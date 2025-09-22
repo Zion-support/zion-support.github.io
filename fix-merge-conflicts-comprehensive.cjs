@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    content = content.replace(conflictRegex, (match, headContent, originContent) => {
+content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
       // Clean up the head content
       let cleaned = headContent
@@ -16,17 +14,6 @@
 
     // Remove any remaining conflict markers
     content = content.replace(/
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Starting comprehensive merge conflict resolution...');
-
-// Function to fix merge conflicts in a file
-=======
-// Function to fix merge conflicts in a file;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixMergeConflicts(filePath) {
   try {
   // TODO: Implement
@@ -36,18 +23,9 @@ function fixMergeConflicts(filePath) {
 
     // Remove merge conflict markers and keep the HEAD version (first part)
 <<<<<<< HEAD
-<<<<<<< HEAD
     content = content.replace(/[^\n]+\n?/g, '');
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    const conflictRegex = /
-    
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
       // Clean up the head content;
@@ -56,16 +34,10 @@ function fixMergeConflicts(filePath) {
       return cleaned;
     });
 
-<<<<<<< HEAD
-    // Remove any remaining conflict markers
+// Remove any remaining conflict markers
     content = content.replace(/
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     content = content.replace(/&quot;/g, '"');
     content = content.replace(/&lt;/g, '<');
@@ -83,24 +55,13 @@ function fixMergeConflicts(filePath) {
 // Function to recursively find files with merge conflicts;
 
   const files = [];
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   function traverse(currentDir) {
   // TODO: Implement
       const items = fs.readdirSync(currentDir);
-<<<<<<< HEAD
-
-      for (const item of items) {
+for (const item of items) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
-
-=======
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (stat.isDirectory()) {
           // Skip certain directories;
 
@@ -109,22 +70,18 @@ function fixMergeConflicts(filePath) {
           const ext = path.extname(item);
           if (extensions.includes(ext)) {
             files.push(fullPath);
-<<<<<<< HEAD
-          }
+}
         }
       }
     } catch (error) {
       // Skip directories we can't read
     }
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   traverse(dir);
   return files;
 
 // Main execution;
-
 
 // Find all files that might have conflicts;
 const allFiles = findFilesWithConflicts(workspaceDir);`;
@@ -137,26 +94,18 @@ let errorCount = 0;
 const batchSize = 100;
 for (let i = 0; i < allFiles.length; i += batchSize) {
   const batch = allFiles.slice(i, i + batchSize);
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   for (const filePath of batch) {
   // TODO: Implement
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
       errorCount++;`;
       console.error(`❌ Error processing ${filePath}:`, error.message);
-<<<<<<< HEAD
-    }
+}
   }
 
   // Progress update
   if (i % 500 === 0) {
-=======
-  // Progress update;
-  if (i % 500 === 0) {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log(`📊 Processed ${Math.min(i + batchSize, allFiles.length)}/${allFiles.length} files...`);
 `;
 console.log(`\n🎉 Merge conflict resolution complete!`);`;
@@ -165,29 +114,10 @@ console.log(`❌ Errors: ${errorCount} files`);
 
 // Try to run a build to check if issues are resolved;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-console.log('\n✨ Merge conflict resolution script completed!');
-=======
-console.log('\n✨ Merge conflict resolution script completed!');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

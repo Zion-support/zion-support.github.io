@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ServicesLayout({
 
   children: React.ReactNode;
@@ -9,10 +7,6 @@ export default function ServicesLayout({
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return <div>{children}</div>;
 }
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -48,21 +42,6 @@ function ServicesLayout() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-},;
-export default function ServicesLayout({
-  children
-}: {
-  children,
-}: {;
-  children: React.ReactNode;
-}) {
-  return <div>{children}</div>;
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

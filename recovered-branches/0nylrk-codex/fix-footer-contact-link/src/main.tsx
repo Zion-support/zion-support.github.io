@@ -1,34 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react',
-import ReactDOM from 'react-dom/client',
-import App from './App.tsx',
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
@@ -74,41 +51,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
-<<<<<<< HEAD
-                <LanguageProvider;
+<LanguageProvider;
                   authState={{ isAuthenticated: false, user: null }}
                 >
-=======
-
-import React from \"react\";
-import ReactDOM from \"react-dom/client\";
-import App from \"./App.tsx\";
-import \"./index.css\";
-import { HelmetProvider } from \"react-helmet-async\";
-import { BrowserRouter, as, Router } from \"react-router-dom\";
-// Import i18n configuration;
-import \"./i18n\";
-import { LanguageProvider } from \"@/context/LanguageContext\";
-import { LanguageDetectionPopup } from \"./components/LanguageDetectionPopup\";
-import { WhitelabelProvider } from \"@/context/WhitelabelContext\";
-// Import auth and notification providers;
-import { AuthProvider } from \"@/context/auth/AuthProvider\";
-import { NotificationProvider } from \"./context\";
-// Import analytics provider;
-import { AnalyticsProvider } from \"./context/AnalyticsContext\";
-// Render the app with proper provider structure;
-ReactDOM.createRoot(document.getElementById(\"root\")!).render(
-  <React.StrictMode />
-    <HelmetProvider />
-      <WhitelabelProvider />
-        <Router />
-          <AuthProvider />
-            <NotificationProvider />
-              <AnalyticsProvider />
-                <LanguageProvider;
-authState={{ isAuthenticated: false, user: null }}
-                 />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <App />
                   <LanguageDetectionPopup />
                 </LanguageProvider>
@@ -122,13 +67,6 @@ authState={{ isAuthenticated: false, user: null }}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -154,14 +92,6 @@ import {BrowserRouter, as, Router} from 'react-router-dom';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -189,36 +119,9 @@ import {NotificationProvider} from './context';
 // Import analytics provider;
 import {AnalyticsProvider} from './context/AnalyticsContext';
 // Render the app with proper provider structure;
-<<<<<<< HEAD
 ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).render(<React && React.StrictMode>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  </React.StrictMode>);
-
-import React from 'react',;
-import ReactDOM from 'react-dom/client',;
-import App from './App.tsx',;
-import './index.css',;
-import { HelmetProvider } from 'react-helmet-async',;
-import { BrowserRouter as Router } from 'react-router-dom',;
-// Import i18n configuration;
-import './i18n',;
-import { LanguageProvider } from '@/context/LanguageContext',;
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup',;
-import { WhitelabelProvider } from '@/context/WhitelabelContext',;
-// Import auth and notification providers;
-import { AuthProvider } from '@/context/auth/AuthProvider',;
-import { NotificationProvider } from './context',;
-// Import analytics provider;
-import { AnalyticsProvider } from './context/AnalyticsContext',;
-// Render the app with proper provider structure;
-ReactDOM.createRoot(document.getElementById('root')!).render(;
-  <React.StrictMode>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <HelmetProvider>;
@@ -228,14 +131,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;
             <NotificationProvider>;
               <AnalyticsProvider>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <LanguageProvider authState={{ isAuthenticated:false, user:null }}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <LanguageProvider authState={{ isAuthenticated: false, user: null }}>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -257,21 +153,9 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
       </WhitelabelProvider>;
     </HelmetProvider>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   </React.StrictMode>);
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
@@ -282,8 +166,6 @@ import {HelmetProvider} from 'react - helmet - async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
 // Import i18n configuration;
 import './i18n';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { LanguageProvider } from '@/context/LanguageContext';
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
@@ -318,11 +200,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </HelmetProvider>
   </React.StrictMode>
 );
-=======
- // Render the app with proper provider structure ReactDOM.createRoot (document.getElementById ('root') !) .render (<React.StrictMode> <HelmetProvider> <WhitelabelProvider> <Router> <AuthProvider> <NotificationProvider> <AnalyticsProvider> <LanguageProvider authState= {
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {LanguageProvider} from '@/context / LanguageContext';
 import {LanguageDetectionPopup} from './components / LanguageDetectionPopup';
 import {WhitelabelProvider} from '@/context / WhitelabelContext';
@@ -352,43 +229,21 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 
   </React.StrictMode>);
 ;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  </React.StrictMode>),; // Render the app with proper provider structure ReactDOM.createRoot (document.getElementById ('root') !) .render (<React.StrictMode> <HelmetProvider> <WhitelabelProvider> <Router> <AuthProvider> <NotificationProvider> <AnalyticsProvider> <LanguageProvider authState= {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   isAuthenticated: false, user: null 
 }
 }> <App /> <LanguageDetectionPopup /> </LanguageProvider> </AnalyticsProvider> </NotificationProvider> </AuthProvider> </Router> </WhitelabelProvider> </HelmetProvider> </React.StrictMode>);
-<<<<<<< HEAD
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
-  </React.StrictMode>);
-  </React.StrictMode>);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  </React.StrictMode>);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   </React.StrictMode>,
 );
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-  </React.StrictMode>);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   </React.StrictMode>);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

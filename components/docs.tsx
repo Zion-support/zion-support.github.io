@@ -10,13 +10,13 @@ export default function DocsPage() {}
     mobile: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',';
     address: '364 E Main St STE 1008 Middletown DE 19709',;'
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com';
   };
 
     {'
-      title: 'AI Services Docs'
-      links: ['
-      color: 'text-green-400'
+      title: 'AI Services Docs';
+      links: [';
+      color: 'text-green-400';
     }
     const matchesSearch =
       doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -36,7 +36,7 @@ export default function DocsPage() { return null; }
       case 'Beginner': return 'bg-green-500/20 text-green-400';'
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';'
       case 'Advanced': return 'bg-red-500/20 text-red-400';'
-      default: return 'bg-gray-500/20 text-gray-400'
+      default: return 'bg-gray-500/20 text-gray-400';
     }
   };
 
@@ -123,7 +123,7 @@ export default function DocsPage() { return null; }
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
 case 'Beginner':
-origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533;
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
@@ -138,8 +138,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       year: 'numeric','
       month: 'short',
 '
-      day: 'numeric''
-    });  };      day: 'numeric'
+      day: 'numeric'';
+    });  };      day: 'numeric';
     })
   }
 
@@ -169,7 +169,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </li>              ))}
           <Card className="p-6 bg-black/40 border border-gray-700/50">"
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>"
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">;
               {external.map((e) => ("
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
 

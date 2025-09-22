@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} });
 
@@ -32,28 +19,6 @@ const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solut
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -75,16 +40,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); '`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} });
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
 '`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} });
-<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx']; filesToClean.forEach(file = > { if (fs.existsSync(file)) { cleanMergeConflicts(file)} })#!/usr/bin/env node const fs = require('fs';
@@ -98,23 +58,11 @@ const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solut
   const path = require('path')function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8')content = content .replace(/,,+/g,',') .replace(/;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n')fs.writeFileSync(filePath,content,'utf8')} catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} });
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
-
-
-
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} });
@@ -127,14 +75,8 @@ const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solut
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -142,18 +84,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} });
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -166,11 +101,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 '`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); } catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); 
 
-
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
 
 const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx']; filesToClean.forEach(file = > { if (fs.existsSync(file)) { cleanMergeConflicts(file)} })#!/usr/bin/env node const fs = require('fs';
   const path = require('path')function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8')content = content .replace(/,,+/g,',') .replace(/;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n')fs.writeFileSync(filePath,content,'utf8')} catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} }

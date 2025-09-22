@@ -50,51 +50,8 @@ const NetworkSecurityChat: NextPage = () => {
       <Head>;
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+<meta name="description" content="NetworkSecurityChat service" />{" "}
 <<<<<<< HEAD
-<<<<<<< HEAD:components/services/network-security-chat.tsx
-        <meta name="description" content="NetworkSecurityChat service" />{" "}
-<<<<<<< HEAD
-
-
-=======
-        <meta name="description" content="NetworkSecurityChat service" />{" "
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/services/network-security-chat.tsx
-=======
-        <meta name="description" content="NetworkSecurityChat service" />{" ""
-</meta>
-
-
-      ;
-      <main>
-</main>
-        <h1>NetworkSecurityChat</h1>
-        <p>Service details coming soon...</p>"
-        <a href="/services">Back to Services</a>"
-      <main>;
-        <h1>NetworkSecurityChat</h1>;
-        <p>Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;"
-      </main>;
-    </div>;
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
-
-        <title > NetworkSecurityChat - Zion Tech Solutions</title>;"
-        <meta name="description" content="NetworkSecurityChat service" />{" "}"
-        <h1 > NetworkSecurityChat</h1>;
-        <p > Service details coming soon...</p>;"
-      </main>;)
-    </div>);
-
-        <meta name=&quot;description&quot; content=&quot;NetworkSecurityChat service&quot; />
-      
-      
-        <p>Service details coming soon...</p>
-        <a href=&quot;/services&quot;>Back to Services</a>
-
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>"
-      
-"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div />
@@ -102,14 +59,6 @@ const NetworkSecurityChat: NextPage = () => {
 
       </Head>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD:components/services/network-security-chat.tsx
-
-=======
-      </Head>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/services/network-security-chat.tsx
       <main>
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
@@ -243,4 +192,3 @@ const NetworkSecurityChat: NextPage = () => {
 }
 
 export default NetworkSecurityChat;
-

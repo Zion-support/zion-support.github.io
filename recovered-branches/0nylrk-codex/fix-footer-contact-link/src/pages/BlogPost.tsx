@@ -3,44 +3,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-export default function BlogPost() {
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
 import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-=======
-import { useState, useEffect } from "react";"
-import { useParams, Link, useNavigate } from "react-router-dom";"
-import { SEO } from "@/components/SEO";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button";
 import {}
-=======
-import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ArrowLeft,
   Calendar,
   Clock,
@@ -49,15 +18,9 @@ import {
   Share2,
   Facebook,
   Twitter,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Linkedin,
+Linkedin,
 } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import {Separator} from "@/components/ui/separator";
 import {AppLayout} from "@/layout/AppLayout";
@@ -85,11 +48,9 @@ import { Separator } from "@/components/ui/separator";
 import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API"
 import { BLOG_POSTS } from "@/data/blog-posts";
-<<<<<<< HEAD
 export default function BlogPost() {
 
-<<<<<<< HEAD
-  useEffect(() => {
+useEffect(() => {
     // Find the current post by slug
     const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
 
@@ -101,25 +62,15 @@ export default function BlogPost() {
 <<<<<<< HEAD
 import { Separator } from "@/components/ui/separator",
 import { AppLayout } from "@/layout/AppLayout",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string },;
-=======
-export default function BlogPost() {};
-  const { slug } = useParams() as { slug: string };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
@@ -127,36 +78,14 @@ export default function BlogPost() {};
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
   const [showShareMenu, setShowShareMenu] = useState(false),
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     // Find the current post by slug
-<<<<<<< HEAD
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug),
-
-=======
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+const currentPost = BLOG_POSTS.find(p => p.slug === slug),
     if (currentPost) {
-<<<<<<< HEAD
-      setPost(currentPost),
-<<<<<<< HEAD
-
+setPost(currentPost),
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-      
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -167,28 +96,7 @@ export default function BlogPost() {};
         p.id !== currentPost.id &&
         (p.category === currentPost.category |
          p.tags.some(tag => currentPost.tags.includes(tag)))
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      ).slice(0, 3),
-      
-
-
-<<<<<<< HEAD
-=======
-      ).slice(0, 3);
-      ).slice(0, 3),
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+).slice(0, 3),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setRelatedPosts(related)
 =======
@@ -236,26 +144,12 @@ export default function BlogPost() {};
     // Scroll to top when post changes
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     window.scrollTo(0, 0)
 <<<<<<< HEAD
 
   if (!post) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   }, [slug, navigate]),
-  
-
-=======
-    window.scrollTo(0, 0);
-  }, [slug, navigate]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
     window.scrollTo(0, 0);
   }, [slug, navigate]);
@@ -288,23 +182,10 @@ export default function BlogPost() {};
   }, [slug, navigate]);
 
   if (!post) {;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
-<<<<<<< HEAD
 
-=======
-  }, [slug, navigate]);
-  }, [slug, navigate]),
-  
-  if (!post) {
-    return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-    window.scrollTo(0, 0)    return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     window.scrollTo(0, 0)    return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -318,9 +199,7 @@ export default function BlogPost() {};
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
 =======
 
-
     return (
-
 
       <AppLayout>"
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">"
@@ -330,24 +209,8 @@ export default function BlogPost() {};
       </AppLayout>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  };
-
-=======
-=======
-  };
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
@@ -364,16 +227,7 @@ export default function BlogPost() {};
     }
   }
   };
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
-  }
-};
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     )
@@ -395,26 +249,13 @@ import { BLOG_POSTS } from "@/data/blog-posts",;
 export default function BlogPost() {;
   const { slug } = useParams() as { slug: string },;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Importing the sample blog posts - in a real app, you would fetch this from an API;
 import { BLOG_POSTS } from "@/data/blog-posts",;
 ;
 export default function BlogPost() {;
   const { slug } = useParams() as { slug:string },;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const navigate = useNavigate(),;
   const [post, setPost] = useState<BlogPostType | null>(null),;
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),;
@@ -442,40 +283,6 @@ export default function BlogPost() {;
   if (!post) {;
     return (;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  ;
-  useEffect(() => {;
-    // Find the current post by slug;
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug),;
-    ;
-    if (currentPost) {;
-      setPost(currentPost),;
-      ;
-      // Find related posts (same category, excluding current post);
-      const related = BLOG_POSTS.filter(p => ;
-        p.id !== currentPost.id && ;
-        (p.category === currentPost.category || ;
-         p.tags.some(tag => currentPost.tags.includes(tag)));
-      ).slice(0, 3),;
-      ;
-      setRelatedPosts(related),;
-    } else {;
-      // Post not found;
-      navigate("/blog", { replace:true }),;
-    }
-    ;
-    // Scroll to top when post changes;
-    window.scrollTo(0, 0),;
-  }, [slug, navigate]),;
-  ;
-  if (!post) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <AppLayout>;
@@ -483,13 +290,8 @@ export default function BlogPost() {;
           <div className="animate-pulse">Loading article...</div>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-    );
+);
   }
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -511,27 +313,10 @@ export default function BlogPost() {;
 <<<<<<< HEAD
   },
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
-
-  
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -610,24 +395,11 @@ export default function BlogPost() {;
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
     const url = encodeURIComponent(window && window.location.href);
     const title = encodeURIComponent(post && post.title),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     switch (platform) {;
       case 'facebook':;
         return `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${url}`;
@@ -638,10 +410,7 @@ export default function BlogPost() {;
       default: return '#';
     }
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <AppLayout>;
       <SEO
@@ -650,53 +419,16 @@ export default function BlogPost() {;
         keywords={post && post.tags.join(", ")}
         ogImage={post && post.featuredImage}
         canonical={`https://app && app.ziontechgroup.com/blog/${post && post.slug}`}
-<<<<<<< HEAD
-=======
-    ),;
-  }
-  ;
-  // Helper function to get share URL;
-  const getShareUrl = (platform:string) => {;
-    const url = encodeURIComponent(window.location.href),;
-    const title = encodeURIComponent(post.title),;
-    ;
-    switch (platform) {;
-      case 'facebook':;
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`,;
-      case 'twitter':;
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`,;
-      case 'linkedin':;
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,;
-      default:return '#';
-    }
-  },;
-  ;
-  return (;
-    <AppLayout>;
-      <SEO ;
-        title={post.title} ;
-        description={post.excerpt} ;
-        keywords={post.tags.join(", ")}
-        ogImage={post.featuredImage}
-        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
       />;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;
         <div className="container mx-auto">;
           {/* Back to blog button */}
           <div className="mb-8">;
-<<<<<<< HEAD
-            <Button
+<Button
               variant="outline" 
               className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
               asChild>;
-=======
-            <Button ;
-              variant="outline" ;
-              className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
-              asChild;
-            >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <Link to="/blog">;
                 <ArrowLeft className="mr-2 h-4 w-4" />;
                 Back to all articles;
@@ -704,8 +436,7 @@ export default function BlogPost() {;
             </Button>;
           </div>;
 
-<<<<<<< HEAD
-          {/* Article header */}
+{/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">;
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">;
               {post && post.category}
@@ -722,44 +453,18 @@ export default function BlogPost() {;
               <div className="flex items-center mb-4 sm:mb-0">;
                 <img
                   src={post && post.author.avatarUrl} 
-                  alt={post && post.author.name} 
-
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  alt={post && post.author.name}
                 <img 
                   src={post.author.avatarUrl} 
                   alt={post.author.name} 
 
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {;
                     const target = e && e.target as HTMLImageElement;
                     target && target.src = "https: //images && images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-                <img
-                  src={post.author.avatarUrl}
-                  alt={post.author.name}
-                <img 
-                  src={post.author.avatarUrl} 
-                  alt={post.author.name} 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                <img
-                  src={post.author.avatarUrl}
-                  alt={post.author.name}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
                 <img
                   src={post.author.avatarUrl}
@@ -772,10 +477,6 @@ export default function BlogPost() {;
                       "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 />
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
@@ -816,33 +517,18 @@ export default function BlogPost() {;
                         <Facebook className="h-4 w-4 mr-2" />
                         <span>Facebook</span>
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </a>
                       <a
                         href={getShareUrl("twitter")}
                         target="_blank"
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </Link>
                       <a 
                         href={getShareUrl('twitter')} 
                         target="_blank" 
 <<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -861,38 +547,17 @@ export default function BlogPost() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </a>
                       <a
                         href={getShareUrl("linkedin")}
                         target="_blank"
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </Link>
                       <a 
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
 <<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
@@ -900,13 +565,7 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>
                       </Link>
                     </div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
 =======
@@ -941,80 +600,19 @@ export default function BlogPost() {;
                     const target = e.target as HTMLImageElement,;"
                     target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-                />;
-                <div>;"
-                  <p className="text-white font-medium">{post && post.author.name}</p>;"
-                  <p className="text-sm text-zion-slate-light">{post && post.author.title}</p>;
-                </div>;
-              </div>;
-"
-              <div className="flex items-center space-x-4">;"
-                <div className="flex items-center text-zion-slate-light">;"
-                  <Calendar className="h-4 w-4 mr-1" />;"
-                  <span className="text-sm">{post && post.publishedDate}</span>;
-                </div>;"
-                <div className="flex items-center text-zion-slate-light">;"
-                  <Clock className="h-4 w-4 mr-1" />;"
-                  <span className="text-sm">{post && post.readTime}</span>;
-                </div>;"
-                <div className="relative">;
-                  <Button"
-                    variant="ghost" "
-                    size="sm""
-                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-                />;
-                <div>;
-                  <p className="text-white font-medium">{post && post.author.name}</p>;
-                  <p className="text-sm text-zion-slate-light">{post && post.author.title}</p>;
-                </div>;
-              </div>;
-
-              <div className="flex items-center space-x-4">;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Calendar className="h-4 w-4 mr-1" />;
-                  <span className="text-sm">{post && post.publishedDate}</span>;
-                </div>;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span className="text-sm">{post && post.readTime}</span>;
-                </div>;
-                <div className="relative">;
-                  <Button
-                    variant="ghost" 
-                    size="sm"
-                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     onClick={() => setShowShareMenu(!showShareMenu)}
                   >;"
                     <Share2 className="h-4 w-4 mr-1" />;"
                     <span className="text-sm">Share</span>;
                   </Button>;
-<<<<<<< HEAD
-
-                  {showShareMenu && (;
+{showShareMenu && (;
                     <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">;
                       <a
                         href={getShareUrl('facebook')} 
                         target="_blank" 
                         rel="noopener noreferrer"
-<<<<<<< HEAD
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;                        <Facebook className="h-4 w-4 mr-2" />;
-=======
-"
-                        <Facebook className="h-4 w-4 mr-2" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
-                        <Facebook className="h-4 w-4 mr-2" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;                        <Facebook className="h-4 w-4 mr-2" />;
                         <span>Facebook</span>;
                       </a>;
                       <a;
@@ -1026,8 +624,7 @@ export default function BlogPost() {;
                         <Twitter className="h-4 w-4 mr-2" />;
                         <span>Twitter</span>;
                       </a>;
-<<<<<<< HEAD
-                      <a
+<a
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
                         rel="noopener noreferrer"
@@ -1040,79 +637,23 @@ export default function BlogPost() {;
                       >;
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
-=======
-
-"
-                        rel="noopener noreferrer""
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <Linkedin className="h-4 w-4 mr-2" />;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   )}
-<<<<<<< HEAD
 
-=======
-                  ;
-                  {showShareMenu && (;
-                    <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">;
-                      <a ;
-                        href={getShareUrl('facebook')} ;
-                        target="_blank" ;
-                        rel="noopener noreferrer";
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
-                      >;
-                        <Facebook className="h-4 w-4 mr-2" />;
-                        <span>Facebook</span>;
-                      </a>;
-                      <a ;
-                        href={getShareUrl('twitter')} ;
-                        target="_blank" ;
-                        rel="noopener noreferrer";
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
-                      >;
-                        <Twitter className="h-4 w-4 mr-2" />;
-                        <span>Twitter</span>;
-                      </a>;
-                      <a ;
-                        href={getShareUrl('linkedin')} ;
-                        target="_blank" ;
-                        rel="noopener noreferrer";
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
-                      >;
-                        <Linkedin className="h-4 w-4 mr-2" />;
-                        <span>LinkedIn</span>;
-                      </a>;
-                    </div>;                  )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                   )}
 
@@ -1121,17 +662,11 @@ export default function BlogPost() {;
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-          {/* Featured image */}
+{/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
 
-<<<<<<< HEAD
-                  const target = e.target as HTMLImageElement,
+const target = e.target as HTMLImageElement,
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
           <div className="mb-12 max-w-5xl mx-auto">;
             <div className="aspect-[21/9] rounded-lg overflow-hidden">;
@@ -1146,18 +681,6 @@ export default function BlogPost() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-                className="object-cover w-full h-full"
-<<<<<<< HEAD
-                onError={(e) => {;
-                  const target = e && e.target as HTMLImageElement;
-                  target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
-=======
-
-=======
-                  )}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                 </div>
               </div>
             </div>
@@ -1166,30 +689,18 @@ export default function BlogPost() {;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
-<<<<<<< HEAD
-
-                className="object-cover w-full h-full"
+className="object-cover w-full h-full"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
 <<<<<<< HEAD
 <<<<<<< HEAD
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <img 
                 src={post.featuredImage} 
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1217,18 +728,6 @@ export default function BlogPost() {;
                   #{tag}
                 </span>;
               ))}
-
-=======
-
-                            const target = e.target as HTMLImageElement,
-
-=======
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   const target = e.target as HTMLImageElement,
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
           <div className="mb-12 max-w-5xl mx-auto">;
@@ -1245,19 +744,11 @@ export default function BlogPost() {;
                 onError={(e) => {;
                   const target = e && e.target as HTMLImageElement;
                   target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
-<<<<<<< HEAD
-                }}
-<<<<<<< HEAD
+}}
 <<<<<<< HEAD
               />;
             </div>;
           </div>;
-=======
-                  target.src =
-                    "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
               <img
                 src={post.featuredImage}
@@ -1289,12 +780,7 @@ export default function BlogPost() {;
                 >
                   #{tag}
                 </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ))}
-            </div>
-=======
-              ))}
+))}
             </div>
 
             <Separator className="my-12 bg-zion-blue-light" />
@@ -1318,66 +804,9 @@ export default function BlogPost() {;
                           alt={relatedPost.title}
                           className="object-cover w-full h-full"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src =
-                              "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
-                          }}
-                        />
-                      </div>
-                      <div className="p-4">
-                        <span className="text-xs text-zion-cyan">
-                          {relatedPost.category}
-                        </span>
-                        <h4 className="text-white font-bold mt-1 line-clamp-2">
-                          {relatedPost.title}
-                        </h4>
-                      </div>
-                    </Link>
-
-
-            </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-            <Separator className="my-12 bg-zion-blue-light" />
-
-            {/* Related articles */}
-            {relatedPosts.length > 0 && (
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold text-white mb-6">
-                  Related Articles
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {relatedPosts.map((relatedPost) => (
-                    <Link
-                      key={relatedPost.id}
-                      to={`/blog/${relatedPost.slug}`}
-                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
-                    >
-                      <div className="aspect-[16/9] relative">
-                        <img
-                          src={relatedPost.featuredImage}
-                          alt={relatedPost.title}
-                          className="object-cover w-full h-full"
-                          onError={(e) => {
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-                            const target = e.target as HTMLImageElement,
-
-                            const target = e.target as HTMLImageElement;
-
-                            const target = e.target as HTMLImageElement,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-=======
-                            const target = e.target as HTMLImageElement;
-                            target.src =
-                              "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                           }}
                         />
                       </div>
@@ -1390,18 +819,7 @@ export default function BlogPost() {;
                         </h4>
                       </div>
                     </Link>
-<<<<<<< HEAD
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-
-=======
-                  #{tag}
-                </span>;
-              ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>;
 =======
               ))}            </div>;
@@ -1425,8 +843,7 @@ export default function BlogPost() {;
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>;"
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
                   {relatedPosts && relatedPosts.map(relatedPost => (;
-<<<<<<< HEAD
-                    <Link
+<Link
                       key={relatedPost && relatedPost.id}
                       to={`/blog/${relatedPost && relatedPost.slug}`}
                       className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300">;
@@ -1485,7 +902,6 @@ export default function BlogPost() {;
                 </span>;
               ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
             </div>;
             ;
             <Separator className="my-12 bg-zion-blue-light" />;
@@ -1499,8 +915,6 @@ export default function BlogPost() {;
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
                   {relatedPosts.map(relatedPost => (;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Link;
                       key={relatedPost && relatedPost.id}
                       to={`/blog/${relatedPost && relatedPost.slug}`}"
@@ -1514,17 +928,11 @@ export default function BlogPost() {;
                             const target = e && e.target as HTMLImageElement;"
                             target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
 
-
                   #{tag}
                 </span>;
               ))}
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1538,22 +946,11 @@ export default function BlogPost() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <span className="text-xs text-zion-cyan">{relatedPost && relatedPost.category}</span>;
-=======
-"
-                        <span className="text-xs text-zion-cyan">{relatedPost && relatedPost.category}</span>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
                       </div>;
                     </Link>;
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                         <span className="text-xs text-zion-cyan">{relatedPost && relatedPost.category}</span>;
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
@@ -1565,8 +962,7 @@ export default function BlogPost() {;
               </div>;
             )}
 
-<<<<<<< HEAD
-            {/* Navigation */}"
+{/* Navigation */}"
             <div className="flex justify-between items-center mt-12">;
               <Button"
                 variant="outline""
@@ -1583,59 +979,18 @@ export default function BlogPost() {;
         </div>
       </div>
     </AppLayout>
+)
 <<<<<<< HEAD
-  )
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 asChild>;
 
-<<<<<<< HEAD
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="flex justify-between items-center mt-12">;
               <Button;
                 variant="outline";
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
                 asChild;
               >;
-<<<<<<< HEAD
-
-                <Link to="/blog">;
+<Link to="/blog">;
                   <ChevronLeft className="mr-2 h-4 w-4" />;
-=======
-import { useState, useEffect } from './react';
-import { use_params, Link, use_navigate } from './react-router-dom';
-import { SEO } from '@/components / SEO';
-import { Button } from '@/components / ui / button';
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from './lucide-react';
-import type { BlogPost as BlogPostType } from "@/types / blog";
-import { Separator } from '@/components / ui / separator';
-import { AppLayout } from '@/layout / AppLayout';
-// Importing the sample blog posts - in a real app, you would fetch this from an API;
-import { BLOG_POSTS } from '@/data / blog - posts';
-export default /**
- * BlogPost - Function description
- */
-function BlogPost() {
-  const { slug } = use_params () as { slug: string },
-  const navigate = use_navigate ();
-  const [post, set_post] = useState < BlogPostType | null>(null);
-  const [related_posts, setRelatedPosts] = useState < BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState (false);
-;
-  useEffect (() => {
-    // Find the current post by slug;
-    const current_post = BLOG_POSTS.find (p => p.slug === slug);
-;
-    // Check condition
-if ( {) {
-  $2
-=======
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
       set_post (current_post);
 ;
@@ -1855,7 +1210,6 @@ if ( {) {}
                 <Link to="/blog">;"
                   <ChevronLeft className="mr - 2 h - 4 w - 4" />;
 
-
               <Button;"
                 variant="outline";"
                 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
@@ -1865,18 +1219,10 @@ if ( {) {}
                   <ChevronLeft className="mr-2 h-4 w-4" />;"
                 <Link to="/blog">;"
                   <ChevronLeft className="mr-2 h-4 w-4" />;
-<<<<<<< HEAD
-                <Link to="/blog">;
+<Link to="/blog">;
                   <ChevronLeft className="mr-2 h-4 w-4" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   All Articles;
                 </Link>;
               </Button>;
@@ -1885,37 +1231,13 @@ if ( {) {}
         </div>;
       </div>;
 
-<<<<<<< HEAD
-    </AppLayout>);
+</AppLayout>);
 }
-<<<<<<< HEAD
-=======
-
-=======
-;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-    </AppLayout>;
-=======
-            <div className="flex justify-between items-center mt-12">;
-              <Button
-                variant="outline"
-                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"    </AppLayout>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <div className="flex justify-between items-center mt-12">;
-              <Button
-                variant="outline"
-                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"    </AppLayout>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">;
@@ -2175,21 +1497,13 @@ if ( {) {
 
 ;
     </AppLayout>;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="flex justify-between items-center mt-12">;
-              <Button
-                variant="outline"
-                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"    </AppLayout>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ); export default function BlogPost () {
   const {
   slug 
 }= useParams () as {
   slug: string 
 =======
-
 
     </AppLayout>;
   ); export default function BlogPost () {}
@@ -2254,21 +1568,13 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2455,7 +1761,6 @@ export default function BlogPost() {
                         <span className="text-xs text-zion-cyan">"
                         <h4 className="text-white font-bold mt-1 line-clamp-2">"
 </h4>
-
 
             <Separator className="my-12 bg-zion-blue-light" />;"
               <div className="mt-12">;"

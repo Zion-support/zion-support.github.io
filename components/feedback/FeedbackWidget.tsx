@@ -74,7 +74,7 @@ const effectiveResponseId = useMemo(
 
   return (
 
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">"
+    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">";
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
     }
@@ -83,10 +83,10 @@ const effectiveResponseId = useMemo(
 
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
       {submitted ? ('
-        <div className='text-sm text-emerald-700 dark:text-emerald-300'>
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>;
           Thanks for your feedback!
         </div>
-      ) : ('
+      ) : (';
         <div className='space-y-3'>'
           <div className='flex items-center gap-2'>'
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;
@@ -201,12 +201,12 @@ if ( {) {}
       {submitted ? ('
         <div className='text - sm text - emerald - 700 dark:text - emerald - 300'>;
           Thanks for your feedback!;
-        </div>) : ('
+        </div>) : (';
         <div className='space - y-3'>;'
           <div className='flex items - center gap - 2'>;
             <button;
               type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (
-        <div className="text - sm text - emerald - 700 dark:text-emerald-300">Thanks for your feedback!</div>) : (
+        <div className="text - sm text - emerald - 700 dark:text-emerald-300">Thanks for your feedback!</div>) : (;
         <div className="space-y-3">;
           <div className="flex items-center gap-2">;
             <button;
@@ -282,10 +282,10 @@ if ( {) {}
   },
 
   return ("
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">"
+    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">";
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {_submitted ? ("
-        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>"
+        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>";
       ) : (_<div className="space-y-3">"
           <div className="flex items-center gap-2">
 
@@ -327,7 +327,7 @@ placeholder='Optional feedback (what worked, what didn’t)'
             <button;
               onClick={submit}
               disabled={submitting}
-              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
+              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
               {submitting ? 'Submitting…' : 'Submit feedback'}
@@ -335,7 +335,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
-              className='rounded-md bg-black text-white dark: bg-white dark:text-black px-3 py-1.5 text-sm'
+              className='rounded-md bg-black text-white dark: bg-white dark:text-black px-3 py-1.5 text-sm';
              />
 
               {submitting ? 'Submitting…' : 'Submit feedback}

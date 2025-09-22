@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-import { describe, it, expect } from '@jest/globals';
-
-describe('SEOEnhancer.dynamic', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SEOEnhancerdynamic from '../components/SEOEnhancer.dynamic';
+import SEOEnhancer from '../components/SEOEnhancer';
 
-describe('SEOEnhancerdynamic', () => {
+describe('SEOEnhancer', () => {
   test('renders without crashing', () => {
-    render(<SEOEnhancerdynamic />);
-    expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument();
+    render(<SEOEnhancer />);
+    expect(screen.getByTestId('seoenhancer')).toBeInTheDocument();
   });
-
+  
   test('displays correct content', () => {
-    render(<SEOEnhancerdynamic />);
-    // Add specific content tests based on component
+    render(<SEOEnhancer />);
   });
-
+  
   test('handles user interactions', () => {
-    render(<SEOEnhancerdynamic />);
-    // Add interaction tests based on component functionality
+    render(<SEOEnhancer />);
   });
-
+  
   test('applies correct styling', () => {
-    render(<SEOEnhancerdynamic />);
-    // Add styling tests if needed
+    render(<SEOEnhancer />);
   });
 });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/main

@@ -3,8 +3,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Fragment} from "react";
@@ -21,10 +19,6 @@ import HelpCenterPage from "@/pages/HelpCenterPage";
 import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Fragment } from "react",
 import { Route, Routes, Navigate } from "react-router-dom",
 import Home from "@/pages/Home",
@@ -37,23 +31,15 @@ import SearchPage from "@/pages/SearchPage",
 import { SitemapPage } from "@/components/SitemapPage",
 import HelpCenterPage from "@/pages/HelpCenterPage",
 import AccountSettings from "@/pages/AccountSettings",
-<<<<<<< HEAD
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 
 import ProjectRoom from "@/pages/ProjectRoom",
 import VideoCall from "@/pages/VideoCall",
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const ContentRoutes = () => {
 =======
 const ContentRoutes = () => {;
@@ -93,16 +79,9 @@ const ContentRoutes = () => {;
       <Route path="/search" element={<SearchPage />} />;
 
       {/* Sitemap Page */}
-<<<<<<< HEAD
-      <Route path="/sitemap-page" element={<SitemapPage />} />
+<Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   )
-=======
-}
-export default ContentRoutes;
-
-},
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 =======
 =======
@@ -126,9 +105,7 @@ import SearchPage from "@/pages/SearchPage";
 import { SitemapPage } from "@/components/SitemapPage";
 import HelpCenterPage from "@/pages/HelpCenterPage";
 import AccountSettings from "@/pages/AccountSettings";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import ProjectRoom from "@/pages/ProjectRoom";
@@ -174,9 +151,7 @@ const ContentRoutes = () => {;
       <Route path="/blog" element={<Blog />} />"
       <Route path="/blog/:slug" element={<BlogPost />} />
 
-<<<<<<< HEAD
-      {/* Green IT Route */}
-<<<<<<< HEAD
+{/* Green IT Route */}
 export default ContentRoutes;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ContentRoutes,
@@ -199,14 +174,8 @@ const ContentRoutes = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Route path="/sitemap-page" element={<SitemapPage />} />;
     </Routes>;
-=======
-=======
-      {/* Green IT Route */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Route path="/green-it" element={<GreenIT />} />
 
       {/* Careers Route */}"
@@ -229,21 +198,12 @@ const ContentRoutes = () => {;
     </Routes>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-=======
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   );
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
-
 
 export default ContentRoutes;
 
@@ -265,9 +225,6 @@ import ProjectRoom from "@/pages / ProjectRoom";
 };
 
 export default ContentRoutes;
-
-
-
 
 import { Fragment } from './react';'
 import { Route, Routes, Navigate } from './react-router-dom';"
@@ -310,10 +267,8 @@ const ContentRoutes = () =>: any {}
       <Route path="/video - call/:room_id" element={<VideoCall />} />;
       {/* Global Search Route */}"
       <Route path="/search" element={<SearchPage />} />;
-<<<<<<< HEAD
-      {/* Sitemap Page */}
-<<<<<<< HEAD
-      <Route path="/sitemap-page" element={<SitemapPage />} />;
+{/* Sitemap Page */}
+<Route path="/sitemap-page" element={<SitemapPage />} />;
     </Routes>;
   );
 },;
@@ -327,10 +282,6 @@ export default ContentRoutes;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ContentRoutes;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-      {/* Sitemap Page */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Route path="/sitemap - page" element={<SitemapPage />} />;
     </Routes>);
 }
@@ -338,18 +289,13 @@ export default ContentRoutes;
 
 },
 
-
 export default ContentRoutes;
-<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ;
       {/* Help Center Routes */}
       <Route path="/help" element={<HelpCenterPage />} />;
@@ -437,18 +383,11 @@ export default ContentRoutes,; const ContentRoutes = () => {
 export default ContentRoutes;
 export default ContentRoutes;
 export default ContentRoutes;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -469,6 +408,5 @@ import HelpCenterPage from "@/pages/HelpCenterPage",;
 import AccountSettings from "@/pages/AccountSettings",;
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -153,15 +153,15 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 const contactInfo = null;
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1
+  staggerChildren: 0.1;
 }
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0
+  y: 20, opacity: 0;
 }
 visible: {
   y: 0, opacity: 1, transition: {
-  duration: 0.5
+  duration: 0.5;
 ];
 const stats = [
   {
@@ -212,7 +212,7 @@ const matchesSearch =
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-return (
+return (;
           parseFloat(a.price.replace(/[^0-9.]/g, '')) -
           parseFloat(b.price.replace(/[^0-9.]/g, ''))
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -247,15 +247,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />"
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />"
         <meta property="og:description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations." />"
-        <meta property="og:url" content="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />"
+        <meta property="og:url" content="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />";
         <meta property="og:type" content="website" />"
-        <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
+        <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />;
       </Head>"
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
                 Services 2025;
               </span>
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Experience the future of technology with our revolutionary services that combine AI consciousness;
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>"
@@ -279,7 +279,7 @@ default:
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 staggerChildren: 0.1,
       },
@@ -312,33 +312,33 @@ duration: 0.5,
           content='futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Ultimate Futuristic Services Showcase 2025 | Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations.'
         />
         <meta
-          property='og:url'
-          content='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
+          property='og:url';
+          content='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025';
         />
         <meta property='og:type' content='website' />
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
+          href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025';
         />
       </Head>
       {/* Hero Section */}
-      <section className='relative py-20 lg:py-32 overflow-hidden'>
+      <section className='relative py-20 lg:py-32 overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+<h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Ultimate Futuristic
               </span>
@@ -347,7 +347,7 @@ duration: 0.5,
                 Services 2025
               </span>
             </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Experience the future of technology with our revolutionary
               services that combine AI consciousness, quantum computing, space
               technology, and breakthrough innovations to transform your
@@ -386,9 +386,9 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Search and Filter Section */}
 <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
-
+;
               ))}
       {/* Search and Filter Section */}'
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>;'
@@ -429,12 +429,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
-                className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
               >"
                 <option value="all">All Categories</option>
                 {serviceCategories.map((category) => (
                 onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
               />
             </div>
             {/* Category Filter */}
@@ -442,7 +442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <select
                 value={selectedCategory}
                 onChange={e => setSelectedCategory(e.target.value)}
-                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
               >
                 <option value='all'>All Categories</option>
                 {serviceCategories.map(category => (
@@ -467,11 +467,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={sortBy}
 onChange={e => setSortBy(e.target.value)}
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-
+;
               >'
                 <option value='popular'>Most Popular</option>'
-                <option value='price-low'>Price: Low to High</option>'
-                <option value='price-high'>Price: High to Low</option>'
+                <option value='price-low'>Price: Low to High</option>';
+                <option value='price-high'>Price: High to Low</option>';
                 <option value='rating'>Highest Rated</option>'
                 <option value='customers'>Most Customers</option>
               </select>
@@ -479,15 +479,15 @@ onChange={e => setSortBy(e.target.value)}
               <select;
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}'
-                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
                 ))}
               {/* View Mode Toggle */}'
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button'
                   onClick={() => setViewMode('grid')}'
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}"
                 <option value="popular">Most Popular</option>"
-                <option value="price-low">Price: Low to High</option>"
-                <option value="price-high">Price: High to Low</option>"
+                <option value="price-low">Price: Low to High</option>";
+                <option value="price-high">Price: High to Low</option>";
                 <option value="rating">Highest Rated</option>"
                 <option value="customers">Most Customers</option>
               </select>
@@ -538,15 +538,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
       {/* Services Grid */}
 <section className='py-16'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <motion.div
             variants={containerVariants}
             initial='hidden'
             animate='visible'
             className={
               viewMode === 'grid'
-                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                : 'space-y-6'
+                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+                : 'space-y-6';
             }
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -594,8 +594,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
 viewMode === 'grid'
-                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'
-                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'
+                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105';
+                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300';
                 }`}
               >
                 {/* Popular Badge */}
@@ -619,7 +619,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>'`
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>'
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>;
                     Popular;
                   </div>;
                 {service.popular && (
@@ -636,7 +636,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>'`
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>"
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">;
                       {service.name}
                     </h3>"
                     <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
@@ -773,11 +773,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
                     href={service.link}"
-                    className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+                    className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105";
                   >
                     Get Started;
                   </Link>"
-                  <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors">"
+                  <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors">";
                     <Eye className="w-5 h-5" />
                   </button>
                 </div>
@@ -791,14 +791,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
                 {/* Action Buttons */}
-<div className='flex flex-col sm:flex-row gap-3'>
+<div className='flex flex-col sm:flex-row gap-3'>;
                   <Link
                     href={service.link}
-                    className='flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'
+                    className='flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105';
                   >
                     Get Started
                   </Link>
-                  <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors'>
+                  <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors'>;
                     <Eye className='w-5 h-5' />
                   </button>
                 </div>
@@ -832,7 +832,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion && motion.div>;
                         href={`mailto:${contactInfo.email}`}
-                        className='flex items-center text-purple-400 hover:text-purple-300'
+                        className='flex items-center text-purple-400 hover:text-purple-300';
                       >
                         <Mail className='w-4 h-4 mr-1' />
                         {contactInfo.email}
@@ -865,7 +865,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Clear Filters;
               </button>;
             </div>;
-                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'
+                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300';
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Experience the Future?;
             </h2>;'
@@ -887,7 +887,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Transform your business with our revolutionary futuristic services.
               Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">';
                 className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'>              Ready to Experience the Future?;
             </h2>;"
             <p className="text-xl text-gray-300 mb-8">;

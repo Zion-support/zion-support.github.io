@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");"
@@ -129,20 +122,11 @@ class ErrorAnalyticsDashboard {
       "fileDistribution": {}"
     }}"
   log(message, level = 'INFO') {
-<<<<<<< HEAD
-    const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log("[${timestamp}] [${level}] ${message}")}
-=======
 
     console.log("[${timestamp}] [${level}] ${message}")}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   async collectErrorReports() {
   // TODO: Implement
       const reports = [];
@@ -411,17 +395,11 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
         ...counts;)
     return trends}
   analyzeFixSuccessRates(reports) {
-<<<<<<< HEAD
-    const fixReports = reports.filter(report =>
-=======
+
     const fixReports = reports.filter(report => 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-      report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
-    );
-=======
+
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     const successRates = [];
     for (const report of fixReports) {
       const totalIssues = report.initialErrors || report.initialIssues || 0;
@@ -491,100 +469,9 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
             <canvas id="successChart"></canvas>"
         <div class="last-updated">"
     <script>
-<<<<<<< HEAD
-        // Error Trends Chart
-        const trendsCtx = document.getElementById('trendsChart').getContext('2d');
-        new Chart(trendsCtx, {
-            "type": 'line',
-            "data": {
-                labels: ${JSON.stringify(analyticsData.errorTrends.map(t => t.date))},
-                "datasets": [{
-                    label: 'Total Errors',
-                    "data": ${JSON.stringify(analyticsData.errorTrends.map(t => t.total))},
-                    "borderColor": '#667eea',
-                    "backgroundColor": 'rgba(102, 126, 234, 0.1)',
-                    "tension": 0.4
-                }]
-            },
-            "options": {
-                responsive: true,
-                "scales": {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        // Error Types Chart
-        const typesCtx = document.getElementById('typesChart').getContext('2d');
-        new Chart(typesCtx, {
-            "type": 'doughnut',
-            "data": {
-                labels: ['TypeScript', 'ESLint', 'Build', 'Dependency'],
-                "datasets": [{
-                    data: [
-                        ${analyticsData.errorTypes.typescript},
-                        ${analyticsData.errorTypes.eslint},
-                        ${analyticsData.errorTypes.build},
-                        ${analyticsData.errorTypes.dependency}
-                    ],
-                    "backgroundColor": ['#667eea',
-                        '#764ba2',
-                        '#f093fb',
-                        '#f5576c'
-                    ]
-                }]
-            },
-            "options": {
-                responsive: true
-            }
-        });
-        // Success Rates Chart
-        const successCtx = document.getElementById('successChart').getContext('2d');
-        new Chart(successCtx, {
-            "type": 'bar',
-            "data": {
-                labels: ${JSON.stringify(analyticsData.fixSuccessRates.map(r => r.timestamp.split('T')[0]))},
-                "datasets": [{
-                    label: 'Success Rate (%)',
-                    "data": ${JSON.stringify(analyticsData.fixSuccessRates.map(r => parseFloat(r.successRate)))},
-                    "backgroundColor": '#667eea'
-                }]
-            },
-            "options": {
-                responsive: true,
-                "scales": {
-                    y: {
-                        beginAtZero: true,
-                        "max": 100
-                    }
-                }
-            }
-        });
-    </script>
-</body>
-</html>`;
-    return html}
-  async generateAnalyticsReport() {
-    this.log('Generating analytics report...');
-    try {
-      const reports = await this.collectErrorReports();
-      if (reports.length === 0) {
-        this.log('No reports found for analytics', 'INFO');
-        return}
-      // Analyze data
-      const errorTrends = this.analyzeErrorTrends(reports);
-      const fixSuccessRates = this.analyzeFixSuccessRates(reports);
-      const errorTypes = this.analyzeErrorTypes(reports);
-      const timeDistribution = this.analyzeTimeDistribution(reports);
-      const fileDistribution = this.analyzeFileDistribution(reports);
-      // Calculate summary statistics
-      const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
-<<<<<<< HEAD
-      const avgSuccessRate = fixSuccessRates.length > 0
-=======
+
       const avgSuccessRate = fixSuccessRates.length > 0 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {
@@ -647,26 +534,9 @@ if (require.main === module) {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = ErrorAnalyticsDashboard
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = ErrorAnalyticsDashboard
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ErrorAnalyticsDashboard
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 module.exports = ErrorAnalyticsDashboard
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+module.exports = ErrorAnalyticsDashboard
+
+module.exports = ErrorAnalyticsDashboard

@@ -33,11 +33,11 @@ export default function CodeQualityCheckerPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const pricing = [
     {
-      name: 'Developer'
-      price: '$29'
-      period: '/month'
-      description: 'Perfect for individual developers and small projects'
-      features: ['
+      name: 'Developer';
+      price: '$29';
+      period: '/month';
+      description: 'Perfect for individual developers and small projects';
+      features: [';
         '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
       ];
       popular: false;
@@ -71,7 +71,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       price: '$79',
       period: '/month',
       description: 'Ideal for development teams and growing companies',
-      features: [
+      features: [;
 '500 code analyses/month',
         'Advanced quality metrics',
         'All programming languages',
@@ -89,7 +89,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       price: '$199',
       period: '/month',
       description: 'For large organizations with complex codebases',
-      features: [
+      features: [;
 'Unlimited analyses',
         'Enterprise metrics',
         'Custom language support',
@@ -111,22 +111,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Simulate code analysis;
     setTimeout(() => {}
       setAnalysisResults({'
-        language: 'JavaScript'
-        qualityScore: 85
-        issues: [
+        language: 'JavaScript';
+        qualityScore: 85;
+        issues: [;
 {
             type: 'warning',
             message:
-              'Consider using const instead of let for variables that are not reassigned'
-            line: 5
-            severity: 'medium'
+              'Consider using const instead of let for variables that are not reassigned';
+            line: 5;
+            severity: 'medium';
           }
           {
-            type: 'info'
+            type: 'info';
             message:
-              'Function is quite long (25 lines). Consider breaking it into smaller functions'
-            line: 12
-            severity: 'low'
+              'Function is quite long (25 lines). Consider breaking it into smaller functions';
+            line: 12;
+            severity: 'low';
           }
           {
             type: 'error',
@@ -142,7 +142,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           securityScore: '92%',
         },
 origin/cursor/automate-test-improve-and-merge-code-2533
-        recommendations: [
+        recommendations: [;
           'Use const for immutable variables to improve code clarity',
           'Break down large functions into smaller, more focused functions',
           'Add proper error handling for better robustness',
@@ -218,11 +218,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Analyze and improve your code quality with our comprehensive checker. Support for multiple languages, security scanning, and detailed improvement recommendations.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Code Quality Checker - Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Professional code quality analysis tool with multi-language support and security scanning.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -282,7 +282,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">;
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.;
           </p>;
-              className='w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'
+              className='w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow';
               disabled={isAnalyzing || !codeInput.trim()}
             >
               {isAnalyzing ? (
@@ -298,7 +298,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button;
               onClick={handleAnalyzeCode}"
               size="lg""
-              className="w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
+              className="w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow";
               disabled={isAnalyzing |!codeInput.trim()}
             >
               {isAnalyzing ? (
@@ -306,7 +306,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
                   Analyzing Code...
                 </>
-              ) : (
+              ) : (;
                 <>
 <Play className='w-5 h-5 mr-2' />
                   Analyze Code Quality
@@ -315,7 +315,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </div>
 
-<div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<div className='flex flex-col sm:flex-row gap-6 justify-center'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
               href='#pricing'
@@ -324,7 +324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl'>;
               View Pricing;
             </Button>;
-              className='border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl'
+              className='border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl';
             >
               View Pricing
             </Button>
@@ -350,7 +350,7 @@ href='/contact'
               Our code quality checker provides comprehensive analysis and improvement suggestions for better code.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {features.map((feature, index) => (
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
@@ -368,7 +368,7 @@ href='/contact'
               <Card;
                 key={index}"
                 className="card-hover group border-gradient-teal"
-              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'
+              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl';
             >
               Schedule Demo
             </Button>
@@ -387,7 +387,7 @@ href='/contact'
               improvement suggestions for better code.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -425,7 +425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               language-specific analysis rules and best practices.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {supportedLanguages.map((language, index) => (
           </div>;
         </div>;
@@ -476,7 +476,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               We support a wide range of programming languages with language-specific analysis rules and best practices.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {supportedLanguages.map((language, index) => ('
                       className='flex items-center text-gray-300 text-sm'>;'
                       <CheckCircle className='w-4 h-4 text-teal-400 mr-3 flex-shrink-0' />                      {feature}              Multi-Language Support;
@@ -626,7 +626,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.
               </p>
             </div>"
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
                       <div>;'
                         <span className='text-gray-300 text-sm'>;
                           {issue && issue.message}
@@ -723,7 +723,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='text-2xl font-bold mb-6 text-white'>
                 Improvement Recommendations;
               </h3>'
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
                 {analysisResults.recommendations.map((rec, index) => ('
                   <div key={index} className='flex items-start space-x-3'>'
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />'
@@ -763,7 +763,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Choose the code quality analysis plan that best fits your development needs.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricing.map((plan, index) => ('
       <section id='pricing' className='section-padding bg-gradient-cursor'>;'
         <div className='container-cursor'>;'
@@ -810,7 +810,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div key={index} className='flex items - start space - x-3'>;'
                       {issue.type === 'error' ? ('
                         <AlertTriangle className='w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0' />) : issue.type === 'warning' ? ('
-                        <AlertTriangle className='w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0' />) : ('
+                        <AlertTriangle className='w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0' />) : (';
                         <CheckCircle className='w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0' />)}
                       <div>;'
                         <span className='text - gray - 300 text - sm'>;
@@ -849,7 +849,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div key={index} className="flex items - start space - x-3">;'
                       {issue.type === 'error' ? ('"
                         <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0" />) : issue.type === 'warning' ? ("
-                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0" />) : ("
+                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0" />) : (";
                         <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />)}
                       <div>;"
                         <span className="text - gray - 300 text - sm">{issue.message}</span>;"
@@ -949,7 +949,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {pricing.map((plan, index) => (
               <Card
                 key={index}
@@ -1027,7 +1027,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
           </h2>'
@@ -1035,7 +1035,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Join thousands of developers using our code quality checker to write;
             better, safer, and more maintainable code.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>'
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>';
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;'
         <div className='container-cursor text-center relative z-10'>;'

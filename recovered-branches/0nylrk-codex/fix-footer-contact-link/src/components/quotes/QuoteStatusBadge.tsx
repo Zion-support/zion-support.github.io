@@ -1,16 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 import { Badge } from "@/components/ui/badge",
 import { QuoteStatus } from "@/types/quotes",
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -21,10 +13,7 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
 interface QuoteStatusBadgeProps {
 
   status: QuoteStatus
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 
 =======
@@ -53,15 +42,6 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {};
   )
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
   const config = statusConfig[status];
@@ -70,14 +50,9 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {};
 ;
   return (
     <Badge className={config.class_name}>;
-<<<<<<< HEAD
-      {config.label}
+{config.label}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Badge } from "@/components/ui/badge",;
-=======
-      {config.label}"
-import { Badge } from "@/components/ui/badge",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
 "
@@ -92,8 +67,6 @@ interface QuoteStatusBadgeProps {;
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
 
@@ -104,25 +77,10 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
-
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

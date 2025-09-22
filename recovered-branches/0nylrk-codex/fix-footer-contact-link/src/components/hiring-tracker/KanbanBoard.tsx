@@ -1,19 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -27,15 +16,11 @@ import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {
   droppableId: string,
   index: number
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -51,20 +36,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { KanbanColumn } from "./KanbanColumn";
-=======
-
-import { useState, useEffect } from "react","
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd","
-import { useJobApplications } from "@/hooks/useJobApplications","
-import { JobApplication, ApplicationStatus } from "@/types/jobs","
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
-import { Button } from "@/components/ui/button","
-import { Skeleton } from "@/components/ui/skeleton","
-import { toast } from "@/hooks/use-toast",";
-import { KanbanColumn } from "./KanbanColumn";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile } from "@/hooks/use-mobile";
 interface DnDLocation {"
 import { KanbanColumn } from "./KanbanColumn","
@@ -85,17 +57,10 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   index: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -104,8 +69,6 @@ interface DnDLocation {;
   index: number;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
 
 interface DnDLocation {
 import { KanbanColumn } from "./KanbanColumn",;
@@ -134,18 +97,10 @@ interface DropResult {;
   source: DnDLocation,;
   destination?: DnDLocation | null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
 <<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   droppableId: string
-=======
-  index: number;  droppableId: string
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   index: number;  droppableId: string
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -153,11 +108,8 @@ interface DropResult {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
   droppableId: string
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
 
   droppableId: string;
   index: number;
@@ -189,34 +141,14 @@ const COLUMNS = []
     id: "rejected""
     title: "Rejected""
     description: "Not moving forward"}]
-<<<<<<< HEAD
 interface KanbanBoardProps {
   jobId?: string
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-export function KanbanBoard({ jobId }: KanbanBoardProps) {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -256,8 +188,7 @@ export function KanbanBoard() { return null; }
          destination.index === source.index)) {}
       return;
     }
-<<<<<<< HEAD
-    // Get the application that was dragged
+// Get the application that was dragged
     const application = applications.find(app => app.id === draggableId);
     if (!application) return;
     // Update the application status in the database
@@ -272,16 +203,6 @@ export function KanbanBoard() { return null; }
       [source.droppableId]: sourceColumn;
       [destination.droppableId]: destColumn});
 =======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
@@ -292,19 +213,7 @@ import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
 import {toast} from "@/hooks/use-toast";
 import {KanbanColumn} from "./KanbanColumn";
-<<<<<<< HEAD
-=======
-"
-import {useState, useEffect} from "react";"
-import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";"
-import {useJobApplications} from "@/hooks/useJobApplications";"
-import {JobApplication, ApplicationStatus} from "@/types/jobs";"
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Button} from "@/components/ui/button";"
-import {Skeleton} from "@/components/ui/skeleton";"
-import {toast} from "@/hooks/use-toast";"
-import {KanbanColumn} from "./KanbanColumn";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useIsMobile} from "@/hooks/use-mobile";
@@ -319,15 +228,7 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -354,38 +255,8 @@ const COLUMNS = [;
     description: "Successful candidates"},;
   {;
     id: "rejected",;
-<<<<<<< HEAD
-    title: "Rejected",,
+title: "Rejected",,
   description: "Not moving forward"}],;
-=======
-
-
-;
-
-
-// Define the kanban board columns based on application statuses;
-const COLUMNS = [;
-  {;"
-    id: "new",;"
-    title: "Applied",;"
-    description: "New applications"},;
-  {;"
-    id: "shortlisted",;"
-    title: "Shortlisted",;"
-    description: "Candidates selected for review"},;
-  {;"
-    id: "interview",;"
-    title: "Interview",;"
-    description: "Scheduled for interview"},;
-  {;"
-    id: "hired",;"
-    title: "Hired",;"
-    description: "Successful candidates"},;
-  {;"
-    id: "rejected",;"
-    title: "Rejected",;"
-    description: "Not moving forward"}],;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     title: "Rejected",;
     description: "Not moving forward"}],;
@@ -395,34 +266,14 @@ interface KanbanBoardProps {;
   jobId?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  // Initialize columns with applications based on their status;
+// Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
-<<<<<<< HEAD
 <<<<<<< HEAD
       // Group applications by status;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
-  const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
-  const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
-  const isMobile = useIsMobile();
-
-
-  // Initialize columns with applications based on their status;
-  useEffect(() => {;
-    if (applications) {;
-      // Group applications by status;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const groupedApplications = COLUMNS && COLUMNS.reduce((acc, column) => {;
         acc[column && column.id] = applications && applications.filter(app => app && app.status === column && column.id);
         return acc;
@@ -443,32 +294,13 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       return;
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-    
-<<<<<<< HEAD
-      const groupedApplications = COLUMNS.reduce((acc, column) => {;
+const groupedApplications = COLUMNS.reduce((acc, column) => {;
         acc[column.id] = applications.filter(app => app.status === column.id),;
         return acc;
       }, {} as Record<string JobApplication[]>),;
@@ -485,13 +317,10 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       return;
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    
+
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Get the application that was dragged
-<<<<<<< HEAD
-    const application = applications.find(app => app.id === draggableId),
+const application = applications.find(app => app.id === draggableId),
     if (!application) return,
 
     // Update the application status in the database
@@ -507,40 +336,19 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       ...columns,
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}),
-
-=======
-=======
-    // Get the application that was dragged;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const application = applications.find(app => app.id === draggableId);
     if (!application) return;
     // Update the application status in the database;
     const newStatus = destination.droppableId as ApplicationStatus;
     // Optimistically update the UI;
-=======
-    
-    // Get the application that was dragged
-    const application = applications.find(app => app.id === draggableId);
-    if (!application) return;
-    // Update the application status in the database
-    const newStatus = destination.droppableId as ApplicationStatus;
-    // Optimistically update the UI
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const sourceColumn = [...columns[source.droppableId]];
     const destColumn = [...columns[destination.droppableId]];
     const [removed] = sourceColumn.splice(source.index, 1);
     destColumn.splice(destination.index, 0, { ...removed, status: newStatus })
-<<<<<<< HEAD
-<<<<<<< HEAD
-    setColumns({
+setColumns({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Update status in the database
     try {
-=======
-    setColumns({}
-    // Update status in the database;
-    try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       await updateApplicationStatus(draggableId, newStatus),
       toast({"
         title: "Status updated"
@@ -555,18 +363,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
   }
 
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  },
-  
-
-<<<<<<< HEAD
-;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -586,52 +383,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
 
-<<<<<<< HEAD
-    // Update the application status in the database;            <CardHeader>;
-=======
-=======
-    setColumns({
-    // Update status in the database
-    try {
-      await updateApplicationStatus(draggableId, newStatus),
-      toast({
-        title: "Status updated"
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`})
-    } catch (error) {
-      // Revert the UI changes if the database update fails
-      toast({
-        title: "Failed to update status"
-        description: "Please try again"
-        variant: "destructive"})
-    }
-
-  },
-  
-
-  }
-
-  },
-  
-  if (isLoading) {
-    return (
-      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
-          <Card key={i} className="h-[500px]">
-            <CardHeader>
-              <Skeleton className="h-8 w-24" />
-            </CardHeader>
-            <CardContent>
-              <Skeleton className="h-[400px] w-full" />
-            </CardContent>
-          </Card>
-
-;
-;
-    // Get the application that was dragged;
-    const application = applications && applications.find(app => app && app.id === draggableId);
-    if (!application) return;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+// Update the application status in the database;            <CardHeader>;
     // Update the application status in the database;
     const newStatus = destination && destination.droppableId as ApplicationStatus;
 
@@ -649,8 +401,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
     // Update status in the database;
     try {;
       await updateApplicationStatus(draggableId, newStatus);
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Status updated",;`
         description: `Candidate moved to ${COLUMNS && COLUMNS.find(col => col && col.id === newStatus)?.title}`});
     } catch (error) {;
@@ -658,51 +409,12 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       toast({;"
         title: "Failed to update status",;"
         description: "Please try again",;"
-=======
-      toast({;
-        title: "Status updated",;
-        description: `Candidate moved to ${COLUMNS && COLUMNS.find(col => col && col.id === newStatus)?.title}`});
-    } catch (error) {;
-      // Revert the UI changes if the database update fails;
-      toast({;
-        title: "Failed to update status",;
-        description: "Please try again",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     }
   };
 
   if (isLoading) {;
-<<<<<<< HEAD
 
-=======
-    return (
-      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
-        {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
-    return (
-      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
-        {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
-      const groupedApplications = COLUMNS.reduce((acc, column) => {;
-        acc[column.id] = applications.filter(app => app.status === column.id),;
-        return acc,;
-      }, {} as Record<string JobApplication[]>),;
-      ;
-      setColumns(groupedApplications),;
-    }
-  }, [applications]),;
-  ;
-  // Handle drag end event to update the application status;
-  const handleDragEnd = async (result:DropResult) => {;
-    const { destination, source, draggableId } = result,;
-    ;
-    // If there's no destination or the item is dropped in the same place, do nothing;
-    if (!destination || ;
-        (destination.droppableId === source.droppableId && ;
-         destination.index === source.index)) {;
-      return,;
-    }
-    ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Get the application that was dragged;
     const application = applications.find(app => app.id === draggableId),;
     if (!application) return,;
@@ -728,8 +440,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
     // Update status in the database;
     try {;
       await updateApplicationStatus(draggableId, newStatus),;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Status updated",;`
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
     } catch (error) {;
@@ -737,35 +448,17 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       toast({;"
         title: "Failed to update status",;"
         description: "Please try again";"
-=======
-      toast({;
-        title: "Status updated",;
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
-    } catch (error) {;
-      // Revert the UI changes if the database update fails;
-      toast({;
-        title: "Failed to update status",;
-        description: "Please try again";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     }
   };
   if (isLoading) {;
-<<<<<<< HEAD
-    return ('`
+return ('`
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
 "
           <Card key={i} className="h-[500px]">;
             <CardHeader>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    return (
-      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
-          <Card key={i} className="h-[500px]">;
-            <CardHeader>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Skeleton className="h-8 w-24" />;
             </CardHeader>;
             <CardContent>;"
@@ -774,82 +467,31 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
           </Card>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ))}
       </div>;
     );
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   if (!applications || applications && applications.length === 0) {;
 
+if (!applications || applications.length === 0) {
 
-  
-<<<<<<< HEAD
-  if (!applications || applications.length === 0) {
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  if (!applications || applications.length === 0) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
 "
       <Card className="text-center py-16">;
-<<<<<<< HEAD
 =======
-
-
-
-        ))}
-      </div>;
-    );
-  }
-<<<<<<< HEAD
-    return (      <Card className="text-center py-16">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-      </div>;
-    );
-  }
-    return (      <Card className="text-center py-16">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
   if (!applications || applications && applications.length === 0) {;
 
-
-  
   if (!applications || applications.length === 0) {
 
     return (
@@ -875,11 +517,8 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-    );
+);
   }
-
-
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>;
@@ -896,24 +535,6 @@ import { Button } from '@/components / ui / button';
 import { Skeleton } from '@/components / ui / skeleton';
 import { toast } from '@/hooks / use - toast';
 import { KanbanColumn } from './KanbanColumn';
-=======
-
-  return (
-    <DragDropContext onDragEnd={handleDragEnd}>;'`
-      <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
-        {COLUMNS && COLUMNS.map(column => (;
-          <KanbanColumn;
-'
-import { useState, useEffect } from './react';'
-import { DragDropContext, Droppable, Draggable } from './react - beautiful - dnd';'
-import { useJobApplications } from '@/hooks / useJobApplications';'
-import { JobApplication, ApplicationStatus } from '@/types / jobs';'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
-import { Button } from '@/components / ui / button';'
-import { Skeleton } from '@/components / ui / skeleton';'
-import { toast } from '@/hooks / use - toast';'
-import { KanbanColumn } from './KanbanColumn';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile } from '@/hooks / use - mobile';
 interface DnDLocation {}
   droppable_id: string,
@@ -1031,7 +652,6 @@ interface DropResult {
 }
 // Define the kanban board columns based on application statuses
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
@@ -1043,24 +663,12 @@ if ( {) {}
       <div className={`grid grid - cols - 1 ${!is_mobile ? 'md:grid - cols - 3 lg:grid - cols - 5' : ''} gap - 4`}>;
         {Array.from ({ length: is_mobile ? 1 : 5 }).map ((_, i) => ("
           <Card key={i} className="h-[500px]">;
-<<<<<<< HEAD
-            <CardHeader>;
+<CardHeader>;
               <Skeleton className="h - 8 w-24" />;
             </CardHeader>;
             <CardContent>;
 <<<<<<< HEAD
-<<<<<<< HEAD
               <Skeleton className="h-[400px] w-full" />;
-=======
-            <CardHeader>;"
-              <Skeleton className="h - 8 w - 24" />;
-            </CardHeader>;
-            <CardContent>;"
-              <Skeleton className="h-[400px] w - full" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <Skeleton className="h-[400px] w - full" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
               <Skeleton className="h-[400px] w-full" />;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1072,25 +680,12 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
-    return (
+return (
       <Card className="text - center py-16">;
         <CardContent>;
 <<<<<<< HEAD
-<<<<<<< HEAD
           <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
           <p className="text - muted - foreground mb-6">;
-=======
-    return ("
-      <Card className="text - center py - 16">;
-        <CardContent>;"
-          <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;"
-          <p className="text - muted - foreground mb - 6">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;
-          <p className="text - muted - foreground mb - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
           <p className="text - muted - foreground mb-6">;
@@ -1105,103 +700,14 @@ if ( {) {}
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <KanbanColumn;
 
 <<<<<<< HEAD
-
-
-=======
-          <KanbanColumn;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-))}
-      </div>
-    )
-  }
-  if (!applications |applications.length === 0) {
-  if (!applications || applications.length === 0) {
-    return (
-      <Card className="text-center py-16">
-        <CardContent>
-          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>
-          <p className="text-muted-foreground mb-6">
-            You haven't received any applications for this job yet.
-          </p>
-        </CardContent>
-      </Card>
-    )
-  }
-  return (
-    <DragDropContext onDragEnd={handleDragEnd}>
-      <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>
-        {COLUMNS.map(column => (
-          <KanbanColumn
-          <KanbanColumn;            applications={columns[column.id] || []}
-            count={columns[column.id]?.length || 0}
-          />))}
-      </div>;
-    </DragDropContext>);
-}
-      [source.droppable_id]: source_column;)
-      [destination.droppable_id]: dest_column});
-    // Update status in the database;
-    try {
-  // TODO: Implement
-      await updateApplicationStatus (draggable_id, new_status);
-      toast ({
-        title: "Status updated",")`;
-
-      toast ({'
-        title: "Status updated",")
-        description: `Candidate moved to ${COLUMNS.find (col => col.id === new_status)?.title}`});
-    } catch (error) {
-      // Revert the UI changes if the database update fails;
-      toast ({"
-        title: "Failed to update status",""
-        description: "Please try again",")"
-        variant: "destructive"});"
-
-    }
-  }
-;
-  // Check condition;
-
-if ( {) {
-    return ("`;
-      <div className={`grid grid - cols - 1 ${!is_mobile ? 'md:grid - cols - 3 lg:grid - cols - 5' : } gap - 4`}>;
-
-              <Skeleton className="h - 8 w - 24" />;"
-
-              <Skeleton className="h-[400px] w - full" />;"
-
-            ;)
-          ))}
-      </div>);"
-      <Card className="text - center py - 16">;"
-
-          <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;""
-          <p className="text - muted - foreground mb - 6">;"
-      );
-      <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
             key={column && column.id}
             id={column && column.id}
@@ -1209,40 +715,14 @@ if ( {) {
             description={column && column.description}
             applications={columns[column && column.id] || []}
             count={columns[column && column.id]?.length || 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-          />;
-
-=======
-),;
-  }
-  ;
-  return (;
-    <DragDropContext onDragEnd={handleDragEnd}>;
-      <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' :'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
-        {COLUMNS.map(column => (;
-          <KanbanColumn;
-            key={column.id}            id={column.id}
-            title={column.title}
-            description={column.description}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+/>;
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />;
 
       </div>;
     </DragDropContext>;
-<<<<<<< HEAD
-
-
-
-            applications={columns[column.id] || []}
-=======
-          <KanbanColumn;            applications={columns[column.id] || []}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+applications={columns[column.id] || []}
 =======
           <KanbanColumn;            applications={columns[column.id] || []}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1260,12 +740,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   ),; interface DnDLocation {}
   droppableId: string;
@@ -1307,58 +782,10 @@ const [columns, setColumns] = useState<Record<string JobApplication[]>> ({}
 });
 const isMobile = useIsMobile ();
 if (applications) {}
-=======
-}
-
-;
-  ),; interface DnDLocation {
-  droppableId: string;
-index: number 
-}interface DropResult {
-  draggableId: string;
-source: DnDLocation;
-destination?: DnDLocation | null 
-}//Define the kanban board columns based on application statuses const COLUMNS = [ {
-  id: "new";
-title: "Applied";
-description: "New applications" 
-};
-{
-  id: "shortlisted";
-title: "Shortlisted";
-description: "Candidates selected for review" 
-};
-{
-  id: "interview";
-title: "Interview";
-description: "Scheduled for interview" 
-};
-{
-  id: "hired";
-title: "Hired";
-description: "Successful candidates" 
-};
-{
-  interface KanbanBoardProps {
-  jobId?: string 
-}export function KanbanBoard ({
-  jobId 
-}: KanbanBoardProps) {
-  const {
-  applications, isLoading, updateApplicationStatus 
-}= useJobApplications (jobId);
-const [columns, setColumns] = useState<Record<string JobApplication[]>> ({
-<<<<<<< HEAD
-  
-});
-const isMobile = useIsMobile ();
-if (applications) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   //Group applications by status setColumns (groupedApplications) 
 }
 ;
 
-<<<<<<< HEAD
 }, [applications]);'
 //Handle drag end event to update the application status //If there's no destination or the item is dropped in the same place, do nothing if (!destination || (destination.droppableId === source.droppableId && 
 }
@@ -1389,17 +816,6 @@ if (isLoading) {}
   columns[column.id] || [] 
 }count= {}
   columns[column.id]?.length || 0;
-=======
-}, [applications]);
-//Handle drag end event to update the application status //If there's no destination or the item is dropped in the same place, do nothing if (!destination || (destination.droppableId === source.droppableId && 
-}
-};
-if (isLoading) {
-  return (<div className= {
-=======
-
-  return (<div className= {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   `grid grid-cols-1 $ {
   !isMobile ? 'md:grid-cols-3 lg:grid-cols-5': `;
 }gap-4` )
@@ -1422,12 +838,8 @@ if (isLoading) {
 }applications= {
   columns[column.id] || [] 
 }count= {
-<<<<<<< HEAD
-  columns[column.id]?.length || 0 
+columns[column.id]?.length || 0 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  columns[column.id]?.length || 0;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }/>) ) 
 
 }</div> ) 
@@ -1444,20 +856,12 @@ pr-12325
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

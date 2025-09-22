@@ -57,23 +57,23 @@ setSubmitSuccess (true);
 }</motion.div> </div> </section> <motion.div initial= {
   {
   opacity: 0, x: -30 
-
+;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }whileInView= {
   {
   opacity: 1, x: 0 
-
+;
 }transition= {
   {
 
-  duration: 0 && 0.8 
-  duration: 0.8 
+  duration: 0 && 0.8 ;
+  duration: 0.8 ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }viewport= {
   {
   once: true 
-
+;
 }> <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8" > <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6" > Get Free Consultation </h2> {;
   isSubmitted ? (<motion && motion.div > <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2" >Thank You!</h3> <p className="text-gray-300 mb-6" > Your message has been sent successfully. We'll get back to you within 24 hours. </p> <div className="text-sm text-gray-400" > <p>✓ Free consultation scheduled</p> <p>✓ Service recommendations prepared</p> <p>✓ ROI analysis in progress</p> </div> return (<UltraFuturisticBackground2029> <Head> <title>Contact Zion Tech Group | Revolutionary 2029 Technology Services</title> <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Get in touch today!" /> <meta name="keywords" content="contact, Zion Tech Group, AI services, quantum computing, space technology, biotechnology, 2029 technology" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/contact" /> </Head> <UltraFuturisticNavigation2029 /> > <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Get In Touch </span> <br /> <span className="text-white" >Transform Your Business</span> </h1> <p className="text-xl text-gray-300 mb-8" > Ready to revolutionize your business with cutting-edge 2029 technology? Our team of experts is here to help you implement the future today. </p> </motion && motion.div> </section> > <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" > <Phone className="w-8 h-8 text-white" /> </div> </div> </motion && motion.div> {;
   /* Email Contact */ ;"
@@ -102,44 +102,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
   opacity: 0, y: 30 
-
+;
 }whileInView= {
   {
   opacity: 1, y: 0 
-
+;
 }transition= {
   {
   duration: 0.8 
-
+;
 }viewport= {
   {
   once: true 
-
+;
 }className="text-center mb-12"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> Popular Revolutionary Services </h2> <p className="text-xl text-gray-300"> Explore some of our most sought-after 2029 technology solutions </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
   popularServices.map ( (service, index) => (<motion.div key= {
   service.id 
 }initial= {
   {
   opacity: 0, y: 20 
-
+;
 }whileInView= {
   {
   opacity: 1, y: 0 
-
+;
 }transition= {
   {
   duration: 0.6, delay: index * 0.1 
-
+;
 }viewport= {
   {
   once: true 
-
+;
 }className="group cursor-pointer"> <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105"> {
   /* Service Icon */ 
 }<div className= {
   `w-16 h-16 bg-gradient-to-r $ {
   service.color 
-}rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300` 
+}rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300` ;
 }> <span className="text-2xl"> {
   service.icon 
 }</span> </div> {
@@ -178,41 +178,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial= {
   {
   opacity: 0, y: 30 
-
+;
 }whileInView= {
   {
   opacity: 1, y: 0 
-
+;
 }transition= {
   {
   duration: 0.8 
-
+;
 }viewport= {
   {
   once: true 
-
+;
 }> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
 }className="text-center mb-12"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> Popular Revolutionary Services </h2> <p className="text-xl text-gray-300"> Explore some of our most sought-after 2029 technology solutions </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
   popularServices.map ( (service, index) => (<motion.div key= {
   service.id
 }initial= {
   {
-  opacity: 0, y: 20
+  opacity: 0, y: 20;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }whileInView= {
   {
-  opacity: 1, y: 0
+  opacity: 1, y: 0;
 }transition= {
   {
 }viewport= {
   {
-  once: true
+  once: true;
 }className="group cursor-pointer"> <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105"> {
   /* Service Icon */
 }<div className= {}`
   `w-16 h-16 bg-gradient-to-r $ {}
   service.color;`
-}rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`"
+}rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`";
 }> <span className="text-2xl"> {}
   service.icon;
 }</span> </div> {}
@@ -291,7 +291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           required;
                           value={formData && formData.email}
                           onChange={handleInputChange}"
-                          className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20""
+                          className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"";
                           placeholder="Enter your email address"
                           Company Name"
                         ">;
@@ -303,7 +303,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           name="company"
                           value={formData && formData.company}
                           onChange={handleInputChange}"
-                          className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20""
+                          className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"";
                           placeholder="Enter your company name"
                           Phone Number"
                         ">;
@@ -315,7 +315,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           name="phone"
                           value={formData && formData.phone}
                           onChange={handleInputChange}"
-                          className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20""
+                          className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"";
                           placeholder="Enter your phone number"
                         Service of Interest"
                       ">;
@@ -337,7 +337,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         rows={5}
                         value={formData && formData.message}
                         onChange={handleInputChange}"
-                        className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20 resize-none""
+                        className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20 resize-none"";
                         placeholder="Tell us about your project, goals, and how we can help transform your business with revolutionary technology..."
                       <button"
                         type="submit"
@@ -366,7 +366,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {popularServices.map((service, index) => (
                 <motion.div;
                   key={service.id}
@@ -392,7 +392,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className="text - gray-300 text-lg">;
                       Thank you for reaching out. Our team will get back to you within 2 hours with a personalized solution.;
                     </p>;
-                  </motion.div>) : (
+                  </motion.div>) : (;
                   <form on_submit={handle_submit} className="space-y-6">;
                     <div className="grid grid - cols - 1 md:grid - cols-2 gap-6">;
                       <div>;
@@ -513,7 +513,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className="flex items-center justify-center">;
                             <div className="animate - spin rounded - full h - 5 w - 5 border - b-2 border-white mr-2"></div>;
                             Sending Message...;
-                          </span>) : (
+                          </span>) : (;
                           <span className="flex items-center justify-center">;
                             <Send className="w - 5 h-5 mr-2" />;
                             Send Message;
@@ -636,14 +636,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
             >
-              <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">;
                 Why Choose
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-12">
                 We're not just another technology company - we're your partners in building the future
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Rocket className="w-8 h-8 text-white" />

@@ -3,266 +3,189 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting advanced syntax fixing...');
+console.log('🚀 Starting Advanced Syntax Fixer');
 
-class AdvancedSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixesApplied = [];
-    this.filesProcessed = 0;
-  }
+// Fix specific syntax issues
+function fixAdvancedSyntaxIssues(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const fixed = false;
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
-  }
+    // Fix HTML entity issues
+    content = content.replace(/&amp;apos;/g, "'");
+    content = content.replace(/&amp;quot;/g, '"');
+    content = content.replace(/&amp;lt;/g, '<');
+    content = content.replace(/&amp;gt;/g, '>');
+    content = content.replace(/&apos;/g, "'");
+    content = content.replace(/&quot;/g, '"');
+    content = content.replace(/&lt;/g, '<');
+    content = content.replace(/&gt;/g, '>');
 
-  findSourceFiles() {
-    const files = [];
-    const srcDir = path.join(this.projectRoot, 'src');
-    
-    function scanDirectory(dir) {
-      try {
-        const items = fs.readdirSync(dir);
-        for (const item of items) {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-            scanDirectory(fullPath);
-          } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-            files.push(fullPath);
-          }
-        }
-      } catch (error) {
-        // Skip directories that can't be read
-      }
-    }
-    
-    scanDirectory(srcDir);
-    return files;
-  }
+    // Fix import statements
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import React from "react",/g,
+      'import React from "react";'
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
 
-  fixAdvancedSyntaxErrors(content, filePath) {
-    let fixed = content;
-    let changes = 0;
+    // Fix export statements
+    content = content.replace(
+      /export default function (\w+)\(\): JSX\.Element \{/g,
+      'export default function $1(): JSX.Element {'
+    );
+    content = content.replace(
+      /export interface (\w+) \{;/g,
+      'export interface $1 {'
+    );
+    content = content.replace(
+      /export const (\w+): (\w+)\[\] = \[;/g,
+      'export const $1: $2[] = [];'
+    );
 
-    // Fix unterminated string literals - look for lines ending with single quotes
-    fixed = fixed.replace(/^([^'\n]*'[^'\n]*)$/gm, (match, line) => {
-      if (line.endsWith("'") && !line.endsWith("';") && !line.endsWith("',") && !line.endsWith("')") && !line.endsWith("'}")) {
-        changes++;
-        return line + ';';
-      }
-      return match;
-    });
+    // Fix JSX syntax
+    content = content.replace(/&lt;main&gt;/g, '<main>');
+    content = content.replace(/&lt;\/main&gt;/g, '</main>');
+    content = content.replace(/&lt;div&gt;/g, '<div>');
+    content = content.replace(/&lt;\/div&gt;/g, '</div>');
 
-    // Fix unterminated string literals in import statements
-    fixed = fixed.replace(/^import\s+.*?from\s+['"][^'"]*$/gm, (match) => {
-      if (!match.endsWith(';') && !match.endsWith('"') && !match.endsWith("'")) {
-        changes++;
-        return match + ';';
-      }
-      return match;
-    });
+    // Fix object syntax issues
+    content = content.replace(/\{\s*,/g, '{');
+    content = content.replace(/,\s*\}/g, '}');
+    content = content.replace(/,\s*,/g, ',');
 
-    // Fix unterminated string literals in JSX attributes
-    fixed = fixed.replace(/className\s*=\s*["'][^"']*$/gm, (match) => {
-      if (!match.endsWith('"') && !match.endsWith("'")) {
-        changes++;
-        return match + '"';
-      }
-      return match;
-    });
+    // Fix array syntax issues
+    content = content.replace(/\[\s*,/g, '[');
+    content = content.replace(/,\s*\]/g, ']');
 
-    // Fix unterminated string literals in console.log statements
-    fixed = fixed.replace(/console\.log\s*\(\s*['"][^'"]*$/gm, (match) => {
-      if (!match.endsWith('"') && !match.endsWith("'")) {
-        changes++;
-        return match + '");';
-      }
-      return match;
-    });
+    // Fix function parameter issues
+    content = content.replace(/\(\s*,/g, '(');
+    content = content.replace(/,\s*\)/g, ')');
 
-    // Fix unterminated string literals in return statements
-    fixed = fixed.replace(/return\s+['"][^'"]*$/gm, (match) => {
-      if (!match.endsWith('"') && !match.endsWith("'")) {
-        changes++;
-        return match + '";';
-      }
-      return match;
-    });
+    // Fix semicolon issues
+    content = content.replace(/;\s*,/g, ';');
+    content = content.replace(/,\s*;/g, ';');
 
-    // Fix extra quotes at the end of lines
-    fixed = fixed.replace(/;\s*'$/gm, ';');
-    fixed = fixed.replace(/;\s*"$/gm, ';');
+    // Fix React component syntax
+    content = content.replace(
+      /const (\w+) = \(\) => \{/g,
+      'const $1 = () => {'
+    );
+    content = content.replace(/export default (\w+),/g, 'export default $1;');
 
-    // Fix missing semicolons after variable declarations
-    fixed = fixed.replace(/^(const|let|var)\s+[^=]+=\s*[^;]+$/gm, (match) => {
-      if (!match.endsWith(';') && !match.includes('{') && !match.includes('(') && !match.includes('[')) {
-        changes++;
-        return match + ';';
-      }
-      return match;
-    });
+    // Fix TypeScript interface syntax
+    content = content.replace(/interface (\w+) \{;/g, 'interface $1 {');
+    content = content.replace(/type (\w+) = \{;/g, 'type $1 = {');
 
-    // Fix missing semicolons after function calls
-    fixed = fixed.replace(/^[a-zA-Z_$][a-zA-Z0-9_$]*\s*\([^)]*\)\s*$/gm, (match) => {
-      if (!match.endsWith(';') && !match.includes('{') && !match.includes('=')) {
-        changes++;
-        return match + ';';
-      }
-      return match;
-    });
+    // Fix JSX syntax
+    content = content.replace(/<(\w+)\s*,/g, '<$1');
+    content = content.replace(/,\s*>/g, '>');
 
-    // Fix missing commas in object literals
-    fixed = fixed.replace(/(\w+):\s*[^,}\n]+(\n\s*[a-zA-Z_$])/g, (match, key, rest) => {
-      if (!match.includes(',')) {
-        changes++;
-        return match.replace(/(\n\s*[a-zA-Z_$])/, ',\n$1');
-      }
-      return match;
-    });
-
-    // Fix missing commas in array literals
-    fixed = fixed.replace(/([^,\n]+)(\n\s*[^,\n\]]+)/g, (match, first, second) => {
-      if (match.includes('[') && !match.includes(',') && !second.includes(']')) {
-        changes++;
-        return match.replace(second, ',' + second);
-      }
-      return match;
-    });
-
-    // Fix JSX syntax issues
-    fixed = fixed.replace(/<([A-Z][a-zA-Z0-9]*)\s*([^>]*?)\s*>/g, (match, tag, props) => {
-      if (props && !props.endsWith('/') && !props.includes('>')) {
-        const selfClosingTags = ['img', 'input', 'br', 'hr', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source', 'track', 'wbr'];
-        if (selfClosingTags.includes(tag.toLowerCase())) {
-          changes++;
-          return `<${tag} ${props} />`;
-        }
-      }
-      return match;
-    });
-
-    // Fix missing closing braces
-    const openBraces = (fixed.match(/\{/g) || []).length;
-    const closeBraces = (fixed.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      const missing = openBraces - closeBraces;
-      fixed += '\n' + '}'.repeat(missing);
-      changes += missing;
+    // Fix performance API issues
+    if (content.includes('performance.')) {
+      content = content.replace(/performance\./g, 'window.performance.');
     }
 
-    // Fix missing closing parentheses
-    const openParens = (fixed.match(/\(/g) || []).length;
-    const closeParens = (fixed.match(/\)/g) || []).length;
-    if (openParens > closeParens) {
-      const missing = openParens - closeParens;
-      fixed += ')'.repeat(missing);
-      changes += missing;
+    // Fix React hooks issues
+    content = content.replace(/useEffect\(\(\) => \{/g, 'useEffect(() => {');
+
+    // Fix console statements
+    content = content.replace(/console\.log\(/g, '// console.log(');
+
+    // Fix specific parsing errors
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
+    content = content.replace(
+      /export default function App\(\): JSX\.Element \{/g,
+      'export default function App(): JSX.Element {'
+    );
+
+    // Fix vite config issues
+    if (filePath.includes('vite.config.ts')) {
+      content = content.replace(
+        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'node: path', export default defineConfig\(\{/g,
+        `import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
+
+export default defineConfig({`
+      );
+
+      content = content.replace(
+        /plugins: \[ react\(\{ include: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefresh: true,jsxRuntime: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
+        `plugins: [
+    react({
+      include: '**/*.{jsx,js,ts,tsx}',
+      fastRefresh: true,
+      jsxRuntime: 'automatic'
+    }),
+    splitVendorChunkPlugin()
+  ]`
+      );
     }
 
-    // Fix missing closing brackets
-    const openBrackets = (fixed.match(/\[/g) || []).length;
-    const closeBrackets = (fixed.match(/\]/g) || []).length;
-    if (openBrackets > closeBrackets) {
-      const missing = openBrackets - closeBrackets;
-      fixed += ']'.repeat(missing);
-      changes += missing;
+    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      return true;
     }
-
-    // Fix React import issues
-    fixed = fixed.replace(/^import\s+React\s+from\s+['"]react['"];?\s*$/gm, 'import React from \'react\';');
-    fixed = fixed.replace(/^import\s+ReactDOM\s+from\s+['"]react-dom\/client['"];?\s*$/gm, 'import ReactDOM from \'react-dom/client\';');
-
-    // Fix TypeScript import issues
-    fixed = fixed.replace(/^import\s+.*?\s+from\s+['"][^'"]*;?\s*$/gm, (match) => {
-      if (!match.endsWith(';')) {
-        changes++;
-        return match + ';';
-      }
-      return match;
-    });
-
-    // Clean up extra whitespace and ensure proper line endings
-    fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');
-    fixed = fixed.replace(/\s+$/gm, ''); // Remove trailing whitespace
-    fixed = fixed.trim() + '\n';
-
-    if (changes > 0) {
-      this.log(`Fixed ${changes} advanced syntax issues in ${path.relative(this.projectRoot, filePath)}`);
-      this.fixesApplied.push(`${changes} fixes in ${path.relative(this.projectRoot, filePath)}`);
-    }
-
-    return fixed;
-  }
-
-  async fixFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const fixed = this.fixAdvancedSyntaxErrors(content, filePath);
-      
-      if (fixed !== content) {
-        fs.writeFileSync(filePath, fixed);
-        this.filesProcessed++;
-        return true;
-      }
-      return false;
-    } catch (error) {
-      this.log(`Error processing ${filePath}: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
-  async fixAllFiles() {
-    this.log('Finding source files...');
-    const files = this.findSourceFiles();
-    this.log(`Found ${files.length} files to process`);
-
-    for (const file of files) {
-      await this.fixFile(file);
-    }
-
-    this.log(`Processed ${this.filesProcessed} files`);
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      filesProcessed: this.filesProcessed,
-      fixesApplied: this.fixesApplied,
-      summary: {
-        totalFixes: this.fixesApplied.length,
-        success: this.fixesApplied.length > 0
-      }
-    };
-
-    const reportPath = path.join(this.projectRoot, 'advanced-syntax-fix-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log('\n=== ADVANCED SYNTAX FIX REPORT ===');
-    this.log(`Files processed: ${report.filesProcessed}`);
-    this.log(`Fixes applied: ${report.summary.totalFixes}`);
-    this.log(`Success: ${report.summary.success ? 'YES' : 'NO'}`);
-    this.log(`Report saved to: ${reportPath}`);
-  }
-
-  async run() {
-    this.log('Starting advanced syntax fixing...');
-    
-    try {
-      await this.fixAllFiles();
-      await this.generateReport();
-      this.log('Advanced syntax fixing completed!');
-    } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
-      await this.generateReport();
-      process.exit(1);
-    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Run the fixer
-const fixer = new AdvancedSyntaxFixer();
-fixer.run().catch(console.error);
+// Get all TypeScript/JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+
+    if (
+      stat.isDirectory() &&
+      !item.startsWith('.') &&
+      item !== 'node_modules'
+    ) {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
+// Main execution
+try {
+  const files = getAllFiles('/workspace');
+  let fixedCount = 0;
+
+  console.log(`Found ${files.length} files to check`);
+
+  for (const file of files) {
+    if (fixAdvancedSyntaxIssues(file)) {
+      fixedCount++;
+      console.log(`✅ Fixed: ${file}`);
+    }
+  }
+
+  console.log(`\n🎯 Fixed ${fixedCount} files`);
+} catch (error) {
+  console.error('Error:', error.message);
+  process.exit(1);
+}

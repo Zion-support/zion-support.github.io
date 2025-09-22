@@ -51,16 +51,16 @@ import { Code;
   BookOpen;
   Github;'
         free: '1,000 operations/month''
-        pro: '$119/month''
-        enterprise: 'Custom'
+        pro: '$119/month'';
+        enterprise: 'Custom';
       }'
-      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500''
-      website: 'https://encrypt.api''
-      docs: 'https://docs.encrypt.api''
-      github: 'https://github.com/encrypt-api''
-      status: 'Live''
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500'';
+      website: 'https://encrypt.api'';
+      docs: 'https://docs.encrypt.api'';
+      github: 'https://github.com/encrypt-api'';
+      status: 'Live'';
       users: '4,200+''
-      responseTime: '<20ms'
+      responseTime: '<20ms';
     }
 
   Terminal
@@ -68,8 +68,8 @@ import { Code;
 export default function ApiToolsPage() {
   const apiTools = null;
       description:
-        'Generate production-ready code in multiple languages using natural language descriptions and AI.'
-      features: [
+        'Generate production-ready code in multiple languages using natural language descriptions and AI.';
+      features: [;
         'Support for 20+ programming languages'
         'Real-time code completion and suggestions'
         'Custom code templates and patterns'
@@ -97,7 +97,7 @@ rating: 4.8,
       title: 'DataSync API - Real-time Data Synchronization',
       description:
         'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
-      features: [
+      features: [;
         'Multi-database support (PostgreSQL, MySQL, MongoDB)',
         'Real-time change detection and propagation',
         'Conflict resolution and data validation',
@@ -125,7 +125,7 @@ rating: 4.9,
       title: 'GeoAPI - Advanced Geospatial Services',
       description:
         'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.'
-      features: [
+      features: [;
         'Multi-database support (PostgreSQL, MySQL, MongoDB)'
         'Real-time change detection and propagation'
         'Conflict resolution and data validation'
@@ -153,7 +153,7 @@ rating: 4.7,
       title: 'AuthGuard API - Enterprise Authentication',
       description:
         'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.'
-      features: [
+      features: [;
         'Global geocoding and reverse geocoding'
         'Real-time traffic and routing optimization'
         'Geofencing and location tracking'
@@ -181,7 +181,7 @@ rating: 4.9,
       title: 'WebhookHub - Intelligent Webhook Management',
       description:
         'Secure, scalable authentication and authorization system with advanced security features.'
-      features: [
+      features: [;
         'Multi-factor authentication (MFA)'
         'OAuth 2.0 and OpenID Connect support'
         'Role-based access control (RBAC)'
@@ -209,7 +209,7 @@ rating: 4.8,
       title: 'NLP API - Natural Language Processing',
       description:
         'Reliable webhook delivery, retry logic, and event processing for modern applications.'
-      features: [
+      features: [;
         'Guaranteed webhook delivery with retry logic'
         'Event filtering and transformation'
         'Real-time monitoring and analytics'
@@ -237,7 +237,7 @@ rating: 4.7,
       title: 'Analytics API - Business Intelligence',
       description:
         'Advanced text analysis, sentiment detection, and language understanding capabilities.'
-      features: [
+      features: [;
         'Text classification and categorization'
         'Sentiment analysis and emotion detection'
         'Named entity recognition (NER)'
@@ -264,8 +264,8 @@ rating: 4.8,
       icon: <Lock className='w-8 h-8 text-white' />,
       title: 'EncryptAPI - Data Encryption Services',
       description:
-        'Comprehensive analytics and reporting APIs for data-driven decision making.'
-      features: [
+        'Comprehensive analytics and reporting APIs for data-driven decision making.';
+      features: [;
         'Real-time data aggregation and analysis'
         'Custom dashboard creation and sharing'
         'Advanced filtering and segmentation'
@@ -743,15 +743,15 @@ function ApiToolsPage() {}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">"
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />"
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />"
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">";
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">"
             <Terminal className="w-4 h-4 mr-2" />
             Developer-First API Solutions;
           </div>"
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">;
             Powerful API Tools & Services;
           </h1>"
-          <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">;
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
           </p>"
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -805,11 +805,11 @@ function ApiToolsPage() {}
           content='Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='API Tools & Developer Services | Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Powerful APIs and developer tools for modern applications. AI, security, analytics, and more.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -818,15 +818,15 @@ function ApiToolsPage() {}
       <section className='relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]' />
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
             <Terminal className='w-4 h-4 mr-2' />
             Developer-First API Solutions
           </div>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight'>
+          <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight'>;
             Powerful API Tools & Services
           </h1>
-          <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
+          <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>;
             Build faster, scale better, and deliver more with our comprehensive
             collection of developer APIs. Each tool is designed for performance
             reliability, and ease of integration.
@@ -846,9 +846,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {category}
       {/* API Tools Grid */}
 <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>;
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
@@ -862,7 +862,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               support.
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools.map((tool, index) => (
             </h2>;'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
@@ -876,7 +876,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {filteredTools && filteredTools.map((tool, index) => (;
               <Card;
                 key={index}'
-                className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'`
+                className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'`;
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='flex items-start space-x-6'>;'
                   <div className='relative'>;
@@ -979,7 +979,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button"
                         href={tool && tool.github}                        variant="outline""
                         size="sm""
-                        className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
+                        className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400";
                       >"
                         <BookOpen className="w-4 h-4 mr-2" />
                         Documentation;
@@ -988,7 +988,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={tool.docs}
 variant='outline'
                         size='sm'
-                        className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'
+                        className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400';
                       >
                         <BookOpen className='w-4 h-4 mr-2' />
                         Documentation
@@ -997,7 +997,7 @@ variant='outline'
                         href={tool.github}
 variant='ghost'
                         size='sm'
-                        className='text-gray-400 hover:text-indigo-400'
+                        className='text-gray-400 hover:text-indigo-400';
                       >
                         <Github className='w-4 h-4 mr-2' />
                         GitHub
@@ -1013,10 +1013,10 @@ variant='ghost'
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Developer Resources */}
 <section className='py-24 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
-
+;
               Developer Resources;
             </h2>'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1024,8 +1024,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               with our APIs.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'
-            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>'
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>';
+            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>';
               <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>'
                 <BookOpen className='w-8 h-8 text-indigo-400' />
               </div>'
@@ -1040,7 +1040,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Explore Docs'
                 <ArrowRight className='w-4 h-4 ml-2' />              </Button>
             </Card>'
-            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>'
+            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>';
               <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>'
                 <Play className='w-8 h-8 text-indigo-400' />
               </div>'
@@ -1056,7 +1056,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <ArrowRight className='w-4 h-4 ml-2' />
               </Button>
             </Card>'
-            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>'
+            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>';
               <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>'
                 <Github className='w-8 h-8 text-indigo-400' />
               </div>'

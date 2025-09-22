@@ -1,46 +1,37 @@
-// Performance optimization utilities
+import { Metadata } from 'next';
 
-export const preloadCriticalResources = () => {
-  if (typeof window === 'undefined') return
-
-  const criticalImages = [
-    '/images/hero-bg.jpg',
-    '/images/logo.png',
-    '/images/ai-solutions.jpg',
-  ]
-
-  criticalImages.forEach(src => {
-    const link = document.createElement('link')
-    link.rel = 'preload'
-    link.as = 'image'
-    link.href = src
-    document.head.appendChild(link)
-  })
+export function optimizeImages() {
+  return {
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  };
 }
 
-export const optimizeImages = () => {
-  if (typeof window === 'undefined') return
-
-  const images = document.querySelectorAll('img')
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy'
+export function getPerformanceHeaders() {
+  return [
+    {
+      key: 'X-DNS-Prefetch-Control',
+      value: 'on'
+    },
+    {
+      key: 'X-Frame-Options',
+      value: 'DENY'
+    },
+    {
+      key: 'X-Content-Type-Options',
+      value: 'nosniff'
+    },
+    {
+      key: 'Referrer-Policy',
+      value: 'origin-when-cross-origin'
+    },
+    {
+      key: 'Permissions-Policy',
+      value: 'camera=(), microphone=(), geolocation=()'
     }
-    if (!img.decoding) {
-      img.decoding = 'async'
-    }
-  })
-}
-
-export const addPerformanceMonitoring = () => {
-  if (typeof window === 'undefined' || !('performance' in window)) return
-
-  window.addEventListener('load', () => {
-    const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-    console.log('Performance metrics:', {
-      domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-      loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-      totalTime: perfData.loadEventEnd - perfData.fetchStart,
-    })
-  })
+  ];
 }

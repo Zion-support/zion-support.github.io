@@ -83,102 +83,102 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     {
-      id: 'AI & Machine Learning'
-      name: 'AI & ML'
-      icon: '🧠'
+      id: 'AI & Machine Learning';
+      name: 'AI & ML';
+      icon: '🧠';
       count: allServices.filter(s => s.category === 'AI & Machine Learning')
         .length
     }
     {
-      id: 'Healthcare AI'
-      name: 'Healthcare'
-      icon: '🏥'
+      id: 'Healthcare AI';
+      name: 'Healthcare';
+      icon: '🏥';
       count: allServices.filter(s => s.category === 'Healthcare AI').length
     }
     {
-      id: 'Fintech AI'
-      name: 'Fintech'
-      icon: '💰'
+      id: 'Fintech AI';
+      name: 'Fintech';
+      icon: '💰';
       count: allServices.filter(s => s.category === 'Fintech AI').length
     }
     {
-      id: 'Cybersecurity'
-      name: 'Security'
-      icon: '🛡️'
+      id: 'Cybersecurity';
+      name: 'Security';
+      icon: '🛡️';
       count: allServices.filter(s => s.category === 'Cybersecurity').length
     }
     {
-      id: 'IoT & Smart Cities'
-      name: 'Smart Cities'
-      icon: '🏙️'
+      id: 'IoT & Smart Cities';
+      name: 'Smart Cities';
+      icon: '🏙️';
       count: allServices.filter(s => s.category === 'IoT & Smart Cities')
         .length
     }
     {
-      id: 'Blockchain & DeFi'
-      name: 'Blockchain'
-      icon: '🔗'
+      id: 'Blockchain & DeFi';
+      name: 'Blockchain';
+      icon: '🔗';
       count: allServices.filter(s => s.category === 'Blockchain & DeFi').length
     }
     {
-      id: 'Quantum Computing'
-      name: 'Quantum'
-      icon: '⚛️'
+      id: 'Quantum Computing';
+      name: 'Quantum';
+      icon: '⚛️';
       count: allServices.filter(s => s.category === 'Quantum Computing').length
     }
     {
-      id: 'Space Technology'
-      name: 'Space Tech'
-      icon: '🚀'
+      id: 'Space Technology';
+      name: 'Space Tech';
+      icon: '🚀';
       count: allServices.filter(s => s.category === 'Space Technology').length
     }
     {
-      id: 'Autonomous Systems'
-      name: 'Autonomous'
-      icon: '🤖'
+      id: 'Autonomous Systems';
+      name: 'Autonomous';
+      icon: '🤖';
       count: allServices.filter(s => s.category === 'Autonomous Systems')
         .length
     }
     {
-      id: 'AR/VR & Metaverse'
-      name: 'AR/VR'
-      icon: '🥽'
+      id: 'AR/VR & Metaverse';
+      name: 'AR/VR';
+      icon: '🥽';
       count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length
     }
     {
-      id: '5G/6G Networks'
-      name: '5G/6G'
-      icon: '📡'
+      id: '5G/6G Networks';
+      name: '5G/6G';
+      icon: '📡';
       count: allServices.filter(s => s.category === '5G/6G Networks').length
     }
     {
-      id: 'Biotechnology AI'
-      name: 'Biotech'
-      icon: '🧬'
+      id: 'Biotechnology AI';
+      name: 'Biotech';
+      icon: '🧬';
       count: allServices.filter(s => s.category === 'Biotechnology AI').length
     }
     {
-      id: 'Renewable Energy'
-      name: 'Energy'
-      icon: '⚡'
+      id: 'Renewable Energy';
+      name: 'Energy';
+      icon: '⚡';
       count: allServices.filter(s => s.category === 'Renewable Energy').length
     }
     {
-      id: 'Edge Computing'
-      name: 'Edge'
-      icon: '🌐'
+      id: 'Edge Computing';
+      name: 'Edge';
+      icon: '🌐';
       count: allServices.filter(s => s.category === 'Edge Computing').length
     }
     {
-      id: 'Quantum Internet'
-      name: 'Q-Internet'
-      icon: '🌍'
+      id: 'Quantum Internet';
+      name: 'Q-Internet';
+      icon: '🌍';
       count: allServices.filter(s => s.category === 'Quantum Internet').length
     }
     {
-      id: 'Neuromorphic Computing'
-      name: 'Neuro'
-      icon: '🧠'
+      id: 'Neuromorphic Computing';
+      name: 'Neuro';
+      icon: '🧠';
       count: allServices.filter(s => s.category === 'Neuromorphic Computing')
         .length
     },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
@@ -214,7 +214,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         case 'popularity':
           return b.popular ? 1 : -1;'
         case 'price':
-'
+';
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>'
       <div className='max-w-7xl mx-auto'>        {/* Header */}
 
@@ -225,7 +225,7 @@ return (
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
-          return (
+          return (;
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
         default:
@@ -265,7 +265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-          <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+          <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
             Revolutionary Micro SAAS Services 2025;
           </h2>'
           <p className='text-xl text-white/70 max-w-3xl mx-auto mb-8'>
@@ -287,7 +287,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>'
           <div className='bg-white/5 rounded-2xl p-6 border border-white/10'>'
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-6 text-center'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-6 text-center'>;
               <div>'
                 <div className='text-3xl font-bold text-blue-400'>
                   {allServices.length}+
@@ -307,7 +307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-white/60'>Average ROI</div>              </div>        >
           className="text-center mb-16"
         >"
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
             Revolutionary Micro SAAS Services 2025;
           </h2>"
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
@@ -328,7 +328,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>"
           <div className="bg-white/5 rounded-2xl p-6 border border-white/10">"
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">;
               <div>"
                 <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>"
                 <div className="text-white/60">Services Available</div>
@@ -443,7 +443,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
             {/* Search */}'
             <div className='relative flex-1 max-w-md'>'
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
@@ -532,7 +532,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion&& motion.div;
                   key={service && service.id}
         {viewMode === 'grid' ? (
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             <AnimatePresence>
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -546,7 +546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Popular Badge */}
         {/* Services Display */}'
         {viewMode === 'grid' ? ("
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>
               {filteredServices.map((service, index) => (
                 <motion.div'
@@ -572,7 +572,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       Popular
 
-className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
                 >
                   {/* Popular Badge */}
                   {service.popular && (
@@ -702,7 +702,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={service.link}
 target='_blank'
                       rel='noopener noreferrer'
-                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
+                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2';
                     >
                       Learn More
                       <ExternalLink className='w-4 h-4' />
@@ -712,7 +712,7 @@ target='_blank'
               ))}
             </AnimatePresence>
           </div>
-        ) : (
+        ) : (;
 <div className='space-y-6'>
             <AnimatePresence>
               {filteredServices.map((service, index) => (
@@ -723,10 +723,10 @@ target='_blank'
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}'
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
-
+;
                       )}
 
-                  <div className='flex flex-col lg:flex-row gap-6'>
+                  <div className='flex flex-col lg:flex-row gap-6'>;
                     {/* Left Side - Icon and Basic Info */}'
                     <div className='flex-shrink-0'>'
                       <div className='text-6xl mb-4'>{service.icon}</div>
@@ -926,7 +926,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={service.link}
 target='_blank'
                         rel='noopener noreferrer'
-                        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2'
+                        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2';
                       >
                         Learn More
                         <ArrowRight className='w-4 h-4' />
@@ -988,18 +988,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Join thousands of companies already using our revolutionary micro;
               SAAS services to drive innovation and growth.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a'
-                href='mailto:kleber@ziontechgroup.com''
-                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
+                href='mailto:kleber@ziontechgroup.com'';
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2';
               >
                 Contact Sales Team'
                 <ArrowRight className='w-5 h-5' />
               </a>
               <a'
-                href='tel:+13024640950'"
-                className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
-                className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'
+                href='tel:+13024640950'";
+                className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2";
+                className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Call +1 302 464 0950;

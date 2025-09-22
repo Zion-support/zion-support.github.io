@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -35,18 +33,10 @@ import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
-=======
-import * as React from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import {}
   Heart, 
@@ -58,8 +48,6 @@ import {}
   ArrowRight ';
 } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
@@ -107,11 +95,6 @@ const features = [;
     description: 'AI-powered analytics for population health management and predictive insights.'';
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const features = [
   {
     icon: Heart,
@@ -130,8 +113,6 @@ const features = [
   },
   {
     icon: Users,
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
@@ -229,45 +210,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
   }
 ];
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
-=======
-const features = []
-  {}
-    icon: Heart,'
-    title: 'Patient Data Management','
-    description: 'Secure and efficient management of patient data and medical records','
-    benefits: ['Electronic health records', 'Data encryption', 'Access control', 'Audit trails']
-  },
-  {}
-    icon: Shield,'
-    title: 'Security & Compliance','
-    description: 'HIPAA-compliant security solutions for healthcare data','
-    benefits: ['HIPAA compliance', 'Data encryption', 'Access control', 'Risk management']
-  },
-  {}
-    icon: Activity,'
-    title: 'Health Analytics','
-    description: 'Advanced analytics and reporting for healthcare insights','
-    benefits: ['Patient analytics', 'Performance metrics', 'Predictive analytics', 'Reporting']
-  },
-  {}
-    icon: Users,'
-    title: 'Provider Management','
-    description: 'Comprehensive provider and staff management solutions','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
   }
 ];
 
-<<<<<<< HEAD
 export default function HealthcareSolutionsPage() {
-<<<<<<< HEAD
-
-    title: 'Provider Portal',
+title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
   {
@@ -359,12 +309,6 @@ const benefits = [
 export default function HealthcareSolutions() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -373,7 +317,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
-  
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -387,11 +330,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform healthcare delivery with secure, compliant, and intelligent technology solutions
-<<<<<<< HEAD
-                designed for modern healthcare providers.
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+designed for modern healthcare providers.
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -399,25 +338,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+<section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-=======
-export default function HealthcareSolutionsPage() {}
-  return (
-    <>
-      <Head>
-        <title>Healthcare Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive healthcare technology solutions including patient data management, security, analytics, and provider management." />
-      </Head>
-"
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}"
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">"
-          <div className="max-w-7xl mx-auto px-4">;
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
@@ -455,10 +378,8 @@ export default function HealthcareSolutionsPage() {}
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gray-50">
+{/* Features Section */}
+<section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -479,12 +400,6 @@ export default function HealthcareSolutionsPage() {}
                   </div>
 
 <<<<<<< HEAD
-=======
-        <section className="py-16 px-4">
-=======
-        {/* Features Section */}"
-        <section className="py-16 px-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -495,16 +410,8 @@ export default function HealthcareSolutionsPage() {}
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Healthcare Technology Features</h2>"
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our healthcare solutions are built with security and compliance in mind.
-<<<<<<< HEAD
-              </p>              {features.map((feature, index) => (
+</p>              {features.map((feature, index) => (
                 <motion.div
-=======
-              </p>
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -513,18 +420,12 @@ export default function HealthcareSolutionsPage() {}
                 >"
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                     <feature.icon className="w-6 h-6 text-blue-600" />
-<<<<<<< HEAD
-                  </div>
+</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
-=======
-                  </div>"
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>"
-                  <p className="text-gray-600 mb-4">{feature.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => ("
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">"
@@ -535,9 +436,7 @@ export default function HealthcareSolutionsPage() {}
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+<h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600">
@@ -550,9 +449,6 @@ export default function HealthcareSolutionsPage() {}
         </section>;
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">"
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -627,8 +523,7 @@ export default function HealthcareSolutionsPage() {}
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Healthcare Solutions;
               </h2>;
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
                 {solutions.map((solution, index) => (,
                   <div key={index} className="flex items-center space-x-3">"
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
@@ -636,25 +531,11 @@ export default function HealthcareSolutionsPage() {}
                   </div>;
                 ))}
               </div>,
-=======
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
-                {solutions && solutions.map((solution, index) => (,;
-                  <div key={index} className="flex items-center space-x-3">";
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{solution}</span>";
-                  </div>;
-                ))}
-              </div>,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>;
           </div>;
         </section>;
         {/* Compliance Section */}
-<<<<<<< HEAD
-        <section className="py-20">"
-=======
-        <section className="py-20">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="bg-gray-800/50 rounded-2xl p-12">";
               <div className="text-center mb-12">";
@@ -662,20 +543,12 @@ export default function HealthcareSolutionsPage() {}
                   HIPAA Compliant & Secure;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-<<<<<<< HEAD
-                  All our healthcare solutions are built with security and compliance in mind,
+All our healthcare solutions are built with security and compliance in mind,
                   ensuring your patient data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
                 <div className="text-center">";
-=======
-                  All our healthcare solutions are built with security and compliance in mind, ;
-                  ensuring your patient data is protected and your organization meets regulatory requirements.;
-                </p>;
-              </div>;
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Shield className="w-8 h-8 text-white" />";
                   </div>;
@@ -701,11 +574,7 @@ export default function HealthcareSolutionsPage() {}
           </div>;
         </section>;
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20">"
-=======
-        <section className="py-20">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
               <h2 className="text-4xl font-bold text-white mb-6">";
@@ -715,23 +584,12 @@ export default function HealthcareSolutionsPage() {}
                 Let our healthcare technology experts help you implement solutions that;
                 improve patient care while ensuring compliance and security.;
               </p>;
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+<div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
                   Schedule Consultation;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Healthcare Guide;
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
-                  Schedule Consultation;
-                </button>;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </button>;
               </div>;
             </div>;
@@ -772,17 +630,10 @@ export default function HealthcareSolutionsPage() {}
                 </button>
               </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de            </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de            </div>
@@ -790,8 +641,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
+{/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -809,58 +659,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
                 Download Healthcare Brochure
               </button>
             </div>
-=======
-        {/* CTA Section */}"
-        <section className="py-20 bg-blue-600">"
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready for Healthcare Solutions?
-              </h2>"
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">'
-                Let's discuss how our healthcare solutions can support your organization.
-              </p>"
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link"
-                  href="/contact""
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Contact Sales"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link"
-                  href="/solutions""
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View Solutions;
-                </Link>
-              </div>
-            </motion.div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-    </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
-<<<<<<< HEAD
-        {/* CTA Section */}
+{/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
@@ -891,6 +701,3 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
     </>;
   ),;
 }
-=======
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

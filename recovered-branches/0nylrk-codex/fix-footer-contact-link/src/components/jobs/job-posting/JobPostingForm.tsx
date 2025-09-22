@@ -1,22 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
 
 import React, { useState, useEffect, useCallback } from 'react';
 =======
 
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useNavigate  } from 'react-router-dom';
@@ -24,42 +13,16 @@ import { useNavigate  } from 'react-router-dom';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-import { Form } from "@/components/ui/form";
-import { useJobForm  } from './useJobForm';
-import { BasicInfoFields  } from './BasicInfoFields';
-import { DateFields  } from './DateFields';
-import { DescriptionFields  } from './DescriptionFields';
-import { useJobs } from "@/hooks/useJobs";
-import { JobSchemaType } from './validation';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Form } from "@/components/ui/form",
 import { useJobForm } from './useJobForm',
@@ -68,52 +31,14 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface JobPostingFormProps {
 =======
-<<<<<<< HEAD
-=======
-'
-import React, { useState, useEffect, useCallback } from 'react';'
-import {useNavigate} from 'react-router-dom';
-import {toast} from "sonner";"
-import {Input} from "@/components/ui/input";"
-import {Label} from "@/components/ui/label";"
-import {Button} from "@/components/ui/button";"
-import {Form} from "@/components/ui/form";'
-import {useJobForm} from './useJobForm';'
-import {BasicInfoFields} from './BasicInfoFields';'
-import {DateFields} from './DateFields';'
-import {DescriptionFields} from './DescriptionFields';"
-import {useJobs} from "@/hooks/useJobs";'
-import {JobSchemaType} from './validation';'
-import React, { useState, useEffect, useCallback } from 'react','
-import { useNavigate } from 'react-router-dom',
-"
-import { toast } from "sonner","
-import { Input } from "@/components/ui/input","
-import { Label } from "@/components/ui/label","
-import { Button } from "@/components/ui/button",
-"
-import { Form } from "@/components/ui/form",'
-import { useJobForm } from './useJobForm','
-import { BasicInfoFields } from './BasicInfoFields','
-import { DateFields } from './DateFields','
-import { DescriptionFields } from './DescriptionFields',"
-import { useJobs } from "@/hooks/useJobs",'
-import { JobSchemaType } from './validation',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 interface JobPostingFormProps {};
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
 
-<<<<<<< HEAD
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect, useCallback } from 'react';
@@ -128,24 +53,7 @@ import {BasicInfoFields} from './BasicInfoFields';
 import {DateFields} from './DateFields';
 import {DescriptionFields} from './DescriptionFields';
 import { use_jobs } from '@/hooks / use_jobs';
-=======
-:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;'
-import React, { useState, useEffect, useCallback } from 'react';'
-import {use_navigate} from 'react-router-dom';'
-import { toast } from './sonner';'
-import { Input } from '@/components / ui / input';'
-import { Label } from '@/components / ui / label';'
-import { Button } from '@/components / ui / button';'
-import { Form } from '@/components / ui / form';'
-import {useJobForm} from './useJobForm';'
-import {BasicInfoFields} from './BasicInfoFields';'
-import {DateFields} from './DateFields';'
-import {DescriptionFields} from './DescriptionFields';'
-import { use_jobs } from '@/hooks / use_jobs';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {JobSchemaType} from './validation';
-
-
 
   const navigate = useNavigate();
 =======
@@ -168,56 +76,15 @@ import {JobSchemaType} from './validation';
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
 
-
-
-
-
-
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",  const navigate = useNavigate();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import React, { useState, useEffect, useCallback } from 'react';
-import {useNavigate} from 'react-router-dom';
-import {toast} from "sonner";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-=======
-import { Button } from "@/components/ui/button",
-
-
-import { Form } from "@/components/ui/form",
-import { useJobForm } from './useJobForm',
-import { BasicInfoFields } from './BasicInfoFields',
-import { DateFields } from './DateFields',
-import { DescriptionFields } from './DescriptionFields',
-import { useJobs } from "@/hooks/useJobs",
-import { JobSchemaType } from './validation',
-
-
-interface JobPostingFormProps {
-interface JobPostingFormProps {
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
-
-:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
-import React, { useState, useEffect, useCallback } from 'react';
-import {use_navigate} from 'react-router-dom';
-import { toast } from './sonner';
-import { Input } from '@/components / ui / input';
-import { Label } from '@/components / ui / label';
-import { Button } from '@/components / ui / button';
-import { Form } from '@/components / ui / form';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useJobForm} from './useJobForm';
 import {BasicInfoFields} from './BasicInfoFields';
 import {DateFields} from './DateFields';
 import {DescriptionFields} from './DescriptionFields';
-<<<<<<< HEAD
 import {useJobs} from "@/hooks/useJobs";
 import {JobSchemaType} from './validation';
 import React, { useState, useEffect, useCallback } from 'react',
@@ -226,46 +93,14 @@ import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",  const navigate = useNavigate();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import { use_jobs } from '@/hooks / use_jobs';
-import {JobSchemaType} from './validation';
-
-
-export function JobPostingForm(): any ({ jobId, onSuccess }: JobPostingFormProps) {;
-
-  const navigate = useNavigate();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);"
   const [editorContent, setEditorContent] = useState("");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface JobPostingFormProps {
   job_id?: string;
   on_success?: () => void;
 }
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
-export /**
- * JobPostingForm - Function description
-=======
-
-
-
-interface JobPostingFormProps {}
-  job_id?: string;
-  on_success?: () => void;
-}
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {}
-export /**;
- * JobPostingForm - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
 function JobPostingForm() {}
   const navigate = use_navigate ();
@@ -274,17 +109,7 @@ function JobPostingForm() {}
   const [editor_content, setEditorContent] = useState ("");
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const {
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   const {}
   const {;
@@ -297,19 +122,6 @@ function JobPostingForm() {}
     is_remote;
     setIsRemote;
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
 <<<<<<< HEAD
 
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
@@ -322,20 +134,12 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   const { createJob, updateJob, getJobById } = useJobs(),
   const [isFormLoading, setIsFormLoading] = useState(false),
   const [editorContent, setEditorContent] = useState(""),
-  
+
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const {
@@ -352,23 +156,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     setIsRemote,
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     submitJob
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  } = useJobForm({ jobId, onSuccess });
-  const { handleSubmit, setValue, formState } = form;
-  const { isSubmitting } = formState;
-  } = useJobForm({ jobId, onSuccess });
-  const { handleSubmit, setValue, formState } = form;
-  const { isSubmitting } = formState;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -382,15 +171,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 
   const { handleSubmit, setValue, formState } = form,
   const { isSubmitting } = formState,
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
 =======
     submitJob  useEffect(() => {
@@ -400,12 +182,10 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   useEffect(() => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (jobId) {
 =======
-
 
   useEffect(() => {}
     if (jobId) {}
@@ -431,25 +211,12 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
                 try {}
                   // @ts-ignore - We know these fields exist in our form;
                   setValue(key, value as any)
-<<<<<<< HEAD
-                } catch (e) {
-<<<<<<< HEAD
+} catch (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
                   // Skip fields that don't exist in our form
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                  // Skip fields that don't exist in our form
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -462,24 +229,7 @@ import { BasicInfoFields } from './BasicInfoFields',;
 import { DateFields } from './DateFields',;
 import { DescriptionFields } from './DescriptionFields',;
 import { useJobs } from "@/hooks/useJobs",;
-<<<<<<< HEAD
-=======
-                } catch (e) {'
-                  // Skip fields that don't exist in our form;
-'
-import React, { useState, useEffect, useCallback } from 'react',;'
-import { useNavigate } from 'react-router-dom',;"
-import { toast } from "sonner",;"
-import { Input } from "@/components/ui/input",;"
-import { Label } from "@/components/ui/label",;"
-import { Button } from "@/components/ui/button",;"
-import { Form } from "@/components/ui/form",;'
-import { useJobForm } from './useJobForm',;'
-import { BasicInfoFields } from './BasicInfoFields',;'
-import { DateFields } from './DateFields',;'
-import { DescriptionFields } from './DescriptionFields',;"
-import { useJobs } from "@/hooks/useJobs",;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { JobSchemaType } from './validation',;
@@ -488,16 +238,9 @@ interface JobPostingFormProps {;
   onSuccess?: () => void;
 }
 ;
-<<<<<<< HEAD
 export function JobPostingForm() { return null; }
   const { createJob, updateJob, getJobById } = useJobs(),;
   const [isFormLoading, setIsFormLoading] = useState(false),;"
-=======
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
-  const navigate = useNavigate(),;
-  const { createJob, updateJob, getJobById } = useJobs(),;
-  const [isFormLoading, setIsFormLoading] = useState(false),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [editorContent, setEditorContent] = useState(""),;
   const {;
     form,;
@@ -515,9 +258,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 
   useEffect(() => {;
     if (jobId) {;
-<<<<<<< HEAD
-
-      setIsFormLoading(true);
+setIsFormLoading(true);
 '
 import React, { useState, useEffect, useCallback } from 'react',;'
 import { useNavigate } from 'react-router-dom',;"
@@ -531,21 +272,6 @@ import { BasicInfoFields } from './BasicInfoFields',;'
 import { DateFields } from './DateFields',;'
 import { DescriptionFields } from './DescriptionFields',;"
 import { useJobs } from "@/hooks/useJobs",;'
-=======
-      setIsFormLoading(true);
-import React, { useState, useEffect, useCallback } from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { toast } from "sonner",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Form } from "@/components/ui/form",;
-import { useJobForm } from './useJobForm',;
-import { BasicInfoFields } from './BasicInfoFields',;
-import { DateFields } from './DateFields',;
-import { DescriptionFields } from './DescriptionFields',;
-import { useJobs } from "@/hooks/useJobs",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { JobSchemaType } from './validation',;
 ;
 interface JobPostingFormProps {;
@@ -553,16 +279,9 @@ interface JobPostingFormProps {;
   onSuccess?:() => void,;
 }
 ;
-<<<<<<< HEAD
 export function JobPostingForm() { return null; }
   const { createJob, updateJob, getJobById } = useJobs(),;
   const [isFormLoading, setIsFormLoading] = useState(false),;"
-=======
-export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
-  const navigate = useNavigate(),;
-  const { createJob, updateJob, getJobById } = useJobs(),;
-  const [isFormLoading, setIsFormLoading] = useState(false),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [editorContent, setEditorContent] = useState(""),;
   ;
   const {;
@@ -582,22 +301,12 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
 ;
   useEffect(() => {;
     if (jobId) {;
-<<<<<<< HEAD
 
-=======
-      setIsFormLoading(true),;
-  useEffect(() => {;
-    if (jobId) {;
-      setIsFormLoading(true),;
-      setIsFormLoading(true);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       getJobById(jobId);
         .then((job) => {;
           if (job) {;
             // Set form values;
-<<<<<<< HEAD
-
-            Object.entries(job).forEach(([key, value]) => {;'
+Object.entries(job).forEach(([key, value]) => {;'
               if (key === 'published_date' && value) {;
                 setStartDate(new Date(value as string)),;'
                 setValue('published_date', value as string);'
@@ -606,20 +315,13 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
 '
                 setValue('expiry_date', value as string);'
               } else if (key === 'is_remote') {;
-<<<<<<< HEAD
-=======
-                  // Skip fields that don't exist in our form      setIsFormLoading(true);              } else if (key === 'is_remote') {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  // Skip fields that don't exist in our form      setIsFormLoading(true);              } else if (key === 'is_remote') {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                 setIsRemote(value as boolean);
               } else if (key === 'description') {;
                 setEditorContent(value as string),;                setEditorContent(value as string),;
 =======
                 setIsRemote(value as boolean);'
               } else if (key === 'description') {;
-
 
                 setEditorContent(value as string),;
 '
@@ -650,16 +352,7 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
                   // @ts-ignore - We know these fields exist in our form;
                   setValue(key, value as any);
                 } catch (e) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     submit_job;
   } = useJobForm ({ job_id, on_success });
 ;
@@ -709,38 +402,8 @@ if ( {) {}
                   set_value (key, value as any);
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 } catch (e) {
 <<<<<<< HEAD
-=======
-                } catch (e) {
-
-                  // Skip fields that don't exist in our form;
-                }
-              }
-            });
-          }
-
-        })
-        .catch((error) => {
-          console.error("Failed to load job:", error),
-          toast.error("Failed to load job")
-        })
-        .finally(() => {
-          setIsFormLoading(false)
-        })
-    }
-
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
-
-
-  const handleEditorChange = useCallback((value: string) => {
-    setEditorContent(value)
-    setValue('description', value)
-
-  }, [setValue]),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   // Skip fields that don't exist in our form;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -748,14 +411,6 @@ if ( {) {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
                 } catch (e) {}
 '
@@ -776,40 +431,15 @@ if ( {) {}
           setIsFormLoading(false)
         })
     }
-<<<<<<< HEAD
-=======
-
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
-
-
-  const handleEditorChange = useCallback((value: string) => {}
-    setEditorContent(value)'
-    setValue('description', value)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value)
     setValue('description', value)
-<<<<<<< HEAD
-=======
-  }, [setValue]);
-  const onSubmit = async (values: JobSchemaType) => {
-    setIsFormLoading(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, [setValue]),
-=======
-                } catch (e) {  }, [setValue]),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                 } catch (e) {  }, [setValue]),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -820,32 +450,15 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     try {}
       const jobData = await submitJob(values)
       if (jobId) {}
         await updateJob(jobId, jobData),"
         toast.success("Job updated successfully!")
+} else {
 <<<<<<< HEAD
-      } else {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-        await createJob(jobData);
-        toast.success("Job posted successfully!");
-        form.reset();
-        setEditorContent("")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -867,22 +480,14 @@ if ( {) {}
         form.reset(),"
         setEditorContent("")
 
-<<<<<<< HEAD
-        });
+});
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleEditorChange = useCallback((value: string) => {;
     setEditorContent(value),;'
     setValue('description', value);
   }, [setValue]);
 
-<<<<<<< HEAD
-  const onSubmit = async (values: JobSchemaType) => {;
+const onSubmit = async (values: JobSchemaType) => {;
     setIsFormLoading(true);
 
     try {;
@@ -891,15 +496,7 @@ if ( {) {}
       if (jobId) {;
 
         await updateJob(jobId, jobData);
-<<<<<<< HEAD
-        toast && toast.success("Job updated successfully!");        await updateJob(jobId, jobData);
-=======
-        await updateJob(jobId, jobData);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        toast && toast.success("Job updated successfully!");
-        await updateJob(jobId, jobData);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+toast && toast.success("Job updated successfully!");        await updateJob(jobId, jobData);
         toast && toast.success("Job updated successfully!");
       } else {;
         await createJob(jobData);"
@@ -907,13 +504,8 @@ if ( {) {}
         form && form.reset();"
         setEditorContent("");
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
       if (onSuccess) {;
         onSuccess();
@@ -951,29 +543,17 @@ if ( {) {}
         setEditorContent("");
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       }
 <<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      }
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
       if (onSuccess) {;
         onSuccess();
 
-
-
       }
-<<<<<<< HEAD
-    } catch (error: any) {
+} catch (error: any) {
 
-<<<<<<< HEAD
-    return <div className="flex items-center justify-center p-8">Loading...</div>
+return <div className="flex items-center justify-center p-8">Loading...</div>
   }
   return (
     <Form {...form}>
@@ -986,48 +566,12 @@ if ( {) {}
         </div>
         <BasicInfoFields control={form.control} />
 <<<<<<< HEAD
-=======
-=======
-    } catch (error: any) {"
-      console.error("Error creating/updating job:", error);"
-      toast.error(error.message |"Failed to post job")
-    } finally {}
-      setIsFormLoading(false)
-    }
-  }
-  if (isLoading |isFormLoading) {"
-      console.error("Error creating/updating job:", error),"
-      toast.error(error.message || "Failed to post job")
-    } finally {}
-      setIsFormLoading(false)
-    }
-  },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-<<<<<<< HEAD
-        <DateFields
+<DateFields
           startDate={startDate}
         <DateFields 
           startDate={startDate} 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-  if (isLoading || isFormLoading) {;"
-    return <div className="flex items-center justify-center p-8">Loading...</div>;
-
-  }
-  return (
-
-
-        <DateFields;
-          startDate={startDate} 
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
@@ -1040,24 +584,6 @@ if ( {) {}
               checked={isRemote}"
               className="mr-2"
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    } catch (error: any) {;
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message || "Failed to post job");
-    } finally {;
-      setIsFormLoading(false);
-<<<<<<< HEAD
-=======
-      }              type="checkbox"
-              id="isRemote"
-              checked={isRemote}              className="mr-2"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      }              type="checkbox"
-              id="isRemote"
-              checked={isRemote}              className="mr-2"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 
@@ -1066,7 +592,6 @@ if ( {) {}
   if (isLoading || isFormLoading) {;"
 =======
       }
-
 
       if (onSuccess) {;
         onSuccess();
@@ -1099,10 +624,8 @@ if ( {) {}
         </div>
         <BasicInfoFields control={form.control} />
 
-
         <DateFields 
           startDate={startDate} 
-
 
         <DateFields
           startDate={startDate}
@@ -1119,18 +642,15 @@ if ( {) {}
 =======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 
-
 import React, { useState, useEffect, useCallback } from 'react';
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               id="isRemote"
               checked={isRemote}              className="mr-2"
 
-<<<<<<< HEAD
-    }
+}
   }
   if (isLoading |isFormLoading) {
-
 
   if (isLoading || isFormLoading) {;
     return <div className="flex items-center justify-center p-8">Loading...</div>;
@@ -1138,10 +658,8 @@ import React, { useState, useEffect, useCallback } from 'react';
   }
   return (
 
-
         <DateFields 
           startDate={startDate} 
-
 
           setStartDate={setStartDate}
           endDate={endDate}
@@ -1168,63 +686,26 @@ import React, { useState, useEffect, useCallback } from 'react';
 ;
   return (;
 
-<<<<<<< HEAD
-    <Form {...form}>;"
+<Form {...form}>;"
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
         <div>;"
           <h3 className="text-lg font-medium">Post a Job</h3>;"
-=======
-    <Form {...form}>;
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
-        <div>;
-          <h3 className="text-lg font-medium">Post a Job</h3>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <p className="text-sm text-muted-foreground">;
             Fill in the details below to create a job posting.;
           </p>;
         </div>;
 
-<<<<<<< HEAD
-=======
-        <BasicInfoFields control={form && form.control} />;
-
-        <DateFields
-          startDate={startDate} 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
         />;
 
-<<<<<<< HEAD
-            <Input"
+<Input"
               type="checkbox""
               id="isRemote"
               checked={isRemote}
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        <div>;
-          <Label htmlFor="isRemote">;
-            <Input
-              type="checkbox"
-              id="isRemote"
-              checked={isRemote}
-
-
-
-              className="mr-2"
-
-
-        <div>;
-          <Label htmlFor="isRemote">;
-            <Input;
-              type="checkbox";
-              id="isRemote";
-              checked={isRemote}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="mr-2"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               onChange={(e) => setIsRemote(e.target.checked)}
@@ -1243,19 +724,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="mr-2"
-
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <DescriptionFields 
@@ -1265,10 +735,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
               className="mr-2"
-
 
 =======
 className="mr-2"
@@ -1281,24 +748,10 @@ className="mr-2"
         />
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
 <<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -1310,15 +763,7 @@ className="mr-2"
         <Button type="submit" disabled={isSubmitting || isFormLoading}>"
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
 
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </Button>
@@ -1327,43 +772,13 @@ className="mr-2"
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-}
-;
-;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-              onChange={(e) => setIsRemote(e && e.target.checked)}
-
-        .catch ((error) => {"
-          console.error ("Failed to load job:", error);"
-          toast.error ("Failed to load job");
-        });
-        .finally (() => {}
-=======
-
-              onChange={(e) => setIsRemote(e && e.target.checked)}
-        .catch ((error) => {
-          console.error ("Failed to load job:", error);
-          toast.error ("Failed to load job");
-        });
-        .finally (() => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           setIsFormLoading (false);
         });
     }
   }, [job_id, getJobById, set_value, setStartDate, setEndDate, setIsRemote]);
 ;
-<<<<<<< HEAD
-  const handleEditorChange = useCallback ((value: string) => {}
+const handleEditorChange = useCallback ((value: string) => {}
     setEditorContent (value),'
     set_value ('description', value);
   }, [set_value]);
@@ -1395,46 +810,11 @@ if ( {) {}
       console.error ("Error creating / updating job:", error);"
       toast.error (error.message || "Failed to post job");
     } finally {}
-=======
-  const handleEditorChange = useCallback ((value: string) => {
-    setEditorContent (value),
-    set_value ('description', value);
-  }, [set_value]);
-;
-  const on_submit = async (values: JobSchemaType) => {
-    setIsFormLoading (true);
-;
-    try {
-      const job_data = await submit_job (values),
-      // Check condition
-if ( {) {
-  $2
-}
-        await update_job (job_id, job_data);
-        toast.success ("Job updated successfully!");
-      } else {
-        await create_job (job_data);
-        toast.success ("Job posted successfully!");
-        form.reset ();
-        setEditorContent ("");
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        on_success ();
-      }
-    } catch (error: any) {
-      console.error ("Error creating / updating job:", error);
-      toast.error (error.message || "Failed to post job");
-    } finally {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsFormLoading (false);
     }
   }
 ;
-<<<<<<< HEAD
-  // Check condition;
+// Check condition;
 if ( {) {}
   $2;
 }"
@@ -1445,19 +825,6 @@ if ( {) {}
       <form on_submit={handle_submit (on_submit)} className="space - y-6">;
         <div>;"
           <h3 className="text - lg font - medium">Post a Job</h3>;"
-=======
-  // Check condition
-if ( {) {
-  $2
-}
-    return <div className="flex items - center justify - center p - 8">Loading...</div>;
-  }
-  return (
-    <Form {...form}>;
-      <form on_submit={handle_submit (on_submit)} className="space - y-6">;
-        <div>;
-          <h3 className="text - lg font - medium">Post a Job</h3>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <p className="text - sm text - muted - foreground">;
             Fill in the details below to create a job posting.;
           </p>;
@@ -1469,8 +836,7 @@ if ( {) {
           end_date={end_date}
           setEndDate={setEndDate}
         />;
-<<<<<<< HEAD
-        <div>;"
+<div>;"
           <Label html_for="is_remote">;
             <Input;"
               type="checkbox";"
@@ -1479,23 +845,16 @@ if ( {) {
               className="mr - 2";
               on_change={(e) => setIsRemote (e.target.checked)}
 
-
-
             />;
-=======
-          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}            />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}            />;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Remote;
           </Label>;
         </div>;
-<<<<<<< HEAD
 }}
 }
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 ;
         <DescriptionFields ;
@@ -1520,7 +879,7 @@ const [editorContent, setEditorContent] = useState ("");
   if (job) {
   //Set form values Object.entries (job) .forEach ( ([key, value]) => {
   if (key === 'published date' && value) {
-  
+
 }
 }) 
 }
@@ -1534,13 +893,13 @@ const [editorContent, setEditorContent] = useState ("");
   onSuccess () 
 }
 }catch (error: any) {
-  
+
 }finally {
   setIsFormLoading (false) 
 }
 };
 if (isLoading || isFormLoading) {
-  
+
 }return (<Form {
   ...form 
 }> <form onSubmit= {
@@ -1567,21 +926,10 @@ if (isLoading || isFormLoading) {
 }
 }
 <<<<<<< HEAD
-=======
 
 }
-}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-}
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '"
@@ -1692,153 +1040,4 @@ if (isLoading || isFormLoading) {
 ;
 ;
 }
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}            />;
-            Remote;
-          </Label>;
-        </div>;
-}}
-}
-
-
-      const jobData = await submitJob(values),;
-
-
-        await updateJob(jobId, jobData);
-        toast && toast.success("Job updated successfully!");"
-        await updateJob(jobId, jobData);"
-        await createJob(jobData);"
-        toast && toast.success("Job posted successfully!");"
-        form && form.reset();"
-        setEditorContent("");"
-      if (onSuccess) {;
-        onSuccess();
-    } catch (error: any) {;"
-      console && console.error("Error creating/updating job:", error);""
-      toast && toast.error(error && error.message || "Failed to post job");"
-    } finally {;
-      setIsFormLoading(false);
-        .catch((error) => {;"
-          console.error("Failed to load job:", error),;""
-          toast.error("Failed to load job");"
-        .finally(() => {;
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),;
-  }, [setValue]),;
-        await updateJob(jobId, jobData),;
-        toast.success("Job updated successfully!");"
-        await createJob(jobData),;"
-        toast.success("Job posted successfully!"),;"
-        form.reset(),;"
-
-
-    } catch (error: any) {"
-      console.error("Error creating/updating job:", error);""
-      toast.error(error.message |"Failed to post job")"
-    } finally {
-  // TODO: Implement
-  if (isLoading |isFormLoading) {"
-      console.error("Error creating/updating job:", error),""
-      toast.error(error.message || "Failed to post job")"
-  // TODO: Implement
-  },
-"
-    return <div className="flex items-center justify-center p-8">Loading...</div>"
-    <Form {...form}>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">"
-</form>
-        <div>
-</div>"
-          <h3 className="text-lg font-medium">Post a Job</h3>""
-          <p className="text-sm text-muted-foreground">"
-</p>
-        </div>
-        <BasicInfoFields control={form.control} />
-
-
-
-        <DateFields;
-          startDate={startDate} 
-
-
-          setStartDate={setStartDate}
-          endDate={endDate}
-          setEndDate={setEndDate}
-        />
-
-          <Label htmlFor="isRemote">"
-
-            <Input;"
-              type="checkbox"""
-              id="isRemote""
-              checked={isRemote}"
-              className="mr-2""
-      toast.error(error.message || "Failed to post job");"
-
-  if (isLoading |isFormLoading) {
-
-
-  if (isLoading || isFormLoading) {;"
-    return <div className="flex items-center justify-center p-8">Loading...</div>;"
-
-
-
-
-
-  };
-
-    <Form {...form}>;
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;"
-        <div>;
-          <h3 className="text-lg font-medium">Post a Job</h3>;""
-          <p className="text-sm text-muted-foreground">;"
-          </p>;
-        </div>;
-        <BasicInfoFields control={form && form.control} />;
-
-
-        />;
-
-
-          <Label htmlFor="isRemote">;"
-
-              checked={isRemote}
-
-
-
-              type="checkbox";""
-              id="isRemote";"
-              onChange={(e) => setIsRemote(e.target.checked)}
-
-        <DescriptionFields;
-          control={form.control}
-          handleEditorChange={handleEditorChange}
-          editorContent={editorContent}
-        <Button type="submit" disabled={isSubmitting |isFormLoading}>"
-
-        <Button type="submit" disabled={isSubmitting || isFormLoading}>"
-
-    return <div className="flex items - center justify - center p - 8">Loading...</div>;"
-      <form on_submit={handle_submit (on_submit)} className="space - y-6">;"
-          <h3 className="text - lg font - medium">Post a Job</h3>;""
-          <p className="text - sm text - muted - foreground">;"
-        <BasicInfoFields control={form.control} />;
-
-          start_date={start_date}
-          end_date={end_date}
-
-          <Label html_for="is_remote">;"
-
-              id="is_remote";"
-              checked={is_remote}"
-              className="mr - 2";"
-              on_change={(e) => setIsRemote (e.target.checked)}
-
-          editor_content={editor_content}
-        <Button type="submit" disabled={is_submitting || isFormLoading}>;"
-
-      </form>;
-    );"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

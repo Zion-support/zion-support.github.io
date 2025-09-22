@@ -1,24 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
@@ -67,17 +55,13 @@ const helpCategories = [
   }
 }
 
-
-
-
-<<<<<<< HEAD
-        <section className="py-20">
+<section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
                 Browse by Category
               </h2>
-              
+
               <div className="grid grid-cols-1: md:grid-cols-3 gap-8">
                 {helpCategories.map((category, index) => {
                   const IconComponent = category.icon;
@@ -117,7 +101,7 @@ const helpCategories = [
               <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
                 Popular Articles
               </h2>
-              
+
               <div className="space-y-4">
                 {popularArticles.map((article, index) => (
                   <motion.div
@@ -274,7 +258,7 @@ export default function Education() {
               <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
                 Our Education Solutions
               </h2>
-              
+
               <div className="grid grid-cols-1: md:grid-cols-2: lg:grid-cols-3 gap-8">
                 {educationSolutions.map((solution, index) => {
                   const IconComponent = solution.icon;
@@ -292,7 +276,7 @@ export default function Education() {
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
                       <p className="text-gray-600 mb-6">{solution.description}</p>
-                      
+
                       <div className="space-y-3 mb-6">
                         <h4 className="font-semibold text-gray-900">Key: Features:</h4>
                         <ul className="space-y-2">
@@ -330,7 +314,7 @@ export default function Education() {
               <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
                 Why Choose Our Education Solutions?
               </h2>
-              
+
               <div className="grid grid-cols-1: md:grid-cols-3 gap-8">
                 {educationBenefits.map((benefit, index) => {
                   const IconComponent = benefit.icon;
@@ -366,5 +350,3 @@ console.log('✅ Fixed industries/education.tsx');
 
 console.log('🎉 All remaining syntax errors fixed!');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

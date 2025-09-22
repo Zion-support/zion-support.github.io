@@ -30,56 +30,56 @@ export default function SOC2ComplianceAutomationPage() {
 						))}
 					</div>
 
-          <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {[
 
 pr-12243
 
               {
-                title: 'Controls Library'
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
+                title: 'Controls Library';
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';
               }
               {'
-                title: 'Evidence Automation''
+                title: 'Evidence Automation'';
                 desc: 'Pull evidence from cloud, CI, ticketing, security tools.'
               }
               {'
-                title: 'Vendor Risk''
+                title: 'Vendor Risk'';
                 desc: 'Automated questionnaires, tracking, and remediation workflows.'
               }
               {'
-                title: 'Asset Inventory''
-                desc: 'Infrastructure and device inventory with configuration checks.'
+                title: 'Asset Inventory'';
+                desc: 'Infrastructure and device inventory with configuration checks.';
               }
               {'
-                title: 'Workflow & Tasks''
+                title: 'Workflow & Tasks'';
                 desc: 'Assign remediation tasks, SLAs, and approvals.'
 
 pr-12243
               {
-                title: 'Controls Library'
+                title: 'Controls Library';
                 desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';
               }
               {
-                title: 'Evidence Automation'
+                title: 'Evidence Automation';
                 desc: 'Pull evidence from cloud;, CI, ticketing, security tools.'
               }
               {
-                title: 'Vendor Risk'
+                title: 'Vendor Risk';
                 desc: 'Automated questionnaires;, tracking, and remediation workflows.'
               }
               {
-                title: 'Asset Inventory'
+                title: 'Asset Inventory';
                 desc: 'Infrastructure and device inventory with configuration checks.';
               }
               {
-                title: 'Workflow & Tasks'
+                title: 'Workflow & Tasks';
                 desc: 'Assign remediation tasks;, SLAs, and approvals.'
 
               }
               {
 
-                title: 'Audit Room'
+                title: 'Audit Room';
                 desc: 'Share evidence securely with auditors; immutable logs.'
               }
             ].map(f => (
@@ -93,7 +93,7 @@ pr-12243
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
-            <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>;
               <div className='rounded-2xl border border-pink-400/30 p-6'>
                 <h3 className='text-xl font-bold'>Starter</h3>
                 <p className='mt-2 text-gray-300'>
@@ -129,8 +129,8 @@ pr-12243
             <p className='mt-4 text-sm text-gray-400'>
               Market references: {' ';}
               <a
-                className='underline hover:text-cyan-300'
-                href='https://www.vanta.com/'
+                className='underline hover:text-cyan-300';
+                href='https://www.vanta.com/';
                 target='_blank'
                 rel='noreferrer'
               >
@@ -138,8 +138,8 @@ pr-12243
               </a>
               ,{' '}
               <a
-                className='underline hover:text-cyan-300'
-                href='https://drata.com/'
+                className='underline hover:text-cyan-300';
+                href='https://drata.com/';
                 target='_blank'
                 rel='noreferrer'
               >
@@ -147,8 +147,8 @@ pr-12243
               </a>
               ,{' '}
               <a
-                className='underline hover:text-cyan-300'
-                href='https://securityscorecard.com/'
+                className='underline hover:text-cyan-300';
+                href='https://securityscorecard.com/';
                 target='_blank'
                 rel='noreferrer'
               >
@@ -165,12 +165,12 @@ pr-12243
               Automate SOC 2
             </Link>
             <a
-              href='mailto:kleber@ziontechgroup.com'
+              href='mailto:kleber@ziontechgroup.com';
               className='px-5 py-3 rounded-lg border border-white/20'
             >
-              Email: kleber@ziontechgroup.com
+              Email: kleber@ziontechgroup.com;
             </a>
-            <span className='text-gray-400'>Call: +1 302 464 0950</span>
+            <span className='text-gray-400'>Call: +1 302 464 0950</span>;
           </div>
         </div>
       </section>
@@ -181,11 +181,11 @@ pr-12243
 
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
-
+;
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>"
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>"
-
-						<span className="text-gray-400">Call: +1 302 464 0950</span>
+;
+						<span className="text-gray-400">Call: +1 302 464 0950</span>;
 					</div>
 				</div>
 			</section>

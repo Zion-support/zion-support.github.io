@@ -252,9 +252,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const getStatusColor = (status: string) => {}
     switch (status) {'
-      case 'success':'
+      case 'success':';
         return 'text-green-400';'
-      case 'rate_limited':'
+      case 'rate_limited':';
         return 'text-red-400'
       default:
   const getStatusColor = (status: string) => {;
@@ -289,22 +289,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Protect your APIs with intelligent rate limiting. Prevent abuse, ensure fair usage, and maintain optimal performance for all users.'
         />;
         <meta'
-          property='og:title''
+          property='og:title'';
           content='API Rate Limiter - Zion Tech Group'
         />;
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Protect your APIs with intelligent rate limiting and prevent abuse.'
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">";
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6">"
               <Shield className="w-4 h-4 mr-2" />
               API Protection & Security;
             </div>
           </div>"
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">;
             API Rate Limiter;
           </h1>"
           <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
@@ -313,14 +313,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='mb-8'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6'>
               <Shield className='w-4 h-4 mr-2' />
               API Protection & Security
             </div>
           </div>
-          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>;
             API Rate Limiter
           </h1>
           <p className='text-xl text-green-200 max-w-4xl mx-auto leading-relaxed'>
@@ -333,9 +333,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Rate Limiter Configuration */}
 <section className='py-20 bg-gray-900'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
               Configure Your Rate Limiting
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -343,7 +343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ensure fair usage across all users.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {/* Configuration Form */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
@@ -365,7 +365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {/* Configuration Form */}"
             <Card className="p-8 bg-gray-800 border border-gray-700">"
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
@@ -403,7 +403,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     value={endpoint}
                     onChange={e => setEndpoint(e.target.value)}
                     placeholder='e.g., /api/users, /api/data, /api/analytics'
-                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent';
                   />
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -470,7 +470,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />;
                     <Button;
                       onClick={generateApiKey}"
-                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed";
                 >
                   {isTesting ? (
                     <>"
@@ -492,7 +492,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`p-3 rounded-lg border text-left transition-all ${}
                           rateLimit === limit.value'
                             ? 'border-green-500 bg-green-500/10 text-green-300''
-                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'`
+                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'`;
                         }`}
                       >
 <div className='font-medium'>{limit.label}</div>
@@ -514,7 +514,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`p-3 rounded-lg border text-left transition-all ${}
                           timeWindow === window.value'
                             ? 'border-green-500 bg-green-500/10 text-green-300''
-                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'`
+                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'`;
                         }`}
                       >
 <div className='font-medium'>{window.label}</div>
@@ -549,7 +549,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />
                     <Button;
                       onClick={generateApiKey}
-                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'
+                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white';
                     >
                       Generate
                     </Button>
@@ -560,14 +560,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 disabled={
                     !endpoint.trim() || !rateLimit || !timeWindow || isTesting
                   }
-                  className='w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'
+                  className='w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed';
                 >
                   {isTesting ? (
                     <>
                       <RefreshCw className='w-5 h-5 mr-2 animate-spin' />
                       Testing Rate Limiting...
                     </>
-                  ) : (
+                  ) : (;
                     <>
 <Zap className='w-5 h-5 mr-2' />
                       Test Rate Limiting
@@ -644,10 +644,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() => setTestResults([])}"
                     variant="outline""
                     size="sm""
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700";
 variant='outline'
                     size='sm'
-                    className='border-gray-600 text-gray-300 hover:bg-gray-700'
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     Clear Results;
@@ -670,7 +670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className={`p-4 rounded-lg border ${
 result.status === 'success'
                           ? 'border-green-500/30 bg-green-500/10'
-                          : 'border-red-500/30 bg-red-500/10'
+                          : 'border-red-500/30 bg-red-500/10';
                       }`}
                     >
                       <div className='flex items-center justify-between mb-2'>
@@ -688,7 +688,7 @@ result.status === 'success'
                       </div>
                       <div className='grid grid-cols-2 gap-4 text-sm'>
                         <div>
-                          <span className='text-gray-400'>Status:</span>
+                          <span className='text-gray-400'>Status:</span>;
                           <span
                             className={`ml-2 font-medium ${getStatusColor(result.status)}`}
                           >
@@ -699,7 +699,7 @@ result.status === 'success'
                           </span>
                         </div>
                         <div>
-                          <span className='text-gray-400'>Response Time:</span>
+                          <span className='text-gray-400'>Response Time:</span>;
                           <span className='ml-2 text-white'>
                             {result.responseTime.toFixed(0)}ms
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -753,7 +753,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
                           <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
 <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
-                          <strong>Rate Limited:</strong> Request exceeded the
+                          <strong>Rate Limited:</strong> Request exceeded the;
                           limit of {rateLimit} requests per {timeWindow}
 origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
@@ -765,7 +765,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
 
                 </div>
-              ) : (
+              ) : (;
 <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
                   <div className='text-6xl mb-4'>📊</div>
                   <p className='text-gray-400'>
@@ -778,10 +778,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Features */}
 <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-
+;
               Advanced Rate Limiting Features;
             </h2>'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -789,7 +789,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               comprehensive monitoring.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>';
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>'
               <div className='text-4xl mb-4'>🛡️</div>'
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -864,7 +864,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get started with our rate limiting service in just a few lines of code.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">";
             <Card className="p-6 bg-gray-800 border border-gray-700">"
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">"
                 <Code className="w-5 h-5 mr-2 text-green-400" />
@@ -884,9 +884,9 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {}
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
       {/* Code Examples */}
 <section className='py-20 bg-gray-900'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
               Quick Integration Examples
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -894,7 +894,7 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {}
               code.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             <Card className='p-6 bg-gray-800 border border-gray-700'>
               <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
                 <Code className='w-5 h-5 mr-2 text-green-400' />
@@ -993,7 +993,7 @@ print('Rate Limit Info:', {}
     'remaining': response.headers.get('x-ratelimit-remaining');
                 variant='outline'
                 size='sm'
-                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700'
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700';
               >
                 <Copy className='w-4 h-4 mr-2' />
                 Copy Code
@@ -1026,7 +1026,7 @@ print('Rate Limit Info:', {
 'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
 origin/cursor/automate-test-improve-and-merge-code-2533
-    'reset': response.headers.get('x-ratelimit-reset')
+    'reset': response.headers.get('x-ratelimit-reset');
                 variant="outline";
                 size="sm";
                 className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700";

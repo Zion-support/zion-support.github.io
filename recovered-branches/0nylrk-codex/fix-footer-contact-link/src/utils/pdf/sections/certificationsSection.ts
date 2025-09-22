@@ -1,18 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -33,17 +22,10 @@ import { PdfThemeColors  } from '../themeConfig';'
 import { formatDate } from '../formatters';
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function addCertificationsSection(
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export function addCertificationsSection(
@@ -53,22 +35,7 @@ import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ';
@@ -77,8 +44,6 @@ import {Certification} from '@/types/resume';'
 import {PdfThemeColors} from '../themeConfig';'
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   doc: jsPDF;
@@ -94,20 +59,14 @@ export function addCertificationsSection(  doc: jsPDF;
 
 export function addCertificationsSection(  doc: jsPDF;
 
-<<<<<<< HEAD
-  doc: jsPDF;
+doc: jsPDF;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   certifications: Certification[];
   colors: PdfThemeColors;
-<<<<<<< HEAD
-  startY: number
+startY: number
 ): number {
 
-<<<<<<< HEAD
-  if (certifications && certifications.length === 0) return startY;
-  
+if (certifications && certifications.length === 0) return startY;
 
   let yPos = startY;
   // Check if we need to add a new page
@@ -116,12 +75,12 @@ export function addCertificationsSection(  doc: jsPDF;
     doc && doc.addPage(),
     yPos = 20
   }
-  
+
   doc && doc.setFontSize(16);
   doc && doc.setTextColor(colors && colors.heading);
   doc && doc.text('Certifications', 20, yPos);
   yPos += 8;
-  
+
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 80, yPos);
 
@@ -146,15 +105,8 @@ export function addCertificationsSection(  doc: jsPDF;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       doc.addPage();
@@ -197,7 +149,6 @@ export function addCertificationsSection(;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   startY: number;
-<<<<<<< HEAD
 ): number {}
   let yPos = startY;
   // Check if we need to add a new page;
@@ -212,42 +163,13 @@ export function addCertificationsSection(;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      doc && doc.addPage();
-      yPos = 20
-    }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     yPos += 16
   }
   return yPos
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {jsPDF} from 'jspdf';
-import {Certification} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
-import {format_date} from '../formatters';
-export function addCertificationsSection (
-  doc: jsPDF;
-  certifications: Certification[];
-  colors: PdfThemeColors;
-  start_y: number): number {
-  // Check condition
-if (return start_y) {
-  $2
-=======
-    }
-    yPos += 16;
-  }
-  return yPos;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
     doc && doc.setFontSize(12);
@@ -273,14 +195,6 @@ export function addCertificationsSection(;
   colors:PdfThemeColors,;
   startY:number;
 ):number {;
-=======
-  doc: jsPDF,;
-  certifications: Certification[],;
-  colors: PdfThemeColors,;
-pr-12325
-  startY: number;)
-): number {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (certifications.length === 0) return startY,;
   ;
   let yPos = startY,;
@@ -290,12 +204,7 @@ pr-12325
     doc.addPage(),;}
     yPos = 20;}
   }
-<<<<<<< HEAD
-  ;
-=======
-pr-12325
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   doc.setFontSize(16),;
   doc.setTextColor(colors.heading),;'
   doc.text('Certifications', 20, yPos),;
@@ -310,21 +219,10 @@ pr-12325
   for (const cert of certifications) {;
     // Check if we need to add a new page;
     if (yPos > 260) {;
-<<<<<<< HEAD
-      doc.addPage(),;
+doc.addPage(),;
       yPos = 20,;
     }
     ;
-=======
-      doc.addPage(),;}
-      yPos = 20;}
-    }
-;
-  for (const cert of certifications) {;
-    // Check if we need to add a new page;
-    if (yPos > 260) {;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     doc.setFontSize(12),;
     doc.setTextColor(colors.subheading),;
     doc.text(cert.name, 20, yPos),;
@@ -334,8 +232,7 @@ pr-12325
     doc.text(cert.issuing_organization, 20, yPos + 5),;
     ;
     if (cert.issue_date) {;
-<<<<<<< HEAD
-      const issueDate = formatDate(cert.issue_date),;'`
+const issueDate = formatDate(cert.issue_date),;'`
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` :'',;
       doc.setFontSize(10),;`
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10),;
@@ -365,16 +262,10 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 }
 }
 
-<<<<<<< HEAD
-
 }
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '`
@@ -510,9 +401,4 @@ pr-12325
 }
 }
 }
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

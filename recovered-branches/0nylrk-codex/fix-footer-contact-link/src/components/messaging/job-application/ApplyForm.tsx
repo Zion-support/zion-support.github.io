@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-<<<<<<< HEAD
-=======
-  onApplySuccess?: (jobId: string) => Promise<void>
-
-
-<<<<<<< HEAD
-export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
-
-  const { createConversation } = useMessaging();
-  const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(;
-    `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
-  );
-  const [proposalLink, setProposalLink] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const [activeTab, setActiveTab] = useState<string>("message");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -34,8 +9,6 @@ import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ApplyFormProps {
 
   job: Job
@@ -50,8 +23,6 @@ interface ApplyFormProps {}
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
@@ -64,22 +35,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResumeId(resume.id)
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { useState } from 'react';
@@ -95,10 +56,6 @@ import {ResumeTab} from "./ResumeTab";"
 import {Job} from "./types";
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -112,8 +69,6 @@ import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
 import { ResumeTab } from "./ResumeTab",
 import { Job } from "./types",
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ApplyFormProps {
 
   job: Job
@@ -121,7 +76,6 @@ interface ApplyFormProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>
 }
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -133,8 +87,6 @@ import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',;
@@ -154,67 +106,28 @@ interface ApplyFormProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ApplyFormProps {;
-=======
-}interface ApplyFormProps {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  job: Job,;
-  onClose: () => void,;
-  onApplySuccess?: (jobId: string) => Promise<void>;
-}
-
-export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
-<<<<<<< HEAD
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
   const [message, setMessage] = useState(
-<<<<<<< HEAD
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-=======
-=======
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`  const { createConversation } = useMessaging();
-  const { applyToJob } = useJobApplications();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+`Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
   const [message, setMessage] = useState(;
     `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-=======
-
-  const { createConversation } = useMessaging();
-  const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(;'"
-    `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
-  );'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 "
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -279,22 +192,14 @@ export function ApplyForm() { return null; }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {}
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
-<<<<<<< HEAD
-  const [message, setMessage] = useState(
+const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
   const [message, setMessage] = useState(;
-=======
-  const [message, setMessage] = useState('"`
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
-  const [message, setMessage] = useState(;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
   );'
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
@@ -308,69 +213,34 @@ import { toast } from "@/hooks/use-toast",
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 interface ApplyFormProps {
-=======
-
-  ),'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  ),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),"
   const [activeTab, setActiveTab] = useState<string>("message"),
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
-  
 
-<<<<<<< HEAD
-  const handleResumeSelected = (resume: ResumeOption) => {
+const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume)
     setSelectedResumeId(resume.id)
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
-  
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume)
-    setSelectedResumeId(resume.id)
-  }
-  },
-  
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  const [activeTab, setActiveTab] = useState<string>("message");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
@@ -384,25 +254,6 @@ interface ApplyFormProps {
         variant: "destructive"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-"
-  const [activeTab, setActiveTab] = useState<string>("message");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-
-  const handleApply = async () => {}
-    if (!message.trim()) {}
-      toast({"
-        title: "Message required""
-        description: "Please enter a message before applying.""
-        variant: "destructive"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume),;
@@ -411,8 +262,7 @@ interface ApplyFormProps {
 
   const handleApply = async () => {;
     if (!message && message.trim()) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Message required",;"
         description: "Please enter a message before applying.",;"
         variant: "destructive";
@@ -420,53 +270,18 @@ interface ApplyFormProps {
       }),
       return;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      toast({;
-        title: "Message required",;
-        description: "Please enter a message before applying.",;
-        variant: "destructive";
-
-      });
-      return;
-    }
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }),
       return
     }
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsSubmitting(true),
-      
-
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      setIsSubmitting(true);
-      setIsSubmitting(true),
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -475,28 +290,6 @@ interface ApplyFormProps {
         job.id
         message
         selectedResumeId
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-      );
-      if (!applicationSuccess) {
-        throw new Error("Failed to submit application")
-=======
-
-
-      ),
-      
-      if (!applicationSuccess) {
-        throw new Error("Failed to submit application")
-import React, { useState } from 'react',;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -509,14 +302,13 @@ interface ApplyFormProps {
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-<<<<<<< HEAD
-      }),
+}),
       return
     }
     try {
       setIsSubmitting(true);
       setIsSubmitting(true),
-      
+
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
         job.id
@@ -533,10 +325,9 @@ interface ApplyFormProps {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
 
       ),
-      
+
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
@@ -545,32 +336,11 @@ interface ApplyFormProps {
       if (proposalLink) {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-      // First submit the application to the job applications table;
-      const applicationSuccess = await applyToJob(
-        job.id;
-        message;
-        selectedResumeId;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ),
-      
+
       if (!applicationSuccess) {"
         throw new Error("Failed to submit application")
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      }
-      
-      // Format message with proposal link if provided
-      let fullMessage = message;
-      
-      if (proposalLink) {
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -582,19 +352,6 @@ import { toast } from "@/hooks/use-toast",;
 import { ResumeSelector, ResumeOption } from "../resume-selector",;
 import { MessageTab } from "./MessageTab",;
 import { ResumeTab } from "./ResumeTab",;
-=======
-'
-import React, { useState } from 'react',;"
-import { Button } from "@/components/ui/button",;"
-import { Loader2 } from "lucide-react",;"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
-import { useJobApplications } from "@/hooks/useJobApplications",;"
-import { useMessaging } from "@/context/MessagingContext",;"
-import { toast } from "@/hooks/use-toast",;"
-import { ResumeSelector, ResumeOption } from "../resume-selector",;"
-import { MessageTab } from "./MessageTab",;"
-import { ResumeTab } from "./ResumeTab",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Job } from "./types",;
 interface ApplyFormProps {;
   job: Job,;
@@ -634,16 +391,11 @@ export function ApplyForm() { return null; }
       }),
       return;
     }
+try {
 <<<<<<< HEAD
-    try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsSubmitting(true);
       setIsSubmitting(true),
-      
+
       // First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(
         job.id;
@@ -659,20 +411,11 @@ export function ApplyForm() { return null; }
       if (proposalLink) {;'`
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
 
-<<<<<<< HEAD
-      ),
-      
+),
+
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -687,44 +430,17 @@ export function ApplyForm() { return null; }
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
+
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
-
-
-      
-
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
-      
-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
-      
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -739,8 +455,6 @@ export function ApplyForm() { return null; }
           type: selectedResume.type
         } : null
 =======
-
-
 
       // Create context data for the conversation;
       const contextData = {}
@@ -759,22 +473,9 @@ export function ApplyForm() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     try {;
       setIsSubmitting(true);
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -805,48 +506,20 @@ export function ApplyForm() { return null; }
       });
       return;
     }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         fullMessage;
-=======
-        fullMessage;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'job';
         job && job.id;
         contextData;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       );
 <<<<<<< HEAD
 <<<<<<< HEAD
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
         await onApplySuccess(job.id)
-=======
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-=======
-=======
-        fullMessage;
-        'job';
-        job.id;
-        contextData
-      );
-      // Call onApplySuccess to update job status in the UI
-      if (onApplySuccess) {
-        await onApplySuccess(job.id)
-      }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
@@ -858,8 +531,6 @@ export function ApplyForm() { return null; }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
       );
-
-
 
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -887,22 +558,12 @@ export function ApplyForm() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
       }
-      
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -912,35 +573,26 @@ export function ApplyForm() { return null; }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
       }
-      
-      
-<<<<<<< HEAD
-      }
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      }
-      
+
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       }
-      
-=======
 
+=======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       }
-      
+
       }
-      
+
       }
-      
+
       }
-      
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: "Application sent"
@@ -954,14 +606,9 @@ export function ApplyForm() { return null; }
         description: "There was an error sending your application. Please try again."
 =======
 
-
+      }
 
       }
-      
-
-
-      }
-      
 
       toast({"
         title: "Application sent""`
@@ -982,29 +629,6 @@ export function ApplyForm() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
-
-  return (
-    <>
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
-          <TabsTrigger value="message" className="flex-1">
-            Message
-          </TabsTrigger>
-          <TabsTrigger value="resume" className="flex-1">
-            Resume
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="message">
-<<<<<<< HEAD
-
-;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -1012,8 +636,6 @@ export function ApplyForm() { return null; }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -1024,42 +646,17 @@ export function ApplyForm() { return null; }
         await onApplySuccess(job && job.id);
       }
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({;
-<<<<<<< HEAD
-        title: "Application sent",,
+title: "Application sent",,
   description: `Your application for "${job && job.title}" has been sent.`}),;
-=======
-      toast({;"
-        title: "Application sent",;"`
-        description: `Your application for "${job && job.title}" has been sent.`}),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        title: "Application sent",;
-        description: `Your application for "${job && job.title}" has been sent.`}),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       onClose();
     } catch (error) {;"
       console && console.error("Failed to send application:", error);
-<<<<<<< HEAD
-      toast({;
-<<<<<<< HEAD
-        title: "Application failed",,
+toast({;
+title: "Application failed",,
   description: "There was an error sending your application. Please try again.",;
-=======
-      toast({;"
-        title: "Application failed",;"
-        description: "There was an error sending your application. Please try again.",;
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        title: "Application failed",;
-        description: "There was an error sending your application. Please try again.",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive";
       });
     } finally {;
@@ -1067,19 +664,11 @@ export function ApplyForm() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     }
   }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
-
-
-
 
     }
   }
@@ -1088,20 +677,13 @@ export function ApplyForm() { return null; }
 
   },
 
-
   return (
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     }
   }
 
   return (
-
 
     }
   }
@@ -1113,7 +695,6 @@ export function ApplyForm() { return null; }
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
   return (
     <>;
@@ -1199,103 +780,7 @@ interface ApplyFormProps {}
   on_close: () => void,
   onApplySuccess?: (job_id: string) => Promise < void>;
 }
-<<<<<<< HEAD
 export /**;
-=======
-export /**
- * ApplyForm - Function description
-  // TODO: Implement
-
-  // TODO: Implement
-}
-  job: Job;,
-  onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>
-</void>
-  onApplySuccess?: (jobId: string) => Promise<void>;
-</void>
-  const [activeTab, setActiveTab] = useState<string>("message");"
-</string>
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-</ResumeOption>
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-</string>
-  onApplySuccess?: (jobId: string) => Promise<void>
-</void>
-  onApplySuccess?: (jobId: string) => Promise<void>
-</void>
-  onApplySuccess?: (jobId: string) => Promise<void>;
-</void>"
-  const [activeTab, setActiveTab] = useState<string>("message"),"
-</string>
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-</ResumeOption>
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
-</string>"
-  const [activeTab, setActiveTab] = useState<string>("message");"
-</string>
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-</ResumeOption>
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-</string>
-  onApplySuccess?: (jobId: string) => Promise<void>;
-</void>"
-  const [activeTab, setActiveTab] = useState<string>("message"),;"
-</string>
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
-</ResumeOption>
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
-</string>
-  onApplySuccess?:(jobId:string) => Promise<void>;
-</void>"
-  const [activeTab, setActiveTab] = useState<string>("message"),;"
-</string>
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
-</ResumeOption>
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
-</string>
-    <>;"
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;"
-</Tabs>"
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;"
-</TabsList>"
-          <TabsTrigger value="message" className="flex-1">;"
-</TabsTrigger>
-          </TabsTrigger>;"
-          <TabsTrigger value="resume" className="flex-1">;"
-</TabsTrigger>
-          </TabsTrigger>;
-        </TabsList>;"
-        <TabsContent value="message">;"
-</TabsContent>
-          <MessageTab;"
-import React, { useState } from 'react';''
-import { Button } from '@/components / ui / button';''
-import { Loader2 } from './lucide-react';''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';''
-import { useJobApplications } from '@/hooks / useJobApplications';''
-import { use_messaging } from '@/context / MessagingContext';''
-import { toast } from '@/hooks / use - toast';''
-import { ResumeSelector, ResumeOption } from '../resume - selector';''
-import { MessageTab } from './MessageTab';''
-import { ResumeTab } from './ResumeTab';''
-import { Job } from './types';'
-
-interface ApplyFormProps {
-  // TODO: Implement
-}
-  job: Job,
-
-  on_close: () => void,
-
-  onApplySuccess?: (job_id: string) => Promise < void>;
-export /**
- * ApplyForm - Function description;
-pr-12325
-
-}
-export /**
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * ApplyForm - Function description;
  */
 function ApplyForm() {}
@@ -1316,14 +801,7 @@ function ApplyForm() {}
   const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState < string | null>(null);
 ;
-<<<<<<< HEAD
-  const handleResumeSelected = (resume: ResumeOption) =>: any {}
-=======
-  const handleResumeSelected = (resume: ResumeOption) =>: any {
-
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const handleResumeSelected = (resume: ResumeOption) =>: any {}
     setSelectedResume (resume),
     setSelectedResumeId (resume.id);
   }
@@ -1346,13 +824,7 @@ function ApplyForm() {}
       });
       return;
     }
-<<<<<<< HEAD
-    try {}
-=======
-    try {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+try {}
       setIsSubmitting (true);
 ;
       // First submit the application to the job applications table;
@@ -1489,66 +961,21 @@ if ( {) {}
         description: "There was an error sending your application. Please try again.","
         variant: "destructive";
       });
-<<<<<<< HEAD
-    } finally {}
-=======
-    } finally {
-        full_message;'
-        'job';'
-        job.id;)
-        context_data);
-;
-      // Call onApplySuccess to update job status in the UI;
-      // Check condition;
-
-if ( {) {
-  $2;
-}
-        await onApplySuccess (job.id);
-      }
-      toast ({'
-        title: "Application sent",")"
-        description: `Your application for "${job.title}" has been sent.`}),"
-      on_close ();
-    } catch (error) {"
-      console.error ("Failed to send application:", error);"
-      toast ({"
-        title: "Application failed",""
-        description: "There was an error sending your application. Please try again.",""
-        variant: "destructive";")
-      });
-    } finally {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+} finally {}
       setIsSubmitting (false);
 
     }
   }
 ;
   return (
-<<<<<<< HEAD
-    <>;
+<>;
       <Tabs value={active_tab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="w - full mb - 4 bg - zion - blue-dark / 30">;
           <TabsTrigger value="message" className="flex-1">;
             Message;
           </TabsTrigger>;
 <<<<<<< HEAD
-<<<<<<< HEAD
           <TabsTrigger value="resume" className="flex-1">;
-=======
-    <>;"
-      <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;"
-        <TabsList className="w - full mb - 4 bg - zion - blue - dark / 30">;"
-          <TabsTrigger value="message" className="flex - 1">;
-            Message;
-          </TabsTrigger>;"
-          <TabsTrigger value="resume" className="flex - 1">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <TabsTrigger value="resume" className="flex - 1">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           <TabsTrigger value="resume" className="flex-1">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1560,64 +987,26 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-<<<<<<< HEAD
-          <MessageTab 
-
+<MessageTab 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-<MessageTab
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <MessageTab 
 
         ;
         <TabsContent value="message">;
           <MessageTab ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-          <MessageTab;
-        ;"
-        <TabsContent value="message">;
-          <MessageTab ;
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             message={message}
@@ -1625,34 +1014,7 @@ if ( {) {
             proposal_link={proposal_link}
             setProposalLink={setProposalLink}
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
-
-=======
-          />;
-        </TabsContent>;
-        <TabsContent value="message">;
-          <MessageTab;
-            message={message}
-            setMessage={setMessage}
-            proposalLink={proposalLink}
-            setProposalLink={setProposalLink}
-          />
-        </TabsContent>
-        <TabsContent value="resume">
-          <ResumeTab
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId}
-          />
-        </TabsContent>
-      </Tabs>
-      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -1671,28 +1033,7 @@ if ( {) {
 
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-/>;
-        </TabsContent>;
-        <TabsContent value="message">;
-          <MessageTab;
-            message={message}
-            setMessage={setMessage}
-            proposalLink={proposalLink}
-            setProposalLink={setProposalLink}
-          />
-        </TabsContent>
-        <TabsContent value="resume">
-          <ResumeTab
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId}
-          />
-        </TabsContent>
-      </Tabs>
-      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Button
           type="button"
           variant="outline"
@@ -1725,11 +1066,7 @@ className="border-zion-purple/30 text-white"
           type="button"
           onClick={handleApply}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           disabled={isSubmitting}
-
-
 
           {isSubmitting ? (;
             <>;"
@@ -1743,19 +1080,9 @@ className="border-zion-purple/30 text-white"
             'Submit Application';
           )}
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
           />;
-<<<<<<< HEAD
-=======
-          disabled={isSubmitting}          />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
           disabled={isSubmitting}          />;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1858,12 +1185,8 @@ className="border-zion-purple/30 text-white"
       </div>;
     </>;
           />;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </TabsContent>;
-=======
-        </TabsContent>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <TabsContent value="resume">;
 =======
         </TabsContent>;'
@@ -1876,28 +1199,14 @@ className="border-zion-purple/30 text-white"
             selectedResumeId={selectedResumeId}
           />;
         </TabsContent>;
-<<<<<<< HEAD
-      </Tabs>;
+</Tabs>;
       <div className="flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt-4">;
         <Button;
           type="button";
           variant="outline";
           on_click={on_close}
 <<<<<<< HEAD
-<<<<<<< HEAD
           className="border - zion - purple / 30 text-white";
-=======
-      </Tabs>;"
-      <div className="flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt - 4">;
-        <Button;"
-          type="button";"
-          variant="outline";
-          on_click={on_close}"
-          className="border - zion - purple / 30 text - white";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          className="border - zion - purple / 30 text - white";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           className="border - zion - purple / 30 text-white";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1907,26 +1216,13 @@ className="border-zion-purple/30 text-white"
         <Button;"
           type="button";
           on_click={handle_apply}
-<<<<<<< HEAD
-          disabled={is_submitting}
+disabled={is_submitting}
           className="bg - zion - purple hover:bg - zion - purple - dark text-white";
         >;
           {is_submitting ? (
             <>;
 <<<<<<< HEAD
-<<<<<<< HEAD
               <Loader2 className="h - 4 w - 4 mr - 2 animate-spin" />;
-=======
-          disabled={is_submitting}"
-          className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-        >;
-          {is_submitting ? (
-            <>;"
-              <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
               <Loader2 className="h - 4 w - 4 mr - 2 animate-spin" />;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1940,20 +1236,10 @@ className="border-zion-purple/30 text-white"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface ApplyFormProps {
 =======
 }  ),; interface ApplyFormProps {
@@ -1963,9 +1249,6 @@ className="border-zion-purple/30 text-white"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
   ),; interface ApplyFormProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -1973,11 +1256,7 @@ className="border-zion-purple/30 text-white"
 
 ;
   ),; interface ApplyFormProps {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}  ),; interface ApplyFormProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   job: Job;
 onClose: () => void;
 onApplySuccess?: (jobId: string) => Promise<void> 
@@ -2000,7 +1279,6 @@ const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
   toast ({}
   return;
 }
-<<<<<<< HEAD
 ;
 
 }//Format message with proposal link if provided let fullMessage = message;
@@ -2143,13 +1421,8 @@ return (<> <Tabs value= {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2184,9 +1457,7 @@ return (<> <Tabs value= {
 
           <TabsTrigger value="resume" className="flex - 1">;"
 
-
           <MessageTab;
-
 
           <MessageTab ;
             message={message}
@@ -2225,8 +1496,6 @@ return (<> <Tabs value= {
       </div>;
     </>;
   );
-
-
 
       <div className="flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt - 4">;"
           type="button";""

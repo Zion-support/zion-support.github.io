@@ -271,7 +271,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-return (
+return (;
           parseFloat(a.price.replace('$', '').replace(',', '')) -
           parseFloat(b.price.replace('$', '').replace(',', ''))
         );
@@ -287,10 +287,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   });
   const contactInfo = {'
-    mobile: '+1 302 464 0950''
-    email: 'kleber@ziontechgroup.com''
-    address: '364 E Main St STE 1008 Middletown DE 19709''
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+    mobile: '+1 302 464 0950'';
+    email: 'kleber@ziontechgroup.com'';
+    address: '364 E Main St STE 1008 Middletown DE 19709'';
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com';
   }
     }
   });
@@ -319,94 +319,94 @@ website: 'https://ziontechgroup.com',
 description:
         'Revolutionary quantum AI solutions with human-level reasoning capabilities',
       icon: <Brain className='w-6 h-6' />,
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Quantum AI & Cognitive Computing'
       ).length
-      color: 'from-purple-500 to-indigo-600'
+      color: 'from-purple-500 to-indigo-600';
     }
-      name: 'Autonomous Manufacturing & Industry 4.0'
+      name: 'Autonomous Manufacturing & Industry 4.0';
       description:
-        'Next-generation autonomous manufacturing with zero human intervention'
+        'Next-generation autonomous manufacturing with zero human intervention';
       icon: <Factory className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Autonomous Manufacturing & Industry 4.0'
       ).length
-      color: 'from-orange-500 to-red-600'
+      color: 'from-orange-500 to-red-600';
     }
     {
-      name: 'Quantum Blockchain & DeFi'
+      name: 'Quantum Blockchain & DeFi';
       description:
-        'Quantum-secured blockchain platforms with infinite scalability'
+        'Quantum-secured blockchain platforms with infinite scalability';
       icon: <Globe className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Quantum Blockchain & DeFi'
       ).length
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600';
     }
     {
-      name: 'AI Biomedical Research & Drug Discovery'
+      name: 'AI Biomedical Research & Drug Discovery';
       description:
-        'AI-powered platforms for accelerated drug discovery and medical research'
+        'AI-powered platforms for accelerated drug discovery and medical research';
       icon: <FlaskIcon className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'AI Biomedical Research & Drug Discovery'
       ).length
-      color: 'from-blue-500 to-indigo-600'
+      color: 'from-blue-500 to-indigo-600';
     }
     {
-      name: 'Quantum Cybersecurity & Threat Detection'
+      name: 'Quantum Cybersecurity & Threat Detection';
       description:
-        'Quantum-resistant cybersecurity with AI-powered threat detection'
+        'Quantum-resistant cybersecurity with AI-powered threat detection';
       icon: <ShieldCheck className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Quantum Cybersecurity & Threat Detection'
       ).length
-      color: 'from-red-500 to-pink-600'
+      color: 'from-red-500 to-pink-600';
     }
     {
-      name: 'Space Technology & Satellite Optimization'
+      name: 'Space Technology & Satellite Optimization';
       description:
-        'Revolutionary platforms for space exploration and satellite optimization'
+        'Revolutionary platforms for space exploration and satellite optimization';
       icon: <Rocket className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Space Technology & Satellite Optimization'
       ).length
-      color: 'from-indigo-500 to-purple-600'
+      color: 'from-indigo-500 to-purple-600';
     }
     {
-      name: 'AI Content Creation & Marketing'
-      description: 'Quantum-powered content creation at infinite scale'
+      name: 'AI Content Creation & Marketing';
+      description: 'Quantum-powered content creation at infinite scale';
       icon: <FileText className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'AI Content Creation & Marketing'
       ).length
-      color: 'from-teal-500 to-cyan-600'
+      color: 'from-teal-500 to-cyan-600';
     }
     {
-      name: 'Quantum Computing as a Service'
-      description: 'Enterprise quantum computing with real quantum processors'
+      name: 'Quantum Computing as a Service';
+      description: 'Enterprise quantum computing with real quantum processors';
       icon: <Cpu className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Quantum Computing as a Service'
       ).length
-      color: 'from-violet-500 to-purple-600'
+      color: 'from-violet-500 to-purple-600';
     }
     {
-      name: 'Autonomous Vehicles & Smart Transportation'
+      name: 'Autonomous Vehicles & Smart Transportation';
       description:
-        'AI platforms for autonomous vehicles and smart transportation'
+        'AI platforms for autonomous vehicles and smart transportation';
       icon: <CarIcon className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Autonomous Vehicles & Smart Transportation'
       ).length
-      color: 'from-emerald-500 to-green-600'
+      color: 'from-emerald-500 to-green-600';
     }
     {
-      name: 'Smart Energy & Renewable Energy'
+      name: 'Smart Energy & Renewable Energy';
       description:
-        'AI platforms for smart energy grids and renewable energy optimization'
+        'AI platforms for smart energy grids and renewable energy optimization';
       icon: <LeafIcon className='w-6 h-6' />
-      count: revolutionaryMicroSaasServices.filter(
+      count: revolutionaryMicroSaasServices.filter(;
         s => s.category === 'Smart Energy & Renewable Energy'
       ).length,
       color: 'from-yellow-500 to-orange-600',
@@ -428,7 +428,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'Revolutionary quantum AI solutions with human - level reasoning capabilities','
       icon: <Brain className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Quantum AI & Cognitive Computing').length,'
       color: 'from - purple - 500 to - indigo - 600',
     },'
@@ -436,7 +436,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'Next - generation autonomous manufacturing with zero human intervention','
       icon: <Factory className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Autonomous Manufacturing & Industry 4.0').length,'
       color: 'from - orange - 500 to - red - 600',
     },
@@ -445,7 +445,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'Quantum - secured blockchain platforms with infinite scalability','
       icon: <Globe className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Quantum Blockchain & DeFi').length,'
       color: 'from - green - 500 to - emerald - 600',
     },
@@ -454,7 +454,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'AI - powered platforms for accelerated drug discovery and medical research','
       icon: <FlaskIcon className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'AI Biomedical Research & Drug Discovery').length,'
       color: 'from - blue - 500 to - indigo - 600',
     },
@@ -463,7 +463,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'Quantum - resistant cybersecurity with AI - powered threat detection','
       icon: <ShieldCheck className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Quantum Cybersecurity & Threat Detection').length,'
       color: 'from - red - 500 to - pink - 600',
     },
@@ -472,7 +472,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'Revolutionary platforms for space exploration and satellite optimization','
       icon: <Rocket className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Space Technology & Satellite Optimization').length,'
       color: 'from - indigo - 500 to - purple - 600',
     },
@@ -480,7 +480,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'AI Content Creation & Marketing','
       description: 'Quantum - powered content creation at infinite scale','
       icon: <FileText className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'AI Content Creation & Marketing').length,'
       color: 'from - teal - 500 to - cyan - 600',
     },
@@ -488,7 +488,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Quantum Computing as a Service','
       description: 'Enterprise quantum computing with real quantum processors','
       icon: <Cpu className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Quantum Computing as a Service').length,'
       color: 'from - violet - 500 to - purple - 600',
     },
@@ -497,7 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'AI platforms for autonomous vehicles and smart transportation','
       icon: <CarIcon className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Autonomous Vehicles & Smart Transportation').length,'
       color: 'from - emerald - 500 to - green - 600',
     },
@@ -506,7 +506,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:;'
         'AI platforms for smart energy grids and renewable energy optimization','
       icon: <LeafIcon className='w - 6 h - 6' />,
-      count: revolutionaryMicroSaasServices.filter ('
+      count: revolutionaryMicroSaasServices.filter (';
         string => s.category === 'Smart Energy & Renewable Energy').length,'
       color: 'from - yellow - 500 to - orange - 600','
     },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
@@ -517,7 +517,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const container_variants = {}
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 staggerChildren: 0.1,
       },
@@ -580,16 +580,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           />;'
           <meta name='author' content='Zion Tech Group' />;
           <meta'
-            property='og:title''
+            property='og:title'';
             content='Revolutionary Micro SaaS Services | Zion Tech Group'
           />;
           <meta'
-            property='og:description''
+            property='og:description'';
             content='Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions.'
           />;
           <meta'
-            property='og:url''
-            content='https://ziontechgroup && ziontechgroup.com/revolutionary-services'
+            property='og:url'';
+            content='https://ziontechgroup && ziontechgroup.com/revolutionary-services';
           />;'
           <meta property='og:type' content='website' />;
           <link'
@@ -599,8 +599,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-white">Micro SaaS Services</span>
               </motion.h1>
               <motion.p"
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-            href='https://ziontechgroup.com/revolutionary-services'
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed";
+            href='https://ziontechgroup.com/revolutionary-services';
           />
         </Head>
         {/* Hero Section */}
@@ -608,7 +608,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='container mx-auto px-4 text-center'>
             <div className='max-w-5xl mx-auto'>
               <motion.h1
-                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'
+                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow';
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -620,7 +620,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-white'>Micro SaaS Services</span>
               </motion.h1>
               <motion.p
-                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
+                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -636,7 +636,7 @@ Experience the future of technology with our revolutionary micro
               </motion.p>
               {/* Service Count Stats */}
               <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -703,7 +703,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
               {/* CTA Buttons */}
 <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center';
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -773,13 +773,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;"
           <div className="container mx-auto px-4">;
             <motion&& motion.div "
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6";
               variants={containerVariants}"
               initial="hidden""
               whileInView="visible"
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
           <div className='container mx-auto px-4'>
-            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>;
               <div className='flex items-center gap-4'>
                 <Phone className='w-5 h-5 text-cyan-400' />
                 <span className='text-white'>{contactInfo.mobile}</span>
@@ -799,7 +799,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-12'>
           <div className='container mx-auto px-4'>
             <motion.div
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6'
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6';
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
@@ -834,7 +834,7 @@ variant='quantum-advanced'
                       setSelectedCategory(
                         category.name === selectedCategory
                           ? 'All'
-                          : category.name
+                          : category.name;
                       )
                     }
                     <div
@@ -869,7 +869,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >'
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
               variants={containerVariants}'
               initial='hidden''
               whileInView='visible'              viewport={{ once: true }}                  Most Popular;
@@ -883,7 +883,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion && motion.div>;
 
             <motion&& motion.div "
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               variants={containerVariants}"
               initial="hidden""
               whileInView="visible"
@@ -895,7 +895,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                   Most Popular
                 </span>
@@ -908,7 +908,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <motion.div
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
@@ -994,7 +994,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-<div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+<div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <select
@@ -1029,13 +1029,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView='visible'              viewport={{ once: true }}            <motion.div '
               className={viewMode === 'grid' 
 "
-                ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8""
-                : "space-y-6"
+                ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"";
+                : "space-y-6";
               }
               variants={containerVariants}"
               initial="hidden"
                       onChange={e => setSearchQuery(e.target.value)}
-                      className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64'
+                      className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />
                   </div>
 
@@ -1060,8 +1060,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div
               className={
                 viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
+                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+                  : 'space-y-6';
               }
               variants={containerVariants}
               initial='hidden'
@@ -1141,14 +1141,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </Button>
                         </div>
                       </div>
-                    ) : (
+                    ) : (;
                       // List View
-<div className='flex flex-col md:flex-row gap-6 w-full'>
-                        <div className='text-4xl md:text-5xl flex-shrink-0'>
+<div className='flex flex-col md:flex-row gap-6 w-full'>;
+                        <div className='text-4xl md:text-5xl flex-shrink-0'>;
                           {service.icon}
                         </div>
                         <div className='flex-1'>
-                          <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>
+                          <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>;
                               <h3 className='text-xl font-bold text-white mb-2'>
                                 {service.name}
                               </h3>
@@ -1156,7 +1156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 {service.tagline}
                               </p>
                             </div>
-                            <div className='text-right mt-2 md:mt-0'>
+                            <div className='text-right mt-2 md:mt-0'>;
                               <div className='text-2xl font-bold text-cyan-400'>
                                 {service.price}
                               </div>
@@ -1165,7 +1165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
                             </div>
                           </div>
-                          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
+                          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
                             <div>
                               <h4 className='text-sm font-semibold text-cyan-400 mb-2'>
                                 Key Features
@@ -1341,13 +1341,13 @@ className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full m
                     </div>
                     <button
                       onClick={() => setSelectedService(null)}
-className='text-gray-400 hover:text-white text-2xl'
+className='text-gray-400 hover:text-white text-2xl';
                     >
                       ×
                     </button>
                   </div>
 
-<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
                     <div>
                       <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
                         Service Details
@@ -1453,7 +1453,7 @@ className='text-gray-400 hover:text-white text-2xl'
                   </div>
 
 <div className='mt-8 pt-6 border-t border-gray-700'>
-                    <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>
+                    <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>;
                       <div className='text-sm text-gray-400'>
                         <div>Setup Time: {selectedService.setupTime;}</div>
                         <div>Trial: {selectedService.trialDays;} days</div>
@@ -1472,7 +1472,7 @@ className='text-gray-400 hover:text-white text-2xl'
                           variant='futuristic'
                           onClick={() =>
                             window.open(
-                              'https://ziontechgroup.com/contact'
+                              'https://ziontechgroup.com/contact';
                               '_blank'
                             )
                           }
@@ -1505,14 +1505,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true ;}}
               transition={{ duration: 0.8 ;}}
             >
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Experience the Future?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
                 Join thousands of companies already transforming their business
                 with our revolutionary micro SaaS services.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
                   variant='primary'
@@ -1534,7 +1534,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
               </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                                  <Button"
                    variant="primary""
                    size="lg"'
@@ -1552,7 +1552,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                    <Calendar className="ml-2 w-5 h-5" />
                  </Button>
               </div>"
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
                 <div>"
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />"
                   <div className="text-white font-semibold">{contactInfo.mobile}</div>"
@@ -1572,7 +1572,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Calendar className='ml-2 w-5 h-5' />
                 </Button>
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
                 <div>
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
                   <div className='text-white font-semibold'>

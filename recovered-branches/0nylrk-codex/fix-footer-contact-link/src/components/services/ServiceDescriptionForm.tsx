@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from "@/components/ui/card";
-import {Loader, Sparkles} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {useForm} from "react-hook-form";
-import z from "zod";
-import {zodResolver} from "@hookform/resolvers/zod";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -36,8 +18,6 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
-<<<<<<< HEAD
-
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -50,27 +30,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useForm } from "react-hook-form",
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-import React, { useState } from './react';
-import { use_toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-import { Loader, Sparkles } from './lucide-react';
-import { supabase } from '@/integrations / supabase / client';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { use_form } from './react - hook - form';
-import z from './zod';
-import { zod_resolver } from '@hookform / resolvers / zod';
-const form_schema = z.object ({
-  title: z.string ().min (3, "Title must be at least 3 characters");
-  key_features: z.string (),
-  target_audience: z.string ()}),
-type FormData = z.infer < typeof form_schema>;
-;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -78,24 +37,7 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>,
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void;
-}
-
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast(),
-  const [isLoading, setIsLoading] = useState(false),
-  
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -106,10 +48,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     setIsLoading(true)
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -152,30 +91,20 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       if (response.error) {
         throw new Error(response.error)
       }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       toast({
         title: "Description Generated"
         description: "Your professional service description has been created."
       })
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error generating description:", error);
-=======
-      console.error("Error generating description:", error),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+console.error("Error generating description:", error);
       toast({
         title: "Generation Failed"
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again."
@@ -183,8 +112,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       })
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -244,10 +171,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
       setIsLoading(false);
 
     }
-=======
-  }
-  },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -323,16 +246,12 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
             <FormField;
               control={form.control}
               name="title";
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
-                    <Input
+<Input
                       {...field} 
                       placeholder="e && e.g. Professional Web Design Services"
 
@@ -356,19 +275,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>;
                   <FormControl>;
-
-=======
-                      className="bg-zion-blue border border-zion-blue-light text-white"
-=======
-
-              control={form.control}
-              name=\"title\";
-              render={({ field }) = /> (;
-                <FormItem />;
-                  <FormLabel className=\"text-zion-slate-light\" />Service Title</FormLabel>;
-                  <FormControl />;
-                      className=\"bg-zion-blue border border-zion-blue-light text-white\"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       disabled={isLoading}
                     />;
                   </FormControl>;
@@ -379,18 +285,11 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
             <FormField;
 control={form && form.control}
               control={form.control}
-<<<<<<< HEAD
-            <FormField
+<FormField
               control={form && form.control}
               name="keyFeatures"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Textarea
-=======
-            <FormField;
-control={form && form.control}
-              name=\"keyFeatures\"
-                    <Textarea;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {...field}
                       placeholder=\"Enter key features, separated by commas\"
                       className=\"bg-zion-blue border border-zion-blue-light text-white min-h-20\"
@@ -400,10 +299,7 @@ control={form && form.control}
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-
-            />;
-
+/>;
 
             <FormField
               control={form && form.control}
@@ -414,13 +310,6 @@ control={form && form.control}
                   <FormControl>
 
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
-=======
-              render={({ field }) => (;
-<<<<<<< HEAD
-                <FormItem>;
-                  <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
-                  <FormControl>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       className="bg-zion-blue border border-zion-blue-light text-white"
 =======
                 <FormItem />;
@@ -434,17 +323,10 @@ control={form && form.control}
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            />
+/>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               type="submit"
-=======
-              type=\"submit\"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               disabled={isLoading}
               className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white\">;
               {isLoading ? (;
@@ -456,31 +338,15 @@ control={form && form.control}
                 <>;
                   <Sparkles className=\"h-4 w-4 mr-2\" />;
                   Generate Description;
-<<<<<<< HEAD
-                </>;
+</>;
               )}
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </form>;
-<<<<<<< HEAD
-        </Form>;
+</Form>;
       </CardContent>;
-<<<<<<< HEAD
-
-    </Card>);
+</Card>);
 }
-
-=======
-;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======

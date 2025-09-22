@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('EquipmentPage', () => {
@@ -7,61 +6,12 @@ describe('EquipmentPage', () => {
   });
 });
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { Link } from 'react-router-dom',
-import { SERVICE_CATEGORIES } from '@/data/servicesData',
-export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
-  }),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-  const [selectedService, setSelectedService] = useState(''),
-=======
+const [selectedService, setSelectedService] = useState(''),
 
-import React from 'react';
-import { render, screen } from '@testing - library / react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
-describe ('EquipmentPage', () => {
-  it ('renders equipment page correctly', () => {
-    render (
-      <MemoryRouter>;
-        <EquipmentPage />;
-      </MemoryRouter>);
-    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-=======
-  });
-<<<<<<< HEAD
-=======
-  const [selectedService, setSelectedService] = useState('');
-
-
-import React, { useState } from 'react',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react',;
 import { Link } from 'react-router-dom',;
 import { SERVICE_CATEGORIES } from '@/data/servicesData',;
@@ -79,28 +29,14 @@ export function ContactPage() {
   }),
 =======
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -126,36 +62,9 @@ export function ContactPage() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const { name, value } = e.target;
-<<<<<<< HEAD
-    setFormData(prev => ({ ...prev, [name]: value }))
+setFormData(prev => ({ ...prev, [name]: value }))
 };
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  },
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    // Here you would typically send the form data to your backend
-    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0ABudget: ${formData.budget}%0D%0ATimeline: ${formData.timeline}%0D%0AMessage: ${formData.message}`,
-    window.location.href = mailtoLink
-  },
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}"
@@ -173,33 +82,14 @@ export function ContactPage() {
                 href="tel:+13024640950""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
-<<<<<<< HEAD
-                📞 Call Now: +1 302 464 0950
-<<<<<<< HEAD
-=======
-              </a>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              </Link>
+📞 Call Now: +1 302 464 0950
+</Link>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
                 ✉️ Email Us
               </Link>
-=======
-                📞 Call Now: +1 302 464 0950;
-              </a>
-<<<<<<< HEAD
-              <a "
-                href="mailto:kleber@ziontechgroup.com""
-                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
-              >
-                ✉️ Email Us;
-              </a>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              </Link>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </div>
@@ -224,14 +114,8 @@ export function ContactPage() {
             <div className="flex items-center gap-2">"
               <span className="text-blue-600">🌐</span>"
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
-<<<<<<< HEAD
-                ziontechgroup.com
+ziontechgroup.com
               </Link>
-=======
-                ziontechgroup.com;
-              </a>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
               </Link>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -248,61 +132,19 @@ export function ContactPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>"
             <p className="text-gray-600 mb-8">'
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
+</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
-            </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            
-            
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <form onSubmit={handleSubmit} className="space-y-6">
-<<<<<<< HEAD
-=======
-            </p>            <form onSubmit={handleSubmit} className="space-y-6">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
             </p>            <form onSubmit={handleSubmit} className="space-y-6">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
 
 "
             <form onSubmit={handleSubmit} className="space-y-6">"
@@ -326,12 +168,7 @@ export function ContactPage() {
                     placeholder="Your full name"
                   />
                 </div>
-<<<<<<< HEAD
-                
-                <div>"
-=======
-                <div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<div>"
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
@@ -346,53 +183,14 @@ export function ContactPage() {
                     placeholder="your.email@company.com"
                   />
                 </div>
+</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-              </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              
-              
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -411,12 +209,7 @@ export function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
-<<<<<<< HEAD
-                
-                <div>"
-=======
-                <div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<div>"
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number;
                   </label>
@@ -431,12 +224,7 @@ export function ContactPage() {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-              
-              <div>"
-=======
-              <div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<div>"
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service of Interest *
                 </label>
@@ -490,31 +278,8 @@ export function ContactPage() {
                   ))}
                 </select>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              
-              
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -527,18 +292,6 @@ export function ContactPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
-
-
-
-
-
-
-
-
-
                     </optgroup>;
                   ))}
                 </select>
@@ -548,9 +301,6 @@ export function ContactPage() {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
 =======
-
-
-
 
 "
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -574,12 +324,7 @@ export function ContactPage() {
                     <option value="over-500k">Over $500,000</option>
                   </select>
                 </div>
-<<<<<<< HEAD
-                
-                <div>"
-=======
-                <div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<div>"
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Timeline;
                   </label>
@@ -599,12 +344,7 @@ export function ContactPage() {
                   </select>
                 </div>
               </div>
-<<<<<<< HEAD
-              
-              <div>"
-=======
-              <div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<div>"
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
                 </label>
@@ -619,14 +359,8 @@ export function ContactPage() {
                   placeholder="Tell us about your project, goals, and requirements..."
                 />
               </div>
-<<<<<<< HEAD
-              
-              <button"
+<button"
                 type="submit""
-=======
-              <button
-                type="submit"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
               >
                 ✉️ Send Message;
@@ -634,42 +368,21 @@ export function ContactPage() {
             </form>
           </div>
 
-<<<<<<< HEAD
-          {/* Contact Information */}
-<<<<<<< HEAD
-=======
-          <div className="space-y-8">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          <div className="space-y-8">;
+{/* Contact Information */}
+<div className="space-y-8">;
             {/* Direct Contact */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
-=======
-          {/* Contact Information */}"
-          <div className="space-y-8">
-            {/* Direct Contact */}"
-            <div className="bg-white rounded-xl shadow-lg p-8">"
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h3>"
-              <div className="space-y-4">"
-                <div className="flex items-center gap-4">"
-                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span className="text-blue-600 text-xl">📱</span>
                   </div>
                   <div>"
                     <p className="font-semibold text-gray-900">Phone</p>"
                     <a href="tel:+13024640950" className="text-blue-600 hover:underline text-lg">
-<<<<<<< HEAD
-                      +1 302 464 0950
++1 302 464 0950
                     </Link>
-=======
-                      +1 302 464 0950;
-                    </a>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
                 "
@@ -687,14 +400,8 @@ export function ContactPage() {
                   <div>"
                     <p className="font-semibold text-gray-900">Email</p>"
                     <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline text-lg">
-<<<<<<< HEAD
-                      kleber@ziontechgroup.com
+kleber@ziontechgroup.com
                     </Link>
-=======
-                      kleber@ziontechgroup.com;
-                    </a>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
                 "
@@ -717,27 +424,16 @@ export function ContactPage() {
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
-                "
+"
                 <div className="flex items-center gap-4">"
                   <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">"
-=======
-                <div className="flex items-center gap-4">
-                  <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-orange-600 text-xl">🌐</span>
                   </div>
                   <div>"
                     <p className="font-semibold text-gray-900">Website</p>"
                     <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline text-lg">
-<<<<<<< HEAD
-                      ziontechgroup.com
+ziontechgroup.com
                     </Link>
-=======
-                      ziontechgroup.com;
-                    </a>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                     </Link>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -749,15 +445,6 @@ export function ContactPage() {
             {/* Business Hours */}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
@@ -782,10 +469,6 @@ export function ContactPage() {
               </div>
             </div>
 
-
-
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-white rounded-xl shadow-lg p-8">;
@@ -793,14 +476,6 @@ export function ContactPage() {
               <div className="space-y-3">;
                 <div className="flex justify-between">;
                   <span className="text-gray-600">Monday - Friday</span>;
-=======
-"
-            <div className="bg-white rounded-xl shadow-lg p-8">;"
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;"
-              <div className="space-y-3">;"
-                <div className="flex justify-between">;"
-                  <span className="text-gray-600">Monday - Friday</span>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span className="font-semibold">8:00 AM - 6:00 PM EST</span>;
                 </div>;"
                 <div className="flex justify-between">;"
@@ -819,41 +494,17 @@ export function ContactPage() {
               </div>;
             </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
 =======
-
-
 
             {/* Quick Actions */}"
             <div className="bg-white rounded-xl shadow-lg p-8">"
@@ -864,37 +515,17 @@ export function ContactPage() {
                   href="tel:+13024640950""
                   className="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors"
                 >
-<<<<<<< HEAD
-                  📞 Call Now
-<<<<<<< HEAD
-=======
-                </a>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                </Link>
+📞 Call Now
+</Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="block w-full bg-green-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-green-700 transition-colors"
                 >
                   ✉️ Send Email
-<<<<<<< HEAD
-=======
-                </a>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 </Link>
                 <Link
                   to="/services"
-=======
-                  📞 Call Now;
-                </a>
-                <a"
-                  href="mailto:kleber@ziontechgroup.com""
-                  className="block w-full bg-green-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-green-700 transition-colors"
-                >
-                  ✉️ Send Email;
-                </a>
-                <Link"
-                  to="/services""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-purple-700 transition-colors"
                 >
                   🚀 View Services;
@@ -903,14 +534,8 @@ export function ContactPage() {
                   href="https://ziontechgroup.com""
                   className="block w-full bg-gray-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-gray-700 transition-colors"
                 >
-<<<<<<< HEAD
-                  🌐 Visit Website
+🌐 Visit Website
                 </Link>
-=======
-                  🌐 Visit Website;
-                </a>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                 </Link>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -934,61 +559,26 @@ export function ContactPage() {
               href="tel: +13024640950""
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
             >
-<<<<<<< HEAD
-              📞 Call +1 302 464 0950
-<<<<<<< HEAD
-=======
-            </a>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            </Link>
+📞 Call +1 302 464 0950
+</Link>
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
             >
               ✉️ Get Free Consultation
             </Link>
-=======
-              📞 Call +1 302 464 0950;
-            </a>
-<<<<<<< HEAD
-            <a "
-              href="mailto:kleber@ziontechgroup.com""
-              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
-            >
-              ✉️ Get Free Consultation;
-            </a>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            </Link>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
+</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
 
   );
 };
 
-<<<<<<< HEAD
 '
 import React from 'react';'
 import { render, screen } from '@testing-library/react';'
@@ -996,18 +586,6 @@ import { MemoryRouter } from 'react-router-dom';'
 import EquipmentPage from './EquipmentPage';'
 describe('EquipmentPage', () => {'
   it('renders equipment page correctly', () => {}
-=======
-  )
-}
-  );
-};
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
-describe('EquipmentPage', () => {
-  it('renders equipment page correctly', () => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     render(
         <EquipmentPage />;
 )
@@ -1052,8 +630,6 @@ describe('EquipmentPage', () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>""
             <p className="text-gray-600 mb-8">"
 
-
-
 "
             <form onSubmit={handleSubmit} className="space-y-6">"
 </form>"
@@ -1078,8 +654,6 @@ describe('EquipmentPage', () => {
                     name="email""
                     value={formData.email}
                     placeholder="your.email@company.com""
-
-
 
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">"
                     id="company"""
@@ -1125,8 +699,6 @@ describe('EquipmentPage', () => {
                           <option value="devops-automation">DevOps Automation & CI/CD Pipeline</option>"
                       )}
                 </select>
-
-
 
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">"
                     id="budget"""
@@ -1226,15 +798,9 @@ describe('EquipmentPage', () => {
     expect(screen.getByText('Equipment')).toBeInTheDocument();
   });
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     </div>
@@ -1246,21 +812,6 @@ describe('EquipmentPage', () => {
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
-
-
-<<<<<<< HEAD
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  );
-};
-
-
-
-  )
-}
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/main

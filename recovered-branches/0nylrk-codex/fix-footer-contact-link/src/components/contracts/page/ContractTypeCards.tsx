@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Card,;
   CardContent,;
@@ -23,36 +18,13 @@ import {
 
 import { Button } from "@/components/ui/button";
 import {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-import { Button } from "@/components/ui/button";
-import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import { Button } from "@/components/ui/button";
-import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { Button } from "@/components/ui/button";
@@ -69,16 +41,9 @@ import {}
   CardFooter,
   CardHeader,
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   CardTitle,;
 } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 interface ContractTypeCardsProps {;
 
@@ -95,16 +60,7 @@ import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  CardTitle,;
-} from "@/components/ui/card";
-import { FileText, ShieldCheck } from "lucide-react";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 =======
 CardTitle,;
@@ -115,21 +71,9 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ContractTypeCardsProps {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-"
-import { Button } from "@/components/ui/button","
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card","
-import { FileText, ShieldCheck } from "lucide-react",
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onStandardClick: () => void;
   onSmartClick: () => void;
 }
@@ -141,17 +85,8 @@ export function ContractTypeCards({};
   onSmartClick: () => void;
 }
 
-<<<<<<< HEAD
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -185,37 +120,15 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-      
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-      
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Card>
 =======
@@ -271,26 +184,12 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
 
-
       <Card>
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import { Button } from "@/components/ui/button";
-import {
-
-
-export function ContractTypeCards({
-  onStandardClick
-  onSmartClick
-}: ContractTypeCardsProps) {      <Card>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
 =======
-
-
 
       <Card>"
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">"
@@ -319,25 +218,6 @@ export function ContractTypeCards({
         </CardContent>
         <CardFooter>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 CardTitle,
 } from '@/components / ui / card';
@@ -353,19 +233,12 @@ export function ContractTypeCards(): any ({;
   onSmartClick,;
 }: ContractTypeCardsProps) {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
 <<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button
-=======
-<Button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
             onClick={onSmartClick}
           >
@@ -377,11 +250,6 @@ export function ContractTypeCards(): any ({;
   );
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   return (
@@ -392,46 +260,16 @@ export function ContractTypeCards(): any ({;
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-<<<<<<< HEAD
-=======
-          <Button "
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" "
-import { Button } from "@/components/ui/button",;"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { FileText, ShieldCheck } from "lucide-react",;
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-<<<<<<< HEAD
-=======
-;
-<<<<<<< HEAD
-export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
-  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { FileText, ShieldCheck } from "lucide-react",;
-;
-interface ContractTypeCardsProps {;
-  onStandardClick:() => void,;
-  onSmartClick:() => void;
-}
-;
-export function ContractTypeCards({ onStandardClick, onSmartClick } ContractTypeCardsProps) {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
 =======
   return (    <div className="grid md:grid-cols-2 gap-6 mb-10">;
@@ -457,11 +295,7 @@ interface ContractTypeCardsProps {;
 export function ContractTypeCards({ onStandardClick, onSmartClick } ContractTypeCardsProps) {;
   return (;
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  return (    <div className="grid md:grid-cols-2 gap-6 mb-10">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -470,11 +304,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export /**
  * ContractTypeCards - Function description
  */
@@ -485,14 +314,7 @@ function ContractTypeCards() {
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-export function ContractTypeCards() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "@/components/ui/card";
 
 interface ContractTypeCardsProps {}
@@ -500,12 +322,8 @@ interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void;
 }
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Standard Contracts;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -529,45 +347,13 @@ interface ContractTypeCardsProps {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-          <ul className="space - y-2">;
-            <li className="text - sm">✓ Legally binding templates</li>;
-            <li className="text - sm">✓ Milestone - based payment terms</li>;
-            <li className="text - sm">✓ IP rights and confidentiality clauses</li>;
-            <li className="text - sm">✓ DocuSign integration</li>;
-          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button variant="outline" on_click={onStandardClick}>;
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-<ul className="space-y-2">;
-            <li className="text-sm">✓ Legally binding templates</li>;
-            <li className="text-sm">✓ Milestone-based payment terms</li>;
-            <li className="text-sm">✓ IP rights and confidentiality clauses</li>;
-            <li className="text-sm">✓ DocuSign integration</li>;
-          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button variant="outline" onClick={onStandardClick}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
 
-<<<<<<< HEAD
-      <Card>;
+<Card>;
         <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded-t-lg">;
           <div className="flex justify - between items-center">;
             <CardTitle className="flex items - center gap-2">;
@@ -610,55 +396,11 @@ interface ContractTypeCardsProps {;
         </CardContent>;
         <CardFooter>;
           <Button;
-<<<<<<< HEAD
-          >;          >;
-=======
-
-
-              Blockchain Powered;
-            </span>;
-          </div>;
-          <CardDescription>;
-            Deploy agreements on Ethereum or Polygon with escrow capabilities;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-
-
-
-          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button;
-
-
-          >;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
-            on_click={onSmartClick}
-          >;
-
-className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
-            onClick={onSmartClick}
-          >;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          >;
-            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded-full">;          </ul>;
-        </CardContent>;
-        <CardFooter>;
-          <Button;
-          >;          >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>;          >;
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -668,27 +410,13 @@ className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </div>);
 
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
     </div>);
-=======
-}    </div>);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }    </div>);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -722,20 +450,11 @@ onSmartClick: () => void;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 }
 
@@ -801,10 +520,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>"
 
-
-
-
-
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">"
           <div className="flex justify-between items-center">"
 </div>"
@@ -856,7 +571,6 @@ interface ContractTypeCardsProps {;)
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;"
             </span>;
           </div>;
-
 
             <li className="text - sm">✓ All standard contract features</li>;""
             <li className="text - sm">✓ Automatic escrow payment release</li>;""

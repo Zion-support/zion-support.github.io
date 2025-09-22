@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -27,16 +11,6 @@ interface ContractBuilderProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -53,29 +27,6 @@ import {ContractPreview} from "./components/ContractPreview";
 import {TemplateManager} from "./templates/TemplateManager";
 import {SmartContractBuilder} from "./SmartContractBuilder";
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-interface ContractBuilderProps {
-
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-
-  onContractGenerated?: (contractContent: string) => void
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -101,11 +52,8 @@ import { Save } from "lucide-react",
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
-<<<<<<< HEAD
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -115,11 +63,6 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -184,11 +127,6 @@ export function ContractBuilder(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -202,61 +140,28 @@ import { SmartContractBuilder } from "./SmartContractBuilder";
 import { TemplateManager } from "./templates/TemplateManager",
 import { SmartContractBuilder } from "./SmartContractBuilder",
 interface ContractBuilderProps {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
-  onContractGenerated?: (contractContent: string) => void
+onContractGenerated?: (contractContent: string) => void
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-
-  onContractGenerated?: (contractContent: string) => void
-}
-
-export function ContractBuilder({;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ContractBuilder({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export function ContractBuilder({;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isOpen;
   onClose;
   talent;
   clientName;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onContractGenerated;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
@@ -278,15 +183,11 @@ export function ContractBuilder() { return null; }
       onContractGenerated(contract);
     }
 
-
-
     return (
       <SmartContractBuilder;
         isOpen={isOpen}
         onClose={() => {;
           setShowSmartContractBuilder(false);
-
-
 
 import { useState } from './react';'
 import { Dialog, DialogContent } from '@/components / ui / dialog';'
@@ -335,25 +236,11 @@ if ( {) {}
           setShowSmartContractBuilder (false);
           on_close ();
 
-
-
 }
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export function ContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 export function ContractBuilder({;export function ContractBuilder({;
 =======
@@ -518,28 +405,19 @@ export function ContractBuilder({;export function ContractBuilder({;
 }: ContractBuilderProps) {
 =======
 
-
-
   onContractGenerated;
 }: ContractBuilderProps) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [activeTab, setActiveTab] = useState<string>("form"),
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-<<<<<<< HEAD
-    undefined;
+undefined;
   ),
-<<<<<<< HEAD
 <<<<<<< HEAD
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
 <<<<<<< HEAD
-=======
-=======
-=======
-    undefined
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
           onClose()
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
@@ -588,84 +466,15 @@ setShowSmartContractBuilder(false),;
             <div className="flex gap-2">;
               <Button
                 variant="outline" 
-<<<<<<< HEAD
-                size="sm"                onClick={() => setTemplateManagerOpen(true)}
-=======
-
-
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
-
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {}
-    setFormValues(templateData)
-  },
-
-  const handleContractGenerated = (contract: string) => {}
-    setGeneratedContract(contract),"
-    setActiveTab("preview"),
-    if (onContractGenerated) {}
-      onContractGenerated(contract)
-
-        }}
-        talent={talent}
-        client_name={client_name}
-        onContractGenerated={onContractGenerated}
-
-
-
-
-  return (
-
-
-    <Dialog open={isOpen} onOpenChange={onClose}>;"
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;"
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;"
-          <div className="flex justify-between items-center">;"
-            <TabsList className="grid grid-cols-2">;"
-              <TabsTrigger value="form">Contract Details</TabsTrigger>;"
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
-            </TabsList>;
-
-                onClick={() => setTemplateManagerOpen(true)}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                size="sm"
-;
-            <div className="flex gap-2">;
-              <Button ;
-                variant="outline" ;
-                size="sm";
-                onClick={() => setTemplateManagerOpen(true)}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                size="sm"                onClick={() => setTemplateManagerOpen(true)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+size="sm"                onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;"
                 <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
 <<<<<<< HEAD
-
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    }
-  };
-
-=======
-}
-  };
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (showSmartContractBuilder) {
     return (
       <SmartContractBuilder
@@ -673,12 +482,8 @@ setShowSmartContractBuilder(false),;
         onClose={() => {
           setShowSmartContractBuilder(false);
           onClose()
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -732,32 +537,17 @@ export function ContractBuilder() { return null; }
         onClose={() => {;
           setShowSmartContractBuilder(false);
           onClose();
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }}
         talent={talent}
         client_name={client_name}
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
         onContractGenerated={onContractGenerated}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-            <ContractForm
-            <ContractForm 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
         onContractGenerated={onContractGenerated}
@@ -778,9 +568,7 @@ export function ContractBuilder() { return null; }
             <div className="flex gap-2">
               <Button
                 variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                size="sm"
+size="sm"
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
@@ -788,14 +576,8 @@ export function ContractBuilder() { return null; }
                 Templates
               </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="secondary"
-=======
-              <Button"
-                variant="secondary""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
 
@@ -831,14 +613,9 @@ export function ContractBuilder() { return null; }
             </div>;
           </div>;
 
-
-
-<<<<<<< HEAD
-            <ContractForm 
+<ContractForm 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -944,7 +721,6 @@ if ( {) {
   const [activeTab, setActiveTab] = useState<string>("form"),;"
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
 
-
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">"
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">"
@@ -992,115 +768,20 @@ if ( {) {
 
 <ContractForm
               talent={talent}
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12325
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
 
-
-<<<<<<< HEAD
-          <TabsContent value="preview" className="pt-4">;
-<<<<<<< HEAD
-            {generatedContract && (;        <TemplateManager
-=======
-
-              <ContractPreview;
-                contractContent={generatedContract}
-                talent={talent}
-                onClose={onClose}"
-                status="ready"
-
-
-
-        <TemplateManager;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            {generatedContract && (;
-
-<ContractForm 
-
-          ;
-          <TabsContent value="form" className="pt-4">;
-            <ContractForm ;
-              talent={talent}              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleContractGenerated}
-            />;
-          </TabsContent>;
-            <ContractForm
-            <ContractForm 
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleContractGenerated}
-            />
-          </TabsContent>
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <ContractPreview
-                contractContent={generatedContract}
-                talent={talent}
-                onClose={onClose}
-                status="ready"
-              />;
-            )}
-
-          </TabsContent>;
-        </Tabs>;
-
-;
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
-              <ContractPreview ;
-                contractContent={generatedContract}
-                talent={talent}
-                onClose={onClose}
-                status="ready";
-              />;
-            )}
-          </TabsContent>;
-        </Tabs>;
-        ;
-        <TemplateManager;
-              />
-            )}
-          </TabsContent>
-        </Tabs>
-        <TemplateManager
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            {generatedContract && (;        <TemplateManager
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<TabsContent value="preview" className="pt-4">;
+{generatedContract && (;        <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />;
@@ -1108,35 +789,16 @@ pr-12325
     </Dialog>;
   );
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
             />;
           </TabsContent>;"
-=======
-}
-
-/>;
-      </DialogContent>;
-    </Dialog>;
-            />;
-          </TabsContent>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <TabsContent value="preview" className="pt - 4">;
             {generated_contract && (
               <ContractPreview;
                 contract_content={generated_contract}
                 talent={talent}
-<<<<<<< HEAD
-                on_close={on_close}"
-=======
-                on_close={on_close}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+on_close={on_close}"
                 status="ready";
               />)}
           </TabsContent>;
@@ -1150,17 +812,6 @@ pr-12325
       </DialogContent>;
     </Dialog>);
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface ContractBuilderProps {
 =======
 }  ),; interface ContractBuilderProps {
@@ -1170,8 +821,6 @@ pr-12325
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
   ),; interface ContractBuilderProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -1179,11 +828,7 @@ pr-12325
 
 ;
   ),; interface ContractBuilderProps {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}  ),; interface ContractBuilderProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   isOpen: boolean;
 onClose: () => void;
 talent: TalentProfile;
@@ -1208,7 +853,6 @@ const handleContractGenerated = (contract: string) => {}
 }
 ;
 
-<<<<<<< HEAD
 };
 return (<SmartContractBuilder isOpen= {
   isOpen 
@@ -1248,13 +892,8 @@ return (<SmartContractBuilder isOpen= {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1265,7 +904,6 @@ return (<SmartContractBuilder isOpen= {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 </ContractForm>
           </TabsContent>;"

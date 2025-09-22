@@ -1,72 +1,63 @@
-import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
+
+
+
+
+
+
+export const metadata = {
+  title: "About | Zion Tech Group",
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+
+
+
+
+
+
+
+
 };
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Empowering businesses with cutting-edge AI, micro SaaS solutions, and enterprise-grade IT services.
+    <div className="animate-fade-in">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
+        <div className="prose prose-lg max-w-none">
+          <p className="text-xl text-gray-600 mb-8">
+            We are a technology consulting firm specializing in AI, micro SaaS development, and enterprise IT solutions. 
+            Our mission is to help businesses leverage cutting-edge technology to achieve their goals.
           </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-slate-300 leading-relaxed">
-                To deliver enterprise-grade AI solutions, innovative micro SaaS platforms, and comprehensive IT services that drive real business results and digital transformation.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
-              <p className="text-slate-300 leading-relaxed">
-                To be the leading provider of intelligent automation solutions that help businesses scale efficiently and stay competitive in the digital age.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-            <h2 className="text-3xl font-bold text-white mb-6">What We Do</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">AI Solutions</h3>
-                <p className="text-slate-300">
-                  Custom AI development, machine learning models, and intelligent automation systems.
-                </p>
+          
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+          <p className="text-gray-600 mb-6">
+            To deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results. 
+            We combine technical expertise with business acumen to help our clients succeed in the digital age.
+          </p>
+          
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h2>
+          <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
+            <li>Innovation: We stay at the forefront of technology trends</li>
+            <li>Quality: We deliver solutions that meet the highest standards</li>
+            <li>Collaboration: We work closely with our clients to understand their needs</li>
+            <li>Results: We focus on delivering measurable business outcomes</li>
+          </ul>
+          
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
+          <div className="bg-gray-50 rounded-lg p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
               </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Micro SaaS</h3>
-                <p className="text-slate-300">
-                  Scalable software-as-a-service solutions tailored to specific business needs.
-                </p>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
               </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛠️</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">IT Services</h3>
-                <p className="text-slate-300">
-                  Enterprise IT infrastructure, cloud solutions, and digital transformation services.
-                </p>
+              <div className="md:col-span-2">
+                <h3 className="font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
               </div>
             </div>
           </div>

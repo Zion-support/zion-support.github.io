@@ -1,34 +1,11 @@
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Star} from "lucide-react";
@@ -40,17 +17,6 @@ import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";"
-import {Star} from "lucide-react";"
-import {Button} from "@/components/ui/button";"
-import {ExternalLink} from "lucide-react";"
-import {TalentProfile} from "@/types/talent";"
-import {HireRequestModal} from "@/components/profile/hire-request";"
-import {useAuthStatus} from "@/hooks/talent";"
-import {UserProfile} from "@/types/auth";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useNavigate} from "react-router-dom";
 
 import React, { useState } from './react';'
@@ -63,62 +29,23 @@ import { useAuthStatus } from '@/hooks / talent';'
 import { UserProfile } from '@/types / auth';'
 import { use_navigate } from './react-router-dom';
 interface TalentCardFooterProps {}
-=======
-import {useNavigate} from "react-router-dom";
-interface TalentCardFooterProps {;
-  profile: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire?: (profile: TalentProfile) => void;
-}
-
-export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
-
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-
-
-import React, { useState } from './react';
-import { Star } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { ExternalLink } from './lucide-react';
-import { TalentProfile } from '@/types / talent';
-import { HireRequestModal } from '@/components / profile / hire - request';
-import { useAuthStatus } from '@/hooks / talent';
-import { UserProfile } from '@/types / auth';
-import { use_navigate } from './react-router-dom';
-interface TalentCardFooterProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void;
 }
-<<<<<<< HEAD
 export /**;
  * TalentCardFooter - Function description;
  */
 function TalentCardFooter() {}
-=======
-export /**
- * TalentCardFooter - Function description
- */
-function TalentCardFooter() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isHireModalOpen, setIsHireModalOpen] = useState (false);
   const { user_details } = useAuthStatus ();
   const navigate = use_navigate ();
 ;
   // Create a compatible UserProfile from UserDetails;
-<<<<<<< HEAD
-  const user_profile: UserProfile = {}
+const user_profile: UserProfile = {}
     id: user_details?.id,'
     display_name: user_details?.name || '','
     email: user_details?.email || '','
-=======
-  const user_profile: UserProfile = {
-    id: user_details?.id,
-    display_name: user_details?.name || '',
-    email: user_details?.email || '',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     user_type: '',
     profile_complete: false,
     created_at: new Date ().toISOString (),
@@ -126,8 +53,7 @@ function TalentCardFooter() {
   }
 ;
   // Handle request to hire;
-<<<<<<< HEAD
-  const handleRequestHire = (e: React.MouseEvent) =>: any {}
+const handleRequestHire = (e: React.MouseEvent) =>: any {}
     e.stop_propagation (),
     // Check condition;
 if ( {) {}
@@ -136,17 +62,6 @@ if ( {) {}
       onRequestHire (profile);
 
     } else {}
-=======
-  const handleRequestHire = (e: React.MouseEvent) =>: any {
-    e.stop_propagation (),
-    // Check condition
-if ( {) {
-  $2
-}
-      onRequestHire (profile);
-
-    } else {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Open hire modal directly if no handler provided;
       setIsHireModalOpen (true);
     }
@@ -154,15 +69,9 @@ if ( {) {
 
   // Create a compatible UserProfile from UserDetails;
   const userProfile: UserProfile = {;
-<<<<<<< HEAD
-    id: userDetails?.id,;'
+id: userDetails?.id,;'
     displayName: userDetails?.name || '',;'
     email: userDetails?.email || '',;'
-=======
-    id: userDetails?.id,;
-    displayName: userDetails?.name || '',;
-    email: userDetails?.email || '',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     userType: '',;
     profileComplete: false,;
     createdAt: new Date().toISOString(),;
@@ -181,34 +90,13 @@ if ( {) {
     }
   };
 
-<<<<<<< HEAD
-
-  return (
+return (
     <>;"
-=======
-  // Handle view profile;
-  const handleViewProfile = (e: React && React.MouseEvent) => {;
-    e && e.stopPropagation(),;
-
-    // Navigate to the talent profile page;
-    navigate(`/talent/${profile && profile.id || ''}`);
-
-    // Also call the onViewProfile callback if provided;
-    if (onViewProfile) {;
-      onViewProfile(profile && profile.id || '');
-
-    }
-  }
-
-  return (
-    <>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
         {/* Experience or Hourly Rate */}
         <div>;
           {profile && profile.hourly_rate ? (;
-<<<<<<< HEAD
-            <div>;"
+<div>;"
               <span className="text-zion-slate-light text-xs">Hourly Rate</span>;"
               <div className="text-white font-bold">${profile && profile.hourly_rate}/hr</div>;
             </div>;
@@ -226,40 +114,14 @@ if ( {) {
     navigate(`/talent/${profile && profile.id || ''}`);
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;'
-=======
-            <div>;
-              <span className="text-zion-slate-light text-xs">Hourly Rate</span>;
-              <div className="text-white font-bold">${profile && profile.hourly_rate}/hr</div>;
-            </div>;
-          ) : (;
-            <div className="flex items-center gap-1">;
-              <Star className="h-4 w-4 text-zion-purple" />;
-              <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
-            </div>;
-          )}
-  // Handle view profile;
-  const handleViewProfile = (e: React && React.MouseEvent) => {;
-    e && e.stopPropagation(),;
-    // Navigate to the talent profile page;
-    navigate(`/talent/${profile && profile.id || ''}`);
-    // Also call the onViewProfile callback if provided;
-    if (onViewProfile) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       onViewProfile(profile && profile.id || '');
     }
   }
 
   return (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
-=======
-import {useNavigate} from "react-router-dom";import React, { useState } from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import {useNavigate} from "react-router-dom";import React, { useState } from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -290,7 +152,6 @@ interface TalentCardFooterProps {
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void
 
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -299,112 +160,14 @@ import { TalentProfile } from "@/types/talent",;
 import { HireRequestModal } from "@/components/profile/hire-request",;
 import { useAuthStatus } from "@/hooks/talent",;
 import { UserProfile } from "@/types/auth",;
-=======
-
-"
-import React, { useState } from "react","
-import { Star } from "lucide-react","
-import { Button } from "@/components/ui/button","
-import { ExternalLink } from "lucide-react","
-import { TalentProfile } from "@/types/talent","
-import { HireRequestModal } from "@/components/profile/hire-request","
-import { useAuthStatus } from "@/hooks/talent",";
-import { UserProfile } from "@/types/auth";"
-import { useNavigate } from "react-router-dom";
-interface TalentCardFooterProps {}
-  profile: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire?: (profile: TalentProfile) => void;
-}
-export function TalentCardFooter() { return null; }
-import { UserProfile } from "@/types/auth","
-import { useNavigate } from "react-router-dom",
-interface TalentCardFooterProps {}
-  profile: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire?: (profile: TalentProfile) => void;
-}
-
-export function TalentCardFooter() { return null; }
-  const { userDetails } = useAuthStatus();
-
-  const navigate = useNavigate();
-  // Create a compatible UserProfile from UserDetails;
-  const userProfile: UserProfile = {}
-    id: userDetails?.id'
-    displayName: userDetails?.name |'''
-    email: userDetails?.email |'''
-    userType: ''
-    profileComplete: false;
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-  }
-  // Handle request to hire;
-  const handleRequestHire = (e: React.MouseEvent) => {}
-    e.stopPropagation()
-    if (onRequestHire) {}
-      onRequestHire(profile)
-    } else {}
-      // Open hire modal directly if no handler provided;
-      setIsHireModalOpen(true)
-    }
-  }
-  // Handle view profile;
-  const handleViewProfile = (e: React.MouseEvent) => {}
-    e.stopPropagation()
-    // Navigate to the talent profile page'`
-    navigate(`/talent/${profile.id |''}`);
-    // Also call the onViewProfile callback if provided;
-    if (onViewProfile) {'
-      onViewProfile(profile.id |'')
-    }
-  }"
-import { UserProfile } from "@/types/auth","
-import { useNavigate } from "react-router-dom",
-interface TalentCardFooterProps {}
-  profile: TalentProfile,
-  onViewProfile: (id: string) => void,;
-  onRequestHire?: (profile: TalentProfile) => void;
-  };"
-import React, { useState } from "react",;"
-import { Star } from "lucide-react",;"
-import { Button } from "@/components/ui/button",;"
-import { ExternalLink } from "lucide-react",;"
-import { TalentProfile } from "@/types/talent",;"
-import { HireRequestModal } from "@/components/profile/hire-request",;"
-import { useAuthStatus } from "@/hooks/talent",;"
-import { UserProfile } from "@/types/auth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useNavigate } from "react-router-dom",;
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-interface TalentCardFooterProps {;
-  profile: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire?: (profile: TalentProfile) => void;
-}
-
-export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
-
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-
-    } else {}
-      // Open hire modal directly if no handler provided;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
           <Button 
             variant="default" 
             size="sm" 
-
 
 =======
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
@@ -453,8 +216,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
               <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
             </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -462,30 +223,15 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         {/* Action Buttons */}
         <div className="flex gap-2">
 <<<<<<< HEAD
-
-=======
-=======
-          )}
-        </div>
-        {/* Action Buttons */}
-        <div className="flex gap-2">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button
             variant="default"
             size="sm"
           <Button 
             variant="default" 
             size="sm" 
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={handleRequestHire}
-=======
-
-            onClick={handleRequestHire}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 =======
           )}            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -493,19 +239,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           >
             Hire;
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-          )}            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-=======
-            onClick={handleRequestHire}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          )}            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           >
             Hire
           </Button>
@@ -515,10 +249,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             variant="outline" 
 =======
 
-
-
-
-
           <Button "
             variant="outline" "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -526,28 +256,17 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button
-=======
-<Button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             variant="outline"
             size="sm"
           <Button 
             variant="outline" 
-<<<<<<< HEAD
-            size="sm" 
+size="sm" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -564,8 +283,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             onClick={handleViewProfile}
 =======
-
-
 
             onClick={handleViewProfile}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -576,16 +293,9 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         </div>;
 
@@ -595,78 +305,24 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             variant="default" "
             size="sm" 
             onClick={handleRequestHire}"
-=======
-      </div>
-
-        </div>;
-
-        {/* Action Buttons */}
-        <div className="flex gap-2">;
-          <Button
-            variant="default" 
-            size="sm" 
-            onClick={handleRequestHire}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
             Hire;
           </Button>;
 
-<<<<<<< HEAD
-          <Button"
+<Button"
             variant="outline" "
             size="sm" 
             onClick={handleViewProfile}"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
 
             View;"
-=======
-          <Button
-            variant="outline" 
-            size="sm" 
-            onClick={handleViewProfile}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
-{profile.hourly_rate ? (;
-            <div>;
-              <span className="text-zion-slate-light text-xs">Hourly Rate</span>;
-              <div className="text-white font-bold">${profile.hourly_rate}/hr</div>;
-            </div>;
-          ) :(;
-            <div className="flex items-center gap-1">;
-              <Star className="h-4 w-4 text-zion-purple" />;
-              <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>;
-            </div>;          )}
-        </div>;
-        ;
-        {/* Action Buttons */}
-        <div className="flex gap-2">;
-          <Button ;
-            variant="default" ;
-            size="sm" ;
-            onClick={handleRequestHire}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-          >;
-            Hire;
-          </Button>;
-          ;
-          <Button ;
-            variant="outline" ;
-            size="sm" ;
-            onClick={handleViewProfile}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-          >;
-            View;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <ExternalLink className="h-3 w-3 ml-1" />;
           </Button>;
         </div>;
       </div>;
 
-
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -675,27 +331,10 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      
-
-      
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Hire Request Modal */}
-=======
-      </div>      {/* Hire Request Modal */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       </div>      {/* Hire Request Modal */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -709,8 +348,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       <HireRequestModal
 =======
 
-
-
       {/* Hire Request Modal */}
       <HireRequestModal;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -718,39 +355,18 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         userDetails={userProfile}
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        userDetails={userProfile}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       />;
     </>;
   );
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ;
       {/* Hire Request Modal */}
       <HireRequestModal;
@@ -759,12 +375,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         userDetails={userProfile}
       />;
     </>;
-<<<<<<< HEAD
-=======
-;
-;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
         userDetails={userProfile};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -824,8 +435,6 @@ if ( {) {}
 </Button>
           </Button>
 
-
-
           <Button;"
             variant="outline"""
             size="sm""
@@ -870,8 +479,6 @@ if ( {) {}
 }
 ;
 
-
-
       ;
       {/* Hire Request Modal */}
       <HireRequestModal;
@@ -900,8 +507,7 @@ if ( {) {
   }
 ;
   return (
-<<<<<<< HEAD
-    <>;
+<>;
       <div className="mt - 4 pt - 4 border - t border - zion - blue - light flex items - center justify-between">;
         {/* Experience or Hourly Rate */}
         <div>;
@@ -922,34 +528,7 @@ if ( {) {
             size="sm";
             on_click={handleRequestHire}
 <<<<<<< HEAD
-<<<<<<< HEAD
             className="bg - zion - purple hover:bg - zion - purple - dark text-white";
-=======
-    <>;"
-      <div className="mt - 4 pt - 4 border - t border - zion - blue - light flex items - center justify - between">;
-        {/* Experience or Hourly Rate */}
-        <div>;
-          {profile.hourly_rate ? (
-            <div>;"
-              <span className="text - zion - slate - light text - xs">Hourly Rate</span>;"
-              <div className="text - white font - bold">${profile.hourly_rate}/hr</div>;
-            </div>) : ("
-            <div className="flex items - center gap - 1">;"
-              <Star className="h - 4 w - 4 text - zion - purple" />;"
-              <span className="text - zion - slate - light">{profile.years_experience} years exp.</span>;
-            </div>)}
-        </div>;
-        {/* Action Buttons */}"
-        <div className="flex gap - 2">;
-          <Button;"
-            variant="default";"
-            size="sm";
-            on_click={handleRequestHire}"
-            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
             className="bg - zion - purple hover:bg - zion - purple - dark text-white";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -959,24 +538,12 @@ if ( {) {
           <Button;"
             variant="outline";"
             size="sm";
-<<<<<<< HEAD
-            on_click={handleViewProfile}
+on_click={handleViewProfile}
             className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
           >;
             View;
 <<<<<<< HEAD
-<<<<<<< HEAD
             <ExternalLink className="h - 3 w - 3 ml-1" />;
-=======
-            on_click={handleViewProfile}"
-            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
-          >;
-            View;"
-            <ExternalLink className="h - 3 w - 3 ml - 1" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <ExternalLink className="h - 3 w - 3 ml - 1" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
             <ExternalLink className="h - 3 w - 3 ml-1" />;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1035,7 +602,6 @@ if ( {) {
 </HireRequestModal>
     </>);
 }
-<<<<<<< HEAD
 };
 //Handle view profile const handleViewProfile = (e: React.MouseEvent) => {
   e.stopPropagation ();
@@ -1083,17 +649,7 @@ profile.id || '''
     </>;
   );
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1205,14 +761,10 @@ if ( {) {
             className="bg-zion-purple hover:bg-zion-purple-dark text-white""
           >
 
-
-
-
             variant="outline"""
             onClick={handleViewProfile}"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
             <ExternalLink className="h-3 w-3 ml-1" />"
-
 
         <div className="flex gap-2">;"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white">;"
@@ -1227,8 +779,6 @@ if ( {) {
 
     </>;
   );
-
-
 
       {/* Hire Request Modal */}
         talent={profile}        isOpen={isHireModalOpen}

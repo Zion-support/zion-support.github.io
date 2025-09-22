@@ -1,38 +1,8 @@
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
-
-=======
-import React from "react";
-import {Link, useLocation} from "react-router-dom";
-import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
-import {cn} from "@/lib/utils";
-export function BottomNavigation() {;
-  const location = useLocation();
-
-  const navItems = [;
-    { path: "/mobile", icon: <Home />, label: "Home" },;
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
-
-import React from "react",
-import { Link, useLocation } from "react-router-dom",
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;import React from "react",;
-import { Link, useLocation } from "react-router-dom",;
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
-import { cn } from "@/lib/utils";
-export function BottomNavigation() {
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-export function BottomNavigation() {
-  const location = useLocation(),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
@@ -41,8 +11,6 @@ export function BottomNavigation() {
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
@@ -51,14 +19,6 @@ import {cn} from "@/lib/utils";
 export function BottomNavigation() {;
   const location = useLocation();
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const navItems = [;
     { path: "/mobile", icon: <Home />, label: "Home" },;
@@ -66,19 +26,7 @@ export function BottomNavigation() {;
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 =======
@@ -89,8 +37,6 @@ import React from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
-
-
 
 import React from "react",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -111,27 +57,18 @@ import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react","
 import { cn } from "@/lib/utils",
 export function BottomNavigation() {}
   const location = useLocation(),
-  
-<<<<<<< HEAD
-  const navItems = [
+
+const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const navItems = [;
     { path: "/mobile", icon: <Home />, label: "Home" },;
@@ -139,24 +76,8 @@ const navItems = [;
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-  const navItems = ["
-    { path: "/mobile", icon: <Home />, label: "Home" },"
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" },"
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },"
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },"
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
-;
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const location = useLocation();
   const navItems = ["
     { path: "/mobile", icon: <Home />, label: "Home" }"
@@ -166,32 +87,7 @@ const navItems = [;
     { path: "/mobile/profile", icon: <User />, label: "Profile" }]
   return (
 
-
-<<<<<<< HEAD
-              "flex flex-col items-center justify-center flex-1 py-1 px-2",
-
-
-=======
-
-
-              "flex flex-col items-center justify-center flex-1 py-1 px-2",
-
-
-    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">
-      {navItems.map((item) => {
-        const isActive = location.pathname === item.path,
-        return (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={cn(
-
-<<<<<<< HEAD
-=======
-              "flex flex-col items-center justify-center flex-1 py-1 px-2",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+"flex flex-col items-center justify-center flex-1 py-1 px-2",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 "
@@ -244,8 +140,7 @@ const navItems = [;
 
             key={item && item.path} 
             to={item && item.path}
-<<<<<<< HEAD
-            className={cn("
+className={cn("
               "flex flex-col items-center justify-center flex-1 py-1 px-2""
               isActive ? "text-primary" : "text-muted-foreground"
             )}>;
@@ -256,23 +151,10 @@ const navItems = [;
           </Link>
         )
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
-=======
-"
-import React from "react",;"
-import { Link, useLocation } from "react-router-dom",;"
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",;
 export function BottomNavigation() { return null; }
     { path: "/mobile", icon: <Home />, label: "Home" },;"
@@ -349,53 +231,21 @@ export function BottomNavigation() {;
           <Link;
             key={item.path} ;
             to={item.path}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className={cn(;"
+className={cn(;"
               "flex flex-col items-center justify-center flex-1 py-1 px-2";"
-=======
-            className={cn(;
-              "flex flex-col items-center justify-center flex-1 py-1 px-2";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               isActive ? "text-primary" : "text-muted-foreground";
             )}
-=======
-            className={cn(;"
-              "flex flex-col items-center justify-center flex-1 py-1 px-2";""
-              isActive ? "text-primary" : "text-muted-foreground";")
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >;
 
-<<<<<<< HEAD
-              })}
+})}
             </div>;"
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       })}
 
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-    </div>;
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';
@@ -464,8 +314,7 @@ function BottomNavigation() {
           <Link;
             key={item.path}
             to={item.path}
-<<<<<<< HEAD
-            className={cn ("
+className={cn ("
               "flex flex - col items - center justify - center flex - 1 py - 1 px - 2";"
               is_active ? "text - primary" : "text - muted - foreground")}
           >;"
@@ -474,27 +323,12 @@ function BottomNavigation() {
                 class_name: cn ("h - 5 w - 5", is_active ? "stroke - primary" : "stroke - muted - foreground");
               })}
             </div>;"
-=======
-            className={cn (
-              "flex flex - col items - center justify - center flex - 1 py - 1 px - 2";
-              is_active ? "text - primary" : "text - muted - foreground")}
-          >;
-            <div className="h - 5 w - 5">;
-              {React.clone_element (item.icon as React.ReactElement, {
-                class_name: cn ("h - 5 w - 5", is_active ? "stroke - primary" : "stroke - muted - foreground");
-              })}
-            </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <span className="text - xs mt - 1">{item.label}</span>;
           </Link>);
       })}
     </div>);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
@@ -539,19 +373,12 @@ export function BottomNavigation() {;
   )
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

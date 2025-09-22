@@ -1,20 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
@@ -27,15 +15,11 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -83,7 +67,6 @@ import {}
   FormMessage} from "@/components/ui/form","
 import { Header } from "@/components/Header","
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
@@ -91,14 +74,6 @@ const forgotPasswordSchema = z.object({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Form validation schema
 
@@ -120,27 +95,14 @@ const forgotPasswordSchema = z.object({"
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 export default function ForgotPassword() {};
   const { resetPassword, isLoading } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [submitted, setSubmitted] = useState(false);export default function ForgotPassword() {;
-=======
-  const [submitted, setSubmitted] = useState(false);
-"
-=======
-  const [submitted, setSubmitted] = useState(false);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+const [submitted, setSubmitted] = useState(false);export default function ForgotPassword() {;
   email: z.string().email("Please enter a valid email")}),
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
 export default function ForgotPassword() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function ForgotPassword() {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { resetPassword, isLoading } = useAuth();
@@ -151,16 +113,10 @@ export default function ForgotPassword() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-  
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Initialize react-hook-form
   const form = useForm({
@@ -176,16 +132,9 @@ export default function ForgotPassword() {}
   const onSubmit = async (data: ForgotPasswordFormValues) => {}
     await resetPassword(data.email)
     setSubmitted(true)
-<<<<<<< HEAD
-=======
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Initialize react-hook-form
@@ -198,30 +147,14 @@ export default function ForgotPassword() {}
     await resetPassword(data.email)
     setSubmitted(true)
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
 
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
-<<<<<<< HEAD
-=======
-  }
-  },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
@@ -249,33 +182,7 @@ export default function ForgotPassword() {}
                     We've sent a password reset link to your email address.
                   </p>"
                   <div className="mt-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {useForm, type, UseFormReturn} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Mail} from "lucide-react";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-// Form validation schema;
-const forgotPasswordSchema = z && z.object({;
-  email: z && z.string().email("Please enter a valid email")}),;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-    <>;
+<>;
       <Header />;"
       <div className="flex min-h-screen bg-zion-blue">;"
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">;"
@@ -285,14 +192,6 @@ const forgotPasswordSchema = z && z.object({;
                 Reset your password;
               </h2>;"
               <p className="mt-2 text-sm text-zion-slate-light">;'
-=======
-
-=======
-  },
-
-}
-  },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Header />
@@ -354,13 +253,9 @@ export default function ForgotPassword() {;
 
   return (
 
-
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-
-
 
 import { useState } from "react",""
 import { Link } from "react-router-dom",""
@@ -448,18 +343,9 @@ export default function ForgotPassword() {;
               </p>;
             </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 "
             <div className="bg-zion-blue-dark rounded-lg p-6">;
 <<<<<<< HEAD
-=======
-              <div className="bg-zion-blue-dark rounded-lg p-6">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              <div className="bg-zion-blue-dark rounded-lg p-6">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
             <div className="bg-zion-blue-dark rounded-lg p-6">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -481,14 +367,8 @@ export default function ForgotPassword() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;
             <div className="bg-zion-blue-dark rounded-lg p-6">;
@@ -508,7 +388,6 @@ export default function ForgotPassword() {;
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
 =======
 
-
                     <Link"
                       to="/login""
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
@@ -518,8 +397,7 @@ export default function ForgotPassword() {;
                     </Link>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-              ) : (;
+) : (;
                 <Form {...form}>;
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField
@@ -534,18 +412,10 @@ export default function ForgotPassword() {;
                       render={({ field }) => (;
                       name="email"                      render={({ field }) => (;
                         <FormItem>;
-=======
-
-
-
-                      render={({ field }) => (;
-                        <FormItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>;
                           <FormControl>;"
                             <div className="relative">;
-<<<<<<< HEAD
-                              <Input
+<Input
                                 placeholder="you@example && example.com"
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
 <Input;
@@ -554,13 +424,6 @@ export default function ForgotPassword() {;
                                 {...field}
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"                                {...field}
                               />;
-=======
-
-
-
-                                {...field}
-                              />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             </div>;
                           </FormControl>;"
@@ -568,257 +431,30 @@ export default function ForgotPassword() {;
                         </FormItem>;
                       )}
 
-<<<<<<< HEAD
-                    />;
+/>;
 
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                       disabled={isLoading}>;
                       {isLoading ? "Sending..." : "Reset Password"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-/>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </Button>;
 "
                     <div className="text-center">;
 
-<<<<<<< HEAD
-                      <Link
-<<<<<<< HEAD
-                        to="/login"                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
-=======
-
-'
-import { useState } from './react';'
-import { Link } from './react-router-dom';'
-import { use_form, type, UseFormReturn } from './react - hook - form';'
-import { zod_resolver } from '@hookform / resolvers / zod';'
-import { z } from './zod';'
-import { Mail } from './lucide-react';'
-import { use_auth } from '@/hooks / use_auth';'
-import { Button } from '@/components / ui / button';'
-import { Input } from '@/components / ui / input';'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';'
-import { Header } from '@/components / Header';'
-import { Footer } from '@/components / Footer';
-// Form validation schema;
-const forgotPasswordSchema = z.object ({"
-  email: z.string ().email ("Please enter a valid email")}),
-type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
-;
-export default /**;
- * ForgotPassword - Function description;
- */
-function ForgotPassword() {}
-=======
-                        to="/login"
-
 <Link
-                        to="/login"
-                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light">;
-import { useState } from './react';
-import { Link } from './react-router-dom';
-import { use_form, type, UseFormReturn } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from './zod';
-import { Mail } from './lucide-react';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-                        to="/login"                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
-                      >
-                        Back to login
-  FormLabel,"
-  FormMessage} from "@/components/ui/form",""
-import { Header } from "@/components/Header",""
-import { Footer } from "@/components/Footer","
-// Form validation schema;
-const forgotPasswordSchema = z.object({
-
-// Form validation schema;
-const forgotPasswordSchema = z.object({)"
-  email: z.string().email("Please enter a valid email")})"
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-</typeof>
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
-</typeof>"
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>"
-</ForgotPasswordFormValues>
-    <>
-      <Header />
-</Header>"
-      <div className="flex min-h-screen bg-zion-blue">"
-</div>"
-        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">"
-</div>"
-          <div className="mx-auto w-full max-w-sm lg:w-96">"
-</div>"
-            <div className="text-center mb-10">"
-</div>"
-              <h2 className="text-3xl font-bold tracking-tight text-white">"
-</h2>
-              </h2>"
-              <p className="mt-2 text-sm text-zion-slate-light">"
-</p>
-              </p>
-            </div>"
-            <div className="bg-zion-blue-dark rounded-lg p-6">"
-</div>"
-                <div className="text-center py-8">"
-</div>"
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">"
-</div>"
-                    <Mail className="h-6 w-6 text-zion-purple" />"
-</Mail>
-                  </div>"
-                  <h3 className="text-lg font-medium text-white">Check your email</h3>""
-                  <p className="mt-2 text-sm text-zion-slate-light">"
-</p>
-                  </p>"
-                  <div className="mt-6">"
-</div>
-    <>;
-      <Header />;
-</Header>"
-      <div className="flex min-h-screen bg-zion-blue">;"
-</div>"
-        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">;"
-</div>"
-          <div className="mx-auto w-full max-w-sm lg:w-96">;"
-</div>"
-            <div className="text-center mb-10">;"
-</div>"
-              <h2 className="text-3xl font-bold tracking-tight text-white">;"
-</h2>
-              </h2>;"
-              <p className="mt-2 text-sm text-zion-slate-light">;"
-</p>
-              </p>;
-            </div>;"
-            <div className="bg-zion-blue-dark rounded-lg p-6">;"
-</div>"
-                <div className="text-center py-8">;"
-</div>"
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;"
-</div>"
-                    <Mail className="h-6 w-6 text-zion-purple" />;"
-</Mail>
-                  </div>;"
-                  <h3 className="text-lg font-medium text-white">Check your email</h3>;""
-                  <p className="mt-2 text-sm text-zion-slate-light">;"
-</p>
-                  </p>;"
-                  <div className="mt-6">;"
-</div>
-                    <Link;"
-                      to="/login"""
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;"
-</Link>
-                    <Link;"
-                      to="/login";""
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";"
-                    >;
-</Link>
-                    <Link;"
-                      to="/login"""
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;"
-</Link>
-                    </Link>;
-                  </div>;
-                </div>;
-                <Form {...form}>;
-</Form>"
-                  <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;"
-</form>
-                    <FormField;
-                      control={form && form.control}"
-                      name="email""
-                      render={({ field }) => (;
-</FormField>
-                        <FormItem>;
-</FormItem>"
-                          <FormLabel className="text-zion-slate-light">Email address</FormLabel>;"
-                          <FormControl>;
-</FormControl>"
-                            <div className="relative">;"
-</div>
-                              <Input;"
-                                placeholder="you@example && example.com"""
-                                className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple""
-                                {...field}
-                              />;
-</Input>"
-                              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
-</Mail>
-                            </div>;
-                          </FormControl>;"
-                          <FormMessage className="text-red-400" />;"
-</FormMessage>
-                        </FormItem>;
-                    <Button;"
-                      type="submit"""
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white""
-                      disabled={isLoading}>;
-</Button>
-                    </Button>;"
-                    <div className="text-center">;"
-</div>
-                      <Link;"
-                        to="/login"""
-import { useState } from './react';''
-import { Link } from './react-router-dom';''
-import { use_form, type, UseFormReturn } from './react - hook - form';''
-import { zod_resolver } from '@hookform / resolvers / zod';''
-import { z } from './zod';''
-import { Mail } from './lucide-react';''
-import { use_auth } from '@/hooks / use_auth';''
-import { Button } from '@/components / ui / button';''
-import { Input } from '@/components / ui / input';''
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';''
-import { Header } from '@/components / Header';''
-import { Footer } from '@/components / Footer';'
-// Form validation schema;
-const forgotPasswordSchema = z.object ({)'
-  email: z.string ().email ("Please enter a valid email")}),"
-type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
-<<<<<<< HEAD
-;
-export default /**
- * ForgotPassword - Function description
- */
-function ForgotPassword() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+to="/login"                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
   const { reset_password, is_loading } = use_auth ();
   const [submitted, set_submitted] = useState (false);
 ;
   // Initialize react - hook - form;
-<<<<<<< HEAD
-  const form = use_form ({}
+const form = use_form ({}
     resolver: zod_resolver (forgotPasswordSchema),
     default_values: {"
       email: ""}}) as UseFormReturn < ForgotPasswordFormValues>,
   // Form submission handler;
   const on_submit = async (data: ForgotPasswordFormValues) => {}
-=======
-  const form = use_form ({
-    resolver: zod_resolver (forgotPasswordSchema),
-    default_values: {
-      email: ""}}) as UseFormReturn < ForgotPasswordFormValues>,
-=======
-</Link>"
-      email: ""}}) as UseFormReturn < ForgotPasswordFormValues>,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Form submission handler;
   const on_submit = async (data: ForgotPasswordFormValues) => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -828,8 +464,7 @@ function ForgotPassword() {
 ;
   return (
     <>;
-<<<<<<< HEAD
-      <Header />;"
+<Header />;"
       <div className="flex min - h-screen bg - zion - blue">;"
         <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:px - 20 xl:px - 24">;"
           <div className="mx - auto w - full max - w-sm lg:w - 96">;"
@@ -854,68 +489,13 @@ function ForgotPassword() {
                   <div className="mt - 6">;
                     <Link;"
                       to="/login";"
-=======
-      <Header />;
-</Header>"
-      <div className="flex min - h-screen bg - zion - blue">;"
-</div>"
-        <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:px - 20 xl:px - 24">;"
-</div>"
-          <div className="mx - auto w - full max - w-sm lg:w - 96">;"
-</div>"
-            <div className="text - center mb - 10">;"
-</div>"
-              <h2 className="text - 3xl font - bold tracking - tight text - white">;"
-</h2>
-              </h2>;"
-              <p className="mt - 2 text - sm text - zion - slate - light">;"
-</p>
-              </p>;
-<<<<<<< HEAD
-            </div>;
-            <div className="bg - zion - blue - dark rounded - lg p - 6">;
-              {submitted ? (
-                <div className="text - center py - 8">;
-                  <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb - 4">;
-                    <Mail className="h - 6 w - 6 text - zion - purple" />;
-                  </div>;
-                  <h3 className="text - lg font - medium text - white">Check your email</h3>;
-                  <p className="mt - 2 text - sm text - zion - slate - light">;
-                    We've sent a password reset link to your email address.;
-                  </p>;
-                  <div className="mt - 6">;
-                    <Link;
-                      to="/login";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white px - 4 py - 2 rounded inline - flex items - center justify - center";
-=======
-            </div>;"
-            <div className="bg - zion - blue - dark rounded - lg p - 6">;"
-</div>"
-                <div className="text - center py - 8">;"
-</div>"
-                  <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb - 4">;"
-</div>"
-                    <Mail className="h - 6 w - 6 text - zion - purple" />;"
-</Mail>
-                  </div>;"
-                  <h3 className="text - lg font - medium text - white">Check your email</h3>;""
-                  <p className="mt - 2 text - sm text - zion - slate - light">;"
-</p>
-                  </p>;"
-                  <div className="mt - 6">;"
-</div>
-                    <Link;"
-                      to="/login";""
-                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white px - 4 py - 2 rounded inline - flex items - center justify - center";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     >;
 </Link>
                     </Link>;
                   </div>;)
                 </div>) : (
-<<<<<<< HEAD
-                <Form {...form}>;"
+<Form {...form}>;"
                   <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
                     <FormField;
                       control={form.control}"
@@ -962,82 +542,10 @@ function ForgotPassword() {
                         to="/login";"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light";
                       >;
-
-=======
-                <Form {...form}>;
-</Form>)"
-                  <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;"
-</form>
-                    <FormField;
-                      control={form.control}"
-                      name="email";"
-                      render={({ field }) => (
-</FormField>
-                        <FormItem>;
-</FormItem>"
-                          <FormLabel className="text - zion - slate - light">Email address</FormLabel>;"
-                          <FormControl>;
-</FormControl>"
-                            <div className="relative">;"
-</div>
-                              <Input;"
-                                placeholder="you@example.com";""
-                                className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";"
-                                {...field}
-                              />;
-</Input>"
-                              <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;"
-</Mail>
-                            </div>;
-                          </FormControl>;"
-                          <FormMessage className="text - red - 400" />;"
-</FormMessage>)
-                        </FormItem>)}
-                    <Button;"
-                      type="submit";""
-                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";"
-                      disabled={is_loading}
-                    >;
-                      {is_loading ? "Sending..." : "Reset Password"}
-                    </Button>;
-                    <div className="text - center">;
-                      <Link;
-                        to="/login";
-                        className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light";
-                      >;
-
-;
-                    <Button;
-                      type="submit";
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
-</Button>
-                    </Button>;"
-                    <div className="text - center">;"
-</div>
-                      <Link;"
-                        to="/login";""
-                        className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light";"
-                      >;
-</Link>
-                    <Button;"
-                      type="submit";""
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";"
-                      disabled={isLoading}
-                    >;
-</Button>
-                    </Button>;"
-                    <div className="text-center">;"
-</div>
-                      <Link;"
-                        to="/login";""
-                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light";"
-                      >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         Back to login;
                       </Link>;
                     </div>;
                   </form>;
-<<<<<<< HEAD
 "
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;"
             <div className="flex flex-col justify-center items-center h-full px-8">;"
@@ -1045,26 +553,7 @@ function ForgotPassword() {
                 <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;"
                 <p className="text-lg text-white/80">;
 
-
 '
-=======
-
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg: block relative w-0 flex-1">;
-</Form>;              )}
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg:block relative w-0 flex-1">;
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
-            <div className="flex flex-col justify-center items-center h-full px-8">;
-              <div className="max-w-md text-center">;
-                <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;
-                <p className="text-lg text-white/80">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 </Form>)}
             </div>;
@@ -1104,59 +593,9 @@ function ForgotPassword() {
       </div>;
       <Footer />;
 
-<<<<<<< HEAD
-
 "
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </>);
-}
-
-<Link
-                      to="/login"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
-                    >
-                      Back to login
-                    </Link>
-                  </div>
-                </div>
-              ) : (
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-                          <FormControl>
-                            <div className="relative">
-                              <Input
-                                placeholder="you@example.com"
-                                className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                                {...field}
-                              />
-                              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                            </div>
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                    <Button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading}
-                    >
-                      {isLoading ? "Sending..." : "Reset Password"}
-                    </Button>
-                    <div className="text-center">
-                      <Link
-                        to="/login"
-                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       >
 =======
 </Footer>
@@ -1175,26 +614,14 @@ function ForgotPassword() {
                 </Form>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 ;
 
 ;
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
-=======
-)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </div>
@@ -1217,16 +644,8 @@ function ForgotPassword() {
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1250,8 +669,6 @@ import { Mail } from "lucide-react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 =======
-
-
 
 ;
 
@@ -1330,12 +747,6 @@ export default function ForgotPassword() { return null; }
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<FormField;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <FormField;
   FormLabel,"
 import { Header } from "@/components/Header",""
@@ -1401,7 +812,6 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
                       to="/login";""
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";"
                     >;
-
 
                     ;
                   </div>;
@@ -1507,7 +917,6 @@ type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
                 <p className="text-lg text-white/80">;"
       <Footer />;
 
-
     </>);
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light""
                       >
@@ -1515,24 +924,13 @@ type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
       email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,;"
 
-
-
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;"
 
-
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-                    <FormField;
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>;
 return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24"> <div className="mx-auto w-full max-w-sm lg:w-96"> <div className="text-center mb-10"> <h2 className="text-3xl font-bold tracking-tight text-white"> Reset your password </h2> <p className="mt-2 text-sm text-zion-slate-light"> Enter your email and we'll send you a link to reset your password. </p> </div> <div className="bg-zion-blue-dark rounded-lg p-6"> {"
   submitted ? (<div className="text-center py-8"> <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4"> <Mail className="h-6 w-6 text-zion-purple" /> </div> <h3 className="text-lg font-medium text-white">Check your email</h3> <p className="mt-2 text-sm text-zion-slate-light"> We've sent a password reset link to your email address. </p> <div className="mt-6" > <Link to="/login" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center" > Back to login  </div> </div>) : (<Form {"
@@ -1566,14 +964,8 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 }</div> </div> </div> <div className="hidden lg: block relative w-0 flex-1"> <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80"> <div className="flex flex-col justify-center items-center h-full px-8"> <div className="max-w-md text-center"> <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3> <p className="text-lg text-white/80"> We'll help you get back into your account so you can continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> <Footer /> </>) 
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                    <FormField;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                     <FormField;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,12 +1,4 @@
 
-
-
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { "encoding": "utf8" }
 
     );
@@ -54,19 +46,6 @@ function findConflictedFiles() {;
   main()}
 module.exports = { resolveMergeConflict, findConflictedFiles }))
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -125,4 +104,3 @@ function log(message, color = "reset")
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
         resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No changes "needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors "encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
-

@@ -105,9 +105,9 @@ return;
     try {
       await onSubmit({
         title
-        description: description |undefined
+        description: description |undefined;
         dueDate
-        amountUsd: parsedAmount
+        amountUsd: parsedAmount;
       });
       setTitle('');
       setDescription('');
@@ -142,7 +142,7 @@ return;
           rows={3}
         />
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         <div>
           <label className='block text-sm font-medium'>Due Date</label>
           <input
@@ -169,7 +169,7 @@ return;
       </div>
       <button
 type='submit'
-        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'
+        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50';
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}

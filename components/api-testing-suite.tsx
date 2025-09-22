@@ -36,40 +36,40 @@ icon: <Code className='w-8 h-8 text-white' />,
       title: 'Comprehensive API Testing',
       description:
         'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.'
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
-      gradient: 'from-indigo-400 to-purple-500'
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600';
+      gradient: 'from-indigo-400 to-purple-500';
     }
     {
       icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Performance Testing'
+      title: 'Performance Testing';
       description:
         'Load testing, stress testing, and performance benchmarking for your APIs.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600';
+      gradient: 'from-orange-400 to-red-500';
     }
     {
       icon: <Shield className='w-8 h-8 text-white' />
-      title: 'Security Testing'
+      title: 'Security Testing';
       description:
         'Automated security testing including authentication, authorization, and vulnerability scanning.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+      gradient: 'from-green-400 to-emerald-500';
     }
     {
       icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Real-Time Monitoring'
+      title: 'Real-Time Monitoring';
       description:
         '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
+      gradient: 'from-blue-400 to-cyan-500';
     }
   ];
   const testTypes = [
     {
-      name: 'Functional Testing'
+      name: 'Functional Testing';
       description:
-        'Verify that your API endpoints work correctly and return expected responses.'
-      tests: [
+        'Verify that your API endpoints work correctly and return expected responses.';
+      tests: [;
         'Request/response validation'
         'Status code verification'
         'Data format checking'
@@ -77,10 +77,10 @@ icon: <Code className='w-8 h-8 text-white' />,
       ]
     }
     {
-      name: 'Performance Testing'
+      name: 'Performance Testing';
       description:
-        'Ensure your APIs can handle expected load and perform under pressure.'
-      tests: [
+        'Ensure your APIs can handle expected load and perform under pressure.';
+      tests: [;
         'Load testing'
         'Stress testing'
         'Response time analysis'
@@ -88,10 +88,10 @@ icon: <Code className='w-8 h-8 text-white' />,
       ]
     }
     {
-      name: 'Security Testing'
+      name: 'Security Testing';
       description:
-        'Identify security vulnerabilities and ensure proper authentication and authorization.'
-      tests: [
+        'Identify security vulnerabilities and ensure proper authentication and authorization.';
+      tests: [;
         'Authentication testing'
         'Authorization checks'
         'Input validation'
@@ -99,10 +99,10 @@ icon: <Code className='w-8 h-8 text-white' />,
       ]
     }
     {
-      name: 'Integration Testing'
+      name: 'Integration Testing';
       description:
-        'Test how your APIs integrate with other systems and services.'
-      tests: [
+        'Test how your APIs integrate with other systems and services.';
+      tests: [;
         'End-to-end workflows',
         'Third-party integrations',
         'Data flow validation',
@@ -113,11 +113,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const pricing = []
     {'
-      name: 'Starter''
-      price: '$49''
-      period: '/month''
-      description: 'Perfect for developers and small teams'
-      features: []
+      name: 'Starter'';
+      price: '$49'';
+      period: '/month'';
+      description: 'Perfect for developers and small teams';
+      features: [];
   const features = [;
     {;'
       icon: <Code className='w-8 h-8 text-white' />,;
@@ -275,7 +275,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
-      features: [
+      features: [;
 '500 API tests/month',
         'Advanced test scenarios',
         'SMS & email alerts',
@@ -300,7 +300,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ];
       popular: false;
     }
-      features: [
+      features: [;
 'Unlimited API tests',
         'Custom test scenarios',
         'Custom alerting rules',
@@ -322,16 +322,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Simulate API testing;
     setTimeout(() => {}
       setTestResults({}
-        endpoint: apiEndpoint'
-        status: 'success''
-        responseTime: '245ms'
+        endpoint: apiEndpoint';
+        status: 'success'';
+        responseTime: '245ms';
         statusCode: 200;
-        tests: []
+        tests: [];
           {'
-            name: 'Response Time''
-            status: 'pass''
-            value: '245ms''
-            threshold: '<500ms'
+            name: 'Response Time'';
+            status: 'pass'';
+            value: '245ms'';
+            threshold: '<500ms';
           }
 
   const handleTestAPI = async () => {;
@@ -358,22 +358,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             threshold: '<500ms',
           },
           {'
-            name: 'Status Code''
-            status: 'pass''
-            value: '200''
-            threshold: '200'
+            name: 'Status Code'';
+            status: 'pass'';
+            value: '200'';
+            threshold: '200';
           }
           {'
-            name: 'Response Format''
-            status: 'pass''
-            value: 'JSON''
-            threshold: 'Valid JSON'
+            name: 'Response Format'';
+            status: 'pass'';
+            value: 'JSON'';
+            threshold: 'Valid JSON';
           }
           {'
-            name: 'Authentication''
-            status: 'pass''
-            value: 'Valid''
-            threshold: 'Authenticated'
+            name: 'Authentication'';
+            status: 'pass'';
+            value: 'Valid'';
+            threshold: 'Authenticated';
           }
           {'
             name: 'Rate Limiting','
@@ -382,7 +382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             threshold: 'No throttling',
           },
         ],
-        recommendations: ['
+        recommendations: [';
             name: 'Rate Limiting','
             status: 'pass','
             value: 'Within limits','
@@ -399,7 +399,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           { name: 'Authentication', status: 'pass', value: 'Valid', threshold: 'Authenticated' },'
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
         ];
-        recommendations: ['
+        recommendations: [';
           'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
       });
@@ -413,7 +413,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Monitoring Tool;
         </title>;
 
-        recommendations: ['
+        recommendations: [';
           'Consider implementing response caching for better performance''
           'Monitor response times during peak usage''
           'Implement rate limiting headers for better API documentation'
@@ -435,11 +435,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs.'
         />
         <meta'
-          property='og:title''
+          property='og:title'';
           content='API Testing Suite - Zion Tech Group'
         />
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Comprehensive API testing tool with functional, performance, and security testing capabilities.'
         />'
         <meta name='twitter:card' content='summary_large_image' />
@@ -470,7 +470,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
               <input'
                 type='url''
-                placeholder='API Endpoint (e && e.g., https://api && api.example.com/users)'
+                placeholder='API Endpoint (e && e.g., https://api && api.example.com/users)';
                 value={apiEndpoint}
                 onChange={e => setApiEndpoint(e && e.target.value)}'
                 className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'              />;
@@ -489,7 +489,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               size='lg''
               className='w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow'              size="lg""
               className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow"
-
+;
               className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white shadow-2xl";
               View Pricing;
             </Button>;
@@ -503,7 +503,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {features.map((feature, index) => (
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`;}
                     />;
@@ -524,7 +524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}"
                 className="card-hover group border-gradient-indigo"
-              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'
+              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl';
             >
               Schedule Demo
             </Button>
@@ -543,7 +543,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               APIs are reliable, performant, and secure.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -587,7 +587,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               highest standards of quality and reliability.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {testTypes.map((type, index) => (
           </div>;
         </div>;
@@ -626,7 +626,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               We cover all aspects of API testing to ensure your APIs meet the highest standards of quality and reliability.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {testTypes.map((type, index) => ('
                       className='flex items-center text-gray-300'>;'
                       <CheckCircle className='w-4 h-4 text-indigo-400 mr-3 flex-shrink-0' />                      {test}              Comprehensive Testing Coverage;
@@ -688,7 +688,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.
               </p>
             </div>"
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
               {/* Summary Card */}"
               <Card className="border-gradient-indigo text-center">"
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Summary</h3>"
@@ -780,7 +780,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-gray-300 text-sm">{test.name}</span>"
                       <div className="flex items-center space-x-2">`
                         <span className={`text-xs px-2 py-1 rounded ${'
-                          test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'`
+                          test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'`;
                         }`}>
                           {test.status}
 
@@ -843,7 +843,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='text-2xl font-bold mb-6 text-white'>
                 Optimization Recommendations;
               </h3>'
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
                 {testResults.recommendations.map((rec, index) => ('
                   <div key={index} className='flex items-start space-x-3'>'
                     <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />'
@@ -884,7 +884,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
               Simple Pricing;
             </h2>;'
@@ -1173,7 +1173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
           </h2>'
@@ -1181,7 +1181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Join thousands of developers and businesses using our API testing;
             suite to ensure their APIs are reliable and performant.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>'
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>';
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;'
         <div className='container-cursor text-center relative z-10'>;'
@@ -1225,7 +1225,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant="outline""
               size="lg""
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
-
+;
             </Button>
           </div>
         </div>

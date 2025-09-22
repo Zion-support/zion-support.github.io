@@ -1,39 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
-const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 const fs = require('fs');
 const path = require('path');
 // Function to clean merge conflicts in a file;
 function cleanMergeConflicts(filePath) {}
   try {}
-<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-=======
-    // Remove all merge conflict markers
-    // Remove duplicate category lines
-    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
-    // Remove all merge conflict markers
-    // Remove duplicate category lines
-    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
     // Remove all merge conflict markers;
-    content = content.replace(/[\s\S]*?[\s\S]*?origin\/cursor[^\n]*\n?/g, );
-    content = content.replace(/origin\/cursor[^\n]*\n?/g, );
-    content = content.replace(/[\s\S]*?/g, );
-    content = content.replace(/[\s\S]*?origin\/cursor[^\n]*\n?/g, );
+    content = content.replace(/[\s\S]*?[\s\S]*?origin\/cursor[^\n]*\n?/g, '');
+    content = content.replace(/origin\/cursor[^\n]*\n?/g, '');
+    content = content.replace(/[\s\S]*?/g, '');
+    content = content.replace(/[\s\S]*?origin\/cursor[^\n]*\n?/g, '');
 cursor/fix-lint-push-and-merge-to-main-f3c1;
     // Remove duplicate category lines;
-<<<<<<< HEAD
     content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
       if (categoryMatch) {}
@@ -45,13 +38,21 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     content = content.replace(/},\s*]/g, '}\n  ]');
     content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
-<<<<<<< HEAD
-=======
+
+
       if (categoryMatch) {
         return `category: '${categoryMatch[1]}'\n    }`}
       return match});
     // Remove any remaining merge conflict markers
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
       if (categoryMatch) {}
         return `category: '${categoryMatch[1]}'\n    }`};
       return match}
@@ -76,15 +77,20 @@ const filesToClean = ['pages/ai-services.tsx',]
   'pages/case-studies.tsx',
   'index.html',
   'public/offline.html'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 // Clean all files;
 filesToClean.forEach(file => {})
   if (fs.existsSync(file)) {}
     cleanMergeConflicts(file)};
 }
-
+});
+console.log('Comprehensive merge conflict cleanup completed!');
 cursor/website-audit-and-update-with-deployment-76dc;
-`;
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

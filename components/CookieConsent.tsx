@@ -118,7 +118,7 @@ export default function CookieConsent() {;
                 Accept All;
               </button>;
             </div>;
-          </div>) : (
+          </div>) : (;
           <div>;
             <div className="flex items - center justify-between mb-4">;
               <h3 className="text - lg font - semibold text-gray-900">;

@@ -1,16 +1,1 @@
-import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'CRM Platform - Zion Tech Group',
-  description: 'Professional CRM platform services by Zion Tech Group.',
-};
-
-export default function ServicePage() {
-  return (
-    <div>
-      <h1>CRM Platform</h1>
-      <p>Professional CRM platform services tailored to your business needs.</p>
-    </div>
-  );
-}
+import React from "react"; import { Metadata } from "next"; export const metadata: Metadata = { title: "crm-platform - Zion Tech Group", description: "Professional crm-platform solutions for your business needs.", keywords: "crm-platform, services, business, technology" }; export default function CrmPlatformPage() { return ( <div className="min-h-screen bg-white"> <div className="container mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8"> crm-platform </h1> <p className="text-lg text-gray-600 mb-8"> Professional crm-platform solutions for your business needs. </p> <div className="bg-blue-50 p-6 rounded-lg"> <h2 className="text-2xl font-semibold text-blue-900 mb-4">Coming Soon</h2> <p className="text-blue-800"> This service page is under development. Please contact us for more information. </p> </div> </div> </div> ); }

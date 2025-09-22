@@ -1,14 +1,13 @@
-'use client'
+'use client';
 
-import React from 'react'
-
+import React from 'react';
 interface ErrorBoundaryState {
-  hasError: boolean
-  error?: Error
+  hasError: boolean;
+  error?: Error;
 }
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode
+  children: React.ReactNode;
   fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>
 }
 
@@ -23,7 +22,35 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    // Enhanced error logging
+    const errorDetails = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+    }
+
+    console.group('🚨 Error Boundary Caught Error')
+    console.error('Error:', error)
+    console.error('Error Info:', errorInfo)
+    console.error('Full Details:', errorDetails)
+    console.groupEnd()
+
+    // Send error to analytics service (placeholder)
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: true,
+      })
+    }
+
+    // Send error to error tracking service (placeholder)
+    if (typeof window !== 'undefined') {
+      // This would be replaced with actual error tracking service
+      console.log('Error would be sent to error tracking service:', errorDetails)
+    }
   }
 
   resetError = () => {

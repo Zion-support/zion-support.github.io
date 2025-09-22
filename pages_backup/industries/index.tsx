@@ -1,16 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
@@ -20,13 +11,11 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
 
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Heart,
   DollarSign,
   Settings,
@@ -38,18 +27,6 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import {
-=======
-import * as React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import * as React from 'react''
-import Link from 'next/link''
-import { motion } from 'framer-motion'
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Heart,
   DollarSign,
   Settings,
@@ -61,22 +38,11 @@ import {}
   Globe,
   Database,
   Shield,
-<<<<<<< HEAD
-  Cloud,
-<<<<<<< HEAD
-
-  Brain
+Cloud,
+Brain
 } from 'lucide-react';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  Brain;
-} from 'lucide-react';
-ursor/fix-syntax-push-and-merge-to-main-40de
-  Brain
-} from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
@@ -89,11 +55,6 @@ const industries = [
     href: '/industries/healthcare',
     features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],
     color: 'from-red-500 to-pink-500'
-
-=======
-  Brain;
-} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/healthcare,',
     features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',
 =======
@@ -108,20 +69,8 @@ const industries = [
   {'
     name: 'Finance','
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
-<<<<<<< HEAD
-    icon: DollarSign,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    href: '/industries/finance,',
-=======
-  Building,;
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+icon: DollarSign,
+href: '/industries/finance,',
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
@@ -130,10 +79,7 @@ import Layout from '../../components/Layout';';
 } from 'lucide-react';
   Brain;
 } from 'lucide-react';    href: '/industries/finance,',
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
 =======
     icon: DollarSign,'
@@ -145,26 +91,8 @@ import Layout from '../../components/Layout';';
   {'
     name: 'Manufacturing','
     description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',
-<<<<<<< HEAD
-    icon: Settings,
-<<<<<<< HEAD
+icon: Settings,
 
-=======
-    href: '/industries/manufacturing',
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
-    color: 'from-blue-500 to-cyan-500'
-    href: '/industries/manufacturing',
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
-    color: 'from-blue-500 to-cyan-500'
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-    href: '/industries/manufacturing',
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
-    color: 'from-blue-500 to-cyan-500'
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
 =======
@@ -177,26 +105,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   {'
     name: 'Retail','
     description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',
-<<<<<<< HEAD
-    icon: ShoppingCart,
-<<<<<<< HEAD
+icon: ShoppingCart,
 
-=======
-    href: '/industries/retail',
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
-    color: 'from-purple-500 to-violet-500'
-    href: '/industries/retail',
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
-    color: 'from-purple-500 to-violet-500'
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-    href: '/industries/retail',
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
-    color: 'from-purple-500 to-violet-500'
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
 =======
@@ -209,26 +119,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   {'
     name: 'Education','
     description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',
-<<<<<<< HEAD
-    icon: BookOpen,
-<<<<<<< HEAD
+icon: BookOpen,
 
-=======
-    href: '/industries/education',
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
-    color: 'from-orange-500 to-yellow-500'
-    href: '/industries/education',
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
-    color: 'from-orange-500 to-yellow-500'
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-    href: '/industries/education',
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
-    color: 'from-orange-500 to-yellow-500'
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/education,',
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
 =======
@@ -241,16 +133,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   {'
     name: 'Government','
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',
-<<<<<<< HEAD
-    icon: Building,
-<<<<<<< HEAD
+icon: Building,
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
@@ -264,8 +149,6 @@ const stats = [
 ];
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
 =======
@@ -375,10 +258,8 @@ const industries = [;
     color: 'from-gray-500 to-slate-500';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-<<<<<<< HEAD
 ];
 const stats = [;
-<<<<<<< HEAD
 <<<<<<< HEAD
   { number: '500+, label: 'Industry Projects' },',
   { number: '50+, label: 'Fortune 500 Clients' },',
@@ -387,17 +268,7 @@ const stats = [;
 ;];
 
 <<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function IndustriesPage() {
@@ -413,10 +284,7 @@ export default function IndustriesPage() {
   { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
   { number: '24/7', label: 'Industry Support' }
 ];      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;];
 
@@ -481,8 +349,6 @@ const industries = []
     href: '/industries/government','
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ]
 
 <<<<<<< HEAD
@@ -501,20 +367,13 @@ export default function Industries() {
           </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-<<<<<<< HEAD
-          </div>
-=======
-=======
-export default function Industries() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+</div>
   return (
     <Layout"
       title="Industry Solutions - Zion Tech Group""
@@ -522,29 +381,19 @@ export default function Industries() {}
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
     >"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 ursor/add-new-services-and-deploy-updates-0462
@@ -568,15 +417,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+transition={{ duration: 0.8 }}
 
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
               transition={{ duration: 0.8 }}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -584,27 +426,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Industry Solutions
               </h1>
-=======
-                Industry Solutions;
-              </h1>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-                We understand the unique challenges and requirements of different industries. Our specialized solutions
+We understand the unique challenges and requirements of different industries. Our specialized solutions
                 are designed to address sector-specific needs while ensuring compliance, security, and scalability.
-=======
-                Specialized technology solutions tailored to meet the unique challenges and opportunities across different industries.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Industries Grid */}
+{/* Industries Grid */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -613,9 +444,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Industry-Specific{' '}',
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -658,11 +486,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
                 We understand the unique challenges and requirements of different industries. Our specialized solutions;
-<<<<<<< HEAD
-                are designed to address sector-specific needs while ensuring compliance, security, and scalability.,
-=======
-                are designed to address sector-specific needs while ensuring compliance, security, and scalability.,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+are designed to address sector-specific needs while ensuring compliance, security, and scalability.,
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
@@ -672,8 +496,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   View All Solutions;
                 </Link>;
               </div>;
-<<<<<<< HEAD
-            </motion.div>;
+</motion.div>;
           </div>;
         </section>;
         {/* Industries Grid */}
@@ -706,53 +529,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </motion.div>
           </div>
         </section>
-=======
-            </motion && motion.div>;
-          </div>;
-        </section>;
-        {/* Industries Grid */}
-        <section className="py-20 bg-gray-50">";
-          <div className="container mx-auto px-4">";
-                Industry-Specific{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
-                  Technology Solutions;
-                </span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                We understand the unique challenges and requirements of different industries. Our specialized solutions ;
-                are designed to address sector-specific needs while ensuring compliance, security, and scalability.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-                  Get Industry Consultation;
-                </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
-                  View All Solutions;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Industries Grid */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
               className="text-center"">;
-<<<<<<< HEAD
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<h1 className="text-4xl md: text-6xl font-bold mb-6">",;
                 Industry-Specific{' '}',;
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
                   Technology Solutions;
                 </span>;
               </h1>;
-<<<<<<< HEAD
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">", We understand the unique challenges and requirements of different industries. Our specialized solutions,;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">", We understand the unique challenges and requirements of different industries. Our specialized solutions,;
                 are designed to address sector-specific needs while ensuring compliance, security, and scalability.,;
               </p>;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">",;
@@ -780,12 +569,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>;
         </section>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Industries Grid */}
@@ -799,9 +582,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
+transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -823,9 +604,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >,
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 return (
                   <motion&& motion.div
                     key={index}
@@ -838,8 +616,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
                 and drive measurable business outcomes.;
               </p>;
-<<<<<<< HEAD
-            </motion.div>;
+</motion.div>;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
@@ -864,10 +641,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 and drive measurable business outcomes.;
               </p>;
             </motion.div>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -880,7 +653,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => {
                 const IconComponent = industry.icon;
-                
+
             >,
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Industries We Serve;
@@ -900,16 +673,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 We provide specialized technology solutions across various industries, helping organizations leverage technology to achieve their goals.
               </p>
             </motion.div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -918,20 +682,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 const IconComponent = industry.icon;
                 return (;
                   <motion.div);
-<<<<<<< HEAD
-                    key={index}
-<<<<<<< HEAD
+key={index}
 
-=======
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                     key={index}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -940,9 +692,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-                    whileHover={{ y: -5 }}
-<<<<<<< HEAD
+whileHover={{ y: -5 }}
 <<<<<<< HEAD
 
                   >
@@ -957,11 +707,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                       {industry.name}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                     whileHover={{ y: -5 }}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -979,17 +724,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                       {industry.description}
                     </p>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </div>,
                     </div>;
-                    
-<<<<<<< HEAD
-                    <Link
+
+<Link
                       href={industry.href}
 <<<<<<< HEAD
                     >;
@@ -1017,98 +755,31 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>,
           </div>;
         </section>;
-
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {industry.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                          >
-                    <div className="mb-6">";
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
-                      <div className="flex flex-wrap gap-2">";
-                        {industry.features.map((feature, idx) => (,
-                          <span}),
-                            key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full""
-                          >;
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                      </div>,
-                    </div>;
-                    <Link
-                      href={industry.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                    <Link;
-                      href={industry.href}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
                     >;
                       <span>Learn More</span>;"
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />";
                     </Link>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </motion && motion.div>;
+</motion && motion.div>;
                 ),;
               })}
             </div>;
           </div>;
         </section>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="text-center mb-16"
-
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+className="text-center mb-16"
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                  </motion.div>;
-=======
-                  </motion.div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="space-y-2 mb-6">
                       {industry.features.map((feature, idx) => ("
                         <div key={idx} className="flex items-center text-gray-300">"
@@ -1117,7 +788,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         </div>
                       ))}
                     </div>
-                    
+
                     <Link href={industry.href}>"
                       <a className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
                         Learn More"
@@ -1130,13 +801,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>,
           </div>;
         </section>;
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 bg-white">"
-=======
-              className="text-center mb-16"        <section className="py-20 bg-white">"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
               className="text-center mb-16"        <section className="py-20 bg-white">"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1148,9 +814,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <motion.div;"
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
@@ -1164,13 +828,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.
               </p>
             </motion.div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >,
-=======
-            >,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Industry Solutions?;
               </h2>;"
@@ -1178,14 +836,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.;
               </p>;
             </motion.div>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1196,25 +847,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-              >
+>
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>
                 <p className="text-gray-600">
-
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >,
@@ -1238,10 +876,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              >
+>
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
@@ -1251,15 +886,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   maintain the highest security standards.
                 </p>
               </motion.div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >,
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
-=======
-              >,"
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Shield className="w-8 h-8 text-green-600" />";
                 </div>;"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>";"
@@ -1269,16 +897,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </p>;
               </motion.div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <motion.div
 =======
               whileInView={{ opacity: 1, y: 0 }}              <motion.div
@@ -1296,23 +914,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Cloud className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
                 <p className="text-gray-600">
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >,
@@ -1346,33 +954,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Stats Section */}
-<<<<<<< HEAD
+{/* Stats Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={index}
-<<<<<<< HEAD
-                  className="text-center"
-
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+key={index}
+className="text-center"
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
@@ -1393,11 +984,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="text-center""
                   initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-                  whileInView={{ opacity: 1, y: 0 }}
+whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
 <<<<<<< HEAD
 
                 >
@@ -1414,13 +1003,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >,
-=======
-                  whileInView={{ opacity: 1, y: 0 }}                >,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                   className="text-center"                  key={index}
                   className="text-center""
@@ -1437,9 +1020,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>;
               ))}
             </div>,
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>;
+</div>;
         </section>;
 
         {/* CTA Section */}"
@@ -1510,33 +1091,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </div>
             >,
               <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-=======
-                Ready to Transform Your Industry?;
-              </h2>;
-              <p className="text-xl mb-8 max-w-2xl mx-auto">";
-                Let our industry experts help you leverage technology to solve your sector-specific challenges.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Get Industry Consultation;
-                </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                  Explore Solutions;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-=======
-            >"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Don't See Your Industry?
               </h2>"
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -1552,8 +1108,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </SimpleLayout>
+</SimpleLayout>
     </SimpleLayout>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -1561,8 +1116,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>
   );
-<<<<<<< HEAD
-                Ready to Transform Your Industry?;
+Ready to Transform Your Industry?;
               </h2>;
               <p className="text-xl mb-8 max-w-2xl mx-auto">";
                 Let our industry experts help you leverage technology to solve your sector-specific challenges.;
@@ -1597,15 +1151,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
       </div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </Layout>
   );
 }
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
@@ -1614,12 +1162,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-            </div>;
+</div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

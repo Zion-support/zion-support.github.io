@@ -1,17 +1,14 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: [
-        '/api/',
-        '/admin/',
-        '/_next/',
-        '/private/',
-      ],
+      disallow: ['/private/', '/admin/', '/api/'],
     },
-    sitemap: 'https://ziontechgroup.com/sitemap.xml',
+    sitemap: 'https://zion.app/sitemap.xml',
   }
 }

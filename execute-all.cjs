@@ -7,7 +7,6 @@ class ExecuteAllScripts {
     this.projectRoot = process.cwd();
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 const scripts = [
   'git-resolution.cjs',
   'run-all-automations.cjs',
@@ -61,10 +60,6 @@ async function runAll() {
 
 runAll().catch(console.error);
 origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async run() {
 
     ];
@@ -73,28 +68,6 @@ origin/cursor/automate-test-improve-and-merge-code-646c
       try {
   // TODO: Implement
 
-
 const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);
-<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
-
-    return false;
-
-async function runAll() {
-
-  const results = [];
-    const success = await runScript(script);
-    results.push({ script, success });
-
-  const successful = results.filter(r => r.success).length;
-  const total = results.length;
-`;
-  console.log(`\n🎉 Execution completed!`);`;
-  console.log(`📊 Results: ${successful}/${total} scripts successful`);
-
-  if (successful < total) {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

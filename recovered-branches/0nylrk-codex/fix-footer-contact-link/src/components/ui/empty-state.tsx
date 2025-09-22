@@ -1,16 +1,6 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
@@ -21,14 +11,7 @@ import {Link} from "react-router-dom";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
@@ -40,20 +23,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { Link } from "react-router-dom",
@@ -65,17 +40,10 @@ interface EmptyStateProps {
   description: string
   action?: {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
   className?: string
 }
-
-=======
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
@@ -98,12 +66,6 @@ interface EmptyStateProps {;
 }
 
 export function EmptyState(): any ({;
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 import React from "react","
 import { cn } from "@/lib/utils",";
@@ -133,19 +95,10 @@ import { Link } from "react-router-dom",  icon;
   action;
   secondaryAction;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   className}: EmptyStateProps) {;
-
-
 
 <<<<<<< HEAD
     href?: string;
-=======
-  className}: EmptyStateProps) {;
-    text: string,
-    href?: string,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     onClick?: () => void
   }
   secondaryAction?: {
@@ -156,8 +109,6 @@ import { Link } from "react-router-dom",  icon;
     onClick?: () => void
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -177,50 +128,29 @@ import { Link } from "react-router-dom",  icon;
     onClick?: () => void;
   },
 
-<<<<<<< HEAD
-  className?: string
+className?: string
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
 
   title;
   description;
   action;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   secondaryAction;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function EmptyState({
-=======
-export function EmptyState({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   icon,
   title,
   description,
   action,
   secondaryAction,
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   className}: EmptyStateProps) {}
   return (;
     <div;
       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        className
+className
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
@@ -235,17 +165,6 @@ export function EmptyState({}
               <Link to={action.href}>{action.text}</Link>
             </Button>
           ) : (
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 =======
   secondaryAction;    <div
@@ -257,14 +176,12 @@ export function EmptyState({}
 =======
   secondaryAction;
 
-<<<<<<< HEAD
 export function EmptyState({
   icon,
   title,
   description,
   action,
   secondaryAction,
-
 
   className}: EmptyStateProps) {
   return (
@@ -274,24 +191,15 @@ export function EmptyState({
 
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-        className
+className
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
-=======
-        className"
-import React from "react",;"
-import { cn } from "@/lib/utils",;"
-import { Button } from "@/components/ui/button",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Link } from "react-router-dom",;
 interface EmptyStateProps {;
   icon: React.ReactNode,;
@@ -312,35 +220,17 @@ interface EmptyStateProps {;
 ;
 export function EmptyState() { return null; }
       )}
-<<<<<<< HEAD
-    >
-<<<<<<< HEAD
+>
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
 
         className
       )}>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      )}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    >"
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
 
@@ -370,14 +260,8 @@ export function EmptyState() { return null; }
               <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
-<<<<<<< HEAD
-
-
 "
               className="bg-zion-purple hover:bg-zion-purple-light"
-=======
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -405,11 +289,7 @@ export function EmptyState() { return null; }
             <Button
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light"
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
@@ -417,19 +297,12 @@ export function EmptyState() { return null; }
         )}
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Button 
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -450,26 +323,9 @@ export function EmptyState() { return null; }
           )
         )}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -478,66 +334,33 @@ export function EmptyState() { return null; }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-<<<<<<< HEAD
-
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {secondaryAction && (
           secondaryAction.href ? ("
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
             </Button>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           ) : (
 
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-          ) : (
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {secondaryAction && (;
           secondaryAction && secondaryAction.href ? (;
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">;
               <Link to={secondaryAction && secondaryAction.href}>{secondaryAction && secondaryAction.text}</Link>;
             </Button>;
           ) : (;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Button
               variant="outline" 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-            <Button 
-=======
-            <Button "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<Button
               variant="outline" 
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -558,11 +381,7 @@ export function EmptyState() { return null; }
               variant="outline" 
 
               size="lg"
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          ) : (              size="lg"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
               {secondaryAction && secondaryAction.text}
@@ -574,43 +393,19 @@ export function EmptyState() { return null; }
     </div>;
   );
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
-=======
-=======
-=======
-;
-        {icon}
-      </div>;
-      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
-      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
-      <div className="flex flex-col sm:flex-row gap-4">;
-        {action && (;
-          action.href ? (;
-            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">;
-              <Link to={action.href}>{action.text}</Link>;
-            </Button>;
-      </div>;
-    </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
 =======
-
 
 "
               size="lg""
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
               {secondaryAction && secondaryAction.text}
-
-
 
 import React from './react';'
 import { cn } from '@/lib / utils';'
@@ -653,32 +448,12 @@ interface EmptyStateProps {
   title: string,
   description: string,
   action?: {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     text: string,
     href?: string;
     on_click?: () => void;
   }
-<<<<<<< HEAD
-  secondary_action?: {}
-=======
-  secondary_action?: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
-  className}: EmptyStateProps) {
-
-export function EmptyState({;
-  secondaryAction;)
-  className}: EmptyStateProps) {;
-    text: string,
-    href?: string,
-    onClick?: () => void;
-  },
-  secondaryAction?: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+secondary_action?: {}
     text: string,
     href?: string,
     onClick?: () => void;
@@ -686,8 +461,6 @@ export function EmptyState({;
 
   className?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export /**;
  * EmptyState - Function description;
  */
@@ -711,37 +484,6 @@ function EmptyState() {}
             </Button>) : (
             <Button;"
               size="lg";"
-=======
-export /**
- * EmptyState - Function description
- */
-function EmptyState() {
-=======
-
-
-
-  className}: EmptyStateProps) {
-  className?: string;
-}
-
-
-export function EmptyState({;
-  icon;
-  title;
-  description;
-  action;
-
-  secondaryAction;
-
-export function EmptyState({
-  icon,
-  title,
-  description,
-  action,
-  secondaryAction,
-
-)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div;
       className={cn(
@@ -811,8 +553,7 @@ interface EmptyStateProps {;
         "flex flex - col items - center justify - center text - center p - 6 md: p - 10 rounded - lg border border - zion - blue - light bg - zion - blue - dark / 50",")
         class_name)}
     >;
-<<<<<<< HEAD
-      <div className="bg - zion - blue / 30 p - 6 rounded - full mb - 6">;
+<div className="bg - zion - blue / 30 p - 6 rounded - full mb - 6">;
         {icon}
       </div>;
       <h3 className="text - 2xl font - semibold text - white mb - 3">{title}</h3>;
@@ -840,73 +581,12 @@ interface EmptyStateProps {;
             <Button;"
               variant="outline";"
               size="lg";"
-=======
-          secondary_action.href ? (
-            <Button as_child variant="outline" size="lg" className="border - zion - blue - light hover:bg - zion - blue - light">;
-              <Link to={secondary_action.href}>{secondary_action.text}</Link>;
-            </Button>) : (
-            <Button;
-              variant="outline";
-              size="lg";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="border - zion - blue - light hover:bg - zion - blue - light";
-=======
-      <div className="bg - zion - blue / 30 p - 6 rounded - full mb - 6">;"
-      <h3 className="text - 2xl font - semibold text - white mb - 3">{title}</h3>;""
-      <p className="text - zion - slate text - lg mb - 8 max - w-md">{description}</p>;""
-      <div className="flex flex - col sm:flex - row gap - 4">;"
-            <Button as_child size="lg" className="bg - zion - purple hover:bg - zion - purple - light">;"
-
-              <Link to={action.href}>{action.text};
-            ) : (
-              size="lg";""
-              className="bg - zion - purple hover:bg - zion - purple - light";"
-              on_click={action.on_click}
-            ))}"
-            <Button as_child variant="outline" size="lg" className="border - zion - blue - light hover:bg - zion - blue - light">;"
-
-              <Link to={secondary_action.href}>{secondary_action.text};
-              variant="outline";""
-              className="border - zion - blue - light hover:bg - zion - blue - light";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               on_click={secondary_action.on_click}
             ))}
     </div>);
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  ),;}
- interface EmptyStateProps {
-  icon: React.ReactNode;
-title: string;
-description: string;
-action?: {
-  text: string;
-href?: string;
-onClick?: () => void 
-};
-secondaryAction?: {
-  text: string;
-href?: string;
-onClick?: () => void 
-};
-className?: string 
-}export function EmptyState ({
-  icon, title, description, action, secondaryAction, className 
-}: EmptyStateProps) {
-  return (<div className= {
-  cn (> {
-</div>)
-}) ) 
-}</div> </div>) 
-              className="bg-zion-purple hover:bg-zion-purple-light";"
-
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        {secondaryAction && (
+{secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
@@ -918,8 +598,6 @@ className?: string
               variant="outline" 
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onClick={secondaryAction.onClick}
 
 pr-12325
@@ -930,20 +608,12 @@ pr-12325
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

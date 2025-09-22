@@ -1,34 +1,15 @@
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-=======
-"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";"
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
-
-<<<<<<< HEAD
 "
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts","
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1","
@@ -37,26 +18,15 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-<<<<<<< HEAD
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-
 
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
@@ -66,12 +36,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
-
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
@@ -80,20 +45,10 @@ const corsHeaders = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -117,63 +72,22 @@ if (req && req.method === "OPTIONS") {
   }
   try {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const corsHeaders = {"
-  "Access-Control-Allow-Origin": "*""
-  "Access-Control-Allow-Headers":"
-    "authorization, x-client-info, apikey, content-type"}
-serve(async (req: Request) => {};
-  // Handle CORS;
-    return new Response(null, {}
-      status: 204;
-      headers: corsHeaders})
-  }
-  try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const supabase = createClient(
 "
-=======
-    const supabase = createClient(
-      supabaseUrl;
-      supabaseServiceKey
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      supabaseUrl,
-      supabaseServiceKey
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     );
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ),
-    
+
     // Run the database function to create scheduled reminders"
     const { data, error } = await supabase.rpc("create_scheduled_reminders"),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    );
-    // Run the database function to create scheduled reminders
-    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -185,8 +99,6 @@ serve(async (req: Request) => {};
     const supabase = createClient(    if (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
     if (error) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -209,19 +121,7 @@ supabaseUrl,
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response("
         JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-if (error) {
-      console.error("Failed to create scheduled reminders:", error),
-      return new Response(
-        JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
-    const supabase = createClient(    if (error) {
-      console && console.error("Failed to create scheduled reminders:", error);
-      return new Response(
-        JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        {
+{
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
@@ -233,65 +133,21 @@ if (error) {
       .eq("job_type", "onboarding_reminder")
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       .eq("status", "pending")
 <<<<<<< HEAD
-
-=======
-      .lt("scheduled_for", new Date().toISOString());
-      .lt("scheduled_for", new Date().toISOString()),
-    
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-        {}
-          status: 500"
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
-      )
-    }
-    // Process pending reminder jobs;
-    const { data: pendingJobs, error: jobsError } = await supabase"
-      .from("scheduled_jobs")"
-      .select("id, payload")"
-      .eq("job_type", "onboarding_reminder")"
-      .eq("status", "pending")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
 =======
       .eq("status", "pending")
 
-<<<<<<< HEAD
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       .lt("scheduled_for", new Date().toISOString()),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (jobsError) {
-=======
-
-
-    if (jobsError) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response("
         JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
-
-
 
         {}
           status: 500"
@@ -313,38 +169,16 @@ if (error) {
       )
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    
+
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const processedJobs = [],
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    const processedJobs = [];
-    
-    const processedJobs = [],
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (pendingJobs && pendingJobs.length > 0) {
 =======
@@ -370,30 +204,14 @@ const processedJobs = [];
             method: "POST";
             headers: {
 <<<<<<< HEAD
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-
-
-    if (pendingJobs && pendingJobs.length > 0) {}
-      for (const job of pendingJobs) {}
-        // Call the send-onboarding-reminder function for each job;
-        const reminderResponse = await fetch(
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
               "Content-Type": "application/json","
               "Authorization": `Bearer ${supabaseServiceKey}`};
             body: JSON && JSON.stringify(job && job.payload)}
-<<<<<<< HEAD
-        );
+);
 
-        
         if (reminderResponse.ok) {}
           // Update job status to completed;
           const { error: updateError } = await supabase"
@@ -403,20 +221,13 @@ const processedJobs = [];
               completed_at: new Date().toISOString()})
 "
             .eq("id", job && job.id);
-          
 
 "
             .eq("id", job.id),
-          
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-            .eq("id", job && job.id);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           if (updateError) {
 =======
@@ -430,12 +241,9 @@ const processedJobs = [];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
           if (updateError) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -467,41 +275,16 @@ if (reminderResponse && reminderResponse.ok) {
 
             .eq("id", job && job.id);
 
-
             .eq("id", job.id),
 
 .eq("id", job && job.id);
           if (updateError) {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        );          if (updateError) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             console && console.error("Failed to update job status:", updateError)
           } else {}
             processedJobs && processedJobs.push(job && job.id)
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-        } else {          // Update job status to failed
-=======
-        } else {
-          console && console.error("Failed to send reminder for job:", job && job.id);
-.eq("id", job.id);
-            .eq("id", job.id),
-          if (updateError) {
-            console.error("Failed to update job status:", updateError)
-          } else {
-            processedJobs.push(job.id)
-          }
-        } else {
-          console.error("Failed to send reminder for job:", job.id),
-          // Update job status to failed
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        } else {          // Update job status to failed
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+} else {          // Update job status to failed
           await supabase
 =======
         } else {}
@@ -511,43 +294,16 @@ if (reminderResponse && reminderResponse.ok) {
             .from("scheduled_jobs")
             .update({"
               status: "failed"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-            .eq("id", job && job.id)            .eq("id", job && job.id)
-=======
-
-"
-            .eq("id", job && job.id)
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+.eq("id", job && job.id)            .eq("id", job && job.id)
         }
       }
     }
-<<<<<<< HEAD
 <<<<<<< HEAD
     return new Response(
 
         job_ids: processedJobs});
       JSON.stringify({}
 "
-=======
-            .eq("id", job && job.id)
-.eq("id", job.id)
-            .eq("id", job && job.id)
-        }
-      }
-    }
-    return new Response(
-
-        processed_jobs: processedJobs && processedJobs.length,
-
-JSON && JSON.stringify({
-        message: "Reminders processed successfully";
-        processed_jobs: processedJobs && processedJobs.length,
-        job_ids: processedJobs});
-      JSON.stringify({
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         message: "Reminders processed successfully",
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
@@ -555,17 +311,7 @@ JSON && JSON.stringify({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      JSON.stringify({
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-      JSON.stringify({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 JSON.stringify({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -575,16 +321,11 @@ JSON.stringify({
         message: "Reminders processed successfully",
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {
         status: 200
 =======
-
-
 
       {}
         status: 200"
@@ -596,25 +337,10 @@ JSON.stringify({
         status: 500"
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
+}
 });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-  }
-});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 =======
@@ -649,24 +375,10 @@ console.error(error),
 }
 });
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            .eq("id", job && job.id)            .eq("id", job && job.id)
-        }
-      }
-    }
-    return new Response(      {
-        status: 500
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 =======
-
-
-
 
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,'
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';"
@@ -679,7 +391,6 @@ const cors_headers = {"
   "Access - Control - Allow - Headers":;"
     "authorization, x - client - info, apikey, content - type"}
 ;
-<<<<<<< HEAD
 serve (async (req: Request) => {
 
 }
@@ -815,29 +526,13 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-  }
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 ;
@@ -899,7 +594,6 @@ serve(async (req:Request) => {;
     }
 ;
 
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;""
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";""
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;""
@@ -952,9 +646,7 @@ serve(async (req: Request) => {
       console && console.error("Failed to fetch pending jobs:", jobsError);"
         JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });"
 
-
     const processedJobs = [],
-
 
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
@@ -964,7 +656,6 @@ serve(async (req: Request) => {
           {"
             method: "POST";",
   headers: {
-
 
 "
               "Content-Type": "application/json",""`;
@@ -1098,9 +789,6 @@ if ( {) {
         status: 200,"
     console.error (error);
       JSON.stringify ({ error: "Internal server error", details: error.message });"
-
-
-
 
 });
 
@@ -1248,14 +936,8 @@ pr-12325
   }
 });
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1387,16 +1069,8 @@ if ( {) {}
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
 
-
-
-
-
-
-
   }
 });
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1444,6 +1118,5 @@ pr-12325
   }
 });
 "
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

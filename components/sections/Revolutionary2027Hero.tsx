@@ -47,7 +47,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     hidden: { opacity: 0 }
 
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 staggerChildren: 0.1,
       },
@@ -145,13 +145,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]"></div>
       {/* Animated Grid Pattern */}"
       <div className="absolute inset-0 opacity-20">"
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       <div className='absolute inset-0 opacity-20'>
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>;
 origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
-
+;
       </div>
 
       </div>
@@ -170,12 +170,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{}
             duration: 4;
             delay: item.delay;
-            repeat: Infinity'
-            ease: 'easeInOut''
+            repeat: Infinity';
+            ease: 'easeInOut'';
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
             rotate: [0, 5, -5, 0]}}'
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-
+;
           transition={{}
             duration: 4,
             delay: item && item.delay,
@@ -184,7 +184,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         >'"
           <item.icon className='w-8 h-8' />            ease: "easeInOut"
-
+;
           }}          transition={{}
             rotate: [0, 5, -5, 0]}}
           transition={{}
@@ -209,7 +209,7 @@ ease: 'easeInOut',
         </motion.div>
       ))}
       {/* Main Content */}
-<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
@@ -344,31 +344,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ArrowRight className='w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1' />;
             </Link>;
             <a'
-              href='tel:+13024640950''
+              href='tel:+13024640950'';
               className='group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50'>;
               <span>Call +1 302 464 0950</span>;'
               <Zap className='w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40' />            </a>;
           </motion && motion.div>;"
             <div className="text-center">"
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">$50T+</div>"
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">$50T+</div>";
               <div className="text-gray-400 text-sm">Total Market Value</div>
             </div>"
             <div className="text-center">"
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>"
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>";
               <div className="text-gray-400 text-sm">Global Customers</div>
             </div>"
             <div className="text-center">"
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>"
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>";
               <div className="text-gray-400 text-sm">Uptime Guarantee</div>
           <motion.div variants={itemVariants} className='space-y-6'>
-            <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>
+            <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Future
               </span>
               <br />
               <span className='text-white'>is Now</span>
             </h1>
-            <div className='flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300'>
+            <div className='flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300'>;
               <span>2027</span>
               <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
               <span>Revolutionary</span>
@@ -378,7 +378,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
           {/* Subtitle */}
 <motion.div variants={itemVariants} className='max-w-4xl mx-auto'>
-            <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>
+            <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>;
               Experience the next generation of AI, quantum computing, and
               emerging technologies. Transform your business with solutions that
               were once science fiction.
@@ -387,7 +387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Key Features */}
 <motion.div
             variants={itemVariants}
-            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
+            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto';
           >
             <div className='bg-gradient-to-br from-purple-900/30 to-purple-800/30 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6'>
               <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4'>
@@ -424,29 +424,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* CTA Buttons */}
 <motion.div
             variants={itemVariants}
-            className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+            className='flex flex-col sm:flex-row gap-4 justify-center items-center';
           >
             <Link
-              href='https://ziontechgroup.com/services'
-              className='group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25'
+              href='https://ziontechgroup.com/services';
+              className='group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25';
               <span>Explore Services</span>
-              <ArrowRight className='w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1' />
+              <ArrowRight className='w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1' />;
             </Link>
             <a
-              href='tel:+13024640950'
-              className='group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50'
+              href='tel:+13024640950';
+              className='group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50';
             >
               <span>Call +1 302 464 0950</span>
-              <Zap className='w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40' />
+              <Zap className='w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40' />;
             </a>
           </motion.div>
           {/* Stats */}
 <motion.div
             variants={itemVariants}
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8';
           >
             <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
                 500+
               </div>
               <div className='text-gray-400 text-sm'>
@@ -454,19 +454,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
             <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
                 $50T+
               </div>
               <div className='text-gray-400 text-sm'>Total Market Value</div>
             </div>
             <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
                 1000+
               </div>
               <div className='text-gray-400 text-sm'>Global Customers</div>
             </div>
             <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
                 99.9%
               </div>
               <div className='text-gray-400 text-sm'>Uptime Guarantee</div>
@@ -488,9 +488,9 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
           y: [0, 10, 0]
         }}
         transition={{
-          duration: 2
-          repeat: Infinity
-          ease: 'easeInOut'
+          duration: 2;
+          repeat: Infinity;
+          ease: 'easeInOut';
         }}
       >
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>
@@ -515,7 +515,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             transition={{}
               duration: 2;
-              repeat: Infinity'
+              repeat: Infinity';
               ease: 'easeInOut',            }}
 
           />;

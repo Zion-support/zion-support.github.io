@@ -37,7 +37,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   async function getToken() {
     const res = await fetch('/api/partners/token', {
-      method: 'POST'
+      method: 'POST';
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ apiKey })
     });
@@ -66,7 +66,7 @@ const res = await fetch('/api/partners/usage', {
     const data = await res.json();
 }
 const res = await fetch('/api/partners/usage', {}
-      headers: token ? { Authorization: `Bearer ${token}` } : 
+      headers: token ? { Authorization: `Bearer ${token}` } : ;
 }
     });
 
@@ -133,7 +133,7 @@ className='border rounded px-3 py-2 flex-1'}
           </div>
         )}
 
-<div className='grid md: grid-cols-3 gap-6' />
+<div className='grid md: grid-cols-3 gap-6' />;
           <div className='bg-white p-6 rounded-lg shadow' />
             <h3 className='font-medium mb-2' />API Keys</h3>
             <button;
@@ -146,14 +146,14 @@ onClick={regenerateKey}
               Old key becomes inactive.
             </p>
           </div>
-          <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>
+          <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>;
             <h3 className='font-medium mb-2'>Usage</h3>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <button
               onClick={fetchUsage}
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;
               {loading ? 'Loading...' : 'Refresh'}
-          <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
+          <div className="bg-white p-6 rounded-lg shadow md:col-span-2">;
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
             {usage ? ("
@@ -163,7 +163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="font-medium">By Endpoint</p>"
                   <ul className="list-disc ml-6">
 
-          <div className='bg-white p-6 rounded-lg shadow md:col-span-2' />
+          <div className='bg-white p-6 rounded-lg shadow md:col-span-2' />;
             <h3 className='font-medium mb-2' />Usage</h3>
             <button;
 onClick={fetchUsag}
@@ -199,7 +199,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </ul>
                 </div>
               </div>
-            ) : (
+            ) : (;
             )}
 
             href='/api/partners/sdk?type=rest'>;

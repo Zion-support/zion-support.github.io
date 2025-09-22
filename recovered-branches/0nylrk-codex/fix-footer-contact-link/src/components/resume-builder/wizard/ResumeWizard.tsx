@@ -3,19 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState, useEffect} from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -40,10 +28,7 @@ import {Button} from '@/components / ui / button';'
 import {Resume} from '@/types / resume';
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Import components;
-
 
 '
 import {Button} from '@/components / ui / button';'
@@ -51,13 +36,8 @@ import {Resume} from '@/types / resume';
 // Import components;
 
 <<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect  } from 'react';
-=======
-// Import components;import { useState, useEffect  } from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 // Import components;import { useState, useEffect  } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -67,13 +47,8 @@ import { useState, useEffect  } from 'react';
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
 import { useState, useEffect  } from 'react';
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
 import { Tabs  } from '@/components/ui/tabs';
@@ -94,7 +69,6 @@ import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';'
 import { Button  } from '@/components/ui/button';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Resume  } from '@/types/resume';
-<<<<<<< HEAD
 // Import components'
 import { ResumeProgress  } from './ResumeProgress';'
 import { EmptyResumeState  } from './EmptyResumeState';'
@@ -104,13 +78,10 @@ import { ResumeStepContent  } from './ResumeStepContent';'
 import { useResumeProgress  } from './useResumeProgress';'
 import { ResumeVersionSelector  } from './ResumeVersionSelector';'
 import { RESUME_STEPS } from './constants';
-<<<<<<< HEAD
 export function ResumeWizard() {
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -130,39 +101,9 @@ import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import {RESUME_STEPS} from './constants';
 <<<<<<< HEAD
 export function ResumeWizard() {;
-=======
-=======
-// Import components
-// Import components;
-pr-12325
-import { ResumeProgress  } from './ResumeProgress';
-import { EmptyResumeState  } from './EmptyResumeState';
-import { CreateResumeForm  } from './CreateResumeForm';
-import { ResumeSteps  } from './ResumeSteps';
-import { ResumeStepContent  } from './ResumeStepContent';
-import { useResumeProgress  } from './useResumeProgress';
-import { ResumeVersionSelector  } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
-
-  }
-
-import {useState, useEffect} from 'react';''
-import {use_auth} from '@/hooks / use_auth';''
-import {use_resume} from '@/hooks / use_resume';''
-import {Tabs} from '@/components / ui / tabs';''
-import {Card, CardContent} from '@/components / ui / card';''
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';''
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';''
-import {Button} from '@/components / ui / button';''
-import {Resume} from '@/types / resume';'
-// Import components;
-
-  };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {RESUME_STEPS} from './constants';
 
   const { user } = useAuth();
@@ -195,37 +136,8 @@ export function ResumeWizard() {;
   // Use the extracted hook for progress calculation
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export function ResumeWizard() { return null; }
-import {useState, useEffect} from 'react';'
-import {use_auth} from '@/hooks / use_auth';'
-import {use_resume} from '@/hooks / use_resume';'
-import {Tabs} from '@/components / ui / tabs';'
-import {Card, CardContent} from '@/components / ui / card';'
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';'
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-'
-import {ResumeProgress} from './ResumeProgress';'
-import {EmptyResumeState} from './EmptyResumeState';'
-import {CreateResumeForm} from './CreateResumeForm';'
-import {ResumeSteps} from './ResumeSteps';'
-import {ResumeStepContent} from './ResumeStepContent';'
-import {useResumeProgress} from './useResumeProgress';'
-import {ResumeVersionSelector} from './ResumeVersionSelector';'
-import {RESUME_STEPS} from './constants';
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -238,55 +150,11 @@ import {RESUME_STEPS} from './constants';
 '
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-  };
-
-=======
-=======
-export function ResumeWizard() {;
-  const { user } = useAuth();
-  const {
-    isLoading;
-
-    error
-    resume
-
-    fetchResume;
-    createResume
-  } = useResume();
-  const [activeTab, setActiveTab] = useState('basic-info');
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  // Use the extracted hook for progress calculation
-=======
-import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+// Use the extracted hook for progress calculation
 =======
 import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-=======
-  const progress = useResumeProgress(resume);
-  useEffect(() => {
-    if (user) {
-      fetchResume()
-    }
-  }, [user, fetchResume]);
-  const handleCreateNewResume = async (title: string) => {
-    const resumeId = await createResume({ title: title.trim() })
-    if (resumeId) {
-      await fetchResume(resumeId);
-      setShowNewResumeForm(false)
-    }
-=======
-  // Use the extracted hook for progress calculation;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   const nextStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
@@ -313,18 +181,9 @@ import {RESUME_STEPS} from './constants';  // Use the extracted hook for progres
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -361,40 +220,7 @@ import { ResumeStepContent } from './ResumeStepContent',;'
 import { useResumeProgress } from './useResumeProgress',;'
 import { ResumeVersionSelector } from './ResumeVersionSelector',;'
 import { RESUME_STEPS } from './constants',;
-<<<<<<< HEAD
 export function ResumeWizard() { return null; }
-=======
-
-  }
-  const handleResumeChange = (
-    fetchResume(resumeId)) => {
-  return $3;}
-}
-  }
-
-
-  };'
-import { useState, useEffect } from 'react',;''
-import { useAuth } from '@/hooks/useAuth',;''
-import { useResume } from '@/hooks/useResume',;''
-import { Tabs } from '@/components/ui/tabs',;''
-import { Card, CardContent } from '@/components/ui/card',;''
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;''
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react',;''
-import { Button } from '@/components/ui/button',;''
-import { Resume } from '@/types/resume',;'
-// Import components;'
-import { ResumeProgress } from './ResumeProgress',;''
-import { EmptyResumeState } from './EmptyResumeState',;''
-import { CreateResumeForm } from './CreateResumeForm',;''
-import { ResumeSteps } from './ResumeSteps',;''
-import { ResumeStepContent } from './ResumeStepContent',;''
-import { useResumeProgress } from './useResumeProgress',;''
-import { ResumeVersionSelector } from './ResumeVersionSelector',;''
-import { RESUME_STEPS } from './constants',;'
-export function ResumeWizard() {;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { user } = useAuth(),;
   const {;
     isLoading,;
@@ -407,8 +233,6 @@ export function ResumeWizard() {;
   const [activeTab, setActiveTab] = useState('basic-info'),;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
 
 <<<<<<< HEAD
@@ -419,26 +243,12 @@ export function ResumeWizard() {;
   useEffect(() => {
     if (user) {
       fetchResume()
-=======
-
-=======
-  const [activeTab, setActiveTab] = useState('basic-info');
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume);
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   useEffect(() => {;
     if (user) {;
       fetchResume();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }, [user, fetchResume]);
+}, [user, fetchResume]);
   const handleCreateNewResume = async (title: string) => {
     const resumeId = await createResume({ title: title.trim() })
     if (resumeId) {
@@ -461,12 +271,6 @@ export function ResumeWizard() {;
   },
 
   if (isLoading) {
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
@@ -552,45 +356,27 @@ const [activeTab, setActiveTab] = useState('basic-info');
 
   },
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleResumeChange = (resumeId: string) => {;
     fetchResume(resumeId);
   };
 
   if (isLoading) {;
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   };
   const handleResumeChange = (resumeId: string) => {;
     fetchResume(resumeId);
   };
   if (isLoading) {;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <div className="flex justify-center items-center h-64">;"
 =======
@@ -602,14 +388,8 @@ const [activeTab, setActiveTab] = useState('basic-info');
     );
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return ("
+return ("
       <Alert variant="destructive" className="mb-6">;"
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (error) {;
 
 if (error) {;
@@ -650,15 +430,10 @@ if (error) {;
   },
   },
 <<<<<<< HEAD
-  
-<<<<<<< HEAD
   if (isLoading) {}
     return (
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (isLoading) {
     return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -667,15 +442,8 @@ if (error) {;
       </div>
     )
   }
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (error) {
-=======
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   if (error) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -686,29 +454,12 @@ if (error) {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
+}
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   if (showNewResumeForm) {
-=======
-
-  }
-  if (showNewResumeForm) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  }
-  if (showNewResumeForm) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   }
 =======
@@ -722,17 +473,6 @@ if (error) {;
   }
   if (showNewResumeForm) {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-"
-      <div className="flex justify-center items-center h-64">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    return (
-=======
-return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <CreateResumeForm
 
 import { useState, useEffect } from 'react',;
@@ -840,31 +580,20 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>;
   }
-<<<<<<< HEAD
-  if (showNewResumeForm) {
-<<<<<<< HEAD
+if (showNewResumeForm) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (!resume && !showNewResumeForm) {;
-=======
-if (!resume && !showNewResumeForm) {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
 
   if (showNewResumeForm) {;
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -881,77 +610,19 @@ if (!resume && !showNewResumeForm) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
     );
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      />;
-    );
-  }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
         <h1 className="text-2xl font-bold">Resume Builder</h1>;
-<<<<<<< HEAD
-=======
 
-      />;
-    );
-  }
-  return ("
-    <div className="space-y-6">;"
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;"
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex gap-4 flex-wrap items-center">;
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button;
             onClick={() => setShowNewResumeForm(true)}
 
-<<<<<<< HEAD
-=======
-        <div className="flex gap-4 flex-wrap items-center">;
-    return (;'
-      <div className="flex justify-center items-center h-64">;"
-</div>"
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;"
-</Loader2>
-      </div>;"
-      <Alert variant="destructive" className="mb-6">;"
-</Alert>"
-        <AlertCircle className="h-4 w-4" />;"
-</AlertCircle>
-        <AlertTitle>Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>;)
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-</EmptyResumeState>
-      <CreateResumeForm;
-        onCreateResume={handleCreateNewResume}
-        onCancel={() => setShowNewResumeForm(false)}
-</CreateResumeForm>"
-    <div className="space-y-6">;"
-</div>"
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;"
-</div>"
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;""
-        <div className="flex gap-4 flex-wrap items-center">;"
-</div>
-          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
-</ResumeVersionSelector>
-          <Button;
-            onClick={() => setShowNewResumeForm(true)}
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             variant="outline";
             size="sm";
             className="gap-2";
@@ -976,19 +647,7 @@ if (!resume && !showNewResumeForm) {;
           </div>;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
             <ResumeSteps
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      />
-    )
-  }
-  
-=======
-/>
-    )
-  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return (
+return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <h1 className="text-2xl font-bold">Resume Builder</h1>
@@ -1019,13 +678,8 @@ if (!resume && !showNewResumeForm) {;
             />
             {resume && (
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 </Tabs>
             <ResumeSteps;
@@ -1042,23 +696,14 @@ if (!resume && !showNewResumeForm) {;
               onChange={setActiveTab} 
             />;
             {resume && (;
-<<<<<<< HEAD
-              <ResumeStepContent
+<ResumeStepContent
 
               <ResumeStepContent 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-activeTab={activeTab}
-</ResumeSteps>
-              <ResumeStepContent;
-              <ResumeStepContent;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 activeTab={activeTab}
                 resume={resume as Resume}
           ;
@@ -1077,15 +722,10 @@ activeTab={activeTab}
               />;
             )}
               <ResumeStepContent
-<<<<<<< HEAD
-              <ResumeStepContent 
+<ResumeStepContent 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1105,30 +745,12 @@ activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              />;
+/>;
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-=======
-
-=======
-              />
-            )}
-          </Tabs>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1138,18 +760,7 @@ activeTab={activeTab}
               />;
             )}
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-/>
-            )}
-          </Tabs>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -1208,21 +819,10 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
-    return (
-<<<<<<< HEAD
+return (
 <<<<<<< HEAD
       <div className="flex justify - center items - center h-64">;
         <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
-=======
-    return ("
-      <div className="flex justify - center items - center h - 64">;"
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <div className="flex justify - center items - center h - 64">;
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       <div className="flex justify - center items - center h-64">;
         <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
@@ -1233,21 +833,10 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
-    return (
-<<<<<<< HEAD
+return (
 <<<<<<< HEAD
       <Alert variant="destructive" className="mb-6">;
         <AlertCircle className="h - 4 w-4" />;
-=======
-    return ("
-      <Alert variant="destructive" className="mb - 6">;"
-        <AlertCircle className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <Alert variant="destructive" className="mb - 6">;
-        <AlertCircle className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       <Alert variant="destructive" className="mb-6">;
         <AlertCircle className="h - 4 w-4" />;
@@ -1273,8 +862,7 @@ if ( {) {}
         is_loading={is_loading}
       />);
   }
-<<<<<<< HEAD
-  return (
+return (
     <div className="space-y-6">;
       <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap-4">;
         <h1 className="text - 2xl font-bold">Resume Builder</h1>;
@@ -1287,26 +875,7 @@ if ( {) {}
             className="gap-2";
           >;
 <<<<<<< HEAD
-<<<<<<< HEAD
             <FilePlus className="h - 4 w-4" />;
-=======
-  return ("
-    <div className="space - y-6">;"
-      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;"
-        <h1 className="text - 2xl font - bold">Resume Builder</h1>;"
-        <div className="flex gap - 4 flex - wrap items - center">;
-          {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
-          <Button;
-            on_click={() => setShowNewResumeForm (true)}"
-            variant="outline";"
-            size="sm";"
-            className="gap - 2";
-          >;"
-            <FilePlus className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <FilePlus className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
             <FilePlus className="h - 4 w-4" />;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1354,24 +923,11 @@ if ( {) {}
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-      <Card>;
-<<<<<<< HEAD
+<Card>;
 <<<<<<< HEAD
         <CardContent className="pt-6">;
           <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb-6">;
             <h2 className="text - xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
-=======
-      <Card>;"
-        <CardContent className="pt - 6">;"
-          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;'"
-            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        <CardContent className="pt - 6">;
-          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
-            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
         <CardContent className="pt-6">;
           <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb-6">;
@@ -1456,21 +1012,9 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
-=======
-=======
-              />;
-=======
-/>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1495,10 +1039,6 @@ function ResumeWizard() {}
     create_resume;
   } = use_resume ();
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 ;
@@ -1531,15 +1071,8 @@ function ResumeWizard() {}
 
   },
 
-
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ;
@@ -1553,7 +1086,6 @@ function ResumeWizard() {}
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
   const handleResumeChange = (resumeId: string) => {;
     fetchResume(resumeId);
@@ -1640,7 +1172,6 @@ function ResumeWizard() {}
                 activeTab={activeTab}                resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
-
 
       <div className="flex justify - center items - center h - 64">;"
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;"

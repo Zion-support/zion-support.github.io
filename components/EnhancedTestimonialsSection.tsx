@@ -25,19 +25,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   content: string;
   rating: number;
   avatar: string;
-  category: string
+  category: string;
 }
 
 const EnhancedTestimonialsSection: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
-  category: string;  id: string
-  name: string
-  title: string
-  company: string
-  content: string
-  rating: number
-  avatar: string
-  category: string
+  category: string;  id: string;
+  name: string;
+  title: string;
+  company: string;
+  content: string;
+  rating: number;
+  avatar: string;
+  category: string;
   category: string;  id: string,
   name: string,
   title: string,
@@ -182,7 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}'
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
       />
 ));
   };
@@ -197,7 +197,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
               What Our Clients Say
             </span>
@@ -208,10 +208,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
         {/* Stats Section */}
-<div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>
+<div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>;
           {stats.map((stat, index) => (
             <div key={index} className='text-center group'>
-              <div className='w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
+              <div className='w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>;
                 <stat.icon className='w-10 h-10 text-blue-400' />
               </div>
               <div className='text-3xl font-bold text-white mb-2'>
@@ -222,16 +222,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
         {/* Testimonials Grid */}
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           {testimonials.map(testimonial => (
 
             <div;
               key={testimonial.id}'
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
             >
               {/* Quote Icon */}'
-              <div className='absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300'>'
+              <div className='absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300'>';
                 <Quote className='w-8 h-8' />
               </div>
               {/* Content */}'
@@ -332,7 +332,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
-<div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+<div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
@@ -349,7 +349,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               achieved. Let's discuss how Zion Tech Group can accelerate your;
               innovation journey.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a'
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion''
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -360,21 +360,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Experience the same transformative results that our clients have achieved.'
               Let's discuss how Zion Tech Group can accelerate your innovation journey.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a"
                 href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion""
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">;
                 Start Your Success Story;
               </a>;
                 href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
-                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
               >
                 Start Your Success Story
               </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
-href='tel:+13024640950'
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+href='tel:+13024640950';
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
               >
                 Schedule a Call;
               </a>

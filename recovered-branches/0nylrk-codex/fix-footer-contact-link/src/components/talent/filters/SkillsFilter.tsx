@@ -1,34 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {SkillsFilterProps} from "@/types/filters";
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox";
-import { SkillsFilterProps } from "@/types/filters";
-import { Checkbox } from "@/components/ui/checkbox",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SkillsFilterProps } from "@/types/filters",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { SkillsFilterProps } from "@/types/filters",
-
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Common skills in AI and tech
@@ -49,38 +22,7 @@ const POPULAR_SKILLS = [
   "Node.js",
   "TypeScript",
   "DevOps",
-<<<<<<< HEAD
-=======
-import {ChevronDown, ChevronUp} from "lucide-react";"
-import {Button} from "@/components/ui/button";"
-import {Checkbox} from "@/components/ui/checkbox";"
-import {SkillsFilterProps} from "@/types/filters";
-"
-import { ChevronDown, ChevronUp } from "lucide-react","
-import { Button } from "@/components/ui/button",";
-import { Checkbox } from "@/components/ui/checkbox";"
-import { SkillsFilterProps } from "@/types/filters";"
-import { Checkbox } from "@/components/ui/checkbox","
-import { SkillsFilterProps } from "@/types/filters",
-;
-// Common skills in AI and tech;
-const POPULAR_SKILLS = ["
-  "Machine Learning","
-  "Deep Learning","
-  "Python","
-  "TensorFlow","
-  "PyTorch","
-  "Computer Vision","
-  "NLP","
-  "Data Science","
-  "AWS","
-  "Docker","
-  "Kubernetes","
-  "React","
-  "Node.js","
-  "TypeScript","
-  "DevOps","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   "Security"
 ],
 
@@ -112,17 +54,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 htmlFor={`skill-${skill}`}"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ChevronDown, ChevronUp } from "lucide-react",;
 =======
@@ -171,16 +103,7 @@ import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { ChevronDown, ChevronUp } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { Checkbox } from '@/components / ui / checkbox';
-import { SkillsFilterProps } from '@/types / filters';
-// Common skills in AI and tech;
-const POPULAR_SKILLS = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   "Machine Learning";
   "Deep Learning";
   "Python";
@@ -208,11 +131,9 @@ const POPULAR_SKILLS = [;
 
 =======
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Checkbox
 =======
-
 
 "
 import { ChevronDown, ChevronUp } from "lucide-react",;"
@@ -266,22 +187,9 @@ const POPULAR_SKILLS = [;"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
@@ -292,8 +200,6 @@ const POPULAR_SKILLS = [;"
           ))}
         </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -302,18 +208,6 @@ const POPULAR_SKILLS = [;"
   )
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-              <Checkbox
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-=======
-      )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 <Checkbox
 
@@ -371,11 +265,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
 ;
 export /**;
  * SkillsFilter - Function description;
@@ -404,12 +293,6 @@ function SkillsFilter() {}
               />;
               <label;`
                 html_for={`skill-${skill}`}"
-=======
-=======
-</div>;
-  );
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export /**
  * SkillsFilter - Function description
@@ -496,8 +379,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
             <div key={skill} className="flex items - center">;"
                 checked={selected_skills.includes (skill)}
                 onCheckedChange={() => toggle_skill (skill)}
-<<<<<<< HEAD
-                className="border - zion - slate - light data-[state = checked]:bg - zion - purple data-[state = checked]:border - zion - purple";
+className="border - zion - slate - light data-[state = checked]:bg - zion - purple data-[state = checked]:border - zion - purple";
               />;
               <label;
                 html_for={`skill-${skill}`}
@@ -506,31 +388,17 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
               >;
                 {skill}
               </label>;
-=======
-
-                html_for={`skill-${skill}`}"
-                className="ml - 2 text - sm text - zion - slate - light cursor - pointer";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>))}
         </div>)}
     </div>);
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 ;
 
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 ;
 
@@ -569,14 +437,8 @@ pr-12325
 };
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

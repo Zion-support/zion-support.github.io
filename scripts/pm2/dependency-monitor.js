@@ -3,8 +3,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -27,26 +25,6 @@ class DependencyMonitor {,;
     const logMessage = `[${timestamp}] ${message}\n`,;
 ,;
     try {,;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-class DependencyMonitor {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkNpmAudit() {try {; this.log('🔒 Running npm audit...'); const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, encoding: 'utf8', stdio: 'pipe'}); const audit = JSON.parse(auditResult); return audit} catch (error) {// npm audit might fail if there are vulnerabilities; try {; const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {; // Try to parse the error output for vulnerability info; const lines = output.split('\n'); const vulnerabilities = []; lines.forEach(line = > {; if (line.includes('│')) {; const parts = line.split('│').map(p = > p.trim()).filter(Boolean); if (parts.length > = 4) {; vulnerabilities.push({; package: parts[0], severity: parts[1], title: parts[2]
-    path: parts[3]})}}}); return { vulnerabilities, error: true }}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`)}; return { error: true, message: error.message }}}; async checkOutdatedPackages() {try {; this.log('📦 Checking for outdated packages...'); const outdatedResult = execSync('npm outdated --json', {; cwd: this.projectRoot, encoding: 'utf8', stdio: 'pipe'}); const outdated = JSON.parse(outdatedResult); return outdated} catch (error) {// npm outdated returns non-zero exit code if there are outdated packages; try {; const output = error.stdout?.toString() |''; if (output) {; return JSON.parse(output)}} catch (parseError) {this.log(`Error parsing npm outdated output: ${parseError.message}`)}; return {}}}; async checkPackageLock() {try {; const packageLockPath = path.join(this.projectRoot, 'package-lock.json'); if (!fs.existsSync(packageLockPath)) {; return { exists: false, message: 'No package-lock.json found' }}; const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8')); const lockfileVersion = packageLock.lockfileVersion; return {exists: true, lockfileVersion, dependencies: Object.keys(packageLock.dependencies |{}).length; devDependencies: Object.keys(packageLock.devDependencies |{}).length}} catch (error) {return { exists: false, error: error.message }}}; async checkNodeVersion() {try {; const nodeVersion = process.version; const npmVersion = execSync('npm --version', {; cwd: this.projectRoot
-    encoding: 'utf8'}).trim(); return { nodeVersion, npmVersion }} catch (error) {return { error: error.message }}}; async checkGitHooks() {try {; const hooksDir = path.join(this.projectRoot, '.git/hooks'); if (!fs.existsSync(hooksDir)) {; return { exists: false, message: 'No git hooks directory found' }}; const hooks = fs.readdirSync(hooksDir); const activeHooks = hooks.filter(hook = > {const hookPath = path.join(hooksDir, hook); const stats = fs.statSync(hookPath); return stats.isFile() && (hook.endsWith('.sample') |stats.mode & 0o111)}); return { exists: true, hooks: activeHooks }} catch (error) {return { error: error.message }}}; async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {const report = {; timestamp: new Date().toISOString(), summary: {
-      , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
@@ -93,33 +71,18 @@ class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); th
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 monitor.run().catch(error = > {process.exit(1)});
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
-<<<<<<< HEAD
 monitor.run().catch(error = > {process.exit(1)});
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-monitor.run().catch(error = > {process.exit(1)});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -351,17 +314,11 @@ class DependencyMonitor {,;
       // If there are critical vulnerabilities, suggest immediate action,;
         this.log('Consider: running: npm audit fix');
 // Run the dependency monitor,;
-<<<<<<< HEAD
 const monitor = new DependencyMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 }),;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 monitor.run().catch(error = > {; process.exit(1)});
       // npm audit might fail if there are vulnerabilities,;
           // Try to parse the error output for vulnerability info,;
@@ -392,25 +349,13 @@ monitor.run().catch(error => {,;
   process.exit(1);
 }),;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
     low: 0;
     },
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class DependencyMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -418,9 +363,6 @@ class DependencyMonitor {;
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json');
     this.startTime = Date.now();
 };
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   log(message) {;
@@ -698,29 +640,10 @@ class DependencyMonitor {;
     } catch (error) {;
       this.log(`❌ Error running dependency monitor: ${error.message}`);
       process.exit(1);
-<<<<<<< HEAD
-=======
-    }
-  }
-},;
-,;
-// Run the dependency monitor,;
-const monitor = new DependencyMonitor(),;
-monitor.run().catch(error => {,;
-  process.exit(1);
-}),;
 
-
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
     low: 0;
     },
-
 
 pr-12325
 class DependencyMonitor {;
@@ -1139,12 +1062,7 @@ pr-12325
 pr-12325
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1261,21 +1179,9 @@ monitor.run ().catch (error = > { process.exit (1)});
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -1294,8 +1200,6 @@ monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
 
 `;
 pr-12325

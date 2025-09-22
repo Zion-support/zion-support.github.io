@@ -51,7 +51,7 @@ import { Zap } from 'lucide-react';
             {title}
           </h2>;'
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-  delay?: number
+  delay?: number;
 }
 
 interface FeaturesProps {
@@ -83,7 +83,7 @@ export default Features);
 export default Features;
 ;
 
-className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1';
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
             >
               <div className='relative'>
@@ -92,9 +92,9 @@ className='text-center group bg-gray-900/50 border border-gray-800 hover:border-
                 >
                   {feature.icon}
                 </div>
-                <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm' />
+                <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm' />;
               </div>
-              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
+              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>;
                 {feature.title}
               </h3>
               <p className='text-gray-400 leading-relaxed'>
