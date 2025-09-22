@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronRight, Star, TrendingUp, Zap } from 'lucide-react';
 
 const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +38,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
       subtitle: "15,000% ROI in 18 Months",
       description: "Transform your business with AI that processes text, images, audio, video, and sensor data simultaneously",
       metrics: "2,400% efficiency gains",
-      icon: <Zap className="w-6 h-6" />,
+      icon: <span className="w-6 h-6">📊</span>,
       gradient: "from-purple-600 to-blue-600"
     },
     {
@@ -47,7 +46,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
       subtitle: "$45.2B Annual Savings",
       description: "See how TechGlobal Industries achieved unprecedented success with multimodal AI implementation",
       metrics: "99.97% accuracy rate",
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <span className="w-6 h-6">📊</span>,
       gradient: "from-green-600 to-emerald-600"
     },
     {
@@ -55,7 +54,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
       subtitle: "Step-by-Step Roadmap",
       description: "Everything you need to deploy multimodal AI systems with guaranteed ROI success",
       metrics: "94% success rate",
-      icon: <Award className="w-6 h-6" />,
+      icon: <span className="w-6 h-6">📊</span>,
       gradient: "from-orange-600 to-red-600"
     }
   ];
@@ -104,7 +103,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
                       {currentContent.title}
                     </h3>
                     <div className="flex items-center space-x-1 text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
+                      <span>Star</span>
                       <span className="text-sm font-medium">NEW</span>
                     </div>
                   </div>
@@ -127,7 +126,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
                       className="inline-flex items-center text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                       Explore Now
-                      <ChevronRight className="w-4 h-4 ml-2" />
+                      <span>ChevronRight</span>
                     </Link>
                   </div>
                 </div>
@@ -162,7 +161,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
               className="ml-4 p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
               aria-label="Dismiss banner"
             >
-              <X className="w-5 h-5" />
+              <span>X</span>
             </button>
           </div>
 

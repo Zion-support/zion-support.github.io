@@ -1,32 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { Button  } from '@/components / ui / button';
 interface Contract {
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { Button  } from '@/components / ui / button';
 interface Contract {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { Button  } from '@/components / ui / button';
 interface Contract {
 
 import { Button } from "@/components/ui/button";
 interface Contract {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   title: string;
   client: string;
@@ -35,15 +20,9 @@ interface Contract {
 isSmartContract: boolean;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface RecentContractsTableProps {}
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
 }
 
@@ -63,20 +42,16 @@ interface Contract {
   date: string;,
   isSmartContract: boolean;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface RecentContractsTableProps {;
 
 interface RecentContractsTableProps {
 
 import { Button } from "@/components/ui/button",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface Contract {
 
-=======
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string,
   title: string,
   client: string,
@@ -102,36 +77,21 @@ interface Contract {;
 ;
 interface RecentContractsTableProps {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   contracts: Contract[];
   onViewContract: (contractId: string) => void;
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface RecentContractsTableProps {;
 
   contracts: Contract[];
   onViewContract: (contractId: string) => void
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
-<<<<<<< HEAD
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
 ;
 interface Contract {;
@@ -149,14 +109,8 @@ interface RecentContractsTableProps {;
 ;
 export function RecentContractsTable({ contracts, onViewContract } RecentContractsTableProps) {;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 interface RecentContractsTableProps {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
 
   return (
@@ -188,7 +142,6 @@ interface RecentContractsTableProps {;
 export function RecentContractsTable({ contracts, onViewContract } RecentContractsTableProps) {;
   return (;
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
       <div className="overflow-x-auto rounded-md border">;
@@ -216,7 +169,6 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
                 scope="col""
                 className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Type;
               </th>;"
               <th scope="col" className="relative px-6 py-3">;"
@@ -233,8 +185,6 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm">;
 <Button
                     variant="ghost"
-<<<<<<< HEAD
-<<<<<<< HEAD
                     size="sm"
                     onClick={() => onViewContract(contract.id)}
                   >
@@ -245,11 +195,7 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
             ))}
 </>;
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                     size="sm"                  <Button
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     size="sm"
 contracts: Contract[];
   onViewContract: (contractId: string) => void
@@ -325,18 +271,15 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
               </tr>
             ))}
                   <Button
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     variant="ghost"
                     size="sm"
     </>
-=======
 
                   <Button"
                     variant="ghost""
                     size="sm"
     </>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     onClick={() => onViewContract(contract && contract.id)}
 interface RecentContractsTableProps {}
   contracts: Contract[];
@@ -417,23 +360,10 @@ function RecentContractsTable() {}
                     variant="ghost";
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <Button ;
                     variant="ghost" ;
                     size="sm";
                     onClick={() => onViewContract(contract.id)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     <>;"
       <h2 className="text - 2xl font - bold mb - 4">Recent Contracts</h2>;"
       <div className="overflow - x-auto rounded - md border">;"
@@ -505,20 +435,11 @@ function RecentContractsTable() {}
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   >;
                     View;
                   </Button>;
                 </td>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 </tr>;
             ))}
@@ -527,8 +448,6 @@ function RecentContractsTable() {}
   onViewContract: (contractId: string) => void;
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
 
@@ -695,30 +614,19 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 </Button>
                   </Button>;
                 </td>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </tbody>;
         </table>;
       </div>;
     </>;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  );
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  );
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   );
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  );
+}
+  );
+}
+
               </tr>))}
           </tbody>;
         </table>;
@@ -874,17 +782,5 @@ pr-12325
     </>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

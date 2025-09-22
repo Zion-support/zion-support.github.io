@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
+import type { QuoteRequest } from "@/types/quotes",;
+import { Button } from "@/components/ui/button";""
+import { Download } from 'lucide-react';
+import type { QuoteRequest } from "@/types/quotes";"
+=======
 import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes",;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface ExportToCSVProps {;
   quotes:QuoteRequest[],;
@@ -72,9 +79,18 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       variant="outline" ;
       onClick={handleExport}
       className="flex items-center gap-2";
+<<<<<<< HEAD
+      variant="outline" ;"
+      onClick={handleExport}"
+      className="flex items-center gap-2";"
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
+<<<<<<< HEAD
+Export CSV;
+=======
       Export CSV;
     </Button>;
   ),;
@@ -101,3 +117,4 @@ quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create 
 }/> Export CSV </Button>) ;
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

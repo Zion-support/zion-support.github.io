@@ -1,8 +1,5 @@
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -16,13 +13,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." })
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
@@ -39,12 +30,7 @@ export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -58,27 +44,14 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const partnerFormSchema = z.object({
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 const partnerFormSchema = z.object({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-=======
 const partnerFormSchema = z.object({"
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
   instagram: z.string().optional(),
@@ -90,15 +63,8 @@ const partnerFormSchema = z.object({"
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const form = useForm<PartnerFormValues>({
-=======
   const form = useForm<PartnerFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {"
       name: """
@@ -139,24 +105,12 @@ setIsSubmitting(false);
     }
     return false
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
@@ -199,7 +153,6 @@ const partnerFormSchema = z && z.object({;
   payout_method: z && z.string(),;
   bio: z && z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -207,10 +160,7 @@ const partnerFormSchema = z && z.object({;
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     }
     setIsSubmitting(true);
     try {
@@ -236,46 +186,20 @@ const partnerFormSchema = z && z.object({;
             bio: data.bio
             status: 'pending', // Partners need approval
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           }
         ])
         .select();
       if (error) throw error;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { useState } from "react",;
-import { z } from "zod",;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
 
 import { useState } from "react",;
 import { z } from "zod",;
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
+import { useState } from "react",;
+import { z } from "zod",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -286,7 +210,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/hooks/use-toast",;
 import { useAuth } from "@/hooks/useAuth",;
-=======
 "
 import { useState } from "react",;"
 import { z } from "zod",;"
@@ -300,7 +223,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea",;"
 import { toast } from "@/hooks/use-toast",;"
 import { useAuth } from "@/hooks/useAuth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from "@/integrations/supabase/client",;
 const partnerFormSchema = z.object({;"
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),;"
@@ -334,10 +256,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
     }
 
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       .select('id');    }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     setIsSubmitting(true);
     try {;
       // Check if they already have a partner profile;
@@ -499,12 +418,6 @@ pr-12325
             bio: data && data.bio,;
             status: 'pending', // Partners need approval;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
 import { useState } from './react';'
 import { z } from './zod';'
@@ -611,7 +524,6 @@ if (return) {}
         .insert([;
           {;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         ]);
         .select();
@@ -643,17 +555,14 @@ if (error) throw error,
         .from('referral_codes')
         .select('code')
         .eq('user_id', user.id)
-<<<<<<< HEAD
         .single(),
 
       if (!existingCode) {'
         await supabase.rpc('generate_referral_code', { user_id: user.id })
-=======
           }
         ]);
         .select();
 if (error) throw error;        await supabase.rpc('generate_referral_code', { user_id: user.id })
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 } catch (error: any) {      toast({
 
@@ -679,38 +588,24 @@ if (error) throw error;        await supabase.rpc('generate_referral_code', { us
       console.error('Error submitting partner application:', error);
 console.error('Error submitting partner application:', error),
       toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Submission failed"
-=======
     } catch (error: any) {}
       toast({"
         title: "Submission failed""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: error.message |"There was a problem submitting your application."
 "
         variant: "destructive"})
 } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      setIsSubmitting(false)
-
-<<<<<<< HEAD
-    }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    }
-=======
-      setIsSubmitting(false)    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      setIsSubmitting(false)    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       setIsSubmitting(false)
 
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+    }
+      setIsSubmitting(false)    }
+      setIsSubmitting(false)    }
+      setIsSubmitting(false)
+
+    }
   }
   return ("
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -768,17 +663,11 @@ render={({ field }) => (
         ]);
         .select(),;
       if (error) throw error,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               />
               <FormField
         ]);
         .select(),;
       if (error) throw error,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast({;
         title: "Application submitted!",;
         description: "Your partner application has been submitted for review.",;
@@ -794,16 +683,7 @@ render={({ field }) => (
       setIsSubmitting(false);
 
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       toast({;
         title: "Application submitted!",;
         description: "Your partner application has been submitted for review.",;
@@ -842,10 +722,6 @@ render={({ field }) => (
     }
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -891,11 +767,8 @@ if ( {) {}
     }
   }
 return (
-<<<<<<< HEAD
     <Card className="bg - zion - blue - dark border - zion - blue-light">;
-=======
     <Card className="bg - zion - blue - dark border - zion - blue-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <CardHeader>;
 </CardContent>
         <Form {...form}>;
@@ -929,25 +802,16 @@ return (
       </CardHeader>;
       <CardContent>;
 <Form {...form}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 control={form.control}
-=======
         <Form {...form}>;"
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;"
             <div className="space - y-4">;
               <FormField;
 
                 control={form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 name="name";
                 render={({ field }) => (
                   <FormItem>;
@@ -976,9 +840,6 @@ return (
                 <FormField;
                   control={form && form.control}"
                   name="twitter"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
               <div className="grid sm:grid-cols-2 gap-4">;
                 <FormField;
@@ -987,20 +848,12 @@ return (
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Twitter (Optional)</FormLabel>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
           <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
             <div className="space-y-4">;
               <FormField;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
             <div className="space-y-4">;
               <FormField;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
@@ -1239,7 +1092,6 @@ export function PartnerRegistrationForm() {;
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Twitter (Optional)</FormLabel>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -1273,22 +1125,18 @@ export function PartnerRegistrationForm() {;
                 />;
                 <FormField;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   control={form.control}
-=======
 
                       <FormControl>;"
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 />;
                 <FormField;
 
                   control={form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   name="instagram";
                   render={({ field }) => (
                     <FormItem>;
@@ -1299,12 +1147,7 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />;
 
 <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
               <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
@@ -1342,7 +1185,6 @@ export function PartnerRegistrationForm() {;
                 <FormField
                 control={form && form.control}                <FormField
                   control={form && form.control}
-=======
 
                 <FormField;
                   control={form && form.control}"
@@ -1406,7 +1248,6 @@ export function PartnerRegistrationForm() {;
 
                 <FormField;
                   control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   name="audience_size"
                   render={({ field }) => (;
                     <FormItem>;
@@ -1414,11 +1255,8 @@ export function PartnerRegistrationForm() {;
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
                   </FormItem>)}
 />;
-<<<<<<< HEAD
               <div className="grid sm:grid - cols - 2 gap-4">;
-=======
               <div className="grid sm:grid - cols - 2 gap-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <FormField;
                   control={form.control}"
                   name="audience_size";
@@ -1430,8 +1268,6 @@ export function PartnerRegistrationForm() {;
                         </FormControl>;
                         <SelectContent>;
 />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <FormField;
                   control={form && form.control}"
@@ -1468,7 +1304,6 @@ control={form.control}"
                       </Select>;
                       <FormMessage />;
 
-=======
 />;
               </div>;
               <FormField
@@ -1547,17 +1382,14 @@ control={form.control}"
               <FormField;
                 control={form.control}
                 name="bio";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Bio</FormLabel>;
                     <FormControl>;
-<<<<<<< HEAD
                       <Textarea
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
                         rows={4} 
                         {...field} 
-<<<<<<< HEAD
                 />;
               </div>;
               <FormField;
@@ -1664,7 +1496,6 @@ control={form.control}"
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
                         rows={4}
                         {...field}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       />
                     </FormControl>
                     <FormDescription>
@@ -1675,56 +1506,32 @@ control={form.control}"
                 )}
               />
             </div>
-<<<<<<< HEAD
 
               <FormField;
                 control={form && form.control}"
                 name="bio"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
               <FormField
                 control={form && form.control}
                 name="bio"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       />;
                     </FormControl>;
                     <FormDescription>;
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
             <Button 
               type="submit" 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;"
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -1733,18 +1540,11 @@ control={form.control}"
             </div>;
             <Button;
               type="submit";
-<<<<<<< HEAD
               className="w - full bg - zion - purple hover:bg - zion - purple-dark";
-=======
               className="w - full bg - zion - purple hover:bg - zion - purple-dark";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               disabled={is_submitting}
             >;"
               {is_submitting ? "Submitting..." : "Submit Application"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <Textarea ;
                         placeholder="Tell us about yourself and how you plan to promote Zion AI";
@@ -1962,21 +1762,14 @@ control={form.control}"
 </Card>);
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </Button>
-=======
 </Button>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </form>
         </Form>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               type="submit"
             <Button 
@@ -2076,27 +1869,11 @@ pr-12325
 }
 };
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 }
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </FormField>
 }/> </div> <Button </Button> </form> </Form> </CardContent> </Card>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+export default function ApiObservabilityPage() {
+=======
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
   if (!service) return null;
 
@@ -24,6 +28,8 @@
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
+<<<<<<< HEAD
+=======
 
 
               </ul>
@@ -50,3 +56,4 @@
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

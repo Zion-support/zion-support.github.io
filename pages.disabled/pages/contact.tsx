@@ -104,7 +104,6 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
-<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 const "Contact": NextPage = () => {
@@ -185,7 +184,6 @@ const "Contact": NextPage = () => {;
       title=\"Contact Us - Zion Tech Group\"
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -280,10 +278,8 @@ const "Contact": NextPage = () => {;
                   <div>
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       Last Name *
-<<<<<<< HEAD
                     </label>                    <input
                     <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
@@ -295,10 +291,8 @@ const "Contact": NextPage = () => {;
                 <div>
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
-<<<<<<< HEAD
                   </label>                  <input
                   <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
@@ -309,10 +303,8 @@ const "Contact": NextPage = () => {;
                 <div>
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Company
-<<<<<<< HEAD
                   </label>                  <input
                   <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
@@ -322,10 +314,8 @@ const "Contact": NextPage = () => {;
                 <div>
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Phone Number
-<<<<<<< HEAD
                   </label>                  <input
                   <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
@@ -356,10 +346,8 @@ className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focu
                 <div>
                   <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Message *
-<<<<<<< HEAD
                   </label>                  <textarea
                   <textarea
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     id=\"message\"
                     name=\"message\"
                     rows={6}
@@ -417,10 +405,8 @@ placeholder=\"Tell us about your project or how we can help you...\"></textarea>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
               Get answers to common questions about our services and process
             </p>
-<<<<<<< HEAD
           </div>                What is your typical project timeline?
                 What is your typical project timeline?
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -560,7 +546,6 @@ placeholder=\"Tell us about your project or how we can help you...\"></textarea>
 </p>
               </p>
             </div>
-<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
@@ -597,7 +582,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 We follow industry best practices including code reviews, automated 
                 testing, continuous integration, and regular client feedback sessions 
                 to ensure high-quality deliverables.
-=======
               </h3>"
               <p className=\"text-gray-600\">"
 </p>
@@ -612,14 +596,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <p className=\"text-gray-600\">"
 </p>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>
             </div>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
   )
 };
           {/* Contact Information */}
@@ -637,7 +619,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
                   Multiple ways to reach us for your convenience
                 </p>
-=======
 
     </MainLayout>"
           <section className=\"py-20\">"
@@ -652,7 +633,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">"
 </h2>
                 </h2>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </motion.div>
                 {contactInfo.map((info, index) => (
                   <motion.div;
@@ -702,7 +682,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Full Name *
                       </label>
                       <input type=\"text\"
-<<<<<<< HEAD
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -723,7 +702,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Project timelines vary depending on complexity and scope. Simple websites ;
                 can take 2-4 weeks, while complex applications may take 3-6 months. ;
                 We\'ll provide a detailed timeline during our initial consultation.;
-=======
 
           </section>"
           <section className=\"bg-gray-50 py-20\">"
@@ -748,7 +726,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <p className=\"text-gray-600\">;"
     ;"
 </p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>;
             </div>;"
             <div className=\"bg-white rounded-lg shadow-lg p-6\">;"
@@ -818,7 +795,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <motion.div
 
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -832,10 +808,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {contactInfo && contactInfo.map((info, index) => (;
                   <motion&& motion.div
 
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -905,9 +878,7 @@ animate={{ \"opacity\": 1, \"y\": 0 }}                transition={{ \"duration\"
               <div className="max-w-4xl mx-auto">;
                 <motion&& motion.form
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -930,7 +901,6 @@ animate={{ \"opacity\": 1, \"y\": 0 }}                transition={{ \"duration\"
                       <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Email Address *
                       </label>
-<<<<<<< HEAD
                       <input type=\"email\"                        id=\"email\"
                         name=\"email\"
                         required
@@ -1011,7 +981,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <inputtype=\"tel\"
 
                         id=\"phone\"
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
@@ -1021,7 +990,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Company
                       </label>
-<<<<<<< HEAD
                       <input type=\"text\"                        id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -1064,7 +1032,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Service Interest
                     </label>
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                        />;
                     </div>;
                   </div>;
@@ -1148,7 +1115,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     </label>
 
                     </select>;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                   </div>;
                   <div className=\"mb-6\">;
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -1156,10 +1122,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -1195,7 +1158,6 @@ whileHover={{ scale: 1.02 }}
         <section className=\"py-16 px-4\">
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
-<<<<<<< HEAD
               {/* Contact Form */}
               {/* Contact Form */}
 
@@ -1216,7 +1178,6 @@ whileHover={{ scale: 1.02 }}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
@@ -1236,9 +1197,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
-<<<<<<< HEAD
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -1266,10 +1225,8 @@ className=\"inline-flex items-center px-6 py-3 border border-transparent text-ba
                       <div>
                         <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Full Name *
-<<<<<<< HEAD
                         </label>                        <input
                         <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
@@ -1283,10 +1240,8 @@ value={formData && formData.name}
                       <div>
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Email Address *
-<<<<<<< HEAD
                         </label>                        <input
                         <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
@@ -1297,7 +1252,6 @@ value={formData && formData.email}
 placeholder=\"your@email.com\"
                         />
                       </div>
-<<<<<<< HEAD
                     </div>                      <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -1598,7 +1552,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </section>;
 
           {/* Services Overview */}
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
@@ -1660,8 +1613,4 @@ export default ContactPage;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

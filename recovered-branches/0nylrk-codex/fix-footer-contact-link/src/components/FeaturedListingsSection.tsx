@@ -5,27 +5,18 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface FeaturedListingsSectionProps {
-=======
 import { ProductListingCard } from '@/components / ProductListingCard';'
 import { GradientHeading } from '@/components / GradientHeading';'
 import { Button } from '@/components / ui / button';'
 import { Link } from './react-router-dom';
 
 interface FeaturedListingsSectionProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   show_title?: boolean;
 }
 export /**;
@@ -35,13 +26,7 @@ function FeaturedListingsSection() {}
   const featured_listings = [;
 {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface FeaturedListingsSectionProps {
   showTitle?: boolean
 }
@@ -51,26 +36,15 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
     {
 
       id: "advanced-nlp-model",
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       id: "advanced-nlp-model",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: "Advanced NLP Model for Text Analysis",
-=======
     {}
       id: "advanced-nlp-model","
       title: "Advanced NLP Model for Text Analysis","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,"
       currency: "$",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
@@ -78,16 +52,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
-=======
 
       author: {"
         name: "TechAI Labs""
         id: "tech-ai-labs""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {"
       id: "image-generation-service","
@@ -98,7 +69,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       category: "Content Creation","
       tags: ["AI", "Images", "Generation"],"
       images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],"
-=======
 
       author: {
         name: "TechAI Labs"
@@ -116,30 +86,19 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       category: "Content Creation",
       tags: ["AI", "Images", "Generation"],
       images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
       reviewCount: 89,
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
 
     },
-<<<<<<< HEAD
 
 }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
@@ -151,13 +110,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       tags: ["Development", "Full-stack", "AI"],
       images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
       reviewCount: 56,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
@@ -166,7 +122,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
-=======
 
       author: {"
         name: "DataMinds Consulting""
@@ -176,7 +131,6 @@ import {Button} from "@/components/ui/button";
 import {ProductListingCard} from "@/components/ProductListingCard";"
 import {GradientHeading} from "@/components/GradientHeading";"
 import {Button} from "@/components/ui/button";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Link} from "react-router-dom";
 "
       tags: ["API", "Sentiment", "Analytics"];"
@@ -184,7 +138,6 @@ import {Link} from "react-router-dom";
       createdAt: "2024-01-05T11:15:00.000Z"
 rating: 4.6
       reviewCount: 72
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     {
       id: "sentiment-analysis-api",
@@ -198,8 +151,6 @@ rating: 4.6
       createdAt: "2024-01-05T11:15:00.000Z",
       rating: 4.6,
       reviewCount: 72,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       author: {
         name: "SocialAI"
         id: "social-ai"
@@ -224,7 +175,6 @@ rating: 4.6
             <ProductListingCard;
               key={listing.id}
               listing={listing}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               view="grid"
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -347,7 +297,6 @@ import { Link } from "react-router-dom",;
       author: {"
         name: "SocialAI","
         id: "social - ai";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     }];
 ;
@@ -375,7 +324,6 @@ import {Link} from "react-router-dom";
       rating: 4.6
 reviewCount: 72    <section id="featured" className="py - 12 px - 4 bg - zion - blue-dark">;
       <div className="container mx-auto">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {show_title && (
           <div className="text - center mb-12">;
             <GradientHeading className="text - 3xl md:text - 4xl font - bold mb-4">;
@@ -393,12 +341,7 @@ listing={listing}
               key={listing.id}
               listing={listing}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               listing={listing}
-=======
       reviewCount: 72
     },
     {
@@ -436,14 +379,11 @@ listing={listing}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredListings.map((listing) => (
             <ProductListingCard
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               key={listing.id}
               listing={listing}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               view="grid"
 onRequestQuote={() => {}}              listing={listing}
-=======
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -451,11 +391,9 @@ import { Link } from "react-router-dom",;
 
 interface FeaturedListingsSectionProps {;
   showTitle?: boolean;
-=======
 export /**
  * FeaturedListingsSection - Function description
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   show_title?: boolean;
 export /**
@@ -585,7 +523,6 @@ view="grid"
             <ProductListingCard;
               key={listing.id}
               listing={listing}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               view="grid"
               onRequestQuote={() => {}}
             />
@@ -602,27 +539,17 @@ view="grid"
       </div>
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               view="grid"
               onRequestQuote={() => {}}
 />
           ))}
         </div>
         <div className="mt-10 text-center">
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>;
 "
         <div className="mt-10 text-center">;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
 asChild
@@ -635,12 +562,9 @@ asChild
   )
 }
 
-<<<<<<< HEAD
 }
 ;
-=======
               view="grid"
-=======
 
 '
       id: "advanced-nlp-model",""
@@ -908,7 +832,6 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             </p>;
           </div>;
               view="grid"")
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onRequestQuote={() => {}}
         </div>;
 
@@ -955,14 +878,12 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             asChild;
           >;
               onRequestQuote={() => {}}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
       </div>;
 </section>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 </section>);
@@ -983,32 +904,16 @@ interface FeaturedListingsSectionProps {}
 }
     </section>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </section>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
           >;
             <Link to="/marketplace">View All Listings;"
     </section>);
@@ -1019,4 +924,3 @@ interface FeaturedListingsSectionProps {}
     </section>);"
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

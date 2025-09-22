@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const NewContent2025RPARevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,13 +73,13 @@ const NewContent2025RPARevolutionBanner = () => {
         className="absolute top-4 right-4 z-10 p-2 rounded-full hover:bg-white/20 transition-colors"
         aria-label="Dismiss banner"
       >
-        <X className="w-5 h-5" />
+        <span>X</span>
       </button>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-6">
           <div className="inline-flex items-center bg-white/20 rounded-full px-4 py-2 mb-4">
-            <TrendingUp className="w-4 h-4 mr-2" />
+            <span className="w-4 h-4 mr-2">📊</span>
             <span className="text-sm font-medium">NEW 2025 CONTENT</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
@@ -108,7 +107,7 @@ const NewContent2025RPARevolutionBanner = () => {
                     {/* Metrics */}
                     <div className="flex flex-wrap justify-center gap-4 mb-6">
                       <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-                        <DollarSign className="w-4 h-4 mr-2" />
+                        <span className="w-4 h-4 mr-2">📊</span>
                         <span className="text-sm font-medium">{slide.metrics}</span>
                       </div>
                     </div>
@@ -119,7 +118,7 @@ const NewContent2025RPARevolutionBanner = () => {
                       className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                     >
                       {slide.cta}
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                      <span className="w-5 h-5 ml-2">📊</span>
                     </Link>
                   </div>
                 </div>
@@ -145,17 +144,17 @@ const NewContent2025RPARevolutionBanner = () => {
         {/* Key Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <CheckCircle className="w-8 h-8 mx-auto mb-3 text-green-300" />
+            <span className="w-8 h-8 mx-auto mb-3 text-green-300">📊</span>
             <h4 className="text-lg font-semibold mb-2">800% ROI Guaranteed</h4>
             <p className="text-sm opacity-80">Proven results from Fortune 100 implementations</p>
           </div>
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <Clock className="w-8 h-8 mx-auto mb-3 text-blue-300" />
+            <span>Clock</span>
             <h4 className="text-lg font-semibold mb-2">12-Month Implementation</h4>
             <p className="text-sm opacity-80">Complete transformation in under one year</p>
           </div>
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <TrendingUp className="w-8 h-8 mx-auto mb-3 text-purple-300" />
+            <span className="w-8 h-8 mx-auto mb-3 text-purple-300">📊</span>
             <h4 className="text-lg font-semibold mb-2">340% Efficiency Gain</h4>
             <p className="text-sm opacity-80">Dramatic improvement in process efficiency</p>
           </div>

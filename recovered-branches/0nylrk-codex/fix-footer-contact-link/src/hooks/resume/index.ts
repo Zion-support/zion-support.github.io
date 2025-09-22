@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -20,14 +11,8 @@ import { useEducation  } from './useEducation';
 import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
-<<<<<<< HEAD
 export function useResume() {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function useResume() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
 import {useFetchResume} from './useFetchResume';
@@ -39,18 +24,11 @@ import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [resume, setResume] = useState<Resume | null>(null);
-=======
 export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const [resume, setResume] = useState<Resume | null>(null);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
@@ -117,9 +95,7 @@ const isLoading =
       setResume(result)
     }
     return result
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
 ;
   const fetchResumeOperations = useFetchResume ();
   const resume_actions = useResumeActions ();
@@ -161,12 +137,7 @@ if ( {) {
     return result;
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
-=======
 import { useState  } from 'react';'
 import { Resume  } from '@/types/resume';'
 import { useFetchResume  } from './useFetchResume';'
@@ -198,7 +169,6 @@ export function useResume() { return null; }
   }
 
   return {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // State;
     is_loading;
     error;
@@ -261,26 +231,17 @@ export function useResume() { return null; }
   }
 }
 // Export all hooks;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export * from './useFetchResume';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export * from './useResumeActions';
-=======
   }export * from './useResumeActions';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   }export * from './useResumeActions';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export * from './useWorkExperience';
 export * from './use_education';
 export * from './use_skills';
 export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 '
 export * from './useResumeActions';'
@@ -291,13 +252,9 @@ export * from './use_certifications';'
 export * from './useResumeList';'
 export * from './useResumeUtils';
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 ;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -306,7 +263,6 @@ import { useWorkExperience } from './useWorkExperience',;
 import { useEducation } from './useEducation',;
 import { useSkills } from './useSkills',;
 import { useCertifications } from './useCertifications',;
-=======
 
 '
 import { useState } from 'react',;'
@@ -317,7 +273,6 @@ import { useWorkExperience } from './useWorkExperience',;'
 import { useEducation } from './useEducation',;'
 import { useSkills } from './useSkills',;'
 import { useCertifications } from './useCertifications',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useResumeList } from './useResumeList',;
 export function useResume() { return null; }
     }
@@ -360,28 +315,12 @@ export * from './useEducation',;
 export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export * from './useResumeUtils';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export * from './useResumeUtils';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export * from './useResumeUtils';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export * from './useResumeUtils';
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

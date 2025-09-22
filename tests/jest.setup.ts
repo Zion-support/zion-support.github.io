@@ -1,11 +1,9 @@
 // Polyfill fetch and enable fetch mocks;
-<<<<<<< HEAD
 
 import 'whatwg - fetch','
 import fetch_mock from 'jest - fetch - mock',
 fetch_mock.enable_mocks (),
 // Reset fetch mocks before each test to ensure isolation;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 before_each (() => {
   fetch_mock.reset_mocks ();
 }),
@@ -13,7 +11,6 @@ before_each (() => {
 import '@testing - library / jest - dom','
 import { TextEncoder, TextDecoder } from 'util',;
 // Polyfill TextEncoder and TextDecoder for JSDOM environment;
-<<<<<<< HEAD
 global.TextEncoder = TextEncoder,;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,;
@@ -61,7 +58,6 @@ Object.define_property (window, 'match_media', {}
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn ()}))}),
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // global.import = {
 //   // @ts - expect - error;
 //   meta: {}
@@ -199,8 +195,6 @@ global.ResizeObserver = jest.fn ().mock_implementation (() => ({}
   unobserve: jest.fn (),
   disconnect: jest.fn ()})),
 // Polyfill for URL.revokeObjectURL;
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Check condition
 if ( {) {
   $2
@@ -272,7 +266,6 @@ Object.defineProperty(window, 'matchMedia', {;
   // Add other axios methods if used (e.g., put, delete, request);
 // Mock ResizeObserver for Radix UI components and other libraries that might use it;
 // Polyfill for URL.revokeObjectURL;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 if (typeof URL.revokeObjectURL === 'undefined') {;
   URL.revokeObjectURL = jest.fn(),;
 }
@@ -280,12 +273,10 @@ if (typeof URL.revokeObjectURL === 'undefined') {;
 
 if ( {) {
   $2
-=======
 
 // Check condition;
 if ( {) {}
   $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   URL.revokeObjectURL = jest.fn ();
 }
@@ -321,7 +312,6 @@ if ( {) {}
 // Mock axios.create to return axios itself;
 import axios from 'axios',
 // @ts - ignore;
-<<<<<<< HEAD
 axios.create = jest.fn (() => axios),      this.name = name;
     }
     post_message = jest.fn (),
@@ -340,29 +330,21 @@ import axios from 'axios',;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
-<<<<<<< HEAD
 // -----------------------------;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 // -----------------------------;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;'
 // Some test files were originally written for Vitest and import utilities from 'vitest'.;
 // To keep migrating gradually while still running the Jest suite successfully, we create;
-<<<<<<< HEAD
-<<<<<<< HEAD
 // a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like &quot;Vitest cannot be imported in a CommonJS module & quot;.;
 //;
 // NOTE: When the test suite is fully migrated to Vitest this shim can be removed together;`
-=======
 
 // a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like &quot;Vitest cannot be imported in a CommonJS module & quot;.;
 //;
 // NOTE: When the test suite is fully migrated to Vitest this shim can be removed together;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.;
 // ---------------------------------------------------------------------------;'
 jest.mock ('vitest', () => {}
@@ -372,7 +354,6 @@ return {'`
     // Named export expected in `import { vi } from 'vitest'` statements;
 vi: {
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       fn: jest_fn,
     vi: {,
   fn: jest_fn,
@@ -494,16 +475,12 @@ if ( {) {}
   window.IntersectionObserver = MockIntersectionObserver,
   // @ts - ignore;
 global.IntersectionObserver = MockIntersectionObserver;
-<<<<<<< HEAD
   global.IntersectionObserver = MockIntersectionObserver;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
 // Override it explicitly so those modules receive the mocked version.;
-<<<<<<< HEAD
 
   global.IntersectionObserver = MockIntersectionObserver;
 
@@ -518,7 +495,6 @@ global.fetch = fetch_mock,
 if ( {) {
   $2
 }
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   // @ts - ignore;
   window.window.window.performance.getEntriesByType = () => [];
 }'
@@ -582,7 +558,6 @@ if ( {) {}
   $2;
 }
 }
-<<<<<<< HEAD
 
 }
   // @ts - ignore;
@@ -607,8 +582,6 @@ if (global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind (jest)) {
   $2
 }
 }
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }) );
 //Add any other specific methods from supabase.auth if they get called;
 };
@@ -740,14 +713,8 @@ getItem: jest.fn ()
 //When a module imports '@/context' root index (e.g., useEnqueueSnackbar) //@ts-ignore if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind (jest);
 //@ts-ignore if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind (jest);
 // @ts-ignore 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 }as unknown as Record<string unknown> 
 </string>`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

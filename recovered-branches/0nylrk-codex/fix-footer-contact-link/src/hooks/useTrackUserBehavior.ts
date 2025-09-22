@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useRef, useEffect  } from 'react';
 import { useAnalytics } from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {
@@ -21,16 +12,10 @@ import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 import {useRef, useEffect} from 'react';'
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { trackEvent } = useAnalytics();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -44,19 +29,11 @@ const target = e && e.target as HTMLElement;
         const button = target && target.tagName === 'BUTTON' ? target : target && target.closest('button');
         const buttonId = button?.id || '';
         const buttonText = button?.textContent || '',
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         trackEvent('button_click', {
-=======
     // Track button clicks;
     const trackButtonClicks = (e: Event) => {}
 '
         trackEvent('button_click', {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           component: componentName;
           elementId: buttonId;
           text: buttonText;
@@ -64,11 +41,7 @@ const target = e && e.target as HTMLElement;
       }
     }
 // Track form submissions
-<<<<<<< HEAD
-<<<<<<< HEAD
     const trackFormSubmits = (e: Event) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       const target = e && e.target as HTMLFormElement;
       if (target && target.tagName === 'FORM') {
@@ -76,14 +49,12 @@ const target = e && e.target as HTMLElement;
         trackEvent('form_submit', {
           component: componentName
           elementId: formId
-=======
     // Track form submissions;
     const trackFormSubmits = (e: Event) => {}
 '
         trackEvent('form_submit', {}
           component: componentName;
           elementId: formId;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         })
       }
 
@@ -96,7 +67,6 @@ return componentRef
 }
 ;
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {use_analytics} from '@/context / AnalyticsContext';
 export /**;
  * useTrackUserBehavior - Function description;
@@ -129,24 +99,16 @@ function useTrackUserBehavior() {
 
   return componentRef
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
-=======
     const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function useTrackUserBehavior(componentName: string) {;
-=======
 '
 import { useRef, useEffect } from 'react',;'
 import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { trackEvent } = useAnalytics(),;
   const componentRef = useRef<HTMLDivElement>(null),;
   useEffect(() => {;
@@ -187,11 +149,7 @@ export function useTrackUserBehavior() { return null; }
   return componentRef;
 
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   useEffect (() => {
     const component = component_ref.current;
     // Check condition
@@ -240,8 +198,6 @@ if ( {) {
   }, [track_event, component_name]);
 ;
   return component_ref;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 import { useRef, useEffect } from 'react',;
@@ -307,17 +263,7 @@ return componentRef
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,34 +1,17 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Badge } from "@/components/ui/badge",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function RecentActivity() {
   // Mock activity data
 
@@ -39,25 +22,17 @@ id: "act-1"
       action: "posted a new job"
       target: "Senior React Developer"
       timestamp: "1h ago"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       type: "job";
     };
       type: "job"
     }
     },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
 import React from "react",";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Badge } from "@/components/ui/badge";"
@@ -76,13 +51,10 @@ export function RecentActivity() {};
       timestamp: "1h ago",
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       type: "job"
     }
     },
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -91,7 +63,6 @@ export function RecentActivity() {};
       timestamp: "3h ago"
       type: "candidate"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: "act-3"
       user: "David Johnson"
@@ -102,11 +73,7 @@ export function RecentActivity() {};
 
 }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Badge } from "@/components/ui/badge",      id: "act-1",
-=======
 
 id: "act-1"
       user: "Michael Chen"
@@ -114,7 +81,6 @@ id: "act-1"
       target: "Senior React Developer"
       timestamp: "1h ago"
       id: "act-1",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
@@ -155,7 +121,6 @@ type: "job";
 
 },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       id: "act-4"
       user: "Emily Davis"
@@ -164,23 +129,15 @@ type: "job";
       timestamp: "2d ago"
       type: "comment"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ];
   ],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -189,7 +146,6 @@ import {Badge} from "@/components/ui/badge";
       case "interview":
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>,
       case "comment":
-=======
     {"
       id: "act-4""
       user: "Emily Davis""
@@ -207,27 +163,18 @@ import {Badge} from "@/components/ui/badge";
       case "interview":"
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>,"
       case "comment":"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>
       default:"
         return <Badge variant="outline">Activity</Badge>
     }
-<<<<<<< HEAD
 
   },
 
 }
   },
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
     <Card>
@@ -361,18 +308,9 @@ import {Badge} from "@/components/ui/badge";"
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -416,15 +354,10 @@ export function RecentActivity() {;
       action: "scheduled an interview with",;
       target: "Alex Morgan",;
       timestamp: "Yesterday",;
-<<<<<<< HEAD
-      type: "interview";
-<<<<<<< HEAD
-<<<<<<< HEAD
-    };
-=======
       type: "interview";
     };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      type: "interview";
+    };
     {;
       id: "act-4",;
       user: "Emily Davis",;
@@ -433,27 +366,17 @@ export function RecentActivity() {;
       timestamp: "2d ago",;
       type: "comment";
     }
-<<<<<<< HEAD
   ];
 
   const getBadgeForType = (type: string) => {;
     switch (type) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
-=======
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       type: "interview";      case "candidate":;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
-=======
 "
 import React from "react",;"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
@@ -466,7 +389,6 @@ export function RecentActivity() { return null; }
       case "candidate":;"
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;"
       case "interview":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
     }
   }
@@ -481,22 +403,13 @@ return (          {activities && activities.map((activity) => (;
           ))}
 
 <div className="p-3 text-center border-t border-border">;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             View All Activity;
-=======
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -610,12 +523,10 @@ function RecentActivity() {
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
             View All Activity;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </button>;
         </div>;
       </CardContent>;
 
-<<<<<<< HEAD
 }
 </Card>);
 }
@@ -623,9 +534,7 @@ function RecentActivity() {
 ;
     </Card>);
 }}
-=======
 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </Card>);
     </Card>;
   ); export function RecentActivity () {}
@@ -675,23 +584,12 @@ default:
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
     </Card>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import React from "react";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -823,4 +721,3 @@ case "comment": return <Badge variant="outline" className="bg-amber-100 text-amb
 
     </Card>);]"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

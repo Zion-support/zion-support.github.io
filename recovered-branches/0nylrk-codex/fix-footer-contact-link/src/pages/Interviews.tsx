@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
 import {Interview} from "@/types/interview";
@@ -20,10 +14,6 @@ import {format, isAfter, parseISO, startOfDay} from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -34,10 +24,7 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
 import { Button } from "@/components/ui/button",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
@@ -47,8 +34,6 @@ function InterviewsContent() {
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
@@ -64,7 +49,6 @@ function InterviewsContent() {
     .filter((interview) => {
 const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) &&
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
 
     loadInterviews()
@@ -79,7 +63,6 @@ const interviewDate = parseISO(interview.scheduled_date);
       const interviewDate = parseISO(interview.scheduled_date),
       return isAfter(interviewDate, now) && 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
@@ -95,7 +78,6 @@ const interviewDate = parseISO(interview.scheduled_date);
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
 const grouped: Record<string, Interview[]> = {}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ),
 
   const pendingInterviews = interviews.filter(interview => 
@@ -112,7 +94,6 @@ const grouped: Record<string, Interview[]> = {}
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string Interview[]> = {},
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {
@@ -154,7 +135,6 @@ import {format, isAfter, parseISO, startOfDay} from "date-fns";
 
 function InterviewsContent() {;
   const { interviews, isLoading, fetchInterviews } = useInterviews();
-=======
 import React, { useEffect, useState } from "react";"
 import {useInterviews} from "@/hooks/useInterviews";"
 import {Interview} from "@/types/interview";"
@@ -170,7 +150,6 @@ import {format, isAfter, parseISO, startOfDay} from "date-fns";
 
 function InterviewsContent() { return null; }
   const { interviews, isLoading, fetchInterviews } = useInterviews();"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [activeTab, setActiveTab] = useState("upcoming");
 import { Calendar, Clock, Video } from "lucide-react",
 import { format, isAfter, parseISO, startOfDay } from "date-fns",
@@ -187,7 +166,6 @@ await fetchInterviews()
     };
 
     loadInterviews();
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, []);
 
   // Filter interviews based on status and date;
@@ -272,10 +250,8 @@ function InterviewsContent() {;
       return isAfter(interviewDate, now) && ;
         ['confirmedrequested'].includes(interview.status),;
     });
-<<<<<<< HEAD
       }
       grouped[dateKey].push(interview)
-<<<<<<< HEAD
   // Group interviews by date;
   const groupInterviewsByDate = (interviews: Interview[]) => {;
     const grouped: Record<string, Interview[]> = {};
@@ -288,7 +264,6 @@ function InterviewsContent() {;
 grouped[dateKey].push(interview),;
     }),;    return grouped
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
@@ -296,12 +271,9 @@ grouped[dateKey].push(interview),;
 
 const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const renderInterviewGroups = (
     groupedInterviews: Record<string, Interview[]>,
 ) => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return Object.entries(groupedInterviews)
       .sort(
         ([dateA], [dateB]) =>
@@ -315,7 +287,6 @@ const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) =>
           </h3>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-<<<<<<< HEAD
               <InterviewCard
                 key={interview.id}
               <InterviewCard 
@@ -372,7 +343,6 @@ function InterviewsContent() {;
       }
       grouped[dateKey].push(interview);
     }),;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return grouped;
   };
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
@@ -381,8 +351,6 @@ function InterviewsContent() {;
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {;
     return Object && Object.entries(groupedInterviews);
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -452,7 +420,6 @@ function InterviewsContent() {;
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {;
     return Object.entries(groupedInterviews);
       .sort(([dateA], [dateB]) =>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
@@ -461,7 +428,6 @@ function InterviewsContent() {;
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {;
     return Object && Object.entries(groupedInterviews);
       .sort(([dateA], [dateB]) => ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         parseISO(dateA).getTime() - parseISO(dateB).getTime();
       );
       .map(([date, interviews]) => (;
@@ -475,19 +441,12 @@ function InterviewsContent() {;
               <InterviewCard;
                 key={interview.id} ;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               <InterviewCard 
                 key={interview.id} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <InterviewCard
                 key={interview.id}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                 interview={interview}
                 onRefresh={async () => {}
                   await fetchInterviews();
@@ -496,28 +455,16 @@ function InterviewsContent() {;
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       ))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       ));
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
       ))
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======  return (
-=======
 
   return (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       ));
   };
-=======
 
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
@@ -544,10 +491,8 @@ function InterviewsContent() {}
   const [activeTab, setActiveTab] = useState(\"upcoming\"),
   useEffect(() => {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO"
         title="Interviews | Zion AI Marketplace""
@@ -577,9 +522,6 @@ Schedule and manage your video interviews;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               )}
             </TabsTrigger>
             <TabsTrigger value="pending">
@@ -588,19 +530,11 @@ Schedule and manage your video interviews;
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length}
                 </span>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </TabsTrigger>
-=======
 
               )}
             </TabsTrigger>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>"
           <TabsContent value="upcoming" className="space-y-6">
@@ -647,10 +581,6 @@ Schedule and manage your video interviews;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </TabsContent>
         </Tabs>
       </main>
@@ -670,9 +600,6 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>;
       ));
@@ -936,7 +863,6 @@ if ( {) {
                 <h3 className="text - xl font - medium mb - 2">No past interviews</h3>;
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex justify-between items-center mb-8">;
@@ -1014,8 +940,6 @@ if ( {) {
                 <p className="text-muted-foreground">Your interview history will appear here.</p>;
               </div>;
             )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -1028,7 +952,6 @@ if ( {) {
       <Footer />
     </>
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 export default function Interviews() {}
@@ -1036,20 +959,14 @@ export default function Interviews() {}
     <ProtectedRoute>
       <InterviewsContent />
 </ProtectedRoute>
-<<<<<<< HEAD
   )
 }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
           </TabsContent>;
         </Tabs>;
       </main>;
       <Footer />;
     </>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 }
 
 export default function Interviews() {
@@ -1057,12 +974,10 @@ export default function Interviews() {
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
 ;
 
-<<<<<<< HEAD
 export default function Interviews() {;
   return (
     <ProtectedRoute>;
@@ -1073,20 +988,13 @@ export default function Interviews() {;
 }
 ;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </ProtectedRoute>;
   );
 }
 
 ;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>);
 }
 export default /**;
@@ -1098,28 +1006,13 @@ function Interviews() {}
       <InterviewsContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     </>;
   );
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export default function Interviews() {
   return (
     <ProtectedRoute>
@@ -1189,4 +1082,3 @@ pr-12325
 </InterviewsContent>
     </ProtectedRoute>;)"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

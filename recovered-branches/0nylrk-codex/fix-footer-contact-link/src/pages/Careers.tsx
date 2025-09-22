@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -12,14 +5,8 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AppLayout} from "@/layout/AppLayout";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -27,14 +14,8 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-<<<<<<< HEAD
 import { AppLayout } from "@/layout/AppLayout",
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Careers() {
   // Sample job listings
 
@@ -45,7 +26,6 @@ title: "Senior Frontend Engineer"
         location: "Remote"
         type: "Full-time"
         department: "Engineering"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
@@ -53,9 +33,6 @@ title: "Senior Frontend Engineer"
 
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
       };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 export default function Careers() {};
   // Sample job listings;
   const jobs = {}
@@ -67,7 +44,6 @@ export default function Careers() {};
         type: "Full-time","
         department: "Engineering",
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
       }
       {"
@@ -86,9 +62,7 @@ export default function Careers() {};
         description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
       },
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {
         title: "Full Stack Developer"
         location: "Remote"
@@ -96,21 +70,15 @@ export default function Careers() {};
         department: "Engineering"
         description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
       }
-<<<<<<< HEAD
     ];
     product: [
       {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title: "Product Manager",
-=======
 import { AppLayout } from "@/layout/AppLayout",        title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",        title: "Product Manager",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 title: "Senior Frontend Engineer"
         location: "Remote"
@@ -157,34 +125,24 @@ description: "Join our frontend team to build beautiful, responsive, and accessi
       {
 
 title: "Product Manager",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         location: "New York, NY",
         type: "Full-time",
         department: "Product",
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       },
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     product: [
       {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {
         title: "UX/UI Designer"
         location: "Remote"
-=======
 ],
     product: [
       {
         title: "Product Manager"
         location: "New York, NY";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         type: "Full-time"
         department: "Product"
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
@@ -197,8 +155,6 @@ title: "Product Manager",
         location: "Remote"
         type: "Full-time"
         department: "Marketing"
-<<<<<<< HEAD
-<<<<<<< HEAD
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
 
       },
@@ -208,7 +164,6 @@ title: "Product Manager",
         type: "Full-time","
         department: "Marketing",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
       }
     ];
@@ -220,17 +175,11 @@ title: "Product Manager",
         type: "Full-time""
         department: "Operations""
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
-<<<<<<< HEAD
 
 }
       },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {
-=======
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."      {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
 
       },
@@ -257,94 +206,62 @@ title: "Product Manager",
       },
 
       {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Talent Acquisition Specialist"
         location: "Remote"
         type: "Full-time"
         department: "Operations"
-=======
       {"
         title: "Talent Acquisition Specialist""
         location: "Remote""
         type: "Full-time""
         department: "Operations""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
       }
-<<<<<<< HEAD
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Benefits list
-=======
     ]  // Benefits list
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     ]  // Benefits list
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Benefits list
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const benefits = [
     {
       title: "Flexible Work"
-=======
 
   // Benefits list;
   const benefits = []
     {"
       title: "Flexible Work""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Remote-first culture with flexible hours to support your productivity and work-life balance."
       icon: ("
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">"
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
-<<<<<<< HEAD
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-=======
       )    {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       )
 
     },
 
     {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: "Health & Wellness"
-=======
     {"
       title: "Health & Wellness""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
       icon: ("
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">"
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       title: "Continuous Learning"
       description: "Education stipends and dedicated learning time to help you grow professionally."
@@ -353,7 +270,6 @@ title: "Product Manager",
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -423,8 +339,6 @@ export default function Careers() {;
         location: "Remote",;
         type: "Full-time",;
         department: "Product",;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.";
       }
     ];
@@ -505,11 +419,8 @@ export default function Careers() { return null; }
       }
     ],;
 
-=======
 
     },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       {;
         title: "Product Manager",;
         location: "New York, NY",;
@@ -525,7 +436,6 @@ export default function Careers() { return null; }
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.";
       }
     ],;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     marketing: [;
       {;
         title: "Growth Marketing Manager",;
@@ -694,14 +604,11 @@ department: "Operations",,
     }
   ];
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <AppLayout>;
       <SEO;
         title="Careers at Zion - Join Our Team";
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform.";
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs";
-<<<<<<< HEAD
         canonical="https://app.ziontechgroup.com / careers";
       />;
       <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">;
@@ -775,7 +682,6 @@ department: "Operations",,
                             <p className="text - zion - slate - light mb - 4">{job.description}</p>;
                           </div>;
                           <Button className="w - full md:w - auto mt - 4 md:mt - 0 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -983,23 +889,16 @@ export default function Careers() {;
                             <p className="text-zion-slate-light mb-4">{job.description}</p>;
                           </div>;
                           <Button className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             Apply Now;
                           </Button>;
                         </div>;
                       </CardContent>;
 
 </Card>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   ))}
                 </TabsContent>;
               ))}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Tabs>
           </div>"
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">'"
@@ -1017,10 +916,8 @@ export default function Careers() {;
     </AppLayout>
   )
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                   ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </TabsContent>;
               ))}
             </Tabs>
@@ -1043,19 +940,14 @@ export default function Careers() {;
 }
 ;
             </Tabs>;
-=======
     ];                            Apply Now;
                           </Button>;
                         </div>;
                       </CardContent>;            </Tabs>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     ];                            Apply Now;
                           </Button>;
                         </div>;
                       </CardContent>;            </Tabs>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                             Apply Now;
                           </Button>;
                         </div>;
@@ -1122,7 +1014,6 @@ export default function Careers() {;
               ))}
 
             </Tabs>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
           ;"
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
@@ -1130,12 +1021,7 @@ export default function Careers() {;
               We're always looking for talented individuals who are passionate about AI and technology. ;
               Send us your resume and let's start a conversation.;
             </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 '"
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;"
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;'
@@ -1144,7 +1030,6 @@ export default function Careers() {;
             </p>;"
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Tabs>;
           </div>;"
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">;'"
@@ -1157,16 +1042,9 @@ export default function Careers() {;
                   ))}
                 </TabsContent>;
               ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Send General Application;
-=======
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;              Send General Application;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;              Send General Application;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 </Card>))}
                 </TabsContent>))}
@@ -1185,15 +1063,12 @@ export default function Careers() {;
                 </TabsContent>;
               ))}
               Send General Application;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
     </AppLayout>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 </AppLayout>);
@@ -1264,13 +1139,10 @@ department: "Operations",
   title: "Talent Acquisition Specialist";
 location: "Remote";
 type: "Full-time";
-<<<<<<< HEAD
 department: "Operations",
   description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
-=======
 department: "Operations",
   description: "Help connect the right talent with the right opportunities on our platform through personalized matching." 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 };
 //Benefits list </svg>) 
@@ -1282,33 +1154,15 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 }
     </AppLayout>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
     </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import {SEO} from "@/components/SEO";""
 import {GradientHeading} from "@/components/GradientHeading";""
@@ -1568,4 +1422,3 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
     </AppLayout>;
     </AppLayout>);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

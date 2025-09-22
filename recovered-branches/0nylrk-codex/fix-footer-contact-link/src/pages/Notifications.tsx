@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";"
 import {Footer} from "@/components/Footer";"
@@ -17,23 +13,16 @@ import {Skeleton} from "@/components/ui/skeleton";"
 import {SEO} from "@/components/SEO";"
 import {useNavigate} from "react-router-dom";"
 import {cn} from "@/lib/utils";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
-=======
 
 '
 import React, { useState } from 'react',"
 import { AppHeader } from "@/layout/AppHeader","
 import { Footer } from "@/components/Footer","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useNotifications } from "@/context/notifications/NotificationContext",
 import {}
   NotificationType,
@@ -51,26 +40,14 @@ import { Badge } from "@/components/ui/badge",
 import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { cn } from "@/lib/utils",
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
-=======
-import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { cn } from "@/lib/utils",
 
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
+import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
+import { cn } from "@/lib/utils",
+
+const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
 
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -79,7 +56,6 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { SEO } from "@/components/SEO",;
 import { useNavigate } from "react-router-dom",;
 import { cn } from "@/lib/utils",const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   switch (type) {
     case 'message':
       return <MessageCircle className={cn(className, "text-blue-500")} />,
@@ -92,7 +68,6 @@ import { cn } from "@/lib/utils",const getNotificationIcon = (type: Notification
     case 'onboarding':
       return <Settings className={cn(className, "text-zion-cyan")} />,
     case 'system':
-=======
 "
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {}
   switch (type) {'
@@ -107,14 +82,10 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     case 'onboarding':"
       return <Settings className={cn(className, "text-zion-cyan")} />,'
     case 'system':"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return <AlertCircle className={cn(className, "text-yellow-500")} />,
     default:"
       return <Bell className={cn(className, "text-gray-500")} />
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
@@ -132,8 +103,6 @@ return <Badge className="bg-blue-500">Message</Badge>,
       return <Badge className="bg-yellow-500">System</Badge>
     default:
       return <Badge variant="outline">Notification</Badge>
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 },
 
@@ -192,7 +161,6 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {}
     case 'system':;"
       return <Badge className="bg - yellow - 500">System</Badge>,
     default:;"
-=======
 };
 
 const getNotificationTypeBadge = (type: NotificationType) => {;
@@ -242,7 +210,6 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
     case 'system':;
       return <Badge className="bg - yellow - 500">System</Badge>,
     default:;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return <Badge variant="outline">Notification</Badge>;
   }
 }
@@ -325,46 +292,28 @@ const NotificationCard: React.FC<{;
 
     if (!notification.read) {;
       onMarkAsRead(notification.id);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
-<<<<<<< HEAD
   }
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
   },
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   }  };
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   }  };
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   },
   };
   },
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <divclassName={cn("
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors""
@@ -439,8 +388,6 @@ onClick={() => onDismiss(notification.id)}
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <p className="text-zion-slate-light mb-3">{notification.message}</p>;
           ;
           {notification.action_url && notification.action_text && (;
@@ -463,16 +410,11 @@ onClick={() => onDismiss(notification.id)}
       </div>
     </div>
   )
-<<<<<<< HEAD
 
 export default function NotificationsPage() {
 
     setFilter
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </div>;
     </div>;
@@ -482,15 +424,12 @@ export default function NotificationsPage() {
       </div>;
     </div>;
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 export default function NotificationsPage() {;
   const {;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     filteredNotifications;
     unreadCount;
     action_text?: string;
@@ -610,11 +549,8 @@ if ( {) {}
               on_click={handle_action}
             >;
               {notification.action_text}
-<<<<<<< HEAD
               <ChevronRight className="ml - 1 h - 4 w-4" />;
-=======
               <ChevronRight className="ml - 1 h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </Button>)}
         </div>;
       </div>;
@@ -628,12 +564,10 @@ function NotificationsPage() {}
   const {}
     filtered_notifications;
     unread_count;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     markAsRead;
     markAllAsRead;
     dismiss_notification;
     loading;
-<<<<<<< HEAD
     filter;
 
 },
@@ -647,26 +581,18 @@ export default function NotificationsPage() {}
     dismissNotification,
     loading,
     filter,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     setFilter
 
   } = useNotifications() as NotificationContextType,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>;
       <SEO
         title="Notifications | Zion AI Marketplace" 
         description="View and manage your notifications on the Zion AI Marketplace." 
-<<<<<<< HEAD
 ;
     <>;
       <SEO"
@@ -722,7 +648,6 @@ export default function NotificationsPage() {}
               variant="outline";
               onClick={() => markAllAsRead()}
             >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Check className="mr-2 h-4 w-4" />;
               Mark all as read;
             </Button>;
@@ -895,27 +820,17 @@ setFilter;
     </>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </TabsContent>;
 
-=======
     filter;            </TabsContent>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             </TabsContent>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     filter;            </TabsContent>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
 
 </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
   const handle_action = () =>: any {
   // TODO: Implement
@@ -1085,15 +1000,9 @@ if ( {) {
 
     </>);
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>;
   ),; 
 
@@ -1171,7 +1080,6 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
   markAsRead;
 }onDismiss= {
 dismissNotification 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/>) ) 
 
 }</div>) 
@@ -1180,19 +1088,7 @@ dismissNotification
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

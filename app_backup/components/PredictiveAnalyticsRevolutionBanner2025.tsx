@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, TrendingUp, DollarSign, Clock, CheckCircle } from 'lucide-react';
 
 const PredictiveAnalyticsRevolutionBanner2025 = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -89,11 +88,11 @@ const PredictiveAnalyticsRevolutionBanner2025 = () => {
             <div className="flex-1">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
-                  <TrendingUp className="w-5 h-5" />
+                  <span className="w-5 h-5">📊</span>
                   <span className="text-sm font-medium">NEW 2025 CONTENT</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-green-500/20 rounded-full px-4 py-2">
-                  <CheckCircle className="w-5 h-5" />
+                  <span className="w-5 h-5">📊</span>
                   <span className="text-sm font-medium">750% ROI GUARANTEED</span>
                 </div>
               </div>
@@ -149,19 +148,19 @@ const PredictiveAnalyticsRevolutionBanner2025 = () => {
                 <h3 className="text-lg font-semibold mb-4">Why Choose Predictive Analytics?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="w-5 h-5 text-green-300">📊</span>
                     <span className="text-sm">750% Average ROI</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="w-5 h-5 text-green-300">📊</span>
                     <span className="text-sm">$4.2M Annual Savings</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="w-5 h-5 text-green-300">📊</span>
                     <span className="text-sm">94% Accuracy Improvement</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="w-5 h-5 text-green-300">📊</span>
                     <span className="text-sm">4.2 Month Payback</span>
                   </li>
                 </ul>
@@ -189,7 +188,7 @@ const PredictiveAnalyticsRevolutionBanner2025 = () => {
         onClick={handleDismiss}
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
       >
-        <X className="w-6 h-6" />
+        <span>X</span>
       </button>
     </div>
   );

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1349,8 +1345,6 @@ export default function ITServices() {;
       <Footer />
     </>
   );
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 export default function ITServices() {;
   const itServices = [{;
       "title": 'AI-Powered IT Operations',;
@@ -2677,4 +2671,3 @@ export default function ITServices() {;
                   </div>;
                 </div>;
               ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

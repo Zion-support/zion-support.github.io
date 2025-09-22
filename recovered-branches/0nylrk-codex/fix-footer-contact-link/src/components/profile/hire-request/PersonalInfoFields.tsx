@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
   FormField
@@ -15,14 +10,10 @@ import { Input } from "@/components/ui/input";
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FormField,
 
-=======
   FormField,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormField,
 FormField,
 FormField,
@@ -30,35 +21,20 @@ FormField,
   FormLabel,
   FormControl,
   FormMessage,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { FormValues  } from './useHireRequestForm';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface PersonalInfoFieldsProps {
   form: UseFormReturn < FormValues>;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {UseFormReturn} from "react-hook-form";
@@ -67,8 +43,6 @@ import {FormValues} from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form",
@@ -81,19 +55,13 @@ import { UseFormReturn } from "react-hook-form",;
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {}
   form: UseFormReturn<FormValues>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn < FormValues>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -108,7 +76,6 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-=======
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
@@ -117,19 +84,14 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormValues } from "./useHireRequestForm",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;  return (
 
-=======
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>;
       <FormField;
         control={form && form.control}"
@@ -299,7 +261,6 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
             <FormMessage />
           </FormItem>
         )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       />
     </>
   );
@@ -307,26 +268,8 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 } from "@/components/ui/form";""
 import { Input } from "@/components/ui/input";""
 import { UseFormReturn } from "react-hook-form";""
@@ -512,4 +455,3 @@ pr-12325
 ;
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,9 +1,16 @@
 
+<<<<<<< HEAD
+            // Simple conflict resolution - take the incoming change
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?
+
+            // Simple conflict resolution - take the incoming change;
+=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
             // Simple conflict resolution - take the incoming change
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             this.log(`✅ Auto-resolved conflicts in: ${file}`);
@@ -117,6 +124,12 @@ if (require.main === module) {
   automator.run();
 }
 
+<<<<<<< HEAD
+'
+module.exports = GitWorkflowAutomator;
+
+'
+=======
 module.exports = GitWorkflowAutomator;
 
 '
@@ -125,6 +138,7 @@ module.exports = GitWorkflowAutomator;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -192,7 +206,13 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
 
+<<<<<<< HEAD
+  git commit -m '"fix"
+git commit -m '"fix"
+
+=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

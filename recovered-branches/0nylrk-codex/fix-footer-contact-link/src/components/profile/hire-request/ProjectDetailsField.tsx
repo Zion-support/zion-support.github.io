@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -9,7 +7,6 @@ FormField,
   FormLabel,
   FormControl,
 FormMessage,
-<<<<<<< HEAD
 } from '@/components / ui / form';
 import { Textarea  } from '@/components / ui / textarea';
 import { FormValues  } from './useHireRequestForm';
@@ -18,7 +15,6 @@ interface ProjectDetailsFieldProps {
   form: UseFormReturn < FormValues>;
 }
 
-<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -28,13 +24,10 @@ import {FormValues} from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FormField
   FormItem
   FormLabel
@@ -45,18 +38,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {}
   form: UseFormReturn<FormValues>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   FormMessage} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
-=======
   FormMessage} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   form: UseFormReturn<FormValues>
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -69,8 +58,6 @@ import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormValues>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   FormField,
   FormItem,
   FormLabel,
@@ -81,8 +68,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;
@@ -98,7 +83,6 @@ import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormValues>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
@@ -130,14 +114,12 @@ control={form.control}
           <FormMessage className="text-red-400" />
         </FormItem>
       )}
-<<<<<<< HEAD
     />
   );
 }
   )
 }
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
 } from "@/components/ui/form";
@@ -151,9 +133,7 @@ export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) 
   return (
     <FormField
       control={form && form.control}
-=======
       control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name="projectOverview"
 }
 ;
@@ -196,9 +176,6 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import React from "react";""
 import { UseFormReturn } from "react-hook-form";"
 import {
@@ -275,4 +252,3 @@ pr-12325
 </FormMessage>
         </FormItem>)"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

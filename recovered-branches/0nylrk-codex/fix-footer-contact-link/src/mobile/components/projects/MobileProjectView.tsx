@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -18,7 +12,6 @@ import { toast } from "sonner";
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
 interface Milestone {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -54,8 +47,6 @@ import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
 
 interface Milestone {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface Milestone {
   id: string,
   title: string,
@@ -108,10 +99,8 @@ import { Badge } from "@/components/ui/badge";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {}
-=======
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CheckCircle,
   ChevronRight,
   FileText,
@@ -128,7 +117,6 @@ interface Milestone {}
   dueDate: string;"
   status: "completed" | "in_progress" | "pending";"
   paymentStatus: "paid" | "pending" | "overdue";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   amount: string;
 
   id: string
@@ -137,19 +125,14 @@ interface Milestone {}
   status: "completed" | "in_progress" | "pending"
   paymentStatus: "paid" | "pending" | "overdue"
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   amount: string}
-=======
   Video,
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface Milestone {
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -169,14 +152,12 @@ interface Milestone {
   payment_status: "paid" | "pending" | "overdue",
   amount: string;
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 interface ProjectViewProps {}
   project: {}
     id: string;
     title: string;
 client: {
-<<<<<<< HEAD
   const navigate = useNavigate();
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -204,21 +185,15 @@ interface ProjectViewProps {;
     client: {;
       name: string,;      avatar?: string
 };
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     startDate: string;
     endDate?: string;
     status: string;
     totalAmount: string;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const navigate = useNavigate(),
 
-<<<<<<< HEAD
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
 
@@ -229,13 +204,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     toast.success("Starting project call", {
       description: "Initializing video connection..."
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }),
 
     navigate(`/call/${roomId}`)
   },
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const navigate = useNavigate(),
 
@@ -246,10 +219,8 @@ interface Milestone {
   status: "completed" | "in_progress" | "pending",
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
-=======
 `
     navigate(`/call/${roomId}`);
   };
@@ -264,8 +235,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   const messageClient = () => {"
     toast.info("Opening message thread with client", {}`
       description: `Messaging ${project.client.name}...`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const navigate = useNavigate();
 
   const startProjectCall = () => {
@@ -276,7 +245,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
     navigate(`/call/${roomId}`);
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const messageClient = () => {
     toast.info("Opening message thread with client", {
@@ -294,10 +262,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>"
@@ -311,7 +275,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     <AvatarImage src={project.client.avatar} />
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>
                   </Avatar>"
-=======
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -325,7 +288,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     <AvatarImage src={project.client.avatar} />
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>
                   </Avatar>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <span className="text-sm">{project.client.name}</span>
                 </div>
               </div>
@@ -405,9 +367,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                   </div>
 <Badge
                     variant={
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   const navigate = useNavigate(),;
@@ -516,9 +475,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
                       milestone.paymentStatus === "paid" ? "default" : 
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
@@ -536,26 +492,16 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                   </div>
                   <Badge
                     variant={
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       milestone.paymentStatus === "paid"
                         ? "default"
                         : milestone.paymentStatus === "overdue"
                           ? "destructive"
 
                           : "outline"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                     }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           : "outline"
                     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   >
                     {milestone.paymentStatus}
                   </Badge>
@@ -746,11 +692,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
               </CardContent>
             </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </Badge>;
                 </div>;"
                 <div className="pl-7">;"
@@ -771,10 +712,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     variant="outline";"
                     className="w-full mt-3 gap-1";
                   >;"
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </Badge>;
                 </div>;
                 <div className="pl-7">;
@@ -795,19 +733,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     variant="outline";
                     className="w-full mt-3 gap-1";
                   >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     View Details <ChevronRight className="h-4 w-4" />;
                   </Button>;
                 </div>;
               </CardContent>;
             </Card>;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ))}
         </div>
       </section>
@@ -816,22 +748,15 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 }
 
 import React from "react";
-=======
         </div>
       </section>
     </div>
   )import React from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
         </div>
       </section>
     </div>
   )import React from "react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           ))}
         </div>
       </section>
@@ -839,7 +764,6 @@ import React from "react";
   );
 }
 import React from "react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
@@ -848,7 +772,6 @@ import {CheckCircle, ChevronRight, FileText, MessageSquare, Video} from "lucide-
 import {Progress} from "@/components/ui/progress";
 import {SeverityIndicator} from "../common/SeverityIndicator";
 import {useNavigate} from "react-router-dom";
-=======
 
 "
 import React from "react";"
@@ -860,7 +783,6 @@ import {CheckCircle, ChevronRight, FileText, MessageSquare, Video} from "lucide-
 import {Progress} from "@/components/ui/progress";"
 import {SeverityIndicator} from "../common/SeverityIndicator";"
 import {useNavigate} from "react-router-dom";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {toast} from "sonner";
 interface Milestone {;
   id: string,;
@@ -1137,14 +1059,7 @@ className="w-full mt-3 gap-1">;                    View Details <ChevronRight cl
     </div>;
 );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name: string,
       avatar?: string;
     }
@@ -1192,9 +1107,7 @@ return (
                     <AvatarImage src={project.client.avatar} />;
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>;
                   </Avatar>;
-<<<<<<< HEAD
                   <span className="text-sm">{project.client.name}</span>;
-=======
                   <span className="text-sm">{project.client.name}</span>;
         </div>;
       </section>;
@@ -1223,7 +1136,6 @@ return (
                   </Avatar>;"
                   <span className="text - sm">{project.client.name}</span>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </div>;
               <Badge />{project.status}</Badge>;

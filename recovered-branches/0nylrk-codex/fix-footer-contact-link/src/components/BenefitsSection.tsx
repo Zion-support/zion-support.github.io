@@ -3,13 +3,10 @@ import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
 const benefits = [
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
 import { Bot, Clock, Globe, TrendingDown } from './lucide-react';
 const benefits = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     title: "AI - Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
@@ -19,10 +16,6 @@ const benefits = [;
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
@@ -38,86 +31,53 @@ const benefits = [
   {
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     icon: <Globe className="w-8 h-8" />}
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-=======
 
 "
 import { GradientHeading } from "./GradientHeading","
 import { FeatureCard } from "./FeatureCard","
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const benefits = []
   {"
     title: "AI-Powered Matchmaking","
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     icon: <Bot className="w-8 h-8" />},
   {"
     title: "Global Availability","
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.","
     icon: <Globe className="w-8 h-8" />},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "24/7 Support"
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."
-=======
 
   {"
     title: "24/7 Support""
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     icon: <Clock className="w-8 h-8" />}
   {"
     title: "Cost Reduction""
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.""
     icon: <TrendingDown className="w-8 h-8" />}]
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <section className="py-20 bg-zion-blue-light">
       <div className="container mx-auto px-4">
@@ -171,8 +131,6 @@ key={index}
 
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function BenefitsSection() {;
   return (
 
@@ -197,19 +155,14 @@ key={index}
 }
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export function BenefitsSection() {;
   return (
             <FeatureCard}
 }
 };
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -283,23 +236,11 @@ export function BenefitsSection() {;
     </section>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: <Globe className="w - 8 h - 8" />},
-=======
     icon: <Globe className="w - 8 h-8" />},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     icon: <Globe className="w - 8 h-8" />},
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     icon: <Globe className="w - 8 h - 8" />},
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     title: "24 / 7 Support",
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
@@ -323,9 +264,7 @@ function BenefitsSection() {
           </p>;
         </div>;
 <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx-auto">;
-=======
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx-auto">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {benefits.map ((benefit, index) => (
 
 import {GradientHeading} from "./GradientHeading";""
@@ -421,30 +360,15 @@ const benefits = [;
               title={benefit.title}
               description={benefit.description}
 icon={benefit.icon}
-<<<<<<< HEAD
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration-300";
-=======
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration-300";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />))}
         </div>;
       </div>;
     </section>);
-<<<<<<< HEAD
 }            <FeatureCard;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 
           {benefits.map((benefit, index) => (;
@@ -453,11 +377,7 @@ icon={benefit.icon}
 ;
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 }            <FeatureCard;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
           {benefits.map((benefit, index) => (;
             <FeatureCard;
@@ -547,4 +467,3 @@ pr-12325
 }
 ;
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

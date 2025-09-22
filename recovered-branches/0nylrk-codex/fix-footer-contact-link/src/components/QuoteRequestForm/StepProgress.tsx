@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
-=======
 interface StepProgressProps {}
   currentStep: QuoteRequestSteps;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 interface StepProgressProps {}
   currentStep: QuoteRequestSteps}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
@@ -25,7 +20,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     if (stepOrder === currentStepOrder) return "current"
     return "upcoming"
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 className={cn(
 
 }
@@ -65,7 +59,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
     { id: "timeline", label: "Timeline" },;"
     { id: "budget", label: "Budget" },;"
     { id: "summary", label: "Summary" }
-=======
 }
                   \"text-xs mt-2 font-medium\",
                   status === \"complete\" ? \"text-zion-cyan\" : 
@@ -86,7 +79,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;}
     { id: \"timeline\", label: \"Timeline\" },;
     { id: \"budget\", label: \"Budget\" },;
     { id: \"summary\", label: \"Summary\" }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ];
   const getStepStatus = (stepId: QuoteRequestSteps) = /> {;
     const stepOrder = steps && steps.findIndex(s => s && s.id === stepId);
@@ -122,7 +114,6 @@ if (stepOrder < currentStepOrder) return "complete";
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   "bg-zion-blue-light text-zion-slate-light"
                 )}>;"
                 {status === "complete" ? (;"
@@ -130,14 +121,12 @@ if (stepOrder < currentStepOrder) return "complete";
                 ) : (;"
                   <span className="text-xs">{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
 )}
-<<<<<<< HEAD
 
               </div>;
               <span
                 className={cn(
                   "text-xs mt-2 font-medium"
                   "text-zion-slate-light"
-=======
     if (stepOrder < currentStepOrder) return \"complete\";
     if (stepOrder === currentStepOrder) return \"current\",;}
     return \"upcoming\"}
@@ -173,7 +162,6 @@ className={cn(
                   <span className=\"text-xs\" />{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
                 )}
                   \"text-zion-slate-light\"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 )}>;
                 {step && step.label}
               </span>;
@@ -184,11 +172,6 @@ className={cn(
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
 import { QuoteRequestSteps } from '../QuoteRequestForm';'
 import { CheckIcon } from '@/components / icons';'
@@ -208,4 +191,3 @@ function StepProgress() {}
     { id: "summary", label: "Summary" }
   ];
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

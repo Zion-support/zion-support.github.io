@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
@@ -13,17 +11,12 @@ export default define_config ({e2e: {baseUrl: 'http://localhost:3000', // Standa
     support_file: 'cypress / support / e2e.ts',experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
     setupNodeEvents (on, config) {on ('before:browser:launch', (browser = {}, launch_options) => {// Check condition;
 if ( {) {$2;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
     experimentalModifyObstructiveThirdPartyCode: true;,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before: browser:launch';, (browser = {}, launchOptions) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { define_config } from 'cypress';
 export default define_config ({
@@ -49,7 +42,6 @@ if (browser && browser.family === 'chromium') {
 if ( {) {}
   $2;
 }'
-=======
     experimentalModifyObstructiveThirdPartyCode: true;,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {
       on('before: browser:launch';, (browser = {}, launchOptions) => {
@@ -65,7 +57,6 @@ pr-12325
 if ( {) {
   $2
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           launch_options.args.push ('--disable - ipv6');
         }
         return launch_options;
@@ -94,7 +85,6 @@ export default defineConfig({;
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
 '
@@ -115,10 +105,8 @@ supportFile: 'cypress/support/e2e.ts';
     supportFile: 'cypress/support/e2e && e2e.ts';
     supportFile: 'cypress/support/e2e.ts';
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     supportFile: 'cypress/support/e2e.ts';
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {'
@@ -131,20 +119,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 env: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');        }
         return launchOptions
       })
     }
     env: {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
   reporterOptions: {
-<<<<<<< HEAD
 
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -171,8 +155,6 @@ CYPRESS_TEST_USER_EMAIL:
   reporter: 'junit',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -200,8 +182,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   reporterOptions: {'
     mochaFile: 'cypress/results/junit-[hash].xml',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     toConsole: true
   }
 });
@@ -219,7 +199,6 @@ if ( {) {
           launch_options.args.push ('--disable - ipv6');        }
         return launch_options;
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;'
@@ -230,7 +209,6 @@ export default defineConfig({;
     setupNodeEvents(on, config) {;'
       on('before:browser:launch', (browser = {}, launchOptions) => {;'
         if (browser.family === 'chromium') {;'
-=======
 import { defineConfig } from 'cypress',;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 export default defineConfig({;
@@ -288,7 +266,6 @@ pr-12325
     setupNodeEvents(on, config) {;
       on('before: browser:launch';, (browser = {}, launchOptions) => {;
         if (browser.family === 'chromium') {;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
@@ -347,7 +324,6 @@ env: {'
   }, });    mocha_file: 'cypress / results / junit-[hash].xml';
     to_console: true;
   }
-=======
 });
       STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242';,
     defaultCommandTimeout: 10000;,
@@ -357,8 +333,6 @@ pr-12325
 
   }
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 });
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -366,10 +340,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       on('before:browser:launch', (browser;
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
       on('before: browser:launch';, (browser;
@@ -379,4 +349,3 @@ pr-12325
 
 '
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Shield, Globe, Users, TrendingUp, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -33,7 +32,7 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
               >
                 Explore Services
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <span className="ml-2 w-5 h-5">📊</span>
               </Link>
               <Link
                 href="/contact"
@@ -82,37 +81,37 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Zap className="w-8 h-8 text-blue-400" />,
+                icon: <span className="w-8 h-8 text-blue-400">📊</span>,
                 title: "AI Autonomous Operations",
                 description: "Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.",
                 features: ["Real-time Decision Making", "Predictive Analytics", "Autonomous Optimization"]
               },
               {
-                icon: <Shield className="w-8 h-8 text-purple-400" />,
+                icon: <span className="w-8 h-8 text-purple-400">📊</span>,
                 title: "Quantum Computing",
                 description: "Breakthrough quantum computing solutions delivering exponential computational power and security.",
                 features: ["Quantum Supremacy", "Error-Corrected Quantum", "Quantum Internet"]
               },
               {
-                icon: <Globe className="w-8 h-8 text-cyan-400" />,
+                icon: <span className="w-8 h-8 text-cyan-400">📊</span>,
                 title: "Advanced Automation",
                 description: "Intelligent process automation that streamlines operations and eliminates manual tasks.",
                 features: ["Process Automation", "Smart Resource Management", "Predictive Maintenance"]
               },
               {
-                icon: <Users className="w-8 h-8 text-green-400" />,
+                icon: <span className="w-8 h-8 text-green-400">📊</span>,
                 title: "Enterprise Solutions",
                 description: "Comprehensive enterprise-grade solutions designed for scalability and reliability.",
                 features: ["Scalable Architecture", "Enterprise Security", "24/7 Support"]
               },
               {
-                icon: <TrendingUp className="w-8 h-8 text-yellow-400" />,
+                icon: <span className="w-8 h-8 text-yellow-400">📊</span>,
                 title: "Business Intelligence",
                 description: "Advanced analytics and insights that drive data-driven decision making and growth.",
                 features: ["Real-time Analytics", "Predictive Insights", "Performance Optimization"]
               },
               {
-                icon: <Star className="w-8 h-8 text-pink-400" />,
+                icon: <span>Star</span>,
                 title: "Innovation Hub",
                 description: "Cutting-edge research and development in emerging technologies and future solutions.",
                 features: ["R&D Excellence", "Future Technologies", "Innovation Labs"]
@@ -127,7 +126,7 @@ export default function HomePage() {
                 <ul className="space-y-2">
                   {feature.features.map((item, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="w-4 h-4 text-green-400 mr-3 flex-shrink-0">📊</span>
                       {item}
                     </li>
                   ))}
@@ -154,7 +153,7 @@ export default function HomePage() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
             >
               Start Your Transformation
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <span className="ml-2 w-5 h-5">📊</span>
             </Link>
             <Link
               href="/case-studies"

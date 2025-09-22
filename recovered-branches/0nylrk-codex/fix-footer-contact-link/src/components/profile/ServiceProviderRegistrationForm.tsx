@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -26,9 +25,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 import { AspectRatio } from "@/components/ui/aspect-ratio",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 ;
 // Define form schema;
@@ -54,8 +50,6 @@ export function ServiceProviderRegistrationForm() {;
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -65,20 +59,13 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-<<<<<<< HEAD
 
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     message: "Rate must be a number"}),
-=======
 import { useAuth } from "@/hooks/useAuth",    message: "Rate must be a number"}),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { useAuth } from "@/hooks/useAuth",    message: "Rate must be a number"}),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const serviceProfileSchema = z.object({"
   name: z.string().min(2, "Name must be at least 2 characters long"),"
   title: z.string().min(5, "Business name/title is required"),"
@@ -88,20 +75,14 @@ const serviceProfileSchema = z.object({"
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {}
 "
     message: "Rate must be a number"}),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     message: "Rate must be a number"}),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),"
   website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function ServiceProviderRegistrationForm() {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -115,19 +96,11 @@ export function ServiceProviderRegistrationForm() {
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
-=======
 
   // Initialize form with default values;
   const form = useForm<ServiceFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(serviceProfileSchema)
     defaultValues: {"
       name: user?.displayName |"""
@@ -141,21 +114,14 @@ export function ServiceProviderRegistrationForm() {
       website: ""}})
 // Handle adding service tags
   const handleAddService = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 
-<<<<<<< HEAD
     const serviceInput = form.getValues("services"),
     if (serviceInput && !serviceTags.includes(serviceInput)) {      setServiceTags([...serviceTags, serviceInput]),
-=======
   // Handle adding service tags;
   const handleAddService = () => {}
       setServiceTags([...serviceTags, serviceInput]),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       form.setValue("services", "")
     }
 },
@@ -164,7 +130,6 @@ export function ServiceProviderRegistrationForm() {
   const handleRemoveService = (service: string) => {}
     setServiceTags(serviceTags.filter((s) => s !== service))
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 "
     const serviceInput = form.getValues("services"),
@@ -174,11 +139,6 @@ export function ServiceProviderRegistrationForm() {
     if (e.key === "Enter") {}
       e.preventDefault()
       handleAddService()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
 // Handle avatar upload
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -190,9 +150,6 @@ export function ServiceProviderRegistrationForm() {
       }
       reader.readAsDataURL(file)
     }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 
@@ -217,14 +174,11 @@ export function ServiceProviderRegistrationForm() {
 
   };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-=======
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const formData = form.getValues();
     if (!formData.bio |formData.bio.length < 20) {}
   };
@@ -320,17 +274,9 @@ const serviceInput = form && form.getValues("services");
       },;
       reader.readAsDataURL(file);
     }
-<<<<<<< HEAD
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -343,18 +289,13 @@ const serviceInput = form && form.getValues("services");
   const generateEnhancedProfile = async () => {
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {}
@@ -362,7 +303,6 @@ const serviceInput = form && form.getValues("services");
         title: "More information needed""
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -390,31 +330,18 @@ const serviceInput = form && form.getValues("services");
       }),;
       if (error) {;
         throw new Error(error.message);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({
-=======
   },  // Generate enhanced profile with AI
-=======
   // Generate enhanced profile with AI
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const generateEnhancedProfile = async () => {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
 return      toast({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       return
 
   },;
@@ -450,7 +377,6 @@ return      toast({
       setGeneratedContent(data as { summary: string, services: string[] }),
 
       toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
     } catch (error: any) {
@@ -459,7 +385,6 @@ return      toast({
       toast({
         title: "Generation failed"
         description: error.message |"There was an error generating your enhanced profile. Please try again."
-<<<<<<< HEAD
         variant: "destructive"})
 '
 import React, { useState } from './react';'
@@ -536,7 +461,6 @@ const form = use_form < ServiceFormValues>({}
 
       if (generatedContent.services && generatedContent.services.length > 0) {}
         const newServices = generatedContent.services.filter('
-=======
   const form = use_form < ServiceFormValues>({
     resolver: zod_resolver (serviceProfileSchema),
     default_values: {
@@ -568,7 +492,6 @@ const form = use_form < ServiceFormValues>({}
 
       if (generatedContent.services && generatedContent.services.length > 0) {
         const newServices = generatedContent.services.filter(
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           service => typeof service === 'string' && service && !serviceTags.includes(service)
         ),
 
@@ -597,13 +520,8 @@ if ( {) {}
 }
           setServiceTags ([...service_tags, ...new_services]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
         if (newServices.length > 0) {
@@ -635,7 +553,6 @@ if ( {) {
 
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       }
     }
@@ -650,22 +567,15 @@ if ( {) {
         description: "Please add at least one service to your profile."
         variant: "destructive"})
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   };
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Handle removing service tags;
   const handleRemoveService = (service: string) => {;
     setServiceTags(serviceTags && serviceTags.filter((s) => s !== service));
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     try {
       // For actual implementation with Supabase
@@ -673,9 +583,6 @@ if ( {) {
 
         throw new Error("User not authenticated")
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
       setGeneratedContent(data as { summary: string, services: string[] }),;
       toast({;"
@@ -687,7 +594,6 @@ if ( {) {
         title: "Generation failed",;"
         description: error.message || "There was an error generating your enhanced profile. Please try again.",;
 "
-=======
         throw new Error("User not authenticated")
 
 ;
@@ -701,7 +607,6 @@ if ( {) {
         title: "Generation failed",;
         description: error.message || "There was an error generating your enhanced profile. Please try again.",;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     } finally {;
       setIsGenerating(false);
@@ -723,10 +628,6 @@ if (generatedContent) {;"
       }
     }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },;
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {;
@@ -754,7 +655,6 @@ if ( {) {}
   $2;
 }"
         throw new Error ("User not authenticated");
-<<<<<<< HEAD
       }
 
       // Enhance profile if not already done;
@@ -766,26 +666,17 @@ if ( {) {}
   $2;
 }
 
-<<<<<<< HEAD
         try {
           const { data: ai_data } = await supabase.functions.invoke ('service - profile - enhancer', {
             body: {
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 ;
     setIsSubmitting(true),;
 
 try {;
-=======
       }    try {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     try {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // For actual implementation with Supabase;
       if (!user?.id) {;"
         throw new Error("User not authenticated");
@@ -826,8 +717,6 @@ finalSummary = generatedContent.summary,;
 
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       }
 
@@ -839,7 +728,6 @@ finalSummary = generatedContent.summary,;
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
       const userEmail = userData.user?.email;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         } catch (error) {;
           console.error("Error enhancing profile:", error),;
           // Continue with submission even if enhancement fails;
@@ -847,11 +735,6 @@ finalSummary = generatedContent.summary,;
       } else if (generatedContent) {;
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
 
       // Get user email for notification
@@ -872,12 +755,9 @@ finalSummary = generatedContent.summary,;
         })
         .eq('id', user.id)
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser(),;
       const userEmail = userData && userData.user?.email;
-=======
       // Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser(),;
       const userEmail = userData && userData.user?.email;
@@ -888,7 +768,6 @@ finalSummary = generatedContent.summary,;
         .update({;
           display_name: values && values.name,;
           bio: finalSummary,;"
-=======
         finalSummary = generatedContent && generatedContent.summary;
         finalServices = [...new Set([...serviceTags, ...generatedContent && generatedContent.services])];
       }
@@ -902,7 +781,6 @@ finalSummary = generatedContent.summary,;
         .update({;
           display_name: values && values.name,;
           bio: finalSummary,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           user_type: "creator", // Set as service provider;
           profile_complete: true,;
           updated_at: new Date().toISOString(),;
@@ -913,29 +791,22 @@ finalSummary = generatedContent.summary,;
 
       }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .select(),
 
       if (error) throw error,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
       const { error: serviceError } = await supabase'
         .from('service_profiles')
-<<<<<<< HEAD
-<<<<<<< HEAD
         .insert({
-<<<<<<< HEAD
 
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
-=======
         .insert({
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           user_id: user.id,
           services: finalServices,
           hourly_rate: Number(values.hourlyRate),
@@ -1020,12 +891,9 @@ if (throw service_error) {}
 if ( {) {}
   $2;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         try {
           await supabase.functions.invoke ('send - email', {
             body: {
-<<<<<<< HEAD
 
         try {'
           await supabase.functions.invoke ('send - email', {}
@@ -1034,10 +902,7 @@ if ( {) {}
           await supabase.functions.invoke ('send - email', {}
             body: {}
             }
-=======
         .insert({            }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       // Check condition
 if (throw service_error) {
   $2
@@ -1057,7 +922,6 @@ if ( {) {
             body: {
 
             }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           })
         } catch (emailError) {"
           console.error("Failed to send notification email:", emailError),
@@ -1079,34 +943,21 @@ if ( {) {
         variant: "destructive"})
     } finally {}
       setIsSubmitting(false)
-<<<<<<< HEAD
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
-=======
     }  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     }
 
   },
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   FormLabel;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="max-w-4xl mx-auto p-4 md:p-6">
-=======
 
   return ("
     <div className="max-w-4xl mx-auto p-4 md:p-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>"
           <CardTitle className="text-2xl text-white">Create Your Service Provider Profile</CardTitle>"
@@ -1205,18 +1056,11 @@ if ( {) {
                             </div>
                           </FormControl>"
                           <FormMessage className="text-red-400" />
-<<<<<<< HEAD
                         </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 ;
-=======
                         </FormItem>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                         </FormItem>
 
 )}
@@ -1224,7 +1068,6 @@ if ( {) {
                   </div>
                 </div>
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
       const userEmail = userData.user?.email,;
@@ -1276,8 +1119,6 @@ pr-12325
         .select(),;
       if (error) throw error,;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Store service-specific data in service_profiles table;
       // (This assumes you have a service_profiles table in your database);
 
@@ -1300,7 +1141,6 @@ user_id: user && user.id,;
 try {;'
           await supabase && supabase.functions.invoke('send-email', {;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             body: {;
               to: userEmail,;"
               subject: "Your Zion Service Profile Is Ready",;
@@ -1323,7 +1163,6 @@ try {;'
 try {
           await supabase.functions.invoke ('send - email', {
             body: {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             }
           });
         } catch (emailError) {;
@@ -1358,10 +1197,8 @@ console.error("Failed to send notification email:", emailError),;
       setIsSubmitting(false);
 
     }
-<<<<<<< HEAD
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;"
@@ -1391,7 +1228,6 @@ console.error("Failed to send notification email:", emailError),;
                               <Input"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white""
                                 placeholder="Your full name"
-<<<<<<< HEAD
                 <h2 style="color: #6D28D9, ">Service Profile Created!</h2>;
                 <p > Your service provider profile has been successfully created and published.</p>;'
                 <p > We've enhanced your profile with AI to help you stand out to potential clients.</p>;
@@ -1421,8 +1257,6 @@ console.error("Failed to send notification email:", emailError),;
     } finally {}
       setIsSubmitting (false);
     }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 return (              {/* Basic Information */}
               <div className="space-y-4">;
@@ -1438,7 +1272,6 @@ return (              {/* Basic Information */}
                     <FormField
                       control={form && form.control}
                       name="name"
-=======
 ;
   return ("
     <div className="max - w-4xl mx - auto p - 4 md:p - 6">;"
@@ -1461,7 +1294,6 @@ return (              {/* Basic Information */}
                     <FormField;
                       control={form.control}"
                       name="name";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       render={({ field }) => (;
                         <FormItem>;"
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
@@ -1546,7 +1378,6 @@ return (              {/* Basic Information */}
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";"
                                 placeholder="City, State/Province, Country";
         <Form {...form}>;
-<<<<<<< HEAD
           <form on_submit={form.handle_submit (on_submit)}>;
             <CardContent className="space - y-8">;
               {/* Basic Information */}"
@@ -1566,14 +1397,7 @@ return (              {/* Basic Information */}
                               <Input;"
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";"
                                 placeholder="Your full name";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 {...field}
                               />;
                             </div>;
@@ -1605,7 +1429,6 @@ render={({ field }) => (;
                       render={({ field }) => (;
                         <FormItem>;"
                         <FormItem>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>;
                           <FormControl>;"
                             <div className="relative">;"
@@ -1631,8 +1454,6 @@ render={({ field }) => (;
                               <Input;"
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";"
                                 placeholder="City, State / Province, Country";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           <form on_submit={form.handle_submit (on_submit)}>;
             <CardContent className="space - y-8">;
               {/* Basic Information */}
@@ -1781,7 +1602,6 @@ render={({ field }) => (;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="City, State/Province, Country";
         <Form {...form}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
               {/* Basic Information */}
@@ -1867,9 +1687,7 @@ render={({ field }) => (;
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="https://yourwebsite.com"
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                                 {...field}
                               />;
                             </div>;
@@ -1878,8 +1696,6 @@ render={({ field }) => (;
 />;
                   </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className="col-span-1">;
                     <FormField
                       control={form && form.control}
@@ -1911,7 +1727,6 @@ render={({ field }) => (;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
 
 "
-=======
                   <div className="col-span-1">;
 
                     <FormField
@@ -1942,7 +1757,6 @@ render={({ field }) => (;
                               <Globe className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 placeholder="https://yourwebsite.com";
                                 {...field}
                               />;
@@ -1952,29 +1766,18 @@ render={({ field }) => (;
 />;
                   </div>;
                 </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           <FormMessage className="text-red-400" />;
-=======
 <FormMessage className="text-red-400" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         </FormItem>;                      )}
                     />;
                   </div>;
                 </div>;
                 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Upload Avatar */}
 
-=======
                   <div className="col-span-1">;                {/* Upload Avatar */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 {/* Upload Avatar */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   <div className="col-span-1">;                {/* Upload Avatar */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
                   <div className="flex items-center gap-6">;
@@ -1996,7 +1799,6 @@ render={({ field }) => (;
                           />;
                         </AspectRatio>;
 ) : (;                        <div className="flex items-center justify-center h-full">;
-=======
                       ) : (;
 <img;
                             src={uploadedAvatar}
@@ -2006,15 +1808,12 @@ render={({ field }) => (;
                         </AspectRatio>;
                       ) :(;
                         <div className="flex items-center justify-center h-full">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
 
 <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
                       <Upload className="mr-2 h-4 w-4" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <span>Upload Photo</span>;
 
                       <input"
@@ -2026,8 +1825,6 @@ render={({ field }) => (;
                     </label>;
                   </div>;
                   <p className="text-sm text-zion-slate">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         </FormItem>)}
                     />;
                   </div>;
@@ -2057,16 +1854,13 @@ render={({ field }) => (;
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
                       <Upload className="mr-2 h-4 w-4" />;
                       <span>Upload Photo</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       <input;
                         type="file";
                         accept="image/*";
                         className="hidden";
 
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
-=======
                       <span>Upload Photo</span>;                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </p>;
                 </div>;
               </div>;
@@ -2091,14 +1885,11 @@ onChange={handleAvatarUpload}
                 </div>;
               </div>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {/* Bio Section */}
               <div className="space-y-4">;
-=======
 
               {/* Bio Section */}"
               <div className="space-y-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h3 className="text-lg font-medium text-white">Service Description</h3>;
                 <FormField;
                   control={form.control}"
@@ -2121,9 +1912,6 @@ onChange={handleAvatarUpload}
                     </FormItem>;
                   )}
                 />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 {/* AI Enhancement Option */}
                 <FormField;
@@ -2148,7 +1936,6 @@ onChange={handleAvatarUpload}
                   control={form.control}"
                   name="bio";
                   render={({ field }) => (
-<<<<<<< HEAD
                     <FormItem>;
                       <FormLabel className="text - zion - slate - light">About Your Services</FormLabel>;
                       <FormControl>;
@@ -2176,29 +1963,17 @@ onChange={handleAvatarUpload}
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           Let AI help optimize your service description for better visibility and client engagement;
                         </FormDescription>;
                       </div>;
                       <FormControl>;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 />;
 
                 {form && form.watch("enhancedProfile") && (;
                   <div className="flex justify-end">;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Button
                       type="button"
                       variant="outline"
@@ -2266,7 +2041,6 @@ disabled={isGenerating}
                     <div className="space-y-4">;
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
                       </div>;
 
@@ -2282,7 +2056,6 @@ disabled={isGenerating}
                                 {service}
 
                               </Badge>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             ))}
                           </div>;
                         </div>;
@@ -2454,50 +2227,32 @@ disabled={isGenerating}
 {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </div>;
-                </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>;
                 </div>;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                  </div>;
+                </div>;
+
                 {/* Pricing and Availability Section */}
-=======
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 {serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
                   </div>;
                 </div>;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
                 {/* Pricing and Availability Section */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;
                   <FormField
                     control={form && form.control}
-<<<<<<< HEAD
                     name="hourlyRate"
-<<<<<<< HEAD
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;
                   <FormField;
                     control={form && form.control}"
@@ -2513,7 +2268,6 @@ disabled={isGenerating}
                             <Input"
                               className="pl-8 bg-zion-blue border-zion-blue-light text-white""
                               placeholder="e && e.g., 85"
-<<<<<<< HEAD
                             className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
                             on_click={handleAddService}
                           >;
@@ -2560,8 +2314,6 @@ disabled={isGenerating}
                             <Input;"
                               className="pl - 8 bg - zion - blue border - zion - blue - light text - white";"
                               placeholder="e.g., 85";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   />;
                   <FormField
                     control={form && form.control}
@@ -2569,13 +2321,7 @@ disabled={isGenerating}
                             <Input;
                               className="pl-8 bg-zion-blue border-zion-blue-light text-white";
                               placeholder="e.g., 85";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               {...field}
                             />;
                           </div>;
@@ -2606,13 +2352,8 @@ disabled={isGenerating}
                             </div>;
 
                               <input
-=======
                     name="hourlyRate"                              <input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     name="hourlyRate"                              <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                             <div className="flex items-center space-x-2">;
 
 checked={field.value === "available"}
@@ -2626,7 +2367,6 @@ checked={field.value === "available"}
                             </div>
                             <div className="flex items-center space-x-2">
                               <input
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 type="radio"
                                 id="limited"
                                 value="limited"
@@ -2647,7 +2387,6 @@ checked={field && field.value === "limited"}
                                 onChange={() => field && field.onChange("limited")}                                className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="limited" className="text-white flex items-center gap-2">;
-=======
 
                               <input"
                                 type="radio""
@@ -2657,22 +2396,17 @@ checked={field && field.value === "limited"}
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;"
                               <label htmlFor="limited" className="text-white flex items-center gap-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                                 <div className="h-2 w-2 rounded-full bg-yellow-500"></div>;
                                 Limited Availability;
                               </label>;
                             </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <div className="flex items-center space-x-2">;
 
                               <input"
                                 type="radio""
                                 id="unavailable""
                                 value="unavailable"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 checked={field && field.value === "unavailable"}
                                 onChange={() => field && field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
@@ -2683,7 +2417,6 @@ checked={field && field.value === "limited"}
                         <FormDescription className="text - zion - slate">;
                           Your base hourly or project rate;
                         </FormDescription>;"
-=======
                             <div className="flex items-center space-x-2">;
 
 checked={field.value === "limited"}
@@ -2750,7 +2483,6 @@ checked={field.value === "unavailable"}
                         <FormDescription className="text - zion - slate">;
                           Your base hourly or project rate;
                         </FormDescription>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
                   />;
@@ -2791,12 +2523,8 @@ control={form.control}"
                               </label>;
                             </div>;"
                             <div className="flex items - center space - x-2">;
-<<<<<<< HEAD
                               <input;
-=======
                             <div className="flex items-center space-x-2">;                              <input;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     control={form.control}
                     name="availability";
                     render={({ field }) => (
@@ -2836,7 +2564,6 @@ control={form.control}"
 ;
                             <div className="flex items-center space-x-2">;
                               <input;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
@@ -2844,23 +2571,15 @@ control={form.control}"
                                 on_change={() => field.on_change ("unavailable")}
                                 className="text - zion - purple focus:ring - zion-purple";
                               />;
-<<<<<<< HEAD
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 onChange={() => field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                               <label html_for="unavailable" className="text - white flex items - center gap-2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                               <input;"
                                 type="radio";"
@@ -2868,29 +2587,18 @@ control={form.control}"
                                 value="unavailable";"
                                 checked={field.value === "unavailable"}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                               <label html_for="unavailable" className="text - white flex items - center gap-2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 }
 ;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 <FormMessage className="text - red - 400" />;
                       </FormItem>)}
@@ -3077,24 +2785,13 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }) 
 }</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>) 
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) 
 }
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   service;"
 }className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {"
 }<button > <X className=" h-3 w-3"/> </button> ) )""
@@ -3109,4 +2806,3 @@ pr-12325
 </FormField>"
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

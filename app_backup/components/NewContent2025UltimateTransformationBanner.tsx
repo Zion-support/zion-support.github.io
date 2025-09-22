@@ -92,7 +92,7 @@ const NewContent2025UltimateTransformationBanner = () => {
           <div className="flex-1 pr-8">
             <div className="flex items-center space-x-2 mb-2">
               <div className="flex items-center space-x-1 bg-white/20 rounded-full px-3 py-1">
-                <StarIcon className="w-4 h-4 text-yellow-300" />
+                <span>StarIcon</span>
                 <span className="text-sm font-medium">NEW 2025 CONTENT</span>
               </div>
               <div className="flex items-center space-x-1 bg-green-500/20 rounded-full px-3 py-1">
@@ -118,12 +118,12 @@ const NewContent2025UltimateTransformationBanner = () => {
                 <div key={key} className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                   <div className="flex items-center space-x-2">
                     {key === 'roi' && <CurrencyDollarIcon className="w-5 h-5 text-green-300" />}
-                    {key === 'timeline' && <ClockIcon className="w-5 h-5 text-blue-300" />}
+                    {key === 'timeline' && <span>ClockIcon</span>}
                     {key === 'savings' && <ChartBarIcon className="w-5 h-5 text-purple-300" />}
-                    {key === 'success' && <StarIcon className="w-5 h-5 text-yellow-300" />}
+                    {key === 'success' && <span>StarIcon</span>}
                     {key === 'efficiency' && <ChartBarIcon className="w-5 h-5 text-green-300" />}
-                    {key === 'quality' && <StarIcon className="w-5 h-5 text-blue-300" />}
-                    {key === 'payback' && <ClockIcon className="w-5 h-5 text-purple-300" />}
+                    {key === 'quality' && <span>StarIcon</span>}
+                    {key === 'payback' && <span>ClockIcon</span>}
                     {key === 'projects' && <ChartBarIcon className="w-5 h-5 text-yellow-300" />}
                     <div>
                       <div className="text-lg font-bold text-white">{value}</div>
@@ -141,7 +141,7 @@ const NewContent2025UltimateTransformationBanner = () => {
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
               >
                 {currentContent.cta}
-                <ChevronRightIcon className="w-5 h-5 ml-2" />
+                <span>ChevronRightIcon</span>
               </a>
               <a
                 href="/contact"

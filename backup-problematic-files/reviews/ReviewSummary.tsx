@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -44,5 +47,12 @@ export default ReviewSummary;      <div>
       </div>
     </div>
 
+<<<<<<< HEAD
+main:components/reviews/ReviewSummary.tsx
+:backup-problematic-files/reviews/ReviewSummary.tsx
+main:components/reviews/ReviewSummary.tsx
+:backup-problematic-files/reviews/ReviewSummary.tsx
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

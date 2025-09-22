@@ -115,7 +115,6 @@ const ReviewSummary: React.FC<Props /> = ({ summary   ,}
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
   )}const ReviewSummary: React.FC<Props> = ({ summary }) => {return (<div className="enhanced-card flex items-center justify-between">;
       <div>;
         <div className="flex items-center gap-3">;

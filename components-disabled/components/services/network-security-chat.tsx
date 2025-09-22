@@ -51,7 +51,6 @@ const NetworkSecurityChat: NextPage = () => {
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>;
 <meta name="description" content="NetworkSecurityChat service" />{" "}
-<<<<<<< HEAD
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div />
@@ -63,7 +62,6 @@ const NetworkSecurityChat: NextPage = () => {
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
         <a href="/services">Back to Services</a>
-=======
       </Head>;
 
 const NetworkSecurityChat: NextPage = () => {
@@ -71,7 +69,6 @@ const NetworkSecurityChat: NextPage = () => {
         <h1 />NetworkSecurityChat</h1>
         <p />Service details coming soon...</p>
         <a href=\"/services\" />Back to Services</a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

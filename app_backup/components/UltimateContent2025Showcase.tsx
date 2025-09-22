@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Award, Clock, ArrowRight, Zap, Star, Users, DollarSign, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -33,7 +32,7 @@ const UltimateContent2025Showcase: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
-            <Zap className="w-4 h-4" />
+            <span className="w-4 h-4">📊</span>
             <span>ULTIMATE CONTENT 2025 REVOLUTION</span>
           </div>
             </div>
@@ -42,14 +41,14 @@ const UltimateContent2025Showcase: React.FC = () => {
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Users className="w-6 h-6 text-white" />
+              <span className="w-6 h-6 text-white">📊</span>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-2">500+</div>
             <div className="text-gray-600">Success Stories</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Star className="w-6 h-6 text-white" />
+              <span>Star</span>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-2">99.7%</div>
             <div className="text-gray-600">Success Rate</div>
@@ -78,7 +77,7 @@ const UltimateContent2025Showcase: React.FC = () => {
                     <span className="capitalize">{item.type.replace('-', ' ')}</span>
                   </div>
                   <div className="flex items-center space-x-1 text-sm text-gray-500">
-                    <Clock className="w-4 h-4" />
+                    <span>Clock</span>
                     <span>{item.readingTime}</span>
                   </div>
                 </div>
@@ -118,7 +117,7 @@ const UltimateContent2025Showcase: React.FC = () => {
                   className={`w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${getTypeGradient(item.type)} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 group`}
                 >
                   <span>Read {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <span className="w-4 h-4 group-hover:translate-x-1 transition-transform">📊</span>
                 </Link>
               </div>
             </div>

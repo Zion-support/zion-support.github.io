@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs && fs.readFileSync(filePath, 'utf8'); const stats = fs && fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats && stats.size, lines: content && content.split('\n').length,
@@ -19,31 +15,16 @@
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};; async walkDirectory(dir) {; const analyses = [];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ; async walkDirectory(dir) {; const analyses = [];
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ; async walkDirectory(dir) {; const analyses = [];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);`;
 ; if (stat && stat.isDirectory()) {; if (!fullPath && fullPath.includes('node_modules') &&; !fullPath && fullPath.includes('.git') &&; !fullPath && fullPath.includes('dist') &&; !fullPath && fullPath.includes('build') &&; !fullPath && fullPath.includes('.next') &&; !fullPath && fullPath.includes('coverage') &&; !fullPath && fullPath.includes('logs')) {; const subAnalyses = await this && this.walkDirectory(fullPath); analyses && analyses.push(...subAnalyses)}} else if (stat && stat.isFile()) {; const ext = path && path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this && this.analyzeFile(fullPath); if (analysis) {; analyses && analyses.push(analysis)}}}}} catch (error) {; this && this.log(`Error walking directory ${dir}: ${error && error.message}`)};
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
-<<<<<<< HEAD
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
@@ -83,8 +64,6 @@
 
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }}; async analyzeFile(filePath) {try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath); const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length
     issues: []}; // Check for common code quality issues; const lines = content.split('\n'); lines.forEach((line, index) = > {const lineNum = index + 1; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found'
     severity: 'low'})}; // Long lines (over 120 characters); if (line.length > 120) {analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`
@@ -117,8 +96,6 @@ const monitor = new CodeQualityMonitor();
 ; analyses.forEach(analysis = > {; analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       , totalFiles; totalIssues; issuesByType; issuesBySeverity
     }
     files: analyses.filter(analysis = > analysis.issues.length > 0)
@@ -183,16 +160,7 @@ monitor.run().catch(error = > {process.exit(1)});
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error = > {; process.exit(1)});
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 pr-12325
@@ -219,20 +187,13 @@ pr-12325
             message: 'Trailing spaces found';',
   severity: 'low';')
           });
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 }};
 monitor && monitor.run().catch(error = > {; process && process.exit(1)});
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   };
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ,
   async analyzeFile(filePath) {,
     try {,
@@ -255,7 +216,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
             message: 'Trailing spaces found',
             severity: 'low',')
           }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         };
 ,
         // Long lines (over 120 characters),
@@ -306,18 +266,10 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
             const analysis = await this.analyzeFile(fullPath),
             if (analysis) {,
               analyses.push(analysis),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             };
           };
         };
       };
-<<<<<<< HEAD
     } catch (error) {,
 
       this.log(`Error walking directory ${dir}: ${error.message}`),
@@ -555,14 +507,8 @@ const monitor = new CodeQualityMonitor(),;
 monitor.run().catch(error => {,;
         issuesBySeverity[issue.severity]++
       })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }),
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
 
     const report = {,
@@ -571,22 +517,12 @@ monitor.run().catch(error => {,;
         totalFiles,
         totalIssues,
 issuesByType,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         issuesBySeverity,
       files: analyses.filter(analysis => analysis.issues.length > 0),
       recommendations: this.generateRecommendations(issuesByType, totalIssues),
     return report,
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 ,
 
@@ -596,64 +532,37 @@ issuesByType,
       recommendations.push({,
         priority: 'low',
         message: 'Remove trailing spaces from files',
-<<<<<<< HEAD
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
         action: 'Run the lint-fixer to automatically remove trailing spaces',')
 
     if (issuesByType['console-statement'] > 0) {,
         priority: 'medium',
         message: 'Remove console statements from production code',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         action: 'Replace console statements with proper logging or remove them',
       }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
         action: 'Replace console statements with proper logging or remove them',
       }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
-=======
         action: 'Replace console statements with proper logging or remove them',
       }),    };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
         action: 'Replace console statements with proper logging or remove them',')
 
     if (issuesByType['unused-import'] > 0) {,
         type: 'unused-import',
 priority: 'medium',
-<<<<<<< HEAD
         message: 'Remove unused imports',
-<<<<<<< HEAD
         action: 'Clean up unused imports to reduce bundle size',
       }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
         action: 'Clean up unused imports to reduce bundle size',
       }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
 ,
         action: 'Clean up unused imports to reduce bundle size',')
@@ -662,22 +571,14 @@ priority: 'medium',
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
-<<<<<<< HEAD
         action: 'Run comprehensive code cleanup and establish coding standards',
       }),
     };
 ,
     return recommendations,
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
         action: 'Run comprehensive code cleanup and establish coding standards',')
     return recommendations,
@@ -685,39 +586,22 @@ priority: 'medium',
   async saveReport(report) {,
       const reportDir = path.dirname(this.reportFile),
 if (!fs.existsSync(reportDir)) {,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         fs.mkdirSync(reportDir, { recursive: true }),
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),`;
       this.log(`Report saved to: ${this.reportFile}`),
       this.log(`Error saving report: ${error.message}`),
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
 
   async checkGitStatus() {,
       const status = execSync('git status --porcelain', {,
 cwd: this.projectRoot,
-<<<<<<< HEAD
-<<<<<<< HEAD
         encoding: 'utf8',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         encoding: 'utf8',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }),
 ,
 
@@ -730,9 +614,6 @@ cwd: this.projectRoot,
       this.log(`Error checking git status: ${error.message}`),
       return false,
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
   };
 ,
@@ -742,18 +623,10 @@ this.log('🔍 Starting Code Quality Monitor...'),
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursive: true }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
         fs.mkdirSync(logsDir, { recursive: true }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
 
         fs.mkdirSync(logsDir, { recursive: true }),
@@ -777,42 +650,25 @@ this.log('\n📊 Code Quality Report Summary: '),
       this.log(`Total issues: ${report.summary.totalIssues}`),
       this.log(`Duration: ${duration}ms`),
       if (report.summary.totalIssues > 0) {,
-<<<<<<< HEAD
-        this.log('\n🚨 Issues by type: '),
-        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
-<<<<<<< HEAD
-          this.log(`  ${type}: ${count}`),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
           this.log(`  ${type}: ${count}`),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        this.log('\n🚨 Issues by type: '),
+        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
+          this.log(`  ${type}: ${count}`),
         }),
-=======
           this.log(`  ${type}: ${count}`),        }),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         }),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ,
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-<<<<<<< HEAD
-<<<<<<< HEAD
           this.log(`    Action: ${rec.action}`),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
           this.log(`    Action: ${rec.action}`),
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         }),
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,`;
@@ -825,18 +681,12 @@ this.log('\n📊 Code Quality Report Summary: '),
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues'),
       } else {,
         this.log('✨ Excellent! No code quality issues found!'),
       this.log(`❌ Error running code quality monitor: ${error.message}`),
       process.exit(1),
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   };
 };
@@ -844,16 +694,10 @@ this.log('\n📊 Code Quality Report Summary: '),
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
-<<<<<<< HEAD
   process.exit(1),
 }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
   process.exit(1),
 }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
@@ -861,11 +705,8 @@ monitor.run().catch(error => {,
 
 )
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }}
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
     issues: []}
@@ -944,15 +785,11 @@ if (&&) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 monitor.run().catch(error = > {; process.exit(1)});
 
   process.exit(1);
 });
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   },;
 ,;
@@ -1123,9 +960,6 @@ monitor.run().catch(error = > {; process.exit(1)});
         this.log('✨ Excellent! No code quality issues found!');
       }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {,;
       this.log(`❌ Error running code quality: monitor: ${error.message}`),;
 // Run the code quality monitor,;
@@ -1133,30 +967,11 @@ const monitor = new CodeQualityMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 });
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   process.exit(1)
 }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 monitor.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-=======
 monitor.run().catch(error => {,;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   process.exit(1)
 }),
@@ -1164,5 +979,3 @@ monitor.run().catch(error => {,;)
 monitor.run().catch(error = > {; process.exit(1)});
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

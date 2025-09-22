@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useState, useMemo  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {
@@ -21,13 +12,7 @@ import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -37,40 +22,26 @@ export function useFilterTalents(talents: TalentProfile[]) {;
   const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15]);
   const [sortOption, setSortOption] = useState<string>('relevance');
   const toggleSkill = (skill: string) => {
-<<<<<<< HEAD
 
     setSelectedSkills(prev => 
       prev && prev.includes(skill) 
         ? prev && prev.filter(s => s !== skill)
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         : [...prev, skill]
     )
   }
   const toggleAvailability = (availability: string) => {
-<<<<<<< HEAD
 
     setSelectedAvailability(prev => 
       prev && prev.includes(availability) 
         ? prev && prev.filter(a => a !== availability)
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         : [...prev, availability]
     )
   }
   const toggleRegion = (region: string) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     setSelectedRegions(prev => 
       prev && prev.includes(region) 
         ? prev && prev.filter(r => r !== region)
-=======
 
 import {useState, useMemo} from 'react';'
 import {TalentProfile} from '@/types/talent';
@@ -84,17 +55,14 @@ export function useFilterTalents() { return null; }
     )
   }
   const toggleRegion = (region: string) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         : [...prev, region]
     )
   }
   const clearFilters = () => {'
-=======
         : [...prev, region]
     )
   }
   const clearFilters = () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setSearchTerm('');
     setSelectedSkills([]);
     setSelectedAvailability([]);
@@ -114,18 +82,12 @@ setExperienceRange([0, 15]);'
         talent && talent.professional_title.toLowerCase().includes(lowerSearch) ||
         talent && talent.bio?.toLowerCase().includes(lowerSearch) ||
         talent && talent.skills?.some(skill => skill && skill.toLowerCase().includes(lowerSearch))
-<<<<<<< HEAD
 
       )
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useMemo } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useFilterTalents() { return null; }
-=======
 
       )
 
@@ -145,7 +107,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         ? prev.filter(s => s !== skill);
         : [...prev, skill];
     );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },;
   const toggleAvailability = (availability: string) => {;
     setSelectedAvailability(prev =>;
@@ -183,19 +144,15 @@ setExperienceRange([0, 15]),;'
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch));
       );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     // Filter by selected skills
     if (selectedSkills && selectedSkills.length > 0) {
-=======
     }
     // Filter by selected skills
 
     }
     // Filter by selected skills
     if (selectedSkills && selectedSkills.length > 0) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       result = result && result.filter(talent => 
         selectedSkills && selectedSkills.every(skill => 
           talent && talent.skills?.some(talentSkill => 
@@ -213,15 +170,11 @@ setExperienceRange([0, 15]),;'
         selectedRegions && selectedRegions.some(region => 
           talent && talent.location?.includes(region)
 
-<<<<<<< HEAD
         )
       )
     }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Filter by price range
       return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
     });
@@ -231,13 +184,11 @@ setExperienceRange([0, 15]),;'
     // Sort talents;
     switch (sortOption) {'
       case 'price-low':
-<<<<<<< HEAD
 
         result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
 
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         result.sort((a, b) => (a.hourly_rate |0) - (b.hourly_rate |0));
         break;
       case 'price-high':
@@ -249,13 +200,7 @@ setExperienceRange([0, 15]),;'
       case 'experience':
         result.sort((a, b) => (b.years_experience |0) - (a.years_experience |0));
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     // Filter by price range;
     result = result.filter(talent => {;
@@ -282,12 +227,8 @@ setExperienceRange([0, 15]),;'
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0)),;
         break,;
       default: // Default sorting by relevance (no specific order);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         break;
-=======
         break;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'price-high':
         result && result.sort((a, b) => (b && b.hourly_rate || 0) - (a && a.hourly_rate || 0));
         break;'
@@ -296,25 +237,13 @@ setExperienceRange([0, 15]),;'
         break;'
       case 'experience':
 result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_experience || 0));
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         break;
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Filter by price range
       return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
     });
 // Filter by experience range        break;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     // Filter by experience range
 
     result = result && result.filter(talent => {
@@ -375,29 +304,15 @@ result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_e
       case 'experience':
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
         break;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       default: // Default sorting by relevance (no specific order)
         break;
     }
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return result
-=======
 
     return result;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
   return {}
     filteredTalents;
@@ -412,13 +327,8 @@ result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_e
     setExperienceRange;
     sortOption;
     setSortOption;
-<<<<<<< HEAD
     toggleSkill;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),;
   return {;
@@ -436,12 +346,10 @@ result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_e
     setSortOption,;
     toggleSkill,;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     toggleAvailability;
     toggleRegion;
 
     clearFilters}
-<<<<<<< HEAD
 }
 import {TalentProfile} from '@/types / talent';
 export /**;
@@ -486,9 +394,7 @@ const filtered_talents = useMemo (() => {}
 if ( {) {}
   $2;
 }
-=======
   $2;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const lower_search = search_term.toLowerCase ();
       result = result.filter (talent =>;)
         talent.full_name.toLowerCase ().includes (lower_search) ||;
@@ -540,8 +446,6 @@ switch (sort_option) {'
         result.sort ((a, b) => (b.average_rating || 0) - (a.average_rating || 0));
         break;'
       case 'experience':;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         result.sort ((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
   }, [talents, search_term, selected_skills, selected_availability, selected_regions, price_range, experience_range, sort_option]);
 ;
@@ -559,10 +463,7 @@ return {}
     toggle_region;
     clear_filters}
 toggleAvailability;
-=======
     toggleSkill;    toggleAvailability;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 }
 
@@ -589,30 +490,13 @@ export function useFilterTalents(talents:TalentProfile[]) {;
 }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
 }
     toggleAvailability;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     toggleRegion;
 
     clearFilters}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   result = result.filter (talent => selectedAvailability.includes (talent.availability type || ) // Filter by location/region if (selectedRegions.length > 0) {
   result = result.filter (talent => selectedRegions.some (region => talent.location?.includes (region) ) return result;
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

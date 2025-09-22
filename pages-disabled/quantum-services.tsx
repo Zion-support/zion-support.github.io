@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
     {
@@ -43,7 +38,6 @@ const QuantumServicesPage: React.FC = () => {
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -58,8 +52,6 @@ const QuantumServicesPage: React.FC = () => {
                   viewport={{ once: true }}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       : 'border-gray-700 hover:border-blue-500'
                   }`}
                 >
@@ -296,9 +288,6 @@ className="text - center mb - 16";
                     href="/contact"
                   <a 
                     href="/contact"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -309,11 +298,6 @@ className="text - center mb - 16";
           </div>
         </section>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -348,7 +332,6 @@ transition={{ duration: 0 && 0.8 }}
       </main>
     </Layout>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 import React from 'react';
                       <span className="text - lg text - gray-400">/{service.period}</span>;
@@ -358,10 +341,8 @@ import React from 'react';
                     {service.features.map ((feature, feature_index) => (
 <li key={feature_index} className="flex items - center text - gray - 300">;
                         <CheckCircle className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
-=======
                       <li key={feature_index} className="flex items - center text - gray-300">;
                         <CheckCircle className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink-0" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {feature}
                       </li>))}
                   </ul>;
@@ -412,10 +393,6 @@ className="px - 8 py - 4 border - 2 border - blue - 400 text - blue - 400 font -
 }
 ;
 export default QuantumServicesPage;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   )
 }
@@ -423,4 +400,3 @@ export default QuantumServicesPage;
 
 export default QuantumServicesPage;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

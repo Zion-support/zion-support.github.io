@@ -1,38 +1,40 @@
+import Link from 'next/link';
 import React from 'react';
 
-const NewContentPromotionBanner: React.FC = () => {
-  return (
-    <div className="py-16 bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <div className="text-sm font-semibold text-purple-700 mb-2">Just published</div>
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Zero-Trust Agent Architecture</h2>
-            <p className="text-lg text-gray-600 max-w-2xl">Blueprint for zero-trust agents with isolation domains, policy-as-code, and runtime guards.</p>
-          </div>
-          <div className="flex gap-3">
-            <a href="/blog/ai-2026-zero-trust-agent-architecture" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read →</a>
-            <a href="/blog/ai-2026-privacy-preserving-agents" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Privacy</a>
-          </div>
-        </div>
-        <div className="mt-6 bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <div className="text-sm font-semibold text-purple-700 mb-2">Also new</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Privacy-Preserving Agents</h3>
-            <p className="text-lg text-gray-600 max-w-2xl">Private-by-default agents using scoped memory, redaction, and confidential computing.</p>
-          </div>
-          <a href="/blog/ai-2026-privacy-preserving-agents" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Read →</a>
-=======
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: LLM Evals Maturity Model</h2>
-            <p className="text-lg text-gray-600 max-w-2xl">An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.</p>
-          </div>
-          <a href="/blog/ai-2026-llm-evals-maturity-model" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article →</a>
->>>>>>> origin/feature/new-content-and-promotions
-        </div>
-      </div>
-    </div>
-  );
+export const metadata = {
+  title: 'NewContentPromotionBanner',
+  description: 'NewContentPromotionBanner - Professional blog page with comprehensive information and insights.'
 };
 
-export default NewContentPromotionBanner;
+export default function NewContentPromotionBannerPage() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Blog</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">NewContentPromotionBanner</h1>
+      <p className="text-gray-600 mb-8">
+        NewContentPromotionBanner - Professional blog page with comprehensive information and insights.
+      </p>
+
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about newcontentpromotionbanner with 
+          detailed insights and practical guidance.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
+
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
+    </main>
+  );
+}

@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
 
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   useEffect(() => {;
     const fetchSavedTalents = async () => {;
@@ -24,9 +18,7 @@ import { TalentCard } from "@/components/talent/TalentCard",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 export default function SavedTalentsPage() {
@@ -43,15 +35,12 @@ const { user } = useAuth();
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsLoading(true);
       try {;
         if (!user) {;
           console && console.warn("User not authenticated.");
           return;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect } from './react';'
 import { AppHeader } from '@/layout / AppHeader';'
@@ -89,10 +78,7 @@ if ( {) {}
             `;
 
 talent_profile (
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             talent_profile (
 
   const { user } = useAuth();
@@ -109,7 +95,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { toast } from "@/components/ui/use-toast";
-=======
 
   const navigate = useNavigate();"
 import { useState, useEffect } from "react","
@@ -121,7 +106,6 @@ import { useAuth } from "@/hooks/useAuth","
 import { supabase } from "@/integrations/supabase/client","
 import { TalentProfile } from "@/types/talent",";
 import { toast } from "@/components/ui/use-toast";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useNavigate } from "react-router-dom";
 export default function SavedTalentsPage() {};
   const { user } = useAuth();
@@ -151,16 +135,12 @@ export default function SavedTalentsPage() {}
           return;
         }
 talent_profile (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
         const { data, error } = await supabase
           .from("saved_talents")
           .select(
             `
             talent_profile (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               id;
               user_id;
               full_name;
@@ -173,16 +153,12 @@ talent_profile (
               skills;
               location;
               availability;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);        if (data) {
-=======
 
         if (data) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
@@ -192,10 +168,8 @@ talent_profile (
           `;
 
           );
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           .eq("user_id", user && user.id);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (error) {;
           throw error;
               is_verified);`
@@ -216,10 +190,8 @@ if ( {) {
           const talent_profiles = data.map (
             item => item.talent_profile as unknown as TalentProfile);
           setSavedTalents (talent_profiles);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
 
-<<<<<<< HEAD
         console.error ("Error fetching saved talents:", error);
         toast ({"
           title: "Error","
@@ -229,7 +201,6 @@ if ( {) {
         // Check condition;
 if ( {) {}
   $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
           // Extract talent profiles and convert to TalentProfile type;
           const talent_profiles = data.map (
@@ -247,17 +218,13 @@ if ( {) {}
         setIsLoading (false);
       }
 
-<<<<<<< HEAD
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {}`
     navigate(`/talent/${talentId}`)
 }
     },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const handleRequestHire = (talent: TalentProfile) => {
     console.log("Request to hire:", talent);
@@ -265,8 +232,6 @@ if ( {) {}
       title: "Hire Request Sent"
       description: `A hire request has been sent to ${talent.full_name}.`})
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleRequestHire = (talent: TalentProfile) => {"
     // // // console.log("Request to hire:", talent),
@@ -290,29 +255,20 @@ return
         if (error) {
           throw error
         }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
           title: "Error",,
   description: "Failed to load saved talents. Please try again later.",;
-=======
         return;
       } catch (error) {;"
         console.error("Error fetching saved talents:", error),;
         toast({;"
           title: "Error",;"
           description: "Failed to load saved talents. Please try again later.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   const handleRequestHire = (talent: TalentProfile) => {
     // // // console.log("Request to hire:", talent),
@@ -330,7 +286,6 @@ return
         toast({;
           title: "Error",;
           description: "Failed to load saved talents. Please try again later.",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
@@ -362,22 +317,14 @@ title: "Hire Request Sent",,
           .eq('user_id', user.id);'
           .eq('talent_id', talentId),;
         if (error) {;
-<<<<<<< HEAD
           throw error;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           throw error;        setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );        }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
 );
@@ -404,9 +351,6 @@ title: "Hire Request Sent",,
           .select('*')'
           .eq('id', talentId)
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           throw error;
 
         }
@@ -441,32 +385,22 @@ title: "Hire Request Sent",,
           .select('*')
           .eq('id', talentId)
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           .single(),
 
 if (talentError) {"
           console.error("Error fetching talent profile:", talentError);
-<<<<<<< HEAD
         if (talentError) {
           console.error("Error fetching talent profile:", talentError),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           toast({
-=======
         ),          toast({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         ),          toast({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         if (talentError) {
           console.error("Error fetching talent profile:", talentError);
         if (talentError) {
           console.error("Error fetching talent profile:", talentError),
           toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             title: "Error"
             description: "Failed to update saved talents. Please try again later."
-=======
 
         if (talentError) {"
           console.error("Error fetching talent profile:", talentError),
@@ -474,7 +408,6 @@ if (talentError) {"
           toast({"
             title: "Error""
             description: "Failed to update saved talents. Please try again later.""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             variant: "destructive"})
           return;
         }
@@ -493,9 +426,6 @@ if (talentData) {
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         if (data) {;
           // Extract talent profiles and convert to TalentProfile type;
@@ -595,13 +525,7 @@ if (talentData) {
         variant: "destructive"});
 
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         if (data) {;
           // Extract talent profiles and convert to TalentProfile type;
@@ -702,14 +626,11 @@ if (talentData) {
 
     }
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>;
       <SEO
         title="Saved Talents | Zion AI Marketplace"
-<<<<<<< HEAD
         description="View and manage your saved talents in the Zion AI Marketplace"
     },;
 ;
@@ -804,7 +725,6 @@ return (
         title="Saved Talents | Zion AI Marketplace""
         description="View and manage your saved talents in the Zion AI Marketplace"
 
-<<<<<<< HEAD
   return (
     <>;
       <SEO
@@ -814,7 +734,6 @@ return (
   }
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <SEO
@@ -835,13 +754,8 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 key={talent.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}
               <TalentCard
 
@@ -891,20 +805,14 @@ return (
         variant: "destructive"});
     }
   };
-<<<<<<< HEAD
-=======
 },;
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (;
     <>;
       <SEO;
         title="Saved Talents | Zion AI Marketplace";
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description="View and manage your saved talents in the Zion AI Marketplace";
-=======
   return (;
     <>;
       <SEO;"
@@ -920,8 +828,6 @@ return (
         </p>;
 
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         description="View and manage your saved talents in the Zion AI Marketplace";
 
       />;
@@ -943,7 +849,6 @@ return (
               <TalentCard
                 key={talent && talent.id}
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fetchSavedTalents ();
   }, [user]);
 ;
@@ -1050,15 +955,12 @@ if ( {) {}
           Here are the talents you've saved for future reference.;
         </p>;
         {is_loading ? (
-<<<<<<< HEAD
           <div className="text - center py-8">Loading saved talents...</div>) : saved_talents.length === 0 ? (
           <div className="text - center py-8">No talents saved yet.</div>) : (
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt-8">;
-=======
           <div className="text - center py-8">Loading saved talents...</div>) : saved_talents.length === 0 ? (
           <div className="text - center py-8">No talents saved yet.</div>) : (
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {saved_talents.map ((talent) => (
               <TalentCard;
 
@@ -1170,10 +1072,6 @@ pr-12325
 
                 key={talent.id}
                 talent={talent}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {isLoading ? (;
           <div className="text-center py-8">Loading saved talents...</div>;
         ) :savedTalents.length === 0 ? (;
@@ -1183,21 +1081,11 @@ pr-12325
             {savedTalents.map((talent) => (;
               <TalentCard;
                 key={talent.id}                talent={talent}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 onViewProfile={handleViewProfile}
                 onRequestHire={handleRequestHire}
                 is_saved={true}
                 onToggleSave={handleToggleSave}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 is_authenticated={!!user}
               />))}
@@ -1205,7 +1093,6 @@ pr-12325
       </div>;
       <Footer />;
     </>);
-<<<<<<< HEAD
 }
 
         {isLoading ? (;"
@@ -1222,13 +1109,11 @@ pr-12325
                 onRequestHire={handleRequestHire}
                 isSaved={true}
                 onToggleSave={handleToggleSave}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 isAuthenticated={!!user}
               />
             ))}
           </div>
         )}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       </div>
       <Footer />
@@ -1246,12 +1131,8 @@ pr-12325
         )}
 
       </div>;
-=======
 }      </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }      </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Footer />;
     </>;
   ),; export default function SavedTalentsPage () {}
@@ -1328,21 +1209,7 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> <Footer /> </>) 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                 is_authenticated={!!user})
 
@@ -1404,4 +1271,3 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 pr-12325
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

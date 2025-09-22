@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
@@ -8,43 +7,28 @@ import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { ClientDashboard } from "../components/dashboard/ClientDashboard";
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-<<<<<<< HEAD
   const isClient = user?.userType === "employer" || user?.userType === "buyer";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
-=======
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const isClient = user?.userType === "employer" || user?.userType === "buyer";
 
 import React from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
-=======
 
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
-=======
 
 "
 import React from "react","
@@ -52,47 +36,29 @@ import { MobileHeader } from "../components/common/MobileHeader","
 import { BottomNavigation } from "../components/common/BottomNavigation","
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",";
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {};
   const { user } = useAuth();
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
-=======
 "
 import { TalentDashboard } from "../components/dashboard/TalentDashboard","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth",
 export function MobileHome() {}
   const { user } = useAuth(),'
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
 
-<<<<<<< HEAD
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen">
       <MobileHeader
         title={isClient ? "Client Dashboard" : "Talent Dashboard"}
         showNotifications
         showSettings
-<<<<<<< HEAD
-<<<<<<< HEAD
       />
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <main className="py-4">
 import React from "react",;
@@ -114,13 +80,7 @@ export function MobileHome() {;
       />;
 
       <main className="py-4">;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       />
 import React from "react";""
 import { MobileHeader } from "../components/common/MobileHeader";""
@@ -141,15 +101,12 @@ import { ClientDashboard } from "../components/dashboard/ClientDashboard",""
   return (
 
 <main className="py-4">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
 
       <BottomNavigation />
 </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -177,7 +134,6 @@ function MobileHome() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -226,13 +182,7 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return ("
     <div className="min-h-screen">
@@ -243,14 +193,9 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
       />
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     </div>;"
 min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomNavigation /> </div>)"
         title={isClient ? "Client Dashboard" : "Talent Dashboard"} ;"
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 
 export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
@@ -26,12 +25,7 @@ import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface ApplicationCardProps {;
   application: JobApplication;
 }
@@ -47,53 +41,32 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {;
     switch (application && application.status) {;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ApplicationCardProps {
   application: JobApplication
 }
 
-<<<<<<< HEAD
 interface ApplicationCardProps {
   application: JobApplication
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ApplicationCard({ application }: ApplicationCardProps) {
-=======
 }export function ApplicationCard({ application }: ApplicationCardProps) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }export function ApplicationCard({ application }: ApplicationCardProps) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
-<<<<<<< HEAD
     toast.info("Resume download functionality will be implemented soon")
-<<<<<<< HEAD
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const renderActionButtons = () => {
     switch (application.status) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case "shortlisted": return (
-=======
     toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       case "shortlisted": return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button variant="default" size="sm">;
-=======
 import {useState} from "react";"
 import {formatDistanceToNow} from "date-fns";"
 import {JobApplication} from "@/types/jobs";"
@@ -135,7 +108,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {}
 "
       case "shortlisted": return (";
           <Button variant="default" size="sm">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
         );"
@@ -161,27 +133,13 @@ export function ApplicationCard({ application }: ApplicationCardProps) {}
         return null;
 
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
-=======
   }    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
             </div>;
           </div>;
@@ -235,16 +193,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {}
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
                 </div>
               </div>
-<<<<<<< HEAD
 
             )}
           </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 
 import { useState } from './react';
@@ -320,13 +272,11 @@ function ApplicationCard() {
             <div className="text-sm text-muted-foreground mt-1">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
             </div>;
-=======
 
   return (
         {expanded && (
           <div className="mt - 4 space-y-3">;
             {application.cover_letter && (            </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>;
           <StatusBadge status={application.status} />;
         </div>;
@@ -361,7 +311,6 @@ function ApplicationCard() {
                     <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
                   </div>;
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>;
-=======
         {expanded && ("
           <div className="mt - 4 space - y-3">;
             {application.cover_letter && (
@@ -453,7 +402,6 @@ export function ApplicationCard() { return null; }
 
                   </div>;"
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Download className="h-3 w-3 mr-1" /> Download;
                   </Button>;
                 </div>;
@@ -480,29 +428,15 @@ export function ApplicationCard() { return null; }
               </div>;
             )}
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
             )}
           </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         )}
 
 <CardFooter className="flex flex-col gap-3 pt-0">;
         <div className="flex justify-between items-center w-full">;
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         )}
 
       </CardContent>;
@@ -511,15 +445,11 @@ export function ApplicationCard() { return null; }
         <div className="flex justify-between items-center w-full">;
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {expanded ? "Show Less" : "Show More"}
           </Button>;"
           <div className="flex gap-2">;
             {renderActionButtons()}
 <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       </CardContent>
       <CardFooter className="flex flex-col gap-3 pt-0">
         <div className="flex justify-between items-center w-full">
@@ -529,7 +459,6 @@ export function ApplicationCard() { return null; }
           <div className="flex gap-2">
             {renderActionButtons()}
             <Button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               variant="outline"
               size="sm"
               asChild
@@ -540,51 +469,25 @@ export function ApplicationCard() { return null; }
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         <Button 
-=======
             <Button;
         <Button "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           variant="secondary" 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 <Button
           variant="secondary"
         <Button 
           variant="secondary"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           size="sm"
-=======
 
 "
           size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="w-full"
           asChild;
         >
@@ -594,10 +497,7 @@ export function ApplicationCard() { return null; }
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
               variant="outline"
               size="sm"
               asChild>;`
@@ -616,7 +516,6 @@ export function ApplicationCard() { return null; }
                     <span className="text - sm font - medium">{application.resume.title || "Resume"}</span>;
                   </div>;"
                   <Button variant="ghost" size="sm" on_click={handleDownloadResume}>;"
-=======
   )
 
               variant="outline" 
@@ -636,7 +535,6 @@ export function ApplicationCard() { return null; }
                     <span className="text - sm font - medium">{application.resume.title || "Resume"}</span>;
                   </div>;
                   <Button variant="ghost" size="sm" on_click={handleDownloadResume}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Download className="h - 3 w - 3 mr - 1" /> Download;
                   </Button>;
                 </div>;
@@ -696,9 +594,7 @@ export function ApplicationCard() { return null; }
           </div>;
         </div>;
 
-=======
                 <ExternalLink className="h - 4 w - 4 mr - 1" /> View Job;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
           variant="secondary";""
           size="sm";""
@@ -751,25 +647,14 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
   application.match score 
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
 }</div>) 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) 
 }
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 } </div> </div>) "
   application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {"
 </div>)"
@@ -777,4 +662,3 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 }</div>) "
 } <Button variant="outline" size="sm" asChild >   </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild >    )""`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

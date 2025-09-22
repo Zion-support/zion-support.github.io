@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Users, Star, Clock, ArrowRight, Filter, Search, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -103,13 +102,13 @@ const NewContent2025ShowcaseSection: React.FC = () => {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':
-        return <TrendingUp className="w-5 h-5" />;
+        return <span className="w-5 h-5">📊</span>;
       case 'case-study':
-        return <Users className="w-5 h-5" />;
+        return <span className="w-5 h-5">📊</span>;
       case 'resource':
-        return <Star className="w-5 h-5" />;
+        return <span>Star</span>;
       default:
-        return <TrendingUp className="w-5 h-5" />;
+        return <span className="w-5 h-5">📊</span>;
     }
   };
 
@@ -161,7 +160,7 @@ const NewContent2025ShowcaseSection: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <div className="flex-1">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <span>Search</span>
               <input
                 type="text"
                 placeholder="Search content..."
@@ -230,7 +229,7 @@ const NewContent2025ShowcaseSection: React.FC = () => {
                     <span>{getTypeLabel(item.type)}</span>
                   </div>
                   <div className="flex items-center space-x-1 text-sm text-gray-500">
-                    <Clock className="w-4 h-4" />
+                    <span>Clock</span>
                     <span>{item.readingTime}</span>
                   </div>
                 </div>
@@ -294,7 +293,7 @@ const NewContent2025ShowcaseSection: React.FC = () => {
                   className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors group"
                 >
                   Read {getTypeLabel(item.type)}
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <span className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">📊</span>
                 </Link>
               </div>
             </div>
@@ -316,7 +315,7 @@ const NewContent2025ShowcaseSection: React.FC = () => {
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Get Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <span className="w-4 h-4 ml-2">📊</span>
               </Link>
               <Link
                 href="/resources"

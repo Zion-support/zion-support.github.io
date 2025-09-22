@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 
   talent: TalentProfile
   onClose: () => void
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   initialJobTitle?: string;
   userDetails?: {;
@@ -25,22 +22,17 @@ import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {};
   talent: TalentProfile;
   onClose: () => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   initialJobTitle?: string;
 
 initialJobTitle?: string;
   userDetails?: {;
     name?: string;
     email?: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   userDetails?: {
     name?: string,
     email?: string,
     id?: string
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   },
 
   onSubmitSuccess?: () => void;
@@ -50,30 +42,21 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
 
-<<<<<<< HEAD
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
 
     initialJobTitle;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     userDetails
 }),
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   });    initialJobTitle;
     userDetails
   });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   initialJobTitle?: string;  onSubmitSuccess?: () => void
-=======
 
   },
 
   onSubmitSuccess?: () => void
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
 
@@ -93,8 +76,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     initialJobTitle;
     userDetails
   });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
     onClose: onSubmitSuccess || onClose, ;
@@ -114,7 +95,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails
   });
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Form {...form}>"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">"
@@ -135,21 +115,15 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             disabled={isSubmitting}
           >
 Cancel
-<<<<<<< HEAD
-<<<<<<< HEAD
           </Button>
           <Button
             type="submit"
-=======
           <Button"
             type="submit""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           </Button>
 
           <Button
             type="submit"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
           >
@@ -318,8 +292,6 @@ return (
             disabled={isSubmitting}>;
             Cancel;
           </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -332,23 +304,18 @@ return (
               </>;
 ) : (;
               'Submit Request';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             ) :(;
 '
               'Submit Request';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
 
           </Button>;
         </DialogFooter>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-=======
   );
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from './react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components / ui / button';
@@ -366,14 +333,12 @@ export interface HireRequestFormProps {}
   on_close: () => void,;
   initialJobTitle?: string;
   user_details?: {}
-=======
 import { BudgetFields } from './BudgetFields';
 export interface HireRequestFormProps {
   talent: TalentProfile,
   on_close: () => void,
   initialJobTitle?: string;
   user_details?: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     name?: string;
     email?: string;
     id?: string;
@@ -455,9 +420,6 @@ Cancel;
       </form>;
     </Form>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
  export interface HireRequestFormProps {
   talent: TalentProfile;
@@ -496,20 +458,9 @@ return (<Form {
     </Form>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           </Button>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
     </Form>'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -5,7 +5,6 @@ import {
   MessageCircle, Send, Bot, User, Loader, 
   X, Minimize2, Maximize2, HelpCircle,
   Lightbulb, Zap, BookOpen, TrendingUp
-} from 'lucide-react';
 
 interface Message {
   id: string;
@@ -94,10 +93,10 @@ const InteractiveAIAssistant: React.FC = () => {
   };
 
   const quickActions = [
-    { icon: <ArrowRight className="w-4 h-4" />, label: "AI Strategy", action: "Help me develop an AI strategy" },
-    { icon: <TrendingUp className="w-4 h-4" />, label: "ROI Analysis", action: "Calculate AI ROI for my business" },
-    { icon: <BookOpen className="w-4 h-4" />, label: "Implementation", action: "Guide me through AI implementation" },
-    { icon: <Zap className="w-4 h-4" />, label: "Optimization", action: "Optimize my current AI systems" }
+    { icon: <span className="w-4 h-4">📊</span>, label: "AI Strategy", action: "Help me develop an AI strategy" },
+    { icon: <span className="w-4 h-4">📊</span>, label: "ROI Analysis", action: "Calculate AI ROI for my business" },
+    { icon: <span className="w-4 h-4">📊</span>, label: "Implementation", action: "Guide me through AI implementation" },
+    { icon: <span className="w-4 h-4">📊</span>, label: "Optimization", action: "Optimize my current AI systems" }
   ];
 
   return (
@@ -149,7 +148,7 @@ const InteractiveAIAssistant: React.FC = () => {
                   onClick={() => setIsOpen(false)}
                   className="p-1 hover:bg-white hover:bg-opacity-20 rounded"
                 >
-                  <X className="w-4 h-4" />
+                  <span>X</span>
                 </button>
               </div>
             </div>
@@ -175,7 +174,7 @@ const InteractiveAIAssistant: React.FC = () => {
                             <Bot className="w-4 h-4 mt-1 flex-shrink-0" />
                           )}
                           {message.type === 'user' && (
-                            <User className="w-4 h-4 mt-1 flex-shrink-0" />
+                            <span>User</span>
                           )}
                           <div className="flex-1">
                             <p className="text-sm">{message.content}</p>

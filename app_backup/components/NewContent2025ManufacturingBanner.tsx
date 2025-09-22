@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Factory, TrendingUp, Shield, Zap, ArrowRight } from 'lucide-react';
 
 const NewContent2025ManufacturingBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,7 +43,7 @@ const NewContent2025ManufacturingBanner = () => {
                 <span className="text-sm font-medium">NEW: MANUFACTURING AI REVOLUTION</span>
               </div>
               <div className="hidden sm:flex items-center space-x-2 bg-green-500/20 rounded-full px-3 py-1">
-                <TrendingUp className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
                 <span className="text-xs font-medium">500% ROI</span>
               </div>
             </div>
@@ -61,15 +60,15 @@ const NewContent2025ManufacturingBanner = () => {
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Shield className="w-5 h-5 text-green-300" />
+                <span className="w-5 h-5 text-green-300">📊</span>
                 <span className="text-sm font-medium">92% Defect Reduction</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Zap className="w-5 h-5 text-yellow-300" />
+                <span className="w-5 h-5 text-yellow-300">📊</span>
                 <span className="text-sm font-medium">78% Efficiency Gain</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <TrendingUp className="w-5 h-5 text-blue-300" />
+                <span className="w-5 h-5 text-blue-300">📊</span>
                 <span className="text-sm font-medium">$50M Annual Savings</span>
               </div>
             </div>
@@ -80,14 +79,14 @@ const NewContent2025ManufacturingBanner = () => {
                 className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <span>Read Full Guide</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
               </Link>
               <Link
                 href="/case-studies/fortune-500-manufacturing-ai-transformation-2025"
                 className="inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 <span>View Case Study</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
               </Link>
             </div>
           </div>
@@ -124,7 +123,7 @@ const NewContent2025ManufacturingBanner = () => {
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
         aria-label="Dismiss banner"
       >
-        <X className="w-6 h-6" />
+        <span>X</span>
       </button>
     </div>
   );

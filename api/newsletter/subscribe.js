@@ -1,4 +1,53 @@
 <<<<<<< HEAD
+
+
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} ';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} ';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require(
+
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} ';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require('
+  ./withErrorLogging.cjs')';
+"async": function handler() { return null; }
+    return}"
+  "try": {}
+    return}
+  try {;
+    const { email } = req.body || {}
+if (!email) {;
+<:api/newsletter/subscribe.js
+
+
+=
+
+>
+
+'
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+    if (!email) {;const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+<=
+>const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+async function handler() { return null; }
+  if (req.method !== 'POST') {}
+    res.statusCode = 405;'
+    res.setHeader('Allow', 'POST');'
+<
+
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+<:api/newsletter/subscribe.js
+
+=
+>const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+<="
+>const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+async function handler(req, res) {
+=======
+<<<<<<< HEAD
 =======
 
 function isValidEmail(email) {;
@@ -57,6 +106,7 @@ module."exports": = withErrorLogging(handler)const { withErrorLogging }  = requi
 module.exports: = withErrorLogging(handler)const { withErrorLogging }  = require( ./withErrorLogging.cjs')';async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { return} try {const { email } = req.body || {} if (!email) {res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err)res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err)res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler)res.json({ "error": err.message ||';Subscription failed }})'}
 module."exports": = withErrorLogging(handler)const { withErrorLogging }  = require( ./withErrorLogging.cjs')';async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { return} try {const { email } = req.body || {} if (!email) {res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err)res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err)res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler)ursor/automate-test-improve-and-merge-code-646c;
 export default async function handler(req, res) {
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -73,6 +123,146 @@ export default async function handler(req, res) {
       return;
     }
 
+<<<<<<< HEAD
+    // TODO: Implement actual newsletter subscription logic;
+// This is a placeholder implementation'
+    // console.log('Newsletter subscription request for:', email);
+
+    res.statusCode = 200;'
+    res.json({ success: true, message: 'Successfully subscribed to newsletter' });
+  } catch (err) {'
+    // console.error('Subscribe API error:', err);
+    res.statusCode = 500;'
+    res.json({ error: err.message || 'Subscription failed' });
+
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+async function handler() { return null; }
+  if (req.method !== 'POST') {}
+    res.statusCode = 405;'
+    res.setHeader('Allow', 'POST');'
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {}
+    const { email } = req.body || {};
+
+if (!email) {
+
+  // TODO: Implement
+    if (!email) {
+
+      res.statusCode = 400;
+      res.statusCode = 400;
+    if (!email) {}
+      res.statusCode = 400;'"
+      res.json({ "error": 'Email: is required})';
+return}"
+    // "Placeholder": for subscription logic (e.g., store in DB or send to service);
+    console.log('"
+  '"New": newsletter subscriber:', email)';"
+    res."statusCode": = 200;"
+    res.json({ success: true})} "catch": (err) {}
+    console.error('
+  'Subscribe API error: ', err);"
+    res."statusCode": = 500;'
+    res.json({ error: err.message: ||';Subscription: failed})}', err);
+    res.statusCode = 500;
+<:api/newsletter/subscribe.js
+    res.json({ error: err.message || 'Subscription failed' });
+  }
+
+module.exports = withErrorLogging(handler);
+=>    res.json({ error: err.message ||';Subscription failed }})'}
+    res.json({ error: err.message ||';Subscription failed }})'}
+module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
+    res.json({ "error": err.message ||';Subscription failed }})'}
+module."exports": = withErrorLogging(handler);
+
+'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);'"
+    res.json({ "error": err.message ||';Subscription failed }})'}"
+module."exports": = withErrorLogging(handler);'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+
+=
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+    // "Placeholder": for subscription logic (e.g., store in DB or send to service);"
+    console.log()"
+  '"New": newsletter subscriber:', email)';
+    res."statusCode": = 200;""
+    res.json({ success: true})} "catch": (err) {"
+    console.error()"
+  'Subscribe API error: ', err);
+    res."statusCode": = 500;""
+    res.json({ error: err.message: ||';Subscription: failed})}', err);
+    res.statusCode = 500;
+<:api/newsletter/subscribe.js
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
+    res.json({ "error": err.message ||';Subscription failed }})'}
+module."exports": = withErrorLogging(handler);
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+
+
+
+'
+    res.json({ error: err.message || 'Subscription failed' });
+
+  }
+}
+
+module.exports = withErrorLogging(handler);
+    res.json({ error: err.message || 'Subscription failed' });
+  }
+
+module.exports = withErrorLogging(handler);
+
+module.exports = withErrorLogging(handler);
+
+=
+>    res.json({ error: err.message ||';Subscription failed }})'}
+    res.json({ error: err.message ||';Subscription failed }})'}
+    res.json({ error: err.message ||';Subscription failed }})'}
+module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow',;POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
+    res.json({ "error": err.message ||';Subscription failed }})'}
+module."exports": = withErrorLogging(handler);
+<:api/newsletter/subscribe.js
+
+=
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
+    res.json({ "error": err.message ||';Subscription failed }})'}
+module."exports": = withErrorLogging(handler);
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
+    res.json({ "error": err.message ||';Subscription failed }})'}
+module."exports": = withErrorLogging(handler);
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+    res.json({ error: err.message || 'Subscription failed' });
+  }
+}
+
+module.exports = withErrorLogging(handler);
+
+'
+
+    res.json({ error: err.message || 'Subscription failed' });
+  }
+
+module.exports = withErrorLogging(handler);
+    res.json({ error: err.message ||';Subscription failed }})'}
+module.exports: = withErrorLogging(handler);'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);'"
+    res.json({ "error": err.message ||';Subscription failed }})'}"
+module."exports": = withErrorLogging(handler);'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})'} module.exports: = withErrorLogging(handler);
+
+'"
+=======
     // Here you would typically save to a database or send to an email service
     // For now, we'll just return success
     res.statusCode = 200;
@@ -85,3 +275,4 @@ export default async function handler(req, res) {
 }
 >>>>>>> origin/merge-pr-12271
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

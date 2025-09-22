@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronRight, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 const UltimateAutonomousAIRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -90,11 +89,11 @@ const UltimateAutonomousAIRevolutionBanner = () => {
           <div className="flex-1">
             <div className="flex items-center space-x-4 mb-4">
               <div className="flex items-center space-x-2 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                <Zap className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
                 <span>ULTIMATE BREAKTHROUGH</span>
               </div>
               <div className="flex items-center space-x-2 bg-green-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                <TrendingUp className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
                 <span>15,000% ROI</span>
               </div>
             </div>
@@ -145,7 +144,7 @@ const UltimateAutonomousAIRevolutionBanner = () => {
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 {currentContent.cta}
-                <ChevronRight className="ml-2 w-5 h-5" />
+                <span>ChevronRight</span>
               </Link>
               <Link
                 href="/contact"
@@ -159,7 +158,7 @@ const UltimateAutonomousAIRevolutionBanner = () => {
           <div className="hidden lg:block ml-8">
             <div className="w-64 h-64 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center">
               <div className="text-center">
-                <Award className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
+                <span className="w-16 h-16 text-yellow-400 mx-auto mb-4">📊</span>
                 <div className="text-4xl font-bold text-yellow-400">15,000%</div>
                 <div className="text-lg text-gray-300">ROI</div>
               </div>
@@ -186,7 +185,7 @@ const UltimateAutonomousAIRevolutionBanner = () => {
         onClick={handleDismiss}
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
       >
-        <X className="w-6 h-6" />
+        <span>X</span>
       </button>
     </div>
   );

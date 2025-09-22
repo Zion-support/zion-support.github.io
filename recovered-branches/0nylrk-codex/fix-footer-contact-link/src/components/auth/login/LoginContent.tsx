@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { LoginCard } from "./LoginCard";
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import { LoginCard } from "./LoginCard";
 "
 import { LoginCard } from "./LoginCard";"
 import { LoginCard } from "./LoginCard",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { LoginCard  } from './LoginCard';
 export /**
@@ -53,18 +40,13 @@ opportunities, and showcase your services to a global audience.;    <div classNa
 <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>;
               <p className="text-lg text-white/80">;
                 Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.;
-<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
       </div>;
 
-<<<<<<< HEAD
 import { LoginCard } from "./LoginCard";
 import { LoginCard } from "./LoginCard",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -76,11 +58,8 @@ export function LoginContent() {
           <div className="flex flex-col justify-center items-center h-full px-8">"
             <div className="max-w-md text-center">"
               <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>"
-=======
               <h3 className="text-3xl font-bold text-white mb-4">;
-=======
 <h3 className="text-3xl font-bold text-white mb-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Join the Zion Community;
               </h3>;
                 Connect with thousands of AI professionals, discover new;
@@ -110,7 +89,6 @@ export function LoginContent() {
           <div className="flex flex-col justify-center items-center h-full px-8">
             <div className="max-w-md text-center">
               <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className="text-lg text-white/80">
                 Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.
               </p>
@@ -118,27 +96,19 @@ export function LoginContent() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </div>
   );
 }
 
     </div>;
-=======
       </div>;    </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       </div>;    </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     </div>
   );
 }
     </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
     </div>
@@ -169,28 +139,10 @@ export function LoginContent() {;
 } export function LoginContent () {
 return (<div className="flex min-h-screen bg-zion-blue" > <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24" > <LoginCard /> </div> <div className="hidden lg:block relative w-0 flex-1" > <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-purple-light opacity-80" > <div className="flex flex-col justify-center items-center h-full px-8" > <div className="max-w-md text-center" > <h3 className="text-3xl font-bold text-white mb-4" >Join the Zion Community</h3> <p className="text-lg text-white/80" > Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.
   return (<div className="flex min-h-screen bg-zion-blue" > <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24" > <LoginCard /> </div> <div className="hidden lg:block relative w-0 flex-1" > <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-purple-light opacity-80" > <div className="flex flex-col justify-center items-center h-full px-8" > <div className="max-w-md text-center" > <h3 className="text-3xl font-bold text-white mb-4" >Join the Zion Community</h3> <p className="text-lg text-white/80" > Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience. 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export function LoginContent() { return null; }
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import { LoginCard } from "./LoginCard";""
 import { LoginCard } from "./LoginCard",""
@@ -245,4 +197,3 @@ function LoginContent() {
 
   return (<div className="flex min-h-screen bg-zion-blue" > <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24" > <LoginCard /> </div> <div className="hidden lg:block relative w-0 flex-1" > <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-purple-light opacity-80" > <div className="flex flex-col justify-center items-center h-full px-8" > <div className="max-w-md text-center" > <h3 className="text-3xl font-bold text-white mb-4" >Join the Zion Community</h3> <p className="text-lg text-white/80" > Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.")"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 
 :netlify/functions/front-enhancer.js
@@ -36,6 +38,7 @@ exports.handler = async () => {;
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -72,6 +75,9 @@ exports.handler = async () => {
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
+<<<<<<< HEAD
+}
+=======
 
 
 :netlify/functions/front-enhancer.js
@@ -123,6 +129,7 @@ exports.config = {
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
@@ -134,6 +141,9 @@ exports.config = {
 main:netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

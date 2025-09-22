@@ -1,27 +1,13 @@
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import {createClient} from '@supabase/supabase-js';
 
 import {createClient} from '@supabase/supabase-js';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { createClient  } from '@supabase/supabase-js';
 import {createClient} from '@supabase/supabase-js';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { createClient  } from '@supabase/supabase-js';
 import {createClient} from '@supabase/supabase-js';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -33,19 +19,7 @@ const {
   SUPABASE_SERVICE_ROLE_KEY
   OPENAI_API_KEY
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 } = process.env
 
 import {createClient} from '@supabase/supabase-js';''
@@ -65,9 +39,6 @@ pr-12325
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
   process.exit(1)
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import fetch from 'node-fetch',;
 const {;
   SUPABASE_URL,;
@@ -97,9 +68,6 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;'
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;'
   process.exit(1);
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -116,7 +84,6 @@ async function fetchData() {
   const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
   const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
 
-=======
 
   return {
     jobs: jobPosts && jobPosts.data || [],
@@ -131,7 +98,6 @@ function stripPii(text) {
   let result = text
   // Emails
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
   // US-style phone numbers'
   result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
@@ -141,10 +107,8 @@ function stripPii(text) {
 return result
 }
 
-<<<<<<< HEAD
 
 function buildTrainingPairs(records) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() { return null; }
@@ -208,12 +172,8 @@ function buildTrainingPairs(records) {}
       prompt: `Create a job description titled "${stripPii(job.title)}"`"
 
       completion: stripPii(job.description)
-<<<<<<< HEAD
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
 ;
 ;)
   for (const resume of records.resumes) {;
@@ -252,15 +212,10 @@ async function saveJsonl(pairs, filePath) {;"
   await fs.writeFile(filePath, lines, 'utf8');'
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 `
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`
 
       completion: stripPii(resume.summary)
@@ -271,10 +226,8 @@ for (const log of records.logs) {}
       prompt: stripPii(log.question)
 
       completion: stripPii(log.answer)
-<<<<<<< HEAD
   for (const job of records && records.jobs) {
     pairs && pairs.push({
-=======
   for (const log of records.logs) {
     pairs.push({
 
@@ -289,7 +242,6 @@ function buildTrainingPairs(records) {
   completion: stripPii(log.answer)
   for (const job of records && records.jobs) {
 pairs && pairs.push({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       prompt: `Create a job description titled "${stripPii(job && job.title)}"`,
       completion: stripPii(job && job.description)
     })
@@ -297,9 +249,7 @@ pairs && pairs.push({
 
 for (const resume of records && records.resumes) {}
     pairs && pairs.push({}`
-=======
     pairs && pairs.push({)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       prompt: `Summarize the candidate with skills: ${stripPii(resume && resume.skills)}`,
       completion: stripPii(resume && resume.summary)
     })
@@ -309,12 +259,7 @@ for (const log of records && records.logs) {}
     pairs && pairs.push({}
       prompt: stripPii(log && log.question),
       completion: stripPii(log && log.answer)
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     })
   }
   return pairs;
@@ -343,23 +288,17 @@ async function saveJsonl(pairs, filePath) {}
 }),
   const job = await jobRes && jobRes.json(),
   console && console.log('Fine-tune job created:', job && job.id)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // // // console.log('Fine-tune job created:', job.id)
-=======
     })    })
   }
   return pairs
 }
 async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     })    })
   }
   return pairs
 }
 async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   for (const log of records && records.logs) {
     pairs && pairs.push({)
       prompt: stripPii(log && log.question),
@@ -473,7 +412,6 @@ async function createFineTune(filePath) {
   const job = await jobRes && jobRes.json(),
   console && console.log('Fine-tune job created:', job && job.id)
   // // // console.log('Fine-tune job created:', job.id)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 async function createFineTune() { return null; }`
       Authorization: `Bearer ${OPENAI_API_KEY}`,;
@@ -526,38 +464,25 @@ pr-12325
     });
   }),;
 const job = await jobRes.json(),;
-<<<<<<< HEAD
-<<<<<<< HEAD
   // // // console.log('Fine-tune job created:', job.id);
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }),
   const job = await jobRes.json(),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   // // // console.log('Fine-tune job created:', job.id);}
 async function main() {
 
   try {
-=======
   const job = await jobRes.json(),;'
   // // // console.log('Fine-tune job created:', job.id);
 
   try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const records = await fetchData(),
   const pairs = buildTrainingPairs(records),'
   await saveJsonl(pairs, 'training-data && data.jsonl'),'
   await createFineTune('training-data && data.jsonl')
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   console && console.error('Training workflow failed', err)
 '
 import {create_client} from '@supabase / supabase - js';'
@@ -683,14 +608,10 @@ main ().catch ((err) => {'
 
 }
 
-=======
   // // // console.log('Fine-tune job created:', job.id);}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 async function main() {
 
-=======
 async function main() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const records = await fetchData()
   const pairs = buildTrainingPairs(records)'
   await saveJsonl(pairs, 'training-data.jsonl')
@@ -700,22 +621,16 @@ async function main() {}
 main().catch((err) => {'
   console.error('Training workflow failed', err)
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-}),
-;
-<<<<<<< HEAD
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+}),
+;
 
 main().catch((err) => {'
   console.error('Training workflow failed', err)
@@ -724,15 +639,11 @@ main().catch((err) => {'
 
 ;
 main().catch((err) => {;'
-=======
 ;
 main().catch((err) => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   console.error('Training workflow failed', err);
 });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }),
 import { createClient } from '@supabase/supabase-js',;
 import fs from 'fs/promises',;
@@ -892,18 +803,8 @@ await createFineTune ('training-data.jsonl')
 }main () .catch ( (err) => {
   console.error ('Training workflow failed', err) 
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 main().catch((err) => {
   console.error('Training workflow failed', err)
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

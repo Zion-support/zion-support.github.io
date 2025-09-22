@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,12 +9,6 @@ education
   onEdit
   onDelete
 }: EducationItemProps) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { format  } from './date - fns';
 import { Edit, Trash2  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -35,7 +24,6 @@ education,
   onEdit,
   onDelete,
 }: EducationItemProps) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
     <Card className="bg-muted / 40">;
       <CardContent className="pt-6">;
@@ -110,7 +98,6 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
               <p className="text - xs text - muted-foreground">;
                 {education.location}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
@@ -118,10 +105,6 @@ import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
@@ -129,12 +112,8 @@ import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
@@ -149,10 +128,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             {education.field_of_study && (
               <p className="text - sm text - muted-foreground">;
                 {education.field_of_study}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             )}
             <p className="text-xs text-muted-foreground mt-1">
               {typeof education.start_date === "string"
@@ -251,22 +227,16 @@ export function EducationItem({}
         {education && education.description && (;"
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       </CardContent>
     </Card>
   );
 }
 ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </CardContent>
     </Card>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 ;
@@ -396,12 +366,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 }
 ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 ;

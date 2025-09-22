@@ -1,24 +1,16 @@
 import React from "react";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 import {Switch} from "@/components/ui/switch";
 import {toast} from "@/hooks/use-toast";
 import {InfoIcon} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import {}
-=======
 
 import React from "react",
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Table,
   TableBody,
   TableCell,
@@ -34,16 +26,8 @@ import {}
   TooltipContent,
   TooltipProvider,"
   TooltipTrigger} from "@/components/ui/tooltip",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function RoleManagement() {
   // Mock team members data
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -58,7 +42,6 @@ import {
 
 export function RoleManagement() {
   // Mock team members data
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const teamMembers = [
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -66,7 +49,6 @@ import { Badge } from '@/components / ui / badge';
 import { Switch } from '@/components / ui / switch';
 import { toast } from '@/hooks / use - toast';
 import { InfoIcon } from './lucide-react';
-=======
 export function RoleManagement() {};
   // Mock team members data;
   const teamMembers = []
@@ -76,7 +58,6 @@ import { Badge } from '@/components / ui / badge';'
 import { Switch } from '@/components / ui / switch';'
 import { toast } from '@/hooks / use - toast';'
 import { InfoIcon } from './lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 ;
 export /**;
@@ -133,8 +114,6 @@ function RoleManagement() {}
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         viewCandidates: true
         editCandidates: false
         createJobs: false
@@ -145,14 +124,11 @@ function RoleManagement() {}
     // In a real app, this would make an API call to update permissions
     toast({
 description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   },
   description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-=======
 
     {}
       id: 1"
@@ -204,14 +180,11 @@ description: `Permission ${permission} has been ${value ? "granted" : "revoked"}
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   };"`
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   };
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   const roleDescriptions: Record<string, string> = {"
     "Admin": "Full access to all features and settings";"
@@ -219,7 +192,6 @@ description: `Permission ${permission} has been ${value ? "granted" : "revoked"}
     "Manager": "Can view candidates and create jobs";"
     "Viewer": "Read-only access to candidates"}
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const roleDescriptions: Record<string string> = {"
     "Admin": "Full access to all features and settings","
@@ -353,9 +325,7 @@ const roleDescriptions: Record<string string> = {
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
-=======
                   <Switch;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     checked={member.permissions.viewCandidates}
                   <Switch;
                     checked={member.permissions.viewCandidates} 
@@ -419,7 +389,6 @@ import {;
   Tooltip,;
   TooltipContent,;
 TooltipProvider,;
-<<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip",;
 
 return (
@@ -555,9 +524,7 @@ email: "alex@example && example.com",;
         createJobs: true,;
         manageTeam: true,;
         viewBilling: true,;
-=======
 export function RoleManagement() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         manageBilling: true}},;
     {;
       id: 2,;"
@@ -613,7 +580,6 @@ export function RoleManagement() { return null; }
                   <Switch 
                     checked={member.permissions.viewCandidates} 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
@@ -622,12 +588,10 @@ export function RoleManagement() { return null; }
                 </TableCell>
                 <TableCell className="text-center">
 
-=======
 
                   <Switch 
                     checked={member.permissions.editCandidates} 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
@@ -656,21 +620,12 @@ onCheckedChange={(checked) =>
                 </TableCell>
               </TableRow>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
     {;
 email: "taylor@example.com",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       id: 1,;
       name: "Alex Johnson",;
       email: "alex@example && example.com",;
@@ -796,7 +751,6 @@ export function RoleManagement() {;
     {;
       email: "taylor@example.com",;
       email: "taylor@example && example.com",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       role: "Viewer",;
       permissions: {;
         viewCandidates: true,;
@@ -839,11 +793,9 @@ toast({;"
             </div>;
           ))}
 "
-=======
 ;
         </div>;
       </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -958,10 +910,7 @@ toast({;"
                 <TableCell className="text-center">;
 
                     }
-=======
   TooltipTrigger} from "@/components/ui/tooltip",;                    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             {teamMembers && teamMembers.map((member) => (;
               <TableRow key={member && member.id}>;
                 <TableCell>;
@@ -1072,7 +1021,6 @@ toast({;"
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   />;
                 </TableCell>;
               </TableRow>;
@@ -1080,32 +1028,22 @@ toast({;"
                   <Switch;
                     checked={member.permissions.viewBilling} 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
 
-<<<<<<< HEAD
           </TableBody>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </Table>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
-=======
           </TableBody>;
         </Table>;
       </div>;
     </div>;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         view_candidates: true,
         edit_candidates: false,
         create_jobs: false,
@@ -1356,7 +1294,6 @@ checked={member.permissions.view_candidates}
                   <Switch;
                     checked={member.permissions.view_billing}
                     onCheckedChange={(checked) =>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       handlePermissionChange (member.id, "view_billing", checked);
                     }
                   />;
@@ -1368,10 +1305,6 @@ checked={member.permissions.view_candidates}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
  import {
   Table;
@@ -1449,19 +1382,8 @@ pr-12325
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>]"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

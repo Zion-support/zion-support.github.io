@@ -8,14 +8,10 @@
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const dateObj = new Date(date);
   switch (format) {'
     case 'short':
@@ -50,19 +46,13 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return 'Yesterday'
       } else {}
         return dateObj.toLocaleDateString()
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 };
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 /**
  * Format a date to show how long ago it was;
  * @param date Date to format;
@@ -170,15 +160,7 @@ if ( {) {}
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
-<<<<<<< HEAD
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

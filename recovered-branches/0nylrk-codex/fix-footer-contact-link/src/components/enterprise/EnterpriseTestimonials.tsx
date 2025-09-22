@@ -3,9 +3,7 @@ import { Quote } from "lucide-react";
 
 import React from "react";
 import { Quote } from "lucide-react";
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   Carousel,;
   CarouselContent,;
   CarouselItem,;
@@ -13,52 +11,31 @@ import { Quote } from "lucide-react";
 CarouselPrevious,;
 } from "@/components/ui/carousel";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Carousel,
-=======
 ];  Carousel,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ];  Carousel,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ];
   Carousel,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Carousel
   CarouselContent
   CarouselItem
   CarouselNext
   CarouselPrevious
-=======
 
   Carousel;
   CarouselContent;
   CarouselItem;
   CarouselNext;
   CarouselPrevious"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "@/components/ui/carousel";
 const testimonials = []
   {}
@@ -86,34 +63,22 @@ const testimonials = []
     image: "/placeholder.svg"
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",
 import { Quote } from "lucide-react",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
 
 export function EnterpriseTestimonials() {;
   return (
 
                       <img
-=======
 export function EnterpriseTestimonials() {;
   return (                      <img
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function EnterpriseTestimonials() {;
   return (                      <img
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 ];
 
 export function EnterpriseTestimonials() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -144,9 +109,7 @@ const testimonials = [
     image: "/placeholder.svg"}],
 
 export function EnterpriseTestimonials() {;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 )
 export function EnterpriseTestimonials() {
@@ -178,18 +141,15 @@ export function EnterpriseTestimonials() {
 export function EnterpriseTestimonials() {;
   return (
                       <img
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}"
                         className="h-full w-full object-cover"
-<<<<<<< HEAD
                       />
 </img>
                     <div>
 <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -252,18 +212,11 @@ import {}
   CarouselNext,
   CarouselPrevious,';
 } from '@/components / ui / carousel';
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <img;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const testimonials = [;
   {
       "Implementing Zion's Enterprise solution has reduced our time - to - hire by 40% and significantly improved the quality of candidates we're seeing.",""
@@ -300,55 +253,32 @@ function EnterpriseTestimonials() {
                       <p className="font - bold">{testimonial.author}</p>;
                       <p className="text - sm text - muted - foreground">;
 {testimonial.title}, {testimonial.company}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                         {testimonial.title}, {testimonial.company}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </p>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
               </CarouselItem>))}
           </CarouselContent>;
           <div className="flex justify - center gap - 2 mt - 8">;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <CarouselPrevious />;
 
             <CarouselNext />;
           </div>;
         </Carousel>;
       </div>;
-<<<<<<< HEAD
 
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                       <img;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                       <img;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     </section>);"
 pr-12325
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

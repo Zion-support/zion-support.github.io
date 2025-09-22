@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Brain, Cpu, Zap, Target, Users, TrendingUp } from 'lucide-react';
 
 export default function NeuralInterfaceRevolutionBanner() {
   return (
@@ -15,7 +14,7 @@ export default function NeuralInterfaceRevolutionBanner() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
-            <Brain className="w-5 h-5 mr-2" />
+            <span className="w-5 h-5 mr-2">📊</span>
             <span className="text-sm font-medium">🧠 BREAKTHROUGH TECHNOLOGY</span>
           </div>
           
@@ -32,7 +31,7 @@ export default function NeuralInterfaceRevolutionBanner() {
         {/* Key Capabilities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <Cpu className="w-12 h-12 text-emerald-400 mb-4" />
+            <span className="w-12 h-12 text-emerald-400 mb-4">📊</span>
             <h3 className="text-xl font-bold mb-3">Thought-to-Action</h3>
             <p className="text-gray-300">
               Convert mental commands into digital actions instantly, 
@@ -41,7 +40,7 @@ export default function NeuralInterfaceRevolutionBanner() {
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <Zap className="w-12 h-12 text-teal-400 mb-4" />
+            <span className="w-12 h-12 text-teal-400 mb-4">📊</span>
             <h3 className="text-xl font-bold mb-3">Enhanced Cognition</h3>
             <p className="text-gray-300">
               Amplified memory, attention, and analytical capabilities 
@@ -50,7 +49,7 @@ export default function NeuralInterfaceRevolutionBanner() {
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <Users className="w-12 h-12 text-cyan-400 mb-4" />
+            <span className="w-12 h-12 text-cyan-400 mb-4">📊</span>
             <h3 className="text-xl font-bold mb-3">Human-AI Symbiosis</h3>
             <p className="text-gray-300">
               Seamless collaboration between human creativity 
@@ -69,17 +68,17 @@ export default function NeuralInterfaceRevolutionBanner() {
               <p className="text-sm text-gray-300">Real-time data processing and instant insights</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center border border-white border-opacity-20">
-              <TrendingUp className="w-8 h-8 text-teal-400 mx-auto mb-3" />
+              <span className="w-8 h-8 text-teal-400 mx-auto mb-3">📊</span>
               <h4 className="font-semibold mb-2">Productivity</h4>
               <p className="text-sm text-gray-300">200-400% improvement in operational speed</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center border border-white border-opacity-20">
-              <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+              <span className="w-8 h-8 text-cyan-400 mx-auto mb-3">📊</span>
               <h4 className="font-semibold mb-2">Innovation</h4>
               <p className="text-sm text-gray-300">Enhanced creativity and problem-solving</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center border border-white border-opacity-20">
-              <Users className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
+              <span className="w-8 h-8 text-emerald-400 mx-auto mb-3">📊</span>
               <h4 className="font-semibold mb-2">Collaboration</h4>
               <p className="text-sm text-gray-300">Seamless team coordination and knowledge sharing</p>
             </div>

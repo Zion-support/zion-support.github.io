@@ -1,72 +1,39 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {useTranslation} from 'react-i18next';
 import {supabase} from '../integrations/supabase/client';
 import {toast} from '../components/ui/use-toast';
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 export type LanguageContextType = {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   currentLanguage: SupportedLanguage
-=======
   currentLanguage: SupportedLanguage;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   changeLanguage: (lang: SupportedLanguage) => Promise<void>
   isRTL: boolean;
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const supportedLanguages = [
-=======
 }const supportedLanguages = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }const supportedLanguages = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 const supportedLanguages = [
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const supportedLanguages = [
 }const supportedLanguages = [
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' }
-=======
 
 const supportedLanguages = []
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }'
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }'
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
 const defaultLanguageContext: LanguageContextType = {'
@@ -74,11 +41,7 @@ const defaultLanguageContext: LanguageContextType = {'
   changeLanguage: async () => {}
 isRTL: false
   supportedLanguages
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 interface LanguageProviderProps {
@@ -97,34 +60,20 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({};
   children;
   authState = { isAuthenticated: false, user: null }
 }) => {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children, 
   authState = { isAuthenticated: false, user: null } ;
 }) => {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { i18n, t } = useTranslation();
-=======
 }  const { i18n, t } = useTranslation();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }  const { i18n, t } = useTranslation();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
   supportedLanguages;
 };
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
@@ -138,7 +87,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 }) => {;
 
   const { i18n, t } = useTranslation();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>('
     (i18n.language?.substring(0, 2) as SupportedLanguage) |'en'
@@ -159,12 +107,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     document.documentElement.lang = currentLanguage;
 // Add RTL class for Tailwind
     if (i18n.dir() === 'rtl') {
-<<<<<<< HEAD
-<<<<<<< HEAD
       document.documentElement.classList.add('rtl')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       document.documentElement.classList.remove('rtl')
     }
   }, [currentLanguage, i18n]);
@@ -179,7 +122,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
             .eq('id', user.id);
           if (error) {
             console.error('Error updating language preference:', error)
-<<<<<<< HEAD
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import { supabase } from '../integrations/supabase/client',;
@@ -195,7 +137,6 @@ const supportedLanguages = [;
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },;
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },;
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
 import {use_translation} from 'react - i18next';
 import {supabase} from '../integrations / supabase / client';
@@ -218,7 +159,6 @@ const supported_languages = [;'
 ];
 ;
 const defaultLanguageContext: LanguageContextType = {'
-=======
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 ;
 export type LanguageContextType = {
@@ -254,7 +194,6 @@ const supported_languages = [;
 ];
 ;
 const defaultLanguageContext: LanguageContextType = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   current_language: 'en',
   change_language: async () => {},
   isRTL: false,
@@ -287,9 +226,7 @@ export const LanguageProvider: React.FC < LanguageProviderProps> = ({}
     const saved_lang = local_storage.get_item ('zion_language') as SupportedLanguage;
     if () {) {}
   $2;
-=======
   $2;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
       i18n.change_language (saved_lang);
       setCurrentLanguage (saved_lang);
@@ -308,8 +245,6 @@ if (=== 'rtl') {) {}
   $2;
 }'
       document.document_element.class_list.add ('rtl');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } else {
       document.document_element.class_list.remove ('rtl');
     }
@@ -323,9 +258,7 @@ export const useLanguage = (): LanguageContextType => useContext(LanguageContext
     } else {'
       document.document_element.class_list.remove ('rtl');
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const syncLanguageWithProfile = async () => {
-=======
   useEffect (() => {
 
 const LanguageContext = createContext(defaultLanguageContext);
@@ -336,14 +269,12 @@ export const useLanguage = (): LanguageContextType => useContext(LanguageContext
       document.document_element.class_list.remove ('rtl');'
     }
     const syncLanguageWithProfile = async () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Check condition
 if ( {) {
   $2;
 }
         try {
 
-=======
 
 interface LanguageProviderProps {;
   children: ReactNode,;
@@ -369,7 +300,6 @@ interface LanguageProviderProps {;
 interface LanguageProviderProps {;
   children: ReactNode,;
   authState?: { ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     isAuthenticated: boolean,;
     user: { id?: string } | null;
   }
@@ -388,10 +318,7 @@ interface LanguageProviderProps {;
       document && document.documentElement.classList && classList.remove('rtl');
     }
   }, [currentLanguage, i18n]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import { supabase } from '../integrations/supabase/client',;
@@ -467,12 +394,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
       document.documentElement.classList.remove('rtl');
     }
   }, [currentLanguage, i18n]),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Sync language preference with user profile when authenticated;
   useEffect(() => {;
     const syncLanguageWithProfile = async () => {;
@@ -481,16 +403,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 const { error } = await supabase;'
             .from('profiles');
 
-<<<<<<< HEAD
           if (error) {;
             console.error('Error updating language preference:', error);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         } catch (err) {;'
           console && console.error('Error syncing language with profile:', err);
@@ -501,9 +416,6 @@ const { error } = await supabase;'
 
     };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             .eq('id', user.id),;
           if (error) {;
             console.error('Error updating language preference:', error);
@@ -514,8 +426,6 @@ const { error } = await supabase;'
       }
     }
     };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {}
@@ -537,9 +447,6 @@ const { error } = await supabase;'
           .eq('id', user.id);
         if (error) {'
           console.error('Error updating language preference:', error)
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -561,7 +468,6 @@ const { error } = await supabase;'
           .eq('id', user.id);
         if (error) {
           console.error('Error updating language preference:', error)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
 
     syncLanguageWithProfile();
@@ -570,18 +476,12 @@ const { error } = await supabase;'
   const changeLanguage = async (lang: SupportedLanguage) => {;
     if (lang === currentLanguage) return;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {;
       await i18n && i18n.changeLanguage(lang);
       setCurrentLanguage(lang),;'
       localStorage && localStorage.setItem('zion_language', lang);
       // Get language name for toast;
       const langName = supportedLanguages && supportedLanguages.find(l => l && l.code === lang)?.name || lang;
-<<<<<<< HEAD
-<<<<<<< HEAD
       toast({;
         description: t('language && language.language_changed', { language: langName });
       });
@@ -592,22 +492,13 @@ const { error } = await supabase;'
           .from('profiles');
           .update({ preferred_language: lang });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
-=======
       toast({,
   description: t('language && language.language_changed', { language: langName });
       });        }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       toast({,
   description: t('language && language.language_changed', { language: langName });
       });        }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       toast({;
         description: t('language && language.language_changed', { language: langName });
       });
@@ -639,30 +530,18 @@ const { error } = await supabase;'
 
 console && console.error('Error updating language preference:', error);
         }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     } catch (err) {;'
       console && console.error('Error changing language:', err);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
   };
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (error) {;
           console.error('Error updating language preference:', error);
         }
@@ -672,23 +551,13 @@ console && console.error('Error updating language preference:', error);
     }
   }
   };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <LanguageContext.Provider
       value={{
         currentLanguage
         changeLanguage
-<<<<<<< HEAD
         isRTL;
-<<<<<<< HEAD
         supportedLanguages
   };
 
@@ -703,11 +572,8 @@ console && console.error('Error updating language preference:', error);
   );
 };
 
-=======
 
         supportedLanguages;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         isRTL;
   };
 
@@ -729,7 +595,6 @@ console && console.error('Error updating language preference:', error);
   );
 };
         supportedLanguages
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },;
   return (;
     <LanguageContext.Provider;
@@ -753,25 +618,16 @@ console && console.error('Error updating language preference:', error);
   );
 };
 
-<<<<<<< HEAD
         supportedLanguages;
       }}>;
       {children}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           const { error } = await supabase;
-=======
 
           const { error } = await supabase;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         supportedLanguages
       }}>;
       {children}
           const { error } = await supabase;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             .from ('profiles');
             .update ({ preferred_language: current_language });'
             .eq ('id', user.id);
@@ -943,8 +799,6 @@ if ( {) {
     </LanguageContext.Provider>);
 }
 ;
-<<<<<<< HEAD
-=======
 supportedLanguages
 </LanguageContext>)
     </LanguageContext.Provider>);
@@ -953,7 +807,6 @@ supportedLanguages
         supportedLanguages;
   },;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (;
     <LanguageContext.Provider;
       value={{;
@@ -967,10 +820,6 @@ supportedLanguages
       {children}
 
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 
   currentLanguage: SupportedLanguage;,
@@ -1079,7 +928,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
     </LanguageContext.Provider>;
   );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       }}>;
           const { error } = await supabase;
@@ -1139,7 +987,6 @@ if (return) {
           if (error) {;
             console.error('Error updating language preference:', error),;
         } catch (err) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           console.error('Error syncing language with profile:', err),;
     syncLanguageWithProfile(),;
   }, [currentLanguage, isAuthenticated, user]),;
@@ -1151,7 +998,6 @@ setCurrentLanguage(lang),;'
       localStorage.setItem('zion_language', lang),;
       // Get language name for toast;
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang,;
-<<<<<<< HEAD
       toast({;'
         description:t('language.language_changed', { language:langName });
       }),;
@@ -1199,13 +1045,11 @@ const [isRTL, setIsRTL] = useState (i18n.dir () === 'rtl');
   try {
   const {
   error 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }= await supabase .from ('profiles') 
 }
 };
 syncLanguageWithProfile () 
 }, [currentLanguage, isAuthenticated, user]);
-<<<<<<< HEAD
 // If user is authenticated, update their profile if (isAuthenticated && user?.id) {}
   const {}
   error '
@@ -1217,14 +1061,12 @@ syncLanguageWithProfile ()
   children;
 }</LanguageContext.Provider>) 
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }= await supabase .from ('profiles') return (<LanguageContext.Provider value= {
   {
   currentLanguage, changeLanguage, isRTL, supportedLanguages;
 }> {
 }</LanguageContext.Provider>) 
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }}
     >
       {children}
@@ -1240,28 +1082,10 @@ pr-12325
 </LanguageContext.Provider>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }}
     >
       {children}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

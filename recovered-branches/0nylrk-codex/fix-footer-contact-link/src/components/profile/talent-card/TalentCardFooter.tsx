@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -15,8 +7,6 @@ import {TalentProfile} from "@/types/talent";
 import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {useNavigate} from "react-router-dom";
 
 import React, { useState } from './react';'
@@ -120,14 +110,9 @@ return (
 
   return (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
-=======
 import {useNavigate} from "react-router-dom";import React, { useState } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React, { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { ExternalLink } from "lucide-react",
@@ -135,7 +120,6 @@ import { TalentProfile } from "@/types/talent",
 import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent",
 
-=======
 interface TalentCardFooterProps {
 
   profile: TalentProfile
@@ -146,7 +130,6 @@ interface TalentCardFooterProps {
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
 import { UserProfile } from "@/types/auth",;
 import { useNavigate } from "react-router-dom",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -161,15 +144,11 @@ import { HireRequestModal } from "@/components/profile/hire-request",;
 import { useAuthStatus } from "@/hooks/talent",;
 import { UserProfile } from "@/types/auth",;
 import { useNavigate } from "react-router-dom",;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
           <Button 
             variant="default" 
             size="sm" 
 
-=======
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
@@ -194,11 +173,8 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button;"
             variant="default"""
             size="sm""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <>;"
@@ -215,27 +191,19 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
               <Star className="h-4 w-4 text-zion-purple" />;"
               <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
             </div>;
-<<<<<<< HEAD
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>
         {/* Action Buttons */}
         <div className="flex gap-2">
-<<<<<<< HEAD
           <Button
             variant="default"
             size="sm"
           <Button 
             variant="default" 
             size="sm" 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-=======
           )}            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             Hire;
           </Button>
@@ -243,59 +211,33 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           >
             Hire
           </Button>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           <Button 
             variant="outline" 
-=======
 
           <Button "
             variant="outline" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             size="sm" 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
           <Button 
             variant="outline" 
 size="sm" 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
             size="sm"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             onClick={handleViewProfile}
-=======
 
             onClick={handleViewProfile}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View"
             <ExternalLink className="h-3 w-3 ml-1" />
           </Button>
         </div>
-<<<<<<< HEAD
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         </div>;
 
@@ -321,52 +263,29 @@ size="sm"
         </div>;
       </div>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      {/* Hire Request Modal */}
-=======
-      </div>      {/* Hire Request Modal */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      {/* Hire Request Modal */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       {/* Hire Request Modal */}
       </div>      {/* Hire Request Modal */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      {/* Hire Request Modal */}
+      {/* Hire Request Modal */}
+      </div>      {/* Hire Request Modal */}
       <HireRequestModal
-=======
 
       {/* Hire Request Modal */}
       <HireRequestModal;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
-<<<<<<< HEAD
         userDetails={userProfile}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ;
 
-<<<<<<< HEAD
       ;
       {/* Hire Request Modal */}
       <HireRequestModal;
@@ -376,22 +295,12 @@ size="sm"
       />;
     </>;
 
-=======
         userDetails={userProfile};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         userDetails={userProfile};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         userDetails={userProfile};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Handle view profile;
   const handleViewProfile = (e: React.MouseEvent) =>: any {}
     e.stop_propagation (),
@@ -527,11 +436,8 @@ if ( {) {
             variant="default";
             size="sm";
             on_click={handleRequestHire}
-<<<<<<< HEAD
             className="bg - zion - purple hover:bg - zion - purple - dark text-white";
-=======
             className="bg - zion - purple hover:bg - zion - purple - dark text-white";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >;
             Hire;
           </Button>;
@@ -542,11 +448,8 @@ on_click={handleViewProfile}
             className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
           >;
             View;
-<<<<<<< HEAD
             <ExternalLink className="h - 3 w - 3 ml-1" />;
-=======
             <ExternalLink className="h - 3 w - 3 ml-1" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Button>;
         </div>;
       </div>;
@@ -640,7 +543,6 @@ profile.id || '''
 
 }/> </>) 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       />
     </>
   )
@@ -649,21 +551,8 @@ profile.id || '''
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "
 import React, { useState } from './react';
 import { Star } from './lucide-react';
@@ -840,4 +729,3 @@ profile.id || `;
 "`;
 pr-12325
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

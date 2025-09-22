@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
   FormField
@@ -16,15 +11,9 @@ import { UseFormReturn } from "react-hook-form";
 import { CertificationFormValues } from "./types";
   FormField,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {
   FormField,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
@@ -43,7 +32,6 @@ interface CertificationFormFieldsProps {;
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { CertificationFormValues  } from './types';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
@@ -51,7 +39,6 @@ interface CertificationFormFieldsProps {
 export function CertificationFormFields({
   form
 }: CertificationFormFieldsProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
 import {UseFormReturn} from 'react-hook-form';
@@ -60,7 +47,6 @@ import {CertificationFormValues} from './types';
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
 
-=======
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
@@ -68,24 +54,18 @@ import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
-=======
 
   FormItem,
   FormLabel,
@@ -94,7 +74,6 @@ import { UseFormReturn } from "react-hook-form";
 } from "@/components/ui/form";"
 import { Input } from "@/components/ui/input";"
 import { UseFormReturn } from "react-hook-form";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CertificationFormValues } from "./types";
 interface CertificationFormFieldsProps {}
   form: UseFormReturn<CertificationFormValues>;
@@ -120,7 +99,6 @@ export function CertificationFormFields({}
                   {...field}
                   value={field.value || ''}export /**
  * CertificationFormFields - Function description
-=======
             <FormItem>;
               <FormLabel > Certification Name</FormLabel>;
               <FormControl>;
@@ -149,16 +127,12 @@ interface CertificationFormFieldsProps {
 export /**
  * CertificationFormFields - Function description;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  */
 function CertificationFormFields() {}
   return (
 <>;
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <FormField;
           control={form.control}"
           name="name";
@@ -290,11 +264,8 @@ render={({ field }) => (;
   )
 }
 ;
-=======
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;        <FormField
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           control={form && form.control}
-=======
 
 "
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -308,7 +279,6 @@ render={({ field }) => (;
 
         <FormField;
           control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           name="credential_id"
           render={({ field }) => (;
             <FormItem>;
@@ -320,11 +290,8 @@ render={({ field }) => (;
             </FormItem>)}
         />;
 </div>;
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <FormField;
           control={form.control}"
           name="issue_date";
@@ -357,9 +324,6 @@ render={({ field }) => (;
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Credential ID (Optional)</FormLabel>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormControl>;
                 <Input placeholder="ABC123XYZ" {...field} />;
               </FormControl>;
@@ -544,7 +508,5 @@ pr-12325
 }
 ;
 
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

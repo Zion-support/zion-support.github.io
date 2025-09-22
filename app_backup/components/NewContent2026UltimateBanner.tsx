@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Cpu } from 'lucide-react';
 
 export default function NewContent2026UltimateBanner() {
   return (
@@ -30,7 +29,7 @@ export default function NewContent2026UltimateBanner() {
           {/* Autonomous Business Operations */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 group">
             <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Cpu className="w-8 h-8 text-white" />
+              <span className="w-8 h-8 text-white">📊</span>
             </div>
             <h3 className="text-2xl font-bold mb-4">Autonomous Business Operations</h3>
             <p className="text-gray-200 mb-6 leading-relaxed">
@@ -42,14 +41,14 @@ export default function NewContent2026UltimateBanner() {
               className="inline-flex items-center text-purple-300 hover:text-white font-semibold group-hover:translate-x-2 transition-all duration-300"
             >
               Read Complete Guide
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              <span className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300">📊</span>
             </Link>
           </div>
 
           {/* Quantum Computing Revolution */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 group">
             <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Zap className="w-8 h-8 text-white" />
+              <span className="w-8 h-8 text-white">📊</span>
             </div>
             <h3 className="text-2xl font-bold mb-4">Quantum Computing Revolution</h3>
             <p className="text-gray-200 mb-6 leading-relaxed">
@@ -61,14 +60,14 @@ export default function NewContent2026UltimateBanner() {
               className="inline-flex items-center text-blue-300 hover:text-white font-semibold group-hover:translate-x-2 transition-all duration-300"
             >
               Discover Quantum Future
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              <span className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300">📊</span>
             </Link>
           </div>
 
           {/* Neural Interface Revolution */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 group">
             <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Brain className="w-8 h-8 text-white" />
+              <span className="w-8 h-8 text-white">📊</span>
             </div>
             <h3 className="text-2xl font-bold mb-4">Neural Interface Revolution</h3>
             <p className="text-gray-200 mb-6 leading-relaxed">
@@ -80,7 +79,7 @@ export default function NewContent2026UltimateBanner() {
               className="inline-flex items-center text-indigo-300 hover:text-white font-semibold group-hover:translate-x-2 transition-all duration-300"
             >
               Explore Neural Future
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              <span className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300">📊</span>
             </Link>
           </div>
         </div>

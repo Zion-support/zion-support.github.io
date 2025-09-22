@@ -7,16 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React, { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -37,20 +29,12 @@ import { AppPlatform } from "./MetadataManager";
 import { Plus, Trash2 } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ChangelogManagerProps {
   platform: AppPlatform
-=======
 
 interface ChangelogManagerProps {};
   platform: AppPlatform;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 type ChangelogEntry = {;
@@ -71,9 +55,7 @@ type ChangelogEntry = {}
   changes: string;
 }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       id: "1"
       version: "1.0.0"
       date: "2025-05-15"
@@ -159,7 +141,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry(prev => ({ ...prev, [name]: value }))
   },
 type ChangelogEntry = {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -171,13 +152,11 @@ interface ChangelogManagerProps {
   platform: AppPlatform;
 }
 type ChangelogEntry = {
-<<<<<<< HEAD
 }
 ;
 export const ChangelogManager: React.FC < ChangelogManagerProps> = ({}
   platform,
 ;
-=======
 }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
     {
@@ -287,7 +266,6 @@ export const ChangelogManager: React.FC < ChangelogManagerProps> = ({
   const [entries, set_entries] = useState < ChangelogEntry[]>([;
     {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({;
@@ -332,23 +310,14 @@ value={newEntry.date}
             <Button
               onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",;
-=======
     {import React, { useState } from "react",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     {import React, { useState } from "react",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <Input
                 type="date"
                 name="date"
 
 import React, { useState } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -371,7 +340,6 @@ type ChangelogEntry = {;import { Plus, Trash2 } from "lucide-react";
 
 import { AppPlatform } from "./MetadataManager";
 import { Plus, Trash2 } from "lucide-react",;
-=======
 
 ";
 import React, { useState } from "react",;"
@@ -380,7 +348,6 @@ import { Button } from "@/components/ui/button",;"
 import { Input } from "@/components/ui/input",;"
 import { Textarea } from "@/components/ui/textarea",;"
 import { Plus, Trash2 } from "lucide-react",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AppPlatform } from "./MetadataManager",;
 
 interface ChangelogManagerProps {
@@ -481,11 +448,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 <Input
                 placeholder="Version (e && e.g. 1 && 1.0.1)"
                 name="version"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 value={newEntry && newEntry.version}
-<<<<<<< HEAD
                 onChange={handleInputChange}
               />;
               <Input
@@ -497,20 +460,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             </div>;
 
             <Button;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 onChange={handleInputChange}
-=======
                 value={newEntry && newEntry.version}                onChange={handleInputChange}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 value={newEntry && newEntry.version}                onChange={handleInputChange}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 value={newEntry && newEntry.version}
                 onChange={handleInputChange}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               />
             </div>
             <Button;
@@ -519,19 +474,8 @@ onClick={handleAddEntry}
               onClick={handleAddEntry}
 
 disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               onClick={handleAddEntry}
 
             <Button;
@@ -560,19 +504,14 @@ disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
 
             <Button;
               onClick={handleAddEntry}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
-<<<<<<< HEAD
             rows={3}
-<<<<<<< HEAD
-<<<<<<< HEAD
           />
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
 
@@ -588,7 +527,6 @@ disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
 "
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
             {entries && entries.map((entry) => (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div
                 key={entry && entry.id}
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark">;
@@ -611,12 +549,9 @@ disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
                     <Trash2 className="h-4 w-4" />;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
-<<<<<<< HEAD
 
             {entries && entries.length === 0 && (;
               <p className="text-center text-gray-400 py-4">;
@@ -626,10 +561,8 @@ disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">
                 No changelog entries yet;
-=======
               <p className="text-center text-gray-400 py-4">
                 No changelog entries yet
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </p>
             )}
           </div>
@@ -637,15 +570,12 @@ disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
       </CardContent>
 </Card>"
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
-<<<<<<< HEAD
 
             {entries && entries.length === 0 && (;
               <p className="text-center text-gray-400 py-4">;
                 No changelog entries yet;
               </p>;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
           </div>;
         </div>;
@@ -657,25 +587,17 @@ disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
 };
 
   );
->>>>>>> main
-=======
             rows={3}          </div>;
         </div>;
       </CardContent>;
     </Card>;
   )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             rows={3}          </div>;
         </div>;
       </CardContent>;
     </Card>;
   )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             )}
           </div>;
         </div>;
@@ -686,7 +608,6 @@ disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
 
 };
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
   ),;
 },; interface ChangelogManagerProps {}
@@ -724,7 +645,4 @@ date: new Date () .toISOString () .split ('T') [0]
 };
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

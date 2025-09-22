@@ -32,7 +32,7 @@ const NewContentShowcase2025: React.FC = () => {
                   </div>
                   {item.featured && (
                     <div className="flex items-center space-x-1 text-yellow-600">
-                      <Award className="w-4 h-4" />
+                      <span className="w-4 h-4">📊</span>
                       <span className="text-sm font-medium">Featured</span>
                     </div>
                   )}
@@ -52,7 +52,7 @@ const NewContentShowcase2025: React.FC = () => {
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
                     <div key={key} className="flex items-center space-x-2">
-                      <TrendingUp className="w-4 h-4 text-green-600" />
+                      <span className="w-4 h-4 text-green-600">📊</span>
                       <div>
                         <div className="text-xs text-gray-500 capitalize">
                           {key === 'roi' && 'ROI'}
@@ -74,7 +74,7 @@ const NewContentShowcase2025: React.FC = () => {
 
                 {/* Reading Time */}
                 <div className="flex items-center space-x-2 text-sm text-gray-500 mb-4">
-                  <Clock className="w-4 h-4" />
+                  <span>Clock</span>
                   <span>{item.readingTime}</span>
                 </div>
               </div>
@@ -86,7 +86,7 @@ const NewContentShowcase2025: React.FC = () => {
                   className="w-full inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 group"
                 >
                   <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                  <span className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200">📊</span>
                 </Link>
               </div>
             </div>
@@ -114,7 +114,7 @@ const NewContentShowcase2025: React.FC = () => {
                 href="/case-studies"
                 className="inline-flex items-center space-x-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
               >
-                <Zap className="w-5 h-5" />
+                <span className="w-5 h-5">📊</span>
                 <span>View All Success Stories</span>
               </Link>
             </div>

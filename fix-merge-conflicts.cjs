@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 #!/usr/bin/env node
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
 
@@ -14,15 +12,12 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflicts
-<<<<<<< HEAD
-    if (!content.includes('<<<<<<< HEAD')) {
       return false;
     }
 
     console.log(`Fixing merge conflicts in: ${filePath}`);
 
     // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
     content = content.replace(/
     const lines = content.split('\n');
     const fixedLines = [];
@@ -36,7 +31,6 @@ ursor/integrate-build-improve-and-re-verify-9d47
         continue;
       }
 
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         keepVersion = false;
         continue;
@@ -44,7 +38,6 @@ ursor/integrate-build-improve-and-re-verify-9d47
 
       if (!inConflict || keepVersion) {
         fixedLines.push(line);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     }
 
@@ -59,35 +52,26 @@ ursor/integrate-build-improve-and-re-verify-9d47
 
     console.log(`Fixing merge conflicts in: ${filePath}`);
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     // Clean up any remaining conflict markers
     content = content.replace(/content = content.replace(/.*?\n?/g, '');
-<<<<<<< HEAD
     content = content.replace(/
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     // Check if file has merge conflicts
-    if (!content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
 
     // Remove merge conflict markers and keep the HEAD version
     content = content.replace(/
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return false;
   }
 }
 
-<<<<<<< HEAD
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -96,7 +80,6 @@ keepVersion = true;
         continue;
       }
 
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         keepVersion = false;
         continue;
@@ -134,7 +117,6 @@ class MergeConflictResolver {
   }
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Function to recursively find and process files
 function processDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -165,14 +147,11 @@ function processDirectory(dirPath) {
   return files;
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const items = fs.readdirSync(currentDir);
 
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             files.push(fullPath);
           }
         } catch (error) {
@@ -187,15 +166,11 @@ function processDirectory(dirPath) {
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return files;
 }
@@ -308,7 +283,6 @@ ursor/integrate-build-improve-and-re-verify-9d47
 
     try {
       // Find all TypeScript and JavaScript files with merge conflicts
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return totalFixed;
 }
@@ -318,8 +292,4 @@ console.log('Starting merge conflict resolution...');
 const totalFixed = processDirectory('.');
 console.log(`\nResolved conflicts in ${totalFixed} files.`);
 console.log('Merge conflict resolution complete!');
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

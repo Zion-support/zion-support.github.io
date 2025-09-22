@@ -5,7 +5,6 @@ import {
   Zap, TrendingUp, Clock, Database, Globe, 
   Shield, CheckCircle, AlertCircle, Loader,
   BarChart3, Brain, ArrowRight
-} from 'lucide-react';
 
 interface PerformanceMetric {
   id: string;
@@ -113,8 +112,8 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-500" />;
-      case 'down': return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
+      case 'up': return <span className="w-4 h-4 text-red-500">📊</span>;
+      case 'down': return <span className="w-4 h-4 text-green-500 rotate-180">📊</span>;
       case 'stable': return <BarChart3 className="w-4 h-4 text-blue-500" />;
       default: return null;
     }
@@ -133,7 +132,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center bg-blue-100 rounded-full px-6 py-2 mb-6">
-            <Zap className="w-5 h-5 mr-2 text-blue-600" />
+            <span className="w-5 h-5 mr-2 text-blue-600">📊</span>
             <span className="text-sm font-medium text-blue-800">ADVANCED PERFORMANCE OPTIMIZER</span>
           </div>
           
@@ -207,7 +206,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-blue-600" />
+                <span className="w-8 h-8 text-blue-600">📊</span>
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Code Optimization</h4>
               <p className="text-gray-600 text-sm">Intelligent code splitting and bundling optimization</p>
@@ -215,7 +214,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
             
             <div className="text-center">
               <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Database className="w-8 h-8 text-green-600" />
+                <span className="w-8 h-8 text-green-600">📊</span>
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Optimization</h4>
               <p className="text-gray-600 text-sm">Efficient data loading and caching strategies</p>
@@ -223,7 +222,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
             
             <div className="text-center">
               <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-purple-600" />
+                <span className="w-8 h-8 text-purple-600">📊</span>
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">CDN Optimization</h4>
               <p className="text-gray-600 text-sm">Global content delivery network optimization</p>
@@ -250,12 +249,12 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 </div>
               ) : optimizationComplete ? (
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span className="w-5 h-5 mr-2">📊</span>
                   Optimization Complete!
                 </div>
               ) : (
                 <div className="flex items-center">
-                  <Zap className="w-5 h-5 mr-2" />
+                  <span className="w-5 h-5 mr-2">📊</span>
                   Optimize Performance
                 </div>
               )}
@@ -272,7 +271,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 className="mt-8 bg-green-50 rounded-lg p-6 border border-green-200"
               >
                 <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-2" />
+                  <span className="w-6 h-6 text-green-600 mr-2">📊</span>
                   <h4 className="text-lg font-semibold text-green-800">Optimization Results</h4>
                 </div>
                 
@@ -312,7 +311,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           
           <div className="text-center">
             <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-green-600" />
+              <span className="w-8 h-8 text-green-600">📊</span>
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Security Optimized</h4>
             <p className="text-gray-600 text-sm">Performance without compromising security</p>
@@ -328,7 +327,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           
           <div className="text-center">
             <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <ArrowRight className="w-8 h-8 text-orange-600" />
+              <span className="w-8 h-8 text-orange-600">📊</span>
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Goal Oriented</h4>
             <p className="text-gray-600 text-sm">Optimization aligned with business objectives</p>

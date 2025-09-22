@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap, Brain } from 'lucide-react';
 
 export default function NewContentShowcase2026Ultimate() {
   const featuredContent = [
@@ -56,7 +55,7 @@ export default function NewContentShowcase2026Ultimate() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6">
-            <Star className="w-5 h-5 mr-2" />
+            <span>Star</span>
             <span className="text-sm font-medium">NEW CONTENT 2026</span>
           </div>
           
@@ -115,7 +114,7 @@ export default function NewContentShowcase2026Ultimate() {
                     className={`inline-flex items-center bg-gradient-to-r ${getColorClasses(content.color)} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <span className="w-4 h-4 ml-2">📊</span>
                   </Link>
                 </div>
               </div>
@@ -137,7 +136,7 @@ export default function NewContentShowcase2026Ultimate() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-4">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
+                <span className="w-6 h-6 text-white">📊</span>
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Quantum AI</h4>
               <p className="text-sm text-gray-600">Quantum computing meets AI</p>
@@ -145,7 +144,7 @@ export default function NewContentShowcase2026Ultimate() {
             
             <div className="text-center p-4">
               <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+                <span className="w-6 h-6 text-white">📊</span>
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Autonomous Systems</h4>
               <p className="text-sm text-gray-600">Self-managing business operations</p>
@@ -153,7 +152,7 @@ export default function NewContentShowcase2026Ultimate() {
             
             <div className="text-center p-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" />
+                <span className="w-6 h-6 text-white">📊</span>
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Human-AI Fusion</h4>
               <p className="text-sm text-gray-600">Seamless human-AI collaboration</p>
@@ -161,7 +160,7 @@ export default function NewContentShowcase2026Ultimate() {
             
             <div className="text-center p-4">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-white" />
+                <span className="w-6 h-6 text-white">📊</span>
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Business Transformation</h4>
               <p className="text-sm text-gray-600">Complete organizational change</p>

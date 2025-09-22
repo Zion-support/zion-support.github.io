@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 const UltimateAITransformation2025Banner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -77,11 +76,11 @@ const UltimateAITransformation2025Banner = () => {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-3">
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Zap className="w-5 h-5 text-yellow-400" />
+                <span className="w-5 h-5 text-yellow-400">📊</span>
                 <span className="text-sm font-semibold">ULTIMATE AI TRANSFORMATION 2025</span>
               </div>
               <div className="flex items-center space-x-2 bg-green-500/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <TrendingUp className="w-4 h-4 text-green-400" />
+                <span className="w-4 h-4 text-green-400">📊</span>
                 <span className="text-sm font-semibold text-green-400">15,000% ROI</span>
               </div>
             </div>
@@ -89,7 +88,7 @@ const UltimateAITransformation2025Banner = () => {
               onClick={handleDismiss}
               className="text-white/70 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
             >
-              <X className="w-5 h-5" />
+              <span>X</span>
             </button>
           </div>
 
@@ -106,11 +105,11 @@ const UltimateAITransformation2025Banner = () => {
 
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <DollarSign className="w-5 h-5 text-green-400" />
+                  <span className="w-5 h-5 text-green-400">📊</span>
                   <span className="font-semibold">{currentContent.metrics}</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <Award className="w-5 h-5 text-blue-400" />
+                  <span className="w-5 h-5 text-blue-400">📊</span>
                   <span className="font-semibold">{currentContent.readingTime}</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-yellow-500/20 backdrop-blur-sm rounded-lg px-4 py-2">
@@ -124,7 +123,7 @@ const UltimateAITransformation2025Banner = () => {
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                 >
                   Read {currentContent.type === 'case-study' ? 'Case Study' : currentContent.type === 'resource' ? 'Guide' : 'Article'}
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <span className="ml-2 w-5 h-5">📊</span>
                 </Link>
                 <Link
                   href="/contact"

@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Star, TrendingUp, BookOpen, Download, Play,
   Users, Award, Zap, ArrowUpRight, Brain, Calendar, Clock
-} from 'lucide-react';
 
 const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -27,7 +26,7 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
       stats: "15.7T Economic Value • 340% ROI • 67% Cost Reduction",
       cta: "Read Predictions",
       href: "/blog/ai-trends-2025-2030-comprehensive-future-predictions",
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <span className="w-8 h-8">📊</span>,
       color: "from-purple-600 to-pink-600"
     },
     {
@@ -37,7 +36,7 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
       stats: "10,000x Speed • 100x Drug Discovery • 99.9% Uptime",
       cta: "Explore Quantum AI",
       href: "/blog/quantum-computing-business-applications-2025",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <span className="w-8 h-8">📊</span>,
       color: "from-blue-600 to-cyan-600"
     },
     {
@@ -47,16 +46,16 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
       stats: "Human-Level Reasoning • Creative AI • Self-Learning",
       cta: "Learn About AGI",
       href: "/blog/ai-2025-autonomous-enterprise-systems-complete-guide",
-      icon: <Brain className="w-8 h-8" />,
+      icon: <span className="w-8 h-8">📊</span>,
       color: "from-green-600 to-emerald-600"
     }
   ];
 
   const features = [
-    { icon: <Calendar className="w-6 h-6" />, title: "5-Year Timeline", description: "Detailed predictions from 2025-2030" },
-    { icon: <ArrowRight className="w-6 h-6" />, title: "Enterprise Focus", description: "Business impact and implementation strategies" },
+    { icon: <span>Calendar</span>, title: "5-Year Timeline", description: "Detailed predictions from 2025-2030" },
+    { icon: <span className="w-6 h-6">📊</span>, title: "Enterprise Focus", description: "Business impact and implementation strategies" },
     { icon: <ArrowUpRight className="w-6 h-6" />, title: "Future Technology", description: "Cutting-edge AI breakthroughs and innovations" },
-    { icon: <Award className="w-6 h-6" />, title: "Expert Insights", description: "Professional analysis and recommendations" }
+    { icon: <span className="w-6 h-6">📊</span>, title: "Expert Insights", description: "Professional analysis and recommendations" }
   ];
 
   if (!isVisible) return null;
@@ -79,7 +78,7 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6"
           >
-            <TrendingUp className="w-5 h-5 mr-2" />
+            <span className="w-5 h-5 mr-2">📊</span>
             <span className="text-sm font-medium">FUTURE AI PREDICTIONS</span>
           </motion.div>
           
@@ -140,7 +139,7 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
                   className="inline-flex items-center bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   {slides[currentSlide].cta}
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <span className="w-5 h-5 ml-2">📊</span>
                 </Link>
               </motion.div>
             </AnimatePresence>
@@ -227,14 +226,14 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
               href="/blog/ai-trends-2025-2030-comprehensive-future-predictions"
               className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              <BookOpen className="w-5 h-5 mr-2" />
+              <span className="w-5 h-5 mr-2">📊</span>
               Read Full Predictions
             </Link>
             <Link
               href="/resources/ai-implementation-roadmap-2025"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center"
             >
-              <Download className="w-5 h-5 mr-2" />
+              <span>Download</span>
               Download Roadmap
             </Link>
           </div>

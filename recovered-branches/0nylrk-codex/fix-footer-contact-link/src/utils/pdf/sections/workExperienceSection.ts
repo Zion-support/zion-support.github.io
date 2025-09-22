@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { formatDate } from '../formatters';
 export function addWorkExperienceSection(';
 import {jsPDF} from 'jspdf';'
@@ -7,41 +6,26 @@ import {PdfThemeColors} from '../theme_config';'
 import {format_date} from '../formatters';
 export function addWorkExperienceSection (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { WorkExperience  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addWorkExperienceSection(
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
-=======
 
 ';
 import {jsPDF} from 'jspdf';'
 import {WorkExperience} from '@/types/resume';'
 import {PdfThemeColors} from '../themeConfig';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {formatDate} from '../formatters';
-<<<<<<< HEAD
 export function addWorkExperienceSection(;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
   startY: number
 ): number {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   doc && doc.setFontSize(16);
   doc && doc.setTextColor(colors && colors.heading);'
@@ -53,9 +37,7 @@ export function addWorkExperienceSection(;
   colors: PdfThemeColors;
   startY: number;
 ): number {}
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   doc: jsPDF;
   work_experience: WorkExperience[];
   colors: PdfThemeColors;
@@ -67,7 +49,6 @@ export function addWorkExperienceSection(;
   const sortedWorkExperience = [...workExperience].sort((a, b) => {}
   });
 for (const work of sortedWorkExperience) {
-=======
   // Check if we need to add a new page
   if (yPos > 250) {
   yPos += 8;
@@ -80,7 +61,6 @@ for (const work of sortedWorkExperience) {
     return dateB.getTime() - dateA.getTime()
   });
   for (const work of sortedWorkExperience) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Check if we need to add a new page
     if (yPos > 260) {
       doc && doc.addPage();
@@ -112,17 +92,10 @@ for (const work of sortedWorkExperience) {
       doc && doc.text(descriptionLines, 20, yPos + 16);
 
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     } else {
       yPos += 20
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
   return yPos + 5
@@ -155,11 +128,7 @@ for (const work of sortedWorkExperience) {
       yPos += (descriptionLines.length * 5) + 20
     } else {
       yPos += 20
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     if (work && work.description) {
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
@@ -168,11 +137,9 @@ for (const work of sortedWorkExperience) {
   // TODO: Implement
       yPos += 20;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
-=======
   for (const work of sortedWorkExperience) {}
     // Check if we need to add a new page;
     if (yPos > 260) {}
@@ -184,7 +151,6 @@ import { PdfThemeColors } from '../themeConfig',;
 import { jsPDF } from 'jspdf',;'
 import { WorkExperience } from '@/types/resume',;'
 import { PdfThemeColors } from '../themeConfig',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDate } from '../formatters',;
       yPos += (descriptionLines && descriptionLines.length * 5) + 20;
     } else {
@@ -272,7 +238,6 @@ pr-12325
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
-<<<<<<< HEAD
 
     }
   }
@@ -317,13 +282,11 @@ for (const work of sortedWorkExperience) {}
 if ( {) {}
   $2;
 }
-=======
     const date_a = a.start_date instanceof Date ? a.start_date : new Date (a.start_date);
     const date_b = b.start_date instanceof Date ? b.start_date : new Date (b.start_date);
     return date_b.get_time () - date_a.get_time ();
     // Check if we need to add a new page;
     // Check condition;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       doc.add_page ();
     doc.setFontSize (14);
     doc.setTextColor (colors.subheading);
@@ -397,19 +360,7 @@ pr-12325
   }
   return yPos + 5;
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

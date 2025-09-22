@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -13,11 +8,6 @@ import { ProjectForm  } from './ProjectForm';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -27,9 +17,6 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -41,23 +28,15 @@ import { PortfolioProject } from "@/types/resume";
 import { usePortfolio } from "@/hooks/usePortfolio";
 export function PortfolioBuilder() {};
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-=======
 export function PortfolioBuilder() {;  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function PortfolioBuilder() {;  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { usePortfolio } from "@/hooks/usePortfolio";
 export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
     null,
   );
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   useEffect(() => {}
     fetchProjects();
@@ -80,11 +59,6 @@ const handleAddSuccess = () => {}
     }
 }
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -114,31 +88,16 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   if (isLoading) {
-=======
     if (isLoading) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     if (isLoading) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   };
 
   if (isLoading) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -170,7 +129,6 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-<<<<<<< HEAD
               {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
             <ProjectForm
@@ -187,14 +145,11 @@ export function PortfolioBuilder() {;
 
             <ProjectForm
               project={editingProject || undefined}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
 
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
             />;
           </CardContent>;
@@ -390,4 +345,3 @@ className="mt-2";
             </CardContent>;
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

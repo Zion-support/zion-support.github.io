@@ -1,5 +1,4 @@
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -7,20 +6,16 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 };
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -39,7 +34,6 @@ export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path),
   return route?.requiredAuth === true;
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return route?.requiredAuth === true
 
@@ -47,14 +41,12 @@ export const isProtectedRoute = (path: string): boolean => {
 export const canAccessRoute = (
   path: string,
   isAuthenticated: boolean,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path)
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const route = findRouteByPath(path),
   return route?.requiredAuth === true
 };
@@ -76,8 +68,6 @@ export const isProtectedRoute = (path: string): boolean => {
 
   const route = findRouteByPath(path),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
@@ -89,20 +79,14 @@ if (route && route.requiredAuth && !isAuthenticated) return false;
   if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
     return route && route.requiredRoles.includes(userType as any)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
-=======
   const route = findRouteByPath(path),
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return true
 }
 // Get breadcrumb items for a path
@@ -125,15 +109,11 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         path: currentPath
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
-<<<<<<< HEAD
       breadcrumbs && breadcrumbs.push({
         label: segment && segment.charAt(0).toUpperCase() + segment && segment.slice(1).replace(/-/g, ' ');
         path: currentPath
@@ -141,8 +121,6 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     }
   }
   return breadcrumbs
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 }
 
@@ -240,36 +218,20 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
   // For dynamic routes that might not be in the static sitemap breadcrumbs.push ({
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (route.requiredAuth && !isAuthenticated) return false,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {};
   return complete_sitemap.find (route => route.path === path);
@@ -343,31 +305,13 @@ if ( {) {}
       });
     }
   }
-<<<<<<< HEAD
   return breadcrumbs;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return breadcrumbs
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   return breadcrumbs
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 };
 
@@ -375,12 +319,7 @@ if ( {) {}
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 };
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

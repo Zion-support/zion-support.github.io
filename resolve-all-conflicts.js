@@ -1,14 +1,7 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-pr-12325
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 // Function to resolve conflicts in a file
 function resolveConflictsInFile(filePath) {
@@ -21,7 +14,6 @@ function resolveConflictsInFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Skip if no conflicts
-    if (!content.includes('<<<<<<< HEAD') || !content.includes('
       .replace(/\n([\s\S]*?)\n
 
     // Strategy 2: For specific file types, use different strategies
@@ -85,29 +77,20 @@ function resolveMergeConflicts(filePath) {}
         let content = fs.readFileSync(filePath, 'utf8');
 
         // Check if file has merge conflicts
-        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
             return false; // No conflicts to resolve
         }
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
         content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)[^\n]+\n?/g, '$1');
         // Remove any remaining conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         content = content.replace(/        content = content.replace(/
         content = content.replace(/        
-=======
-=======
         content = content.replace(/\n([\s\S]*?)
 
         // Remove any remaining conflict markers
         content = content.replace(/content = content.replace(/
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // Clean up any duplicate content
-=======
         // Check if file has merge conflicts'
         if (!content.includes('
 
@@ -115,7 +98,6 @@ function resolveMergeConflicts(filePath) {}
         content = content.replace(/
 
         // Clean up any duplicate content'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         content = content.replace(/\n\n\n+/g, '\n\n');
 
         // Write the resolved content back'
@@ -123,7 +105,6 @@ function resolveMergeConflicts(filePath) {}
         console.log(`✅ Resolved conflicts in: ${filePath}`);
         return true;
     } catch (error) {}`
-=======
         content = content.replace(/[^\n]+\n?/g, '');
         content = content.replace(/\n?/g, '');
         content = content.replace(/[^\n]+\n?/g, '');
@@ -147,7 +128,6 @@ pr-12325
         console.log(`✅ Resolved conflicts in: ${filePath}`);
         return true;
     } catch (error) {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         console.error(`❌ Error processing ${filePath}:`, error.message);
         return false;
 
@@ -286,4 +266,3 @@ async function main() {}
     console.log('🎉 Merge conflict resolution completed!');
 
 main().catch(console.error);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

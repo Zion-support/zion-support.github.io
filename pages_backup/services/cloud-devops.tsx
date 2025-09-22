@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
 import React from 'react';import Head from 'next/head';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import React from 'react';import Head from 'next/head';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const features = [
   {
     icon: Cloud,
@@ -23,7 +15,6 @@ description: 'Seamless migration to cloud platforms with minimal downtime and ma
 
   },
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -36,11 +27,9 @@ const features = [;
   description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';  {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Server,
     title: 'Infrastructure as Code',
     description: 'Manage your infrastructure using code for better consistency and automation.',
-=======
 import * as React from 'react';'
 import Head from 'next/head';'
 import Link from 'next/link';'
@@ -58,9 +47,7 @@ const features = []
     icon: Server,'
     title: 'Infrastructure as Code','
     description: 'Manage your infrastructure using code for better consistency and automation.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     benefits: ['Version control', 'Automated provisioning', 'Consistent environments', 'Disaster recovery']
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 {
     icon: GitBranch,
@@ -83,7 +70,6 @@ const features = []
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
-<<<<<<< HEAD
 
 const tools = ['
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },'
@@ -107,7 +93,6 @@ const benefits = [
 ];
 export default function CloudDevOpsServices() {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -124,7 +109,6 @@ export default function CloudDevOpsServices() {
       </Head>
 "
       <div className="min-h-screen bg-gray-50">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,12 +128,10 @@ export default function CloudDevOpsServices() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-=======
         {/* Hero Section */}"
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">"
           <div className="max-w-7xl mx-auto px-4">;
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
@@ -159,7 +141,6 @@ export default function CloudDevOpsServices() {
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform your infrastructure with our comprehensive cloud and DevOps services;
                 designed for scalability, reliability, and efficiency.
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -174,7 +155,6 @@ export default function CloudDevOpsServices() {
         </section>
 
 {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -215,7 +195,6 @@ export default function CloudDevOpsServices() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>"
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Comprehensive cloud and DevOps solutions to modernize your infrastructure.
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </p>
 </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -269,7 +248,6 @@ export default function CloudDevOpsServices() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 {/* Process Section */}
         <section className="py-16 px-4">;
@@ -304,7 +282,6 @@ export default function CloudDevOpsServices() {
                   <p className="text-gray-600">{phase && phase.description}</p>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
 
         {/* Benefits Section */}
         <section className="py-20">
@@ -339,8 +316,6 @@ export default function CloudDevOpsServices() {
                 </button>
               </div>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -368,9 +343,6 @@ export default function CloudDevOpsServices() {
       </div>
 </>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

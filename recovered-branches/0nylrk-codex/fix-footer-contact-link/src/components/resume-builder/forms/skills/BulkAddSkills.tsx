@@ -1,28 +1,18 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   },  return (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 import {use_resume} from '@/hooks / use_resume';
-=======
 
 import {useState} from 'react';'
 import {Button} from '@/components / ui / button';'
 import {Loader2, Sparkles} from 'lucide-react';'
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';'
 import {use_resume} from '@/hooks / use_resume';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {BulkAddSkillsProps} from './types';
 
     setError(null);
@@ -150,25 +140,20 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           await onSuccess();
         } catch (err) {;'
           setError('Failed to parse categorized skills. Please try again.');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 }
   },
   };
   },
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       }
     } catch (err: any) {'
@@ -179,7 +164,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 
   };
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="bg-muted/40 p-6 rounded-lg">"
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>"
@@ -276,9 +260,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
@@ -288,25 +269,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         <Button;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className="gap-2"
         >
           {isEnhancing ? ("
@@ -376,11 +344,8 @@ return (
         <div className="space-y-2">;
           <label className="text - sm font-medium">Enter multiple skills (comma separated)</label>;
           <Textarea;
-<<<<<<< HEAD
             className="min-h-24";
-=======
             className="min-h-24";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             placeholder="Python, React, TypeScript, Project Management, Communication...";
             value={bulk_skills}
             on_change={(e) => setBulkSkills (e.target.value)}
@@ -396,11 +361,8 @@ disabled={is_enhancing || !bulk_skills.trim ()}
             <Sparkles className="h - 4 w-4" />)}
           Categorize with AI;
         </Button>;
-<<<<<<< HEAD
         <p className="text - xs text - muted - foreground mt-1">;
-=======
         <p className="text - xs text - muted - foreground mt-1">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;"
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -408,11 +370,6 @@ disabled={is_enhancing || !bulk_skills.trim ()}
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ;
         <p className="text-xs text-muted-foreground mt-1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
@@ -438,18 +395,8 @@ disabled={is_enhancing || !bulk_skills.trim ()}
 },
 };
 },
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -633,4 +580,3 @@ if ( {) {
 pr-12325
 }Categorize with AI </Button> <p className="text-xs text-muted-foreground mt-1" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

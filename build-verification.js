@@ -57,7 +57,6 @@ const {}
     Cloud,
     Shield,
 
-<<<<<<< HEAD
     Zap,
 }
     Zap}
@@ -81,10 +80,8 @@ main
     Zap: typeof Zap,
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   });
   console.log('🎉 All core dependencies imported successfully!');
-=======
 
     Zap,'
   } = require('lucide-react');'
@@ -97,7 +94,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 ;
   });'
   console.log('🎉 All core dependencies imported successfully!');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   console.log('📋 Components should be ready for build');
 } catch (error) {'
   console.error('❌ Import error:', error.message);

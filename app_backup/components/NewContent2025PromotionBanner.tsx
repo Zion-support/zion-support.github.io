@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronLeft, ChevronRight, Star, TrendingUp, Clock, Users } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -126,13 +125,13 @@ const NewContent2025PromotionBanner: React.FC = () => {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':
-        return <TrendingUp className="w-4 h-4" />;
+        return <span className="w-4 h-4">📊</span>;
       case 'case-study':
-        return <Users className="w-4 h-4" />;
+        return <span className="w-4 h-4">📊</span>;
       case 'resource':
-        return <Star className="w-4 h-4" />;
+        return <span>Star</span>;
       default:
-        return <TrendingUp className="w-4 h-4" />;
+        return <span className="w-4 h-4">📊</span>;
     }
   };
 
@@ -170,7 +169,7 @@ const NewContent2025PromotionBanner: React.FC = () => {
             className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
             aria-label="Dismiss banner"
           >
-            <X className="w-5 h-5" />
+            <span>X</span>
           </button>
 
           {/* Content */}
@@ -193,7 +192,7 @@ const NewContent2025PromotionBanner: React.FC = () => {
             {/* Metrics */}
             <div className="flex flex-wrap items-center gap-4 mb-3">
               <div className="flex items-center space-x-1 text-sm">
-                <TrendingUp className="w-4 h-4 text-green-600" />
+                <span className="w-4 h-4 text-green-600">📊</span>
                 <span className="font-medium text-gray-900">{currentContent.metrics.roi} ROI</span>
               </div>
               <div className="flex items-center space-x-1 text-sm">
@@ -201,7 +200,7 @@ const NewContent2025PromotionBanner: React.FC = () => {
                 <span className="font-medium text-gray-900">{currentContent.metrics.savings}</span>
               </div>
               <div className="flex items-center space-x-1 text-sm">
-                <Clock className="w-4 h-4 text-blue-600" />
+                <span>Clock</span>
                 <span className="text-gray-600">{currentContent.readingTime}</span>
               </div>
             </div>
@@ -224,7 +223,7 @@ const NewContent2025PromotionBanner: React.FC = () => {
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
               Read Now
-              <ChevronRight className="w-4 h-4 ml-1" />
+              <span>ChevronRight</span>
             </Link>
           </div>
 
@@ -235,7 +234,7 @@ const NewContent2025PromotionBanner: React.FC = () => {
               className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
               aria-label="Previous content"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <span className="w-5 h-5">📊</span>
             </button>
             
             {/* Progress indicators */}
@@ -260,7 +259,7 @@ const NewContent2025PromotionBanner: React.FC = () => {
               className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
               aria-label="Next content"
             >
-              <ChevronRight className="w-5 h-5" />
+              <span>ChevronRight</span>
             </button>
           </div>
         </div>

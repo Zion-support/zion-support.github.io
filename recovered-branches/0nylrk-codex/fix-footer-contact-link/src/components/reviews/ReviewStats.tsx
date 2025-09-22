@@ -1,18 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
-<<<<<<< HEAD
   ratingDistribution?: Record<number, number>
 "
 import { Star } from "lucide-react","
@@ -26,8 +18,6 @@ import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 ";
 import {Star} from "lucide-react";"
@@ -35,14 +25,9 @@ import {Progress} from "@/components/ui/progress";"
 import { Star } from "lucide-react","
 import { Progress } from "@/components/ui/progress",
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ReviewStatsProps {
-=======
 
 interface ReviewStatsProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
@@ -50,39 +35,30 @@ import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
 interface ReviewStatsProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 interface ReviewStatsProps {
 
   ratingDistribution?: Record<number, number>interface ReviewStatsProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
 
 }
-<<<<<<< HEAD
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Format the average rating to one decimal place;
   const formattedRating = averageRating.toFixed(1);
   // Format the average rating to one decimal place
 
   const formattedRating = averageRating.toFixed(1);
   const formattedRating = averageRating.toFixed(1),
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
@@ -96,10 +72,8 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
-=======
 import { Star } from "lucide-react",;
 import { Progress } from "@/components/ui/progress",;
 
@@ -134,11 +108,9 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   const formattedRating = averageRating.toFixed(1),;
   // Calculate percentages for distribution if available;
   const getPercentage = (count: number) => {;
-=======
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {};
   // Calculate percentages for distribution if available;
   const getPercentage = (count: number) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (totalReviews === 0) return 0;
     return (count / totalReviews) * 100;
   return ("
@@ -168,12 +140,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
                     i <= Math && Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   }`}
 
                 <Star;
@@ -236,33 +206,20 @@ if (return 0, ) {}
                 {ratingDistribution[rating] || 0}
               </div>;
             </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ))}
         </div>
       )}
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {  // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {  // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Calculate percentages for distribution if available
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {  // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
@@ -528,4 +485,3 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 }</div>) 
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,62 +1,35 @@
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
-=======
 import {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Dialog;
   DialogContent;
   DialogDescription;
-<<<<<<< HEAD
-<<<<<<< HEAD
   DialogHeader;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { useState } from 'react',
 import {}
-=======
   DialogHeader;
 import React, { useState } from 'react',
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-<<<<<<< HEAD
   DialogTitle} from "@/components/ui/dialog",
-=======
   DialogHeader;  DialogTitle} from "@/components/ui/dialog",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   DialogHeader;  DialogTitle} from "@/components/ui/dialog",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   DialogTitle} from "@/components/ui/dialog",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-=======
 
 DialogTitle} from "@/components/ui/dialog","
 import { Button } from "@/components/ui/button","
@@ -65,23 +38,10 @@ import { Label } from "@/components/ui/label","
 import { Textarea } from "@/components/ui/textarea","
 import { toast } from "@/hooks/use-toast","
 import { supabase } from "@/integrations/supabase/client","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   DialogHeader;  DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -90,7 +50,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -101,10 +60,6 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface HireConfirmationModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -114,18 +69,10 @@ export interface HireConfirmationModalProps {;
   isSubmitting?: boolean;
 }
 
-<<<<<<< HEAD
 export function HireConfirmationModal({ ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isOpen;
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   isOpen;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function HireConfirmationModal({ ;
 
   isOpen;
@@ -139,22 +86,10 @@ export function HireConfirmationModal({ ;
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const { user } = useAuth();
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',
-=======
   const { user } = useAuth();import React, { useState } from 'react',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const { user } = useAuth();import React, { useState } from 'react',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
   const { user } = useAuth();import React, { useState } from 'react',;
 import {
 
@@ -259,7 +194,6 @@ export function HireConfirmationModal({ ;
   const [projectDescription, setProjectDescription] = useState();
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { user } = useAuth();
 
 // Get talent information from either candidateData or application
@@ -272,9 +206,7 @@ export function HireConfirmationModal({ ;
         variant: 'destructive'})
       return
 import React, { useState } from 'react',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
-=======
   // TODO: Implement
 '
 import React, { useState } from 'react','
@@ -282,7 +214,6 @@ import React, { useState } from 'react','
 import {
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Dialog,
   DialogContent,
   DialogDescription,
@@ -295,23 +226,11 @@ import { Textarea } from "@/components/ui/textarea","
 import { toast } from "@/hooks/use-toast","
 import { supabase } from "@/integrations/supabase/client","
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useAuth } from "@/hooks/useAuth",
-=======
 
 "
 import { useAuth } from "@/hooks/useAuth","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {}
   isOpen: boolean,
@@ -377,21 +296,11 @@ export function HireConfirmationModal() { return null; }
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
 toast({;
-<<<<<<< HEAD
         title: 'Required fields missing',,
   description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
-<<<<<<< HEAD
       return;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     if (!user) {}
       toast({'
@@ -417,24 +326,17 @@ return
         description: 'Please fill in both project name and description.',;'
         variant: 'destructive'}),;
       return;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     if (!user) {;
       toast({;'
         title: 'Not authenticated',;'
         description: 'You must be logged in to hire a candidate.',;'
-=======
         title: 'Required fields missing',;
         description: 'Please fill in both project name and description.',;
-=======
         title: 'Required fields missing',,
   description: 'Please fill in both project name and description.',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: 'destructive'}),;
       return;            return;
           }
@@ -491,7 +393,6 @@ return
 toast({;
         title: 'Not authenticated',;
         description: 'You must be logged in to hire a candidate.',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: 'destructive'}),;
       return;
     }
@@ -507,10 +408,6 @@ if (!talentData) {;
 
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setIsLoading(true);
     setIsLoading(true);
 
@@ -586,8 +483,6 @@ if ( {) {
 
     }
     setIsLoading(true);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -602,12 +497,10 @@ import { JobApplication } from '@/types / jobs';
 export interface HireConfirmationModalProps {}
   is_open: boolean,
   on_close: () => void,;
-=======
 import { JobApplication } from '@/types / jobs';
   // TODO: Implement
   is_open: boolean,
   on_close: () => void,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   candidate_data?: TalentProfile;
   on_confirm: () => void,
   is_submitting?: boolean;
@@ -624,12 +517,10 @@ function HireConfirmationModal() {
   const [project_description, setProjectDescription] = useState ();
   const [update_availability, setUpdateAvailability] = useState (true);
   const [is_loading, setIsLoading] = useState (false);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = use_auth ();
   // Get talent information from either candidate_data or application;
   const talent_data = candidate_data || (application?.talent_profile as TalentProfile);
 ;
-<<<<<<< HEAD
   const handleHireCandidate = async () => {}
     // Check condition;
 if ( {) {}
@@ -672,7 +563,6 @@ if ( {) {
     // Check condition;
         title: 'Missing talent data',
 description: 'Talent information is missing.',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: 'destructive'}),
       return;
     }
@@ -699,9 +589,7 @@ description: 'Talent information is missing.',
             title: projectName,;
 description: projectDescription,;'
             status: 'active',;'
-=======
             status: 'active',;')]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             payment_terms: 'hourly'}]);
         .select();
         .single();
@@ -727,14 +615,12 @@ setIsLoading(false);
 
       // Create a new hiring record;
       const { error: hiringError } = await supabase;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .from('hiring_records');
 .insert([;
           {;
             client_id: user && user.id,;
             talent_id: talentData && talentData.user_id,;
             project_id: projectData && projectData.id,;
-<<<<<<< HEAD
             hire_date: new Date().toISOString(),;'
             status: 'active'}]),;
 
@@ -758,18 +644,11 @@ setIsLoading(false);
               description: availabilityError && availabilityError.message,;'
               variant: 'destructive'}),;
 
-<<<<<<< HEAD
             setIsLoading(false);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             hire_date: new Date().toISOString(),;
-=======
             project_id: projectData && projectData.id,;)
             hire_date: new Date().toISOString(),;]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             status: 'active'}]),;
 
       if (hiringError) {;
@@ -799,7 +678,6 @@ setIsLoading(false);
               variant: 'destructive'}),;
 
             setIsLoading(false);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             client_id: user.id,
             talent_id: talent_data.user_id,
             job_id: application?.job_id || null,
@@ -820,12 +698,10 @@ if ( {) {}
           variant: 'destructive'}),
         setIsLoading (false);
         return;
-<<<<<<< HEAD
           title: 'Error creating project',
           description: project_error.message,)
         setIsLoading (false);
         return;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
       // Create a new hiring record;
       const { error: hiring_error } = await supabase;
@@ -848,13 +724,8 @@ if ( {) {}
               description: availability_error.message,
               variant: 'destructive'}),
             setIsLoading (false);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             return;
-=======
             return;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
 
 return;
@@ -871,8 +742,6 @@ return;
         }
 }
 
-<<<<<<< HEAD
-=======
 
             return;
           }
@@ -883,15 +752,12 @@ return;
 
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
   };
 
 ;
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setIsLoading(true),;
     // Create a new project;
     try {;
@@ -913,7 +779,6 @@ toast({;
 title: 'Error creating project',,
   description: projectError.message,;
           variant: 'destructive'}),;
-=======
 }
   };
 ;
@@ -932,7 +797,6 @@ title: 'Error creating project',,
             talent_id: talentData.user_id,;
         .single(),;
           description: projectError.message,;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         setIsLoading(false),;
       // Create a new hiring record;
 const { error: hiringError } = await supabase;'
@@ -946,7 +810,6 @@ const { error: hiringError } = await supabase;'
             status: 'active'}]),;
       if (hiringError) {;
 toast({;
-<<<<<<< HEAD
           title: 'Error creating hiring record',,
   description: hiringError.message,;
           variant: 'destructive'}),;
@@ -970,13 +833,11 @@ title: 'Error updating availability',,
             return;
           }
         } catch (error) {;'
-=======
             project_id: projectData.id,;)
           description: hiringError.message,;)
       // Update the availability status;
             .eq('id', talentData.id),;
               description: availabilityError.message,;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.error('Error updating availability:', error),;
 toast({;
 title: 'Error updating availability',,
@@ -1011,20 +872,11 @@ toast({;
         variant: 'destructive'});
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
-<<<<<<< HEAD
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
   },
@@ -1182,16 +1034,11 @@ toast({;
               id="updateAvailability"
               className="h-4 w-4"
               checked={updateAvailability}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               onChange={(e) => setUpdateAvailability(e && e.target.checked)}
             />;
             <label"
               htmlFor="updateAvailability"
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
@@ -1200,7 +1047,6 @@ toast({;
           toast ({'
             title: 'Error updating availability','
             description: 'Failed to update candidate availability status.','
-=======
               onChange={(e) => setUpdateAvailability(e && e.target.checked)}
             />;
             <label
@@ -1232,7 +1078,6 @@ onChange={(e) => setUpdateAvailability(e.target.checked)}
           toast ({
             title: 'Error updating availability',
             description: 'Failed to update candidate availability status.',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             variant: 'destructive'}),
           setIsLoading (false);
           return;
@@ -1355,7 +1200,6 @@ className="col - span - 3";
             <input;
               type="checkbox";
               id="update_availability";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="h - 4 w - 4";
               checked={update_availability}
               on_change={(e) => setUpdateAvailability (e.target.checked)}
@@ -1420,14 +1264,6 @@ if (!projectName || !projectDescription) {}
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -8,24 +8,13 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Badge} from "@/components/ui/badge";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function ApiLogs() {
-=======
 export function ApiLogs() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
@@ -46,25 +35,15 @@ export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export function ApiLogs() { return null; }
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
-=======
 
 export function ApiLogs() { return null; }
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
@@ -74,7 +53,6 @@ export function ApiLogs() { return null; }
 import { useState, useEffect } from "react","
 import { format } from "date-fns","
 import { List, RefreshCw } from "lucide-react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",
 "
 import { Button } from "@/components/ui/button","
@@ -85,13 +63,7 @@ export function ApiLogs() {}
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -101,47 +73,29 @@ export function ApiLogs() {}
     fetchApiLogs(pageSize, currentPage * pageSize)
   },
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Load logs on mount and when pagination changes
   useEffect(() => {
-=======
 
   ;
 ;
   // Load logs on mount and when pagination changes;
   useEffect(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]);
 
   const handleRefresh = () => {}
     fetchApiLogs(pageSize, currentPage * pageSize)
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
-=======
   // Helper to format the timestamp;
   const formatTimestamp = (timestamp: string) => {'
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
@@ -149,7 +103,6 @@ export function ApiLogs() {}
   // Helper to get badge color based on status code;
   const getStatusBadge = (statusCode: number) => {}
     if (statusCode >= 200 && statusCode < 300) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return <Badge className="bg-green-700">Success</Badge>
     } else if (statusCode >= 400 && statusCode < 500) {"
       return <Badge className="bg-amber-700">Client Error</Badge>
@@ -157,10 +110,7 @@ export function ApiLogs() {}
       return <Badge className="bg-red-700">Server Error</Badge>
     } else {"
       return <Badge className="bg-blue-700">Other</Badge>
-<<<<<<< HEAD
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -179,11 +129,9 @@ export function ApiLogs() {}
             <Select
 
 export function ApiLogs() { return null; }
-=======
     }
 
 export function ApiLogs() {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
@@ -238,14 +186,9 @@ return (
                 setPageSize(Number(value));
 
                 setCurrentPage(0), // Reset to first page when changing page size
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from "react",;
-=======
     }import { useState, useEffect } from "react",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { useState, useEffect } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
 import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",;
@@ -254,7 +197,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { Badge } from "@/components/ui/badge",;
 export function ApiLogs() {;
-=======
 "
 import { useState, useEffect } from "react",;"
 import { format } from "date-fns",;"
@@ -268,7 +210,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge",;
 
 export function ApiLogs() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),;
   const [pageSize, setPageSize] = useState(25),;
   const [currentPage, setCurrentPage] = useState(0),;
@@ -308,10 +249,6 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
           View logs of requests made using your API keys.;
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <CardContent>;"
         <div className="flex justify-between items-center mb-6">;"
@@ -322,30 +259,15 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
               value={pageSize && pageSize.toString()}
               onValueChange={(value) => {;
                 setPageSize(Number(value));
-<<<<<<< HEAD
 
                 setCurrentPage(0), // Reset to first page when changing page size;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <Select;
               value={pageSize.toString()}
               onValueChange={(value) => {;
                 setPageSize(Number(value));
                 setCurrentPage(0), // Reset to first page when changing page size;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
             >"
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">"
@@ -409,22 +331,11 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
                           log.method === 'GET'"
                             ? "border-green-500 text-green-400"'
                             : log.method === 'POST'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 <Select;
               value={pageSize.toString()}
               onValueChange={(value) => {;
                 setPageSize(Number(value)),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
             >;"
@@ -461,28 +372,18 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
                           log && log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
                             : log && log.method === 'POST' 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             ? "border-blue-500 text-blue-400"
                             : log && log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
 
                         }>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                             ? "border-blue-500 text-blue-400"
                             : log && log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
 
                         }>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         {log && log.method}
                       </Badge>;
                     </td>;"
@@ -496,8 +397,6 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
                     <td className="px-4 py-3 text-sm">;'
                       {log && log.response_time_ms ? `${log && log.response_time_ms}ms` : '-'}
 </td>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;
                   </tr>;
                 ));
@@ -509,7 +408,6 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
 <Button"
                 variant="outline""
                 size="sm"
-=======
 ;
         {logs.length > 0 && (;
           <div className="mt-4 flex justify-between items-center">;
@@ -523,7 +421,6 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
               <Button
                 variant="outline"
                 size="sm"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
               >;
@@ -540,53 +437,30 @@ return (;    <Card className="bg-zinc-900 border-zinc-800 text-white">;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
 
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { useState, useEffect } from './react';
-=======
 import { useState, useEffect } from './react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                     <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;import { useState, useEffect } from './react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';
-=======
 '
 import { useState, useEffect } from './react';'
 import { format } from './date - fns';'
 import { List, RefreshCw } from './lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
     </Card>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

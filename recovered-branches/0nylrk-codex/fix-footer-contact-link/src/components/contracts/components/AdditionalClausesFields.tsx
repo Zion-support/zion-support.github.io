@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
 
 import {;
@@ -7,62 +6,36 @@ import {;
   FormItem,;
   FormLabel,;
   FormControl,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  FormDescription,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   FormDescription,;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  FormDescription,;
+
   FormField,
   FormItem,
   FormLabel,
   FormControl,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
-=======
   FormDescription,;} from "@/components/ui/form";import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   FormDescription,;} from "@/components/ui/form";import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 } from "@/components/ui/form";
 
 "
 import { Checkbox } from "@/components/ui/checkbox";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 } from "@/components/ui/form";
 
 } from "@/components/ui/form";
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { UseFormReturn } from "react-hook-form";
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 FormDescription,
   FormDescription,;
@@ -79,13 +52,8 @@ export function AdditionalClausesFields({
   return (
     <FormField
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { UseFormReturn } from "react-hook-form",
 import {
   FormField,
@@ -102,7 +70,6 @@ import { Checkbox } from "@/components/ui/checkbox",
 FormDescription "
 } from "@/components/ui/form","
 import { Checkbox } from "@/components/ui/checkbox","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ContractFormValues } from "./ContractForm",
 interface AdditionalClausesFieldsProps {}
   form: UseFormReturn<ContractFormValues>";
@@ -120,15 +87,12 @@ interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
 ;
-<<<<<<< HEAD
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
   return (;
     <FormField;
-<<<<<<< HEAD
         <FormItem>;
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -163,7 +127,6 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                 </FormItem>
               )}
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -182,7 +145,6 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       control={form.control}
 
 export function AdditionalClausesFields(): any ({;
@@ -196,16 +158,13 @@ export function AdditionalClausesFields(): any ({;
 
       render={() => (;
 
-=======
       name="additionalClauses"      render={() => (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <FormItem>;
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
       control={form.control}
       name="additionalClauses"
       render={() => (
-=======
         <FormItem>;"
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
@@ -214,7 +173,6 @@ export function AdditionalClausesFields(): any ({;
       name="additionalClauses"
       render={() => (
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <FormDescription>;
               Select additional clauses to include in your contract;
             </FormDescription>;
@@ -226,7 +184,6 @@ checked={field && field.value?.includes("nda")}
                           ? field && field.onChange([...currentValues, "nda"]);
                           : field && field.onChange(;
                               currentValues && currentValues.filter((value) => value !== "nda"),;
-<<<<<<< HEAD
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <FormField;
 
@@ -257,24 +214,16 @@ checked={field.value?.includes("nda")}
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       onCheckedChange={(checked) => {;
-=======
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
             <FormField;                      onCheckedChange={(checked) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
             <FormField;                      onCheckedChange={(checked) => {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         const currentValues = field.value || [];
                         return checked"
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange("
                               currentValues.filter((value) => value !== "nda"),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
@@ -284,13 +233,6 @@ checked={field.value?.includes("nda")}
                           : field.onChange(;'
                               currentValues.filter((value) => value !== 'nda');
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             );
                       }}
                     />
@@ -306,24 +248,12 @@ checked={field.value?.includes("nda")}
                 </FormItem>
               )}
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />
             <FormField
             />;
             <FormField;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               control={form.control}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               control={form.control}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             );
                       }}
                     />;
@@ -335,8 +265,6 @@ checked={field.value?.includes("nda")}
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
-<<<<<<< HEAD
-<<<<<<< HEAD
                       checked={field.value?.includes("ip")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -345,11 +273,6 @@ checked={field.value?.includes("nda")}
                           : field.onChange(
                               currentValues.filter((value) => value !== "ip")
                               currentValues.filter((value) => value !== "ip"),
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                     <FormDescription>;
                       Protect sensitive information;
@@ -370,20 +293,14 @@ checked={field.value?.includes("nda")}
                   <FormControl>;
                     <Checkbox;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       checked={field && field.value?.includes("ip")}
 "
                               currentValues.filter((value) => value !== "ip"),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       checked={field.value?.includes('ip')}
 
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
                         return checked;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ? field && field.onChange([...currentValues, "ip"]);
                           : field && field.onChange(;
@@ -404,22 +321,13 @@ control={form.control}"
                           ? field.on_change ([...current_values, "ip"]);
                           : field.on_change ("
                               current_values.filter ((value) => value !== "ip"),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;'
                               currentValues.filter((value) => value !== 'ip');
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             />
-=======
 />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <FormField
             />;
             <FormField;
@@ -445,14 +353,6 @@ control={form.control}"
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             );
                       }}
                     />
@@ -471,21 +371,9 @@ control={form.control}"
             <FormField;
             />;
             <FormField;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               control={form.control}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               control={form.control}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             );
                       }}
                     />;
@@ -497,9 +385,6 @@ control={form.control}"
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                             );
                       }}
@@ -516,15 +401,10 @@ control={form.control}"
                 </FormItem>
               )}
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
-=======
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Intellectual Property Transfer</FormLabel>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <FormDescription>;
                       Transfer ownership of work products;
                     </FormDescription>;
@@ -544,7 +424,6 @@ render={({ field }) => (;"
                   <FormControl>;
                     <Checkbox;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       checked={field && field.value?.includes("termination")}
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
@@ -582,27 +461,18 @@ render={({ field }) => (;"
 "
                                 (value) => value !== "termination",
                               ),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                                 (value) => value !== "termination",
                               ),
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked;'
                           ? field.onChange([...currentValues, 'termination']);
 : field.onChange(;
-<<<<<<< HEAD
                               currentValues.filter((value) => value !== 'termination');
-<<<<<<< HEAD
-=======
                       checked={field && field.value?.includes("termination")}
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
@@ -671,7 +541,6 @@ render={({ field }) => (;"
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'termination');
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             );
                       }}
                     />
@@ -690,34 +559,25 @@ render={({ field }) => (;"
 <FormField;
             />;
             <FormField;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               control={form.control}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             <FormField
             />;
             <FormField;
 
 control={form.control}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             );
                       }}
                     />;
                   </FormControl>;
 
 <FormDescription>;
-=======
                               currentValues.filter((value) => value !== 'termination');                    <FormDescription>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Define conditions for ending the contract;
                     </FormDescription>;
                   </div>;
 <FormField
               control={form && form.control}
-=======
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Termination Clause</FormLabel>;
 
@@ -758,7 +618,6 @@ control={form.control}
             <FormField
               control={form && form.control}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             />;
             <FormField;
 
@@ -770,16 +629,11 @@ control={form.control}
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
 <Checkbox
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
                     <Checkbox;
 "
                                 (value) => value !== "revisions"
                               )"
-=======
             <FormField
               control={form && form.control}
               name="additionalClauses"
@@ -790,12 +644,10 @@ control={form.control}
 
                                 (value) => value !== "revisions"
                               )
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 (value) => value !== "revisions",
                               ),
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       checked={field && field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
@@ -806,7 +658,6 @@ control={form.control}
                                 (value) => value !== "revisions",;
                               ),;
 
-<<<<<<< HEAD
                 </FormItem>)}
             />;
             <FormField;
@@ -814,15 +665,10 @@ control={form.control}
               name="additional_clauses";
 
                                 (value) => value !== "revisions",
-<<<<<<< HEAD
                               ),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 (value) => value !== "revisions",
                               ),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       checked={field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -835,11 +681,7 @@ control={form.control}
                               )
                                 (value) => value !== "revisions",
                               ),
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -847,19 +689,10 @@ control={form.control}
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;'
                               currentValues.filter((value) => value !== 'revisions');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             );
-=======
                               ),                            );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                               ),                            );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -869,7 +702,6 @@ control={form.control}
                               currentValues.filter((value) => value !== 'revisions');
 
                             );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       }}
                     />
                   </FormControl>"
@@ -887,11 +719,8 @@ control={form.control}
           </div>
         </FormItem>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
     />
     />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }
 
@@ -903,10 +732,7 @@ control={form.control}
                   <div className="space - y-1 leading-none">;
                     <FormLabel > Revisions & Amendments</FormLabel>;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 <div className="space - y-1 leading - none">;
                     <FormLabel > Revisions & Amendments</FormLabel>;
                 </FormItem>;              )}
@@ -934,7 +760,6 @@ control={form.control}
                     <FormLabel>;
                       Revisions & Amendments;
                     </FormLabel>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <FormDescription>;
                       Define how changes to the contract are handled;
                     </FormDescription>;
@@ -956,11 +781,7 @@ control={form.control}
                       Define how changes to the contract are handled;
                     </FormDescription>;
                   </div>;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </FormItem>;              )}
             />;
           </div>;
@@ -992,19 +813,10 @@ FormDescription interface AdditionalClausesFieldsProps {
     />;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   FormDescription,;
 
   FormField,
@@ -1115,4 +927,3 @@ export function AdditionalClausesFields(): any ({;
                     <FormLabel > Revisions & Amendments;
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

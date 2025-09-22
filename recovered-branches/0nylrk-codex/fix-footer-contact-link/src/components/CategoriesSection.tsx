@@ -3,13 +3,10 @@ import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 const categories = [
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { GradientHeading } from './GradientHeading';
 import { Link } from './react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
 const categories = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     title: "Services",
     description: "On - demand IT support, consulting, development, and more";
@@ -17,10 +14,6 @@ const categories = [;
     link: "/services",
     color: "from - purple - 500 to - indigo - 600"},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
     title: "Talents"
     description: "Connect with AI experts, developers, and tech specialists";
@@ -33,12 +26,6 @@ icon: <HardDrive className="w-10 h-10" />
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   {
     title: "Talents"
     description: "Connect with AI experts, developers, and tech specialists";
@@ -46,33 +33,18 @@ import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const categories = [
   {
     title: "Services",
     description: "On-demand IT support, consulting, development, and more",
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services",
-=======
 
 "
 import { GradientHeading } from "./GradientHeading","
@@ -85,7 +57,6 @@ const categories = []
     description: "On-demand IT support, consulting, development, and more","
     icon: <Briefcase className="w-10 h-10" />,"
     link: "/services","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: "from-purple-500 to-indigo-600"},
   {"
     title: "Talents","
@@ -98,19 +69,9 @@ const categories = []
     description: "Rent or buy specialized hardware, servers, and devices",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: "from-amber-500 to-orange-600"},
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
     color: "from-amber-500 to-orange-600"},
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -119,19 +80,14 @@ const categories = []
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
-<<<<<<< HEAD
   }
-=======
     color: "from-amber-500 to-orange-600"},  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 title: "IT Onsite Services"
     link: "/it-onsite-services"
     title: "IT Onsite Services"
     link: "/it-onsite-services"
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];
 
 interface CategoriesSectionProps {
@@ -157,7 +113,6 @@ const categories = [;
     link: "/it-onsite-services"
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
-=======
   {"
     title: "Equipment","
     description: "Rent or buy specialized hardware, servers, and devices","
@@ -183,18 +138,10 @@ interface CategoriesSectionProps {}
     link: "/it-onsite-services""
 import { GradientHeading } from "./GradientHeading",;"
 import { Link } from "react-router-dom",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const categories = [;
 {;
     title: "Services",;
@@ -245,25 +192,13 @@ const specialServices = [;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {}
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
 ";
@@ -279,8 +214,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         )}
 
 key={service.title}
-<<<<<<< HEAD
-=======
     icon: <HardDrive className="w - 10 h - 10" />,
     link: "/equipment",
     color: "from - amber - 500 to - orange - 600"},
@@ -339,7 +272,6 @@ function CategoriesSection() {
               <Link;
 
                 key={service.title}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 to={service.link}
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration-300";
               >;
@@ -366,7 +298,6 @@ function CategoriesSection() {
 
         <div className="mt-8">;
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>;
-=======
                 to={service.link}"
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
               >;
@@ -393,7 +324,6 @@ function CategoriesSection() {
 "
         <div className="mt-8">;"
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="flex flex-wrap justify-center gap-4">;
             {specialServices && specialServices.map((service) => (;
               <Link;
@@ -403,14 +333,7 @@ function CategoriesSection() {
                 {service && service.title}
 </Link>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
           </div>;
         </div>;
@@ -425,9 +348,7 @@ function CategoriesSection() {
         <div className="mt - 12 flex justify-center">;
           <Link;
             to="/categories";
-<<<<<<< HEAD
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
-<<<<<<< HEAD
           </div>
         </div>
         <div className="mt-12 flex justify-center">
@@ -436,7 +357,6 @@ function CategoriesSection() {
         </div>;
 
         <div className="mt-12 flex justify-center">;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <Link
             to="/categories"
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
@@ -449,13 +369,11 @@ function CategoriesSection() {
   )
 
           >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             View All Categories →;
           </Link>;
         </div>;
 </div>;
 
-<<<<<<< HEAD
           <Link;
             to="/categories";
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
@@ -607,7 +525,6 @@ pr-12325
         </div>;
       </div>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </section>);
 ;
     </section>;
@@ -655,29 +572,13 @@ interface CategoriesSectionProps {
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition-colors";;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition-colors";;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </section>);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

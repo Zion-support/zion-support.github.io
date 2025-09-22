@@ -1,8 +1,5 @@
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -24,8 +21,6 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -34,9 +29,7 @@ function ProjectDetailsContent() {
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
-<<<<<<< HEAD
   const { projectId } = useParams() as { projectId?: string };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
@@ -55,7 +48,6 @@ function ProjectDetailsContent() {;
       const projectData = await getProjectById(projectId);
       if (projectData) {
         setProject(projectData);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -66,7 +58,6 @@ import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
-=======
 
 "
 import { useState, useEffect } from "react","
@@ -79,7 +70,6 @@ import { Footer } from "@/components/Footer","
 import { SEO } from "@/components/SEO","
 import { ProtectedRoute } from "@/components/ProtectedRoute","
 import { Project, ProjectStatus } from "@/types/projects","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button",
 import {}
   Card,
@@ -121,22 +111,15 @@ import {}
   User,"
   XCircle} from "lucide-react",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   const { projectId } = useParams() as { projectId?: string };  const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const { projectId } = useParams() as { projectId?: string };  const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -244,14 +227,11 @@ function ProjectDetailsContent() {;
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
-=======
 
 function ProjectDetailsContent() {};
   // useParams may be untyped in this environment, so avoid passing a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // type argument and cast the result instead to prevent TS2347 errors.
 const { projectId } = useParams() as { projectId?: string },
   const { user } = useAuth(),
@@ -271,42 +251,25 @@ const { projectId } = useParams() as { projectId?: string },
 
       setIsLoading(true),
       const projectData = await getProjectById(projectId),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       if (projectData) {
-<<<<<<< HEAD
         setProject(projectData),
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         // Now fetch notes
-=======
 
 if (projectData) {        // Now fetch notes
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       if (projectData) {
         setProject(projectData),
 
         // Now fetch notes
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         fetchProjectNotes(projectId)
       } else {
         toast({
           title: "Project not found"
           description: "The requested project could not be found."
           variant: "destructive"})
-<<<<<<< HEAD
         navigate("/dashboard")
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { useState, useEffect } from './react';'
 import { use_params, use_navigate, Link } from './react-router-dom';'
@@ -388,7 +351,6 @@ User,;"
   XCircle} from "lucide-react",;
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
-<<<<<<< HEAD
 
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { project_id } = use_params () as { project_id?: string }
@@ -437,15 +399,9 @@ if ( {) {
   }, [project_id]);
 ;
   const fetchProjectNotes = async (project_id: string) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
-=======
         navigate("/dashboard")    try {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     try {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data, error } = await supabase;
         .from ("project_notes");
         .select (`;
@@ -504,9 +460,6 @@ if (throw error) {
       setIsSubmittingNote (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
   const handleStatusChange = async (new_status: ProjectStatus) => {}
@@ -536,10 +489,7 @@ if ( {) {}
   }
 ;
 const getStatusBadge = (status: ProjectStatus) =>: any {
-<<<<<<< HEAD
     switch (status) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Load project data;
   useEffect(() => {;
     async function loadProject() {;
@@ -549,18 +499,11 @@ setIsLoading(true);
 
       if (projectData) {;
         setProject(projectData);
-<<<<<<< HEAD
         // Now fetch notes;
-=======
     switch (status) {        // Now fetch notes;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     switch (status) {        // Now fetch notes;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         // Now fetch notes;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         fetchProjectNotes(projectId);
       } else {;
         toast({;
@@ -568,13 +511,8 @@ setIsLoading(true);
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
 
       setIsLoading(false);
@@ -582,7 +520,6 @@ setIsLoading(true);
 loadProject()
   }, [projectId]),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         .order("created_at", { ascending: false }),
 
       if (error) throw error,
@@ -598,21 +535,16 @@ loadProject()
 
     setIsSubmittingNote(true),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const { data, error } = await supabase
-=======
     try {}
       const { data, error } = await supabase"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .from("project_notes")
         .insert({}
           project_id: project.id;
           user_id: user.id;
           content: newNote})
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .select(),
 
       if (error) throw error,
@@ -621,13 +553,10 @@ loadProject()
       fetchProjectNotes(project.id),"
       setNewNote(""),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({
         title: "Note added"
-=======
       toast({"
         title: "Note added""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Your note has been added to the project."})
     } catch (err: any) {"
       console.error("Error adding note:", err),
@@ -639,8 +568,6 @@ loadProject()
       setIsSubmittingNote(false)
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const handleStatusChange = async (newStatus: ProjectStatus) => {}
@@ -653,22 +580,18 @@ loadProject()
         ...project,
         status: newStatus}),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
           title: "Offer Accepted! 🎉"
-=======
       // If offer was accepted, show a special toast"
       if (newStatus === "offer_accepted") {}
         toast({"
           title: "Offer Accepted! 🎉""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           description: "The project is now in progress. Congratulations!"})
       }
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
@@ -679,7 +602,6 @@ loadProject()
       case "in_progress":
         return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,
       case "completed":
-=======
   const getStatusBadge = (status: ProjectStatus) => {}
     switch (status) {"
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,"
@@ -690,7 +612,6 @@ loadProject()
       case "in_progress":"
         return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,"
       case "completed":"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="default">Completed</Badge>,
 
 "
@@ -701,8 +622,6 @@ loadProject()
     }
 
 if (isLoading) {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   if (isLoading) {}
@@ -736,7 +655,6 @@ if (isLoading) {
 "
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;"
       case "offer_accepted":;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
       <div className="container mx-auto py-8">;
         <div className="flex justify-center items-center h-64">;
@@ -749,21 +667,12 @@ if (isLoading) {
     );
   }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
-=======
       setIsLoading(false);
     }    return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       setIsLoading(false);
     }    return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       }
 
@@ -914,7 +823,6 @@ if (isLoading) {
   if (!project) {;
 
     return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="container mx-auto py-8">;
         <Card>;"
           <CardContent className="flex flex-col items-center justify-center py-10">;"
@@ -924,12 +832,7 @@ if (isLoading) {
               The project you're looking for doesn't exist or you don't have access to it.;
 </p>;
             <Button onClick={() => navigate("/dashboard")}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case "changes_requested":;
         return <Badge variant="secondary">Changes Requested</Badge>;
       case "in_progress":;
@@ -937,7 +840,6 @@ if (isLoading) {
       case "completed":;
         return <Badge variant="default">Completed</Badge>;
       case "canceled":;
-=======
             </p>;"
             <Button onClick={() => navigate("/dashboard")}>;"
         return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;"
@@ -948,7 +850,6 @@ if (isLoading) {
       case "completed":;"
         return <Badge variant="default">Completed</Badge>;"
       case "canceled":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="destructive">Canceled</Badge>,
       default:;"
         return <Badge variant="outline">{status}</Badge>;
@@ -981,14 +882,8 @@ if ( {) {
               The project you're looking for doesn't exist or you don't have access to it.;
             </p>;
             <Button on_click={() => navigate ("/dashboard")}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     }
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Return to Dashboard;
             </Button>;
           </CardContent>;
@@ -1013,11 +908,8 @@ if (!project) {}
     )
   }
 // Check if user is either the client or the talent
-<<<<<<< HEAD
-=======
   // Check if user is either the client or the talent
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
 
@@ -1043,7 +935,6 @@ if (!isClient && !isTalent) {
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 
   "
@@ -1051,31 +942,20 @@ if (!isClient && !isTalent) {
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),"
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
             </Button>;
           </CardContent>;
         </Card>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             </Button>;
           </CardContent>;
         </Card>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <SEO'`
@@ -1875,11 +1755,8 @@ if ( {) {}
               <h1 className="text - 3xl font-bold">{project.job?.title || "Project"}</h1>;
               <div className="flex items - center gap - 2 mt-1">;
                 {getStatusBadge (project.status)}
-<<<<<<< HEAD
                 <span className="text - muted-foreground">;
-=======
                 <span className="text - muted-foreground">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Started on {format (new Date (project.start_date), "PPP")}
                 </span>;
               </div>;
@@ -1891,11 +1768,8 @@ if ( {) {}
                   <AlertDialog>;
                     <AlertDialogTrigger as_child>;
                       <Button variant="default">;
-<<<<<<< HEAD
                         <CheckCircle2 className="mr - 2 h - 4 w-4" /> Accept Offer;
-=======
                         <CheckCircle2 className="mr - 2 h - 4 w-4" /> Accept Offer;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </AlertDialogTrigger>;
                     <AlertDialogContent>;
@@ -2041,11 +1915,8 @@ if ( {) {}
                 <AlertDialog>;
 <AlertDialogTrigger as_child>;
                     <Button variant="default">;
-<<<<<<< HEAD
                       <CheckCircle2 className="mr - 2 h - 4 w-4" /> Mark as Completed;
-=======
                       <CheckCircle2 className="mr - 2 h - 4 w-4" /> Mark as Completed;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </Button>;
                   </AlertDialogTrigger>;
                   <AlertDialogContent>;
@@ -2064,11 +1935,8 @@ if ( {) {}
                     </AlertDialogFooter>;
                   </AlertDialogContent>;
 >;
-<<<<<<< HEAD
                   <MessageSquare className="mr - 2 h - 4 w-4" /> Message;
-=======
                   <MessageSquare className="mr - 2 h - 4 w-4" /> Message;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Button>)}
             </div>;
           </div>;
@@ -2089,11 +1957,8 @@ if ( {) {}
                     <div className="space-y-4">;
                       <div>;
                       <div>;
-<<<<<<< HEAD
                         <h3 className="font - semibold mb-2">Payment Terms</h3>;
-=======
                         <h3 className="font - semibold mb-2">Payment Terms</h3>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <Badge variant="outline" className="capitalize">;
                           {project.payment_terms} Payment;
 </AlertDialog>
@@ -2205,13 +2070,10 @@ if ( {) {}
                   </CardHeader>;
                   <CardContent>;
 <div>;
-<<<<<<< HEAD
                             <h3 className="font-semibold">Project Agreement</h3>;
                             <p className="text - sm text - muted-foreground">;
-=======
                             <h3 className="font-semibold">Project Agreement</h3>;
                             <p className="text - sm text - muted-foreground">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                               Uploaded when project was created;
                             </p>;
                           </div>;
@@ -2266,7 +2128,6 @@ if ( {) {}
     navigate("/unauthorized");
     return null;
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         {notes.length > 0 ? (
 notes.map ((note) => (
                             <div key={note.id} className="bg - muted / 30 p - 3 rounded-md">;
@@ -2274,10 +2135,8 @@ notes.map ((note) => (
                                 <Avatar className="h - 6 w-6">;
                                   {note.created_by_profile?.avatar_url ? (
 
-<<<<<<< HEAD
   const isOfferPending = project && project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project && project.status);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project && project.status);
 
   return (
@@ -2301,9 +2160,7 @@ notes.map ((note) => (
             </div>;
 
             {/* Action Buttons Based on Role and Status */}
-<<<<<<< HEAD
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
                 <>;
@@ -2331,10 +2188,8 @@ notes.map ((note) => (
                   </AlertDialog>;
 
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
-=======
 "
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
                   </Button>;
                 </>;
@@ -2343,11 +2198,9 @@ notes.map ((note) => (
 {(isClient || isTalent) && project && project.status === "in_progress" && (;                <AlertDialog>;
                   <AlertDialogTrigger asChild>;
                     <Button variant="default">;
-=======
                 <AlertDialog>;
                   <AlertDialogTrigger asChild>;"
                     <Button variant="default">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed;
                     </Button>;
                   </AlertDialogTrigger>;
@@ -2412,9 +2265,7 @@ onClick={() => navigate(`/messages?talentId=${project && project.talent_id}&clie
                 )}
               </TabsList>;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <TabsContent value="details">;
                 <Card>;
                   <CardHeader>;
@@ -2510,11 +2361,9 @@ onClick={() => navigate(`/messages?talentId=${project && project.talent_id}&clie
                   <CardContent>;
 {project && project.agreement_url ? (;                      <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">;
                         <div className="flex items-center gap-3">;
-=======
 "
                       <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">;"
                         <div className="flex items-center gap-3">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <FileText className="h-5 w-5 text-primary" />;
                           <div>;"
                             <h3 className="font-semibold">Project Agreement</h3>;"
@@ -2639,16 +2488,10 @@ onClick={() => navigate(`/messages?talentId=${project && project.talent_id}&clie
                         </div>;
                       )}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
@@ -2716,21 +2559,10 @@ onClick={() => navigate(`/messages?talentId=${project && project.talent_id}&clie
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <img
-=======
-=======                        <img
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======                        <img
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                         <img;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                         <img
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           src={project.talent_profile.profile_picture_url}
 src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
@@ -2778,8 +2610,6 @@ src={project.talent_profile.profile_picture_url}
 <Button
                           variant="outline"
                           size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className="mt-2"
 
 ;
@@ -3004,10 +2834,7 @@ src={project.talent_profile.profile_picture_url}
                 <div className="space-y-6">;"
                   <div className="flex items-start gap-4">;"
                     <Avatar className="h-10 w-10">;
-<<<<<<< HEAD
                       {project && project.talent_profile?.profile_picture_url ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <img
                           src={project && project.talent_profile.profile_picture_url}
                           alt={project && project.talent_profile.full_name}
@@ -3063,26 +2890,17 @@ src={project.talent_profile.profile_picture_url}
                       )}
                     </div>;
                   </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>;
               </CardContent>;
             </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                           className="mt-2"                        <Button
                           variant="outline"
                           size="sm"
                           className="mt-2"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                           className="mt-2"                        <Button
                           variant="outline"
                           size="sm"
                           className="mt-2"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
@@ -3563,12 +3381,9 @@ src={project.talent_profile.profile_picture_url}
                     </div>;
                   </div>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Project Status Card */}
-=======
 
             {/* Project Status Card */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
@@ -3712,10 +3527,7 @@ src={project.talent_profile.profile_picture_url}
     </>;
   );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 
 export default function ProjectDetails() {;
   return (
@@ -3725,7 +3537,6 @@ export default function ProjectDetails() {;
   );
 }
 
-=======
               ;
               {project.status === "offer_sent" && isClient && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
@@ -3781,8 +3592,6 @@ export default function ProjectDetails() {
   )
 };
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                   </p>
 
                     </div>;
@@ -3842,7 +3651,6 @@ export default function ProjectDetails() {
                 </CardFooter>;
               )}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Card>;
           </div>;
         </div>;
@@ -3850,12 +3658,8 @@ export default function ProjectDetails() {
       <Footer />;
 
     </>);
-=======
 }    </>);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }    </>);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export default /**;
  * ProjectDetails - Function description;
@@ -3865,7 +3669,6 @@ function ProjectDetails() {}
     <ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>);
-<<<<<<< HEAD
 }
 ;
 ;
@@ -4631,28 +4434,13 @@ export default /**
  * ProjectDetails - Function description;
 }
 ;
-<<<<<<< HEAD
 export default function ProjectDetails() { return null; }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
     </>);
 
 }
@@ -4672,7 +4460,6 @@ function ProjectDetails() {
     </>;
   ),;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function ProjectDetails() {;
   return (;
 
@@ -4685,4 +4472,3 @@ pr-12325
   );
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

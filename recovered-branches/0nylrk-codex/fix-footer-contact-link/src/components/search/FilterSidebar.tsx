@@ -1,40 +1,24 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 import { Filter, X, Star } from "lucide-react",
-<<<<<<< HEAD
 import { FilterOptions } from "@/types/search",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FilterSidebarProps {
   filters: {
-=======
 import React from "react","
 import { Button } from "@/components/ui/button","
 import { Checkbox } from "@/components/ui/checkbox",";
@@ -42,7 +26,6 @@ import { Filter, X, Star } from "lucide-react";"
 import { FilterOptions } from "@/types/search";"
 import { Filter, X, Star } from "lucide-react","
 import { FilterOptions } from "@/types/search",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface FilterSidebarProps {}
   filters: {}
@@ -56,25 +39,20 @@ interface FilterSidebarProps {}
   onFilterChange: (filterType: string, value: string) => void
   onRatingChange: (rating: number | null) => void
 
-<<<<<<< HEAD
   onClearFilters: () => void
 }
 
 export function FilterSidebar({
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function FilterSidebar({;
   filters;
   filterOptions;
   onFilterChange;
   onRatingChange;
 export function FilterSidebar({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   filters,
   filterOptions,
   onFilterChange,
   onRatingChange,
-<<<<<<< HEAD
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -84,36 +62,25 @@ export function FilterSidebar({}
           <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { Filter, X, Star } from "lucide-react",;
 import { FilterOptions } from "@/types/search",;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FilterSidebarProps {;
   filters: {;
-=======
 import { FilterOptions } from "@/types/search",  filters: {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { FilterOptions } from "@/types/search",  filters: {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     selectedProductTypes: string[],;
     selectedLocations: string[],;
     selectedAvailability: string[],;
 selectedRating: number | null
 };  };
-=======
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
@@ -122,29 +89,21 @@ interface FilterSidebarProps {;
     selectedRating: number | null;
   };
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 export function FilterSidebar(): any ({;
 
   filters;
   filterOptions;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onFilterChange;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white flex items-center">;
@@ -154,18 +113,8 @@ export function FilterSidebar(): any ({;
           variant="outline";
           size="sm";
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           onClick={onClearFilters}
         >
           Clear All;
@@ -242,26 +191,20 @@ export function FilterSidebar(): any ({;
             </div>
           ))}
         </div>
-<<<<<<< HEAD
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white flex items-center">;
-=======
 
 "
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;"
       <div className="flex items-center justify-between mb-4">;"
         <h3 className="text-lg font-medium text-white flex items-center">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Filter className="mr-2 h-5 w-5" /> Filters;
         </h3>;
         <Button"
           variant="outline" "
           size="sm""
-=======
       </div>
 return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
@@ -272,7 +215,6 @@ return (
         <Button
           variant="outline" 
           size="sm"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={onClearFilters}>;
           Clear All;
@@ -416,25 +358,16 @@ export function FilterSidebar() { return null; }
             </div>;          ))}
         </div>;
       </div>;
-<<<<<<< HEAD
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Rating Filter */}
       <div className="mb-6">;
-=======
       </div>      <div className="mb-6">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       {/* Rating Filter */}"
       <div className="mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       ;
       {/* Rating Filter */}
       <div className="mb-6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Minimum Rating;
         </label>;"
@@ -445,7 +378,6 @@ export function FilterSidebar() { return null; }
               variant="outline"
               size="sm"
 onClick={() => onRatingChange(rating)}              }`}
-=======
               onClick={() => onRatingChange(rating)}
 
               className={`${;
@@ -464,18 +396,15 @@ onClick={() => onRatingChange(rating)}              }`}
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
                   :"border-zion-blue-light text-zion-slate-light";
               }`}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >;
               {rating === null ? (;"
                 "Any";
 ) : (;                <div className="flex items-center">;
                   {[...Array(rating)].map((_, i) => (;
-=======
 
 "
                 <div className="flex items-center">;
                   {[...Array(rating)].map((_, i) => (;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                   ))}"
                   <span className="ml-1">& Up</span>;
@@ -488,20 +417,13 @@ onClick={() => onRatingChange(rating)}              }`}
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             </Button>;
           ))}
         </div>;
       </div>;
     </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -510,7 +432,6 @@ import { Filter, X, Star } from './lucide-react';
 import { FilterOptions } from '@/types / search';
 interface FilterSidebarProps {}
   filters: {}
-=======
 import { FilterOptions } from '@/types / search';
 
 import React from "react";""
@@ -527,7 +448,6 @@ import { Filter, X, Star } from "lucide-react",""
 import { FilterOptions } from "@/types/search","
 interface FilterSidebarProps {
 filters: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     selectedProductTypes: string[],
     selected_locations: string[],
     selected_availability: string[],
@@ -615,7 +535,6 @@ checked={filters.selected_locations.includes (location.value)}
               />;
               <label;
                 html_for={`location-${location.value}`}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="text - sm text - zion - slate - light cursor - pointer hover:text - white";
               >;
                 {location.label}
@@ -623,7 +542,6 @@ checked={filters.selected_locations.includes (location.value)}
             </div>))}
         </div>;
       </div>;
-<<<<<<< HEAD
       {/* Availability Filter */}"
       <div className="mb - 6">;"
         <label className="text - sm font - medium text - zion - slate - light block mb - 2">;
@@ -721,7 +639,6 @@ className={`${
                 <div className="flex items - center">;
                   {[...Array (rating)].map ((_, i) => (
                     <Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />))}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <span className="ml - 1">& Up</span>;
                 </div>)}
             </Button>))}
@@ -729,10 +646,6 @@ className={`${
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
   return (<div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4" > <div className="flex items-center justify-between mb-4" > <h3 className="text-lg font-medium text-white flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters outline"size=" sm"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick= {
   onClearFilters 
@@ -773,19 +686,9 @@ className={`${
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
             ))}
     </div>);"
   return (<div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4" > <div className="flex items-center justify-between mb-4" > <h3 className="text-lg font-medium text-white flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters outline"size=" sm"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick= {"
@@ -801,4 +704,3 @@ className={`${
                   <span className="ml-1">& Up</span>"
     </div>"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

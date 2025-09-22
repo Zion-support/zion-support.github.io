@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -8,23 +5,14 @@ import {useEffect, useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { Wallet, TokenTransaction } from '@/types/tokens';
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import type { Wallet, TokenTransaction } from '@/types/tokens';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function useWallet() {;
-=======
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null),
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -35,27 +23,15 @@ import type { Wallet, TokenTransaction } from '@/types/tokens';
       setWallet(null);
       setLoading(false);
 return
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useEffect, useState} from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {useEffect, useState} from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
-=======
       return;
 '
 import {useEffect, useState} from 'react';'
 import {use_auth} from '@/hooks / use_auth';'
 import {supabase} from '@/integrations / supabase / client';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { Wallet, TokenTransaction } from '@/types / tokens';
 export /**;
  * use_wallet - Function description;
@@ -91,7 +67,6 @@ if ( {) {}
       set_wallet (null);
       set_loading (false);
       return;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 try {}
       set_loading (true);
@@ -121,7 +96,6 @@ setTransactions(prev => []
         user_id: user && user.id;
 
         amount;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         transaction_type: 'earn';
         reason: reason |null;
         created_at: new Date().toISOString()}
@@ -130,7 +104,6 @@ setTransactions(prev => []
   async function spendTokens(amount: number, reason?: string) {}
     if (!user?.id) return;
     setWallet(prev =>
-<<<<<<< HEAD
         amount;
         transaction_type: 'burn';
         reason: reason |null;
@@ -149,8 +122,6 @@ function fetch_transactions() {}
     // Check condition;
 if ( {) {}
   $2;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
     try {
       setLoading(true);
@@ -234,8 +205,6 @@ if (return) {}
     fetch_wallet ();
     fetch_transactions ();
   }, [user?.id]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 
   return {}
@@ -244,28 +213,17 @@ if (return) {}
     loading;
     error;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from 'react',;
-=======
 ;import { useEffect, useState } from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ;import { useEffect, useState } from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { useEffect, useState } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
-=======
 
 '
 import { useEffect, useState } from 'react',;'
 import { useAuth } from '@/hooks/useAuth',;'
 import { supabase } from '@/integrations/supabase/client',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { Wallet, TokenTransaction } from '@/types/tokens',;
 export function useWallet() { return null; }
   const { user } = useAuth(),;
@@ -349,18 +307,12 @@ export function useWallet() { return null; }
     error,;
     fetchWallet,;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fetchTransactions;
     earnTokens;
 
     spendTokens}
 }
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
@@ -474,25 +426,16 @@ export function useWallet() {;
 } .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     fetchTransactions;
     earnTokens;
 
     spendTokens}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     fetchTransactions;
     earnTokens;
 
     spendTokens}}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     fetchTransactions;
     earnTokens;
@@ -612,7 +555,4 @@ export function useWallet() {;
 }
 }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

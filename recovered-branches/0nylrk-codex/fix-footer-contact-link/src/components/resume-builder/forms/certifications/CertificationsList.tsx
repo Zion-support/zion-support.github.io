@@ -1,44 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsListProps {
-=======
 import { Certification } from "@/types/resume";"
 import { Card, CardContent } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
 import { Edit, Trash2 } from "lucide-react";"
 import { format } from "date-fns";
 interface CertificationsListProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
-<<<<<<< HEAD
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -48,8 +29,6 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export function CertificationsList({
   certifications
@@ -57,14 +36,12 @@ export function CertificationsList({
   onDelete
 }: CertificationsListProps) {
   if (certifications.length === 0) {
-=======
 export function CertificationsList({}
   certifications,
   onEdit,
   onDelete,
 }: CertificationsListProps) {}
   if (certifications.length === 0) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return null;
   }
 
@@ -80,7 +57,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
 import { format } from "date-fns";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsListProps {
   certifications: Certification[];
   on_edit: (cert: Certification) => void;
@@ -127,16 +103,11 @@ if ( {) {
                       ? cert && cert.expiration_date ;
                       : format(cert && cert.expiration_date, 'MMM yyyy')}
                     </>;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
 import { format } from "date-fns";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -150,7 +121,6 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;                  )}
-=======
   return ("
     <div className="space-y-4">"
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -179,11 +149,7 @@ interface CertificationsListProps {;
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
                   )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -227,7 +193,6 @@ export function CertificationsList({
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
                   )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </p>;
               </div>;"
               <div className="flex gap-2">;
@@ -262,7 +227,6 @@ export function CertificationsList({
                   size="icon";
                   on_click={() => on_edit (cert)}
                 >;
-<<<<<<< HEAD
                   <Edit className="h - 4 w-4" />;
                 </Button>;
 "
@@ -279,18 +243,14 @@ export function CertificationsList({
                   on_click={() => on_edit (cert)}
                 >;"
                   <Edit className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Button>;
                 <Button;"
                   variant="ghost";"
                   size="icon";
                   on_click={() => on_delete (cert.id!)}
 >;
-<<<<<<< HEAD
                   <Trash2 className="h - 4 w-4" />;
-=======
                   <Trash2 className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Button>;
               </div>;
             </div>;
@@ -311,7 +271,6 @@ export function CertificationsList({
         </Card>
       ))}
     </div>
-<<<<<<< HEAD
   )
 }
 ;
@@ -333,30 +292,13 @@ export function CertificationsList({
 }
 ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import { Certification } from "@/types/resume";""
 import { Card, CardContent } from "@/components/ui/card";""
@@ -459,4 +401,3 @@ export function CertificationsList({
 }</div>) "
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

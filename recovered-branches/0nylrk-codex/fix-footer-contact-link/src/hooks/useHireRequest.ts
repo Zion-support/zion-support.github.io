@@ -6,23 +6,18 @@ export interface HireRequestData {}
 project: {}
     overview: string;
 timeline: string;
-<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
-=======
     timeline: string;'
 import {useState} from 'react';"
 import {supabase} from "@/integrations/supabase/client";"
 import {toast} from "@/hooks/use-toast";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {TalentProfile} from "@/types/talent";
 export interface HireRequestData {};
   talent: {;
     id: string;
 full_name: string;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { TalentProfile } from "@/types/talent",
 export interface HireRequestData {}
   talent: {}
@@ -46,7 +41,6 @@ export interface HireRequestData {}
 
 export function useHireRequest() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -55,7 +49,6 @@ export function useHireRequest() {;
     setError(null)
     try {
       // Call the edge function to process the hire request
-<<<<<<< HEAD
       const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
 
@@ -113,12 +106,10 @@ title: "Error",
       setIsSubmitting (false);
     }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title: "Error",
         description: errorMessage,"
         variant: "destructive"}),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       return { success: false, error: errorMessage }
     } finally {}
       setIsSubmitting(false)
@@ -128,13 +119,11 @@ return {}
     submitHireRequest;
     isSubmitting;
 
-<<<<<<< HEAD
     error
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import { TalentProfile } from "@/types/talent",;
-=======
   return {
     submitHireRequest;}
     isSubmitting;}
@@ -147,7 +136,6 @@ import { useState } from 'react';
 import { supabase } from \"@/integrations/supabase/client\";
 import { toast } from \"@/hooks/use-toast\",;
 import { TalentProfile } from \"@/types/talent\",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface HireRequestData {;
   talent: {;
     id: string,;
@@ -202,12 +190,6 @@ title: "Error",,
 ;
 }
 }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

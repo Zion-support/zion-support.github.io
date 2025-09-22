@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -7,26 +5,18 @@ function fixDoubleCommas(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (fixedContent !== content) {
-=======
     if (fixedContent !== content) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 #!/usr / bin / env node;
 import fs from './fs';'

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
 const corsHeaders = {"
@@ -19,14 +17,9 @@ import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
@@ -48,13 +41,10 @@ import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface HireRequest {
   talent: {
     id: string;
@@ -77,7 +67,6 @@ professional_title: string
     id?: string
   }
   project: {
-=======
 
 interface HireRequest {}
   talent: {}
@@ -94,12 +83,8 @@ interface HireRequest {}
 
   }
   project: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     overview: string;
-<<<<<<< HEAD
     timeline: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",";
@@ -111,34 +96,22 @@ budgetMin: number
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     timeline: string;
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const corsHeaders = {
-=======
     timeline: string;const corsHeaders = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     timeline: string;const corsHeaders = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 const corsHeaders = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "Access-Control-Allow-Origin": "*",
-=======
 
 "
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
@@ -147,15 +120,12 @@ import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 const corsHeaders = {
   }
   project: {
     overview: string;
     timeline: string;const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 interface HireRequest {}
@@ -174,30 +144,18 @@ interface HireRequest {}
     overview: string,
     timeline: string,
     budgetMin: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
     budgetMax: number
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-=======
     budgetMax: numberimport { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     budgetMax: numberimport { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     budgetMax: number
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
-=======
     budgetMax: number;
 "
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;"
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
 const corsHeaders = {;"
   "Access-Control-Allow-Origin": "*",;"
@@ -300,22 +258,13 @@ interface HireRequest {;
     overview: string,;
     timeline: string,;
     budgetMin: number,;
-<<<<<<< HEAD
     budgetMax: number;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
 interface EnhancedContent {}
   summary: string;
   projectType: string;
-=======
     budgetMax: number;
 
   }
@@ -323,15 +272,9 @@ interface EnhancedContent {}
 interface EnhancedContent {
   summary: string
   projectType: string
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -343,39 +286,27 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
-=======
   try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const supabase = createClient(
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const { talent, requester, project } = requestData;
 // Format budget for display
 
     const budgetDisplay = `$${project && project.budgetMin.toLocaleString()} - $${project && project.budgetMax.toLocaleString()}`;
     // 1. Optional: Enhance content with AI
     let enhancedContent: EnhancedContent | null = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),
     if (openAiKey) {
       try {
         const configuration = new Configuration({
-=======
     // Format budget for display;
     if (openAiKey) {}
       try {}
         const configuration = new Configuration({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           apiKey: openAiKey});
         const openai = new OpenAIApi(configuration);
 "
       Deno.env.get("SUPABASE_URL") ?? "","
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),
 
 const requestData: HireRequest = await req && req.json(),
@@ -401,7 +332,6 @@ const requestData: HireRequest = await req && req.json(),
           apiKey: openAiKey});
         const openai = new OpenAIApi(configuration);
       Deno.env.get("SUPABASE_URL") ?? "",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
     ),
@@ -420,10 +350,6 @@ const requestData: HireRequest = await req && req.json(),
           apiKey: openAiKey}),
         const openai = new OpenAIApi(configuration),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         const prompt = `
 
 "
@@ -448,15 +374,12 @@ const prompt = `
         const prompt = `
 
           Project Overview: "${project && project.overview}"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           Please provide:
           1. A brief summary of this project (max 100 characters)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           2. Classify this project into one category (e && e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
 
           Format your response as JSON: {
             "summary": "Brief summary here"
-<<<<<<< HEAD
             "projectType": "Project type here"
           }
         `;
@@ -475,7 +398,6 @@ const prompt = `
         `,
 
         const completion = await openai && openai.createCompletion({"
-=======
             "projectType": "Project type here"
 Format your response as JSON: {
             "summary": "Brief summary here"
@@ -635,7 +557,6 @@ prompt;
           max_tokens: 150
           temperature: 0.3});
         const completion = await openai && openai.createCompletion({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           model: "gpt-3 && 3.5-turbo-instruct";
           prompt;
           max_tokens: 150,
@@ -643,15 +564,9 @@ prompt;
 "
         const responseText = completion && completion.data.choices[0]?.text || "";
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const responseText = completion && completion.data.choices[0]?.text || "";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         try {
           // Extract JSON from the response
           const jsonMatch = responseText && responseText.match(/\{[\s\S]*\}/);
@@ -660,9 +575,6 @@ prompt;
 
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           talent_id: talent && talent.id,
           requester_id: requester && requester.id || null, // May be null if user is not authenticated
@@ -678,7 +590,6 @@ prompt;
           status: 'new',
           expiry_date: new Date(Date && Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
 
-<<<<<<< HEAD
             console && console.log("Enhanced content generated:", enhancedContent)
           }
         } catch (jsonError) {
@@ -709,28 +620,20 @@ const responseText = completion.data.choices[0]?.text || "",
         console.error("Error generating enhanced content:", aiError);
 
         // Continue without enhanced content
-=======
             "projectType": "Project type here"          }
         `;        // Continue without enhanced content
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         try {}
           // Extract JSON from the response;
           const jsonMatch = responseText && responseText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {}
         // Continue without enhanced content;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         // Continue without enhanced content
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         // Continue without enhanced content
 
           Format your response as JSON: {
             "summary": "Brief summary here"
             "projectType": "Project type here"          }
         `;        // Continue without enhanced content
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     }
     // 2. Store the request in the database;
@@ -754,16 +657,10 @@ const responseText = completion.data.choices[0]?.text || "",
         }
       ])
       .select();
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (requestError) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       throw new Error(`Error storing hire request: ${requestError && requestError.message}`)
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             enhancedContent = JSON.parse(jsonMatch[0]),
-=======
       .insert([]
         {}
         }
@@ -771,7 +668,6 @@ const responseText = completion.data.choices[0]?.text || "",
       .select();
     if (requestError) {}
             enhancedContent = JSON.parse(jsonMatch[0]),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             // // // console.log("Enhanced content generated:", enhancedContent)
           }
         } catch (jsonError) {;"
@@ -782,7 +678,6 @@ const responseText = completion.data.choices[0]?.text || "",
         console.error("Error generating enhanced content:", aiError),
         // Continue without enhanced content;
       } catch (aiError) {;"
-=======
     if (requestError) {
       throw new Error(`Error storing hire request: ${requestError && requestError.message}`)
     }
@@ -799,7 +694,6 @@ throw new Error(`Error storing hire request: ${requestError.message}`)
         console.error("Error generating enhanced content:", aiError),
         // Continue without enhanced content
       } catch (aiError) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         console.error("Error generating enhanced content:", aiError),;
         // Continue without enhanced content;
       }
@@ -1005,7 +899,6 @@ if ( {) {
         // Continue without enhanced content;
     // 2. Store the request in the database;
 const { data: requestRecord, error: requestError } = await supabase;'
-=======
       .from('hire_requests')
       .insert([
         {
@@ -1040,7 +933,6 @@ const { data: requestRecord, error: requestError } = await supabase;'
         // Continue without enhanced content;
     // 2. Store the request in the database;
     const { data: requestRecord, error: requestError } = await supabase;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       .from('hire_requests');
       .insert([;
         {;
@@ -1062,65 +954,40 @@ budget_display: budgetDisplay,;'
       .select(),;
 if (requestError) {;`
       throw new Error(`Error storing hire request: ${requestError.message}`);
-<<<<<<< HEAD
-=======
     if (requestError) {;
-=======
           status: 'new',;')
       ]);
       .select(),;
     if (requestError) {;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       throw new Error(`Error storing hire request: ${requestError.message}`);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     }
 
 }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
     }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     if (requestError) {    }
-=======
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     if (requestError) {    }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
       .from('profiles')
       .select('id')
       .eq('user_typeadmin')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id
       const adminNotificationContent = {
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (adminError) {
-=======
     if (adminError) {
-=======
 
     // 3. Create notification for the admin;
     // Fetch admin users;
@@ -1130,10 +997,8 @@ if (requestError) {;`
       .eq('user_typeadmin')
 
     if (adminError) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console && console.error("Error fetching admin users:", adminError)
     }    if (adminError) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console && console.error("Error fetching admin users:", adminError)
     }    if (adminError) {
       console && console.error("Error fetching admin users:", adminError)
@@ -1355,11 +1220,7 @@ console && console.error("Error creating admin notification:", notificationError
         }),
 
 if (notificationError) {
-<<<<<<< HEAD
         console.error("Error creating admin notification:", notificationError)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     // 3. Create notification for the admin;
     // Fetch admin users;
@@ -1424,7 +1285,6 @@ body: {
             <p><strong>Budget:</strong> ${budgetDisplay}</p>
             <p><strong>Timeline:</strong> ${project && project.timeline}</p>
             <p><strong>Overview:</strong></p>
-<<<<<<< HEAD
             <p>${project.overview}</p>
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
@@ -1441,7 +1301,6 @@ body: {
         }),
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
     // 3. Create notification for the admin;
     // Fetch admin users;
@@ -1496,7 +1355,6 @@ body: {
         title: `New hiring request for ${talent && talent.full_name}`;
         message: `${requester && requester.name} (${requester && requester.email}) wants to hire ${talent && talent.full_name} for a project with budget ${budgetDisplay}.`;
         type: "hire_request",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 if ( {) {
   $2;
@@ -1547,12 +1405,10 @@ pr-12325
         }),
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     }
     return new Response(
@@ -1575,7 +1431,6 @@ pr-12325
           `}}),
       "
       // // // console.log("Email sending result:", emailResponse)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     return new Response(
       JSON.stringify({}
@@ -1596,8 +1451,6 @@ headers: { ...corsHeaders, "Content-Type": "application/json" }
     return new Response(
         request_id: requestRecord[0].id
 {        headers: { ...corsHeaders, "Content-Type": "application/json" }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 200}
@@ -1632,7 +1485,6 @@ console.error ("Error processing hire request:", error.message);
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         status: 200}
     )
   } catch (error) {"
@@ -1659,7 +1511,6 @@ status: 200}
 {
 
         headers: { ...corsHeaders, "Content-Type": "application/json" };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         headers: { ...corsHeaders, "Content-Type": "application/json" },
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>;
             <p>Best regards,<br>The Zion AI Marketplace Team</p>;`
@@ -1687,10 +1538,6 @@ status: 200}
       }),;
       {;"
         headers: { ...corsHeaders, "Content-Type": "application/json" },;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     console.error ("Error processing hire request:", error.message);
 ;
     return new Response (
@@ -1700,8 +1547,6 @@ status: 200}
         error: error.message;
       });
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
         headers: { ...cors_headers, "Content - Type": "application / json" }
 
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -1717,16 +1562,11 @@ status: 200}
       }),
       {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         status: 500}
     );
   }
 });
 
-=======
 ;
 
 ;
@@ -1968,17 +1808,9 @@ error: error.message;
   }
 });
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     console.error ("Error processing hire request:", error.message);
 ;
     return new Response (
@@ -2173,4 +2005,3 @@ pr-12325
 }</p>` : '''
 }<p>Please log in to your Zion AI Marketplace account to respond to this request.</p> <p>Best regards, <br>The Zion AI Marketplace Team</p> ` '
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

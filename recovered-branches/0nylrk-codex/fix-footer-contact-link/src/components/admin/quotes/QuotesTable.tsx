@@ -14,18 +14,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
   quotes;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
 
-<<<<<<< HEAD
 import {formatDate} from "@/utils/dateUtils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {formatDate} from "@/utils/dateUtils";
 
 import React from "react";
@@ -49,7 +44,6 @@ import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
 import { 
@@ -69,47 +63,30 @@ import {
 } from "@/components/ui/dropdown-menu",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {}
   quotes: QuoteRequest[]
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   isArchived?: boolean;
 isLoading: boolean
   updateStatus: (id: string, status: QuoteStatus) => void
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {formatDate} from "@/utils/dateUtils";
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
-=======
   isLoading: boolean;
   updateStatus: (id: string, status: QuoteStatus) => void;
   toggleArchive: (id: string, isArchived: boolean) => void;
   deleteQuote: (id: string) => void;
 "
 import React from "react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import {}
-=======
 
 import {formatDate} from "@/utils/dateUtils";
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Table,
   TableBody, 
   TableCell, 
@@ -128,15 +105,6 @@ import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge","
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes","
 import { formatDate } from "@/utils/dateUtils",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   TableRow 
 } from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
@@ -150,42 +118,25 @@ import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface QuotesTableProps {
-=======
 interface QuotesTableProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   quotes: QuoteRequest[],
   isArchived?: boolean,
   isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   onViewDetails: (quote: QuoteRequest) => void
 }
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   onViewDetails: (quote: QuoteRequest) => void
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
@@ -198,10 +149,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({};
   isArchived = false;
   isLoading;
   updateStatus;
-<<<<<<< HEAD
   toggleArchive;
-<<<<<<< HEAD
-<<<<<<< HEAD
   deleteQuote
   quotes,
   isArchived = false,
@@ -209,8 +157,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({};
   updateStatus,
   toggleArchive,
   deleteQuote,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onViewDetails
 }) => {
   return (
@@ -224,7 +170,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({};
             <TableHead className="text-zion-slate-light">Budget</TableHead>"
             <TableHead className="text-zion-slate-light">Date</TableHead>"
             <TableHead className="text-zion-slate-light">Status</TableHead>"
-=======
   onViewDetails
 }) => {
   return (
@@ -238,7 +183,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({};
             <TableHead className="text-zion-slate-light">Budget</TableHead>
             <TableHead className="text-zion-slate-light">Date</TableHead>
             <TableHead className="text-zion-slate-light">Status</TableHead>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <TableHead className="text-zion-slate-light">Actions</TableHead>
           </TableRow>
         </TableHeader>
@@ -267,15 +211,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({};
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>"
                 <TableCell className="text-white">
-<<<<<<< HEAD
 import React from './react';
-=======
   toggleArchive;import React from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   toggleArchive;import React from './react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <TableRow
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue"
@@ -285,14 +223,12 @@ import React from './react';
                 </TableCell>
                 <TableCell className="text-white">
 import React from './react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Button } from '@/components / ui / button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
 import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-=======
 
 '
 import React from './react';'
@@ -302,7 +238,6 @@ import { Button } from '@/components / ui / button';'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';'
 import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';"
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format_date } from '@/utils / date_utils';
 interface QuotesTableProps {}
   quotes: QuoteRequest[],
@@ -327,7 +262,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
     <div className="overflow-x-auto">;
       <Table>;
         <TableHeader>;
-<<<<<<< HEAD
           <TableRow className="border - zion - blue - light hover:bg - zion-blue">;
             <TableHead className="text - zion - slate-light">Talent</TableHead>;
             <TableHead className="text - zion - slate-light">Requester</TableHead>;
@@ -336,8 +270,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
             <TableHead className="text - zion - slate-light">Date</TableHead>;
             <TableHead className="text - zion - slate-light">Status</TableHead>;
             <TableHead className="text - zion - slate-light">Actions</TableHead>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </TableRow>;
         </TableHeader>;
         <TableBody>;
@@ -357,15 +289,12 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
             quotes.map (quote => (
               <TableRow;
 key={quote.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="border - zion - blue - light hover:bg - zion - blue";
               >;"
                 <TableCell className="text - white">;'
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;"
                 <TableCell className="text - white">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {quote.requester_name}
                 </TableCell>;"
                 <TableCell className="text - white">;"
@@ -516,9 +445,7 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
               <TableRow ;
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue";
-=======
                 className="border - zion - blue - light hover:bg - zion - blue";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >;
                 <TableCell className="text - white">;
                   {quote.talent_name || 'Unknown Talent'}
@@ -531,7 +458,6 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
 
-=======
 
   deleteQuote,;
   onViewDetails;
@@ -601,7 +527,6 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                     <Button
                       variant="ghost" 
                       size="icon" 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       onClick={() => onViewDetails(quote)}
                     >;"
                       <Eye className="h-4 w-4" />;"
@@ -743,9 +668,6 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     )}
                   </div>
@@ -756,10 +678,8 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
 
 };
 import React from "react",;
-=======
 
 import React from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
 import {;
   Table,;
@@ -889,19 +809,12 @@ key={quote.id}"
                             }
                           }}
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         >;
                           <Trash2 className="h-4 w-4" />;
-=======
                         >;"
                           <Trash2 className="h-4 w-4" />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <span className="sr-only">Delete</span>;
                         </Button>;
-<<<<<<< HEAD
                       </>;
 
                     ) : (;
@@ -916,9 +829,6 @@ key={quote.id}"
 
                             }
                           }}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                               }
                             }}"
                             className="text-red-500";
@@ -927,30 +837,17 @@ key={quote.id}"
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
-<<<<<<< HEAD
                       </DropdownMenu>;
                       </DropdownMenu>;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     )}
-=======
                       </>;                    )}                    )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                       </>;                    )}                    )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     )}
 </DropdownMenu>;                    )}
                     )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>
                 </TableCell>
               </TableRow>
@@ -971,28 +868,20 @@ key={quote.id}"
 )}        </TableBody>;
       </Table>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 
-=======
           )}
 
         </TableBody>;
       </Table>;
     </div>;
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 key={quote && quote.id}"
                 className="border-zion-blue-light hover:bg-zion-blue">;"
                 <TableCell className="text-white">;"
 
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <TableCell className="text - white">;
                   {format_date (quote.created_at)}
                 </TableCell>;
@@ -1074,7 +963,6 @@ on_click={() => {}
                           >;"
                             <Trash2 className="h - 4 w - 4 mr - 2" />;
                             Delete;
-=======
                   <div className="font-medium">{quote && quote.project_name}</div>;""
                   <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;"
                   </div>;
@@ -1156,7 +1044,6 @@ on_click={() => {}
                       ;                    )}
 
 </Trash2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>)}
@@ -1174,18 +1061,9 @@ on_click={() => {}
     </div>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   </div>;
                 </TableCell>;"
                 <TableCell className="text - white">;"
@@ -1284,4 +1162,3 @@ pr-12325
       </Table>;
     </div>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -20,12 +18,7 @@ type FormValues = z.infer<typeof formSchema>;
 interface TemplateSaveFormProps {
   onCancel: () => void
   onComplete: () => void
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const formSchema = z && z.object({;
   title: z && z.string().min(1, "Title is required");
   isDefault: z && z.boolean().default(false)}),;
@@ -36,14 +29,11 @@ interface TemplateSaveFormProps {;
   onCancel: () => void,;
   onComplete: () => void,;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -56,16 +46,10 @@ import {Button} from "@/components/ui/button";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 export function TemplateSaveForm(): any ({;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onCancel;
   onComplete;
   editTemplate;
@@ -114,16 +98,9 @@ export function TemplateSaveForm({};
           title: values.title;
           templateData: currentValues;
           isDefault: values.isDefault})
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
-=======
 
 export function TemplateSaveForm(): any ({;import { useState } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -165,7 +142,6 @@ export function TemplateSaveForm({
           templateData: currentValues
           isDefault: values.isDefault})
 import { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
@@ -177,26 +153,12 @@ import { Button } from "@/components/ui/button",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const formSchema = z.object({
-=======
 
 const formSchema = z.object({"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
 
@@ -206,10 +168,7 @@ interface TemplateSaveFormProps {}
   onCancel: () => void,
   onComplete: () => void,
 editTemplate?: ContractTemplate | null,
-<<<<<<< HEAD
-<<<<<<< HEAD
   currentValues?: ContractFormValues
-<<<<<<< HEAD
 }
 
 export function TemplateSaveForm({;
@@ -246,10 +205,8 @@ export function TemplateSaveForm({;
           title: values.title,
           templateData: currentValues,
           isDefault: values.isDefault})
-=======
   currentValues?: ContractFormValues
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -264,10 +221,8 @@ import { Input } from "@/components/ui/input",;
 
 import { Switch } from "@/components/ui/switch",;
 const formSchema = z.object({;"
-=======
 import { Switch } from "@/components/ui/switch",;
 const formSchema = z.object({;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: z.string().min(1, "Title is required"),;
   isDefault: z.boolean().default(false)}),;
 type FormValues = z.infer<typeof formSchema>,;
@@ -303,11 +258,7 @@ export function TemplateSaveForm() { return null; }
           title: values.title,;
           templateData: currentValues;
           isDefault: values.isDefault});
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
       onComplete()
     } finally {}
@@ -341,15 +292,10 @@ const form = useForm<FormValues>({;
           isDefault: values.isDefault});
 
   };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   };
-=======
   currentValues?: ContractFormValues  };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       }
       onComplete()
     } finally {
@@ -362,7 +308,6 @@ const form = useForm<FormValues>({;
   },
 
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
   return (
@@ -568,7 +513,6 @@ defaultValues:{;"
               </FormControl>;
               <FormMessage />;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </FormItem>;          )}
         />;
         ;
@@ -677,23 +621,8 @@ try {}
     </Form>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const formSchema = z && z.object({;)
   title: z && z.string().min(1, "Title is required");"
   isDefault: z && z.boolean().default(false)}),;
@@ -860,4 +789,3 @@ if ( {) {
               `${editTemplate ? "Update" : "Save"} Template`")
         </div>
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

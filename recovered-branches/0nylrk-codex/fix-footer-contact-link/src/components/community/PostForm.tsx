@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { useForm } from "react-hook-form";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { useState } from "react";
 import { useForm } from "react-hook-form";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -36,21 +28,11 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import { 
 
@@ -69,7 +51,6 @@ import {
   // TODO: Implement
 }
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Card;
   CardContent;
   CardFooter;
@@ -86,21 +67,15 @@ FormMessage"
 } from "@/components/ui/form","
 import { Input } from "@/components/ui/input","
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface PostFormValues {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   title: string
   content: string
@@ -109,27 +84,19 @@ interface PostFormValues {
   tags: string
 }
 interface PostFormProps {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
-=======
-=======
   FormMessage
 } from "@/components/ui/form",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { Textarea } from "@/components/ui/textarea",;
 import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   isEditing?: boolean
-=======
 interface PostFormValues {}
   title: string,
   content: string,
@@ -144,27 +111,18 @@ interface PostFormProps {}
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 export const PostForm = ({;
   initialValues;
-<<<<<<< HEAD
   onSubmit;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
-=======
 
 "
 import { useState } from "react",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   onSubmit;
 
 import { useState } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from "react-hook-form",;
 import {;
   Card,;
@@ -197,43 +155,23 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   initialValues?: Partial<PostFormValues>;
-<<<<<<< HEAD
-=======
 
   initialValues?: Partial<PostFormValues>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   onSubmit;  initialValues?: Partial<PostFormValues>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
   initialValues;
   onSubmit;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 initialValues,
   onSubmit,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -267,7 +205,6 @@ export const PostForm = ({};
       categoryId: initialValues?.categoryId || "project-help",;
       tags: initialValues?.tags || "";
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 import { useState } from './react';
@@ -316,9 +253,6 @@ setIsSubmitting(false)
 
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     }
   });
@@ -367,61 +301,39 @@ export const PostForm = ({
 
     try {
       await on_submit (values);
-<<<<<<< HEAD
     } finally {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
       title: initialValues?.title || "",
       content: initialValues?.content || "",
       categoryId: initialValues?.categoryId || "project-help",
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       tags: initialValues?.tags || ""
     }
   };
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
 
-<<<<<<< HEAD
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     }
-<<<<<<< HEAD
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
     } finally {    }
   }  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     } finally {    }
   }  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     }
   }
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card>;
       <CardHeader>;"
         <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
@@ -435,7 +347,6 @@ export const PostForm = ({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
-<<<<<<< HEAD
       setIsSubmitting (false);
     }
   }
@@ -447,18 +358,14 @@ export const PostForm = ({
       </CardHeader>;
       <CardContent>;
 <Form {...form}>;
-<<<<<<< HEAD
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
-=======
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <FormField;
               control={form.control}"
               name="title";
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
@@ -466,14 +373,11 @@ export const PostForm = ({
 
             />;
 
-<<<<<<< HEAD
             <FormField
               control={form && form.control}
-=======
 
             <FormField;
               control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="content"
 
               render={({ field }) => (;
@@ -491,14 +395,11 @@ export const PostForm = ({
               )}
             />;
 
-<<<<<<< HEAD
             <FormField
               control={form && form.control}
-=======
 
             <FormField;
               control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="categoryId"
               render={({ field }) => (;
                 <FormItem>;
@@ -519,14 +420,11 @@ export const PostForm = ({
 
             />;
 
-<<<<<<< HEAD
             <FormField
               control={form && form.control}
-=======
 
             <FormField;
               control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="tags"
 
               render={({ field }) => (;
@@ -574,11 +472,8 @@ export const PostForm = ({
       </CardHeader>;
       <CardContent>;
 <Form {...form}>;
-<<<<<<< HEAD
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
-=======
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <FormField;
               control={form.control}"
               name="title";
@@ -704,13 +599,6 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </FormItem>)}
             />;
             <FormField;
@@ -743,7 +631,6 @@ export const PostForm = ({
                       <option value="getting - hired">Getting Hired</option>;
                       <option value="project - help">Project Help</option>;
                       <option value="ai - tools">AI Tools Discussion</option>;
-=======
 
             </Button>;
           </form>;
@@ -871,7 +758,6 @@ export const PostForm = ({;
                       <option value="getting-hired">Getting Hired</option>;"
                       <option value="project-help">Project Help</option>;"
                       <option value="ai-tools">AI Tools Discussion</option>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <option value="feedback">Feedback & Feature Requests</option>;
                     </select>;
                   </FormControl>;
@@ -1190,10 +1076,6 @@ export default PostForm,
 }/>  </form>   ) "
 pr-12325
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 </FormItem>;              )}
             />;
             ;
@@ -1270,4 +1152,3 @@ export default PostForm;
 export default PostForm,
 
 '";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

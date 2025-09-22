@@ -1,20 +1,11 @@
 import React, { useState } from "react";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
 
-=======
 
 import {
   // TODO: Implement
@@ -23,7 +14,6 @@ pr-12325
 import {
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Table;
   TableBody;
   TableCell;
@@ -38,16 +28,8 @@ import {};
 
   DialogFooter;
   DialogHeader;
-<<<<<<< HEAD
-<<<<<<< HEAD
   DialogTitle;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   DialogTitle;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -60,20 +42,12 @@ export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
-=======
   DialogTitle;import React, { useState } from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   DialogTitle;import React, { useState } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React, { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
-=======
 "
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";"
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";"
@@ -86,8 +60,6 @@ import {toast} from "@/hooks/use-toast";
 export function TeamManagement() { return null; }
 import React, { useState } from "react",
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   DialogTitle;import React, { useState } from "react",;
 import {
@@ -110,7 +82,6 @@ pr-12325
 import {
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Table,
   TableBody,
   TableCell,
@@ -125,50 +96,28 @@ import {}
 
   DialogFooter,
   DialogHeader,
-<<<<<<< HEAD
   DialogTitle,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   DialogTrigger} from "@/components/ui/dialog",
-=======
   DialogTitle,  DialogTrigger} from "@/components/ui/dialog",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   DialogTitle,  DialogTrigger} from "@/components/ui/dialog",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   DialogTitle,
 
   DialogTrigger} from "@/components/ui/dialog",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
-=======
 
 "
   DialogTrigger} from "@/components/ui/dialog","
 import { Button } from "@/components/ui/button","
 import { Input } from "@/components/ui/input","
 import { Label } from "@/components/ui/label","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {}
   const [isAddingMember, setIsAddingMember] = useState(false),"
-=======
 
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
@@ -179,16 +128,8 @@ import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [newMemberEmail, setNewMemberEmail] = useState(""),
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Mock team members data
 
   const teamMembers = [
@@ -232,23 +173,15 @@ export function TeamManagement() {
     }
 toast({
 
-=======
     toast({}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 "
     setNewMemberEmail(""),
     setIsAddingMember(false)
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       lastActive: "2 hours ago"}
     {
       id: 2
@@ -294,38 +227,25 @@ title: "Invitation sent"
     setIsAddingMember(false)
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
   },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
-<<<<<<< HEAD
       description: `A new invitation has been sent to ${memberEmail}`})
-<<<<<<< HEAD
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
@@ -402,13 +322,9 @@ export function TeamManagement() {;
       description: `A new invitation has been sent to ${memberEmail}`})
 
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
-=======
       description: `A new invitation has been sent to ${memberEmail}`})  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     // In a real app, this would make an API call to remove the member;
     toast({;
       title: "Team member removed",;
@@ -424,14 +340,11 @@ export function TeamManagement() {;
 
 },
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
-=======
   return ("
     <div className="space-y-6">;"
       <div className="flex items-center justify-between">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h3 className="text-xl font-medium">Team Members</h3>;
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
           <DialogTrigger asChild>;"
@@ -763,13 +676,7 @@ export function TeamManagement() {;
                         variant="ghost""
                         size="sm""
                         className="text-destructive hover:text-destructive"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",;
 import {;
   Table,;
@@ -865,11 +772,6 @@ toast({;"
               <div className="grid grid-cols-4 items-center gap-4">;"
                 <Label htmlFor="email" className="text-right">;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
               </DialogDescription>;
@@ -878,7 +780,6 @@ toast({;"
               <div className="grid grid-cols-4 items-center gap-4">;
                 <Label htmlFor="email" className="text-right">;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Email;
                 </Label>;
                 <Input;"
@@ -1063,8 +964,6 @@ export function TeamManagement() {;
 <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
                 Cancel;
               </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Button on_click={handleAddMember}>Send Invitation</Button>;
 
 <Button variant="outline" onClick={() => setIsAddingMember(false)}>;
@@ -1082,19 +981,10 @@ export function TeamManagement() {;
                   </div>;
                 </TableCell>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <TableCell>{member.role}</TableCell>;
-=======
               <Button on_click={handleAddMember}>Send Invitation</Button>;                <TableCell>{member.role}</TableCell>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               <Button on_click={handleAddMember}>Send Invitation</Button>;                <TableCell>{member.role}</TableCell>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           </TableBody>;
         </Table>;
       </div>;
@@ -1103,7 +993,6 @@ export function TeamManagement() {;
 }
 
                 <TableCell>{member.role}</TableCell>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <TableCell>;
                   <Badge;"
                     variant={member.status === "active" ? "default" : "outline"}
@@ -1154,14 +1043,9 @@ export function TeamManagement() {;
                   <Badge;
                     variant={member.status === "active" ? "default" :"outline"}
 
-<<<<<<< HEAD
                         className="text-destructive hover:text-destructive";
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         onClick={() => handleRemoveMember(member.id)}
                       >"
                         <Trash className="h-4 w-4" />

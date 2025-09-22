@@ -3,30 +3,24 @@ import Link from 'next/link';
 import React from 'react',
 export default function FutureOfWork() {
   return (
-=======
 
 import React from 'react',
 export default function FutureOfWork() {
   return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
 export default /**
  * FutureOfWork - Function description
-=======
 
 import Head from 'next / head';'
 import Link from 'next / link';'
 import React from 'react',
 export default /**;
  * FutureOfWork - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
 function FutureOfWork() {}
   return (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <>;
       <Head>;
         <title>;
@@ -56,7 +50,6 @@ function FutureOfWork() {}
                 className='text-cyan-400 hover:text-cyan-300 transition-colors';
               >;
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ← Back to Blog;
               </Link>;
             </nav>;
@@ -219,12 +212,10 @@ Today, we're witnessing the emergence of a new paradigm:;
                 </ul>;'
                 <p className='text - white / 90 mb - 4'>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   This collaboration model has proven to be 40% more effective;
                   than either humans or AI working alone.;
                 </p>;
               </section>;
-<<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>;
                   New Roles and Opportunities;
@@ -254,7 +245,6 @@ Today, we're witnessing the emergence of a new paradigm:;
                 <p className='text-white/90 mb-4'>;
                   These roles require a unique blend of technical skills and;
                   human understanding—qualities that are becoming increasingly;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   valuable in the modern workplace.;
                 </p>;
               </section>;
@@ -315,22 +305,16 @@ Today, we're witnessing the emergence of a new paradigm:;
                   </li>;
                 </ul>;
 <p className='text-white/90 mb-4'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
                   valuable in the modern workplace.;
                 </p>;
               </section>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Our workplace design principles ensure that AI systems enhance;
                   rather than disrupt human workflows.;
                 </p>;
               </section>;
-<<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>;
                   Measuring Success;
@@ -384,10 +368,7 @@ Today, we're witnessing the emergence of a new paradigm:;
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300';
                   >;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     Explore Solutions;
                   </Link>;
                 </div>;
@@ -396,7 +377,6 @@ Today, we're witnessing the emergence of a new paradigm:;
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -405,12 +385,6 @@ Today, we're witnessing the emergence of a new paradigm:;
   }
 }
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 import React from 'react';
 export default function FutureOfWork() {
   return (
@@ -612,9 +586,5 @@ export default function FutureOfWork() {
     </>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

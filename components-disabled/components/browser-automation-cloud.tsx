@@ -1,7 +1,6 @@
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-<<<<<<< HEAD
 }import React from 'react';
 
   static getDerivedStateFromError(error) {}
@@ -15,11 +14,9 @@ console.error('Error caught by boundary:', error, errorInfo);
       return <div>Something went wrong.</div>;
 
 import React from 'react';
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
   }
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary: ';, error, errorInfo);}
@@ -42,7 +39,6 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const features = [
 const features = [
 
@@ -189,7 +185,6 @@ title='Browser Automation Cloud'
               target='_blank'
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
-<<<<<<< HEAD
               <ExternalLink className='w-4 h-4' /> Puppeteer;className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 export default /**;
@@ -201,7 +196,6 @@ function BrowserAutomationCloudPage() {const features = [;
     'Webhook callbacks and REST API';
   ];return (<>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default /**
  * BrowserAutomationCloudPage - Function description;
  */
@@ -272,8 +266,6 @@ function BrowserAutomationCloudPage() {
       </main>;</>)return (<>;
       </main>;
 
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     </>);	return (
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;"
 "
@@ -605,7 +597,6 @@ href='https://pptr.dev/'
 
 ),
 
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
 	)
 }
 
@@ -613,10 +604,8 @@ href='https://pptr.dev/'
 }
 	),
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 	),
 }
 	const features = [
 
 ),
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx

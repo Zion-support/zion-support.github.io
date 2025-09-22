@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -10,10 +6,7 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 }
 
@@ -30,15 +23,8 @@ import { Textarea } from "@/components/ui/textarea";
 import {
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Form,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   Form,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FormControl,
   FormField,
   FormItem,
@@ -80,14 +66,10 @@ import { Button } from "@/components/ui/button";"
 import { Textarea } from "@/components/ui/textarea";
 import {
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Form,
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD
 FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -96,7 +78,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 } from "@/components/ui/form";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
     <Card>;
@@ -164,11 +145,8 @@ pr-12325
 ;
   return (
 <Card>;
-<<<<<<< HEAD
       <CardContent className="pt-6">;
-=======
       <CardContent className="pt-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -325,9 +303,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
   },
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card>;"
       <CardContent className="pt-6">;
@@ -384,11 +359,8 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
   return (
 <Card>;
-<<<<<<< HEAD
       <CardContent className="pt-6">;
-=======
       <CardContent className="pt-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -404,11 +376,8 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                           ? "Write your reply...";"
                           : "Join the discussion...";
 }
-<<<<<<< HEAD
                       className="min - h-[100px] resize-y";
-=======
                       className="min - h-[100px] resize-y";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {...field}
                     />;
                   </FormControl>;
@@ -555,18 +524,10 @@ interface ReplyFormValues {;
       setIsSubmitting(false);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Card>;"
       <CardContent className="pt-6">;
@@ -585,7 +546,6 @@ interface ReplyFormValues {;
                           : "Join the discussion...";
 }
 placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -647,15 +607,9 @@ export default ReplyForm;
 export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 export default ReplyForm;
 export default ReplyForm,
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="min - h-[100px] resize - y";
                       {...field}
                     />;
@@ -666,13 +620,5 @@ export default ReplyForm,
           </form>;
         </Form>;
       </CardContent>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

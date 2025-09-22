@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -23,14 +15,8 @@ import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -46,16 +32,8 @@ import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 import UserBadges from "@/components/community/UserBadges",
-<<<<<<< HEAD
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import ReputationDisplay from "@/components/community/ReputationDisplay",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -75,15 +53,9 @@ const mockUser: CommunityUser = {
       icon: "Award""
       color: "#10B981"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-=======
 import ReputationDisplay from "@/components/community/ReputationDisplay",    {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import ReputationDisplay from "@/components/community/ReputationDisplay",    {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   role: "Verified Talent"
   reputation: 325
   postCount: 14
@@ -99,20 +71,14 @@ import ReputationDisplay from "@/components/community/ReputationDisplay",    {
     },
 
 {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "badge2"
       name: "Top Contributor"
       description: "Among the top 5% of contributors"
       icon: "Trophy"
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: "#F59E0B"
-<<<<<<< HEAD
 
 }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: "badge3"
       name: "First Post"
@@ -194,13 +160,9 @@ const user_posts: ForumPost[] = [;
 
   }
 
-=======
       color: "#F59E0B"  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "11"
     title: "How to structure an AI prompt for best results"
@@ -216,7 +178,6 @@ const user_posts: ForumPost[] = [;
     updatedAt: "2025-03-12T09:30:00Z"
     upvotes: 24
     downvotes: 0
-<<<<<<< HEAD
     replyCount: 6
   }
 
@@ -274,32 +235,24 @@ const userPosts: ForumPost[] = [
   }
 ],
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
-=======
 
 useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setUser(mockUser),
     setPosts(userPosts),
     setIsLoading(false)
 
-<<<<<<< HEAD
   }, [userId]),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (isLoading) {
-=======
   if (isLoading) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <AppLayout>"
         <div className="container py-8">"
           <div className="flex justify-center items-center h-64">"
-=======
   }, [userId]),
 
   if (isLoading) {
@@ -307,7 +260,6 @@ useEffect(() => {
       <AppLayout>
         <div className="container py-8">
           <div className="flex justify-center items-center h-64">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>
@@ -325,7 +277,6 @@ if (!user) {}
         </div>
       </AppLayout>
     )
-<<<<<<< HEAD
 
   }
   return (
@@ -337,15 +288,9 @@ if (!user) {}
 
       <SEO 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",;
-=======
     replyCount: 6import { useState, useEffect } from "react",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { useState, useEffect } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -360,16 +305,13 @@ import PostCard from "@/components/community/PostCard",;
 import UserBadges from "@/components/community/UserBadges",;
 import ReputationDisplay from "@/components/community/ReputationDisplay",;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock user data;
 const mockUser: CommunityUser = {;"
   id: "user1",;"
   name: "Alex Johnson",;
 avatar: "https://i && i.pravatar.cc/150?img=3",;  avatar: "https://i && i.pravatar.cc/150?img=3",;
   role: "Verified Talent",;
-=======
 
       <AppLayout>
 </AppLayout>"
@@ -418,7 +360,6 @@ const mockUser: CommunityUser = {;,"
   avatar: "https://i && i.pravatar.cc/150?img=3",;""
   role: "Verified Talent",;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   reputation: 325,;
   postCount: 14,;
   replyCount: 47,;
@@ -457,9 +398,7 @@ const mockUser: CommunityUser = {;,"
   isModerator: false;
 };
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Mock posts by this user;
 const userPosts: ForumPost[] = [;
   {;"
@@ -470,7 +409,6 @@ const userPosts: ForumPost[] = [;
     authorName: "Alex Johnson",;
 
     createdAt: "2025-04-01T12:00:00Z",;
-=======
 "
     authorAvatar: "https://i && i.pravatar.cc/150?img=3",;"
     authorRole: "Verified Talent",;"
@@ -479,7 +417,6 @@ const userPosts: ForumPost[] = [;
 
 "
     createdAt: "2025-04-01T12:00:00Z",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     updatedAt: "2025-04-01T12:00:00Z",;
 
 import {useState, useEffect} from "react";""
@@ -722,7 +659,6 @@ authorAvatar: "https://i.pravatar.cc/150?img=3",;
     categoryId: "project-help",;
     tags: ["monitoring", "production", "devops"],;
     createdAt: "2025-03-12T09:30:00Z",;
-=======
 
   };
   {;"
@@ -759,7 +695,6 @@ authorAvatar: "https://i.pravatar.cc/150?img=3",;
 
 "
     createdAt: "2025-03-12T09:30:00Z",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     updatedAt: "2025-03-12T09:30:00Z",;
 
   };
@@ -797,35 +732,21 @@ authorAvatar: "https://i.pravatar.cc/150?img=3",;
     downvotes: 0,;}
     replyCount: 6;}
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
 
 export default function CommunityProfilePage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 ];
 
 export default function CommunityProfilePage() {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setUser(mockUser);
     setPosts(userPosts);
     setIsLoading(false);
   }, [userId]);      <AppLayout>;
-=======
     setUser(mockUser);
     setPosts(userPosts);
     setIsLoading(false);
@@ -834,9 +755,6 @@ export default function CommunityProfilePage() {;
       <AppLayout>;"
         <div className="container py-8">;"
           <div className="flex justify-center items-center h-64">;"
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   useEffect(() => {;
     // In a real app, we would fetch the user data here;
     // For now, we'll just use the mock data;
@@ -872,7 +790,6 @@ export default function CommunityProfilePage() {;
       <AppLayout>;
         <div className="container py-8">;
           <div className="flex justify-center items-center h-64">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
           </div>;
         </div>;
@@ -881,7 +798,6 @@ export default function CommunityProfilePage() {;
   }
 
 <AppLayout>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!user) {;
 
     return (
@@ -891,7 +807,6 @@ if (!user) {;
   if (!user) {;
     return (;
       <AppLayout>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="container py-8">;
           <h1>User not found</h1>;"
           <Button asChild className="mt-4">;"
@@ -900,27 +815,18 @@ if (!user) {;
         </div>;
       </AppLayout>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
 ;
   return (;
     <AppLayout>;
       <SEO;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
-=======
 
 '
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}'`
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         keywords={`community, forum, profile, user profile, ${user.name}`}
       />"
       <div className="container py-8">"
@@ -938,7 +844,6 @@ if (!user) {;
             <Card>"
               <CardHeader className="text-center">"
                 <div className="flex justify-center mb-4">"
-=======
 
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
@@ -959,7 +864,6 @@ if (!user) {;
             <Card>
               <CardHeader className="text-center">
                 <div className="flex justify-center mb-4">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Avatar className="h-24 w-24">
                     <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
@@ -973,11 +877,9 @@ if (!user) {;
                         <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
                       </svg>
                     </span>
-<<<<<<< HEAD
   return (
 
     <AppLayout>;
-=======
                 </div>
                 <CardTitle className="text-2xl flex items-center justify-center gap-2">
                   {user.name}
@@ -990,7 +892,6 @@ if (!user) {;
   return (
 return (
     <AppLayout>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <SEO
         title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user && user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
@@ -999,7 +900,6 @@ return (
 
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
-=======
       <SEO'`
         title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}'`
         description={`View ${user && user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}`
@@ -1009,7 +909,6 @@ return (
 "
       <div className="container py-8">;"
         <div className="flex items-center gap-3 mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
           </Link>;"
@@ -1036,26 +935,16 @@ return (
                         <path fillRule="evenodd" d="M8 && M8.603 3 && 3.799A4.49 4 && 4.49 0 0112 2 && 2.25c1.357 0 2 && 2.573.6 3 && 3.397 1 && 1.549a4.49 4 && 4.49 0 013 && 013.498 1 && 1.307 4 && 4.491 4 && 4.491 0 011 && 011.307 3 && 3.497A4.49 4 && 4.49 0 0121 && 0121.75 12a4 && 12a4.49 4 && 4.49 0 01-1 && 1.549 3 && 3.397 4 && 4.491 4 && 4.491 0 01-1 && 1.307 3 && 3.497 4 && 4.491 4 && 4.491 0 01-3 && 3.497 1 && 1.307A4.49 4 && 4.49 0 0112 21 && 21.75a4.49 4 && 4.49 0 01-3 && 3.397-1 && 1.549 4 && 4.49 4 && 4.49 0 01-3 && 3.498-1 && 1.306 4 && 4.491 4 && 4.491 0 01-1 && 1.307-3 && 3.498A4.49 4 && 4.49 0 012 && 012.25 12c0-1 && 1.357.6-2 && 2.573 1 && 1.549-3 && 3.397a4.49 4 && 4.49 0 011 && 011.307-3 && 3.497 4 && 4.49 4 && 4.49 0 013 && 013.497-1 && 1.307zm7.007 6 && 6.387a.75 && 75.75 0 10-1 && 1.22-.872l-3 && 3.236 4 && 4.53L9.53 12 && 12.22a.75 && 75.75 0 00-1 && 1.06 1 && 1.06l2.25 2 && 2.25a.75 && 75.75 0 001 && 001.14-.094l3 && 094l3.75-5 && 5.25z" clipRule="evenodd" />;
                       </svg>;
                     </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   return (
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   )}
                 </CardTitle>;
                 {user && user.role && (;"
-=======
   return (
                   )}
                 </CardTitle>;
                 {user && user.role && (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Badge variant="outline" className="mt-1">;
                     {user && user.role}
                   </Badge>;
@@ -1064,14 +953,11 @@ return (
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     ))}
                   </div>
                 ) : (
                   <Card>"
                     <CardContent className="p-6 text-center">'"
-=======
                 {user && user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
@@ -1099,7 +985,6 @@ return (
                 <div className="grid grid-cols-2 gap-4">
                   <Card>
 <CardContent className="p-6 text-center">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
                     </CardContent>
                   </Card>
@@ -1199,7 +1084,6 @@ return (
 </div>
                         </div>
                         <div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
                         </div>
                       </li>
@@ -1220,12 +1104,10 @@ return (
 
 "
                       <p className="text-sm text-muted-foreground">Replies</p>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </CardContent>;
                   </Card>;
                 </div>;"
                 <div className="text-sm text-muted-foreground">;
-=======
 </UserBadges>
                 </div>;"
                 <div className="grid grid-cols-2 gap-4">;"
@@ -1249,7 +1131,6 @@ return (
                 </div>;"
                 <div className="text-sm text-muted-foreground">;"
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <p>Member since April 2025</p>;
                 </div>;
               </CardContent>;
@@ -1260,38 +1141,28 @@ return (
               <TabsList>;"
                 <TabsTrigger value="posts">Posts</TabsTrigger>;"
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
-<<<<<<< HEAD
               </TabsList>;
 
-<<<<<<< HEAD
                 {posts && posts.length > 0 ? (;
                   <div className="space-y-4">;
                     {posts && posts.map((post) => (;
                       <PostCard key={post && post.id} post={post} />;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>;
                 {posts.length > 0 ? (;
                   <div className="space-y-4">;
                     {posts.map((post) => (;
                       <PostCard key={post.id} post={post} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     ))}
                   </div>;
                 ) : (;
                   <Card>;"
                     <CardContent className="p-6 text-center">;'"
-=======
                     ))}
                   </div>;
                 ) : (;
                   <Card>;
                     <CardContent className="p-6 text-center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <p className="text-muted-foreground">This user hasn't created any posts yet.</p>;
                     </CardContent>;
                   </Card>;
@@ -1310,10 +1181,7 @@ return (
 
 "
                           {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
-=======
               </TabsList>;                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
               <TabsContent value="activity" className="mt-6">;
                 <h2 className="text-xl font-bold mb-4">Recent Activity</h2>;
@@ -1325,7 +1193,6 @@ return (
                         <div className="min-w-fit text-sm text-muted-foreground">;
 
                           {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         </div>;
                         <div>;"
                           <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>;
@@ -1574,14 +1441,11 @@ return (
                           {formatDistanceToNow (new Date ("2025 - 03 - 25T08:20:00Z"), { add_suffix: true })}
                         </div>;
                         <div>;
-<<<<<<< HEAD
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>;
                         </div>;
                         <div>;
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </div>;
-=======
                           <p > Answer was accepted in <Link to="/community / post / 15" className="text - zion - purple hover: underline">How to optimize RAG systems for better results</Link></p>;
 
 ;
@@ -1650,7 +1514,6 @@ return (
                         <div>;
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>;
                         </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </li>;
                     </ul>;
                   </CardContent>;
@@ -1662,7 +1525,6 @@ return (
       </div>;
 </AppLayout>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 </AppLayout>);
@@ -1702,34 +1564,15 @@ isModerator: false;
 }
     </AppLayout>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </AppLayout>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </AppLayout>);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

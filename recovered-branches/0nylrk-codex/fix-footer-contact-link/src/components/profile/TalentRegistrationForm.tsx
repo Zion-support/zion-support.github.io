@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -24,13 +20,10 @@ interface CategorizedSkills {
   platforms: string[]
   softSkills: string[]
   other: string[]
-=======
     message: "Hourly rate must be a number"}),
-=======
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {}
 "
     message: "Hourly rate must be a number"}),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true)}),
 
@@ -38,16 +31,9 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
 
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface CategorizedSkills {
-=======
 
 interface CategorizedSkills {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   programming: string[]
   devops: string[]
   platforms: string[]
@@ -69,15 +55,8 @@ import {X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound} from "l
 import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {useAuth} from "@/hooks/useAuth";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -90,10 +69,8 @@ import { Badge } from "@/components/ui/badge";
 
 import { Separator } from "@/components/ui/separator";
 import {};
-=======
 import { Separator } from "@/components/ui/separator";
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Form;
   FormControl;
   FormDescription;
@@ -137,13 +114,9 @@ interface CategorizedSkills {}
   platforms: string[]
   softSkills: string[]
   other: string[]
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
-=======
 import {useAuth} from "@/hooks/useAuth";import { useForm } from "react-hook-form",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
@@ -151,7 +124,6 @@ import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Switch } from "@/components/ui/switch",;
 import { Badge } from "@/components/ui/badge",;
-=======
 "
 import React, { useState } from "react",;"
 import { useForm } from "react-hook-form",;"
@@ -162,7 +134,6 @@ import { Input } from "@/components/ui/input",;"
 import { Textarea } from "@/components/ui/textarea",;"
 import { Switch } from "@/components/ui/switch",;"
 import { Badge } from "@/components/ui/badge",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Separator } from "@/components/ui/separator",;
 import {;
   Form,;
@@ -177,7 +148,6 @@ import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 
 import { toast } from "@/components/ui/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",;
 
 interface CategorizedSkills {;
@@ -186,16 +156,12 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface EnhancedProfile {}
   summary: string;
   categorizedSkills: CategorizedSkills;
 }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
@@ -219,20 +185,12 @@ export function TalentRegistrationForm() {
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
-=======
 import { useAuth } from "@/hooks/useAuth",;  const form = useForm<TalentFormValues>({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { useAuth } from "@/hooks/useAuth",;  const form = useForm<TalentFormValues>({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Initialize form with default values;
   const form = useForm<TalentFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(talentProfileSchema)
     defaultValues: {"
       name: user?.displayName |"""
@@ -254,11 +212,6 @@ if (skillInput && !skillTags.includes(skillInput)) {
       e.preventDefault()
       handleAddSkill()
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   }
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {}
@@ -280,8 +233,6 @@ export function TalentRegistrationForm() { return null; }
       setSkillTags([...skillTags, skillInput]),;
       form.setValue("skills", "");
     }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },;
   // Handle removing skill tags;
   const handleRemoveSkill = (skill: string) => {;
@@ -305,7 +256,6 @@ export function TalentRegistrationForm() { return null; }
       reader.readAsDataURL(file);
     }
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
@@ -334,8 +284,6 @@ const formData = form.getValues(),
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return;
   };
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Handle removing skill tags;
   const handleRemoveSkill = (skill: string) => {;
@@ -363,7 +311,6 @@ const formData = form.getValues(),
     }
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
 
   // Generate enhanced profile with AI;
@@ -375,9 +322,6 @@ toast({;
   description: "Please provide at least a detailed bio before generating enhanced content."}),;
       return;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     try {;
       setIsGenerating(true);
@@ -398,31 +342,12 @@ toast({;
       if (error) {;
         throw new Error(error.message);
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (error) {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         throw new Error(error && error.message);
 }
       setGeneratedContent(data as EnhancedProfile);
@@ -436,7 +361,6 @@ if ( {) {}
 setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
-<<<<<<< HEAD
 
             }
           });
@@ -450,7 +374,6 @@ setSkillTags ([...skill_tags, skill_input]);
 
   // Get category color;
   const getCategoryColor = (category: CategoryType) => {;
-<<<<<<< HEAD
     switch (category) {;
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -930,7 +853,6 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
       }
       setGeneratedContent(data as EnhancedProfile);
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     try {;
       setIsGenerating(true),;
@@ -983,7 +905,6 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
     } finally {;
       setIsGenerating(false);
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
   // Apply generated content to form;
   const applyGeneratedContent = () => {;
@@ -998,7 +919,6 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
           categorySkills.forEach(skill => {;
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
               newSkills.push(skill);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             }
           })
         }
@@ -1055,13 +975,8 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
                 skills: skillTags
                 location: values.location
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       form.set_value ("bio", generated_content.summary);
 ;
       // Extract all skills from categorized skills and properly type cast them;
@@ -1081,15 +996,11 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
           });
         }
       });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
-=======
     switch (category) {;      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
-=======
 '
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';'
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';'
@@ -1098,7 +1009,6 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
 
   };
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -1117,7 +1027,6 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
     }
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -1303,7 +1212,6 @@ if ( {) {}
   $2;
 }"
         throw new Error ("User not authenticated");
-<<<<<<< HEAD
       }
 
       // Enhance profile if not already done;"
@@ -1351,29 +1259,20 @@ Object.values(categorizedSkills).forEach(categorySkills => {;
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   }
                 });
               }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       }                  }
                 });
               }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
           }                  if (typeof skill === 'string' && skill) {;
-=======
 '
                   if (typeof skill === 'string' && skill) {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     aiSkills && aiSkills.push(skill);
               talent_data: {}
                 name: values.name,
@@ -1456,28 +1355,18 @@ if ( {) {}
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
         } catch (error) {"
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails"
           finalSummary = ""
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         } catch (error) {;
-=======
 
         } catch (error) {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;"
           finalSummary = "";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
@@ -1485,21 +1374,15 @@ if ( {) {}
 // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = userData.user?.email,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Create the talent profile
-=======
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""      // Create the talent profile
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""      // Create the talent profile
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
@@ -1531,50 +1414,34 @@ if ( {) {}
       const userEmail = userData.user?.email,
 
       // Create the talent profile
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
           title: "Profile Created Successfully"
-=======
 
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {}
         toast({"
           title: "Profile Created Successfully""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           description: "Your talent profile has been published and is now visible in the directory."})
         // Send notification email if we have user email;
         if (userEmail && values.enhancedProfile) {}
           sendEnhancementNotification(user.id, userEmail)
         }
         setIsSubmitting(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
       }, 1500),
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       }, 1500),
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }, 1500);
       }, 1500),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Here would be the actual code to save the profile to Supabase
-=======
 
       // Here would be the actual code to save the profile to Supabase;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       /*
       const { error } = await supabase'
         .from('talent_profiles')
@@ -1588,17 +1455,12 @@ if ( {) {}
           skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level;
           hourly_rate: Number(values.hourlyRate)
 availability_status: values.availability
-<<<<<<< HEAD
-<<<<<<< HEAD
           // Other fields would be handled here
-<<<<<<< HEAD
 
       // Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser(),;
       const userEmail = userData && userData.user?.email;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
   // Get category color;
   const getCategoryColor = (category:CategoryType) => {;
@@ -1706,9 +1568,6 @@ availability_status: values.availability
       const { data:userData } = await supabase.auth.getUser(),;
       const userEmail = userData.user?.email,;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {;
@@ -1720,7 +1579,6 @@ availability_status: values.availability
         .insert({;
 
         }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       */
     } catch (error: any) {}
@@ -1729,11 +1587,7 @@ availability_status: values.availability
         description: error.message |"There was an error creating your profile. Please try again.""
         variant: "destructive"})
       setIsSubmitting(false)
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
 
@@ -1832,19 +1686,12 @@ const { error } = await supabase;'
 
 };
   return (;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
-=======
 "
     <div className="max-w-4xl mx-auto p-4 md:p-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   };
   return (;
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 user_id:user.id,;
           name:values.name,;
           title:values.title,;
@@ -1875,7 +1722,6 @@ user_id:user.id,;
   return (;
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
           // Other fields would be handled here    <div className="max-w-4xl mx-auto p-4 md:p-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;"
           <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>;"
@@ -1887,23 +1733,11 @@ user_id:user.id,;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -1919,7 +1753,6 @@ user_id:user.id,;
                       name="name"                    <FormField
                       control={form && form.control}
                       name="name"
-=======
               {/* Basic Information */}"
               <div className="space-y-4">;"
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;"
@@ -1930,17 +1763,12 @@ user_id:user.id,;
                       control={form && form.control}"
                       name="name"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       render={({ field }) => (;
                         <FormItem>;"
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                           <FormControl>;"
                             <div className="relative">;"
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
@@ -2041,9 +1869,6 @@ return ("
                               <Input;"
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";"
                                 placeholder="Your full name";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           <form on_submit={form.handle_submit (on_submit)}>;
             <CardContent className="space - y-8">;
               {/* Basic Information */}
@@ -2063,7 +1888,6 @@ return ("
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="Your full name";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     />;
                   </div>;
                   <div className="col-span-1">;
@@ -2073,11 +1897,6 @@ return ("
                               <Input;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="Your full name";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 {...field}
                               />;
                             </div>;
@@ -2093,8 +1912,6 @@ return ("
                           <FormControl>;"
                             <div className="relative">;"
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., Senior Software Developer"
@@ -2116,8 +1933,6 @@ return ("
                               <Input;"
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";"
                                 placeholder="e.g., Senior Software Developer";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </div>;
                   <div className="col-span-1">;
@@ -2127,13 +1942,7 @@ return ("
                               <Input;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="e.g., Senior Software Developer";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 {...field}
                               />;
                             </div>;
@@ -2145,7 +1954,6 @@ return ("
 
                       render={({ field }) => (;
 
-=======
                     />;
                   </div>;
 
@@ -2168,11 +1976,8 @@ return ("
                       control={form && form.control}
                       name="location"
                       render={({ field }) => (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <FormItem>;
-=======
                         <FormItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>;
                           <FormControl>;"
                             <div className="relative">;"
@@ -2215,7 +2020,6 @@ return ("
                       name="hourlyRate"
                       render={({ field }) => (;
                         <FormItem>;
-=======
 
                               <Input"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white""
@@ -2243,7 +2047,6 @@ return ("
 
                       render={({ field }) => (;
                         <FormItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <FormLabel className="text-zion-slate-light">Hourly Rate (USD)</FormLabel>;
                           <FormControl>;"
                             <div className="relative">;"
@@ -2387,7 +2190,6 @@ return ("
                           />;
                         </AspectRatio>;
 ) : (;                        <div className="flex items-center justify-center h-full">;
-=======
                       ) : (;
 <img;
                             src={uploadedAvatar}
@@ -2397,7 +2199,6 @@ return ("
                         </AspectRatio>;
                       ) :(;
                         <div className="flex items-center justify-center h-full">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
@@ -2642,14 +2443,12 @@ onChange={handleAvatarUpload}
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
                       onClick={generateEnhancedProfile}
 
                     </Button>;
                   </div>;
                 )}
 
-<<<<<<< HEAD
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
 <Switch;
                           checked={field.value}
@@ -2739,7 +2538,6 @@ disabled={isGenerating}
                     <div className="space-y-4">;
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
                       </div>;
 
@@ -2750,19 +2548,11 @@ disabled={isGenerating}
                             {Object && Object.entries(generatedContent && generatedContent.categorizedSkills).map(([category, skills]) => (;"
                               <div key={category} className="flex items-center gap-2">;
 
-<<<<<<< HEAD
                                 <Badge
-=======
                       onClick={generateEnhancedProfile}                                <Badge
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                       onClick={generateEnhancedProfile}                                <Badge
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                                 <Badge;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                         <div>;
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
                           <div className="flex flex-wrap gap-2 mt-1">;
@@ -2770,7 +2560,6 @@ disabled={isGenerating}
                               <div key={category} className="flex items-center gap-2">;
 
                                 <Badge
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
                                 </Badge>;"
@@ -3225,24 +3014,15 @@ checked={field && field.value === "available"}
                                 on_change={() => field.on_change ("unavailable")}
                                 className="text - zion - purple focus:ring - zion-purple";
                               />;
-<<<<<<< HEAD
-<<<<<<< HEAD
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 onChange={() => field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                               <label html_for="unavailable" className="text - white flex items - center gap-2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                               <input"
                                 type="radio""
@@ -3267,22 +3047,13 @@ checked={field && field.value === "available"}
                                 id="unavailable";"
                                 value="unavailable";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                               <label html_for="unavailable" className="text - white flex items - center gap-2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   />;
 "
@@ -3291,9 +3062,7 @@ checked={field && field.value === "available"}
                     <Textarea'"
                       placeholder="Describe your availability, working hours, or when you'll be available next..."
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="mt-1 && 1.5 bg-zion-blue border-zion-blue-light text-white"
                     />;"
                     <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
@@ -3524,21 +3293,12 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     />;
                     <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     />;
                     <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
                   />;
 
@@ -4171,4 +3931,3 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

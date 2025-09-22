@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Users, TrendingUp, Award, Zap, Brain, ArrowRight, Brain } from 'lucide-react';
 
 const NewContent2026ShowcaseBanner = () => {
   return (
@@ -18,7 +17,7 @@ const NewContent2026ShowcaseBanner = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20">
-            <Calendar className="w-5 h-5 text-yellow-400 mr-2" />
+            <span>Calendar</span>
             <span className="text-sm font-medium">📅 NEW 2026 CONTENT RELEASE</span>
           </div>
           
@@ -42,7 +41,7 @@ const NewContent2026ShowcaseBanner = () => {
           <div className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                <Zap className="w-6 h-6 text-white" />
+                <span className="w-6 h-6 text-white">📊</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Enterprise Automation</h3>
@@ -61,7 +60,7 @@ const NewContent2026ShowcaseBanner = () => {
               href="/blog/ai-2026-enterprise-automation-revolution"
               className="inline-flex items-center text-purple-300 hover:text-purple-200 transition-colors group-hover:translate-x-1 transform duration-200"
             >
-              Read Article <ArrowRight className="w-4 h-4 ml-2" />
+              Read Article <span className="w-4 h-4 ml-2">📊</span>
             </Link>
           </div>
 
@@ -69,7 +68,7 @@ const NewContent2026ShowcaseBanner = () => {
           <div className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                <Brain className="w-6 h-6 text-white" />
+                <span className="w-6 h-6 text-white">📊</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Quantum AI</h3>
@@ -88,7 +87,7 @@ const NewContent2026ShowcaseBanner = () => {
               href="/blog/ai-2026-quantum-computing-breakthrough"
               className="inline-flex items-center text-blue-300 hover:text-blue-200 transition-colors group-hover:translate-x-1 transform duration-200"
             >
-              Read Article <ArrowRight className="w-4 h-4 ml-2" />
+              Read Article <span className="w-4 h-4 ml-2">📊</span>
             </Link>
           </div>
 
@@ -96,7 +95,7 @@ const NewContent2026ShowcaseBanner = () => {
           <div className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
-                <Award className="w-6 h-6 text-white" />
+                <span className="w-6 h-6 text-white">📊</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Global Success</h3>
@@ -115,7 +114,7 @@ const NewContent2026ShowcaseBanner = () => {
               href="/case-studies/ai-2026-global-transformation-success"
               className="inline-flex items-center text-green-300 hover:text-green-200 transition-colors group-hover:translate-x-1 transform duration-200"
             >
-              Read Case Study <ArrowRight className="w-4 h-4 ml-2" />
+              Read Case Study <span className="w-4 h-4 ml-2">📊</span>
             </Link>
           </div>
         </div>
@@ -131,7 +130,7 @@ const NewContent2026ShowcaseBanner = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <span className="w-8 h-8 text-white">📊</span>
               </div>
               <h4 className="text-lg font-semibold mb-2">500%+ ROI</h4>
               <p className="text-sm text-gray-400">Proven results from real implementations</p>
@@ -139,7 +138,7 @@ const NewContent2026ShowcaseBanner = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ArrowRight className="w-8 h-8 text-white" />
+                <span className="w-8 h-8 text-white">📊</span>
               </div>
               <h4 className="text-lg font-semibold mb-2">10,000x Faster</h4>
               <p className="text-sm text-gray-400">Quantum computing breakthroughs</p>
@@ -147,7 +146,7 @@ const NewContent2026ShowcaseBanner = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+                <span className="w-8 h-8 text-white">📊</span>
               </div>
               <h4 className="text-lg font-semibold mb-2">$50B+ Savings</h4>
               <p className="text-sm text-gray-400">Global cost savings achieved</p>
@@ -155,7 +154,7 @@ const NewContent2026ShowcaseBanner = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
+                <span className="w-8 h-8 text-white">📊</span>
               </div>
               <h4 className="text-lg font-semibold mb-2">95% Accuracy</h4>
               <p className="text-sm text-gray-400">AI-powered decision making</p>

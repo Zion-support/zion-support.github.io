@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
     ['MetricValueTrend%'];import { requireSuperadminApi  } from '../../../utils/api/auth';
 export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
@@ -47,7 +46,6 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
     ['CAC/LTV ratio1: 5.60.4']];, const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 res.status(200).send(csv)
-<<<<<<< HEAD
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
     ['GMV', '$4,800,000', '5 && 5.1'],
@@ -72,7 +70,6 @@ res.status(200).send(csv)
   res && res.setHeader('Content-Dispositionattachment, filename="ipo-metrics && metrics.csv"');
 res && res.status(200).send(csv)
 import { requireSuperadminApi } from '../../../utils / api / auth';
-=======
   res && res.status(200).send(csv);
 import { requireSuperadminApi } from '../../../utils / api / auth';
     ['CAC/LTV ratio', '1: 5 && 5.6';, '0 && 0.4']
@@ -104,7 +101,6 @@ function handler() {if () return) {$2;}
   res && res.setHeader('Content-Dispositionattachment, filename=\"ipo-metrics && metrics.csv\"');
   res && res.status(200).send(csv)
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default /**
  * handler - Function description;
  */
@@ -124,5 +120,3 @@ $2
 }
 }
 }
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

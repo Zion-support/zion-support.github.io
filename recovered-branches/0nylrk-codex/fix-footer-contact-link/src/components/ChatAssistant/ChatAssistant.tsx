@@ -1,36 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ChatMessage  } from './ChatMessage';
-=======
 
 import { ChatMessage  } from './ChatMessage';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ChatInput  } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",";
 import { Button } from "@/components/ui/button";"
 import { X } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface Message {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export interface Message {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -43,44 +24,28 @@ import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Message {
-=======
 export interface Message {export interface Message {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export interface Message {export interface Message {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export interface Message {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
 export interface Message {export interface Message {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
-<<<<<<< HEAD
   read?: boolean
     id: string,
     name: string,;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
-=======
   read?: boolean}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   read?: boolean}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   read?: boolean;
 }
@@ -88,31 +53,16 @@ export interface ChatAssistantProps {
 
 id: string,
     name: string,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     avatarUrl?: string;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     avatarUrl?: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     role?: string
-=======
 export interface ChatAssistantProps {}
     id: string,;
     name: string,;
 
     avatarUrl?: string;
     role?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
   conversationId?: string;
@@ -120,62 +70,38 @@ export interface ChatAssistantProps {}
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
 contextHeader?: ReactNode;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ChatAssistant({
 
 export function ChatAssistant({;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 '
 import {ChatMessage} from './ChatMessage';'
 import {ChatInput} from './ChatInput';
 
 '
-=======
 
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   isOpen;
   onClose;
   recipient;
   conversationId;
 
 initialMessages = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
   onSendMessage;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   useEffect(() => {
-=======
   onSendMessage;  useEffect(() => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   onSendMessage;  useEffect(() => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   useEffect(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     scrollToBottom()
   }, [messages]);
   const scrollToBottom = () => {'
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-<<<<<<< HEAD
   }
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
@@ -189,7 +115,6 @@ export interface Message {}
   message: string,
 timestamp: Date,
   read?: boolean
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect, useRef, ReactNode } from 'react',;
 import { ChatMessage } from './ChatMessage',;
 import { ChatInput } from './ChatInput',;
@@ -226,20 +151,15 @@ export function ChatAssistant({;
   conversationId,;
   initialMessages = [],;
   onSendMessage,;
-<<<<<<< HEAD
   const [messages, setMessages] = useState<Message[]>(initialMessages),;
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
   useEffect(() => {;
     if (initialMessages.length > 0) {;
       setMessages(initialMessages);
-=======
 export function ChatAssistant() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }, [initialMessages]),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -248,14 +168,9 @@ export function ChatAssistant() { return null; }
   }
 
   useEffect(() => {
-=======
   }  useEffect(() => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   useEffect(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
@@ -326,7 +241,6 @@ export function ChatAssistant({;
   }
 
   useEffect(() => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     scrollToBottom()
   }, [messages]),
 
@@ -334,7 +248,6 @@ export function ChatAssistant({;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
 },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
@@ -357,7 +270,6 @@ export function ChatAssistant({;
   },
 
   if (!isOpen) return null,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return ("
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;"
@@ -392,22 +304,14 @@ export function ChatAssistant({;
             messages && messages.map((msg) => (;
 <ChatMessage
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <ChatMessage;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 role={msg.role}
-=======
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {                role={msg.role}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {                role={msg.role}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
@@ -496,24 +400,13 @@ export function ChatAssistant({;
                 key={msg.id} 
 
                 role={msg.role}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 message={msg.message}
               />
             ))
           )}
           <div ref={messagesEndRef} />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={msg && msg.id} 
                 role={msg && msg.role}
                 message={msg && msg.message}
@@ -523,7 +416,6 @@ export function ChatAssistant({;
           <div ref={messagesEndRef} />;
         </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Input */}
 <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
           <ChatInput onSend={handleSendMessage} />;
@@ -636,11 +528,8 @@ return (
         {/* Messages */}
         <div className="flex - 1 overflow - y-auto p - 4 space-y-4">;
           {messages.length === 0 ? (
-<<<<<<< HEAD
             <div className="text - center text - zion - slate py-8">;
-=======
             <div className="text - center text - zion - slate py-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p > Start a conversation with {recipient.name}</p>;
             </div>) : (
             messages.map ((msg) => (
@@ -658,12 +547,9 @@ return (
       </div>;
     </div>);
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   )
 
 {/* Input */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
@@ -675,17 +561,8 @@ return (
 }
 
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   messagesEndRef;
 }/> </div> </div> </div> </div>) "
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

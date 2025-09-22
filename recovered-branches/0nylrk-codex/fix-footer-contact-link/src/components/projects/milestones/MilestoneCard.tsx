@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
   id: string
   projectId: string
@@ -13,7 +9,6 @@
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>
 
-<<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -37,10 +32,7 @@ interface MilestoneCardProps {
   onReject?: (id: string) => Promise<void>
 }
 export function MilestoneCard({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";"
 import {Badge} from "@/components/ui/badge";"
@@ -110,7 +102,6 @@ export function MilestoneCard({ ;
       default: return 'bg-gray-500'
     }
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",
 import { format } from 'date-fns',
 import { Check, ArrowDown, X } from "lucide-react",
@@ -170,7 +161,6 @@ interface MilestoneCardProps {}
   dueDate?: string,
   onApprove?: (id: string) => Promise<void>,
 onReject?: (id: string) => Promise<void>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -180,9 +170,6 @@ import { Check, ArrowDown, X } from "lucide-react",;
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   onReject?: (id: string) => Promise<void>';
 import React from 'react',;"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
@@ -194,14 +181,9 @@ import { useDisputeCheck } from '@/hooks/useDisputeCheck',;'
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;'
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface MilestoneCardProps {;
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,;
   projectId: string,;
   title: string,;
@@ -217,12 +199,10 @@ interface MilestoneCardProps {;
 export function MilestoneCard(): any ({ ;
   id;
   projectId;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title, ;
   description, ;
   amount, ;
   status, ;
-<<<<<<< HEAD
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
@@ -231,39 +211,25 @@ export function MilestoneCard(): any ({ ;
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    }
-  }
-<<<<<<< HEAD
 
     }
   }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
-=======
+  }
+
+    }
     }
   }
       }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
       }
   }
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -275,7 +241,6 @@ export function MilestoneCard(): any ({ ;
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
-<<<<<<< HEAD
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
@@ -316,10 +281,6 @@ export function MilestoneCard(): any ({ ;
               <X className="h-4 w-4 mr-1" /> Reject
             </Button>
                 Due:{format(new Date(dueDate), 'MMM d, yyyy')}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>;
             )}
           </div>;"
@@ -369,26 +330,19 @@ export function MilestoneCard(): any ({ ;
             />;
           )}
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           )}
         </div>
       </CardFooter>
     </Card>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
-=======
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {status.replace('_ ')}
             </Badge>;
             {isUnderDispute && disputeStatus && (;
@@ -414,9 +368,7 @@ export function MilestoneCard(): any ({ ;
               variant="ghost";"
               size="sm";
             />;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           )}
-<<<<<<< HEAD
           {status === 'pending' && onApprove && !isUnderDispute && (
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>
               <Check className="h-4 w-4 mr-1" /> Approve
@@ -427,11 +379,7 @@ export function MilestoneCard(): any ({ ;
               Actions frozen due to dispute
             </Button>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div className="flex gap-2">;
           {status === 'pending' && onReject && !isUnderDispute && (;
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
@@ -441,7 +389,6 @@ export function MilestoneCard(): any ({ ;
 '
           {status === 'pending' && onApprove && !isUnderDispute && (;"
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>;"
-=======
 
         </div>;
 
@@ -454,22 +401,13 @@ export function MilestoneCard(): any ({ ;
 
           {status === 'pending' && onApprove && !isUnderDispute && (;
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Check className="h-4 w-4 mr-1" /> Approve;
             </Button>;
           )}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {isUnderDispute && (;
-=======
 
           {isUnderDispute && (;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Button variant="outline" size="sm" disabled>;
               Actions frozen due to dispute;
             </Button>;
@@ -477,7 +415,6 @@ export function MilestoneCard(): any ({ ;
         </div>;
       </CardFooter>;
     </Card>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }'
 import React from 'react';'
@@ -694,10 +631,6 @@ pr-12325
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
  interface MilestoneCardProps {
   id: string;
@@ -756,21 +689,10 @@ onApprove?: (id: string) => Promise<void>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   projectId;)
 
 }</div> Actions frozen due to dispute ) 
 }</div>  ) `;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

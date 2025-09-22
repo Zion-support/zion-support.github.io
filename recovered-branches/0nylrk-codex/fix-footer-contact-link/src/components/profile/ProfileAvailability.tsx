@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Availability } from '@/types / profile';'
 import { Badge } from '@/components / ui / badge';'
@@ -11,21 +7,14 @@ interface ProfileAvailabilityProps {}
   availability: Availability;
 }
 
-<<<<<<< HEAD
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
@@ -50,10 +39,6 @@ const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
@@ -98,8 +83,6 @@ import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProfileAvailabilityProps {;
   availability: Availability;
 }
@@ -128,16 +111,10 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   };"
 import { Availability } from "@/types/profile","
@@ -163,10 +140,7 @@ export function ProfileAvailability() { return null; }
       case 'unavailable': return 'Currently Unavailable';'
       default: return '';
     }
-<<<<<<< HEAD
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return ("
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
@@ -178,18 +152,11 @@ export function ProfileAvailability() { return null; }
         <Badge "
           variant="outline" 
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
-=======
   },        >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   },        >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   },
 
   return (
@@ -209,9 +176,6 @@ export function ProfileAvailability() { return null; }
           variant="outline" 
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {getStatusText(availability.status)}
         </Badge>'
         {availability.nextAvailable && availability.status !== 'available' && ("
@@ -236,13 +200,9 @@ export function ProfileAvailability() { return null; }
                   <span>{slot.hours}</span>
                 </div>
               </div>
-<<<<<<< HEAD
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             <Calendar className="h-4 w-4" />;
             <span>Next available: {availability && availability.nextAvailable}</span>;
@@ -266,8 +226,6 @@ export function ProfileAvailability() { return null; }
                   <span>{slot && slot.hours}</span>;
                 </div>;
               </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ))}
           </div>;
         </div>;
@@ -275,8 +233,6 @@ export function ProfileAvailability() { return null; }
 
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
       case 'unavailable': return 'Currently Unavailable
   };
@@ -290,8 +246,6 @@ import { Badge } from "@/components/ui/badge",;""
 import { Calendar, Clock, Check } from "lucide-react",;""
   // TODO: Implement
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
 import { Calendar, Clock, Check } from "lucide-react",;
@@ -358,13 +312,10 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
         </div>;
       )}
     </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       case 'available': return 'Available Now',;
       case 'limited': return 'Limited Availability',;
       case 'unavailable': return 'Currently Unavailable';
   },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
@@ -470,7 +421,6 @@ return ("
                 <div className="w - 20 text - zion - slate - light">{slot.day}:</div>;"
                 <div className="flex items - center gap - 1">;"
                   <Clock className="h - 4 w - 4 text - zion - cyan" />;
-=======
 
           <div className="flex items - center gap - 2 text - zion - slate - light">;"
             <Calendar className="h - 4 w - 4" />;"
@@ -486,16 +436,12 @@ return ("
                 <div className="flex items - center gap - 1">;"
                   <Clock className="h - 4 w - 4 text - zion - cyan" />;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>{slot.hours}</span>;
               </div>))}
           </div>;
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
  interface ProfileAvailabilityProps {
   availability: Availability 
@@ -523,19 +469,8 @@ pr-12325
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

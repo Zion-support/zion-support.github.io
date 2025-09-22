@@ -1,13 +1,8 @@
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-=======
 import React, { useState, useEffect } from 'react';'
 import Head from 'next/head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion, AnimatePresence } from 'framer-motion';
 import {};
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
@@ -18,16 +13,11 @@ import {};
 import EnhancedNavigation from '../components/EnhancedNavigation';'
 import EnhancedFooter from '../components/EnhancedFooter';'
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react',;
 import Head from 'next/head',;
-=======
 '
 import React, { useState, useEffect } from 'react',;'
 import Head from 'next/head',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion, AnimatePresence } from 'framer-motion',;
 import {}
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
@@ -38,11 +28,6 @@ import {}
 import EnhancedNavigation from '../components/EnhancedNavigation',;'
 import EnhancedFooter from '../components/EnhancedFooter',;'
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -59,7 +44,6 @@ export default function Comprehensive2025ServicesShowcase() {
     { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') |s.category.includes('Quantum')).length }
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') |s.category.includes('IoT')).length }
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length }
-=======
 
 export default function Comprehensive2025ServicesShowcase() { return null; }
     { id: 'all', name: 'All Services', count: innovative2025MicroSaasExpansionV3.length }'
@@ -72,7 +56,6 @@ export default function Comprehensive2025ServicesShowcase() { return null; }
     { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') |s.category.includes('Quantum')).length }'
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') |s.category.includes('IoT')).length }'
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length }
   ];
   const filteredServices = innovative2025MicroSaasExpansionV3;
@@ -81,16 +64,12 @@ export default function Comprehensive2025ServicesShowcase() { return null; }
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase())'
       const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {}
       switch (sortBy) {'
         case 'popularity':
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
           return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
@@ -103,11 +82,7 @@ export default function Comprehensive2025ServicesShowcase() { return null; }
     })
   const containerVariants = {}
     hidden: { opacity: 0 }
-<<<<<<< HEAD
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -148,10 +123,8 @@ export default function Comprehensive2025ServicesShowcase() { return null; }
 }
 
       <section className="relative py-20 px-6">
-=======
 "
       <section className="relative py-20 px-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 }  } catch (error) {"
@@ -179,11 +152,7 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions, 
               Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
@@ -243,13 +212,9 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="relative flex-1 max-w-md">
-=======
 "
             <div className="relative flex-1 max-w-md">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
                 type="text""
@@ -331,10 +296,8 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
 }
 
             <div className="flex items-center gap-4">
-=======
 "
             <div className="flex items-center gap-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="flex items-center bg-white/10 rounded-lg p-1">
                 <button'
                   onClick={() => setViewMode('grid')  } catch (error) {"
@@ -381,11 +344,7 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
               >"
                 <option value="popularity">Most Popular</option>"
@@ -489,11 +448,7 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {service.popular && (
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
                 {service.popular && (
 "
@@ -519,10 +474,8 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
 }
 
                 <div className="flex items-start gap-4 mb-6">
-=======
 "
                 <div className="flex items-start gap-4 mb-6">`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
                     {service.icon  } catch (error) {"
     console.error("Error:", error);"
@@ -542,17 +495,13 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
-=======
 "
                 <div className="flex items-center justify-between mb-4">"
                   <div className="flex items-center gap-2">"
                     <span className="text-3xl font-bold text-cyan-400">{service.price}</span>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span className="text-white/60">{service.period}</span>
                   </div>"
                   <div className="flex items-center gap-1">"
@@ -604,15 +553,11 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-=======
 "
                 <div className="mb-6">"
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 3).map((feature, idx) => ("
                       <div key={idx} className="flex items-center gap-2 text-sm text-white/70">"
@@ -639,11 +584,7 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div>"
                     <span className="text-white/60">Market Size:</span>"
@@ -660,17 +601,13 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
                   <div className="text-cyan-400 font-semibold mb-2">🚀 Expected ROI:</div>
                   <p className="text-white/80 text-sm">{service.roi}</p>
-=======
 "
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">"
                   <div className="text-cyan-400 font-semibold mb-2">🚀 Expected ROI:</div>"
                   <p className="text-white/80 text-sm">{service.roi}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="mt-2 text-white/60 text-sm">
                     Setup Time: {service.setupTime} | Trial: {service.trialDays} days;
                   </div>
@@ -718,26 +655,18 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     target="_blank"
                     rel="noopener noreferrer"
-=======
 "
                     target="_blank""
                     rel="noopener noreferrer""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                   >
                     Learn More"
                     <ExternalLink className="w-4 h-4" />
 
                   </Link>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <button className="px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white transition-all duration-300 hover:bg-white/5">
                     Contact Sales;
                   </button>
@@ -748,17 +677,13 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>
                   <div className="flex items-center justify-center gap-4 text-sm">
-=======
 "
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">"
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>"
                   <div className="flex items-center justify-center gap-4 text-sm">"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <a href={`tel:${service.contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300">
 
                       📞 {service.contactInfo.mobile  } catch (error) {"
@@ -788,8 +713,6 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
@@ -798,8 +721,6 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
               <button
                 onClick={() => {
                   setSearchTerm('')
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           {filteredServices.length === 0 && ("
             <div className="text-center py-20">"
@@ -817,11 +738,7 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Clear Filters;
@@ -895,10 +812,8 @@ Discover our comprehensive collection of cutting-edge micro SAAS services, AI so
 }
 
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-=======
 "
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 }  } catch (error) {"
@@ -941,15 +856,11 @@ Our team of experts is ready to help you implement these cutting-edge solutions
                 <ArrowRight className="w-5 h-5" />
 
               </Link>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <a
                 href="tel:+13024640950"
-=======
 
               <a"
                 href="tel:+13024640950""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Call Us Now;
@@ -964,10 +875,8 @@ Our team of experts is ready to help you implement these cutting-edge solutions
 };
   )
           >;
-=======
 
           >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
             </h2>;"
@@ -1005,7 +914,6 @@ Our team of experts is ready to help you implement these cutting-edge solutions
         case 'rating':
           return b.rating - a.rating,'
         case 'newest':
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   },
 
@@ -1278,10 +1186,8 @@ Our team of experts is ready to help you implement these cutting-edge solutions
     </div>
 
   )
-=======
     visible: {
       opacity: 1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     visible: {
       opacity: 1
       y: 0
@@ -1290,16 +1196,12 @@ Our team of experts is ready to help you implement these cutting-edge solutions
       }
     }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-=======
 
 '
 import React, { useState, useEffect } from 'react';'
 import Head from 'next/head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
@@ -1328,12 +1230,10 @@ const categories = [;
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length },;
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length },;
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length   } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
   ],;
   const filteredServices = innovative2025MicroSaasExpansionV3;
@@ -1748,7 +1648,6 @@ const categories = [;
                 onClick={() => {
                   setSearchTerm('')
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   setSelectedCategory('all')
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
@@ -1838,19 +1737,9 @@ and drive innovation in your organization.
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
     </div>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

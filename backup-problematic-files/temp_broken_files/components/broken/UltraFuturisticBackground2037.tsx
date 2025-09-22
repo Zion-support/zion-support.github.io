@@ -601,7 +601,11 @@ export default function UltraFuturisticBackground2037({;
               ctx.beginPath();
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
+<<<<<<< HEAD
+ctx.stroke();
+=======
               ctx.stroke();
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 export default function UltraFuturisticBackground2037({ 
   intensity = 'medium',
@@ -951,10 +955,14 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.beginPath(),
               ctx.moveTo(particle1.x, particle1.y),
               ctx.lineTo(particle2.x, particle2.y),
+<<<<<<< HEAD
+ctx.stroke()
+=======
               ctx.stroke()
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             }
           });
         });
@@ -983,8 +991,11 @@ ref={canvasRef}
         style={{
           background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         }}      />
       {children}
     </div>
@@ -993,5 +1004,8 @@ ref={canvasRef}
 
 export default UltraFuturisticBackground2037,
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -28,9 +28,7 @@
 
   hasMergeConflicts(content) {
 
-') || content.includes('>>>>>>>');
 
-    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
 
   }
 

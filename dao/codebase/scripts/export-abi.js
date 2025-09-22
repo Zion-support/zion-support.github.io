@@ -16,8 +16,6 @@ function main() {
 const fs = require('fs'),
 const path = require('path'),
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 function main() {
 
 function main() {}
@@ -26,7 +24,6 @@ function main() {}
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),'
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -65,7 +62,6 @@ function main() {
       console.log('Exported ABI for', name)
 origin/cursor/automate-test-improve-and-merge-code-2533
     } else {
-=======
 
   const abis = ['
     ['VoteToken.solVoteToken']'
@@ -77,7 +73,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ['Treasure/EpochManager.solEpochManager']]
   for (const [rel, name] of abis) {}
     } else {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console.warn('Missing artifact for', name)
     }
   }
@@ -85,13 +80,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }main ();main(),
 
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }main ();main(),
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -34,6 +34,9 @@ class ComprehensiveAutomationRunner {
       return { success: false, error: error.message };
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 >>>>>>> origin/merge-pr-12271
 console.log('🚀 Starting Comprehensive Automation Runner...');
@@ -68,13 +71,67 @@ class ComprehensiveAutomationRunner {
       this.log(`❌ ${scriptName} failed: ${error.message}`);
       return { success: false, script: scriptName, error: error.message };
 <<<<<<< HEAD
+main
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
   }
 
   async runAllAutomations() {
+<<<<<<< HEAD
+    this.log('🚀 Starting Comprehensive Automation Runner...');
+this.log('🎯 Starting Comprehensive Automation Runner');
+
+    const scripts = [
+      { path: automation/master-orchestrator.cjs, name: Master Orchestrator},
+      { path: enhanced-automation-suite.cjs, name: Enhanced Automation Suite},
+      { path: automation/performance-optimizer.cjs, name: Performance Optimizer},
+      { path: automation/security-enhancer.cjs, name: Security Enhancer},
+      { path: automation/accessibility-improver.cjs, name: Accessibility Improver}]
+
+    ];
+)
+    for (const script of scripts) {
+      if (fs.existsSync(script.path)) {
+        await this.runScript(script.path, script.name);
+      } else {
+
+  async generateFinalReport() {
+    this.log('\n📊 Generating Final Report');
+    const totalDuration = Date.now() - this.startTime.getTime();
+    const successfulScripts = this.results.filter(r => r.success).length;
+    const totalScripts = this.results.length;
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalDuration,
+      successfulScripts,
+      totalScripts,`;
+      successRate: `${successfulScripts}/${totalScripts} (${Math.round((successfulScripts/totalScripts)*100)}%)`,
+      results: this.results,`;
+      summary: `Comprehensive automation completed: ${successfulScripts}/${totalScripts} scripts successful`
+    };
+
+    this.log(`🎉 Comprehensive automation completed: ${successfulScripts}/${totalScripts} scripts successful`);
+
+  async run() {
+    await this.runAllAutomations();
+    await this.runTests();
+    await this.generateFinalReport();
+
+// Run the comprehensive automation;
+const runner = new ComprehensiveAutomationRunner();
+runner.run().catch(console.error);
+
+
+=======
 
 <<<<<<< HEAD
 
@@ -82,6 +139,7 @@ class ComprehensiveAutomationRunner {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     const automations = [
       { name: 'Master Orchestrator', path: 'automation/master-orchestrator.cjs' },
       { name: 'Comprehensive App Improvement Suite', path: 'automation/comprehensive-app-improvement-suite.cjs' },
@@ -171,9 +229,20 @@ runner.runAllAutomations().catch(console.error);
 
 // Run the automation runner
 if (require.main === module) {
+<<<<<<< HEAD
+
+module.exports = ComprehensiveAutomationRunner;
+module.exports = ComprehensiveAutomationRunner;
+main
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+module.exports = ComprehensiveAutomationRunner;
+
+=======
   const runner = new ComprehensiveAutomationRunner();
   runner.runAllAutomations().catch(console.error);
 }
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 module.exports = ComprehensiveAutomationRunner;
 >>>>>>> origin/merge-pr-12271

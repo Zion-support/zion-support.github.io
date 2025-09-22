@@ -7,7 +7,6 @@ import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
 import { 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Card;
   CardContent;
   CardHeader;
@@ -16,7 +15,6 @@ CardTitle;
 } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
@@ -28,7 +26,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
   onMarkAsResponded,
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onToggleArchive
 }) => {
   // Format date for display
@@ -38,7 +35,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
 
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -171,8 +167,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           </Button>;
 <div className="flex items-center">;
             {quote && quote.status !== 'responded' && onMarkAsResponded && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Button
                 variant="ghost"
                 size="sm"
@@ -196,22 +190,12 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               )}
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
             </Button>;
           </div>;
         </div>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </CardContent>
 };
     </Card>);
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

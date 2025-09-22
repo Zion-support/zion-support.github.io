@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -26,7 +17,6 @@ export function PartnerReferralLinks() {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-<<<<<<< HEAD
   const [customParam, setCustomParam] = useState<string>("");
 
 import { useRef, useState } from "react",
@@ -51,7 +41,6 @@ export function PartnerReferralLinks() {
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-<<<<<<< HEAD
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -76,44 +65,24 @@ export function PartnerReferralLinks() {
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
 
   // Get the base referral link
-=======
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
 
   // Get the base referral link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const baseLink = getReferralLink(),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleCopyLink = (link: string) => {
-=======
   const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const handleCopyLink = (link: string) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   // Get the base referral link
   const baseLink = getReferralLink(),
 
   const handleCopyLink = (link: string) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     navigator.clipboard.writeText(link)
     toast({"
       title: "Link copied!""
@@ -121,23 +90,14 @@ export function PartnerReferralLinks() {
       variant: "default"
     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const handleGenerateLink = () => {}
     if (baseLink) {}
-=======
 }
   const handleGenerateLink = () => {
     if (baseLink) {
@@ -180,25 +140,15 @@ pr-12325
   },
   const handleGenerateLink = (
     if (baseLink) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const url = new URL(baseLink),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
-=======
 
       // Add custom campaign parameter if selected"
       if (selectedCampaign !== "default") {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         url.searchParams.append("campaign", selectedCampaign)
       }
       // Add custom parameter if provided;
@@ -210,7 +160,6 @@ pr-12325
 link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("");
-<<<<<<< HEAD
     }
 
       },
@@ -221,8 +170,6 @@ link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
     }
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
@@ -230,13 +177,11 @@ link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
 const csvContent = [
       "Name,Link",
       ...allLinks.map(l => `${l.name},${l.link}`)
-=======
 
   const handleDownloadLinks = () => {}
     const allLinks = ["
       { name: "Default", link: baseLink }
       ...generatedLinks;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const handleDownloadLinks = () => {;
     const allLinks = [;"
       { name: "Default", link: baseLink },;
@@ -256,11 +201,6 @@ const csvContent = [
     document.body.removeChild(link)
   },
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return ("
     <div className="space-y-6">"
@@ -340,7 +280,6 @@ export function PartnerReferralLinks() {;
     document.body.appendChild(link),;
     link.click();
     document.body.removeChild(link);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL && URL.createObjectURL(blob);"
     const link = document && document.createElement("a");"
@@ -350,7 +289,6 @@ export function PartnerReferralLinks() {;
     document && document.body.appendChild(link);
     link && link.click();
     document && document.body.removeChild(link);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
 "
 import { useRef, useState } from "react",;"
@@ -431,13 +369,10 @@ export function PartnerReferralLinks() { return null; }
     <div className="space-y-6">;"
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
 
-=======
     }  const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
       ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
@@ -667,7 +602,6 @@ export function PartnerReferralLinks() {;
 return (
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
@@ -675,14 +609,6 @@ return (
               variant="outline";
               size="sm";
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
 <Button
@@ -699,7 +625,6 @@ return (
       "Name,Link";
               className="flex items-center gap-2">;      "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
-=======
         <CardHeader>;"
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
@@ -714,7 +639,6 @@ return (
 "
       "Name,Link";`
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ].join("\n");
               onClick={handleDownloadLinks}"
               className="flex items-center gap-2">;
@@ -932,11 +856,7 @@ return (
 <Input
               value={baseLink}
               readOnly
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="font-mono text-sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <Input;
               value={baseLink}
@@ -974,7 +894,6 @@ return (
 
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}>;
-<<<<<<< HEAD
 import { useRef, useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -1119,23 +1038,15 @@ return ("
 
                   <SelectTrigger id="campaign">;
 
-=======
               className="font-mono text-sm"                  <SelectTrigger id="campaign">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
                   <SelectTrigger id="campaign">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                   <SelectTrigger id="campaign">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
             <Input
               value={baseLink}
               readOnly
               className="font-mono text-sm"                  <SelectTrigger id="campaign">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
                   <SelectContent>;"
@@ -1149,7 +1060,6 @@ return ("
                 </Select>;
               </div>;
 
-<<<<<<< HEAD
               <div className="grid gap-2">;
                 <Label html_for="custom">Custom Parameter (Optional)</Label>;
                 <Input;
@@ -1396,14 +1306,10 @@ return ("
                     <span className="sr-only">Copy</span>;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
               </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </Button>;
                 </div>;
               </CardContent>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </Card>))) : (
           <Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light">;
             <CardContent className="flex flex - col items - center justify - center p - 6">;
@@ -1737,8 +1643,6 @@ if ( {) {
           </Card>;
       </div>;
     </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),; export function PartnerReferralLinks () {
   const {
   referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia 
@@ -1799,21 +1703,11 @@ pr-12325
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-=======
               </CardContent>;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
     </div>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

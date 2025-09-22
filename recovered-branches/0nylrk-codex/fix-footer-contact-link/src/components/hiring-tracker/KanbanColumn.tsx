@@ -1,39 +1,23 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "./CandidateCard";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "./CandidateCard";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { CandidateCard } from "./CandidateCard",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface KanbanColumnProps {
-=======
 import { Droppable } from "react-beautiful-dnd","
 import { JobApplication } from "@/types/jobs","
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",";
@@ -41,7 +25,6 @@ import { Badge } from "@/components/ui/badge";"
 import { CandidateCard } from "./CandidateCard";"
 import { Badge } from "@/components/ui/badge","
 import { CandidateCard } from "./CandidateCard",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface KanbanColumnProps {};
   id: string;
@@ -63,7 +46,6 @@ interface KanbanColumnProps {;
   applications: JobApplication[],;
 
 export function KanbanColumn(): any ({;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function KanbanColumn({;
 
@@ -71,17 +53,13 @@ export function KanbanColumn({;
   title;
   description;
   applications;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -96,11 +74,8 @@ export function KanbanColumn({
     switch (columnId) {;
 
 import { Droppable } from './react - beautiful - dnd';
-=======
 import { CandidateCard } from "./CandidateCard",export function KanbanColumn({
-=======
 export function KanbanColumn({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id,
   title,
   description,
@@ -118,17 +93,14 @@ export function KanbanColumn({
 
   const getBadgeVariant = (columnId: string) => {
 switch (columnId) {import { Droppable } from './react - beautiful - dnd';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
-=======
 
 import { Droppable } from './react - beautiful - dnd';'
 import { JobApplication } from '@/types / jobs';'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
 import { Badge } from '@/components / ui / badge';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CandidateCard } from './CandidateCard';
 interface KanbanColumnProps {}
   id: string,
@@ -144,7 +116,6 @@ function KanbanColumn() {}
   // Add color based on column type;
 const getBadgeVariant = (column_id: string) =>: any {
     switch (column_id) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "new": return "secondary";
       case "shortlisted":;
         return "outline";
@@ -152,10 +123,6 @@ const getBadgeVariant = (column_id: string) =>: any {
         return "default";
       case "hired":;
         return "success";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       case "new": return "secondary",
       case "shortlisted":
         return "outline",
@@ -172,8 +139,6 @@ const getBadgeVariant = (column_id: string) =>: any {
         return "outline"
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const getColumnBgColor = (columnId: string) => {}
@@ -183,12 +148,6 @@ const getBadgeVariant = (column_id: string) =>: any {
 const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
       case "hired": return "bg-green-50",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         return "success",
 
       case "rejected":
@@ -203,51 +162,35 @@ const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
       case "hired": return "bg-green-50",
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case "rejected":
-=======
 
 "
       case "rejected":"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return "bg-red-50"
       default:"
         return "bg-muted/30"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       case "rejected":;
-=======
 "
       case "rejected":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return "destructive",;
       default:;"
         return "outline";
     }
   };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const getColumnBgColor = (columnId: string) => {;
     switch (columnId) {;"
       case "hired": return "bg-green-50";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       case "rejected":;
-=======
 "
       case "rejected":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return "bg-red-50",;
       default:;"
         return "bg-muted/30";
 }
   };
 
-<<<<<<< HEAD
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;"
       <CardHeader className="pb-2">;"
@@ -266,25 +209,15 @@ const getColumnBgColor = (columnId: string) => {;
 }
 
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
         <div className="flex justify-between items-center">
-=======
             <div;
   return (`
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>"
       <CardHeader className="pb-2">"
         <div className="flex justify-between items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <CardTitle className="text-base">{title}</CardTitle>
           <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>
         </div>"
@@ -299,23 +232,16 @@ const getColumnBgColor = (columnId: string) => {;
               {...provided.droppableProps}"
               className="min-h-full space-y-2"
             >
-<<<<<<< HEAD
               {applications.map((application, index) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <CandidateCard
                 <CandidateCard
-=======
               {applications.map((application, index) => (
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { CandidateCard } from "./CandidateCard",;
 interface KanbanColumnProps {;
   id: string,;
@@ -342,29 +268,18 @@ export function KanbanColumn({;
         return "default",;
       case "hired":;
         return "success",;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "rejected":;
         return "destructive",
-=======
               {applications.map((application, index) => (        return "destructive",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               {applications.map((application, index) => (        return "destructive",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       case "rejected":;
         return "destructive",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       default:;
         return "outline";
     }
   }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
   const getColumnBgColor = (column_id: string) =>: any {
     switch (column_id) {
       case "hired": return "bg - green - 50";
@@ -394,11 +309,7 @@ export function KanbanColumn({;
             >;
               {applications.map ((application, index) => (
                 <CandidateCard;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={application.id}
-=======
 export function KanbanColumn() { return null; }
     }
   }
@@ -414,7 +325,6 @@ export function KanbanColumn() { return null; }
                 <CandidateCard;
                   key={application && application.id}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   application={application}
                   index={index}
 
@@ -422,8 +332,6 @@ export function KanbanColumn() { return null; }
               ))}
               {provided.placeholder}
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               {applications.length === 0 && ("
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">"
@@ -436,10 +344,7 @@ export function KanbanColumn() { return null; }
 
               {applications && applications.length === 0 && (;"
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">;"
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
               {applications.length === 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
@@ -451,15 +356,12 @@ export function KanbanColumn() { return null; }
 
               {applications && applications.length === 0 && (;
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <p className="text-center text-sm text-muted-foreground">;
                     Drag candidates here;
                   </p>;
                 </div>;
 )}
-=======
 ;              )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
           )}
 />))}
@@ -467,7 +369,6 @@ export function KanbanColumn() { return null; }
               {applications.length === 0 && (
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p-4">;
                   <p className="text - center text - sm text - muted-foreground">;
-=======
               )}
             </div>;
           )}
@@ -486,7 +387,6 @@ export function KanbanColumn() { return null; }
               {applications.length === 0 && (
 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p - 4">;
                   <p className="text - center text - sm text - muted - foreground">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     Drag candidates here;
                   </p>;
                 </div>)}
@@ -496,9 +396,7 @@ export function KanbanColumn() { return null; }
     </Card>);
 }
 
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   },;
   ;"
@@ -585,21 +483,18 @@ return (<Card className= {}`
 }
                 <CandidateCard;
 
-<<<<<<< HEAD
                 <CandidateCard 
 
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-center">;
-=======
 
                 <CandidateCard;
   return (`
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;"
       <CardHeader className="pb-2">;"
         <div className="flex justify-between items-center">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <CardTitle className="text-base">{title}</CardTitle>;
           <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>;
         </div>;"
@@ -618,7 +513,6 @@ return (<Card className= {}`
                   key={application && application.id}
                   application={application}
                   index={index}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {applications.length === 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
                   <p className="text-center text-sm text-muted-foreground">
@@ -629,17 +523,13 @@ return (<Card className= {}`
             </div>;
           )}
 
-=======
                 />))}
               {provided.placeholder}
 {applications.length === 0 && (
-<<<<<<< HEAD
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p-4">;
                   <p className="text - center text - sm text - muted-foreground">;
-=======
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p-4">;
                   <p className="text - center text - sm text - muted-foreground">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     Drag candidates here;
                   </p>;
                 </div>)}
@@ -649,22 +539,8 @@ return (<Card className= {}`
     </Card>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   // TODO: Implement
     switch (column_id) {
       case "new": return "secondary";""
@@ -805,4 +681,3 @@ return (<Card className= {`;
                   </p>;)
     );"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

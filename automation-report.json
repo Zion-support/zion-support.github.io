@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+  "timestamp": "2025-09-06T21:22:23.368Z",
+=======
+<<<<<<< HEAD
   "timestamp": "2025-07-25T07:14:20.080Z",
   "duration": -1753427589075,
   "summary": {
@@ -21,6 +24,7 @@
 =======
 
 <<<<<<< HEAD
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   "timestamp": "2025-09-05T15:52:31.442Z",
   "totalDuration": 19528,
   "successfulPhases": 3,
@@ -31,6 +35,13 @@
       "duration": 1,
   "timestamp": "2025-09-06T17:32:48.376Z",
   "duration": "64s",
+<<<<<<< HEAD
+
+  "timestamp": "2025-09-06T00:45:34.806Z",
+  "duration": "48s",
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   "results": {
     "tests": {
       "passed": 0,
@@ -83,14 +94,20 @@ ursor/automate-test-improve-and-merge-code-646c
       "errors": [
         "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:6058) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
       ]
+<<<<<<< HEAD
+=======
   "timestamp": "2025-09-06T21:22:23.368Z"
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     "testing": {
       "success": true,
       "duration": 1355,
       "errors": []
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   "timestamp": "2025-09-06T22:31:53.507Z",
   "summary": {
     "totalScripts": 8,
@@ -222,7 +239,16 @@ ursor/automate-test-improve-and-merge-code-646c
       "duration": 5292,
       "errors": []
     }
+<<<<<<< HEAD
+    },
+    {
+pr-12325
+      "action": "Pushing to main branch",
+      "error": "Command failed: git push origin main\nTo https://github.com/Zion-Holdings/zion.app\n ! [rejected]                main -> main (fetch first)\nerror: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'\nhint: Updates were rejected because the remote contains work that you do not\nhint: have locally. This is usually caused by another repository pushing to\nhint: the same ref. If you want to integrate the remote changes, use\nhint: 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    }
+=======
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "errors": [
         "spawnSync /bin/sh ETIMEDOUT"
       ]
@@ -235,6 +261,8 @@ ursor/automate-test-improve-and-merge-code-646c
       "Created performance monitoring script"
     ]
   },
+<<<<<<< HEAD
+=======
   "summary": {
     "testsPassed": 0,
     "testsFailed": 2,
@@ -245,6 +273,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   }
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   ],
   "recommendations": [
     "Continue monitoring build process",
@@ -253,8 +282,26 @@ ursor/automate-test-improve-and-merge-code-646c
     "Monitor performance metrics",
     "Regular security audits"
   ]
+<<<<<<< HEAD
+
+      "errors": []
+    },
+    "linting": {
+      "success": false,
+
+  "summary": {
+    "testsPassed": 0,
+    "testsFailed": 2,
+    "buildSuccess": false,
+    "lintingSuccess": false,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 1
+  }
+  }
+=======
   }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 >>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 }

@@ -17,7 +17,6 @@ import {
   Target,
   Zap,
   X
-} from 'lucide-react';
 
 const NewContent2025Banner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -97,7 +96,7 @@ const NewContent2025Banner: React.FC = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
-                    <Zap className="w-4 h-4 mr-2" />
+                    <span className="w-4 h-4 mr-2">📊</span>
                     <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -155,7 +154,7 @@ const NewContent2025Banner: React.FC = () => {
                     className="inline-flex items-center bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
                     Read Latest Article
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <span className="w-4 h-4 ml-2">📊</span>
                   </Link>
                   <Link
                     href="/resources"
@@ -183,14 +182,14 @@ const NewContent2025Banner: React.FC = () => {
                     transition={{ duration: 2, repeat: Infinity }}
                     className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
                   >
-                    <Star className="w-4 h-4 text-white" />
+                    <span>Star</span>
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 2.5, repeat: Infinity }}
                     className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
                   >
-                    <CheckCircle className="w-3 h-3 text-white" />
+                    <span className="w-3 h-3 text-white">📊</span>
                   </motion.div>
                 </div>
               </div>
@@ -203,7 +202,7 @@ const NewContent2025Banner: React.FC = () => {
             className="absolute top-4 right-4 text-white hover:text-gray-200 transition-colors p-2"
             aria-label="Dismiss banner"
           >
-            <X className="w-5 h-5" />
+            <span>X</span>
           </button>
 
           {/* Progress Bar */}

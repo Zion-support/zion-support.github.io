@@ -11,31 +11,19 @@ export /**;
 function MilestoneActivities() {}
   return <div > Activity will be shown here</div>;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 projectId: string
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   projectId: string;
 interface MilestoneActivitiesProps {;
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {};
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4import React from "react";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from "react";"
 interface MilestoneActivitiesProps {
@@ -59,7 +47,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 interface MilestoneActivitiesProps {;
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return <div>Activity will be shown here</div>;
 }
 ;
@@ -94,23 +81,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {};
 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
