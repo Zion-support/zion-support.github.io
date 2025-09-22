@@ -22,7 +22,8 @@ const nextConfig = {
   },
 
   // Output configuration
-  output: "standalone",
+  // Let Netlify Next.js runtime handle output; do not force standalone
+  // output: "standalone",
   
   // Trailing slash
   trailingSlash: false,
