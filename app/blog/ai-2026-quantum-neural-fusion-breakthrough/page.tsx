@@ -42,12 +42,11 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
             while maintaining the learning capabilities of neural networks.
           </p>
         </div>
-      </div>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">🧠 Core Technologies</h2>
-          
-          <div className="space-y-6">
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">🧠 Core Technologies</h2>
+        
+        <div className="space-y-6">
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">⚛️ Quantum Neural Networks (QNNs)</h3>
               <p className="text-gray-700 mb-4">
@@ -247,7 +246,7 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
                   <li>• <strong>Qubits:</strong> 1000+ logical qubits</li>
                   <li>• <strong>Coherence Time:</strong> 100+ seconds</li>
                   <li>• <strong>Gate Fidelity:</strong> 99.99%</li>
-                  <li>• <strong>Error Rate:</strong> < 0.01%</li>
+                  <li>• <strong>Error Rate:</strong> &lt; 0.01%</li>
                   <li>• <strong>Processing Speed:</strong> 10^15 operations/second</li>
                 </ul>
               </div>

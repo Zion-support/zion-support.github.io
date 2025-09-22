@@ -61,5 +61,3 @@ const SecureAgentArchitecturePage: React.FC = () => {
     </div>
   );
 };
-
-export default SecureAgentArchitecturePage;

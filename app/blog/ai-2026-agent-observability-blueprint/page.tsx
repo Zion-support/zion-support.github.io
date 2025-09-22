@@ -49,5 +49,3 @@ const AgentObservabilityBlueprint: React.FC = () => {
     </div>
   );
 };
-
-export default AgentObservabilityBlueprint;

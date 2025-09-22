@@ -43,4 +43,3 @@ export default function MultimodalAgentsEnterprise2025Page() {
       </div>
     </main>
   );
-}

@@ -58,5 +58,3 @@ const MultimodalAgentsBlueprintPage = () => {
     </div>
   );
 };
-
-export default MultimodalAgentsBlueprintPage;

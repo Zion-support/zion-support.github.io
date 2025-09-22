@@ -40,4 +40,3 @@ export default function AutonomousFinanceControlPlanePage() {
       </article>
     </main>
   );
-}

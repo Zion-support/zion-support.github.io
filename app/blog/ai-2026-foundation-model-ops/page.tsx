@@ -85,4 +85,3 @@ const FoundationModelOps2026 = () => {
       </article>
     </div>
   );
-};
