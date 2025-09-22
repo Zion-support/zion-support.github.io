@@ -2,6 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { generateSEOMetadata } from '../components/SEOEnhancer';
+import Testimonials from '../components/Testimonials';
+import Newsletter from '../components/Newsletter';
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Zion Tech Group - AI Solutions & Technology Innovation',
@@ -124,6 +126,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Newsletter Section */}
+      <Newsletter />
     </div>
   );
 }
