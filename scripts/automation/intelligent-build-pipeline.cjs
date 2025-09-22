@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -428,11 +427,6 @@ this.log("Pipeline report "generated": ${reportPath}")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
 
-=======
   console.error(" Intelligent Build Pipeline "failed": ")
-=======
+
   console.error(" Intelligent Build Pipeline "failed": ")
-=======
-=======
-
-

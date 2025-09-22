@@ -1,5 +1,4 @@
 
-=======
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -22,9 +21,8 @@ import { execSync, spawn } from;
     const lines = output.split('\\n')
           type: 'lint'
 
-=======
   '
-=======
+
 #!/usr/bin/env node
 import { execSync, spawn } from;
 
@@ -35,14 +33,9 @@ import { execSync, spawn } from;
         const newContent = lines.join(')
     const varMatch = message.match(/'(.+?)
     if (line.includes('console.')
-    if (message.includes('single quotes')
-
-=======
-      lines[lineIndex] = line.replace(/"/g, ")
-=======
-      lines[lineIndex] = line.replace(/"/g, ")
-=======
 
       lines[lineIndex] = line.replace(/"/g, ")
-=======
 
+      lines[lineIndex] = line.replace(/"/g, ")
+
+      lines[lineIndex] = line.replace(/"/g, ")

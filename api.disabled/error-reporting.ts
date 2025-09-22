@@ -1,193 +1,150 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export {};
+
+=======
+=======
+<<<<<<< HEAD
+export {};
+
+=======
+>>>>>>> main
+=======
+
+export {};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = {};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+module.exports = {};
+
+module.exports = {};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+
+module.exports = {};
+module.exports = {};
+
+module.exports = {};
+module.exports = {};
+
+export {};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+module.exports = {};
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+module.exports = {};
+module.exports = {};
+module.exports = {};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
 module.exports = {};
-module.exports = {};
-module.exports = {};
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {};
 module.exports = {};
 module.exports = {};
 export {};
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-interface ErrorReport {
-  error: {
-    message: string;
-    stack?: string;
-    name: string};
-  errorInfo: {
-    componentStack?: string};
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId?: string;
-  sessionId?: string}
+=======
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+module.exports = {};
 
 module.exports = {};
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })}
 
 
-    // Validate required fields
-    if (!errorReport.error || !errorReport.error.message) {
-      return res.status(400).json({ error: 'Missing required fields' })}
 
-    // Add timestamp if not provided
-    if (!errorReport.timestamp) {
-      errorReport.timestamp = new Date().toISOString()}
 
-    // Add to error reports
-    errorReports.push(errorReport);
 
-    // Log for debugging
-    console.error('Error Report:' {
-      message: errorReport.error.message,
-      stack: errorReport.error.stack,
-      url: errorReport.url,
-      timestamp: errorReport.timestamp });
 
-    // Send to external error monitoring services
-    await sendToErrorMonitoringServices(errorReport);
 
-    // Send alerts for critical errors
-    if (isCriticalError(errorReport)) {
-      await sendCriticalErrorAlert(errorReport)}
+<<<<<<< HEAD
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
 
-    res.status(200).json({ success: true })} catch (error) {
-    console.error('Error Reporting API Error:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+=======
 
-async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
-  try {
-    // Sentry
-    if (process.env.SENTRY_DSN) {
-      await fetch('https://sentry.io/api/0/projects/' {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}` },
-        body: JSON.stringify({
-          message: errorReport.error.message,
-          stacktrace: {
-            frames: parseStackTrace(errorReport.error.stack) },
-          tags: {
-            component: 'frontend',
-            url: errorReport.url },
-          user: {
-            id: errorReport.userId },
-          extra: {
-            userAgent: errorReport.userAgent,
-            sessionId: errorReport.sessionId,
-            componentStack: errorReport.errorInfo.componentStack } }) })}
-
-    // LogRocket
-    if (process.env.LOGROCKET_APP_ID) {
-      await fetch(`https://api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors` {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}` },
-        body: JSON.stringify({
-          message: errorReport.error.message,
-          stack: errorReport.error.stack,
-          url: errorReport.url,
-          userAgent: errorReport.userAgent,
-          timestamp: errorReport.timestamp }) })}
-
-    // Custom webhook
-    if (process.env.ERROR_WEBHOOK_URL) {
-      await fetch(process.env.ERROR_WEBHOOK_URL {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json' },
-        body: JSON.stringify(errorReport) })}
-  } catch (error) {
-    console.error('Failed to send to error monitoring services:', error)}
-}
-
-function parseStackTrace(stack?: string) {
-  if (!stack) return [];
-  
-  return stack.split('\n').map(line => {
-    const match = line.match(/at\s+(.+?)\s+\((.+?):(\d+):(\d+)\)/);
-    if (match) {
-      return {
-        function: match[1],
-        filename: match[2],
-        lineno: parseInt(match[3]),
-        colno: parseInt(match[4]) }}
-    return {
-      function: line.trim(),
-      filename: 'unknown',
-      lineno: 0,
-      colno: 0 }})}
-
-function isCriticalError(errorReport: ErrorReport): boolean {
-  const criticalPatterns = [
-    /chunk load failed/i,
-    /loading chunk/i,
-    /network error/i,
-    /failed to fetch/i,
-    /script error/i ];
-
-  return criticalPatterns.some(pattern => 
-    pattern.test(errorReport.error.message)
-  )}
-
-async function sendCriticalErrorAlert(errorReport: ErrorReport) {
-  try {
-    // Send email alert
-    if (process.env.ALERT_EMAIL) {
-      await fetch('/api/send-alert-email' {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          to: process.env.ALERT_EMAIL,
-          subject: 'Critical Error Alert - Zion Tech Group',
-          body: `
-            A critical error has occurred on the website:
-            
-            Error: ${errorReport.error.message}
-            URL: ${errorReport.url}
-            Time: ${errorReport.timestamp}
-            User Agent: ${errorReport.userAgent}
-            
-            Stack Trace:
-            ${errorReport.error.stack}
-          ` }) })}
-
-    // Send Slack notification
-    if (process.env.SLACK_WEBHOOK_URL) {
-      await fetch(process.env.SLACK_WEBHOOK_URL {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: `🚨 Critical Error Alert`,
-          attachments: [{
-            color: 'danger',
-            fields: [
-              {
-                title: 'Error Message',
-                value: errorReport.error.message,
-                short: false }, {
-                title: 'URL',
-                value: errorReport.url,
-                short: true }, {
-                title: 'Timestamp',
-                value: errorReport.timestamp,
-                short: true } ] }] }) })}
-  } catch (error) {
-    console.error('Failed to send critical error alert:', error)}
-}
-
-// Get error reports (for admin dashboard)
-export async function getErrorReports() {
-  return errorReports}
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+module.exports = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -109,11 +108,6 @@ const path = require("path")
       } catch (error) {  await this.log(` Build Error Fixer "failed": ${error.message  }`)} catch (error) {await this.log(` Build Error Fixer "failed"`})
   console.log("Build error fixer completed successfully")
 
-=======
   console.error("Build error fixer "failed": ")
-=======
+
   console.error("Build error fixer "failed": ")
-=======
-=======
-
-

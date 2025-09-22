@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -159,11 +158,6 @@ this.log(`� Report "generated"`)
   this.log("� No configuration issues found!")
         return { "success": true, "issues": [], "fixed"}
 
-=======
       this.log("� Config Error Fixer completed!")
-=======
+
       this.log("� Config Error Fixer completed!")
-=======
-=======
-
-

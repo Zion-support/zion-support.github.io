@@ -1,10 +1,14 @@
 {
-  "timestamp": "2025-09-07T09:45:05.259Z",
+  "timestamp": "2025-09-07T02:39:50.068Z",
   "optimizations": [
-    "Images optimized",
-    "Code optimized"
+    {
+      "type": "images",
+      "count": 0,
+      "status": "completed"
+    }
   ],
-  "metrics": {
-    "bundleSize": "0.00 MB"
+  "summary": {
+    "totalOptimizations": 1,
+    "completed": 1
   }
 }

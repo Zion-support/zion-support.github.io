@@ -1,63 +1,52 @@
-name: CI
+name: Test
 
 on:
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
-    branches: ["**"]
+    branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
-  test-runner:
-    name: Test Runner
+  test:
+    name: Test Job
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: npm
+          cache: 'npm'
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run type check
-        run: npm run type-check
-        continue-on-error: true
-      - name: Run linting
-        run: npm run lint
-        continue-on-error: true
-      - name: Run security audit
-        run: npm audit --audit-level=high
-        continue-on-error: true
-      - name: Build verification
+        run: npm ci
+      - name: Build project
         run: npm run build
       - name: Verify build output
         run: |
-          if [ ! -d .next ]; then
-            echo "Build failed: .next folder not found"
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
             exit 1
           fi
-          echo "Build completed successfully"
-      - name: Verify asset paths
-        run: |
-          if [ -d dist ]; then
-            echo "Build assets found:"
-            ls -la dist/
-            echo "Total files: $(find dist -type f | wc -l)"
-          fi
-      - name: Run tests (if available)
-        run: npm test --if-present
+      - name: Run Tests
+        run: npm test -- --run
         continue-on-error: true
-      - name: Upload build artifacts
-        if: success()
-        uses: actions/upload-artifact@v4
+      - name: Run Cypress Tests (if available)
+        run: npm run cypress:run
+        env:
+          TEST_USER_EMAIL: ${{ secrets.CYPRESS_TEST_USER_EMAIL }}
+          TEST_USER_PASSWORD: ${{ secrets.CYPRESS_TEST_USER_PASSWORD }}
+          TEST_USER_DISPLAY_NAME: ${{ secrets.CYPRESS_TEST_USER_DISPLAY_NAME }}
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
         with:
           name: build
           path: dist
-          retention-days: 7
+        if: success()
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

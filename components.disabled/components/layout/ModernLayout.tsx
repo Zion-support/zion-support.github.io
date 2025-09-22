@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/main
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ModernHeader from './ModernHeader';
@@ -8,14 +17,16 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string}
+  canonical?: string;
+}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https://ziontechgroup.com' }) => {
+  canonical = 'https://ziontechgroup.com',
+}) => {
   return (
     <>
       <Helmet>
@@ -81,7 +92,33 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Zion Tech Group',
+              url: 'https://ziontechgroup.com',
+              logo: 'https://ziontechgroup.com/logo.png',
+              description:
+                'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '364 E Main St STE 1008',
+                addressLocality: 'Middletown',
+                addressRegion: 'DE',
+                postalCode: '19709',
+                addressCountry: 'US',
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+1-302-464-0950',
+                contactType: 'customer service',
+                email: 'kleber@ziontechgroup.com',
+              },
+              sameAs: [
+                'https://linkedin.com/company/ziontechgroup',
+                'https://twitter.com/ziontechgroup',
+                'https://github.com/ziontechgroup',
+              ],
+            }),
           }}
         />
       </Helmet>
@@ -92,6 +129,22 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <ModernFooter />
       </div>
     </>
-  )};
+  );
+};
 
 export default ModernLayout;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

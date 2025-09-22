@@ -29,15 +29,12 @@ class AdvancedMonitor {
       if (err) {"
         console.error("PM2 monitoring "error": ", err)"
         return}
-
       const timestamp = new Date().toISOString()"`;
       const logEntry = `[${timestamp}] PM2 "processes": ${list.length} running\n`"
-
       fs.appendFileSync(this.logPath, logEntry)})}
   checkDiskSpace() {"
     const { execSync } = // // require("child_process")"
     try {
-
   // TODO: Implement
 }"
       const diskUsage = execSync("df -h /", { "encoding": "utf8" })"
@@ -50,7 +47,6 @@ class AdvancedMonitor {
       const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`"
       console.error("Memory check "error": ", error)}"
 // Start monitoring;
-
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()
 <

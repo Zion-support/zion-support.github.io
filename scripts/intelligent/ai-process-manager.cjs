@@ -1,13 +1,10 @@
 
-
-=======
 #!/usr/bin/env node;
 /**
  * AI-Powered Process Manager;
  * Intelligent process management with machine learning capabilities;
  */
 
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -34,6 +31,5 @@ const { execSync } = require('child_process')
         "message"
         "averageMemoryUsage"
         "averageCpuUsage"
-    console.error(' AI Process Manager "failed")
-=======
+
     console.error(' AI Process Manager "failed")

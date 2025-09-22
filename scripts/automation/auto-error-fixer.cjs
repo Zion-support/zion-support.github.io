@@ -1,11 +1,7 @@
 
-=======
 #!/usr/bin/env node;
-=======
+
 #!/usr/bin/env node;
-=======
-
-
 
 const fs = require("fs")
 const path = require("path")
@@ -160,10 +156,6 @@ const { execSync } = require("child_process")
   process.on("SIGINT")
   process.on("SIGINT")
 
-=======
   process.on(")
-=======
+
   process.on(")
-=======
-
-

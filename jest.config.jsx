@@ -1,3 +1,11 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3]}
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 
-
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./jest.setup.jsx'],
+    globals: true,
+  },
+});

@@ -1,24 +1,4 @@
 
-;
-    // Identify missing pages;
-    const missingPages = [];
-;
-    for (const route of routes) {;
-
-;
-async function getAllFiles(dirPath, arrayOfFiles = []) {;
-  const files = await fs.readdir(dirPath);
-;
-  for (const file of files) {;
-    const fullPath = path.join(dirPath, file);
-    const stat = await fs.stat(fullPath);
-;
-    if (stat.isDirectory()) {}
-;
-// Run the analysis;
-if (require.main === module) {}
-;
-module.exports = { identifyMissingPages };
 const fs = require("fs")
 const path = require("path")
     const appContent = await fs.readFile("src/App.tsx", "utf8")
@@ -46,7 +26,6 @@ const fs = require("fs").promises;const path = require("path")"
 
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
     console.error("Error identifying missing "pages")
+
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
     console.error("Error identifying missing "pages")
-
-

@@ -1,5 +1,19 @@
 import { useState } from 'react';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export type FeedbackContext = any;
+    onClose(true)
+export default function FeedbackModal({
+origin/cursor/automate-test-improve-and-merge-code-2533
+  isOpen
+  onClose
+  defaultContext
+=======
+  isOpen;
+  onClose;
+  defaultContext'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   defaultKind = 'general'
   userHeaders;
 }: {}
@@ -39,10 +53,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     onClose(true)
   }
   return (
-    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>'
-      <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>'
-        <div className='text-lg font-medium'>Was this helpful?</div>'
-        <div className='flex gap-2'>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">"
+      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">"
+        <div className="text-lg font-medium">Was this helpful?</div>"
+        <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
   async function submit() {
     if (rating < 1) return onClose(false);
@@ -60,7 +74,11 @@ headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
       });
     setLoading(false);
     onClose(true);
+=======
+export type FeedbackContext = any;
+    onClose(true)
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>
@@ -97,7 +115,120 @@ className={
               ★;
             </button>;
           ))}
-
+<<<<<<< HEAD
+        </div>;'
+        <div className='text-sm'>;'
+          <label className='block mb-1'>Optional comment</label>;
+          <textarea;
+            value={comment}
+            onChange={e => setComment(e && e.target.value)}'
+            className='w-full border rounded p-2';
+            rows={3}
+          />;
+        </div>;'
+        <div className='text-sm'>;'
+          <label className='block mb-1'>Also</label>;'
+          <div className='flex gap-3'>;'
+            <label className='inline-flex items-center gap-1'>;
+              <input'
+                type='radio''
+                checked={kind === 'general'}'
+                onChange={() => setKind('general')}
+              />;
+              General;
+            </label>;'
+            <label className='inline-flex items-center gap-1'>;
+              <input'
+                type='radio''
+                checked={kind === 'bug'}'
+                onChange={() => setKind('bug')}
+              />;
+              Report a bug;
+            </label>;'
+            <label className='inline-flex items-center gap-1'>;
+              <input'
+                type='radio''
+                checked={kind === 'feature'}'
+                onChange={() => setKind('feature')}
+;
+export type FeedbackContext = { action_type?: string; metadata?: any }
+;
+export default function FeedbackModal ({}
+  is_open,
+  on_close,
+  default_context,'
+  default_kind = 'general',
+  user_headers,
+}: {};
+  is_open: boolean;
+  on_close: (submitted: boolean) => void;
+  default_context?: FeedbackContext;'
+  default_kind?: 'general' | 'bug' | 'feature';
+  user_headers?: Record < string, string>;}) {export default function FeedbackModal ({};
+  is_open;
+  on_close;
+  default_context;'
+  default_kind = 'general';
+  user_headers}: {}
+  is_open: boolean,
+  on_close: (submitted: boolean) => void,
+  default_context?: FeedbackContext;'
+  default_kind?: 'general' | 'bug' | 'feature';
+  user_headers?: Record < string, string>;
+}) {}
+  const [rating, set_rating] = useState < number>(0);
+  const [hover, set_hover] = useState < number>(0);'
+  const [kind, set_kind] = useState<'general' | 'bug' | 'feature'>(default_kind);'
+  const [comment, set_comment] = useState ('');
+  const [loading, set_loading] = useState (false);
+;
+  // Check condition;
+if (return null) {}
+  $2;
+}
+  async /**
+ * submit - Function description;
+ */
+function submit() {}
+    if (return on_close (false)) {}
+  $2;
+}
+    set_loading (true);
+    try {'
+      await fetch ('/api / feedback', {'
+        method: 'POST','
+        headers: { 'Content - Type': 'application / json', ...(user_headers || {}) },
+        body: JSON.stringify ({}
+          rating,
+          comment,
+          kind,
+          context: default_context || {},
+        }),
+      });
+    set_loading (false);
+    on_close (true);
+  }
+<<<<<<< HEAD
+  return (
+    <div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40'>;
+      <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4'>;
+        <div className='text - lg font - medium'>Was this helpful?</div>;
+        <div className='flex gap - 2'>;
+          {[1, 2, 3, 4, 5].map (number => (            <button    <div className="fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40">;
+      <div className="bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4">;
+        <div className="text-lg font-medium">Was this helpful?</div>;
+        <div className="flex gap-2">;
+=======
+  return ('
+    <div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40'>;'
+      <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4'>;'
+        <div className='text - lg font - medium'>Was this helpful?</div>;'
+        <div className='flex gap - 2'>;"
+          {[1, 2, 3, 4, 5].map (number => (            <button    <div className="fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40">;"
+      <div className="bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4">;"
+        <div className="text - lg font - medium">Was this helpful?</div>;"
+        <div className="flex gap - 2">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {[1, 2, 3, 4, 5].map (number => (
               key={n}
               onMouseEnter={() => set_hover (n)}
@@ -106,18 +237,170 @@ className={
               className={'
                 hover >= n || rating >= n ? 'text - yellow - 500' : 'text - gray - 300';
               }`
+=======
+        </div>;
+        <div className='text-sm' />;
+          <label className='block mb-1' />Optional comment</label>;
+          <textarea;
+            value={comment}
+            onChange={e = /> setComment(e && e.target.value)}
+            className='w-full border rounded p-2';
+            rows={3}
+          />;
+        </div>;
+        <div className='text-sm' />;
+          <label className='block mb-1' />Also</label>;
+          <div className='flex gap-3' />;
+            <label className='inline-flex items-center gap-1' />;
+              <input;
+                type='radio';
+                checked={kind === 'general'}
+                onChange={() = /> setKind('general')}
+              />;
+              General;
+            </label>;
+            <label className='inline-flex items-center gap-1' />;
+              <input;
+                type='radio';
+                checked={kind === 'bug'}
+                onChange={() = /> setKind('bug')}
+              />;
+              Report a bug;
+            </label>;
+            <label className='inline-flex items-center gap-1' />;
+              <input;
+                type='radio';
+                checked = {kind === 'feature'}
+                onChange={() = /> setKind('feature';}
+}
 
+export type FeedbackContext = { action_type?: string; metadata?: any }
+
+export default function FeedbackModal ({is_open,on_close,default_context,default_kind = 'general',user_headers}: {is_open: boolean;
+  on_close: (submitted: boolean) => void;
+  default_context?: FeedbackContext;}
+  default_kind?: 'general' | 'bug' | 'feature';}
+  user_headers?: Record < string, string>;}) {export default function FeedbackModal ({is_open;
+  on_close;
+  default_context;}
+  default_kind = 'general';}
+  user_headers}: {is_open: boolean;,on_close: (submitted: boolean) => void;,default_context?: FeedbackContext;
+  default_kind?: 'general' | 'bug' | 'feature';}
+  user_headers?: Record < string, string>;}
+}) {const [rating, set_rating] = useState < number>(0)const [hover, set_hover] = useState < number>(0)const [kind, set_kind] = useState<'general' | 'bug' | 'feature'>(default_kind)const [comment, set_comment] = useState ('')const [loading, set_loading]  = useState (false)// Check condition;}
+if (return null) {$2;}
+}
+  async /**;
+ * submit - Function description;
+ */;
+function submit() {if (return on_close (false)) {$2;}
+}
+    set_loading (true)try {await fetch ('/api / feedback', {method: 'POST';}
+  headers: { 'Content - Type': 'application / json';, ...(user_headers || {}) },body: JSON.stringify ({rating;,comment,kind,context: default_context || ;}
+}})})set_loading (false)on_close (true)}
+  return (<div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40' />;
+      <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4' />;
+        <div className='text - lg font - medium' />Was this helpful?</div>;
+        <div className='flex gap - 2' />;
+          {[1, 2, 3, 4, 5].map (number => (            <button    <div className=\"fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40\" />;"
+      <div className=\"bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4\" />;"
+        <div className=\"text-lg font-medium\" />Was this helpful?</div>;}"
+        <div className=\"flex gap-2\" />;}
+          {[1, 2, 3, 4, 5].map (number => (key={n}
+              onMouseEnter={() => set_hover (n)}
+              onMouseLeave={() => set_hover (0)}
+              on_click={() => set_rating (n)}
+              className={hover >= n || rating >= n ? 'text - yellow - 500' : 'text - gray - 300';}
+              }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               aria - label={`${n} stars`}
             >;
               ★;
             </button>))}
-
+<<<<<<< HEAD
+        </div>;'
+        <div className='text - sm'>;'
+          <label className='block mb - 1'>Optional comment</label>;
+          <textarea;
+            value={comment}
+            on_change={e => set_comment (e.target.value)}'
+            className='w - full border rounded p - 2';
+            rows={3}
+          />;
+        </div>;'
+        <div className='text - sm'>;'
+          <label className='block mb - 1'>Also</label>;'
+          <div className='flex gap - 3'>;'
+            <label className='inline - flex items - center gap - 1'>;
+              <input;'
+                type='radio';'
+                checked={kind === 'general'}'
+                on_change={() => set_kind ('general')}
+              />;
+              General;
+            </label>;'
+            <label className='inline - flex items - center gap - 1'>;
+              <input;'
+                type='radio';'
+                checked={kind === 'bug'}'
+                on_change={() => set_kind ('bug')}
+              />;
+              Report a bug;
+            </label>;'
+            <label className='inline - flex items - center gap - 1'>;
+              <input;'
+                type='radio';'
+                checked={kind === 'feature'}'
+                on_change={() => set_kind ('feature')}
+=======
+        </div>;
+        <div className='text - sm' />;
+          <label className='block mb - 1' />Optional comment</label>;
+          <textarea;
+            value={comment}
+            on_change={e = /> set_comment (e.target.value)}
+            className='w - full border rounded p - 2';
+            rows={3}
+          />;
+        </div>;
+        <div className='text - sm' />;
+          <label className='block mb - 1' />Also</label>;
+          <div className='flex gap - 3' />;
+            <label className='inline - flex items - center gap - 1' />;
+              <input;
+                type='radio';
+                checked={kind === 'general'}
+                on_change={() = /> set_kind ('general')}
+              />;
+              General;
+            </label>;
+            <label className='inline - flex items - center gap - 1' />;
+              <input;
+                type='radio';
+                checked={kind === 'bug'}
+                on_change={() = /> set_kind ('bug')}
+              />;
+              Report a bug;
+            </label>;
+            <label className='inline - flex items - center gap - 1' />;
+              <input;
+                type='radio';
+                checked={kind === 'feature'}
+                on_change={() = /> set_kind ('feature')}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               />;
               Suggest a feature;
             </label>;
           </div>;
         </div>;
-
+<<<<<<< HEAD
+          ))}'"
+          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+=======
+          ))}
+"
+          <button onClick={submit} disabled={loading || rating<1} className=\"px-3 py-2 rounded bg-gray-900 text-white\" />{loading? 'Submitting…' : 'Submit'}</button>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
         <div className='flex justify-end gap-2'>
           <button
@@ -148,7 +431,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
-
+<<<<<<< HEAD
+}'
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}'
@@ -165,3 +452,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>);`
 }              aria - label={`${n} stars`}
+<<<<<<< HEAD
+        </div>;
+        <div className="text-sm">;
+          <label className="block mb-1" html_for="input - Optional comment">Optional comment</label>;
+          <textarea value={comment} on_change={(e)=>set_comment (e.target.value)} className="w-full border rounded p-2" rows={3} />;
+        </div>;
+        <div className="text-sm">;
+          <label className="block mb-1" html_for="input - Also">Also</label>;
+          <div className="flex gap-3">;
+            <label className="inline - flex items-center gap-1"><input type="radio" checked={kind==='general'} on_change={()=>set_kind ('general')} />General</label>;
+            <label className="inline - flex items-center gap-1"><input type="radio" checked={kind==='bug'} on_change={()=>set_kind ('bug')} />Report a bug</label>;
+            <label className="inline - flex items-center gap-1"><input type="radio" checked={kind==='feature'} on_change={()=>set_kind ('feature')} />Suggest a feature</label>;
+          </div>;
+        </div>;
+        <div className="flex justify-end gap-2">;
+          <button on_click={()=>on_close (false)} className="px-3 py-2 rounded border">Later</button>;
+
+}
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+        </div>;"
+        <div className="text - sm">;"
+          <label className="block mb - 1" html_for="input - Optional comment">Optional comment</label>;"
+          <textarea value={comment} on_change={(e)=>set_comment (e.target.value)} className="w - full border rounded p - 2" rows={3} />;
+        </div>;"
+        <div className="text - sm">;"
+          <label className="block mb - 1" html_for="input - Also">Also</label>;"
+          <div className="flex gap - 3">;'"
+            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='general'} on_change={()=>set_kind ('general')} />General</label>;'"
+            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='bug'} on_change={()=>set_kind ('bug')} />Report a bug</label>;'"
+            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='feature'} on_change={()=>set_kind ('feature')} />Suggest a feature</label>;
+          </div>;
+        </div>;"
+        <div className="flex justify - end gap - 2">;"
+          <button on_click={()=>on_close (false)} className="px - 3 py - 2 rounded border">Later</button>;
+
+}
+  );
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

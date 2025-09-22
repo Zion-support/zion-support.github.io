@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const fs = require("fs")
@@ -71,11 +70,6 @@ const path = require("path")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
 
-=======
   console.error(" Intelligent Predictive Monitor "failed": ")
-=======
+
   console.error(" Intelligent Predictive Monitor "failed": ")
-=======
-=======
-
-
