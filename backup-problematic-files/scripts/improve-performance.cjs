@@ -1,5 +1,7 @@
 
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -8,6 +10,7 @@
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
 function improvePerformance() {}
@@ -21,6 +24,8 @@ const nextConfig = {}
   "poweredByHeader": false,
   "generateEtags": false,
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -29,11 +34,14 @@ const nextConfig = {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   // Image optimization;
   "images": {}
     formats: ['image/webp', 'image/avif'],
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
+<<<<<<< HEAD
+=======
 
 
 
@@ -43,6 +51,7 @@ const nextConfig = {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
     if ( {})
@@ -63,6 +72,8 @@ const nextConfig = {}
             "name": 'vendors',
             "chunks": 'all'}}}};
     return confi}g},
+<<<<<<< HEAD
+=======
 
 
 
@@ -72,6 +83,7 @@ const nextConfig = {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   // Headers for performance;
   async headers() {}
     return [;]
@@ -90,23 +102,32 @@ const nextConfig = {}
           {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]}};
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 module.exports = nextConfig;";
       
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
 
 
+<<<<<<< HEAD
+      fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
+=======
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       } catch (error) {
       console.error('Performance improvement "failed": ', error.message)}
   }
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -118,6 +139,7 @@ module.exports = nextConfig;";
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       console.log('Performance improvements completed')} catch (error) {}
       console.error('Performance improvement "failed": ', error.message)};
   };
@@ -129,9 +151,12 @@ module.exports = nextConfig;";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 improvePerformance();
+<<<<<<< HEAD
+=======
       improvePerformance();
       
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -6,6 +8,7 @@
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 module.exports = {}
   "apps": [// High Priority Error Prevention (runs every 5 minutes);]
     {}
@@ -230,6 +233,10 @@ module.exports = {}
       'post-setup': 'npm install --legacy-peer-deps && npm run build'
     };
   };
+<<<<<<< HEAD
+};
+};
+=======
 
 
 
@@ -238,3 +245,4 @@ module.exports = {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

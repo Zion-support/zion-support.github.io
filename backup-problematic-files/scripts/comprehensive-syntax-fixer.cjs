@@ -51,6 +51,11 @@
   // Fix common syntax errors
   fixSyntaxErrors(content) {
     let fixed = content;
+<<<<<<< HEAD
+// Fix merge conflicts by keeping the HEAD version
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     // Fix merge conflicts by keeping the HEAD version
 
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
@@ -407,4 +412,8 @@ if (require.main === module) {}
   }
 });
 };
+<<<<<<< HEAD
 module.exports = ComprehensiveSyntaxFixer;
+=======
+module.exports = ComprehensiveSyntaxFixer;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

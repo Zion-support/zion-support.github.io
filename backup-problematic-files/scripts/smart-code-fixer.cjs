@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -11,17 +14,26 @@ const { execSync } = require('child_process');
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -75,10 +87,13 @@ function fixSpecificIssues(content, filePath) {
     }
   }
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
@@ -174,9 +189,12 @@ function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   let fixedCount = 0;
@@ -209,8 +227,13 @@ function main() {
 if (require.main === module) {
   main();
 }
+<<<<<<< HEAD
+module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+`;
+=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
