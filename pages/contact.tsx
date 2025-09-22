@@ -1,34 +1,15 @@
+import type { NextPage } from 'next'
+import React from 'react'
 
-export default function Contact() {;
-
+const Contact: NextPage = () => {
   return (
-
-    </div>;
-    <div>;
-      <main>;
-        <h1>Contact Us</h1>;
-        <p>Get in touch with our team for your IT and AI service needs.</p>;
-      </main>;
     <div>
       <main>
         <h1>Contact Us</h1>
         <p>Get in touch with our team for your IT and AI service needs.</p>
       </main>
-    </div>;
-  );
-
-import React from './react';
-;
-export default /**;
- * Contact - Function description;
- */
-function Contact() {}
-  return (
-    <div>;
-      <main>;
-        <h1 > Contact Us</h1>;
-        <p > Get in touch with our team for your IT and AI service needs.</p>;
-      </main>;
-    </div>);
+    </div>
+  )
 }
-'
+
+export default Contact

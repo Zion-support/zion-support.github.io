@@ -1,40 +1,15 @@
+import type { NextPage } from 'next'
+import React from 'react'
 
-export default function About() {;
-
+const About: NextPage = () => {
   return (
-    <div>;
-      <main>;
-        <h1>About Zion Tech Group</h1>;
-import React from './react';
-;
-export default /**
- * About - Function description
- */
-function About() {
-  return (
-    <div>;
-      <main>;
-        <h1 > About Zion Tech Group</h1>;
-
-        <p>;
-          We are a leading provider of advanced IT solutions and AI services.;
-        </p>;
-      </main>;
-
-
-}
+    <div>
+      <main>
+        <h1>About Zion Tech Group</h1>
+        <p>We provide advanced IT solutions and AI services.</p>
+      </main>
+    </div>
+  )
 }
 
-    <div>;
-</div>
-      <main>;
-</main>
-        <h1>About Zion Tech Group</h1>;
-        <h1 > About Zion Tech Group</h1>;
-        <p>;
-</p>
-        </p>;
-      </main>;
-pr-12325
-
-}
+export default About
