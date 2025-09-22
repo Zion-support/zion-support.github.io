@@ -10,20 +10,72 @@ function Contact() {
     message: '',
     service: ''
   })
+  const [formErrors, setFormErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
+  const validateForm = () => {
+    const errors = {}
+    
+    if (!formData.name.trim()) {
+      errors.name = 'Name is required'
+    }
+    
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required'
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'Please enter a valid email address'
+    }
+    
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required'
+    }
+    
+    setFormErrors(errors)
+    return Object.keys(errors).length === 0
   }
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+    
+    // Clear error when user starts typing
+    if (formErrors[name]) {
+      setFormErrors({
+        ...formErrors,
+        [name]: ''
+      })
+    }
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We\'ll get back to you soon.')
-    setFormData({ name: '', email: '', company: '', message: '', service: '' })
+    
+    if (!validateForm()) {
+      return
+    }
+    
+    setIsSubmitting(true)
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
+      console.log('Form submitted:', formData)
+      setSubmitSuccess(true)
+      setFormData({ name: '', email: '', company: '', message: '', service: '' })
+      setFormErrors({})
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitSuccess(false), 5000)
+    } catch (error) {
+      console.error('Error submitting form:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -42,6 +94,7 @@ function Contact() {
             <div className="hidden md:flex space-x-8">
               <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
               <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
+              <Link href="/blog" className="text-white hover:text-purple-300 transition-colors">Blog</Link>
               <Link href="/contact" className="text-purple-300 font-semibold">Contact</Link>
             </div>
           </div>
@@ -75,9 +128,12 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                        formErrors.name ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'
+                      }`}
                       placeholder="Your full name"
                     />
+                    {formErrors.name && <p className="text-red-400 text-sm mt-1">{formErrors.name}</p>}
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-white font-semibold mb-2">Email *</label>
@@ -88,9 +144,12 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                        formErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'
+                      }`}
                       placeholder="your.email@company.com"
                     />
+                    {formErrors.email && <p className="text-red-400 text-sm mt-1">{formErrors.email}</p>}
                   </div>
                 </div>
                 
@@ -135,16 +194,30 @@ function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                      formErrors.message ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'
+                    }`}
                     placeholder="Tell us about your project and how we can help..."
                   />
+                  {formErrors.message && <p className="text-red-400 text-sm mt-1">{formErrors.message}</p>}
                 </div>
 
+                {submitSuccess && (
+                  <div className="bg-green-600/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg">
+                    Thank you for your message! We'll get back to you soon.
+                  </div>
+                )}
+                
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 rounded-lg font-semibold transition-all transform ${
+                    isSubmitting
+                      ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 hover:scale-105'
+                  }`}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
@@ -218,8 +291,9 @@ function Contact() {
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
             <div className="mt-4 flex justify-center space-x-6">
               <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
               <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
         </div>

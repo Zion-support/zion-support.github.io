@@ -106,6 +106,7 @@ export default function Services() {
             <div className="hidden md:flex space-x-8">
               <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
               <Link href="/services" className="text-purple-300 font-semibold">Services</Link>
+              <Link href="/blog" className="text-white hover:text-purple-300 transition-colors">Blog</Link>
               <Link href="/contact" className="text-white hover:text-purple-300 transition-colors">Contact</Link>
             </div>
           </div>
@@ -202,8 +203,9 @@ export default function Services() {
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
             <div className="mt-4 flex justify-center space-x-6">
               <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
               <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
         </div>

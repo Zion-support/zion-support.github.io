@@ -63,6 +63,7 @@ export default function HomePage() {
             <div className="hidden md:flex space-x-8">
               <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
               <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
+              <Link href="/blog" className="text-white hover:text-purple-300 transition-colors">Blog</Link>
               <Link href="/contact" className="text-white hover:text-purple-300 transition-colors">Contact</Link>
             </div>
           </div>
@@ -119,6 +120,58 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* Testimonials Section */}
+          <div className={`mt-20 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className="text-4xl font-bold text-white text-center mb-12">What Our Clients Say</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
+                <div className="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 mb-4">
+                  "Zion Tech Group transformed our infrastructure and helped us scale our AI capabilities. Their expertise is unmatched."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    JD
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">John Davis</div>
+                    <div className="text-gray-400 text-sm">CTO, TechCorp</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
+                <div className="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 mb-4">
+                  "The cloud migration was seamless and our security posture improved dramatically. Highly recommended!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    SM
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Sarah Miller</div>
+                    <div className="text-gray-400 text-sm">VP Engineering, InnovateLab</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
+                <div className="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 mb-4">
+                  "Their AI solutions automated our processes and increased efficiency by 300%. Game-changing results!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    RW
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Robert Wilson</div>
+                    <div className="text-gray-400 text-sm">CEO, FutureTech</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* CTA Section */}
           <div className={`mt-20 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
@@ -141,8 +194,9 @@ export default function HomePage() {
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
             <div className="mt-4 flex justify-center space-x-6">
               <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
               <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
         </div>
