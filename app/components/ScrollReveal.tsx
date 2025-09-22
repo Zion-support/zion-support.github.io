@@ -37,7 +37,7 @@ export default function ScrollReveal({
   const [isVisible, setIsVisible] = useState(false)
   const [hasAnimated, setHasAnimated] = useState(false)
   const [childIndex, setChildIndex] = useState(-1)
-  const elementRef = useRef<HTMLDivElement>(null)
+  const elementRef = useRef<any>(null)
 
   useEffect(() => {
     // Skip animation on mobile if mobile is false
@@ -47,7 +47,7 @@ export default function ScrollReveal({
       return
     }
 
-    const observer = new IntersectionObserver(
+    const observer = new (window as any).IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && (!hasAnimated || reset)) {
           if (staggerChildren && Array.isArray(children)) {

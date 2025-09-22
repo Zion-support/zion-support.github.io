@@ -29,12 +29,12 @@ export default function LazyImage({
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(priority)
   const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement>(null)
+  const imgRef = useRef<any>(null)
 
   useEffect(() => {
     if (priority) return
 
-    const observer = new IntersectionObserver(
+    const observer = new (window as any).IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
