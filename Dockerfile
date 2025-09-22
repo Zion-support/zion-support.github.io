@@ -1,16 +1,14 @@
-# Dockerfile for Zion Tech Nexus Market
-# Build stage
-FROM node:20 AS builder
-WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
-COPY . .
-RUN npm run build
+# DevNet Dockerfile
+FROM node:20-alpine
 
-# Production stage
-FROM node:20-slim AS runner
 WORKDIR /app
-COPY --from=builder /app .
-ENV NODE_ENV=production
+COPY package*.json ./
+RUN npm ci --prefer-offline --no-audit --no-fund
+COPY . .
+
+ENV DEVNET=1
+ENV PORT=3000
 EXPOSE 3000
-CMD ["npx", "next", "start", "-p", "3000"]
+
+# For quick iterations we run Next dev; switch to build/start for prod-like
+CMD ["sh", "-c", "npm run dev"]
