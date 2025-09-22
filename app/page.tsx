@@ -1,27 +1,15 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateSEOMetadata } from '../components/SEOEnhancer';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateSEOMetadata({
   title: 'Zion Tech Group - AI Solutions & Technology Innovation',
   description: 'Leading provider of AI solutions, automation platforms, and cutting-edge technology services. Transform your business with our innovative AI-powered tools and comprehensive tech solutions.',
-  keywords: ['AI solutions', 'artificial intelligence', 'automation', 'technology innovation', 'business transformation', 'AI platforms'],
-  openGraph: {
-    title: 'Zion Tech Group - AI Solutions & Technology Innovation',
-    description: 'Leading provider of AI solutions, automation platforms, and cutting-edge technology services.',
-    type: 'website',
-    url: 'https://ziontechgroup.com',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI Solutions & Technology Innovation',
-    description: 'Leading provider of AI solutions, automation platforms, and cutting-edge technology services.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  keywords: ['AI solutions', 'artificial intelligence', 'automation', 'technology innovation', 'business transformation', 'AI platforms', 'machine learning', 'cloud services', 'cybersecurity'],
+  canonicalUrl: '/',
+  ogImage: '/images/og-homepage.jpg'
+});
 
 export default function Home() {
   return (
