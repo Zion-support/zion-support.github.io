@@ -1,14 +1,19 @@
+<<<<<<< HEAD
 name: automerge-main
-'on':
+on:
   workflow_dispatch: {}
   schedule:
-    - cron: 0 */2 * * *
+  - cron: '0 2 * * *'
 permissions:
-  contents: write
+  contents: read
   actions: read
+  
+concurrency:
+  group: automerge-main-\${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   main:
-    name: Main Job
+    name: Automerge Main Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -23,7 +28,40 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-      - name: Run workflow
+      - name: Run automerge main
+        run: echo "Automerge main workflow completed successfully"
+=======
+name: Auto-merge to main
+
+on:
+  pull_request:
+    types: [labeled, opened, synchronize, reopened]
+    branches: [ main ]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    if: contains(github.event.pull_request.labels.*.name, 'automerge')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Ensure no conflicts with base
         run: |
-          echo "Workflow completed successfully"
-          
+          git fetch origin ${{ github.base_ref }}
+          git merge --no-commit --no-ff --no-edit origin/${{ github.base_ref }} || {
+            echo "Conflicts exist. Aborting automerge.";
+            exit 1;
+          }
+          git merge --abort || true
+      - name: Enable auto-merge
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: squash
+>>>>>>> origin/auto/autonomy-17186719616
