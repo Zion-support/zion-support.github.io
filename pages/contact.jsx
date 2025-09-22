@@ -61,18 +61,29 @@ function Contact() {
     setIsSubmitting(true)
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
       
-      console.log('Form submitted:', formData)
-      setSubmitSuccess(true)
-      setFormData({ name: '', email: '', company: '', message: '', service: '' })
-      setFormErrors({})
+      const result = await response.json()
       
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitSuccess(false), 5000)
+      if (result.success) {
+        setSubmitSuccess(true)
+        setFormData({ name: '', email: '', company: '', message: '', service: '' })
+        setFormErrors({})
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setSubmitSuccess(false), 5000)
+      } else {
+        setFormErrors({ submit: result.message || 'Failed to send message. Please try again.' })
+      }
     } catch (error) {
       console.error('Error submitting form:', error)
+      setFormErrors({ submit: 'Network error. Please check your connection and try again.' })
     } finally {
       setIsSubmitting(false)
     }
@@ -205,6 +216,12 @@ function Contact() {
                 {submitSuccess && (
                   <div className="bg-green-600/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg">
                     Thank you for your message! We'll get back to you soon.
+                  </div>
+                )}
+                
+                {formErrors.submit && (
+                  <div className="bg-red-600/20 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg">
+                    {formErrors.submit}
                   </div>
                 )}
                 

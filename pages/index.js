@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import TypewriterText from '../components/ui/TypewriterText'
+import ScrollToTop from '../components/ui/ScrollToTop'
+import MobileMenu from '../components/ui/MobileMenu'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -66,6 +69,14 @@ export default function HomePage() {
               <Link href="/blog" className="text-white hover:text-purple-300 transition-colors">Blog</Link>
               <Link href="/contact" className="text-white hover:text-purple-300 transition-colors">Contact</Link>
             </div>
+            <MobileMenu 
+              links={[
+                { href: '/about', label: 'About' },
+                { href: '/services', label: 'Services' },
+                { href: '/blog', label: 'Blog' },
+                { href: '/contact', label: 'Contact' }
+              ]} 
+            />
           </div>
         </div>
       </nav>
@@ -75,9 +86,22 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Advanced IT & AI
-              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Solutions
+              <TypewriterText 
+                texts={[
+                  "Advanced IT & AI Solutions",
+                  "Cloud Infrastructure Services", 
+                  "Cybersecurity Solutions",
+                  "DevOps & Automation",
+                  "Data Analytics & Insights",
+                  "Technology Consulting"
+                ]}
+                speed={100}
+                deleteSpeed={50}
+                pauseTime={2000}
+                className="block"
+              />
+              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mt-2">
+                for Modern Businesses
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -201,6 +225,8 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      <ScrollToTop />
     </div>
   )
 }
