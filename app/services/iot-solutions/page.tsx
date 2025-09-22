@@ -3,20 +3,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Iot Solutions - Zion Tech Group',
-  description: 'Professional iot solutions services powered by AI and modern technology',
+  description: 'Professional iot solutions services by Zion Tech Group.',
 };
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          Iot Solutions
-        </h1>
-        <p className="text-center text-gray-600 mb-8">
-          Professional iot solutions services powered by AI and modern technology
-        </p>
-      </div>
+    <div>
+      <h1>Iot Solutions</h1>
+      <p>Professional iot solutions services tailored to your business needs.</p>
     </div>
   );
 }

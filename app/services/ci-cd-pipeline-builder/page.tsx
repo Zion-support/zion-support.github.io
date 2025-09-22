@@ -3,20 +3,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Ci Cd Pipeline Builder - Zion Tech Group',
-  description: 'Professional ci cd pipeline builder services powered by AI and modern technology',
+  description: 'Professional ci cd pipeline builder services by Zion Tech Group.',
 };
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          Ci Cd Pipeline Builder
-        </h1>
-        <p className="text-center text-gray-600 mb-8">
-          Professional ci cd pipeline builder services powered by AI and modern technology
-        </p>
-      </div>
+    <div>
+      <h1>Ci Cd Pipeline Builder</h1>
+      <p>Professional ci cd pipeline builder services tailored to your business needs.</p>
     </div>
   );
 }
