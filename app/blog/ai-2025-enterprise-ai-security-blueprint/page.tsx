@@ -9,7 +9,10 @@ export const metadata = {
 
 export default function EnterpriseAISecurityBlueprint2025Page() {
   return (
-
+    <div>
+      <h1>Enterprise AI Security Blueprint (2025)</h1>
+      <p>Layered controls for model, data, runtime, and supply chain risk in enterprise AI systems.</p>
+    </div>
   );
 }
 
