@@ -4,122 +4,176 @@ import { useState, useEffect } from 'react'
 
 export default function HomePage() {
   const [isClient, setIsClient] = useState(false)
+  const [currentStat, setCurrentStat] = useState(0)
 
   useEffect(() => {
     setIsClient(true)
   }, [])
 
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50+', label: 'Expert Team Members' },
+    { number: '24/7', label: 'Support Available' }
+  ]
+
+  const features = [
+    {
+      icon: '🤖',
+      title: 'AI-Powered Solutions',
+      description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights.'
+    },
+    {
+      icon: '☁️',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions that grow with your business needs.'
+    },
+    {
+      icon: '🔒',
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and data.'
+    },
+    {
+      icon: '📊',
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with advanced analytics tools.'
+    }
+  ]
+
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Tech Group — Advanced IT & AI Services</title>
-        <meta name="description" content="Zion Tech Group delivers advanced IT solutions and AI services for modern businesses." />
+        <meta name="description" content="Zion Tech Group delivers advanced IT solutions and AI services for modern businesses. Transform your business with cutting-edge technology." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Zion Tech Group — Advanced IT & AI Services" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI and IT solutions." />
+        <meta property="og:type" content="website" />
       </Head>
-      <main style={{ 
-        padding: '2rem', 
-        fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif',
-        maxWidth: '1200px',
-        margin: '0 auto',
-        lineHeight: '1.6'
-      }}>
-        <h1 style={{ 
-          fontSize: '2.5rem', 
-          fontWeight: 'bold', 
-          marginBottom: '1rem',
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>
-          Zion Tech Group
-        </h1>
-        
-        <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#666' }}>
-          Welcome to Zion Tech Group. We deliver cutting-edge IT solutions and AI services 
-          that transform businesses and drive innovation.
-        </p>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-          gap: '1.5rem',
-          marginBottom: '2rem'
-        }}>
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #e1e5e9',
-            borderRadius: '8px',
-            backgroundColor: '#f8f9fa'
-          }}>
-            <h3 style={{ marginBottom: '0.5rem', color: '#333' }}>About Us</h3>
-            <p style={{ color: '#666', marginBottom: '1rem' }}>
-              Learn about our mission and expertise in delivering world-class technology solutions.
-            </p>
-            <Link href="/about" style={{ 
-              color: '#667eea', 
-              textDecoration: 'none',
-              fontWeight: '500'
-            }}>
-              Learn More →
-            </Link>
-          </div>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 section-padding overflow-hidden">
+        <div className="container-max">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in-left">
+              <h1 className="text-responsive-xl font-bold text-gray-900 mb-6 text-balance">
+                Transform Your Business with{' '}
+                <span className="gradient-text">Advanced AI & IT Solutions</span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed text-balance">
+                We deliver cutting-edge technology solutions that drive innovation, 
+                enhance productivity, and accelerate your digital transformation journey.
+              </p>
 
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #e1e5e9',
-            borderRadius: '8px',
-            backgroundColor: '#f8f9fa'
-          }}>
-            <h3 style={{ marginBottom: '0.5rem', color: '#333' }}>Our Services</h3>
-            <p style={{ color: '#666', marginBottom: '1rem' }}>
-              Explore our comprehensive range of IT and AI services designed for modern businesses.
-            </p>
-            <Link href="/services" style={{ 
-              color: '#667eea', 
-              textDecoration: 'none',
-              fontWeight: '500'
-            }}>
-              View Services →
-            </Link>
-          </div>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link href="/contact" className="btn-primary text-center">
+                  Get Started Today
+                </Link>
+                <Link href="/services" className="btn-secondary text-center">
+                  Explore Services
+                </Link>
+              </div>
 
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #e1e5e9',
-            borderRadius: '8px',
-            backgroundColor: '#f8f9fa'
-          }}>
-            <h3 style={{ marginBottom: '0.5rem', color: '#333' }}>Get in Touch</h3>
-            <p style={{ color: '#666', marginBottom: '1rem' }}>
-              Ready to transform your business? Contact us to discuss your project needs.
-            </p>
-            <Link href="/contact" style={{ 
-              color: '#667eea', 
-              textDecoration: 'none',
-              fontWeight: '500'
-            }}>
-              Contact Us →
-            </Link>
+              {/* Trust Indicators */}
+              <div className="flex items-center space-x-6 text-sm text-gray-500">
+                <div className="flex items-center space-x-2">
+                  <span className="text-green-500">✓</span>
+                  <span>Trusted by 500+ companies</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <span className="text-green-500">✓</span>
+                  <span>24/7 Expert Support</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="animate-fade-in-right">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl blur-3xl opacity-20 transform rotate-6"></div>
+                <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    {stats.map((stat, index) => (
+                      <div key={index} className="text-center p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl">
+                        <div className="text-2xl font-bold gradient-text">{stat.number}</div>
+                        <div className="text-sm text-gray-600">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                      All Systems Operational
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {isClient && (
-          <div style={{
-            padding: '1rem',
-            backgroundColor: '#e8f4fd',
-            border: '1px solid #b8daff',
-            borderRadius: '8px',
-            marginTop: '2rem'
-          }}>
-            <p style={{ margin: 0, color: '#004085' }}>
-              🚀 <strong>Enhanced Experience:</strong> This page now includes improved styling, 
-              responsive design, and client-side hydration for better performance.
+      {/* Features Section */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-responsive-lg font-bold text-gray-900 mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-balance">
+              We combine deep industry expertise with cutting-edge technology to deliver 
+              solutions that drive real business value.
             </p>
           </div>
-        )}
-      </main>
-    </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="card p-6 text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container-max text-center">
+          <div className="animate-fade-in-up">
+            <h2 className="text-responsive-lg font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto text-balance">
+              Join hundreds of companies that have already transformed their operations 
+              with our advanced AI and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                Start Your Project
+              </Link>
+              <Link href="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-200">
+                Learn More About Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Experience Notice */}
+      {isClient && (
+        <div className="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg animate-fade-in-up max-w-sm">
+          <div className="flex items-center space-x-2">
+            <span className="text-xl">🚀</span>
+            <div>
+              <div className="font-semibold">Enhanced Experience!</div>
+              <div className="text-sm opacity-90">New design with improved performance</div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
