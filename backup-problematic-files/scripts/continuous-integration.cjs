@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 /**
  * Continuous Integration Automation;
@@ -90,6 +93,8 @@ if (require.main === module) {
       process.exit(1)})}
 module.exports = ContinuousIntegration;
 
+<<<<<<< HEAD
+=======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 
@@ -99,6 +104,7 @@ module.exports = ContinuousIntegration;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -129,6 +135,10 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
 
+<<<<<<< HEAD
+      console.error('Fatal "error")
+      console.error('Fatal "error")
+=======
 
 
 
@@ -138,3 +148,4 @@ const path = require('path')
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
