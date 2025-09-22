@@ -4,12 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 :backup-problematic-files/hooks/useAutoTranslate.ts
 import { translateTextViaAI } from '../utils/translation';
 
-<<<<<<< HEAD
-export type UseAutoTranslateResult = {;
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
@@ -22,11 +18,6 @@ export function useAutoTranslate(
   debounceMs = 600;
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
 
-<<<<<<< HEAD
-  const [translations, setTranslations] = useState<Record<string, string>>({});
-
-return { translations, loading, error }
-=======
 
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -63,4 +54,3 @@ return { translations, loading, error }
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

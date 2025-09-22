@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-import { EmptyResumeProps } from "./types",;
-import { Card, CardContent } from "@/components/ui/card";""
-import { Button } from "@/components/ui/button";""
-import { FilePlus } from 'lucide-react';
-import { EmptyResumeProps } from "./types";"
-=======
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { FilePlus } from 'lucide-react';
 import { EmptyResumeProps } from "./types",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
   return (;
@@ -39,9 +31,5 @@ export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
 }className="gap-2" > <FilePlus className="h-4 w-4" /> Create Resume </Button> </div> </CardContent> </Card>) ;
 };
 "
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/wizard/EmptyResumeState.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

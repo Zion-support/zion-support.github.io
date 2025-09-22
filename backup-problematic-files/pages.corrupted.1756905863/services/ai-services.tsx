@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import Sidebar from \'../../components/Sidebar\' export default function AIServices() { const services = [{ \"title\": \'AI Product Development\',\"price\": \'$25k–$150k project\',\"desc\": \'RAG,agents,evaluation,safety,and monitoring.\' },{ \"title\": \'Data Platforms\',\"price\": \'$5k–$20k/mo\',\"desc\": \'Pipelines,warehousing,governance,and BI.\' },{ \"title\": \'GenAI Integrations\',\"price\": \'$8k–$40k project\',\"desc\": \'Chat,summarization,structured extraction,and workflows.\' },{ \"title\": \'MLOps & Observability\',\"price\": \'$3k–$12k/mo\',\"desc\": \'Evaluation suites,drift detection,and rollout safety.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>AI Services</h1> <p>Practical,production-grade AI for measurable business outcomes.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {services.map((s) => ( <div key={s.title} className=\"ztg-card\"> <h3>{s.title}</h3> <p>{s.desc}</p> <p><strong>{s.price}</strong></p> </div> ))} </div> <div className=\"ztg-card\"> <p> Reference pricing insights from{\' \'} <a href=\""https\": <a href=\"https: <a href=\"https: </p> </div> </div> </div> </div> </div> ) }
 
 import React from 'react';
@@ -11,31 +8,6 @@ interface Ai-servicesProps {
 }
 
 const Ai-services: React.FC<Ai-servicesProps> = ({ className }) => {
-<<<<<<< HEAD
-import Sidebar from \'../../components/Sidebar\' export default function AIServices() { const services = [{ \"title\": \'AI Product Development\',\"price\": \'$25k–$150k project\',\"desc\": \'RAG,agents,evaluation,safety,and monitoring.\' },{ \"title\": \'Data Platforms\',\"price\": \'$5k–$20k/mo\',\"desc\": \'Pipelines,warehousing,governance,and BI.\' },{ \"title\": \'GenAI Integrations\',\"price\": \'$8k–$40k project\',\"desc\": \'Chat,summarization,structured extraction,and workflows.\' },{ \"title\": \'MLOps & Observability\',\"price\": \'$3k–$12k/mo\',\"desc\": \'Evaluation suites,drift detection,and rollout safety.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>AI Services</h1> <p>Practical,production-grade AI for measurable business outcomes.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {services.map((s) => ( <div key={s.title} className=\"ztg-card\"> <h3>{s.title}</h3> <p>{s.desc}</p> <p><strong>{s.price}</strong></p> </div> ))} </div> <div className=\"ztg-card\"> <p> Reference pricing insights from{\' \'} <a href=\""https\": <a href=\"https: <a href=\"https: </p> </div> </div> </div> </div> </div> ) }
-import React from 'react';
-interface AiservicesProps {
-  // Add props here as needed
-}
-export default function Aiservices({ }: AiservicesProps) {
-  return (
-    <div>
-      <h1>Aiservices</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-}
-}
-import Sidebar from \'../../components/Sidebar\' export default function AIServices() { const services = [{ \"title\": \'AI Product Development\',\"price\": \'$25k$150k project\',\"desc\": \'RAG,agents,evaluation,safety,and monitoring.\' },{ \"title\": \'Data Platforms\',\"price\": \'$5k$20k/mo\',\"desc\": \'Pipelines,warehousing,governance,and BI.\' },{ \"title\": \'GenAI Integrations\',\"price\": \'$8k$40k project\',\"desc\": \'Chat,summarization,structured extraction,and workflows.\' },{ \"title\": \'MLOps & Observability\',\"price\": \'$3k$12k/mo\',\"desc\": \'Evaluation suites,drift detection,and rollout safety.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>AI Services</h1> <p>Practical,production-grade AI for measurable business outcomes.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {services.map((s) => ( <div key={s.title} className=\"ztg-card\"> <h3>{s.title}</h3> <p>{s.desc}</p> <p><strong>{s.price}</strong></p> </div> ))} </div> <div className=\"ztg-card\"> <p> Reference pricing insights from{\' \'} <a href=\""https\": <a href=\"https: <a href=\"https: </p> </div> </div> </div> </div> </div> ) }"
-const Ai-services: React.FC<Ai-servicesProps> = ({ className }) => {
-"
-    <div className={className || }>
-</div>
-      <h1>Ai-services</h1>
-      <p>This component is under development.</p>
-=======
   return (
     <div className={className || ''}>
       <h1>Ai-services</h1>
@@ -44,4 +16,3 @@ const Ai-services: React.FC<Ai-servicesProps> = ({ className }) => {
   );
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

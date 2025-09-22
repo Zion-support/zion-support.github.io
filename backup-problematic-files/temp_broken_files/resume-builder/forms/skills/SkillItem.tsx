@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-import { SkillItemProps } from './types',;
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
-=======
 import { Badge } from '@/components/ui/badge',;
 import { Button } from '@/components/ui/button',;
 import { Trash2 } from 'lucide-react';
 import { SkillItemProps } from './types',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
   return (;
@@ -28,10 +20,7 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
         size="icon";
         className="h-5 w-5 p-0 ml-1";
         onClick={() => onDelete(skill.id!, category)}
-<<<<<<< HEAD
-=======
         aria-label="Delete skill";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       >;
         <Trash2 className="h-3 w-3" />;
       </Button>;

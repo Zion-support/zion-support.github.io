@@ -12,13 +12,6 @@ interface ChatMessageProps {;
   timestamp:Date;
 }
 ;
-<<<<<<< HEAD
-export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
-  const { theme } = useTheme(),;
-  ;
-  return (;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 export const ChatMessage:React.FC<ChatMessageProps> = ({;
   message,;
   isUser,;
@@ -37,8 +30,6 @@ export const ChatMessage:React.FC<ChatMessageProps> = ({;
       <Avatar className="h-8 w-8">;
         {isUser ? (;
           <>;
-<<<<<<< HEAD
-=======
             <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />;
             <AvatarFallback>U</AvatarFallback>;
           </>;
@@ -47,16 +38,11 @@ export const ChatMessage:React.FC<ChatMessageProps> = ({;
             <AvatarImage;
               src="https://placehold.co/40x40?text=AI";
               alt="Zion Support";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             />;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
-<<<<<<< HEAD
-</Avatar>;
-=======
       </Avatar>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       ;
       <div className={cn(;
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",;
@@ -137,16 +123,5 @@ return (<> <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" /
 };
 //A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy //dependency like DOMPurify for now and instead escape the five critical //characters. This ensures any user-supplied string is rendered harmless //before we perform our link replacements below. ;
 }//First, escape any HTML so that user input cannot break out of the intended //markup.);
-<<<<<<< HEAD
-:temp_broken_files/support/ChatMessage.tsx
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatMessage.tsx
-)
-return (<> <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" /> <AvatarFallback>U </>) : (<> <AvatarImage src="https://placehold.co/40x40?text=AI" alt="Zion Support" /> <AvatarFallback className="bg-zion-purple text-white" >Z </>) ;"
-
-} </div> </div> </div>) ;"
-pr-12325
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

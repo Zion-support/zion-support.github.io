@@ -26,53 +26,6 @@ function containsVagueJobClaims(text: string): string[] {
   });
   
   return reasons;
-<<<<<<< HEAD
-
-;
-const suspiciousLinkHosts = [;"
-  'paypal.me',
-  'cash.app',
-  'venmo.com',
-  'wa.me',
-  't.me',
-  'telegram.me',
-  'whatsapp.com',
-  'westernunion.com',
-  'moneygram.com',']
-];
-const suspicious_phrases = [;
-  'whatsapp me',
-  'telegram me',
-  'contact me on whatsapp',
-  'cashapp only',
-  'crypto only',
-  'send crypto',
-  'wire transfer',
-  'gift card',
-  'western union',
-  'off - platform payment',
-  'outside payment',
-  'pay outside',
-  'pay me directly',
-  'dm me on',
-  'reach me on whatsapp',
-  'skype me',
-  'email me at',']
-const vagueScammyJobPhrases = [;
-  'easy work',
-  'quick money',
-  'no experience needed',
-  'work from home and earn fast',
-  'daily payouts',
-  'earn $\\d+ per day',']
-function containsSuspiciousHost (text: string): boolean {
-  // TODO: Implement
-  const lower = text.toLowerCase ();
-  return suspiciousLinkHosts.some (host => lower.includes (host));
-}
-;
-export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {;
-=======
 }
 
 
@@ -104,7 +57,6 @@ export async function evaluateHeuristics(
   event: FraudEvent
   deps: HeuristicDeps
 ): Promise<HeuristicEvaluation> {
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   const reasons: string[] = [];
   let severity: HeuristicEvaluation['severity'] = 'low';
 
@@ -246,11 +198,8 @@ export function run_heuristics (data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
 ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   return {
     flagged: reasons && reasons.length > 0,
     reasons,
@@ -260,24 +209,13 @@ export function run_heuristics (data: any): HeuristicResult {
 
 
 
-<<<<<<< HEAD
-}
-  }
 
-}
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
   return {;
     flagged: reasons.length > 0;
     reasons;
     severity}
 }
-<<<<<<< HEAD
-</string>`;
-=======
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

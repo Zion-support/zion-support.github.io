@@ -21,22 +21,16 @@ key={service.id}
                     >
                       <h4 className="text-xl font-semibold text-white mb-3">
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                         {service.title}
                       </h4>;
                       <p className="text-gray-300 mb-4">;
                         {service.description}
                       </p>;
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center text-sm text-cyan-400">;
                           <TrendingUp className="w-4 h-4 mr-2" />;
@@ -46,8 +40,6 @@ key={service.id}
                           <Star className="w-4 h-4 mr-2" />;
                           {service.growthRate}
 
-<<<<<<< HEAD
-=======
 
                         </div>
                       </div>
@@ -74,13 +66,10 @@ href={_`/services/${service.slug}`}
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   ))}
                 </div>;
               </motion.div>;
             ))}
-<<<<<<< HEAD
-=======
 
 
           </motion.div>
@@ -212,4 +201,3 @@ href="https://ziontechgroup.com"
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

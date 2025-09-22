@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 import React from 'react';
@@ -29,7 +27,6 @@ import {
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   Brain,
   Atom,
   Shield,
@@ -48,8 +45,6 @@ import {
   Building,
   Phone,
 
-<<<<<<< HEAD
-=======
   Mail,;
   MapPin,;} from 'lucide-react';
 
@@ -65,7 +60,6 @@ import {
 
 // Import our new 2025 V2 innovative services
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
@@ -240,10 +234,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
       <SEO
@@ -272,11 +263,7 @@ import {
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react',
 
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto text-center">
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           >
             Experience the future of technology with our revolutionary portfolio
             of innovative micro SAAS, IT infrastructure, AI services, industry
@@ -358,18 +345,6 @@ import {
           </motion.h2>
           <motion.div
             className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion.div
-<<<<<<< HEAD
-            </div>
-            <div className='text-center'>
-              <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-white mb-2'>
-                Visit Us
-              </h3>
-              <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
-              <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-
-=======
 
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>            <a
               href="#services" 
@@ -402,7 +377,6 @@ import {
             className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion && motion.div 
             className="grid md:grid-cols-3 gap-8"
             initial={{ opacity: 0, y: 20 }}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             whileInView={{ opacity: 1, y: 0 }}
     ...emergingTechBreakthroughs2025V2;
   const service_categories = [;
@@ -540,10 +514,6 @@ import {
           <motion.div;
             className="flex flex - col sm:flex - row gap - 4 justify - center";
             animate={{ opacity: 1, coordinate_y: 0 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             transition={{ duration: 0.8, delay: 0.4 }}
           >;
             <a;
@@ -562,14 +532,7 @@ import {
             </a>;
             <a;
               href="#contact";
-<<<<<<< HEAD
-className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200";
-              href="#contact";""
-              className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200";"
-pr-12325
-=======
               className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               Get Started;
             </a>;
           </motion.div>;
@@ -588,26 +551,6 @@ pr-12325
             viewport={{ once: true }}
             transition={{ duration: 0 && 0.6 }}>;
             Ready to Transform Your Business?;
-<<<<<<< HEAD
-          </motion.h2>;
-          <motion.div;
-            className='grid md:grid - cols - 3 gap - 8'            initial={{ opacity: 0, coordinate_y: 20 }}          <motion.div;
-            className="grid md:grid - cols - 3 gap - 8";
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            className='text - 3xl md:text - 4xl font - bold text - white mb - 8'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="contact" className="py - 16 px-4 bg-black / 20">;
-        <div className="max - w-4xl mx-auto text-center">;
-          <motion.h2;
-            className="text - 3xl md:text - 4xl font - bold text-white mb-8";
-            className='text - 3xl md:text - 4xl font - bold text - white mb - 8'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="contact" className="py - 16 px - 4 bg - black / 20">;"
-        <div className="max - w-4xl mx - auto text - center">;"
-          <motion.h2;"
-            className="text - 3xl md:text - 4xl font - bold text - white mb - 8";"
-pr-12325
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-=======
           </motion && motion.h2>;
           <motion&& motion.div
             className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion && motion.div 
@@ -616,7 +559,6 @@ pr-12325
             whileInView={{ opacity: 1, y: 0 }}
 
             </div>
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             <div className='text-center'>
               <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
               <h3 className='text-xl font-semibold text-white mb-2'>
@@ -879,14 +821,7 @@ pr-12325
                     <motion.div;
 
                       key={service.id}
-<<<<<<< HEAD
-                  </p>;
-                </div>;"
-                <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-                      key={service.id}
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                       whileHover={_{ y: -5}}
                     >
@@ -907,14 +842,11 @@ pr-12325
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
                           {_service.marketSize}
-<<<<<<< HEAD
-=======
 
 
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                         </div>
                         <div className='flex items-center text-sm text-green-400'>
                           <Star className='w-4 h-4 mr-2' />
@@ -1029,47 +961,6 @@ pr-12325
                         {service.title}
                       </h4>;
                       <p className="text - gray - 300 mb - 4">;
-<<<<<<< HEAD
-                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'>;
-                        Learn More <ArrowRight className='w-4 h-4 ml-2' />                      </a>            variants={staggerContainer}
-
-                        Learn More <ArrowRight className='w - 4 h - 4 ml - 2' />                      </a>            variants={stagger_container}
-
-              <motion.div key={category.id} variants={fadeInUp}>;
-                <div className="text-center mb-12">;
-                <div className="text - center mb - 12">;"
-</div>`;
-pr-12325
-                  <div className={`inline - flex p - 4 rounded - 2xl bg - gradient - to - r ${category.color} mb - 6`}>;
-                  <h3 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;"
-                  </h3>;"
-                  <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;"
-                <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;"
-
-                    {category.icon}
-                  </div>;
-                  <h3 className="text - 3xl md:text - 4xl font - bold text-white mb-4">;
-                    {category.name}
-                  </h3>;
-                  <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
-                    {category.description}
-
-                  </p>;
-                </div>;
-                <div className="grid md:grid - cols - 2 lg:grid - cols-3 gap-8">;
-                  {category.services.map ((service) => (
-                    <motion.div;
-
-                      key={service.id}
-                      className="bg - black / 30 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 6 hover:border - cyan - 500 / 50 transition - all duration-300 hover:scale-105";
-                      while_hover={{ coordinate_y: -5 }}
-                    >;
-                      <h4 className="text - xl font - semibold text-white mb-3">;
-                        {service.title}
-                      </h4>;
-                      <p className="text - gray-300 mb-4">;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                         {service.description}
 
           >;
@@ -1086,97 +977,12 @@ pr-12325
                     {category && category.description}
                   </p>;
                 </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
                   {category && category.services.map((service) => (;
                     <motion&& motion.div
                       key={service && service.id}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
-<<<<<<< HEAD
-
-                        </div>
-                        <div className="flex items-center text-sm text-green-400">
-                          <Star className="w-4 h-4 mr-2" />
-                          {_service.growthRate}
-                        </div>
-                      </div>
-
-                        </div>
-                        <div className="text-sm text-gray-400">
-                          {_(service as any).pricing?.professional ?
-                        </div>
-                        <div className="text-sm text-gray-400">
-                          {_(service as any).pricing?.professional ? 
-                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${_(service as any).pricing.enterprise}` :
-                            `${_service.price} ${_service.period}`
-                          }
-                        </div>
-                      </div>
-                      <a
-                        href={_`/services/${service.slug}`}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-                      >
-                        Learn More <ArrowRight className='w-4 h-4 ml-2' />                      </a>            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {serviceCategories.map((category) => (
-              <motion.div key={category.id} variants={fadeInUp}>
-                <div className="text-center mb-12">
-                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
-                    {category.icon}
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    {category.name}
-                  </h3>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    {category.description}
-                  </p>
-                </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service) => (
-                    <motion.div
-                      key={service.id}
-                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
-                      whileHover={{ y: -5 }}
-                    >
-                      <h4 className="text-xl font-semibold text-white mb-3">
-                        {service.title}
-                      </h4>
-                      <p className="text-gray-300 mb-4">
-                        {service.description}
-                      </p>
-                      <div className="space-y-3 mb-6">
-                        <div className="flex items-center text-sm text-cyan-400">
-                          <TrendingUp className="w-4 h-4 mr-2" />
-                          {service.marketSize}
-                        </div>
-                        <div className="flex items-center text-sm text-green-400">
-                          <Star className="w-4 h-4 mr-2" />
-                          {service.growthRate}
-                        </div>
-                      </div>
-                      <div className="mb-6">
-                        <div className="text-2xl font-bold text-white mb-2">
-                          Starting at {(service as any).pricing?.starter |service.price}
-                        </div>
-                        <div className="text-sm text-gray-400">
-                          {(service as any).pricing?.professional ?
-                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :
-                            `${service.price} ${service.period}`
-
-                          }
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">;"
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;"
-                    <motion&& motion.div;
-                      key={service && service.id}"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       whileHover={{ y: -5 }}>;
                       <h4 className="text-xl font-semibold text-white mb-3">;
                         {service && service.title}
@@ -1262,15 +1068,10 @@ pr-12325
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}
           <motion.div
 
-<<<<<<< HEAD
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4 bg-black/20">"
-      <section className="py-20 px-4 bg-black/20">"
-=======
           </motion && motion.div>;
         </div>;
       </section>;
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       {/* Market Statistics */}
       <section className='py-20 px-4 bg-black/20'>;
         <div className='max-w-7xl mx-auto'>;
@@ -1291,13 +1092,6 @@ pr-12325
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
-            whileInView={{ opacity: 1, y: 0 }}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       </p>;
                       <div className="space - y-3 mb - 6">;
                         <div className="flex items - center text - sm text - cyan - 400">;
@@ -1314,28 +1108,6 @@ pr-12325
                           Starting at {(service as any).pricing?.starter || service.price}
                         </div>;
                         <div className="text - sm text - gray - 400">;
-<<<<<<< HEAD
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-                      </p>;
-                      <div className="space-y-3 mb-6">;
-                        <div className="flex items - center text - sm text-cyan-400">;
-                          <TrendingUp className="w - 4 h-4 mr-2" />;
-                          {service.market_size}
-                        </div>;
-                        <div className="flex items - center text - sm text-green-400">;
-                          <Star className="w - 4 h-4 mr-2" />;
-                          {service.growth_rate}
-                        </div>;
-                      </div>;
-                      <div className="mb-6">;
-                        <div className="text - 2xl font - bold text-white mb-2">;
-                          Starting at {(service as any).pricing?.starter || service.price}
-                        </div>;
-                        <div className="text - sm text-gray-400">;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
@@ -1386,16 +1158,9 @@ pr-12325
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
-<<<<<<< HEAD
-          >
-            <div className='text-center'>
-
-      {_/* Market Statistics */}"
-=======
 
           >
             <div className='text-center'>
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
                 25+
               </div>
@@ -1642,10 +1407,7 @@ pr-12325
           </motion && motion.h2>;
           <motion&& motion.p
             className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion && motion.p 
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             className="text-xl text-gray-300 mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1664,26 +1426,6 @@ pr-12325
               Contact Our Team;
             </a>;
             <a
-<<<<<<< HEAD
-              href='https://ziontechgroup.com'
-              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >              href={`mailto:${contactInfo.email}`}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              Contact Our Team
-            </a>
-            <a
-              href="https://ziontechgroup.com"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-            >
-              Visit Website
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-);
-}
-=======
 
             transition={{ duration: 0.6, delay: 0.2 }}
 
@@ -1700,7 +1442,6 @@ pr-12325
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -1715,19 +1456,14 @@ pr-12325
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           >
             Join thousands of businesses already transforming their operations
             with our cutting-edge solutions.
           </motion.p>
-<<<<<<< HEAD
-=======
 
           <motion.div
             className='flex flex-col sm:flex-row gap-4 justify-center'            initial={{ opacity: 0, y: 20 }}            Join thousands of businesses already transforming their operations with our cutting-edge solutions.
@@ -1748,7 +1484,6 @@ pr-12325
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           >
             <a
               href={`mailto:${contactInfo.email}`}
@@ -1775,10 +1510,7 @@ pr-12325
     </div>
 );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               href='https://ziontechgroup && ziontechgroup.com'
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>              href={`mailto:${contactInfo && contactInfo.email}`}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
@@ -1792,19 +1524,6 @@ pr-12325
             </a>;
           </motion && motion.div>;
         </div>;
-<<<<<<< HEAD
-          <motion&& motion.p;"
-            className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion && motion.p;
-            className="text-xl text-gray-300 mb-8""
-              href={`mailto:${contactInfo.email}`}"
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg
-              href='https://ziontechgroup.com`;
-              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >              href={`mailto:${contactInfo.email}`}
-              href="https://ziontechgroup.com"""
-              href="https://ziontechgroup && ziontechgroup.com"""
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">;"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       </section>;
     </div>;
   );
@@ -1905,8 +1624,5 @@ pr-12325
         </div>;
       </section>;
     </div>);
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

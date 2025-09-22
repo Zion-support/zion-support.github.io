@@ -8,18 +8,6 @@ import { Check, Pencil } from 'lucide-react';
 ;
 interface GeneratedDescriptionDisplayProps {;
   description:string,;
-<<<<<<< HEAD
-import React, { useState } from "react";""
-import { useToast } from "@/hooks/use-toast";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";""
-import { Textarea } from "@/components/ui/textarea";""
-import { Check, Pencil } from 'lucide-react';
-;
-interface GeneratedDescriptionDisplayProps {,
-  description: string;,;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   onSave:(editedDescription:string) => void;
 }
 ;
@@ -127,9 +115,5 @@ toast ({;
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

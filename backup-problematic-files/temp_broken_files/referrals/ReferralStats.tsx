@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 ;
 interface ReferralStatsProps {;
@@ -33,24 +30,6 @@ export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
       value:stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` :"-",;
       icon:<Award className="h-5 w-5 text-muted-foreground" />,;
       description:"Credits earned from referrals"}],;
-<<<<<<< HEAD
-    {;
-      title: "Completed";,;
-      value: stats.completedReferrals;,;
-      icon: <Star className="h-5 w-5 text-muted-foreground" />;,,
-  description: "Signed up & completed onboarding";},;
-    {;
-      title: "Pending";,;
-      value: stats.pendingReferrals;,;
-      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />;,,
-  description: "Not yet completed onboarding";},;
-    {;
-title:"Total Rewards",;
-      value:stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` :"-",;
-      icon:<Award className="h-5 w-5 text-muted-foreground" />,,
-  description:"Credits earned from referrals"}],;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;

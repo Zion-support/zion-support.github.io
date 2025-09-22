@@ -3,34 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SEOEnhancer from '../components/SEOEnhancer';
 
-<<<<<<< HEAD
-describe('SEOEnhancer', () => {
-  test('renders without crashing', () => {
-    render(<SEOEnhancer />);
-    expect(screen.getByTestId('seoenhancer')).toBeInTheDocument();
-  });
-  
-  test('displays correct content', () => {
-    render(<SEOEnhancer />);
-  });
-  
-  test('handles user interactions', () => {
-    render(<SEOEnhancer />);
-  });
-  
-  test('applies correct styling', () => {
-    render(<SEOEnhancer />);
-  });
-});
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer from '../components/SEOEnhancer" describe('SEOEnhancer',() => {' test('renders without crashing',() => {' render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOEnhancer / />) }) test('handles user interactions',() => {' render(<SEOEnhancer / />) }) test('applies correct styling',() => {' render(<SEOEnhancer / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer from '../components/SEOEnhancer" describe('SEOEnhancer',() => {' test('renders without crashing',() => {' render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOEnhancer / />) }) test('handles user interactions',() => {' render(<SEOEnhancer / />) }) test('applies correct styling',() => {' render(<SEOEnhancer / />) }) })
-
-
-=======
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SEOEnhancer from "./components/SEOEnhancer" describe("SEOEnhancer",() => {" test("renders without crashing",() => {" render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SEOEnhancer / />) }) test("handles user interactions",() => {" render(<SEOEnhancer / />) }) test("applies correct styling",() => {" render(<SEOEnhancer / />) }) })'"'"
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SEOEnhancer from "./components/SEOEnhancer" describe("SEOEnhancer",() => {" test("renders without crashing",() => {" render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SEOEnhancer / />) }) test("handles user interactions",() => {" render(<SEOEnhancer / />) }) test("applies correct styling",() => {" render(<SEOEnhancer / />) }) })'"'"
@@ -40,9 +12,3 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer from '../components/SEOEnhancer" describe('SEOEnhancer',() => {' test('renders without crashing',() => {' render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOEnhancer / />) }) test('handles user interactions',() => {' render(<SEOEnhancer / />) }) test('applies correct styling',() => {' render(<SEOEnhancer / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer from '../components/SEOEnhancer" describe('SEOEnhancer',() => {' test('renders without crashing',() => {' render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOEnhancer / />) }) test('handles user interactions',() => {' render(<SEOEnhancer / />) }) test('applies correct styling',() => {' render(<SEOEnhancer / />) }) })
-=======
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

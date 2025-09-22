@@ -34,34 +34,11 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             className="object-cover";
             loading="lazy";
           />;
-<<<<<<< HEAD
-) :(;
-=======
         ) :(;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           <div className="w-full h-full flex items-center justify-center bg-muted">;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
-<<<<<<< HEAD
-
-              <Button variant="ghost" size="icon">;
-                <Github className="h-4 w-4" />;
-              </Button>;
-            </a>;
-            <a;
-              href={project.github_url}"
-              target="_blank";""
-              rel="noopener noreferrer";""
-              aria-label="GitHub";""
-              title="GitHub";"
-            >;
-</a>"
-              <Button variant="ghost" size="icon" aria-label="GitHub link">;"
-                <Github className="h-4 w-4" />;"
-
-            </a>;
-=======
       </div>;
       ;
       <CardContent className="flex-grow pt-6">;
@@ -97,7 +74,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           )}
           ;
           {project.demo_url && (;
@@ -155,13 +131,5 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   deleteDialogOpen ;
 }onOpenChange= {;
   setDeleteDialogOpen ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/portfolio/ProjectCard.tsx
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;"}"
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectCard.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

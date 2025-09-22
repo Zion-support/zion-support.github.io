@@ -6,35 +6,10 @@ import { define_config } from 'cypress;
 
 
 
-<<<<<<< HEAD
-export default defineConfig({
-  e2e: {
-    baseUrl: 'http://localhost:5000',
-    supportFile: false,
-import { defineConfig } from 'cypress;
-;
-export default defineConfig({,";
-  e2e: {,'
-  baseUrl: 'http://localhost:3000',
-    supportFile: cypress/support/e2e.ts',
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-ursor/fix-lint-push-and-merge-to-main-ae4e
-    viewportWidth: 1280,
-    viewportHeight: 720,
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 export default define_config ({,
   e2e: {,
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -53,7 +28,6 @@ export default defineConfig({,
     viewportWidth: 1280,
     viewportHeight: 720,
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   base_url: 'http://localhost:3000',
 support_file: cypress / support / e2e.ts',
 import { define_config } from 'cypress'; export default define_config ({ e2e: { base_url: 'http: support_file: 'cypress / support / e2e.ts', spec_pattern: 'cypress / e2e*.cy.{js, jsx, ts, tsx}', viewport_width: 1280, viewport_height: 720, video: false, screenshotOnRunFailure: true, defaultCommandTimeout: 10000, request_timeout: 10000, response_timeout: 10000, setupNodeEvents () { }, }, component: { dev_server: { framework: 'react', bundler: 'vite', }, }, });
@@ -75,70 +49,13 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
       open_mode: 0;
     },
 
-<<<<<<< HEAD
-    setupNodeEvents(on, config) {,
-      // implement node event listeners here;
-    }
-}
-}),
-import { defineConfig } from 'cypress';
-export default defineConfig({
-  "e2e": {
-    baseUrl: 'http://localhost:3000',
-    "supportFile": 'cypress/support/e2e.ts',
-    "specPattern": 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    "viewportWidth": 1280,
-    "viewportHeight": 720,
-    "video": false,
-    "screenshotOnRunFailure": true,
-    "defaultCommandTimeout": 10000,
-    "requestTimeout": 10000,
-    "responseTimeout": 10000,
-    setupNodeEvents() {
-      // Add any custom setup here
-    }},
-  "component": {
-    devServer: {
-      framework: 'react',
-      "bundler": 'vite'}}});
-import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
-import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
-<:backup-problematic-files/cypress.config.ts
-
-import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
-:backup-problematic-files/cypress.config.ts
-import { defineConfig } from 'cypress;
-;
-export default defineConfig({,
-  e2e: {,
-  baseUrl: 'http://localhost:3000',
-import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    viewportWidth: 1280,
-    viewportHeight: 720,
-    video: false,
-    screenshotOnRunFailure: true,
-    defaultCommandTimeout: 10000,
-    requestTimeout: 10000,
-    responseTimeout: 10000,
-    pageLoadTimeout: 30000,
-    retries: {,
-      runMode: 2,
-      openMode: 0
-    },
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     setupNodeEvents(on, config) {,
       // implement node event listeners here
     }
   }
 }),
-<<<<<<< HEAD
-<:backup-problematic-files/cypress.config.ts
-=======
     specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
   },
 });
@@ -157,7 +74,6 @@ origin/automation-improvements-final
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 export default defineConfig({
   e2e: {
   baseUrl: 'http://localhost:3000'
@@ -181,8 +97,6 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     }
   }
 })
-<<<<<<< HEAD
-=======
 
 
     setupNodeEvents (on, config) {,
@@ -193,4 +107,3 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Calendar, Clock, Check } from 'lucide-react';
 ;
 interface ProfileAvailabilityProps {;

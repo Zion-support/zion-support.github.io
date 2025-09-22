@@ -10,20 +10,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields",;
 import { ProjectDetailsField } from "./ProjectDetailsField",;
 import { TimelineField } from "./TimelineField",;
 import { BudgetFields } from "./BudgetFields",;
-<<<<<<< HEAD
-import React from "react";""
-import { useHireRequestForm, FormValues } from "./useHireRequestForm";""
-import { Button } from "@/components/ui/button";""
-import { DialogFooter } from "@/components/ui/dialog";""
-import { Form } from "@/components/ui/form";""
-import { Loader2 } from 'lucide-react';
-import { TalentProfile } from "@/types/talent";""
-import { PersonalInfoFields } from "./PersonalInfoFields";""
-import { ProjectDetailsField } from "./ProjectDetailsField";""
-import { TimelineField } from "./TimelineField";""
-import { BudgetFields } from "./BudgetFields";"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 export interface HireRequestFormProps {;
   talent:TalentProfile,;
@@ -123,9 +109,5 @@ return (<Form {;
   isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request') ;
 }</Button> </DialogFooter> </form> </Form>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/hire-request/HireRequestForm.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

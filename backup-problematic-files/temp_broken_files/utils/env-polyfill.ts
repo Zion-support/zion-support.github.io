@@ -84,17 +84,6 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 };
 versions: {;
   ;
-<<<<<<< HEAD
-;
-// // // console.log('✅ Environment polyfill loaded successfully');
-;export default safeEnv,
-/** * Environment Polyfill for Browser * * This polyfill ensures that process.env is always available in the browser environment. * It prevents the "Cannot read properties of undefined (reading 'env') " error. */ //Define safe defaults for environment variables //Create a safe process object const createProcessObject = () => ({;
-  env: {;
-  ...defaultEnv ;
-};
-versions: {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 };';
 platform: 'browser';';
 arch: 'x64';';
@@ -104,13 +93,5 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
-<<<<<<< HEAD
-:temp_broken_files/utils/env-polyfill.ts
-}"}// Ensure process is available globally '"
-}
-}// Ensure process is available globally '"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

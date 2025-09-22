@@ -1,22 +1,10 @@
 
-<<<<<<< HEAD
-=======
 import { Button } from '@/components/ui/button',;
 import { ArrowLeft, FileText, Link } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { PdfExportButton } from '../PdfExportButton',;
 import { Resume } from '@/types/resume',;
 import { useState } from 'react',;
 import { useIsMobile } from '@/hooks/use-mobile',;
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react';
-import { PdfExportButton } from '../PdfExportButton';
-import { Resume } from '@/types/resume';
-import { useState } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface PreviewHeaderProps {;
   resume:Resume,;
@@ -92,8 +80,6 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
         </Button>;
       </div>;
     </div>;
-<<<<<<< HEAD
-=======
   ),;}
  ;
 }`;
@@ -101,7 +87,6 @@ document.head.appendChild (style);
 //Trigger print dialog window.print ();
 //Remove the temporary style element after printing return (<div className= {;
   `flex $ {;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   isMobile ? 'flex-col' : 'justify-between' ;
 }items-$ {';
   isMobile ? 'stretch' : 'center' ;
@@ -118,9 +103,5 @@ document.head.appendChild (style);
   resume ";
 }/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/preview/PreviewHeader.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

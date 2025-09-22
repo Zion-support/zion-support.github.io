@@ -1,10 +1,6 @@
 import Link from 'next/link';
-<<<<<<< HEAD:app/ai-2026-quantum-neural-fusion/page.tsx
-import React from 'react';
-=======
 import { Card } from '../../components/ui/Card';
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Award, Lightbulb, Atom, Cpu, Network } from 'lucide-react';
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa:app_backup/ai-2026-quantum-neural-fusion/page.tsx
 
 export const metadata = {
   title: 'Page',

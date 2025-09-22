@@ -1,10 +1,7 @@
 
-<<<<<<< HEAD
-=======
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Button } from "@/components/ui/button",;
 import { AppStoreButtons } from "./AppStoreButtons",;
 ;
@@ -24,15 +21,6 @@ export const MobileAppHero:React.FC = () => {;
             <p className="text-lg md:text-xl opacity-90 mb-8">;
               Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.;
             </p>;
-<<<<<<< HEAD
-<AppStoreButtons ;
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />;
-</div>;
-
-            <Link to="/open-app">;
-=======
             ;
             <div className="mb-8">;
               <AppStoreButtons ;
@@ -42,7 +30,6 @@ export const MobileAppHero:React.FC = () => {;
             </div>;
             ;
             <Link href="/open-app">;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">;
                 Open App;
                 <ArrowRight size={20} />;
@@ -66,13 +53,5 @@ export const MobileAppHero:React.FC = () => {;
 }googlePlayUrl= {;"  googlePlayUrl ";"}/> </div> <Link href=" /open-app"> <Button variant=" outline"size=" lg"className=" flex gap-2 border-white text-white hover:bg-white/10" > Open App <ArrowRight size= {;
   20 ;
 }/> </Button> </Link> </div> </div> </div> </div> </div> </section>) ;
-<<<<<<< HEAD
-:temp_broken_files/mobile-app/MobileAppHero.tsx
-};""
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/MobileAppHero.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

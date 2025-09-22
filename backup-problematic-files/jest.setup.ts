@@ -89,33 +89,7 @@ beforeAll(() => {
 afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
-<<<<<<< HEAD
-});
-;
-// Mock IntersectionObserver;
-global.IntersectionObserver = jest.fn ().mock_implementation (() => ({)
-  disconnect: jest.fn (),
-}));
-// Mock console methods to reduce noise in tests;
-const originalConsoleError = console.error;
-const originalConsoleWarn = console.warn;
-before_all (() => {
-  console.error = (...args: any[]) => {
-    // Check condition;
-if ()
-    ) {) {
-  $2;
-    originalConsoleError.call (console, ...args);
-  console.warn = (...args: any[]) => {
-    // Check condition;
-    originalConsoleWarn.call (console, ...args);
-after_all (() => {
-  console.error = originalConsoleError;
-  console.warn = originalConsoleWarn;
-});
-=======
 
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

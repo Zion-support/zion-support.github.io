@@ -128,12 +128,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   );
 };
 
-<<<<<<< HEAD
-export default InteractiveNavigation
-};
-=======
 export default InteractiveNavigation;};
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 const InteractiveNavigation: React.FC: = () => {";
@@ -147,8 +142,5 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 export default Component}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,30 +1,4 @@
-<<<<<<< HEAD
-        >;
-          {type}
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      ))}
-
-        >;
-          {location}
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      ))}
-
-        >;
-          {availability}
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      ))}
-
-          {selectedRating}+ Stars;
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      )}
-    </div>;
-=======
 import React from 'react',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
@@ -179,13 +153,5 @@ value: labels[type] || type ;
 }variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
 }<Button > Clear all </Button> </div>) ;
 };
-<<<<<<< HEAD
-:temp_broken_files/search/ActiveFiltersBar.tsx
-export default ActiveFiltersBar;"'"
-export default ActiveFiltersBar;
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/search/ActiveFiltersBar.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

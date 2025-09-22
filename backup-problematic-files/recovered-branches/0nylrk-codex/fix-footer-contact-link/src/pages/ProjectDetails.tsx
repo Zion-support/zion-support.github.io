@@ -119,12 +119,9 @@ function ProjectDetailsContent() {;
       const { data, error } = await supabase;
         .from("project_notes");
         .insert({;
-<<<<<<< HEAD
-=======
           project_id:project.id,;
           user_id:user.id,;
           content:newNote});
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         .select(),;
       ;
       if (error) throw error,;
@@ -198,98 +195,6 @@ function ProjectDetailsContent() {;
       </div>;
     ),;
   }
-<<<<<<< HEAD
-
-        <Card>;
-"
-          <CardContent className="flex flex-col items-center justify-center py-10">;"
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;"
-            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;""
-            <p className="text-muted-foreground mb-4">;"
-</p>
-            </p>;"
-            <Button onClick={() => navigate("/dashboard")}>;"
-
-    <>;
-      <SEO ;"
-        title={`Project: ${project.job?.title || 'Project Details';} | Zion AI Marketplace`} ;
-        description="View and manage your project details and collaboration.";"
-      />;
-
-      <AppHeader />;
-      <main className="container mx-auto px-4 py-8">;"
-</main>"
-        <div className="mb-6">;"
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;"
-            <div>;
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>;""
-              <div className="flex items-center gap-2 mt-1">;"
-                <span className="text-muted-foreground">;"
-</span>
-                </span>;
-</div>;
-            </div>;
-            ;
-            {/* Action Buttons Based on Role and Status */}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-  ;
-  if (!project) {;
-    return (;
-      <div className="container mx-auto py-8">;
-        <Card>;
-          <CardContent className="flex flex-col items-center justify-center py-10">;
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;
-            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;
-            <p className="text-muted-foreground mb-4">;
-              The project you're looking for doesn't exist or you don't have access to it.;
-            </p>;
-            <Button onClick={() => navigate("/dashboard")}>;
-              Return to Dashboard;
-            </Button>;
-          </CardContent>;
-        </Card>;
-      </div>;
-    ),;
-  }
-  ;
-  // Check if user is either the client or the talent;
-  const isClient = user?.id === project.client_id,;
-  const isTalent = user?.id === project.talent_id,;
-  ;
-  if (!isClient && !isTalent) {;
-    navigate("/unauthorized"),;
-    return null,;
-  }
-  ;
-  const isOfferPending = project.status === "offer_sent",;
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),;
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),;
-  ;
-  return (;
-    <>;
-      <SEO ;
-        title={`Project:${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
-        description="View and manage your project details and collaboration.";
-      />;
-      <AppHeader />;
-      <main className="container mx-auto px-4 py-8">;
-        <div className="mb-6">;
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;
-            <div>;
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>;
-              <div className="flex items-center gap-2 mt-1">;
-                {getStatusBadge(project.status)}
-                <span className="text-muted-foreground">;
-                  Started on {format(new Date(project.start_date), "PPP")}
-                </span>;
-              </div>;
-            </div>;
-            ;
-            {/* Action Buttons Based on Role and Status */}
-<<<<<<< HEAD
-=======
-
   ;
   if (!project) {;
     return (;
@@ -345,8 +250,62 @@ function ProjectDetailsContent() {;
             ;
             {/* Action Buttons Based on Role and Status */}
 
+  ;
+  if (!project) {;
+    return (;
+      <div className="container mx-auto py-8">;
+        <Card>;
+          <CardContent className="flex flex-col items-center justify-center py-10">;
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;
+            <p className="text-muted-foreground mb-4">;
+              The project you're looking for doesn't exist or you don't have access to it.;
+            </p>;
+            <Button onClick={() => navigate("/dashboard")}>;
+              Return to Dashboard;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      </div>;
+    ),;
+  }
+  ;
+  // Check if user is either the client or the talent;
+  const isClient = user?.id === project.client_id,;
+  const isTalent = user?.id === project.talent_id,;
+  ;
+  if (!isClient && !isTalent) {;
+    navigate("/unauthorized"),;
+    return null,;
+  }
+  ;
+  const isOfferPending = project.status === "offer_sent",;
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),;
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),;
+  ;
+  return (;
+    <>;
+      <SEO ;
+        title={`Project:${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
+        description="View and manage your project details and collaboration.";
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;
+            <div>;
+              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>;
+              <div className="flex items-center gap-2 mt-1">;
+                {getStatusBadge(project.status)}
+                <span className="text-muted-foreground">;
+                  Started on {format(new Date(project.start_date), "PPP")}
+                </span>;
+              </div>;
+            </div>;
+            ;
+            {/* Action Buttons Based on Role and Status */}
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
                 <>;
@@ -372,10 +331,7 @@ function ProjectDetailsContent() {;
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
-<<<<<<< HEAD
-=======
                   ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
                   </Button>;
@@ -461,8 +417,6 @@ function ProjectDetailsContent() {;
                       <div>;
                         <h3 className="font-semibold mb-2">Project Description</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
-<<<<<<< HEAD
-=======
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>;
                         </div>;
                       </div>;
@@ -478,7 +432,6 @@ function ProjectDetailsContent() {;
                         <h3 className="font-semibold mb-2">Job Details</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                         </div>;
                       </div>;
                     </div>;
@@ -614,11 +567,7 @@ function ProjectDetailsContent() {;
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
                           >;
-<<<<<<< HEAD
-{isSubmittingNote ? "Posting..." :"Post Note"}
-=======
                             {isSubmittingNote ? "Posting..." :"Post Note"}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                           </Button>;
                         </div>;
                       )}
@@ -626,10 +575,7 @@ function ProjectDetailsContent() {;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-<<<<<<< HEAD
-=======
               ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <TabsContent value="reviews">;
                 <ProjectReviewSection project={project} />;
               </TabsContent>;
