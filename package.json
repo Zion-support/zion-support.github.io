@@ -11,6 +11,7 @@
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build --no-lint",
     "start": "next start",
     "lint": "next lint",
+    "verify": "node build-verification.js",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
