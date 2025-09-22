@@ -3,6 +3,10 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   fallback?: React.ReactNode;
   [key: string]: any;
 }
+<<<<<<< HEAD
+const LazyComponent: React.FC<LazyComponentProps> = ({component;
+  fallback = <div>Loading...</div>;
+=======
 
 
 ;
@@ -11,6 +15,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
   fallback = <div>Loading...</div>,;
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;
@@ -26,7 +31,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
   component,;
   fallback = <div>Loading...</div>,;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;
@@ -51,6 +55,9 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 },
 
 export default LazyComponent,
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
