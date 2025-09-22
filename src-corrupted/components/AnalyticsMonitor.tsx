@@ -1,7 +1,0 @@
-import React, { useEffect, useState, useCallback } from 'react'; ; interface AnalyticsEvent { id: string; type: string; category: string; action: string; label?: string; value?: number; timestamp: number; sessionId: string; userId?: string; pageUrl: string; userAgent: string; referrer: string;   }; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; domLoad: number; windowLoad: number;   }; interface UserBehavior { pageViews: number; sessionDuration: number; bounceRate: number; conversionRate: number; topPages: string[]; userJourney: string[];   }; export const AnalyticsMonitor: Reac t.FC = () => {; const [events, setEvents] = useState<AnalyticsEvent[]>([]); const [performance, setPerformance] = useState<PerformanceMetrics | null>(null); const [userBehavior, setUserBehavior] = useState<UserBehavior>({; pageViews: 0,; sessionDuration: 0,; bounceRate: 0,; conversionRate: 0,; topPages: [],; userJourney: []; }); const [isTracking, setIsTracking] = useState<any>(false); const [sessionId] = useState<any>(() => generateSessionId()); ;
-
-</any>
-</any>
-</UserBehavior>
-</PerformanceMetrics>
-</AnalyticsEvent>

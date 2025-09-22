@@ -45,26 +45,18 @@ class FinalMergeConflictResolver {
         try {
           let content = fs.readFileSync(filePath, 'utf8');
           
-
-          if (content.includes('') || content.includes('>>>>>>>')) {
-            this.log(`Resolving conflicts in ${file}...`);
- (Resolve merge conflicts: clean up all conflict markers)
+          if (content.includes('            this.log(`Resolving conflicts in ${file}...`);
             
             // For JSON files, keep our version
             if (file.endsWith('.json')) {
               // Remove conflict markers and keep our version
-
-              content = content.replace(/\n([\s\S]*?)
-            }
+              content = content.replace(/            }
             // For TypeScript files, keep our version
             else if (file.endsWith('.ts')) {
-              content = content.replace(/\n([\s\S]*?)
-            }
+              content = content.replace(/            }
             // For other files, keep our version
             else {
-              content = content.replace(/\n([\s\S]*?)
-            }
- (Resolve merge conflicts: clean up all conflict markers)
+              content = content.replace(/            }
             
             fs.writeFileSync(filePath, content);
             this.log(`✅ Resolved conflicts in ${file}`);

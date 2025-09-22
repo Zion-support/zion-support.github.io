@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
@@ -32,6 +35,8 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
+=======
 };  try {
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const resp = await fetch(`${baseUrl}/api/dao/metrics`)
@@ -53,5 +58,5 @@ exports.handler = async function () {
   }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
