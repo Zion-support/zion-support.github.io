@@ -1,10 +1,22 @@
+<<<<<<< HEAD
+<
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8");  return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src");  const totalFixed = processDirectory(srcDir); 
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8");  return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src");  const totalFixed = processDirectory(srcDir); 
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8");  return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0;  else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src");  const totalFixed = processDirectory(srcDir); 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8");  return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") |file.endsWith(".ts") |file.endsWith(".jsx") |file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src");  const totalFixed = processDirectory(srcDir);
+origin/main
+origin/automation-improvements-final
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8");  return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") |file.endsWith(".ts") |file.endsWith(".jsx") |file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src");  const totalFixed = processDirectory(srcDir);
+=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
@@ -111,23 +123,16 @@ origin/automation-improvements-final
 
 ;
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function processDirectory(dirPath) {
   const files = fs && fs.readdirSync(dirPath);
   let fixedCount = 0;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   for (const file of files) {
 
    else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
 
->>>>>>> origin/automation-improvements-final
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   if (fixFile(fullPath)) {
   fixedCount++}
@@ -139,6 +144,13 @@ const srcDir = path.join(__dirname, "src");
 console.log("Final fix...");
 const totalFixed = processDirectory(srcDir);
 console.log(""Fixed ${totalFixed} files"")
+<<<<<<< HEAD
+
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8"); console.log(``Fixed: ${filePath}``); return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src"); console.log("Final fix..."); const totalFixed = processDirectory(srcDir); console.log(``Fixed ${totalFixed} files``)
+#!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8"); console.log(``Fixed: ${filePath}``); return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src"); console.log("Final fix..."); const totalFixed = processDirectory(srcDir); console.log(``Fixed ${totalFixed} files``)
+<:backup-problematic-files/final-fix.js
+]"
+=======
 #!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8"); console.log(``Fixed: ${filePath}``); return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src"); console.log("Final fix..."); const totalFixed = processDirectory(srcDir); console.log(``Fixed ${totalFixed} files``)
 #!/usr/bin/env node; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,(match) => { if (!match.endsWith(";")) { return match + ";",} return match}); fixed = fixed.replace(/<([^>]+)\s*>/g,(match) => { return match.replace(/\s+/g," ").trim()}); fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g,"[$1]"); fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g,"{$1}"); fixed = fixed.replace(/\]\s*\[/g,"],["); fixed = fixed.replace(/\}\s*\{/g,"},{"); if (content !== fixed) { fs.writeFileSync(filePath,fixed,"utf8"); console.log(``Fixed: ${filePath}``); return true} return false} catch (error) { console.error(`Error: ${filePath}`,error.message); return false} } ; function processDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const fullPath = path.join(dirPath,file); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) { if (fixFile(fullPath)) { fixedCount++,} } } ; return fixedCount} ; const srcDir = path.join(__dirname,"src"); console.log("Final fix..."); const totalFixed = processDirectory(srcDir); console.log(``Fixed ${totalFixed} files``)
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -151,12 +163,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
->>>>>>> origin/automation-improvements-final
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
