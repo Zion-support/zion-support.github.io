@@ -10,7 +10,7 @@ const nextConfig = {
 
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['jsx', 'js'],
   images: {
     domains: [
       'localhost',
