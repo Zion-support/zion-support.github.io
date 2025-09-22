@@ -1,4 +1,5 @@
 export interface Notification {
+export interface Notification {};
   id: string;
   user_id: string;
   title: string;
@@ -6,6 +7,25 @@ export interface Notification {
   type: string;
   related_id?: string;
   read: boolean;
-  created_at: string;
+
+created_at: string,
   updated_at: string;
+}
+
+  created_at: string,
+  updated_at: string;
+}
+
+export interface Notification {;
+
+}
+}
+
+export interface Notification {;
+
+}
+}
+  created_at: string;
+
+  updated_at: string
 }
