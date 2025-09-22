@@ -40,6 +40,6 @@ export const contentSecurityPolicy = {
     fontSrc: ["'self'"],
     objectSrc: ["'none'"],
     mediaSrc: ["'self'"],
-    frameSrc: ["'none'"],
+    frameSrc: ["'none'"]
   }
 };
