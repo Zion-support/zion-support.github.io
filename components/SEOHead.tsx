@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-pr-12243
+interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -13,8 +13,6 @@ pr-12243
   noindex?: boolean;
   nofollow?: boolean;
 }
-
-pr-12243
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
