@@ -1,13 +1,16 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import { Menu, X, Zap } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Menu, X, Zap, Search, ChevronDown } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const searchRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +20,22 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    if (isSearchOpen && searchRef.current) {
+      searchRef.current.focus()
+    }
+  }, [isSearchOpen])
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery)
+      setIsSearchOpen(false)
+      setSearchQuery('')
+    }
+  }
 
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -49,14 +68,22 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded px-2 py-1"
+                aria-label={`Navigate to ${item.name}`}
               >
                 {item.name}
               </Link>
             ))}
             <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded p-2"
+                aria-label="Open search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
               <ThemeToggle />
-              <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
+              <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent">
                 Get Started
               </Link>
             </div>
@@ -97,6 +124,39 @@ export default function Navigation() {
           </div>
         )}
       </div>
+
+      {/* Search Overlay */}
+      {isSearchOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-32">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 w-full max-w-2xl mx-4">
+            <form onSubmit={handleSearch} className="relative">
+              <div className="flex items-center gap-4">
+                <Search className="w-6 h-6 text-gray-400" />
+                <input
+                  ref={searchRef}
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services, solutions, or topics..."
+                  className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+                  aria-label="Search input"
+                />
+                <button
+                  type="button"
+                  onClick={() => setIsSearchOpen(false)}
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Close search"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+            </form>
+            <div className="mt-4 text-sm text-gray-400">
+              Try searching for "AI", "Cloud", "Security", or "Analytics"
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }

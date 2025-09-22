@@ -1,4 +1,4 @@
-import { Brain, Cloud, Shield, Zap, Database, Cpu, Lock, Globe } from 'lucide-react'
+import { Brain, Cloud, Shield, Zap, Database, Cpu, Lock, Globe, ArrowRight, CheckCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
@@ -116,11 +116,50 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 
-                <Button variant="outline" size="sm" className="w-full">
+                <Button variant="outline" size="sm" className="w-full group">
                   Learn More
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver exceptional results for your business.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+              <p className="text-gray-300">Certified professionals with deep expertise in AI, cloud, and security technologies.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">24/7 Support</h3>
+              <p className="text-gray-300">Round-the-clock support and monitoring to ensure your systems run smoothly.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
+              <p className="text-gray-300">Track record of successful implementations and measurable business outcomes.</p>
+            </div>
           </div>
         </div>
 
@@ -134,8 +173,9 @@ export default function ServicesPage() {
               Let's discuss how our technology solutions can accelerate your digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
+              <Button size="lg" className="group">
                 Schedule Consultation
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg">
                 View Case Studies

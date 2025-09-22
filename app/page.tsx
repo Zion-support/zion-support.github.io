@@ -1,10 +1,16 @@
 import Link from 'next/link'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target } from 'lucide-react'
+import dynamic from 'next/dynamic'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import AnimatedCounter from './components/AnimatedCounter'
 import ScrollReveal from './components/ScrollReveal'
+
+// Lazy load heavy components
+const LazyTestimonials = dynamic(() => import('./components/Testimonials'), {
+  loading: () => <div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+})
 
 export default function Home() {
   return (
@@ -27,6 +33,16 @@ export default function Home() {
               Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. 
               We deliver enterprise-grade technology that drives innovation and growth.
             </p>
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="flex items-center gap-2 text-green-400">
+                <TrendingUp className="w-5 h-5" />
+                <span className="text-sm font-medium">99.9% Uptime</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-400">
+                <Sparkles className="w-5 h-5" />
+                <span className="text-sm font-medium">AI-Powered</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition-all transform hover:scale-105 inline-flex items-center justify-center">
                 Explore Solutions
@@ -149,7 +165,7 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <Testimonials />
+          <LazyTestimonials />
         </div>
       </main>
       
