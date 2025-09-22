@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "import/order": "off",
+    "prefer-destructuring": "off",
+    "@next/next/no-img-element": "off",
+    "no-undef": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "dist/",
+    "coverage/",
+    "out/",
+    "temp_exclude/",
+    "ts_files_backup/",
+    "tests.disabled/",
+    "solutions.disabled/",
+    "src.disabled/",
+    "src.pages.disabled/",
+    "temp-backup/",
+    "test_build/",
+    "tests.disabled/"
+  ]
+}
