@@ -37,6 +37,7 @@ const nextConfig = {
   compress: true,
   generateEtags: true,
   
+  
   // Generate unique build ID for better caching
   generateBuildId: async () => {
     return 'build-' + Date.now()

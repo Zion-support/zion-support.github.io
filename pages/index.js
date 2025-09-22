@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { TypewriterEffect } from '../components/ui/TypewriterEffect';
-import { GradientButton } from '../components/ui/GradientButton';
+import TypewriterEffect from '../components/ui/TypewriterEffect';
+import GradientButton from '../components/ui/GradientButton';
 import { LazyImage } from '../components/ui/LazyImage';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { MobileNavigation } from '../components/MobileNavigation';
@@ -13,10 +13,12 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import EnhancedAnalytics from '../components/EnhancedAnalytics';
 import EnhancedServiceCard from '../components/EnhancedServiceCard';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import AdvancedSEO from '../components/AdvancedSEO';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -76,7 +78,7 @@ export default function Home() {
   return (
     <ErrorBoundary>
       <div>
-        <AdvancedSEO 
+        <EnhancedSEO 
           title="Zion Tech Group - AI, IT & Micro SaaS Services"
           description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
           keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps, enterprise technology, digital transformation"
@@ -351,6 +353,9 @@ export default function Home() {
         
         {/* Performance Monitor (Development Only) */}
         <PerformanceMonitor />
+        
+        {/* Performance Optimizer */}
+        <PerformanceOptimizer />
         
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
