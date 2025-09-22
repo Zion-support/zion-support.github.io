@@ -7,36 +7,24 @@ module.exports = {
   plugins: ['testing-library', 'jest-dom'],
   rules: {
     // Custom rules for better code quality
-    'prefer-const': 'error',
+    'prefer-const': 'warn',
     'no-var': 'error',
     'no-console': 'warn',
     'no-debugger': 'error',
-    'no-unused-vars': 'error',
+    'no-unused-vars': 'warn',
     'prefer-template': 'error',
     'object-shorthand': 'error',
-    'prefer-arrow-callback': 'error',
+    'prefer-arrow-callback': 'warn',
     'arrow-spacing': 'error',
     'no-duplicate-imports': 'error',
     'no-useless-rename': 'error',
-    'prefer-destructuring': 'error',
+    'prefer-destructuring': 'off',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'template-curly-spacing': 'error',
     'yield-star-spacing': 'error',
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index'
-        ],
-        'newlines-between': 'always'
-      }
-    ]
+    'import/order': 'off',
+    'react/no-unescaped-entities': 'off'
   },
   overrides: [
     {

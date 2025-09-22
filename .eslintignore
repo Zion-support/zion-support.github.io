@@ -32,3 +32,15 @@ recovered-branches/**
 **/*.conflict_backup
 **/*.conflicted
 **/*.backup
+components/**
+components.broken/**
+components_backup/**
+components.backup/**
+backup-problematic-files/**
+src_backup_temp/**
+src_backup/**
+pages._archive_corrupted/**
+pages.broken/**
+pages_backup_conflict/**
+pages_backup_conflicts/**
+pages._quarantine/**

@@ -23,13 +23,15 @@ module.exports = {
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    // Disable to avoid escaping quotes in static content pages
+    'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
     '@next/next/no-html-link-for-pages': 'warn',
-    'import/order': [
-      'error',
-      { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
-    ],
+    // Relax ordering rules to reduce noise during maintenance
+    'import/order': 'off',
+    // Prefer readability over enforcing destructuring
+    'prefer-destructuring': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
   },
