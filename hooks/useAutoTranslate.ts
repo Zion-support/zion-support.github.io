@@ -1,5 +1,17 @@
+import { useEffect, useMemo, useState } from 'react';
+
+// Stub translation function
+const translateTextViaAI = async (text: string, target: string): Promise<string> => {
+  // Simulate API call
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`${text} (${target})`);
+    }, 100);
+  });
+};
+
 export type UseAutoTranslateResult = {
-  translations: Record < string, string>;
+  translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
@@ -15,7 +27,12 @@ export function useAutoTranslate(
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
+  const [error, setError] = useState<string | undefined>();
+
+  const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
+  
+  useEffect(() => {
+    if (!text || targets.length === 0) {
       setTranslations({});
 ;
 export function useAutoTranslate (
@@ -79,13 +96,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 clearTimeout(timer);
     };
   }, [key, debounceMs]);
-
-  return { translations, loading, error };
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return { translations, loading, error }
-    }
-  }, [key, debounceMs]);
-  return { translations, loading, error }
+  
+  return {
+    translations,
+    loading,
+    error
+  };
 }
 }
     }
