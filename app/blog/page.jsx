@@ -75,6 +75,7 @@ const BlogPage = () => {
       date: "2025-01-01",
       featured: false,
       image: "/images/ai-trends-2025.jpg"
+<<<<<<< HEAD
     },
     {
       title: "Multimodal Agents in the Enterprise",
@@ -82,6 +83,8 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/multimodal-agents-2025.jpg"
+=======
+>>>>>>> 40ac30d6b50e4e85e121866b9f75741934b667c0
     }
   ];
 
@@ -232,6 +235,7 @@ const BlogPage = () => {
                 </div>
               </article>
             ))}
+<<<<<<< HEAD
     <div>
       <h1>Blog</h1>
       <div className="featured-posts">
@@ -240,8 +244,10 @@ const BlogPage = () => {
             <h2>{post.title}</h2>
             <p>Category: {post.category}</p>
             <p>Date: {post.date}</p>
+=======
+>>>>>>> 40ac30d6b50e4e85e121866b9f75741934b667c0
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
