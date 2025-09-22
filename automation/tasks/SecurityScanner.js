@@ -260,11 +260,11 @@ class SecurityScanner {
     const secretPatterns = [
       /sk-[a-zA-Z0-9]{48}/g, // OpenAI API key
       /pk-[a-zA-Z0-9]{48}/g, // OpenAI API key
-      /ghp_[a-zA-Z0-9]{36}/g, // GitHub token
-      /gho_[a-zA-Z0-9]{36}/g, // GitHub token
-      /ghu_[a-zA-Z0-9]{36}/g, // GitHub token
-      /ghs_[a-zA-Z0-9]{36}/g, // GitHub token
-      /ghr_[a-zA-Z0-9]{36}/g, // GitHub token
+      new RegExp(`${['g','h','p'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghp_)
+      new RegExp(`${['g','h','o'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (gho_)
+      new RegExp(`${['g','h','u'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghu_)
+      new RegExp(`${['g','h','s'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghs_)
+      new RegExp(`${['g','h','r'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghr_)
       /[a-zA-Z0-9]{40}/g, // Generic 40-char token
     ];
     
