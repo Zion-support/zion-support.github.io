@@ -1,6 +1,6 @@
 import React from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
+import SEO from '../components/SEO'
 
 export default function Services() {
   const services = [
@@ -92,11 +92,10 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Head>
-        <title>Our Services — Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT and AI services including cloud infrastructure, cybersecurity, DevOps, data analytics, and technology consulting." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <SEO 
+        title="Our Services"
+        description="Comprehensive IT and AI services including cloud infrastructure, cybersecurity, DevOps, data analytics, and technology consulting."
+      />
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">

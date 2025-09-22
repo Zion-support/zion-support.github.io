@@ -2,7 +2,6 @@
 const nextConfig = {
   // Optimized for Netlify deployment; use default output for Next 12
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   

@@ -1,6 +1,6 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import SEO from '../components/SEO'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -45,32 +45,26 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Head>
-        <title>Zion Tech Group — Advanced IT & AI Services</title>
-        <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
-        <meta name="keywords" content="IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO />
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <h1 className="text-2xl font-bold text-white">Zion Tech Group</h1>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
-              <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
-              <Link href="/contact" className="text-white hover:text-purple-300 transition-colors">Contact</Link>
+            <div className="hidden md:flex space-x-8" role="menubar">
+              <Link href="/about" className="text-white hover:text-purple-300 transition-colors focus:ring-2 focus:ring-purple-400 focus:outline-none rounded" role="menuitem">About</Link>
+              <Link href="/services" className="text-white hover:text-purple-300 transition-colors focus:ring-2 focus:ring-purple-400 focus:outline-none rounded" role="menuitem">Services</Link>
+              <Link href="/contact" className="text-white hover:text-purple-300 transition-colors focus:ring-2 focus:ring-purple-400 focus:outline-none rounded" role="menuitem">Contact</Link>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
