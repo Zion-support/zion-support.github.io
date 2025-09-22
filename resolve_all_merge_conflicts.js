@@ -31,7 +31,11 @@ const results = {
   failedBranches: []
 };
 
+<<<<<<< HEAD
 // Utility functions
+=======
+// Helper functions
+>>>>>>> 28908383ab8249c4831cce95a5056b00fef63057
 function execCommand(command, options = {}) {
   try {
     const result = execSync(command, { 
@@ -97,6 +101,7 @@ function resolveMergeConflict(filePath) {
     return true;
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+<<<<<<< HEAD
     return false;
   }
 }
@@ -160,6 +165,8 @@ function resolveMergeConflicts(branchName) {
     
   } catch (error) {
     console.log(`❌ Error processing branch ${branchName}: ${error.message}`);
+=======
+>>>>>>> 28908383ab8249c4831cce95a5056b00fef63057
     return false;
   }
 }
@@ -309,7 +316,8 @@ async function mergeAllOpenPRs() {
     .split('\n')
     .map(line => line.trim())
     .filter(line => line && !line.includes('origin/HEAD') && line !== 'origin/main')
-    .filter(line => line.startsWith('origin/'));
+    .filter(line => line.startsWith('origin/'))
+    .slice(0, config.maxBranches); // Limit to prevent overwhelming
   
   console.log(`📋 Found ${allBranches.length} remote branches to process`);
   
