@@ -1,15 +1,14 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
   NEXT_TELEMETRY_DISABLED = "1"
 
-## For Next.js static export, no Netlify Next.js runtime plugin is required
-
-## Static export: no Next.js runtime plugin or functions needed
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 ## Security and caching headers for static assets
 [[headers]]
@@ -37,7 +36,7 @@ Cross-Origin-Resource-Policy = "same-origin"
 X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
-## Using Next.js static export; no Netlify Next.js runtime plugin required
+## Using Netlify Next.js runtime
 
 # Static redirects for specific routes
 [[redirects]]
