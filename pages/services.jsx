@@ -181,7 +181,7 @@ export default function Services() {
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Let's discuss your specific needs and how our services can help you achieve your technology goals.
+                Let&apos;s discuss your specific needs and how our services can help you achieve your technology goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
