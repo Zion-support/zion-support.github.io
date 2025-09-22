@@ -31,11 +31,7 @@ const results = {
   failedBranches: []
 };
 
-<<<<<<< HEAD
 // Utility functions
-=======
-// Helper functions
->>>>>>> 28908383ab8249c4831cce95a5056b00fef63057
 function execCommand(command, options = {}) {
   try {
     const result = execSync(command, { 
@@ -101,7 +97,6 @@ function resolveMergeConflict(filePath) {
     return true;
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
-<<<<<<< HEAD
     return false;
   }
 }
@@ -165,8 +160,6 @@ function resolveMergeConflicts(branchName) {
     
   } catch (error) {
     console.log(`❌ Error processing branch ${branchName}: ${error.message}`);
-=======
->>>>>>> 28908383ab8249c4831cce95a5056b00fef63057
     return false;
   }
 }
