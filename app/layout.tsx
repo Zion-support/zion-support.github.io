@@ -14,6 +14,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://app.ziontechgroup.com'),
   title: 'Zion Tech Group - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
   keywords: 'AI solutions, micro SaaS, IT services, technology consulting, automation',
