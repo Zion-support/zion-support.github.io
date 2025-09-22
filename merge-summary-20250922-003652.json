@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "totalBranches": 50,
+    "successfullyMerged": 0,
+    "failedBranches": 50,
+    "conflictsResolved": 0,
+    "startTime": "2025-09-22T00:36:52.755Z",
+    "endTime": "2025-09-22T00:36:52.752Z"
+  },
+  "resultsFile": "/workspace/merge-results-20250922-003556.json"
+}

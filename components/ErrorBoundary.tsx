@@ -1,302 +1,108 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, RefreshCw, Home, ArrowLeft, 
-  Bug, Shield, Zap, MessageCircle
-} from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
+'use client';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-}
-
-interface State {
+import React from 'react';
+interface ErrorBoundaryState {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  showDetails: boolean;
+  error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      showDetails: false
-    };
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>
+}
+
+export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+    this.state = { hasError: false }
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    // Generate unique error ID for tracking
-    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
-    return {
-      hasError: true,
-      error,
-      errorId,
-      showDetails: false
-    };
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ errorInfo });
-    
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // Enhanced error logging
+    const errorDetails = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
     }
 
-    // Send error to analytics/error tracking service
-    this.trackError(error, errorInfo);
+    console.group('🚨 Error Boundary Caught Error')
+    console.error('Error:', error)
+    console.error('Error Info:', errorInfo)
+    console.error('Full Details:', errorDetails)
+    console.groupEnd()
+
+    // Send error to analytics service (placeholder)
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: true,
+      })
+    }
+
+    // Send error to error tracking service (placeholder)
+    if (typeof window !== 'undefined') {
+      // This would be replaced with actual error tracking service
+      console.log('Error would be sent to error tracking service:', errorDetails)
+    }
   }
 
-  trackError = (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      // Send to error tracking service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
-          error_id: this.state.errorId,
-          stack_trace: error.stack,
-          component_stack: errorInfo.componentStack
-        });
-      }
-
-      // Send to custom error endpoint
-      if (process.env.NODE_ENV === 'production') {
-        fetch('/api/errors', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            errorId: this.state.errorId,
-            message: error.message,
-            stack: error.stack,
-            componentStack: errorInfo.componentStack,
-            url: window.location.href,
-            userAgent: navigator.userAgent,
-            timestamp: new Date().toISOString()
-          })
-        }).catch(() => {
-          // Silently handle fetch errors
-        });
-      }
-    } catch {
-      // Silently handle tracking errors
-    }
-  };
-
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      showDetails: false
-    });
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  handleGoBack = () => {
-    window.history.back();
-  };
-
-  toggleDetails = () => {
-    this.setState(prevState => ({
-      showDetails: !prevState.showDetails
-    }));
-  };
+  resetError = () => {
+    this.setState({ hasError: false, error: undefined })
+  }
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      // Default error UI
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-2xl w-full bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 text-center"
-          >
-            {/* Error Icon */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="w-20 h-20 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <AlertTriangle className="w-10 h-10 text-red-400" />
-            </motion.div>
-
-            {/* Error Message */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-3xl font-bold text-white mb-4"
-            >
-              Oops! Something went wrong
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-gray-300 mb-8 text-lg"
-            >
-              We encountered an unexpected error while loading this page. 
-              Our team has been notified and is working to fix it.
-            </motion.p>
-
-            {/* Error ID */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="bg-gray-700/50 border border-gray-600/50 rounded-lg p-4 mb-6"
-            >
-              <p className="text-sm text-gray-400 mb-2">Error Reference ID:</p>
-              <code className="text-cyan-400 font-mono text-sm break-all">
-                {this.state.errorId}
-              </code>
-            </motion.div>
-
-            {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
-            >
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                <RefreshCw className="w-5 h-5" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={this.handleGoBack}
-                className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-              >
-                <ArrowLeft className="w-5 h-5" />
-                Go Back
-              </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-              >
-                <Home className="w-5 h-5" />
-                Go Home
-              </button>
-            </motion.div>
-
-            {/* Additional Help */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6"
-            >
-              <div className="flex items-center justify-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer">
-                <Bug className="w-4 h-4" />
-                <span className="text-sm">Report Bug</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer">
-                <MessageCircle className="w-4 h-4" />
-                <span className="text-sm">Get Help</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer">
-                <Shield className="w-4 h-4" />
-                <span className="text-sm">Status Page</span>
-              </div>
-            </motion.div>
-
-            {/* Error Details Toggle */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="border-t border-gray-700/50 pt-6"
-            >
-              <button
-                onClick={this.toggleDetails}
-                className="flex items-center justify-center gap-2 mx-auto text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <Zap className="w-4 h-4" />
-                <span className="text-sm">
-                  {this.state.showDetails ? 'Hide' : 'Show'} Technical Details
-                </span>
-              </button>
-            </motion.div>
-
-            {/* Error Details */}
-            <AnimatePresence>
-              {this.state.showDetails && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-6 text-left"
-                >
-                  <div className="bg-gray-900/50 border border-gray-700/50 rounded-lg p-4 space-y-4">
-                    {this.state.error && (
-                      <div>
-                        <h4 className="text-red-400 font-semibold mb-2">Error Message:</h4>
-                        <code className="text-red-300 text-sm break-all">
-                          {this.state.error.message}
-                        </code>
-                      </div>
-                    )}
-                    
-                    {this.state.error && this.state.error.stack && (
-                      <div>
-                        <h4 className="text-red-400 font-semibold mb-2">Stack Trace:</h4>
-                        <pre className="text-red-300 text-xs overflow-auto max-h-40 bg-gray-800/50 p-3 rounded border border-gray-700/50">
-                          {this.state.error.stack}
-                        </pre>
-                      </div>
-                    )}
-                    
-                    {this.state.errorInfo && (
-                      <div>
-                        <h4 className="text-red-400 font-semibold mb-2">Component Stack:</h4>
-                        <pre className="text-red-300 text-xs overflow-auto max-h-40 bg-gray-800/50 p-3 rounded border border-gray-700/50">
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        </div>
-      );
+      const FallbackComponent = this.props.fallback || DefaultErrorFallback
+      return <FallbackComponent error={this.state.error} resetError={this.resetError} />
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError: () => void }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+          <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          </svg>
+        </div>
+        <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">
+          Something went wrong
+        </h2>
+        <p className="text-gray-600 text-center mb-4">
+          We're sorry, but something unexpected happened. Please try again.
+        </p>
+        {process.env.NODE_ENV === 'development' && error && (
+          <details className="mb-4 p-3 bg-gray-100 rounded text-sm">
+            <summary className="cursor-pointer font-medium">Error Details</summary>
+            <pre className="mt-2 text-xs overflow-auto">{error.stack}</pre>
+          </details>
+        )}
+        <div className="flex space-x-3">
+          <button
+            onClick={resetError}
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Try Again
+          </button>
+          <button
+            onClick={() => window.location.href = '/'}
+            className="flex-1 border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors"
+          >
+            Go Home
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
