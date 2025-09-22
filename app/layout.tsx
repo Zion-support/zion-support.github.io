@@ -1,10 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
@@ -36,11 +42,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Zion Tech Group - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
   },
   verification: {
     google: 'your-google-verification-code',
