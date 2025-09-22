@@ -7,8 +7,8 @@ function Contact() {
     name: '',
     email: '',
     company: '',
-    service: '',
-    message: ''
+    message: '',
+    service: ''
   })
 
   const handleChange = (e) => {
@@ -20,298 +20,210 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically handle form submission
-    alert('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', company: '', service: '', message: '' })
+    // Handle form submission here
+    console.log('Form submitted:', formData)
+    alert('Thank you for your message! We\'ll get back to you soon.')
+    setFormData({ name: '', email: '', company: '', message: '', service: '' })
   }
 
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
         <title>Contact Us — Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for your IT and AI service needs. We're here to help transform your business." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main style={{ 
-        padding: '2rem', 
-        fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif',
-        maxWidth: '1000px',
-        margin: '0 auto',
-        lineHeight: '1.6'
-      }}>
-        <h1 style={{ 
-          fontSize: '2.5rem', 
-          fontWeight: 'bold', 
-          marginBottom: '1rem',
-          color: '#333'
-        }}>
-          Contact Us
-        </h1>
-        
-        <p style={{ 
-          fontSize: '1.2rem', 
-          color: '#666', 
-          marginBottom: '3rem',
-          maxWidth: '600px'
-        }}>
-          Ready to transform your business? Get in touch with our team to discuss 
-          your IT and AI service needs.
-        </p>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
-          gap: '3rem'
-        }}>
-          {/* Contact Form */}
-          <div style={{
-            padding: '2rem',
-            border: '1px solid #e1e5e9',
-            borderRadius: '12px',
-            backgroundColor: '#fff',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-          }}>
-            <h2 style={{ 
-              fontSize: '1.5rem', 
-              fontWeight: '600', 
-              marginBottom: '1.5rem',
-              color: '#333'
-            }}>
-              Send us a Message
-            </h2>
-            
-            <form onSubmit={handleSubmit}>
-              <div style={{ marginBottom: '1.5rem' }}>
-                <label style={{ 
-                  display: 'block', 
-                  marginBottom: '0.5rem',
-                  fontWeight: '500',
-                  color: '#333'
-                }}>
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  style={{
-                    width: '100%',
-                    padding: '0.75rem',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '6px',
-                    fontSize: '1rem',
-                    fontFamily: 'inherit'
-                  }}
-                />
-              </div>
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
+            <div className="hidden md:flex space-x-8">
+              <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
+              <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
+              <Link href="/contact" className="text-purple-300 font-semibold">Contact</Link>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-              <div style={{ marginBottom: '1.5rem' }}>
-                <label style={{ 
-                  display: 'block', 
-                  marginBottom: '0.5rem',
-                  fontWeight: '500',
-                  color: '#333'
-                }}>
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  style={{
-                    width: '100%',
-                    padding: '0.75rem',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '6px',
-                    fontSize: '1rem',
-                    fontFamily: 'inherit'
-                  }}
-                />
-              </div>
-
-              <div style={{ marginBottom: '1.5rem' }}>
-                <label style={{ 
-                  display: 'block', 
-                  marginBottom: '0.5rem',
-                  fontWeight: '500',
-                  color: '#333'
-                }}>
-                  Company
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  style={{
-                    width: '100%',
-                    padding: '0.75rem',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '6px',
-                    fontSize: '1rem',
-                    fontFamily: 'inherit'
-                  }}
-                />
-              </div>
-
-              <div style={{ marginBottom: '1.5rem' }}>
-                <label style={{ 
-                  display: 'block', 
-                  marginBottom: '0.5rem',
-                  fontWeight: '500',
-                  color: '#333'
-                }}>
-                  Service Interest
-                </label>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  style={{
-                    width: '100%',
-                    padding: '0.75rem',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '6px',
-                    fontSize: '1rem',
-                    fontFamily: 'inherit'
-                  }}
-                >
-                  <option value="">Select a service</option>
-                  <option value="ai-solutions">AI Solutions</option>
-                  <option value="cloud-infrastructure">Cloud Infrastructure</option>
-                  <option value="cybersecurity">Cybersecurity</option>
-                  <option value="data-analytics">Data Analytics</option>
-                  <option value="digital-transformation">Digital Transformation</option>
-                  <option value="custom-development">Custom Development</option>
-                  <option value="consultation">General Consultation</option>
-                </select>
-              </div>
-
-              <div style={{ marginBottom: '2rem' }}>
-                <label style={{ 
-                  display: 'block', 
-                  marginBottom: '0.5rem',
-                  fontWeight: '500',
-                  color: '#333'
-                }}>
-                  Message *
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                  style={{
-                    width: '100%',
-                    padding: '0.75rem',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '6px',
-                    fontSize: '1rem',
-                    fontFamily: 'inherit',
-                    resize: 'vertical'
-                  }}
-                  placeholder="Tell us about your project or requirements..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem 1.5rem',
-                  backgroundColor: '#667eea',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '6px',
-                  fontSize: '1rem',
-                  fontWeight: '500',
-                  cursor: 'pointer',
-                  transition: 'background-color 0.2s'
-                }}
-              >
-                Send Message
-              </button>
-            </form>
+      <main className="pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          {/* Hero Section */}
+          <div className="text-center mb-20">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Contact <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Us</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology? Let's discuss your project and how we can help you achieve your goals.
+            </p>
           </div>
 
-          {/* Contact Information */}
-          <div>
-            <h2 style={{ 
-              fontSize: '1.5rem', 
-              fontWeight: '600', 
-              marginBottom: '1.5rem',
-              color: '#333'
-            }}>
-              Get in Touch
-            </h2>
-            
-            <div style={{ marginBottom: '2rem' }}>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
-                marginBottom: '0.75rem',
-                color: '#333'
-              }}>
-                Ready to Get Started?
-              </h3>
-              <p style={{ color: '#666', marginBottom: '1rem' }}>
-                We're here to help you transform your business with cutting-edge 
-                technology solutions. Reach out to us for a consultation.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-white font-semibold mb-2">Name *</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-white font-semibold mb-2">Email *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="your.email@company.com"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="company" className="block text-white font-semibold mb-2">Company</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-white font-semibold mb-2">Service Interest</label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-ml">AI & Machine Learning</option>
+                    <option value="cloud">Cloud Infrastructure</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="devops">DevOps & Automation</option>
+                    <option value="consulting">Technology Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-white font-semibold mb-2">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Tell us about your project and how we can help..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
 
-            <div style={{ 
-              padding: '1.5rem',
-              backgroundColor: '#f8f9fa',
-              border: '1px solid #e1e5e9',
-              borderRadius: '8px',
-              marginBottom: '2rem'
-            }}>
-              <h4 style={{ 
-                fontSize: '1rem', 
-                fontWeight: '600', 
-                marginBottom: '0.75rem',
-                color: '#333'
-              }}>
-                Response Time
-              </h4>
-              <p style={{ color: '#666', margin: 0 }}>
-                We typically respond to all inquiries within 24 hours during business days.
-              </p>
-            </div>
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <div className="text-purple-400 mr-4">📧</div>
+                    <div>
+                      <div className="text-white font-semibold">Email</div>
+                      <div className="text-gray-300">contact@ziontechgroup.com</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="text-purple-400 mr-4">📞</div>
+                    <div>
+                      <div className="text-white font-semibold">Phone</div>
+                      <div className="text-gray-300">+1 (555) 123-4567</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="text-purple-400 mr-4">📍</div>
+                    <div>
+                      <div className="text-white font-semibold">Office</div>
+                      <div className="text-gray-300">San Francisco, CA</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="text-purple-400 mr-4">⏰</div>
+                    <div>
+                      <div className="text-white font-semibold">Business Hours</div>
+                      <div className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM PST</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            <div style={{ 
-              padding: '1.5rem',
-              backgroundColor: '#f8f9fa',
-              border: '1px solid #e1e5e9',
-              borderRadius: '8px'
-            }}>
-              <h4 style={{ 
-                fontSize: '1rem', 
-                fontWeight: '600', 
-                marginBottom: '0.75rem',
-                color: '#333'
-              }}>
-                Explore Our Services
-              </h4>
-              <p style={{ color: '#666', marginBottom: '1rem' }}>
-                Learn more about our comprehensive IT and AI solutions.
-              </p>
-              <Link href="/services" style={{ 
-                color: '#667eea', 
-                textDecoration: 'none',
-                fontWeight: '500'
-              }}>
-                View All Services →
-              </Link>
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center">
+                    <span className="text-purple-400 mr-3">✓</span>
+                    24/7 Support & Monitoring
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-400 mr-3">✓</span>
+                    Proven Track Record
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-400 mr-3">✓</span>
+                    Custom Solutions
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-purple-400 mr-3">✓</span>
+                    Competitive Pricing
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center text-gray-400">
+            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+            <div className="mt-4 flex justify-center space-x-6">
+              <Link href="/about" className="hover:text-white transition-colors">About</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
