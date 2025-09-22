@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group - Advanced AI and Technology Solutions',
     description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.',
   },
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#3b82f6',
 }
 
