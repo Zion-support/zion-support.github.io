@@ -10,8 +10,14 @@
 }</div>)
 }
 export const StarRating: React.FC<Props> = ({
+<<<<<<< HEAD
+type Props = {
+  value: number,
+  onChange: (val: number) => void,
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   value,
   onChange,
   size = 24,
@@ -24,8 +30,21 @@ type Props = {
   onChange: (val: number) => void,
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+<<<<<<< HEAD
+  return (
+    <div className="flex items-center gap-1">
+      {stars.map((star) => {
+        const active = (hovered ?? value) >= star,
+        return (
+          <button
+            key={star}
+            type="button"
+            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
+            onMouseEnter={() => !readOnly && setHovered(star)}
+:backup-problematic-files/reviews/StarRating.tsx
+=======
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   size?: number;
   readOnly?: boolean
 }
@@ -42,9 +61,12 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
@@ -95,9 +117,11 @@ export default StarRating;              width={size}
   )
 }
 export default StarRating;
+<<<<<<< HEAD
+              <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />"
+    </div>"`;
+=======
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

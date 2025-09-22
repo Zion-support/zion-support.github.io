@@ -18,21 +18,10 @@ const publicRoutes = [
   "/privacy",
   "/terms",
   "/cookies",
-  "/accessibility",
-  "/compliance",
-  "/gdpr",
-  "/security",
-  "/support",
-  "/help",
-  "/faq",
-  "/guides",
-  "/tutorials",
-  "/webinars",
-  "/white-papers",
-  "/case-studies",
-  "/press",
-  "/events",
-  "/newsletter",
+
+
+
+
   "/sitemap",
   "/api-docs",
   "/docs",
@@ -47,6 +36,8 @@ const publicRoutes = [
   "/search",
   "/micro-saas",
   "/it-services",
+
+
   "/ai-services",
   "/services-overview",
   "/solutions/cloud-migration",
@@ -72,23 +63,43 @@ const publicRoutes = [
   "/industries/healthcare",
   "/industries/manufacturing",
   "/industries/retail"
+
+
 ];
+
+
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  
-  // Check if the route is public
+
+
+
+
+
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
-  
-  // For protected routes, you can add authentication logic here
-  // For now, we'll just allow all requests
+
+
+
+  const authCookie = request.cookies.get("auth-token");
+  if (!authCookie) {
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+
+
+
   return NextResponse.next();
+
+
 }
 
 export const config = {
   matcher: [
+
+
+
+
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -96,6 +107,11 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
+
+
+
+
+
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };
