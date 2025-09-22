@@ -3,8 +3,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Complete Enterprise Transformation Guide | Zion Tech Group',
-  description: 'Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge automation, neural interfaces, and quantum computing solutions.',
   keywords: ['AI transformation', 'enterprise AI', 'neural interfaces', 'quantum computing', 'business automation', '2025'],
 };
 

@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Ultimate Innovation Breakthrough - Ultimate Guide to 5,000% ROI',
-  description: 'Discover the revolutionary AI technologies delivering 5,000% ROI and transforming enterprises worldwide. Complete guide with real-world success stories and implementation roadmap.',
   keywords: ['AI Innovation', 'ROI', 'Breakthrough', 'Revolutionary AI', 'Enterprise AI', '5,000% ROI'],
   openGraph: {
-    title: 'AI 2025: The Ultimate Innovation Breakthrough - Ultimate Guide to 5,000% ROI',
-    description: 'Discover the revolutionary AI technologies delivering 5,000% ROI and transforming enterprises worldwide.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -24,22 +19,22 @@ export default function AI2025UltimateInnovationBreakthroughPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2 text-purple-200 mb-4">
             <Link href="/blog" className="flex items-center hover:text-white transition-colors">
-              <ArrowLeftIcon className="w-4 h-4 mr-1" />
+              <span>ArrowLeftIcon</span>
               Back to Blog
             </Link>
           </div>
           
           <div className="flex items-center space-x-4 text-sm text-purple-200 mb-6">
             <div className="flex items-center">
-              <CalendarIcon className="w-4 h-4 mr-1" />
+              <span>CalendarIcon</span>
               January 17, 2025
             </div>
             <div className="flex items-center">
-              <ClockIcon className="w-4 h-4 mr-1" />
+              <span>ClockIcon</span>
               30 min read
             </div>
             <div className="flex items-center">
-              <UserIcon className="w-4 h-4 mr-1" />
+              <span>UserIcon</span>
               Zion Tech Group
             </div>
           </div>

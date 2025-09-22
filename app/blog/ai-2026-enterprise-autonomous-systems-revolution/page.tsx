@@ -1,22 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: The Enterprise Autonomous Systems Revolution - Zion Tech Group',
-  description: 'Discover how autonomous AI systems are transforming enterprise operations in 2026. Complete implementation guide with real-world case studies and ROI analysis.',
   keywords: ['AI 2026', 'Autonomous Systems', 'Enterprise AI', 'Digital Transformation', 'Machine Learning', 'AI Implementation'],
 };
 
 export default function AI2026EnterpriseAutonomousSystemsRevolution() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: The Enterprise Autonomous Systems Revolution - Zion Tech Group"
-        description="Discover how autonomous AI systems are transforming enterprise operations in 2026. Complete implementation guide with real-world case studies and ROI analysis."
-        keywords="AI 2026, Autonomous Systems, Enterprise AI, Digital Transformation, Machine Learning, AI Implementation"
-        url="/blog/ai-2026-enterprise-autonomous-systems-revolution"
-      />
+      
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">

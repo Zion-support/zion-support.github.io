@@ -1,23 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Reliability Engineering for Agents | Zion Tech Group',
-  description:
-    'Engineering reliable autonomous agents with SLOs, chaos testing, and progressive delivery guarded by evals.',
   keywords: ['reliability engineering', 'SLOs', 'chaos testing', 'evals', 'progressive delivery'],
 };
 
 const ReliabilityEngineeringForAgents2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Reliability Engineering for Agents"
-        description="SLOs, chaos testing, and progressive delivery guarded by evaluation gates for agent systems."
-        keywords="reliability engineering, SLOs, chaos testing, evals, progressive delivery"
-        url="/blog/ai-2026-reliability-engineering-for-agents"
-      />
+      
 
       <header className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

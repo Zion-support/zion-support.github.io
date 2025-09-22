@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Enterprise Autonomous Systems Complete Guide',
-  description: 'Comprehensive guide to implementing autonomous AI systems in enterprise environments. Learn about architecture, governance, and operational best practices.',
   keywords: ['autonomous systems', 'enterprise AI', 'AI governance', 'autonomous agents', 'AI operations'],
 };
 

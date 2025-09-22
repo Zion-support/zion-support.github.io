@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '../../../components/ui/Card';
 
 export const metadata = {
-  title: 'AI 2025: Ultimate Breakthrough Trends | Zion Tech Group',
-  description: 'Discover the revolutionary AI trends of 2025 that are transforming industries and reshaping the future of technology.'
 };
 
 export default function AI2025UltimateBreakthroughTrends() {

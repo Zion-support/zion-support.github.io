@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Risk‑Tiered Tool Use — Guardrails that Scale',
-  description:
-    'Design a risk‑tiered tool permission model with policy‑as‑code, isolation domains, and runtime checks to ship safer autonomous agents.',
   keywords: [
     'risk tiered tool use',
     'policy as code',
@@ -18,12 +13,7 @@ export const metadata = {
 const RiskTieredToolUse2026: React.FC = () => {
   return (
     <div>
-      <SEO
-        title="AI 2026: Risk‑Tiered Tool Use"
-        description="Risk tiers, policy gates, and isolation domains for safe tool execution."
-        keywords="risk tiers, policy as code, sandboxing, guardrails, runtime checks"
-        url="/blog/ai-2026-risk-tiered-tool-use"
-      />
+      
 
       <article className="min-h-screen bg-white">
         <header className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16">

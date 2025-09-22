@@ -1,22 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2027 Future Predictions: Ultimate Breakthrough Technologies',
-  description: 'Discover the revolutionary AI technologies predicted for 2027. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs.',
   keywords: ['AI 2027', 'future predictions', 'quantum AI', 'autonomous systems', 'AI breakthroughs', 'technology trends'],
 };
 
 export default function AI2027FuturePredictionsPage() {
   return (
     <div>
-      <SEO
-        title="AI 2027 Future Predictions: Ultimate Breakthrough Technologies"
-        description="Discover the revolutionary AI technologies predicted for 2027. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs."
-        keywords="AI 2027, future predictions, quantum AI, autonomous systems, AI breakthroughs, technology trends"
-        url="/blog/ai-2027-future-predictions-ultimate-breakthrough"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

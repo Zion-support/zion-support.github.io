@@ -1,23 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
-  title: 'AI 2026: Hyperautomation Business Playbook - Complete Implementation Guide',
-  description: 'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.',
   keywords: ['hyperautomation', 'AI automation', 'business transformation', 'enterprise AI'],
 };
 
 export default function AI2026HyperautomationPlaybook() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI 2026: Hyperautomation Business Playbook - Complete Implementation Guide"
-        description="A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise."
-        keywords="hyperautomation, AI automation, business transformation, enterprise AI"
-        url="/blog/ai-2026-hyperautomation-business-playbook"
-      />
+      
       
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">

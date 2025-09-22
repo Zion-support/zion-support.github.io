@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronRightIcon, XMarkIcon, SparklesIcon, ChartBarIcon, CpuChipIcon } from '@heroicons/react/24/outline';
-import { Brain } from 'lucide-react';
 
 const AdvancedNeuralArchitecturesBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -132,7 +131,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
                     
                     <div className="flex items-center text-white text-sm font-medium group-hover:text-yellow-300 transition-colors">
                       Read More
-                      <ChevronRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      <span>ChevronRightIcon</span>
                     </div>
                   </div>
                 </div>
@@ -169,7 +168,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
                 href="/services/ai-implementation"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors flex items-center"
               >
-                <Brain className="w-5 h-5 mr-2" />
+                <span className="w-5 h-5 mr-2">📊</span>
                 Get AI Implementation Help
               </Link>
             </div>

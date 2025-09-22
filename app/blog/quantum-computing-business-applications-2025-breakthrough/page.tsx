@@ -1,23 +1,14 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'Quantum Computing Business Applications 2025: The Ultimate Breakthrough Guide',
-  description: 'Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success.',
   keywords: ['quantum computing', 'business applications', 'AI', 'innovation', 'technology', '2025'],
 };
 
 export default function QuantumComputingBusinessApplicationsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Quantum Computing Business Applications 2025: The Ultimate Breakthrough Guide"
-        description="Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success."
-        keywords="quantum computing, business applications, AI, innovation, technology, 2025"
-        url="/blog/quantum-computing-business-applications-2025-breakthrough"
-      />
+      
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white py-20">

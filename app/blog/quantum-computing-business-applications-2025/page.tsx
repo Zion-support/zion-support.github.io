@@ -1,15 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'Quantum Computing Business Applications 2025 | Zion Tech Group',
-  description: 'Explore how quantum computing is revolutionizing business operations, from optimization problems to cryptography, and discover practical applications transforming industries in 2025.',
   keywords: ['quantum computing', 'business applications', 'future technology', 'innovation', 'optimization', 'cryptography'],
   openGraph: {
-    title: 'Quantum Computing Business Applications 2025',
-    description: 'Revolutionary applications transforming industries with quantum advantage',
     type: 'article',
     publishedTime: '2025-01-14',
     authors: ['Zion Tech Group'],
@@ -19,12 +13,7 @@ export const metadata: Metadata = {
 export default function QuantumComputingBusinessApplicationsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Quantum Computing Business Applications 2025"
-        description="Explore how quantum computing is revolutionizing business operations"
-        keywords="quantum computing, business applications, future technology, innovation, optimization, cryptography"
-        url="/blog/quantum-computing-business-applications-2025"
-      />
+      
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 text-white py-20">

@@ -2,7 +2,19 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import React from 'react';
-import { BLOG_POSTS } from '../../../src/data/blog-posts.js';
+
+// Define a simple blog posts array for static generation
+const BLOG_POSTS = [
+  {
+    slug: 'ai-2026-rag-at-scale-engineering-playbook',
+    title: 'AI 2026: RAG at Scale - Engineering Playbook',
+    author: 'Zion Tech Group',
+    publishDate: '2024-01-01',
+    readTime: '15 min read',
+    content: 'This is a comprehensive guide to implementing RAG systems at scale.',
+    imageUrl: null
+  }
+];
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = BLOG_POSTS.find(p => p.slug === params.slug);

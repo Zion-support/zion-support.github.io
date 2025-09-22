@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Award, Zap } from 'lucide-react';
 
 const UltimateAITransformationShowcase2025 = () => {
   const content = [
@@ -69,7 +68,7 @@ const UltimateAITransformationShowcase2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6">
-            <Zap className="w-5 h-5 mr-2" />
+            <span className="w-5 h-5 mr-2">📊</span>
             <span className="font-semibold">ULTIMATE AI TRANSFORMATION 2025</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -113,7 +112,7 @@ const UltimateAITransformationShowcase2025 = () => {
                     {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Implementation Guide' : 'Blog Post'}
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
+                    <span>Clock</span>
                     {item.readingTime}
                   </div>
                 </div>
@@ -153,7 +152,7 @@ const UltimateAITransformationShowcase2025 = () => {
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Read {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <span className="ml-2 w-4 h-4">📊</span>
                 </Link>
               </div>
             </div>
@@ -175,7 +174,7 @@ const UltimateAITransformationShowcase2025 = () => {
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Get Free Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <span className="ml-2 w-5 h-5">📊</span>
               </Link>
               <Link
                 href="/services"
@@ -192,7 +191,7 @@ const UltimateAITransformationShowcase2025 = () => {
           <h4 className="text-2xl font-bold text-gray-900 mb-8">Additional Resources</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-              <Users className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+              <span className="w-8 h-8 text-blue-600 mx-auto mb-4">📊</span>
               <h5 className="font-semibold text-gray-900 mb-2">AI Strategy Workshop</h5>
               <p className="text-gray-600 text-sm mb-4">Free 2-hour workshop to develop your AI transformation strategy</p>
               <Link href="/contact" className="text-blue-600 font-semibold hover:text-blue-800">
@@ -200,7 +199,7 @@ const UltimateAITransformationShowcase2025 = () => {
               </Link>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-              <Award className="w-8 h-8 text-green-600 mx-auto mb-4" />
+              <span className="w-8 h-8 text-green-600 mx-auto mb-4">📊</span>
               <h5 className="font-semibold text-gray-900 mb-2">ROI Calculator</h5>
               <p className="text-gray-600 text-sm mb-4">Calculate your potential ROI from AI transformation</p>
               <Link href="/tools/roi-calculator" className="text-green-600 font-semibold hover:text-green-800">
@@ -208,7 +207,7 @@ const UltimateAITransformationShowcase2025 = () => {
               </Link>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-              <Award className="w-8 h-8 text-purple-600 mx-auto mb-4" />
+              <span className="w-8 h-8 text-purple-600 mx-auto mb-4">📊</span>
               <h5 className="font-semibold text-gray-900 mb-2">Success Stories</h5>
               <p className="text-gray-600 text-sm mb-4">Read more Fortune 500 success stories</p>
               <Link href="/case-studies" className="text-purple-600 font-semibold hover:text-purple-800">

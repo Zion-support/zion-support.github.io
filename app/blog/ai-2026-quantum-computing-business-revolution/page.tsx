@@ -1,22 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Quantum Computing Business Revolution',
-  description: 'Discover how quantum computing is revolutionizing business operations in 2026. Learn about quantum algorithms, optimization, and real-world applications transforming industries.',
   keywords: ['quantum computing', 'business revolution', 'quantum algorithms', 'optimization', 'AI 2026'],
 };
 
 export default function QuantumComputingBusinessRevolution() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Quantum Computing Business Revolution"
-        description="Discover how quantum computing is revolutionizing business operations in 2026. Learn about quantum algorithms, optimization, and real-world applications."
-        keywords="quantum computing, business revolution, quantum algorithms, optimization, AI 2026"
-        url="/blog/ai-2026-quantum-computing-business-revolution"
-      />
+      
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}

@@ -1,15 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide',
-  description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI through next-generation autonomous systems and advanced neural architectures.',
   keywords: ['AI automation', 'business automation', 'ROI', 'enterprise transformation', 'AI 2025', 'automation revolution', '25,000% ROI', 'Fortune 500'],
   openGraph: {
-    title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide',
-    description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI through next-generation autonomous systems.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -17,20 +11,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide',
-    description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI.',
   },
 };
 
 export default function AI2025UltimateBusinessAutomationRevolutionPage() {
   return (
     <div>
-      <SEO
-        title="AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide"
-        description="Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI through next-generation autonomous systems and advanced neural architectures."
-        keywords="AI automation, business automation, ROI, enterprise transformation, AI 2025, automation revolution, 25,000% ROI, Fortune 500"
-        url="/blog/ai-2025-ultimate-business-automation-revolution"
-      />
+      
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

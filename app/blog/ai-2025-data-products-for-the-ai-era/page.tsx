@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const DataProductsForTheAIEra2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025: Data Products for the AI Era"
-        description="Blueprint for building reliable, reusable, and monetizable data products that power enterprise AI."
-        keywords="data products, feature store, governance, metadata, MDM, AI platforms"
-        url="/blog/ai-2025-data-products-for-the-ai-era"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

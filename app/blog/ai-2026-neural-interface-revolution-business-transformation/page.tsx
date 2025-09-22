@@ -1,22 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Neural Interface Revolution - Business Transformation',
-  description: 'Discover how neural interface technology is revolutionizing business operations in 2026. Learn about brain-computer interfaces, thought-controlled systems, and the future of human-AI collaboration.',
   keywords: ['neural interface', 'brain-computer interface', 'BCI', 'AI collaboration', 'business transformation', 'neural technology'],
 };
 
 export default function NeuralInterfaceRevolutionBusinessTransformation() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Neural Interface Revolution - Business Transformation"
-        description="Discover how neural interface technology is revolutionizing business operations in 2026. Learn about brain-computer interfaces and thought-controlled systems."
-        keywords="neural interface, brain-computer interface, BCI, AI collaboration, business transformation, neural technology"
-        url="/blog/ai-2026-neural-interface-revolution-business-transformation"
-      />
+      
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}

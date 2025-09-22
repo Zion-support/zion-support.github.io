@@ -1,15 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2026: Enterprise Automation Breakthrough - Ultimate Guide',
-  description: 'Complete guide to AI 2026 enterprise automation breakthrough. Discover advanced automation strategies, implementation frameworks, and success metrics for enterprise transformation.',
   keywords: ['AI 2026', 'enterprise automation', 'business automation', 'AI transformation', 'automation strategy', 'enterprise AI'],
   openGraph: {
-    title: 'AI 2026: Enterprise Automation Breakthrough - Ultimate Guide',
-    description: 'Complete guide to AI 2026 enterprise automation breakthrough and implementation strategies.',
     type: 'article',
     publishedTime: '2024-12-27T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -19,12 +13,7 @@ export const metadata: Metadata = {
 export default function AI2026EnterpriseAutomationUltimateGuide() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Enterprise Automation Breakthrough - Ultimate Guide"
-        description="Complete guide to AI 2026 enterprise automation breakthrough. Discover advanced automation strategies, implementation frameworks, and success metrics for enterprise transformation."
-        keywords="AI 2026, enterprise automation, business automation, AI transformation, automation strategy, enterprise AI"
-        url="/blog/ai-2026-enterprise-automation-breakthrough-ultimate-guide"
-      />
+      
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white py-20">

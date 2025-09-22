@@ -1,23 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
 import ErrorBoundary from '../../components/ErrorBoundary';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Agent Safety Certification',
-  description: 'A practical certification framework for autonomous agent safety: scenarios, metrics, gates, and governance.',
   keywords: ['agent safety', 'AI certification', 'safety evaluations', 'risk management', 'AI governance'],
 };
 
 export default function AgentSafetyCertification2026() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI 2026: Agent Safety Certification"
-        description="A practical certification framework for autonomous agent safety: scenarios, metrics, gates, and governance."
-        keywords="agent safety, AI certification, safety evaluations, risk management, AI governance"
-        url="/blog/ai-2026-agent-safety-certification"
-      />
+      
 
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">

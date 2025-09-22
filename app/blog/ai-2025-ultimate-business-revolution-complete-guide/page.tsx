@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'AI 2025 Ultimate Business Revolution: Complete Implementation Guide',
-  description: 'Discover the complete roadmap for implementing AI-driven business transformation in 2025. Learn from Fortune 500 success stories and get actionable strategies for 1000%+ ROI.',
   keywords: ['AI 2025', 'Business Transformation', 'AI Implementation', 'ROI', 'Enterprise AI'],
   openGraph: {
-    title: 'AI 2025 Ultimate Business Revolution: Complete Implementation Guide',
-    description: 'Discover the complete roadmap for implementing AI-driven business transformation in 2025. Learn from Fortune 500 success stories and get actionable strategies for 1000%+ ROI.',
     type: 'article',
     publishedTime: '2025-01-14T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -28,22 +23,22 @@ export default function BlogPost() {
               href="/blog"
               className="inline-flex items-center text-white hover:text-gray-200 transition-colors"
             >
-              <ArrowLeftIcon className="w-5 h-5 mr-2" />
+              <span>ArrowLeftIcon</span>
               Back to Blog
             </Link>
           </div>
           
           <div className="flex items-center space-x-6 text-sm mb-6">
             <div className="flex items-center">
-              <CalendarIcon className="w-4 h-4 mr-2" />
+              <span>CalendarIcon</span>
               January 14, 2025
             </div>
             <div className="flex items-center">
-              <ClockIcon className="w-4 h-4 mr-2" />
+              <span>ClockIcon</span>
               15 min read
             </div>
             <div className="flex items-center">
-              <UserIcon className="w-4 h-4 mr-2" />
+              <span>UserIcon</span>
               Zion Tech Group
             </div>
           </div>

@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const AgentSafetyEngineeringBlueprint2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025: Agent Safety Engineering Blueprint"
-        description="Practical guardrails, evaluations, and controls to deploy safe, reliable enterprise AI agents."
-        keywords="AI safety, agent safety, red teaming, evals, governance, enterprise AI"
-        url="/blog/ai-2025-agent-safety-engineering-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

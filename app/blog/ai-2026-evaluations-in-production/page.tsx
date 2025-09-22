@@ -2,9 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Evaluations in Production | Zion Tech Group',
-  description:
-    'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.',
 };
 
 export default function EvaluationsInProductionArticle() {

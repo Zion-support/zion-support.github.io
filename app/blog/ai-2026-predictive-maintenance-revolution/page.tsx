@@ -1,20 +1,11 @@
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Predictive Maintenance Revolution - Zion Tech Group',
-  description: 'Revolutionize your maintenance operations with AI-powered predictive analytics. Reduce downtime by 85% and maintenance costs by 60% with our proven framework.',
 };
 
 export default function PredictiveMaintenanceRevolution2026() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Predictive Maintenance Revolution"
-        description="Revolutionize your maintenance operations with AI-powered predictive analytics. Reduce downtime by 85% and maintenance costs by 60% with our proven framework."
-        keywords="predictive maintenance, AI analytics, IoT, machine learning, maintenance optimization, 2026"
-        url="/blog/ai-2026-predictive-maintenance-revolution"
-      />
+      
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">

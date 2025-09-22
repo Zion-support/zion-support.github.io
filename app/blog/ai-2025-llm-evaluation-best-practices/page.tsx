@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2025: LLM Evaluation Best Practices - Reliable, Fair, and Robust',
-  description: 'A practical guide to evaluating large language models in 2025, covering metrics, human-in-the-loop evaluation, bias audits, reliability testing, and production monitoring.',
   keywords: [
     'LLM evaluation', 'AI reliability', 'bias audit', 'prompt evaluation',
     'robustness testing', 'safety evaluation', 'RAG quality', 'agent assessment'
@@ -14,12 +10,7 @@ export const metadata = {
 const LlmEvaluationBestPractices2025: React.FC = () => {
   return (
     <div>
-      <SEO
-        title="AI 2025: LLM Evaluation Best Practices"
-        description="A practical guide to evaluating large language models in 2025: metrics, human evaluation, bias audits, reliability, and production monitoring."
-        keywords="LLM evaluation, AI reliability, bias audit, prompt evaluation, robustness testing, safety evaluation, RAG quality, agent assessment"
-        url="/blog/ai-2025-llm-evaluation-best-practices"
-      />
+      
 
       <article className="min-h-screen bg-white">
         <header className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">

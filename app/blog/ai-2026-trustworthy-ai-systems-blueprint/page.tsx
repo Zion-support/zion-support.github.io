@@ -2,8 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Trustworthy AI Systems Blueprint',
-  description: 'Engineering practices for reliable, secure, and transparent AI systems: evals, guardrails, monitoring, and incident response.',
 };
 
 export default function TrustworthyAISystemsBlueprintPage() {

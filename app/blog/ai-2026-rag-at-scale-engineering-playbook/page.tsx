@@ -1,23 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
-  title: 'AI 2026: RAG at Scale - Engineering Playbook',
-  description: 'A practical, engineering-first playbook to design, operate, and scale Retrieval-Augmented Generation (RAG) systems with reliability, observability, and ROI.',
   keywords: ['RAG', 'retrieval-augmented generation', 'vector databases', 'prompt engineering', 'observability', 'RAG evaluation', 'scalability'],
 };
 
 export default function AI2026RAGAtScalePlaybook() {
   return (
-    <ErrorBoundary>
-      <SEO
-        title="AI 2026: RAG at Scale - Engineering Playbook"
-        description="A practical, engineering-first playbook to design, operate, and scale Retrieval-Augmented Generation (RAG) systems with reliability, observability, and ROI."
-        keywords="RAG, retrieval-augmented generation, vector databases, prompt engineering, observability, RAG evaluation, scalability"
-        url="/blog/ai-2026-rag-at-scale-engineering-playbook"
-      />
+    <div>
+      
 
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-blue-700 via-purple-700 to-indigo-700 text-white py-20">
@@ -90,7 +81,7 @@ export default function AI2026RAGAtScalePlaybook() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
 

@@ -1,21 +1,12 @@
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2025: The Enterprise AI Transformation Ultimate Breakthrough - 1,500% ROI in 6 Months',
-  description: 'Discover the proven methodologies that Fortune 500 companies are using to achieve 1,500% ROI within 6 months through comprehensive AI transformation strategies.',
   keywords: ['AI transformation', 'enterprise AI', 'ROI', 'Fortune 500', 'digital transformation', 'AI strategy'],
 };
 
 export default function AI2025EnterpriseAITransformationUltimateBreakthrough() {
   return (
     <div>
-      <SEO
-        title="AI 2025: The Enterprise AI Transformation Ultimate Breakthrough - 1,500% ROI in 6 Months"
-        description="Discover the proven methodologies that Fortune 500 companies are using to achieve 1,500% ROI within 6 months through comprehensive AI transformation strategies."
-        keywords="AI transformation, enterprise AI, ROI, Fortune 500, digital transformation, AI strategy"
-        url="/blog/ai-2025-enterprise-ai-transformation-ultimate-breakthrough"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

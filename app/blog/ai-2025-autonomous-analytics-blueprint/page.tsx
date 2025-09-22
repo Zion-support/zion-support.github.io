@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const AutonomousAnalyticsBlueprint2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025: Autonomous Analytics Blueprint"
-        description="A practical blueprint for deploying autonomous analytics systems that continuously discover insights and drive decisions across the enterprise."
-        keywords="autonomous analytics, AI analytics, continuous intelligence, 2025 blueprint"
-        url="/blog/ai-2025-autonomous-analytics-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

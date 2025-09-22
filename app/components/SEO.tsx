@@ -10,18 +10,7 @@ interface SEOProps {
   type?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
-  url = '',
-  image = '/images/og-image.jpg',
-  type = 'website'
-}) => {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
+const SEO: React.FC
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       

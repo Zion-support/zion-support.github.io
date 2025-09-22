@@ -1,37 +1,26 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Agent Posture Management',
-  description:
-    'Continuously assess, harden, and govern autonomous agents across environments with posture baselines, controls, and evaluations.',
 };
 
-export default function Page() {
+export default function AgentPostureManagementPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <article className="prose prose-lg">
-        <h1>AI 2026: Agent Posture Management</h1>
-        <p>
-          Agent Posture Management applies continuous assessment and remediation to
-          autonomous agents: evaluating capabilities, permissions, risks, and
-          operational health against organizational guardrails.
-        </p>
-        <h2>What this includes</h2>
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Security</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Agent Posture Management</h1>
+      <p className="text-gray-600 mb-8">
+        Continuously assess, harden, and govern autonomous agents across environments with posture baselines, controls, and evaluations.
+      </p>
+
+      <div className="prose prose-lg max-w-none">
+        <h2>Key Capabilities</h2>
         <ul>
-          <li>Baseline definitions for capabilities, scopes, and controls</li>
-          <li>Runtime posture checks and evidence collection</li>
-          <li>Policy-as-code with evaluation gates and escalation paths</li>
-          <li>Drift detection and auto-remediation playbooks</li>
+          <li>Continuous posture assessment</li>
+          <li>Security hardening</li>
+          <li>Cross-environment governance</li>
+          <li>Baseline controls and evaluations</li>
         </ul>
-        <h2>Getting started</h2>
-        <ol>
-          <li>Define posture baselines per agent class and environment.</li>
-          <li>Integrate telemetry for abilities, actions, and outcomes.</li>
-          <li>Automate enforcement with policy-as-code and eval harnesses.</li>
-          <li>Report posture over time to drive risk reduction.</li>
-        </ol>
-      </article>
+      </div>
     </main>
   );
 }
-

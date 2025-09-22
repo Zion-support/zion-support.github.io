@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Calendar, Clock, ArrowRight, TrendingUp, Users, Target } from 'lucide-react';
 
 export default function LatestContent2026Showcase() {
   const latestContent = [
@@ -64,7 +63,7 @@ export default function LatestContent2026Showcase() {
                   <div className="text-right">
                     <div className="text-sm font-semibold text-purple-600">{content.category}</div>
                     <div className="flex items-center text-gray-500 text-sm mt-1">
-                      <Clock className="w-4 h-4 mr-1" />
+                      <span>Clock</span>
                       {content.readTime}
                     </div>
                   </div>
@@ -80,7 +79,7 @@ export default function LatestContent2026Showcase() {
 
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center text-gray-500 text-sm">
-                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>Calendar</span>
                     {content.publishDate}
                   </div>
                   <div className="text-sm font-semibold text-green-600 bg-green-100 px-3 py-1 rounded-full">
@@ -93,7 +92,7 @@ export default function LatestContent2026Showcase() {
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105"
                 >
                   Read Article
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300">📊</span>
                 </Link>
               </div>
             </article>
@@ -106,7 +105,7 @@ export default function LatestContent2026Showcase() {
             className="inline-flex items-center bg-white border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
           >
             View All AI 2026 Content
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <span className="w-5 h-5 ml-2">📊</span>
           </Link>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Revenue Ops with Autonomous Agents',
-  description: 'Pipeline generation, deal acceleration, and expansion using governed agent workflows with eval-gated upgrades.',
 };
 
 export default function Page() {

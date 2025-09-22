@@ -1,7 +1,5 @@
 import Link from 'next/link';
 export const metadata = {
-  title: 'AI 2026: Policy‑as‑Code in Production — Guardrails, Gates, and Evidence',
-  description: 'Operationalize policy‑as‑code for autonomous agents with evaluation gates, runtime protections, and audit‑ready evidence.'
 };
 
 export default function Page() {

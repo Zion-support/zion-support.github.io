@@ -1,15 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI Automation Success Story: 500% ROI Achievement | Zion Tech Group',
-  description: 'Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.',
   keywords: ['AI automation', 'ROI', 'enterprise', 'success story', 'productivity', 'cost reduction'],
   openGraph: {
-    title: 'AI Automation Success Story: 500% ROI Achievement',
-    description: 'Fortune 500 company achieves 500% ROI through intelligent automation',
     type: 'article',
     publishedTime: '2025-01-14',
     authors: ['Zion Tech Group'],
@@ -19,12 +13,7 @@ export const metadata: Metadata = {
 export default function AIAutomationSuccessStoryPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Automation Success Story: 500% ROI Achievement"
-        description="Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation"
-        keywords="AI automation, ROI, enterprise, success story, productivity, cost reduction"
-        url="/blog/ai-automation-success-story-2025"
-      />
+      
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20">

@@ -1,9 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Operational Resilience Blueprint',
-  description:
-    'Design resilient AI and agent systems with eval-gated rollouts, chaos drills, and safe-mode fallbacks.',
 };
 
 export default function Page() {

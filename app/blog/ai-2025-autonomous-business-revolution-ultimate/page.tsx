@@ -3,12 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Ultimate Autonomous Business Revolution | Zion Tech Group',
-  description: 'Discover how AI is revolutionizing business operations in 2025 with autonomous systems that deliver unprecedented efficiency and ROI.',
   keywords: ['AI', 'Autonomous Systems', 'Business Automation', '2025', 'Revolution', 'ROI'],
   openGraph: {
-    title: 'AI 2025: The Ultimate Autonomous Business Revolution',
-    description: 'Discover how AI is revolutionizing business operations in 2025 with autonomous systems that deliver unprecedented efficiency and ROI.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],

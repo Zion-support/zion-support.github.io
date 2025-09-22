@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, Zap, TrendingUp, Users, Shield } from 'lucide-react';
 
 const AutomationMasteryBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,11 +36,11 @@ const AutomationMasteryBanner = () => {
           <div className="flex-1">
             <div className="flex items-center space-x-4 mb-4">
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Zap className="w-5 h-5 text-white" />
+                <span className="w-5 h-5 text-white">📊</span>
                 <span className="text-sm font-medium">🚀 AUTOMATION MASTERY</span>
               </div>
               <div className="hidden sm:flex items-center space-x-2 text-sm text-white/80">
-                <Users className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
                 <span>Enterprise Ready</span>
               </div>
             </div>
@@ -63,7 +62,7 @@ const AutomationMasteryBanner = () => {
                   <div className="text-xs text-white/70">1,500% ROI • $8.5B Savings • 99% Automation</div>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-white/80">
-                  <Shield className="w-4 h-4" />
+                  <span className="w-4 h-4">📊</span>
                   <span>Fortune 500 Proven</span>
                 </div>
               </div>
@@ -85,7 +84,7 @@ const AutomationMasteryBanner = () => {
             className="ml-4 p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
             aria-label="Dismiss banner"
           >
-            <X className="w-5 h-5" />
+            <span>X</span>
           </button>
         </div>
       </div>

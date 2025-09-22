@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'AI 2025 Ultimate Business Transformation: Complete Enterprise Guide | Zion Tech Group',
-  description: 'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 2025.',
   keywords: ['AI 2025', 'Business Transformation', 'Enterprise AI', 'Digital Transformation', 'ROI Optimization'],
   openGraph: {
-    title: 'AI 2025 Ultimate Business Transformation: Complete Enterprise Guide',
-    description: 'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 2025.',
     images: ['/images/ai-business-transformation-2025.jpg'],
   },
 };
@@ -25,7 +20,7 @@ export default function AI2025UltimateBusinessTransformationGuide() {
               href="/blog" 
               className="flex items-center text-white/80 hover:text-white transition-colors"
             >
-              <ArrowLeftIcon className="w-5 h-5 mr-2" />
+              <span>ArrowLeftIcon</span>
               Back to Blog
             </Link>
           </div>

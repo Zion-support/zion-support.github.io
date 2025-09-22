@@ -1,11 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Future Trends Revolutionary Breakthrough - Complete Guide to 1,200% ROI',
-  description: 'Discover the revolutionary AI trends that are delivering 1,200% ROI and transforming industries. Complete guide to AI 2025 future trends and implementation strategies.',
   keywords: 'AI trends 2025, future predictions, ROI, revolutionary breakthrough, AI implementation, quantum AI, neural interfaces, synthetic intelligence',
 };
 
@@ -20,7 +17,7 @@ export default function AI2025FutureTrendsPage() {
               href="/blog"
               className="flex items-center text-white/80 hover:text-white transition-colors"
             >
-              <ArrowLeftIcon className="w-5 h-5 mr-2" />
+              <span>ArrowLeftIcon</span>
               Back to Blog
             </Link>
           </div>
@@ -44,15 +41,15 @@ export default function AI2025FutureTrendsPage() {
 
           <div className="flex flex-wrap items-center space-x-6 text-sm text-blue-200">
             <div className="flex items-center">
-              <CalendarIcon className="w-4 h-4 mr-2" />
+              <span>CalendarIcon</span>
               January 17, 2025
             </div>
             <div className="flex items-center">
-              <ClockIcon className="w-4 h-4 mr-2" />
+              <span>ClockIcon</span>
               25 min read
             </div>
             <div className="flex items-center">
-              <TagIcon className="w-4 h-4 mr-2" />
+              <span>TagIcon</span>
               AI Trends, Future Predictions, ROI
             </div>
           </div>

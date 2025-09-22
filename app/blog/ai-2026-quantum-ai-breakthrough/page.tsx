@@ -1,20 +1,11 @@
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Quantum AI Breakthrough - Zion Tech Group',
-  description: 'Discover the quantum AI breakthrough that will revolutionize computing. Achieve 10,000x speed improvements and solve previously impossible problems.',
 };
 
 export default function QuantumAIBreakthrough2026() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Quantum AI Breakthrough"
-        description="Discover the quantum AI breakthrough that will revolutionize computing. Achieve 10,000x speed improvements and solve previously impossible problems."
-        keywords="quantum AI, quantum computing, breakthrough, 10,000x speed, impossible problems, 2026"
-        url="/blog/ai-2026-quantum-ai-breakthrough"
-      />
+      
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">

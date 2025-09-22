@@ -1,68 +1,40 @@
-import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import ScrollToTop from '../components/ScrollToTop';
+import Link from 'next/link';
+import React from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
+export const metadata = {
+  title: 'Layout',
+  description: 'Layout - Professional blog page with comprehensive information and insights.'
 };
 
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'),
-  title: 'Zion Tech Group - AI Solutions & Technology Services',
-  description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
-  keywords: 'AI solutions, micro SaaS, IT services, technology consulting, automation',
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    title: 'Zion Tech Group - AI Solutions & Technology Services',
-    description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI Solutions & Technology Services',
-    description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function LayoutPage() {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-        <ScrollToTop />
-      </body>
-    </html>
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Blog</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Layout</h1>
+      <p className="text-gray-600 mb-8">
+        Layout - Professional blog page with comprehensive information and insights.
+      </p>
+
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about layout with 
+          detailed insights and practical guidance.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
+
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
+    </main>
   );
 }

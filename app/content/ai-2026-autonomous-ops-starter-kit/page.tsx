@@ -1,50 +1,40 @@
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Autonomous Ops Starter Kit',
-  description:
-    'Kickstart evaluation-first operations: templates for SLOs, incident runbooks, and policy-as-code gates.',
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function Page() {
+export default function PagePage() {
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <header className="mb-8">
-        <p className="text-sm text-emerald-700 font-semibold">New guide</p>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-          AI 2026: Autonomous Ops Starter Kit
-        </h1>
-        <p className="text-gray-600 mt-3">
-          Downloadable templates and reference implementations to operate autonomous agents with confidence.
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
+
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
         </p>
-      </header>
-      <section className="grid gap-6 md:grid-cols-2">
-        <div className="bg-white rounded-xl border border-gray-100 p-6 shadow">
-          <h3 className="text-lg font-semibold text-gray-900">SLO Templates</h3>
-          <p className="text-gray-600 mt-2">Safety, quality, reliability, and economics—ready to adapt.</p>
-          <Link href="/content/ai-2026-agent-platform-slos" className="inline-block mt-4 text-purple-600 font-semibold hover:text-purple-800">View →</Link>
-        </div>
-        <div className="bg-white rounded-xl border border-gray-100 p-6 shadow">
-          <h3 className="text-lg font-semibold text-gray-900">Incident Runbooks</h3>
-          <p className="text-gray-600 mt-2">Eval‑gated triage, mitigation, and escalation patterns.</p>
-          <Link href="/content/ai-2026-agent-incident-response-playbook" className="inline-block mt-4 text-purple-600 font-semibold hover:text-purple-800">View →</Link>
-        </div>
-        <div className="bg-white rounded-xl border border-gray-100 p-6 shadow">
-          <h3 className="text-lg font-semibold text-gray-900">Policy‑as‑Code</h3>
-          <p className="text-gray-600 mt-2">Versioned controls and lifecycle gates with audit evidence.</p>
-          <Link href="/content/ai-2026-policy-as-code-starter-kit" className="inline-block mt-4 text-purple-600 font-semibold hover:text-purple-800">View →</Link>
-        </div>
-        <div className="bg-white rounded-xl border border-gray-100 p-6 shadow">
-          <h3 className="text-lg font-semibold text-gray-900">Evaluation Harness</h3>
-          <p className="text-gray-600 mt-2">Scenario suites, metrics, and CI/CD integration.</p>
-          <Link href="/content/ai-2026-evaluation-harness-starter-kit" className="inline-block mt-4 text-purple-600 font-semibold hover:text-purple-800">View →</Link>
-        </div>
-      </section>
-      <div className="mt-10 flex gap-3">
-        <Link href="/blog/ai-2026-operational-resilience-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Operational Resilience</Link>
-        <Link href="/blog/ai-2026-production-guardrails-playbook" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Production Guardrails</Link>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
+
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
       </div>
     </main>
   );
 }
-

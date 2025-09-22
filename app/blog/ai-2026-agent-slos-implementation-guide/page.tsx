@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Implementing Agent SLOs — Practical Guide',
-  description: 'Define, monitor, and enforce SLOs that matter for autonomous agent platforms with policy-as-code and eval gates.',
 };
 
 export default function Page() {

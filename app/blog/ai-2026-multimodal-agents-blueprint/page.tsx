@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const MultimodalAgentsBlueprint2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Multimodal Agents Blueprint"
-        description="A practical blueprint to design, deploy, and scale multimodal AI agents that see, talk, reason, and act across enterprise workflows."
-        keywords="multimodal agents, AI agents, enterprise AI, 2026 blueprint, vision-language-action"
-        url="/blog/ai-2026-multimodal-agents-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

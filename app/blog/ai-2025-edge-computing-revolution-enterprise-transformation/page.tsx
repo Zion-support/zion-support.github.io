@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: Edge Computing Revolution - Enterprise Transformation Guide',
-  description: 'Discover how edge computing is revolutionizing enterprise AI in 2025, enabling real-time decision-making and autonomous operations at unprecedented scale.',
   keywords: ['Edge Computing', 'AI 2025', 'Real-time AI', 'Enterprise Transformation', 'Autonomous Systems'],
   openGraph: {
-    title: 'AI 2025: Edge Computing Revolution - Enterprise Transformation Guide',
-    description: 'Discover how edge computing is revolutionizing enterprise AI in 2025, enabling real-time decision-making and autonomous operations at unprecedented scale.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -27,25 +22,25 @@ export default function EdgeComputingRevolutionPage() {
             href="/blog" 
             className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors mb-4"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <span>ArrowLeft</span>
             Back to Blog
           </Link>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
+              <span>Calendar</span>
               January 15, 2025
             </div>
             <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
+              <span>User</span>
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
+              <span>Clock</span>
               16 min read
             </div>
             <div className="flex items-center">
-              <BookOpen className="w-4 h-4 mr-2" />
+              <span className="w-4 h-4 mr-2">📊</span>
               Featured Article
             </div>
           </div>
@@ -56,7 +51,7 @@ export default function EdgeComputingRevolutionPage() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
-            <TrendingUp className="w-4 h-4 mr-2" />
+            <span className="w-4 h-4 mr-2">📊</span>
             Featured Article
           </div>
           
@@ -77,7 +72,7 @@ export default function EdgeComputingRevolutionPage() {
           </div>
 
           <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            <Share2 className="w-4 h-4 mr-2" />
+            <span className="w-4 h-4 mr-2">📊</span>
             Share Article
           </button>
         </div>
@@ -162,7 +157,7 @@ export default function EdgeComputingRevolutionPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white border rounded-lg p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-blue-600" />
+                  <span className="w-6 h-6 text-blue-600">📊</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Manufacturing Excellence</h4>
                 <p className="text-gray-600 text-sm">
@@ -173,7 +168,7 @@ export default function EdgeComputingRevolutionPage() {
               
               <div className="bg-white border rounded-lg p-6">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-green-600" />
+                  <span className="w-6 h-6 text-green-600">📊</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Healthcare Transformation</h4>
                 <p className="text-gray-600 text-sm">
@@ -184,7 +179,7 @@ export default function EdgeComputingRevolutionPage() {
               
               <div className="bg-white border rounded-lg p-6">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <BookOpen className="w-6 h-6 text-purple-600" />
+                  <span className="w-6 h-6 text-purple-600">📊</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Financial Services</h4>
                 <p className="text-gray-600 text-sm">
@@ -205,7 +200,7 @@ export default function EdgeComputingRevolutionPage() {
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
               >
                 Get Started Today
-                <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
+                <span>ArrowLeft</span>
               </Link>
             </div>
           </div>

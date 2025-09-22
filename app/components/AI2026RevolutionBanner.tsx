@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Sparkles, Rocket, Brain, Zap } from 'lucide-react';
 
 export default function AI2026RevolutionBanner() {
   return (
@@ -41,7 +40,7 @@ export default function AI2026RevolutionBanner() {
             
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl mb-4">
-                <Zap className="w-8 h-8 text-white" />
+                <span className="w-8 h-8 text-white">📊</span>
               </div>
               <h3 className="text-xl font-bold mb-2">1000x Speedup</h3>
               <p className="text-gray-300">Quantum computing exponential optimization</p>
@@ -49,7 +48,7 @@ export default function AI2026RevolutionBanner() {
             
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl mb-4">
-                <Brain className="w-8 h-8 text-white" />
+                <span className="w-8 h-8 text-white">📊</span>
               </div>
               <h3 className="text-xl font-bold mb-2">500% Productivity</h3>
               <p className="text-gray-300">Neural interfaces for thought control</p>

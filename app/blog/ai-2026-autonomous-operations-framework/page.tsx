@@ -1,20 +1,11 @@
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Autonomous Operations Framework - Zion Tech Group',
-  description: 'Build self-healing, self-optimizing systems with our comprehensive autonomous operations framework. Reduce manual intervention by 90% and achieve 99.9% uptime.',
 };
 
 export default function AutonomousOperationsFramework2026() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Operations Framework"
-        description="Build self-healing, self-optimizing systems with our comprehensive autonomous operations framework. Reduce manual intervention by 90% and achieve 99.9% uptime."
-        keywords="autonomous operations, AI framework, self-healing systems, automation, enterprise AI, 2026"
-        url="/blog/ai-2026-autonomous-operations-framework"
-      />
+      
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">

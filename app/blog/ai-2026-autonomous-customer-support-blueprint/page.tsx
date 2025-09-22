@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 const AutonomousCustomerSupportBlueprint2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Customer Support Blueprint"
-        description="Design and deploy autonomous, guardrailed AI support agents that resolve issues end-to-end with measurable CSAT and cost savings."
-        keywords="autonomous support, AI agents, customer service, CSAT, AHT, containment rate, 2026"
-        url="/blog/ai-2026-autonomous-customer-support-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

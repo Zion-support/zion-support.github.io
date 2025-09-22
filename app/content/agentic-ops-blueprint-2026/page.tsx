@@ -1,36 +1,40 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-	title: 'Agentic Ops Blueprint 2026',
-	description:
-		'A pragmatic blueprint to operationalize agentic workflows across the enterprise with safety, observability, and ROI.',
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function AgenticOpsBlueprint2026() {
-	return (
-		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-			<h1 className="text-4xl font-bold text-gray-900 mb-4">Agentic Ops Blueprint 2026</h1>
-			<p className="text-gray-600 mb-8">
-				This blueprint details how to design, deploy, and scale agentic operations for real business outcomes. It
-				covers safety-by-design, observability, governance, and value realization so teams can ship reliable agents in
-				production.
-			</p>
-			<section className="prose max-w-none">
-				<h2>What You Will Learn</h2>
-				<ul>
-					<li>Reference architecture for agentic workflows and human-in-the-loop controls</li>
-					<li>Guardrails: policy-as-code, risk tiers, evaluation harnesses, red-teaming</li>
-					<li>Operational telemetry: traces, metrics, feedback loops, and continuous improvement</li>
-					<li>ROI model: measuring impact across cycle time, quality, cost, and revenue</li>
-				</ul>
-				<h2>Getting Started</h2>
-				<p>
-					Start with one high-signal workflow. Instrument it end-to-end with evaluations and guardrails, define
-					clear success metrics, and iterate weekly using production feedback. Expand to adjacent use cases once
-					observability and governance are in place.
-				</p>
-			</section>
-		</main>
-	);
-}
+export default function PagePage() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
 
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
+
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
+    </main>
+  );
+}

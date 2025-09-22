@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const AutonomousEnterpriseBlueprint2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Enterprise Blueprint"
-        description="A step-by-step blueprint to design, build, and scale an autonomous enterprise using AI agents, workflow orchestration, and robust governance."
-        keywords="autonomous enterprise, AI agents, workflow orchestration, governance, 2026"
-        url="/blog/ai-2026-autonomous-enterprise-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

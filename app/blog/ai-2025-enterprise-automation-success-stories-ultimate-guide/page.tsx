@@ -1,23 +1,14 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2025 Enterprise Automation Success Stories: Ultimate Guide',
-  description: 'Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.',
   keywords: ['AI automation', 'enterprise', 'case studies', 'ROI', 'success stories', 'Fortune 500'],
 };
 
 export default function AIEnterpriseAutomationSuccessStoriesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025 Enterprise Automation Success Stories: Ultimate Guide"
-        description="Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results."
-        keywords="AI automation, enterprise, case studies, ROI, success stories, Fortune 500"
-        url="/blog/ai-2025-enterprise-automation-success-stories-ultimate-guide"
-      />
+      
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">

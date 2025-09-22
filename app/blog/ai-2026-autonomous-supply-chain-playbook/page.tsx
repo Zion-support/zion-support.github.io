@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const AutonomousSupplyChainPlaybook2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Supply Chain Playbook"
-        description="A practical playbook to design, deploy, and scale AI-driven autonomous supply chains in 2026."
-        keywords="autonomous supply chain, AI logistics, demand forecasting, 2026 playbook"
-        url="/blog/ai-2026-autonomous-supply-chain-playbook"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

@@ -2,8 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Strategic AI Roadmap for Executives',
-  description: 'A concise, actionable roadmap for executives to plan, fund, and scale AI initiatives through 2026.',
 };
 
 export default function Page() {

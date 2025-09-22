@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 const EnterpriseAIFinOpsCostOptimization2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Enterprise AI FinOps Cost Optimization"
-        description="A practical guide to control AI infrastructure costs with FinOps: utilization, right-sizing, caching, eval gating, and policy-driven guardrails."
-        keywords="AI FinOps, cost optimization, enterprise AI, LLM cost control, 2026"
-        url="/blog/ai-2026-enterprise-ai-finops-cost-optimization"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

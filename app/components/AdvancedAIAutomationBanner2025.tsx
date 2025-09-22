@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Award, Zap } from 'lucide-react';
 
 const AdvancedAIAutomationBanner2025 = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -92,7 +91,7 @@ const AdvancedAIAutomationBanner2025 = () => {
             <div className="space-y-6">
               {/* Badge */}
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium">
-                <Star className="w-4 h-4 mr-2 text-yellow-400" />
+                <span>Star</span>
                 NEW 2025 CONTENT
               </div>
 
@@ -128,7 +127,7 @@ const AdvancedAIAutomationBanner2025 = () => {
                   className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
                 >
                   {currentContent.cta}
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <span className="w-5 h-5 ml-2">📊</span>
                 </Link>
                 <Link
                   href="/contact"
@@ -146,7 +145,7 @@ const AdvancedAIAutomationBanner2025 = () => {
                 <div className="space-y-6">
                   {/* Icon */}
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl mx-auto">
-                    <Zap className="w-8 h-8 text-black" />
+                    <span className="w-8 h-8 text-black">📊</span>
                   </div>
 
                   {/* Stats */}
@@ -172,15 +171,15 @@ const AdvancedAIAutomationBanner2025 = () => {
                   {/* Features */}
                   <div className="space-y-3">
                     <div className="flex items-center text-sm">
-                      <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
+                      <span className="w-4 h-4 mr-2 text-green-400">📊</span>
                       <span>Proven Implementation Framework</span>
                     </div>
                     <div className="flex items-center text-sm">
-                      <Users className="w-4 h-4 mr-2 text-blue-400" />
+                      <span className="w-4 h-4 mr-2 text-blue-400">📊</span>
                       <span>Fortune 500 Case Studies</span>
                     </div>
                     <div className="flex items-center text-sm">
-                      <Award className="w-4 h-4 mr-2 text-yellow-400" />
+                      <span className="w-4 h-4 mr-2 text-yellow-400">📊</span>
                       <span>Industry-Leading Results</span>
                     </div>
                   </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Agent Platform Operations Best Practices',
-  description: 'SLOs, incident response, and change management patterns for safe, reliable agent platforms.',
 };
 
 export default function Page() {

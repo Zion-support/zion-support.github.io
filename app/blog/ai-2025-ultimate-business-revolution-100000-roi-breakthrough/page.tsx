@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Ultimate Business Revolution - 100,000% ROI Breakthrough Guide',
-  description: 'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns. Complete guide to 100,000% ROI transformation.',
   keywords: ['AI Revolution', 'Business Transformation', 'ROI', 'Fortune 500', '100,000% ROI', 'Ultimate Breakthrough'],
   openGraph: {
-    title: 'AI 2025: The Ultimate Business Revolution - 100,000% ROI Breakthrough Guide',
-    description: 'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -25,7 +20,7 @@ export default function UltimateBusinessRevolutionPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
-              <ArrowLeftIcon className="h-5 w-5" />
+              <span>ArrowLeftIcon</span>
               <span>Back to Home</span>
             </Link>
             <div className="flex items-center space-x-4">
@@ -96,16 +91,16 @@ export default function UltimateBusinessRevolutionPage() {
           <div className="flex flex-wrap items-center justify-between text-sm text-gray-600">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <CalendarIcon className="h-4 w-4" />
+                <span>CalendarIcon</span>
                 <span>January 17, 2025</span>
               </div>
               <div className="flex items-center space-x-2">
-                <ClockIcon className="h-4 w-4" />
+                <span>ClockIcon</span>
                 <span>45 min read</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <TagIcon className="h-4 w-4" />
+              <span>TagIcon</span>
               <span>AI Revolution, Business Transformation, ROI</span>
             </div>
           </div>

@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Autonomous Business Operations - Zion Tech Group',
-  description: 'Discover how autonomous AI agents will revolutionize business operations in 2026 with self-healing systems, intelligent automation, and predictive analytics.',
   keywords: ['AI 2026', 'autonomous business', 'AI agents', 'business automation', 'predictive analytics'],
 };
 

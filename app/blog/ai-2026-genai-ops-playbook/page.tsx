@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const GenAIOpsPlaybook2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: GenAI Operations Playbook"
-        description="A practical playbook to operationalize Generative AI safely and at scale across the enterprise in 2026."
-        keywords="GenAI operations, AI governance, AI platform engineering, MLOps, 2026"
-        url="/blog/ai-2026-genai-ops-playbook"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

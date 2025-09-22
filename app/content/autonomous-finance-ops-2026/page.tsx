@@ -1,55 +1,40 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Autonomous Finance Operations Blueprint',
-  description:
-    'A practical guide to building an autonomous finance operating system: real-time cash, policy-as-code, and continuous close.',
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function AutonomousFinanceOps2026Page() {
+export default function PagePage() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            AI 2026: Autonomous Finance Operations Blueprint
-          </h1>
-          <p className="text-xl opacity-90 max-w-3xl">
-            Design and implement an autonomous finance operating system with real-time liquidity, policy-as-code guardrails, and continuous close.
-          </p>
-        </div>
-      </section>
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
 
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
-          <h2>What You Will Learn</h2>
-          <ul>
-            <li>Reference architecture for autonomous finance workflows</li>
-            <li>Event-driven ledgers and real-time cash visibility</li>
-            <li>Policy-as-code for approvals, spend controls, and risk</li>
-            <li>Continuous close and autonomous reconciliations</li>
-            <li>Controls, observability, and human-in-the-loop</li>
-          </ul>
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
+        </p>
 
-          <h2>Reference Architecture</h2>
-          <p>
-            The blueprint composes streaming ingestion, event-sourced ledgers, LLM agents for anomaly detection, and policy engines to drive safe autonomous decisions.
-          </p>
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
 
-          <h2>Getting Started</h2>
-          <ol>
-            <li>Instrument finance events and establish a unified ledger</li>
-            <li>Codify policies as declarative rules with audit trails</li>
-            <li>Deploy evaluators and guardrails for every autonomous action</li>
-            <li>Roll out progressively with measurable KPIs and SLOs</li>
-          </ol>
-
-          <p>
-            Ready to implement? Contact us to run an accelerated 4-week pilot tailored to your financial stack.
-          </p>
-        </div>
-      </section>
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
     </main>
   );
 }
-

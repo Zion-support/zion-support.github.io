@@ -1,11 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Real-Time Retrieval Architectures - Low Latency RAG Systems',
-  description:
-    'Designing sub-100ms retrieval and generation pipelines with vector indices, hybrid search, caching, and streaming for production-grade RAG.',
   keywords: [
     'RAG',
     'real-time retrieval',
@@ -19,12 +14,7 @@ export const metadata = {
 const RealTimeRetrievalArchitectures2026: React.FC = () => {
   return (
     <div>
-      <SEO
-        title="AI 2026: Real-Time Retrieval Architectures"
-        description="Sub-100ms retrieval and generation with hybrid search, semantic caches, and streaming."
-        keywords="RAG, real-time retrieval, vector DB, hybrid search, caching, streaming"
-        url="/blog/ai-2026-real-time-retrieval-architectures"
-      />
+      
 
       <article className="min-h-screen bg-white">
         <header className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-16">

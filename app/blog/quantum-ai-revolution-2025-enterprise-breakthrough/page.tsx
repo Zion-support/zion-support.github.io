@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'Quantum AI Revolution 2025: Enterprise Breakthrough Guide | Zion Tech Group',
-  description: 'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',
   keywords: ['Quantum Computing', 'AI Revolution', 'Enterprise Technology', 'Quantum AI', 'Future Computing'],
   openGraph: {
-    title: 'Quantum AI Revolution 2025: Enterprise Breakthrough Guide',
-    description: 'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',
     images: ['/images/quantum-ai-revolution-2025.jpg'],
   },
 };
@@ -25,7 +20,7 @@ export default function QuantumAIRevolution2025Guide() {
               href="/blog" 
               className="flex items-center text-white/80 hover:text-white transition-colors"
             >
-              <ArrowLeftIcon className="w-5 h-5 mr-2" />
+              <span>ArrowLeftIcon</span>
               Back to Blog
             </Link>
           </div>

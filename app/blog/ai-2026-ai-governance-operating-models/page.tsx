@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const AIGovernanceOperatingModels2026 = () => {
 	return (
 		<div className="min-h-screen bg-white">
-			<SEO
-				title="AI 2026: Governance Operating Models for Safe, Scalable Autonomy"
-				description="Practical operating models for AI safety, policy-as-code, and decentralized governance to scale autonomous systems responsibly."
-				keywords="AI governance 2026, policy-as-code, safety, operating model"
-				url="/blog/ai-2026-ai-governance-operating-models"
-			/>
+			
 
 			<article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<header className="mb-10">

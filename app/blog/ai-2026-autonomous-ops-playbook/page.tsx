@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 const AutonomousOpsPlaybook2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Ops Playbook"
-        description="SLOs, incident response, eval-driven releases, and policy-as-code for AI operations."
-        keywords="autonomous operations, AI ops, SLOs, incident response, 2026"
-        url="/blog/ai-2026-autonomous-ops-playbook"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

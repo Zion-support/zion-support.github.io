@@ -1,11 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
-	title: 'AI 2026: Enterprise Multimodal Agents Blueprint',
-	description: 'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.',
 	keywords: [
 		'enterprise AI agents',
 		'multimodal AI',
@@ -19,12 +16,7 @@ export const metadata = {
 export default function EnterpriseMultimodalAgentsBlueprint2026() {
 	return (
 		<ErrorBoundary>
-			<SEO
-				title="AI 2026: Enterprise Multimodal Agents Blueprint"
-				description="Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations."
-				keywords="enterprise AI agents, multimodal AI, AI blueprint, vision-language models, speech AI, enterprise automation"
-				url="/blog/ai-2026-enterprise-multimodal-agents-blueprint"
-			/>
+			
 
 			<div className="min-h-screen bg-white">
 				<section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600 text-white py-20">

@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Enterprise AI Governance Blueprint | Zion Tech Group',
-  description: 'A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly in 2026.',
   keywords: [
     'AI governance', 'policy-as-code', 'model risk management', 'AI compliance', 'AI monitoring', 'guardrails'
   ],
@@ -13,12 +9,7 @@ export const metadata = {
 const EnterpriseAIGovernanceBlueprint2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Enterprise AI Governance Blueprint"
-        description="A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly."
-        keywords="AI governance, policy-as-code, model risk management, AI compliance, AI monitoring, guardrails"
-        url="/blog/ai-2026-enterprise-ai-governance-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

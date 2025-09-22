@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 const EdgeToCloudIntelligentAutomation2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025: Edge-to-Cloud Intelligent Automation"
-        description="Design patterns to orchestrate AI-driven automation from edge devices to cloud platforms across the enterprise."
-        keywords="edge AI, edge-to-cloud, intelligent automation, enterprise automation, 2025"
-        url="/blog/ai-2025-edge-to-cloud-intelligent-automation"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

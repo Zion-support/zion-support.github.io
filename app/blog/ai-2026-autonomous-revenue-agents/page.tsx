@@ -1,9 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Autonomous Revenue Agents — From Lead to Closed Won',
-  description:
-    'How autonomous AI agents will run end-to-end revenue operations by 2026: prospecting, qualification, meetings, proposals, and renewals.',
   keywords: [
     'autonomous agents',
     'AI sales',

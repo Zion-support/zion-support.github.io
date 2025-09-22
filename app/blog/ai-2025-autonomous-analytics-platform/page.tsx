@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'Autonomous Analytics Platform 2025: From Dashboards to Decisions | Zion Tech Group',
-  description: 'Design an autonomous analytics platform that turns raw data into governed, explainable, ROI-backed decisions in 2025.',
   keywords: [
     'autonomous analytics',
     'ai analytics platform',
@@ -17,12 +13,7 @@ export const metadata = {
 const AutonomousAnalyticsPlatform2025Page = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Autonomous Analytics Platform 2025: From Dashboards to Decisions"
-        description="Design an autonomous analytics platform that turns raw data into governed, explainable, ROI-backed decisions in 2025."
-        keywords="autonomous analytics, ai analytics platform, decision intelligence, ai governance, analytics 2025"
-        url="/blog/ai-2025-autonomous-analytics-platform"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

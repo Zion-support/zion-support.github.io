@@ -2,8 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Agent Benchmark Suite',
-  description: 'Scenario-driven benchmarks to measure safety, quality, reliability, and efficiency of autonomous agents.'
 };
 
 export default function AgentBenchmarkSuitePage() {

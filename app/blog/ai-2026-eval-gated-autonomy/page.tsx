@@ -1,23 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Eval‑Gated Autonomy | Zion Tech Group',
-  description:
-    'Designing autonomous agents that are gated by evaluations across build, deploy, and runtime.',
   keywords: ['evals', 'governance', 'autonomy', 'ai agents', 'risk management'],
 };
 
 const EvalGatedAutonomy2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Eval‑Gated Autonomy"
-        description="Designing autonomous agents that are gated by evaluations across build, deploy, and runtime."
-        keywords="evals, governance, autonomy, ai agents, risk management"
-        url="/blog/ai-2026-eval-gated-autonomy"
-      />
+      
 
       <header className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

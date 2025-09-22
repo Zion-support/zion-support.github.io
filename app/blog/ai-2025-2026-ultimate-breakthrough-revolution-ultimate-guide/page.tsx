@@ -3,8 +3,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2025-2026: The Ultimate Breakthrough Revolution - Ultimate Guide to 15,000% ROI',
-  description: 'Discover how Fortune 500 companies are achieving 15,000% ROI through next-generation AI technologies. Complete guide to AI 2025-2026 breakthrough implementation.',
   keywords: ['AI Revolution', 'Ultimate Breakthrough', 'ROI', 'Fortune 500', '2025-2026', 'Neural Superintelligence', 'Autonomous Systems'],
 };
 

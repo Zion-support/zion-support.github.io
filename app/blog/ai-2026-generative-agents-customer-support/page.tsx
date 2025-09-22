@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const GenerativeAgentsCustomerSupport2026 = () => {
 	return (
 		<div className="min-h-screen bg-white">
-			<SEO
-				title="AI 2026: Generative Agents for Customer Support"
-				description="How generative AI agents will reshape customer support in 2026 with autonomous resolution, omnichannel orchestration, and measurable CSAT improvements."
-				keywords="generative agents, customer support, AI 2026, CX automation, CSAT"
-				url="/blog/ai-2026-generative-agents-customer-support"
-			/>
+			
 
 			<article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<header className="mb-10">

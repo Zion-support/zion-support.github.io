@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp, Brain, Zap,  ArrowUpRight, Star, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
-  description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.',
   keywords: ['AI Trends', 'Future Technology', 'Enterprise AI', 'Predictions', '2025-2030', 'Quantum AI', 'AGI', 'Neural Interfaces'],
   openGraph: {
-    title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
-    description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -25,15 +20,15 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
-              <ArrowLeft className="h-5 w-5 text-gray-600" />
+              <span>ArrowLeft</span>
               <span className="text-gray-600 hover:text-gray-900">Back to Home</span>
             </Link>
             <div className="flex items-center space-x-4">
               <button className="p-2 text-gray-600 hover:text-gray-900">
-                <Share2 className="h-5 w-5" />
+                <span className="h-5 w-5">📊</span>
               </button>
               <button className="p-2 text-gray-600 hover:text-gray-900">
-                <BookOpen className="h-5 w-5" />
+                <span className="h-5 w-5">📊</span>
               </button>
             </div>
           </div>
@@ -45,7 +40,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <TrendingUp className="w-5 h-5 mr-2" />
+              <span className="w-5 h-5 mr-2">📊</span>
               <span className="text-sm font-medium">FUTURE AI PREDICTIONS</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -56,15 +51,15 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
+                <span>Calendar</span>
                 January 17, 2025
               </div>
               <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
+                <span>Clock</span>
                 15 min read
               </div>
               <div className="flex items-center">
-                <User className="w-4 h-4 mr-2" />
+                <span>User</span>
                 Zion Tech Group
               </div>
             </div>
@@ -78,7 +73,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <section className="mb-12">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-              <Award className="w-8 h-8 mr-3 text-blue-600" />
+              <span className="w-8 h-8 mr-3 text-blue-600">📊</span>
               Executive Summary
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -139,7 +134,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         {/* Timeline Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-            <ArrowUpRight className="w-8 h-8 mr-3 text-purple-600" />
+            <span className="w-8 h-8 mr-3 text-purple-600">↗</span>
             AI Evolution Timeline 2025-2030
           </h2>
           <div className="space-y-8">
@@ -309,7 +304,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         {/* Implementation Roadmap */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-            <Zap className="w-8 h-8 mr-3 text-yellow-600" />
+            <span className="w-8 h-8 mr-3 text-yellow-600">📊</span>
             Implementation Roadmap for Enterprises
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -355,7 +350,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         {/* Investment Recommendations */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-            <Star className="w-8 h-8 mr-3 text-yellow-600" />
+            <span>Star</span>
             Investment Recommendations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

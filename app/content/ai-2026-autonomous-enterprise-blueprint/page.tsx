@@ -2,53 +2,39 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Autonomous Enterprise Blueprint | Zion Tech Group',
-  description: 'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.',
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function AutonomousEnterpriseBlueprint2026Page() {
+export default function PagePage() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-600 to-green-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Autonomous Enterprise Blueprint</h1>
-          <p className="text-lg opacity-90 max-w-3xl">
-            A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.
-          </p>
-        </div>
-      </section>
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
 
-      <section className="py-12">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
-          <h2>Why Autonomous, Why Now</h2>
-          <p>
-            Enterprises are moving beyond workflow automation to systems that plan, act, and learn with explicit guardrails and measurable outcomes.
-            This blueprint outlines architecture, governance, and operating models to get there safely.
-          </p>
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
+        </p>
 
-          <h2>Reference Architecture</h2>
-          <ul>
-            <li>Policy-as-code guardrails and audit trails</li>
-            <li>Capability-scoped tools and zero-trust agents</li>
-            <li>Evaluation harnesses and real-time observability</li>
-            <li>Human-in-the-loop escalation and override</li>
-          </ul>
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
 
-          <h2>Roadmap</h2>
-          <ol>
-            <li>Assess automations and define outcome KPIs</li>
-            <li>Introduce agents with scoped capabilities</li>
-            <li>Instrument evals and safety checks</li>
-            <li>Scale across domains with shared platforms</li>
-          </ol>
-
-          <p>
-            Ready to implement?{' '}
-            <Link href="/contact" className="text-emerald-600 font-semibold">Talk to our team →</Link>
-          </p>
-        </div>
-      </section>
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
     </main>
   );
 }
-

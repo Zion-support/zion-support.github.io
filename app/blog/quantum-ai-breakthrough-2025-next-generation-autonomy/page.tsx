@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap, Brain } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Quantum AI Breakthrough 2025: Next-Generation Autonomous Systems',
-  description: 'Explore the revolutionary convergence of quantum computing and AI in 2025, unlocking unprecedented computational power for autonomous enterprise systems.',
   keywords: ['Quantum AI', 'Quantum Computing', 'Autonomous Systems', 'AI 2025', 'Next-Generation Technology'],
   openGraph: {
-    title: 'Quantum AI Breakthrough 2025: Next-Generation Autonomous Systems',
-    description: 'Explore the revolutionary convergence of quantum computing and AI in 2025, unlocking unprecedented computational power for autonomous enterprise systems.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -27,25 +22,25 @@ export default function QuantumAIBreakthroughPage() {
             href="/blog" 
             className="inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors mb-4"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <span>ArrowLeft</span>
             Back to Blog
           </Link>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
+              <span>Calendar</span>
               January 15, 2025
             </div>
             <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
+              <span>User</span>
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
+              <span>Clock</span>
               20 min read
             </div>
             <div className="flex items-center">
-              <BookOpen className="w-4 h-4 mr-2" />
+              <span className="w-4 h-4 mr-2">📊</span>
               Featured Article
             </div>
           </div>
@@ -56,7 +51,7 @@ export default function QuantumAIBreakthroughPage() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium mb-6">
-            <Brain className="w-4 h-4 mr-2" />
+            <span className="w-4 h-4 mr-2">📊</span>
             Quantum AI Breakthrough
           </div>
           
@@ -77,7 +72,7 @@ export default function QuantumAIBreakthroughPage() {
           </div>
 
           <button className="inline-flex items-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-            <Share2 className="w-4 h-4 mr-2" />
+            <span className="w-4 h-4 mr-2">📊</span>
             Share Article
           </button>
         </div>
@@ -162,7 +157,7 @@ export default function QuantumAIBreakthroughPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white border rounded-lg p-6">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-green-600" />
+                  <span className="w-6 h-6 text-green-600">📊</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Financial Services Revolution</h4>
                 <p className="text-gray-600 text-sm">
@@ -173,7 +168,7 @@ export default function QuantumAIBreakthroughPage() {
               
               <div className="bg-white border rounded-lg p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <BookOpen className="w-6 h-6 text-blue-600" />
+                  <span className="w-6 h-6 text-blue-600">📊</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Healthcare and Life Sciences</h4>
                 <p className="text-gray-600 text-sm">
@@ -184,7 +179,7 @@ export default function QuantumAIBreakthroughPage() {
               
               <div className="bg-white border rounded-lg p-6">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-purple-600" />
+                  <span className="w-6 h-6 text-purple-600">📊</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Manufacturing and Supply Chain</h4>
                 <p className="text-gray-600 text-sm">
@@ -231,7 +226,7 @@ export default function QuantumAIBreakthroughPage() {
                 className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
               >
                 Explore Quantum AI Solutions
-                <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
+                <span>ArrowLeft</span>
               </Link>
             </div>
           </div>

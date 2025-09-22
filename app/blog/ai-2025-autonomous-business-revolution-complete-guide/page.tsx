@@ -1,12 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AI 2025 Autonomous Business Revolution: Complete Implementation Guide | Zion Tech Group',
-  description: 'Complete implementation guide to autonomous business operations. Master AI-powered business transformation with real case studies, proven strategies, and step-by-step frameworks.',
   keywords: 'autonomous business, AI transformation guide, business automation, AI implementation, autonomous operations, business revolution, AI strategy',
   openGraph: {
-    title: 'AI 2025 Autonomous Business Revolution: Complete Implementation Guide',
-    description: 'Master AI-powered business transformation with real case studies, proven strategies, and step-by-step frameworks.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group Research Team'],

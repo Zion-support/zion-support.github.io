@@ -1,23 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
-  title: 'Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact',
-  description: 'Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.',
   keywords: ['enterprise AI agents', 'AI automation', 'business transformation', 'AI productivity', 'autonomous workflows'],
 };
 
 export default function EnterpriseAIAgents2025() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact"
-        description="Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025."
-        keywords="enterprise AI agents, AI automation, business transformation, AI productivity, autonomous workflows"
-        url="/blog/ai-2025-enterprise-ai-agents-breakthrough"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

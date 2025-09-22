@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const AutonomousFinanceAgents2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Finance Agents — From FP&A to Real-Time Treasury"
-        description="How autonomous AI agents are transforming finance with real-time forecasting, risk management, and continuous close operations in 2026."
-        keywords="autonomous finance, FP&A, treasury, real-time forecasting, AI agents, 2026"
-        url="/blog/ai-2026-autonomous-finance-agents"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

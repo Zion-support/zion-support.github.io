@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const EnterpriseAgentsVsAutonomousCopilots2025 = () => {
 	return (
 		<div className="min-h-screen bg-white">
-			<SEO
-				title="Enterprise Agents vs. Autonomous Copilots (2025): What Drives ROI"
-				description="A practical comparison for CIOs: when to deploy enterprise agents versus autonomous copilots, with architecture patterns and ROI benchmarks."
-				keywords="enterprise agents, autonomous copilots, AI ROI 2025, architecture patterns"
-				url="/blog/ai-2025-enterprise-agents-vs-autonomous-copilots"
-			/>
+			
 
 			<article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<header className="mb-10">

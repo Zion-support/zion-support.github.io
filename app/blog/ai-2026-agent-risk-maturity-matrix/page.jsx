@@ -1,9 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Agent Risk Maturity Matrix — Governance to ROI',
-  description:
-    'Assess and improve agent risk maturity across policy, evals, telemetry, and operations to safely scale AI with measurable ROI.',
   keywords: [
     'AI governance',
     'agent risk',
@@ -13,7 +10,7 @@ export const metadata = {
     'observability',
     'enterprise AI',
     'ROI'
-  ]
+  ],
 };
 
 export default function Page() {

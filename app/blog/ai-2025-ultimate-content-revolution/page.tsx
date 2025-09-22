@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2025 Ultimate Content Revolution - Transform Your Business',
-  description: 'Discover the revolutionary AI content strategies that are transforming businesses in 2025. Learn how to leverage AI for content creation, automation, and customer engagement.',
   keywords: ['AI content revolution', 'content automation', 'AI marketing', 'business transformation', '2025 trends'],
 };
 

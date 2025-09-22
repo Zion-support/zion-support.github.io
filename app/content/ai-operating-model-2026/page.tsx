@@ -1,30 +1,40 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-	title: 'AI Operating Model 2026',
-	description: 'Design an outcome-driven AI operating model: teams, processes, and platforms.'
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function AIOperatingModel2026() {
-	return (
-		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-			<h1 className="text-4xl font-bold text-gray-900 mb-4">AI Operating Model 2026</h1>
-			<p className="text-gray-600 mb-8">
-				A practical guide to structuring AI teams, workflows, and platform capabilities to deliver sustained business value.
-			</p>
-			<section className="prose max-w-none">
-				<h2>Model Components</h2>
-				<ul>
-					<li>Product-centric pods with embedded data, ML, and engineering</li>
-					<li>Central enablement for evaluations, safety, and developer experience</li>
-					<li>Shared platforms for data, inference, and observability</li>
-				</ul>
-				<h2>Getting Started</h2>
-				<p>
-					Start with one pod, clear KPIs, and a thin platform slice. Iterate every quarter based on outcomes and developer feedback.
-				</p>
-			</section>
-		</main>
-	);
-}
+export default function PagePage() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
 
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
+
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
+    </main>
+  );
+}

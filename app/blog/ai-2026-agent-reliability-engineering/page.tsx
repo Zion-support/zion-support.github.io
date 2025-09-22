@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const AgentReliabilityEngineering2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Agent Reliability Engineering"
-        description="Engineering practices to make autonomous agents reliable: SLOs, testing, chaos, and evaluation harnesses."
-        keywords="agent reliability, SLOs, chaos testing, evaluation harness, autonomous agents"
-        url="/blog/ai-2026-agent-reliability-engineering"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

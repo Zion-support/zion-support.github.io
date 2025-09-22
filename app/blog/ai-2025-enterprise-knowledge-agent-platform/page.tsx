@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const EnterpriseKnowledgeAgentPlatform2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Enterprise Knowledge Agent Platform (2025)"
-        description="How enterprises are deploying knowledge-grounded AI agents with retrieval, actions, and governance to drive measurable business outcomes."
-        keywords="enterprise ai agents, rags, retrieval augmented generation, ai governance, agent actions, 2025"
-        url="/blog/ai-2025-enterprise-knowledge-agent-platform"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

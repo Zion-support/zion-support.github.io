@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 const EdgeAISecurityPlaybook2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Edge AI Security Playbook 2025"
-        description="Security patterns, controls, and architectures to safely deploy AI at the edge in 2025."
-        keywords="edge ai security, zero trust, model security, data protection"
-        url="/blog/edge-ai-security-playbook-2025"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 const EnterpriseFoundationModelsPracticalGuide2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Enterprise Foundation Models: A Practical Guide (2025)"
-        description="A practical, vendor-neutral guide for evaluating, deploying, and governing enterprise foundation models in 2025."
-        keywords="foundation models, enterprise AI, governance, MLOps, 2025 guide"
-        url="/blog/ai-2025-enterprise-foundation-models-practical-guide"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

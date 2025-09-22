@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2025: Data Governance, Trust, and Security - Enterprise Guide | Zion Tech Group',
-  description: 'A practical 2025 guide to AI data governance across privacy, security, lineage, access control, and compliance for trustworthy AI at scale.',
   keywords: [
     'ai data governance', 'data trust', 'ai security', 'privacy by design', 'rbac', 'abac', 'lineage', 'observability', 'compliance', 'soc2', 'iso27001', 'hipaa'
   ],
@@ -13,12 +9,7 @@ export const metadata = {
 const DataGovernanceTrustSecurity2025Page = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO
-        title="AI 2025: Data Governance, Trust, and Security - Enterprise Guide"
-        description="A practical 2025 guide to AI data governance across privacy, security, lineage, access control, and compliance for trustworthy AI at scale."
-        keywords="ai data governance, data trust, ai security, privacy by design, rbac, abac, lineage, observability, compliance, soc2, iso27001, hipaa"
-        url="/blog/ai-2025-data-governance-trust-security"
-      />
+      
 
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

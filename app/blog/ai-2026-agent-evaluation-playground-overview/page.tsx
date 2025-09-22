@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Agent Evaluation Playground — Overview',
-  description: 'Why every agent platform needs a quick, safe way to prototype evaluations.',
 };
 
 export default function Page() {

@@ -2,8 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Foundational Models Cost Optimization Playbook',
-  description: 'A practical playbook to reduce AI infra costs 30-70% via routing, caching, distillation, and preferred-model strategies.'
 };
 
 export default function FMConfigCostOptimizationPage() {

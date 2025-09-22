@@ -1,34 +1,40 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-	title: 'GenAI Governance 2026: Policies, Controls, and Guardrails',
-	description: 'A pragmatic governance framework for safe, compliant, and value-driven GenAI at scale in 2026.'
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function GenAIGovernance2026() {
-	return (
-		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-			<h1 className="text-4xl font-bold text-gray-900 mb-4">GenAI Governance 2026</h1>
-			<p className="text-gray-600 mb-8">
-				A pragmatic governance framework to deploy AI responsibly with clear policies, controls, and guardrails across the model, data, runtime, and organization layers.
-			</p>
-			<section className="prose max-w-none">
-				<h2>Framework Overview</h2>
-				<ul>
-					<li>Policy-as-code with automated enforcement</li>
-					<li>Risk taxonomy mapped to mitigations and controls</li>
-					<li>Lifecycle governance from experimentation to production</li>
-				</ul>
-				<h2>Key Controls</h2>
-				<ul>
-					<li>Data governance: lineage, minimization, retention</li>
-					<li>Model governance: evals, red-teaming, change management</li>
-					<li>Runtime governance: observability, guardrails, incident response</li>
-				</ul>
-				<h2>Outcomes</h2>
-				<p>Enable safe, compliant scaling of AI capabilities while protecting users and the business.</p>
-			</section>
-		</main>
-	);
-}
+export default function PagePage() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
 
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
+
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
+    </main>
+  );
+}

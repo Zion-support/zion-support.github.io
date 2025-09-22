@@ -3,12 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
-  description: 'Discover how Fortune 500 companies are achieving 500%+ ROI with advanced AI automation and machine learning solutions. Complete guide to enterprise AI transformation.',
   keywords: ['AI automation', 'enterprise AI', 'machine learning', 'ROI', 'digital transformation', 'Fortune 500'],
   openGraph: {
-    title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
-    description: 'Discover how Fortune 500 companies are achieving 500%+ ROI with advanced AI automation and machine learning solutions.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],

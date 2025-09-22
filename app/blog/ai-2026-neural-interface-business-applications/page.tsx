@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Neural Interface Business Applications',
-  description: 'Explore how neural interfaces are revolutionizing business operations. Complete guide to brain-computer interfaces in enterprise environments.',
   keywords: ['neural interfaces', 'brain-computer interfaces', 'BCI', 'neural technology', 'business applications'],
 };
 

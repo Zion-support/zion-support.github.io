@@ -1,15 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'AI 2025-2026: The Ultimate AI Revolution Breakthrough - Ultimate Guide to 10,000% ROI',
-  description: 'Discover the revolutionary AI breakthroughs that are transforming Fortune 500 companies with unprecedented 10,000% ROI through next-generation artificial intelligence systems.',
   keywords: ['AI Revolution', '2025-2026', 'ROI', 'Fortune 500', 'Breakthrough', 'Ultimate Guide', '10,000% ROI'],
   openGraph: {
-    title: 'AI 2025-2026: The Ultimate AI Revolution Breakthrough - Ultimate Guide to 10,000% ROI',
-    description: 'Discover the revolutionary AI breakthroughs that are transforming Fortune 500 companies with unprecedented 10,000% ROI through next-generation artificial intelligence systems.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -28,7 +23,7 @@ export default function AIRevolutionBlogPost() {
               href="/blog"
               className="flex items-center text-white/80 hover:text-white transition-colors"
             >
-              <ArrowLeftIcon className="w-5 h-5 mr-2" />
+              <span>ArrowLeftIcon</span>
               Back to Blog
             </Link>
           </div>
@@ -51,15 +46,15 @@ export default function AIRevolutionBlogPost() {
 
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300">
             <div className="flex items-center">
-              <UserIcon className="w-5 h-5 mr-2" />
+              <span>UserIcon</span>
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <CalendarIcon className="w-5 h-5 mr-2" />
+              <span>CalendarIcon</span>
               January 17, 2025
             </div>
             <div className="flex items-center">
-              <ClockIcon className="w-5 h-5 mr-2" />
+              <span>ClockIcon</span>
               45 min read
             </div>
           </div>

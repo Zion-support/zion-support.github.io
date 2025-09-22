@@ -2,9 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Production Guardrails for Autonomous Agents',
-  description:
-    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.',
 };
 
 export default function ProductionGuardrailsForAutonomousAgentsPage() {

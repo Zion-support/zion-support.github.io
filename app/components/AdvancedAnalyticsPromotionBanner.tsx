@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, TrendingUp, BarChart3, Zap, ArrowRight } from 'lucide-react';
 
 const AdvancedAnalyticsPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -122,7 +121,7 @@ const AdvancedAnalyticsPromotionBanner = () => {
             <div className="flex flex-wrap gap-4 mb-4">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="flex items-center space-x-2 bg-white/10 rounded-lg px-3 py-2">
-                  <TrendingUp className="w-4 h-4 text-yellow-300" />
+                  <span className="w-4 h-4 text-yellow-300">📊</span>
                   <span className="text-sm font-medium">
                     {key === 'roi' && 'ROI'}
                     {key === 'savings' && 'Savings'}
@@ -143,16 +142,16 @@ const AdvancedAnalyticsPromotionBanner = () => {
                 href={currentContent.link}
                 className="inline-flex items-center space-x-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
               >
-                <ArrowRight className="w-5 h-5" />
+                <span className="w-5 h-5">📊</span>
                 <span>{currentContent.cta}</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
               </Link>
               
               <Link
                 href="/case-studies"
                 className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
               >
-                <Zap className="w-5 h-5" />
+                <span className="w-5 h-5">📊</span>
                 <span>View All Success Stories</span>
               </Link>
             </div>
@@ -163,7 +162,7 @@ const AdvancedAnalyticsPromotionBanner = () => {
             className="ml-4 p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
             aria-label="Dismiss banner"
           >
-            <X className="w-6 h-6" />
+            <span>X</span>
           </button>
         </div>
       </div>

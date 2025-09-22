@@ -1,15 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2026: Quantum Machine Learning Business Breakthrough',
-  description: 'Explore the revolutionary impact of quantum machine learning on business operations in 2026. Discover how quantum algorithms will transform data processing, optimization, and decision-making.',
   keywords: ['AI 2026', 'quantum machine learning', 'quantum AI', 'business optimization', 'quantum algorithms', 'enterprise AI'],
   openGraph: {
-    title: 'AI 2026: Quantum Machine Learning Business Breakthrough',
-    description: 'Explore the revolutionary impact of quantum machine learning on business operations in 2026.',
     type: 'article',
     publishedTime: '2024-12-27T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -19,12 +13,7 @@ export const metadata: Metadata = {
 export default function AI2026QuantumMLBreakthrough() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Quantum Machine Learning Business Breakthrough"
-        description="Explore the revolutionary impact of quantum machine learning on business operations in 2026. Discover how quantum algorithms will transform data processing, optimization, and decision-making."
-        keywords="AI 2026, quantum machine learning, quantum AI, business optimization, quantum algorithms, enterprise AI"
-        url="/blog/ai-2026-quantum-machine-learning-business-breakthrough"
-      />
+      
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">

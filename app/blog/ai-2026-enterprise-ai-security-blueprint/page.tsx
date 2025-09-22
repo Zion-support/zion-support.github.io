@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 const EnterpriseAISecurityBlueprint2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Enterprise AI Security Blueprint"
-        description="A pragmatic blueprint to secure AI agents, data, and workflows across the modern enterprise in 2026."
-        keywords="AI security, enterprise AI, agent security, data governance, 2026"
-        url="/blog/ai-2026-enterprise-ai-security-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

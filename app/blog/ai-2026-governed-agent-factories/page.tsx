@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 const GovernedAgentFactories2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Governed Agent Factories"
-        description="How to build and operate governed agent factories with safety, observability, and policy guardrails."
-        keywords="agent factories, AI governance, safety, observability, policy-as-code, 2026"
-        url="/blog/ai-2026-governed-agent-factories"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

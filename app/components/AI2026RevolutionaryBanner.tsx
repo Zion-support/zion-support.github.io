@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award } from 'lucide-react';
 
 const AI2026RevolutionaryBanner = () => {
   return (
@@ -17,7 +16,7 @@ const AI2026RevolutionaryBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20">
-            <Star className="w-5 h-5 text-yellow-400 mr-2" />
+            <span>Star</span>
             <span className="text-sm font-medium">🚀 AI 2026 REVOLUTIONARY BREAKTHROUGH</span>
           </div>
           
@@ -37,7 +36,7 @@ const AI2026RevolutionaryBanner = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
-                <Zap className="w-6 h-6 text-purple-300" />
+                <span className="w-6 h-6 text-purple-300">📊</span>
               </div>
               <h3 className="text-xl font-bold">Enterprise Automation</h3>
             </div>
@@ -50,7 +49,7 @@ const AI2026RevolutionaryBanner = () => {
                 href="/blog/ai-2026-enterprise-automation-revolution"
                 className="text-purple-300 hover:text-purple-200 transition-colors group-hover:translate-x-1 transform duration-200"
               >
-                Read More <ArrowRight className="w-4 h-4 inline ml-1" />
+                Read More <span className="w-4 h-4 inline ml-1">📊</span>
               </Link>
             </div>
           </div>
@@ -59,7 +58,7 @@ const AI2026RevolutionaryBanner = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                <TrendingUp className="w-6 h-6 text-blue-300" />
+                <span className="w-6 h-6 text-blue-300">📊</span>
               </div>
               <h3 className="text-xl font-bold">Quantum AI</h3>
             </div>
@@ -72,7 +71,7 @@ const AI2026RevolutionaryBanner = () => {
                 href="/blog/ai-2026-quantum-computing-breakthrough"
                 className="text-blue-300 hover:text-blue-200 transition-colors group-hover:translate-x-1 transform duration-200"
               >
-                Read More <ArrowRight className="w-4 h-4 inline ml-1" />
+                Read More <span className="w-4 h-4 inline ml-1">📊</span>
               </Link>
             </div>
           </div>
@@ -81,7 +80,7 @@ const AI2026RevolutionaryBanner = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-4">
-                <Award className="w-6 h-6 text-indigo-300" />
+                <span className="w-6 h-6 text-indigo-300">📊</span>
               </div>
               <h3 className="text-xl font-bold">Global Success</h3>
             </div>
@@ -94,7 +93,7 @@ const AI2026RevolutionaryBanner = () => {
                 href="/case-studies/ai-2026-global-transformation-success"
                 className="text-indigo-300 hover:text-indigo-200 transition-colors group-hover:translate-x-1 transform duration-200"
               >
-                Read More <ArrowRight className="w-4 h-4 inline ml-1" />
+                Read More <span className="w-4 h-4 inline ml-1">📊</span>
               </Link>
             </div>
           </div>

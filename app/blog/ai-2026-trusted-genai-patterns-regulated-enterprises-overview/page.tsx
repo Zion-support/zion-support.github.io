@@ -1,23 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'Overview: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group',
-  description:
-    'Executive overview of trusted GenAI for regulated industries: policies, evals, tool governance, and audit evidence.',
   keywords: ['GenAI', 'regulated', 'executive overview', 'governance', 'evaluations'],
 };
 
 export default function TrustedGenAIOverviewPage() {
   return (
     <main className="min-h-screen bg-white">
-      <SEO
-        title="Overview: Trusted GenAI Patterns for Regulated Enterprises"
-        description="Executive overview of trusted GenAI for regulated industries: policies, evals, tool governance, and audit evidence."
-        keywords="GenAI, regulated, governance, evaluations"
-        url="/blog/ai-2026-trusted-genai-patterns-regulated-enterprises-overview"
-      />
+      
 
       <section className="bg-gradient-to-r from-slate-900 to-indigo-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

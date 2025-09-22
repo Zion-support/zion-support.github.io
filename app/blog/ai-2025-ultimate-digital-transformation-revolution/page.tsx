@@ -3,12 +3,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Ultimate Digital Transformation Revolution - 30,000% ROI Guide',
-  description: 'Discover how Fortune 500 companies are achieving unprecedented 30,000% ROI through strategic AI implementation. Complete guide to digital transformation success.',
   keywords: ['AI Revolution', 'Digital Transformation', 'ROI', 'Fortune 500', 'Strategy', '30,000% ROI'],
   openGraph: {
-    title: 'AI 2025: The Ultimate Digital Transformation Revolution - 30,000% ROI Guide',
-    description: 'Discover how Fortune 500 companies are achieving unprecedented 30,000% ROI through strategic AI implementation.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group'],

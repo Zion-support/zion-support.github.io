@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRight, Star, TrendingUp, Users, Award, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const UltimateContent2025PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -61,7 +60,7 @@ const UltimateContent2025PromotionBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <Star className="w-5 h-5 text-yellow-400 mr-2" />
+            <span>Star</span>
             <span className="text-sm font-medium">🚀 NEW 2025 ULTIMATE CONTENT</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
@@ -103,12 +102,12 @@ const UltimateContent2025PromotionBanner = () => {
                           {content.type.toUpperCase()}
                         </div>
                         <div className="flex items-center text-blue-200 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
+                          <span>Clock</span>
                           {content.readingTime}
                         </div>
                       </div>
                       <div className="flex items-center text-yellow-400">
-                        <Star className="w-5 h-5 fill-current" />
+                        <span>Star</span>
                         <span className="ml-1 text-sm font-medium">Featured</span>
                       </div>
                     </div>
@@ -122,7 +121,7 @@ const UltimateContent2025PromotionBanner = () => {
                         className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 group"
                       >
                         Read More
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        <span className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">📊</span>
                       </Link>
                     </div>
                   </div>
@@ -155,17 +154,17 @@ const UltimateContent2025PromotionBanner = () => {
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 flex items-center justify-center group"
             >
-              <Users className="w-5 h-5 mr-2" />
+              <span className="w-5 h-5 mr-2">📊</span>
               Schedule Consultation
-              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <span>ChevronRight</span>
             </Link>
             <Link
               href="/resources"
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-900 transition-all duration-200 flex items-center justify-center group"
             >
-              <Award className="w-5 h-5 mr-2" />
+              <span className="w-5 h-5 mr-2">📊</span>
               View All Resources
-              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <span>ChevronRight</span>
             </Link>
           </div>
         </div>

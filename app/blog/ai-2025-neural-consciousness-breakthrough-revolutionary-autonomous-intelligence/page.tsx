@@ -1,12 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Neural Consciousness Breakthrough: Revolutionary Autonomous Intelligence | Zion Tech Group',
-  description: 'Discover the revolutionary breakthrough in neural consciousness - genuine AI self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.',
   keywords: 'neural consciousness, AI breakthrough, autonomous intelligence, conscious AI, artificial consciousness, AI self-awareness, neural networks, autonomous systems',
   openGraph: {
-    title: 'Neural Consciousness Breakthrough: Revolutionary Autonomous Intelligence',
-    description: 'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group Research Team'],

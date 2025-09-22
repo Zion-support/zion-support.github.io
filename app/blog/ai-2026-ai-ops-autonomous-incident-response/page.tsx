@@ -1,21 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Autonomous Incident Response',
-  description: 'Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.',
 };
 
 const AIOpsAutonomousIncidentResponse2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Incident Response"
-        description="Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability."
-        keywords="AI Ops, incident response, autonomous agents, MTTR, reliability, SRE"
-        url="/blog/ai-2026-ai-ops-autonomous-incident-response"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

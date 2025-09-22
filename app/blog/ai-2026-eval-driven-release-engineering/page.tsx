@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Eval‑Driven Release Engineering',
-  description: 'How to ship safer AI with evaluation-gated releases, metrics, and automation.',
 };
 
 export default function Page() {

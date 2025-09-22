@@ -1,23 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Edge Agents On-Device',
-  description:
-    'Private, low-latency agents with hybrid on-device/offload compute, secure updates, and telemetry for enterprises.',
-  keywords: ['edge agents', 'on-device AI', 'privacy', 'low latency', 'hybrid compute']
+  keywords: ['edge agents', 'on-device AI', 'privacy', 'low latency', 'hybrid compute'],
 };
 
 export default function EdgeAgentsOnDevicePage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Edge Agents On-Device"
-        description="Private, low-latency agents with hybrid offload, secure updates, and telemetry."
-        keywords="edge agents, on-device ai, privacy, low latency, hybrid compute"
-        url="/blog/ai-2026-edge-agents-on-device"
-      />
+      
 
       <header className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,22 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Complete Guide to Autonomous Business Operations',
-  description: 'Master autonomous business operations with our comprehensive 2026 guide. Learn implementation strategies, best practices, and real-world case studies for transforming your business with AI.',
   keywords: ['autonomous business operations', 'AI automation', 'business transformation', 'enterprise AI', 'operational excellence'],
 };
 
 export default function AutonomousBusinessOperationsGuide() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Complete Guide to Autonomous Business Operations"
-        description="Master autonomous business operations with our comprehensive 2026 guide. Learn implementation strategies, best practices, and real-world case studies."
-        keywords="autonomous business operations, AI automation, business transformation, enterprise AI, operational excellence"
-        url="/blog/ai-2026-autonomous-business-operations-complete-guide"
-      />
+      
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}

@@ -1,16 +1,10 @@
 import React from 'react';
 import { Metadata } from 'next';
-import SEO from '../../components/SEO';
-import { ArrowLeft, ArrowRight, Calendar, Clock, User, TrendingUp, Zap, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: The Quantum Computing Breakthrough That\'s Revolutionizing Enterprise',
-  description: 'Discover how quantum computing is transforming enterprise AI, delivering 600% ROI and $500M+ in savings across Fortune 500 companies.',
   keywords: ['Quantum Computing', 'AI', 'Enterprise', 'ROI', 'Breakthrough', '2025'],
   openGraph: {
-    title: 'AI 2025: The Quantum Computing Breakthrough That\'s Revolutionizing Enterprise',
-    description: 'Discover how quantum computing is transforming enterprise AI, delivering 600% ROI and $500M+ in savings across Fortune 500 companies.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -21,12 +15,7 @@ export const metadata: Metadata = {
 export default function QuantumComputingBreakthroughPage() {
   return (
     <div>
-      <SEO
-        title="AI 2025: The Quantum Computing Breakthrough That's Revolutionizing Enterprise"
-        description="Discover how quantum computing is transforming enterprise AI, delivering 600% ROI and $500M+ in savings across Fortune 500 companies."
-        keywords="Quantum Computing, AI, Enterprise, ROI, Breakthrough, 2025"
-        url="/blog/ai-2025-quantum-computing-breakthrough-enterprise"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Back button */}
@@ -36,7 +25,7 @@ export default function QuantumComputingBreakthroughPage() {
               href="/blog"
               className="inline-flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <span>ArrowLeft</span>
               <span>Back to Blog</span>
             </Link>
           </div>
@@ -47,15 +36,15 @@ export default function QuantumComputingBreakthroughPage() {
           {/* Meta information */}
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
             <div className="flex items-center space-x-2">
-              <Calendar className="w-4 h-4" />
+              <span>Calendar</span>
               <span>January 17, 2025</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Clock className="w-4 h-4" />
+              <span>Clock</span>
               <span>18 min read</span>
             </div>
             <div className="flex items-center space-x-2">
-              <User className="w-4 h-4" />
+              <span>User</span>
               <span>Zion Tech Group</span>
             </div>
           </div>
@@ -278,14 +267,14 @@ export default function QuantumComputingBreakthroughPage() {
                   className="inline-flex items-center justify-center space-x-2 bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   <span>Contact Us Today</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="w-4 h-4">📊</span>
                 </Link>
                 <Link
                   href="/quantum-computing-solutions"
                   className="inline-flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   <span>Explore Solutions</span>
-                  <Zap className="w-4 h-4" />
+                  <span className="w-4 h-4">📊</span>
                 </Link>
               </div>
             </div>

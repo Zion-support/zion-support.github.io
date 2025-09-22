@@ -2,67 +2,39 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Agent Governance Control Library',
-  description:
-    'Reusable, policy‑as‑code controls for safe, compliant, and observable autonomous agent systems.',
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function AgentGovernanceControlLibraryPage() {
+export default function PagePage() {
   return (
-    <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <header className="mb-10">
-        <div className="text-sm font-semibold text-purple-700 mb-2">Controls</div>
-        <h1 className="text-4xl font-bold text-gray-900">AI 2026: Agent Governance Control Library</h1>
-        <p className="text-gray-600 mt-3 max-w-3xl">
-          A curated library of guardrails and controls implemented as policy‑as‑code with evaluation
-          gates, enabling safe autonomy across risk tiers and regulated workflows.
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
+
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
         </p>
-      </header>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <article className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Access & Permissions</h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Tool permission tiers with allowlists and time‑boxed grants</li>
-            <li>Scoped credentials with rotation and break‑glass workflows</li>
-            <li>Context redaction and PII minimization gates</li>
-          </ul>
-        </article>
-        <article className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Reliability & Safety</h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Shadow mode enablement with SLO‑based promotion</li>
-            <li>Evaluation thresholds for irreversible actions</li>
-            <li>Safe‑mode fallbacks and guarded rollbacks</li>
-          </ul>
-        </article>
-        <article className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Compliance & Audit</h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Evidence capture for controls and evaluation results</li>
-            <li>Change management with policy versioning</li>
-            <li>Data residency and retention enforcement</li>
-          </ul>
-        </article>
-        <article className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Security</h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Prompt firewall and content safety classifiers</li>
-            <li>Outbound action validation and approvals</li>
-            <li>Isolation domains for high‑risk tools</li>
-          </ul>
-        </article>
-      </section>
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
 
-      <footer className="mt-12 flex flex-wrap gap-3">
-        <Link href="/blog/ai-2026-agent-safety-runbooks" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">
-          Agent Safety Runbooks
-        </Link>
-        <Link href="/content/ai-2026-policy-as-code-starter-kit" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">
-          Policy‑as‑Code Starter Kit
-        </Link>
-      </footer>
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
     </main>
   );
 }
-

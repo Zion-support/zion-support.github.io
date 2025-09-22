@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export default function QuantumAIROICalculator2026() {
   const [inputs, setInputs] = useState({
     currentRevenue: 100000000,
@@ -43,12 +41,7 @@ export default function QuantumAIROICalculator2026() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO
-        title="Quantum AI ROI Calculator 2026 - Calculate Your Investment Returns"
-        description="Calculate the ROI of quantum AI implementation for your business. See potential savings, efficiency gains, and revenue increases with our advanced calculator."
-        keywords="quantum AI ROI calculator, AI investment calculator, quantum computing ROI, business AI calculator"
-        url="/tools/quantum-ai-roi-calculator-2026"
-      />
+      
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}

@@ -3,12 +3,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management | Zion Tech Group',
-  description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025. Learn about self-managing systems, automated decision-making, and the future of work.',
   keywords: ['autonomous operations', 'AI 2025', 'business automation', 'enterprise management', 'future of work', 'AI automation'],
   openGraph: {
-    title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management',
-    description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],

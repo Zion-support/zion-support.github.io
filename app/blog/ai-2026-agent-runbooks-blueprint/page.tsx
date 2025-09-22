@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Agent Runbooks Blueprint',
-  description:
-    'Design eval-gated, auditable runbooks for autonomous agents with safety envelopes and rollback paths.',
   keywords: [
     'agent runbooks',
     'eval-gated automation',
@@ -18,12 +13,7 @@ export const metadata = {
 const AgentRunbooksBlueprintPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Agent Runbooks Blueprint"
-        description="Design eval-gated, auditable runbooks for autonomous agents with safety envelopes and rollback paths."
-        keywords="agent runbooks, eval-gated automation, rollback, safety envelopes, autonomous operations"
-        url="/blog/ai-2026-agent-runbooks-blueprint"
-      />
+      
 
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

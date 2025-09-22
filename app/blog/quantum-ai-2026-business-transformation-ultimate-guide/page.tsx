@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Quantum AI 2026 Business Transformation: Ultimate Guide',
-  description: 'Discover how quantum AI is revolutionizing business operations in 2026. Complete guide to quantum computing applications, implementation strategies, and transformative benefits.',
   keywords: ['quantum AI', 'quantum computing', 'business transformation', 'AI 2026', 'quantum algorithms'],
 };
 

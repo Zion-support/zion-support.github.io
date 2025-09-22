@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Guardrails in Production',
-  description: 'Operational guardrails for safe, observable, and efficient autonomous systems in production.',
 };
 
 export default function Page() {

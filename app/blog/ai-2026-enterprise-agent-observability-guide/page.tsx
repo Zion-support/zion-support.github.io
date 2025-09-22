@@ -1,11 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Enterprise Agent Observability Guide',
-  description:
-    'Deep visibility for autonomous agents: traces, evaluations, safety telemetry, and governance for enterprise readiness.',
   keywords: [
     'agent observability',
     'telemetry',
@@ -18,12 +13,7 @@ export const metadata = {
 const EnterpriseAgentObservabilityGuide2026: React.FC = () => {
   return (
     <div>
-      <SEO
-        title="AI 2026: Enterprise Agent Observability Guide"
-        description="Traces, evals, and safety telemetry to operate autonomous agents in production."
-        keywords="agent observability, telemetry, tracing, evaluations, governance"
-        url="/blog/ai-2026-enterprise-agent-observability-guide"
-      />
+      
 
       <article className="min-h-screen bg-white">
         <header className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-16">

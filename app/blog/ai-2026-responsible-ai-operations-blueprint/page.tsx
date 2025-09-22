@@ -2,8 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
-  title: 'AI 2026: Responsible AI Operations Blueprint',
-  description: 'A pragmatic blueprint to operationalize responsible AI with policy-as-code, evals, incident response, and governance that scales.'
 };
 
 export default function ResponsibleAIOpsBlueprintPage() {

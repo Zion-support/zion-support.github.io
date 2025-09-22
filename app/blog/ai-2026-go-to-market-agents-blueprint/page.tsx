@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Go-To-Market Agents Blueprint — Blog Overview',
-  description:
-    'How to design GTM agents for pipeline generation, deal acceleration, and expansion with eval-gated safety and policy-as-code.',
   keywords: [
     'GTM agents',
     'go to market',
@@ -19,12 +14,7 @@ export const metadata = {
 const GTMAgentsBlueprintBlog: React.FC = () => {
   return (
     <div>
-      <SEO
-        title="AI 2026: Go-To-Market Agents Blueprint — Blog Overview"
-        description="Design GTM agents with eval-gated delivery, brand-safe tone, and closed-loop learning."
-        keywords="GTM agents, go-to-market, sales automation, marketing automation, evals, policy as code"
-        url="/blog/ai-2026-go-to-market-agents-blueprint"
-      />
+      
 
       <article className="min-h-screen bg-white">
         <header className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">

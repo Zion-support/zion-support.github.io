@@ -1,16 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Brain } from 'lucide-react';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2025: The Quantum Computing Revolution That\'s Reshaping Enterprise',
-  description: 'Discover how quantum computing is revolutionizing AI capabilities in 2025, delivering unprecedented processing power and solving previously impossible enterprise challenges.',
   keywords: ['quantum computing', 'AI 2025', 'enterprise transformation', 'quantum AI', 'breakthrough technology'],
   openGraph: {
-    title: 'AI 2025: The Quantum Computing Revolution That\'s Reshaping Enterprise',
-    description: 'Discover how quantum computing is revolutionizing AI capabilities in 2025, delivering unprecedented processing power and solving previously impossible enterprise challenges.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -21,12 +14,7 @@ export const metadata: Metadata = {
 export default function QuantumComputingRevolutionPage() {
   return (
     <div>
-      <SEO
-        title="AI 2025: The Quantum Computing Revolution That's Reshaping Enterprise"
-        description="Discover how quantum computing is revolutionizing AI capabilities in 2025, delivering unprecedented processing power and solving previously impossible enterprise challenges."
-        keywords="quantum computing, AI 2025, enterprise transformation, quantum AI, breakthrough technology"
-        url="/blog/ai-2025-quantum-computing-revolution"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Navigation */}
@@ -36,7 +24,7 @@ export default function QuantumComputingRevolutionPage() {
               href="/blog" 
               className="inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <span>ArrowLeft</span>
               Back to Blog
             </Link>
           </div>
@@ -47,15 +35,15 @@ export default function QuantumComputingRevolutionPage() {
           <div className="mb-8">
             <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
               <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-1" />
+                <span>Calendar</span>
                 January 15, 2025
               </div>
               <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-1" />
+                <span>Clock</span>
                 12 min read
               </div>
               <div className="flex items-center">
-                <User className="w-4 h-4 mr-1" />
+                <span>User</span>
                 Zion Tech Group
               </div>
             </div>
@@ -71,7 +59,7 @@ export default function QuantumComputingRevolutionPage() {
             <div className="flex flex-wrap gap-2">
               {['quantum computing', 'AI 2025', 'enterprise transformation', 'quantum AI', 'breakthrough technology'].map((tag) => (
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-                  <Brain className="w-3 h-3 mr-1" />
+                  <span className="w-3 h-3 mr-1">📊</span>
                   {tag}
                 </span>
               ))}

@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 const AgenticSalesPlaybooks2025 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025: Agentic Sales Playbooks for Revenue Teams"
-        description="A practical guide to deploying agentic AI for prospecting, qualification, and deal execution across modern revenue organizations."
-        keywords="agentic AI, sales automation, revenue operations, AI playbooks, 2025 guide"
-        url="/blog/ai-2025-agentic-sales-playbooks"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

@@ -1,23 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
-  title: 'AI Automation Success Stories 2026: Real ROI Results - Zion Tech Group',
-  description: 'Discover real AI automation success stories from 2026. See how companies achieved 300%+ ROI, 70% cost reduction, and massive productivity gains.',
   keywords: ['AI automation success stories', 'AI ROI', 'automation case studies', 'AI business results', 'automation ROI', 'AI transformation'],
 };
 
 export default function AIAutomationSuccessStories2026() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI Automation Success Stories 2026: Real ROI Results"
-        description="Discover real AI automation success stories from 2026. See how companies achieved 300%+ ROI, 70% cost reduction, and massive productivity gains."
-        keywords="AI automation success stories, AI ROI, automation case studies, AI business results, automation ROI, AI transformation"
-        url="/blog/ai-automation-success-stories-2026"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

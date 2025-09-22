@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: End-to-End Eval Pipelines',
-  description: 'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.',
 };
 
 export default function Page() {

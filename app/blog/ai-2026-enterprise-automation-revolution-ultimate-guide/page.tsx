@@ -1,30 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
-import { Settings, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap, BarChart3, Award } from 'lucide-react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: The Ultimate Enterprise Automation Revolution Transforming $100B+ in Business Operations',
-  description: 'Discover how AI-powered automation is achieving 99.8% process accuracy, 500% efficiency improvements, and $2.3 trillion in value creation across enterprise operations.',
   keywords: ['enterprise automation', 'AI automation', 'business process automation', 'AI transformation', 'automation ROI', 'intelligent automation'],
 };
 
 export default function EnterpriseAutomationRevolutionPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: The Ultimate Enterprise Automation Revolution Transforming $100B+ in Business Operations"
-        description="Discover how AI-powered automation is achieving 99.8% process accuracy, 500% efficiency improvements, and $2.3 trillion in value creation across enterprise operations."
-        keywords="enterprise automation, AI automation, business process automation, AI transformation, automation ROI, intelligent automation"
-        url="/blog/ai-2026-enterprise-automation-revolution-ultimate-guide"
-      />
+      
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <Settings className="w-5 h-5 mr-2" />
+              <span>Settings</span>
               <span className="text-sm font-medium">ENTERPRISE AUTOMATION REVOLUTION</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -102,7 +92,7 @@ export default function EnterpriseAutomationRevolutionPage() {
             <div className="space-y-8 mb-12">
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <DollarSign className="w-8 h-8 text-green-600 mr-3" />
+                  <span className="w-8 h-8 text-green-600 mr-3">📊</span>
                   <h4 className="text-xl font-bold text-gray-900">Financial Services: $25B in Automated Operations</h4>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -129,7 +119,7 @@ export default function EnterpriseAutomationRevolutionPage() {
 
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <Settings className="w-8 h-8 text-blue-600 mr-3" />
+                  <span>Settings</span>
                   <h4 className="text-xl font-bold text-gray-900">Manufacturing: $30B in Production Automation</h4>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -156,7 +146,7 @@ export default function EnterpriseAutomationRevolutionPage() {
 
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <Users className="w-8 h-8 text-purple-600 mr-3" />
+                  <span className="w-8 h-8 text-purple-600 mr-3">📊</span>
                   <h4 className="text-xl font-bold text-gray-900">Healthcare: $20B in Medical Process Automation</h4>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -187,7 +177,7 @@ export default function EnterpriseAutomationRevolutionPage() {
             <div className="space-y-6 mb-12">
               <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <Award className="w-6 h-6 text-green-600 mr-3" />
+                  <span className="w-6 h-6 text-green-600 mr-3">📊</span>
                   Phase 1: Automation Assessment & Strategy (Months 1-2)
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -214,7 +204,7 @@ export default function EnterpriseAutomationRevolutionPage() {
 
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <Brain className="w-6 h-6 text-blue-600 mr-3" />
+                  <span className="w-6 h-6 text-blue-600 mr-3">📊</span>
                   Phase 2: Pilot Implementation (Months 3-4)
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -241,7 +231,7 @@ export default function EnterpriseAutomationRevolutionPage() {
 
               <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <Zap className="w-6 h-6 text-purple-600 mr-3" />
+                  <span className="w-6 h-6 text-purple-600 mr-3">📊</span>
                   Phase 3: Scale & Optimize (Months 5-8)
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -1,23 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
-  title: 'AI 2026: Ultimate Business Transformation Guide - Zion Tech Group',
-  description: 'Discover how AI in 2026 is revolutionizing business operations, driving unprecedented ROI, and transforming enterprise automation. Complete guide to AI transformation.',
   keywords: ['AI 2026', 'business transformation', 'enterprise automation', 'AI ROI', 'digital transformation', 'artificial intelligence trends'],
 };
 
 export default function AI2026UltimateBusinessTransformation() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI 2026: Ultimate Business Transformation Guide"
-        description="Discover how AI in 2026 is revolutionizing business operations, driving unprecedented ROI, and transforming enterprise automation."
-        keywords="AI 2026, business transformation, enterprise automation, AI ROI, digital transformation, artificial intelligence trends"
-        url="/blog/ai-2026-ultimate-business-transformation"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

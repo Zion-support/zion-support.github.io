@@ -1,23 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Operational Blueprint for Autonomous Agents | Zion Tech Group',
-  description:
-    'Practical operating model for autonomous agents: roles, gates, on-call, and governance.',
   keywords: ['autonomous agents', 'operations', 'on-call', 'governance', 'eval-gates'],
 };
 
 export default function OperationalBlueprintPage() {
   return (
     <main className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Operational Blueprint for Autonomous Agents"
-        description="Practical operating model for autonomous agents: roles, gates, on-call, and governance."
-        keywords="autonomous agents, operations, on-call, governance, eval-gates"
-        url="/blog/ai-2026-operational-blueprint"
-      />
+      
 
       <section className="bg-gradient-to-r from-purple-700 via-blue-700 to-indigo-700 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

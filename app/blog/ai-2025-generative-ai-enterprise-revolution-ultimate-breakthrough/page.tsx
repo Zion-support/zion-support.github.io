@@ -1,15 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2025: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide',
-  description: 'Discover how generative AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and transformative business outcomes.',
   keywords: ['Generative AI', 'Enterprise AI', 'Business Transformation', 'AI Automation', '2025 Trends'],
   openGraph: {
-    title: 'AI 2025: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide',
-    description: 'Discover how generative AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and transformative business outcomes.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -20,12 +14,7 @@ export const metadata: Metadata = {
 export default function GenerativeAIRevolutionPage() {
   return (
     <div>
-      <SEO
-        title="AI 2025: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide"
-        description="Discover how generative AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and transformative business outcomes."
-        keywords="Generative AI, Enterprise AI, Business Transformation, AI Automation, 2025 Trends"
-        url="/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Safe Tool Use Blueprint for Autonomous Agents',
-  description:
-    'Designing permissioned tool use with policy-as-code, risk tiers, sandboxes, and runtime checks for enterprise agents.',
   keywords: [
     'autonomous agents',
     'tool use',
@@ -19,12 +14,7 @@ export const metadata = {
 const SafeToolUseBlueprint2026: React.FC = () => {
   return (
     <div>
-      <SEO
-        title="AI 2026: Safe Tool Use Blueprint"
-        description="Permissioned tool use with risk tiers, isolation domains, sandboxes, and policy-as-code."
-        keywords="agents, tool use, permissions, sandboxes, guardrails, policy as code"
-        url="/blog/ai-2026-safe-tool-use-blueprint"
-      />
+      
 
       <article className="min-h-screen bg-white">
         <header className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">

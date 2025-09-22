@@ -2,9 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Privacy-Preserving Agents - Practical Techniques',
-  description:
-    'Techniques for private-by-default agents: scoped memory, redaction, local-first inference, and secure enclaves.',
   keywords: [
     'privacy',
     'privacy-preserving',

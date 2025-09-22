@@ -1,20 +1,11 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Agent Risk Mitigation Playbook',
-  description: 'Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments.'
 };
 
 const AgentRiskMitigationPlaybook2026 = () => {
   return (
     <div>
-      <SEO
-        title="AI 2026: Agent Risk Mitigation Playbook"
-        description="Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments."
-        keywords="agent risk, AI safety, guardrails, evaluations, governance, policy-as-code"
-        url="/blog/ai-2026-agent-risk-mitigation-playbook"
-      />
+      
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Agent Risk Mitigation Playbook</h1>
         <p className="text-gray-600 mb-8">

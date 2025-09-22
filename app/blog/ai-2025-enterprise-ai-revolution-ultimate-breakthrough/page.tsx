@@ -1,22 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
-  description: 'Discover how Fortune 500 companies are achieving 800% ROI with revolutionary AI implementations. Complete guide to enterprise AI transformation in 2025.',
   keywords: ['AI', 'Enterprise', 'ROI', 'Digital Transformation', 'AI Strategy', 'Fortune 500', 'Breakthrough'],
 };
 
 export default function EnterpriseAIRevolutionPage() {
   return (
     <div>
-      <SEO
-        title="AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide"
-        description="Discover how Fortune 500 companies are achieving 800% ROI with revolutionary AI implementations. Complete guide to enterprise AI transformation in 2025."
-        keywords="AI, Enterprise, ROI, Digital Transformation, AI Strategy, Fortune 500, Breakthrough"
-        url="/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

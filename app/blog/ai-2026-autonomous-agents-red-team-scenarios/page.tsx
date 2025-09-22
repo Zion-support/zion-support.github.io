@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Autonomous Agents Red-Team Scenarios',
-  description:
-    'Catalog of adversarial scenarios, pass criteria, and CI/CD integration to harden autonomous agents before production.',
   keywords: [
     'red team',
     'adversarial testing',
@@ -18,12 +13,7 @@ export const metadata = {
 const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Agents Red-Team Scenarios"
-        description="Adversarial scenarios, pass criteria, and CI/CD integration to harden agents."
-        keywords="red team, adversarial testing, agent safety, evals, governance"
-        url="/blog/ai-2026-autonomous-agents-red-team-scenarios"
-      />
+      
 
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

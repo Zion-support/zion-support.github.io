@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../../components/SEO';
-
 const TrustworthyRAGBlueprint2026 = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Trustworthy RAG Blueprint"
-        description="End-to-end blueprint to build reliable Retrieval-Augmented Generation systems with grounding, citations, evals, and governance."
-        keywords="RAG, retrieval augmented generation, grounding, citations, evals, governance"
-        url="/blog/ai-2026-trustworthy-rag-blueprint"
-      />
+      
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

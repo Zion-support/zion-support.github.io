@@ -1,51 +1,40 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
 
 export const metadata = {
-  title: 'AI 2026: Agent Security Hardening Guide | Zion Tech Group',
-  description: 'Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.',
-  keywords: ['AI agent security', 'prompt security', 'tool permissions', 'sandboxing', 'security 2026'],
+  title: 'Page',
+  description: 'Page - Professional content page with comprehensive information and insights.'
 };
 
-export default function AgentSecurityHardening2026() {
+export default function PagePage() {
   return (
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Agent Security Hardening Guide"
-        description="Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture."
-        keywords="AI agent security, prompt security, tool permissions, sandboxing, security 2026"
-        url="/content/ai-2026-agent-security-hardening"
-      />
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Content</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+      <p className="text-gray-600 mb-8">
+        Page - Professional content page with comprehensive information and insights.
+      </p>
 
-      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Agent Security Hardening</h1>
-          <p className="text-lg md:text-xl opacity-90">Practical patterns to prevent jailbreaks, limit blast radius, and verify agent behavior.</p>
-        </div>
-      </section>
+      <div className="prose prose-lg max-w-none">
+        <h2>Overview</h2>
+        <p>
+          This page provides comprehensive information about page with 
+          detailed insights and practical guidance.
+        </p>
 
-      <section className="py-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
-          <h2>Defense-in-Depth</h2>
-          <ul>
-            <li>Prompt input/output filtering and structured tool calls</li>
-            <li>Fine-grained tool permissioning and scoped credentials</li>
-            <li>Sandboxed execution with syscall/network egress controls</li>
-            <li>Security evaluations with red-teaming and eval harnesses</li>
-          </ul>
+        <h2>Key Features</h2>
+        <ul>
+          <li>Comprehensive coverage</li>
+          <li>Professional insights</li>
+          <li>Practical guidance</li>
+          <li>Industry best practices</li>
+        </ul>
+      </div>
 
-          <h3>Verification & Observability</h3>
-          <p>Adopt signed decision logs, runtime attestations, and anomaly detection tuned to agent tasks.</p>
-
-          <div className="mt-8 p-6 bg-emerald-50 rounded-xl">
-            <h4 className="font-semibold mb-2">Related reading</h4>
-            <p>Pair this with our LLM Evals Maturity Model to measure resilience improvements.</p>
-            <Link href="/blog/ai-2026-llm-evals-maturity-model" className="text-emerald-700 font-semibold">Read the Model →</Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+      </div>
+    </main>
   );
 }
-

@@ -1,16 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Brain, Zap, Shield } from 'lucide-react';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2025: Autonomous Enterprise Systems - The Future of Business Operations',
-  description: 'Explore how autonomous AI systems are revolutionizing enterprise operations in 2025, creating self-managing businesses that adapt, learn, and optimize without human intervention.',
   keywords: ['autonomous systems', 'AI 2025', 'enterprise automation', 'self-managing systems', 'business intelligence'],
   openGraph: {
-    title: 'AI 2025: Autonomous Enterprise Systems - The Future of Business Operations',
-    description: 'Explore how autonomous AI systems are revolutionizing enterprise operations in 2025, creating self-managing businesses that adapt, learn, and optimize without human intervention.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -21,12 +14,7 @@ export const metadata: Metadata = {
 export default function AutonomousEnterpriseSystemsPage() {
   return (
     <div>
-      <SEO
-        title="AI 2025: Autonomous Enterprise Systems - The Future of Business Operations"
-        description="Explore how autonomous AI systems are revolutionizing enterprise operations in 2025, creating self-managing businesses that adapt, learn, and optimize without human intervention."
-        keywords="autonomous systems, AI 2025, enterprise automation, self-managing systems, business intelligence"
-        url="/blog/ai-2025-autonomous-enterprise-systems"
-      />
+      
       
       <div className="min-h-screen bg-white">
         {/* Navigation */}
@@ -36,7 +24,7 @@ export default function AutonomousEnterpriseSystemsPage() {
               href="/blog" 
               className="inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <span>ArrowLeft</span>
               Back to Blog
             </Link>
           </div>
@@ -47,15 +35,15 @@ export default function AutonomousEnterpriseSystemsPage() {
           <div className="mb-8">
             <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
               <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-1" />
+                <span>Calendar</span>
                 January 15, 2025
               </div>
               <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-1" />
+                <span>Clock</span>
                 15 min read
               </div>
               <div className="flex items-center">
-                <User className="w-4 h-4 mr-1" />
+                <span>User</span>
                 Zion Tech Group
               </div>
             </div>
@@ -71,7 +59,7 @@ export default function AutonomousEnterpriseSystemsPage() {
             <div className="flex flex-wrap gap-2">
               {['autonomous systems', 'AI 2025', 'enterprise automation', 'self-managing systems', 'business intelligence'].map((tag) => (
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-                  <Brain className="w-3 h-3 mr-1" />
+                  <span className="w-3 h-3 mr-1">📊</span>
                   {tag}
                 </span>
               ))}
@@ -89,28 +77,28 @@ export default function AutonomousEnterpriseSystemsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
-                    <Brain className="w-6 h-6 text-purple-600 mr-2" />
+                    <span className="w-6 h-6 text-purple-600 mr-2">📊</span>
                     <span className="font-semibold text-gray-900">Self-Monitor</span>
                   </div>
                   <p className="text-gray-600 text-sm">Continuously track performance metrics and system health</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
-                    <Brain className="w-6 h-6 text-blue-600 mr-2" />
+                    <span className="w-6 h-6 text-blue-600 mr-2">📊</span>
                     <span className="font-semibold text-gray-900">Self-Diagnose</span>
                   </div>
                   <p className="text-gray-600 text-sm">Identify issues and potential problems before they impact operations</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
-                    <Zap className="w-6 h-6 text-green-600 mr-2" />
+                    <span className="w-6 h-6 text-green-600 mr-2">📊</span>
                     <span className="font-semibold text-gray-900">Self-Heal</span>
                   </div>
                   <p className="text-gray-600 text-sm">Automatically resolve issues and implement fixes</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
-                    <Shield className="w-6 h-6 text-orange-600 mr-2" />
+                    <span className="w-6 h-6 text-orange-600 mr-2">📊</span>
                     <span className="font-semibold text-gray-900">Self-Adapt</span>
                   </div>
                   <p className="text-gray-600 text-sm">Modify strategies based on changing market conditions</p>

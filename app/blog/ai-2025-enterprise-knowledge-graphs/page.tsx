@@ -1,90 +1,39 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
-  title: 'Enterprise Knowledge Graphs in 2025: From Data to Decisions',
-  description:
-    'How modern enterprises are using knowledge graphs to unify data, power RAG, and drive autonomous decisioning across the business.',
   keywords: [
     'knowledge graphs',
     'enterprise AI',
     'RAG',
-    'data integration',
-    'semantic layer',
-    'governance',
-    'vector databases',
-  ],
+    'data unification',
+    'autonomous decisioning'
+  ]
 };
 
-export default function Page() {
+export default function EnterpriseKnowledgeGraphsPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Enterprise Knowledge Graphs in 2025: From Data to Decisions
-          </h1>
-          <p className="text-lg md:text-xl opacity-90">
-            A practical blueprint to unify your data, enable secure RAG, and operationalize
-            trustworthy, explainable AI across the enterprise.
-          </p>
-        </div>
-      </section>
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6 text-sm text-purple-700 font-semibold">Enterprise AI</div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise Knowledge Graphs</h1>
+      <p className="text-gray-600 mb-8">
+        How modern enterprises are using knowledge graphs to unify data, power RAG, and drive autonomous decisioning across the business.
+      </p>
 
-      <article className="py-12">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
-          <p>
-            Knowledge graphs have moved from research labs to production-grade platforms
-            powering search, copilots, and analytics. In 2025, the winning architectures combine a
-            governed semantic layer with vector-native retrieval to deliver context-rich reasoning
-            and auditable outcomes.
-          </p>
+      <div className="prose prose-lg max-w-none">
+        <h2>Key Benefits</h2>
+        <ul>
+          <li>Unified data representation across systems</li>
+          <li>Enhanced RAG capabilities</li>
+          <li>Autonomous decisioning support</li>
+          <li>Improved data governance</li>
+        </ul>
+      </div>
 
-          <h2>Why now</h2>
-          <ul>
-            <li>Multimodal RAG demands structured context and policy-aware retrieval.</li>
-            <li>Lineage and explainability are board-level requirements.</li>
-            <li>Data mesh programs need a shared semantic fabric.</li>
-          </ul>
-
-          <h2>Reference architecture</h2>
-          <ol>
-            <li>Domain ontologies as contracts between producers and consumers.</li>
-            <li>Graph store for relationships and constraints; vector store for similarity.</li>
-            <li>Policy engine for ABAC, PII redaction, and purpose-based access.</li>
-            <li>RAG router selecting tools, embeddings, and prompts per task.</li>
-            <li>Observability: lineage, prompt traces, and guardrails.</li>
-          </ol>
-
-          <h2>Starter checklist</h2>
-          <ul>
-            <li>Pick 2–3 high-value question types and model them first.</li>
-            <li>Define a minimal ontology per domain; avoid over-modeling.</li>
-            <li>Instrument retrieval quality and feedback loops from day one.</li>
-          </ul>
-
-          <div className="bg-purple-50 border border-purple-100 rounded-xl p-5">
-            <p className="m-0">
-              Looking to implement an enterprise-grade knowledge graph? Our team can help with
-              strategy, platform selection, and end-to-end delivery.
-            </p>
-            <div className="mt-3">
-              <Link
-                href="/contact"
-                className="inline-block bg-purple-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-purple-700"
-              >
-                Talk to an expert
-              </Link>
-            </div>
-          </div>
-
-          <p>
-            Next up: how to pair knowledge graphs with event streams to enable real-time reasoning
-            and autonomous workflows.
-          </p>
-        </div>
-      </article>
+      <div className="mt-10 flex gap-4">
+        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Learn More</Link>
+        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Explore Resources</Link>
+      </div>
     </main>
   );
 }
-

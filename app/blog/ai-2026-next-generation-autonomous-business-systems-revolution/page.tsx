@@ -1,15 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
-  title: 'AI 2026: Next-Generation Autonomous Business Systems Revolution',
-  description: 'Discover how autonomous AI business systems will revolutionize enterprise operations in 2026. Complete guide to self-managing business processes, predictive decision-making, and autonomous optimization.',
   keywords: ['AI 2026', 'autonomous business systems', 'enterprise AI', 'business automation', 'predictive analytics', 'self-managing systems'],
   openGraph: {
-    title: 'AI 2026: Next-Generation Autonomous Business Systems Revolution',
-    description: 'Discover how autonomous AI business systems will revolutionize enterprise operations in 2026.',
     type: 'article',
     publishedTime: '2024-12-27T00:00:00.000Z',
     authors: ['Zion Tech Group'],
@@ -19,12 +13,7 @@ export const metadata: Metadata = {
 export default function AI2026AutonomousBusinessSystems() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Next-Generation Autonomous Business Systems Revolution"
-        description="Discover how autonomous AI business systems will revolutionize enterprise operations in 2026. Complete guide to self-managing business processes, predictive decision-making, and autonomous optimization."
-        keywords="AI 2026, autonomous business systems, enterprise AI, business automation, predictive analytics, self-managing systems"
-        url="/blog/ai-2026-next-generation-autonomous-business-systems-revolution"
-      />
+      
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">

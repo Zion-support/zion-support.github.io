@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI 2026: Quantum Computing Breakthrough - Zion Tech Group',
-  description: 'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 2026. Quantum supremacy, quantum AI, and practical applications.',
   keywords: ['quantum computing 2026', 'quantum AI', 'quantum supremacy', 'quantum algorithms', 'enterprise quantum'],
 };
 
