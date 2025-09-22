@@ -1,15 +1,15 @@
 [build]
   command = "npm run build"
   publish = ".next"
-  functions = "netlify/empty-functions"
+  # Netlify Next.js plugin manages functions output automatically
+  # functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "20.18.1"
   NODE_OPTIONS = "--max-old-space-size=4096"
   NEXT_TELEMETRY_DISABLED = "1"
 
-## Enable Netlify Next.js runtime
-# For static exports, the Next.js Netlify plugin is not required
+# Use the official Netlify Next.js plugin for SSR/ISR support
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 

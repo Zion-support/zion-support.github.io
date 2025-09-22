@@ -1,50 +1,50 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Let Netlify's Next.js runtime handle output; do not force standalone
+  // output: 'standalone',
+
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  
+
   eslint: { ignoreDuringBuilds: false },
   typescript: { ignoreBuildErrors: false },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-
-  // Image optimization
   images: {
     domains: [
-      "localhost",
-      "ziontechgroup.com", 
-      "images.unsplash.com",
-      "via.placeholder.com"
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
     ],
     formats: ['image/webp', 'image/avif'],
+    // Netlify image CDN can be used; keep unoptimized true to avoid server image optimization
     unoptimized: true
   },
 
-  // Output configuration
-  output: "standalone",
-  
-  // Trailing slash
-  trailingSlash: false,
-  
-  // Base path
-  basePath: "",
-  
-  // Asset prefix
-  assetPrefix: "",
-  
-  // Generate ETags
-  generateEtags: true,
-  
-  // Dist directory
-  distDir: ".next",
+  // Keep default dist directory for Netlify plugin
+  distDir: '.next',
 
-  // Performance optimizations
+  trailingSlash: false,
+  basePath: '',
+  assetPrefix: '',
+  generateEtags: true,
+
   experimental: {
     optimizePackageImports: ['lucide-react']
   },
 
-  // Security headers
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
@@ -60,7 +60,6 @@ const nextConfig = {
     ];
   },
 
-  // Webpack configuration
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -83,4 +82,4 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+module.exports = nextConfig;

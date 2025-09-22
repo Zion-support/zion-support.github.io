@@ -67,6 +67,8 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   }
 }
 
+export default ErrorBoundary;
+
 function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -106,5 +108,3 @@ function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError
     </div>
   )
 }
-
-export default ErrorBoundary
