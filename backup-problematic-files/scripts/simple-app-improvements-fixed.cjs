@@ -1,12 +1,22 @@
+<<<<<<< HEAD
+    this.log(`Total improvements: ${this.improvements.length}`);
+    this.log(`Total errors: ${this.errors.length}`);
+    this.log(`Duration: ${duration}ms`);
+=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     if (this.improvements.length > 0) {
       this.log('\\n✅ Improvements created:');
       this.improvements.forEach((improvement, index) => {
@@ -27,6 +37,14 @@
 
 // Run the improvements
 const improvements = new SimpleAppImprovements();
+<<<<<<< HEAD
+improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
+#!/usr/bin/env node;
+improvements.runAllImprovements().catch(console.error);
+
+#!/usr/bin/env node;
+improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
+=======
 
 improvements.runAllImprovements().catch(console.error);
 
@@ -36,6 +54,7 @@ improvements.runAllImprovements().catch(console.error);
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -57,7 +76,10 @@ console.log('=====')
       this.log('\\n Improvements created:')
       this.log('\\n Errors encountered:')
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
