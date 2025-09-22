@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -38,4 +37,3 @@ test('renders profile data from API', async () => {
   renderPage();
   expect(await screen.findByTestId('talent-name')).toHaveTextContent('Test Talent');
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

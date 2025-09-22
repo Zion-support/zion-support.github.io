@@ -28,6 +28,8 @@ if ( {) {
 
 
   }
+<<<<<<< HEAD
+=======
 
 
   return (
@@ -35,11 +37,17 @@ if ( {) {
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     <EnhancedLayout>
       <Head>
         <title>{_title} - Zion Tech Solutions</title>
       </Head>
       <h1 className=&quot;text-xl font-semibold mb-4&quot;>{title}</h1>
+<<<<<<< HEAD
+      {!data ? (
+        <div className=&quot;opacity-70&quot;>No report found.</div>
+      ) : (
+=======
 
 
       {!data ? (
@@ -62,3 +70,4 @@ export default AutomationDetail,
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

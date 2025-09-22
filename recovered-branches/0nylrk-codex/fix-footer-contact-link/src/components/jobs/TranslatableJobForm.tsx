@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -87,13 +84,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       return
     }
     try {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TranslatableJobFormProps {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface TranslatableJobFormProps {
 
 // Auto translate content when language tab changes
@@ -111,9 +103,6 @@ import {useTranslation} from "react-i18next";"
 import {useTranslationService} from "@/hooks/useTranslationService";"
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";"
 import {toast} from "@/components/ui/use-toast";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -183,7 +172,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     await ensureAllTranslations(),
 
     onSubmit({}
-=======
 import { toast } from "@/components/ui/use-toast",
 interface TranslatableJobFormProps {
 
@@ -242,7 +230,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     await ensureAllTranslations(),
 
     onSubmit({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title,
       description,
       requirements,
@@ -276,14 +263,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         break;
       }
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
@@ -311,7 +291,6 @@ import React, { useState } from "react",;
       }
     }
 import React, { useState } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -323,9 +302,7 @@ import { useTranslationService } from "@/hooks/useTranslationService",;
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
 import { toast } from "@/components/ui/use-toast",;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void,;
   isSubmitting?: boolean;
@@ -381,17 +358,11 @@ en: "",;
       deadline});
   };
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Auto translate content when language tab changes;
   const handleTabChange = async (tab: SupportedLanguage) => {;
     if (tab !== activeTab) {;
       setActiveTab(tab);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
 
   // Auto translate function;'
@@ -409,7 +380,6 @@ en: "",;
         content = description[lang];
         sourceLanguage = lang;
         break;'
-=======
   };
 
   // Auto translate function;
@@ -427,13 +397,10 @@ en: "",;
         content = description[lang];
         sourceLanguage = lang;
         break;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       } else if (field === 'requirements' && requirements[lang]) {;
         content = requirements[lang];
         sourceLanguage = lang;
         break;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
 
@@ -445,7 +412,6 @@ en: "",;
       return
     }
     try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       }
     }
@@ -453,20 +419,13 @@ en: "",;
 '
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (error) {
-=======
 
       }
     }      if (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       }
     }      if (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       }
     }
@@ -474,23 +433,15 @@ en: "",;
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
 
       if (error) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         toast({
-=======
 
       if (error) {}
         toast({'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           title: t('translation.translation_failed')
           description: error"
           variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
         return
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     if (!content) {;
       toast({;'
@@ -508,10 +459,6 @@ en: "",;
           description: error,;"
           variant: "destructive"}),;
         return;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       if (field === 'title') {
         setTitle(translations)
@@ -521,14 +468,11 @@ en: "",;
         setRequirements(translations)
       }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({
         title: t('translation.translation_success')
-=======
 
       toast({'
         title: t('translation.translation_success')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: t('translation.content_translated')})
     } catch (error) {}
       console.error(`Error translating ${field}:`, error),
@@ -538,11 +482,6 @@ en: "",;
         description: error instanceof Error ? error.message : t('translation.unknown_error')"
         variant: "destructive"})
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
   // Ensure all translations are available;
@@ -553,14 +492,11 @@ en: "",;
 // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
       promises.push(autoTranslate('title'))
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
-=======
         return
 
 ;
     if (!content) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast({;
         title: t('translation.no_content'),;
         description: t('translation.add_content_first'),;
@@ -627,24 +563,10 @@ en: "",;
     // Title translations;
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     // Description translations;
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {'
@@ -659,47 +581,20 @@ en: "",;
     }
 
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
     return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>'"
         <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>"
@@ -713,41 +608,24 @@ en: "",;
             <label htmlFor="title" className="text-lg font-medium">'
               {t('jobs.job_title')}
             </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!content) {;
 toast({;
-<<<<<<< HEAD
         title: t('translation && translation.no_content'),,
   description: t('translation && translation.add_content_first'),;
-=======
         title: t('translation && translation.no_content'),,
   description: t('translation && translation.add_content_first'),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: "destructive"}),;
       return;
     }
       if (error) {;
 toast({;
-<<<<<<< HEAD
           title: t('translation && translation.translation_failed'),,
   description: error,;
-=======
           title: t('translation && translation.translation_failed'),,
   description: error,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           variant: "destructive"}),;
         return;
       }'
@@ -764,13 +642,10 @@ toast({;
     } catch (error) {;
       console && console.error(`Error translating ${field}:`, error);
       toast({;
-<<<<<<< HEAD
         title: t('translation && translation.translation_failed'),,
   description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
-=======
         title: t('translation && translation.translation_failed'),,
   description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: "destructive"});
     }
   };
@@ -805,18 +680,12 @@ toast({;
             <label htmlFor="title" className="text-lg font-medium">;
 
       }
-<<<<<<< HEAD
     }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('title')}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <Button"
               type="button""
@@ -826,7 +695,6 @@ toast({;
 disabled={isTranslating || (!title.en && !title.es && !title.pt && !title.ar)}
               className="flex items-center gap-1";
             >;
-=======
 
               disabled={isTranslating || (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar)}
 disabled={isTranslating || (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar)}
@@ -933,7 +801,6 @@ disabled={isTranslating || (!title && title.en && !title && title.es && !title &
               disabled={isTranslating || (!description.en && !description.es && !description.pt && !description.ar)}
               className="flex items-center gap-1";
             >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {isTranslating ? (;
                 <Loader2 className="h-4 w-4 animate-spin" />;
       }
@@ -1093,9 +960,7 @@ onClick={() => autoTranslate('requirements')}
                   placeholder={t('jobs && jobs.description_placeholder')}
                   className="min-h-32 w-full";
 dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}                />;
-=======
                   dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}                />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </TabsContent>;
             ))}
           </Tabs>;
@@ -1112,7 +977,6 @@ dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}                />;
                 <Loader2 className="h-4 w-4 animate-spin" />;
 
                 />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </TabsContent>;
             ))}
           </Tabs>;
@@ -1132,7 +996,6 @@ dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}                />;
             <Input"
               id="budget"
               value={budget}
-<<<<<<< HEAD
               onChange={(e) => setBudget(e && e.target.value)}
 
 "
@@ -1151,11 +1014,6 @@ dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}                />;
               id="deadline""
               type="date"
               value={deadline}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               onChange={(e) => setDeadline(e && e.target.value)}"
               className="w-full";
@@ -1179,7 +1037,6 @@ export /**;
  * TranslatableJobForm - Function description;
  */
 function TranslatableJobForm() {}
-=======
               onChange={(e) => setBudget(e && e.target.value)}
 <Input
               id="budget"
@@ -1301,7 +1158,6 @@ export /**
  * TranslatableJobForm - Function description
  */
 function TranslatableJobForm() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { t } = use_translation ();
   const { translate_content, is_translating } = useTranslationService ();
   const { supported_languages, current_language } = use_language ();
@@ -1656,17 +1512,12 @@ return ("
 }
         </Button>;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               onChange={(e) => setBudget(e && e.target.value)}        </Button>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
     </form>;
   );
 }
 
-<<<<<<< HEAD
       <div className="pt-4">;
         <Button;
           type="submit";
@@ -1683,7 +1534,6 @@ return ("
       </div>;
     </form>);
 }          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
-=======
 }
 
 ;
@@ -1695,7 +1545,6 @@ return ("
         <Button;
           type="submit";
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           disabled={isSubmitting || isTranslating}
         >;
           {isSubmitting ? (;
@@ -1760,22 +1609,8 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 }</Button> </div> </form>) 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 interface TranslatableJobFormProps {
   // TODO: Implement
@@ -2134,4 +1969,3 @@ pr-12325
 }</Button> </div> </form>) 
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

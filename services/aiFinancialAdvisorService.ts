@@ -1,47 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export interface InvestmentPortfolio {
-=======
 
 export interface InvestmentPortfolio {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface InvestmentPortfolio {;
   id: string;
   userId: string;
   name: string;
   totalValue: number;
   currency: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
   target_return: number;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
 }
-=======
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
@@ -52,7 +28,6 @@ export interface InvestmentPortfolio {;
 }
 export interface PortfolioAsset {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
   assets: PortfolioAsset[];
   last_rebalanced: Date;
@@ -60,26 +35,11 @@ export interface PortfolioAsset {
 }
 export interface PortfolioAsset {
 export interface PortfolioAsset {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 export interface PortfolioAsset {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 export interface PortfolioAsset {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 export interface PortfolioAsset {
@@ -87,24 +47,16 @@ export interface PortfolioAsset {
 }
 export interface PortfolioAsset {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 }
 export interface PortfolioAsset {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   id: string;
   symbol: string;
   name: string;'
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
-<<<<<<< HEAD
-<<<<<<< HEAD
   quantity: number;
 
-<<<<<<< HEAD
-=======
   quantity: number;
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   current_price: number;
   market_value: number,
   allocation: number, // percentage of portfolio;
@@ -117,22 +69,16 @@ performance: {}
     yearly_return: number,
     total_return: number;
 
-<<<<<<< HEAD
   }
 }
-<<<<<<< HEAD
 
   totalReturn: number;
   annualizedReturn: number;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   }
 }
 export interface PortfolioPerformance {
   total_return: number;
   annualized_return: number;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
@@ -140,7 +86,6 @@ export interface PortfolioPerformance {
   alpha: number;
   id: string;
   user_id: string;
-<<<<<<< HEAD
 
   }
 }
@@ -148,7 +93,6 @@ export interface PortfolioPerformance {};
   }
 }
 export interface PortfolioPerformance {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   total_return: number;
   annualized_return: number;
   volatility: number;
@@ -157,20 +101,12 @@ export interface PortfolioPerformance {
   beta: number;
   alpha: number;
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   user_id: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   currentPrice: number;
-=======
 export interface InvestmentRecommendation {};
   id: string;
   user_id: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 allocation: number, // percentage of portfolio
   purchasePrice: number;
@@ -197,21 +133,15 @@ trackingError: number;informationRatio: number;
 }
 export interface InvestmentRecommendation  {export interface InvestmentRecommendation  {id: string;
   id: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   userId: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {
-=======
 '
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     symbol: string;
-<<<<<<< HEAD
     name: string;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export interface FinancialGoal {};
   id: string;
@@ -238,12 +168,8 @@ expected_return: number;'
   expires_at: Date;
 
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 export interface FinancialGoal {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   user_id: string;
   name: string;
@@ -261,15 +187,11 @@ target_date: Date;'
   updated_at: Date;
 
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
 export interface MarketAnalysis {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   market: string;
 
@@ -304,7 +226,6 @@ export interface MarketAnalysis {
 
   analysis: string,
   key_metrics: Record < string, number>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   trends: string[];
   risks: string[];
@@ -312,15 +233,9 @@ export interface MarketAnalysis {
   recommendations: string[];
   confidence: number;
 
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
 
   last_updated: Date,
   next_update: Date;
@@ -373,15 +288,11 @@ export interface FinancialPlan {;
 
     emergencyFund: number
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   last_updated: Date,
   next_update: Date;
 
 }
 export interface FinancialPlan {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   user_id: string;
   name: string;
@@ -399,7 +310,6 @@ investment_strategy: {}
     savings_rate: number,
     emergency_fund: number;
 
-<<<<<<< HEAD
 
 }
 export interface FinancialPlan {
@@ -439,23 +349,18 @@ insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
-=======
   cash_flow: {}
-=======
   investment_strategy: {
     asset_allocation: Record < string, number>;
     rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
     risk_management: string[];
   }
   cash_flow: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     monthly_income: number;
     monthly_expenses: number;
     savings_rate: number,
     emergency_fund: number;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
   insurance: {}
@@ -469,7 +374,6 @@ disability: boolean;property: boolean,recommendations: string[];
   tax: {}
   }
   tax: {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     estimatedTaxLiability: number;
     taxOptimizationStrategies: string[],
     deductions: string[];
@@ -484,7 +388,6 @@ retirement: {
   created_at: Date,
   updated_at: Date;
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     property: boolean,
     recommendations: string[];
   }
@@ -503,9 +406,6 @@ retirement: {
   created_at: Date,
   updated_at: Date;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   userId: string;
 
@@ -516,22 +416,11 @@ export interface FinancialRequest {
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 export interface FinancialResponse {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export interface FinancialRequest {};
   user_id: string;'
@@ -540,26 +429,16 @@ export interface FinancialRequest {};
   preferences?: Record < string, any>;
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }
 export interface FinancialResponse {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   success: boolean;
   data: {}
     portfolio?: InvestmentPortfolio;
@@ -574,7 +453,6 @@ estimatedFees: number
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
   preferences?: Record<string, any>
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 }
 
 }
@@ -589,7 +467,6 @@ export interface FinancialResponse {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export class AIFinancialAdvisorService {
 
   private apiKey: string;
@@ -598,27 +475,16 @@ export class AIFinancialAdvisorService {
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-=======
-}  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}  }
+}  }
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+  }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
@@ -752,7 +618,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/recommendati
       console && console.error('Error getting market analysis:', error);
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console && console.error('Error tracking financial goals:', error);
       throw error;
     }
@@ -816,7 +681,6 @@ estimatedFees: number
           'Authorization': `Bearer ${this && this.apiKey}`;'
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ targetAllocation })});
-<<<<<<< HEAD
       console && console.error('Error rebalancing portfolio:', error);    } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
     } catch (error) {
@@ -844,12 +708,7 @@ console && console.error('Error calculating retirement needs:', error);    } cat
       throw error
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
 
@@ -865,7 +724,6 @@ return data && data.calculation;
     }
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     analysis?: MarketAnalysis,
     goals?: FinancialGoal[];
   }
@@ -873,7 +731,6 @@ return data && data.calculation;
   next_steps: string[];
   risk_warnings: string[],
   estimated_fees: number;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 private apiKey: string;
 
@@ -990,7 +847,6 @@ if ( {) {}
 }`
         throw new Error (`HTTP error! status: ${response.status}`);
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     strategies: string[];
     estimated_savings: number;
     implementation: string[];
@@ -1012,17 +868,14 @@ if ( {) {}
     } catch (error) {'
       console && console.error('Error getting tax optimization strategies:', error);
 
-<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
       throw error
-=======
 
     } catch (error) {'
       console && console.error('Error getting tax optimization strategies:', error);
 
       throw error;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }'
   async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{}
@@ -1048,21 +901,12 @@ console && console.error('Error generating financial report:', error);    } catc
   }
 }'
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,;
   userId: string,;
   name: string,;
@@ -1075,7 +919,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
   lastRebalanced: Date,;
   performance: PortfolioPerformance,;
   createdAt: Date,;
-<<<<<<< HEAD
   updatedAt: Date;
 
 '
@@ -1092,11 +935,9 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
           'Content - Type': 'application / json'}
         body: JSON.stringify ({ user_id, tax_year })});
 ;
-<<<<<<< HEAD
       // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -1137,19 +978,12 @@ if ( {) {}
     }
   }
 }
-<<<<<<< HEAD
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export interface InvestmentPortfolio {;
 '
-=======
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
 
@@ -1159,7 +993,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 
 export interface InvestmentPortfolio {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export interface InvestmentPortfolio {;
   id:string,;
@@ -1690,30 +1523,14 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 
 '
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   updatedAt: Date;export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   updatedAt: Date;export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
         method: 'POST',
@@ -1847,8 +1664,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/market-analy
     expectedImpact: string
   }> {
     try {
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
         headers: {
@@ -2699,4 +2514,3 @@ export class AIFinancialAdvisorService {;
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

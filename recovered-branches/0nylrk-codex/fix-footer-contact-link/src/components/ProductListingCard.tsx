@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -12,16 +9,12 @@ import {Star, DollarSign} from "lucide-react";
 }: ProductListingCardProps) {;'
   const isGrid = view === 'grid';
   const navigate = useNavigate();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ProductListingCardProps {;
   listing: ProductListing,;
 '
@@ -34,16 +27,13 @@ interface ProductListingCardProps {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
   onRequestQuote?: (id: string) => void;
 }
 
-<<<<<<< HEAD
 export function ProductListingCard({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -54,26 +44,16 @@ const imageUrl = listing.images && listing.images.length > 0
     ? listing.images[0]
     : '/placeholder.svg',
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-=======
 export function ProductListingCard() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return `${listing.currency}${listing.price.toLocaleString()}`
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-=======
   // Handle image loading errors;
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     e.currentTarget.src = '/placeholder.svg'
   }
   // Handle navigating to listing detail;
@@ -84,9 +64,7 @@ export function ProductListingCard() { return null; }
   const handleRequestQuote = (e: React.MouseEvent) => {
 e.preventDefault();
     e.stopPropagation()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
-=======
     return `${listing.currency}${listing.price.toLocaleString()}`
 
 import { use_navigate } from './react-router-dom';
@@ -115,7 +93,6 @@ interface ProductListingCardProps {
     e.preventDefault();
     e.stopPropagation()
   },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -129,22 +106,12 @@ interface ProductListingCardProps {
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault(),
     e.stopPropagation(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {}
       // Default behavior if no handler provided;`
       navigate(`/request-quote?listing=${listing.id}`)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     if (onRequestQuote) {
       onRequestQuote(listing.id)
@@ -152,18 +119,15 @@ interface ProductListingCardProps {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { ProductListing } from "@/types/listings",;
-=======
 "
 import { useNavigate } from "react-router-dom",;"
 import { Badge } from "@/components/ui/badge",;"
 import { Button } from "@/components/ui/button",;"
 import { ProductListing } from "@/types/listings",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
   listing: ProductListing,;'
@@ -330,13 +294,11 @@ if ( {) {
     }
   }
 
-<<<<<<< HEAD
   // Get the first image or use a placeholder;
   const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
     ? listing && listing.images[0] ;
     : '/placeholder && placeholder.svg';
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Format price display;
   const formatPrice = () => {;
     if (listing && listing.price === null) return "Custom pricing";
@@ -360,8 +322,6 @@ navigate(`/listing/${listing && listing.id}`)
     e && e.preventDefault();
     e && e.stopPropagation(),;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (onRequestQuote) {;
       onRequestQuote(listing && listing.id);
     } else {;
@@ -370,17 +330,10 @@ navigate(`/listing/${listing && listing.id}`)
     }
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>;
@@ -394,10 +347,7 @@ navigate(`/listing/${listing && listing.id}`)
             onError={handleImageError}
           />;
           {listing && listing.featured && (;"
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 
@@ -415,7 +365,6 @@ navigate(`/listing/${listing && listing.id}`)
             onError={handleImageError}
           />;
           {listing && listing.featured && (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Badge className="absolute top-2 right-2 bg-zion-purple text-white border-none">;
               Featured;
             </Badge>;
@@ -438,7 +387,6 @@ navigate(`/listing/${listing && listing.id}`)
                 )}
               </div>;
             )}
-<<<<<<< HEAD
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
@@ -458,14 +406,8 @@ navigate(`/listing/${listing && listing.id}`)
             )}
           </div>
           </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       {/* Image */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       {/* Image */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <div className="flex justify-between items-center mb-2">;
             <Badge variant="outline" className="bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light">;
               {listing && listing.category}
@@ -480,14 +422,11 @@ navigate(`/listing/${listing && listing.id}`)
               </div>;
             )}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
-=======
 
           {/* Title & Description */}"
           <div onClick={handleViewListing} className="block">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
               {listing.title}
             </h3>
@@ -523,12 +462,10 @@ navigate(`/listing/${listing && listing.id}`)
 
           {/* Title & Description */}"
           <div onClick={handleViewListing} className="block">;"
-=======
           </div>;
 
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
               {listing && listing.title}
             </h3>;
@@ -550,8 +487,6 @@ navigate(`/listing/${listing && listing.id}`)
               ))}
             </div>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>;
 
         {/* Footer with price and button */}"
@@ -566,23 +501,14 @@ navigate(`/listing/${listing && listing.id}`)
               <span className="text-zion-slate-light">;
                 {formatPrice()}
 
-<<<<<<< HEAD
               </span>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
 
                 e.stopPropagation(),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 navigate(`/listing/${listing.id}`)
-=======
         </div>;                navigate(`/listing/${listing.id}`)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         </div>;                navigate(`/listing/${listing.id}`)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 e.stopPropagation();
 
@@ -590,21 +516,17 @@ e.stopPropagation();
 
                 e.stopPropagation(),
                 navigate(`/listing/${listing.id}`)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               }}
-=======
 
                 e.stopPropagation(),
 `
                 navigate(`/listing/${listing.id}`)
               }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
               Buy Now;
             </Button>
             {onRequestQuote && (
-<<<<<<< HEAD
           </div>;
 
           <div className="flex gap-2">;
@@ -619,20 +541,14 @@ e.stopPropagation();
               Buy Now;
             </Button>;
             {onRequestQuote && (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
                 Request Quote;
               </Button>;
 
-=======
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
@@ -804,7 +720,6 @@ if ( {) {
               >;
                 Request Quote;
               </Button>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             )}
           </div>;
         </div>;
@@ -819,7 +734,6 @@ if ( {) {
                 <span;
                   key={idx}"
                   className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";
-=======
                   key={idx}"
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full""
                 >
@@ -894,7 +808,6 @@ if ( {) {
 
             <div className="flex flex - wrap gap - 1 mb - 4">;"
                   className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                 </span>))}
 </div>)}
@@ -925,13 +838,11 @@ if ( {) {
 e.stop_propagation ();
                 navigate (`/listing/${listing.id}`);
               }}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="bg - zion - purple hover:bg - zion - purple - dark text - white";
             >;
               Buy Now;
             </Button>;
             {onRequestQuote && (
-<<<<<<< HEAD
               <Button;"
                 size="sm";"
                 variant="outline";
@@ -944,9 +855,6 @@ e.stop_propagation ();
         </div>;
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),; interface ProductListingCardProps {
   listing: ProductListing;
 view?: 'grid' | 'list';
@@ -1004,22 +912,12 @@ pr-12325
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-=======
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
               </Button>;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
     </div>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

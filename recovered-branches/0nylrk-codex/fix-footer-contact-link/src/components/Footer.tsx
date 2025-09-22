@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -12,13 +9,10 @@ import { Link } from "react-router-dom";
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react","
 import { Link } from "react-router-dom",
 
-=======
-=======
 
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
@@ -26,17 +20,13 @@ import { Link } from "react-router-dom",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
-=======
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function Footer() {
   return (
   return (
@@ -50,7 +40,6 @@ export function Footer() {;
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-=======
 
 "
 import { NewsletterForm } from "@/components/NewsletterForm","
@@ -62,7 +51,6 @@ export function Footer() {}
 ";
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
           <div>;"
             <div className="mb-4">;
@@ -314,12 +302,10 @@ className="text - zion - slate hover:text - zion - cyan transition-colors";
             <p className="text - zion - slate mb - 4">;
 
             </p>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <NewsletterForm />;
           </div>;
         </div>;
 
-<<<<<<< HEAD
         <div className="mt - 12 pt - 8 border - t border - zion - blue-light">;
           <div className="flex flex - col md: flex - row justify - between items-center">;
             <p className="text - zion - slate text-sm">;
@@ -358,7 +344,6 @@ import { NewsletterForm } from "@/components/NewsletterForm",;
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
 import { Link } from "react-router-dom";
 export function Footer() { return null; }
-=======
 import { Link } from "react-router-dom";
 export function Footer() {;
   return (;
@@ -502,7 +487,6 @@ export function Footer() {;
         <div className="mt-12 pt-8 border-t border-zion-blue-light">;
           <div className="flex flex-col md: flex-row justify-between items-center">;
             <p className="text-zion-slate text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.;
             </p>;"
             <div className="flex space-x-6 mt-4 md: mt-0">;"
@@ -514,26 +498,17 @@ export function Footer() {;
       </div>;
 
     </footer>;
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </footer>;
   );
 </footer>);
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-=======
   );
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </footer>);
 }
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",""
@@ -764,20 +739,9 @@ export function Footer() {;
     </footer>;
   );
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
     </footer>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

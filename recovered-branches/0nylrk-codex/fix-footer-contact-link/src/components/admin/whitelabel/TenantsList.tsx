@@ -12,11 +12,6 @@ import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   DropdownMenuTrigger,;
 
   Table,
@@ -24,26 +19,15 @@ import {;
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/table";
-=======
   DropdownMenuTrigger,;} from "@/components/ui/table";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   DropdownMenuTrigger,;} from "@/components/ui/table";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 } from "@/components/ui/table";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   TableRow,;
 } from "@/components/ui/table";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button";
 import {}
   DropdownMenu,
@@ -51,36 +35,24 @@ import {}
   DropdownMenuItem,;
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
 
-=======
 "
 } from "@/components/ui/dropdown-menu";"
 import { Badge } from "@/components/ui/badge";"
 import { toast } from "@/hooks/use-toast";"
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     loadTenants();
-=======
   DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
@@ -104,7 +76,6 @@ export function TenantsList() {;
   useEffect(() => {;
 
     loadTenants();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }, []);
 
       setIsLoading(true);
@@ -122,13 +93,6 @@ export function TenantsList() {;
     }
 
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import {
   Edit,
@@ -225,18 +189,14 @@ import {
       });
     }
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
-=======
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Edit,
   MoreHorizontal,
   ExternalLink,
   Power,
   PowerOff,
   Users,
-<<<<<<< HEAD
 
   useEffect(() => {};
     loadTenants();
@@ -294,12 +254,10 @@ import {}
   RefreshCcw,;"
 } from "@/components/icons";"
 import { format } from "date-fns";
-<<<<<<< HEAD
 export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     loadTenants();
   }, []);
@@ -353,15 +311,10 @@ import { format } from "date-fns";
 export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React, { useState, useEffect } from 'react',;
-=======
 export function TenantsList() { return null; }
 import React, { useState, useEffect } from 'react',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase
@@ -391,7 +344,6 @@ export function TenantsList() {;
   const [isLoading, setIsLoading] = useState(true);
 
 import React, { useState, useEffect } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client',;
 import {;
   Table,;
@@ -460,15 +412,7 @@ toast({;"
     }
   };
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const verifyDns = async (tenant: WhitelabelTenant) => {;
     try {;
       // In a real implementation, this would verify DNS records;'
@@ -476,7 +420,6 @@ toast({;"
 const { error } = await supabase;    }
 
   },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -573,7 +516,6 @@ export function TenantsList() {;
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
       <div className="flex justify-between items-center">;
         <h2 className="text-xl font-semibold">White-Label Tenants</h2>;
@@ -582,7 +524,6 @@ export function TenantsList() {;
           Refresh;
         </Button>;
       </div>;
-=======
         .from("whitelabel_tenants");
         .update({ dns_verified: true });
         .eq("id", tenant && tenant.id);
@@ -608,7 +549,6 @@ export function TenantsList() {;
         description: error && error.message,;
       });
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       {isLoading ? (;"
         <div className="flex justify-center p-8">;"
@@ -995,7 +935,6 @@ export function TenantsList() {;
                               <>
                                 <Power className="mr-2 h-4 w-4" />
                                 Enable Tenant
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               </>
                                 <Power className="mr-2 h-4 w-4" />"
 
@@ -1061,7 +1000,6 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 }</TableCell> <TableCell> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" size="sm" > <MoreHorizontal className="h-4 w-4" /> <span className="sr-only" >Actions</span> </Button> </DropdownMenuTrigger> <DropdownMenuContent align="end" > <DropdownMenuItem> <Edit className="mr-2 h-4 w-4" /> Edit Tenant </DropdownMenuItem> <DropdownMenuItem> <Users className="mr-2 h-4 w-4" /> Manage Admins </DropdownMenuItem> <DropdownMenuItem onClick= {
   () => toggleTenantStatus (tenant) 
 }> {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   tenant.is active ? (<> <PowerOff className="mr-2 h-4 w-4" /> Disable Tenant </>) : (<> <Power className="mr-2 h-4 w-4" /> Enable Tenant </>) 
 }</DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> </TableCell> </TableRow>) ) ) 
 }</TableBody> </Table> </div>) 
@@ -1082,18 +1020,5 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 pr-12325
 </div>"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

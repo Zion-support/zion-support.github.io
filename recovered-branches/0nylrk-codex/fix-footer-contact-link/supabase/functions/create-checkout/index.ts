@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
-=======
 
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 const corsHeaders = {
@@ -27,7 +20,6 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
-<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 const corsHeaders = {"
@@ -40,24 +32,13 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
 "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
-=======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 const corsHeaders = {
@@ -78,9 +59,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req && req.method === "OPTIONS") {
-=======
 "
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";"
 import Stripe from "https://esm.sh/stripe@14.21.0",;"
@@ -91,7 +70,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {}
 serve(async (req) => {"
   if (req && req.method === "OPTIONS") {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseClient = createClient(;
@@ -113,8 +91,6 @@ const requestData = await req && req.json();
       amount,
       serviceId = null;
       providerId = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
@@ -160,31 +136,22 @@ try {}
     const requestData = await req.json();
     const {
       amount
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       serviceId = null;
       providerId = null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       escrow = false;
       productType = "service";
-=======
       serviceId = null;
       providerId = null;
       escrow = false;"
       productType = "service";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       currency = "usd";
 
   ),
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
     // Retrieve the request body
-=======
   try {}
     // Retrieve the request body;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const requestData = await req.json(),
     const {}
       amount, 
@@ -196,25 +163,17 @@ try {}
       successUrl,
       cancelUrl;
     } = requestData,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
     }
     // Authenticate the user
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
-<<<<<<< HEAD
 
     const authHeader = req.headers.get("Authorization")!,
     const token = authHeader.replace("Bearer ", ""),
@@ -223,9 +182,7 @@ try {}
     "
     if (!user?.email) throw new Error("User not authenticated");
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     // Check if customer exists;
     const customers = await stripe && stripe.customers.list({ email: user && user.email, limit: 1 });
@@ -240,7 +197,6 @@ const productName = productType === "service"
     const productDescription = escrow
       ? "Payment held in escrow until service completion"
       : "Direct payment for services";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const productName = productType === "service" 
       ? "Service Payment"
       : "Premium Subscription",
@@ -248,7 +204,6 @@ const productName = productType === "service"
     const productDescription = escrow "
       ? "Payment held in escrow until service completion" "
       : "Direct payment for services",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     // Create the session;
     const session = await stripe && stripe.checkout.sessions && sessions.create({}
@@ -363,7 +318,6 @@ if ( {) {}
         status: "pending",
         in_escrow: escrow,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         created_at: new Date().toISOString()
       })
     }
@@ -380,7 +334,6 @@ status: 200})
       status: 500})
   }
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
@@ -454,11 +407,8 @@ serve(async (req) => {;"
               name: productName,;
               description: productDescription;
             },;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return new Response(JSON && JSON.stringify({ url: session && session.url }), {
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
@@ -564,8 +514,6 @@ mode: productType === "subscription" ? "subscription" : "payment",
         userId: user && user.id;
         serviceId: serviceId;
 providerId: providerId;    return new Response(JSON && JSON.stringify({ url: session && session.url }), {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         providerId: providerId;
 
         escrow: escrow && escrow.toString(),
@@ -753,7 +701,6 @@ serve(async (req) => {;
             },;
 
     return new Response(JSON && JSON.stringify({ url: session && session.url }), {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
   } catch (error) {
@@ -769,7 +716,6 @@ serve(async (req) => {;
               description: product_description;
             }
             unit_amount: amount * 100, // Convert to cents;
-=======
 
       status: 500})
   }
@@ -780,7 +726,6 @@ serve(async (req) => {;
             }
 
             unit_amount: amount * 100, // Convert to cents;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
           quantity: 1}];"
@@ -826,10 +771,8 @@ if ( {) {}
       status: 500})
 
   }
-<<<<<<< HEAD
 });
 
-<<<<<<< HEAD
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
@@ -1256,23 +1199,12 @@ unit amount: amount * 100, //Convert to cents status: 500;
       status: 500});
   }
 });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     return new Response(JSON.stringify({ url: session.url }), {;"
       headers: { ...corsHeaders, "Content-Type": "application/json" },;"
     return new Response(JSON.stringify({ error: error.message }), {;"
 "`;
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -17,7 +12,6 @@ import { BookOpen,
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {}
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -26,7 +20,6 @@ import * as React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   BookOpen,
   Brain,
   Users,
@@ -36,12 +29,9 @@ import {
   BarChart3,
   FileText,
   Video,
-<<<<<<< HEAD
   Globe,;
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -51,12 +41,8 @@ import Layout from '../../components/Layout';
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
-=======
 import Layout from '../../components/Layout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const services = [
   {
     title: 'Learning Management Systems',
@@ -66,12 +52,10 @@ const services = [
       'Course management,',
       'Student tracking',',
       'Assessment tools',',
-<<<<<<< HEAD
       'Progress analytics'';
     ];
   },
   {}
-<<<<<<< HEAD
 
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual learning environments with interactive features.,',;
@@ -87,7 +71,6 @@ const services = [
       'Live video streaming,',
       'Interactive whiteboards',',
       'Breakout rooms',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Recording capabilities'';
     ];
   },
@@ -102,7 +85,6 @@ title: 'Educational AI Tutors,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Educational AI Tutors,',
     description: 'AI-powered tutoring systems for personalized learning experiences.,',
     icon: Brain,
@@ -110,14 +92,10 @@ title: 'Educational AI Tutors,',;
       'Adaptive learning paths,',
       'Intelligent tutoring',',
       'Progress monitoring',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Personalized feedback'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Student Analytics,',;
     description: 'Data-driven insights into student performance and engagement.,',;
@@ -133,7 +111,6 @@ title: 'Educational AI Tutors,',;
       'Performance tracking,',
       'Engagement metrics',',
       'Predictive analytics',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Intervention recommendations'';
     ];
   },
@@ -148,7 +125,6 @@ title: 'Online Assessment Tools,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Online Assessment Tools,',
     description: 'Secure and comprehensive online testing and evaluation systems.,',
     icon: FileText,
@@ -156,14 +132,10 @@ title: 'Online Assessment Tools,',;
       'Automated grading,',
       'Plagiarism detection',',
       'Secure testing',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Performance reports'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Content Management Systems,',;
     description: 'Digital content creation and management platforms for educators.,',;
@@ -176,8 +148,6 @@ title: 'Online Assessment Tools,',;
       'Collaboration features'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
@@ -193,7 +163,6 @@ const benefits = [;
       'Collaboration features'';
     ];
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = []
   {'
@@ -202,7 +171,6 @@ const benefits = []
     icon: GraduationCap;
   },
 {}
-<<<<<<< HEAD
 
     title: 'Enhanced Engagement,',;
     description: 'Interactive tools and gamification increase student participation.,',;
@@ -219,8 +187,6 @@ const benefits = []
     icon: BarChart3,;
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function EducationPage() {
   return (;
@@ -269,7 +235,6 @@ export default function EducationPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
     title: 'Content Management Systems,',
     description: 'Digital content creation and management platforms for educators.,',
     icon: Database,
@@ -294,12 +259,9 @@ const benefits = [
     icon: GraduationCap
   },
   {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Enhanced Engagement,',
-=======
   {}'
     title: 'Enhanced Engagement,','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Interactive tools and gamification increase student participation.,',
     icon: Users;
   },
@@ -316,19 +278,16 @@ const benefits = [
 ;];
 export default function EducationPage() {;
   return (
-<<<<<<< HEAD
     <Layout
       title="Education Technology Solutions - Zion Tech Group"
       description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
       keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms.""
       keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -340,8 +299,6 @@ export default function EducationPage() {;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >"
@@ -376,9 +333,6 @@ export default function EducationPage() {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -395,11 +349,9 @@ transition={{ duration: 0.8 }}
               className="text-center mb-16"
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto""
             >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-center justify-center mb-6">";
                 <BookOpen className="w-12 h-12 text-orange-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -424,13 +376,10 @@ transition={{ duration: 0.8 }}
             </motion.div>;
           </div>;
 </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Education Technology Services;
               </h2>"
@@ -446,10 +395,6 @@ transition={{ duration: 0.8 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
@@ -473,7 +418,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
               {services && services.map((service, index) => (,;
@@ -504,8 +448,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -522,22 +464,17 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -545,9 +482,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -575,16 +509,11 @@ Our education technology solutions deliver measurable improvements in learning o
             </div>;
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               className="text-center mb-16"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Education Solutions?
               </h2>"
@@ -597,7 +526,6 @@ Our education technology solutions deliver measurable improvements in learning o
               {benefits.map((benefit, index) => (
                 <motion.div;
                   key={benefit.title}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
@@ -610,9 +538,6 @@ Our education technology solutions deliver measurable improvements in learning o
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -637,31 +562,21 @@ Our education technology solutions deliver measurable improvements in learning o
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}        {/* CTA Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">"
-=======
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Education?;
-=======
               transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Education?;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Education?;
               </h2>;
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
                 Let our education technology experts help you implement solutions that improve;
@@ -687,11 +602,8 @@ Our education technology solutions deliver measurable improvements in learning o
         </section>;
       </div>;
 </Layout>;            >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     </Layout>;
             >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?
               </h2>"
@@ -713,9 +625,6 @@ Our education technology solutions deliver measurable improvements in learning o
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Education?;
@@ -739,10 +648,5 @@ Our education technology solutions deliver measurable improvements in learning o
     </Layout>;
   ),;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

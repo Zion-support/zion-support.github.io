@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
@@ -21,25 +20,14 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { format } from "date-fns",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 
   useEffect(() => {
 
@@ -55,74 +43,49 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 useEffect(() => {
 
     const fetchJobs = async () => {
-<<<<<<< HEAD
 
   useEffect(() => {}
     const fetchJobs = async () => {}
       if (!user) return,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
-=======
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
-=======
       if (!user) return;
       if (!user) return,  const { user } = useAuth();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       if (!user) return;
       if (!user) return,  const { user } = useAuth();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 const { user } = useAuth(),
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 useEffect(() => {
 
     const fetchJobs = async () => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       try {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       try {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
           .order("created_at", { ascending: false })
         if (filter) {
-<<<<<<< HEAD
           query = query.eq("status", filter)
-<<<<<<< HEAD
         }
 
       try {}
@@ -141,7 +104,6 @@ useEffect(() => {
       if (!user) return;
 
 if (error) throw error,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         setJobs(data as Job[])
       } catch (error) {"
         console.error("Error fetching jobs:", error)
@@ -153,12 +115,9 @@ if (error) throw error,
 
     fetchJobs()
   }, [user, filter]),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 if (isLoading) {
-<<<<<<< HEAD
   if (isLoading) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -170,7 +129,6 @@ if (jobs && jobs.length === 0) {;
           }
         </p>"
         <Button asChild className="mt-4">"
-=======
 
   if (isLoading) {
   if (isLoading) {;
@@ -186,7 +144,6 @@ if (jobs && jobs.length === 0) {;
           }
         </p>
         <Button asChild className="mt-4">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Link to="/post-job">Post Your First Job</Link>
         </Button>
       </div>
@@ -207,8 +164,6 @@ const getStatusColor = (status: JobStatus) => {}
 
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return ("
     <div className="grid gap-6 md:grid-cols-2">
@@ -240,7 +195,6 @@ const getStatusColor = (status: JobStatus) => {}
             <div className="flex flex-wrap gap-1 mt-2">
               {job.skills.slice(0, 3).map((skill, index) => ("
                 <Badge key={index} variant="outline" className="text-xs">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -251,8 +205,6 @@ import { Badge } from "@/components/ui/badge",;
 import { Loader2, Edit, X, Eye } from "lucide-react",;
 import { format } from "date-fns",;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Link } from "react-router-dom",;
 interface JobsListProps {;
   filter?: JobStatus,;
@@ -302,21 +254,15 @@ if (isLoading) {;
         <p className="text-lg text-muted-foreground">;
           {filter ;"`
             ? `No jobs with status "${filter}" found.` ;
-<<<<<<< HEAD
             : "You haven't posted any jobs yet.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             :"You haven't posted any jobs yet.";
       <div className="text-center p-8 border rounded-md bg-muted/20">;
         <p className="text-lg text-muted-foreground">;
           {filter;
             ? `No jobs with status "${filter}" found.`;
             : "You haven't posted any jobs yet.";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
-=======
           }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </p>;
         <Button asChild className="mt-4">;
           <Link to="/post-job">Post Your First Job</Link>;
@@ -332,7 +278,6 @@ if (isLoading) {;
       case "in_progress":;
         return "bg-yellow-100 text-yellow-800";
       case "filled":;
-=======
 
           }
         </p>;"
@@ -345,7 +290,6 @@ if (isLoading) {;
       case "in_progress":;"
         return "bg-yellow-100 text-yellow-800";"
       case "filled":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return "bg-green-100 text-green-800";
 
 }
@@ -399,7 +343,6 @@ key={job && job.id}       case "closed":;
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
 "
       case "closed":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return "bg-gray-100 text-gray-800";
       default:;"
         return "bg-gray-100 text-gray-800";
@@ -485,17 +428,10 @@ key={job && job.id}       case "closed":;
             <div className="flex flex-wrap gap-1 mt-2">;
 {job.skills.slice(0, 3).map((skill, index) => (;
               <Link to={`/jobs/${job.id}`}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Badge key={index} variant="outline" className="text-xs">;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
               {job && job.skills.slice(0, 3).map((skill, index) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {skill}
                 </Badge>;
               ))}
@@ -515,15 +451,8 @@ key={job && job.id}       case "closed":;
           <CardFooter className="flex justify-between p-4 pt-0 gap-2">;
             <Button variant="outline" size="sm" asChild>;
               <Link to={`/jobs/${job && job.id}`}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Eye className="h-4 w-4 mr-1" /> View Details;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <Eye className="h-4 w-4 mr-1" /> View Details;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </Link>;
             </Button>;"
             <div className="flex gap-2">;"
@@ -538,10 +467,7 @@ key={job && job.id}       case "closed":;
             </div>;
           </CardFooter>;
         </Card>;
-<<<<<<< HEAD
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect } from './react';'
 import { use_auth } from '@/hooks / use_auth';'
@@ -567,12 +493,8 @@ function JobsList() {}
 ;
 
 }
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </div>;
   useEffect (() => {
     const fetch_jobs = async () => {
@@ -581,19 +503,16 @@ if (return) {
   $2
 }
       ))}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       try {
         let query = supabase;
           .from ("jobs");
           .select ("*");
           .eq ("client_id", user.id);
-=======
       try {}
         let query = supabase;"
           .from ("jobs");"
           .select ("*");"
           .eq ("client_id", user.id);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           .order ("created_at", { ascending: false }),
         // Check condition;
 if ( {) {}
@@ -623,13 +542,10 @@ if ( {) {}
   $2;
 }
 return (
-<<<<<<< HEAD
       <div className="flex justify - center items - center p-8">;
         <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
-=======
       <div className="flex justify - center items - center p-8">;
         <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>);
   }
   // Check condition;
@@ -644,11 +560,8 @@ return (
             : "You haven't posted any jobs yet.";
           }
         </p>;
-<<<<<<< HEAD
         <Button as_child className="mt-4">;
-=======
         <Button as_child className="mt-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Link to="/post - job">Post Your First Job</Link>;
         </Button>;
       </div>);
@@ -668,11 +581,8 @@ return (
   }
 ;
 return (
-<<<<<<< HEAD
     <div className="grid gap - 6 md:grid - cols-2">;
-=======
     <div className="grid gap - 6 md:grid - cols-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {jobs.map ((job) => (
         <Card;
           key={job.id}`
@@ -684,13 +594,10 @@ return (
           <CardHeader className="p-4">;
             <div className="flex justify - between items-start">;
               <div>;
-<<<<<<< HEAD
                 <CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
-=======
                 <CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Posted {format (new Date (job.created_at), "PPP")}
                 </CardDescription>;
               </div>;
@@ -733,11 +640,8 @@ return (
                 </Link>;
               </Button>;
               <Button variant="outline" size="sm">;
-<<<<<<< HEAD
                 <X className="h - 4 w-4" />;
-=======
                 <X className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Button>;
             </div>;
           </CardFooter>;
@@ -844,22 +748,8 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   const [jobs, setJobs] = useState<Job[]>([]);
 
@@ -1064,4 +954,3 @@ return (<div className="grid gap-6 md:grid-cols-2" > {"
 
     </div>;"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

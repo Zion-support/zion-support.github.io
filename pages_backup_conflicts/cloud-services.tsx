@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 interface CloudservicesProps {
   // Add props here as needed
 }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Cloudservices({ }: CloudservicesProps) {
 
 class ErrorBoundary extends React.Component {
@@ -40,21 +34,15 @@ interface CloudservicesProps {;
   // Add props here as needed;
 }
 export default function Cloudservices(): any ({ }: CloudservicesProps) {;  return (
-=======
 interface CloudservicesProps {}
   // Add props here as needed;
 }
 
 export default function Cloudservices({ }: CloudservicesProps) {}
   return (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div>
       <h1>Cloudservices</h1>
       <p>This component is currently under development.</p>
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

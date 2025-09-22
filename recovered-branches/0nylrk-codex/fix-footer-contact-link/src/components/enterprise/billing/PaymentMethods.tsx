@@ -9,27 +9,16 @@ import {;
 
 import React from "react";
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React from "react";
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React from "react";
 import {};
-=======
 import React from \"react\";
 import {
   CardContent,
@@ -135,52 +124,32 @@ import React from "react";"
 import {
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Card;
   CardContent;
   CardDescription;
   CardFooter;
   CardHeader;
   CardTitle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   Card,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   Card,
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-<<<<<<< HEAD
   CardTitle,;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-=======
 "
 import { Button } from "@/components/ui/button";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CreditCard, Plus, Trash } from "lucide-react";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/components/ui/card";
-=======
   CardTitle,;} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
 
-=======} from "@/components/ui/card";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   CardTitle,;
 
 } from "@/components/ui/card";
@@ -191,7 +160,6 @@ import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
 
 } from "@/components/ui/card";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
@@ -212,59 +180,29 @@ export function PaymentMethods() {
       isDefault: false;
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
-=======
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       last4: "4242",
       expMonth: 12,
       expYear: 2025,
       isDefault: true,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {
       id: "pm-2",
       type: "credit_card",
       brand: "Mastercard",
-=======
 
 "
 import React from "react","
@@ -276,18 +214,11 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       id: "pm-2","
       type: "credit_card","
       brand: "Mastercard","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       last4: "8888",
       expMonth: 4,
-<<<<<<< HEAD
       expYear: 2026,
-<<<<<<< HEAD
       isDefault: false}
   ],
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       expYear: 2026,
 
       isDefault: false}
@@ -298,7 +229,6 @@ isDefault: false,
   ];
       isDefault: false}
   ],
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Card>
       <CardHeader>
@@ -349,40 +279,27 @@ isDefault: false,
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
   );
 }
 
 );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function PaymentMethods() {;
-=======
       expYear: 2026,  )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentMethods() {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       expYear: 2026,  )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentMethods() {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <CardFooter>
         <Button className="gap-1">
           <Plus className="h-4 w-4" />
@@ -402,7 +319,6 @@ import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
 ;
 export function PaymentMethods() {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Mock payment methods;
   const paymentMethods = [;
     {;
@@ -424,13 +340,9 @@ isDefault: true},;
       brand: "Mastercard",;
       last4: "8888",;
       expMonth: 4,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       expYear: 2026,;
       isDefault: false,;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   Card,
   CardContent,
   CardDescription,
@@ -464,44 +376,27 @@ function PaymentMethods() {}
       exp_year: 2026,
       is_default: false,
     },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
 ;
   return (
     <Card>;
       <CardHeader>;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         <CardTitle > Payment Methods</CardTitle>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
 
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 <CardContent className="space-y-4">;
   );
 "
       <CardContent className="space - y-4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       <CardContent className="space-y-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {payment_methods.map ((method) => (
           <div;
             key={method.id}`
@@ -531,13 +426,10 @@ function PaymentMethods() {}
                 <Button size="sm" variant="ghost">;
                   Set Default;
                 </Button>)}
-<<<<<<< HEAD
               <Button size="sm" variant="ghost" className="text-destructive">;
                 <Trash className="h - 4 w-4" />;
-=======
               <Button size="sm" variant="ghost" className="text-destructive">;
                 <Trash className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Button>;
             </div>;
           </div>))}
@@ -732,19 +624,11 @@ pr-12325
 ;
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <CardFooter>;"
         <Button className="gap - 1">;"
           <Plus className="h - 4 w - 4" />;
@@ -756,10 +640,5 @@ pr-12325
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </Card>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

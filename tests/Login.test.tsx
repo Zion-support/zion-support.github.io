@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { LoginForm } from '@/components/auth/login';
@@ -34,4 +33,3 @@ data: { error: 'Invalid credentials' }
     await screen.findByText('Invalid credentials');
   });
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

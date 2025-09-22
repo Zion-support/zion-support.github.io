@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -23,7 +16,6 @@ import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSte
 import {MyApplications} from "@/components/jobs/MyApplications";
 import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -72,9 +64,7 @@ import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";
 import { MyApplications } from "@/components/jobs/MyApplications";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
-=======
   CardTitle,";
 } from "@/components/ui/card";"
 import { Avatar } from "@/components/ui/avatar";"
@@ -82,27 +72,15 @@ import { Badge } from "@/components/ui/badge";"
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";"
 import { MyApplications } from "@/components/jobs/MyApplications";"
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {}
   const { user } = useAuth();"
   const [activeTab, setActiveTab] = useState("job-matches");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <SEO"
@@ -198,7 +176,6 @@ import { Badge } from "@/components/ui/badge",;
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",;
 import { MyApplications } from "@/components/jobs/MyApplications",;
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",;
-=======
 
             "
 import { useState, useEffect } from "react",;"
@@ -218,7 +195,6 @@ import { Badge } from "@/components/ui/badge",;"
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",;"
 import { MyApplications } from "@/components/jobs/MyApplications",;"
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
 function TalentDashboardContent() { return null; }
   const { user } = useAuth(),;"
@@ -307,11 +283,6 @@ function TalentDashboardContent() { return null; }
                           {user?.displayName?.charAt(0) || "U"}
                         </div>
                       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </Avatar>;
                     <div>;
                       <CardTitle>{user?.displayName || "User"}</CardTitle>;
@@ -344,10 +315,7 @@ function TalentDashboardContent() { return null; }
                   </Button>;
                 </div>;
               </CardContent>;
-<<<<<<< HEAD
             </Card>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                 <div className="mt-4">
                   <Button className="w-full" asChild>
@@ -355,33 +323,19 @@ function TalentDashboardContent() { return null; }
 
                       <MessageSquare className="h-4 w-4 mr-2" />
                       Messages;
-=======
                       <MessageSquare className="h-4 w-4 mr-2" />
                       Messages
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             {/* New Onboarding Progress Tracker */}
-=======
             </Card>;            {/* New Onboarding Progress Tracker */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             </Card>;            {/* New Onboarding Progress Tracker */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             {/* New Onboarding Progress Tracker */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
             </Card>;            {/* New Onboarding Progress Tracker */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <TalentOnboardingSteps />
 
             {/* Upcoming Interviews Card */}"
@@ -598,13 +552,7 @@ function TalentDashboardContent() { return null; }
     </>)
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
 export default function TalentDashboard() {;
@@ -616,16 +564,7 @@ export default function TalentDashboard() {;
 }
 ;
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 
 export default function TalentDashboard() {;
@@ -638,7 +577,6 @@ export default function TalentDashboard() {;
 
 ;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -656,7 +594,6 @@ import { Badge } from '@/components / ui / badge';
 import { TalentOnboardingSteps } from '@/components / onboarding / TalentOnboardingSteps';
 import { MyApplications } from '@/components / jobs / MyApplications';
 import { ProjectOfferBanner } from '@/components / projects / ProjectOfferBanner';
-=======
 export default function TalentDashboard() { return null; }
 import { useState, useEffect } from './react';'
 import { AppHeader } from '@/layout / AppHeader';'
@@ -675,7 +612,6 @@ import { Badge } from '@/components / ui / badge';'
 import { TalentOnboardingSteps } from '@/components / onboarding / TalentOnboardingSteps';'
 import { MyApplications } from '@/components / jobs / MyApplications';'
 import { ProjectOfferBanner } from '@/components / projects / ProjectOfferBanner';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInterviewsCard';
 /**
  * TalentDashboardContent - Function description;
@@ -706,9 +642,7 @@ function TalentDashboardContent() {}
             </Button>;
             <Button as_child>;
               <Link to="/dashboard / talent / applications">;
-<<<<<<< HEAD
                 <Inbox className="h - 4 w - 4 mr-2" /> Application Tracker;
-=======
                 <Inbox className="h - 4 w - 4 mr-2" /> Application Tracker;
 
     <ProtectedRoute>
@@ -757,7 +691,6 @@ function TalentDashboardContent() {}
                 <Inbox className="h - 4 w - 4 mr - 2" /> Application Tracker;"
 </Inbox>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Link>;
             </Button>;
           </div>;
@@ -773,11 +706,8 @@ function TalentDashboardContent() {}
                     <Avatar className="h - 12 w-12 border">;
                       {user?.avatar_url ? (
                         <img src={user.avatar_url} alt={user.display_name || "User"} />) : (
-<<<<<<< HEAD
                         <div className="flex h - full w - full items - center justify - center bg - muted text - lg font-medium uppercase">;
-=======
                         <div className="flex h - full w - full items - center justify - center bg - muted text - lg font-medium uppercase">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           {user?.display_name?.char_at (0) || "U"}
                         </div>)}
                     </Avatar>;
@@ -806,11 +736,8 @@ function TalentDashboardContent() {}
                 <div className="mt-4">;
                   <Button className="w-full" as_child>;
                     <Link to="/messages">;
-<<<<<<< HEAD
                       <MessageSquare className="h - 4 w - 4 mr-2" />;
-=======
                       <MessageSquare className="h - 4 w - 4 mr-2" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       Messages;
         <ProjectOfferBanner />;
 
@@ -901,11 +828,9 @@ function TalentDashboardContent() {}
                     <span className="text - muted-foreground">Applications</span>;
                     <span className="font-medium">3</span>;
                   </div>;
-<<<<<<< HEAD
                   <div className="flex justify-between">;
                     <span className="text - muted-foreground">Profile completion</span>;
                     <span className="font-medium">85%</span>;
-=======
                   <div className="flex justify-between">;
                     <span className="text - muted-foreground">Profile completion</span>;
                     <span className="font-medium">85%</span>;
@@ -947,7 +872,6 @@ function TalentDashboardContent() {}
                     <span className="text - muted - foreground">Profile completion</span>;""
                     <span className="font - medium">85%</span>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>;
                 </div>;
               </CardContent>;
@@ -955,15 +879,12 @@ function TalentDashboardContent() {}
 </div>;
           <div className="lg:col - span-2">;
             <Tabs default_value="job - matches" onValueChange={setActiveTab}>;
-<<<<<<< HEAD
               <TabsList className="mb-6">;
                 <TabsTrigger value="job - matches" className="flex items-center">;
                   <BriefcaseIcon className="h - 4 w - 4 mr-2" />;
-=======
               <TabsList className="mb-6">;
                 <TabsTrigger value="job - matches" className="flex items-center">;
                   <BriefcaseIcon className="h - 4 w - 4 mr-2" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   AI Job Matches;
                 </TabsTrigger>;"
                 <TabsTrigger value="applications">My Applications</TabsTrigger>;"
@@ -988,11 +909,8 @@ function TalentDashboardContent() {}
                     <p className="text - muted-foreground">;
                       You haven't saved any jobs yet.;
                     </p>;
-<<<<<<< HEAD
                     <Button className="mt-4" as_child>;
-=======
                     <Button className="mt-4" as_child>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <Link to="/jobs">Browse Jobs</Link>;
 
           </div>;"
@@ -1065,11 +983,6 @@ function TalentDashboard() {}
       <TalentDashboardContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;
 import { useState, useEffect } from "react";""
 import { AppHeader } from "@/layout/AppHeader";""
@@ -1242,18 +1155,8 @@ function TalentDashboardContent() {
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 export default function TalentDashboard() {
 </ProtectedRoute>
@@ -1369,4 +1272,3 @@ pr-12325
 </TalentDashboardContent>
     </ProtectedRoute>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

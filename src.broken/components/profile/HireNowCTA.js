@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -103,22 +102,16 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         startDate: '',
         message: ''
         e.preventDefault();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 :src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {        e.preventDefault();
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         if (onHire) {
-=======
 
         e.preventDefault();
         if (onHire) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onHire(formData);
         }
         // Reset form and close;
@@ -126,7 +119,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '','
             budget: '','
             startDate: '',
-<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );
@@ -135,16 +127,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         });
         setIsFormOpen(false)
 };    const handleChange = (e) => {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
 }))
 };
-=======
         }));
     };
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
         <CardTitle className="text-white flex items-center gap-2">"
@@ -158,7 +147,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
                 <DollarSign className="h-4 w-4"/>
                 <span>Starting at ${hourlyRate}/hour</span>
 </div>)}"
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
             <p className="text-zion-slate-light text-sm">
               Ready to start your project? Send a message to discuss details and get started.
             </p>"
@@ -173,7 +161,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
               <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
             </div>
 "
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
             <div className="grid grid-cols-2 gap-4">
               <div>"
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
@@ -183,7 +170,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
               </div>
 
               <div>
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
                 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
                   Start Date;
                 </label>"
@@ -192,7 +178,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             </div>
 
             <div>
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                 Additional Message;
               </label>"
@@ -201,7 +186,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 "
             <div className="flex gap-3">"
             <div className="flex gap-3">
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
               <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 Send Message;
               </Button>"
@@ -209,14 +193,9 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
                 Cancel;
               </Button>
             </div>
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           </form>)}
       </CardContent>
     </Card>);
 }
 
-=======
-=======
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

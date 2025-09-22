@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from "react"
 
 import type { CSSProperties } from "react"
@@ -12,7 +10,6 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   side?: "left" | "right"
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
@@ -32,21 +29,11 @@ export interface SidebarProps extends React.ComponentProps<"div"> {"
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (props.collapsible === &quot;none&quot;) {
-=======
 ;
 ;
   if (props.collapsible === &quot;none&quot;) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <div;
         className={cn(
@@ -55,10 +42,6 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   if (props.collapsible === &quot;none&quot;) {
 
   if (props.collapsible === "none") {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
   if (props.collapsible === &quot;none&quot;) {
 
@@ -66,14 +49,10 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   if (props.collapsible === &quot;none&quot;) {
 
   if (props.collapsible === "none") {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
       <div;
         className={cn("
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           props.className
         )}
 
@@ -126,11 +105,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         )}
           props.className
         )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ref={ref}
         {...props}
       >;
@@ -173,10 +148,7 @@ if (isMobile) {
       </Sheet>
     )
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   return (;
     <div;
@@ -185,8 +157,6 @@ if (isMobile) {
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;"
       className="group peer hidden md:block text-sidebar-foreground"
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -196,9 +166,6 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;"
       {/* This is what handles the sidebar gap on desktop */}
 
     >;
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       <div
         className={cn(
@@ -261,8 +228,6 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         {...props}
       >;
 {props.children}    >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         {props.children}
       </div>);
   }
@@ -329,7 +294,6 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       {/* This is what handles the sidebar gap on desktop */}
 
     >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* This is what handles the sidebar gap on desktop */}
 <div
         className={cn(
@@ -345,11 +309,6 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === "floating" || props.variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear","
           "group-data-[collapsible=offcanvas]:w-0","
@@ -358,7 +317,6 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]""
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         )}
       />
       <div;
@@ -420,7 +378,6 @@ export const SidebarRail = React.forwardRef<
   React.ComponentProps<&quot;button&quot;>
   HTMLButtonElement,
   React.ComponentProps<"button">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -441,9 +398,6 @@ export const SidebarRail = React.forwardRef<
           props.variant === "floating" || props.variant === "inset"
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         )}
       />
@@ -518,14 +472,12 @@ export const SidebarRail = React.forwardRef<
           props.className
         )}
         className={cn (
-=======
 
           props.className;
         )}
 
 <div;
         className={cn ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           "duration - 200 relative h - svh w-[--sidebar - width] bg - transparent transition-[width] ease - linear & quot;,
           &quot;group - data-[collapsible = offcanvas]:w - 0&quot;,
           &quot;group - data-[side = right]:rotate - 180 & quot;,
@@ -759,29 +711,19 @@ pr-12325
         "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         props.className
-=======
 
         props.className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       )}
       {...props}
     />
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 })
 
-<<<<<<< HEAD
 export const SidebarInset = React.forwardRef<
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 })
 
       >;
@@ -807,7 +749,6 @@ export const SidebarInset = React.forwardRef<
 
 export const SidebarInset = React.forwardRef<
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
 
@@ -816,13 +757,8 @@ export const SidebarInset = React.forwardRef<
   React.ComponentProps<&quot;main">
   HTMLDivElement,
   React.ComponentProps<"main">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >((props, ref) => {
-=======
 >((props, ref) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <main;
       ref={ref as SafeRef<HTMLDivElement>}
@@ -831,14 +767,10 @@ export const SidebarInset = React.forwardRef<
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
 
-<<<<<<< HEAD
         "relative flex min-h-svh flex-1 flex-col bg-background&quot;
         &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
 
@@ -846,34 +778,20 @@ export const SidebarInset = React.forwardRef<
         &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         props.className
-=======
 })        props.className
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 })        props.className
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
         "relative flex min-h-svh flex-1 flex-col bg-background","
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
 
         props.className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         props.className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       )}
       {...props}
     />
   )
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       data - sidebar=&quot;rail & quot;
       aria - label=&quot;Toggle Sidebar & quot;
@@ -1004,14 +922,8 @@ SidebarInset.displayName = "SidebarInset";)
 }) SidebarInset.displayName = "SidebarInset" "
 SidebarInset.displayName = &quot;SidebarInset""
 SidebarInset.displayName = "SidebarInset"
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 });
 SidebarInset.displayName = "SidebarInset";) 
 }ref= {
@@ -1020,7 +932,6 @@ SidebarInset.displayName = "SidebarInset";)
   ...props 
 }> {
   props.children 
-=======
 
       ref={ref}"
       data-sidebar="rail";""
@@ -1037,7 +948,6 @@ SidebarInset.displayName = "SidebarInset";)
 export const SidebarInset = React.forwardRef<;
   React.ComponentProps<"main">;"
 </main>)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }</div>) 
   return (<Sheet open= {
   openMobile;
@@ -1069,4 +979,3 @@ export const SidebarInset = React.forwardRef<;
 }) SidebarInset.displayName = "SidebarInset" 
 SidebarInset.displayName = &quot;SidebarInset"
 SidebarInset.displayName = "SidebarInset"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

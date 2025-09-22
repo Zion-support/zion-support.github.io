@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",
 import { Star } from "lucide-react",
@@ -18,7 +10,6 @@ import { Star } from "lucide-react";
 
 import React from "react",
 import { Star } from "lucide-react",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -26,35 +17,23 @@ export const CommunityTrust: React.FC = () => {
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
 
-=======
 
 import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import React from "react";
 import { Star } from "lucide-react";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 import React from "react";
 import { Star } from "lucide-react";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 import React from "react",
 import { Star } from "lucide-react",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import React from "react",
 import { Star } from "lucide-react",
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from "react";
 import { Star } from "lucide-react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -70,7 +49,6 @@ export const CommunityTrust: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Trusted by the{" "}
-=======
 import React from "react";"
 import { Star } from "lucide-react";
 export const CommunityTrust: React.FC = () => {};
@@ -88,7 +66,6 @@ export const CommunityTrust: React.FC = () => {};
         <div className="text-center mb-12">"
           <h2 className="text-3xl md:text-4xl font-bold text-white">"
             Trusted by the{" "}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className="text-zion-cyan">Tech Community</span>
           </h2>"
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
@@ -109,8 +86,6 @@ export const CommunityTrust: React.FC = () => {};
               </div>"
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",;
 import { Star } from "lucide-react",;
 export const CommunityTrust: React.FC = () => {;
@@ -139,8 +114,6 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ))}
         </div>
 
@@ -168,10 +141,7 @@ export const CommunityTrust: React.FC = () => {;
     </section>
   );
 };
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 },
 };
@@ -187,11 +157,8 @@ export const CommunityTrust: React.FC = () => {;
             {[1, 2, 3, 4, 5].map ((star) => (
               <Star;
                 key={star}                className="w - 6 h - 6 text - zion-cyan";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
                 className="w - 6 h - 6 text - zion - cyan";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 fill="current_color";
               />))}
           </div>;
@@ -202,37 +169,19 @@ export const CommunityTrust: React.FC = () => {;
 <div className="text-center">;
             <div className="font - semibold text - zion-cyan">Sarah Johnson</div>;
             <div className="text - sm text - zion - slate-light">CTO at TechFlow</div>;
-=======
           <div className="text - center">;
             <div className="font - semibold text - zion - cyan">Sarah Johnson</div>;
             <div className="text - sm text - zion - slate - light">CTO at TechFlow</div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>;
       </div>;
     </section>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 "

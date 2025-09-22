@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import React from 'react';
 
@@ -37,4 +38,27 @@ export default function LayoutPage() {
       </div>
     </main>
   );
+=======
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group',
+  description: 'Advanced AI and Technology Solutions',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+>>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
 }

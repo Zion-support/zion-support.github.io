@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {supabase} from "@/integrations/supabase/client";
 
-=======
 
 import { supabase } from "@/integrations/supabase/client";"
 import {supabase} from "@/integrations/supabase/client";"
@@ -22,10 +18,8 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import {supabase} from "@/integrations/supabase/client";
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
 
@@ -37,20 +31,13 @@ export const quoteRequestService = {};
       .select (`;
         *;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {}
@@ -85,19 +72,13 @@ export const quoteRequestService = {
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       .select(`
         *,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         talent:talent_id (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         talent:talent_id (
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return data && data.map((item: any) => ({
 
 .select(`;
@@ -197,7 +178,6 @@ pr-12325
       .from('quote_requests')
       .select(`
         *,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         talent:talent_id (
           display_name
         )
@@ -213,13 +193,11 @@ pr-12325
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     if (error) throw error,
     return data as QuoteRequest[]
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -238,7 +216,6 @@ pr-12325
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
@@ -389,7 +366,6 @@ pr-12325
       .order('created_at', { ascending: false }),;'
 
     if (error) throw error,;
-=======
       .single();
     if (error) throw error;
     return {}
@@ -409,11 +385,9 @@ pr-12325
 if (throw error) {}
   $2;
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return data as QuoteRequest[];
   },;
   // Get a single quote request by id;
-<<<<<<< HEAD
   getById: async (id: string) => {;
     const { data, error } = await supabase;
       .from('quote_requests');
@@ -541,7 +515,6 @@ pr-12325
       .delete();
       .eq('id', id),;
 
-<<<<<<< HEAD
   }
 };
   getById: async (id: string) => {
@@ -551,13 +524,7 @@ pr-12325
         *;
         talent:talent_id (
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -571,7 +538,6 @@ pr-12325
         .select('viewed_at')
         .eq('id', id)
         .single();      }
-=======
 
   // Update quote request status;
   updateStatus: async (id: string, status: QuoteStatus) => {}
@@ -588,7 +554,6 @@ pr-12325
         .single();
 
       }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     const { data, error } = await supabase'
       .from('quote_requests')
@@ -635,8 +600,6 @@ pr-12325
     // If marking as responded, set replied_at'
     if (status === 'responded') {}
       updates.replied_at = new Date().toISOString()
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
 
     // If marking as in_review and viewed_at is null, set viewed_at
@@ -684,14 +647,8 @@ pr-12325
     if (error) throw error;
     return true
 import { supabase } from "@/integrations/supabase/client",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
 import { supabase } from "@/integrations/supabase/client",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
   // Get all quote requests (for admin);
@@ -784,9 +741,6 @@ export const quoteRequestService = {;
       .eq('id', id),;
     if (error) throw error;
 return true;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ;
   // Archive / Unarchive a quote request;
@@ -819,7 +773,6 @@ if ( {) {
       // Check condition;
         updates.viewed_at = new Date ().toISOString ();
       .update (updates);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .eq ('id', id);
       .select ();
 ;
@@ -843,8 +796,6 @@ if (throw error) {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           display_name);`
       `);'
@@ -908,22 +859,10 @@ if (throw error) {}
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     return true;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     return true;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,13 +1,13 @@
 [build]
-command = "npm ci && npm run build"
-publish = "out"
+  command = "npm run build"
+  publish = ".next"
 
 [build.environment]
-NODE_VERSION = "20"
-NODE_OPTIONS = "--max-old-space-size=4096"
-NEXT_TELEMETRY_DISABLED = "1"
-NEXT_PRIVATE_STATIC_KEY = "build"
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  NEXT_TELEMETRY_DISABLED = "1"
 
+<<<<<<< HEAD
 ## Note: Using Next.js static export (output: 'export').
 ## No Next.js plugin or Netlify Functions are required.
 
@@ -77,3 +77,10 @@ status = 301
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
+=======
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  node_bundler = "esbuild"
+>>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa

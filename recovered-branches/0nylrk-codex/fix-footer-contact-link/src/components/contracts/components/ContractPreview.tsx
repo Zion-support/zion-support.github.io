@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from './react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -35,34 +34,22 @@ import { SmartContractInfo } from "@/types/smart-contracts";"
 import { TalentProfile } from "@/types/talent","
 import { SmartContractInfo } from "@/types/smart-contracts",
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ContractPreviewProps {
-=======
 import { SmartContractInfo } from "@/types/smart-contracts",interface ContractPreviewProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 interface ContractPreviewProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { SmartContractInfo } from "@/types/smart-contracts",
 
 interface ContractPreviewProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions'
   status?: 'draft' | 'ready' | 'pending',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export function ContractPreview({
   contractContent;}
 export function ContractPreview({
   contractContent;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   generatedContract,
   status = 'ready',
   onDeploy,
@@ -79,8 +66,6 @@ export function ContractPreview({
   deployStatus?: string,
   deploymentInfo?: SmartContractInfo | null
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         {status === 'ready' ? (
 
@@ -95,17 +80,12 @@ export function ContractPreview({
         {status === 'ready' ? (
 
 export function ContractPreview(): any ({ ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   contractContent;
   generatedContract, ;'
   status = 'ready', ;
   onDeploy, ;
   onSign;
   onClose;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ContractPreview({ ;
   contractContent;
 export function ContractPreview({ 
@@ -113,7 +93,6 @@ export function ContractPreview({
   generatedContract, 
   status = 'ready', 
   onDeploy, 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onSign,
   onClose,
   deployStatus,
@@ -122,28 +101,17 @@ export function ContractPreview({
   // Use either contractContent or generatedContract, whichever is provided
   const displayContent = contractContent |generatedContract |"";
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Contract Preview</h2>
         {status === 'ready' ? (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Badge
-=======
-=======          <Badge
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <Badge
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             variant="secondary"
-=======
 
           <Badge"
             variant="secondary""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="text-sm bg-green-100 text-green-800"
           >
             Ready to Sign;
@@ -203,21 +171,12 @@ export function ContractPreview({ ;
       <div className="flex justify-between items-center mb-4">;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Badge
-=======
           <Badge
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   return (    <div className="space-y-4">;
       <div className="flex justify-between items-center mb-4">;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
             Ready to Sign;
@@ -231,10 +190,6 @@ export function ContractPreview({ ;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
 import React from "react",;"
 import { Badge } from "@/components/ui/badge",;"
@@ -254,13 +209,11 @@ interface ContractPreviewProps {;
 }
 ;
 export function ContractPreview() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         )}
       {/* Contract content */}"
       <div className="border rounded-lg p-6 bg-muted/50">;
         {/* Render the contract content as markdown or formatted text */}"
         <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
-<<<<<<< HEAD
           {displayContent}
 
       {/* Deployment info if available */}
@@ -275,10 +228,6 @@ export function ContractPreview() { return null; }
             Close;
           </Button>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Badge variant="outline">Draft</Badge>;
         )}
       </div>
@@ -310,43 +259,25 @@ export function ContractPreview() { return null; }
             Sign Contract
           </Button>
         )}
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {status === 'ready' && onDeploy && (
-=======
 
 '
         {status === 'ready' && onDeploy && ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain;
-=======
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </Button>
         )}
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {status === 'ready' && onSign && (;
           <Button onClick={onSign}>;
             Sign Contract;
@@ -360,40 +291,28 @@ export function ContractPreview() { return null; }
         )}
       </div>;
     </div>;
-<<<<<<< HEAD
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
-=======
           {displayContent}            variant="secondary";
             className="text - sm bg - green - 100 text - green-800";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           {displayContent}            variant="secondary";
             className="text - sm bg - green - 100 text - green-800";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 }
 }
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >;
             Ready to Sign;'
           </Badge>) : status === 'pending' ? (
 <Badge;
             variant="outline";
-<<<<<<< HEAD
             className="text - sm bg - yellow - 100 text - yellow-800";
-=======
             className="text - sm bg - yellow - 100 text - yellow-800";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >;
             Pending Review;
           </Badge>) : ("
@@ -402,11 +321,8 @@ export function ContractPreview() { return null; }
 {/* Contract content */}
       <div className="border rounded - lg p - 6 bg-muted / 50">;
         {/* Render the contract content as markdown or formatted text */}
-<<<<<<< HEAD
         <div className="prose prose - sm max - w-none prose - headings:font - semibold prose - headings:text - foreground prose - p:text - muted-foreground">;
-=======
         <div className="prose prose - sm max - w-none prose - headings:font - semibold prose - headings:text - foreground prose - p:text - muted-foreground">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {display_content}
         </div>;
       </div>;

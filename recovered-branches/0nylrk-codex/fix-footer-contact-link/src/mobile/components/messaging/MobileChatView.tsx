@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -17,11 +8,7 @@ import {Input} from "@/components/ui/input";
 import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {toast} from "sonner";
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
@@ -30,8 +17,6 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lu
 import { cn } from "@/lib/utils",
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface Message {
 
   id: string
@@ -69,12 +54,10 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
-<<<<<<< HEAD
 }
 
 interface MobileChatViewProps {
@@ -106,7 +89,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend()
     }
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -115,15 +97,10 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lu
 import { cn } from "@/lib/utils",;
 import { useNavigate } from "react-router-dom",;
 import { toast } from "sonner",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface Message {;
   id: string,;
-=======
 import {toast} from "sonner";  id: string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import {toast} from "sonner";  id: string,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   content: string,;
   timestamp: string,;
   isMe: boolean,;
@@ -162,7 +139,6 @@ interface Message {}
 avatar?: string,'
   status?: 'sent' | 'delivered' | 'read'
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   sender?: string,;
   avatar?: string,;'
   status?: 'sent' | 'delivered' | 'read';
@@ -180,36 +156,25 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  onSendMessage: (content: string) => void
-}
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-=======
-  onSendMessage: (content: string) => void
-}
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  onSendMessage: (content: string) => void
-}
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
 
 interface MobileChatViewProps {;
   contact: {;
@@ -231,7 +196,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
-<<<<<<< HEAD
       onSendMessage(newMessage);
       setNewMessage("");
     }
@@ -254,42 +218,25 @@ export function MobileChatView() { return null; }
       handleSend();
     }
   },
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const startVideoCall = () => {
-=======
       onSendMessage(newMessage);      setNewMessage("");
     }  const startVideoCall = () => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const startVideoCall = () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
-=======
   const startVideoCall = () => {}
     const roomId = `mobile-${contact.id}`,"
     toast.success("Starting video call", {}`
       description: `Connecting with ${contact.name}...`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const startAudioCall = () => {}`
     const roomId = `mobile-audio-${contact.id}`,"
     toast.success("Starting audio call", {}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: `Connecting with ${contact.name}...`
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const startVideoCall = () => {
 const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
@@ -298,27 +245,16 @@ const roomId = `mobile-${contact.id}`,
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }),
 
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   },
 
-=======
   const [newMessage, setNewMessage] = useState("");
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
     toast.success("Starting audio call", {
@@ -327,25 +263,18 @@ const roomId = `mobile-${contact.id}`,
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call", {
-<<<<<<< HEAD
       description: `Connecting with ${contact.name}...`
-<<<<<<< HEAD
     });
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }),
 
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -354,10 +283,8 @@ const roomId = `mobile-${contact.id}`,
 
             <ChevronLeft className="h-5 w-5" />
           </Button>"
-=======
             <ChevronLeft className="h-5 w-5" />
           </Button>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="flex items-center flex-1 gap-3 mx-2">
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
@@ -397,28 +324,19 @@ const roomId = `mobile-${contact.id}`,
           >
             <div;
               className={cn(
-<<<<<<< HEAD
                 "max-w-[80%] rounded-2xl px-4 py-2",
                 message.isMe "
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   : "bg-muted rounded-tl-none"
-=======
       description: `Connecting with ${contact.name}...`                  : "bg-muted rounded-tl-none"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       description: `Connecting with ${contact.name}...`                  : "bg-muted rounded-tl-none"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             >
               <p>{message.content}</p>
 <div className={cn(                "text-xs mt-1 flex justify-end";
-=======
       </header>
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
@@ -444,24 +362,16 @@ const roomId = `mobile-${contact.id}`,
               <div className={cn(
 
                 "text-xs mt-1 flex justify-end";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },;
   const startVideoCall = () => {;`
     const roomId = `mobile-${contact.id}`,;"
     toast.success("Starting video call", {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleSend = () => {;
     if (newMessage && newMessage.trim() !== "") {;
       onSendMessage(newMessage);
       setNewMessage("");
     }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     status?: string;
   }
   messages: Message[],
@@ -495,7 +405,6 @@ if ( {) {}
 const startVideoCall = () =>: any {
     const room_id = `mobile-${contact.id}`;
     toast.success ("Starting video call", {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -565,11 +474,6 @@ className={cn ("
                 "text - xs mt - 1 flex justify - end";"
                 message.is_me ? "text - primary - foreground / 80" : "text - muted - foreground")}>;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             className={cn (
               "flex";
               message.is_me ? "justify - end" : "justify - start")}
@@ -585,18 +489,13 @@ className={cn ("
               <div className={cn (
                 "text - xs mt - 1 flex justify - end";
                 message.is_me ? "text - primary - foreground / 80" : "text - muted - foreground")}>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml-1">;
                     {message.status === 'read' ? '✓✓' : '✓'}
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
   const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;'
     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
@@ -671,13 +570,10 @@ export function MobileChatView() { return null; }
   ;
 const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
-<<<<<<< HEAD
     toast.success("Starting video call", {,
   description:`Connecting with ${contact.name}...`;
-=======
     toast.success("Starting video call", {,
   description:`Connecting with ${contact.name}...`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),;
     ;
     // Navigate to video call page;`
@@ -686,39 +582,30 @@ const startVideoCall = () => {;
   ;
 const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-<<<<<<< HEAD
     toast.success("Starting audio call", {,
   description:`Connecting with ${contact.name}...`;
-=======
     toast.success("Starting audio call", {,
   description:`Connecting with ${contact.name}...`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),;
     ;
     // Navigate to video call page with audio-only flag;`
     navigate(`/call/${roomId}?audioOnly=true`),;
   },;
   ;
-<<<<<<< HEAD
   return (,
   description: `Connecting with ${contact.name}...`;
-=======
   return (,
   description: `Connecting with ${contact.name}...`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),;
     // Navigate to video call page;`
     navigate(`/call/${roomId}`);
   },;
 const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-<<<<<<< HEAD
     toast.success("Starting audio call", {,
   description: `Connecting with ${contact.name}...`;
-=======
     toast.success("Starting audio call", {,
   description: `Connecting with ${contact.name}...`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),;
     // Navigate to video call page with audio-only flag;`
     navigate(`/call/${roomId}?audioOnly=true`);
@@ -735,7 +622,6 @@ return (;          ;
                 {contact.status || "Online"}
               </p>;
             </div>;
-<<<<<<< HEAD
           </div>;
 "
           <div className="flex">;"
@@ -760,17 +646,9 @@ return (;          ;
       </header>;
 
 )}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <p>{message && message.content}</p>;
-=======
           </div>;              )}>;              <p>{message && message.content}</p>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           </div>;              )}>;              <p>{message && message.content}</p>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {messages && messages.map((message) => (;
           <div
@@ -788,25 +666,18 @@ return (;          ;
               )}>;
               )}>;
               <p>{message && message.content}</p>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <divclassName={cn(
                 "text-xs mt-1 flex justify-end"
-=======
 
               <p>{message && message.content}</p>;
               <divclassName={cn("
                 "text-xs mt-1 flex justify-end""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>;
                 {message && message.timestamp}
                 {message && message.isMe && message && message.status && (;"
                   <span className="ml-1">;'
                     {message && message.status === 'read' ? '✓✓' : '✓'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </span>;
 
 "
@@ -819,21 +690,10 @@ return (;          ;
                   <span className="ml-1">'
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 )}
-=======
                   </span>;                )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   </span>;                )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   </span>;
 
 ;
@@ -886,7 +746,6 @@ return (;          ;
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
                 )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
             </div>;
           </div>;
@@ -901,11 +760,6 @@ return (;          ;
             <PaperclipIcon className="h-5 w-5" />;
           </Button>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
@@ -917,7 +771,6 @@ return (;          ;
             onClick={handleSend}
             disabled={!newMessage && newMessage.trim()}
             className={!newMessage && newMessage.trim() ? "opacity-50" : ""}>;
-<<<<<<< HEAD
           <Input;
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
@@ -952,8 +805,6 @@ return (;          ;
       </div>
     </div>
   )
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             placeholder="Type a message...";
             className="flex-1";
           />;
@@ -964,16 +815,7 @@ return (;          ;
             disabled={!newMessage.trim()}
             className={!newMessage.trim() ? "opacity-50" :""}
           >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Send className="h-5 w-5" />;
             disabled={!newMessage && newMessage.trim()}"
             className={!newMessage && newMessage.trim() ? "opacity-50" : ""}>;"
@@ -988,9 +830,7 @@ return (;          ;
 );
 }
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </span>)}
               </div>;
             </div>;
@@ -999,9 +839,7 @@ return (;          ;
       <div className="sticky bottom - 0 bg - background border - t border - border p-2">;
         <div className="flex items - center gap-2">;
           <Button variant="ghost" size="icon">;
-<<<<<<< HEAD
             <PaperclipIcon className="h - 5 w-5" />;
-=======
             <PaperclipIcon className="h - 5 w-5" />;
 
       </div>;"
@@ -1013,18 +851,14 @@ return (;          ;
 </Button>"
             <PaperclipIcon className="h - 5 w - 5" />;"
 </PaperclipIcon>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Button>;
           <Input;
             value={new_message}
             on_change={(e) => setNewMessage (e.target.value)}
 onKeyDown={handleKeyDown}
             placeholder="Type a message...";
-<<<<<<< HEAD
             className="flex-1";
-=======
             className="flex-1";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />;
           <Button;"
             size="icon";
@@ -1032,9 +866,7 @@ onKeyDown={handleKeyDown}
             disabled={!new_message.trim ()}"
             className={!new_message.trim () ? "opacity - 50" : ""}
 >;
-<<<<<<< HEAD
             <Send className="h - 5 w-5" />;
-=======
             <Send className="h - 5 w-5" />;
 </Input>
           <Button;"
@@ -1047,7 +879,6 @@ onKeyDown={handleKeyDown}
             <Send className="h - 5 w - 5" />;"
 </Send>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Button>;
         </div>;
       </div>;
@@ -1103,22 +934,8 @@ setNewMessage ("") contact.avatar;
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import React, { useState } from "react";""
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";""
@@ -1396,4 +1213,3 @@ pr-12325
 }
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

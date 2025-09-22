@@ -40,12 +40,8 @@ darkMode: ["class"],  content: [
         },
       },
 borderRadius: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   plugins: []}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   darkMode: ["class"],"
   content: ["
@@ -114,38 +110,23 @@ module.exports = {
         sm: "calc (var (--radius) - 4px)"}}},"
 pr-12325
   plugins: []}
-<<<<<<< HEAD
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"}}},
   plugins: []}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
       borderRadius: {}
 "
         lg: "var(--radius)","
         md: "calc(var(--radius) - 2px)","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   plugins: []}
 "
 
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         sm: "calc(var(--radius) - 4px)",
       },
     },
   },
   plugins: [],
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

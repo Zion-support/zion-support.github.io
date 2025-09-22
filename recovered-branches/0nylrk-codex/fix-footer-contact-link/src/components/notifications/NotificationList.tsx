@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   loading: boolean,
   error: string | null,
   notifications: Notification[],
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>,
   onRetry: () => void;
-=======
 import React from 'react';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import { Skeleton  } from '@/components/ui/skeleton';
@@ -28,42 +15,29 @@ import { Notification } from '@/context/notifications';
 interface NotificationListProps {
 
   onRetry: () => void
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
   notifications;
-<<<<<<< HEAD
   onMarkAsRead;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
-=======
   onMarkAsRead;import React from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   onMarkAsRead;import React from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   onMarkAsRead;
 
 import React from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
 import { NotificationItem } from './NotificationItem',;
-=======
 
 import React from 'react',;'
 import { ScrollArea } from '@/components/ui/scroll-area',;'
 import { Skeleton } from '@/components/ui/skeleton',;'
 import { Button } from '@/components/ui/button',;'
 import { NotificationItem } from './NotificationItem',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Notification } from '@/context/notifications',;
 interface NotificationListProps {;
   loading: boolean,;
@@ -73,24 +47,13 @@ interface NotificationListProps {;
   onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   loading: boolean;
   error: string | null;
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   loading: boolean
   error: string | null
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   notifications: Notification[]
   onMarkAsRead: (id: string) => Promise<void>
   onDismiss: (id: string) => Promise<void>
@@ -98,11 +61,9 @@ interface NotificationListProps {;
 onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-<<<<<<< HEAD
 
   onDismiss,
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {ScrollArea} from '@/components/ui/scroll-area';
 import {Skeleton} from '@/components/ui/skeleton';
 import {Button} from '@/components/ui/button';
@@ -151,21 +112,13 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 }
 export const NotificationList: React.FC < NotificationListProps> = ({};
   loading;
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   error;
   notifications;
 onMarkAsRead;  on_dismiss,
-=======
 on_dismiss,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   on_retry;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }) => {
-=======
   onMarkAsRead;
 
   loading,
@@ -178,7 +131,6 @@ on_dismiss,
   on_retry;
 
 }) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
@@ -224,7 +176,6 @@ on_dismiss,
         ));
       )}
 
-=======
     </ScrollArea>;
   ),;
 },; {
@@ -278,7 +229,6 @@ on_dismiss,
           />
         ))
       )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </ScrollArea>
   )
 }
@@ -288,38 +238,21 @@ on_dismiss,
     </ScrollArea>;
   );
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
     </ScrollArea>;
   );
 
-=======
-=======
     </ScrollArea>;
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }) => {
   return (
 <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
       {error ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
 
@@ -507,4 +440,3 @@ pr-12325
     </ScrollArea>;
   );
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

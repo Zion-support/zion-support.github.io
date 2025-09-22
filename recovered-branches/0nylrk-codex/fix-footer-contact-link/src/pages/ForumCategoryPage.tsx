@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -19,10 +12,7 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
-<<<<<<< HEAD
-<<<<<<< HEAD
     adminOnly: false
-=======
 import {useState} from "react";"
 import {useParams, Link} from "react-router-dom";"
 import {Button} from "@/components/ui/button";"
@@ -34,14 +24,12 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";"
 import {Badge} from "@/components/ui/badge";"
 import {useAuth} from "@/hooks/useAuth";"
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     adminOnly: false;
 "
     icon: "Briefcase"
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -51,7 +39,6 @@ import { AppLayout } from "@/layout/AppLayout",
 import PostCard from "@/components/community/PostCard",
 import { ForumPost, ForumCategoryInfo } from "@/types/community",
 import { Badge } from "@/components/ui/badge",
-=======
 "
 import { useState } from "react","
 import { useParams, Link } from "react-router-dom","
@@ -62,7 +49,6 @@ import { AppLayout } from "@/layout/AppLayout","
 import PostCard from "@/components/community/PostCard","
 import { ForumPost, ForumCategoryInfo } from "@/types/community","
 import { Badge } from "@/components/ui/badge","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth",
 import {}
   MessageSquare,
@@ -72,7 +58,6 @@ import {}
   Megaphone,
   Search"
 } from "@/components/icons",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
@@ -80,20 +65,16 @@ id: "getting-hired"
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform.";
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     adminOnly: false,
     icon: "Briefcase"
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     icon: "Briefcase"
   },
     icon: "Briefcase"
   }    adminOnly: false,
     icon: "Briefcase"
   },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   "project-help": {
 
     id: "project-help"
@@ -101,13 +82,9 @@ id: "getting-hired"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
 
-<<<<<<< HEAD
     icon: "MessageSquare"
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   },
-=======
     icon: "MessageSquare"
 
 }
@@ -121,7 +98,6 @@ id: "getting-hired"
     icon: "Code"
   }
   },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
@@ -129,12 +105,8 @@ id: "getting-hired"
     adminOnly: false,
     icon: "Code"
 },
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "feedback": {
 
     id: "feedback"
@@ -143,18 +115,12 @@ id: "getting-hired"
     adminOnly: false
 
     icon: "FileText"
-<<<<<<< HEAD
   },
 
 },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   }
   },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "announcements": {
 
     id: "announcements"
@@ -170,8 +136,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
     {
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState } from './react';
 import { use_params, Link } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -237,10 +201,7 @@ const postsByCategory: Record<string, ForumPost[]> = {"
     {}
     }
 
-=======
     icon: "MessageSquare"    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 // Mock category data;
 const categories_info: Record < string, ForumCategoryInfo> = {
@@ -302,7 +263,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       is_featured: true;
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {
 
       id: "2"
@@ -350,7 +310,6 @@ id: "2",
       tags: ["portfolio", "projects", "examples"],"
       createdAt: "2025-04-07T11:30:00Z","
       updatedAt: "2025-04-07T11:30:00Z",
-=======
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
@@ -452,7 +411,6 @@ const postsByCategory: Record < string, ForumPost[]> = {"
       tags: ["portfolio", "projects", "examples"];""
       created_at: "2025 - 04 - 07T11:30:00Z",""
       updated_at: "2025 - 04 - 07T11:30:00Z","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       upvotes: 19,
       downvotes: 2,
       reply_count: 6;,"
@@ -477,25 +435,11 @@ const postsByCategory: Record < string, ForumPost[]> = {"
       updatedAt: "2025-04-07T11:30:00Z","
 
 replyCount: 6
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];"
   "project - help": [;
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "3",
       title: "Looking for feedback on my automated testing approach",
       content: "I've set up a CI / CD pipeline with the following testing strategy...",
@@ -505,10 +449,7 @@ replyCount: 6
       tags: ["testing", "automation", "ci - cd"];
       created_at: "2025 - 04 - 10T14:30:00Z",
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       updated_at: "2025 - 04 - 10T14:30:00Z",
-=======
 "
       id: "3",""
       title: "Looking for feedback on my automated testing approach",""
@@ -519,7 +460,6 @@ replyCount: 6
       tags: ["testing", "automation", "ci - cd"];""
       created_at: "2025 - 04 - 10T14:30:00Z",""
       updated_at: "2025 - 04 - 10T14:30:00Z","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       upvotes: 5,
       reply_count: 2;
 }
@@ -536,16 +476,11 @@ replyCount: 6
       updated_at: "2025 - 04 - 08T10:20:00Z",
       upvotes: 24,
       downvotes: 0,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
       isAnswered: true
 
-<<<<<<< HEAD
-=======
       replyCount: 7,
       isAnswered: true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];"
   "ai - tools": [;
@@ -562,7 +497,6 @@ replyCount: 6
   "ai - tools": [;
     {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       id: "1",
       title: "Best practices for AI model fine - tuning",
@@ -576,7 +510,6 @@ replyCount: 6
       created_at: "2025 - 04 - 01T12:00:00Z",
 
       updated_at: "2025 - 04 - 01T12:00:00Z",
-=======
       id: "1",""
       title: "Best practices for AI model fine - tuning",""
       content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",""
@@ -588,21 +521,14 @@ replyCount: 6
       tags: ["machine - learning", "fine - tuning", "gpt"];""
       created_at: "2025 - 04 - 01T12:00:00Z",""
       updated_at: "2025 - 04 - 01T12:00:00Z","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       upvotes: 48,
       reply_count: 12,
       is_answered: true,
 is_featured: true;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "7",
       title: "Comparing different vector embedding models",
       content: "I've been experimenting with these different embedding models and here are my findings...",
@@ -614,8 +540,6 @@ is_featured: true;
       updated_at: "2025 - 04 - 05T16:40:00Z",
       upvotes: 31,
       downvotes: 0,
-=======
-=======
       id: "7",""
       title: "Comparing different vector embedding models",""
       content: "I've been experimenting with these different embedding models and here are my findings...",""
@@ -626,23 +550,17 @@ is_featured: true;
       created_at: "2025 - 04 - 05T16:40:00Z",""
       updated_at: "2025 - 04 - 05T16:40:00Z","
       upvotes: 31,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 {"
       id: "7","
       title: "Comparing different vector embedding models",'"
       content: "I've been experimenting with these different embedding models and here are my findings...",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     }
   ];"
   "feedback": [;
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
 
       id: "4",
       title: "Feature request: Team collaboration tools",
@@ -658,14 +576,9 @@ is_featured: true;
       downvotes: 1,
       reply_count: 3;
     }
-<<<<<<< HEAD
     {
-=======
       replyCount: 9    {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
       content: "I think the job matching could be improved by considering these additional factors...",
@@ -675,7 +588,6 @@ is_featured: true;
       tags: ["matching", "jobs", "algorithm"];
       created_at: "2025 - 04 - 04T08:10:00Z",
       updated_at: "2025 - 04 - 04T08:10:00Z",
-=======
       id: "4",""
       title: "Feature request: Team collaboration tools",""
       content: "It would be really helpful if we could have built - in tools for team collaboration...",""
@@ -697,26 +609,19 @@ is_featured: true;
       tags: ["matching", "jobs", "algorithm"];""
       created_at: "2025 - 04 - 04T08:10:00Z",""
       updated_at: "2025 - 04 - 04T08:10:00Z","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       upvotes: 17,
       downvotes: 3,
-=======
 
 {"
       id: "8","
       title: "Suggestion for improving the jobs matching algorithm","
       content: "I think the job matching could be improved by considering these additional factors...",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     }
   ];"
   "announcements": [;
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
 
 // Mock category data;
 const categoriesInfo: Record<string, ForumCategoryInfo> = {;
@@ -888,11 +793,6 @@ const postsByCategory: Record<string, ForumPost[]> = {;
 
 const iconMap = {;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "9",
       title: "Platform Update: New AI Matching Algorithm",
       content: "We're excited to announce the launch of our new and improved AI matching algorithm...",
@@ -903,8 +803,6 @@ const iconMap = {;
       tags: ["update", "matching", "algorithm"];
       created_at: "2025 - 04 - 02T15:00:00Z",
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       updated_at: "2025 - 04 - 02T15:00:00Z",
       upvotes: 42,
       downvotes: 0,
@@ -952,7 +850,6 @@ export default function ForumCategoryPage() {};
   const [searchQuery, setSearchQuery] = useState("");
 
   if (!categoryId || !categoriesInfo[categoryId]) {;
-<<<<<<< HEAD
   ]
 },
 
@@ -971,12 +868,10 @@ export default function ForumCategoryPage() {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   if (!categoryId |!categoriesInfo[categoryId]) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 },
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
     return (
 
@@ -1001,16 +896,11 @@ export default function ForumCategoryPage() {
     )
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const category = categoriesInfo[categoryId],
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
   const posts = postsByCategory[categoryId] || [],
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
   }
 
@@ -1027,12 +917,7 @@ export default function ForumCategoryPage() {
   // For announcements, check if user is admin'"
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <AppLayout>
       <SEO;`
@@ -1069,16 +954,11 @@ export default function ForumCategoryPage() {
         <div className="mb-6">"
           <div className="relative">"
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-<<<<<<< HEAD
 
   const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -1369,39 +1249,28 @@ export default function ForumCategoryPage() { return null; }
               placeholder="Search posts in this category...";
               className="pl-10";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               value={searchQuery}
             <Input
               placeholder="Search posts in this category..."
-=======
             <Input"
               placeholder="Search posts in this category...""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="pl-10"
               value={searchQuery}
 
             )}
           </div>;
 )}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   "Megaphone": Megaphone;
 }
 ;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       replyCount: 5  "Briefcase": Briefcase;
-=======
 
 ];
 }
 ;
 const icon_map = {
   "Briefcase": Briefcase;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "MessageSquare": MessageSquare;
   "Code": Code;
   "FileText": FileText;
@@ -2176,11 +2045,7 @@ const category = categoriesInfo[categoryId];
               placeholder="Search posts in this category..."
               className="pl-10"
               value={searchQuery}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               onChange={(e) => setSearchQuery(e && e.target.value)}
             />;
           </div>;
@@ -2409,4 +2274,3 @@ pr-12325
               </Button>;
           </div>;"
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

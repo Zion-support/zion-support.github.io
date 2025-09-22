@@ -51,7 +51,6 @@ const ApiDevelopmentChat: NextPage = () => {
 
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
 <meta name="description" content="ApiDevelopmentChat service" />{" "}
-<<<<<<< HEAD
 const ApiDevelopmentChat: NextPage = () => {
   return (
     <div />
@@ -63,7 +62,6 @@ const ApiDevelopmentChat: NextPage = () => {
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
         <a href="/services">Back to Services</a>
-=======
       </Head>;
 
 const ApiDevelopmentChat: NextPage = () => {
@@ -71,7 +69,6 @@ const ApiDevelopmentChat: NextPage = () => {
         <h1 />ApiDevelopmentChat</h1>
         <p />Service details coming soon...</p>
         <a href=\"/services\" />Back to Services</a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

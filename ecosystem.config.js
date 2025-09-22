@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD;
-=======
 export default {
   apps: [
     {
       name: 'bolt-zion-app',
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 module.exports = {;      error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default {apps: [;
     {name: 'bolt-zion-app',export default {apps: [;
@@ -121,22 +103,16 @@ error_file:'./logs/error-fixer-error && error.log',;
       error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       time:true;
 },;
     {;'
       name:'intelligent-orchestrator',;
-<<<<<<< HEAD
-<<<<<<< HEAD
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
       script:'automation/intelligent-orchestrator.cjs',;
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 script:'automation/intelligent-orchestrator && orchestrator.cjs',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -147,38 +123,29 @@ script:'automation/intelligent-orchestrator && orchestrator.cjs',;
       },;
 error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
-<<<<<<< HEAD
       log_file:'./logs/orchestrator-combined && combined.log',;      error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
 
-=======
 error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       time:true;
     },;
     {;'
       name:'automation-dashboard',;
-<<<<<<< HEAD
-<<<<<<< HEAD
       script:'automation/automation-dashboard && dashboard.cjs',;      script:'automation/automation-dashboard && dashboard.cjs',;
       script:'automation/automation-dashboard && dashboard.cjs',;
       script:'automation/automation-dashboard.cjs',;
       script:'automation/automation-dashboard && dashboard.cjs',;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 script:'automation/automation-dashboard && dashboard.cjs',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       args:'start',;
       instances:1,;
       autorestart:true,;
       watch:false,;'
       max_memory_restart:'1G',;
-<<<<<<< HEAD
 
 env:{;'
         NODE_ENV:'production';
@@ -195,9 +162,6 @@ env:{;'
       error_file:'./logs/dashboard-error && error.log',;'
       out_file:'./logs/dashboard-out && out.log',;'
       log_file:'./logs/dashboard-combined && combined.log',;
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
       error_file:'./logs/dashboard-error && error.log',;
       out_file:'./logs/dashboard-out && out.log',;
       log_file:'./logs/dashboard-combined && combined.log',;
@@ -210,22 +174,16 @@ env:{;'
       out_file:'./logs/dashboard-out.log',;
       log_file:'./logs/dashboard-combined.log',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       time:true;
     },;
     {;'
       name:'code-quality-monitor',;
-<<<<<<< HEAD
-<<<<<<< HEAD
       script:'automation/code-quality-monitor && monitor.cjs',;      script:'automation/code-quality-monitor && monitor.cjs',;
       script:'automation/code-quality-monitor && monitor.cjs',;
       script:'automation/code-quality-monitor.cjs',;
       script:'automation/code-quality-monitor && monitor.cjs',;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 script:'automation/code-quality-monitor && monitor.cjs',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances:1,;
       autorestart:true,;
       watch:false,;'
@@ -235,32 +193,24 @@ script:'automation/code-quality-monitor && monitor.cjs',;
       },;
 error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
-<<<<<<< HEAD
       log_file:'./logs/code-quality-combined && combined.log',;      error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
 
-=======
 error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       time:true;
     },;
     {;'
       name:'performance-optimizer',;
-<<<<<<< HEAD
-<<<<<<< HEAD
       script:'automation/performance-optimizer && optimizer.cjs',;      script:'automation/performance-optimizer && optimizer.cjs',;
       script:'automation/performance-optimizer && optimizer.cjs',;
       script:'automation/performance-optimizer.cjs',;
       script:'automation/performance-optimizer && optimizer.cjs',;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 script:'automation/performance-optimizer && optimizer.cjs',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances:1,;
       autorestart:true,;
       watch:false,;'
@@ -268,13 +218,10 @@ script:'automation/performance-optimizer && optimizer.cjs',;
       env:{;'
         NODE_ENV:'production';
       },;
-<<<<<<< HEAD
-<<<<<<< HEAD
       error_file:'./logs/performance-error && error.log',;
       out_file:'./logs/performance-out && out.log',;
       log_file:'./logs/performance-combined && combined.log',;
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 module.exports = {;
   apps:[;
 module.exports = {apps:[;
@@ -291,7 +238,6 @@ module.exports = {apps:[;
       }'
       error_file:'./logs/error-fixer-error.log';'
       out_file:'./logs/error-fixer-out.log';'
-=======
 error_file:'./logs/performance-error.log',;
       out_file:'./logs/performance-out.log',;
       log_file:'./logs/performance-combined.log',;
@@ -374,7 +320,6 @@ module.exports = {apps:[;
       }
       error_file:'./logs/error-fixer-error.log';
       out_file:'./logs/error-fixer-out.log';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       log_file:'./logs/error-fixer-combined.log';
       time:true;
     }'
@@ -434,32 +379,18 @@ watch:false;'
 }
       error_file:'./logs/performance-error.log';
       out_file:'./logs/performance-out.log';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       log_file:'./logs/performance-combined.log';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       log_file:'./logs/performance-combined.log';
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
       }'
       error_file:'./logs/performance-error.log';'
       out_file:'./logs/performance-out.log';'
       log_file:'./logs/performance-combined.log';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       time:true;
     }
   ];
 };      env: {'
         NODE_ENV: 'production'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       },'
       error_file: './logs/performance-error && error.log','
@@ -467,10 +398,7 @@ watch:false;'
       log_file: './logs/performance-combined && combined.log',
 
 time: true
-<<<<<<< HEAD
 module.exports = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   apps: [{
     name: "ziontechgroup-site"
     script: "npm"
@@ -480,7 +408,6 @@ module.exports = {
     env: {
       NODE_ENV: "production"
       PORT: 3000
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     env_production: {
       NODE_ENV: "production"
@@ -502,7 +429,6 @@ module.exports = {
 
 ;
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 module.exports = {;
   apps: [;
     {;
@@ -585,25 +511,14 @@ module.exports = {;
       time: true;
     }
   ];
->>>>>>> 878d942794613d77e7906d7fb8891458141d2dcc;
 },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   apps: [;
     {
 
       name: 'bolt-zion-app',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
 module.exports = {
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-=======
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
       log_file:'./logs/performance-combined.log';
 
       time:true;
@@ -653,7 +568,6 @@ module.exports = {apps: [;
 
       time: true
 module.exports = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   apps: [
     {
       name: 'error-fixer',
@@ -691,9 +605,6 @@ module.exports = {
       name: 'automation-dashboard','
       script: 'automation/automation-dashboard.cjs','
       args: 'start',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   apps: [{
     name: "ziontechgroup-site"
     script: "npm"
@@ -703,15 +614,7 @@ module.exports = {
     env: {
       NODE_ENV: "production"
       PORT: 3000
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     env_production: {
       NODE_ENV: "production"
@@ -828,17 +731,9 @@ export default {
     {
 
       name: 'bolt-zion-app',
-<<<<<<< HEAD
       script: 'npm',
       args: 'run preview',
       cwd: './',
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 name: 'bolt - zion - app',
       script: 'npm',
       args: 'run preview',
@@ -869,11 +764,8 @@ module.exports = {
       script: 'automation/automation-dashboard.cjs',
       args: 'start',
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,'
       max_memory_restart: '1G',
@@ -881,12 +773,6 @@ module.exports = {
         NODE_ENV: 'production',
 PORT: 3001
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
       out_file: 'logs/pm2/preview-out.log',
@@ -894,29 +780,18 @@ PORT: 3001
       out_file: './logs/dashboard-out.log',
       log_file: './logs/dashboard-combined.log',
       time: true
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     {
       name: 'auto-fix',
       script: 'node',
       args: 'scripts/pm2/auto-fix.js',
       cron_restart: '0 */6 * * *',
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-=======
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       error_file: './logs/dashboard-error.log',
       out_file: './logs/dashboard-out.log',
-=======
         PORT: 3001;
       },'
       error_file: './logs/dashboard-error.log','
       out_file: './logs/dashboard-out.log','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       log_file: './logs/dashboard-combined.log',
       time: true;
     },
@@ -924,57 +799,21 @@ PORT: 3001
       name: 'code-quality-monitor','
       script: 'automation/code-quality-monitor.cjs',
 instances: 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       cron_restart: '0 */6 * * *',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> main
-=======
       cron_restart: '0 */6 * * *',
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       autorestart: true,
       watch: false,'
       max_memory_restart: '512M',
 env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        NODE_ENV: 'production'
-<<<<<<< HEAD
         NODE_ENV: 'production'
         NODE_ENV: 'production'
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+        NODE_ENV: 'production'
       },
       log_file: 'logs/pm2/auto-fix.log',
       error_file: 'logs/pm2/auto-fix-error.log',
       out_file: 'logs/pm2/auto-fix-out.log',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
         NODE_ENV: 'production'
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 NODE_ENV: 'production';
       },
     env_production: {,
@@ -1126,32 +965,20 @@ export default {export default {apps: [;
   error_file: 'logs / pm2 / auto - fix - error.log',out_file: 'logs / pm2 / auto - fix - out.log';
         NODE_ENV: 'production';
       out_file: 'logs / pm2 / auto - fix - out.log',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     },
     {
       name: 'healthcheck',
       script: 'node',
 args: 'scripts/pm2/healthcheck.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 args: 'scripts / pm2 / healthcheck.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       cron_restart: '*/5 * * * *',
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '128M',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         NODE_ENV: 'production'
-=======
 NODE_ENV: 'production';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       },
 
       log_file: 'logs / pm2 / health.log',
@@ -1160,40 +987,23 @@ NODE_ENV: 'production';
     },
     {
 name: 'code-quality-monitor',
-<<<<<<< HEAD
       script: 'scripts/pm2/code-quality-monitor.js',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       name: 'code - quality - monitor',
       script: 'scripts / pm2 / code - quality - monitor.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         PM2_PROCESS_NAME: 'code-quality-monitor',
-=======
         PM2_PROCESS_NAME: 'code-quality-monitor',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 PM2_PROCESS_NAME: 'code - quality - monitor',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
       },
       cron_restart: '0 */6 * * *',
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
@@ -1201,9 +1011,6 @@ PM2_PROCESS_NAME: 'code - quality - monitor',
     {
       name: 'auto-commit-fixes',
 script: 'scripts/pm2/auto-commit-fixes.js',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 log_file: 'logs / pm2 / code - quality - monitor.log',
       error_file: 'logs / pm2 / code - quality - monitor - error.log',
       out_file: 'logs / pm2 / code - quality - monitor - out.log',
@@ -1211,33 +1018,20 @@ log_file: 'logs / pm2 / code - quality - monitor.log',
     {
       name: 'auto - commit - fixes',
       script: 'scripts / pm2 / auto - commit - fixes.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         PM2_PROCESS_NAME: 'auto-commit-fixes',
-=======
         PM2_PROCESS_NAME: 'auto-commit-fixes',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 PM2_PROCESS_NAME: 'auto - commit - fixes',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
       },
       cron_restart: '0 */2 * * *',
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       log_file: 'logs/pm2/auto-commit-fixes.log',
       error_file: 'logs/pm2/auto-commit-fixes-error.log',
       out_file: 'logs/pm2/auto-commit-fixes-out.log',
@@ -1245,9 +1039,6 @@ PM2_PROCESS_NAME: 'auto - commit - fixes',
     {
       name: 'dependency-monitor',
 script: 'scripts/pm2/dependency-monitor.js',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 log_file: 'logs / pm2 / auto - commit - fixes.log',
       error_file: 'logs / pm2 / auto - commit - fixes - error.log',
       out_file: 'logs / pm2 / auto - commit - fixes - out.log',
@@ -1255,33 +1046,20 @@ log_file: 'logs / pm2 / auto - commit - fixes.log',
     {
       name: 'dependency - monitor',
       script: 'scripts / pm2 / dependency - monitor.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         PM2_PROCESS_NAME: 'dependency-monitor',
-=======
         PM2_PROCESS_NAME: 'dependency-monitor',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 PM2_PROCESS_NAME: 'dependency - monitor',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         AUTO_UPDATE_DEV: 'true',
         SECURITY_ALERTS: 'true',
       },
       cron_restart: '0 0 * * 0',
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       log_file: 'logs/pm2/dependency-monitor.log',
       error_file: 'logs/pm2/dependency-monitor-error.log',
       out_file: 'logs/pm2/dependency-monitor-out.log',
@@ -1289,9 +1067,6 @@ PM2_PROCESS_NAME: 'dependency - monitor',
     {
       name: 'performance-monitor',
 script: 'scripts/pm2/performance-monitor.js',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 log_file: 'logs / pm2 / dependency - monitor.log',
       error_file: 'logs / pm2 / dependency - monitor - error.log',
       out_file: 'logs / pm2 / dependency - monitor - out.log',
@@ -1299,33 +1074,20 @@ log_file: 'logs / pm2 / dependency - monitor.log',
     {
       name: 'performance - monitor',
       script: 'scripts / pm2 / performance - monitor.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         PM2_PROCESS_NAME: 'performance-monitor',
-=======
         PM2_PROCESS_NAME: 'performance-monitor',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 PM2_PROCESS_NAME: 'performance - monitor',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         PERFORMANCE_THRESHOLD: '3000',
         BUNDLE_SIZE_LIMIT: '2MB',
       },
       cron_restart: '0 */8 * * *',
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       log_file: 'logs/pm2/performance-monitor.log',
       error_file: 'logs/pm2/performance-monitor-error.log',
       out_file: 'logs/pm2/performance-monitor-out.log',
@@ -1333,9 +1095,6 @@ PM2_PROCESS_NAME: 'performance - monitor',
     {
       name: 'git-workflow',
 script: 'scripts/pm2/git-workflow-automator.js',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 log_file: 'logs / pm2 / performance - monitor.log',
       error_file: 'logs / pm2 / performance - monitor - error.log',
       out_file: 'logs / pm2 / performance - monitor - out.log',
@@ -1343,39 +1102,23 @@ log_file: 'logs / pm2 / performance - monitor.log',
     {
       name: 'git - workflow',
       script: 'scripts / pm2 / git - workflow - automator.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         PM2_PROCESS_NAME: 'git-workflow',
-=======
         PM2_PROCESS_NAME: 'git-workflow',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 PM2_PROCESS_NAME: 'git - workflow',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         AUTO_BRANCH_CLEANUP: 'true',
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         AUTO_MERGE_SAFE: 'true',
         CONFLICT_RESOLUTION: 'true',
         BRANCH_STRATEGY: 'gitflow',
       },
       cron_restart: '0 */6 * * *',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
       out_file: 'logs/pm2/git-workflow-out.log',
@@ -1383,9 +1126,6 @@ PM2_PROCESS_NAME: 'git - workflow',
     {
       name: 'error-detection',
 script: 'scripts/pm2/error-detection-service.js',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 log_file: 'logs / pm2 / git - workflow.log',
       error_file: 'logs / pm2 / git - workflow - error.log',
       out_file: 'logs / pm2 / git - workflow - out.log',
@@ -1393,33 +1133,20 @@ log_file: 'logs / pm2 / git - workflow.log',
     {
       name: 'error - detection',
       script: 'scripts / pm2 / error - detection - service.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         PM2_PROCESS_NAME: 'error-detection',
-=======
         PM2_PROCESS_NAME: 'error-detection',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 PM2_PROCESS_NAME: 'error - detection',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/5 * * * *',
       },
       cron_restart: '*/5 * * * *',
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       log_file: 'logs/pm2/error-detection.log',
       error_file: 'logs/pm2/error-detection-error.log',
       out_file: 'logs/pm2/error-detection-out.log',
@@ -1427,9 +1154,6 @@ PM2_PROCESS_NAME: 'error - detection',
     {
       name: 'syntax-fixer',
 script: 'scripts/pm2/syntax-error-fixer.js',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 log_file: 'logs / pm2 / error - detection.log',
       error_file: 'logs / pm2 / error - detection - error.log',
       out_file: 'logs / pm2 / error - detection - out.log',
@@ -1437,53 +1161,29 @@ log_file: 'logs / pm2 / error - detection.log',
     {
       name: 'syntax - fixer',
       script: 'scripts / pm2 / syntax - error - fixer.js',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         PM2_PROCESS_NAME: 'syntax-fixer',
-=======
         PM2_PROCESS_NAME: 'syntax-fixer',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 PM2_PROCESS_NAME: 'syntax - fixer',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/10 * * * *',
       },
       cron_restart: '*/10 * * * *',
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       log_file: 'logs/pm2/syntax-fixer.log',
       error_file: 'logs/pm2/syntax-fixer-error.log',
       out_file: 'logs/pm2/syntax-fixer-out.log',
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",
-=======
 
       log_file: 'logs / pm2 / syntax - fixer.log',
       error_file: 'logs / pm2 / syntax - fixer - error.log',
@@ -1491,15 +1191,8 @@ module.exports = {
 
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 module && module.exports = {
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   apps: [{
 
     },
@@ -1511,47 +1204,20 @@ module && module.exports = {
 
     time: true
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 }
 
 }
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }
 
 }
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         NODE_ENV: 'production'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       },
       error_file: './logs/code-quality-error.log',
       out_file: './logs/code-quality-out.log',
@@ -1734,9 +1400,7 @@ export default {
       out_file: 'logs/pm2/syntax-fixer-out.log'
     }
   ]
-<<<<<<< HEAD
 module.exports = {
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   apps: [{
     name: "ziontechgroup-site"
     script: "npm"
@@ -3077,7 +2741,6 @@ module.exports = {;
 
 }
 
-=======
     },
     {
       name: 'performance-optimizer',
@@ -3101,7 +2764,6 @@ module.exports = {;
       out_file: './logs/performance-out.log',
       log_file: './logs/performance-combined.log',
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default {
   apps: [;
     {
@@ -3122,13 +2784,6 @@ export default {
       log_file: 'logs / pm2 / preview.log',
 error_file: 'logs / pm2 / preview - error.log',
       out_file: 'logs / pm2 / preview - out.log',
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
       env: {'
         NODE_ENV: 'production'
       },'
@@ -3136,14 +2791,10 @@ error_file: 'logs / pm2 / preview - error.log',
       out_file: './logs/code-quality-out.log','
       log_file: './logs/code-quality-combined.log',
       time: true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
     {'
       name: 'performance-optimizer','
       script: 'automation/performance-optimizer.cjs',
-=======
   error_file: 'logs / pm2 / preview - error.log',
       out_file: 'logs / pm2 / preview - out.log'
    ,
@@ -3151,7 +2802,6 @@ error_file: 'logs / pm2 / preview - error.log',
     {
       name: 'performance-optimizer',
   script: 'automation/performance-optimizer.cjs',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       instances: 1,
       autorestart: true,
       watch: false,'
@@ -3159,12 +2809,6 @@ error_file: 'logs / pm2 / preview - error.log',
       env: {'
         NODE_ENV: 'production'
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       log_file: 'logs / pm2 / auto - fix.log',
       error_file: 'logs / pm2 / auto - fix - error.log',
       out_file: 'logs / pm2 / auto - fix - out.log',
@@ -3329,62 +2973,34 @@ module && module.exports = {
   }]
 };
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     name: "ziontechgroup - site",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     name: "ziontechgroup - site",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     name: "ziontechgroup - site",
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
     name: "ziontechgroup - site",
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     script: "npm",
     args: "start",
     instances: 1,
     exec_mode: "fork",
     env: {
       NODE_ENV: "production",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       PORT: 3000
-=======
 PORT: 3000;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     },
     env_production: {
       NODE_ENV: "production",
       PORT: 3000;
     },
     max_memory_restart: "1G",
-<<<<<<< HEAD
     log_file: "./logs/combined.log",
     time: true;
   }]
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     node_args: "--max - old - space - size = 1024",
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
     log_file: "./logs / combined.log",
@@ -3392,30 +3008,7 @@ PORT: 3000;
   }];
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> main
-=======
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       error_file: './logs/performance-error.log',
       out_file: './logs/performance-out.log',
       log_file: './logs/performance-combined.log',
@@ -3423,14 +3016,7 @@ PORT: 3000;
     }
   ]
 },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err.log",
     out_file: "./logs/out.log",
@@ -3438,37 +3024,10 @@ PORT: 3000;
     time: true
   }]
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
 };
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
 
 };
@@ -3522,4 +3081,3 @@ PORT: 3000;
     time: true;
   }],
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

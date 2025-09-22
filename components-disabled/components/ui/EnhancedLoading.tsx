@@ -1,4 +1,3 @@
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -14,7 +13,6 @@ import React from './react';
 type EnhancedLoadingProps = {
   lines?: number;
 }
-<<<<<<< HEAD
 ;
 export default /**
  * EnhancedLoading - Function description
@@ -28,8 +26,6 @@ function EnhancedLoading() {
       ))}
 
   );
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
   return (
     <div className="flex items-center justify-center p-4">
@@ -37,4 +33,3 @@ function EnhancedLoading() {
     </div>
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

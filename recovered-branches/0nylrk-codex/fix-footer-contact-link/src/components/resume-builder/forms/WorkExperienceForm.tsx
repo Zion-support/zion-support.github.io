@@ -35,18 +35,15 @@ import {useResume} from '@/hooks/useResume';'
 import {Alert, AlertDescription} from '@/components/ui/alert';'
 import {Card, CardContent} from '@/components/ui/card';'
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
-<<<<<<< HEAD
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required');
   role_title: z.string().min(1, 'Job title is required');
-=======
 // Define schema for form validation;
 const workExperienceSchema = z.object({'
   company_name: z.string().min(1, 'Company name is required');'
   role_title: z.string().min(1, 'Job title is required');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   start_date: z.string().min(1, 'Start date is required');
   end_date: z.string().optional()
   is_current: z.boolean().default(false)
@@ -62,14 +59,9 @@ interface WorkExperienceFormProps {}
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export function WorkExperienceForm() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -114,9 +106,6 @@ export function WorkExperienceForm() { return null; }
           description: '''
           location: ''})
         setEditingId(null)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch (err: any) {'
       setError(err.message |'An error occurred')
@@ -124,14 +113,10 @@ export function WorkExperienceForm() { return null; }
 }
   };
 
-=======
   };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleEdit = (work: WorkExperience) => {
-=======
   const handleEdit = (work: WorkExperience) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setEditingId(work.id!);
     form.reset({}
       ...work;
@@ -150,7 +135,6 @@ export function WorkExperienceForm() { return null; }
 
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -169,7 +153,6 @@ export function WorkExperienceForm() { return null; }
     form.setValue('description', enhancedContent)
   },
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-6">
       <div>"
@@ -240,7 +223,6 @@ export function WorkExperienceForm() { return null; }
               <FormField;
                 control={form && form.control}"
                 name="start_date"
-<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
@@ -275,13 +257,10 @@ export function WorkExperienceForm() { return null; }
                         type="date" 
                         {...field} '
                         value={field.value || ''}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <FormField
                   control={form && form.control}
-=======
                 <FormField;
                   control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   name="is_current"
                   render={({ field }) => (;"
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
@@ -363,12 +342,8 @@ export function WorkExperienceForm() { return null; }
                   <FormControl>;
 <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
-<<<<<<< HEAD
                       className="min - h-[100px]";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                       className="min-h-[100px]";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {...field}
                     />;
                   </FormControl>;
@@ -389,7 +364,6 @@ export function WorkExperienceForm() { return null; }
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
-=======
   FormItem;}
   FormLabel;}
   FormMessage } from '@/components/ui/form';
@@ -400,27 +374,17 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   }
                 }}
               >;'
                 {editingId ? 'Cancel' : 'Back'}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>;
             </div>;
           </form>;
         </Form>;
 </div>;
-<<<<<<< HEAD
 
     </div>);
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

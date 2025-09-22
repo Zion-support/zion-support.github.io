@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "../components/ContractForm";
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 
@@ -28,20 +16,12 @@ interface Milestone {
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface Milestone {
   title: string,
   description: string,
   dueDate: string,
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       milestones: milestoneData}
   });
 
@@ -50,19 +30,14 @@ interface Milestone {
   }
 
         title: m.title,
-=======
 interface Milestone {
   title: string,
   description: string,
   dueDate: string,        title: m.title,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 interface Milestone {
   title: string,
   description: string,
   dueDate: string,        title: m.title,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface Milestone {
   title: string,
   description: string,
@@ -115,7 +90,6 @@ export async function generateContract(
     ? generatedMilestones.map(m => ({
 
         title: m.title,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: m.description,
         dueDate: m.dueDate,
         estimatedHours: m.estimatedHours;
@@ -141,27 +115,19 @@ return data.contract  } else {
 milestones: milestoneData}
   });
 
-<<<<<<< HEAD
   if (error) {
     throw error
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   if (error) {
     throw error
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
-=======
   if (error) {}
     throw error;
 "
 import { supabase } from "@/integrations/supabase/client",;"
 import { TalentProfile } from "@/types/talent",;"
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ContractFormValues } from "../components/ContractForm",;
 interface Milestone {;
   title: string,;
@@ -203,7 +169,6 @@ export async function generateContract(;
     throw error;
 
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (data.success && data.contract) {
     return data.contract
 } else {
@@ -213,8 +178,6 @@ export async function generateContract(;
   if (data && data.success && data && data.contract) {
     return data && data.contract
   } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
     throw new Error("Failed to generate contract")
 
 import { supabase } from '@/integrations / supabase / client';'
@@ -234,13 +197,10 @@ talent: TalentProfile,;
   generated_milestones: GeneratedMilestone[]): Promise < string> {}
   const additional_clauses = values.additional_clauses || [];
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
     ? generated_milestones.map (m => ({}
-=======
   talent: TalentProfile,
   client_name: string;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
@@ -250,7 +210,6 @@ talent: TalentProfile,;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
     ? generated_milestones.map (m => ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: m.title;
         description: m.description;
         due_date: m.due_date,
@@ -277,39 +236,27 @@ if ( {) {}
   $2;
 }
     throw error;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 ;
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   } else {;
     throw new Error("Failed to generate contract");
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
   } else {
-=======
     throw new Error("Failed to generate contract")  }
 }  } else {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 }
 }
   } else {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     throw new Error ("Failed to generate contract");
   }
 }
@@ -321,25 +268,12 @@ if ( {) {}
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   } else {"
     throw new Error ("Failed to generate contract");
   }
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   generatedMilestones: GeneratedMilestone[];)
 ): Promise<string> {;
@@ -389,4 +323,3 @@ pr-12325
   }
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

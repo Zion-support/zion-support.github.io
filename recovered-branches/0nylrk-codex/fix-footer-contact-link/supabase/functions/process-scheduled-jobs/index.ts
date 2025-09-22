@@ -1,72 +1,47 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-<<<<<<< HEAD
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
-<<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseAdmin = createClient(
-<<<<<<< HEAD
 
       }
       // Update job status
@@ -79,7 +54,6 @@ serve(async (req) => {
         .eq('id', job.id)
     }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     { auth: { persistSession: false } }
   );
   try {}
@@ -123,9 +97,7 @@ switch (job.job_type) {
           await processContentGeneration(supabaseAdmin, 'newsletter');
           break;
         // Add more job types as needed
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     Deno.env.get("SUPABASE_URL") ?? "",
-=======
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -200,8 +172,6 @@ const cors_headers = {
           break;
         // Add more job types as needed
     Deno.env.get("SUPABASE_URL") ?? "",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -220,7 +190,6 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && 
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;  "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {    Deno.env.get("SUPABASE_URL") ?? "",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -232,9 +201,7 @@ serve(async (req) => {;
     return new Response(null, { headers: corsHeaders });
   }
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 serve (async (req) => {}
   // Check condition;
@@ -275,7 +242,6 @@ if ( {) {}
               job.payload.user_id;
               job.payload.missing_milestone;
               job.payload.role);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
           break;'
         case 'email_reminder':;
@@ -283,7 +249,6 @@ if ( {) {}
           break;'
         case 'subscription_check':;
           // Check subscription status;
-<<<<<<< HEAD
           break;
 '
         case 'resume_scoring':;
@@ -303,7 +268,6 @@ if ( {) {}
           await processContentGeneration (supabase_admin, 'newsletter');
           break;
         // Add more job types as needed;
-<<<<<<< HEAD
 
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -314,8 +278,6 @@ if ( {) {}
       status: 500})
   }
 }),
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 status: 500})
   }
@@ -331,25 +293,11 @@ return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
   }
 }),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 async function processOnboardingReminder(supabase, userId, milestone, role) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 async function processOnboardingReminder(supabase, userId, milestone, role) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 async function processOnboardingReminder(supabase, userId, milestone, role) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Update job status;
       await supabase_admin;'
         .from ('scheduled_jobs');
@@ -367,23 +315,15 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
-<<<<<<< HEAD
 
     // Create notification for user
     const milestoneMessages = {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
     // Create notification for user
     const milestoneMessages = {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       profile_completed: "Complete your profile to get noticed by clients";
       skills_added: "Add your skills to get better job matches";
       availability_set: "Set your availability to receive project offers";
@@ -401,21 +341,14 @@ match_viewed: "Check out your AI matched talent recommendations"
       type: 'onboarding_reminder'
       read: false
     });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       profile_completed: "Complete your profile to get noticed by clients",
       skills_added: "Add your skills to get better job matches",
-=======
       profile_completed: "Complete your profile to get noticed by clients",
       skills_added: "Add your skills to get better job matches",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   try {      skills_added: "Add your skills to get better job matches",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       availability_set: "Set your availability to receive project offers",
       job_posted: "Post your first job to start finding talent",
       match_viewed: "Check out your AI matched talent recommendations",
-=======
   try {}
 "
       profile_completed: "Complete your profile to get noticed by clients";"
@@ -428,7 +361,6 @@ match_viewed: "Check out your AI matched talent recommendations"
       availability_set: "Set your availability to receive project offers","
       job_posted: "Post your first job to start finding talent","
       match_viewed: "Check out your AI matched talent recommendations","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       talent_invited: "Invite talent to your job posting to get responses"
     },
 "
@@ -443,18 +375,12 @@ match_viewed: "Check out your AI matched talent recommendations"
       type: 'onboarding_reminder',
       read: false;
     }),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
 
     // // // console.log(`Successfully scored application ${applicationId}`),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     // Here you could also add logic to send an email;
     // For example, call another edge function to send email;
@@ -529,7 +455,6 @@ async function processResumeScoring(supabase, applicationId) {
       status: 200});
   } catch (error) {;
     return new Response(JSON.stringify({ error: error.message }), {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
   }
@@ -581,35 +506,25 @@ if (!response && response.ok) {}
 `
     console && console.log(`Successfully scored application ${applicationId}`);
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .single(),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (application) {
-=======
         // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)    if (application) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)    if (application) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     console && console.log(`Successfully scored application ${applicationId}`);
 }
@@ -626,13 +541,11 @@ if (!response && response.ok) {}
 .single();
       .single(),
     if (application) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data: job } = await supabase
         .from("jobs")
         .select("client_id, title")
 
       match_viewed: "Check out your AI matched talent recommendations",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       talent_invited: "Invite talent to your job posting to get responses";
     }
 ;"
@@ -908,8 +821,6 @@ function processResumeScoring() {}
   try {}
     // Call the resume - scorer function to process the application;
 const response = await fetch (
-<<<<<<< HEAD
-<<<<<<< HEAD
       `${Deno.env.get ("SUPABASE_URL")}/functions / v1 / resume - scorer`;
 
       {"
@@ -930,15 +841,11 @@ const response = await fetch (
           user_id: job.client_id;
           title: "Application Scored"
           message: `An application for "${job.title}" has been scored and is ready for review.`;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           type: "application_scored";
 
         .single(),
 
-=======
       `${Deno.env.get ("SUPABASE_URL")}/functions / v1 / resume - scorer`;        
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       `${Deno.env.get ("SUPABASE_URL")}/functions / v1 / resume - scorer`;
 async function processOnboardingReminder (supabase, userId, milestone, role) {
   try {
@@ -1009,7 +916,6 @@ if ( {) {
           type: "application_scored";
           related_id: applicationId
         .single(),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (job) {
         // Create notification for the client
         await supabase.from("notifications").insert({
@@ -1018,16 +924,8 @@ if ( {) {
           message: `An application for "${job.title}" has been scored and is ready for review.`,
           type: "application_scored",
           related_id: applicationId,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           read: false
         })
       }
@@ -1039,25 +937,15 @@ console.error("Error processing resume scoring:", error)
   }
 }
 async function processContentGeneration(supabase, contentType) {
-<<<<<<< HEAD
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
     console && console.log(`Starting scheduled content generation for ${contentType}`);
 
 `
     // // // console.log(`Starting scheduled content generation for ${contentType}`),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Call the content generation function
-=======
   try {    // Call the content generation function
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   try {    // Call the content generation function
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   try {
 
     console && console.log(`Starting scheduled content generation for ${contentType}`);
@@ -1066,26 +954,19 @@ async function processContentGeneration(supabase, contentType) {
 
 console && console.log(`Starting scheduled content generation for ${contentType}`);
     // Call the content generation function
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const response = await fetch(
-=======
 
     // Call the content generation function;
     const response = await fetch("`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`;
       {"
         method: "POST";
-<<<<<<< HEAD
-<<<<<<< HEAD
         headers: {
-<<<<<<< HEAD
 
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
         body: JSON && JSON.stringify({ 
 
-<<<<<<< HEAD
     // Call the content generation function
     const response = await fetch(
       `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
@@ -1095,28 +976,22 @@ console && console.log(`Starting scheduled content generation for ${contentType}
           "Content-Type": "application/json"
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
         body: JSON.stringify({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           contentType;
           autoPublish: contentType === 'blog' ? true : false
           includeImage: contentType === 'blog' ? true : false
-=======
         headers: {}
           contentType;'
           autoPublish: contentType === 'blog' ? true : false'
           includeImage: contentType === 'blog' ? true : false;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           contentType;
           autoPublish: contentType === 'blog' ? true : false
           includeImage: contentType === 'blog' ? true : false
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         })}
     );
 
 "
           "Content-Type": "application/json","`
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-<<<<<<< HEAD
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`Content generation failed: ${JSON && JSON.stringify(errorData)}`)
@@ -1129,26 +1004,17 @@ if (!response.ok) {
     console.log(`Successfully generated ${contentType} content`);
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         body: JSON.stringify({ 
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const contentData = await response && response.json();
     console && console.log(`Successfully generated ${contentType} content`);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // If it's a newsletter, send a test email to the admin
-=======
     // If it's a newsletter, send a test email to the admin
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     // If it's a newsletter, send a test email to the admin
         headers: {    // If it's a newsletter, send a test email to the admin
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (contentType === 'newsletter') {
       // Get admin email from profiles
       const { data: adminProfiles } = await supabase
@@ -1397,9 +1263,7 @@ pr-12325
         const adminEmail = adminProfiles[0].email;
         // Send test newsletter to admin
         await fetch(
-<<<<<<< HEAD
           `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;
-<<<<<<< HEAD
         })}
     );
 
@@ -1408,25 +1272,16 @@ pr-12325
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
-=======
           `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         body: JSON.stringify({}
           contentType,'
           autoPublish: contentType === 'blog' ? true : false,'
           includeImage: contentType === 'blog' ? true : false;
 ;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
           `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
     const { data: application } = await supabase;"
@@ -1589,16 +1444,12 @@ if (!response.ok) {;
       const errorData = await response.json(),;`
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
-<<<<<<< HEAD
     const contentData = await response.json(),
     // // // console.log(`Successfully generated ${contentType} content`),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const contentData = await response && response.json();
-<<<<<<< HEAD
     console && console.log(`Successfully generated ${contentType} content`);
-<<<<<<< HEAD
           &quot;Content-Type&quot;: &quot;application/json&quot;,
           &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
         body: JSON.stringify({ 
@@ -1619,8 +1470,6 @@ const contentData = await response && response.json();
 
 async function processContentGeneration(_supabase, _contentType) {_try {
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {
             method: "POST";
             headers: {
@@ -1628,7 +1477,6 @@ async function processContentGeneration(_supabase, _contentType) {_try {
               "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
       // Get admin email from profiles
@@ -1645,32 +1493,22 @@ async function processContentGeneration(_supabase, _contentType) {_try {
             method: "POST",
 headers: {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             body: JSON.stringify({
               subject: contentData.subject;
               previewText: contentData.previewText;
               body: contentData.body;
               testMode: true
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
     console && console.log(`Successfully generated ${contentType} content`);              subject: contentData.subject;
               previewText: contentData.previewText;
               body: contentData.body;
               testMode: true
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     if (!response.ok) {;}
       const errorData = await response.json(),;}
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const contentData = await response && response.json();
     console && console.log(`Successfully generated ${contentType} content`);
           &quot;Content-Type&quot;: &quot;application/json&quot;,
@@ -1751,9 +1589,7 @@ const contentData = await response.json(),
               previewText: contentData.previewText;
               body: contentData.body;
               testMode: true
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               "Content-Type": "application/json",
-=======
             headers: {}
             body: JSON.stringify({}
               subject: contentData.subject;
@@ -1762,27 +1598,15 @@ const contentData = await response.json(),
               testMode: true;
 "
               "Content-Type": "application/json","`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
             body: JSON && JSON.stringify({}
               subject: contentData && contentData.subject;
               previewText: contentData && contentData.previewText;
-<<<<<<< HEAD
               body: contentData && contentData.body;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               testMode: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               testEmail: adminEmail
-=======
               body: contentData && contentData.body;              testEmail: adminEmail
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               body: contentData && contentData.body;              testEmail: adminEmail
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               body: contentData && contentData.body;
 &quot;Content-Type&quot;: &quot;application/json&quot;,
               &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
@@ -1792,7 +1616,6 @@ const contentData = await response.json(),
               body: contentData.body,
               testMode: true,
               testEmail: adminEmail
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             })}
         );
         // Create notification for admin
@@ -1807,7 +1630,6 @@ testEmail: adminEmail
           user_id: null, // System notification visible to admins
           title: "Newsletter Draft Ready";
           message: "AI-generated newsletter draft has been sent to your email for review.";
-=======
 
               testMode: true,
 
@@ -1820,11 +1642,8 @@ testEmail: adminEmail
 "
           title: "Newsletter Draft Ready";"
           message: "AI-generated newsletter draft has been sent to your email for review.";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           type: "system"
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     const contentData = await response.json(),;`
     // // // console.log(`Successfully generated ${contentType} content`),;'
@@ -1866,13 +1685,7 @@ const { data: adminProfiles } = await supabase;'
           type: "system";
           read: false;
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           title: "Newsletter Draft Ready",
           message: "AI-generated newsletter draft has been sent to your email for review.",
@@ -1880,7 +1693,6 @@ const { data: adminProfiles } = await supabase;'
 
           read: false
 
-=======
         await fetch(;)'
           `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,;"
           {;"
@@ -1910,17 +1722,11 @@ const { data: adminProfiles } = await supabase;'
           type: "system","
 
           read: false;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     }
 return contentData
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           related_id: application_id,
           read: false;
@@ -1930,23 +1736,15 @@ return contentData
   } catch (error) {
     console.error ("Error processing resume scoring:", error);
   }
-=======
     return contentData;
   } catch (error) {}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error(`Error processing ${contentType} generation:`, error)
   }
 
 }
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
   } catch (error) {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 async /**
  * processContentGeneration - Function description;
  */
@@ -1956,7 +1754,6 @@ function processContentGeneration() {}
 ;
 }
 }
-<<<<<<< HEAD
     console.error(`Error processing ${contentType} generation:`, error)
   }}
       }
@@ -1968,13 +1765,7 @@ function processContentGeneration() {}
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
 // Call the content generation function;
     const response = await fetch (
       `${Deno.env.get ("SUPABASE_URL")}/functions / v1 / generate - content`;
@@ -1993,9 +1784,7 @@ function processContentGeneration() {}
     // Check condition
 if ( {) {
   $2
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }  }
 }
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

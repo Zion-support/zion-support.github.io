@@ -36,7 +36,6 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
 :components/secrets-rotation-automation.tsx
   }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   static getDerivedStateFromError(error) {
     return { hasError: true ;};
 
@@ -194,7 +193,6 @@ href="https://cloud.google.com / kms";
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
-<<<<<<< HEAD
   return (return (return (</a>;
           </div>;
         </section>;
@@ -691,4 +689,3 @@ href=\"https://cloud.google.com/kms\"
           </div>;
         </section>;
       </main>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

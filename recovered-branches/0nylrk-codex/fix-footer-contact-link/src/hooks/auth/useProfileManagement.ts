@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client",";
 import { toast } from "@/hooks/use-toast";"
 import type { UserProfile } from "@/types/auth";
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast";
@@ -26,7 +16,6 @@ import type { UserProfile } from "@/types/auth";
 
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
@@ -110,7 +99,6 @@ return { error: "User ID is required" }
 import { supabase } from "@/integrations/supabase/client",;
       if (!data.id) {import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
-=======
 "
 import { toast } from "@/hooks/use-toast","
 import type { UserProfile } from "@/types/auth",
@@ -173,7 +161,6 @@ if ( {) {}
 "
 import { supabase } from "@/integrations/supabase/client",;"
 import { toast } from "@/hooks/use-toast",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { UserProfile } from "@/types/auth",;
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {;
   const updateProfile = async (data: Partial<UserProfile>) => {;
@@ -181,12 +168,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
       return { success: true }
     } catch (error: any) {
       console && console.error("Profile update error:", error);
@@ -250,7 +232,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
       // Update profiles table;
       const { error: profile_error } = await supabase;
-=======
 
       // Update profiles table;
       const { error: profileError } = await supabase"
@@ -265,7 +246,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
       // Update profiles table;
       const { error: profile_error } = await supabase;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .from ("profiles");
         .update ({}
           display_name: data.display_name;
@@ -294,7 +274,6 @@ toast ({
           title: "Profile update failed",
           description: profileError.message,"
           variant: "destructive"}),
-<<<<<<< HEAD
         return { error: profileError }
 "
           variant: "destructive"});
@@ -306,9 +285,7 @@ toast ({
         description: "Your profile has been updated successfully."});"
         title: "Profile update failed";"
         variant: "destructive"});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return { error }
-<<<<<<< HEAD
     } finally {;
       setIsLoading(false);
     }
@@ -316,7 +293,6 @@ toast ({
 ;
       // Update profiles table;
       const { error: profileError } = await supabase;"
-=======
         return { error: profileError }
           variant: "destructive"});
         return { error: profile_error }
@@ -341,7 +317,6 @@ toast ({
 ;
       // Update profiles table;
       const { error: profileError } = await supabase;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .from("profiles");
         .update({;
           display_name: data.displayName,;
@@ -375,20 +350,12 @@ toast({;"
       setIsLoading(false);
     }
   };
-<<<<<<< HEAD
   return { updateProfile }
 };
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       toast ({
 
-=======
       toast ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         return { error: profileError }      toast ({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         title: "Profile updated",
         description: "Your profile has been updated successfully."});
 ;
@@ -399,12 +366,10 @@ toast({;"
 
 title: "Profile update failed",
   description: error && error.message || "An unexpected error occurred",
-=======
         title: "Profile update failed";
 
         description: error && error.message || "An unexpected error occurred",
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
       return { error }
     } finally {}
@@ -537,24 +502,13 @@ return {
 };
   return { updateProfile }
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return { updateProfile }
 };
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return { updateProfile }
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import { supabase } from "@/integrations/supabase/client",""
 import { toast } from "@/hooks/use-toast";""
@@ -602,4 +556,3 @@ pr-12325
   const updateProfile = async (data: Partial<UserProfile>) => {
 </UserProfile>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

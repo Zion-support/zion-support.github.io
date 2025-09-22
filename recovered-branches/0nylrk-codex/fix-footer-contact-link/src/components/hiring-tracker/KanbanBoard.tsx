@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -17,17 +13,9 @@ interface DnDLocation {
   droppableId: string,
   index: number
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -56,19 +44,9 @@ import { KanbanColumn } from "./KanbanColumn",;"
 import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
-<<<<<<< HEAD
   index: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   index: number;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 interface DnDLocation {
 import { KanbanColumn } from "./KanbanColumn",;
@@ -89,7 +67,6 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
   index: number;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 interface DropResult {;
@@ -97,19 +74,11 @@ interface DropResult {;
   source: DnDLocation,;
   destination?: DnDLocation | null;
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
   droppableId: string
-=======
   index: number;  droppableId: string
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   droppableId: string
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   droppableId: string;
   index: number;
@@ -143,28 +112,17 @@ const COLUMNS = []
     description: "Not moving forward"}]
 interface KanbanBoardProps {
   jobId?: string
-<<<<<<< HEAD
 }
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface KanbanBoardProps {}
   jobId?: string;
 export function KanbanBoard() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -202,8 +160,6 @@ export function KanbanBoard() { return null; }
       ...columns;
       [source.droppableId]: sourceColumn;
       [destination.droppableId]: destColumn});
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -214,8 +170,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {toast} from "@/hooks/use-toast";
 import {KanbanColumn} from "./KanbanColumn";
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {;
   droppableId: string,;
@@ -228,11 +182,6 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 // Define the kanban board columns based on application statuses;
@@ -257,10 +206,8 @@ const COLUMNS = [;
     id: "rejected",;
 title: "Rejected",,
   description: "Not moving forward"}],;
-=======
     title: "Rejected",;
     description: "Not moving forward"}],;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 interface KanbanBoardProps {;
   jobId?: string;
@@ -269,11 +216,7 @@ interface KanbanBoardProps {;
 // Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
-<<<<<<< HEAD
       // Group applications by status;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       const groupedApplications = COLUMNS && COLUMNS.reduce((acc, column) => {;
         acc[column && column.id] = applications && applications.filter(app => app && app.status === column && column.id);
         return acc;
@@ -293,12 +236,7 @@ interface KanbanBoardProps {;
          destination && destination.index === source && source.index)) {;
       return;
     }
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const groupedApplications = COLUMNS.reduce((acc, column) => {;
         acc[column.id] = applications.filter(app => app.status === column.id),;
@@ -316,9 +254,7 @@ const groupedApplications = COLUMNS.reduce((acc, column) => {;
          destination.index === source.index)) {;
       return;
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Get the application that was dragged
 const application = applications.find(app => app.id === draggableId),
     if (!application) return,
@@ -346,7 +282,6 @@ const application = applications.find(app => app.id === draggableId),
     const [removed] = sourceColumn.splice(source.index, 1);
     destColumn.splice(destination.index, 0, { ...removed, status: newStatus })
 setColumns({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus),
@@ -363,23 +298,15 @@ setColumns({
 
   }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Get the application that was dragged;
-=======
       // Group applications by status;  }
 
   },
       // Get the application that was dragged;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       // Group applications by status;  }
 
   },
       // Get the application that was dragged;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
 
@@ -458,37 +385,26 @@ return ('`
 "
           <Card key={i} className="h-[500px]">;
             <CardHeader>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Skeleton className="h-8 w-24" />;
             </CardHeader>;
             <CardContent>;"
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ))}
       </div>;
     );
   }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   if (!applications || applications && applications.length === 0) {;
 
 if (!applications || applications.length === 0) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
 "
       <Card className="text-center py-16">;
-=======
 
   if (!applications || applications && applications.length === 0) {;
 
@@ -504,15 +420,12 @@ if (!applications || applications.length === 0) {
     return (;
     return (
       <Card className="text-center py-16">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
           <p className="text-muted-foreground mb-6">;
-=======
         <CardContent>;"
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;"
           <p className="text-muted-foreground mb-6">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             You haven't received any applications for this job yet.;
           </p>;
         </CardContent>;
@@ -636,7 +549,6 @@ if (return) {}
         description: "Please try again","
         variant: "destructive"});
     }
-=======
 
   droppableId: string
   index: number;  droppableId: string
@@ -652,7 +564,6 @@ interface DropResult {
 }
 // Define the kanban board columns based on application statuses
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
   // Check condition;
@@ -667,11 +578,8 @@ if ( {) {}
               <Skeleton className="h - 8 w-24" />;
             </CardHeader>;
             <CardContent>;
-<<<<<<< HEAD
               <Skeleton className="h-[400px] w-full" />;
-=======
               <Skeleton className="h-[400px] w-full" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </CardContent>;
           </Card>))}
       </div>);
@@ -683,13 +591,10 @@ if ( {) {}
 return (
       <Card className="text - center py-16">;
         <CardContent>;
-<<<<<<< HEAD
           <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
           <p className="text - muted - foreground mb-6">;
-=======
           <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
           <p className="text - muted - foreground mb-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             You haven't received any applications for this job yet.;
           </p>;
         </CardContent>;
@@ -699,15 +604,12 @@ return (
     <DragDropContext onDragEnd={handleDragEnd}>;'`
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
-<<<<<<< HEAD
           <KanbanColumn;
 
-<<<<<<< HEAD
             key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
-<<<<<<< HEAD
 
             key={column && column.id}
             id={column && column.id}
@@ -723,23 +625,15 @@ return (
       </div>;
     </DragDropContext>;
 applications={columns[column.id] || []}
-=======
           <KanbanColumn;            applications={columns[column.id] || []}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 }
 
             applications={columns[column.id] || []}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             count={columns[column.id]?.length || 0}
           />))}
       </div>;
     </DragDropContext>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
   ),; interface DnDLocation {}
@@ -839,7 +733,6 @@ if (isLoading) {}
   columns[column.id] || [] 
 }count= {
 columns[column.id]?.length || 0 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/>) ) 
 
 }</div> ) 
@@ -854,20 +747,8 @@ pr-12325
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </DragDropContext>;'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

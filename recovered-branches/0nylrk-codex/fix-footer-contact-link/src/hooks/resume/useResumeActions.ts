@@ -1,29 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-<<<<<<< HEAD
 export function useResumeActions() {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function useResumeActions() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
@@ -31,8 +16,6 @@ import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { useState  } from 'react';'
 import { supabase  } from '@/integrations/supabase/client';'
 import { Resume, ResumeBasicInfo  } from '@/types/resume';'
@@ -46,37 +29,23 @@ import {Resume, ResumeBasicInfo} from '@/types/resume';'
 import {useAuth} from '@/hooks/useAuth';'
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
-=======
 export function useResumeActions() {  const { user } = useAuth();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function useResumeActions() {  const { user } = useAuth();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const { user } = useAuth();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {}
     if (!user) {'
       setError('You must be logged in to create a resume')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       return null
-<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       return null
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -84,10 +53,8 @@ import { useAuth } from '@/hooks/useAuth',;
 
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
 export function useResumeActions() { return null; }
-=======
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
 export function useResumeActions() {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
@@ -95,24 +62,11 @@ export function useResumeActions() {;
 if (!user) {;'
       setError('You must be logged in to create a resume'),;
       return null;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
     setIsLoading(true),
     setError(null),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
@@ -131,7 +85,6 @@ return data.id
     }
     setIsLoading(true);
     setError(null);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     try {}
       const { data, error } = await supabase'
@@ -143,23 +96,16 @@ return data.id
 summary: basicInfo && basicInfo.summary
 
         })
-=======
       return null    try {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({        })
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       return null    try {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({        })
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           summary: basicInfo && basicInfo.summary;
         })'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     if (!user) {;
       setError('You must be logged in to create a resume'),;
       return null;
@@ -180,14 +126,10 @@ summary: basicInfo && basicInfo.summary
           summary: basicInfo && basicInfo.summary
 
         })
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .select('id')
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
     setIsLoading(true),;
     setError(null),;
@@ -220,18 +162,11 @@ summary: basicInfo && basicInfo.summary
     setIsLoading(true),
     setError(null),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     try {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         })'
         .eq('id', resumeId)'
@@ -291,14 +226,11 @@ if (throw error) {}
         .update({
 
       if (error) throw error;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return showSuccessToast("Resume updated", "Your resume information has been updated")
     } catch (e: any) {'
       return handleResumeError(e, 'Could not update resume')
     } finally {}
       setIsLoading(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     }
 
@@ -309,8 +241,6 @@ if (throw error) {}
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           title: basicInfo && basicInfo.title;
           headline: basicInfo && basicInfo.headline,
           summary: basicInfo && basicInfo.summary
@@ -325,7 +255,6 @@ if (throw error) {}
 
       if (error) throw error,
 
-<<<<<<< HEAD
       return showSuccessToast("Resume updated", "Your resume information has been updated")
 
 ;
@@ -334,7 +263,6 @@ if (throw error) {}
 if ( {) {}
   $2;
 }'
-=======
 
       return showSuccessToast("Resume updated", "Your resume information has been updated")
 ;
@@ -343,7 +271,6 @@ if ( {) {}
 if ( {) {
   $2
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       set_error ('You must be logged in to update a resume'),
       return false;
     }
@@ -372,7 +299,6 @@ if (throw error) {}
     } finally {}
       setIsLoading(false)
 
-<<<<<<< HEAD
     }
   }
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
@@ -382,7 +308,6 @@ if (throw error) {}
     }
     setIsLoading(true);
     setError(null);
-=======
     try {
       const { error } = await supabase;
         .from ('talent_resumes');
@@ -405,20 +330,13 @@ if (throw error) {
 
       setIsLoading(false)
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     setIsLoading(true);
     setError(null);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
       return showSuccessToast("Resume updated", "Your resume information has been updated");
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -443,45 +361,19 @@ if (throw error) {
     if (!user) {;'
       setError('You must be logged in to set active resume'),;
       return false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     setIsLoading(true),
     setError(null),
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
-=======
         try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         try {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })        .eq('user_id', user.id),
-=======
 
     try {'
       // First, set all user's resumes to inactive;
@@ -493,8 +385,6 @@ if (throw error) {
 
 '
         .eq('user_id', user.id),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     try {
       // First, set all user's resumes to inactive
@@ -507,31 +397,20 @@ if (throw error) {
       if (resetError) throw resetError;
 
         .eq('user_id', user.id),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       if (resetError) throw resetError,
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
-<<<<<<< HEAD
         .eq('id', resumeId)
-<<<<<<< HEAD
         .eq('user_id', user && user.id);
 
       if (error) throw error;"
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
 
 '
-=======
         .eq('id', resumeId)
 
         .eq('user_id', user && user.id);
@@ -539,35 +418,22 @@ if (throw error) {
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq('user_id', user.id),
 
       if (error) throw error,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {'
       return handleResumeError(e, 'Could not set active resume')
     } finally {}
       setIsLoading(false)
 
-=======
         .eq('user_id', user && user.id);
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
         .eq('id', resumeId);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         .eq('id', resumeId);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {
@@ -579,13 +445,11 @@ if (throw error) {
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const setActiveResume = async (resume_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
 }
-=======
 
 ;
   const setActiveResume = async (resume_id: string): Promise < boolean> => {}
@@ -593,7 +457,6 @@ if ( {) {
 if ( {) {}
   $2;
 }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       set_error ('You must be logged in to set active resume'),
       return false;
     }
@@ -629,8 +492,6 @@ if (throw error) {}
       setIsLoading (false);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 
   return {}
@@ -638,29 +499,16 @@ if (throw error) {}
     error;
     create_resume;
     updateBasicInfo;
-=======
 export function useResumeActions() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     setActiveResume}
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     createResume;
     updateBasicInfo;
 
     setActiveResume}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 }
 ;
@@ -695,13 +543,9 @@ try {;'
     }
 },;
   return {;
-=======
 ;  return {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   },;
   return {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     isLoading,;
     error,;
     createResume;
@@ -1079,22 +923,8 @@ setActiveResume }
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const createResume = async (basicInfo:ResumeBasicInfo):Promise<string | null> => {;
@@ -1103,4 +933,3 @@ setActiveResume }
 const setActiveResume = async (resumeId: string) : Promise<boolean> => {
 pr-12325
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,15 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -41,19 +30,15 @@ import {generateSearchSuggestions} from "@/data/marketplaceData";
 import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
-<<<<<<< HEAD
 export default function SearchPage() {;
-<<<<<<< HEAD
   const [params] = useSearchParams();
   const navigate = useNavigate();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
 
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -85,10 +70,8 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { SearchSuggestion } from "@/types/search",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
@@ -104,8 +87,6 @@ useEffect(() => {}
     if (initial) {;
       search(initial);
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }, [initial]);
 
   const handleSubmit = (e: React && React.FormEvent) => {;
@@ -113,9 +94,7 @@ useEffect(() => {}
     navigate(`/search?q=${encodeURIComponent(query)}`);
     search(query);
   };
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }, [initial]),
 
   const handleSubmit = (e: React.FormEvent) => {}
@@ -123,10 +102,8 @@ useEffect(() => {}
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
-=======
   useEffect(() => {
     if (initial) {
       search(initial)
@@ -158,41 +135,25 @@ useEffect(() => {}
   },
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <EnhancedSearchInput
-=======
     <AppLayout>;"
       <main className="container mx-auto px-4 py-8">;"
         <form onSubmit={handleSubmit} className="mb-6">;
 
           <EnhancedSearchInput;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}"
             placeholder="Search talent, jobs, and projects..."
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
           />;
         </form>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -202,14 +163,12 @@ import { useAISearch } from "@/hooks/useAISearch",;
 
 import { AppLayout } from "@/layout/AppLayout",;
 export default function SearchPage() { return null; }
-=======
 import { AppLayout } from "@/layout/AppLayout",;
 export default function SearchPage() {;
   const [params] = useSearchParams(),;
   const navigate = useNavigate(),;
   const initial = params.get("q") || "",;
   const [query, setQuery] = useState(initial),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { results, loading, search } = useAISearch(),;
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   useEffect(() => {;
@@ -234,21 +193,10 @@ searchSuggestions={suggestions}"
           />;
         </form>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           />;
         </form>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;"
           <p className="text-zion-slate-light">No results found.</p>;
@@ -272,11 +220,8 @@ searchSuggestions={suggestions}"
       </main>;
     </AppLayout>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -298,11 +243,8 @@ searchSuggestions={suggestions}"
         )}
       </main>;
     </AppLayout>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -317,7 +259,6 @@ export default /**;
 function SearchPage() {}
   const [params] = useSearchParams ();
   const navigate = use_navigate ();"
-=======
 import { AppLayout } from '@/layout / AppLayout';
 export default /**
  * SearchPage - Function description
@@ -325,7 +266,6 @@ export default /**
 function SearchPage() {
   const [params] = useSearchParams ();
   const navigate = use_navigate ();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const initial = params.get ("q") || "";
   const [query, set_query] = useState (initial);
   const { results, loading, search } = useAISearch ();
@@ -379,9 +319,6 @@ search_suggestions={suggestions}"
       </main>;
     </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
  const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
   loading && <p className="text-zion-slate-light">Searching...</p> 
@@ -421,19 +358,8 @@ search_suggestions={suggestions}"
     </AppLayout>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     "`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

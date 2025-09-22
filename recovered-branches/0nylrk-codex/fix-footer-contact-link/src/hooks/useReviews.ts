@@ -45,9 +45,6 @@ if (return) {}
 
   const fetchProjectReviews = async (projectId: string) => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Review, ReviewReport } from "@/types/reviews";
 import { toast } from "@/hooks/use-toast";
 
@@ -72,12 +69,10 @@ export function useReviews(projectId?: string) {
   const [userReview, setUserReview] = useState<Review | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-<<<<<<< HEAD
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Fetch reviews for a project
 
   const fetchProjectReviews = async (projectId: string) => {
@@ -95,7 +90,6 @@ try {
 
     setIsLoading(true),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { data, error } = await supabase
         .from("reviews")
@@ -106,13 +100,7 @@ try {
         .eq("project_id", projectId)
         .eq("is_visible", true)
     if (!projectId) return,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     if (!projectId) return,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     setIsLoading(true),
 
@@ -121,7 +109,6 @@ const { data, error } = await supabase;
         .select (`;
           *;
 
-<<<<<<< HEAD
 
 "
         .eq("status", "approved"),
@@ -130,17 +117,8 @@ const { data, error } = await supabase;
 
       setReviews(data || []),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Check if current user has already submitted a review
       if (user) {
         const { data: userReviewData, error: userReviewError } = await supabase
@@ -148,7 +126,6 @@ const { data, error } = await supabase;
           .select("*")
           .eq("project_id", projectId)
 
-<<<<<<< HEAD
           .eq("reviewer_id", user.id)
       // Check if current user has already submitted a review;
       if (user) {}
@@ -157,28 +134,22 @@ const { data, error } = await supabase;
           .select("*")"
           .eq("project_id", projectId)
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           .single(),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
       }
     } catch (err: any) {
-<<<<<<< HEAD
       console && console.error("Error fetching reviews:", err);
       toast({
 
-<<<<<<< HEAD
         variant: "destructive"})
-=======
       console.error ("Error fetching reviews:", err);
       toast ({
         title: "Error";
         description: "Failed to load reviews",
         variant: "destructive"});
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } finally {
       setIsLoading(false)
     }
@@ -214,8 +185,6 @@ const fetchUserReviews = async (userId: string) => {
 
     setIsLoading(true),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const { data, error } = await supabase
         .from("reviews")
@@ -226,7 +195,6 @@ const fetchUserReviews = async (userId: string) => {
         .eq("reviewee_id", userId)
         .eq("is_visible", true)
         .eq("status", "approved")
-<<<<<<< HEAD
         .order("created_at", { ascending: false });
       if (error) throw error;
       setReviews(data |[])
@@ -236,7 +204,6 @@ const fetchUserReviews = async (userId: string) => {
 
       setReviews(data || [])
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     } catch (err: any) {
       console && console.error("Error fetching user reviews:", err);
@@ -244,18 +211,14 @@ const fetchUserReviews = async (userId: string) => {
 
         variant: "destructive"})
 
-=======
           .eq("reviewer_id", user.id)    } finally {
       setIsLoading(false)
     }
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           .eq("reviewer_id", user.id)    } finally {
       setIsLoading(false)
     }
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Error",
         description: "Failed to load reviews",
 
@@ -263,13 +226,11 @@ const fetchUserReviews = async (userId: string) => {
         `);
         .eq ("project_id", project_id);
         .eq ("is_visible", true);
-=======
 
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);`
         `);"
         .eq ("project_id", project_id);"
         .eq ("is_visible", true);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .eq ("status", "approved");
 ;
       // Check condition;
@@ -303,36 +264,21 @@ toast ({
         title: "Error",
   description: "Failed to load reviews",
         variant: "destructive"});
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
-=======
       toast ({"
         title: "Error";"
         description: "Failed to load reviews","
         variant: "destructive"});
 
     } finally {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsLoading (false);
     }
 
-=======
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     project_id: string;
-=======
         project_id: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         project_id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         title: "Error",
         description: "Failed to load reviews",
@@ -360,17 +306,12 @@ toast ({
 
   }
     project_id: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviewee_id: string;
     rating: number;
     review_text: string;
     communication_rating?: number;
     quality_rating?: number;
     timeliness_rating?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     would_work_again?: boolean,
     is_anonymous: boolean;
@@ -401,28 +342,20 @@ if ( {) {
       // Check for unique constraint violation
       if (err && err.code === "23505") {
         toast({
-<<<<<<< HEAD
-          title: "Error";
-          description: "You have already submitted a review for this project"
-          variant: "destructive"})
-<<<<<<< HEAD
-          reviewer_id: user.id});
-=======
-          title: "Error",
-  description: "You have already submitted a review for this project"
-          variant: "destructive"})          reviewer_id: user.id});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          title: "Error",
-  description: "You have already submitted a review for this project"
-          variant: "destructive"})          reviewer_id: user.id});
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           title: "Error";
           description: "You have already submitted a review for this project"
           variant: "destructive"})
           reviewer_id: user.id});
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          title: "Error",
+  description: "You have already submitted a review for this project"
+          variant: "destructive"})          reviewer_id: user.id});
+          title: "Error",
+  description: "You have already submitted a review for this project"
+          variant: "destructive"})          reviewer_id: user.id});
+          title: "Error";
+          description: "You have already submitted a review for this project"
+          variant: "destructive"})
+          reviewer_id: user.id});
         .select ();
         .single ();
 ;
@@ -448,25 +381,17 @@ toast ({
           title: "Error";
           description: "You have already submitted a review for this project",
           variant: "destructive"});
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } else {
         toast ({
 title: "Error",
   description: "Failed to submit review",
           variant: "destructive"});
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   // Submit a review;
   const submitReview = async (review: {}
-=======
           title: "Error";
 
           description: "Failed to submit review",
@@ -476,7 +401,6 @@ title: "Error",
 
   // Submit a review
   const submitReview = async (review: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     project_id: string,
     reviewee_id: string,
     rating: number,
@@ -485,23 +409,16 @@ title: "Error",
     quality_rating?: number,
     timeliness_rating?: number,
     would_work_again?: boolean,
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     is_anonymous: boolean
   }) => {
     if (!user) {
       toast({
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Error",
         description: "You must be logged in to submit a review",
-=======
     is_anonymous: boolean;
   }) => {}
     if (!user) {}
@@ -509,30 +426,20 @@ title: "Error",
 "
         title: "Error","
         description: "You must be logged in to submit a review","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"}),
       return false;
     }
 
     setIsSubmitting(true),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       const { data, error } = await supabase
-=======
 
     try {}
       const { data, error } = await supabase"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .from("reviews")
         .insert({}
           ...review,
@@ -559,27 +466,16 @@ title: "Error",
         toast({
           title: "Error",
           description: "Failed to submit review",
-<<<<<<< HEAD
-<<<<<<< HEAD
           variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
-=======
           variant: "destructive"})import { useState } from "react",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           variant: "destructive"})
 
 import { useState } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Review, ReviewReport } from "@/types/reviews",;
-=======
       } else {}
         toast({"
           title: "Error","
@@ -590,7 +486,6 @@ import { useState } from "react",;"
 import { supabase } from "@/integrations/supabase/client",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { Review, ReviewReport } from "@/types/reviews",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "@/hooks/use-toast",;
 export function useReviews() { return null; }
   const { user } = useAuth(),;
@@ -601,7 +496,6 @@ export function useReviews() { return null; }
   // Fetch reviews for a project;
   const fetchProjectReviews = async (projectId: string) => {;
     if (!projectId) return,;
-=======
     setIsLoading(true),;
     try {;
       const { data, error } = await supabase;"
@@ -626,31 +520,18 @@ export function useReviews() { return null; }
         if (!userReviewError && userReviewData) {;
           setUserReview(userReviewData);
         }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
         toast ({
           title: "Error";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         toast ({"
           title: "Error";"
           description: "You have already submitted a review for this project","
           variant: "destructive"});
       } else {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
       return false;
     } finally {}
       setIsSubmitting (false);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {}
@@ -658,21 +539,13 @@ export function useReviews() { return null; }
     setIsSubmitting(true)
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },;
-=======
     }  },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }  },;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
     if (!userId) return,;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setIsLoading(true),;
     try {;
       const { data, error } = await supabase;"
@@ -697,12 +570,10 @@ setReviews(data || []),;
         if (!userReviewError && userReviewData) {;
           setUserReview(userReviewData);
         }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setReviews(data || []);
     } catch (err: any) {;"
       console.error("Error fetching user reviews:", err),;
 toast({;
-<<<<<<< HEAD
         title: "Error",,
   description: "Failed to load reviews",;
         variant: "destructive"});
@@ -762,63 +633,37 @@ title: "Error",,
         toast({;"
           title: "Error",;"
           description: "Failed to submit review",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           variant: "destructive"});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       return false;
     } finally {
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
-=======
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (!user) return false,
 
     setIsSubmitting(true),
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const { error } = await supabase
-=======
 
     try {}
       const { error } = await supabase"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .from("reviews")
         .update(updates)"
         .eq("id", reviewId)
-<<<<<<< HEAD
 
         .eq("reviewer_id", user.id)
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     try {
       const { error } = await supabase
@@ -828,7 +673,6 @@ title: "Error",,
 
         .eq("reviewer_id", user.id)
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq("status", "pending"),
 
       if (error) throw error,
@@ -837,28 +681,19 @@ toast({"
         title: "Success","
         description: "Your review has been updated"}),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (userReview) {
-=======
           if (userReview) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           if (userReview) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       if (userReview) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         setUserReview({ ...userReview, ...updates })
       }
       return true
     } catch (err: any) {
 };
-=======
       console && console.error("Error updating review:", err);
       toast({
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Update a review;
   const update_review = async (review_id: string, updates: Partial < Review>) => {}
     // Check condition;
@@ -899,27 +734,16 @@ title: "Error",
     } finally {}
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
 
-<<<<<<< HEAD
       return false
     } finally {
       setIsSubmitting(false)
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   }  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   }  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -927,24 +751,16 @@ title: "Error",
       const { error } = await supabase
         .from("review_reports")
         .insert({
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           reporter_id: user && user.id,
 
 reason});          review_id: reviewId,
-=======
           reason});
           review_id: reviewId,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           reporter_id: user.id,
           reason}),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if (error) {
         // Check for unique constraint violation
         if (error && error.code === "23505") {
@@ -954,17 +770,12 @@ variant: "destructive"})
             title: "Error",
             description: "You have already reported this review",
 
-=======
         // Check for unique constraint violation
         if (error && error.code === "23505") {
           toast({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         // Check for unique constraint violation
         if (error && error.code === "23505") {
           toast({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       if (error) {}
         // Check for unique constraint violation"
         if (error && error.code === "23505") {}
@@ -974,9 +785,6 @@ variant: "destructive"})
             description: "You have already reported this review",
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             variant: "destructive"})
 ;
   // Report a review;
@@ -1003,17 +811,13 @@ if ( {) {}
   $2;
 }
 toast ({
-<<<<<<< HEAD
             title: "Error",
   description: "You have already reported this review",
             variant: "destructive"});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         } else {
           throw error;
         }
       } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         toast ({
           title: "Report Submitted",
@@ -1051,7 +855,6 @@ if ( {) {
           title: "Report Submitted",
           description: "Thank you. Our team will review your report"}),
 
-<<<<<<< HEAD
             title: "Error",
   description: "You have already reported this review",
             variant: "destructive"});
@@ -1060,8 +863,6 @@ if ( {) {
         }
       } else {
 toast({
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return true
       }
     } catch (err: any) {
@@ -1070,13 +871,7 @@ toast({
 title: "Error";
         description: "Failed to report review"
         variant: "destructive"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     return false
   }
@@ -1084,11 +879,9 @@ title: "Error";
   if (projectId && reviews.length === 0 && !isLoading) {
 fetchProjectReviews(projectId)  }
   return {
-=======
     fetchProjectReviews(projectId)
   }
   return {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews;
     user_review;
     is_loading;
@@ -1096,7 +889,6 @@ fetchProjectReviews(projectId)  }
     fetchProjectReviews;
     fetchUserReviews;
 
-<<<<<<< HEAD
   },;
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
@@ -1177,29 +969,16 @@ toast({;"
     isSubmitting,;
     fetchProjectReviews,;
     fetchUserReviews,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     submitReview;
     updateReview;
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reportReview}
 submit_review;
     update_review;
     report_review}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df}
     submit_review;
     update_review;
     report_review}
@@ -1209,14 +988,11 @@ submit_review;
     } catch (err: any) {
   }
   return {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews;
     user_review;
     is_loading;
     is_submitting;
     fetchProjectReviews;
     fetchUserReviews;
-<<<<<<< HEAD
 
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

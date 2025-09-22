@@ -8,22 +8,13 @@ import {;
 
 import React from "react";
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React from "react";
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React from "react";
 import {};
   Card;
@@ -31,20 +22,13 @@ import {};
   CardDescription;
   CardHeader;
   CardTitle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { toast } = useToast();
-=======
-=======
   Card,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CardContent,
   CardDescription,
   CardHeader,
@@ -54,8 +38,6 @@ import {};
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";  const { toast } = useToast();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { useToast } from "@/hooks/use-toast";
 
 export function ExportPanel() {;
@@ -87,18 +69,15 @@ import { useToast } from "@/hooks/use-toast";
 export function ExportPanel() {;
 export function ExportPanel() {
   const { toast } = useToast();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-=======
   const { toast } = useToast();
 "
 import React from "react","
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
 import { Button } from "@/components/ui/button","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useToast } from "@/hooks/use-toast",
 export function ExportPanel() {}
   const { toast } = useToast(),
@@ -154,13 +133,11 @@ export function ExportPanel() {
     toast({)
       title: `Exporting as ${format.toUpperCase()}`,
 
-<<<<<<< HEAD
       title: `Exporting as ${format.toUpperCase()}`,
 
         });
       }, 1500));
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         });
       }, 1500));
   }
@@ -191,9 +168,6 @@ return (
             variant="outline""
             className="border-zion-blue-light text-zion-slate-light""
             onClick={() => handleExport("json")}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import {}
   Card,
@@ -228,9 +202,6 @@ return (
           Export your analytics data in CSV or JSON format for deeper analysis in your preferred tools.
         </p>
         <div className="flex flex-wrap gap-4">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -245,12 +216,10 @@ return (
           in your preferred tools.;
         </p>;
         <div className="flex flex-wrap gap-4">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <Button
             variant="default"
             className="bg-zion-purple hover:bg-zion-purple-dark"
 
-<<<<<<< HEAD
 import React from './react';
 import {
   Card,
@@ -268,7 +237,6 @@ function ExportPanel() {
   const { toast } = use_toast ();
 ;
   const handle_export = (format: "csv" | "json") =>: any {
-<<<<<<< HEAD
       description: "Your export is being prepared and will download shortly.",
     }),;
       // In a real implementation, this would trigger an API call to generate and download the export;
@@ -303,13 +271,8 @@ function ExportPanel() {
           <Button 
             variant="default" 
             className="bg-zion-purple hover:bg-zion-purple-dark"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             onClick={() => handleExport('csv')}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             onClick={() => handleExport('csv')}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             Export as CSV
           </Button>
@@ -337,9 +300,7 @@ import { useToast } from "@/hooks/use-toast",;
 export function ExportPanel() {;
   const { toast } = useToast(),;
   const handleExport = (format: 'csv' | 'json') => {;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     // Placeholder for actual export functionality;
     (toast ({
       title: `Exporting as ${format.toUpperCase ()}`,
@@ -380,19 +341,9 @@ export function ExportPanel() {;
           </Button>;
           <Button;"
             variant="outline";
-<<<<<<< HEAD
             className="border - zion - blue - light text - zion - slate - light";
             on_click={() => handle_export ("json")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 ;
   return (
@@ -470,37 +421,21 @@ export function ExportPanel() {;
             on_click={() => handle_export ("json")}
 className="border-zion-blue-light text-zion-slate-light";
             onClick={() => handleExport('json')}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >;
             Export as JSON;
           </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </Card>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
     </Card>);
 }  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </Card>);
-=======
   );
     </Card>);
 }  );
@@ -641,7 +576,6 @@ pr-12325
 }
     </Card>;
   );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 </Card>;
   ),;}
@@ -663,17 +597,5 @@ pr-12325
     </Card>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

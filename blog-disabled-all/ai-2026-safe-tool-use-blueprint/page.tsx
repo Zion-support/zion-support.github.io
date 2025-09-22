@@ -73,4 +73,3 @@ const SafeToolUseBlueprint2026: React.FC = () => {
 };
 
 export default SafeToolUseBlueprint2026;
-

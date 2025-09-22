@@ -9,13 +9,6 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication) => void
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -26,7 +19,6 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {StatusBadge} from "./StatusBadge";
 import {ScoreBadge} from "./ScoreBadge";
 import {ApplicationActions} from "./ApplicationActions";
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -63,11 +55,6 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface ApplicationRowProps {}
   application: JobApplication;
   processingId: string | null;
@@ -86,24 +73,17 @@ import {StatusBadge} from "./StatusBadge";"
 import {ScoreBadge} from "./ScoreBadge";"
 import {ApplicationActions} from "./ApplicationActions";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface ApplicationRowProps {;
   application: JobApplication,;
   processingId: string | null,;
   onViewApplication: (applicationId: string) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
   onViewScore: (application: JobApplication) => void;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function ApplicationRow(): any ({;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -125,35 +105,21 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function ApplicationRow({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export function ApplicationRow({;export function ApplicationRow({;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export function ApplicationRow({;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export function ApplicationRow({;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 export function ApplicationRow({;
 export function ApplicationRow({;
 export function ApplicationRow({;export function ApplicationRow({;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   application;
   processingId;
   onViewApplication;
   onStatusChange;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ApplicationRow({
   application,
   processingId,
@@ -161,35 +127,25 @@ export function ApplicationRow({
 onStatusChange,
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 onViewScore
 }: ApplicationRowProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <TableRow key={application && application.id}>;
-<<<<<<< HEAD
         )}
       </TableCell>;
       <TableCell className="text-right">;
         <ApplicationActions
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onStatusChange,}
-=======
   onViewScore;
 }: ApplicationRowProps) {;
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onViewScore
 }: ApplicationRowProps) {
   return (
@@ -285,7 +241,6 @@ import { TableRow, TableCell } from "@/components/ui/table",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 import { StatusBadge } from "./StatusBadge",;
 import { ScoreBadge } from "./ScoreBadge",;
-=======
   onViewScore;
 }: ApplicationRowProps) {}
 export function ApplicationRow({}
@@ -314,7 +269,6 @@ import { TableRow, TableCell } from "@/components/ui/table",;"
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;"
 import { StatusBadge } from "./StatusBadge",;"
 import { ScoreBadge } from "./ScoreBadge",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ApplicationActions } from "./ApplicationActions",;
   // TODO: Implement
 }
@@ -712,13 +666,10 @@ function ApplicationRow() {}
   return (
     <TableRow key={application.id}>;
 <TableCell>;
-<<<<<<< HEAD
         <div className="flex items - center gap-3">;
           <Avatar className="h - 9 w-9">;
-=======
         <div className="flex items - center gap-3">;
           <Avatar className="h - 9 w-9">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {application.talent_profile?.profile_picture_url ? (
               <img;
                 src={application.talent_profile.profile_picture_url}
@@ -730,11 +681,8 @@ function ApplicationRow() {}
             <div className="font-medium">;
               {application.talent_profile?.full_name || "Unknown"}
             </div>;
-<<<<<<< HEAD
             <div className="text - xs text - muted-foreground">;
-=======
             <div className="text - xs text - muted-foreground">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {application.talent_profile?.professional_title || "Talent"}
 </TableRow>
       <TableCell>;
@@ -783,7 +731,6 @@ on_click={() => onViewScore (application)}
 <BarChart className="h - 4 w - 4 mr-1" />;          <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
-<<<<<<< HEAD
       <TableCell>;
 
           </Button>;
@@ -798,18 +745,10 @@ on_click={() => onViewScore (application)}
       </TableCell>;"
       <TableCell className="text - right">;
         <ApplicationActions;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           application={application}
           processing_id={processing_id}
-=======
       <TableCell>;          processing_id={processing_id}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       <TableCell>;          processing_id={processing_id}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onViewApplication={onViewApplication}
 onStatusChange={onStatusChange}
           onStatusChange={onStatusChange}
@@ -820,8 +759,5 @@ onStatusChange={onStatusChange}
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </TableRow>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

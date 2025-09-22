@@ -1,40 +1,24 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {Card, CardContent} from "@/components/ui/card";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Card, CardContent} from "@/components/ui/card";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { Skeleton } from "@/components/ui/skeleton",
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
-=======
 import { Card, CardContent } from "@/components/ui/card","
 import { useQuery } from "@tanstack/react-query","
 import { supabase } from "@/integrations/supabase/client",";
@@ -42,7 +26,6 @@ import { Skeleton } from "@/components/ui/skeleton";"
 import { formatDistanceToNow } from "date-fns";"
 import { Skeleton } from "@/components/ui/skeleton","
 import { formatDistanceToNow } from "date-fns",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export function AnalyticsSummary() {}
   const { data: stats, isLoading } = useQuery({}
@@ -57,49 +40,34 @@ if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase'
         .from('analytics_events')'
         .select('user_id')'
         .eq('event_typepage_view')
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         .is('user_idnot.null'),
 
       if (uniqueVisitorsError) throw uniqueVisitorsError,
 
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
-=======
 
       // Get conversion count;
       const { data: conversionsData, error: conversionsError } = await supabase'
         .from('analytics_events')'
         .select('count')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .eq('event_typeconversion')
 
         .single(),
         '
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase'
         .from('analytics_events')'
@@ -109,11 +77,8 @@ if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
 .single(),
         '
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return {
-=======
 import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by counting distinct user IDs)
-=======
 import { formatDistanceToNow } from "date-fns",
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
@@ -144,7 +109,6 @@ import {formatDistanceToNow} from "date-fns";
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
       // Get unique visitors (by counting distinct user IDs)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
         .select('user_id')
@@ -163,8 +127,6 @@ import {formatDistanceToNow} from "date-fns";
         .from('analytics_events')
         .select('count')
 .eq('event_typeconversion')      return {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         .eq('event_typeconversion')
 
 .single();
@@ -184,20 +146,12 @@ import {formatDistanceToNow} from "date-fns";
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
 
       return {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
         conversions: conversionsData?.count |0
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     refetchInterval: 300000, // Refetch every 5 minutes
   });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       return {}
         totalPageViews: pageViewsData?.count |0;
@@ -205,7 +159,6 @@ import {formatDistanceToNow} from "date-fns";
         conversions: conversionsData?.count |0;
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     refetchInterval: 300000, // Refetch every 5 minutes;
   }),
@@ -215,8 +168,6 @@ import {formatDistanceToNow} from "date-fns";
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
 
     : '0.00',
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Calculate conversion rate
   const conversionRate = stats && stats.totalPageViews > 0
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
@@ -255,7 +206,6 @@ import {formatDistanceToNow} from "date-fns";
         }
         icon={
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-<<<<<<< HEAD
         }
       />
     </div>
@@ -265,14 +215,10 @@ interface StatCardProps {
   title: string
   value: React.ReactNode
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Skeleton } from "@/components/ui/skeleton",;
-=======
 
 }
 interface StatCardProps {}
@@ -283,7 +229,6 @@ import { Card, CardContent } from "@/components/ui/card",;"
 import { useQuery } from "@tanstack/react-query",;"
 import { supabase } from "@/integrations/supabase/client",;"
 import { Skeleton } from "@/components/ui/skeleton",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDistanceToNow } from "date-fns",;
 
 export function AnalyticsSummary() { return null; }
@@ -410,13 +355,10 @@ if (throw lastEventError) {}
 "`
         value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
 
-=======
 }
 interface StatCardProps {
   title: string
   value: React.ReactNode        value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 interface StatCardProps {
@@ -560,9 +502,7 @@ if (throw lastEventError) {
         .limit(1);
         .single();
 
-=======
 .single();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
         .single(),
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
@@ -609,7 +549,6 @@ return {;
           <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/><path d="M10 15H6a4 4 0 0 0 - 4 4v2"/><path d="m21.7 16.4-.9-.3"/><path d="m15.2 13.9-.9-.3"/><path d="m16.6 18.7.3-.9"/><path d="m19.1 12.2.3-.9"/><path d="m19.6 18.7-.4 - 1"/><path d="m16.8 12.3-.4 - 1"/><path d="m14.3 16.6 1-.4"/><path d="m20.7 13.8 1-.4"/></svg>;
         }
         value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         icon={;
           <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 20 2-2"/><path d="M4 14a6 6 0 0 1 6-6"/><path d="M5 18a8 8 0 0 1 8-8"/><path d="M6 16a6 6 0 0 1 6-6"/><path d="m10 16 2-2v6"/><path d="m3 14 2-2"/><rect x="14" y="2" width="8" height="8" rx="2"/></svg>;
         }
@@ -631,69 +570,40 @@ return {;
       />;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 interface StatCardProps {;
   title: string;
   value: React.ReactNode;
   icon: React.ReactNode;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   icon: React.ReactNode;
 }
 function StatCard({ title, value, icon }: StatCardProps) {
 
-=======
 }
 
   icon: React.ReactNode
 }
 function StatCard({ title, value, icon }: StatCardProps) {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface StatCardProps {;
   title: string,;
   value: React && React.ReactNode,;
   icon: React && React.ReactNode;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
         <div className="flex items-center gap-4">;
-=======
   return ("
     <Card className="bg-zion-blue-dark border-zion-blue-light">;"
       <CardContent className="p-6">;"
         <div className="flex items-center gap-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="h-12 w-12 rounded-lg bg-zion-purple/20 flex items-center justify-center text-zion-purple">;
             {icon}
           </div>;
@@ -728,10 +638,8 @@ interface StatCardProps {}
   title: string,
   value: React.ReactNode,
   icon: React.ReactNode;
-=======
       return {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 /**
  * StatCard - Function description;
@@ -1008,4 +916,3 @@ pr-12325
       </CardContent>;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

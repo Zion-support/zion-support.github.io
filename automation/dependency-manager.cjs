@@ -1,6 +1,20 @@
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
 
 
 #!/usr/bin/env node;
+
+=======
+
+
+#!/usr/bin/env node;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -358,8 +372,19 @@ if ( {})
     .catch(error => {})
       console.error('Dependency management "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
+
+module.exports = DependencyManager;
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+=======
 module.exports = DependencyManager;
 
 module.exports = DependencyManager;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 module.exports = DependencyManager;
 

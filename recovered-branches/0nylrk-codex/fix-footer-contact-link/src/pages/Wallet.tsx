@@ -1,30 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
   const { wallet, transactions, loading } = useWallet();
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { BadgeDollarSign } from 'lucide-react';
 export default function WalletPage() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
-<<<<<<< HEAD
   Card,
   CardContent,
   CardHeader,
@@ -33,20 +20,16 @@ CardDescription,";
 } from "@/components/ui/card";"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";"
 import { BadgeDollarSign } from "lucide-react";
-<<<<<<< HEAD
 export default function WalletPage() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const { wallet, transactions, loading } = useWallet();
   return (
     <div className="container max-w-4xl py-10">;
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;
-=======
 export default function WalletPage() {};
   const { wallet, transactions, loading } = useWallet();
   return ("
     <div className="container max-w-4xl py-10">;"
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <BadgeDollarSign className="h-6 w-6" /> Wallet;
       </h1>;"
       <Card className="mb-6">;
@@ -98,10 +81,7 @@ function WalletPage() {}
       </Card>;"
       <Tabs default_value="earnings">;"
         <TabsList className="grid w - full grid - cols - 2 mb - 4">;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { wallet, transactions, loading } = useWallet();
 import { useWallet } from '@/hooks/useWallet',
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
@@ -126,10 +106,8 @@ export default function WalletPage() {
             <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;
           ) : (;
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
-=======
 export default function WalletPage() {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           )}
 ))}
           <TabsTrigger value="spending">Spending</TabsTrigger>
@@ -148,7 +126,6 @@ export default function WalletPage() {
                     <span className="font-medium">+{t.amount} ZION$</span>
                   </li>
                 ))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </ul>
           )}
         </TabsContent>"
@@ -182,7 +159,6 @@ export default function WalletPage() {
       </div>
     </div>
 )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
           <TabsTrigger value="spending">Spending</TabsTrigger>;
         </TabsList>;
@@ -218,16 +194,11 @@ export default function WalletPage() {
           {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
             <p className="text - muted - foreground">No earnings yet</p>) : (
             <ul className="space - y-2">;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
             </ul>
           )}          {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
             <p className="text - muted-foreground">No earnings yet</p>) : (
             <ul className="space-y-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
         </CardContent>;
       </Card>;
@@ -322,7 +293,6 @@ function WalletPage() {
           {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
             <p className="text - muted - foreground">No earnings yet</p>) : (
             <ul className="space - y-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {transactions.filter (t => t.transaction_type === 'earn').map (t => (
                 <li key={t.id} className="flex justify - between border - b py-2">;
                   <span>{t.reason || 'Reward'}</span>;
@@ -360,7 +330,6 @@ function WalletPage() {
   wallet?.balance ?? 0 
 }ZION$</p>) 
 }</CardContent> </Card> <Tabs defaultValue="earnings" > <TabsList className="grid w-full grid-cols-2 mb-4" > <TabsTrigger value="earnings" >Earnings</TabsTrigger> <TabsTrigger value="spending" >Spending</TabsTrigger> </TabsList>) : (<ul className="space-y-2" > {
-=======
 
 '
           {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? ("
@@ -401,7 +370,6 @@ function WalletPage() {
   wallet?.balance ?? 0;
 }ZION$</p>) "
 }</CardContent> </Card> <Tabs defaultValue="earnings" > <TabsList className="grid w-full grid-cols-2 mb-4" > <TabsTrigger value="earnings" >Earnings</TabsTrigger> <TabsTrigger value="spending" >Spending</TabsTrigger> </TabsList>) : (<ul className="space-y-2" > {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   transactions.filter (t => t.transaction type === 'earn') .map (t => (</li>) ) 
 }</ul>) "
 }</TabsContent>) : (<ul className="space-y-2" > {'
@@ -412,17 +380,8 @@ function WalletPage() {
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { useWallet } from "@/hooks/useWallet";"
 import {
   // TODO: Implement
@@ -544,4 +503,3 @@ export default function WalletPage() {
 pr-12325
 }</TabsContent> </Tabs> </div> </div>) '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

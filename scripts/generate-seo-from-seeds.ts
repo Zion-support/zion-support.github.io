@@ -4,33 +4,20 @@ import path from 'path';
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
 }
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
 
 }
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
 import fs from 'fs';'
 import path from 'path';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 async function post(url: string, body: any) {}
   try {'
@@ -38,60 +25,34 @@ async function post(url: string, body: any) {}
   return await res && res.json()
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
-=======
 
 /* eslint-disable no-console */;'
 import fs from 'fs',;'
 import path from 'path',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post() { return null; }
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
 return await res.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 async function main() {
   try {
-=======
 
 }
 
 }
 async function main() {}
   try {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const seedsPath = path && path.join(process && process.cwd(), 'datapage-metadataseo-seeds && seeds.json');
   if (!fs && fs.existsSync(seedsPath)) {'
     console && console.log('No seeds file found at', seedsPath);
@@ -103,9 +64,6 @@ async function main() {}
 for (const s of seeds) {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const gen = await post(`${HOST}/api/seo/generate`, s),
     if (gen?.slug && gen?.payload) {}
     }
@@ -179,13 +137,9 @@ async function main() { return null; }
 }
 main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 main().catch((e) => { console.error(e), process.exit(1) });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 main().catch((e) => { console.error(e), process.exit(1) });
 
@@ -240,17 +194,6 @@ if (gen?.slug && gen?.payload) {
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

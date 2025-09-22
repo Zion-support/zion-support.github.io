@@ -22,8 +22,15 @@ describe('enhanced-home.integration', () => {
     render(<enhanced-home.integration />);
   });
 });
+<<<<<<< HEAD
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import enhanced-home from '../pages/enhanced-home" describe('enhanced-home Integration Tests',() => {' test('page renders correctly',() => {' render(<enhanced-home / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<enhanced-home / />) }) test('page content is accessible',() => {' render(<enhanced-home / />) }) test('page loads with correct data',() => {' render(<enhanced-home / />) })})
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import enhanced-home from '../pages/enhanced-home" describe('enhanced-home Integration Tests',() => {' test('page renders correctly',() => {' render(<enhanced-home / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<enhanced-home / />) }) test('page content is accessible',() => {' render(<enhanced-home / />) }) test('page loads with correct data',() => {' render(<enhanced-home / />) })})
+
+
+=======
 =======
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import enhanced-home from "./pages/enhanced-home" describe("enhanced-home Integration Tests",() => {" test("page renders correctly",() => {" render(<enhanced-home / />) expect(screen.getByRole("main")).toBeInTheDocument()})" test("navigation works",() => {" render(<enhanced-home / />) }) test("page content is accessible",() => {" render(<enhanced-home / />) }) test("page loads with correct data",() => {" render(<enhanced-home / />) })})'"'"
 const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import enhanced-home from "./pages/enhanced-home" describe("enhanced-home Integration Tests",() => {" test("page renders correctly",() => {" render(<enhanced-home / />) expect(screen.getByRole("main")).toBeInTheDocument()})" test("navigation works",() => {" render(<enhanced-home / />) }) test("page content is accessible",() => {" render(<enhanced-home / />) }) test("page loads with correct data",() => {" render(<enhanced-home / />) })})'"'"
@@ -33,4 +40,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
+<<<<<<< HEAD
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import enhanced-home from '../pages/enhanced-home" describe('enhanced-home Integration Tests',() => {' test('page renders correctly',() => {' render(<enhanced-home / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<enhanced-home / />) }) test('page content is accessible',() => {' render(<enhanced-home / />) }) test('page loads with correct data',() => {' render(<enhanced-home / />) })})
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import enhanced-home from '../pages/enhanced-home" describe('enhanced-home Integration Tests',() => {' test('page renders correctly',() => {' render(<enhanced-home / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<enhanced-home / />) }) test('page content is accessible',() => {' render(<enhanced-home / />) }) test('page loads with correct data',() => {' render(<enhanced-home / />) })})
+=======
 >>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

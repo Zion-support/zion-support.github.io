@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -21,17 +11,7 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function EnterprisePlans() {
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -44,8 +24,6 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",export default function EnterprisePlans() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import React from "react";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer";"
@@ -57,15 +35,10 @@ import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBa
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";"
 import { SEO } from "@/components/SEO";
 export default function EnterprisePlans() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
 import { SEO } from "@/components/SEO";
 export default function EnterprisePlans() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <SEO"
@@ -84,7 +57,6 @@ export default function EnterprisePlans() {
       <Footer />
 </>
 )
-<<<<<<< HEAD
 }
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -108,7 +80,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 "
 import React from "react";"
@@ -122,21 +93,10 @@ import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadg
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";"
 import {SEO} from "@/components/SEO";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -193,7 +153,6 @@ export default function EnterprisePlans() {;
       <main className="min-h-screen bg-background">;    <>;
       <SEO;
         title="Enterprise Plans - Zion AI Marketplace";
-=======
 
 "
 import React from "react",;"
@@ -210,25 +169,11 @@ import { SEO } from "@/components/SEO";
     <>;
       <SEO;"
         title="Enterprise Plans - Zion AI Marketplace";'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";
       />;
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Header />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <main className="min - h-screen bg - background">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
       <Header />;    </>);
 
 import React from "react";""
@@ -297,13 +242,11 @@ export default function EnterprisePlans() {;
     <>;
       />;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Header />;
       <main className="min - h-screen bg - background">;
 <main className="min-h-screen bg-background">;
       <main className="min-h-screen bg-background">;
 <main className="min-h-screen bg-background">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <EnterpriseHero />;
 
         <EnterprisePricingTable />;
@@ -321,22 +264,12 @@ export default function EnterprisePlans() {;
 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </>);
 }
 pr-12325
@@ -355,4 +288,3 @@ pr-12325
 
     </>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 interface PostFormValues {
 
   title: string
@@ -37,33 +31,22 @@ interface PostFormValues {
         variant: "destructive"
       })
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface PostFormValues {
-=======
 import { useState, useEffect } from "react";"
 import { Link, useNavigate, useSearchParams } from "react-router-dom";"
 import { AppLayout } from "@/layout/AppLayout";"
@@ -73,7 +56,6 @@ import PostForm from "@/components/community/PostForm";"
 import { useToast } from "@/hooks/use-toast";"
 import { ForumCategory } from "@/types/community";
 interface PostFormValues {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string;
   content: string;
   categoryId: ForumCategory;
@@ -100,7 +82,6 @@ export default function CreatePostPage() {
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null,
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const initialValues: Partial<PostFormValues> = {
     categoryId: initialCategory || "project-help"
   },
@@ -138,18 +119,13 @@ interface PostFormValues {;
   categoryId: ForumCategory,;
   tags: string;
 }
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
-=======
 import PostForm from "@/components/community/PostForm";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
 interface PostFormValues {
@@ -158,16 +134,12 @@ title: string
   categoryId: ForumCategory
 
   tags: string}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export default function CreatePostPage() { return null; }
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
-<<<<<<< HEAD
 export default function CreatePostPage() {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Get category from URL query params if available;
   const initialCategory = searchParams && searchParams.get("category") as ForumCategory | null;
 
@@ -201,7 +173,6 @@ export default function CreatePostPage() {
     }
 
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
 
@@ -212,18 +183,12 @@ export default function CreatePostPage() {
   const { toast } = useToast();
 const [searchParams] = useSearchParams();
   // Get category from URL query params if available
-=======
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();  // Get category from URL query params if available
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const [searchParams] = useSearchParams();  // Get category from URL query params if available
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   // Get category from URL query params if available
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const initialCategory = searchParams.get("category") as ForumCategory | null;
 
   const initialValues: Partial<PostFormValues> = {
@@ -256,11 +221,8 @@ const [searchParams] = useSearchParams();
     }
 }
     }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
-=======
 
 interface PostFormValues {
 
@@ -287,7 +249,6 @@ interface PostFormValues {
   tags: string;
 pr-12325
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <AppLayout>
@@ -295,7 +256,6 @@ pr-12325
         title="Create New Post | Community Forum | Zion AI Marketplace""
         description="Create a new discussion post in the Zion AI Marketplace community forum.""
         keywords="community, forum, discussion, create post, new thread"
-<<<<<<< HEAD
       />
 "
       <div className="container py-8">"
@@ -315,15 +275,7 @@ pr-12325
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
       </div>
     </AppLayout>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -421,9 +373,7 @@ export default function CreatePostPage() {;
       />;
       ;
       />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="container py-8">;
-=======
   // Get category from URL query params if available;
   const initialCategory = searchParams.get("category") as ForumCategory | null,;
   const initialValues: Partial<PostFormValues> = {;
@@ -522,13 +472,10 @@ export default function CreatePostPage() {;
       ;
       />;
       <div className="container py-8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="flex items-center gap-3 mb-6">;
-=======
 "
       <div className="container py-8">;"
         <div className="flex items-center gap-3 mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
           </Link>;"
@@ -688,15 +635,11 @@ function CreatePostPage() {}
       </div>;
     </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         ;"
 
 ;
         ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
         ;
 <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
@@ -730,18 +673,8 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 }/> </div> </AppLayout>) 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   ),; interface PostFormValues {
   title: string;
 content: string;
@@ -762,11 +695,9 @@ const [searchParams] = useSearchParams ();
 
 }
 ;
-=======
   // Get category from URL query params if available;"
   const initialCategory = searchParams.get("category") as ForumCategory | null;"
   const initialValues: Partial<PostFormValues> = {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     <AppLayout>
 
@@ -854,4 +785,3 @@ pr-12325
     </AppLayout>);
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

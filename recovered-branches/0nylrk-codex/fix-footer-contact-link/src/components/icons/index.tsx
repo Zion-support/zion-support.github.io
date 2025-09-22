@@ -2,14 +2,10 @@ const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
 
-<<<<<<< HEAD
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
-<<<<<<< HEAD
     return <LucideIcon {...props} />;
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   LayoutGrid: 'LayoutGrid'
   List: 'List'
   // UI elements
@@ -104,19 +100,13 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     return <LucideIcon {...props} />
 };
-=======
-=======
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
 // Alias for missing icons or for icons with different names
 const iconAliases: Record<string, keyof typeof LucideIcons> = {
   // Grid views
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   LayoutGrid: 'LayoutGrid'
   List: 'List'
@@ -213,9 +203,7 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
     return <LucideIcon {...props} />;
   };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -224,9 +212,7 @@ const iconExports: Record<string, React.FC<IconProps>> = {}
 // Generate icon exports
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
-<<<<<<< HEAD
     iconExports[alias] = createIconComponent(alias, lucideName)
-<<<<<<< HEAD
   // Grid views;
   LayoutGrid: 'LayoutGrid',
   List: 'List',
@@ -332,37 +318,23 @@ if ( {) {
   $2
 }
     icon_exports[alias] = createIconComponent (alias, lucide_name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } else {
-=======
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {}
   if (LucideIcons[lucideName]) {}
     iconExports[alias] = createIconComponent(alias, lucideName)
 
   } else {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     console.warn (`Icon '${lucide_name}' not found in lucide-react`);
     // Use a fallback icon;'
     icon_exports[alias] = createIconComponent (alias, 'HelpCircle');
   }
 });
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const {
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 export const {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Alias for missing icons or for icons with different names;
-=======
     iconExports[alias] = createIconComponent(alias, lucideName)// Alias for missing icons or for icons with different names;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     iconExports[alias] = createIconComponent(alias, lucideName)// Alias for missing icons or for icons with different names;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;'
   LayoutGrid: 'LayoutGrid',;'
@@ -464,7 +436,6 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
 const iconExports: Record<string, React.FC<IconProps>> = {};
 
 // Generate icon exports;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   if (LucideIcons[lucideName]) {;
     iconExports[alias] = createIconComponent(alias, lucideName);
@@ -473,21 +444,13 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
     // Use a fallback icon;'
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
 
-<<<<<<< HEAD
 export const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const {;
 
 export const {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   } else {
     console.warn(`Icon '${lucideName}' not found in lucide-react`);
     // Use a fallback icon
@@ -498,17 +461,10 @@ export const {
 
 export const {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   LayoutGrid;
-=======
 });  LayoutGrid;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 });  LayoutGrid;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   LayoutGrid;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   List;
   Zap;
   Settings;
@@ -574,9 +530,6 @@ export const {;
 Key;
 Tag} = iconExports;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import * as LucideIcons from 'lucide-react',;
 // Alias for missing icons or for icons with different names;
 const iconAliases: Record<string keyof typeof LucideIcons> = {;
@@ -754,16 +707,13 @@ export const {;
   Key,;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
-<<<<<<< HEAD
 export * from 'lucide-react';  Tag} = icon_exports;
 export * from 'lucide-react';
 
 Tag} = icon_exports;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 // Also export all original icons from lucide-react;'
 export * from 'lucide-react';
-<<<<<<< HEAD
 ;;
 // Alias for missing icons or for icons with different names type IconProps = LucideIcons.LucideProps;
 // Create a type safe export for each icon const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
@@ -773,15 +723,8 @@ export * from 'lucide-react';
 };
 // Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
 ;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 ;
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

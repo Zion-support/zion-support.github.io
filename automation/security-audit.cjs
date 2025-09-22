@@ -1,14 +1,48 @@
 <<<<<<< HEAD
+
+}},
+}},
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+<<<<<<< HEAD
 =======
 
 }},
 
 >>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+    "action": () => {"
+      try {
+  // TODO: Implement
+}"
+
+      } catch (error) {
+      }
+    },
+},
+
+    }},
+main
+
+
+    }},
+  {
+    "name": 'Environment Variables Check',
+    "action": () => {
+
+  {
+    "name": 'Environment Variables Check',
+    "action": () => {"]"
+=======
 <<<<<<< HEAD
 (function main() {
   let json = null;
@@ -18,6 +52,7 @@ const path = require('path');
     "name": 'Environment Variables Check',
     "action": () => {
       
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       const envFiles = ['.env', '.env.local', '.env.production'];
       let foundEnvFiles = 0;
 
@@ -28,6 +63,23 @@ const path = require('path');
         }
       });
 
+<<<<<<< HEAD
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+      envFiles.forEach(envFile => {)
+        if (fs.existsSync(envFile)) {
+          foundEnvFiles++;
+      });
+
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }},
   {
     "name": 'API Security Check',
@@ -44,13 +96,33 @@ const path = require('path');
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
           if (
             content.includes('process.env') &&
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+        apiFiles.forEach(file => {)
+
+
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
 
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
         );
@@ -58,6 +130,17 @@ const path = require('path');
     },
   },
 
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       }
     }},
   {
@@ -81,11 +164,29 @@ const path = require('path');
           }
         });
 
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
   },
 
+<<<<<<< HEAD
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+        pages.forEach(page => {)
+
+            cspFound++;
+
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       }
     }},
   {
@@ -104,10 +205,30 @@ const path = require('path');
         
       }
 
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }},
 ];
 
 // Run security checks
+<<<<<<< HEAD
+  // TODO: Implement
+  // TODO: Implement
+
+];
+
+// Run security checks;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 let successCount = 0;
 let totalCount = securityChecks.length;
 
@@ -136,6 +257,13 @@ const report = {
   "checks": securityChecks.map(check => ({
     name: check.name,
 
+<<<<<<< HEAD
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     status: 'completed',
   })),
   summary: {
@@ -144,13 +272,36 @@ const report = {
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -159,6 +310,31 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  "summary": {"
+    total: totalCount,"
+    "successful": successCount,""
+    "failed": totalCount - successCount}};""
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });"
+const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+
+main
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -172,8 +348,28 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
+<<<<<<< HEAD
+    "status"
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
 
     "status"
     "status"
 
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
+    "status"
+    "status"
+
+<<<<<<< HEAD
+    "status"
+
+=======
 >>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

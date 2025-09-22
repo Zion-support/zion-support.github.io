@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -17,34 +13,24 @@ import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function ClientDashboard() {
-=======
 import { Link } from "react-router-dom",export function ClientDashboard() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 export function ClientDashboard() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
         <Button className="w-full py-6" size="lg">
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
 
-=======
 
 import React from "react";""
 import { Card, CardContent } from "@/components/ui/card";""
@@ -62,7 +48,6 @@ export function ClientDashboard() {
 </Button>"
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;"
 </Plus>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </Button>
       </section>
 
@@ -71,13 +56,11 @@ export function ClientDashboard() {
           <h2 className="text-lg font-medium">Active Projects</h2>
           <Link to="/mobile/projects">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
-=======
       <section>"
         <div className="flex items-center justify-between mb-4">"
           <h2 className="text-lg font-medium">Active Projects</h2>"
           <Link to="/mobile/projects">"
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               View all <ChevronRight className="h-4 w-4" />
 </section>"
         <div className="flex items-center justify-between mb-4">"
@@ -109,7 +92,6 @@ export function ClientDashboard() {
                 </div>
                 <Badge>3 Milestones</Badge>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
                   <span>Progress</span>"
@@ -123,7 +105,6 @@ export function ClientDashboard() {
                   ></div>
                 </div>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <div className="flex justify-between items-center">
                 <div className="flex -space-x-2">
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
@@ -133,12 +114,10 @@ export function ClientDashboard() {
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
-<<<<<<< HEAD
                 <Button size="sm" variant="outline">View Details</Button>
                 <Button size="sm" variant="outline">
 View Details;
                 </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               </div>
             </div>
           </CardContent>
@@ -169,7 +148,6 @@ View Details;
                     <p className="text-sm text-muted-foreground">
                       UX Designer • 5 years exp;
                     </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   </div>
                 </div>"
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">
@@ -177,7 +155,6 @@ View Details;
                 </div>
 </div>
               <div className="mt-3 flex gap-1 flex-wrap">
-<<<<<<< HEAD
                 <Badge variant="outline" className="text-xs">UI/UX</Badge>
                 <Badge variant="outline" className="text-xs">Figma</Badge>
                 <Badge variant="outline" className="text-xs">User Testing</Badge>
@@ -207,8 +184,6 @@ Message;
             </CardContent>
           </Card>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -222,7 +197,6 @@ Message;
                     <p className="text-sm text-muted-foreground">
                       Full Stack Dev • 8 years exp;
                     </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   </div>
                 </div>"
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">
@@ -230,7 +204,6 @@ Message;
                 </div>
 </div>
               <div className="mt-3 flex gap-1 flex-wrap">
-<<<<<<< HEAD
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
@@ -253,7 +226,6 @@ Message;
                 <Button size="sm" variant="outline">
 Message;
                 </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               </div>
             </CardContent>
           </Card>
@@ -261,10 +233,8 @@ Message;
       </section>
       <section>
         <div className="flex items-center justify-between mb-4">
-=======
       <section>"
         <div className="flex items-center justify-between mb-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
 
@@ -272,12 +242,10 @@ Message;
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
-=======
         <Card>"
           <CardContent className="p-4 space-y-4">"
             <div className="flex gap-3 items-start">"
               <div className="bg-primary/10 p-2 rounded-full">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Bell className="h-5 w-5 text-primary" />
               </div>
               <div>"
@@ -303,15 +271,10 @@ Message;
             <Button variant="outline" className="w-full">
 View All Notifications;
             </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           </CardContent>
         </Card>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 import React from "react",;
@@ -368,7 +331,6 @@ export function ClientDashboard() {;
                   </div>;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>;
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -484,13 +446,9 @@ export function ClientDashboard() {;
   );
 }
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -666,11 +624,4 @@ pr-12325
 
     </div>)"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

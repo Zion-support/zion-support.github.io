@@ -1,16 +1,10 @@
 :pages_backup/blog.tsx
-<<<<<<< HEAD:pages/blog.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 const BlogPage = () => {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useState } from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
@@ -22,10 +16,7 @@ import React, { useState } from 'react',
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog.tsx
 export default function BlogPage() {
 	return (
 		<Layout>
@@ -40,11 +31,9 @@ export default function BlogPage() {
 		</Layout>
 	)
 :pages_backup/blog.tsx
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 
 export default function BlogPage() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 
@@ -69,7 +58,6 @@ return (
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -116,7 +104,6 @@ export default function BlogPage() {
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog.tsx
 		<Layout>
 			<Head>
 				<title>Blog | Zion Tech Group</title>
@@ -141,8 +128,6 @@ import Layout from '../components/layout/Layout',;
 import React, { useState } from 'react',
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default function BlogPage() {
 	return (
@@ -158,20 +143,10 @@ export default function BlogPage() {
 		</Layout>
 	)
 :pages_backup/blog.tsx
-<<<<<<< HEAD:pages/blog.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog.tsx
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -179,20 +154,12 @@ export default function BlogPage() {
 }
 :pages_backup/blog.tsx
 ;
-<<<<<<< HEAD:pages/blog.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Layout>
       <Head>
@@ -208,20 +175,8 @@ const Page = () => {
 };
 
 export default BlogPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 ;
 
@@ -229,7 +184,6 @@ export default BlogPage;
 ;
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog.tsx
   return (
     <Layout>
       <Head>
@@ -247,9 +201,4 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Layout>
   );
 :pages_backup/blog.tsx
-<<<<<<< HEAD:pages/blog.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog.tsx

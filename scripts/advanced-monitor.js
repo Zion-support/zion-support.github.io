@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitor.js
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node
-=======
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
  * Advanced Monitoring Script;
  */
@@ -54,18 +48,15 @@ checkSystemHealth() {}
       const timestamp = new Date().toISOString()"`
       const logEntry = `[${timestamp}] PM2 "processes": ${list && list.length} running\n`
       fs && fs.appendFileSync(this && this.logPath, logEntry)})}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   checkDiskSpace() {
     const { execSync } = // // require("child_process")
     try {"
       const diskUsage = execSync("df -h /", { "encoding": "utf8" })
       const timestamp = new Date().toISOString()"`
       const logEntry = `[${timestamp}] Disk "usage": ${diskUsage}\n`
-<<<<<<< HEAD
       fs.appendFileSync(this.logPath, logEntry)} catch (error) {
       console.error("Disk space check "error": ", error)}
       console && console.error("Disk space check "error": ", error)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   checkMemoryUsage() {"
     const { execSync } = // // require("child_process")
@@ -79,19 +70,12 @@ fs.appendFileSync(this.logPath, logEntry)} catch (error) {
 }
 // Start monitoring;
 const monitor = new AdvancedMonitor()
-<<<<<<< HEAD
 monitor.startMonitoring()
-<<<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitor.js
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-monitor.js
-=======
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   checkSystemHealth() {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] System health check completed\n`
@@ -120,4 +104,3 @@ monitor.startMonitoring()
 // Start monitoring;
 const monitor = new AdvancedMonitor()
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

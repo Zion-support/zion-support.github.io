@@ -31,11 +31,7 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\]/g, ']');
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -84,9 +80,7 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
 ursor/automate-test-improve-and-merge-code-59d5
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 
-=======
     content = content.replace(/([^;}])\s*$/gm, '$1;');
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
@@ -129,9 +123,6 @@ async function main() {
     if (totalFixes > 0) {
 
     } else {
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -163,9 +154,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
 ursor/automate-test-improve-and-merge-code-59d5
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
@@ -217,7 +205,6 @@ ursor/automate-test-improve-and-merge-code-59d5
 
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content, 'utf8');
-=======
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
     let originalContent = content;
@@ -247,7 +234,6 @@ function fixSyntaxErrors(content, filePath) {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                         <Link href="/contact" className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       modified = true;
     }
 
@@ -256,7 +242,6 @@ function fixSyntaxErrors(content, filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
@@ -288,6 +273,4 @@ console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
 ursor/automate-test-improve-and-merge-code-59d5
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -15,11 +6,7 @@ import {Label} from "@/components/ui/label";
 import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
-<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -45,16 +32,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.timeline}
         `;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {};
   const [isMatching, setIsMatching] = useState(false);
@@ -65,7 +48,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {};
     const runMatching = async () => {}
       if (!formData.projectDescription) return;
       setIsMatching(true);
-<<<<<<< HEAD
       try {
         // Create a query string from the form data
         const queryString = `
@@ -88,16 +70,10 @@ import { Textarea } from "@/components/ui/textarea",;
 import { AIMatchingResults } from "@/components/AIMatchingResults",;
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
 import { toast } from "@/hooks/use-toast",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SummaryStepProps {;
   formData: QuoteFormData,;
-=======
 import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
@@ -107,14 +83,11 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
 
   const [matches, setMatches] = useState<MatchResult[]>([]);
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Run AI matching when the component mounts;
   useEffect(() => {;
     const runMatching = async () => {;
       if (!formData && formData.projectDescription) return;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsMatching(true);
       try {;
         // Create a query string from the form data;
@@ -126,7 +99,6 @@ ${formData.projectName} ;
           ${formData.timeline}
         `,
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         // Get AI matches;
         const results = await findMatches(;
 
@@ -158,23 +130,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3;
           queryString;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Get AI matches
         const results = await findMatches(
           queryString,
@@ -186,7 +147,6 @@ const [isMatching, setIsMatching] = useState(false);
 
   const [matches, setMatches] = useState<MatchResult[]>([]);
           queryString;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           formData && formData.serviceType;
           3;
         );
@@ -307,10 +267,7 @@ pr-12325
         setIsMatching (false);
 
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     },
 
@@ -328,14 +285,7 @@ pr-12325
     }
     },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     runMatching()
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     },
 
@@ -357,7 +307,6 @@ pr-12325
         setIsMatching (false);
       }
     runMatching()
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {}
     // Update the form with the selected match;
@@ -368,46 +317,26 @@ pr-12325
     toast({"
       title: "Match Selected"'`
       description: `You've selected ${match.item.title}`})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item);
   },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Extract just the items from each MatchResult for the AIMatchingResults component;
   const matchItems = matches.map(match => match.item),
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
-=======
 
   // Map the onSelectMatch handler to work with the item directly;
   const handleItemSelect = (item: any) => {}
     // Find the original MatchResult that contains this item;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
 
@@ -448,53 +377,29 @@ pr-12325
   // Map the onSelectMatch handler to work with the item directly;
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const matchResult = matches.find(match => match.item.id === item.id)
     if (matchResult) {}
       handleSelectMatch(matchResult)
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   return ("
     <div className="space-y-6">"
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
         `,;
-=======
 `,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Get AI matches;
         const results = await findMatches(;
           queryString,;
@@ -539,7 +444,6 @@ pr-12325
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* AI Matching Results */}
 <AIMatchingResults;
         serviceType={formData.serviceType}
@@ -646,27 +550,15 @@ pr-12325
                     {formData.startDate.toLocaleDateString()}
                   </div>
                 </div>
-<<<<<<< HEAD
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {formData.endDate && (
                 <div>"
                   <Label className="text-zion-slate-light">End Date</Label>"
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <div className="text-white">
                     {formData.endDate.toLocaleDateString()}
                   </div>
@@ -725,7 +617,6 @@ pr-12325
       </div>
     </div>
   )
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 } finally {
         setIsMatching (false);
@@ -779,10 +670,7 @@ return ("
         projectDescription={formData && formData.projectDescription}
 
         matches={matchItems}
-=======
               )}        matches={matchItems}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return (
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
@@ -956,15 +844,11 @@ const matchResult = matches.find(match => match.item.id === item.id),
 serviceType={formData.serviceType}
         projectDescription={formData.projectDescription}
         matches={matchItems}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;
 
-<<<<<<< HEAD
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Service Information */}
       <div>;"
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>;"
@@ -979,15 +863,12 @@ serviceType={formData.serviceType}
               {formData && formData.specificItem && (;
                 <div>;
                   <Label className="text-zion-slate-light">Selected Item</Label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className="text-white">{formData && formData.specificItem.title}</div>;
                 </div>;
               )}
 
               </div>;
 
-=======
                   <div className="text-white">{formData && formData.specificItem.title}</div>;
 <div className="text-white">{formData.serviceType}</div>;
               </div>;
@@ -999,7 +880,6 @@ serviceType={formData.serviceType}
                 </div>;
               )}
               </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </CardContent>;
         </Card>;
@@ -1014,7 +894,6 @@ serviceType={formData.serviceType}
             <div className="space-y-4">;
               <div>;"
                 <Label className="text-zion-slate-light">Project Name</Label>;
-=======
 }
 ;
     run_matching ();
@@ -1096,14 +975,12 @@ if ( {) {
               <div>;
                 <Label className="text-zion-slate-light">Project Description</Label>;
                 <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
 
-=======
 ;
       {/* Timeline */}
       <div>;
@@ -1131,13 +1008,11 @@ if ( {) {
                   </div>;
                 </div>;
               )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           </CardContent>;
         </Card>;
       </div>;
 
-=======
 ;
       {/* Budget */}
       <div>;
@@ -1155,7 +1030,6 @@ if ( {) {
                 <div className="text-white">;
                   ${formData.budget.amount.toLocaleString()}
                   {formData.budget.maxAmount ? ` - $${formData.budget.maxAmount.toLocaleString()}` :''}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </div>;
             </div>;
@@ -1306,27 +1180,16 @@ pr-12325
   /* Budget */ 
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </CardContent> </Card> </div> {
   /* Contact Information */ 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </CardContent> </Card> </div> </div>) 
 }
 }
 };
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }</div> </CardContent> </Card> </div> {"
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </CardContent> </Card> </div> {""
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </CardContent> </Card> </div> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
@@ -40,5 +41,15 @@ export default function InteractiveAICalculator() {
         </div>
       </CardContent>
     </Card>
+=======
+import React from 'react';
+
+export default function InteractiveAICalculator() {
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">Interactive AI Calculator</h3>
+      <p className="text-gray-600">Calculate AI costs, performance metrics, and ROI.</p>
+    </div>
+>>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
   );
 }

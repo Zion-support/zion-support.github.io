@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ScrollArea } from "@/components/ui/scroll-area",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -31,19 +27,12 @@ CardTitle,";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { ScrollArea } from "@/components/ui/scroll-area";"
 import { Badge } from "@/components/ui/badge";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDistanceToNow } from "date-fns";
 export function TransactionHistory() {};
   const { transactions, loading } = useWallet();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   if (loading) {
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -58,21 +47,16 @@ export function TransactionHistory() {;
 ;
   if (loading) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet(),;
   if (loading) {;
     return (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>;
         <CardHeader>;
           <CardTitle>Transaction History</CardTitle>;
           <CardDescription>Loading transactions...</CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       </Card>;
-<<<<<<< HEAD
     );
   }
 
@@ -80,7 +64,6 @@ export function TransactionHistory() {;
   const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
 
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -94,22 +77,13 @@ import { Badge } from "@/components/ui/badge",
 import { formatDistanceToNow } from "date-fns",
 export function TransactionHistory() {
   const { transactions, loading } = useWallet(),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   if (loading) {
     return (
 
-=======
       </Card>;    return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       </Card>;    return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       </Card>;    return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Card>
         <CardHeader>
       <Card>
@@ -123,9 +97,6 @@ export function TransactionHistory() {
 );
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const earnTransactions = transactions.filter(
     (tx) => tx.transaction_type === "earn",
   );
@@ -179,7 +150,6 @@ export function TransactionHistory() {
                         +{tx.amount} ZION$
                       </Badge>
                     </div>
-<<<<<<< HEAD
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -233,7 +203,6 @@ export function TransactionHistory() {;
                       </Badge>;
                     </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               )}
@@ -309,8 +278,6 @@ export function TransactionHistory() {;
   const burnTransactions = transactions.filter(
     (tx) => tx.transaction_type === "burn",
   );
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     <Card>
 </Card>
@@ -448,12 +415,10 @@ export function TransactionHistory() {;
                     </div>;                  ))}
                 </div>;
               )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </ScrollArea>;
           </TabsContent>;
           <TabsContent value="spent">;
             <ScrollArea className="h-64">;
-<<<<<<< HEAD
               {burnTransactions && burnTransactions.length === 0 ? (;
                 <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>;
               ) : (;
@@ -474,11 +439,9 @@ export function TransactionHistory() {;
                 </div>;
               )}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   ))}
                 </div>
               )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { use_wallet } from '@/hooks / use_wallet';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -508,8 +471,6 @@ if ( {) {
   const burn_transactions = transactions.filter (tx => tx.transaction_type === 'burn');
 ;
   return (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;
@@ -558,7 +519,6 @@ if ( {) {
 </div>;                  ))}
                 </div>;
               )}
-<<<<<<< HEAD
             </ScrollArea>
           </TabsContent>
         </Tabs>
@@ -566,8 +526,6 @@ if ( {) {
     </Card>
   )
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   ))}
                 </div>
               )}
@@ -594,9 +552,6 @@ if ( {) {
                   ))}
                 </div>
               )}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
       <CardContent>;"
         <Tabs default_value="earned">;"
           <TabsList className="w - full">;"
@@ -642,27 +597,17 @@ if ( {) {
                     </div>))}
                 </div>)}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </ScrollArea>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     </div>))}
                 </div>)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     </div>))}
                 </div>)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </Card>);
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

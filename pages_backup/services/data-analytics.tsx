@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -192,7 +190,6 @@ export default function DataAnalyticsPage() {
     icon: Brain,"
     features: ["AI algorithms", "Natural language processing", "Computer vision", "Deep learning"],"
     pricing: "$4,000 - $20,000/month"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
 
@@ -209,7 +206,6 @@ const benefits = [
 export default function DataAnalyticsServices() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -217,7 +213,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights"
     >
       <div className="min-h-screen bg-white">
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -299,7 +294,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -337,7 +331,6 @@ business intelligence, and AI-powered data solutions.
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with our comprehensive analytics;
                 solutions and AI-powered intelligence.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -360,7 +353,6 @@ business intelligence, and AI-powered data solutions.
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         {/* Services Grid */}"
         <section className="py-16 px-4">"
@@ -376,7 +368,6 @@ business intelligence, and AI-powered data solutions.
                 >"
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                     <service.icon className="w-6 h-6 text-blue-600" />
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
@@ -402,7 +393,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <feature.icon className="w-6 h-6 text-purple-600" />
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -414,11 +404,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <feature.icon className="w-6 h-6 text-purple-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-=======
                   </div>"
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>"
                   <p className="text-gray-600 mb-4">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => ("
                       <div key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -436,14 +424,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -479,7 +464,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
@@ -547,9 +531,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>
 </div>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

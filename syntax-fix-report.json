@@ -1,13 +1,8 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
 main
 main
 
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
   "timestamp": "2025-09-06T20:12:39.757Z",
   "filesProcessed": 562,
   "fixesApplied": [
@@ -568,7 +563,6 @@ main
     "234 fixes in src/utils/serverless-polyfill.ts"
 main
 main
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -7994,10 +7988,6 @@ pr-12325
     "zion_academy/static/js/script.jsx"
   ],
   "errorList": []
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "timestamp": "2025-09-03T22:43:17.753Z",
   "fixes": [
     "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
@@ -8021,10 +8011,6 @@ pr-12325
   "totalFixes": 16,
   "totalIssues": 0
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
   "timestamp": "2025-09-06T00:46:49.695Z",
   "duration": "46s",
   "fixedFiles": [],
@@ -8034,5 +8020,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     "totalErrors": 0,
     "successRate": null
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

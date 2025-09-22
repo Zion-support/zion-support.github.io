@@ -1,20 +1,16 @@
-<<<<<<< HEAD
   FormItem
   FormLabel
   FormControl
   FormDescription
   FormMessage
 
-<<<<<<< HEAD
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormDescription;
   FormMessage;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {;
   FormField,;
   FormItem,;
@@ -22,21 +18,9 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React from "react";
 import { Control } from "react-hook-form";
@@ -48,10 +32,7 @@ import {
   FormDescription
   FormMessage
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormField,
   FormItem,
   FormLabel,
@@ -59,20 +40,10 @@ pr-12325
 
   FormDescription,
   FormMessage,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/components/ui/form";
-=======
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";} from "@/components/ui/form";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 } from "@/components/ui/form";
 
@@ -83,7 +54,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
 
-=======
 
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
@@ -97,16 +67,11 @@ interface DescriptionFieldsProps {
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export function DescriptionFields(): any ({;
   control,;
   handleEditorChange,;
@@ -116,15 +81,11 @@ export function DescriptionFields(): any ({;
   return (
     <>;
 <FormField
-<<<<<<< HEAD
         control;
                   field.onChange(e.target.value)
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       <FormField
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         control={control}
         name="description"
 control={control}
@@ -160,12 +121,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           <FormItem>;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Textarea
 
-<<<<<<< HEAD
 export function DescriptionFields({
   control
   handleEditorChange
@@ -176,21 +133,12 @@ export function DescriptionFields({
       <FormField
         control;
                   field.onChange(e.target.value)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <Textarea
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea",
-=======
       <FormField;
         control={control}"
         name="description"
@@ -205,7 +153,6 @@ import React from 'react','
 import { Control } from 'react-hook-form',"
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form","
 import { Textarea } from "@/components/ui/textarea",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { JobSchemaType } from './validation',
 interface DescriptionFieldsProps {}
   control: Control<JobSchemaType>,
@@ -226,41 +173,24 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         control={control}
-=======
 export function DescriptionFields() { return null; }
         control={control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
-<<<<<<< HEAD
             <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Textarea
               <Textarea 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Textarea
               <Textarea 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 value={editorContent}
                 onChange={(e) => {;
 handleEditorChange(e.target.value);
                   field.onChange(e.target.value);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 }}
                 className="min-h-[200px]";
                 }}
@@ -269,7 +199,6 @@ handleEditorChange(e.target.value);
 import React from './react';'
 import { Control  } from './react - hook - form';
 import {}
-=======
             <FormControl>
 
               <Textarea
@@ -291,7 +220,6 @@ import {}
 import React from './react';
 import { Control  } from './react - hook - form';
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FormField,
   FormItem,
   FormLabel,
@@ -326,9 +254,6 @@ on_change={(e) => {}
                   field.on_change (e.target.value);
                 }}"
                 className="min - h-[200px]";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <Textarea ;
                 value={editorContent}
                 onChange={(e) => {;
@@ -336,14 +261,8 @@ on_change={(e) => {}
                   field.onChange(e.target.value),;
                 }}
                 className="min-h-[200px]";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 placeholder="Enter a detailed description of the job role";
               />;
             </FormControl>;
@@ -352,14 +271,12 @@ on_change={(e) => {}
             </FormDescription>;
             <FormMessage />;
 
-=======
 </FormItem>;        )}
       />;
 ;
       <FormField;
         control={control}
         name="responsibilities";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Responsibilities (Optional)</FormLabel>;
@@ -376,10 +293,7 @@ on_change={(e) => {}
             <FormMessage />;
 
 render={({ field }) => (;
-=======
             <FormControl>        render={({ field }) => (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       />;
 
       <FormField
@@ -392,7 +306,6 @@ render={({ field }) => (;
         control={control}
         name="qualifications";
         render={({ field }) => (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <FormItem>;
             <FormLabel>Qualifications (Optional)</FormLabel>;
             <FormControl>;
@@ -604,13 +517,9 @@ render={({ field }) => (;
 
       />;
     </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }
   );}  );
-=======
               <Textarea;"
                 placeholder="Provide instructions on how to apply for this job";"
                 className="resize - none min - h-[100px]";
@@ -641,14 +550,11 @@ render={({ field }) => (;
 
   );
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   );
           </FormItem>)}
     </>);
 }
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </FormItem>)}
       />;
     </>);
@@ -694,22 +600,8 @@ editorContent: string
     </>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 } from "@/components/ui/form";""
 import { Textarea } from "@/components/ui/textarea";""
@@ -850,4 +742,3 @@ function DescriptionFields() {
     </>
 pr-12325
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

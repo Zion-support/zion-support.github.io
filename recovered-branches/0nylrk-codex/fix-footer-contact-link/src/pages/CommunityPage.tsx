@@ -1,6 +1,5 @@
 const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
-<<<<<<< HEAD
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -13,15 +12,10 @@ import PostCard from "@/components/community/PostCard",
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
     tags: ["machine-learning", "fine-tuning", "gpt"];
-=======
     categoryId: "ai-tools",;    tags: ["machine-learning", "fine-tuning", "gpt"];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     categoryId: "ai-tools",;
     tags: ["machine-learning", "fine-tuning", "gpt"];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     createdAt: "2025-04-01T12:00:00Z",;
-=======
 "
 import {useState} from "react";"
 import {Link} from "react-router-dom";"
@@ -36,7 +30,6 @@ import {ForumPost} from "@/types/community";
 "
     tags: ["machine-learning", "fine-tuning", "gpt"];"
     createdAt: "2025-04-01T12:00:00Z",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     updatedAt: "2025-04-01T12:00:00Z",;
     upvotes: 48,;
     downvotes: 2,;
@@ -61,7 +54,6 @@ isFeatured: true
     isPinned: true,;
     isFeatured: true;
 
-<<<<<<< HEAD
 
 // Mock data for featured posts;
 const featuredPosts: ForumPost[] = []
@@ -81,9 +73,7 @@ const featuredPosts: ForumPost[] = []
     downvotes: 2,
     replyCount: 12,
     isAnswered: true,
-<<<<<<< HEAD
     isFeatured: true
-<<<<<<< HEAD
   },
   {
     id: "2",
@@ -101,7 +91,6 @@ const featuredPosts: ForumPost[] = []
     replyCount: 8,
     isPinned: true,
     isFeatured: true
-<<<<<<< HEAD
 
   }
 ];
@@ -161,13 +150,10 @@ export default function CommunityPage() {;
   const [activeTab, setActiveTab] = useState("categories");
   return (
     <AppLayout>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
@@ -205,9 +191,6 @@ export default function CommunityPage() {
                 <PostCard key={post.id} post={post} />
 
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -217,7 +200,6 @@ import { AppLayout } from "@/layout/AppLayout",;
 import ForumCategories from "@/components/community/ForumCategories",;
 import PostCard from "@/components/community/PostCard",;
 import { useAuth } from "@/hooks/useAuth",;
-=======
 ";
 import { useState } from "react",;"
 import { Link } from "react-router-dom",;"
@@ -228,7 +210,6 @@ import { AppLayout } from "@/layout/AppLayout",;"
 import ForumCategories from "@/components/community/ForumCategories",;"
 import PostCard from "@/components/community/PostCard",;"
 import { useAuth } from "@/hooks/useAuth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ForumPost } from "@/types/community",;
 // Mock data for featured posts;
 const featuredPosts: ForumPost[] = [;
@@ -343,11 +324,7 @@ export default function CommunityPage() { return null; }
             <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
           <Button asChild>;"
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Create New Post;
             </Link>;
           </Button>;
@@ -370,16 +347,12 @@ export default function CommunityPage() { return null; }
       </div>;
 </AppLayout>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
 
     <AppLayout>;
 
 return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
@@ -437,7 +410,6 @@ export default function CommunityPage() {;
             <TabsTrigger value="featured">Featured</TabsTrigger>;
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             ;
         </div>;"
@@ -462,7 +434,6 @@ export default function CommunityPage() {;
     </AppLayout>);
 }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </AppLayout>);
 }
     </AppLayout>);
@@ -480,18 +451,10 @@ export default function CommunityPage() {;
 ;
     </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     );
  }</div> ) ) 
 }</div>   </div> ) 
     );"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

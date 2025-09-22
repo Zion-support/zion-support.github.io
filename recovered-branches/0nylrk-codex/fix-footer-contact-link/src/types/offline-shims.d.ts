@@ -6,37 +6,22 @@ declare module 'react' {
   export function useRef<T>(initialValue: T): { current: T }
   export function useRef<T>(initialValue: T | null): { current: T | null }
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   export default React,
-=======
 
   export default React,;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 export default React,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Basic overloads for useRef to handle common cases;
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   export const useEffect: any;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
 initialState: S | (() => S);    initialState: S | (() => S);
-=======
 
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
@@ -44,13 +29,10 @@ initialState: S | (() => S);    initialState: S | (() => S);
   export function useState<S>(
     initialState: S | (() => S)
     initialState: S | (() => S);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
     initialState: S | (() => S);    initialState: S | (() => S);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -59,31 +41,20 @@ initialState: S | (() => S);    initialState: S | (() => S);
   export function useId(): string;
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     render: (props: P, ref: Ref<T>) => ReactElement | null
-<<<<<<< HEAD
   ): any;
   ): any;
-=======
     render: (props: P, ref: Ref<T>) => ReactElement | null  ): any;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     render: (props: P, ref: Ref<T>) => ReactElement | null
 export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
 
     render: (props: P, ref: Ref<T>) => ReactElement | null;
   ): any;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   export default React,
-=======
 ;
   ): any;
   export default React,;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Basic overloads for useRef to handle common cases;
 
   export default React,
@@ -150,27 +121,19 @@ static getDerivedStateFromError(error) {}
 }'
 declare module 'react' {}
   const React: any;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   export const Fragment: any;
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
-<<<<<<< HEAD
-<<<<<<< HEAD
   export type ReactElement = any
   export type ComponentType<P = {}> = (props: P) => any
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -190,8 +153,6 @@ declare module 'react' {}
 export type ElementRef<T = any> = any;
   export type CSSProperties = Record<string, string | number | undefined>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   export type ReactElement = any,
   export type ComponentType < P = {}> = (props: P) => any,
   export type FC < P = {}> = (props: P) => any;
@@ -224,7 +185,6 @@ declare module 'react / jsx - runtime' {}
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 '
@@ -237,9 +197,6 @@ declare module 'react/jsx-runtime' {;
   export const jsxs: any,;
   export const Fragment: any;
 };
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 '
 declare module 'react' {;
@@ -346,23 +303,13 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 declare module 'react-dom' {
   export * from 'react-dom / index';
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 declare module 'react-dom' {
   export * from 'react-dom / index';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 declare module 'react / jsx - runtime' {
   export const jsx: any;
@@ -501,4 +448,3 @@ declare module 'react/jsx-runtime' {;
 }
 pr-12325
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

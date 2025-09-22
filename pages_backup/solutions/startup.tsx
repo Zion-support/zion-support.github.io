@@ -1,34 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import * as React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
-<<<<<<< HEAD
 import Link from 'next/link';';
-=======
 import React from 'react';import Link from 'next/link';';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from 'react';
 import * as React from 'react';
 import Link from 'next/link';';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
-=======
 import * as React from 'react';'
 import Link from 'next/link';';'
 import { motion } from 'framer-motion';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
 
 const features = [;
   {}'
@@ -70,19 +55,15 @@ const stats = [;
   { number: '100+, label: 'Startups Helped' },',
   { number: '300+, label: 'Projects Delivered' },',
   { number: '300%, label: 'Average Growth' },',
-=======
 const stats = [;'
   { number: '100+, label: 'Startups Helped' },','
   { number: '300+, label: 'Projects Delivered' },','
   { number: '300%, label: 'Average Growth' },','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { number: '2-4, label: 'Weeks to MVP' }',
 ;];
 
 export default function StartupSolutionsPage() {
-=======
 export default function StartupSolutionsPage() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (;
     <Layout);"
       title="Startup Solutions - Zion Tech Group"";"
@@ -106,7 +87,6 @@ export default function StartupSolutionsPage() {};
 >;
               <div className="flex items-center justify-center mb-6">";
                 <Rocket className="w-16 h-16 text-green-400 mr-4" />";
-<<<<<<< HEAD
 
                 <h1 className="text-5xl md: text-6xl font-bold">", Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>",;
                 </h1>;
@@ -141,7 +121,6 @@ export default function StartupSolutionsPage() {};
                   href="/case-studies"";"
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
                 >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Success Stories;
                 </Link>;
               </div>;
@@ -159,13 +138,8 @@ export default function StartupSolutionsPage() {};
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   initial={{ opacity: 0, y: 30 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}"
                   className="text-center""
@@ -180,15 +154,12 @@ export default function StartupSolutionsPage() {};
 
         {/* Features Section */}
         <section className="py-20 bg-gray-50">"
-=======
         {/* Features Section */}"
         <section className="py-20 bg-gray-50">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -198,7 +169,6 @@ export default function StartupSolutionsPage() {};
             >;"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
                 Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
@@ -240,17 +210,12 @@ export default function StartupSolutionsPage() {};
 
         {/* Services Section */}
         <section className="py-20 bg-white">"
-=======
         {/* Services Section */}"
         <section className="py-20 bg-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -259,19 +224,14 @@ export default function StartupSolutionsPage() {};
             >;"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
-=======
               </h2>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
               </h2>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive startup services designed to help you build, launch, and scale your business,
               </p>;
@@ -283,7 +243,6 @@ export default function StartupSolutionsPage() {};
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover: shadow-lg transition-shadow duration-300"">,;
@@ -296,7 +255,6 @@ export default function StartupSolutionsPage() {};
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>""
                   <p className="text-gray-600">{service.description}</p>"
                 </motion.div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
             </div>,
           </div>;
@@ -304,27 +262,21 @@ export default function StartupSolutionsPage() {};
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
-=======
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Launch Your Startup?,;
               </h2>;
-=======
               transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Launch Your Startup?;
               </h2>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
                 Let's turn your idea into a successful product with our rapid development and scaling solutions';
               </p>;
@@ -337,12 +289,10 @@ export default function StartupSolutionsPage() {};
                 <Link
                   href="/solutions""
                   className="px-8 py-4 border border-white text-white hover: bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"",>,;
-=======
               </h2>;"
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";'
                 Let's turn your idea into a successful product with our rapid development and scaling solutions';
               </p>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link;"
                   href="/contact"";"
@@ -355,7 +305,6 @@ export default function StartupSolutionsPage() {};
                   href="/solutions"";"
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"";
                 >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View All Solutions;
                 </Link>;
               </div>;

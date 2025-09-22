@@ -1,42 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import * as React from "react"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import * as React from &quot;react&quot;
 import * as React from "react"
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older;`
  * React version is used where `useId` is unavailable, this hook provides;`
  * a small fallback that mimics the API using `useRef`.
-<<<<<<< HEAD
  */
 
-<<<<<<< HEAD
     return (React as any).useId()
   }
 import * as React from &quot;react & quot;
@@ -66,20 +41,10 @@ if ( {) {}
   $2;
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
  */
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
  */
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
  */
 import * as React from "react""
 /**
@@ -153,4 +118,3 @@ export function useReactId(): string {
 }
 ;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

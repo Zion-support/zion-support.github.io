@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Slider } from "@/components/ui/slider",
 import { Badge } from "@/components/ui/badge",
@@ -13,35 +9,21 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
-<<<<<<< HEAD
   CardTitle
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-<<<<<<< HEAD
 CardTitle,;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 CardTitle,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
@@ -106,9 +88,6 @@ import {
       description: "The new usage limits have been saved successfully."
       title: "Limits updated",
       description: "The new usage limits have been saved successfully.",;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
@@ -140,26 +119,15 @@ export function UsageStats() {;
       title: "Limits updated",
       description: "The new usage limits have been saved successfully.",;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     });
   }
 
   return (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Card>
-=======
   CardTitle        <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   CardTitle        <Card>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
             <CardDescription>
@@ -188,25 +156,13 @@ export function UsageStats() {;
               Save Changes
             </Button>
           </CardFooter>
-<<<<<<< HEAD
         </Card>
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Card>
-=======
         </Card>        <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         </Card>        <Card>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -233,17 +189,9 @@ export function UsageStats() {;
 <CardFooter>            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -284,17 +232,13 @@ export function UsageStats() {;
           </CardFooter>
         </Card>
       </div>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
-=======
 "
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">"
         <div className="flex items-center gap-4">"
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Sparkles className="h-5 w-5 text-primary" />
           </div>
           <div>"
@@ -314,25 +258,19 @@ export function UsageStats() {;
 
 );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
-=======
       </div>  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
-=======
   )"
 import React from "react",;"
 import { Slider } from "@/components/ui/slider",;"
 import { Badge } from "@/components/ui/badge",;"
 import { Button } from "@/components/ui/button",;"
 import { Input } from "@/components/ui/input",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "@/hooks/use-toast",;
 import {;
   Card,;
@@ -355,10 +293,6 @@ export function UsageStats() {;
       <div>;"
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;"
         <p className="text-muted-foreground mb-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from './react';
 import { Slider  } from '@/components / ui / slider';
 import { Badge  } from '@/components / ui / badge';
@@ -383,19 +317,10 @@ function UsageStats() {
     toast ({
       title: "Limits updated",
       description: "The new usage limits have been saved successfully.",
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     });
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
@@ -405,15 +330,12 @@ function UsageStats() {
           <CardHeader>;
             <CardTitle > Job Postings</CardTitle>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
           </CardHeader>;
 
-<<<<<<< HEAD
           <CardContent className="space-y-4">;
             <div>;
               <div className="flex items - center justify - between mb-2">;
@@ -422,7 +344,6 @@ function UsageStats() {
               <div className="flex items - center justify - between mb - 2">;
                 <div className="text - sm font - medium">;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Monthly job posting limit;
                 </div>;"
                 <Badge variant="outline">25 / 50</Badge>;
@@ -466,7 +387,6 @@ Monthly contact credits;
                 <div className="text - sm">New limit:</div>;"
                 <div className="col - span - 2">;"
                   <Input type="number" min="1" default_value="500" />;
-=======
 <CardContent className="space-y-4">;
             <div>;
               <div className="flex items-center justify-between mb-2">;
@@ -504,7 +424,6 @@ Monthly contact credits;
 </div>"
                   <Input type="number" min="1" default_value="50" />;"
 </Input>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </div>;
             </div>;
@@ -546,10 +465,7 @@ Monthly contact credits;
           <CardFooter>;
 
 <CardDescription>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             <CardTitle > AI Features</CardTitle>;            <CardDescription>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;
@@ -571,15 +487,11 @@ Monthly contact credits;
               </div>;
 <div className="grid grid - cols - 3 items - center gap-4">;
                 <div className="text-sm">Alert threshold:</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="col-span-2">;
                   <select className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <option value="75">75% of limit</option>;
                     <option value="80">80% of limit</option>;
                     <option value="90">90% of limit</option>;
-=======
               <div className="grid grid - cols - 3 items - center gap - 4">;
                 <div className="text - sm">Alert threshold:</div>;
                 <div className="col - span - 2">;
@@ -608,7 +520,6 @@ Monthly contact credits;
                     <option value="75">75% of limit</option>;
                     <option value="80">80% of limit</option>;
                     <option value="90">90% of limit</option>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <option value="95">95% of limit</option>;
                   </select>;
                 </div>;
@@ -630,46 +541,33 @@ Monthly contact credits;
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button>Contact Us</Button>;
       </div>;
     </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 ;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
-=======
                 <div className="col - span-2">;
                   <select className="w - full flex h - 10 rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring-ring">;  );}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
 );
 }
   );
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   );
         <Button > Contact Us</Button>;
       </div>;
     </div>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
         <Button > Contact Us</Button>;
       </div>;

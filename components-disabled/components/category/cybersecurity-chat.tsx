@@ -51,7 +51,6 @@ const CybersecurityChat: NextPage = () => {
 
         <title>CybersecurityChat - Zion Tech Solutions</title>;
 <meta name="description" content="CybersecurityChat blog post" />{" "}
-<<<<<<< HEAD
 const CybersecurityChat: NextPage = () => {
   return (
     <div />
@@ -63,7 +62,6 @@ const CybersecurityChat: NextPage = () => {
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
         <a href="/blog">Back to Blog</a>
-=======
       </Head>;
 
 const CybersecurityChat: NextPage = () => {
@@ -71,7 +69,6 @@ const CybersecurityChat: NextPage = () => {
         <h1 />CybersecurityChat</h1>
         <p />Blog content coming soon...</p>
         <a href=\"/blog\" />Back to Blog</a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

@@ -42,4 +42,3 @@ const MultimodalAgentsBlueprint2026 = () => {
 };
 
 export default MultimodalAgentsBlueprint2026;
-

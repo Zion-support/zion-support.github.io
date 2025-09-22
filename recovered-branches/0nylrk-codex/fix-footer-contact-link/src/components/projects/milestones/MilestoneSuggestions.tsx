@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectName: string,
   scopeSummary: string,
   startDate: Date,
   endDate?: Date;
   projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
-=======
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
@@ -31,7 +18,6 @@ interface MilestoneSuggestionsProps {
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function MilestoneSuggestions({;
@@ -40,30 +26,18 @@ projectName;
   scopeSummary;
   startDate;
   endDate;
-<<<<<<< HEAD
-<<<<<<< HEAD
   projectType;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
-=======
   projectType;import React, { useState } from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   projectType;import React, { useState } from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   projectType;
 
 import React, { useState } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Loader2, Sparkles, Check } from 'lucide-react',;
 import { Badge } from '@/components/ui/badge',;
-=======
 
 '
 import React, { useState } from 'react',;'
@@ -72,7 +46,6 @@ import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hoo
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;'
 import { Loader2, Sparkles, Check } from 'lucide-react',;'
 import { Badge } from '@/components/ui/badge',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format, parseISO } from 'date-fns',;
 interface MilestoneSuggestionsProps {;
   projectName: string,;
@@ -80,17 +53,9 @@ interface MilestoneSuggestionsProps {;
   startDate: Date,;
   endDate?: Date,;
   projectType: string,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   projectName: string;
   scopeSummary: string;
@@ -100,7 +65,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
 export function MilestoneSuggestions() { return null; }
-=======
 
 projectName: string
   scopeSummary: string
@@ -118,7 +82,6 @@ export function MilestoneSuggestions({
   projectType;
   onMilestonesGenerated;
 }: MilestoneSuggestionsProps) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -127,7 +90,6 @@ projectName,
   startDate,
   endDate,
   projectType,
-<<<<<<< HEAD
 
   const handleGenerateMilestones = async () => {}
     const input: MilestoneInput = {}
@@ -138,13 +100,8 @@ projectName,
     }
     const milestones = await generateMilestones(input);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,"
@@ -152,23 +109,13 @@ projectName,
     },
 
     const milestones = await generateMilestones(input),
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    if (milestones.length > 0) {
-=======
-        if (milestones.length > 0) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        if (milestones.length > 0) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     if (milestones.length > 0) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        if (milestones.length > 0) {
+        if (milestones.length > 0) {
+
+    if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
@@ -192,9 +139,7 @@ export function MilestoneSuggestions({;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;`
       scope: `${projectName}: ${scopeSummary}`,;
@@ -207,7 +152,6 @@ projectType: projectType || "Other"
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setShowSuggestions(true);
 
       if (onMilestonesGenerated) {;
@@ -276,23 +220,13 @@ const format_date = (date_string: string) =>: any {
 }
 
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
-=======
 export function MilestoneSuggestions({;
 import React, { useState } from 'react';'
 
@@ -302,14 +236,11 @@ import React, { useState } from 'react';'
   endDate;
   projectType;import React, { useState } from 'react',;
   projectType;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
-=======
   }
 
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-4">;
       {!showSuggestions && (;
         <Button"
@@ -335,7 +266,6 @@ import React, { useState } from 'react';'
           )}
         </Button>
       )}
-=======
 
           {isGenerating ? (;
             <>;"
@@ -347,7 +277,6 @@ import React, { useState } from 'react';'
         </Button>
       )}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>"
           <CardHeader className="pb-3">"
@@ -385,8 +314,6 @@ These milestones will be added to your contract;
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
 )}
@@ -406,12 +333,10 @@ These milestones will be added to your contract;
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;        <Card>;
           <CardHeader className="pb-3">;
             <CardTitle className="text-lg flex items-center">;
-=======
 
         <Card>;"
           <CardHeader className="pb-3">;"
             <CardTitle className="text-lg flex items-center">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Sparkles className="h-5 w-5 mr-2 text-primary" />;
               AI-Suggested Milestones;
             </CardTitle>;
@@ -447,19 +372,14 @@ Due: {formatDate(milestone && milestone.dueDate)}
     </div>);
 }
 
-=======
 </div>
   )
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>;
   );
 }
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Card>;
       )}
 
@@ -556,20 +476,9 @@ pr-12325
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </CardContent>"
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)"
 }</div>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Resume } from "@/types/resume";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card","
 import { Badge } from "@/components/ui/badge",";
@@ -35,20 +25,14 @@ export function ResumePreviewCard({
 }: ResumePreviewCardProps) {
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Resume } from "@/types/resume",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ResumePreviewCardProps {
-=======
 export function ResumePreviewCard() { return null; }
 import { Button } from "@/components/ui/button",'
 import { Download } from 'lucide-react',"
 import { Resume } from "@/types/resume",
 
 interface ResumePreviewCardProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   resume: Resume,
   onDownload: () => void,;
   isLoading: boolean;
@@ -105,7 +89,6 @@ interface ResumePreviewCardProps {;
             )}
           </div>
         )}
-<<<<<<< HEAD
 
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';
@@ -130,15 +113,11 @@ interface ResumePreviewCardProps {;
   resume: Resume,;
   onDownload: () => void;
   isLoading: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
-<<<<<<< HEAD
             className="h-8 w-8 p-0">;
             <Download className="h-4 w-4 text-zion-cyan" />;
             <span className="sr-only">Download Resume</span>;
@@ -187,7 +166,6 @@ interface ResumePreviewCardProps {;
         {resume.basic_info.summary && ("
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Badge
                 key={index}
                 variant="outline"
@@ -209,10 +187,7 @@ interface ResumePreviewCardProps {;
       </CardContent>;
     </Card>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
           </p>)}
         {resume.skills && resume.skills.length > 0 && ("
@@ -237,12 +212,8 @@ interface ResumePreviewCardProps {;
     </Card>);
 }
 
-=======
 import { Resume } from "@/types/resume",  return (  return (
-=======
-=======
 import { Resume } from "@/types/resume",;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface ResumePreviewCardProps {;
   resume:Resume,;)
@@ -251,17 +222,12 @@ interface ResumePreviewCardProps {;
 export function ResumePreviewCard({ resume, onDownload, isLoading } ResumePreviewCardProps) {;
   return (;
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
       <CardContent className="p-4">;
         <div className="flex justify-between items-start mb-2">;
           <div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             <h4 className="font-medium text-white">;
               {resume && resume.basic_info.title}
             </h4>;
@@ -557,4 +523,3 @@ function ResumePreviewCard() {
       </CardContent>;
     </Card>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

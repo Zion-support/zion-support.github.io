@@ -3,8 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
@@ -37,8 +35,6 @@ if (!inConflict) {
       }
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-<<<<<<< HEAD
     // Remove all merge conflict markers and keep the main branch version (after
       return true;
     return false;
@@ -134,5 +130,3 @@ resolvedCount++;
 
 console.log(`Resolved conflicts in ${resolvedCount} files`);
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

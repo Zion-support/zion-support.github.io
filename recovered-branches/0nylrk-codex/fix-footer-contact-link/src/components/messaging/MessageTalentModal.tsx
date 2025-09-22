@@ -1,36 +1,19 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
-=======
 import {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import {
   // TODO: Implement
 }
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Dialog;
   DialogContent;
 
   DialogHeader;
   DialogTitle;
-<<<<<<< HEAD
   DialogDescription;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   DialogDescription;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -40,16 +23,10 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 import React, { useState } from 'react',
-<<<<<<< HEAD
-=======
 
 import React, { useState } from 'react',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
-=======
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   DialogDescription;import React, { useState } from 'react',;
 import {
   DialogDescription;
@@ -69,38 +46,22 @@ import React, { useState } from 'react','
 import {
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Dialog,
   DialogContent,
   DialogHeader,
 
   DialogTitle,
   DialogDescription,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -108,13 +69,11 @@ export interface MessageTalentModalProps {
   onClose: () => void
 
   jobTitle?: string
-=======
 export interface MessageTalentModalProps {};
   talent: TalentProfile;
   isOpen: boolean;
   onClose: () => void;
   jobTitle?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 export function MessageTalentModal({;
@@ -126,11 +85,7 @@ export function MessageTalentModal({}
   isOpen,
   onClose,
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   DialogFooter} from "@/components/ui/dialog",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export interface MessageTalentModalProps {
   // TODO: Implement
@@ -162,26 +117,14 @@ pr-12325
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   jobTitle
-=======
   jobTitle
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   jobTitle;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }: MessageTalentModalProps) {
 
   const { createConversation } = useMessaging();
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const navigate = useNavigate(),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
@@ -190,24 +133,15 @@ pr-12325
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleSendMessage = async () => {
-=======
   const navigate = useNavigate(),  const handleSendMessage = async () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const navigate = useNavigate(),  const handleSendMessage = async () => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const handleSendMessage = async () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
-<<<<<<< HEAD
         variant: "destructive"
-<<<<<<< HEAD
   jobTitle;
 }: MessageTalentModalProps) {}
   const { createConversation } = useMessaging();
@@ -244,15 +178,10 @@ toast({;"
         title: "Message required",;"
         description: "Please enter a message before sending.",;"
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       return;
     }
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       toast({;
         title: "Message required",;
         description: "Please enter a message before sending.",;
@@ -261,7 +190,6 @@ toast({;"
       return;
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       return;
     }
@@ -315,10 +243,6 @@ image_url: talent.profile_picture_url || "";
 ;
       // Create conversation with this talent;
       await create_conversation (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
         image_url: talent.profile_picture_url || ""
@@ -331,7 +255,6 @@ image_url: talent.profile_picture_url || "";
         jobTitle ? 'job' : 'talent',
         talent.id,
 contextData
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ),
 
       toast({"
@@ -340,9 +263,7 @@ contextData
 
       onClose(),
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       navigate("/messages")
     } catch (error) {"
       console.error("Failed to send message:", error),
@@ -358,12 +279,7 @@ contextData
       });
       return;
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         talent.user_id;
 
     try {;
@@ -379,7 +295,6 @@ title: jobTitle || `Discussion with ${talent && talent.full_name}`,,
       // Create conversation with this talent;
       await createConversation(;
         talent && talent.user_id;
-<<<<<<< HEAD
         message;
 
       setIsSubmitting(true),
@@ -417,9 +332,6 @@ toast({"
 
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>"
@@ -429,7 +341,6 @@ toast({"
             <Avatar className="h-8 w-8 border border-zion-purple/20">
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />"
               <AvatarFallback className="bg-zion-blue-dark text-white">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -506,8 +417,6 @@ export function MessageTalentModal() { return null; }
       });
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 }
 
@@ -515,7 +424,6 @@ export function MessageTalentModal() { return null; }
 
   return (
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -531,7 +439,6 @@ import { useMessaging } from "@/context/MessagingContext",;
 import { TalentProfile } from "@/types/talent",;
 import { toast } from "@/components/ui/use-toast",;
 import { useNavigate } from "react-router-dom",;
-<<<<<<< HEAD
 ;
 export interface MessageTalentModalProps {;
   talent:TalentProfile,;
@@ -607,13 +514,9 @@ jobTitle ? 'job' :'talent',;
   return (;
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       });
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 
@@ -624,36 +527,21 @@ jobTitle ? 'job' :'talent',;
   return (
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
-=======
 
     <Dialog open={isOpen} onOpenChange={onClose}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
         <DialogHeader>;"
           <DialogTitle className="text-white flex items-center gap-3">;"
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <AvatarFallback className="bg-zion-blue-dark text-white">;              <AvatarFallback className="bg-zion-blue-dark text-white">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               <AvatarFallback className="bg-zion-blue-dark text-white">;              <AvatarFallback className="bg-zion-blue-dark text-white">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
 
 <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -662,8 +550,6 @@ jobTitle ? 'job' :'talent',;
           <DialogDescription className="text-zion-slate">
             Send a direct message to start a conversation.
 {talent.professional_title && (
-<<<<<<< HEAD
-<<<<<<< HEAD
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
 
               </AvatarFallback>;
@@ -679,7 +565,6 @@ jobTitle ? 'job' :'talent',;
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
               rows={5}
-<<<<<<< HEAD
             <Textarea;
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
@@ -695,9 +580,7 @@ jobTitle ? 'job' :'talent',;
             disabled={isSubmitting}
 
 className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               placeholder="Write your message here...";
-=======
 
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
 job_title ? 'job' : 'talent';
@@ -789,7 +672,6 @@ job_title ? 'job' : 'talent';
 
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
               placeholder="Write your message here...";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             />;
           </div>;
         </div>;
@@ -980,7 +862,6 @@ job_title ? 'job' : 'talent';
             onClick={handleSendMessage}
 }            onClick={handleSendMessage}
             disabled={isSubmitting}
-=======
           >;
             Cancel;
           </Button>;
@@ -990,7 +871,6 @@ job_title ? 'job' : 'talent';
             type="button" ;
             onClick={handleSendMessage}
             disabled={isSubmitting}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;'
             {isSubmitting ? 'Sending...' :'Send Message'}
@@ -1058,21 +938,7 @@ return (<Dialog open= {}
 }</Button> </DialogFooter> </DialogContent> </Dialog>) 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         message;
 
   // TODO: Implement
@@ -1160,4 +1026,3 @@ return (<Dialog open= {
 }   ) `;
 pr-12325
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

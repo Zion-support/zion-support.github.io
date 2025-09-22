@@ -1,35 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import {Link} from "react-router-dom";
 import {ArrowRight, Smartphone} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {AppStoreButtons} from "./AppStoreButtons";
 import {Card, CardContent} from "@/components/ui/card";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 
 import { AppStoreButtons } from "./AppStoreButtons";
 import { Card, CardContent } from "@/components/ui/card";
-<<<<<<< HEAD
 import { AppStoreButtons } from "./AppStoreButtons",
 import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -55,7 +39,6 @@ export const MobileLaunchHero: React.FC = () => {
 "
             <div className="mb-8">
               <AppStoreButtons;
-=======
               The Power of <span className="text-zion-cyan">Zion</span>
               <br />
               In Your Pocket
@@ -69,7 +52,6 @@ export const MobileLaunchHero: React.FC = () => {
 
             <div className="mb-8">
               <AppStoreButtons
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -103,23 +85,14 @@ export const MobileLaunchHero: React.FC = () => {
             <div className="relative">
               {/* Phone mockup with glow effect */}"
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
@@ -136,28 +109,20 @@ export const MobileLaunchHero: React.FC = () => {
     </section>
 );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
-=======
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
 import { Button } from "@/components/ui/button",import React from "react",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
 import { Button } from "@/components/ui/button",import React from "react",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { AppStoreButtons } from "./AppStoreButtons",;
-=======
 
 "
 import React from "react",;"
@@ -165,7 +130,6 @@ import { Link } from "react-router-dom",;"
 import { ArrowRight, Smartphone } from "lucide-react",;"
 import { Button } from "@/components/ui/button",;"
 import { AppStoreButtons } from "./AppStoreButtons",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Card, CardContent } from "@/components/ui/card",;
 
 export const MobileLaunchHero: React.FC = () => {;
@@ -205,26 +169,14 @@ return (    <section className="relative bg-gradient-to-r from-zion-blue-dark vi
 
 "
           <div className="flex-1 flex justify-center md:justify-end">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="relative">;
               {/* Phone mockup with glow effect */}"
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>;
-<<<<<<< HEAD
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">;
                 <CardContent className="p-0">;
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">;
                     <Smartphone className="w-40 h-40 text-white opacity-40" />;
                     {/* In production, replace with actual app screenshot */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>;
                 </CardContent>;
               </Card>;
@@ -232,15 +184,10 @@ return (    <section className="relative bg-gradient-to-r from-zion-blue-dark vi
           </div>;
         </div>;
 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </section>);
 }
 ;
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>
                 </CardContent>
               </Card>
@@ -249,16 +196,9 @@ return (    <section className="relative bg-gradient-to-r from-zion-blue-dark vi
         </div>
       </div>
     </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-=======
       </div>;  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 "
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

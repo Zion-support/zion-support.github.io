@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -22,14 +13,8 @@ import { addWorkExperienceSection  } from './sections/workExperienceSection';
 import { addEducationSection  } from './sections/educationSection';
 import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
-<<<<<<< HEAD
 export interface ExportOptions {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export interface ExportOptions {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -43,8 +28,6 @@ import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Resume  } from '@/types/resume';'
 import { jsPDF  } from 'jspdf';'
 import 'jspdf-autotable';'
@@ -72,18 +55,11 @@ import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   theme: 'light' | 'dark';
-=======
 export interface ExportOptions {  theme: 'light' | 'dark';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export interface ExportOptions {  theme: 'light' | 'dark';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   theme: 'light' | 'dark';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   includePortfolio?: boolean;
 
   maxProjects?: number;
@@ -98,35 +74,20 @@ const defaultOptions: ExportOptions = {'
 export async function exportResumeToPDF(;
   resume: Resume;
   options: Partial<ExportOptions> = {}
-<<<<<<< HEAD
 
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ): Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({'
@@ -138,12 +99,7 @@ export async function exportResumeToPDF(;
   await loadCustomFonts(doc, fontFamily);
   // Set up colors based on theme;
   const colors = getPdfThemeColors(theme);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Set background color
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   doc && doc.setFillColor(colors && colors.background);
   doc && doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
@@ -166,10 +122,6 @@ export async function exportResumeToPDF(;
   return doc && doc.output('blob')
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf - autotable';
@@ -183,10 +135,8 @@ import {addCertificationsSection} from './sections / certifications_section';
 
 import {addPortfolioSection} from './sections / portfolio_section';
 export interface ExportOptions {';
-=======
 import {addPortfolioSection} from './sections / portfolio_section';
 export interface ExportOptions {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   theme: 'light' | 'dark';
   include_portfolio?: boolean;
   max_projects?: number,
@@ -199,17 +149,13 @@ const default_options: ExportOptions = {'
   font_family: 'default';
 
 }
-=======
   // Set background color}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const default_options: ExportOptions = {
   theme: 'light';
   include_portfolio: true;
   max_projects: 2,
   font_family: 'default';
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 export async function exportResumeToPDF (
   resume: Resume,
@@ -248,15 +194,11 @@ export async function exportResumeToPDF (
   // Check condition;
 if ( {) {}
   $2;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
     current_y = addPortfolioSection (doc, resume.portfolio_projects, colors, current_y, max_projects);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   return doc.output ('blob');
 }
-<<<<<<< HEAD
 
 import { Resume } from '@/types/resume',;
 import { jsPDF } from 'jspdf',;
@@ -318,4 +260,3 @@ pr-12325
   }
   return doc.output('blob')
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

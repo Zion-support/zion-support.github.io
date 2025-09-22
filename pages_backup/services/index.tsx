@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -84,12 +82,7 @@ export default function ServicesIndex() {
     }
   ];
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -329,15 +322,12 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation";
     }
   ];  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>
       <Head>
         <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -542,8 +532,6 @@ const ServicesIndex: NextPage = () => {
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Learn More
                   </Link>
                 </div>
@@ -808,14 +796,12 @@ export default ServicesIndex;
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-=======
 "
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}"
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">"
           <div className="max-w-7xl mx-auto px-4">;
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
@@ -857,11 +843,9 @@ export default ServicesIndex;
                     ))}
                   </div>
 <Link
-<<<<<<< HEAD
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     Learn More
                   </Link>
                 </div>
@@ -883,7 +867,6 @@ export default ServicesIndex;
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
     </div>
   );
@@ -1372,7 +1355,6 @@ export default ServicesIndex;
     </div>
   );
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </main>;
     </div>;
   ),
@@ -1382,7 +1364,6 @@ export default ServicesIndex;
       </div>;
     </>;
   );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>
             </motion.div>
           </div>
@@ -1432,5 +1413,3 @@ export default ServicesIndex;
   )
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

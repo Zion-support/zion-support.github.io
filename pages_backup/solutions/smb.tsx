@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -17,7 +12,6 @@ ArrowRight ;
 } from 'lucide-react';
 
 export default function SMBSolutionsPage() {
-<<<<<<< HEAD
 
     >
       <div className="min-h-screen bg-gray-50">
@@ -28,7 +22,6 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 } from 'lucide-react';
 
 const smbServices = []
@@ -131,7 +124,6 @@ export default function SMBSolutionsPage() {;
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
     }
 ;  ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <>
       <Head>
@@ -144,7 +136,6 @@ export default function SMBSolutionsPage() {;
         <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-=======
 export default function SMBSolutionsPage() {}
   return (
     <>
@@ -158,7 +149,6 @@ export default function SMBSolutionsPage() {}
         <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">"
           <div className="max-w-7xl mx-auto px-4">;
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}"
@@ -167,16 +157,10 @@ transition={{ duration: 0.8 }}"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>"
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
                 Technology solutions designed specifically for small and medium businesses.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -260,7 +244,6 @@ transition={{ duration: 0.8 }}"
             </div>
           </div>
         </section>
-<<<<<<< HEAD
           <div className="container mx-auto px-4 text-center">";
 
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
@@ -322,11 +305,7 @@ transition={{ duration: 0.8 }}"
     </>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           </div>;
         </section>;
             </div>
@@ -403,4 +382,3 @@ transition={{ duration: 0.8 }}"
     </>
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

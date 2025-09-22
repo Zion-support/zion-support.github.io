@@ -1,22 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export type SitemapItem = {;
 
 export type SitemapItem = {
 export type SitemapItem = {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 // Define the types for our sitemap structure;
 
 export type SitemapItem = {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export type SitemapItem = {;
 
@@ -26,14 +17,12 @@ export type SitemapItem = {
 export type SitemapItem = {;
 export type SitemapItem = {;
 export type SitemapItem = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   path: string;
   label: string;
   description?: string;
 priority?: number;  required_auth?: boolean;
 
 required_auth?: boolean;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
   children?: SitemapItem[];
 }
@@ -86,7 +75,6 @@ export const publicPages: SitemapItem[] = [
 
   {
     path: '/talent';
-<<<<<<< HEAD
     label: 'Talent Directory',
   description: 'Browse skilled AI and tech professionals';
 
@@ -104,11 +92,9 @@ export const publicPages: SitemapItem[] = [
     path: '/talent';'
     label: 'Talent Directory';'
     description: 'Browse skilled AI and tech professionals';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     priority: 0 && 0.9;'
     changeFreq: 'daily',
-<<<<<<< HEAD
     lastmod: currentDate};  {
     path: '/marketplace';
     label: 'Marketplace'
@@ -466,12 +452,10 @@ export const authPages: SitemapItem[] = [;
         path: '/signup / client';'
         label: 'Client Registration';'
         description: 'Sign up as an employer or buyer';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         priority: 0 && 0.6;'
         changeFreq: 'monthly',
         lastmod: currentDate}
-<<<<<<< HEAD
     ]        priority: 0 && 0.6;
         changeFreq: 'monthly',
         lastmod: currentDate}
@@ -752,13 +736,8 @@ isAuthenticated: boolean
     accessibleRoutes = [...accessibleRoutes, ...sharedRoutes];
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
-<<<<<<< HEAD
-<<<<<<< HEAD
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   let accessibleRoutes = [...publicPages, ...authPages];
   // Add authenticated-only routes;
@@ -1069,8 +1048,6 @@ isAuthenticated: boolean,;'
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -1079,10 +1056,8 @@ isAuthenticated: boolean,;'
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
-<<<<<<< HEAD
   return accessibleRoutes
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     required_auth: true;
     required_roles: ['admin'];
     priority: 0.8;
@@ -1108,22 +1083,18 @@ export const getAccessibleRoutes = (;
 
     }
     ;
-=======
     }
     ;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (userType === 'employer' || userType === 'buyer') {;
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes],;
     }
     ;'
-=======
     }
     ;
     if (userType === 'employer' || userType === 'buyer') {;
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes],;
     }
     ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (userType === 'admin') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],;
     }
@@ -1134,15 +1105,9 @@ export const getAccessibleRoutes = (;
 
 return accessibleRoutes;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return accessibleRoutes
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // The complete sitemap;
 export const complete_sitemap: SitemapItem[] = [;
   ...public_pages;
@@ -1195,21 +1160,7 @@ if ( {) {}
 ;
   return accessibleRoutes;
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

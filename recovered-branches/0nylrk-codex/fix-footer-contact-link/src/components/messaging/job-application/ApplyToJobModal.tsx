@@ -5,41 +5,27 @@ Dialog
   DialogDescription
   DialogHeader
   DialogTitle
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Dialog,
   DialogContent,
   DialogDescription,
 DialogHeader,
-<<<<<<< HEAD
 DialogTitle,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/dialog";
-=======
   Dialog,
   DialogContent,
   DialogDescription,
 DialogHeader,} from "@/components/ui/dialog";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   DialogHeader,
 DialogTitle,;
 
 DialogTitle,;
 } from "@/components/ui/dialog";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   DialogHeader,} from "@/components/ui/dialog";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ApplyForm } from "./ApplyForm";
-=======
 
 } from "@/components/ui/dialog";"
 import { ApplyForm } from "./ApplyForm";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal({};
   job;
@@ -56,8 +42,6 @@ export function ApplyToJobModal({};
             Complete your application for this position;
           </DialogDescription>
         </DialogHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <ApplyForm
           job={job}
           onClose={onClose}
@@ -74,22 +58,11 @@ export function ApplyToJobModal({};
       </DialogContent>
     </Dialog>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import React from 'react',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Dialog,;
   DialogContent,;
@@ -108,9 +81,7 @@ export function ApplyToJobModal(): any ({;
         <DialogHeader>;
           <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from './react';
 import {}
   Dialog,
@@ -129,22 +100,14 @@ function ApplyToJobModal() {}
 <Dialog open={is_open} onOpenChange={on_close}>;
       <DialogContent className="sm:max - w-[600px]">;
         <DialogHeader>;
-<<<<<<< HEAD
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     <Dialog open={is_open} onOpenChange={on_close}>;"
       <DialogContent className="sm:max - w-[600px]">;
         <DialogHeader>;
           <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   DialogTitle} from '@/components/ui/dialog',;
-=======
 DialogTitle} from '@/components/ui/dialog',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ApplyForm } from './ApplyForm',;
 import { ApplyToJobModalProps } from './types',;
 ;
@@ -154,19 +117,13 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
       <DialogContent className="sm:max-w-[600px]">;
         <DialogHeader>;
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <ApplyForm;
-<<<<<<< HEAD
-=======
 DialogTitle,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 DialogTitle,;"
 } from "@/components/ui/dialog";""
@@ -213,33 +170,21 @@ export function ApplyToJobModal({
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
-<<<<<<< HEAD
     </Dialog>;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </Dialog>;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-<<<<<<< HEAD
 }
 }
 
-=======
-=======
     </Dialog>;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 </Dialog>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </Dialog>;
   );
     </Dialog>);
@@ -267,7 +212,6 @@ export function ApplyToJobModal({
 }/> </DialogContent> </Dialog>) 
 }
 <ApplyForm
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           job={job}
 
           onClose={onClose}
@@ -287,15 +231,8 @@ pr-12325
 );
     </Dialog>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   );
     </Dialog>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

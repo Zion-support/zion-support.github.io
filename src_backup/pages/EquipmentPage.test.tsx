@@ -5,10 +5,6 @@ describe('EquipmentPage', () => {
     expect(true).toBe(true);
   });
 });
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const [selectedService, setSelectedService] = useState(''),
 
@@ -27,18 +23,9 @@ export function ContactPage() {
     budget: '',
     timeline: ''
   }),
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({
@@ -54,17 +41,11 @@ export function ContactPage() {
     window.location.href = mailtoLink
   },
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const { name, value } = e.target;
 setFormData(prev => ({ ...prev, [name]: value }))
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}"
@@ -116,9 +97,7 @@ setFormData(prev => ({ ...prev, [name]: value }))
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
 ziontechgroup.com
               </Link>
-=======
               </Link>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </div>
@@ -133,25 +112,14 @@ ziontechgroup.com
             <p className="text-gray-600 mb-8">'
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <form onSubmit={handleSubmit} className="space-y-6">
 
-=======
             </p>            <form onSubmit={handleSubmit} className="space-y-6">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
             <form onSubmit={handleSubmit} className="space-y-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             </p>            <form onSubmit={handleSubmit} className="space-y-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>"
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -184,16 +152,9 @@ ziontechgroup.com
                   />
                 </div>
 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>"
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -279,18 +240,9 @@ ziontechgroup.com
                 </select>
               </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
               </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                     </optgroup>;
                   ))}
@@ -298,14 +250,11 @@ ziontechgroup.com
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
-=======
 
 "
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                     Budget Range;
                   </label>
@@ -388,13 +337,11 @@ ziontechgroup.com
                 "
                 <div className="flex items-center gap-4">"
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">"
-=======
                     </Link>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-green-600 text-xl">✉️</span>
                   </div>
                   <div>"
@@ -407,13 +354,11 @@ kleber@ziontechgroup.com
                 "
                 <div className="flex items-center gap-4">"
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">"
-=======
                     </Link>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-purple-600 text-xl">📍</span>
                   </div>
                   <div>"
@@ -434,17 +379,13 @@ kleber@ziontechgroup.com
                     <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline text-lg">
 ziontechgroup.com
                     </Link>
-=======
                     </Link>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Business Hours */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
@@ -469,8 +410,6 @@ ziontechgroup.com
               </div>
             </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-white rounded-xl shadow-lg p-8">;
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
               <div className="space-y-3">;
@@ -493,23 +432,15 @@ ziontechgroup.com
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
-=======
 
             {/* Quick Actions */}"
             <div className="bg-white rounded-xl shadow-lg p-8">"
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="space-y-3">
                 <a"
                   href="tel:+13024640950""
@@ -536,9 +467,7 @@ ziontechgroup.com
                 >
 🌐 Visit Website
                 </Link>
-=======
                 </Link>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             </div>
           </div>
@@ -571,8 +500,6 @@ ziontechgroup.com
         </div>
       </div>
 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 
@@ -798,20 +725,7 @@ describe('EquipmentPage', () => {'
     expect(screen.getByText('Equipment')).toBeInTheDocument();
   });
 });
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> origin/main

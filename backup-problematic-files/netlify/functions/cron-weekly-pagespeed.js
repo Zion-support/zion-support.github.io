@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -59,6 +62,8 @@ exports.handler = async function () {
 
   return resp.json()
 }
+<<<<<<< HEAD
+=======
 exports.handler = async function() {
   try {
 
@@ -94,3 +99,4 @@ exports.handler = async function() {
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

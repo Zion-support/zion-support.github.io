@@ -1,38 +1,20 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useMessages } from './useMessages';
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { useMessages } from './useMessages';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Allow either UserProfile or UserDetails
-=======
 import { UserProfile, UserDetails  } from '@/types/auth';'
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';'
 import { useConversationState  } from './useConversationState';'
@@ -45,14 +27,11 @@ import {useConversationState} from './useConversationState';'
 import {useConversations} from './useConversations';'
 import {useMessages} from './useMessages';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
 * Hook that combines all messaging operations
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
  */
 function useMessagingOperations() {
   // State management;
@@ -66,7 +45,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 export /**;
  * useMessagingOperations - Function description;
  */
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     messages;
     set_messages;
     active_messages;
@@ -78,9 +56,6 @@ export /**;
     active_conversation;
     setActiveConversation;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     is_loading,
     setIsLoading;
   } = useConversationState ();
@@ -129,23 +104,14 @@ export /**;
     markAsRead;
 fetchConversations;
     loadMessages;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 import { useMessages } from './useMessages';// Allow either UserProfile or UserDetails
-=======
 
 // Allow either UserProfile or UserDetails
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { useMessages } from './useMessages';// Allow either UserProfile or UserDetails
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
@@ -235,9 +201,4 @@ export function useMessagingOperations(user: UserWithProfile) {;
 }
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

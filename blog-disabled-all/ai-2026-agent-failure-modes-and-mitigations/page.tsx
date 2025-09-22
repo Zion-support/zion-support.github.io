@@ -49,4 +49,3 @@ export default function AgentFailureModesPage() {
     </main>
   );
 }
-

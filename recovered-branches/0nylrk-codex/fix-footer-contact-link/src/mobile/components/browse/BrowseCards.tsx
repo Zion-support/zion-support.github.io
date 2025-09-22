@@ -1,46 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 interface BrowseItem {;
   id: string,;
   title: string,;
-<<<<<<< HEAD
   subtitle: string,;
   description: string,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
-=======
   subtitle: string,,
   description: string,;import React, { useState } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   subtitle: string,;
   description: string,;
 import React, { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   location?: string;
   badges: string[]
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 interface BrowseItem {;
   id: string,;
   title: string,;
@@ -52,8 +34,6 @@ import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface BrowseItem {}
   id: string;
@@ -62,10 +42,7 @@ interface BrowseItem {}
   description: string;
   location?: string;
 badges: string[],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   badges: string[];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   price?: string;
   image?: string;
   match?: number;
@@ -88,9 +65,7 @@ interface BrowseCardsProps {
   image?: string;
   match?: number;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   type: "jobs" | "talents"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   onViewDetails: (id: string) => void;
 }
@@ -98,7 +73,6 @@ interface BrowseCardsProps {
 export function BrowseCards() { return null; }
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {};
   const [savedItems, setSavedItems] = useState<string[]>([]);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const [savedItems, setSavedItems] = useState<string[]>([]),
 
@@ -138,7 +112,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {}
                   </div>
                 </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
                 >
@@ -208,7 +181,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {}
       ))}
     </div>
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsProps) {;
@@ -228,7 +200,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
   image?: string;
   match?: number;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   price?: string;
   image?: string;
   match?: number;
@@ -407,14 +378,10 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
-=======
 
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;"
         <Card key={item && item.id} className="overflow-hidden">;
@@ -436,17 +403,12 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                   <div>;
                     <h3 className="font-medium">{item && item.title}</h3>;
                     <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
 
 },
   return (
@@ -474,24 +436,18 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                 </div>
 
                   <div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <button
 
                 <button 
                 <button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
                   {savedItems && savedItems.includes(item && item.id) ? (;"
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
                   ) : (;
-<<<<<<< HEAD
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-<<<<<<< HEAD
                 </button>
               </div>
               <div className="mt-3 flex flex-wrap gap-1">
@@ -501,16 +457,10 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     variant="outline"
                     className="text-xs font-normal"
                   >
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 "
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -555,20 +505,17 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",;
-=======
 "
 import React, { useState } from "react",;"
 import { Card, CardContent } from "@/components/ui/card",;"
 import { Button } from "@/components/ui/button",;"
 import { Badge } from "@/components/ui/badge",;"
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface BrowseItem {;
   id: string,;
@@ -633,8 +580,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 </button>;
               </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="mt-3 flex flex-wrap gap-1">;
 
                 {item.badges.map((badge, index) => (;
@@ -643,15 +588,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";"
                     className="text-xs font-normal";
                   >;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {badge}
-=======
               <div className="mt-3 flex flex-wrap gap-1">;                    {badge}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <div className="mt-3 flex flex-wrap gap-1">;
 
 </button>;
@@ -671,7 +609,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   >;
 
                     {badge}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </Badge>;
                 ))}
 
@@ -704,7 +641,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 {item && item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
 {item && item.match}% match;                  </div>;
-=======
                     {item && item.match}% match;
 {item && item.badges.map((badge, index) => (;
                   <Badge
@@ -752,7 +688,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;
                     {item.match}% match;
                   </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 )}
               </div>;
             </div>;
@@ -777,14 +712,9 @@ onClick={() => onViewDetails(item && item.id)}                    {badge}
 
 </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   time_posted?: string;
 }
 interface BrowseCardsProps {}
@@ -799,7 +729,6 @@ function BrowseCards() {}
   const [saved_items, setSavedItems] = useState < string[]>([]);
 ;
   const toggle_saved = (id: string) =>: any {}
-=======
 }
 
 </div>;
@@ -858,7 +787,6 @@ function BrowseCards() {
   const [saved_items, setSavedItems] = useState < string[]>([]);
 ;
   const toggle_saved = (id: string) =>: any {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setSavedItems (prev =>;
       prev.includes (id);
         ? prev.filter (item_id => item_id !== id);
@@ -933,12 +861,10 @@ return ("
                     <span>{item.time_posted}</span>;
                   </div>)}
                 {item.match && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <div className="ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5">;
                     {item.match}% match;
                   </div>)}
               </div>;
-<<<<<<< HEAD
             </div>;"
             <div className="border - t border - border p - 3 flex justify - end">;
               <Button;"
@@ -1006,9 +932,6 @@ return ("
 
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
  interface BrowseItem {
   id: string;
@@ -1089,19 +1012,8 @@ pr-12325
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

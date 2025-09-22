@@ -1,49 +1,30 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Allow either UserProfile or UserDetails
-=======
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
-<<<<<<< HEAD
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function useMessages(
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { UserProfile, UserDetails  } from '@/types/auth';'
 import { supabase  } from '@/integrations/supabase/client';'
 import { Message, Conversation  } from '@/types/messaging';'
@@ -60,19 +41,12 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle message operations;
  */
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   user: UserWithProfile;
-=======
  */  user: UserWithProfile;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
  */  user: UserWithProfile;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
  */
 export function useMessages(
   user: UserWithProfile;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   active_conversation: Conversation | null;
   active_messages: Message[];
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -86,10 +60,7 @@ if (unreadMessages && unreadMessages.length > 0) {
         await markAsRead(conversationId)
       }
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       console && console.error('Error fetching messages:', error)
-<<<<<<< HEAD
   /**;
   * Fetch messages for a conversation;
   */;
@@ -125,10 +96,7 @@ if ( {) {}
       }
     } catch (error) {'
       console.error ('Error fetching messages:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
-=======
       // Check condition
 if ( {) {
   $2
@@ -138,35 +106,25 @@ if ( {) {
     } catch (error) {
       console.error ('Error fetching messages:', error);
     } finally {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading (false);
     }
   }
 
 if (unreadMessages.length > 0) {}
         await markAsRead(conversationId)
-<<<<<<< HEAD
 import { UserProfile, UserDetails } from '@/types/auth',;
-=======
       console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
 import { UserProfile, UserDetails } from '@/types/auth',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
-=======
 
 '
 import { UserProfile, UserDetails } from '@/types/auth',;'
 import { supabase } from '@/integrations/supabase/client',;'
 import { Message, Conversation } from '@/types/messaging',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from '@/hooks/use-toast',;
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null,;
@@ -206,19 +164,8 @@ export function useMessages(;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     } catch (error) {'
       console.error('Error fetching messages:', error)
@@ -226,22 +173,12 @@ export function useMessages(;
       setIsLoading(false)
     }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   };
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   /**
    * Send a message to an existing conversation;
    */
@@ -251,13 +188,6 @@ export function useMessages(;
     try {}
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   }
   };
@@ -272,12 +202,9 @@ export function useMessages(;
     try {
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (!conversation) {
-=======
 
       if (!conversation) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         throw new Error('Conversation not found')
       }
       // Send the message;
@@ -301,28 +228,15 @@ export function useMessages(;
       // Update active messages if this conversation is selected;
       if (activeConversation && activeConversation.id === conversationId) {}
         setActiveMessages(prev => [...prev, data as Message])
-<<<<<<< HEAD
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Update conversations list
       await fetchConversations();
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },;
-=======
       }  },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       }  },;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       }
 
   },;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   /**;
    * Send a message to an existing conversation;
    */;
@@ -351,21 +265,12 @@ export function useMessages(;
       // Update active messages if this conversation is selected;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
-<<<<<<< HEAD
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       // Update conversations list;
       await fetchConversations(),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Return the sent message
       return data
     } catch (error) {
@@ -400,12 +305,10 @@ if (error) throw error;
 setActiveMessages(prev =>
         prev.map(msg =>
           msg.recipient_id === user.id ? { ...msg, read: true } : msg
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       setActiveMessages(prev => 
         prev && prev.map(msg => 
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         )
       );
       // Update conversations to reflect read messages
@@ -421,18 +324,13 @@ setActiveMessages(prev =>
 msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
         .eq('recipient_id', user && user.id)
-=======
       }      
       // Update conversations list
       await fetchConversations(),
               .eq('recipient_id', user && user.id)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg;
 '
         .eq('recipient_id', user && user.id)'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       }
 
       // Update conversations list
@@ -490,7 +388,6 @@ msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
         .eq('recipient_id', user && user.id)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq('read', false);
       if (error) throw error;'
       // Update active messages to show they've been read;
@@ -525,16 +422,10 @@ console && console.error('Error marking messages as read:', error)      console 
   }
   return {}
     loadMessages;
-<<<<<<< HEAD
     sendMessage;
 
-<<<<<<< HEAD
     markAsRead
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     sendMessage;
 
     markAsRead
@@ -595,7 +486,6 @@ if ( {) {
     }
 
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   /**;
   * Send a message to an existing conversation;
@@ -672,7 +562,6 @@ markAsRead
         variant: "destructive";
       });
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
   /**;
    * Mark messages as read;
@@ -721,20 +610,10 @@ markAsRead
     loadMessages;
     sendMessage;
     markAsRead;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
-=======
     sendMessage;  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     sendMessage;  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   /**;
   * Mark messages as read;
@@ -788,13 +667,10 @@ if (throw error) {}
     load_messages;
     send_message;
     markAsRead;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   }
 }
 }
-<<<<<<< HEAD
   fetchConversations:() => Promise<void>;
 fetchConversations: () => Promise<void>) {
   /** * Fetch messages for a conversation */setIsLoading (true);
@@ -836,4 +712,3 @@ return updatedConversations.reduce ( (total, conv) => total + (conv.unread count
   }
 }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

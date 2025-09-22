@@ -1,9 +1,4 @@
 :pages_backup/api.tsx
-<<<<<<< HEAD:pages_backup/api.tsx
-<<<<<<< HEAD:pages/api.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 
@@ -43,10 +38,6 @@ const apiFeatures = [
   }
 ];
 :pages_backup/api.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
 export default function API() {
   const apiEndpoints = [
     {
@@ -224,11 +215,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
 
 :pages_backup/api.tsx
-<<<<<<< HEAD:pages/api.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -237,10 +223,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           >
             <h2 className="text-3xl font-bold text-white mb-4">
 :pages_backup/api.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
         {/* API Endpoints */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -445,18 +427,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </motion.div>
         </div>
 :pages_backup/api.tsx
-<<<<<<< HEAD:pages/api.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
   Code,
   Check,
   Globe,
@@ -467,18 +440,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   Cloud,
   XCircle,;
 :pages_backup/api.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
 } from "lucide-react";
 export default function APIPage() {}
   const apiEndpoints = []
@@ -531,8 +494,6 @@ export default function APIPage() {}
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-<<<<<<< HEAD
-<<<<<<< HEAD
   }'`
         }
       ]
@@ -542,7 +503,6 @@ import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
 import {
 :pages_backup/api.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Code,
   Check,
   Globe,
@@ -552,7 +512,6 @@ import {
   Cpu,
   Cloud,
 :pages_backup/api.tsx
-<<<<<<< HEAD
 
 } from "lucide-react";
 export default function APIPage() {
@@ -569,21 +528,15 @@ function APIPage() {
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   XCircle,;
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
     {
       id: "auth",
       title: "Authentication",
       description: "Secure authentication and authorization endpoints",
       base_url: "/api / v1 / auth",
-=======
       methods: []
         {"
           method: "POST""
@@ -605,7 +558,6 @@ export default function APIPage() {}
       title: "Authentication","
       description: "Secure authentication and authorization endpoints","
       base_url: "/api / v1 / auth",;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
       methods: [;
         {"
           method: "POST","
@@ -647,8 +599,6 @@ export default function APIPage() {}
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
   -H "Content - Type: application / json" \\;
   -d '{
-<<<<<<< HEAD
-<<<<<<< HEAD
     "model": "gpt - 4",
     "temperature": 0.7;
   }'`,
@@ -656,7 +606,6 @@ export default function APIPage() {}
       ],
     },
 :pages_backup/api.tsx
-=======
         {"
           method: "POST","
           endpoint: "/chat","
@@ -666,24 +615,14 @@ export default function APIPage() {}
   -H "Content - Type: application / json" \\;'
   -d '{}
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
   }'`,
         },
       ],
     },;
 :pages_backup/api.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
   ];
 ;
   const response_examples = {}
@@ -722,8 +661,6 @@ id: "12345",
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 :pages_backup/api.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Quick Start Guide;
@@ -785,11 +722,7 @@ id: "12345",
                   </p>;
                 </motion && motion.div>;
 );
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
-=======
           field: "email",
           issue: "Invalid email format",
         },
@@ -854,12 +787,7 @@ id: "12345",
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >;"
@@ -1011,14 +939,9 @@ return (
           </div>
         </section>
 :pages_backup/api.tsx
-<<<<<<< HEAD:pages/api.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
     </Layout>
 :pages_backup/api.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   View Documentation;
                 </a>;
               </div>;
@@ -1028,21 +951,16 @@ return (
       </div>;
     </MainLayout>;
 :pages_backup/api.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   );
 
   );
 :pages_backup/api.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
-=======
 
         {/* CTA Section */}"
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
           <div className="container mx - auto px - 4">;
             <motion.div;"
               className="text - center";
@@ -1080,8 +998,6 @@ return (
 }
 :pages_backup/api.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx
       </main>
 </>
   );
@@ -1089,5 +1005,3 @@ return (
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 :pages_backup/api.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api.tsx

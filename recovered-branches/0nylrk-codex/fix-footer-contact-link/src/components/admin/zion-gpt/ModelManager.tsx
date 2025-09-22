@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',
 import { useState, useEffect } from 'react',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { useState, useEffect  } from 'react';
 import { useState, useEffect } from 'react',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from 'react',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
@@ -21,21 +14,13 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState, useEffect} from 'react';
-=======
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",import {useState, useEffect} from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
 import { useState, useEffect } from 'react',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { useState, useEffect } from 'react',
 
@@ -47,29 +32,17 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",import {useState, useEffect} from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
 import {supabase} from '@/integrations/supabase/client';
-<<<<<<< HEAD
 import {ModelConfig} from '@/utils/zion-gpt';
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ModelVersionData extends ModelConfig {
-=======
 import {ModelConfig} from '@/utils/zion-gpt';interface ModelVersionData extends ModelConfig {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import {ModelConfig} from '@/utils/zion-gpt';interface ModelVersionData extends ModelConfig {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface ModelVersionData extends ModelConfig {}
 '
@@ -80,20 +53,14 @@ interface ModelVersionData extends ModelConfig {}
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
@@ -117,12 +84,9 @@ export function ZionGPTModelManager() { return null; }
   const fetchModels = async () => {;
     try {;
       setIsLoading(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState, useEffect} from 'react';
-=======
 
 import {useState, useEffect} from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -194,17 +158,11 @@ await supabase;'
         .eq ('id', model_id);
 
     } catch (error) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console.error (`Error checking status for model ${model_id}:`, error);
     } finally {}
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 export function ZionGPTModelManager() {
@@ -296,11 +254,7 @@ export function ZionGPTModelManager() {;
       console.error('Error toggling model active state:', error)
     }
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -313,24 +267,15 @@ import { ModelConfig } from '@/utils/zion-gpt',
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { useState, useEffect } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",;
 import { supabase } from '@/integrations/supabase/client',;
-=======
   };'
 import { useState, useEffect } from 'react',"
 import { Button } from "@/components/ui/button","
@@ -351,7 +296,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge",;"
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",;'
 import { supabase } from '@/integrations/supabase/client',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ModelConfig } from '@/utils/zion-gpt',;
 interface ModelVersionData extends ModelConfig {;'
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
@@ -359,7 +303,6 @@ interface ModelVersionData extends ModelConfig {;'
 }
 ;
 export function ZionGPTModelManager() { return null; }
-=======
 interface ModelVersionData extends ModelConfig {;
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
   errorMessage?: string;
@@ -368,7 +311,6 @@ export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
   // Fetch model data on component mount;
   useEffect(() => {;
@@ -377,7 +319,6 @@ export function ZionGPTModelManager() {;
   const fetchModels = async () => {;
     try {;
 setIsLoading(true),;
-<<<<<<< HEAD
       const { data, error } = await supabase;
         .from('model_versions');
         .select('*');
@@ -437,13 +378,9 @@ setIsLoading(true),;
     } finally {;
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
 
-=======
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
     try {;
@@ -464,18 +401,10 @@ await supabase;'
       // Refresh the model list;
       fetchModels();
     } catch (error) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
       console && console.error('Error toggling model active state:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     }
@@ -483,7 +412,6 @@ await supabase;'
   },
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   }
   return ()
@@ -505,10 +433,7 @@ await supabase;'
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
   },
@@ -621,58 +546,39 @@ title={model && model.errorMessage || "Training failed"}>;
                       </Button>;
 
                     )}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </TableCell>;
                 </TableRow>;
 
                     )}
-=======
   };                    )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   };                    )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   </TableCell>;
                 </TableRow>;
                     )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   </TableCell>;
                 </TableRow>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
             </TableBody>;
           </Table>;
-<<<<<<< HEAD
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ;
-=======
         )};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       </CardContent>;
     </Card>;
 ;
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string) => {
     try {
-=======
 
   const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string) => {}
     try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // If activating, deactivate all other models with the same purpose;
       // Check condition;
 if ( {) {}
@@ -699,7 +605,6 @@ if ( {) {}
 return (
 <Card className="w-full">;
       <CardHeader className="flex flex - row items - center justify-between">;
-=======
 </TableCell>"
                       <Badge className="bg-green-500">Ready</Badge>;""
                       <Badge className="bg-red-500">Failed</Badge>;""
@@ -760,7 +665,6 @@ return (
 </Card>"
       <CardHeader className="flex flex - row items - center justify - between">;"
 </CardHeader>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div>;
 </div>
           <CardTitle > ZionGPT Models</CardTitle>;
@@ -774,10 +678,8 @@ return (
       </CardHeader>;
       <CardContent>;
         {is_loading ? (
-<<<<<<< HEAD
           <div className="flex items - center justify - center h-24">;
             <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
-=======
         </div>;"
         <Button on_click={fetch_models} variant="outline" size="sm">;"
 </Button>"
@@ -791,7 +693,6 @@ return (
 </div>"
             <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;"
 </Loader2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>) : (
           <Table>;
 </Table>
@@ -805,11 +706,8 @@ return (
                 <TableHead > Base Model</TableHead>;
                 <TableHead > Status</TableHead>;
 <TableHead > Created</TableHead>;
-<<<<<<< HEAD
                 <TableHead className="text-right">Actions</TableHead>;
-=======
                 <TableHead className="text-right">Actions</TableHead>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </TableRow>;
             </TableHeader>;
             <TableBody>;
@@ -837,11 +735,8 @@ return (
                     {model.active && <Badge className="ml - 2 bg - purple-500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;
-<<<<<<< HEAD
                   <TableCell className="text-right">;
-=======
                   <TableCell className="text-right">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {model.training_status === 'queued' || model.training_status === 'running' ? (
                       <Button;"
                         variant="ghost";"
@@ -850,15 +745,12 @@ return (
                         disabled={active_jobs[model.id]}
                       >;
 {active_jobs[model.id] ? (
-<<<<<<< HEAD
                           <Loader2 className="h - 4 w - 4 animate-spin" />) : (
                           <RefreshCw className="h - 4 w-4" />)}
                         <span className="ml-1">Check</span>;
-=======
                           <Loader2 className="h - 4 w - 4 animate-spin" />) : (
                           <RefreshCw className="h - 4 w-4" />)}
                         <span className="ml-1">Check</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>) : model.training_status === 'succeeded' ? (
                       <Button;"
                         variant={model.active ? "outline" : "default"}"
@@ -879,9 +771,7 @@ return (
                         className="text - red-500";
                         title={model.error_message || "Training failed"}
                       >;
-<<<<<<< HEAD
                         <AlertCircle className="h - 4 w - 4 mr-1" /> Error;
-=======
                         <AlertCircle className="h - 4 w - 4 mr-1" /> Error;
 </TableCell>)"
                       <Badge className="bg - green - 500">Ready</Badge>) : model.training_status === 'failed' ? (')'
@@ -928,7 +818,6 @@ return (
                         <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;"
 </AlertCircle>)
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>)}
                   </TableCell>;
                 </TableRow>))}
@@ -992,28 +881,14 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
             </TableBody>
           </Table>
 )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </CardContent>
     </Card>
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   const [models, setModels] = useState<ModelVersionData[]>([]),;
 
   // Fetch model data on component mount;
@@ -1244,4 +1119,3 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
     ;"`;
 pr-12325
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

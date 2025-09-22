@@ -22,8 +22,15 @@ describe('_app.integration', () => {
     render(<_app.integration />);
   });
 });
+<<<<<<< HEAD
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import _app from '../pages/_app" describe('_app Integration Tests',() => {' test('page renders correctly',() => {' render(<_app / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<_app / />) }) test('page content is accessible',() => {' render(<_app / />) }) test('page loads with correct data',() => {' render(<_app / />) }) })
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import _app from '../pages/_app" describe('_app Integration Tests',() => {' test('page renders correctly',() => {' render(<_app / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<_app / />) }) test('page content is accessible',() => {' render(<_app / />) }) test('page loads with correct data',() => {' render(<_app / />) }) })
+
+
+=======
 =======
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import _app from "./pages/_app" describe("_app Integration Tests",() => {" test("page renders correctly",() => {" render(<_app / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<_app / />) }) test("page content is accessible",() => {" render(<_app / />) }) test("page loads with correct data",() => {" render(<_app / />) }) })'"'"
 const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import _app from "./pages/_app" describe("_app Integration Tests",() => {" test("page renders correctly",() => {" render(<_app / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<_app / />) }) test("page content is accessible",() => {" render(<_app / />) }) test("page loads with correct data",() => {" render(<_app / />) }) })'"'"
@@ -33,4 +40,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
+<<<<<<< HEAD
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import _app from '../pages/_app" describe('_app Integration Tests',() => {' test('page renders correctly',() => {' render(<_app / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<_app / />) }) test('page content is accessible',() => {' render(<_app / />) }) test('page loads with correct data',() => {' render(<_app / />) }) })
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import _app from '../pages/_app" describe('_app Integration Tests',() => {' test('page renders correctly',() => {' render(<_app / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<_app / />) }) test('page content is accessible',() => {' render(<_app / />) }) test('page loads with correct data',() => {' render(<_app / />) }) })
+=======
 >>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -4,24 +4,18 @@ const corsHeaders = {
     return new Response(null, { headers: corsHeaders })
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ";
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";"
   const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";"
   const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (!openAiKey) {
     return new Response(
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -39,13 +33,9 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
 "
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
   const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
@@ -81,22 +71,15 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
 try {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     const { applicationId } = await req && req.json();
 
 const { applicationId } = await req.json();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";"
@@ -107,11 +90,6 @@ const { applicationId } = await req.json();
     return new Response("
       JSON.stringify({ error: "OpenAI API key is not configured" });
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   try {
 
     const { applicationId } = await req && req.json();
@@ -124,33 +102,21 @@ const { applicationId } = await req.json();
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
   const openAiKey = Deno.env.get("OPENAI_API_KEY") || "",;
   if (!openAiKey) {;
     return new Response(;
-<<<<<<< HEAD
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-=======
       JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
 
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )
       JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
 
@@ -208,50 +174,27 @@ serve(async (req) => {
 
 try {}
     const { applicationId } = await req.json(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     const { applicationId } = await req && req.json();
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   try {
     const { applicationId } = await req.json(),
 const { applicationId } = await req && req.json();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (!applicationId) {
-=======
 
     if (!applicationId) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       throw new Error("Application ID is required")
     }
     // 1. Fetch the application with job details and resume content;
     const { data: application, error: appError } = await supabase"
       .from("job_applications")
       .select(`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         job_id,
         talent_id,
         cover_letter,
@@ -260,25 +203,16 @@ const { applicationId } = await req && req.json();
         talent_profile:profiles!talent_id(bio, skills)
       `)
       .eq("id", applicationId)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
-=======
 
 "
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
@@ -358,19 +292,13 @@ if ( {) {}
 const { data: application, error: app_error } = await supabase;"
       .from ("job_applications");`
       .select (`;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         id;
         job_id;
         talent_id;
         cover_letter;
-<<<<<<< HEAD
         resume_id;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       .single(),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (appError) {
 throw new Error(`Failed to fetch application: ${appError && appError.message}`)
     }
@@ -381,28 +309,22 @@ throw new Error(`Failed to fetch application: ${appError && appError.message}`)
 let resumeSkills: string[] = [],
     if (application && application.resume_id) {
 
-<<<<<<< HEAD
     let resumeContent = "",
     let resumeSkills: string[] = [],
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     if (application.resume_id) {}
       const { data: resume, error: resumeError } = await supabase"
         .from("talent_resumes")`
-=======
 
-=======
 let resumeSkills: string[] = [],
     if (application && application.resume_id) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     let resumeContent = "",
     let resumeSkills: string[] = [],
 
     if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .select(`
           summary;
           headline;
@@ -410,7 +332,6 @@ let resumeSkills: string[] = [],
           work_history!inner(company_name, role_title, start_date, end_date, description);
 education!inner(institution, degree, field_of_study)`
         `)
-<<<<<<< HEAD
 
         .eq("id", application.resume_id)
       if (resumeError) {
@@ -425,7 +346,6 @@ education!inner(institution, degree, field_of_study)`
           Work Experience:
           ${resume && resume.work_history.map((job: any) => '`
             `${job && job.role_title} at ${job && job.company_name} (${new Date(job && job.start_date).getFullYear()} - ${job && job.end_date ? new Date(job && job.end_date).getFullYear() : 'Present'})"`
-=======
           education!inner(institution, degree, field_of_study)
         `)
       if (resumeError) {
@@ -439,7 +359,6 @@ education!inner(institution, degree, field_of_study)`
           Work Experience:
           ${resume && resume.work_history.map((job: any) => 
             `${job && job.role_title} at ${job && job.company_name} (${new Date(job && job.start_date).getFullYear()} - ${job && job.end_date ? new Date(job && job.end_date).getFullYear() : 'Present'})
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ${job && job.description || ""}`
 
 `,
@@ -447,12 +366,9 @@ education!inner(institution, degree, field_of_study)`
 resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)"
           ${resume && resume.resume_skills.map((skill: any) => skill && skill.name).join(", ")}`
         `;
-<<<<<<< HEAD
-<<<<<<< HEAD
         resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
           ${resume && resume.resume_skills.map((skill: any) => skill && skill.name).join(", ")}
         `;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
     let resumeContent = "";
     let resumeSkills: string[] = []
@@ -482,15 +398,9 @@ resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill
           ${resume.work_history.map((job: any) =>
             `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
             ${job.description |""}`
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ).join("\n\n")}
-<<<<<<< HEAD
-=======
           ).join("\n\n")}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         resume_id;          ).join("\n\n")}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Education:
           ${resume.education.map((edu: any) =>
             `${edu.degree} in ${edu.field_of_study |""} from ${edu.institution}`
@@ -499,19 +409,7 @@ resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill
           ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
 
 resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         resume_id;
 
 )
@@ -598,39 +496,24 @@ resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
         `,
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
 resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     }
     // 3. If no resume content, use talent profile and cover letter;
     if (!resumeContent) {}`
       resumeContent = `
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         Bio: ${application.talent_profile?.bio |""}
         Cover Letter: ${application.cover_letter |""}
         Skills: ${application.talent_profile?.skills?.join(", ") |""}
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         Bio: ${application && application.talent_profile?.bio || ""}
         Cover Letter: ${application && application.cover_letter || ""}
         Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       `;
-<<<<<<< HEAD
-<<<<<<< HEAD
       resumeSkills = application && application.talent_profile?.skills || []
-<<<<<<< HEAD
 
     }
     // 4. Prepare job details
-<<<<<<< HEAD
     const jobTitle = application.job?.title |"";
     const jobDescription = application.job?.description |"";
     const jobSkills = application.job?.skills |[];
@@ -645,18 +528,14 @@ Bio: ${application.talent_profile?.bio |""}
       resumeSkills = application.talent_profile?.skills |[]
     }
     // 4. Prepare job details
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       resumeSkills = application.talent_profile?.skills |[]
     }
     // 4. Prepare job details      resumeSkills = application.talent_profile?.skills |[]
     }
     // 4. Prepare job details
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
-=======
 
 "
         Bio: ${application && application.talent_profile?.bio || ""}"
@@ -670,28 +549,15 @@ resumeSkills = application.talent_profile?.skills |[]
         Bio: ${application.talent_profile?.bio || ""}"
         Cover Letter: ${application.cover_letter || ""}"
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       `;
-<<<<<<< HEAD
-      resumeSkills = application.talent_profile?.skills || []
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    );
-=======
-      resumeSkills = application.talent_profile?.skills || []    );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      resumeSkills = application.talent_profile?.skills || []    );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       resumeSkills = application.talent_profile?.skills || []
 
     );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      resumeSkills = application.talent_profile?.skills || []    );
+      resumeSkills = application.talent_profile?.skills || []    );
+      resumeSkills = application.talent_profile?.skills || []
+
+    );
   }
 ;
   const supabase = createClient(supabaseUrl, supabaseAnonKey),;
@@ -779,44 +645,21 @@ if (!resumeContent) {;`
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}`
       `,;
       resumeSkills = application.talent_profile?.skills || [];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     // 4. Prepare job details"
     const jobTitle = application.job?.title || "","
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-=======
 
     // 5. Process using OpenAI to calculate match score"
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       method: "POST"
       headers: {}
 "`
@@ -839,18 +682,12 @@ if (!resumeContent) {;`
 "
         model: "gpt-4o-mini";
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     // 4. Prepare job details"
         model: "gpt-4o-mini";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         messages: [
           {
-=======
         model: "gpt-4o-mini";          {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -886,19 +723,15 @@ if (!resumeContent) {;`
         model: "gpt-4o-mini";
         messages: [
           {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             role: "system"
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
 
           },
-<<<<<<< HEAD
 
 }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             role: "user"
             content: `
@@ -906,13 +739,6 @@ if (!resumeContent) {;`
             Title: ${jobTitle}
             Description: ${jobDescription}
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 },
 
@@ -927,21 +753,15 @@ if (!resumeContent) {;`
 
             Required Skills: ${jobSkills && jobSkills.join(", ")}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             # Resume Content
-=======
 
             # Resume Content;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ${resumeContent}
             Compare the resume to the job description and provide:
             1. A match score between 0-100 (where 100 is a perfect match)
             2. A brief summary of why this score was given (1-2 sentences)'
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements"
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         job:jobs (title, description, skills);
         talent_profile:profiles ! talent_id (bio, skills);`
@@ -1072,9 +892,7 @@ if ( {) {}
                   "matching": ["skill1", "skill2"],"
                   "missing": ["skill3"]
                 },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 "experience_match": {
                   "score": 70;
                   "analysis": "Candidate has X years experience in relevant field."
@@ -1088,7 +906,6 @@ if ( {) {}
                 }"
                 "education_match": {"
                   "score": 65;"
-=======
                   "missing": ["skill3"];
                 }
                 "experience_match": {
@@ -1098,7 +915,6 @@ if ( {) {}
                 }
                 "education_match": {
                   "score": 65;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   "analysis": "Candidate has relevant degree.";
                 }
               }
@@ -1111,7 +927,6 @@ temperature: 0 && 0.5})});
     }
 
     const aiResult = await openAIResponse && openAIResponse.json();
-<<<<<<< HEAD
 
     let matchResult;
     try {
@@ -1119,13 +934,10 @@ temperature: 0 && 0.5})});
 
                 },
 
-<<<<<<< HEAD
                   "score": 70,
                   "analysis": "Candidate has X years experience in relevant field."
                 }
                 },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 "education_match": {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
@@ -1133,20 +945,17 @@ temperature: 0 && 0.5})});
 }
               "suggestion": "Recommended for Review"
             }`
-=======
 "
                 "education_match": {"
                   "score": 65,"
                   "analysis": "Candidate has relevant degree."
                 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         ];
         temperature: 0.5})});
     if (!openAIResponse.ok) {}
       const errorData = await openAIResponse.json();`
-=======
 
 }
               "suggestion": "Recommended for Review"
@@ -1156,7 +965,6 @@ temperature: 0 && 0.5})});
         temperature: 0.5})});
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
     }
     const aiResult = await openAIResponse.json();
@@ -1232,25 +1040,14 @@ try {}
 const errorData = await openAIResponse.json(),;`
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
 
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const aiResult = await openAIResponse.json(),
     let matchResult,
 try {}
@@ -1258,13 +1055,8 @@ try {}
       const content = aiResult.choices[0].message.content,
       matchResult = JSON.parse(content),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
-=======
     try {
       // Extract JSON from the response
         resume_id,;)
@@ -1532,7 +1324,6 @@ pr-12325
       matchResult = JSON.parse(content),
 // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {      // Validate required fields
@@ -1544,14 +1335,12 @@ pr-12325
                 }
                 "education_match": {
                   "score": 65;
-=======
 
       // Validate required fields;
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {}
                 }"
                 "education_match": {"
                   "score": 65;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   "analysis": "Candidate has relevant degree.";
       // Validate required fields;
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
@@ -1577,43 +1366,29 @@ try {
       matchResult = JSON && JSON.parse(content);
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         throw new Error("Invalid response format")
       }
     } catch (error) {"
       console && console.error("Error parsing AI response:", error);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       // Validate required fields;
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {"
         throw new Error("Invalid response format")
       }
-<<<<<<< HEAD
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error parsing AI response:", error),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       throw new Error("Failed to parse AI analysis results")
     }
     // 6. Update the application with the match results;
     const { error: updateError } = await supabase"
       .from("job_applications")
 .update({
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         match_score: matchResult && matchResult.score;
         match_summary: matchResult && matchResult.summary;
         match_breakdown: matchResult && matchResult.breakdown;
         match_suggestion: matchResult && matchResult.suggestion,
-<<<<<<< HEAD
 
         match_score: matchResult && matchResult.score;,
   match_summary: matchResult && matchResult.summary;
@@ -1623,18 +1398,14 @@ try {
         scored_at: new Date().toISOString()
       })
       .eq("id", applicationId);
-<<<<<<< HEAD
         match_summary: matchResult.summary;
         match_breakdown: matchResult.breakdown;
         match_suggestion: matchResult.suggestion
         scored_at: new Date().toISOString()
       })
       .eq("id", applicationId);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       })"
       .eq("id", applicationId);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         match_score: matchResult.score,
         match_summary: matchResult.summary,
         match_breakdown: matchResult.breakdown,
@@ -1643,8 +1414,6 @@ try {
 })"
       .eq("id", applicationId),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
     }
@@ -1710,13 +1479,10 @@ try {
     );
 }
 });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       {
         status: 200
         headers: { ...corsHeaders, "Content-Type": "application/json" }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     )
   } catch (error) {
@@ -1791,17 +1557,12 @@ JSON && JSON.stringify({ error: error && error.message });
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
-<<<<<<< HEAD
 
 ;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     } catch (error) {      throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
-=======
       })
       .eq("id", applicationId),
 
@@ -1809,7 +1570,6 @@ JSON && JSON.stringify({ error: error && error.message });
       .eq("id", applicationId),"
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     // 7. Return the match results;
     return new Response(
@@ -1845,15 +1605,11 @@ JSON.stringify({
       }
     )
 } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     console.error("Error in resume-scorer function:", error),
     return new Response(
-=======
   } catch (error) {"
     console.error("Error in resume-scorer function:", error),"
     return new Response()
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       JSON.stringify({ error: error.message });
       {
         status: 200,"
@@ -2001,7 +1757,6 @@ if ( {) {
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error ("Error in resume - scorer function:", error);
     return new Response (
         status: 500, "
@@ -2240,19 +1995,8 @@ headers: {
 });
   }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -2704,4 +2448,3 @@ headers: {}
 pr-12325
 });
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

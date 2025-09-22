@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -7,7 +6,6 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -18,7 +16,6 @@ import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { Sparkles, Search } from "lucide-react";
 interface AIMatchmakerProps {}
 interface AIMatchmakerProps {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;}
   className?: string;}
@@ -34,13 +31,7 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
 onMatchSelect?: (match: any) => void
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   serviceType?: string,
   onMatchSelect?: (match: any) => void,;
   className?: string;
@@ -60,10 +51,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -85,7 +73,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       // // // console.log("AI matching results:", results),
       setMatches(results),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } finally {
       setIsMatchmaking(false)
     }
@@ -120,19 +107,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       // Set empty matches to show no results found UI;
       setMatches([])
 } finally {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   // Extract just the items from each MatchResult
-<<<<<<< HEAD
   const matchItems = matches.map(match => match.item);
 
   };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       setIsMatchmaking(false)
 
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -170,13 +153,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       }
     }
 },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   // Extract just the items from each MatchResult;
   const matchItems = matches.map(match => match.item),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
@@ -194,7 +174,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
     }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;

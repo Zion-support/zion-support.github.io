@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 import React from './react';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 interface TalentDirectoryHeaderProps {
 title: string;
@@ -24,9 +21,6 @@ import React from "react",;
 interface TalentDirectoryHeaderProps {;
   title: string,;
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 export function TalentDirectoryHeader({
@@ -35,7 +29,6 @@ export function TalentDirectoryHeader({
   description,
 }: TalentDirectoryHeaderProps) {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="bg-zion-blue-dark border-b border-zion-blue-light">
       <div className="container mx-auto px-4 py-8 md:py-12">
@@ -48,13 +41,8 @@ export function TalentDirectoryHeader({
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   description: string;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 export function TalentDirectoryHeader({}
@@ -75,9 +63,7 @@ export function TalentDirectoryHeader({}
 
         </h1>;"
         <p className="text-zion-slate-light max-w-2xl">;
-<<<<<<< HEAD
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 "
@@ -116,32 +102,17 @@ export function TalentDirectoryHeader() { return null; }
         </p>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <p className="text-zion-slate-light max-w-2xl">
-=======
 
   );
 
 "
         <p className="text-zion-slate-light max-w-2xl">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-zion-slate-light max-w-2xl">
 
 }
@@ -174,28 +145,16 @@ description: string
 
         <p className="text-zion-slate-light max-w-2xl">
         <p className="text-zion-slate-light max-w-2xl">
-<<<<<<< HEAD
 }
 ;
 
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
   );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 ;
@@ -204,4 +163,3 @@ description: string
 }
 ;
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

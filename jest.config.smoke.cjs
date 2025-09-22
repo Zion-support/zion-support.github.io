@@ -1,14 +1,10 @@
 module.exports = {
   displayName: 'Smoke Tests',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const nextJest = require('next/jest');
 const createJestConfig = nextJest({
   dir: ./,
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -26,7 +22,6 @@ const config = {
       ]
     }]
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   testMatch: [
     '<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx)'
@@ -43,9 +38,6 @@ const config = {
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -79,12 +71,7 @@ const config = {
   verbose: true,
 };
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   coverageThreshold: {
     global: {
       branches: 70,
@@ -94,19 +81,15 @@ const config = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
 };
 
 module.exports = createJestConfig(customJestConfig);
-<<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-=======
 
 const customJestConfig = {
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   testEnvironment: 'jsdom',
 
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -161,7 +144,6 @@ moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: false,
   testTimeout: 30000,
   passWithNoTests: true
-=======
     '**/__tests__/**/*.(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
@@ -204,28 +186,14 @@ moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   ],
   coveragePathIgnorePatterns: [<rootDir>/node_modules/,<rootDir>/.next/,<rootDir>/dist/,<rootDir>/build/,
   ],
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 };
 
 module.exports = createJestConfig(config);
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-module.exports = createJestConfig(customJestConfig);
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
 
 module.exports = createJestConfig(customJestConfig);
 
-=======
+module.exports = createJestConfig(customJestConfig);
+
 module.exports = createJestConfig(config);
 module.exports = {
   preset: ts-jest,
@@ -238,6 +206,3 @@ module.exports = {
   testTimeout: 30000,
   passWithNoTests: true
 };
->>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

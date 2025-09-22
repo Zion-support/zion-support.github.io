@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
   Card
@@ -57,13 +55,10 @@ export function PartnerDashboard() {;
     pendingRevenue: 200 && 200.00;
   };
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 
-<<<<<<< HEAD
 export function PartnerDashboard() {;
   // Placeholder data - would come from API in real implementation;
   const stats = {;
@@ -74,29 +69,13 @@ export function PartnerDashboard() {;
     totalRevenue: 850 && 850.00,;
     pendingRevenue: 200 && 200.00;
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
-=======
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";"
 import {Button} from "@/components/ui/button";"
@@ -108,7 +87,6 @@ import { Button } from "@/components/ui/button","
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
@@ -214,7 +192,6 @@ Users,
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
@@ -229,7 +206,6 @@ export function PartnerDashboard() {;
     pendingRevenue: 200.00;
   };
   return (;
-<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
@@ -341,7 +317,6 @@ export function PartnerDashboard() {;
   return (;
     <div className="space-y-6">;
       {/* Stats Overview */}
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
         <Card className="bg - zion - blue - dark border - zion - blue - light">;
           <CardHeader className="flex flex - row items - center justify - between pb - 2">;
@@ -476,7 +451,6 @@ export function PartnerDashboard() {;
 
       ;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Recent Referrals */}
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader className="flex flex - row items - center justify - between">;
@@ -493,8 +467,6 @@ export function PartnerDashboard() {;
             <Users className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
             <p className="text - zion - slate - light mb - 4">No referrals yet</p>;
             <p className="text - xs text - zion - slate - light">;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Start sharing your referral links to earn rewards;
             </p>;
           </div>;
@@ -503,7 +475,6 @@ export function PartnerDashboard() {;
 )
 }
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 
 }
@@ -534,26 +505,17 @@ return (<div className="space-y-6" > {}
 }
 );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   );
 }
 </div>);
 }
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 }
     </div>);
@@ -588,4 +550,3 @@ return (<div className="space-y-6" > {
 
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

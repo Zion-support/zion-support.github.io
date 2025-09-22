@@ -1,15 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -20,11 +9,9 @@ import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
 export function EducationForm({
 export function EducationForm({ ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export function EducationForm({ ;
 
-<<<<<<< HEAD
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Education} from '@/types/resume';
@@ -35,8 +22,6 @@ import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
 export function EducationForm({
 export function EducationForm({ ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   resumeId;
   educationEntries;
   onComplete;
@@ -60,10 +45,6 @@ export function EducationForm({ ;
       is_current: data.is_current;
       description: data.description;
       location: data.location}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   resumeId;
   educationEntries
   onComplete
@@ -87,7 +68,6 @@ export function EducationForm({ ;
       is_current: data.is_current
       description: data.description
       location: data.location}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function EducationForm(): any ({ ;
   resumeId;
   educationEntries, ;
@@ -96,7 +76,6 @@ export function EducationForm(): any ({ ;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }
     if (success) {
@@ -104,9 +83,6 @@ export function EducationForm(): any ({ ;
     }
 
     let success;
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -135,12 +111,6 @@ let success;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;'
     if (!dateValue) return '';'
@@ -168,17 +138,13 @@ let success;
     } else {;
       success = await addEducation(resumeId, educationData);
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     if (success) {}
       setEditingId(null)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     }
 
@@ -203,13 +169,9 @@ let success;
 
   };
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleEdit = (edu: Education) => {
-=======
 
   const handleEdit = (edu: Education) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setEditingId(edu.id!)
     // Form reset happens in the child component;
   }
@@ -226,9 +188,6 @@ let success;
 }
 
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (success) {;
       setEditingId(null);
     }
@@ -251,14 +210,12 @@ let success;
       setEditingId(null);
     } else {;
       onBack();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
 },
 
   },
 return (
-<<<<<<< HEAD
     <div className="space-y-6">
       <div>"
         <h2 className="text-xl font-semibold mb-2">Education</h2>"
@@ -288,12 +245,10 @@ export function EducationForm({ ;
 </div>
       <div>
         <h2 className="text-xl font-semibold mb-2">Education</h2>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p className="text-muted-foreground">
           Add your educational background and academic achievements.
         </p>
       </div>
-<<<<<<< HEAD
       <EducationList
         educationEntries={educationEntries}
       <EducationList 
@@ -304,44 +259,26 @@ export function EducationForm({ ;
       <EducationList;
 pr-12325
         educationEntries={educationEntries} 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <EducationList;
         educationEntries={educationEntries} 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <EducationList
-=======
 <EducationList
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         educationEntries={educationEntries}
       <EducationList 
         educationEntries={educationEntries} 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
@@ -367,8 +304,6 @@ pr-12325
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
@@ -402,11 +337,7 @@ pr-12325
       </div>;
 ;
       {!editingId && educationEntries.length > 0 && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="flex justify-end">;
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
@@ -534,7 +465,6 @@ export function EducationForm({ ;
 ;
       {!editingId && educationEntries.length > 0 && (;
         <div className="flex justify-end">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button type="button" onClick={onComplete}>;
             Next;
           </Button>;
@@ -592,10 +522,8 @@ if (return date_value, ) {}
   const handleAddOrUpdate = async (data: any) => {}
     const education_data: Education = {}
       institution: data.institution,
-=======
     const education_data: Education = {,
   institution: data.institution,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       degree: data.degree,
       field_of_study: data.field_of_study,
       start_date: data.start_date,
@@ -624,13 +552,11 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       setEditingId (null);
     }
   }
 ;
-<<<<<<< HEAD
   const handle_edit = (edu: Education) =>: any {}
     setEditingId (edu.id!),
     // Form reset happens in the child component;
@@ -687,11 +613,8 @@ return ("
     </div>);
 }
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
         <div className="flex justify-end">"
           <Button type="button" onClick={onComplete}>"
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

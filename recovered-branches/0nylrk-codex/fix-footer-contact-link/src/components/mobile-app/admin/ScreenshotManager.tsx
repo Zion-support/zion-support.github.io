@@ -5,25 +5,16 @@ import { Upload, Trash2, Plus } from "lucide-react",
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from "lucide-react";
 import {AppPlatform} from "./MetadataManager";
-=======
 import React, { useState, useRef } from "react";"
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";"
 import {Button} from "@/components/ui/button";"
 import {Upload, Trash2, Plus} from "lucide-react";"
 import {AppPlatform} from "./MetadataManager";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {toast} from "sonner";
 interface ScreenshotManagerProps {}
   platform: AppPlatform;
@@ -73,23 +64,18 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Upload, Trash2, Plus } from './lucide-react';
 import { AppPlatform } from './MetadataManager';
-=======
 
 import React, { useState, useRef } from './react';'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';'
 import { Button } from '@/components / ui / button';'
 import { Upload, Trash2, Plus } from './lucide-react';'
 import { AppPlatform } from './MetadataManager';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from './sonner';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface ScreenshotManagerProps {
   platform: AppPlatform
@@ -136,30 +122,19 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
-<<<<<<< HEAD
 
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (imageFiles.length === 0) {
-=======
   },    if (imageFiles.length === 0) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   },    if (imageFiles.length === 0) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface ScreenshotManagerProps {}
   platform: AppPlatform;
 }
@@ -169,25 +144,18 @@ type Screenshot = {}
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
 
     if (imageFiles.length === 0) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     if (imageFiles.length === 0) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Please select valid image files")
       return;
     }
 // Limit the number of screenshots
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
 
     if (availableSlots <= 0) {
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return
     }
 
@@ -237,12 +205,6 @@ type Screenshot = {}
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     // Limit the number of screenshots;
 "
     const maxScreenshots = platform === "ios" ? 10 : 8,
@@ -250,7 +212,6 @@ type Screenshot = {}
 
     if (availableSlots <= 0) {}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return;
   },;
@@ -307,17 +268,9 @@ type Screenshot = {}
       addScreenshots(Array.from(e.dataTransfer.files));
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>"
         <CardTitle className="text-lg">App Screenshots</CardTitle>
@@ -325,13 +278,8 @@ type Screenshot = {}
       <CardContent>
 
 import React, { useState, useRef } from "react";
-=======
   import React, { useState, useRef } from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   import React, { useState, useRef } from "react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -340,12 +288,10 @@ import React, { useState, useRef } from "react";
       </CardHeader>
       <CardContent>
 import React, { useState, useRef } from "react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from "lucide-react";
 import {AppPlatform} from "./MetadataManager";
-=======
 
 "
 import React, { useState, useRef } from "react";"
@@ -353,7 +299,6 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";"
 import {Button} from "@/components/ui/button";"
 import {Upload, Trash2, Plus} from "lucide-react";"
 import {AppPlatform} from "./MetadataManager";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {toast} from "sonner";
 interface ScreenshotManagerProps {;
   platform: AppPlatform;
@@ -408,52 +353,29 @@ return (    <Card className="bg-zion-blue border-zion-purple/30">;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
 
-<<<<<<< HEAD
 
             isDragging "
               ? "border-zion-cyan bg-zion-cyan/10" 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
 
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               : "border-zion-purple/30"
-=======
 
-=======              : "border-zion-purple/30"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======              : "border-zion-purple/30"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               : "border-zion-purple/30"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
@@ -470,8 +392,6 @@ return (    <Card className="bg-zion-blue border-zion-purple/30">;
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           onDrop={handleDrop}>;"
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;"
@@ -512,22 +432,13 @@ return (    <Card className="bg-zion-blue border-zion-purple/30">;
   )
 }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>;
       </CardContent>;
     </Card>;
   );
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           />;
           <Button
@@ -571,10 +482,7 @@ return (    <Card className="bg-zion-blue border-zion-purple/30">;
   );
 
 };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
         <CardTitle className="text - lg">App Screenshots</CardTitle>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </CardHeader>;
       <CardContent>;
         <div;`
@@ -631,26 +539,14 @@ on_click={() => fileInputRef.current?.click ()}
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
 ;
 
-<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -15,26 +10,21 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
-<<<<<<< HEAD
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import React, { useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-=======
 import React, { useState } from "react";"
 import { MobileHeader } from "../components/common/MobileHeader";"
 import { BottomNavigation } from "../components/common/BottomNavigation";"
 import { Button } from "@/components/ui/button";"
 import { Input } from "@/components/ui/input";"
 import { Textarea } from "@/components/ui/textarea";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Label } from "@/components/ui/label";
 import {}
   Select,
@@ -48,7 +38,6 @@ import { Badge } from "@/components/ui/badge";"
 import { Card, CardContent } from "@/components/ui/card";
 
 import React, { useState } from "react",
-=======
 
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
@@ -61,11 +50,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";import React, { useState } from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import {Card, CardContent} from "@/components/ui/card";import React, { useState } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React, { useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -85,21 +70,17 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
 import React, { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
-=======
-======="
 import React, { useState } from "react","
 import { MobileHeader } from "../components/common/MobileHeader","
 import { BottomNavigation } from "../components/common/BottomNavigation","
 import { Button } from "@/components/ui/button","
 import { Input } from "@/components/ui/input","
 import { Textarea } from "@/components/ui/textarea","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Label } from "@/components/ui/label",
 import {}
   Select,
@@ -116,12 +97,8 @@ type JobPostStep = "details" | "requirements" | "budget" | "preview",
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 export function MobileJobPost() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -130,7 +107,6 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview")
     }
-<<<<<<< HEAD
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -260,36 +236,27 @@ import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
 import { Card, CardContent } from "@/components/ui/card",;
 type JobPostStep = "details" | "requirements" | "budget" | "preview",;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
   const goToNextStep = () => {
-=======
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
     const goToNextStep = () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
     const goToNextStep = () => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
   const goToNextStep = () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (currentStep === "details") {
       setCurrentStep("requirements");
     } else if (currentStep === "requirements") {
       setCurrentStep("budget");
     } else if (currentStep === "budget") {
-=======
 ;
 export function MobileJobPost() { return null; }
     } else if (currentStep === "requirements") {"
       setCurrentStep("budget");"
     } else if (currentStep === "budget") {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setCurrentStep("preview");
     }
 
@@ -316,11 +283,8 @@ const renderStepContent = () => {;
     }
 };
 
-<<<<<<< HEAD
   return (
-=======
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="min-h-screen flex flex-col">;
       <MobileHeader"
         title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
@@ -389,14 +353,11 @@ showBack
 
 function DetailsStep() { return null; }
           rows={5}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />;
       </div>;
     </div>;
   );
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </Button>;
         </div>;
       </main>;
@@ -470,7 +431,6 @@ function RequirementsStep() {}
   const [skills, setSkills] = useState<string[]>(["
     "React","
     "TypeScript","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "Node.js",
   ]);"
   const [newSkill, setNewSkill] = useState("");
@@ -483,28 +443,18 @@ function RequirementsStep() {}
   };
 
 const removeSkill = (skill: string) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     setSkills(skills.filter(s => s !== skill))
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setSkills(skills.filter((s) => s !== skill));
   };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="space-y-4">
-=======
   return ("
     <div className="space-y-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <h2 className="text-lg font-medium">Job Requirements</h2>
 "
       <div className="space-y-2">"
@@ -545,13 +495,6 @@ const removeSkill = (skill: string) => {
           {skills.map((skill) => (
 <Badge
               key={skill}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -563,7 +506,6 @@ function RequirementsStep() {;
       setSkills([...skills, newSkill]),;
       setNewSkill("");
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
 
   const removeSkill = (skill: string) => {;
@@ -644,15 +586,10 @@ function RequirementsStep() {
     }
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
-<<<<<<< HEAD
               {skill}
-<<<<<<< HEAD
               <button;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
@@ -660,14 +597,12 @@ function RequirementsStep() {
               <button"
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
               </button>;
             </Badge>;
           ))}
-<<<<<<< HEAD
 
         </div>;
         <div className="flex gap-2">;
@@ -711,7 +646,6 @@ function RequirementsStep() {
         <Textarea"
           id="responsibilities""
           placeholder="List the key responsibilities for this role"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           rows={4}
         />
       </div>
@@ -725,7 +659,6 @@ id="responsibilities"
           placeholder="List the key responsibilities for this role" 
 
           rows={4}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />;
       </div>;
     </div>;
@@ -739,7 +672,6 @@ function BudgetStep() {;
 
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
-=======
 function BudgetStep() { return null; }
   const add_skill = () =>: any {}
     if () {) {}
@@ -759,7 +691,6 @@ function BudgetStep() { return null; }
       <h2 className="text - lg font - medium">Job Requirements</h2>;"
       <div className="space - y-2">;"
         <Label html_for="experience">Experience Level</Label>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Select>;
           <SelectTrigger>;"
             <SelectValue placeholder="Select experience level" />;
@@ -807,7 +738,6 @@ function RequirementsStep() {
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
               {skill}          rows={3}
-=======
       </div>;"
       <div className="space - y-2">;
         <Label > Required Skills</Label>;"
@@ -890,7 +820,6 @@ function BudgetStep() {}
             <SelectContent>"
               <SelectItem value="usd">USD</SelectItem>"
               <SelectItem value="eur">EUR</SelectItem>"
-=======
       <div className="space-y-2">
         <Label>Salary Range</Label>
         <div className="flex gap-4 items-center">
@@ -904,7 +833,6 @@ function BudgetStep() {}
             <SelectContent>
               <SelectItem value="usd">USD</SelectItem>
               <SelectItem value="eur">EUR</SelectItem>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <SelectItem value="gbp">GBP</SelectItem>
             </SelectContent>
           </Select>
@@ -944,22 +872,17 @@ function BudgetStep() {}
           id="additionalInfo""
           placeholder="Any additional information about budget or payment"
           rows={3}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               {skill}          rows={3}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         />
       </div>
     </div>
   );
 }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 }
 ;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
 
       <Card>"
@@ -1411,7 +1334,6 @@ function BudgetStep() {}
         Edit Job Post;
       </Button>
     </div>
-<<<<<<< HEAD
   )/**
  * PreviewStep - Function description
  */
@@ -1449,8 +1371,6 @@ function PreviewStep() {
       <Button variant="outline" className="w-full">Edit Job Post</Button>;
     </div>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   SelectValue,"
 } from "@/components/ui/select";""
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react";""
@@ -1812,4 +1732,3 @@ pr-12325
       <Button variant="outline" className="w - full">Edit Job Post</Button>;"
     </div>);]"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -76,4 +76,3 @@ export default function AgentSafetyCertification2026() {
     </ErrorBoundary>
   );
 }
-

@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const defaultContext: MessagingContextType = {
-=======
 
 const defaultContext: MessagingContextType = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 const defaultContext: MessagingContextType = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   messages: [],
   conversations: [],
   unreadCount: 0,
@@ -25,25 +17,15 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
-=======
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;'
 import { useAuth } from '@/hooks/useAuth',;'
 import { MessagingContextType } from '@/types/messaging',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;
 // Default context used when React type definitions are missing;
 const defaultContext: MessagingContextType = {;
@@ -60,16 +42,8 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const defaultContext: MessagingContextType = {}
   messages: []
@@ -78,7 +52,6 @@ const defaultContext: MessagingContextType = {}
   activeConversation: null;
   activeMessages: []
   isLoading: false;
-=======
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -87,7 +60,6 @@ const defaultContext: MessagingContextType = {
   activeConversation: null
   activeMessages: []
   isLoading: false
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   sendMessage: async () => {}
   createConversation: async () => {}
   markAsRead: async () => {}
@@ -99,9 +71,7 @@ const defaultContext: MessagingContextType = {
 // To avoid TS2347 when the definitions are unavailable, we cast the default;
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
-<<<<<<< HEAD
   defaultContext as MessagingContextType
-<<<<<<< HEAD
 
 import {useAuth} from '@/hooks/useAuth';
 import {MessagingContextType} from '@/types/messaging';
@@ -135,7 +105,6 @@ const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider');
 
-=======
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -169,28 +138,22 @@ const MessagingContext = createContext(;
 
 ),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Hook for using the messaging context
 export function useMessaging(): MessagingContextType {
 
   if (context === undefined) {
-=======
   const context = useContext(MessagingContext) as MessagingContextType,
 
   if (context === undefined) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     throw new Error('useMessaging must be used within a MessagingProvider')
 
   }
   return context;
 }
 
-=======
 
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
   const { user } = useAuth();
@@ -210,9 +173,6 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     create_conversation;
     markAsRead;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <MessagingContext.Provider value={contextValue}>
   const { user } = useAuth();
@@ -236,11 +196,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 // Hook for using the messaging context
 export function useMessaging(): MessagingContextType {
   // Cast to avoid type errors when React type definitions are missing;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider');
@@ -251,7 +207,6 @@ export function useMessaging(): MessagingContextType {
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
-=======
 // Provider component;
 export function MessagingProvider() { return null; }
   }
@@ -260,7 +215,6 @@ export function MessagingProvider() { return null; }
   const {}
 // Provider component;
 export function MessagingProvider() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
   const {;
     messages;
@@ -276,8 +230,6 @@ export function MessagingProvider() { return null; }
     send_message;
     create_conversation;
     markAsRead;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {children}
     </MessagingContext.Provider>
   )
@@ -338,35 +290,19 @@ pr-12325
     } else {;
       setConversations([]),;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       setConversations([]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
 
 // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fetch_conversations;
     load_messages;
     if (user) {;}
@@ -407,7 +343,6 @@ if ( {) {}
 ;
   // Create context value with all the methods and states;
 const context_value: MessagingContextType = {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     messages;
     active_messages;
     conversations;
@@ -419,63 +354,36 @@ const context_value: MessagingContextType = {
     markAsRead;
     setActiveConversation;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     fetchConversations,;
     loadMessages;
   };
-<<<<<<< HEAD
   return (;
     <MessagingContext.Provider value={contextValue}>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {children}
-=======
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}      {children}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}      {children}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     fetchConversations,;
     loadMessages;
   };
 
       {children}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     </MessagingContext && MessagingContext.Provider>;
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}
-=======
 
-=======
 fetchConversations,;
     loadMessages;
   };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
     setActiveConversation;}
@@ -490,7 +398,6 @@ fetchConversations,;
     <MessagingContext && MessagingContext.Provider value={contextValue} />;
       {children}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fetch_conversations,
     load_messages;
   }
@@ -500,10 +407,6 @@ return (
       {children}
     </MessagingContext.Provider>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ),;
 // Hook for using the messaging context;
 export function useMessaging():MessagingContextType {;
@@ -532,17 +435,7 @@ pr-12325
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
