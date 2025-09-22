@@ -1,12 +1,22 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import LoadingSpinner from '../components/LoadingSpinner'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setIsVisible(true)
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+      setIsLoading(false)
+    }, 500)
+
+    return () => clearTimeout(timer)
   }, [])
 
   const services = [
@@ -43,32 +53,56 @@ export default function HomePage() {
     { number: "24/7", label: "Support Available" }
   ]
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <LoadingSpinner size="lg" />
+      </div>
+    )
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
       <Head>
         <title>Zion Tech Group — Advanced IT & AI Services</title>
         <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
         <meta name="keywords" content="IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Zion Tech Group — Advanced IT & AI Services" />
+        <meta property="og:description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group — Advanced IT & AI Services" />
+        <meta name="twitter:description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses.",
+              "url": "https://ziontechgroup.com",
+              "sameAs": [
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https://github.com/ziontechgroup"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              }
+            })
+          }}
+        />
       </Head>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-white">Zion Tech Group</h1>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
-              <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
-              <Link href="/blog" className="text-white hover:text-purple-300 transition-colors">Blog</Link>
-              <Link href="/contact" className="text-white hover:text-purple-300 transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <main className="pt-20">
@@ -84,10 +118,18 @@ export default function HomePage() {
               Transform your business with cutting-edge technology, artificial intelligence, and innovative IT solutions designed for the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
+              <Link 
+                href="/services" 
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+                aria-label="Explore our comprehensive services"
+              >
                 Explore Services
               </Link>
-              <Link href="/contact" className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all">
+              <Link 
+                href="/contact" 
+                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+                aria-label="Contact us to get started"
+              >
                 Get Started
               </Link>
             </div>
@@ -96,7 +138,7 @@ export default function HomePage() {
           {/* Stats Section */}
           <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" role="region" aria-label={`${stat.number} ${stat.label}`}>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </div>
@@ -108,11 +150,15 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold text-white text-center mb-12">Our Core Services</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all transform hover:scale-105">
-                  <div className="text-4xl mb-4">{service.icon}</div>
+                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all transform hover:scale-105 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-opacity-50">
+                  <div className="text-4xl mb-4" role="img" aria-label={service.title}>{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <Link href={service.href} className="text-purple-400 hover:text-purple-300 font-semibold">
+                  <Link 
+                    href={service.href} 
+                    className="text-purple-400 hover:text-purple-300 font-semibold focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 rounded-md px-1 py-1"
+                    aria-label={`Learn more about ${service.title}`}
+                  >
                     Learn More →
                   </Link>
                 </div>
@@ -179,7 +225,11 @@ export default function HomePage() {
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 Join hundreds of companies that trust Zion Tech Group for their technology needs. Let's build the future together.
               </p>
-              <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 inline-block">
+              <Link 
+                href="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 inline-block focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+                aria-label="Contact us to start your project"
+              >
                 Start Your Project Today
               </Link>
             </div>
@@ -188,19 +238,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-gray-400">
-            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-            <div className="mt-4 flex justify-center space-x-6">
-              <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-              <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

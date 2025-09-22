@@ -1,3 +1,11 @@
 User-agent: *
 Allow: /
-Sitemap: /publicsitemap.xml
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /backup/
+Disallow: /temp_exclude/
