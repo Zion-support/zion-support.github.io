@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -28,7 +11,6 @@ const path = require('path')
   log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
-
 
   async runCommand(command, description) {
     try {
@@ -65,23 +47,6 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       return size}}
 
@@ -125,4 +90,3 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}""
     console.error(' Simple automation "failed")""
         "status"""`;
-
