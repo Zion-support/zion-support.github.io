@@ -56,6 +56,20 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
         ]
+      },
+      // Cache Next.js build assets for 1 year (immutable)
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Cache common static assets for 7 days
+      {
+        source: '/:path*{png|jpg|jpeg|gif|webp|avif|svg|ico|css|js}',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400' }
+        ]
       }
     ];
   },
