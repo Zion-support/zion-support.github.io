@@ -1,68 +1,22 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Solutions - Zion Tech Group',
+  description: 'Innovative technology solutions for modern businesses.',
+};
 
-export default function SolutionsPage() {
-
-        
-
-          
-
-          
-
-import {
-
-const flagshipSolutions = [
-
-const industryApplications = [
-
-const implementationSteps = [
-
-export default function SolutionsPage() {
-
-export default function SolutionsPage() {
-
-// eslint-disable-next-line react-refresh/only-export-components
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function SolutionsPage() {
-
-        
-
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function SolutionsPage() {
-
-            
-
-            
-
-import React from 'react';
-import { Metadata } from 'next';
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-const solutions = [
-
-const solutionCategories = [
-
-export default function SolutionsPage() {
-
-          
-
-          
-
-                
-
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Solutions</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            Explore our innovative technology solutions designed to solve your business challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

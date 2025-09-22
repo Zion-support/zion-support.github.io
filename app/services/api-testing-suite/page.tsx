@@ -1,34 +1,22 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Api Testing Suite - Zion Tech Group',
+  description: 'Professional api testing suite services for your business.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function APITestingSuitePage() {}
-
-function FeatureItem({}
-
-function PricingCard({}
-
-function TestingCapability({}
-
-function TechCard({ name, icon }: { name: string; icon: string }) {}
-
-function IntegrationCard({ name, icon }: { name: string; icon: string }) {}
-
-function UseCaseCard({}
-
-function CTA() {}
-
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Api Testing Suite</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            Professional api testing suite services to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

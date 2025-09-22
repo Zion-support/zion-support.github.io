@@ -1,16 +1,22 @@
 import React from 'react';
-
-import Link from "next/link";
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Meeting Transcriber - Zion Tech Group',
+  description: 'Professional ai meeting transcriber services for your business.',
+};
 
-export default function AIMeetingTranscriberPage() {
-
-function FeatureItem({
-
-function PricingCard({
-
-function StepCard({
-
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Meeting Transcriber</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            Professional ai meeting transcriber services to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

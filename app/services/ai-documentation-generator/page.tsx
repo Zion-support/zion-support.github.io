@@ -1,26 +1,22 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Documentation Generator - Zion Tech Group',
+  description: 'Professional ai documentation generator services for your business.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function AIDocumentationGeneratorPage() {}
-
-function FeatureItem({}
-
-function PricingCard({}
-
-function BenefitCard({}
-
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Documentation Generator</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            Professional ai documentation generator services to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

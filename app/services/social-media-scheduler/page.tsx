@@ -1,24 +1,22 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Social Media Scheduler - Zion Tech Group',
+  description: 'Professional social media scheduler services for your business.',
+};
 
 export default function ServicePage() {
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function SocialMediaSchedulerPage() {
-
-        
-
-          
-
-          
-
-function PricingSection() {}
-
-function PricingPlan({
-
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Social Media Scheduler</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            Professional social media scheduler services to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

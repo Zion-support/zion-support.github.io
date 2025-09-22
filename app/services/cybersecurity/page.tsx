@@ -1,58 +1,22 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Cybersecurity - Zion Tech Group',
+  description: 'Professional cybersecurity services for your business.',
+};
 
 export default function ServicePage() {
-
-export default function CybersecurityPage() {}
-
-export default function CybersecurityPage() {
-
-        
-
-          
-
-          
-
-function CybersecurityServiceCard({ title, description, features, price, icon }: { 
-
-function CyberServiceCard({ title, description, features, price, icon }: { 
-
-function CyberServiceCard({ title, description, features, price, icon }
-
-function CybersecurityTechStack({ title, technologies }: { 
-
-function IndustrySecurity({ title, description, solutions, icon }: { 
-
-function Item({ title, details }: { title: string; details: string[] }) {}
-
-function CybersecurityBenefitCard({ title, description, icon }: { 
-
-function Item({ title, details }: { title: string; details: string[] }) {
-
-function Item({ title, details }: { title: string; details: string[] }) {}
-
-function Pricing() {
-
-function Pricing() {}
-
-function Pricing() {
-
-function Pricing() {}
-
-function Plan({ name, price, features, popular }: { 
-
-function Plan({ name, price, duration, features }: { 
-
-function Plan({ name, price, duration, features }
-
-function Plan({ name, price, duration, features }: { 
-
-function CTASection() {
-
-function ContactSection() {
-
-function ContactSection() {}
-
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Cybersecurity</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            Professional cybersecurity services to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

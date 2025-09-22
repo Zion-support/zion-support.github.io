@@ -1,26 +1,22 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Financial Analytics - Zion Tech Group',
+  description: 'Professional ai financial analytics services for your business.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-import Link from 'next/link';
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function AIFinancialAnalyticsPage() {
-
-          
-
-          
-
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Financial Analytics</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            Professional ai financial analytics services to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
