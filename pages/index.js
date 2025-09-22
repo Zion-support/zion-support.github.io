@@ -25,10 +25,10 @@ export default function Home() {
 
   useEffect(() => {
     setIsVisible(true);
-    // Simulate loading for better UX
+    // Optimized loading for better performance
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 500); // Reduced loading time for better UX
     return () => clearTimeout(timer);
   }, []);
 

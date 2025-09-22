@@ -21,7 +21,7 @@ const nextConfig = {
   
   // Experimental features
   experimental: {
-    optimizeCss: false,
+    optimizeCss: false, // Disable CSS optimization for static export compatibility
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
   },
@@ -43,7 +43,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, dev }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -57,6 +57,20 @@ const nextConfig = {
         util: false,
         buffer: 'buffer',
         process: 'process/browser',
+      };
+    }
+
+    // Performance optimizations
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
       };
     }
     
