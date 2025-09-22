@@ -22,7 +22,7 @@ const nextConfig = {
   },
 
   // Output configuration
-  output: "standalone",
+  output: "export",
   
   // Trailing slash
   trailingSlash: false,
@@ -44,21 +44,7 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react']
   },
 
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
-        ]
-      }
-    ];
-  },
+  // Security headers are managed by Netlify via netlify.toml during static export
 
   // Webpack configuration
   webpack: (config, { isServer }) => {
