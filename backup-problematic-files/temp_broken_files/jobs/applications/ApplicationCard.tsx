@@ -82,4 +82,3 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
             </Button>;
           </div>;
         </div>;
-

@@ -1,28 +1,5 @@
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-import React from "react",
-import { useNavigate } from "react-router-dom",
-import { ChevronLeft, Bell, Settings } from "lucide-react",
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -30,9 +7,6 @@ import { ChevronLeft, Bell, Settings } from "lucide-react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import {useNavigate} from "react-router-dom";
@@ -40,23 +14,9 @@ import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface MobileHeaderProps {;
-  title: string,;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import {Button} from "@/components/ui/button";
-interface MobileHeaderProps {;
-  title: string,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
@@ -65,13 +25,7 @@ import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
 
   title: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -111,17 +65,8 @@ pr-12325
   onNotificationsClick?: () => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onSettingsClick?: () => void;
 }
 
@@ -132,8 +77,6 @@ export function MobileHeader(): any ({;
 }
   onSettingsClick?: () => void;
 }
-
-
 
 export function MobileHeader(): any ({;
 )
@@ -143,15 +86,13 @@ pr-12325
 }
 =======
 
-
   onSettingsClick?: () => void;
 }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title;
 
-<<<<<<< HEAD
-  showBack = false;
+showBack = false;
   showNotifications = false;
   showSettings = false;
   className;
@@ -160,21 +101,11 @@ pr-12325
   const navigate = useNavigate();
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MobileHeaderProps {
 =======
   return (interface MobileHeaderProps {
@@ -183,8 +114,6 @@ interface MobileHeaderProps {
   return (interface MobileHeaderProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 interface MobileHeaderProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -198,8 +127,6 @@ interface MobileHeaderProps {
   showNotifications?: boolean,
   showSettings?: boolean,
   className?: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
   onNotificationsClick?: () => void,
 <<<<<<< HEAD
@@ -218,16 +145,8 @@ export function MobileHeader({
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export function MobileHeader({;
-=======
-  onNotificationsClick?: () => void,export function MobileHeader({;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   onNotificationsClick?: () => void,export function MobileHeader({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -236,8 +155,6 @@ export function MobileHeader({;
 
   onSettingsClick?: () => void
 }
-
-
 
   onSettingsClick?: () => void
 }
@@ -256,17 +173,9 @@ export function MobileHeader({};
   title;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title,
@@ -279,14 +188,9 @@ export function MobileHeader({};
   const navigate = useNavigate(),
 
   return (
-<<<<<<< HEAD
-    <header className={cn(
-<<<<<<< HEAD
+<header className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-    <header className={cn("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
       className;
@@ -299,22 +203,12 @@ export function MobileHeader({};
               size="icon""
               className="mr-2"
 
-<<<<<<< HEAD
-    <headerclassName={cn(
+<headerclassName={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
       className
 <<<<<<< HEAD
 }
 ;
-=======
-=======
-=======
-    <headerclassName={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
-      className
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() => navigate(-1)}
 =======
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}
@@ -324,7 +218,6 @@ export function MobileHeader({};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
-
 
       className
     )}>
@@ -346,7 +239,6 @@ export function MobileHeader({};
             >
               <ChevronLeft className="h-5 w-5" />
 =======
-
 
               onClick={() => navigate(-1)}
             >"
@@ -379,43 +271,14 @@ export function MobileHeader({};
               <Settings className="h-5 w-5" />"
               <span className="sr-only">Settings</span>
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 }
 
-<<<<<<< HEAD
-=======
-
-)}
-        </div>
-      </div>
-    </header>
-  )
-}
-}
-
-}
-
-}
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
 import { cn } from "@/lib/utils",;
-=======
-"
-import React from "react",;"
-import { useNavigate } from "react-router-dom",;"
-import { ChevronLeft, Bell, Settings } from "lucide-react",;"
-import { cn } from "@/lib/utils",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button",;
 interface MobileHeaderProps {;
   title: string,;
@@ -425,15 +288,7 @@ interface MobileHeaderProps {;
   className?: string,;
   onNotificationsClick?: () => void,;
   onSettingsClick?: () => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface MobileHeaderProps {;
   title:string,;
   showBack?:boolean,;
@@ -442,71 +297,7 @@ interface MobileHeaderProps {;
   className?:string,;
   onNotificationsClick?:() => void,;
   onSettingsClick?:() => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-}
-;
-export function MobileHeader() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-;
-export function MobileHeader({;
-  title,;
-  showBack = false,;
-  showNotifications = false,;
-  showSettings = false,;
-  className,;
-  onNotificationsClick,;
-  onSettingsClick}: MobileHeaderProps) {;
-  const navigate = useNavigate();
-  return (;
-    <header className={cn(;
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
-      className;
-  onNotificationsClick,)
-  onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate(),
-
-    <header className={cn("
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border","
-      className;)
-    )}>
-</header>"
-      <div className="flex items-center justify-between h-14 px-4">"
-</div>"
-        <div className="flex items-center">"
-</div>
-            <Button;"
-              variant="ghost"""
-              size="icon"""
-              className="mr-2""
-    <headerclassName={cn("
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border""
-              onClick={() => navigate(-1)}
-"
-              <ChevronLeft className="h-5 w-5" />"
-              <span className="sr-only">Back</span>"
-          <h1 className="text-lg font-medium leading-none truncate">"
-</h1>
-        <div className="flex items-center space-x-2">"
-              size="icon""
-              onClick={onNotificationsClick}
-            >
-              <Bell className="h-5 w-5" />"
-              <span className="sr-only">Notifications</span>"
-              onClick={onSettingsClick}
-              <Settings className="h-5 w-5" />"
-              <span className="sr-only">Settings</span>"
-    <header className={cn(;"
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";"
-pr-12325
-      className;
-)
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onSettingsClick} MobileHeaderProps) {;
   const navigate = useNavigate(),;
 ;
@@ -514,41 +305,19 @@ pr-12325
     <header className={cn(;"
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
       className;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    )}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      <div className="flex items-center justify-between h-14 px-4">;
-=======
-
-    )}>;"
-      <div className="flex items-center justify-between h-14 px-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           {showBack && (;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-          {showBack && (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Button
               variant="ghost" 
               size="icon" 
               className="mr-2" 
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-            <Button ;
-=======
-<Button ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               variant="ghost" ;
               size="icon" ;
               className="mr-2" ;
@@ -589,12 +358,8 @@ pr-12325
               size="icon";
               className="mr-2";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onClick={() => navigate(-1)}
@@ -613,10 +378,7 @@ pr-12325
 "
               size="icon"
               onClick={onNotificationsClick}>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
               size="icon"
 =======
           {showBack && (;              size="icon"
@@ -634,17 +396,12 @@ pr-12325
               size="icon";
               onClick={onNotificationsClick}
             >;
-<<<<<<< HEAD
-            <Button;"
+<Button;"
               variant="ghost";"
               size="icon";
               onClick={onNotificationsClick}
             >;
-<<<<<<< HEAD
-=======
-              <Bell className="h-5 w-5" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-              <span className="sr-only">Notifications</span>;
+<span className="sr-only">Notifications</span>;
             </Button>;
           )}
 
@@ -672,38 +429,6 @@ pr-12325
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
-<<<<<<< HEAD
-=======
-"
-              <Bell className="h-5 w-5" />;"
-              <span className="sr-only">Notifications</span>;
-            </Button>;
-          )}
-"
-              size="icon"
-              onClick={onSettingsClick}>;
-            <Button ;"
-              variant="ghost" ;"
-              size="icon";
-              onClick={onSettingsClick}
-            >;
-          {showSettings && (;
-            <Button;"
-              variant="ghost";"
-              size="icon";
-              onClick={onSettingsClick}
-            >;
-"
-              <Settings className="h-5 w-5" />;"
-              <span className="sr-only">Settings</span>;
-            </Button>;
-          )}
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
               <span className="sr-only">Notifications</span>;
             </Button>;
@@ -714,13 +439,10 @@ pr-12325
         </div>;
       </div>;
     </header>;
-<<<<<<< HEAD
-  );
+);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 }
@@ -743,8 +465,6 @@ export /**;
  */
 function MobileHeader() {}
   const navigate = use_navigate ();
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -785,88 +505,14 @@ function MobileHeader() {}
               on_click={onSettingsClick}
             >;"
               <Settings className="h - 5 w - 5" />;"
-=======
-;
-</div>;
-      </div>;
-    </header>;
-  return (
-    <header className={cn (
-      "sticky top - 0 z - 40 bg - background / 80 backdrop - blur - sm border - b border - border";
-      class_name)}>;
-      <div className="flex items - center justify - between h - 14 px - 4">;
-        <div className="flex items - center">;
-          {show_back && (
-            <Button;
-              variant="ghost";
-              size="icon";
-              className="mr - 2";
-              on_click={() => navigate (-1)}
-            >;
-              <ChevronLeft className="h - 5 w - 5" />;
-              <span className="sr - only">Back</span>;
-            </Button>)}
-          <h1 className="text - lg font - medium leading - none truncate">;
-            {title}
-
-    <header className={cn(;"
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;"
-    )}>;
-      <div className="flex items-center justify-between h-14 px-4">;"
-        <div className="flex items-center">;"
-            <Button ;"
-              variant="ghost" ;""
-              size="icon" ;""
-              className="mr-2" ;"
-              variant="ghost";""
-              size="icon";""
-              className="mr-2";"
-              <ChevronLeft className="h-5 w-5" />;"
-              <span className="sr-only">Back</span>;"
-            ;"
-          <h1 className="text-lg font-medium leading-none truncate">;"
-          </h1>;
-        </div>;"
-        <div className="flex items-center space-x-2">;"
-              onClick={onNotificationsClick}>;
-
-              size="icon";"
-            >;
-<<<<<<< HEAD
-              <Bell className="h - 5 w - 5" />;
-              <span className="sr - only">Notifications</span>;
-            </Button>)}
-          {show_settings && (
-            <Button;
-              variant="ghost";
-              size="icon";
-              on_click={onSettingsClick}
-            >;
-              <Settings className="h - 5 w - 5" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <span className="sr - only">Settings</span>;
             </Button>)}
-=======
-
-              <Bell className="h-5 w-5" />;"
-              <span className="sr-only">Notifications</span>;"
-              onClick={onSettingsClick}>;
-
-
-              <Settings className="h-5 w-5" />;"
-              <span className="sr-only">Settings</span>;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>;
       </div>;
     </header>);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;}
  interface MobileHeaderProps {
   title: string;
@@ -908,20 +554,12 @@ className)
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

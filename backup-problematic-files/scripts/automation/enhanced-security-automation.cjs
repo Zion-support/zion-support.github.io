@@ -21,23 +21,14 @@ class EnhancedSecurityAutomation {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-<<<<<<< HEAD
-    runSecurityAudit() {}
+runSecurityAudit() {}
         this.log('Running security audit...');
-        
+
         try {}
             const auditResult = execSync('npm audit --json', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
-=======
-    runSecurityAudit() {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;`;
@@ -101,17 +92,8 @@ class EnhancedSecurityAutomation {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = EnhancedSecurityAutomation;
-module.exports = EnhancedSecurityAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = EnhancedSecurityAutomation;
 "`;

@@ -2,23 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -52,7 +43,6 @@ pr-12325
   FormField,
   FormItem,
 FormMessage,;
-<<<<<<< HEAD
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 interface ReplyFormProps {
@@ -81,14 +71,6 @@ onSubmit: (content: string) => Promise<void>;
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
-=======
-} from "@/components/ui/form";"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-import { useState  } from './react';'
-import { use_form  } from './react - hook - form';'
-import { Button  } from '@/components / ui / button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Textarea  } from '@/components / ui / textarea';
 import {";
 import { useState } from "react";"
@@ -96,17 +78,9 @@ import { useForm } from "react-hook-form";
 "
 import { Button } from "@/components/ui/button";"
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 import {
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Form,
@@ -114,72 +88,18 @@ import {}
   FormField,
   FormItem,
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-=======
-=======
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-Form
-  FormControl
-  FormField
-  FormItem
-  FormMessage
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   FormMessage,
 
 } from "@/components/ui/form";
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  FormMessage,
-} from '@/components / ui / form';
-import { Card, CardContent, CardFooter  } from '@/components / ui / card';
-interface ReplyFormProps {
-  on_submit: (content: string) => Promise < void>;
-  parent_id?: string;
-}
-interface ReplyFormValues {
-interface ReplyFormValues {;
-  content: string;
-}
-  const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "",;
-    },;
-  });
-  const handleSubmit = async (values: ReplyFormValues) => {;
-    setIsSubmitting(true);
-    try {;
-      (await onSubmit(values && values.content), form && form.reset());
-    } finally {;
-      setIsSubmitting(false);
-    }
-
-  },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <Card>;
-=======
-
-
-
-
-
-  return (;
-    <Card>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <CardContent className="pt-6">;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
@@ -237,34 +157,15 @@ pr-12325
     setIsSubmitting (true);
     try {}
       (await on_submit (values.content), form.reset ());
-<<<<<<< HEAD
-    } finally {}
-=======
-    } finally {
-  // TODO: Implement
-}
-      (await on_submit (values.content), form.reset ());
-    } finally {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+} finally {}
       setIsSubmitting (false);
     }
   }
 ;
   return (
-<<<<<<< HEAD
-    <Card>;
-<<<<<<< HEAD
+<Card>;
 <<<<<<< HEAD
       <CardContent className="pt-6">;
-=======
-    <Card>;"
-      <CardContent className="pt - 6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <CardContent className="pt - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       <CardContent className="pt-6">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -281,17 +182,10 @@ pr-12325
                         parent_id;"
                           ? "Write your reply...";"
                           : "Join the discussion...";
-<<<<<<< HEAD
-                      }
+}
                       className="min - h-[100px] resize-y";
   FormMessage;
 } from "@/components/ui/form",;
-=======
-                      }"
-                      className="min - h-[100px] resize - y";
-  FormMessage;"
-} from "@/components/ui/form",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 ;
 interface ReplyFormProps {;
@@ -414,42 +308,13 @@ interface ReplyFormProps {;)
         </Form>;
       </CardContent>;
 
-<<<<<<< HEAD
 FormMessage,;
 placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 
 } from "@/components/ui/form";
 
-<<<<<<< HEAD
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 };
-=======
-
-"
-} from "@/components/ui/form";
-"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  };
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "",;
-    },;
-  });
-
-  const handleSubmit = async (values: ReplyFormValues) => {;
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     setIsSubmitting(true);
     try {;
@@ -461,20 +326,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
   },
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
@@ -526,34 +377,15 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
     setIsSubmitting (true);
     try {}
       (await on_submit (values.content), form.reset ());
-<<<<<<< HEAD
-    } finally {}
-=======
-    } finally {
-  // TODO: Implement
-}
-      (await on_submit (values.content), form.reset ());
-    } finally {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+} finally {}
       setIsSubmitting (false);
     }
   }
 ;
   return (
-<<<<<<< HEAD
-    <Card>;
-<<<<<<< HEAD
+<Card>;
 <<<<<<< HEAD
       <CardContent className="pt-6">;
-=======
-    <Card>;"
-      <CardContent className="pt - 6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <CardContent className="pt - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       <CardContent className="pt-6">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -571,18 +403,9 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                         parent_id;"
                           ? "Write your reply...";"
                           : "Join the discussion...";
-<<<<<<< HEAD
-                      }
-<<<<<<< HEAD
+}
 <<<<<<< HEAD
                       className="min - h-[100px] resize-y";
-=======
-                      }"
-                      className="min - h-[100px] resize - y";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                      className="min - h-[100px] resize - y";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                       className="min - h-[100px] resize-y";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -592,15 +415,9 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                   <FormMessage />;
 
                 </FormItem>)}
-<<<<<<< HEAD
-            />;
+/>;
             <div className="mt - 4 flex justify-end">;
               <Button type="submit" disabled={is_submitting}>;
-=======
-            />;"
-            <div className="mt - 4 flex justify - end">;"
-              <Button type="submit" disabled={is_submitting}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {is_submitting ? "Submitting..." : "Post Reply"}
 
 </Card>"
@@ -650,67 +467,13 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
 export default ReplyForm;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-
-                      className="min-h-[100px] resize-y"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from "@/components/ui/form";
-=======
-
-
-"
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-
-"
-                      className="min-h-[100px] resize-y"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />"
-            <div className="mt-4 flex justify-end">"
-              <Button type="submit" disabled={isSubmitting}>"
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
 } from "@/components/ui/form";
 "
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-<<<<<<< HEAD
 interface ReplyFormProps {
-=======
-
-interface ReplyFormProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
 }
@@ -718,7 +481,6 @@ interface ReplyFormValues {}
   content: string;
 }
 
-<<<<<<< HEAD
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ReplyFormValues>({}
@@ -756,10 +518,6 @@ import { useState } from "react",;"
 import { useForm } from "react-hook-form",;"
 import { Button } from "@/components/ui/button",;"
 import { Textarea } from "@/components/ui/textarea",;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {;
   Form,;
   FormControl,;
@@ -785,20 +543,7 @@ import { useForm } from "react-hook-form";
 "
 import { Button } from "@/components/ui/button";"
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 import {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-=======
-import {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ReplyFormValues {;
 
   content: string;
@@ -813,22 +558,11 @@ interface ReplyFormValues {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
@@ -849,16 +583,9 @@ interface ReplyFormValues {;
                         parent_id;"
                           ? "Write your reply...";"
                           : "Join the discussion...";
-<<<<<<< HEAD
-                      }
-<<<<<<< HEAD
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+}
+placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                      }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -876,10 +603,8 @@ interface ReplyFormValues {;
         </Form>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  )
+)
 },
-
 
     </Card>;
   ),;
@@ -919,33 +644,13 @@ export default ReplyForm;
   )
 },
 
-
 export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export default ReplyForm;
-export default ReplyForm,
-
-=======
-
-
-  )
-},
-
-
-
-export default ReplyForm;
-export default ReplyForm,
-";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 export default ReplyForm;
 export default ReplyForm,
@@ -961,14 +666,8 @@ export default ReplyForm,
           </form>;
         </Form>;
       </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '"

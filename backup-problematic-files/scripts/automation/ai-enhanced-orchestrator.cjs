@@ -9,8 +9,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
-<<<<<<< HEAD
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
+this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
     this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
       learningEnabled: process.env.LEARNING_ENABLED === 'true'
@@ -37,15 +36,8 @@ const os = require('os')
         '5min'
         '15min'
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      const result = execSync('top -bn1 | grep "Cpu(s)"
-      const result = execSync('top -bn1 | grep "Cpu(s)"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

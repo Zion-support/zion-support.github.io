@@ -1,17 +1,9 @@
-<<<<<<< HEAD:pages/MicroSAAS.tsx
-<<<<<<< HEAD
+:pages/MicroSAAS.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/Layout';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     >
       <div className="min-h-screen bg-gray-50 py-20">"
@@ -96,21 +88,8 @@ export default function MicroSAAS() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD:pages/MicroSAAS.tsx
+:pages/MicroSAAS.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  );
-<<<<<<< HEAD
-}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
   );
 import React from 'react';
@@ -123,7 +102,6 @@ import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 import { 
 =======
-
 
 import React from 'react';'
 import Head from 'next/head';'
@@ -354,20 +332,11 @@ export default function MicroSAASPage() {}
     </MainLayout>
   );
 }
-<<<<<<< HEAD:pages/MicroSAAS.tsx
-<<<<<<< HEAD
+:pages/MicroSAAS.tsx
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     >
-=======
->
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/MicroSAAS.tsx
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -382,18 +351,9 @@ export default function MicroSAASPage() {}
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD:pages/MicroSAAS.tsx
-<<<<<<< HEAD
+:pages/MicroSAAS.tsx
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/MicroSAAS.tsx

@@ -9,9 +9,6 @@ export class TestingSystem {_static async testUserInteraction(element: HTMLEleme
         break
     }
         break;}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }

@@ -10,7 +10,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-
+;
 interface TryItProps {'
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
@@ -50,7 +50,7 @@ export default function TryItConsole() { return null; }
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
   const [token, setToken] = useState('');
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -70,7 +70,7 @@ const headers: Record<string, string> = {
         body:
           method === 'GET' |method === 'DELETE'
             ? undefined
-            : body |undefined
+            : body |undefined;
       });
       const text = await res.text();
       setResponse(text);
@@ -88,7 +88,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
 <div className='space-y-2'>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>;
         <div>
 
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>"
@@ -114,7 +114,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
 <div className='space-y-2' />
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2' />
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2' />;
         <div />
 
           <label className='block text-sm mb-1' />Base URL</label>
@@ -235,7 +235,7 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
   }
   return ('
     <div className='space-y-2'>'
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>;
 '
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>

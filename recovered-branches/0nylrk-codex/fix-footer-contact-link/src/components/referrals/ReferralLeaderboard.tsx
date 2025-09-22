@@ -3,10 +3,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {
   Card
@@ -19,69 +15,20 @@ import {
 import { Award } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  Card,
-=======
-<<<<<<< HEAD
-
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Award  } from './lucide-react';
-
-=======
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Award } from "lucide-react",
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {
-=======
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-<<<<<<< HEAD
-  CardTitle,
-<<<<<<< HEAD
+CardTitle,
 <<<<<<< HEAD
 <<<<<<< HEAD
 } from '@/components / ui / card';
 import { Award  } from './lucide-react';
-
-=======
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
-
-=======
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Award} from "lucide-react";
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -89,9 +36,6 @@ interface LeaderboardEntry {
   rank: number;
   name: string;
   referrals: number
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 } from "@/components/ui/card";
@@ -120,11 +64,7 @@ function ReferralLeaderboard() {}
     { rank: 5, name: "Jordan Lee", referrals: 10 },
   ];
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Card>;
@@ -140,15 +80,6 @@ function ReferralLeaderboard() {}
           {leaderboard_data.map ((entry) => (
             <div;
               key={entry.rank}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Award} from "lucide-react";
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   return (
     <Card>
@@ -162,14 +93,9 @@ import {Award} from "lucide-react";
       <CardContent>"
         <div className="space-y-2">
           {leaderboardData.map((entry) => (
-<<<<<<< HEAD
-            <div
+<div
               key={entry.rank}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            <div;
-              key={entry.rank}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >"
               <div className="flex items-center gap-3">
@@ -177,8 +103,7 @@ import {Award} from "lucide-react";
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${}
                     entry.rank === 1"
                       ? "bg-yellow-200 text-yellow-800"
-<<<<<<< HEAD
-                      : entry.rank === 2
+: entry.rank === 2
 <<<<<<< HEAD
 <<<<<<< HEAD
                       ? "bg-slate-200 text-slate-800"
@@ -186,29 +111,13 @@ import {Award} from "lucide-react";
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
 <<<<<<< HEAD
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Award } from "lucide-react",;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface LeaderboardEntry {;
   rank: number,;
   name: string,;
   referrals: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ReferralLeaderboard() {;
   // This would typically be fetched from the server;
   // For now, we'll use mock data;
@@ -216,9 +125,7 @@ export function ReferralLeaderboard() {;
     { rank: 1, name: "Alex Johnson", referrals: 24 },;
     { rank: 2, name: "Jamie Smith", referrals: 18 },;
     { rank: 3, name: "Taylor Wong", referrals: 15 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { rank: 4, name: "Casey Brown", referrals: 12 },;
+{ rank: 4, name: "Casey Brown", referrals: 12 },;
     { rank: 5, name: "Jordan Lee", referrals: 10 }],;
 
   return (
@@ -237,17 +144,11 @@ export function ReferralLeaderboard() {;
               key={entry && entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;
               <div className="flex items-center gap-3">;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <div
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry && entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50 transition - colors";
             >;
               <div className="flex items - center gap - 3">;
@@ -256,37 +157,11 @@ export function ReferralLeaderboard() {;
                     entry.rank === 1;
                       ? "bg - yellow - 200 text - yellow - 800";
                       : entry.rank === 2;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                        ? "bg - slate - 200 text - slate - 800";
-                        : entry.rank === 3;
-                          ? "bg - amber - 200 text - amber - 800";
-                          : "bg - muted text - muted - foreground";
-
-=======
-                <div
-                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
-                    entry.rank === 1
-                      ? "bg-yellow-200 text-yellow-800"
-                      : entry.rank === 2
-
-                      ? "bg-slate-200 text-slate-800"
-                      : entry.rank === 3
-                      ? "bg-amber-200 text-amber-800"
-                      : "bg-muted text-muted-foreground"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       ? "bg-slate-200 text-slate-800";
                       : entry.rank === 3;
                       ? "bg-amber-200 text-amber-800";
                       : "bg-muted text-muted-foreground";
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -313,7 +188,6 @@ import {
 } from "@/components/ui/card";
 import { Award } from "lucide-react";
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface LeaderboardEntry {
@@ -363,8 +237,7 @@ function ReferralLeaderboard() {
 </div>
                 <div;
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
-<<<<<<< HEAD
-                    entry.rank === 1
+entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
                       : entry.rank === 2
                         ? "bg-slate-200 text-slate-800"
@@ -373,14 +246,9 @@ function ReferralLeaderboard() {
                           ? "bg-amber-200 text-amber-800"
                           : "bg-muted text-muted-foreground"
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   }`}
                 >;
                   {entry.rank}
@@ -390,25 +258,6 @@ function ReferralLeaderboard() {
               <span className="text - sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
 
-<<<<<<< HEAD
-=======
-                      : entry.rank === 2"
-                        ? "bg-slate-200 text-slate-800"
-                        : entry.rank === 3"
-                          ? "bg-amber-200 text-amber-800""
-                          : "bg-muted text-muted-foreground"`
-                  }`}
-                >;
-                  {entry.rank}
-                </div>;"
-                <span className="font - medium">{entry.name}</span>;
-              </div>;"
-              <span className="text - sm">;"
-                {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
-
-"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -431,20 +280,9 @@ export function ReferralLeaderboard() { return null; }
     { rank: 5, name: "Jordan Lee", referrals: 10 }];
   return (;
     <Card>;
-<<<<<<< HEAD
-      <CardHeader>;
-<<<<<<< HEAD
-        <CardTitle className="flex items - center gap-2">;
+<CardHeader>;
+<CardTitle className="flex items - center gap-2">;
           <Award className="h - 5 w-5" />;
-=======
-      <CardHeader>;"
-        <CardTitle className="flex items - center gap - 2">;"
-          <Award className="h - 5 w - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        <CardTitle className="flex items - center gap - 2">;
-          <Award className="h - 5 w - 5" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           Leaderboard;
 =======
                     entry.rank === 1;"
@@ -482,17 +320,6 @@ export function ReferralLeaderboard() { return null; }
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;"
               <div className="flex items-center gap-3">;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                      : entry && entry.rank === 2"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                <div
-=======
-<div
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry && entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
@@ -521,30 +348,13 @@ export function ReferralLeaderboard() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </span>;
             </div>;
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-              </span>;
-            </div>;
-          ))}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        </div>
+</div>
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
@@ -552,11 +362,6 @@ export function ReferralLeaderboard() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }
 ;
@@ -576,29 +381,7 @@ export function ReferralLeaderboard() { return null; }
   );
 }
 ;
-<<<<<<< HEAD
-=======
 
-  )
-=======
-
-  ),;}
- interface LeaderboardEntry {
-  rank: number;
-name: string;
-referrals: number 
-}//This would typically be fetched from the server //For now, we'll use mock data const leaderboardData: LeaderboardEntry[] = [ flex items-center gap-2"> <Award className=" h-5 w-5"/> Leaderboard </CardTitle> <CardDescription>Top referrers this month</CardDescription> </CardHeader> <CardContent> <div key= {
-  entry.rank 
-}className=" flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"> <div className=" flex items-center gap-3"> <div className= {
-  `h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium $ {
-  entry.rank === 1 ? " bg-yellow-200 text-yellow-800": entry.rank === 2 ? " bg-slate-200 text-slate-800" : entry.rank === 3 > {
-  entry.rank 
-}</div> </span> </div>) ) 
-}</div> </CardContent> </Card>) 
-}
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 
@@ -607,13 +390,7 @@ referrals: number
   )
 }
 ;
-<<<<<<< HEAD
-=======
 
-
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 import {
   // TODO: Implement

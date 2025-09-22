@@ -1,58 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-))}
-          </div>;
-        )}
-        <code className="language-javascript">{code}</code>"
-      </pre>
-      <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"",
-        onClick={handleCopyClick}
-        aria-label="Copy code""
-      >
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>
-      {language && (
-        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">"
-          {language}
-        </div>;
-      )}
-    </div>;
-  );
-    >;
-      <pre;
-        className={cn ('p - 4 overflow - auto', showLineNumbers && 'pl - 12 relative')}'
-      >;
-        {showLineNumbers && (
-          <div className='absolute left - 0 top - 0 bottom - 0 w - 8 bg - zinc - 800 flex flex - col items - end pr - 2 text - zinc - 500'>;
-            {code.split ('\n').map ((_, i) => ('
-              <div key={i} className='h - 6 leading - 6'>                {i + 1}'
-              </div>))}
-          </div>)}
-        <code className='language - javascript'>{code}</code>;
-      </pre>;
-      <button;
-        className='absolute top - 2 right - 2 p - 2 rounded - md hover:bg - zinc - 800 transition - colors';',
-        on_click={handleCopyClick}
-        aria - label='Copy code'      >;
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>;
-      {language && (
-        <div className='absolute top - 2 left - 2 px - 2 py - 1 text - xs rounded - md bg - zinc - 800 text - zinc - 400'>;
-          {language}
-        </div>)}
-    </div>);
-export default CodeBlock;
-export default CodeBlock;
-;
-}
-}
-}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
@@ -64,7 +11,6 @@ interface CodeBlockProps {
   className?: string
 }
 
-<<<<<<< HEAD
 export function CodeBlock({ 
   code,
   language = 'bash',
@@ -150,27 +96,6 @@ export function CodeBlock({;
           {language}
         </div>;
       )}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-))}
-          </div>;
-        )}
-
-        <code className="language-javascript">{code}</code>
-      </pre>
-      <button"
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
-        onClick={handleCopyClick}"
-        aria-label="Copy code"
-      >
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>
-      {language && ("
-        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           {language}
         </div>;
@@ -183,17 +108,12 @@ export function CodeBlock({;
       <pre;
         className={cn ('p - 4 overflow - auto', showLineNumbers && 'pl - 12 relative')}
       >;
-<<<<<<< HEAD
-        {showLineNumbers && (
-<<<<<<< HEAD
-          <div className='absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500'>
+{showLineNumbers && (
+<div className='absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500'>
             {code.split('\n').map((_, i) => (
               <div key={i} className='h-6 leading-6'>                {i + 1}
               </div>
   const [copied, setCopied] = useState(false),
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default CodeBlock;
 ;
 }
@@ -201,8 +121,7 @@ export default CodeBlock;
 }
 }
 
-<<<<<<< HEAD
-  const handleCopyClick = async () => {
+const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code),
     setCopied(true),
     setTimeout(() => {
@@ -265,27 +184,8 @@ export function CodeBlock({;
             ))}
           </div>
         )}
-=======
-        {showLineNumbers && ('
-          <div className='absolute left - 0 top - 0 bottom - 0 w - 8 bg - zinc - 800 flex flex - col items - end pr - 2 text - zinc - 500'>;'
-            {code.split ('\n').map ((_, i) => ('
-              <div key={i} className='h - 6 leading - 6'>                {i + 1}
-              </div>))}
-          </div>)}'
-        <code className='language - javascript'>{code}</code>;
-      </pre>;
-      <button;'
-        className='absolute top - 2 right - 2 p - 2 rounded - md hover:bg - zinc - 800 transition - colors';
-        on_click={handleCopyClick}'
-        aria - label='Copy code'      >;
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>;
-      {language && ('
-        <div className='absolute top - 2 left - 2 px - 2 py - 1 text - xs rounded - md bg - zinc - 800 text - zinc - 400'>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {language}
-<<<<<<< HEAD
-        </div>)}
+</div>)}
     </div>);
 export default CodeBlock;
 
@@ -297,23 +197,13 @@ export default CodeBlock;
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   );
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default CodeBlock;
 <<<<<<< HEAD
-=======
-        </div>
-      )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======

@@ -1,41 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -49,32 +24,15 @@ import {Badge} from "@/components/ui/badge";
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card } from "@/components/ui/card";
-<<<<<<< HEAD
 import {};
-=======
-import {
-
-
-import {Card} from "@/components/ui/card";""
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
-import {Badge} from "@/components/ui/badge";""
-import { Card } from "@/components/ui/card";"
-
-import {
-  // TODO: Implement
-}
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Table;
   TableBody;
   TableCell;
 
   TableHead;
-<<<<<<< HEAD
-  TableHeader;
+TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 <<<<<<< HEAD
@@ -83,34 +41,14 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/c
 import {Badge} from "@/components/ui/badge";
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
-import {Badge} from "@/components/ui/badge";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
-=======
-  TableHeader;"
-  TableRow} from "@/components/ui/table","
-import { Badge } from "@/components/ui/badge";"
-import {Card} from "@/components/ui/card";"
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";"
-import {Badge} from "@/components/ui/badge";
-"
-import React from "react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Card } from "@/components/ui/card",
 import {}
 =======
@@ -122,29 +60,15 @@ import {
   TableBody,
   TableCell,
   TableHead,
-<<<<<<< HEAD
-  TableHeader,"
+TableHeader,"
   TableRow} from "@/components/ui/table","
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Sample data for integration sync logs
 =======
@@ -158,8 +82,6 @@ import {Badge} from "@/components/ui/badge";// Sample data for integration sync 
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 
-
-
 // Sample data for integration sync logs
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -171,50 +93,13 @@ const syncLogs = [
     status: "success"
     timestamp: "2024-05-20T12:30:45Z"
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     details: "Successfully synced contact data for Job #1234"
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-  },
-=======
-
-
-;
-// Sample data for integration sync logs;
-const syncLogs = []
-  {"
-    id: "1""
-    integration: "Salesforce""
-    event: "contact_synced""
-    status: "success""
-    timestamp: "2024-05-20T12:30:45Z""
-    details: "Successfully synced contact data for Job #1234"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-
-  }
+}
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    details: "Successfully synced contact data for Job #1234"
-
-
-  },
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "2"
     integration: "Greenhouse"
@@ -222,47 +107,17 @@ const syncLogs = []
     status: "success"
     timestamp: "2024-05-20T10:15:22Z"
     details: "New applicant created in Greenhouse from Zion application"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-  },
-=======
-  {"
-    id: "2""
-    integration: "Greenhouse""
-    event: "applicant_created""
-    status: "success""
-    timestamp: "2024-05-20T10:15:22Z""
-    details: "New applicant created in Greenhouse from Zion application"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-
-  }
+}
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
-=======
-    details: "Successfully synced contact data for Job #1234"  {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     details: "Successfully synced contact data for Job #1234"  {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   },
-
 
   {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -273,41 +128,11 @@ const syncLogs = []
     timestamp: "2024-05-19T16:45:12Z"
     details: "Failed to update deal - API rate limit exceeded"
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-  },
-<<<<<<< HEAD
-=======
-  {"
-    id: "3""
-    integration: "HubSpot""
-    event: "deal_updated""
-    status: "error""
-    timestamp: "2024-05-19T16:45:12Z""
-    details: "Failed to update deal - API rate limit exceeded"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-
-  }
+}
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "4"
     integration: "Zoho CRM"
@@ -315,48 +140,17 @@ const syncLogs = []
     status: "warning"
     timestamp: "2024-05-19T14:22:33Z"
     details: "Job synced but some fields were skipped due to mapping issues"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-  },
-=======
-  {"
-    id: "4""
-    integration: "Zoho CRM""
-    event: "job_synced""
-    status: "warning""
-    timestamp: "2024-05-19T14:22:33Z""
-    details: "Job synced but some fields were skipped due to mapping issues"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-
-  }
+}
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-  },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
   },
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   },
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
@@ -375,65 +169,19 @@ const syncLogs = []
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     details: "Updated candidate status to 'Interview Scheduled'"
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-<<<<<<< HEAD
-=======
 
-],
-
-
-export function IntegrationsSyncLog() {
-  const getStatusBadge = (status: string) => {
-
-    switch (status) {
-      case "success": return <Badge className="bg-green-500">Success</Badge>,
-
-=======
-
-
-],
-
-
-export function IntegrationsSyncLog() {
-  const getStatusBadge = (status: string) => {
-
-    switch (status) {
-      case "success": return <Badge className="bg-green-500">Success</Badge>,
-
-];
-],
-
-export function IntegrationsSyncLog() {
-  const getStatusBadge = (status: string) => {
-    switch (status) {;
-      case "success": return <Badge className="bg-green-500">Success</Badge>;
-    switch (status) {
-      case "success": return <Badge className="bg-green-500">Success</Badge>,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "error":
-=======
-"
-      case "error":"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="destructive">Error</Badge>,
 
 "
@@ -443,16 +191,7 @@ export function IntegrationsSyncLog() {
         return <Badge variant="outline">Unknown</Badge>
     }
 
-
-
-<<<<<<< HEAD
-  }
-
-=======
-  },
-  
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -472,7 +211,6 @@ export function IntegrationsSyncLog() {
     }
 
   },
-  
 
   return (
     <Card>
@@ -484,18 +222,13 @@ export function IntegrationsSyncLog() {
               <TableHead>Integration</TableHead>
               <TableHead>Event</TableHead>
               <TableHead>Status</TableHead>
-<<<<<<< HEAD
-              <TableHead>Time</TableHead>"
-=======
-              <TableHead>Time</TableHead>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TableHead>Time</TableHead>"
               <TableHead className="hidden md:table-cell">Details</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {syncLogs.map((log) => (
-<<<<<<< HEAD
-              <TableRow key={log.id}>"
+<TableRow key={log.id}>"
                 <TableCell className="font-medium">{log.integration}</TableCell>
                 <TableCell>'
                   {log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
@@ -505,20 +238,7 @@ export function IntegrationsSyncLog() {
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
 =======
   }            ))}
@@ -537,7 +257,6 @@ export function IntegrationsSyncLog() {
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
 
-
             ))}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -549,16 +268,9 @@ export function IntegrationsSyncLog() {
     </Card>
   )
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 =======
@@ -575,17 +287,11 @@ import {;
   TableBody,;
   TableCell,;
   TableHead,;
-<<<<<<< HEAD
-  TableHeader,;"
+TableHeader,;"
   TableRow} from "@/components/ui/table",;"
 import { Badge } from "@/components/ui/badge",;
 
-
-
 // Sample data for integration sync logs;
-=======
-}// Sample data for integration sync logs;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }// Sample data for integration sync logs;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -595,14 +301,9 @@ import { Badge } from "@/components/ui/badge",;
 import { Badge } from "@/components/ui/badge",;
 
 // Sample data for integration sync logs;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}// Sample data for integration sync logs;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const syncLogs = [;
-<<<<<<< HEAD
-  {;
+{;
     id: "1",;
     integration: "Salesforce",;
     event: "contact_synced",;
@@ -653,82 +354,23 @@ status: "success",;
     event: "candidate_status_changed",;
     status: "success",;
     timestamp: "2024-05-18T09:10:05Z",;
-=======
-  {;"
-    id: "1",;"
-    integration: "Salesforce",;"
-    event: "contact_synced",;"
-    status: "success",;"
-    timestamp: "2024-05-20T12:30:45Z",;"
-    details: "Successfully synced contact data for Job #1234";
-
-
-
-  {;"
-    id: "2",;"
-    integration: "Greenhouse",;"
-    event: "applicant_created",;
-
-
-
-  {;"
-    id: "3",;"
-    integration: "HubSpot",;"
-    event: "deal_updated",;"
-    status: "error",;"
-    timestamp: "2024-05-19T16:45:12Z",;"
-    details: "Failed to update deal - API rate limit exceeded";
-
-
-
-  {;"
-    id: "4",;"
-    integration: "Zoho CRM",;"
-    event: "job_synced",;"
-    status: "warning",;"
-    timestamp: "2024-05-19T14:22:33Z",;"
-    details: "Job synced but some fields were skipped due to mapping issues";
-
-
-
-  {;"
-    id: "5",;"
-    integration: "Lever",;"
-    event: "candidate_status_changed",;"
-    status: "success",;"
-    timestamp: "2024-05-18T09:10:05Z",;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     details: "Updated candidate status to 'Interview Scheduled'";
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-  }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];
 
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
-=======
-"
-      case "success": return <Badge className="bg-green-500">Success</Badge>;"
-      case "error":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="destructive">Error</Badge>;
 
 "
@@ -737,13 +379,8 @@ export function IntegrationsSyncLog() {;
       default:;"
         return <Badge variant="outline">Unknown</Badge>;
 
-
-
   return (
-<<<<<<< HEAD
-=======
-  }  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
   }  return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -821,11 +458,7 @@ export function IntegrationsSyncLog() {;
   };
 
   return (
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  }  return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card>;
 =======
     <Card>;"
@@ -855,32 +488,20 @@ export function IntegrationsSyncLog() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </TableBody>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 =======
 ))}
@@ -895,18 +516,9 @@ export function IntegrationsSyncLog() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -917,7 +529,6 @@ import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 =======
-
 
             ))}
 '
@@ -970,7 +581,6 @@ const sync_logs = [;
   }
 ];
 ;
-<<<<<<< HEAD
 export /**
  * IntegrationsSyncLog - Function description
  */
@@ -1018,11 +628,7 @@ function IntegrationsSyncLog() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   },;
   ;
@@ -1063,13 +669,11 @@ const syncLogs = [
   details: "Successfully synced contact data for Job #1234""
   },
 
-
     id: "2"","
   integration: "Greenhouse"""
     event: "applicant_created"","
     timestamp: "2024-05-20T10:15:22Z"","
   details: "New applicant created in Greenhouse from Zion application""
-
 
     id: "3"","
   integration: "HubSpot"""
@@ -1078,14 +682,12 @@ const syncLogs = [
     timestamp: "2024-05-19T16:45:12Z"","
   details: "Failed to update deal - API rate limit exceeded""
 
-
     id: "4"","
   integration: "Zoho CRM"""
     event: "job_synced"","
   status: "warning"""
     timestamp: "2024-05-19T14:22:33Z"","
   details: "Job synced but some fields were skipped due to mapping issues""
-
 
     id: "5"","
   integration: "Lever"""
@@ -1153,8 +755,6 @@ const syncLogs = [
         return <Badge className="bg - amber - 500">Warning,""
       <div className="p - 4">;"
 
-
-
               <TableHead > Integration;
               <TableHead > Event;
               <TableHead > Status;
@@ -1172,9 +772,6 @@ const syncLogs = [
       case "success": return <Badge className="bg-green-500">Success,;""
         return <Badge variant="destructive">Error,;""
         return <Badge className="bg-amber-500">Warning;""
-
-
-
 
                 <TableCell className="font-medium">{log.integration};"
 
@@ -1254,18 +851,11 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

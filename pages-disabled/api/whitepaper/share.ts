@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
@@ -55,34 +44,18 @@ export function getShared(id: string) {
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { markdown, publicPreview } = req.body || {}
   if (!markdown) return res.status(400).json({ error: 'Missing markdown' })
   const id = randomUUID()
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview }
-<<<<<<< HEAD
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL |''}/whitepaper/preview/${id}`
-
-=======
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`
-<<<<<<< HEAD
-=======
->>>>>>> main
+const url = `${process.env.NEXT_PUBLIC_BASE_URL |''}/whitepaper/preview/${id}`
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { markdown, publicPreview } = req.body || {},
-  if (!markdown) return res.status(400).json({ error: 'Missing markdown' });
-  const id = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
   res.status(200).json({ id, url })
 }
-<<<<<<< HEAD
 export function getShared(id: string) {
   return store[id]
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -125,14 +98,6 @@ export /**
  */
 function get_shared() {
   return store[id];
-
-
-=======
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export function getShared(id: string) {}
   return store[id];

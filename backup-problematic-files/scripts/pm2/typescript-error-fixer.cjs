@@ -6,19 +6,7 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class TypeScriptErrorFixer {}
@@ -38,19 +26,9 @@ class TypeScriptErrorFixer {}
       level,
       message,
       data,
-<<<<<<< HEAD
-      service: 'typescript-error-fixer'
+service: 'typescript-error-fixer'
     };
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -65,7 +43,7 @@ class TypeScriptErrorFixer {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting TypeScript Error Fixer Service...');
-    
+
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -74,21 +52,10 @@ class TypeScriptErrorFixer {}
       await this.performTypeScriptFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
-<<<<<<< HEAD
-      
-      this.log('info', 'TypeScript Error Fixer Service started successfully');
-<<<<<<< HEAD
+this.log('info', 'TypeScript Error Fixer Service started successfully');
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
-      
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -109,19 +76,11 @@ class TypeScriptErrorFixer {}
   resetCounters() {}
     this.fixedFiles.clear()};
   async getTypeScriptErrors() {}
-<<<<<<< HEAD
-    try {}
+try {}
       const result = execSync('npx tsc --noEmit --json', { })
-<<<<<<< HEAD
-        cwd: this.projectRoot,
-=======
-        cwd: this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
 });
       if (result) {}
@@ -165,18 +124,7 @@ class TypeScriptErrorFixer {}
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
-        
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -185,15 +133,9 @@ class TypeScriptErrorFixer {}
   };
   shouldSkipLine(line) {}
     const trimmed = line.trim();
-<<<<<<< HEAD
-    return !trimmed ||
+return !trimmed ||
            trimmed.startsWith('//') ||
            trimmed.startsWith('/*') ||
-=======
-    return !trimmed || 
-           trimmed.startsWith('//') || 
-           trimmed.startsWith('/*') || 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
            trimmed.startsWith('*') ||
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -214,18 +156,7 @@ class TypeScriptErrorFixer {}
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
 =======
@@ -250,18 +181,8 @@ class TypeScriptErrorFixer {}
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -272,20 +193,9 @@ class TypeScriptErrorFixer {}
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
-    
+
     const propertyName = propertyMatch[1];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     // Try to fix common module issues;
 
@@ -301,18 +211,8 @@ class TypeScriptErrorFixer {}
     let firstUsage = -1;
     let declaration = -1;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     allLines.forEach((line, index) => {}
@@ -358,7 +258,6 @@ class TypeScriptErrorFixer {}
 // Start the service;
 const fixer = new TypeScriptErrorFixer();
 // Handle graceful shutdown;
-<<<<<<< HEAD
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
@@ -386,15 +285,8 @@ fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-});
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

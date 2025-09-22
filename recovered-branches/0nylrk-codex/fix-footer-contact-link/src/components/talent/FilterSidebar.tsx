@@ -1,44 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Filter} from "lucide-react";
-import {SearchFilter} from "./filters/SearchFilter";
-import {SortFilter} from "./filters/SortFilter";
-import {SkillsFilter} from "./filters/SkillsFilter";
-import {AvailabilityFilter} from "./filters/AvailabilityFilter";
-import {RegionFilter} from "./filters/RegionFilter";
-import {ExperienceFilter} from "./filters/ExperienceFilter";
-import {PriceFilter} from "./filters/PriceFilter";
-import {FilterSidebarProps} from "@/types/filters";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function FilterSidebar(): any ({;
-=======
-import React from "react";"
-import {Button} from "@/components/ui/button";"
-import {Filter} from "lucide-react";"
-import {SearchFilter} from "./filters/SearchFilter";"
-import {SortFilter} from "./filters/SortFilter";"
-import {SkillsFilter} from "./filters/SkillsFilter";"
-import {AvailabilityFilter} from "./filters/AvailabilityFilter";"
-import {RegionFilter} from "./filters/RegionFilter";"
-import {ExperienceFilter} from "./filters/ExperienceFilter";"
-import {PriceFilter} from "./filters/PriceFilter";"
-import {FilterSidebarProps} from "@/types/filters";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-=======
-export function FilterSidebar(): any ({;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -59,7 +19,6 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
-<<<<<<< HEAD
 "
 import React from "react","
 import { Button } from "@/components/ui/button","
@@ -75,16 +34,9 @@ import { FilterSidebarProps } from "@/types/filters";"
 import { PriceFilter } from "./filters/PriceFilter","
 import { FilterSidebarProps } from "@/types/filters",
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function FilterSidebar({
-=======
-
-export function FilterSidebar({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   searchTerm,
 =======
 export function FilterSidebar(): any ({;  searchTerm,
@@ -126,11 +78,7 @@ import { PriceFilter } from "./filters/PriceFilter",""
 import { FilterSidebarProps } from "@/types/filters","
 export function FilterSidebar({
   searchTerm,
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   setSearchTerm,
   selectedSkills,
   toggleSkill,
@@ -146,153 +94,24 @@ pr-12325
   toggleSection,
   sortOption,
   setSortOption,
+clearFilters,
 <<<<<<< HEAD
-  clearFilters,
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   isMobileFilterOpen
 }: FilterSidebarProps) {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   return (
     <>;
       {/* Filter header */}
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Filter } from "lucide-react",;
-import { SearchFilter } from "./filters/SearchFilter",;
-import { SortFilter } from "./filters/SortFilter",;
-import { SkillsFilter } from "./filters/SkillsFilter",;
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
-import { RegionFilter } from "./filters/RegionFilter",;
-import { ExperienceFilter } from "./filters/ExperienceFilter",;
-import { PriceFilter } from "./filters/PriceFilter",;
-import { FilterSidebarProps } from "@/types/filters",;
-}: FilterSidebarProps) {
-  return (
-    <>;
-      {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-white flex items-center">
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-          Filters
-        </h3>
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
-        >
-          Clear All
-        </Button>
-      </div>      {/* Search */}
-      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      {/* Sorting */}
-      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-      {/* Skills */}
-      <SkillsFilter
-        selectedSkills={selectedSkills}
-        toggleSkill={toggleSkill}
-        expanded={expandedSections.skills}
-        toggleSection={() => toggleSection('skills')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />
-      {/* Availability */}
-      <AvailabilityFilter
-}: FilterSidebarProps) {
-  return (
-    <>;
-      {/* Filter header */}"
-import React from "react",;""
-import { Button } from "@/components/ui/button",;""
-import { Filter } from "lucide-react",;""
-import { SearchFilter } from "./filters/SearchFilter",;""
-import { SortFilter } from "./filters/SortFilter",;""
-import { SkillsFilter } from "./filters/SkillsFilter",;""
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",;""
-import { RegionFilter } from "./filters/RegionFilter",;""
-import { ExperienceFilter } from "./filters/ExperienceFilter",;""
-import { PriceFilter } from "./filters/PriceFilter",;""
-import { FilterSidebarProps } from "@/types/filters",;"
-;
-export function FilterSidebar({;
-  searchTerm,;
-  setSearchTerm,;
-  selectedSkills,;
-  toggleSkill,;
-  selectedAvailability,;
-  toggleAvailability,;
-  selectedRegions,;
-  toggleRegion,;
-  priceRange,;
-  setPriceRange,;
-  experienceRange,;
-  setExperienceRange,;
-  expandedSections,;
-  toggleSection,;
-  sortOption,;
-  setSortOption,;
-  clearFilters,;
-} FilterSidebarProps) {;
-  return (;
-      {/* Filter header */}
-  isMobileFilterOpen
-}: FilterSidebarProps) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  return (
-    <>;
-      {/* Filter header */}
-=======
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Filter } from "lucide-react",;
-import { SearchFilter } from "./filters/SearchFilter",;
-import { SortFilter } from "./filters/SortFilter",;
-import { SkillsFilter } from "./filters/SkillsFilter",;
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
-import { RegionFilter } from "./filters/RegionFilter",;
-import { ExperienceFilter } from "./filters/ExperienceFilter",;
-import { PriceFilter } from "./filters/PriceFilter",;
-import { FilterSidebarProps } from "@/types/filters",;
-;
-export function FilterSidebar({;
-  searchTerm,;
-  setSearchTerm,;
-  selectedSkills,;
-  toggleSkill,;
-  selectedAvailability,;
-  toggleAvailability,;
-  selectedRegions,;
-  toggleRegion,;
-  priceRange,;
-  setPriceRange,;
-  experienceRange,;
-  setExperienceRange,;
-  expandedSections,;
-  toggleSection,;
-  sortOption,;
-  setSortOption,;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   clearFilters,;
 ;
   isMobileFilterOpen;
-<<<<<<< HEAD
 } FilterSidebarProps) {;
   return (;
     <>;
       {/* Filter header */}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isMobileFilterOpen
 =======
   isMobileFilterOpen
@@ -310,8 +129,7 @@ export function FilterSidebar({;
       <div className="flex items-center justify-between mb-6">"
         <h3 className="text-lg font-semibold text-white flex items-center">"
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-<<<<<<< HEAD
-          Filters;
+Filters;
         </h3>
         <Button"
           variant="ghost""
@@ -323,7 +141,6 @@ export function FilterSidebar({;
         </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -331,11 +148,6 @@ export function FilterSidebar({;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       "
 import React from "react",;"
@@ -380,7 +192,6 @@ export function FilterSidebar() { return null; }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
 
-
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from "lucide-react",;
@@ -419,8 +230,7 @@ export function FilterSidebar({;
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
           Filters;
-<<<<<<< HEAD
-        </h3>;
+</h3>;
         <Button;
           variant="ghost";
           size="sm";
@@ -431,11 +241,6 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
-=======
-      <div className="flex items-center justify-between mb-6">;"
-        <h3 className="text-lg font-semibold text-white flex items-center">;"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         </h3>;
           variant="ghost";""
@@ -445,13 +250,7 @@ export function FilterSidebar({;
 
       </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -469,26 +268,16 @@ export function FilterSidebar({;
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-<<<<<<< HEAD
-      {/* Skills */}
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+{/* Skills */}
       <SkillsFilter;
         selectedSkills={selectedSkills}
         toggleSkill={toggleSkill}
         expanded={expandedSections.skills})"
         toggleSection={() => toggleSection('skills')}
-<<<<<<< HEAD
-        isMobileFilterOpen={isMobileFilterOpen}
+isMobileFilterOpen={isMobileFilterOpen}
       />
       {/* Availability */}
       <AvailabilityFilter;
-=======
-
-      <AvailabilityFilter;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         selectedAvailability={selectedAvailability}
         toggleAvailability={toggleAvailability}
         expanded={expandedSections.availability}'
@@ -496,14 +285,7 @@ pr-12325
         isMobileFilterOpen={isMobileFilterOpen}
       />
       {/* Region */}
-<<<<<<< HEAD
-      <RegionFilter;
-=======
-      <RegionFilter
-
-      <RegionFilter;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<RegionFilter;
         selectedRegions={selectedRegions}
         toggleRegion={toggleRegion}
         expanded={expandedSections.region}'
@@ -511,14 +293,7 @@ pr-12325
         isMobileFilterOpen={isMobileFilterOpen}
       />
       {/* Years of Experience */}
-<<<<<<< HEAD
-      <ExperienceFilter;
-=======
-      <ExperienceFilter
-
-      <ExperienceFilter;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<ExperienceFilter;
         experienceRange={experienceRange}
         setExperienceRange={setExperienceRange}
         expanded={expandedSections.experience}'
@@ -526,14 +301,7 @@ pr-12325
         isMobileFilterOpen={isMobileFilterOpen}
       />
       {/* Price Range */}
-<<<<<<< HEAD
-      <PriceFilter;
-=======
-      <PriceFilter
-
-      <PriceFilter;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<PriceFilter;
         priceRange={priceRange}
         setPriceRange={setPriceRange}
         expanded={expandedSections.price}'
@@ -554,20 +322,8 @@ pr-12325
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="flex items-center justify-between mb-6">;
-=======
-  return (
-    <>;
-      {/* Filter header */}      <div className="flex items-center justify-between mb-6">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   return (
     <>;
@@ -576,13 +332,7 @@ pr-12325
 =======
 }
       <div className="flex items-center justify-between mb-6">;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  return (
-    <>;
-      {/* Filter header */}      <div className="flex items-center justify-between mb-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
           Filters;
@@ -649,18 +399,7 @@ pr-12325
 
       {isMobileFilterOpen && (;
         <Button
-<<<<<<< HEAD
-          onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
-=======
-"
-      <div className="flex items-center justify-between mb-6">;"
-        <h3 className="text-lg font-semibold text-white flex items-center">;"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
-          Filters;
-        </h3>;
-"
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
 =======
           onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
 <Button ;
@@ -728,33 +467,19 @@ pr-12325
         <Button ;
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         >;
           Apply Filters;
         </Button>;
       )}
     </>;
-<<<<<<< HEAD
-  );
+);
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-  return (
-    <>;
-      {/* Filter header */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -826,24 +551,11 @@ export /**;
 function FilterSidebar() {}
   return (
     <>;
-<<<<<<< HEAD
-      {/* Filter header */}
-<<<<<<< HEAD
+{/* Filter header */}
 <<<<<<< HEAD
       <div className="flex items - center justify - between mb-6">;
         <h3 className="text - lg font - semibold text - white flex items-center">;
           <Filter className="h - 4 w - 4 mr - 2 text - zion-purple" />;
-=======
-      {/* Filter header */}"
-      <div className="flex items - center justify - between mb - 6">;"
-        <h3 className="text - lg font - semibold text - white flex items - center">;"
-          <Filter className="h - 4 w - 4 mr - 2 text - zion - purple" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <div className="flex items - center justify - between mb - 6">;
-        <h3 className="text - lg font - semibold text - white flex items - center">;
-          <Filter className="h - 4 w - 4 mr - 2 text - zion - purple" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       <div className="flex items - center justify - between mb-6">;
         <h3 className="text - lg font - semibold text - white flex items-center">;
@@ -854,18 +566,9 @@ function FilterSidebar() {}
         <Button;"
           variant="ghost";"
           size="sm";
-<<<<<<< HEAD
-          on_click={clear_filters}
-<<<<<<< HEAD
+on_click={clear_filters}
 <<<<<<< HEAD
           className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg-transparent";
-=======
-          on_click={clear_filters}"
-          className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg-transparent";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -873,99 +576,4 @@ function FilterSidebar() {}
           Clear All;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
-
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-  ),;}
- export function FilterSidebar ({
-  searchTerm;
-setSearchTerm;
-selectedSkills;
-toggleSkill;
-selectedAvailability;
-toggleAvailability;
-selectedRegions;
-toggleRegion;
-priceRange;
-setPriceRange;
-experienceRange;
-setExperienceRange;
-expandedSections;
-toggleSection;
-sortOption;
-setSortOption;
-clearFilters;
-isMobileFilterOpen 
-}: FilterSidebarProps) {
-  return (<> /* Filter header */ 
-}<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All </Button> </div> {
-  /* Search */ 
- * FilterSidebar - Function description;
- */)
-function FilterSidebar() {
-      <div className="flex items - center justify - between mb - 6">;"
-        <h3 className="text - lg font - semibold text - white flex items - center">;"
-          <Filter className="h - 4 w - 4 mr - 2 text - zion - purple" />;"
-
-          on_click={clear_filters}"
-          className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent";"
-
-  return (<> /* Filter header */ "
-}<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All  </div> {"
-}<SearchFilter searchTerm= {
-}setSearchTerm= {
-}/> {
-
-}<SortFilter sortOption= {
-}setSortOption= {
-
-}<SkillsFilter selectedSkills= {
-}toggleSkill= {
-}expanded= {
-  expandedSections.skills;
-}toggleSection= {)"
-  () => toggleSection ('skills')
-
-}<AvailabilityFilter selectedAvailability= {
-}toggleAvailability= {
-  expandedSections.availability;
-}toggleSection= {
-  () => toggleSection ('availability')
-
-}<RegionFilter selectedRegions= {
-}toggleRegion= {
-  expandedSections.region;
-  () => toggleSection ('region')
-
-}<ExperienceFilter experienceRange= {
-}setExperienceRange= {
-  expandedSections.experience;
-  () => toggleSection ('experience')
-
-}<PriceFilter priceRange= {
-}setPriceRange= {
-  expandedSections.price;
-  () => toggleSection ('price')
-
-  isMobileFilterOpen && (<Button onClick= {)
-  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') )
-
-}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters )"
-}</>) 
-}
-}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

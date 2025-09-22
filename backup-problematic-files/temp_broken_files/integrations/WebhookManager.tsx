@@ -144,4 +144,3 @@ export function WebhookManager() {;
                 </div>;
               </div>;
             </CardContent>;
-

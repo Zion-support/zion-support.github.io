@@ -109,7 +109,7 @@ if (return) {}
                    Math.floor(particleCount * 0.5);
       for (let i = 0, i < count, i++) {
     const colors = {
-      quantum: [
+      quantum: [;
         '#00ffff'
         '#ff00ff'
         '#ffff00'
@@ -118,7 +118,7 @@ if (return) {}
         '#8000ff'
         '#00ffff'
       ]
-      neon: [
+      neon: [;
         '#ff0066'
         '#00ffff'
         '#ff6600'
@@ -127,7 +127,7 @@ if (return) {}
         '#ff1493'
         '#00bfff'
       ]
-      holographic: [
+      holographic: [;
         '#ff1493'
         '#00bfff'
         '#ffd700'
@@ -136,7 +136,7 @@ if (return) {}
         '#00ced1'
         '#ff4500'
       ]
-      cyberpunk: [
+      cyberpunk: [;
         '#ff0066'
         '#00ffff'
         '#ff6600'
@@ -145,7 +145,7 @@ if (return) {}
         '#ff1493'
         '#00bfff'
       ]
-      'quantum-fusion': [
+      'quantum-fusion': [;
         '#00ffff',
         '#ff00ff',
         '#ffff00',

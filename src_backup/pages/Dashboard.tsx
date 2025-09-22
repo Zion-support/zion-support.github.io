@@ -1,11 +1,6 @@
-<<<<<<< HEAD:src/pages/Dashboard.tsx
+:src/pages/Dashboard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Dashboard.tsx
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -111,7 +106,6 @@ const GuidedTour = dynamic(
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
 
-
   const userType = null;
     userWithExtendedProps?.userType ||
     user?.user_metadata?.userType ||
@@ -159,7 +153,7 @@ export default function Dashboard() {
   const { logout } = useAuth(),
   const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
   const { toast } = useToast(),
-  
+
   // Add safe checks for user ID to prevent premature API calls
   const userId = user?.id,
   const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
@@ -313,13 +307,13 @@ export default function Dashboard() {;
                   </div>
                   <h2 className="text-xl font-bold text-white">{userWithExtendedProps?.displayName || userWithExtendedProps?.email}</h2>
                   <p className="text-zion-slate-light mb-2">{user?.email}</p>
-                  
+
                   <Badge
                     className="bg-zion-purple text-white mb-4"
                   >
                     {userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : "New User"}
                   </Badge>
-                  
+
                   <Button
                     id="profile-link"
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -330,7 +324,7 @@ export default function Dashboard() {;
                   </Button>
                 </div>
               </div>
-              
+
               {/* Stats & Metrics */}
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
@@ -342,7 +336,7 @@ export default function Dashboard() {;
                   <div className="w-full bg-zion-blue rounded-full h-2">
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Points</span>
                     <PointsBadge />
@@ -353,12 +347,12 @@ export default function Dashboard() {;
                       <Link href="/wallet" className="hover:underline">View Wallet</Link>
                     </span>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Badges Earned</span>
                     <span className="text-zion-cyan font-medium">3/12</span>
                   </div>
-                  
+
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">
                     <Button 
@@ -396,7 +390,7 @@ export default function Dashboard() {;
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
-<<<<<<< HEAD:src/pages/Dashboard.tsx
+:src/pages/Dashboard.tsx
 <<<<<<< HEAD
 
                     <Button 
@@ -526,23 +520,15 @@ export default function Dashboard() {;
                       }}
                     >;
                       <Bell size={16} className="text-yellow-500" />;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Send System Alert;
                     </Button>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-              {/* Notifications */}
+{/* Notifications */}
               <div className="bg-zion-blue-dark rounded-xl p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">
                   <Bell size={18} className="mr-2 text-zion-cyan" />
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Dashboard.tsx
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -581,12 +567,9 @@ export default function Dashboard() {;
               <div className='bg-zion-blue-dark rounded-xl p-6'>
                 <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
                   <Bell size={18} className='mr-2 text-zion-cyan' />
-<<<<<<< HEAD:src/pages/Dashboard.tsx
+:src/pages/Dashboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Dashboard.tsx
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -599,7 +582,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </div>
-            
+
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -657,7 +640,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Community Section */}
                 <div id="community-section">
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
@@ -705,73 +688,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {favorites.slice(0, 3).map(f => (;
                           <li key={f.item_id}>{f.item_id}</li>;
                         ))}
-<<<<<<< HEAD
-                      </ul>;
-=======
-                      </ul>
-                    )}
-                    <div className='mt-2 text-right'>
-                      <Link
-                        href='/wishlist'
-                        className='text-zion-purple underline'
-                      >
-                        View all
-                      </Link>
-                    </div>
-                  </div>
-                  <div className='bg-zion-blue-dark rounded-xl p-6'>
-                    <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
-                      <Key className='mr-2' size={18} /> API Keys
-                    </h3>
-                    <ApiKeysManager />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <GuidedTour role={roleForTour} />
-    </>
-  )
-};"
-return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-8"> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> {
-  /* Left Sidebar - User Profile */ "
-}<div className="lg:col-span-1"> <div className="bg-zion-blue-dark rounded-xl p-6 mb-6"> <div className="flex flex-col items-center text-center"> <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4"> {'
-  userWithExtendedProps?.displayName?.split (' ') .map ( (name: string) => name[0]) .join ('') |userWithExtendedProps?.email?.charAt (0) .toUpperCase () "
-}</div> <h2 className="text-xl font-bold text-white"> {
-  userWithExtendedProps?.displayName |userWithExtendedProps?.email "
-}</h2> <p className="text-zion-slate-light mb-2"> {
-  user?.email "
-}</p> <Badge className="bg-zion-purple text-white mb-4" > > <UserCheck size= {
-  16
-}/> Edit Profile </Button> </div> </div> {
-  /* Stats & Metrics */ ";
-}<div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6"> <h3 className="text - lg font - bold text - white mb - 4">Your Activity</h3> <div className="space - y-4"> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Profile Completion</span> <span className="text - zion - cyan font - medium">65%</span> </div> <div className="w - full bg - zion - blue rounded - full h - 2"> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Points</span> <PointsBadge /> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">ZION$ Balance</span> <span className="text - zion - cyan font - medium"> <Link href="/wallet" className="hover:underline">View Wallet</Link> </span> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Badges Earned</span> <span className="text - zion - cyan font - medium">3 / 12</span> </div> {
-  /* Test notification buttons */ ";
-}<div className="flex flex - col gap - 2 mt - 4"> <Button > <Send size= {
-  16 ";
-}className="text - zion - cyan" /> Send Test Notification </Button> <Button;
-
-}> <Settings size= {
-  16 ";
-}className="text - zion - purple" /> async () => {
-  try {
-  const {
-<<<<<<< HEAD:src/pages/Dashboard.tsx
-<<<<<<< HEAD
-
-                        className='text-zion-purple underline'>;
-                        View all;
-                      </Link>;
-
-;
-                        ))}
-                      </ul>
-                    )}
-                        ))}
-                      </ul>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+</ul>;
                     )}
                     <div className="mt-2 text-right">;
                       <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
@@ -794,9 +711,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
   );
 }
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Dashboard.tsx
 import React from 'react';
 
 const Dashboard: React.FC = () => {
@@ -811,14 +725,8 @@ const Dashboard: React.FC = () => {
 };
 
 export default Dashboard;
-<<<<<<< HEAD:src/pages/Dashboard.tsx
-<<<<<<< HEAD
+:src/pages/Dashboard.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -889,9 +797,6 @@ toast ({"
   roleForTour
 }/> </>)
 }'"
-<<<<<<< HEAD:src/pages/Dashboard.tsx
+:src/pages/Dashboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Dashboard.tsx

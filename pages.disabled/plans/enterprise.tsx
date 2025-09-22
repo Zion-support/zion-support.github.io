@@ -1,5 +1,4 @@
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD:pages/plans/enterprise.tsx
 <<<<<<< HEAD
@@ -8,21 +7,9 @@ import Link from 'next/link';
 import Link from 'next/link',;
 const features = [
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
 
-
-
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+:pages_backup/plans/enterprise.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/plans/enterprise.tsx
@@ -32,21 +19,12 @@ const features = [
   { key: 'branded_onboarding', label: 'Branded onboarding' },
 =======
 
-
-
-
   { key: 'private_portal', label: 'Private hiring portal' },'
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },'
   { key: 'custom_sla', label: 'Custom SLA' },'
   { key: 'branded_onboarding', label: 'Branded onboarding' },'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' }
@@ -56,8 +34,7 @@ const features = [
   { key: 'admin_dashboards', label: 'Admin dashboards' }]
 const tiers = [
   {
-<<<<<<< HEAD
-    id: 'teams'
+id: 'teams'
     name: 'Teams'
     price: '$199/mo'
     blurb: 'Up to 10 users, core collaboration features'
@@ -77,13 +54,6 @@ const tiers = [
     blurb: 'Unlimited users, custom contracts and SLAs'
     highlights: ['Unlimited seatsCustom SLADedicated CSM']
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}]
-=======
-=======
-
-
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-  {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: 'teams',
     name: 'Teams',
     price: '$199 / mo',
@@ -106,26 +76,16 @@ const tiers = [
     name: 'Enterprise','
     price: 'Custom','
     blurb: 'Unlimited users, custom contracts and SLAs',
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
     highlights: ['Unlimited seats_custom SLADedicated CSM'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
-
-
-
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 import Link from 'next/link';
@@ -202,21 +162,12 @@ export default function EnterprisePlans() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
       <header style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h1>Enterprise Plans</h1>
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD
-        <p>Team-based access with admin controls, branded environments, and usage limits.</p>
+:pages_backup/plans/enterprise.tsx
+<p>Team-based access with admin controls, branded environments, and usage limits.</p>
       </header>'
       <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
         {tiers.map(t => ('
           <div key={t.id} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: '1.25rem' }}>
-=======
-=======
-        <p>Team-based access with admin controls, branded environments, and usage limits.</p>
-      </header>
-      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
-        {tiers.map(t => (
-          <div key={t.id} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: '1.25rem' }}>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/plans/enterprise.tsx
 <p>
           Team-based access with admin controls, branded environments, and usage
           limits.
@@ -249,24 +200,13 @@ export default function EnterprisePlans() {}
               ))}
             </ul>'
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD
               <Link href="/enterprise" passHref legacyBehavior>
-=======
-              <Link href="/enterprise" passHref legacyBehavior>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
                 <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</a>
               </Link>'"
               <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>
-
-=======
-=======
-              <Link href="/enterprise" passHref legacyBehavior>
-                <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</a>
-              </Link>
-              <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/plans/enterprise.tsx
 <Link href='/enterprise' passHref legacyBehavior>
                 <a
                   style={{
@@ -298,7 +238,7 @@ export default function EnterprisePlans() {}
         <div style={{ overflowX: 'auto', marginTop: 12 }}>'
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
               <tr>
                 <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Feature</th>
                 {tiers.map(t => (
@@ -324,57 +264,12 @@ export default function EnterprisePlans() {}
                     {t.name}
                   </th>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              <tr>'
-                <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Feature</th>
-                {tiers.map(t => ('
-                  <th key={t.id} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>{t.name}</th>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
                 ))}
               </tr>
             </thead>
             <tbody>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-              {features.map(f => (
-                <tr key={f.key}>'
-                  <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
-                  {tiers.map(t => ('
-                    <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              {features.map(f => (
-                <tr key={f.key}>
-                  <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
-                  {tiers.map(t => (
-                    <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-<td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-                    {f.label}
-                  </td>
-                  {tiers.map(t => (
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-=======
-                    <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/plans/enterprise.tsx
-                    <td
-                      key={t.id + f.key}
-                      style={{
-                        textAlign: 'center',
-                        padding: 8,
-                        borderBottom: '1px solid #f3f4f6',
-                      }}
-                    >
-                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/plans/enterprise.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/plans/enterprise.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -385,27 +280,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </tr>
               ))}
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import Link from 'next/link';
-import Link from 'next/link';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -423,7 +304,6 @@ const features = [;
 ';
 import Link from 'next/link';'
 import Link from 'next/link';
-
 
 const features = [;'
   { key: 'private_portal', label: 'Private hiring portal' },;'
@@ -529,27 +409,14 @@ export default function EnterprisePlans(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
 
-
-
-
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/plans/enterprise.tsx
@@ -557,41 +424,11 @@ export default function EnterprisePlans(req, res) {}
           </table>
         </div>
       </section>
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-'
-      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>'
-        <div style={{ display: 'flex', gap: 8 }}>'
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>'
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>ISO 27001</span>'
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>
-        </div>'
-        <div style={{ marginLeft: 'auto' }}>"
-          <Link href="/enterprise/admin">Admin Dashboard</Link>
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </div>
-      </section>
-    </main>
-=======
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </section>
     </main>
@@ -600,76 +437,6 @@ export default function EnterprisePlans(req, res) {}
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
-<<<<<<< HEAD
-=======
-=======
-=======
-
-      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
-        <div style={{ display: 'flex', gap: 8 }}>
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>ISO 27001</span>
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>
-        </div>
-        <div style={{ marginLeft: 'auto' }}>
-          <Link href="/enterprise/admin">Admin Dashboard</Link>
-        </div>
-      </section>
-    </main>
-}
-
-        </div>
-      </section>
-    </main>
-  );
-};
-  )
-
-<section
-        style={{
-          marginTop: '2rem',
-          display: 'flex',
-          gap: 16,
-          alignItems: 'center',
-        }}
-      >
-        <div style={{ display: 'flex', gap: 8 }}>
-          <span
-            style={{
-              border: '1px solid #e5e7eb',
-              borderRadius: 6,
-              padding: '0.25rem 0.5rem',
-            }}
-          >
-            SSL
-          </span>
-          <span
-            style={{
-              border: '1px solid #e5e7eb',
-              borderRadius: 6,
-              padding: '0.25rem 0.5rem',
-            }}
-          >
-            ISO 27001
-          </span>
-          <span
-            style={{
-              border: '1px solid #e5e7eb',
-              borderRadius: 6,
-              padding: '0.25rem 0.5rem',
-            }}
-          >
-            SOC 2
-          </span>
-        </div>
-        <div style={{ marginLeft: 'auto' }}>
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/plans/enterprise.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/plans/enterprise.tsx
           <Link href="/enterprise/admin">Admin Dashboard</Link>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
@@ -678,34 +445,17 @@ export default function EnterprisePlans(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-        </div>
-      </section>
-    </main>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-        </div>
-      </section>
-    </main>
-
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/plans/enterprise.tsx
 
 }
 
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 }
@@ -715,12 +465,7 @@ export default /**
  * EnterprisePlans - Function description
 =======
 
-
-
-
-
 }
-
 
 export default /**;
  * EnterprisePlans - Function description;
@@ -795,22 +540,11 @@ function EnterprisePlans() {}
 }
 }
 
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -827,22 +561,10 @@ function EnterprisePlans() {}
       </section>
     </main>
   );
-<<<<<<< HEAD:pages_backup/plans/enterprise.tsx
-<<<<<<< HEAD
+:pages_backup/plans/enterprise.tsx
 <<<<<<< HEAD:pages/plans/enterprise.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/plans/enterprise.tsx
-=======
-
-
-
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/plans/enterprise.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

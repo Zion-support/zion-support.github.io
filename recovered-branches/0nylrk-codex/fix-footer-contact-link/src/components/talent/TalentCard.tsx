@@ -1,16 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
@@ -50,16 +42,9 @@ export interface TalentCardProps {
 
 export function TalentCard({;
 
-
-
 export function TalentCard(): any ({;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -76,23 +61,13 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 }
 export function TalentCard({
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -114,7 +89,6 @@ export function TalentCard({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-
 export function TalentCard(): any ({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -130,9 +104,7 @@ import {TalentProfile} from "@/types/talent";
   onViewProfile;
   onRequestHire;
   isSaved;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  onToggleSave;
+onToggleSave;
   isAuthenticated;
 }: TalentCardProps) {}
   const navigate = useNavigate();
@@ -179,14 +151,6 @@ import { useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   isSaved: boolean,;
@@ -209,14 +173,9 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 
-
-
 export function TalentCard(): any ({;
 
-
 =======
-
-
 
 import {Button} from "@/components/ui/button";""
 import {Card} from "@/components/ui/card";""
@@ -232,17 +191,7 @@ pr-12325
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  isAuthenticated;
-=======
-  onToggleSave;  isAuthenticated;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  onToggleSave;  isAuthenticated;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+isAuthenticated;
 =======
   isAuthenticated;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -332,34 +281,13 @@ isAuthenticated
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     if (onToggleSave) {;
       onToggleSave(talent && talent.id, !isSaved);
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-  },
-=======
-  };
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const skills = talent && talent.skills?.slice(0, 5) || [];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+},
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-
-  // Extract skills - limit to 5 for display;
-  const skills = talent && talent.skills?.slice(0, 5) || [];
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
@@ -368,8 +296,6 @@ isAuthenticated
       <div className="p-6">;"
         <div className="flex items-start">;
           {/* Avatar */}
-
-
 
               )}
             </div>;
@@ -407,15 +333,10 @@ isAuthenticated
               </div>;
             )}
 
-<<<<<<< HEAD
-
-
-          {/* Main Info */}"
+{/* Main Info */}"
           <div className="flex-1">;"
             <div className="flex justify-between items-start">;"
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
-
-
 
               <Button"
                 variant="ghost""
@@ -423,24 +344,10 @@ isAuthenticated
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                onClick={handleToggleSave}
-              >
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
-              </Button>
-            </div>
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
   return (              <Button
@@ -457,7 +364,6 @@ isAuthenticated
 =======
           </div>;
 
-
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
@@ -472,7 +378,6 @@ isAuthenticated
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
 =======
 
-
                 onClick={handleToggleSave}>;"`
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -482,26 +387,11 @@ isAuthenticated
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-            
-
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Location & Availability */}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -522,72 +412,14 @@ isAuthenticated
                 <div className="flex items-center text-zion-slate-light">;"
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
-<<<<<<< HEAD
-                </div>;
+</div>;
               )}
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <span
-=======
-=======
-=======
-              {talent.profile_picture_url ? (;
-                <img ;
-                  src={talent.profile_picture_url} ;
-                  alt={talent.full_name} ;
-                  className="w-full h-full object-cover" ;
-                />;
-              ) :(;
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
-                  {talent.full_name?.charAt(0) || "T"}
-                </div>;
-              )}
-            </div>;
-            {talent.is_verified && (;
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-              </div>;            )}
-          </div>;
-          ;
-          {/* Main Info */}
-          <div className="flex-1">;
-            <div className="flex justify-between items-start">;
-              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
-              <Button;
-                variant="ghost";
-                size="sm";
-                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan";
-                onClick={handleToggleSave}
-              >;
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" :""}`} />;
-                <span className="sr-only">{isSaved ? "Saved" :"Save"}</span>;
-              </Button>;
-            </div>;
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>;
-            ;
-            {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent.location}</span>;
-                </div>;
-              )}
-              {talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent.availability_type}</span>;
-                </div>;
-              )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -595,14 +427,12 @@ isAuthenticated
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </div>;
         </div>;
 
-<<<<<<< HEAD
-        {/* Skills */}
+{/* Skills */}
         {skills && skills.length > 0 && (;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
@@ -624,7 +454,6 @@ isAuthenticated
               )}
             </div>;
           </div>;
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
@@ -650,55 +479,19 @@ isAuthenticated
           <div>;
                 </span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-                <span;
-                  key={index}"
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
-                  {skill}
-                </span>;
-              ))}
-
-              {(talent && talent.skills?.length || 0) > 5 && (;"
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               )}
             </div>;
           </div>;
         )}
-
 
 "
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;"
               <div className="text-zion-slate-light">Rate not specified</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             )}
 =======
         )}                <span className="text-zion-slate-light font-normal">/hr</span>;
@@ -717,8 +510,6 @@ isAuthenticated
 =======
         )}
 
-
-
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
           <div>;
@@ -730,13 +521,10 @@ isAuthenticated
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
 
-
-
             )}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
-          </div>;
+</div>;
 
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
@@ -764,33 +552,9 @@ isAuthenticated
               size="sm"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <Button"
-                size="sm""
-                variant="secondary"
-                onClick={handleRequestHire}
-
-"
-                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
-                Hire;
-              </Button>;
-
-            )}
-            <Button"
-              size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               variant="ghost"
 
-
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                e.stopPropagation(),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -804,7 +568,6 @@ isAuthenticated
               onClick={(e) => {
 
                 e.stopPropagation(),
-
 
                 handleViewProfile()
               }}
@@ -820,17 +583,8 @@ isAuthenticated
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onClick={(e) => {;
                 e && e.stopPropagation();
                 handleViewProfile();
@@ -865,8 +619,7 @@ export interface TalentCardProps {
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
   is_saved: boolean,
-<<<<<<< HEAD
-  onToggleSave: (id: string, is_saved: boolean) => void,;
+onToggleSave: (id: string, is_saved: boolean) => void,;
   is_authenticated: boolean;
 }
 export /**;
@@ -883,65 +636,28 @@ function TalentCard() {}
     // Check condition;
 if ( {) {}
   $2;
-=======
-  onToggleSave: (id: string, is_saved: boolean) => void,
-  is_authenticated: boolean;
-}
-export /**
- * TalentCard - Function description
- */
-function TalentCard() {
-  const navigate = use_navigate ();
-;
-  const handleViewProfile = () =>: any {
-    // Navigate directly to the talent profile;
-    navigate (`/talent/${talent.id}`);
-;
-    // Also call the onViewProfile callback if provided;
-    // Check condition
-if ( {) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       onViewProfile (talent.id);
     }
   }
 ;
-<<<<<<< HEAD
-  const handleRequestHire = (e: React.MouseEvent) =>: any {}
+const handleRequestHire = (e: React.MouseEvent) =>: any {}
     e.prevent_default ();
     e.stop_propagation (),
     // Check condition;
 if ( {) {}
   $2;
-=======
-  const handleRequestHire = (e: React.MouseEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation (),
-    // Check condition
-if ( {) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       onRequestHire (talent);
     }
   }
 ;
-<<<<<<< HEAD
-  const handleToggleSave = (e: React.MouseEvent) =>: any {}
+const handleToggleSave = (e: React.MouseEvent) =>: any {}
     e.prevent_default ();
     e.stop_propagation (),
     // Check condition;
 if ( {) {}
   $2;
-=======
-  const handleToggleSave = (e: React.MouseEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation (),
-    // Check condition
-if ( {) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       onToggleSave (talent.id, !is_saved);
     }
@@ -950,21 +666,12 @@ if ( {) {
   // Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice (0, 5) || [];
 ;
-<<<<<<< HEAD
-  return ("
+return ("
     <Card className="overflow - hidden transition - all hover:shadow - lg border - zion - blue - light bg - zion - blue cursor - pointer" on_click={handleViewProfile}>;"
       <div className="p - 6">;"
         <div className="flex items - start">;
           {/* Avatar */}"
           <div className="relative mr - 4">;"
-=======
-  return (
-    <Card className="overflow - hidden transition - all hover:shadow - lg border - zion - blue - light bg - zion - blue cursor - pointer" on_click={handleViewProfile}>;
-      <div className="p - 6">;
-        <div className="flex items - start">;
-          {/* Avatar */}
-          <div className="relative mr - 4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="w - 16 h - 16 rounded - full overflow - hidden bg - zion - blue - dark border border - zion - blue - light">;
               {talent.profile_picture_url ? (
 =======
@@ -1045,9 +752,7 @@ if ( {) {
           <div className="relative mr - 4">;"
             <div className="w - 16 h - 16 rounded - full overflow - hidden bg - zion - blue - dark border border - zion - blue - light">;"
                   src={talent.profile_picture_url}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  alt={talent.full_name}"
+alt={talent.full_name}"
                   className="w - full h - full object - cover";
                 />) : ("
                 <div className="w - full h - full flex items - center justify - center text - zion - slate - light text - xl font - bold">;"
@@ -1083,13 +788,6 @@ if ( {) {
                 </div>)}
               {talent.availability_type && ("
                 <div className="flex items - center text - zion - slate - light">;"
-=======
-                  alt={talent.full_name}
-                  className="w - full h - full object - cover";
-=======
-                  alt={talent.full_name}"
-                  className="w - full h - full object - cover";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />) : (
                 <div className="w - full h - full flex items - center justify - center text - zion - slate - light text - xl font - bold">;"
 </div>)
@@ -1112,8 +810,7 @@ if ( {) {
                   <MapPin className="h - 4 w - 4 mr - 1" />;"
 
                   <span>{talent.location}</span>;
-<<<<<<< HEAD
-                </div>)}
+</div>)}
               {talent.availability_type && (
                 <div className="flex items - center text - zion - slate - light">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1131,30 +828,17 @@ if ( {) {
               {skills.map ((skill, index) => (
                 <span;
                   key={index}"
-=======
-        {skills.length > 0 && (
-          <div className="mt - 4">;
-            <div className="flex flex - wrap gap - 2">;
-              {skills.map ((skill, index) => (
-                <span;
-                  key={index}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   className="px - 2 py - 1 text - xs rounded - full bg - zion - blue - light text - zion - slate - light";
                 >;
                   {skill}
                 </span>))}
-<<<<<<< HEAD
-              {(talent.skills?.length || 0) > 5 && ("
-=======
-              {(talent.skills?.length || 0) > 5 && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+{(talent.skills?.length || 0) > 5 && ("
                 <span className="px - 2 py - 1 text - xs rounded - full bg - zion - purple / 20 text - zion - cyan">;
                   +{(talent.skills?.length || 0) - 5} more;
                 </span>)}
             </div>;
           </div>)}
-<<<<<<< HEAD
-        {/* Hourly Rate & Actions */}"
+{/* Hourly Rate & Actions */}"
         <div className="mt - 5 flex items - center justify - between">;
           <div>;
             {talent.hourly_rate ? ("
@@ -1170,30 +854,11 @@ if ( {) {
                 size="sm";"
                 variant="secondary";
                 on_click={handleRequestHire}"
-=======
-        {/* Hourly Rate & Actions */}
-        <div className="mt - 5 flex items - center justify - between">;
-          <div>;
-            {talent.hourly_rate ? (
-              <div className="text - white font - bold">;
-                ${talent.hourly_rate}
-                <span className="text - zion - slate - light font - normal">/hr</span>;
-              </div>) : (
-              <div className="text - zion - slate - light">Rate not specified</div>)}
-          </div>;
-          <div className="flex items - center gap - 2">;
-            {is_authenticated && (
-              <Button;
-                size="sm";
-                variant="secondary";
-                on_click={handleRequestHire}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="bg - zion - purple hover:bg - zion - purple - light text - white";
               >;
                 Hire;
               </Button>)}
-<<<<<<< HEAD
-            <Button;"
+<Button;"
               size="sm";"
               variant="ghost";
               on_click={(e) => {}
@@ -1206,19 +871,6 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-            <Button;
-              size="sm";
-              variant="ghost";
-              on_click={(e) => {
-                e.stop_propagation ();
-                handleViewProfile ();
-              }}
-              className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
-            >;
-              View <ArrowRight className="ml - 1 h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
@@ -1250,16 +902,8 @@ if ( {) {
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>;
 =======
               variant="ghost"            </Button>;
@@ -1274,18 +918,9 @@ if ( {) {
         </div>;
       </div>;
 
-<<<<<<< HEAD
-    </Card>);
+</Card>);
 }
-<<<<<<< HEAD
-=======
 
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                 </div>)}"
                   <Clock className="h - 4 w - 4 mr - 1" />;"

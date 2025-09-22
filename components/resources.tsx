@@ -33,14 +33,14 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Link from 'next/link';
   return (
             {'
-              name: 'Support Center''
-              href: '/support''
+              name: 'Support Center'';
+              href: '/support'';
               blurb: 'Help, FAQs, and contact options.'
             }
             {'
-              name: 'Training & Certification''
-              href: '/training''
-              blurb: 'Workshops and curated curricula.'
+              name: 'Training & Certification'';
+              href: '/training'';
+              blurb: 'Workshops and curated curricula.';
             }
             {'
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };'

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/pages/AboutPage.tsx
-<<<<<<< HEAD
+:src/pages/AboutPage.tsx
 import React from 'react';
 <<<<<<< HEAD
 import './AboutPage.css';
@@ -152,162 +151,69 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
-=======
-import { motion } from 'framer-motion';
-import Card from '../components/Card';
-=======
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import Card from '../components/Card';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import SEOHead from '../components/SEOHead';
 
 const AboutPage: React.FC = () => (
   <>
-<<<<<<< HEAD
-    <SEOHead
+<SEOHead
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission to empower businesses with cutting-edge technology solutions. Leading technology company with industry expertise."
       keywords="about zion tech group, technology company, mission, vision, team, expertise"
-=======
-    <SEOHead;
-      title="About Us - Zion Tech Group"'"
-      description="Learn about Zion Tech Group's mission to empower businesses with cutting-edge technology solutions. Leading technology company with industry expertise.""
-      keywords="about zion tech group, technology company, mission, vision, team, expertise""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       canonicalUrl="https://ziontechgroup.com/about"
     />"
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16">
-<<<<<<< HEAD
-    <motion.div
-=======
-    <motion.div "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<motion.div
       className="container mx-auto px-4 sm:px-6 lg:px-8"
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import Card from '../components/Card';
-import SEOHead from '../components/SEOHead';
-const AboutPage: React.FC = () => (
-  <>
-    <SEOHead
-title="About Us - Zion Tech Group""
-      description="Learn about Zion Tech Group's mission to empower businesses with cutting-edge technology solutions. Leading technology company with industry expertise.""
-      keywords="about zion tech group, technology company, mission, vision, team, expertise""
-      canonicalUrl="https://ziontechgroup.com/about""
-    />
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16">"
-    <motion.div
-      className="container mx-auto px-4 sm:px-6 lg:px-8"",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AboutPage.tsx
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-<<<<<<< HEAD:src/pages/AboutPage.tsx
-<<<<<<< HEAD
-      <motion.h1
-=======
-      <motion.h1 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+:src/pages/AboutPage.tsx
+<motion.h1
         className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-=======
-      <motion.h1
-className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AboutPage.tsx
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-<<<<<<< HEAD:src/pages/AboutPage.tsx
+:src/pages/AboutPage.tsx
         About Us;
       </motion.h1>"
       <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-        <motion.p
-=======
-        <motion.p "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<motion.p
           className="text-lg sm:text-xl text-gray-600 mb-12 text-center leading-relaxed"
-=======
-        About Us
-      </motion.h1>
-<div className="max-w-4xl mx-auto">"
-        <motion.p
-          className="text-lg sm:text-xl text-gray-600 mb-12 text-center leading-relaxed"",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AboutPage.tsx
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-<<<<<<< HEAD:src/pages/AboutPage.tsx
-<<<<<<< HEAD
-          Zion Tech Group is a leading technology company dedicated to delivering innovative
-=======
-          Zion Tech Group is a leading technology company dedicated to delivering innovative;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+:src/pages/AboutPage.tsx
+Zion Tech Group is a leading technology company dedicated to delivering innovative
           solutions that transform businesses and drive growth in the digital age.
         </motion.p>"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <motion.div;
-=======
-          Zion Tech Group is a leading technology company dedicated to delivering innovative
-          solutions that transform businesses and drive growth in the digital age.
-        </motion.p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">"
-          <motion.div
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AboutPage.tsx
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ scale: 1.05, y: -5 }}
           >
-<<<<<<< HEAD:src/pages/AboutPage.tsx
-<<<<<<< HEAD
-            <Card
+:src/pages/AboutPage.tsx
+<Card
               title="Our Mission"
               description="To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth."
-=======
-            <Card "
-              title="Our Mission" "
-              description="To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth.""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="h-full"
             />
           </motion.div>
           <motion.div;
-=======
-            <Card
-title="Our Mission" "
-              description="To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth.""
-              className="h-full""
-            />
-          </motion.div>
-          <motion.div
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AboutPage.tsx
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             whileHover={{ scale: 1.05, y: -5 }}
           >
-<<<<<<< HEAD:src/pages/AboutPage.tsx
-<<<<<<< HEAD
-            <Card
+:src/pages/AboutPage.tsx
+<Card
               title="Our Vision"
               description="To be the global leader in technology solutions, creating a world where every business can leverage technology."
-=======
-            <Card "
-              title="Our Vision" "
-              description="To be the global leader in technology solutions, creating a world where every business can leverage technology.""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="h-full"
-=======
-            <Card
-title="Our Vision" "
-              description="To be the global leader in technology solutions, creating a world where every business can leverage technology.""
-              className="h-full""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AboutPage.tsx
             />
           </motion.div>
         </div>
@@ -316,15 +222,7 @@ title="Our Vision" "
     </div>
   </>
 );
-<<<<<<< HEAD:src/pages/AboutPage.tsx
+:src/pages/AboutPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
 export default AboutPage;
-=======
-export default AboutPage;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-export default AboutPage;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AboutPage.tsx

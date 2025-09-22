@@ -41,8 +41,8 @@ export default function Header() {
       {/* Top Bar */}"
       <div className="bg-blue-900 text-white py-2">"
         <div className="container mx-auto px-4">"
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">"
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">"
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">";
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">";
               <div className="flex items-center space-x-2">"
                 <Phone className="w-4 h-4" />
                 <span>+1 302 464 0950</span>
@@ -77,18 +77,18 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}"
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">;
             {navigation.map((item) => ("
               <div key={item.name} className="relative group">
                 <button;
                   onClick={() => item.dropdown && toggleDropdown(item.name)}"
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium";
                 >
                   <Link href={item.href}>{item.name}</Link>
                   {item.dropdown && (
                     <ChevronDown;
                       className={`w-4 h-4 transition-transform duration-200 ${"
-                        activeDropdown === item.name ? "rotate-180" : ""`
+                        activeDropdown === item.name ? "rotate-180" : ""`;
                       }`}
                     />
                   )}
@@ -108,7 +108,7 @@ export default function Header() {
                           <Link;
                             key={subItem.name}
                             href={subItem.href}"
-                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200";
                             onClick={() => setActiveDropdown(null)}
                           >
                             {subItem.name}
@@ -125,11 +125,11 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button;
             onClick={toggleMenu}"
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200";
           >
             {isMenuOpen ? ("
               <X className="w-6 h-6" />
-            ) : ("
+            ) : (";
               <Menu className="w-6 h-6" />
             )}
           </button>
@@ -142,14 +142,14 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}"
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}"
-              className="lg:hidden mt-4 border-t border-gray-200 pt-4"
+              className="lg:hidden mt-4 border-t border-gray-200 pt-4";
             >
               {navigation.map((item) => ("
                 <div key={item.name} className="mb-2">"
                   <div className="flex items-center justify-between">
                     <Link;
                       href={item.href}"
-                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
+                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2";
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -161,7 +161,7 @@ export default function Header() {
                       >
                         <ChevronDown;`
                           className={`w-4 h-4 transition-transform duration-200 ${"
-                            activeDropdown === item.name ? "rotate-180" : ""`
+                            activeDropdown === item.name ? "rotate-180" : ""`;
                           }`}
                         />
                       </button>
@@ -173,7 +173,7 @@ export default function Header() {
                         <Link;
                           key={subItem.name}
                           href={subItem.href}"
-                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
+                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1";
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {subItem.name}
@@ -186,7 +186,7 @@ export default function Header() {
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <Link"
                   href="/contact""
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold";
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started;
@@ -217,37 +217,37 @@ const Header: React.FC = () => {
       title: 'Web Development',
       description: 'Custom websites and web applications',
       href: '/services/web-development',
-      icon: Code
+      icon: Code;
     },
     {
       title: 'Mobile Development',
       description: 'iOS and Android applications',
       href: '/services/mobile-development',
-      icon: Smartphone
+      icon: Smartphone;
     },
     {
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure',
       href: '/services/cloud-solutions',
-      icon: Cloud
+      icon: Cloud;
     },
     {
       title: 'Database Management',
       description: 'Database design and optimization',
       href: '/services/database-management',
-      icon: Database
+      icon: Database;
     },
     {
       title: 'Security Services',
       description: 'Cybersecurity and data protection',
       href: '/services/security',
-      icon: Shield
+      icon: Shield;
     },
     {
       title: 'Performance Optimization',
       description: 'Speed and efficiency improvements',
       href: '/services/performance',
-      icon: Zap
+      icon: Zap;
     }
   ];
 
@@ -267,7 +267,7 @@ const Header: React.FC = () => {
     { 
       name: 'Services', 
       href: '/services',
-      submenu: [
+      submenu: [;
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Network },
         { name: 'Micro SAAS', href: '/micro-saas', icon: Cloud }
@@ -299,15 +299,15 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-lg">
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">;
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">;
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>;
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>;
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -319,13 +319,13 @@ const Header: React.FC = () => {
                 <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden bg-white border-t border-gray-200">;
           <div className="px-4 py-2 space-y-1">
             {navigation.map((item) => (
               <div key={item.name}>
                 <Link
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200";
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -336,7 +336,7 @@ const Header: React.FC = () => {
                       <Link
                         key={dropdownItem.name}
                         href={dropdownItem.href}
-                        className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                        className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200";
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {dropdownItem.name}
@@ -349,7 +349,7 @@ const Header: React.FC = () => {
             <div className="pt-4 border-t border-gray-200">
               <Link
                 href="/contact"
-                className="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium";
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

@@ -1,48 +1,20 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
+return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
-=======
-interface TalentCardAvailabilityProps {
-  availability_type: string;
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 import {Clock} from "lucide-react";
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
 }
-<<<<<<< HEAD
-
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-
-
-=======
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -55,19 +27,6 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
   };
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Clock } from "lucide-react";
-interface TalentCardAvailabilityProps {
-  availabilityType: string
-}
-export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
-  // Format availability status
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const getAvailabilityColor = (status: string) => {
     switch (status) {
       case 'full-time':;
@@ -94,17 +53,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     }
   }
   };
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
-=======
-
-"
-import React from "react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Clock } from "lucide-react",
 interface TalentCardAvailabilityProps {}
   availabilityType: string";
@@ -123,7 +74,6 @@ interface TalentCardAvailabilityProps {;
   availabilityType: string;
 }
 ;
-<<<<<<< HEAD
 export function TalentCardAvailability() { return null; }
     }
 
@@ -132,26 +82,9 @@ export function TalentCardAvailability() { return null; }
     switch (status) {;'
       case 'full-time':;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         return 'Full-time';
-=======
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
-};
-  // Format availability status;
-  const getAvailabilityColor = (status: string) => {;
-    switch (status) {;
-      case 'full-time':;        return 'Full-time';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
-};
-  // Format availability status;
-  const getAvailabilityColor = (status: string) => {;
-    switch (status) {;
-      case 'full-time':;        return 'Full-time';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {;
 
@@ -233,29 +166,13 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
       default:;
         return status;
 
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
+}
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
   },
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
-=======
-        return 'Full-time',;
-      case 'part-time':;
-        return 'Part-time',;
-      case 'project-based':;
-        return 'Project';
-      default:;
-        return status;
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
 '
@@ -266,12 +183,8 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
         return 'Part-time';
     }
 
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   },
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -297,12 +210,7 @@ return 'Full-time',;
         return 'Part-time';
     }
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  },
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>"
       <Clock className="h-3 w-3" />
@@ -313,9 +221,7 @@ return 'Full-time',;
   }
 
   return (
-<<<<<<< HEAD
-
-    <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
+<div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
       <Clock className="h-3 w-3" />;
       <span>{getAvailabilityLabel(availabilityType)}</span>;
     </div>;
@@ -325,25 +231,12 @@ return 'Full-time',;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * TalentCardAvailability - Function description
 =======
 
-
-
 }
-
-
-
 
 export /**;
  * TalentCardAvailability - Function description;
@@ -377,8 +270,6 @@ interface TalentCardAvailabilityProps {;
   availabilityType: string;
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
-
-
 
   };
 "
@@ -419,53 +310,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project',;
         return status;
 
-
   },
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // Format availability label;
-  const getAvailabilityLabel = (status: string) =>: any {
-    switch (status) {
-      case 'full - time':;
-        return 'Full - time';
-      case 'part - time':;
-        return 'Part - time';
-      case 'project - based':;
-        return 'Project',
-      default:;
-        return status;
-    }
-  }
-;
-  return (
-    <div className={`flex items - center gap - 1 px - 2 py - 0.5 rounded - full text - xs ${getAvailabilityColor (availability_type)}`}>;
-      <Clock className="h - 3 w - 3" />;
-      <span>{getAvailabilityLabel (availability_type)}</span>;
-    </div>);
-}
-  },;
-;
-  return (;
-    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
-=======
-        return 'bg-yellow-500/20 text-yellow-400';
-
-  return ()
-    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
-</div>
-      <Clock className="h-3 w-3" />"
-
-      <span>{getAvailabilityLabel(availabilityType)}</span>
-    </div>`;
-    <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-</div>"
-      <Clock className="h-3 w-3" />;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <span>{getAvailabilityLabel(availabilityType)}</span>;
     </div>;
   ),;}
@@ -488,13 +335,8 @@ default: </div>)
 }
 }
 ;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======

@@ -1,18 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardHeader.tsx
-=======
-import React from "react",;
-import { BadgeCheck } from "lucide-react",;
-=======
-import React from "react",;
-import { BadgeCheck } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardHeader.tsx
-=======
-import React from "react",;
-import { BadgeCheck } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { TalentCardAvatar } from "./TalentCardAvatar",;
 import { TalentCardAvailability } from "./TalentCardAvailability",;
 =======
@@ -40,15 +27,9 @@ export function TalentCardHeader({ ;
     <div className="flex items-start gap-4 mb-4">;"
 </div>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
-<<<<<<< HEAD
-      ;
-<<<<<<< HEAD
+;
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardHeader.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardHeader.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="flex-1">;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
@@ -58,22 +39,7 @@ export function TalentCardHeader({ ;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
           </h3>;
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardHeader.tsx
-
-=======
-          ;
-=======
-"
-      <div className="flex-1">;"
-</div>"
-        <div className="flex items-center justify-between">;"
-          <h3 className="text-lg font-semibold text-white flex items-center gap-1">;"
-</h3>"
-              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;"
-
-          </h3>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <TalentCardAvailability availabilityType={availabilityType} />;
 
         </div>;"
@@ -85,16 +51,9 @@ export function TalentCardHeader({ ;
 
 }</h3> <TalentCardAvailability availabilityType= {;
   availabilityType ;
-<<<<<<< HEAD
 :temp_broken_files/profile/talent-card/TalentCardHeader.tsx
 }/> </div> </div> </div>) ;"}"
 }/> </div> </div> </div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardHeader.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-:temp_broken_files/profile/talent-card/TalentCardHeader.tsx;)"
-}/> </div> </div> </div>) ;"}""
-
-}/> </div> </div> </div>) ;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

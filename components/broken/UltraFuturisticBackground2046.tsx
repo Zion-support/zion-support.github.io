@@ -145,7 +145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }
             break;
           case 'neural':
-            // Neural network nodes
+            // Neural network nodes;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
@@ -288,7 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             break;
             ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
 case 'data':
-            // Data streams
+            // Data streams;
             ctx.fillStyle = this.color;
             ctx.fillRect(
               this.x - this.size / 2
@@ -384,9 +384,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     // Quantum field lines
     const drawQuantumField = (
-      ctx: CanvasRenderingContext2D
-      width: number
-      height: number
+      ctx: CanvasRenderingContext2D;
+      width: number;
+      height: number;
     ) => {
       const time = Date.now() * 0.001;
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
@@ -419,7 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const drawNeuralGrid = (
       ctx: CanvasRenderingContext2D,
       width: number,
-      height: number
+      height: number;
     ) => {
       ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
       ctx.lineWidth = 0.5;
@@ -457,7 +457,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <motion&& motion.div'
         className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black'
         animate={{}
-          background: ['
+          background: [';
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)''
             'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)''
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
@@ -733,8 +733,8 @@ if ( {) {}
           }}
           transition={{}
             duration: 4;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
           }}
         />;
           animate={{'

@@ -1,8 +1,5 @@
-<<<<<<< HEAD:components/AccessibilityEnhancer.tsx
+:components/AccessibilityEnhancer.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/components/AccessibilityEnhancer.tsx
 
 :components/AccessibilityEnhancer.tsx
 pr-12243
@@ -94,14 +91,8 @@ import React, { useState, useEffect } from 'react';
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 
-
-
 pr-12243
-<<<<<<< HEAD:components/AccessibilityEnhancer.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/components/AccessibilityEnhancer.tsx
+:components/AccessibilityEnhancer.tsx
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -129,7 +120,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
 
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, motion: boolean) => {
     const root = document.documentElement;
-    
+
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
@@ -193,12 +184,8 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     </div>
   );
 }
-<<<<<<< HEAD:components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD
-=======
+:components/AccessibilityEnhancer.tsx
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/components/AccessibilityEnhancer.tsx
-      }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
       }
@@ -248,7 +235,7 @@ pr-12325
           >
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast
           </button>
-          
+
           <div className="text-xs text-gray-600 dark:text-gray-300">Font Size:</div>
           <div className="flex gap-1">
             {['small', 'medium', 'large', 'extra-large'].map((size) => (
@@ -304,16 +291,8 @@ pr-12325
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 
-
-
-
-
 pr-12243
-<<<<<<< HEAD:components/AccessibilityEnhancer.tsx
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:components/AccessibilityEnhancer.tsx
 =======
         .high-contrast * {
           color: var(--text-color) !important;

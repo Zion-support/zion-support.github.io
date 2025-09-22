@@ -61,7 +61,7 @@ export type ReviewFormValues = any;
 const ReviewForm: React.FC<Props> = ({ initial ;}) => {
 origin/cursor/automate-test-improve-and-merge-code-2533
       const res = await fetch('/api/reviews/submit', {
-        method: 'POST'
+        method: 'POST';
         headers: { 'Content-Type': 'application/json' ;}
         body: JSON.stringify({
           projectId: initial.projectId;,
@@ -141,7 +141,7 @@ pr-12243
 
         <textarea'
 
-          className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
           rows={5}
           value={text}
           onChange={e => setText(e && e.target.value)}          required;
@@ -155,7 +155,7 @@ pr-12243
       </div>;
 
         <textarea
-          className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500";
           rows={5}
           value={text}
 

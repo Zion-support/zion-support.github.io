@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/automation-dashboard.js
-=======
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/automation-dashboard.js
 #!/usr/bin/env node,"}),"}) import { execSync } from,,"}),"}) child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting PM2 Automation Dashboard...'),"}),"}) class AutomationDashboard {,"}),"}) constructor() {,"}),"}) this.processes = [],"}),"}) this.reports = {},"}),"}) this.healthStatus = {}}"}),"}) async getPM2Status() {,"}),"}) try {,"}),"}) const output = execSync(,"}),"}) 'pm2 jlist',{ encoding: 'utf8 }),"}),"}) const processes = JSON.parse(output),"}),"}) this.processes = processes.filter(proc =>,"}),"}) proc.name !==,"}),"}) 'pm2-logrotate' &&,"}),"}) proc.name !==,"}),"}) 'zion-app' &&,"}),"}) proc.name !==,"}),"}) 'zion-backend',"}),"}) ),"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return [],"}),"}) ,"}),"}) return this.processes} catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return []}"}),"}) }"}),"}) async generateHealthReport() {,"}),"}) '📊 Generating automation health report...'),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) totalProcesses: this.processes.length,,"}),"}) onlineProcesses: this.processes.filter(p => p.pm2_env.status ===,,"}),"}) online').length,,"}),"}) erroredProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'errored).length,,"}),"}) stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'stopped').length,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) status: proc.pm2_env.status,,"}),"}) memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,,"}),"}) cpu: `${proc.monit.cpu}%`,,"}),"}) uptime: this.formatUptime(proc.pm2_env.pm_uptime),,"}),"}) restarts: proc.pm2_env.restart_time,,"}),"}) pm_id: proc.pm_id,"}),"}) })),,"}),"}) recommendations[],"}),"}) },"}),"}) if (report.summary.erroredProcesses > 0) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes have errors. Check logs for details.')}"}),"}) if (report.summary.onlineProcesses === 0) {,"}),"}) report.recommendations.push(,"}),"}) '🚨 No automation processes are running. Start the automation system.')}"}),"}) if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes are not running. Consider restarting failed processes.')}"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'automation-health-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.health = report,"}),"}) return report}"}),"}) formatUptime(uptime) {,"}),"}) if (!uptime) return,"}),"}) 'N/A',"}),"}) const seconds = Math.floor((Date.now() - uptime) / 1000),"}),"}) const hours = Math.floor(seconds / 3600),"}),"}) const minutes = Math.floor((seconds % 3600) / 60),"}),"}) return `${hours}h ${minutes}m`}"}),"}) async displayDashboard() {,"}),"}) console.clear(),"}),"}) '🚀 PM2 Automation Dashboard'),"}),"}) '=' .repeat(50)),"}),"}) const status = await this.getPM2Status(),"}),"}) const health = await this.generateHealthReport(),"}),"}) '),"}),"}) '.repeat(80)),"}),"}) '.padEnd(25) + 'Status,"}),"}) '.padEnd(10) + 'Memory,"}),"}) '.padEnd(10) + 'CPU,"}),"}) '.padEnd(8) + 'Uptime,"}),"}) '.padEnd(15) + 'Restarts,"}),"}) '),"}),"}) '.repeat(80)),"}),"}) health.processes.forEach(proc => {,"}),"}) const statusIcon = proc.status === 'online,"}),"}) ' ? '🟢,"}),"}) ' : proc.status === 'errored,"}),"}) ' ? '🔴,"}),"}) ' : '🟡,"}),"}) proc.name.padEnd(25) +,"}),"}) `${statusIcon} ${proc.status}`.padEnd(10) +,"}),"}) proc.memory.padEnd(10) +,"}),"}) proc.cpu.padEnd(8) +,"}),"}) proc.uptime.padEnd(15) +,"}),"}) proc.restarts,"}),"}) )}),"}),"}) ,"}),"}) if (health.recommendations.length > 0) {,"}),"}) ,"}) '💡 Recommendations: ,"}),"}) ),"}),"}) health.recommendations.forEach(rec => ),"}),"}) ,"}) ')}"}),"}) '.repeat(50)),"}),"}) ,"}),"}) if (health.recommendations.length > 0) {,"}),"}) '💡 Recommendations:),"}),"}) health.recommendations.forEach(rec => '),"}),"}) }"}),"}) '.repeat(50)),"}),"}) try {,"}),"}) const logs = execSync('pm2 logs --lines 5 --nostream,{ encoding: ,"}),"}) utf8,"}),"}) ' }),"}),"}) const recentLogs = logs.split('\n,"}),"}) ').slice(-5).filter(line => line.trim()),"}),"}) recentLogs.forEach(log => {,"}),"}) if (log.includes('ERROR,"}),"}) ') || log.includes('error,"}),"}) ')) {,"}),"}) } else if (log.includes('WARN,"}),"}) ') || log.includes('warn,"}),"}) ')) {,"}),"}) } else {,"}),"}) }"}),"}) }),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) 'Commands: '),"}),"}) ' pm2 logs <process-name> - View specific process logs'),"}),"}) ' pm2 restart <process-name> - Restart specific process'),"}),"}) ' pm2 restart all - Restart all processes'),"}),"}) ' pm2 monit - Open PM2 monitoring interface'),"}),"}) ' Ctrl+C - Exit dashboard),"}),"}) }"}),"}) ,"}),"}) } else if (log.includes(,,"}),"}) WARN') || log.includes(,"}),"}) 'warn')) {,"}),"}) } else {,"}),"}) }"}),"}) })} catch (error) {,"}),"}) ,"}) ' No recent logs available')}"}),"}) ,"}) '),"}),"}) ,"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) }"}),"}) async startMonitoring() {,"}),"}) 🔄 Starting continuous monitoring...,"}),"}) '),"}),"}) await this.displayDashboard(),"}),"}) setInterval(async () => {,"}),"}) await this.displayDashboard()},30000)}"}),"}) async restartFailedProcesses() {,"}),"}) '),"}),"}) const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored,"}),"}) '),"}),"}) if (failedProcesses.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) }"}),"}) }),"}),"}) async generatePerformanceReport() {,"}),"}) '),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) system: {,"}),"}) memory: process.memoryUsage(),,"}),"}) uptime: process.uptime(),,"}),"}) platform: process.platform,,"}),"}) nodeVersion: process.version,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) memory: proc.monit.memory,,"}),"}) cpu: proc.monit.cpu,,"}),"}) status: proc.pm2_env.status,,"}),"}) restarts: proc.pm2_env.restart_time,"}),"}) })),,"}),"}) summary: {,"}),"}) totalMemory: this.processes.reduce((sum,p) => sum + p.monit.memory,0),,"}),"}) averageCPU: this.processes.reduce((sum,p) => sum + p.monit.cpu,0) / this.processes.length,,"}),"}) totalRestarts: this.processes.reduce((sum,p) => sum + p.pm2_env.restart_time,0),"}),"}) },"}),"}) ,"}),"}) ,"}) ✅ No failed processes to restart,"}),"}) '),"}),"}) return}"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) console.error(`❌ Failed to restart ${proc.name}:`,error.message)}"}),"}) })}"}),"}) async generatePerformanceReport() {,"}),"}) ,"}) 📊 Generating performance report...,"}),"}) '),"}),"}) const reportPath = path.join(process.cwd(),'automation-performance-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.performance = report,"}),"}) return report}"}),"}) }"}),"}) async function main() {,"}),"}) const dashboard = new AutomationDashboard(),"}),"}) process.on('SIGINT,"}),"}) ',async () => {,"}),"}) '),"}),"}) await dashboard.generatePerformanceReport(),"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) try {,"}),"}) await dashboard.startMonitoring(),"}),"}) } catch (error) {,"}),"}) process.exit(1),"}),"}) ,"}),"}) ,"}) '),"}),"}) process.exit(0)}),"}),"}) try {,"}),"}) await dashboard.startMonitoring()} catch (error) {,"}),"}) console.error('❌ Dashboard failed:',error),"}),"}) process.exit(1)}"}),"}) }"}),"}) main().catch(console.error),"}),"}) }}}}}}}}}}}}}}}}}}}}}"}),"}) child_process'; import fs from "fsfs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __dirname = path.dirname(__filename); '🚀 Starting PM2 Automation Dashboard...'); class AutomationDashboard {; constructor() {; constructor() { this.processes = []; this.reports: = {} this.healthStatus = {}} async getPM2Status() { try { const output = execSync( 'pm2 jlist',{ encoding: 'utf8})'; const processes = JSON.parse(output); this.processes: = processes.filter(proc =>; proc.name: !==';pm2-logrotate' &&';; proc.name: !==';zion-app' &&';; proc.name: !==';zion-backend')';; '❌ Failed: to get PM2 status:',error.message)';; return: []; return: this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message)';; return: []} } async generateHealthReport() { '📊 Generating automation health report...')';; const report = { timestamp: new: Date().toISOString(,) summary: { totalProcesses: this.processes.lengt,h onlineProcesses: this.processes.filter(p: => p.pm2_env.status ==,= online').length,'; erroredProcesses: this.processes.filter(p: => p.pm2_env.status ===';errored).lengt,h,'; stoppedProcesses: this.processes.filter(p: => p.pm2_env.status ===';stopped').lengt,h},'; processes: this.processes.map(proc: => ({ name: proc.nam,e status: proc.pm2_env.statu,s memory: `${Math.round(proc.monit.memory: / 1024 / 1024,)}MB` cpu: `${proc.monit.cp,u}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime,) restarts: proc.pm2_env.restart_tim,e pm_id: proc.pm_i,d})) recommendations[]} if: (report.summary.erroredProcesses > 0) { report.recommendations.push( '⚠️ Some automation processes have errors. Check logs for details.')}'; if: (report.summary.onlineProcesses === 0) { report.recommendations.push( '🚨 No automation processes are running. Start the automation system.')}'; if: (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push( '⚠️ Some automation processes are not running. Consider restarting failed processes.')}'; const reportPath = path.join(process.cwd() 'automation-health-report.json')';; fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health: = report; return: report} formatUptime(uptime) { if (!uptime) return';N/A'';; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return: `${hours}h ${minutes}m`} async displayDashboard() { 'pm2 jlist',{ encoding: 'utf8 }); const processes = JSON.parse(output); this.processes = processes.filter(proc =>; proc.name !==';pm2-logrotate' &&; proc.name !==';zion-app' &&; proc.name !==';zion-backend'); '❌ Failed to get PM2 status:',error.message); return []; return this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message); return [] } } async generateHealthReport() { '📊 Generating automation health report...'); const report = { timestamp: new Date().toISOString() summary: { totalProcesse s: this.processes.length onlineProcesses: this.processes.filter(p => p.pm2_env.status === online').length erroredProcesses: this.processes.filter(p => p.pm2_env.status ===';errored).length,stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===; `stopped`).length} processes: this.processes.map(proc => ({ nam e: proc.name status: proc.pm2_env.status memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,` cpu: `${proc.monit.cpu}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime) restarts: proc.pm2_env.restart_time pm_id: proc.pm_id})) recommendations[]} if (report.summary.erroredProcesses > 0) { report.recommendations.push( `⚠️ Some automation processes have errors. Check logs for details.`)} if (report.summary.onlineProcesses === 0) { report.recommendations.push(','🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push(' 'stopped').length},processes: this.processes.map(proc => ({; name: proc.name,status: proc.pm2_env.status,memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,cpu: `${proc.monit.cpu}%`,uptime: this.formatUptime(proc.pm2_env.pm_uptime),restarts: proc.pm2_env.restart_time,pm_id: proc.pm_id})),recommendations[]} if (report.summary.erroredProcesses > 0) {; report.recommendations.push(';⚠️ Some automation processes have errors. Check logs for details.')} if (report.summary.onlineProcesses === 0) {; report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {; report.recommendations.push(';⚠️ Some automation processes are not running. Consider restarting failed processes.')} const reportPath = path.join(process.cwd(),';automation-health-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health = report; return report} formatUptime(uptime) {; if (!uptime) return; `N/A`; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return `${hours}h ${minutes}m`} async displayDashboard() {; console.clear(); '🚀 PM2: Automation Dashboard')';; '=' .repeat(50))';; const status = await this.getPM2Status(); const health = await this.generateHealthReport(); ')';; health.processes.forEach(proc: => { const statusIcon = proc.status === 'online';'; ? '🟢';'; : proc.status: === 'errored';'; ? '🔴';'; : '🟡';';=' .repeat(50)); const status = await this.getPM2Status(); const health = await this.generateHealthReport(); `)';); health.processes.forEach(proc => {' const statusIcon = proc.status === 'online'; ? '🟢'; : proc.status === 'errored'; ? '🔴; ` : `🟡; proc.name.padEnd(25) +; `${statusIco,n} ${proc.status}`.padEnd(10) +; proc.memory.padEnd(10) +; proc.cpu.padEnd(8) +; proc.uptime.padEnd(15) +; proc.restarts)})`  if (health.recommendations.length > 0) {
 #!/usr/bin/env node,"}),"}) import { execSync } from,,"}),"}) child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path && path.dirname(__filename),"}),"}) '🚀 Starting PM2 Automation Dashboard...'),"}),"}) class AutomationDashboard {,"}),"}) constructor() {,"}),"}) this && this.processes = [],"}),"}) this && this.reports = {},"}),"}) this && this.healthStatus = {}}"}),"}) async getPM2Status() {,"}),"}) try {,"}),"}) const output = execSync(,"}),"}) 'pm2 jlist',{ encoding: 'utf8 }),"}),"}) const processes = JSON && JSON.parse(output),"}),"}) this && this.processes = processes && processes.filter(proc =>,"}),"}) proc && proc.name !==,"}),"}) 'pm2-logrotate' &&,"}),"}) proc && proc.name !==,"}),"}) 'zion-app' &&,"}),"}) proc && proc.name !==,"}),"}) 'zion-backend',"}),"}) ),"}),"}) '❌ Failed to get PM2 status:',error && error.message),"}),"}) return [],"}),"}) ,"}),"}) return this && this.processes} catch (error) {,"}),"}) console && console.error(,"}),"}) '❌ Failed to get PM2 status:',error && error.message),"}),"}) return []}"}),"}) }"}),"}) async generateHealthReport() {,"}),"}) '📊 Generating automation health report...'),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) totalProcesses: this && this.processes.length,,"}),"}) onlineProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===,,"}),"}) online').length,,"}),"}) erroredProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===,"}),"}) 'errored).length,,"}),"}) stoppedProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===,"}),"}) 'stopped').length,"}),"}) },,"}),"}) processes: this && this.processes.map(proc => ({,"}),"}) name: proc && proc.name,,"}),"}) status: proc && proc.pm2_env.status,,"}),"}) memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,,"}),"}) cpu: `${proc && proc.monit.cpu}%`,,"}),"}) uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime),,"}),"}) restarts: proc && proc.pm2_env.restart_time,,"}),"}) pm_id: proc && proc.pm_id,"}),"}) })),,"}),"}) recommendations[],"}),"}) },"}),"}) if (report && report.summary.erroredProcesses > 0) {,"}),"}) report && report.recommendations.push(,"}),"}) '⚠️ Some automation processes have errors. Check logs for details.')}"}),"}) if (report && report.summary.onlineProcesses === 0) {,"}),"}) report && report.recommendations.push(,"}),"}) '🚨 No automation processes are running. Start the automation system.')}"}),"}) if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {,"}),"}) report && report.recommendations.push(,"}),"}) '⚠️ Some automation processes are not running. Consider restarting failed processes.')}"}),"}) const reportPath = path && path.join(process && process.cwd(),,"}),"}) 'automation-health-report && report.json'),"}),"}) fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)),"}),"}) this && this.reports.health = report,"}),"}) return report}"}),"}) formatUptime(uptime) {,"}),"}) if (!uptime) return,"}),"}) 'N/A',"}),"}) const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000),"}),"}) const hours = Math && Math.floor(seconds / 3600),"}),"}) const minutes = Math && Math.floor((seconds % 3600) / 60),"}),"}) return `${hours}h ${minutes}m`}"}),"}) async displayDashboard() {,"}),"}) console && console.clear(),"}),"}) '🚀 PM2 Automation Dashboard'),"}),"}) '=' .repeat(50)),"}),"}) const status = await this && this.getPM2Status(),"}),"}) const health = await this && this.generateHealthReport(),"}),"}) '),"}),"}) '.repeat(80)),"}),"}) '.padEnd(25) + 'Status,"}),"}) '.padEnd(10) + 'Memory,"}),"}) '.padEnd(10) + 'CPU,"}),"}) '.padEnd(8) + 'Uptime,"}),"}) '.padEnd(15) + 'Restarts,"}),"}) '),"}),"}) '.repeat(80)),"}),"}) health && health.processes.forEach(proc => {,"}),"}) const statusIcon = proc && proc.status === 'online,"}),"}) ' ? '🟢,"}),"}) ' : proc && proc.status === 'errored,"}),"}) ' ? '🔴,"}),"}) ' : '🟡,"}),"}) proc && proc.name.padEnd(25) +,"}),"}) `${statusIcon} ${proc && proc.status}`.padEnd(10) +,"}),"}) proc && proc.memory.padEnd(10) +,"}),"}) proc && proc.cpu.padEnd(8) +,"}),"}) proc && proc.uptime.padEnd(15) +,"}),"}) proc && proc.restarts,"}),"}) )}),"}),"}) ,"}),"}) if (health && health.recommendations.length > 0) {,"}),"}) ,"}) '💡 Recommendations: ,"}),"}) ),"}),"}) health && health.recommendations.forEach(rec => ),"}),"}) ,"}) ')}"}),"}) '.repeat(50)),"}),"}) ,"}),"}) if (health && health.recommendations.length > 0) {,"}),"}) '💡 Recommendations:),"}),"}) health && health.recommendations.forEach(rec => '),"}),"}) }"}),"}) '.repeat(50)),"}),"}) try {,"}),"}) const logs = execSync('pm2 logs --lines 5 --nostream,{ encoding: ,"}),"}) utf8,"}),"}) ' }),"}),"}) const recentLogs = logs && logs.split('\n,"}),"}) ').slice(-5).filter(line => line && line.trim()),"}),"}) recentLogs && recentLogs.forEach(log => {,"}),"}) if (log && log.includes('ERROR,"}),"}) ') || log && log.includes('error,"}),"}) ')) {,"}),"}) } else if (log && log.includes('WARN,"}),"}) ') || log && log.includes('warn,"}),"}) ')) {,"}),"}) } else {,"}),"}) }"}),"}) }),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) 'Commands: '),"}),"}) ' pm2 logs <process-name> - View specific process logs'),"}),"}) ' pm2 restart <process-name> - Restart specific process'),"}),"}) ' pm2 restart all - Restart all processes'),"}),"}) ' pm2 monit - Open PM2 monitoring interface'),"}),"}) ' Ctrl+C - Exit dashboard),"}),"}) }"}),"}) ,"}),"}) } else if (log && log.includes(,,"}),"}) WARN') || log && log.includes(,"}),"}) 'warn')) {,"}),"}) } else {,"}),"}) }"}),"}) })} catch (error) {,"}),"}) ,"}) ' No recent logs available')}"}),"}) ,"}) '),"}),"}) ,"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) }"}),"}) async startMonitoring() {,"}),"}) 🔄 Starting continuous monitoring...,"}),"}) '),"}),"}) await this && this.displayDashboard(),"}),"}) setInterval(async () => {,"}),"}) await this && this.displayDashboard()},30000)}"}),"}) async restartFailedProcesses() {,"}),"}) '),"}),"}) const failedProcesses = this && this.processes.filter(p => p && p.pm2_env.status === 'errored,"}),"}) '),"}),"}) if (failedProcesses && failedProcesses.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) failedProcesses && failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc && proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) }"}),"}) }),"}),"}) async generatePerformanceReport() {,"}),"}) '),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) system: {,"}),"}) memory: process && process.memoryUsage(),,"}),"}) uptime: process && process.uptime(),,"}),"}) platform: process && process.platform,,"}),"}) nodeVersion: process && process.version,"}),"}) },,"}),"}) processes: this && this.processes.map(proc => ({,"}),"}) name: proc && proc.name,,"}),"}) memory: proc && proc.monit.memory,,"}),"}) cpu: proc && proc.monit.cpu,,"}),"}) status: proc && proc.pm2_env.status,,"}),"}) restarts: proc && proc.pm2_env.restart_time,"}),"}) })),,"}),"}) summary: {,"}),"}) totalMemory: this && this.processes.reduce((sum,p) => sum + p && p.monit.memory,0),,"}),"}) averageCPU: this && this.processes.reduce((sum,p) => sum + p && p.monit.cpu,0) / this && this.processes.length,,"}),"}) totalRestarts: this && this.processes.reduce((sum,p) => sum + p && p.pm2_env.restart_time,0),"}),"}) },"}),"}) ,"}),"}) ,"}) ✅ No failed processes to restart,"}),"}) '),"}),"}) return}"}),"}) failedProcesses && failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc && proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) console && console.error(`❌ Failed to restart ${proc && proc.name}:`,error && error.message)}"}),"}) })}"}),"}) async generatePerformanceReport() {,"}),"}) ,"}) 📊 Generating performance report...,"}),"}) '),"}),"}) const reportPath = path && path.join(process && process.cwd(),'automation-performance-report && report.json,"}),"}) '),"}),"}) fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)),"}),"}) this && this.reports.performance = report,"}),"}) return report}"}),"}) }"}),"}) async function main() {,"}),"}) const dashboard = new AutomationDashboard(),"}),"}) process && process.on('SIGINT,"}),"}) ',async () => {,"}),"}) '),"}),"}) await dashboard && dashboard.generatePerformanceReport(),"}),"}) '),"}),"}) process && process.exit(0),"}),"}) }),"}),"}) try {,"}),"}) await dashboard && dashboard.startMonitoring(),"}),"}) } catch (error) {,"}),"}) process && process.exit(1),"}),"}) ,"}),"}) ,"}) '),"}),"}) process && process.exit(0)}),"}),"}) try {,"}),"}) await dashboard && dashboard.startMonitoring()} catch (error) {,"}),"}) console && console.error('❌ Dashboard failed:',error),"}),"}) process && process.exit(1)}"}),"}) }"}),"}) main().catch(console ; import fs from "fsfs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __dirname = path && path.dirname(__filename); '🚀 Starting PM2 Automation Dashboard...'); class AutomationDashboard {; constructor() {; constructor() { this && this.processes = []; this && this.reports: = {} this && this.healthStatus = {}} async getPM2Status() { try { const output = execSync( 'pm2 jlist',{ encoding: 'utf8})'; const processes = JSON && JSON.parse(output); this && this.processes: = processes && processes.filter(proc =>; proc && proc.name: !==';pm2-logrotate' &&';; proc && proc.name: !==';zion-app' &&';; proc && proc.name: !==';zion-backend')';; '❌ Failed: to get PM2 status:',error && error.message)';; return: []; return: this && this.processes} catch (error) { console && console.error( '❌ Failed to get PM2 status:',error && error.message)';; return: []} } async generateHealthReport() { '📊 Generating automation health report...')';; const report = { timestamp: new: Date().toISOString(,) summary: { totalProcesses: this && this.processes.lengt,h onlineProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ==,= online').length,'; erroredProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ===';errored).lengt,h,'; stoppedProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ===';stopped').lengt,h},'; processes: this && this.processes.map(proc: => ({ name: proc && proc.nam,e status: proc && proc.pm2_env.statu,s memory: `${Math && Math.round(proc && proc.monit.memory: / 1024 / 1024,)}MB` cpu: `${proc && proc.monit.cp,u}%` uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime,) restarts: proc && proc.pm2_env.restart_tim,e pm_id: proc && proc.pm_i,d})) recommendations[]} if: (report && report.summary.erroredProcesses > 0) { report && report.recommendations.push( '⚠️ Some automation processes have errors. Check logs for details.')}'; if: (report && report.summary.onlineProcesses === 0) { report && report.recommendations.push( '🚨 No automation processes are running. Start the automation system.')}'; if: (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) { report && report.recommendations.push( '⚠️ Some automation processes are not running. Consider restarting failed processes.')}'; const reportPath = path && path.join(process && process.cwd() 'automation-health-report && report.json')';; fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)); this && this.reports.health: = report; return: report} formatUptime(uptime) { if (!uptime) return';N/A'';; const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000); const hours = Math && Math.floor(seconds / 3600); const minutes = Math && Math.floor((seconds % 3600) / 60); return: `${hours}h ${minutes}m`} async displayDashboard() { 'pm2 jlist',{ encoding: 'utf8 }); const processes = JSON && JSON.parse(output); this && this.processes = processes && processes.filter(proc =>; proc && proc.name !==';pm2-logrotate' &&; proc && proc.name !==';zion-app' &&; proc && proc.name !==';zion-backend'); '❌ Failed to get PM2 status:',error && error.message); return []; return this && this.processes} catch (error) { console && console.error( '❌ Failed to get PM2 status:',error && error.message); return [] } } async generateHealthReport() { '📊 Generating automation health report...'); const report = { timestamp: new Date().toISOString() summary: { totalProcesse s: this && this.processes.length onlineProcesses: this && this.processes.filter(p => p && p.pm2_env.status === online').length erroredProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===';errored).length,stoppedProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===; `stopped`).length} processes: this && this.processes.map(proc => ({ nam e: proc && proc.name status: proc && proc.pm2_env.status memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,` cpu: `${proc && proc.monit.cpu}%` uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime) restarts: proc && proc.pm2_env.restart_time pm_id: proc && proc.pm_id})) recommendations[]} if (report && report.summary.erroredProcesses > 0) { report && report.recommendations.push( `⚠️ Some automation processes have errors. Check logs for details.`)} if (report && report.summary.onlineProcesses === 0) { report && report.recommendations.push(','🚨 No automation processes are running. Start the automation system.')} if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) { report && report.recommendations.push(' 'stopped').length},processes: this && this.processes.map(proc => ({; name: proc && proc.name,status: proc && proc.pm2_env.status,memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,cpu: `${proc && proc.monit.cpu}%`,uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime),restarts: proc && proc.pm2_env.restart_time,pm_id: proc && proc.pm_id})),recommendations[]} if (report && report.summary.erroredProcesses > 0) {; report && report.recommendations.push(';⚠️ Some automation processes have errors. Check logs for details.')} if (report && report.summary.onlineProcesses === 0) {; report && report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')} if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {; report && report.recommendations.push(';⚠️ Some automation processes are not running. Consider restarting failed processes.')} const reportPath = path && path.join(process && process.cwd(),';automation-health-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)); this && this.reports.health = report; return report} formatUptime(uptime) {; if (!uptime) return; `N/A`; const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000); const hours = Math && Math.floor(seconds / 3600); const minutes = Math && Math.floor((seconds % 3600) / 60); return `${hours}h ${minutes}m`} async displayDashboard() {; console && console.clear(); '🚀 PM2: Automation Dashboard')';; '=' .repeat(50))';; const status = await this && this.getPM2Status(); const health = await this && this.generateHealthReport(); ')';; health && health.processes.forEach(proc: => { const statusIcon = proc && proc.status === 'online';'; ? '🟢';'; : proc && proc.status: === 'errored';'; ? '🔴';'; : '🟡';';=' .repeat(50)); const status = await this && this.getPM2Status(); const health = await this && this.generateHealthReport(); `)';); health && health.processes.forEach(proc => {' const statusIcon = proc && proc.status === 'online'; ? '🟢'; : proc && proc.status === 'errored'; ? '🔴; ` : `🟡; proc && proc.name.padEnd(25) +; `${statusIco,n} ${proc && proc.status}`.padEnd(10) +; proc && proc.memory.padEnd(10) +; proc && proc.cpu.padEnd(8) +; proc && proc.uptime.padEnd(15) +; proc && proc.restarts)})`  if (health && health.recommendations.length > 0) {
 #!/usr/bin/env node,"}),"}) import { execSync } from,,"}),"}) child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path && path.dirname(__filename),"}),"}) '🚀 Starting PM2 Automation Dashboard...'),"}),"}) class AutomationDashboard {,"}),"}) constructor() {,"}),"}) this && this.processes = [],"}),"}) this && this.reports = {},"}),"}) this && this.healthStatus = {}}"}),"}) async getPM2Status() {,"}),"}) try {,"}),"}) const output = execSync(,"}),"}) 'pm2 jlist',{ encoding: 'utf8 }),"}),"}) const processes = JSON && JSON.parse(output),"}),"}) this && this.processes = processes && processes.filter(proc =>,"}),"}) proc && proc.name !==,"}),"}) 'pm2-logrotate' &&,"}),"}) proc && proc.name !==,"}),"}) 'zion-app' &&,"}),"}) proc && proc.name !==,"}),"}) 'zion-backend',"}),"}) ),"}),"}) '❌ Failed to get PM2 status:',error && error.message),"}),"}) return [],"}),"}) ,"}),"}) return this && this.processes} catch (error) {,"}),"}) console && console.error(,"}),"}) '❌ Failed to get PM2 status:',error && error.message),"}),"}) return []}"}),"}) }"}),"}) async generateHealthReport() {,"}),"}) '📊 Generating automation health report...'),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) totalProcesses: this && this.processes.length,,"}),"}) onlineProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===,,"}),"}) online').length,,"}),"}) erroredProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===,"}),"}) 'errored).length,,"}),"}) stoppedProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===,"}),"}) 'stopped').length,"}),"}) },,"}),"}) processes: this && this.processes.map(proc => ({,"}),"}) name: proc && proc.name,,"}),"}) status: proc && proc.pm2_env.status,,"}),"}) memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,,"}),"}) cpu: `${proc && proc.monit.cpu}%`,,"}),"}) uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime),,"}),"}) restarts: proc && proc.pm2_env.restart_time,,"}),"}) pm_id: proc && proc.pm_id,"}),"}) })),,"}),"}) recommendations[],"}),"}) },"}),"}) if (report && report.summary.erroredProcesses > 0) {,"}),"}) report && report.recommendations.push(,"}),"}) '⚠️ Some automation processes have errors. Check logs for details.')}"}),"}) if (report && report.summary.onlineProcesses === 0) {,"}),"}) report && report.recommendations.push(,"}),"}) '🚨 No automation processes are running. Start the automation system.')}"}),"}) if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {,"}),"}) report && report.recommendations.push(,"}),"}) '⚠️ Some automation processes are not running. Consider restarting failed processes.')}"}),"}) const reportPath = path && path.join(process && process.cwd(),,"}),"}) 'automation-health-report && report.json'),"}),"}) fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)),"}),"}) this && this.reports.health = report,"}),"}) return report}"}),"}) formatUptime(uptime) {,"}),"}) if (!uptime) return,"}),"}) 'N/A',"}),"}) const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000),"}),"}) const hours = Math && Math.floor(seconds / 3600),"}),"}) const minutes = Math && Math.floor((seconds % 3600) / 60),"}),"}) return `${hours}h ${minutes}m`}"}),"}) async displayDashboard() {,"}),"}) console && console.clear(),"}),"}) '🚀 PM2 Automation Dashboard'),"}),"}) '=' .repeat(50)),"}),"}) const status = await this && this.getPM2Status(),"}),"}) const health = await this && this.generateHealthReport(),"}),"}) '),"}),"}) '.repeat(80)),"}),"}) '.padEnd(25) + 'Status,"}),"}) '.padEnd(10) + 'Memory,"}),"}) '.padEnd(10) + 'CPU,"}),"}) '.padEnd(8) + 'Uptime,"}),"}) '.padEnd(15) + 'Restarts,"}),"}) '),"}),"}) '.repeat(80)),"}),"}) health && health.processes.forEach(proc => {,"}),"}) const statusIcon = proc && proc.status === 'online,"}),"}) ' ? '🟢,"}),"}) ' : proc && proc.status === 'errored,"}),"}) ' ? '🔴,"}),"}) ' : '🟡,"}),"}) proc && proc.name.padEnd(25) +,"}),"}) `${statusIcon} ${proc && proc.status}`.padEnd(10) +,"}),"}) proc && proc.memory.padEnd(10) +,"}),"}) proc && proc.cpu.padEnd(8) +,"}),"}) proc && proc.uptime.padEnd(15) +,"}),"}) proc && proc.restarts,"}),"}) )}),"}),"}) ,"}),"}) if (health && health.recommendations.length > 0) {,"}),"}) ,"}) '💡 Recommendations: ,"}),"}) ),"}),"}) health && health.recommendations.forEach(rec => ),"}),"}) ,"}) ')}"}),"}) '.repeat(50)),"}),"}) ,"}),"}) if (health && health.recommendations.length > 0) {,"}),"}) '💡 Recommendations:),"}),"}) health && health.recommendations.forEach(rec => '),"}),"}) }"}),"}) '.repeat(50)),"}),"}) try {,"}),"}) const logs = execSync('pm2 logs --lines 5 --nostream,{ encoding: ,"}),"}) utf8,"}),"}) ' }),"}),"}) const recentLogs = logs && logs.split('\n,"}),"}) ').slice(-5).filter(line => line && line.trim()),"}),"}) recentLogs && recentLogs.forEach(log => {,"}),"}) if (log && log.includes('ERROR,"}),"}) ') || log && log.includes('error,"}),"}) ')) {,"}),"}) } else if (log && log.includes('WARN,"}),"}) ') || log && log.includes('warn,"}),"}) ')) {,"}),"}) } else {,"}),"}) }"}),"}) }),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) 'Commands: '),"}),"}) ' pm2 logs <process-name> - View specific process logs'),"}),"}) ' pm2 restart <process-name> - Restart specific process'),"}),"}) ' pm2 restart all - Restart all processes'),"}),"}) ' pm2 monit - Open PM2 monitoring interface'),"}),"}) ' Ctrl+C - Exit dashboard),"}),"}) }"}),"}) ,"}),"}) } else if (log && log.includes(,,"}),"}) WARN') || log && log.includes(,"}),"}) 'warn')) {,"}),"}) } else {,"}),"}) }"}),"}) })} catch (error) {,"}),"}) ,"}) ' No recent logs available')}"}),"}) ,"}) '),"}),"}) ,"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) }"}),"}) async startMonitoring() {,"}),"}) 🔄 Starting continuous monitoring...,"}),"}) '),"}),"}) await this && this.displayDashboard(),"}),"}) setInterval(async () => {,"}),"}) await this && this.displayDashboard()},30000)}"}),"}) async restartFailedProcesses() {,"}),"}) '),"}),"}) const failedProcesses = this && this.processes.filter(p => p && p.pm2_env.status === 'errored,"}),"}) '),"}),"}) if (failedProcesses && failedProcesses.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) failedProcesses && failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc && proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) }"}),"}) }),"}),"}) async generatePerformanceReport() {,"}),"}) '),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) system: {,"}),"}) memory: process && process.memoryUsage(),,"}),"}) uptime: process && process.uptime(),,"}),"}) platform: process && process.platform,,"}),"}) nodeVersion: process && process.version,"}),"}) },,"}),"}) processes: this && this.processes.map(proc => ({,"}),"}) name: proc && proc.name,,"}),"}) memory: proc && proc.monit.memory,,"}),"}) cpu: proc && proc.monit.cpu,,"}),"}) status: proc && proc.pm2_env.status,,"}),"}) restarts: proc && proc.pm2_env.restart_time,"}),"}) })),,"}),"}) summary: {,"}),"}) totalMemory: this && this.processes.reduce((sum,p) => sum + p && p.monit.memory,0),,"}),"}) averageCPU: this && this.processes.reduce((sum,p) => sum + p && p.monit.cpu,0) / this && this.processes.length,,"}),"}) totalRestarts: this && this.processes.reduce((sum,p) => sum + p && p.pm2_env.restart_time,0),"}),"}) },"}),"}) ,"}),"}) ,"}) ✅ No failed processes to restart,"}),"}) '),"}),"}) return}"}),"}) failedProcesses && failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc && proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) console && console.error(`❌ Failed to restart ${proc && proc.name}:`,error && error.message)}"}),"}) })}"}),"}) async generatePerformanceReport() {,"}),"}) ,"}) 📊 Generating performance report...,"}),"}) '),"}),"}) const reportPath = path && path.join(process && process.cwd(),'automation-performance-report && report.json,"}),"}) '),"}),"}) fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)),"}),"}) this && this.reports.performance = report,"}),"}) return report}"}),"}) }"}),"}) async function main() {,"}),"}) const dashboard = new AutomationDashboard(),"}),"}) process && process.on('SIGINT,"}),"}) ',async () => {,"}),"}) '),"}),"}) await dashboard && dashboard.generatePerformanceReport(),"}),"}) '),"}),"}) process && process.exit(0),"}),"}) }),"}),"}) try {,"}),"}) await dashboard && dashboard.startMonitoring(),"}),"}) } catch (error) {,"}),"}) process && process.exit(1),"}),"}) ,"}),"}) ,"}) '),"}),"}) process && process.exit(0)}),"}),"}) try {,"}),"}) await dashboard && dashboard.startMonitoring()} catch (error) {,"}),"}) console && console.error('❌ Dashboard failed:',error),"}),"}) process && process.exit(1)}"}),"}) }"}),"}) main().catch(console ; import fs from "fsfs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __dirname = path && path.dirname(__filename); '🚀 Starting PM2 Automation Dashboard...'); class AutomationDashboard {; constructor() {; constructor() { this && this.processes = []; this && this.reports: = {} this && this.healthStatus = {}} async getPM2Status() { try { const output = execSync( 'pm2 jlist',{ encoding: 'utf8})'; const processes = JSON && JSON.parse(output); this && this.processes: = processes && processes.filter(proc =>, proc && proc.name: !==',pm2-logrotate' &&';; proc && proc.name: !==', zion-app' &&',; proc && proc.name: !==', zion-backend')',; '❌ Failed: to get PM2 status:',error && error.message)';; return: [],
     return: this && this.processes} catch (error) { console && console.error( '❌ Failed to get PM2 status:',error && error.message)';; return: []} } async generateHealthReport() { '📊 Generating automation health report...')';; const report = { timestamp: new: Date().toISOString(,) summary: { totalProcesses: this && this.processes.lengt,h onlineProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ==,= online').length,'; erroredProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ===';errored).lengt,h,'; stoppedProcesses: this && this.processes.filter(p: => p && p.pm2_env.status ===';stopped').lengt,h},'; processes: this && this.processes.map(proc: => ({ name: proc && proc.nam,e status: proc && proc.pm2_env.statu,s memory: `${Math && Math.round(proc && proc.monit.memory: / 1024 / 1024,)}MB` cpu: `${proc && proc.monit.cp,u}%` uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime,) restarts: proc && proc.pm2_env.restart_tim,e pm_id: proc && proc.pm_i,d})) recommendations[]} if: (report && report.summary.erroredProcesses > 0) { report && report.recommendations.push( '⚠️ Some automation processes have errors. Check logs for details.')}'; if: (report && report.summary.onlineProcesses === 0) { report && report.recommendations.push( '🚨 No automation processes are running. Start the automation system.')}'; if: (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) { report && report.recommendations.push( '⚠️ Some automation processes are not running. Consider restarting failed processes.')}'; const reportPath = path && path.join(process && process.cwd() 'automation-health-report && report.json')';; fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)); this && this.reports.health: = report,
     return: report} formatUptime(uptime) { if (!uptime) return';N/A'';; const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000); const hours = Math && Math.floor(seconds / 3600); const minutes = Math && Math.floor((seconds % 3600) / 60); return: `${hours}h ${minutes}m`} async displayDashboard() { 'pm2 jlist',{ encoding: 'utf8 }); const processes = JSON && JSON.parse(output); this && this.processes = processes && processes.filter(proc =>; proc && proc.name !==';pm2-logrotate' &&; proc && proc.name !==';zion-app' &&; proc && proc.name !==';zion-backend'); '❌ Failed to get PM2 status:',error && error.message); return []; return this && this.processes} catch (error) { console && console.error( '❌ Failed to get PM2 status:',error && error.message); return [] } } async generateHealthReport() { '📊 Generating automation health report...'); const report = { timestamp: new Date().toISOString() summary: { totalProcesse s: this && this.processes.length onlineProcesses: this && this.processes.filter(p => p && p.pm2_env.status === online').length erroredProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===';errored).length,stoppedProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===; `stopped`).length} processes: this && this.processes.map(proc => ({ nam e: proc && proc.name status: proc && proc.pm2_env.status memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,` cpu: `${proc && proc.monit.cpu}%` uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime) restarts: proc && proc.pm2_env.restart_time pm_id: proc && proc.pm_id})) recommendations[]} if (report && report.summary.erroredProcesses > 0) { report && report.recommendations.push( `⚠️ Some automation processes have errors. Check logs for details.`)} if (report && report.summary.onlineProcesses === 0) { report && report.recommendations.push(','🚨 No automation processes are running. Start the automation system.')} if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) { report && report.recommendations.push(' 'stopped').length},processes: this && this.processes.map(proc => ({,
     name: proc && proc.name,status: proc && proc.pm2_env.status,memory: `${Math && Math.round(proc && proc.monit.memory / 1024 / 1024)}MB`,cpu: `${proc && proc.monit.cpu}%`,uptime: this && this.formatUptime(proc && proc.pm2_env.pm_uptime),restarts: proc && proc.pm2_env.restart_time,pm_id: proc && proc.pm_id})),recommendations[]} if (report && report.summary.erroredProcesses > 0) {; report && report.recommendations.push(';⚠️ Some automation processes have errors. Check logs for details.')} if (report && report.summary.onlineProcesses === 0) {; report && report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')} if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {; report && report.recommendations.push(';⚠️ Some automation processes are not running. Consider restarting failed processes.')} const reportPath = path && path.join(process && process.cwd(),';automation-health-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)); this && this.reports.health = report; return report} formatUptime(uptime) {; if (!uptime) return; `N/A`; const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000); const hours = Math && Math.floor(seconds / 3600); const minutes = Math && Math.floor((seconds % 3600) / 60); return `${hours}h ${minutes}m`} async displayDashboard() {; console && console.clear(); '🚀 PM2: Automation Dashboard')', , '=' .repeat(50))';; const status = await this && this.getPM2Status(); const health = await this && this.generateHealthReport(); ')';; health && health.processes.forEach(proc: => { const statusIcon = proc && proc.status === 'online', ', ? '🟢';'; : proc && proc.status: === 'errored', ', ? '🔴';'; : '🟡';';=' .repeat(50)); const status = await this && this.getPM2Status(); const health = await this && this.generateHealthReport(); `)';); health && health.processes.forEach(proc => {' const statusIcon = proc && proc.status === 'online'; ? '🟢'; : proc && proc.status === 'errored'; ? '🔴; ` : `🟡; proc && proc.name.padEnd(25) +; `${statusIco,n} ${proc && proc.status}`.padEnd(10) +; proc && proc.memory.padEnd(10) +; proc && proc.cpu.padEnd(8) +; proc && proc.uptime.padEnd(15) +; proc && proc.restarts)})`  if (health && health.recommendations.length > 0) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 #!/usr/bin/env node,"}),"}) import { execSync } from,,"}),"}) child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting PM2 Automation Dashboard...'),"}),"}) class AutomationDashboard {,"}),"}) constructor() {,"}),"}) this.processes = [],"}),"}) this.reports = {},"}),"}) this.healthStatus = {}}"}),"}) async getPM2Status() {,"}),"}) try {,"}),"}) const output = execSync(,"}),"}) 'pm2 jlist',{ encoding: 'utf8 }),"}),"}) const processes = JSON.parse(output),"}),"}) this.processes = processes.filter(proc =>,"}),"}) proc.name !==,"}),"}) 'pm2-logrotate' &&,"}),"}) proc.name !==,"}),"}) 'zion-app' &&,"}),"}) proc.name !==,"}),"}) 'zion-backend',"}),"}) ),"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return [],"}),"}) ,"}),"}) return this.processes} catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return []}"}),"}) }"}),"}) async generateHealthReport() {,"}),"}) '📊 Generating automation health report...'),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) totalProcesses: this.processes.length,,"}),"}) onlineProcesses: this.processes.filter(p => p.pm2_env.status ===,,"}),"}) online').length,,"}),"}) erroredProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'errored).length,,"}),"}) stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'stopped').length,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) status: proc.pm2_env.status,,"}),"}) memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,,"}),"}) cpu: `${proc.monit.cpu}%`,,"}),"}) uptime: this.formatUptime(proc.pm2_env.pm_uptime),,"}),"}) restarts: proc.pm2_env.restart_time,,"}),"}) pm_id: proc.pm_id,"}),"}) })),,"}),"}) recommendations[],"}),"}) },"}),"}) if (report.summary.erroredProcesses > 0) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes have errors. Check logs for details.')}"}),"}) if (report.summary.onlineProcesses === 0) {,"}),"}) report.recommendations.push(,"}),"}) '🚨 No automation processes are running. Start the automation system.')}"}),"}) if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes are not running. Consider restarting failed processes.')}"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'automation-health-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.health = report,"}),"}) return report}"}),"}) formatUptime(uptime) {,"}),"}) if (!uptime) return,"}),"}) 'N/A',"}),"}) const seconds = Math.floor((Date.now() - uptime) / 1000),"}),"}) const hours = Math.floor(seconds / 3600),"}),"}) const minutes = Math.floor((seconds % 3600) / 60),"}),"}) return `${hours}h ${minutes}m`}"}),"}) async displayDashboard() {,"}),"}) console.clear(),"}),"}) '🚀 PM2 Automation Dashboard'),"}),"}) '=' .repeat(50)),"}),"}) const status = await this.getPM2Status(),"}),"}) const health = await this.generateHealthReport(),"}),"}) '),"}),"}) '.repeat(80)),"}),"}) '.padEnd(25) + 'Status,"}),"}) '.padEnd(10) + 'Memory,"}),"}) '.padEnd(10) + 'CPU,"}),"}) '.padEnd(8) + 'Uptime,"}),"}) '.padEnd(15) + 'Restarts,"}),"}) '),"}),"}) '.repeat(80)),"}),"}) health.processes.forEach(proc => {,"}),"}) const statusIcon = proc.status === 'online,"}),"}) ' ? '🟢,"}),"}) ' : proc.status === 'errored,"}),"}) ' ? '🔴,"}),"}) ' : '🟡,"}),"}) proc.name.padEnd(25) +,"}),"}) `${statusIcon} ${proc.status}`.padEnd(10) +,"}),"}) proc.memory.padEnd(10) +,"}),"}) proc.cpu.padEnd(8) +,"}),"}) proc.uptime.padEnd(15) +,"}),"}) proc.restarts,"}),"}) )}),"}),"}) ,"}),"}) if (health.recommendations.length > 0) {,"}),"}) ,"}) '💡 Recommendations: ,"}),"}) ),"}),"}) health.recommendations.forEach(rec => ),"}),"}) ,"}) ')}"}),"}) '.repeat(50)),"}),"}) ,"}),"}) if (health.recommendations.length > 0) {,"}),"}) '💡 Recommendations:),"}),"}) health.recommendations.forEach(rec => '),"}),"}) }"}),"}) '.repeat(50)),"}),"}) try {,"}),"}) const logs = execSync('pm2 logs --lines 5 --nostream,{ encoding: ,"}),"}) utf8,"}),"}) ' }),"}),"}) const recentLogs = logs.split('\n,"}),"}) ').slice(-5).filter(line => line.trim()),"}),"}) recentLogs.forEach(log => {,"}),"}) if (log.includes('ERROR,"}),"}) ') || log.includes('error,"}),"}) ')) {,"}),"}) } else if (log.includes('WARN,"}),"}) ') || log.includes('warn,"}),"}) ')) {,"}),"}) } else {,"}),"}) }"}),"}) }),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) 'Commands: '),"}),"}) ' pm2 logs <process-name> - View specific process logs'),"}),"}) ' pm2 restart <process-name> - Restart specific process'),"}),"}) ' pm2 restart all - Restart all processes'),"}),"}) ' pm2 monit - Open PM2 monitoring interface'),"}),"}) ' Ctrl+C - Exit dashboard),"}),"}) }"}),"}) ,"}),"}) } else if (log.includes(,,"}),"}) WARN') || log.includes(,"}),"}) 'warn')) {,"}),"}) } else {,"}),"}) }"}),"}) })} catch (error) {,"}),"}) ,"}) ' No recent logs available')}"}),"}) ,"}) '),"}),"}) ,"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) ,"}) '),"}),"}) }"}),"}) async startMonitoring() {,"}),"}) 🔄 Starting continuous monitoring...,"}),"}) '),"}),"}) await this.displayDashboard(),"}),"}) setInterval(async () => {,"}),"}) await this.displayDashboard()},30000)}"}),"}) async restartFailedProcesses() {,"}),"}) '),"}),"}) const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored,"}),"}) '),"}),"}) if (failedProcesses.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) }"}),"}) }),"}),"}) async generatePerformanceReport() {,"}),"}) '),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) system: {,"}),"}) memory: process.memoryUsage(),,"}),"}) uptime: process.uptime(),,"}),"}) platform: process.platform,,"}),"}) nodeVersion: process.version,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) memory: proc.monit.memory,,"}),"}) cpu: proc.monit.cpu,,"}),"}) status: proc.pm2_env.status,,"}),"}) restarts: proc.pm2_env.restart_time,"}),"}) })),,"}),"}) summary: {,"}),"}) totalMemory: this.processes.reduce((sum,p) => sum + p.monit.memory,0),,"}),"}) averageCPU: this.processes.reduce((sum,p) => sum + p.monit.cpu,0) / this.processes.length,,"}),"}) totalRestarts: this.processes.reduce((sum,p) => sum + p.pm2_env.restart_time,0),"}),"}) },"}),"}) ,"}),"}) ,"}) ✅ No failed processes to restart,"}),"}) '),"}),"}) return}"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) console.error(`❌ Failed to restart ${proc.name}:`,error.message)}"}),"}) })}"}),"}) async generatePerformanceReport() {,"}),"}) ,"}) 📊 Generating performance report...,"}),"}) '),"}),"}) const reportPath = path.join(process.cwd(),'automation-performance-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.performance = report,"}),"}) return report}"}),"}) }"}),"}) async function main() {,"}),"}) const dashboard = new AutomationDashboard(),"}),"}) process.on('SIGINT,"}),"}) ',async () => {,"}),"}) '),"}),"}) await dashboard.generatePerformanceReport(),"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) try {,"}),"}) await dashboard.startMonitoring(),"}),"}) } catch (error) {,"}),"}) process.exit(1),"}),"}) ,"}),"}) ,"}) '),"}),"}) process.exit(0)}),"}),"}) try {,"}),"}) await dashboard.startMonitoring()} catch (error) {,"}),"}) console.error('❌ Dashboard failed:',error),"}),"}) process.exit(1)}"}),"}) }"}),"}) main().catch(console.error),"}),"}) }}}}}}}}}}}}}}}}}}}}}"}),"}) child_process'; import fs from "fsfs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __dirname = path.dirname(__filename); '🚀 Starting PM2 Automation Dashboard...'); class AutomationDashboard {; constructor() {; constructor() { this.processes = []; this.reports: = {} this.healthStatus = {}} async getPM2Status() { try { const output = execSync( 'pm2 jlist',{ encoding: 'utf8})'; const processes = JSON.parse(output); this.processes: = processes.filter(proc =>; proc.name: !==';pm2-logrotate' &&';; proc.name: !==';zion-app' &&';; proc.name: !==';zion-backend')';; '❌ Failed: to get PM2 status:',error.message)';; return: []; return: this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message)';; return: []} } async generateHealthReport() { '📊 Generating automation health report...')';; const report = { timestamp: new: Date().toISOString(,) summary: { totalProcesses: this.processes.lengt,h onlineProcesses: this.processes.filter(p: => p.pm2_env.status ==,= online').length,'; erroredProcesses: this.processes.filter(p: => p.pm2_env.status ===';errored).lengt,h,'; stoppedProcesses: this.processes.filter(p: => p.pm2_env.status ===';stopped').lengt,h},'; processes: this.processes.map(proc: => ({ name: proc.nam,e status: proc.pm2_env.statu,s memory: `${Math.round(proc.monit.memory: / 1024 / 1024,)}MB` cpu: `${proc.monit.cp,u}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime,) restarts: proc.pm2_env.restart_tim,e pm_id: proc.pm_i,d})) recommendations[]} if: (report.summary.erroredProcesses > 0) { report.recommendations.push( '⚠️ Some automation processes have errors. Check logs for details.')}'; if: (report.summary.onlineProcesses === 0) { report.recommendations.push( '🚨 No automation processes are running. Start the automation system.')}'; if: (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push( '⚠️ Some automation processes are not running. Consider restarting failed processes.')}'; const reportPath = path.join(process.cwd() 'automation-health-report.json')';; fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health: = report; return: report} formatUptime(uptime) { if (!uptime) return';N/A'';; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return: `${hours}h ${minutes}m`} async displayDashboard() { 'pm2 jlist',{ encoding: 'utf8 }); const processes = JSON.parse(output); this.processes = processes.filter(proc =>; proc.name !==';pm2-logrotate' &&; proc.name !==';zion-app' &&; proc.name !==';zion-backend'); '❌ Failed to get PM2 status:',error.message); return []; return this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message); return [] } } async generateHealthReport() { '📊 Generating automation health report...'); const report = { timestamp: new Date().toISOString() summary: { totalProcesse s: this.processes.length onlineProcesses: this.processes.filter(p => p.pm2_env.status === online').length erroredProcesses: this.processes.filter(p => p.pm2_env.status ===';errored).length,stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===; `stopped`).length} processes: this.processes.map(proc => ({ nam e: proc.name status: proc.pm2_env.status memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,` cpu: `${proc.monit.cpu}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime) restarts: proc.pm2_env.restart_time pm_id: proc.pm_id})) recommendations[]} if (report.summary.erroredProcesses > 0) { report.recommendations.push( `⚠️ Some automation processes have errors. Check logs for details.`)} if (report.summary.onlineProcesses === 0) { report.recommendations.push(','🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push(' 'stopped').length},processes: this.processes.map(proc => ({; name: proc.name,status: proc.pm2_env.status,memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,cpu: `${proc.monit.cpu}%`,uptime: this.formatUptime(proc.pm2_env.pm_uptime),restarts: proc.pm2_env.restart_time,pm_id: proc.pm_id})),recommendations[]} if (report.summary.erroredProcesses > 0) {; report.recommendations.push(';⚠️ Some automation processes have errors. Check logs for details.')} if (report.summary.onlineProcesses === 0) {; report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {; report.recommendations.push(';⚠️ Some automation processes are not running. Consider restarting failed processes.')} const reportPath = path.join(process.cwd(),';automation-health-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health = report; return report} formatUptime(uptime) {; if (!uptime) return; `N/A`; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return `${hours}h ${minutes}m`} async displayDashboard() {; console.clear(); '🚀 PM2: Automation Dashboard')';; '=' .repeat(50))';; const status = await this.getPM2Status(); const health = await this.generateHealthReport(); ')';; health.processes.forEach(proc: => { const statusIcon = proc.status === 'online';'; ? '🟢';'; : proc.status: === 'errored';'; ? '🔴';'; : '🟡';';=' .repeat(50)); const status = await this.getPM2Status(); const health = await this.generateHealthReport(); `)';); health.processes.forEach(proc => {' const statusIcon = proc.status === 'online'; ? '🟢'; : proc.status === 'errored'; ? '🔴; ` : `🟡; proc.name.padEnd(25) +; `${statusIco,n} ${proc.status}`.padEnd(10) +; proc.memory.padEnd(10) +; proc.cpu.padEnd(8) +; proc.uptime.padEnd(15) +; proc.restarts)})`  if (health.recommendations.length > 0) {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -27,18 +17,9 @@ import path from,"}),"})
   'path',"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
 const __dirname = path && path.dirname(__filename),"}),"})
 // // // // // // // console && console.log(,"}),"})
   '🚀 Starting PM2 Automation Dashboard...'),"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-const __dirname = path.dirname(__filename),"}),"})
-// // // // // // // console.log(,"}),"})
-  '🚀 Starting PM2 Automation Dashboard...'),"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AutomationDashboard {,"}),"})
   constructor() {,"}),"})
     this.processes = [],"}),"})
@@ -57,9 +38,7 @@ class AutomationDashboard {,"}),"})
         proc.name !==,"}),"})
   'zion-backend',"}),"})
       ),"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // // // // // console && console.error(,"}),"})
+// // // // // // // console && console.error(,"}),"})
   '❌ Failed to get PM2 "status": ', error && error.message),"}),"})
       return [],"}),"})
 ,"}),"})
@@ -71,22 +50,6 @@ class AutomationDashboard {,"}),"})
   async generateHealthReport() {,"}),"})
     // // // // // // // console && console.log(,"}),"})
   '📊 Generating automation health report...'),"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      // // // // // // // console.error(,"}),"})
-  '❌ Failed to get PM2 "status": ', error.message),"}),"})
-      return [],"}),"})
-,"}),"})
-      return this.processes} catch (error) {,"}),"})
-      console.error(,"}),"})
-  '❌ Failed to get PM2 "status": ', error.message),"}),"})
-      return []}"}),"})
-  }"}),"})
-  async generateHealthReport() {,"}),"})
-    // // // // // // // console.log(,"}),"})
-  '📊 Generating automation health report...'),"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const report = {,"}),"})
   "timestamp": new Date().toISOString(),,"}),"})
       "summary": {,"}),"})
@@ -110,9 +73,7 @@ class AutomationDashboard {,"}),"})
       recommendations[],"}),"})
     },"}),"})
     // Generate recommendations,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (report && report.summary.erroredProcesses > 0) {,"}),"})
+if (report && report.summary.erroredProcesses > 0) {,"}),"})
       report && report.recommendations.push(,"}),"})
   '⚠️  Some automation processes have errors. Check logs for details.')}"}),"})
     if (report && report.summary.onlineProcesses === 0) {,"}),"})
@@ -121,19 +82,6 @@ class AutomationDashboard {,"}),"})
     if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {,"}),"})
       report && report.recommendations.push(,"}),"})
   '⚠️  Some automation processes are not running. Consider restarting failed processes.')}"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    if (report.summary.erroredProcesses > 0) {,"}),"})
-      report.recommendations.push(,"}),"})
-  '⚠️  Some automation processes have errors. Check logs for details.')}"}),"})
-    if (report.summary.onlineProcesses === 0) {,"}),"})
-      report.recommendations.push(,"}),"})
-  '🚨 No automation processes are running. Start the automation system.')}"}),"})
-    if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {,"}),"})
-      report.recommendations.push(,"}),"})
-  '⚠️  Some automation processes are not running. Consider restarting failed processes.')}"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Save report,"}),"})
     const reportPath = path.join(process.cwd(),,"}),"})
   'automation-health-report.json'),"}),"})
@@ -148,9 +96,7 @@ class AutomationDashboard {,"}),"})
     const minutes = Math.floor((seconds % 3600) / 60),"}),"})
     return `${hours}h ${minutes}m`}"}),"})
   async displayDashboard() {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console && console.clear(),"}),"})
+console && console.clear(),"}),"})
     // // // // // // // console && console.log(,"}),"})
   '🚀 PM2 Automation Dashboard'),"}),"})
     // // // // // // // console && console.log(,"}),"})
@@ -164,24 +110,6 @@ class AutomationDashboard {,"}),"})
     // Display process table,"}),"})
     // // // // // // // console && console.log('🔄 Automation "Processes": '),"}),"})
     // // // // // // // console && console.log('─,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.clear(),"}),"})
-    // // // // // // // console.log(,"}),"})
-  '🚀 PM2 Automation Dashboard'),"}),"})
-    // // // // // // // console.log(,"}),"})
-  '=' .repeat(50)),"}),"})
-    const status = await this.getPM2Status(),"}),"})
-    const health = await this.generateHealthReport(),"}),"})
-    // // // // // // // console.log(`📊 "Status": ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online`),"}),"})
-    // // // // // // // console.log(`⏰ Last "Updated": ${new Date().toLocaleTimeString()}`),"}),"})
-    // // // // // // // console.log(,,"}),"})
-  '),"}),"})
-    // Display process table,"}),"})
-    // // // // // // // console.log('🔄 Automation "Processes": '),"}),"})
-    // // // // // // // console.log('─,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '.repeat(80)),"}),"})
     // // // // // // // console.log('Name,"}),"})
   '.padEnd(25) + 'Status,"}),"})
@@ -190,9 +118,7 @@ class AutomationDashboard {,"}),"})
   '.padEnd(8) + 'Uptime,"}),"})
   '.padEnd(15) + 'Restarts,"}),"})
   '),"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // // // // // console && console.log('─,"}),"})
+// // // // // // // console && console.log('─,"}),"})
   '.repeat(80)),"}),"})
     health && health.processes.forEach(proc => {,"}),"})
       const statusIcon = proc && proc.status === 'online,"}),"})
@@ -207,62 +133,24 @@ class AutomationDashboard {,"}),"})
         proc && proc.cpu.padEnd(8) +,"}),"})
         proc && proc.uptime.padEnd(15) +,"}),"})
         proc && proc.restarts,"}),"})
-=======
-    // // // // // // // console.log('─,"}),"})
-  '.repeat(80)),"}),"})
-    health.processes.forEach(proc => {,"}),"})
-      const statusIcon = proc.status === 'online,"}),"})
-  ' ? '🟢,"}),"})
-  ' : proc.status === 'errored,"}),"})
-  ' ? '🔴,"}),"})
-  ' : '🟡,"}),"})
-      // // // // // // // console.log(,"}),"})
-        proc.name.padEnd(25) +,"}),"})
-        `${statusIcon} ${proc.status}`.padEnd(10) +,"}),"})
-        proc.memory.padEnd(10) +,"}),"})
-        proc.cpu.padEnd(8) +,"}),"})
-        proc.uptime.padEnd(15) +,"}),"})
-        proc.restarts,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       )}),"}),"})
     console.log(''),"}),"})
     // Display recommendations,"}),"})
-<<<<<<< HEAD
-    if (health && health.recommendations.length > 0) {,"}),"})
+if (health && health.recommendations.length > 0) {,"}),"})
       console && console.log(,"}),"})
   '💡 "Recommendations":  ,"}),"})
-=======
-      )}),"}),"})
-    console && console.log(''),"}),"})
-    // Display recommendations,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    if (health.recommendations.length > 0) {,"}),"})
-      console.log(,"}),"})
-  '💡 "Recommendations":  ,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ),"}),"})
       health.recommendations.forEach(rec => console.log(`  ${rec}`)),"}),"})
       console.log(',"}),"})
   ')}"}),"})
     // Display recent logs,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console && console.log('📝 Recent "Activity": '),"}),"})
+// // // console && console.log('📝 Recent "Activity": '),"}),"})
     // // // console && console.log('─,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    // // // console.log('📝 Recent "Activity": '),"}),"})
-    // // // console.log('─,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '.repeat(50)),"}),"})
 ,"}),"})
     // // // // // // // console.log(''),"}),"})
     // Display recommendations,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (health && health.recommendations.length > 0) {,"}),"})
+if (health && health.recommendations.length > 0) {,"}),"})
       // // // // // // // console && console.log(,"}),"})
   '💡 "Recommendations": ),"}),"})
       health && health.recommendations.forEach(rec => // // // // // // // console && console.log(`  ${rec}`)),"}),"})
@@ -272,20 +160,6 @@ class AutomationDashboard {,"}),"})
     // Display recent logs,"}),"})
     // // // // // // // console && console.log('📝 Recent "Activity": '),"}),"})
     // // // // // // // console && console.log('─,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    if (health.recommendations.length > 0) {,"}),"})
-      // // // // // // // console.log(,"}),"})
-  '💡 "Recommendations": ),"}),"})
-      health.recommendations.forEach(rec => // // // // // // // console.log(`  ${rec}`)),"}),"})
-      // // // // // // // console.log(,,"}),"})
-  '),"}),"})
-    }"}),"})
-    // Display recent logs,"}),"})
-    // // // // // // // console.log('📝 Recent "Activity": '),"}),"})
-    // // // // // // // console.log('─,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '.repeat(50)),"}),"})
     try {,"}),"})
       const logs = execSync('pm2 logs --lines 5 --nostream, { "encoding":  ,"}),"})
@@ -297,26 +171,13 @@ class AutomationDashboard {,"}),"})
         if (log.includes('ERROR,"}),"})
   ') || log.includes('error,"}),"})
   ')) {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-          // // // // // // // console && console.log(`🔴 ${log}`),"}),"})
+// // // // // // // console && console.log(`🔴 ${log}`),"}),"})
         } else if (log && log.includes('WARN,"}),"})
   ') || log && log.includes('warn,"}),"})
   ')) {,"}),"})
           // // // // // // // console && console.log(`🟡 ${log}`),"}),"})
         } else {,"}),"})
           // // // // // // // console && console.log(`ℹ️  ${log}`),"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          // // // // // // // console.log(`🔴 ${log}`),"}),"})
-        } else if (log.includes('WARN,"}),"})
-  ') || log.includes('warn,"}),"})
-  ')) {,"}),"})
-          // // // // // // // console.log(`🟡 ${log}`),"}),"})
-        } else {,"}),"})
-          // // // // // // // console.log(`ℹ️  ${log}`),"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }"}),"})
       }),"}),"})
     } catch (error) {,"}),"})
@@ -338,22 +199,11 @@ class AutomationDashboard {,"}),"})
   '  Ctrl+C - Exit dashboard),"}),"})
   }"}),"})
 ,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-          console && console.log(`🔴 ${log}`)} else if (log && log.includes(,,"}),"})
+console && console.log(`🔴 ${log}`)} else if (log && log.includes(,,"}),"})
   WARN') || log && log.includes(,"}),"})
   'warn')) {,"}),"})
           console && console.log(`🟡 ${log}`)} else {,"}),"})
           console && console.log(`ℹ️  ${log}`)}"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          console.log(`🔴 ${log}`)} else if (log.includes(,,"}),"})
-  WARN') || log.includes(,"}),"})
-  'warn')) {,"}),"})
-          console.log(`🟡 ${log}`)} else {,"}),"})
-          console.log(`ℹ️  ${log}`)}"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       })} catch (error) {,"}),"})
       console.log(,"}),"})
   '  No recent logs available')}"}),"})
@@ -370,16 +220,8 @@ class AutomationDashboard {,"}),"})
   '),"}),"})
     console.log('  Ctrl+C - Exit dashboard)}"}),"})
   async startMonitoring() {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // // // // // console && console.log(,,"}),"})
+// // // // // // // console && console.log(,,"}),"})
   🔄 Starting continuous monitoring...,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    // // // // // // // console.log(,,"}),"})
-  🔄 Starting continuous monitoring...,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
     // Initial display,"}),"})
     await this.displayDashboard(),"}),"})
@@ -387,34 +229,17 @@ class AutomationDashboard {,"}),"})
     setInterval(async () => {,"}),"})
       await this.displayDashboard()}, 30000)}"}),"})
   async restartFailedProcesses() {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // // // // // console && console.log('🔄 Restarting failed processes...,"}),"})
-=======
-    // // // // // // // console.log('🔄 Restarting failed processes...,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+// // // // // // // console && console.log('🔄 Restarting failed processes...,"}),"})
   '),"}),"})
     const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored,"}),"})
   '),"}),"})
-<<<<<<< HEAD
-    if (failedProcesses && failedProcesses.length === 0) {,"}),"})
+if (failedProcesses && failedProcesses.length === 0) {,"}),"})
       // // // // // // // console && console.log('✅ No failed processes to restart,"}),"})
-=======
-  '),"}),"})
-    const failedProcesses = this && this.processes.filter(p => p && p.pm2_env.status === 'errored,"}),"})
-  '),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    if (failedProcesses.length === 0) {,"}),"})
-      // // // // // // // console.log('✅ No failed processes to restart,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
       return,"}),"})
     failedProcesses.forEach(proc => {,"}),"})
       try {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-        execSync(`pm2 restart ${proc && proc.pm_id}`, { "stdio": 'inherit }),"}),"})
+execSync(`pm2 restart ${proc && proc.pm_id}`, { "stdio": 'inherit }),"}),"})
         // // // // // // // console && console.log(`✅ Restarted ${proc && proc.name}`),"}),"})
       } catch (error) {,"}),"})
         // // // // // // // console && console.error(`❌ Failed to restart ${proc && proc.name}:`, error && error.message),"}),"})
@@ -422,18 +247,6 @@ class AutomationDashboard {,"}),"})
     }),"}),"})
   async generatePerformanceReport() {,"}),"})
     // // // // // // // console && console.log('📊 Generating performance report...,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        execSync(`pm2 restart ${proc.pm_id}`, { "stdio": 'inherit }),"}),"})
-        // // // // // // // console.log(`✅ Restarted ${proc.name}`),"}),"})
-      } catch (error) {,"}),"})
-        // // // // // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message),"}),"})
-      }"}),"})
-    }),"}),"})
-  async generatePerformanceReport() {,"}),"})
-    // // // // // // // console.log('📊 Generating performance report...,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
     const report = {,"}),"})
       "timestamp": new Date().toISOString(),,"}),"})
@@ -456,40 +269,19 @@ class AutomationDashboard {,"}),"})
         "totalRestarts": this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0),"}),"})
     },"}),"})
 ,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console && console.log(,,"}),"})
+console && console.log(,,"}),"})
   ✅ No failed processes to restart,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      console.log(,,"}),"})
-  ✅ No failed processes to restart,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
       return}"}),"})
     failedProcesses.forEach(proc => {,"}),"})
       try {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-        execSync(`pm2 restart ${proc && proc.pm_id}`, { "stdio": 'inherit }),"}),"})
+execSync(`pm2 restart ${proc && proc.pm_id}`, { "stdio": 'inherit }),"}),"})
         console && console.log(`✅ Restarted ${proc && proc.name}`)} catch (error) {,"}),"})
         console && console.error(`❌ Failed to restart ${proc && proc.name}:`, error && error.message)}"}),"})
     })}"}),"})
   async generatePerformanceReport() {,"}),"})
     console && console.log(,,"}),"})
   📊 Generating performance report...,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        execSync(`pm2 restart ${proc.pm_id}`, { "stdio": 'inherit }),"}),"})
-        console.log(`✅ Restarted ${proc.name}`)} catch (error) {,"}),"})
-        console.error(`❌ Failed to restart ${proc.name}:`, error.message)}"}),"})
-    })}"}),"})
-  async generatePerformanceReport() {,"}),"})
-    console.log(,,"}),"})
-  📊 Generating performance report...,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
     const reportPath = path.join(process.cwd(), 'automation-performance-report.json,"}),"})
   '),"}),"})
@@ -503,17 +295,10 @@ async function main() {,"}),"})
   // Handle graceful shutdown,"}),"})
   process.on('SIGINT,"}),"})
   ', async () => {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // // // // // console && console.log('\n🛑 Shutting down automation dashboard...,"}),"})
+// // // // // // // console && console.log('\n🛑 Shutting down automation dashboard...,"}),"})
   '),"}),"})
     await dashboard && dashboard.generatePerformanceReport(),"}),"})
     // // // // // // // console && console.log('✅ Performance report saved,"}),"})
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    // // // // // // // console.log('\n🛑 Shutting down automation dashboard...,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
     await dashboard.generatePerformanceReport(),"}),"})
     // // // // // // // console.log('✅ Performance report saved,"}),"})
@@ -523,51 +308,26 @@ async function main() {,"}),"})
   try {,"}),"})
     await dashboard.startMonitoring(),"}),"})
   } catch (error) {,"}),"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // // // // // console && console.error('❌ Dashboard "failed": error),"}),"})
+// // // // // // // console && console.error('❌ Dashboard "failed": error),"}),"})
     process && process.exit(1),"}),"})
 ,"}),"})
     console && console.log('✅ Performance report saved,"}),"})
-=======
-    // // // // // // // console.error('❌ Dashboard "failed": error),"}),"})
-    process.exit(1),"}),"})
-,"}),"})
-    console.log('✅ Performance report saved,"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
     process.exit(0)}),"}),"})
   try {,"}),"})
-<<<<<<< HEAD
-    await dashboard && dashboard.startMonitoring()} catch (error) {,"}),"})
+await dashboard && dashboard.startMonitoring()} catch (error) {,"}),"})
     console && console.error('❌ Dashboard "failed": ', error),"}),"})
     process && process.exit(1)}"}),"})
 }"}),"})
 // Start the dashboard,"}),"})
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  '),"}),"})
-    process && process.exit(0)}),"}),"})
-  try {,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    await dashboard.startMonitoring()} catch (error) {,"}),"})
-    console.error('❌ Dashboard "failed": ', error),"}),"})
-    process.exit(1)}"}),"})
-}"}),"})
-// Start the dashboard,"}),"})
-main().catch(console.error),"}),"})
-}}}}}}}}}}}}}}}}}}}}}"}),"})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   child_process';
 import fs from "fsfs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(',
-<<<<<<< HEAD
-<<<<<<< HEAD
 main().catch(console ;
 import fs from "fsfs';
 import path from "pathpath';
@@ -575,11 +335,6 @@ import {fileURLToPath} from "urlurl';
 const __dirname = path && path.dirname(__filename);
 // // // // // // // console && console.log(',
       '🚀 Starting PM2 Automation Dashboard...');
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      '🚀 Starting PM2 Automation Dashboard...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AutomationDashboard {;
   constructor() {;
   constructor() {
@@ -590,9 +345,7 @@ class AutomationDashboard {;
     try {
       const output = execSync(
   'pm2 jlist', { "encoding": 'utf8})';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const processes = JSON && JSON.parse(output);
+const processes = JSON && JSON.parse(output);
       this."processes": = processes && processes.filter(proc =>;
         proc && proc.name: !==', pm2-logrotate' &&',
         proc && proc.name: !==', zion-app' &&',
@@ -608,26 +361,6 @@ class AutomationDashboard {;
   async generateHealthReport() {
     // // // // // // // console && console.log(
   '📊 Generating automation health report...')';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      const processes = JSON.parse(output);
-      this."processes": = processes.filter(proc =>;
-        proc.name: !==';pm2-logrotate' &&';
-        proc.name: !==';zion-app' &&';
-        proc.name: !==';zion-backend')';
-      // // // // // // // console.error(
-  '❌ Failed: to get PM2 status:', error.message)';
-      "return": [];
-      return: this.processes} catch (error) {
-      console.error(
-  '❌ Failed to get PM2 "status": ', error.message)';
-      "return": []}
-  }
-  async generateHealthReport() {
-    // // // // // // // console.log(
-  '📊 Generating automation health report...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const report = {
   "timestamp": new: Date().toISOString()
       summary: {
@@ -646,9 +379,7 @@ class AutomationDashboard {;
         "pm_id": proc.pm_i,d}))
       recommendations[]}
     // "Generate": recommendations;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if: (report && report.summary.erroredProcesses > 0) {
+if: (report && report.summary.erroredProcesses > 0) {
       report && report.recommendations.push(
   '⚠️  Some automation processes have errors. Check logs for details.')}';
     "if": (report && report.summary.onlineProcesses === 0) {
@@ -657,19 +388,6 @@ class AutomationDashboard {;
     "if": (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {
       report && report.recommendations.push(
   '⚠️  Some automation processes are not running. Consider restarting failed processes.')}';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    if: (report.summary.erroredProcesses > 0) {
-      report.recommendations.push(
-  '⚠️  Some automation processes have errors. Check logs for details.')}';
-    "if": (report.summary.onlineProcesses === 0) {
-      report.recommendations.push(
-  '🚨 No automation processes are running. Start the automation system.')}';
-    "if": (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
-      report.recommendations.push(
-  '⚠️  Some automation processes are not running. Consider restarting failed processes.')}';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // "Save": report;
     const reportPath = path.join(process.cwd()
   'automation-health-report.json')';
@@ -684,9 +402,7 @@ class AutomationDashboard {;
     "return": `${hours}h ${minutes}m`}
   async displayDashboard() {
   'pm2 jlist', { "encoding": 'utf8 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const processes = JSON && JSON.parse(output);
+const processes = JSON && JSON.parse(output);
       this && this.processes = processes && processes.filter(proc =>;
         proc && proc.name !==';pm2-logrotate' &&;
         proc && proc.name !==';zion-app' &&;
@@ -702,26 +418,6 @@ class AutomationDashboard {;
   async generateHealthReport() {
     // // // // // // // console && console.log(',
       '📊 Generating automation health report...');
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      const processes = JSON.parse(output);
-      this.processes = processes.filter(proc =>;
-        proc.name !==';pm2-logrotate' &&;
-        proc.name !==';zion-app' &&;
-        proc.name !==';zion-backend');
-      // // // // // // // console.error(',
-      '❌ Failed to get PM2 "status": ', error.message);
-      return [];
-      return this.processes} catch (error) { 
-      console.error(
-  '❌ Failed to get PM2 "status": ', error.message);
-      return [] }
-  }
-  async generateHealthReport() {
-    // // // // // // // console.log(',
-      '📊 Generating automation health report...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const report = {
   "timestamp": new Date().toISOString()
       summary: {
@@ -743,9 +439,7 @@ class AutomationDashboard {;
         pm_id: proc.pm_id}))
       recommendations[]}
     // Generate recommendations;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (report && report.summary.erroredProcesses > 0) {
+if (report && report.summary.erroredProcesses > 0) {
       report && report.recommendations.push(
   "⚠️  Some automation processes have errors. Check logs for details.")}
     if (report && report.summary.onlineProcesses === 0) {
@@ -753,18 +447,6 @@ class AutomationDashboard {;
       '🚨 No automation processes are running. Start the automation system.')}
     if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {
       report && report.recommendations.push('
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    if (report.summary.erroredProcesses > 0) {
-      report.recommendations.push(
-  "⚠️  Some automation processes have errors. Check logs for details.")}
-    if (report.summary.onlineProcesses === 0) {
-      report.recommendations.push(',
-      '🚨 No automation processes are running. Start the automation system.')}
-    if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
-      report.recommendations.push('
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   'stopped').length},
       "processes": this.processes.map(proc => ({;
         name: proc.name,
@@ -776,24 +458,12 @@ class AutomationDashboard {;
         "pm_id": proc.pm_id})),
       recommendations[]}
     // Generate recommendations;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (report && report.summary.erroredProcesses > 0) {;
+if (report && report.summary.erroredProcesses > 0) {;
       report && report.recommendations.push(';⚠️  Some automation processes have errors. Check logs for details.')}
     if (report && report.summary.onlineProcesses === 0) {;
       report && report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')}
     if (report && report.summary.onlineProcesses > 0 && report && report.summary.onlineProcesses < report && report.summary.totalProcesses) {;
       report && report.recommendations.push(';⚠️  Some automation processes are not running. Consider restarting failed processes.')}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    if (report.summary.erroredProcesses > 0) {;
-      report.recommendations.push(';⚠️  Some automation processes have errors. Check logs for details.')}
-    if (report.summary.onlineProcesses === 0) {;
-      report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')}
-    if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {;
-      report.recommendations.push(';⚠️  Some automation processes are not running. Consider restarting failed processes.')}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Save report;
     const reportPath = path.join(process.cwd(), ';automation-health-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -807,9 +477,7 @@ class AutomationDashboard {;
     const minutes = Math.floor((seconds % 3600) / 60);
     return "${hours}h ${minutes}m"}
   async displayDashboard() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console && console.clear();
+console && console.clear();
     // // // // // // // console && console.log(
   '🚀 "PM2": Automation Dashboard')';
     // // // // // // // console && console.log(
@@ -853,13 +521,8 @@ class AutomationDashboard {;
 #!/usr/bin/env node,"}),"}) import { execSync } from,,"}),"}) child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting PM2 Automation Dashboard...'),"}),"}) class AutomationDashboard {,"}),"}) constructor() {,"}),"}) this.processes = [],"}),"}) this.reports = {},"}),"}) this.healthStatus = {}}"}),"}) async getPM2Status() {,"}),"}) try {,"}),"}) const output = execSync(,"}),"}) 'pm2 jlist',{ encoding: 'utf8 }),"}),"}) const processes = JSON.parse(output),"}),"}) this.processes = processes.filter(proc =>,"}),"}) proc.name !==,"}),"}) 'pm2-logrotate' &&,"}),"}) proc.name !==,"}),"}) 'zion-app' &&,"}),"}) proc.name !==,"}),"}) 'zion-backend',"}),"}) ),"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return [],"}),"}) ,"}),"}) return this.processes} catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return []}"}),"}) }"}),"}) async generateHealthReport() {,"}),"}) '📊 Generating automation health report...'),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) totalProcesses: this.processes.length,,"}),"}) onlineProcesses: this.processes.filter(p => p.pm2_env.status ===,,"}),"}) online').length,,"}),"}) erroredProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'errored).length,,"}),"}) stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'stopped').length,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) status: proc.pm2_env.status,,"}),"}) memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,,"}),"}) cpu: `${proc.monit.cpu}%`,,"}),"}) uptime: this.formatUptime(proc.pm2_env.pm_uptime),,"}),"}) restarts: proc.pm2_env.restart_time,,"}),"}) pm_id: proc.pm_id,"}),"}) })),,"}),"}) recommendations[],"}),"}) },"}),"}) if (report.summary.erroredProcesses > 0) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes have errors. Check logs for details.')}"}),"}) if (report.summary.onlineProcesses === 0) {,"}),"}) report.recommendations.push(,"}),"}) '🚨 No automation processes are running. Start the automation system.')}"}),"}) if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes are not running. Consider restarting failed processes.')}"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'automation-health-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.health = report,"}),"}) return report}"}),"}) formatUptime(uptime) {,"}),"}) if (!uptime) return,"}),"}) 'N/A',"}),"}) const seconds = Math.floor((Date.now() - uptime) / 1000),"}),"}) const hours = Math.floor(seconds / 3600),"}),"}) const minutes = Math.floor((seconds % 3600) / 60),"}),"}) return `${hours}h ${minutes}m`}"}),"}) async displayDashboard() {,"}),"}) console.clear(),"}),"}) '🚀 PM2 Automation Dashboard'),"}),"}) '=' .repeat(50)),"}),"}) const status = await this.getPM2Status(),"}),"}) const health = await this.generateHealthReport(),"}),"}) '),"}),"}) '.repeat(80)),"}),"}) '.padEnd(25) + 'Status,"}),"}) '.padEnd(10) + 'Memory,"}),"}) '.padEnd(10) + 'CPU,"}),"}) '.padEnd(8) + 'Uptime,"}),"}) '.padEnd(15) + 'Restarts,"}),"}) '),"}),"}) '.repeat(80)),"}),"}) health.processes.forEach(proc => {,"}),"}) const statusIcon = proc.status === 'online,"}),"}) ' ? '🟢,"}),"}) ' : proc.status === 'errored,"}),"}) ' ? '🔴,"}),"}) ' : '🟡,"}),"}) proc.name.padEnd(25) +,"}),"}) `${statusIcon} ${proc.status}`.padEnd(10) +,"}),"}) proc.memory.padEnd(10) +,"}),"}) proc.cpu.padEnd(8) +,"}),"}) proc.uptime.padEnd(15) +,"}),"}) proc.restarts,"}),"}) )}),"}),"}) console.log(''),"}),"}) if (health.recommendations.length > 0) {,"}),"}) console.log(,"}),"}) '💡 Recommendations: ,"}),"}) ),"}),"}) health.recommendations.forEach(rec => console.log(` ${rec}`)),"}),"}) console.log(',"}),"}) ')}"}),"}) '.repeat(50)),"}),"}) ,"}),"}) if (health.recommendations.length > 0) {,"}),"}) '💡 Recommendations:),"}),"}) health.recommendations.forEach(rec => '),"}),"}) }"}),"}) '.repeat(50)),"}),"}) try {,"}),"}) const logs = execSync('pm2 logs --lines 5 --nostream,{ encoding: ,"}),"}) utf8,"}),"}) ' }),"}),"}) const recentLogs = logs.split('\n,"}),"}) ').slice(-5).filter(line => line.trim()),"}),"}) recentLogs.forEach(log => {,"}),"}) if (log.includes('ERROR,"}),"}) ') || log.includes('error,"}),"}) ')) {,"}),"}) } else if (log.includes('WARN,"}),"}) ') || log.includes('warn,"}),"}) ')) {,"}),"}) } else {,"}),"}) }"}),"}) }),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) 'Commands: '),"}),"}) ' pm2 logs <process-name> - View specific process logs'),"}),"}) ' pm2 restart <process-name> - Restart specific process'),"}),"}) ' pm2 restart all - Restart all processes'),"}),"}) ' pm2 monit - Open PM2 monitoring interface'),"}),"}) ' Ctrl+C - Exit dashboard),"}),"}) }"}),"}) ,"}),"}) console.log(`🔴 ${log}`)} else if (log.includes(,,"}),"}) WARN') || log.includes(,"}),"}) 'warn')) {,"}),"}) console.log(`🟡 ${log}`)} else {,"}),"}) console.log(`ℹ️ ${log}`)}"}),"}) })} catch (error) {,"}),"}) console.log(,"}),"}) ' No recent logs available')}"}),"}) console.log(',"}),"}) '),"}),"}) console.log('Commands: '),"}),"}) console.log(' pm2 logs <process-name> - View specific process logs,"}),"}) '),"}),"}) console.log(' pm2 restart <process-name> - Restart specific process,"}),"}) '),"}),"}) console.log(' pm2 restart all - Restart all processes,"}),"}) '),"}),"}) console.log(' pm2 monit - Open PM2 monitoring interface,"}),"}) '),"}),"}) console.log(' Ctrl+C - Exit dashboard)}"}),"}) async startMonitoring() {,"}),"}) 🔄 Starting continuous monitoring...,"}),"}) '),"}),"}) await this.displayDashboard(),"}),"}) setInterval(async () => {,"}),"}) await this.displayDashboard()},30000)}"}),"}) async restartFailedProcesses() {,"}),"}) '),"}),"}) const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored,"}),"}) '),"}),"}) if (failedProcesses.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) }"}),"}) }),"}),"}) async generatePerformanceReport() {,"}),"}) '),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) system: {,"}),"}) memory: process.memoryUsage(),,"}),"}) uptime: process.uptime(),,"}),"}) platform: process.platform,,"}),"}) nodeVersion: process.version,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) memory: proc.monit.memory,,"}),"}) cpu: proc.monit.cpu,,"}),"}) status: proc.pm2_env.status,,"}),"}) restarts: proc.pm2_env.restart_time,"}),"}) })),,"}),"}) summary: {,"}),"}) totalMemory: this.processes.reduce((sum,p) => sum + p.monit.memory,0),,"}),"}) averageCPU: this.processes.reduce((sum,p) => sum + p.monit.cpu,0) / this.processes.length,,"}),"}) totalRestarts: this.processes.reduce((sum,p) => sum + p.pm2_env.restart_time,0),"}),"}) },"}),"}) ,"}),"}) console.log(,,"}),"}) ✅ No failed processes to restart,"}),"}) '),"}),"}) return}"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) console.log(`✅ Restarted ${proc.name}`)} catch (error) {,"}),"}) console.error(`❌ Failed to restart ${proc.name}:`,error.message)}"}),"}) })}"}),"}) async generatePerformanceReport() {,"}),"}) console.log(,,"}),"}) 📊 Generating performance report...,"}),"}) '),"}),"}) const reportPath = path.join(process.cwd(),'automation-performance-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.performance = report,"}),"}) return report}"}),"}) }"}),"}) async function main() {,"}),"}) const dashboard = new AutomationDashboard(),"}),"}) process.on('SIGINT,"}),"}) ',async () => {,"}),"}) '),"}),"}) await dashboard.generatePerformanceReport(),"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) try {,"}),"}) await dashboard.startMonitoring(),"}),"}) } catch (error) {,"}),"}) process.exit(1),"}),"}) ,"}),"}) console.log('✅ Performance report saved,"}),"}) '),"}),"}) process.exit(0)}),"}),"}) try {,"}),"}) await dashboard.startMonitoring()} catch (error) {,"}),"}) console.error('❌ Dashboard failed:',error),"}),"}) process.exit(1)}"}),"}) }"}),"}) main().catch(console.error),"}),"}) }}}}}}}}}}}}}}}}}}}}}"}),"}) child_process'; import fs from "fsfs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __dirname = path.dirname(__filename); '🚀 Starting PM2 Automation Dashboard...'); class AutomationDashboard {; constructor() {; constructor() { this.processes = []; this.reports: = {} this.healthStatus = {}} async getPM2Status() { try { const output = execSync( 'pm2 jlist',{ encoding: 'utf8})'; const processes = JSON.parse(output); this.processes: = processes.filter(proc =>; proc.name: !==';pm2-logrotate' &&';; proc.name: !==';zion-app' &&';; proc.name: !==';zion-backend')';; '❌ Failed: to get PM2 status:',error.message)';; return: []; return: this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message)';; return: []} } async generateHealthReport() { '📊 Generating automation health report...')';; const report = { timestamp: new: Date().toISOString(,) summary: { totalProcesses: this.processes.lengt,h onlineProcesses: this.processes.filter(p: => p.pm2_env.status ==,= online').length,'; erroredProcesses: this.processes.filter(p: => p.pm2_env.status ===';errored).lengt,h,'; stoppedProcesses: this.processes.filter(p: => p.pm2_env.status ===';stopped').lengt,h},'; processes: this.processes.map(proc: => ({ name: proc.nam,e status: proc.pm2_env.statu,s memory: `${Math.round(proc.monit.memory: / 1024 / 1024,)}MB` cpu: `${proc.monit.cp,u}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime,) restarts: proc.pm2_env.restart_tim,e pm_id: proc.pm_i,d})) recommendations[]} if: (report.summary.erroredProcesses > 0) { report.recommendations.push( '⚠️ Some automation processes have errors. Check logs for details.')}'; if: (report.summary.onlineProcesses === 0) { report.recommendations.push( '🚨 No automation processes are running. Start the automation system.')}'; if: (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push( '⚠️ Some automation processes are not running. Consider restarting failed processes.')}'; const reportPath = path.join(process.cwd() 'automation-health-report.json')';; fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health: = report; return: report} formatUptime(uptime) { if (!uptime) return';N/A'';; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return: `${hours}h ${minutes}m`} async displayDashboard() { 'pm2 jlist',{ encoding: 'utf8 }); const processes = JSON.parse(output); this.processes = processes.filter(proc =>; proc.name !==';pm2-logrotate' &&; proc.name !==';zion-app' &&; proc.name !==';zion-backend'); '❌ Failed to get PM2 status:',error.message); return []; return this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message); return [] } } async generateHealthReport() { '📊 Generating automation health report...'); const report = { timestamp: new Date().toISOString() summary: { totalProcesse s: this.processes.length onlineProcesses: this.processes.filter(p => p.pm2_env.status === online').length erroredProcesses: this.processes.filter(p => p.pm2_env.status ===';errored).length,stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===; `stopped`).length} processes: this.processes.map(proc => ({ nam e: proc.name status: proc.pm2_env.status memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,` cpu: `${proc.monit.cpu}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime) restarts: proc.pm2_env.restart_time pm_id: proc.pm_id})) recommendations[]} if (report.summary.erroredProcesses > 0) { report.recommendations.push( `⚠️ Some automation processes have errors. Check logs for details.`)} if (report.summary.onlineProcesses === 0) { report.recommendations.push(','🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push(' 'stopped').length},processes: this.processes.map(proc => ({; name: proc.name,status: proc.pm2_env.status,memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,cpu: `${proc.monit.cpu}%`,uptime: this.formatUptime(proc.pm2_env.pm_uptime),restarts: proc.pm2_env.restart_time,pm_id: proc.pm_id})),recommendations[]} if (report.summary.erroredProcesses > 0) {; report.recommendations.push(';⚠️ Some automation processes have errors. Check logs for details.')} if (report.summary.onlineProcesses === 0) {; report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {; report.recommendations.push(';⚠️ Some automation processes are not running. Consider restarting failed processes.')} const reportPath = path.join(process.cwd(),';automation-health-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health = report; return report} formatUptime(uptime) {; if (!uptime) return; `N/A`; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return `${hours}h ${minutes}m`} async displayDashboard() {; console.clear(); '🚀 PM2: Automation Dashboard')';; '=' .repeat(50))';; const status = await this.getPM2Status(); const health = await this.generateHealthReport(); ')';; health.processes.forEach(proc: => { const statusIcon = proc.status === 'online';'; ? '🟢';'; : proc.status: === 'errored';'; ? '🔴';'; : '🟡';';=' .repeat(50)); const status = await this.getPM2Status(); const health = await this.generateHealthReport(); `)';); health.processes.forEach(proc => {' const statusIcon = proc.status === 'online'; ? '🟢'; : proc.status === 'errored'; ? '🔴; ` : `🟡; proc.name.padEnd(25) +; `${statusIco,n} ${proc.status}`.padEnd(10) +; proc.memory.padEnd(10) +; proc.cpu.padEnd(8) +; proc.uptime.padEnd(15) +; proc.restarts)})` console.log(''); if (health.recommendations.length > 0) {
 <<<<<<< HEAD:backup-problematic-files/scripts/automation-dashboard.js
 #!/usr/bin/env node,"}),"}) import { execSync } from,,"}),"}) child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting PM2 Automation Dashboard...'),"}),"}) class AutomationDashboard {,"}),"}) constructor() {,"}),"}) this.processes = [],"}),"}) this.reports = {},"}),"}) this.healthStatus = {}}"}),"}) async getPM2Status() {,"}),"}) try {,"}),"}) const output = execSync(,"}),"}) 'pm2 jlist',{ encoding: 'utf8 }),"}),"}) const processes = JSON.parse(output),"}),"}) this.processes = processes.filter(proc =>,"}),"}) proc.name !==,"}),"}) 'pm2-logrotate' &&,"}),"}) proc.name !==,"}),"}) 'zion-app' &&,"}),"}) proc.name !==,"}),"}) 'zion-backend',"}),"}) ),"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return [],"}),"}) ,"}),"}) return this.processes} catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to get PM2 status:',error.message),"}),"}) return []}"}),"}) }"}),"}) async generateHealthReport() {,"}),"}) '📊 Generating automation health report...'),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) totalProcesses: this.processes.length,,"}),"}) onlineProcesses: this.processes.filter(p => p.pm2_env.status ===,,"}),"}) online').length,,"}),"}) erroredProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'errored).length,,"}),"}) stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===,"}),"}) 'stopped').length,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) status: proc.pm2_env.status,,"}),"}) memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,,"}),"}) cpu: `${proc.monit.cpu}%`,,"}),"}) uptime: this.formatUptime(proc.pm2_env.pm_uptime),,"}),"}) restarts: proc.pm2_env.restart_time,,"}),"}) pm_id: proc.pm_id,"}),"}) })),,"}),"}) recommendations[],"}),"}) },"}),"}) if (report.summary.erroredProcesses > 0) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes have errors. Check logs for details.')}"}),"}) if (report.summary.onlineProcesses === 0) {,"}),"}) report.recommendations.push(,"}),"}) '🚨 No automation processes are running. Start the automation system.')}"}),"}) if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {,"}),"}) report.recommendations.push(,"}),"}) '⚠️ Some automation processes are not running. Consider restarting failed processes.')}"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'automation-health-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.health = report,"}),"}) return report}"}),"}) formatUptime(uptime) {,"}),"}) if (!uptime) return,"}),"}) 'N/A',"}),"}) const seconds = Math.floor((Date.now() - uptime) / 1000),"}),"}) const hours = Math.floor(seconds / 3600),"}),"}) const minutes = Math.floor((seconds % 3600) / 60),"}),"}) return `${hours}h ${minutes}m`}"}),"}) async displayDashboard() {,"}),"}) console.clear(),"}),"}) '🚀 PM2 Automation Dashboard'),"}),"}) '=' .repeat(50)),"}),"}) const status = await this.getPM2Status(),"}),"}) const health = await this.generateHealthReport(),"}),"}) '),"}),"}) '.repeat(80)),"}),"}) '.padEnd(25) + 'Status,"}),"}) '.padEnd(10) + 'Memory,"}),"}) '.padEnd(10) + 'CPU,"}),"}) '.padEnd(8) + 'Uptime,"}),"}) '.padEnd(15) + 'Restarts,"}),"}) '),"}),"}) '.repeat(80)),"}),"}) health.processes.forEach(proc => {,"}),"}) const statusIcon = proc.status === 'online,"}),"}) ' ? '🟢,"}),"}) ' : proc.status === 'errored,"}),"}) ' ? '🔴,"}),"}) ' : '🟡,"}),"}) proc.name.padEnd(25) +,"}),"}) `${statusIcon} ${proc.status}`.padEnd(10) +,"}),"}) proc.memory.padEnd(10) +,"}),"}) proc.cpu.padEnd(8) +,"}),"}) proc.uptime.padEnd(15) +,"}),"}) proc.restarts,"}),"}) )}),"}),"}) console.log(''),"}),"}) if (health.recommendations.length > 0) {,"}),"}) console.log(,"}),"}) '💡 Recommendations: ,"}),"}) ),"}),"}) health.recommendations.forEach(rec => console.log(` ${rec}`)),"}),"}) console.log(',"}),"}) ')}"}),"}) '.repeat(50)),"}),"}) ,"}),"}) if (health.recommendations.length > 0) {,"}),"}) '💡 Recommendations:),"}),"}) health.recommendations.forEach(rec => '),"}),"}) }"}),"}) '.repeat(50)),"}),"}) try {,"}),"}) const logs = execSync('pm2 logs --lines 5 --nostream,{ encoding: ,"}),"}) utf8,"}),"}) ' }),"}),"}) const recentLogs = logs.split('\n,"}),"}) ').slice(-5).filter(line => line.trim()),"}),"}) recentLogs.forEach(log => {,"}),"}) if (log.includes('ERROR,"}),"}) ') || log.includes('error,"}),"}) ')) {,"}),"}) } else if (log.includes('WARN,"}),"}) ') || log.includes('warn,"}),"}) ')) {,"}),"}) } else {,"}),"}) }"}),"}) }),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) 'Commands: '),"}),"}) ' pm2 logs <process-name> - View specific process logs'),"}),"}) ' pm2 restart <process-name> - Restart specific process'),"}),"}) ' pm2 restart all - Restart all processes'),"}),"}) ' pm2 monit - Open PM2 monitoring interface'),"}),"}) ' Ctrl+C - Exit dashboard),"}),"}) }"}),"}) ,"}),"}) console.log(`🔴 ${log}`)} else if (log.includes(,,"}),"}) WARN') || log.includes(,"}),"}) 'warn')) {,"}),"}) console.log(`🟡 ${log}`)} else {,"}),"}) console.log(`ℹ️ ${log}`)}"}),"}) })} catch (error) {,"}),"}) console.log(,"}),"}) ' No recent logs available')}"}),"}) console.log(',"}),"}) '),"}),"}) console.log('Commands: '),"}),"}) console.log(' pm2 logs <process-name> - View specific process logs,"}),"}) '),"}),"}) console.log(' pm2 restart <process-name> - Restart specific process,"}),"}) '),"}),"}) console.log(' pm2 restart all - Restart all processes,"}),"}) '),"}),"}) console.log(' pm2 monit - Open PM2 monitoring interface,"}),"}) '),"}),"}) console.log(' Ctrl+C - Exit dashboard)}"}),"}) async startMonitoring() {,"}),"}) 🔄 Starting continuous monitoring...,"}),"}) '),"}),"}) await this.displayDashboard(),"}),"}) setInterval(async () => {,"}),"}) await this.displayDashboard()},30000)}"}),"}) async restartFailedProcesses() {,"}),"}) '),"}),"}) const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored,"}),"}) '),"}),"}) if (failedProcesses.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) }"}),"}) }),"}),"}) async generatePerformanceReport() {,"}),"}) '),"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) system: {,"}),"}) memory: process.memoryUsage(),,"}),"}) uptime: process.uptime(),,"}),"}) platform: process.platform,,"}),"}) nodeVersion: process.version,"}),"}) },,"}),"}) processes: this.processes.map(proc => ({,"}),"}) name: proc.name,,"}),"}) memory: proc.monit.memory,,"}),"}) cpu: proc.monit.cpu,,"}),"}) status: proc.pm2_env.status,,"}),"}) restarts: proc.pm2_env.restart_time,"}),"}) })),,"}),"}) summary: {,"}),"}) totalMemory: this.processes.reduce((sum,p) => sum + p.monit.memory,0),,"}),"}) averageCPU: this.processes.reduce((sum,p) => sum + p.monit.cpu,0) / this.processes.length,,"}),"}) totalRestarts: this.processes.reduce((sum,p) => sum + p.pm2_env.restart_time,0),"}),"}) },"}),"}) ,"}),"}) console.log(,,"}),"}) ✅ No failed processes to restart,"}),"}) '),"}),"}) return}"}),"}) failedProcesses.forEach(proc => {,"}),"}) try {,"}),"}) execSync(`pm2 restart ${proc.pm_id}`,{ stdio: 'inherit }),"}),"}) console.log(`✅ Restarted ${proc.name}`)} catch (error) {,"}),"}) console.error(`❌ Failed to restart ${proc.name}:`,error.message)}"}),"}) })}"}),"}) async generatePerformanceReport() {,"}),"}) console.log(,,"}),"}) 📊 Generating performance report...,"}),"}) '),"}),"}) const reportPath = path.join(process.cwd(),'automation-performance-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) this.reports.performance = report,"}),"}) return report}"}),"}) }"}),"}) async function main() {,"}),"}) const dashboard = new AutomationDashboard(),"}),"}) process.on('SIGINT,"}),"}) ',async () => {,"}),"}) '),"}),"}) await dashboard.generatePerformanceReport(),"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) try {,"}),"}) await dashboard.startMonitoring(),"}),"}) } catch (error) {,"}),"}) process.exit(1),"}),"}) ,"}),"}) console.log('✅ Performance report saved,"}),"}) '),"}),"}) process.exit(0)}),"}),"}) try {,"}),"}) await dashboard.startMonitoring()} catch (error) {,"}),"}) console.error('❌ Dashboard failed:',error),"}),"}) process.exit(1)}"}),"}) }"}),"}) main().catch(console.error),"}),"}) }}}}}}}}}}}}}}}}}}}}}"}),"}) child_process'; import fs from "fsfs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __dirname = path.dirname(__filename); '🚀 Starting PM2 Automation Dashboard...'); class AutomationDashboard {; constructor() {; constructor() { this.processes = []; this.reports: = {} this.healthStatus = {}} async getPM2Status() { try { const output = execSync( 'pm2 jlist',{ encoding: 'utf8})'; const processes = JSON.parse(output); this.processes: = processes.filter(proc =>; proc.name: !==';pm2-logrotate' &&';; proc.name: !==';zion-app' &&';; proc.name: !==';zion-backend')';; '❌ Failed: to get PM2 status:',error.message)';; return: []; return: this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message)';; return: []} } async generateHealthReport() { '📊 Generating automation health report...')';; const report = { timestamp: new: Date().toISOString(,) summary: { totalProcesses: this.processes.lengt,h onlineProcesses: this.processes.filter(p: => p.pm2_env.status ==,= online').length,'; erroredProcesses: this.processes.filter(p: => p.pm2_env.status ===';errored).lengt,h,'; stoppedProcesses: this.processes.filter(p: => p.pm2_env.status ===';stopped').lengt,h},'; processes: this.processes.map(proc: => ({ name: proc.nam,e status: proc.pm2_env.statu,s memory: `${Math.round(proc.monit.memory: / 1024 / 1024,)}MB` cpu: `${proc.monit.cp,u}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime,) restarts: proc.pm2_env.restart_tim,e pm_id: proc.pm_i,d})) recommendations[]} if: (report.summary.erroredProcesses > 0) { report.recommendations.push( '⚠️ Some automation processes have errors. Check logs for details.')}'; if: (report.summary.onlineProcesses === 0) { report.recommendations.push( '🚨 No automation processes are running. Start the automation system.')}'; if: (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push( '⚠️ Some automation processes are not running. Consider restarting failed processes.')}'; const reportPath = path.join(process.cwd() 'automation-health-report.json')';; fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health: = report; return: report} formatUptime(uptime) { if (!uptime) return';N/A'';; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return: `${hours}h ${minutes}m`} async displayDashboard() { 'pm2 jlist',{ encoding: 'utf8 }); const processes = JSON.parse(output); this.processes = processes.filter(proc =>; proc.name !==';pm2-logrotate' &&; proc.name !==';zion-app' &&; proc.name !==';zion-backend'); '❌ Failed to get PM2 status:',error.message); return []; return this.processes} catch (error) { console.error( '❌ Failed to get PM2 status:',error.message); return [] } } async generateHealthReport() { '📊 Generating automation health report...'); const report = { timestamp: new Date().toISOString() summary: { totalProcesse s: this.processes.length onlineProcesses: this.processes.filter(p => p.pm2_env.status === online').length erroredProcesses: this.processes.filter(p => p.pm2_env.status ===';errored).length,stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===; `stopped`).length} processes: this.processes.map(proc => ({ nam e: proc.name status: proc.pm2_env.status memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,` cpu: `${proc.monit.cpu}%` uptime: this.formatUptime(proc.pm2_env.pm_uptime) restarts: proc.pm2_env.restart_time pm_id: proc.pm_id})) recommendations[]} if (report.summary.erroredProcesses > 0) { report.recommendations.push( `⚠️ Some automation processes have errors. Check logs for details.`)} if (report.summary.onlineProcesses === 0) { report.recommendations.push(','🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) { report.recommendations.push(' 'stopped').length},processes: this.processes.map(proc => ({; name: proc.name,status: proc.pm2_env.status,memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,cpu: `${proc.monit.cpu}%`,uptime: this.formatUptime(proc.pm2_env.pm_uptime),restarts: proc.pm2_env.restart_time,pm_id: proc.pm_id})),recommendations[]} if (report.summary.erroredProcesses > 0) {; report.recommendations.push(';⚠️ Some automation processes have errors. Check logs for details.')} if (report.summary.onlineProcesses === 0) {; report.recommendations.push(';🚨 No automation processes are running. Start the automation system.')} if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {; report.recommendations.push(';⚠️ Some automation processes are not running. Consider restarting failed processes.')} const reportPath = path.join(process.cwd(),';automation-health-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.reports.health = report; return report} formatUptime(uptime) {; if (!uptime) return; `N/A`; const seconds = Math.floor((Date.now() - uptime) / 1000); const hours = Math.floor(seconds / 3600); const minutes = Math.floor((seconds % 3600) / 60); return `${hours}h ${minutes}m`} async displayDashboard() {; console.clear(); '🚀 PM2: Automation Dashboard')';; '=' .repeat(50))';; const status = await this.getPM2Status(); const health = await this.generateHealthReport(); ')';; health.processes.forEach(proc: => { const statusIcon = proc.status === 'online';'; ? '🟢';'; : proc.status: === 'errored';'; ? '🔴';'; : '🟡';';=' .repeat(50)); const status = await this.getPM2Status(); const health = await this.generateHealthReport(); `)';); health.processes.forEach(proc => {' const statusIcon = proc.status === 'online'; ? '🟢'; : proc.status === 'errored'; ? '🔴; ` : `🟡; proc.name.padEnd(25) +; `${statusIco,n} ${proc.status}`.padEnd(10) +; proc.memory.padEnd(10) +; proc.cpu.padEnd(8) +; proc.uptime.padEnd(15) +; proc.restarts)})` console.log(''); if (health.recommendations.length > 0) {
-=======
-=======
->>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/automation-dashboard.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     console.clear();
     // // // // // // // console.log(

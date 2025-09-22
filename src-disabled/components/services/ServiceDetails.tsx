@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
@@ -17,16 +15,6 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
   const getDatacenters = (country: string): string[] => {
-=======
-  const getDatacenters = (country: string): string[] => {
-
-=======
-// Component to show service details for the selected country;
-export function ServiceDetails({ country }: ServiceDetailsProps) {}
-  // Get datacenters for regions (simplified - in production this would come from a real database)
-
-  const getDatacenters = (country: string): string[] => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
@@ -67,15 +55,8 @@ function ServiceDetails() {}
       data_centers['default'] || ['Major metropolitan areas']);
 
   }
-<<<<<<< HEAD
-  // Get region - specific image;
+// Get region - specific image;
   const getRegionalImage = (country: string): string => {
-
-=======
-  // Get region-specific image;
-  const getRegionalImage = (country: string): string => {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // In a real app, you'd have specific images for each region;
     const regions: Record < string, string> = {'
       'United States':;'
@@ -101,48 +82,23 @@ function ServiceDetails() {}
   // Get region-specific instructions;
   const getRegionalInstructions = (country: string): string => {}
     // In a real implementation, this would be much more detailed and specific;
-<<<<<<< HEAD
-    const time_zones: Record < string, string> = {
+const time_zones: Record < string, string> = {
       'United States': 'EST / CST / PST depending on location',
       'United Kingdom': 'GMT / BST',
       Germany: 'CET / CEST',
       Japan: 'JST',
 <<<<<<< HEAD
       Australia: 'AEST / ACDT / AWST depending on location',      Singapore: 'SGT',
-=======
-
-      Singapore: 'SGT',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-    const time_zones: Record < string, string> = {'
-      'United States': 'EST / CST / PST depending on location','
-      'United Kingdom': 'GMT / BST','
-      Germany: 'CET / CEST','
-      Japan: 'JST','
-      Australia: 'AEST/ACDT/AWST depending on location','
-      Singapore: 'SGT','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       default: 'Local timezone',
     }
     const timezone =;'
       time_zones[country] || time_zones['default'] || 'Local timezone';
 
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-      `Our technicians in ${country} operate during business hours (8AM - 6PM ${timezone}). ` +;
+`Our technicians in ${country} operate during business hours (8AM - 6PM ${timezone}). ` +;
       `Response times are typically within 4 hours for metropolitan areas. ` +;
       `Please have site access permissions and contact details ready for our technicians. ` +;
       `For remote locations, additional travel fees may apply.`);  }
-=======
-=======
-      `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +`
-      `Response times are typically within 4 hours for metropolitan areas. ` +`
-      `Please have site access permissions and contact details ready for our technicians. ` +`
-      `For remote locations, additional travel fees may apply.`
-    )
-  }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -156,7 +112,6 @@ import {;
   CardTitle,;'
 } from '@/components/ui/card';
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
@@ -170,13 +125,9 @@ import {;
 <<<<<<< HEAD
       "default": ["Major metropolitan areas"]
     },
-    
+
     return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"]
   },
-  
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -188,13 +139,12 @@ import {;
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
-<<<<<<< HEAD
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+"default": "https://source.unsplash.com/featured/900x700/?datacenter"
     },
-    
+
     return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter"
   },
-  
+
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -207,26 +157,16 @@ import {;
       "Singapore": "SGT",
       "default": "Local timezone"
     },
-    
+
     const timezone = timeZones[country] || timeZones["default"] || "Local timezone",
-    
+
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
            `For remote locations, additional travel fees may apply.`
   },
-  
+
   const datacenters = getDatacenters(country),
-  
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -297,14 +237,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
             loading="lazy"
           />
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-4">
@@ -320,14 +253,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
               Service Locations;
             </h4>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
         <div className="space-y-4">
           <div>
@@ -341,22 +267,14 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
                 <div;
                   key={idx} "
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
-<<<<<<< HEAD
-                >
+>
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from 'lucide-react';
 import Image from 'next/image';
-=======
-                >"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;'
-import { Server, Clock, MapPin } from 'lucide-react';"
-import Image from "next/image",;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface ServiceDetailsProps {;
   country: string;
 
 // Component to show service details for the selected country;
-<<<<<<< HEAD
 export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const getDatacenters = (country: string): string[] => {;
@@ -383,18 +301,10 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
       dataCenters['default'] || ['Major metropolitan areas'];
     )
 };
-
-=======
-export function ServiceDetails() { return null; }
-    },;"
-    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"];
-  },;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Get region-specific image;
   const getRegionalImage = (country: string): string => {;'
     // In a real app, you'd have specific images for each region;
-<<<<<<< HEAD
-    const regions: Record<string, string> = {;
+const regions: Record<string, string> = {;
       'United States':;
         'https://source && source.unsplash.com/featured/900x700/?datacenter,usa',;
       'United Kingdom':;
@@ -438,105 +348,8 @@ export function ServiceDetails() { return null; }
       `Response times are typically within 4 hours for metropolitan areas. ` +;
       `Please have site access permissions and contact details ready for our technicians. ` +;
       `For remote locations, additional travel fees may apply.`;
-<<<<<<< HEAD
-    )
+)
 };
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-    );
-  };
-
-import Image from "next/image",;
-interface ServiceDetailsProps {;
-  country: string;
-}
-;
-// Component to show service details for the selected country;
-export function ServiceDetails({ country }:,  ServiceDetailsProps) {;
-  // Get datacenters for regions (simplified - in production this would come from a real,  database);
-  const getDatacenters = (country:,  string): string[] => {;,
-    const dataCenters: Record<string string[]> = {;,
-      "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],;,
-      "United Kingdom": ["London", "Manchester", "Birmingham"],;,
-      "Germany": ["Frankfurt", "Berlin", "Munich"],;,
-      "Japan": ["Tokyo", "Osaka"],;,
-      "Australia": ["Sydney", "Melbourne", "Perth"],;,
-      "Singapore": ["Singapore Central"],;,
-      "Canada": ["Toronto", "Montreal", "Vancouver"],;
-      // Default for other countries;
-      "default": ["Major metropolitan areas"];,
-    },;,
-    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"];,
-  },;
-  // Get region-specific image;
-  const getRegionalImage = (country:,  string): string => {;
-export function ServiceDetails({ country }: ServiceDetailsProps) {;
-  // Get datacenters for regions (simplified - in production this would come from a real database);
-  const getDatacenters = (country: string): string[] => {;
-    const dataCenters: Record<string string[]> = {;
-      "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],;
-      "United Kingdom": ["London", "Manchester", "Birmingham"],;
-      "Germany": ["Frankfurt", "Berlin", "Munich"],;
-      "Japan": ["Tokyo", "Osaka"],;
-      "Australia": ["Sydney", "Melbourne", "Perth"],;
-      "Singapore": ["Singapore Central"],;
-      "Canada": ["Toronto", "Montreal", "Vancouver"],;
-      // Default for other countries;
-      "default": ["Major metropolitan areas"];
-    },;
-    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"];
-  },;
-  // Get region-specific image;
-  const getRegionalImage = (country: string): string => {;
-    // In a real app, you'd have specific images for each region;
-    const regions: Record<string string> = {;
-      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",;
-      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",;
-      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",;
-      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",;
-      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",;
-      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",;
-      // Default placeholder;
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter";
-    },;,
-    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter";,
-  },;
-  // Get region-specific instructions;
-  const getRegionalInstructions = (country:,  string): string => {;
-    },;
-    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter";
-  },;
-  // Get region-specific instructions;
-  const getRegionalInstructions = (country: string): string => {;
-    // In a real implementation, this would be much more detailed and specific;
-    const timeZones: Record<string string> = {;
-      "United States": "EST/CST/PST depending on location",;
-      "United Kingdom": "GMT/BST",;
-      "Germany": "CET/CEST",;
-      "Japan": "JST",;
-      "Australia": "AEST/ACDT/AWST depending on location",;
-      "Singapore": "SGT",;
-      "default": "Local timezone";
-    },;,
-    const timezone = timeZones[country] || timeZones["default"] || "Local timezone",;
-    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;`
-           `Response times are typically within 4 hours for metropolitan areas. ` +;`
-           `Please have site access permissions and contact details ready for our technicians. ` +;`
-           `For remote locations, additional travel fees may apply.`;`
-  };
-  const datacenters = getDatacenters(country);
-  return (
-    <Card className='bg-zion-blue-dark border-zion-blue-light'>;
-    },;
-    const timezone = timeZones[country] || timeZones["default"] || "Local timezone",;
-    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;
-           `Response times are typically within 4 hours for metropolitan areas. ` +;
-           `Please have site access permissions and contact details ready for our technicians. ` +;
-           `For remote locations, additional travel fees may apply.`;
-  };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const datacenters = getDatacenters(country);
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -549,105 +362,19 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
           Details about our service locations and capabilities in {country}
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <CardContent className='space-y-4'>;
-        <div className='overflow-hidden rounded-lg mb-4 relative h-48'>;
-          <Image
-            src = {getRegionalImage(country),}
-        <CardTitle className="text-white flex items-center">;
-          <Server className="mr-2 h-5 w-5 text-zion-cyan" />;
-          IT Onsite Service in {country}
-        </CardTitle>;
-        <CardDescription className="text-zion-slate-light">;
-          Details about our service locations and capabilities in {country}
-        </CardDescription>;
-      </CardHeader>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      <CardContent className="space-y-4">;
+<CardContent className="space-y-4">;
         <div className="overflow-hidden rounded-lg mb-4 relative h-48">;
           <Image;
             src={getRegionalImage(country)}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             alt={`Datacenter in ${country}`}
             className="object-cover transform transition-transform duration-500 hover:scale-110";
             loading="lazy";
-=======
-      <CardContent className='space-y-4'>;
-        <div className='overflow-hidden rounded-lg mb-4 relative h-48'>;
-          <Image
-            src = {getRegionalImage(country),}            alt={`Datacenter in ${country}`}
-            className='object-cover transform transition-transform duration-500 hover:scale-110'
-=======
-    const regions: Record<string string> = {;"
-      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",;"
-      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",;"
-      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",;"
-      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",;"
-      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",;"
-      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",;
-      // Default placeholder;"
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter";
-    },;"
-    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter";
-  },;
-  // Get region-specific instructions;
-  const getRegionalInstructions = (country: string): string => {;
-    // In a real implementation, this would be much more detailed and specific;
-    const timeZones: Record<string string> = {;"
-      "United States": "EST/CST/PST depending on location",;"
-      "United Kingdom": "GMT/BST",;"
-      "Germany": "CET/CEST",;"
-      "Japan": "JST",;"
-      "Australia": "AEST/ACDT/AWST depending on location",;"
-      "Singapore": "SGT",;"
-      "default": "Local timezone";
-    },;"
-    const timezone = timeZones[country] || timeZones["default"] || "Local timezone",;`
-    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;`
-           `Response times are typically within 4 hours for metropolitan areas. ` +;`
-           `Please have site access permissions and contact details ready for our technicians. ` +;`
-           `For remote locations, additional travel fees may apply.`;
-  };
-  const datacenters = getDatacenters(country);
-
-  return ('
-    <Card className='bg-zion-blue-dark border-zion-blue-light'>;
-      <CardHeader>;"
-        <CardTitle className="text-white flex items-center">;"
-          <Server className="mr-2 h-5 w-5 text-zion-cyan" />;
-          IT Onsite Service in {country}
-        </CardTitle>;"
-        <CardDescription className="text-zion-slate-light">;
-          Details about our service locations and capabilities in {country}
-        </CardDescription>;
-      </CardHeader>;"
-      <CardContent className="space-y-4">;"
-        <div className="overflow-hidden rounded-lg mb-4 relative h-48">;
-          <Image;
-            src={getRegionalImage(country)}`
-            alt={`Datacenter in ${country}`}'
-            className='object-cover transform transition-transform duration-500 hover:scale-110''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             loading='lazy'
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />;
-<<<<<<< HEAD
-        </div>;
-=======
-        </div>;"
-        <div className="space-y-4">;
-          <div>;"
-            <h4 className="text-lg font-medium text-white mb-2 flex items-center">;"
-              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />;
-              Service Locations;
-            </h4>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+</div>;
 =======
             alt={`Datacenter in ${country}`}`
             className='object-cover transform transition-transform duration-500 hover:scale-110'',
@@ -659,46 +386,26 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
         </div>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-        <div className='space-y-4'>;
+<div className='space-y-4'>;
           <div>;
             <h4 className='text-lg font-medium text-white mb-2 flex items-center'>;
-<<<<<<< HEAD
-              <MapPin className='mr-2 h-4 w-4 text-zion-purple' />;              Service Locations;
-=======
-=======
-              <MapPin className='mr-2 h-4 w-4 text-zion-purple' />;
-        <div className="space-y-4">;
-          <div>;
-            <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
-              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<MapPin className='mr-2 h-4 w-4 text-zion-purple' />;              Service Locations;
               Service Locations;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </h4>;
-<<<<<<< HEAD
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
+<div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {dc}
                 </div>;
               ))}
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div>
@@ -719,18 +426,10 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               {getRegionalInstructions(country)}
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          
+
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -743,12 +442,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -774,7 +468,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             className="object-cover transform transition-transform duration-500 hover:scale-110"""
             loading="lazy""
           />
-
 
         <div className="space-y-4">"
           <div>
@@ -822,7 +515,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             <p className="text-zion-slate-light">"
 </p>
 
-
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">"
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">"
@@ -838,17 +530,7 @@ pr-12325
           </div>
         </div>
       </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -862,31 +544,13 @@ pr-12325
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </p>
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
-=======
-
-            </div>;
-          </div>;
-
-          <div>;'
-            <h4 className='text-lg font-medium text-white mb-2 flex items-center'>;'
-=======
-            </div>;
-          </div>;
-          <div>;
-            <h4 className='text-lg font-medium text-white mb-2 flex items-center'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Clock className='mr-2 h-4 w-4 text-zion-purple' />;
               Service Instructions;
             </h4>;'
@@ -894,29 +558,11 @@ pr-12325
               {getRegionalInstructions(country)}
             </p>;
           </div>;
-<<<<<<< HEAD
 '
           <div className='bg-zion-blue rounded-lg p-4 border border-zion-blue-light'>;'
             <h4 className='text-lg font-medium text-white mb-2'>;'
               What's Included;
             </h4>;'
-=======
-          <div className='bg-zion-blue rounded-lg p-4 border border-zion-blue-light'>;
-            <h4 className='text-lg font-medium text-white mb-2'>;
-              What's Included;
-            </h4>;
-
-      <CardFooter className="border-t border-zion-blue-light pt-4">"
-        <p className="text-sm text-zion-slate-light">"
-            <h4 className='text-lg font-medium text-white mb-2 flex items-center'>;
-              <Clock className='mr-2 h-4 w-4 text-zion-purple' />;
-
-            <p className='text-zion-slate-light'>;
-            </p>;
-          <div className='bg-zion-blue rounded-lg p-4 border border-zion-blue-light'>;
-            <h4 className='text-lg font-medium text-white mb-2'>;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <ul className='list-disc list-inside text-zion-slate-light space-y-1'>;
               <li>Transportation to your site</li>;
               <li>First hour of onsite technical support</li>;
@@ -935,52 +581,23 @@ pr-12325
       </CardFooter>;
     </Card>;
 <<<<<<< HEAD
-<<<<<<< HEAD
   )
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 }operate during business hours (8AM-6PM $ {;
-<<<<<<< HEAD
-  timezone ;
-<<<<<<< HEAD
+timezone ;
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` 
 };";
 <<<<<<< HEAD
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {
   idx "
-=======
-  timezone ;`
-}) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` ;"
-};";"
-return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {"
-  idx ""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {;
   dc ;"
 }</div>) ) ";'"
 }</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) ;'"
 }'"}
-
-=======
-}) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` ;`
-};";
-return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {"
-  idx ""
-}className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {;
-  dc ;
-}</div>) ) ";
-}</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) ;
-}'"}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const datacenters = get_datacenters (country);
   return ('
     <Card className='bg - zion - blue - dark border - zion - blue - light'>;
@@ -996,15 +613,9 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
       <CardContent className='space - y-4'>;'
         <div className='overflow - hidden rounded - lg mb - 4 relative h - 48'>;
           <Image;
-<<<<<<< HEAD
-            src = {getRegionalImage (country), }`
+src = {getRegionalImage (country), }`
             alt={`Datacenter in ${country}`}'
             className='object - cover transform transition - transform duration - 500 hover:scale - 110';'
-=======
-            src = {getRegionalImage (country), }
-            alt={`Datacenter in ${country}`}`
-            className='object - cover transform transition - transform duration - 500 hover:scale - 110';',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             loading='lazy';
           />;
         </div>;'
@@ -1035,49 +646,7 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
           <div className='bg - zion - blue rounded - lg p - 4 border border - zion - blue - light'>;'
             <h4 className='text - lg font - medium text - white mb - 2'>;'
               What's Included;
-<<<<<<< HEAD
-            </h4>;'
-=======
-            </h4>;
-      <CardFooter className='border-t border-zion-blue-light pt-4'>;
-
-        <p className='text-sm text-zion-slate-light'>;
-return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader>   <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {"
-)"
-}</div>) ) ";""
-}</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div>  </p>  ) ;""
-    <Card className='bg - zion - blue - dark border - zion - blue - light'>;
-
-
-        <CardTitle className='text - white flex items - center'>;
-
-          <Server className='mr - 2 h - 5 w - 5 text - zion - cyan' />;
-
-        <CardDescription className='text - zion - slate - light'>;
-
-      <CardContent className='space - y-4'>;
-
-        <div className='overflow - hidden rounded - lg mb - 4 relative h - 48'>;
-            src = {getRegionalImage (country), }`;
-            alt={`Datacenter in ${country}`}
-            className='object - cover transform transition - transform duration - 500 hover:scale - 110';
-            loading='lazy';
-
-        <div className='space - y-4'>;
-            <h4 className='text - lg font - medium text - white mb - 2 flex items - center'>;
-              <MapPin className='mr - 2 h - 4 w - 4 text - zion - purple' />;
-
-            <div className='grid grid - cols - 2 md:grid - cols - 3 gap - 2'>;
-                  key={idx}
-                  className='bg - zion - blue p - 2 rounded border border - zion - blue - light text - center text - zion - slate - light'                >;
-                </div>))}
-              <Clock className='mr - 2 h - 4 w - 4 text - zion - purple' />;
-
-            <p className='text - zion - slate - light'>;
-          <div className='bg - zion - blue rounded - lg p - 4 border border - zion - blue - light'>;
-            <h4 className='text - lg font - medium text - white mb - 2'>;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+</h4>;'
             <ul className='list - disc list - inside text - zion - slate - light space - y-1'>;
               <li > Transportation to your site</li>;
               <li > First hour of onsite technical support</li>;
@@ -1096,38 +665,20 @@ pr-12325
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
 }operate during business hours (8AM - 6PM $ {
   timezone;
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.`;`
 }";
-<<<<<<< HEAD
 return (<Card className="bg - zion - blue - dark border - zion - blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow - hidden rounded - lg mb - 4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text - lg font - medium text - white mb - 2 flex items-center" > <MapPin className="mr - 2 h - 4 w - 4 text - zion-purple" /> Service Locations </h4> <div key= {
   idx ";
 }className="bg - zion - blue p - 2 rounded border border - zion - blue - light text - center text - zion - slate-light" > {
-=======
-return (<Card className="bg - zion - blue - dark border - zion - blue - light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space - y-4" > <div className="overflow - hidden rounded - lg mb - 4 relative h - 48" > <Image /> </div> <div className="space - y-4" > <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <MapPin className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Locations </h4> <div key= {"
-  idx ";
-}className="bg - zion - blue p - 2 rounded border border - zion - blue - light text - center text - zion - slate - light" > {"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   dc;
 }</div>) ) ";
-<<<<<<< HEAD
 }</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light" > <h4 className="text - lg font - medium text - white mb - 2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space - y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);
 }'"}
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items-center" > <Clock className="mr - 2 h - 4 w - 4 text - zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue-light" > <h4 className="text - lg font - medium text - white mb-2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space-y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);
-}'"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {;
   idx ";
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light" > {;
@@ -1135,22 +686,8 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }</div>) ) ";
 }</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) ;
 }'"
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}operate during business hours (8AM - 6PM $ {}
-  timezone;`
-}) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.`;"
-}";"
-return (<Card className="bg - zion - blue - dark border - zion - blue - light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space - y-4" > <div className="overflow - hidden rounded - lg mb - 4 relative h - 48" > <Image /> </div> <div className="space - y-4" > <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <MapPin className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Locations </h4> <div key= {"
-  idx ";"
-}className="bg - zion - blue p - 2 rounded border border - zion - blue - light text - center text - zion - slate - light" > {}
-  dc;"
-}</div>) ) ";'"
-}</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light" > <h4 className="text - lg font - medium text - white mb - 2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space - y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);'"
-}'"}'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
       <CardFooter className='border - t border - zion - blue - light pt - 4'>;

@@ -1,29 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
-
-
-=======
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
 export default function FutureOfWork() {
   return (
 =======
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react',;
-export default function FutureOfWork() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
 
 import React from 'react',
 export default function FutureOfWork() {
@@ -45,12 +25,8 @@ export default /**;
  */
 function FutureOfWork() {}
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>;
       <Head>;
         <title>;
@@ -67,17 +43,7 @@ function FutureOfWork() {}
         <meta;
           property='og:description';
           content='How autonomous systems are reshaping the workplace and enhancing human capabilities.';
-=======
-    <>;
-      <Head>;
-        <title>;
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />;
-=======
-        />;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
 '
@@ -85,19 +51,10 @@ function FutureOfWork() {}
         <main className='container mx-auto px-6 py-12'>;'
           <div className='max-w-4xl mx-auto'>;'
             <nav className='mb-8'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link;
+<Link;
                 href='/blog';
                 className='text-cyan-400 hover:text-cyan-300 transition-colors';
               >;
-=======
-              <Link
-                href='/blog'
-=======
-              <Link'
-                href='/blog''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ← Back to Blog;
@@ -131,11 +88,7 @@ function FutureOfWork() {}
                 <p className='text-white/90 mb-4'>;
                   The workplace is undergoing a fundamental transformation. Gone;
                   are the days when AI was seen as a threat to human employment.;
-<<<<<<< HEAD
-                  Today, we're witnessing the emergence of a new paradigm:;
-=======
-                  Today, we&apos,re witnessing the emergence of a new paradigm:;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+Today, we're witnessing the emergence of a new paradigm:;
                   human-AI collaboration that amplifies human capabilities;
                   rather than replacing them.;
                 </p>;'
@@ -266,26 +219,14 @@ function FutureOfWork() {}
                 </ul>;'
                 <p className='text - white / 90 mb - 4'>;
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   This collaboration model has proven to be 40% more effective;
                   than either humans or AI working alone.;
                 </p>;
               </section>;
 <<<<<<< HEAD
-<<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>;
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - green - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   New Roles and Opportunities;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
@@ -314,23 +255,11 @@ function FutureOfWork() {}
                   These roles require a unique blend of technical skills and;
                   human understanding—qualities that are becoming increasingly;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   valuable in the modern workplace.;
                 </p>;
               </section>;
-<<<<<<< HEAD
-              <section className='mb-12'>;
+<section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-blue-400'>;
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - blue - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Skills for the Future;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
@@ -385,12 +314,7 @@ function FutureOfWork() {}
                     based on human feedback;
                   </li>;
                 </ul>;
-<<<<<<< HEAD
-                <p className='text-white/90 mb-4'>;
-=======
-                <p className='text - white / 90 mb - 4'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<p className='text-white/90 mb-4'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -407,18 +331,8 @@ function FutureOfWork() {}
                 </p>;
               </section>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>;
-=======
-<<<<<<< HEAD
-=======
-
-                    className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Measuring Success;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
@@ -469,13 +383,8 @@ function FutureOfWork() {}
                     href='/services';
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300';
                   >;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -488,8 +397,6 @@ function FutureOfWork() {}
         </main>;
       </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -498,21 +405,8 @@ function FutureOfWork() {}
   }
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -721,9 +615,6 @@ export default function FutureOfWork() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

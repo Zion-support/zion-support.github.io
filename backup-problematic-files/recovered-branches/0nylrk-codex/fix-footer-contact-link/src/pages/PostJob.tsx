@@ -45,4 +45,3 @@ export default function PostJob() {;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
 <<<<<<< HEAD
-

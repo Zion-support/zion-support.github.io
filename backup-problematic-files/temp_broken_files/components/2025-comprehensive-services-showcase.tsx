@@ -5,7 +5,7 @@ import {
   Brain, Building, Target, Cpu, Shield,
   Check, Phone, Mail, MapPin,
   TrendingUp, Zap, Globe
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
+:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
 } from 'lucide-react';
 
 // Import our new service data
@@ -14,9 +14,6 @@ import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-autom
 import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-=======
-} from 'lucide-react',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx
 
 // Import our new service data,
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',
@@ -27,7 +24,7 @@ import { emergingTechnologyServices } from '../data/2025-emerging-technology-ser
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('all'),
 
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
+:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
   const allServices = [
     ...advancedBusinessIntelligenceServices2025,
     ...advancedAIAutomationServices2025,
@@ -35,44 +32,6 @@ const ComprehensiveServicesShowcase2025 = () => {
     ...innovativeMicroSaasSolutions2025,
     ...cuttingEdgeAIServices2025
   ];
-=======
-// Helper function to get service pricing,
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter,
-  if (service.price?.monthly) return `$${service.price.monthly}/month`,
-  if (typeof service.price === 'string') return service.price,
-  return 'Contact for pricing'
-},
-
-// Helper function to get service features,
-const getServiceFeatures = (service: any) => {
-  return service.keyFeatures || service.features || []
-},
-
-// Helper function to get service setup time,
-const getServiceSetupTime = (service: any) => {
-  if (service.setupTime) return service.setupTime,
-  if (service.pricing?.setupTime) return service.pricing.setupTime,
-  if (service.price?.setupTime) return service.price.setupTime,
-  return 'N/A'
-},
-
-// Helper function to get service trial days,
-const getServiceTrialDays = (service: any) => {
-  if (service.trialDays) return service.trialDays,
-  if (service.pricing?.trialDays) return service.pricing.trialDays,
-  if (service.price?.trialDays) return service.price.trialDays,
-  return 'N/A'
-},
-// All services combined,
-const allServices = [
-  ...advancedAIMLServices,
-  ...advancedCybersecurityServices,
-      ...advancedCloudDevOpsServices2025,
-  ...industrySpecificSolutions,
-  ...emergingTechnologyServices
-],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
@@ -278,10 +237,7 @@ href={_`tel:${(service as any).mobile || '+1 302 464 0950'}`}
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx
+:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
 
           {_/* Services Display */}
           <AnimatePresence mode="wait">
@@ -312,7 +268,7 @@ key={service.id}
                       </div>
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>
                       <p className="text-blue-100 text-sm">{service.tagline}</p>
-                      
+
                       {_/* Price */}
                       <div className="mt-4">
                         <span className="text-2xl font-bold">
@@ -324,7 +280,7 @@ key={service.id}
                     {_/* Service Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-                      
+
                       {_/* Price */}
                       <div className="mb-4">
                         <span className="text-3xl font-bold text-gray-900">
@@ -391,7 +347,7 @@ key={service.id}
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
-                          
+
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -410,7 +366,7 @@ key={service.id}
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
-                            
+
                             <a,
 href={service.link}
                               target="blank"
@@ -513,7 +469,7 @@ initial={_{ opacity: 0, y: 20}}
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our innovative services can help you achieve your business goals
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -554,9 +510,6 @@ href="https://ziontechgroup.com"
   )
 },
 
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
+:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
 <<<<<<< HEAD
 export default ComprehensiveServicesShowcase2025;
-=======
-export default ComprehensiveServicesShowcase,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx

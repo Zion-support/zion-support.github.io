@@ -311,7 +311,6 @@ import {;
   Users,;
   BarChart3;'
 } from 'lucide-react',;
-<<<<<<< HEAD
 export default function ITServicesPage() {;
   const itServices = [;
     {;
@@ -334,11 +333,6 @@ export default function ITServicesPage() {;
         enterprise: "From $15,000";
       },;
       marketPrice: "$5,000-15,000",;
-=======
-export default function ITServicesPage() { return null; }
-      },;"
-      marketPrice: "$5,000-15,000",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       useCases: ["Enterprises", "Mid-size companies", "Startups", "Healthcare", "Financial services"],;
       benefits: [;"
         "Reduced infrastructure costs",;"
@@ -349,15 +343,9 @@ export default function ITServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/cloud-migration";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "DevOps Automation Platform",,
   description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",;
-=======
-    {;"
-      name: "DevOps Automation Platform",;"
-      description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Code className="w-12 h-12 text-green-500" />,;
       features: [;"
         "CI/CD pipeline automation",;"
@@ -385,15 +373,9 @@ export default function ITServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/devops-automation";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "Cybersecurity Assessment & Implementation",,
   description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",;
-=======
-    {;"
-      name: "Cybersecurity Assessment & Implementation",;"
-      description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Shield className="w-12 h-12 text-red-500" />,;
       features: [;"
         "Security audits and assessments",;"
@@ -421,15 +403,9 @@ export default function ITServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/cybersecurity";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "Network Infrastructure Design",,
   description: "Scalable network architecture design with high availability, security, and performance optimization.",;
-=======
-    {;"
-      name: "Network Infrastructure Design",;"
-      description: "Scalable network architecture design with high availability, security, and performance optimization.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Network className="w-12 h-12 text-purple-500" />,;
       features: [;"
         "Network architecture design",;"
@@ -457,15 +433,9 @@ export default function ITServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/network-infrastructure";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "Database Design & Optimization",,
   description: "Database architecture design, performance tuning, and migration services for optimal data management.",;
-=======
-    {;"
-      name: "Database Design & Optimization",;"
-      description: "Database architecture design, performance tuning, and migration services for optimal data management.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Database className="w-12 h-12 text-orange-500" />,;
       features: [;"
         "Database architecture design",;"
@@ -493,15 +463,9 @@ export default function ITServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/database-services";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "IT Infrastructure Management",,
   description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",;
-=======
-    {;"
-      name: "IT Infrastructure Management",;"
-      description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Server className="w-12 h-12 text-indigo-500" />,;
       features: [;"
         "24/7 infrastructure monitoring",;"
@@ -531,8 +495,7 @@ export default function ITServicesPage() { return null; }
     }
   ],;
   const additionalServices = [;
-<<<<<<< HEAD
-    {;
+{;
       name: "API Development & Integration",,
   description: "Custom API development and third-party system integration services.",;
       pricing: "From $2,500",;
@@ -554,30 +517,6 @@ export default function ITServicesPage() { return null; }
       name: "IT Consulting",,
   description: "Strategic IT consulting and technology roadmap planning.",;
       pricing: "From $150/hour",;
-=======
-    {;"
-      name: "API Development & Integration",;"
-      description: "Custom API development and third-party system integration services.",;"
-      pricing: "From $2,500",;"
-      icon: <Code className="w-8 h-8 text-blue-400" />;
-    },;
-    {;"
-      name: "Data Backup & Recovery",;"
-      description: "Comprehensive backup solutions and disaster recovery planning.",;"
-      pricing: "From $299/month",;"
-      icon: <Database className="w-8 h-8 text-green-400" />;
-    },;
-    {;"
-      name: "Performance Monitoring",;"
-      description: "Real-time performance monitoring and optimization services.",;"
-      pricing: "From $199/month",;"
-      icon: <Monitor className="w-8 h-8 text-purple-400" />;
-    },;
-    {;"
-      name: "IT Consulting",;"
-      description: "Strategic IT consulting and technology roadmap planning.",;"
-      pricing: "From $150/hour",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Users className="w-8 h-8 text-orange-400" />;
     }
   ],;

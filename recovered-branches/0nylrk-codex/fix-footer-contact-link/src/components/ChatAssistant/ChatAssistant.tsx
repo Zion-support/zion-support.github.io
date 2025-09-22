@@ -1,19 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -32,21 +19,14 @@ import { ChatMessage  } from './ChatMessage';
 import { ChatMessage  } from './ChatMessage';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ChatInput  } from './ChatInput';
-<<<<<<< HEAD
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",";
 import { Button } from "@/components/ui/button";"
 import { X } from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 export interface Message {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface Message {
@@ -56,30 +36,14 @@ import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Message {
 =======
@@ -104,64 +68,11 @@ export interface Message {export interface Message {
   message: string,
   timestamp: Date,
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   read?: boolean
-
     id: string,
     name: string,;
 
-}
-  read?: boolean}
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  read?: boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface Message {}
-';
-import {ChatMessage} from './ChatMessage';'
-import {ChatInput} from './ChatInput';"
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";"
-import {Button} from "@/components/ui/button";"
-import {X} from "lucide-react";'
-import React, { useState, useEffect, useRef, ReactNode } from 'react','
-import { ChatMessage } from './ChatMessage','
-import { ChatInput } from './ChatInput',"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
-import { Button } from "@/components/ui/button","
-import { X } from "lucide-react",
-
-
-
-export interface Message {}
-  id: string,'
-  role: 'user' | 'assistant',
-  message: string,;
-  timestamp: Date,;
-  read?: boolean;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    id: string,
-    name: string,;
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 =======
@@ -173,24 +84,14 @@ export interface Message {}
 
   read?: boolean;
 }
-<<<<<<< HEAD
 export interface ChatAssistantProps {
 
-
-<<<<<<< HEAD
-    id: string,
+id: string,
     name: string,;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     avatarUrl?: string;
 =======
@@ -198,7 +99,6 @@ export interface ChatAssistantProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
     avatarUrl?: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -218,15 +118,8 @@ export interface ChatAssistantProps {}
   conversationId?: string;
   initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-<<<<<<< HEAD
-  contextHeader?: ReactNode;
-=======
-
-  contextHeader?: ReactNode
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+contextHeader?: ReactNode;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,42 +127,21 @@ export function ChatAssistant({
 
 export function ChatAssistant({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
 import {ChatMessage} from './ChatMessage';'
 import {ChatInput} from './ChatInput';
 
-
 '
 =======
 
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import {ChatMessage} from './ChatMessage';
-import {ChatInput} from './ChatInput';
-
-export function ChatAssistant({
-
-export function ChatAssistant({;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -281,50 +153,13 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
   recipient;
   conversationId;
 
-<<<<<<< HEAD
-  initialMessages = [];
-<<<<<<< HEAD
+initialMessages = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
   onSendMessage;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  contextHeader;
-}: ChatAssistantProps) {;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  contextHeader
-}: ChatAssistantProps) {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    if (initialMessages.length > 0) {
-      setMessages(initialMessages)
-    }
-  }, [initialMessages]);
-<<<<<<< HEAD
-  contextHeader;
-}: ChatAssistantProps) {;
-
-  const [messages, setMessages] = useState<Message[]>(initialMessages),;
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-  useEffect(() => {;
-    if (initialMessages.length > 0) {;
-      setMessages(initialMessages);
-    }
-  }, [initialMessages]),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
 =======
   onSendMessage;  useEffect(() => {
@@ -341,29 +176,18 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
   const scrollToBottom = () => {'
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
-=======
-  }'
-import React, { useState, useEffect, useRef, ReactNode } from 'react','
-import { ChatMessage } from './ChatMessage','
-import { ChatInput } from './ChatInput',"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
-import { Button } from "@/components/ui/button","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { X } from "lucide-react",
 export interface Message {}
   id: string,'
   role: 'user' | 'assistant',
   message: string,
-<<<<<<< HEAD
-  timestamp: Date,
+timestamp: Date,
   read?: boolean
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect, useRef, ReactNode } from 'react',;
@@ -371,15 +195,6 @@ import { ChatMessage } from './ChatMessage',;
 import { ChatInput } from './ChatInput',;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
-=======
-  timestamp: Date,;
-  read?: boolean';
-import React, { useState, useEffect, useRef, ReactNode } from 'react',;'
-import { ChatMessage } from './ChatMessage',;'
-import { ChatInput } from './ChatInput',;"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
-import { Button } from "@/components/ui/button",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { X } from "lucide-react",;
 export interface Message {;
   id: string,;'
@@ -404,7 +219,6 @@ export interface ChatAssistantProps {;
   contextHeader?: ReactNode;
 }
 ;
-<<<<<<< HEAD
 export function ChatAssistant({;
   isOpen,;
   onClose,;
@@ -413,16 +227,6 @@ export function ChatAssistant({;
   initialMessages = [],;
   onSendMessage,;
 <<<<<<< HEAD
-=======
-  contextHeader;
-}: ChatAssistantProps) {;
-
-<<<<<<< HEAD
-  contextHeader;
-}: ChatAssistantProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [messages, setMessages] = useState<Message[]>(initialMessages),;
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
   useEffect(() => {;
@@ -434,40 +238,20 @@ export function ChatAssistant() { return null; }
     }
   }, [initialMessages]),
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  onSendMessage;
-  contextHeader;
-}: ChatAssistantProps) {;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
-<<<<<<< HEAD
-=======
-  }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
-=======
-  }  useEffect(() => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   }  useEffect(() => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
   useEffect(() => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -533,9 +317,6 @@ export function ChatAssistant({;
     }
   }, [initialMessages]),
 
-
-
-
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -551,46 +332,13 @@ export function ChatAssistant({;
 
   const scrollToBottom = () => {'
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-<<<<<<< HEAD
-  },
-<<<<<<< HEAD
+},
 
-=======
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-  useEffect(() => {;
-    if (initialMessages && initialMessages.length > 0) {;
-      setMessages(initialMessages);
-    }
-  }, [initialMessages]);
-
-  useEffect(() => {;
-    scrollToBottom();
-  }, [messages]);
-
-  const scrollToBottom = () => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSendMessage = async (message: string) => {;
-    if (!message && message.trim()) return,;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleSendMessage = async (message: string) => {}
     if (!message.trim()) return;
@@ -601,16 +349,15 @@ export function ChatAssistant({;
       message,
       timestamp: new Date()
     },
-    
+
     setMessages((prev: Message[]) => [...prev, newMessage]),
-    
+
     // Send message to recipient via the provided handler;
     await onSendMessage(message, conversationId)
   },
 
   if (!isOpen) return null,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 
   return ("
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;"
@@ -643,70 +390,8 @@ export function ChatAssistant({;
             </div>;
           ) : (;
             messages && messages.map((msg) => (;
-<<<<<<< HEAD
-              <ChatMessage
-<<<<<<< HEAD
+<ChatMessage
 
-=======
-<<<<<<< HEAD
-
-
-                key={msg.id} 
-
-
-=======
-                key={msg.id} 
-
-
-
-  return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
-        {/* Header */}
-        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
-          <div className="flex items-center space-x-3">
-            <Avatar className="h-10 w-10 border border-zion-purple/20">
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
-              <AvatarFallback className="bg-zion-purple/20 text-white">
-                {recipient.name.charAt(0).toUpperCase()}
-              </AvatarFallback>
-            </Avatar>
-            <div>
-              <div className="font-medium text-white">{recipient.name}</div>
-              {recipient.role && (
-                <div className="text-xs text-zion-slate">{recipient.role}</div>
-              )}
-            </div>
-          </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        </div>
-        {/* Context Header (Optional) */}
-        {contextHeader && (
-          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
-            {contextHeader}
-          </div>
-        )}
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {messages.length === 0 ? (
-            <div className="text-center text-zion-slate py-8">
-              <p>Start a conversation with {recipient.name}</p>
-            </div>
-          ) : (
-            messages.map((msg) => (
-              <ChatMessage
-                key={msg.id}
-                key={msg.id} 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
               <ChatMessage;
@@ -727,7 +412,6 @@ export function ChatAssistant({;
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
-
 
   useEffect(() => {;
     if (initialMessages && initialMessages.length > 0) {;
@@ -760,7 +444,6 @@ export function ChatAssistant({;
     await onSendMessage(message, conversationId);
   };
 
-
   if (!isOpen) return null;
 
       id: Date.now().toString(),
@@ -768,15 +451,14 @@ export function ChatAssistant({;
       message,
       timestamp: new Date()
     },
-    
+
     setMessages((prev: Message[]) => [...prev, newMessage]),
-    
+
     // Send message to recipient via the provided handler
     await onSendMessage(message, conversationId)
   },
 
   if (!isOpen) return null,
-
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -811,9 +493,7 @@ export function ChatAssistant({;
             messages && messages.map((msg) => (;
               <ChatMessage
 
-
                 key={msg.id} 
-
 
                 role={msg.role}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -827,23 +507,11 @@ export function ChatAssistant({;
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={msg && msg.id} 
@@ -857,8 +525,6 @@ export function ChatAssistant({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Input */}
-<<<<<<< HEAD
-
 <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
           <ChatInput onSend={handleSendMessage} />;
         </div>;
@@ -867,42 +533,9 @@ export function ChatAssistant({;
   );
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
-=======
-'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';'
-import { Button } from '@/components / ui / button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { X } from './lucide-react';
-<<<<<<< HEAD
 export interface Message {}
   id: string,'
-=======
-export interface Message {
-  id: string,
-
-import { ChatMessage  } from './ChatMessage';
-import { ChatInput  } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",""
-import { Button } from "@/components/ui/button";""
-import { X } from "lucide-react";"
-export interface Message {
-  // TODO: Implement
-}"
-import {ChatMessage} from './ChatMessage';
-import {ChatInput} from './ChatInput';
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";""
-import {Button} from "@/components/ui/button";""
-import {X} from "lucide-react";""
-import React, { useState, useEffect, useRef, ReactNode } from 'react',;
-import { ChatMessage } from './ChatMessage',;
-import { ChatInput } from './ChatInput',;
-import { Button } from "@/components/ui/button",""
-import { X } from "lucide-react","
-  // TODO: Implement
-}
-  id: string,"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,;
@@ -922,72 +555,8 @@ export interface ChatAssistantProps {}
   onSendMessage: (message: string, conversation_id?: string) => Promise < void>;
   context_header?: ReactNode;
 }
-<<<<<<< HEAD
 export /**;
  * ChatAssistant - Function description;
-=======
-export /**
- * ChatAssistant - Function description
-    id: string,
-    name: string,;
-
-
-
-
-export interface ChatAssistantProps {
-  // TODO: Implement
-
-
-    avatarUrl?: string;
-    role?: string;
-
-  conversationId?: string;
-  initialMessages?: Message[],
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-</void>
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
-  const [messages, setMessages] = useState<Message[]>(initialMessages),;
-
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;"
-</div>"
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;"
-        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;"
-          <div className="flex items-center space-x-3">;"
-            <Avatar className="h-10 w-10 border border-zion-purple/20">;"
-
-              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;
-"
-              <AvatarFallback className="bg-zion-purple/20 text-white">;"
-
-              ;
-            <div>;
-              <div className="font-medium text-white">{recipient && recipient.name}</div>;""
-                <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;""
-          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;"
-</div>
-          </div>;"
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">;"
-            <div className="text-center text-zion-slate py-8">;"
-              <p>Start a conversation with {recipient && recipient.name}</p>;
-            </div>;
-              <ChatMessage;
-                key={msg.id} 
-
-
-                role={msg.role}
-                message={msg.message}
-              />
-
-          <div ref={messagesEndRef} />
-          <div ref={messagesEndRef} />;
-  onSendMessage: (message: string, conversation_id?: string) => Promise < void>;
-  context_header?: ReactNode;
-export /**
- * ChatAssistant - Function description;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  */
 function ChatAssistant() {}
   const [messages, set_messages] = useState < Message[]>(initial_messages);
@@ -1032,8 +601,7 @@ if ( {) {}
 if (return null) {}
   $2;
 }
-<<<<<<< HEAD
-  return (
+return (
     <div className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p-4">;
       <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max-h-[80vh]">;
         {/* Header */}
@@ -1069,49 +637,7 @@ if (return null) {}
         <div className="flex - 1 overflow - y-auto p - 4 space-y-4">;
           {messages.length === 0 ? (
 <<<<<<< HEAD
-<<<<<<< HEAD
             <div className="text - center text - zion - slate py-8">;
-=======
-  return ("
-    <div className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p - 4">;"
-      <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max - h-[80vh]">;
-        {/* Header */}"
-        <div className="bg - zion - blue - dark p - 3 flex items - center justify - between border - b border - zion - purple / 20">;"
-          <div className="flex items - center space - x-3">;"
-            <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;
-              <AvatarImage src={recipient.avatar_url} alt={recipient.name} />;"
-              <AvatarFallback className="bg - zion - purple / 20 text - white">;
-                {recipient.name.char_at (0).toUpperCase ()}
-              </AvatarFallback>;
-            </Avatar>;
-            <div>;"
-              <div className="font - medium text - white">{recipient.name}</div>;
-              {recipient.role && ("
-                <div className="text - xs text - zion - slate">{recipient.role}</div>)}
-            </div>;
-          </div>;
-          <Button;"
-            variant="ghost";"
-            size="icon";"
-            className="text - white hover:bg - zion - purple / 10 rounded - full";
-            on_click={on_close}
-          >;"
-            <X className="h - 5 w - 5" />;
-          </Button>;
-        </div>;
-        {/* Context Header (Optional) */}
-        {context_header && ("
-          <div className="border - b border - zion - purple / 20 bg - zion - blue - dark / 50 p - 3">;
-            {context_header}
-          </div>)}
-        {/* Messages */}"
-        <div className="flex - 1 overflow - y-auto p - 4 space - y-4">;
-          {messages.length === 0 ? ("
-            <div className="text - center text - zion - slate py - 8">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <div className="text - center text - zion - slate py - 8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
             <div className="text - center text - zion - slate py-8">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1125,51 +651,19 @@ if (return null) {}
               />)))}
           <div ref={messagesEndRef} />;
         </div>;
-<<<<<<< HEAD
-        {/* Input */}
+{/* Input */}
         <div className="p - 3 border - t border - zion - purple / 20 bg - zion - blue-dark / 30">;
           <ChatInput on_send={handleSendMessage} />;
         </div>;
       </div>;
     </div>);
-<<<<<<< HEAD
-
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        {/* Input */}
-=======
-        {/* Input */}"
-        <div className="p - 3 border - t border - zion - purple / 20 bg - zion - blue - dark / 30">;
-          <ChatInput on_send={handleSendMessage} />;
-        </div>;
-      </div>;
-    </div>);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   )
 
-<<<<<<< HEAD
-
-        {/* Input */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 {/* Input */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
@@ -1177,189 +671,13 @@ if (return null) {}
     </div>
   )
 
-<<<<<<< HEAD
-
-=======
-import React, { useState, useEffect, useRef, ReactNode } from 'react',;
-import { ChatMessage } from './ChatMessage',;
-import { ChatInput } from './ChatInput',;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { X } from "lucide-react",;
-;
-export interface Message {;
-  id:string,;
-  role:'user' | 'assistant',;
-  message:string,;
-  timestamp:Date,;
-  read?:boolean;
-}
-;
-export interface ChatAssistantProps {;
-  isOpen:boolean,;
-  onClose:() => void,;
-  recipient:{;
-    id:string,;
-    name:string,;
-    avatarUrl?:string,;
-    role?:string;
-  },;
-  conversationId?:string,;
-  initialMessages?:Message[],;
-  onSendMessage:(message:string, conversationId?:string) => Promise<void>,;
-  contextHeader?:ReactNode,;
-}
-;
-export function ChatAssistant({;
-  isOpen,;
-  onClose,;
-  recipient,;
-  conversationId,;
-  initialMessages = [],;
-  onSendMessage,;
-  contextHeader;
-} ChatAssistantProps) {;
-  const [messages, setMessages] = useState<Message[]>(initialMessages),;
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-  ;
-  useEffect(() => {;
-    if (initialMessages.length > 0) {;
-      setMessages(initialMessages),;
-    }
-  }, [initialMessages]),;
-;
-  useEffect(() => {;
-    scrollToBottom(),;
-  }, [messages]),;
-;
-  const scrollToBottom = () => {;
-    messagesEndRef.current?.scrollIntoView({ behavior:'smooth' }),;
-  },;
-  ;
-  const handleSendMessage = async (message:string) => {;
-    if (!message.trim()) return,;
-    ;
-  useEffect (() => {
-    // Check condition;
-if ( {) {
-  $2;
-      set_messages (initial_messages);
-  }, [initial_messages]);
-    scrollToBottom ();
-  }, [messages]);
-  const scrollToBottom = () =>: any {
-  // TODO: Implement
-    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
-  const handleSendMessage = async (message: string) => {
-    if () return, ) {
-    // Add user message to the chat;
-    const new_message: Message = {,
-  id: Date.now ().to_string (),
-      role: 'user',
-      message;
-      timestamp: new Date ();
-    set_messages ((prev: Message[]) => [...prev, new_message]);
-    // Send message to recipient via the provided handler;
-    await onSendMessage (message, conversation_id);
-  // Check condition;
-if (return null) {
-  return (
-    <div className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p - 4">;"
-      <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max - h-[80vh]">;"
-        <div className="bg - zion - blue - dark p - 3 flex items - center justify - between border - b border - zion - purple / 20">;"
-          <div className="flex items - center space - x-3">;"
-            <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;"
-
-              <AvatarImage src={recipient.avatar_url} alt={recipient.name} />;
-              <AvatarFallback className="bg - zion - purple / 20 text - white">;"
-
-              <div className="font - medium text - white">{recipient.name}</div>;")"
-                <div className="text - xs text - zion - slate">{recipient.role}</div>)}"
-          <Button;"
-            variant="ghost";""
-            size="icon";""
-            className="text - white hover:bg - zion - purple / 10 rounded - full";"
-            on_click={on_close}
-          >;
-            <X className="h - 5 w - 5" />;"
-
-          <div className="border - b border - zion - purple / 20 bg - zion - blue - dark / 50 p - 3">;"
-          </div>)}"
-        <div className="flex - 1 overflow - y-auto p - 4 space - y-4">;"
-            <div className="text - center text - zion - slate py - 8">;"
-              <p > Start a conversation with {recipient.name}</p>;
-            </div>) : (
-                message={msg.message})
-              />)))}
-
-        <div className="p - 3 border - t border - zion - purple / 20 bg - zion - blue - dark / 30">;"
-          <ChatInput on_send={handleSendMessage} />;
-
-    </div>);"
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">"
-          <ChatInput onSend={handleSendMessage} />
-
-
-  onSendMessage:(message:string, conversationId?:string) => Promise<void>,;
-
-
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />;
-
-              <div className="font-medium text-white">{recipient.name}</div>;""
-                <div className="text-xs text-zion-slate">{recipient.role}</div>;"
-          <Button ;"
-            variant="ghost" ;""
-            className="text-white hover:bg-zion-purple/10 rounded-full";"
-            onClick={onClose}
-            <X className="h-5 w-5" />;"
-
-          </div>;        )}"
-              <p>Start a conversation with {recipient.name}</p>;
-                key={msg.id} ;                role={msg.role}
-              />;
-
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;"
-          <ChatInput onSend={handleSendMessage} />;
-
-onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-  const [messages, setMessages] = useState<Message[]> (initialMessages);
-
-const messagesEndRef = useRef<HTMLDivElement | null> (null);
-}</div> </div> <Button > <X className="h-5 w-5" />  </div> {"
-}</div>) 
-}<p>Start a conversation with {
-</p>
-}</p> </div>) : (messages.map ( (msg) => (<ChatMessage key= {
-  msg.id;
-}role= {
-  msg.role;
-}message= {
-  msg.message;)
-}/>) ) ) 
-
-}<div ref= {
-  messagesEndRef 
-}/> </div> </div> </div> </div>) 
-}
-}
-};
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 }
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '"

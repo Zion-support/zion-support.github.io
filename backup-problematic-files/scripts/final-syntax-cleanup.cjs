@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-cleanup.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/final-syntax-cleanup.cjs
 #!/usr/bin/env node
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs');
@@ -110,107 +96,7 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
-<<<<<<< HEAD
-=======
-// Try to build
-console.log('\n🔨 Testing build...');
-try {
-  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
-});
-  console.log('✅ Build successful!');
-} catch (error) {
-  console.log('⚠️  Build still has issues, but syntax was fixed');
-  console.log('Error:', error.message);
-}
-// Commit the fixes
-console.log('\n📝 Committing syntax fixes...');
-try {
-  execSync('git add .', { cwd: '/workspace' }
-});
-  execSync('git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace' }
-});
-  console.log('✅ Syntax fixes committed');
-} catch (error) {
-  console.log('⚠️  Failed to commit syntax fixes:', error.message);
-}
-// Push changes
-console.log('\n🚀 Pushing syntax fixes to main branch...');
-try {
-  execSync('git push origin main', { cwd: '/workspace' }
-});
-  console.log('✅ Syntax fixes pushed to main branch');
-} catch (error) {
-  console.log('⚠️  Failed to push syntax fixes:', error.message);
-}
 
-console.log('\n🎉 Ultimate syntax fix completed!');
-console.log('🎉 Final syntax cleanup completed!');
-}
-console.log(`\n✅ Fixed ${totalFixed} files`);
-console.log('🎉 Final syntax cleanup completed!');
-class FinalSyntaxCleanup {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-
-      // Fix remaining syntax issues
-      const fixes = [
-        // Fix trailing commas and semicolons
-        { pattern: /,\s*,/g, replacement: ',' },
-        { pattern: /;\s*;/g, replacement: ';' },
-        { pattern: /,\s*;/g, replacement: ',' },
-        { pattern: /;\s*,/g, replacement: ';' },
-        
-        // Fix standalone semicolons
-        { pattern: /^\s*;\s*$/gm, replacement: '' },
-        { pattern: /\n\s*;\s*\n/g, replacement: '\n' },
-        
-        // Fix malformed function calls
-        { pattern: /console\.log\([^)]*\),/g, replacement: (match) => match.replace(/,$/, '') },
-        
-        // Fix malformed object properties
-        { pattern: /:\s*'[^']*',\s*;/g, replacement: (match) => match.replace(',', ',') },
-        { pattern: /:\s*"[^"]*",\s*;/g, replacement: (match) => match.replace(',', ',') },
-        { pattern: /:\s*\d+,\s*;/g, replacement: (match) => match.replace(',', ',') },
-        { pattern: /:\s*(true|false),\s*;/g, replacement: (match) => match.replace(',', ',') },
-        
-        // Fix malformed arrays
-        { pattern: /\[\s*;\s*"/g, replacement: '[ "' },
-        { pattern: /"\s*;\s*\]/g, replacement: '" ]' },
-        
-        // Fix malformed interfaces and types
-        { pattern: /interface\s+\w+\s*{\s*;/g, replacement: (match) => match.replace('{;', '{') },
-        { pattern: /:\s*React\.ReactNode;\s*,/g, replacement: ': React.ReactNode;' },
-        
-        // Fix malformed function declarations
-        { pattern: /const\s+\w+:\s*React\.FC<[^>]*>\s*=\s*\(\s*[^)]*\)\s*=>\s*{\s*;/g, replacement: (match) => match.replace('{;', '{') },
-        
-        // Fix malformed useEffect
-        { pattern: /useEffect\(\s*\(\s*\)\s*=>\s*{\s*;/g, replacement: (match) => match.replace('{;', '{') },
-        
-        // Fix malformed ESLint config
-        { pattern: /'react-hooks\/exhaustive-deps':\s*'warn',\s*;/g, replacement: "'react-hooks/exhaustive-deps': 'warn'," },
-        { pattern: /'react\/react-in-jsx-scope':\s*'off',\s*;/g, replacement: "'react/react-in-jsx-scope': 'off'," },
-        { pattern: /'no-undef':\s*'off',\s*,/g, replacement: "'no-undef': 'off'," },
-        { pattern: /},\s*;/g, replacement: '},' },
-        { pattern: /ignorePatterns:\s*\[\s*;/g, replacement: 'ignorePatterns: [' },
-        
-        // Clean up extra whitespace
-        { pattern: /\n\s*\n\s*\n/g, replacement: '\n\n' },
-        { pattern: /^\s*;\s*$/gm, replacement: '' },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ];
 
       // Apply all fixes;
@@ -227,7 +113,6 @@ class FinalSyntaxCleanup {
         return true;
 
       return false;
-
 
     for (const file of specificFiles) {
       const filePath = path.join(this.projectRoot, file);
@@ -255,7 +140,6 @@ class FinalSyntaxCleanup {
           if (extensions.includes(ext)) {
             // Only fix files that likely have syntax issues;
 
-
 // Run the cleanup;
 if (require.main === module) {
   const cleanup = new FinalSyntaxCleanup();
@@ -265,11 +149,7 @@ if (require.main === module) {
       process.exit(1);
 
 module.exports = FinalSyntaxCleanup;
-<<<<<<< HEAD
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('🎉 Final syntax cleanup completed!');
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

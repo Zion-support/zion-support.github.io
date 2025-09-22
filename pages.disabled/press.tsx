@@ -1,25 +1,8 @@
-<<<<<<< HEAD:pages_backup/press.tsx
-<<<<<<< HEAD
+:pages_backup/press.tsx
 <<<<<<< HEAD:pages/press.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -35,31 +18,8 @@ return (
   </div>;
   </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-
-
-import React from 'react';
-import SEO from '../components/SEO';
-export default function PressPage() {
-	return (
-		<>
-			<SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />
-			<div className="container mx-auto px-4 py-16">
-				<h1 className="text-4xl font-bold mb-4">Press</h1>
-				<p className="text-gray-300">Media kit and announcements coming soon.</p>
-			</div>
-		</>
-	)
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -73,14 +33,8 @@ export default function PressPage() {
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -163,16 +117,10 @@ const contactInfo = {
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
-<<<<<<< HEAD:pages_backup/press.tsx
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
+:pages_backup/press.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 }
 
@@ -250,19 +198,10 @@ export default function Press() {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 }
-<<<<<<< HEAD:pages_backup/press.tsx
-<<<<<<< HEAD
+:pages_backup/press.tsx
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-}
-<<<<<<< HEAD:pages/press.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
@@ -292,19 +231,9 @@ return (
   </div>;
   </>);
 }
-<<<<<<< HEAD:pages_backup/press.tsx
+:pages_backup/press.tsx
 
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/press.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
-
-import React from 'react';
-import SEO from '../components/SEO';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx
 export default function PressPage() {
 	return (
 		<>
@@ -316,39 +245,26 @@ export default function PressPage() {
 		</>
 	)
 }
-<<<<<<< HEAD:pages_backup/press.tsx
+:pages_backup/press.tsx
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
 
 import React from 'react';
 import SEO from '../components/SEO';
 
 export default function PressPage() {
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
 =======
 
-
 import React from 'react';
 import SEO from '../components/SEO';
 
 export default function PressPage() {
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx
   } catch (error) {
@@ -357,40 +273,26 @@ export default function PressPage() {
   }
 }
 ;
-<<<<<<< HEAD:pages_backup/press.tsx
-<<<<<<< HEAD
+:pages_backup/press.tsx
 <<<<<<< HEAD:pages/press.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
-
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
 =======
-
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
 =======
-
 
 ursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -614,17 +516,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
-<<<<<<< HEAD:pages_backup/press.tsx
-<<<<<<< HEAD
+:pages_backup/press.tsx
 <<<<<<< HEAD:pages/press.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx

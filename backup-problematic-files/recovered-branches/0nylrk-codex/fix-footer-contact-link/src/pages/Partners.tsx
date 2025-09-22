@@ -163,4 +163,3 @@ export default function Partners() {;
           <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>;
           <TabsTrigger value="resources">Resources</TabsTrigger>;
         </TabsList>;
-

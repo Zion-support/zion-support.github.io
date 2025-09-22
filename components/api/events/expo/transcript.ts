@@ -6,8 +6,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.query as { id?: string };
   const item = null;
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 origin/cursor/automate-test-improve-and-merge-code-2533
 ) {
   const { id } = req.query as { id?: string }
@@ -24,8 +24,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const { id } = req.query as { id?: string };
 pr-12243
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
 pr-12243
 

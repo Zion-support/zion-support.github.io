@@ -1,36 +1,17 @@
 import React from "react";
 
 <<<<<<< HEAD
-
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React from "react";
-
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 import {Switch} from "@/components/ui/switch";
 import {toast} from "@/hooks/use-toast";
 import {InfoIcon} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from "react",
 import {}
 =======
@@ -42,8 +23,7 @@ import {
   TableBody,
   TableCell,
   TableHead,
-<<<<<<< HEAD
-  TableHeader,"
+TableHeader,"
   TableRow} from "@/components/ui/table","
 import { Badge } from "@/components/ui/badge","
 import { Switch } from "@/components/ui/switch","
@@ -54,18 +34,9 @@ import {}
   TooltipContent,
   TooltipProvider,"
   TooltipTrigger} from "@/components/ui/tooltip",
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RoleManagement() {
   // Mock team members data
 =======
@@ -84,8 +55,6 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
-
-
 
 export function RoleManagement() {
   // Mock team members data
@@ -116,14 +85,7 @@ export /**;
 function RoleManagement() {}
   // Mock team members data;
   const team_members = [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export function RoleManagement() {
-  // Mock team members data
-  const teamMembers = [
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    {
+{
       id: 1
       name: "Alex Johnson"
       email: "alex@example.com"
@@ -172,12 +134,7 @@ export function RoleManagement() {
       role: "Viewer"
       permissions: {
 <<<<<<< HEAD
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         viewCandidates: true
         editCandidates: false
         createJobs: false
@@ -187,15 +144,7 @@ export function RoleManagement() {
   const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
-<<<<<<< HEAD
-
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-=======
-      title: "Permission updated"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -204,8 +153,6 @@ export function RoleManagement() {
   },
   description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
 =======
-
-
 
     {}
       id: 1"
@@ -220,8 +167,6 @@ export function RoleManagement() {
         view_billing: true,
         manage_billing: true}},
 
-
-
     {}
       id: 2"
       name: "Jamie Smith""
@@ -235,8 +180,6 @@ export function RoleManagement() {
         view_billing: false,
         manage_billing: false}},
 
-
-
     {}
       id: 3"
       name: "Sam Williams""
@@ -249,8 +192,6 @@ export function RoleManagement() {
         manage_team: false,
         view_billing: true,
         manage_billing: false}},
-
-
 
     {}
       id: 4"
@@ -286,9 +227,7 @@ export function RoleManagement() {
     "Manager": "Can view candidates and create jobs","
     "Viewer": "Read-only access to candidates"},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const roleDescriptions: Record<string string> = {
+const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
@@ -413,14 +352,6 @@ export function RoleManagement() {
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import React from "react",
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Switch
 =======
                   <Switch;
@@ -487,17 +418,11 @@ import { InfoIcon } from "lucide-react",;
 import {;
   Tooltip,;
   TooltipContent,;
+TooltipProvider,;
 <<<<<<< HEAD
-  TooltipProvider,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  TooltipProvider,;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   TooltipTrigger} from "@/components/ui/tooltip",;
 
-<<<<<<< HEAD
-  return (
+return (
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
@@ -616,28 +541,13 @@ import {;
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
     {;
       id: 1,;
       name: "Alex Johnson",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      email: "alex@example && example.com",;
-=======
-      email: "alex@example.com",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      email: "alex@example && example.com",;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+email: "alex@example && example.com",;
       role: "Admin",;
       permissions: {;
         viewCandidates: true,;
@@ -685,12 +595,6 @@ export function RoleManagement() { return null; }
 
 "
       email: "taylor@example && example.com",;
-<<<<<<< HEAD
-=======
-
-      title: "Permission updated",
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="space-y-6">;
@@ -705,7 +609,6 @@ export function RoleManagement() { return null; }
               <p className="text-sm text-muted-foreground">{description}</p>;
             </div>;
           ))}
-
 
                   <Switch 
                     checked={member.permissions.viewCandidates} 
@@ -723,7 +626,6 @@ export function RoleManagement() { return null; }
 
                   <Switch 
                     checked={member.permissions.editCandidates} 
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     onCheckedChange={(checked) =>
@@ -747,8 +649,7 @@ export function RoleManagement() { return null; }
                 </TableCell>
                 <TableCell className="text-center">
 
-<<<<<<< HEAD
-                    onCheckedChange={(checked) =>
+onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewBilling", checked)
                     }
                   />
@@ -759,43 +660,13 @@ export function RoleManagement() { return null; }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
-import React from "react",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Switch } from "@/components/ui/switch",;
-import { toast } from "@/hooks/use-toast",;
-import { InfoIcon } from "lucide-react",;
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger} from "@/components/ui/tooltip",;
-<<<<<<< HEAD
-;
-=======
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
     {;
-<<<<<<< HEAD
-      email: "taylor@example.com",;
+email: "taylor@example.com",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      email: "taylor@example && example.com",;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -937,8 +808,7 @@ export function RoleManagement() {;
 
   const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {;
     // In a real app, this would make an API call to update permissions;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Permission updated",;"`
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
 
@@ -953,13 +823,11 @@ export function RoleManagement() {;
 
   return (
 
-
 "
     <div className="space-y-6">;
       <div>;"
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>;"
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
-
 
           {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
 "
@@ -972,153 +840,6 @@ export function RoleManagement() {;
           ))}
 "
 =======
-    toast({;
-      title: "Permission updated",;
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
-  };
-
-  const roleDescriptions: Record<string, string> = {;
-
-    "Admin": "Full access to all features and settings";
-    "Recruiter": "Can manage candidates and job postings";
-    "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read-only access to candidates"}
-
-  return (
-id:1,;
-      name:"Alex Johnson",;
-      email:"alex@example.com",;
-      role:"Admin",;
-      permissions:{;
-        viewCandidates:true,;
-        editCandidates:true,;
-        createJobs:true,;
-        manageTeam:true,;
-        viewBilling:true,;
-        manageBilling:true}},;
-    {;
-      id:2,;
-      name:"Jamie Smith",;
-      email:"jamie@example.com",;
-      role:"Recruiter",;
-      permissions:{;
-        viewCandidates:true,;
-        editCandidates:true,;
-        createJobs:true,;
-        manageTeam:false,;
-        viewBilling:false,;
-        manageBilling:false}},;
-    {;
-      id:3,;
-      name:"Sam Williams",;
-      email:"sam@example.com",;
-      role:"Manager",;
-      permissions:{;
-        viewCandidates:true,;
-        editCandidates:false,;
-        createJobs:true,;
-        manageTeam:false,;
-        viewBilling:true,;
-        manageBilling:false}},;
-    {;
-      id:4,;
-      name:"Taylor Brown",;
-      email:"taylor@example.com",;
-      role:"Viewer",;
-      permissions:{;
-        viewCandidates:true,;
-        editCandidates:false,;
-        createJobs:false,;
-        manageTeam:false,;
-        viewBilling:false,;
-        manageBilling:false}}],;
-;
-  const handlePermissionChange = (memberId:number, permission:string, value:boolean) => {;
-    // In a real app, this would make an API call to update permissions;
-    toast({;
-      title:"Permission updated",;
-      description:`Permission ${permission} has been ${value ? "granted" :"revoked"}.`}),;
-  },;
-;
-  const roleDescriptions:Record<string string> = {;
-    "Admin":"Full access to all features and settings",;
-    "Recruiter":"Can manage candidates and job postings",;
-    "Manager":"Can view candidates and create jobs",;
-    "Viewer":"Read-only access to candidates"},;
-;
-  return (;
-  },;
-  const roleDescriptions: Record<string string> = {;
-    "Admin": "Full access to all features and settings",;
-    "Recruiter": "Can manage candidates and job postings",;
-    "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read-only access to candidates"};
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>;
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
-          {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
-{Object.entries(roleDescriptions).map(([role, description]) => (;
-            <div key={role} className="bg-card rounded-lg p-4 border border-border">;
-              <div className="flex items-center gap-2 mb-2">;
-                <Badge variant={role === "Admin" ? "default" :"outline"}>{role}</Badge>;
-          {Object.entries(roleDescriptions).map(([role, description]) => (;
-          {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
-            <div key={role} className="bg-card rounded-lg p-4 border border-border">;
-              <div className="flex items-center gap-2 mb-2">;
-                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>;
-              </div>;
-              <p className="text-sm text-muted-foreground">{description}</p>;
-            </div>;
-          ))}
-
-                  <Switch 
-                    checked={member.permissions.viewCandidates} 
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "viewCandidates", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-                  <Switch 
-                    checked={member.permissions.editCandidates} 
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "editCandidates", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-                  <Switch 
-                    checked={member.permissions.createJobs} 
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "createJobs", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-                  <Switch 
-                    checked={member.permissions.manageTeam} 
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "manageTeam", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-        </div>;
-      </div>;
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
         </div>;
       </div>;
@@ -1128,22 +849,13 @@ id:1,;
           <TableHeader>;
             <TableRow>;
               <TableHead>Team Member</TableHead>;
-<<<<<<< HEAD
-              <TableHead>Role</TableHead>;"
+<TableHead>Role</TableHead>;"
               <TableHead className="text-center">;"
-=======
-              <TableHead>Role</TableHead>;
-              <TableHead className="text-center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items-center justify-center gap-1">;
                   View Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1152,22 +864,13 @@ id:1,;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text-center">;"
-=======
-              </TableHead>;
-              <TableHead className="text-center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items-center justify-center gap-1">;
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1176,22 +879,13 @@ id:1,;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text-center">;"
-=======
-              </TableHead>;
-              <TableHead className="text-center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items-center justify-center gap-1">;
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1200,22 +894,13 @@ id:1,;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text-center">;"
-=======
-              </TableHead>;
-              <TableHead className="text-center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items-center justify-center gap-1">;
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1224,22 +909,13 @@ id:1,;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text-center">;"
-=======
-              </TableHead>;
-              <TableHead className="text-center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items-center justify-center gap-1">;
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1252,7 +928,6 @@ id:1,;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-<<<<<<< HEAD
 "
                     <option value="Admin">Admin</option>;"
                     <option value="Recruiter">Recruiter</option>;"
@@ -1282,12 +957,7 @@ id:1,;
                 </TableCell>;"
                 <TableCell className="text-center">;
 
-
-
                     }
-=======
-  TooltipTrigger} from "@/components/ui/tooltip",;                    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   TooltipTrigger} from "@/components/ui/tooltip",;                    }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1402,17 +1072,10 @@ id:1,;
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  TooltipTrigger} from "@/components/ui/tooltip",;                    }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   />;
                 </TableCell>;
               </TableRow>;
-
-
-
 
                   <Switch;
                     checked={member.permissions.viewBilling} 
@@ -1421,12 +1084,6 @@ id:1,;
             ))}
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </TableBody>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </Table>;
@@ -1435,23 +1092,14 @@ id:1,;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
           </TableBody>;
         </Table>;
       </div>;
     </div>;
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -1483,10 +1131,8 @@ export function RoleManagement() {
   role: "Recruiter""
         manage_team: false,
         view_billing: false,
-<<<<<<< HEAD
-        manage_billing: false}}],
-<<<<<<< HEAD
-  const handlePermissionChange = (member_id: number, permission: string, value: boolean) =>: any {}
+manage_billing: false}}],
+const handlePermissionChange = (member_id: number, permission: string, value: boolean) =>: any {}
     // In a real app, this would make an API call to update permissions;
     toast ({"
       title: "Permission updated","`
@@ -1513,140 +1159,21 @@ export function RoleManagement() {
             </div>))}
         </div>;
       </div>;"
-=======
-  const handlePermissionChange = (member_id: number, permission: string, value: boolean) =>: any {
-    // In a real app, this would make an API call to update permissions;
-    toast ({
-      title: "Permission updated",
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
-  }
-;
-  const role_descriptions: Record < string, string> = {
-    "Admin": "Full access to all features and settings";
-    "Recruiter": "Can manage candidates and job postings";
-    "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read - only access to candidates"}
-;
-  return (
-    <div className="space - y-6">;
-      <div>;
-        <h3 className="text - xl font - medium mb - 4">Role Permissions</h3>;
-        <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4 mb - 6">;
-          {Object.entries (role_descriptions).map (([role, description]) => (
-            <div key={role} className="bg - card rounded - lg p - 4 border border - border">;
-              <div className="flex items - center gap - 2 mb - 2">;
-                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>;
-              </div>;
-              <p className="text - sm text - muted - foreground">{description}</p>;
-            </div>))}
-        </div>;
-      </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="rounded - md border">;
-=======
-        manage_billing: false}},
-
-      id: 3;,"
-  name: "Sam Williams"""
-      email: "sam@example.com"","
-  role: "Manager""
-        edit_candidates: false,
-
-      id: 4;,"
-  name: "Taylor Brown"""
-      email: "taylor@example.com"","
-  role: "Viewer""
-      permissions: {,"
-  title: "Permission updated",""
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});"
-  };"`;
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})"
-  const roleDescriptions: Record<string, string> = {
-</string>
-  const roleDescriptions: Record<string string> = {
-                  <Switch;
-                    checked={member.permissions.viewCandidates}
-                    onCheckedChange={(checked) =>
-
-                "
-                <TableCell className="text-center">"
-
-                    checked={member.permissions.editCandidates} 
-
-
-                    checked={member.permissions.createJobs} 
-
-
-                    checked={member.permissions.manageTeam} 
-
-
-                    checked={member.permissions.viewBilling}
-
-
-  const roleDescriptions: Record<string, string> = {;
-</string>"
-    <div className="space-y-6">;"
-</div>
-      <div>;
-</div>"
-        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>;""
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;"
-            <div key={role} className="bg-card rounded-lg p-4 border border-border">;"
-              <div className="flex items-center gap-2 mb-2">;"
-                <Badge variant={role === "Admin" ? "default" : "outline"}>{role};"
-              </div>;"
-              <p className="text-sm text-muted-foreground">{description}</p>;"
-            </div>;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className="rounded-md border">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Table>;
 
           <TableHeader>;
 
             <TableRow>;
-<<<<<<< HEAD
-              <TableHead > Team Member</TableHead>;
-<<<<<<< HEAD
-              <TableHead > Role</TableHead>;"
+<TableHead > Team Member</TableHead>;
+<TableHead > Role</TableHead>;"
               <TableHead className="text - center">;"
-=======
-              <TableHead > Role</TableHead>;
-              <TableHead className="text - center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items - center justify - center gap - 1">;
                   View Candidates;
-=======
-
-              <TableHead>Team Member;
-              <TableHead>Role;"
-              <TableHead className="text-center">;"
-                <div className="flex items-center justify-center gap-1">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <TooltipProvider>;
 
                     <Tooltip>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h - 4 w - 4 text - muted - foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1655,22 +1182,13 @@ export function RoleManagement() {
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text - center">;"
-=======
-              </TableHead>;
-              <TableHead className="text - center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items - center justify - center gap - 1">;
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h - 4 w - 4 text - muted - foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1679,22 +1197,13 @@ export function RoleManagement() {
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text - center">;"
-=======
-              </TableHead>;
-              <TableHead className="text - center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items - center justify - center gap - 1">;
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h - 4 w - 4 text - muted - foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1703,22 +1212,13 @@ export function RoleManagement() {
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text - center">;"
-=======
-              </TableHead>;
-              <TableHead className="text - center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items - center justify - center gap - 1">;
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h - 4 w - 4 text - muted - foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1727,22 +1227,13 @@ export function RoleManagement() {
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD
-              </TableHead>;"
+</TableHead>;"
               <TableHead className="text - center">;"
-=======
-              </TableHead>;
-              <TableHead className="text - center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="flex items - center justify - center gap - 1">;
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
-<<<<<<< HEAD
-                      <TooltipTrigger>;"
-=======
-                      <TooltipTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TooltipTrigger>;"
                         <InfoIcon className="h - 4 w - 4 text - muted - foreground" />;
                       </TooltipTrigger>;
                       <TooltipContent>;
@@ -1757,20 +1248,14 @@ export function RoleManagement() {
           <TableBody>;
             {team_members.map ((member) => (
               <TableRow key={member.id}>;
-<<<<<<< HEAD
-                <TableCell>;"
+<TableCell>;"
                   <div className="font - medium">{member.name}</div>;"
-=======
-                <TableCell>;
-                  <div className="font - medium">{member.name}</div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <div className="text - sm text - muted - foreground">;
                     {member.email}
                   </div>;
                 </TableCell>;
                 <TableCell>;
-<<<<<<< HEAD
-                  <select;"
+<select;"
                     className="w - full h - 9 rounded - md border border - input bg - background px - 3 py - 1 text - sm shadow - sm transition - colors focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring";
                     default_value={member.role}
                   >;"
@@ -1816,85 +1301,28 @@ export function RoleManagement() {
                   <Switch;
                     checked={member.permissions.view_billing}
                     onCheckedChange={(checked) =>;"
-=======
-                  <select;
-                    className="w - full h - 9 rounded - md border border - input bg - background px - 3 py - 1 text - sm shadow - sm transition - colors focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring";
-                    default_value={member.role}
-                  >;
-                    <option value="Admin">Admin</option>;
-                    <option value="Recruiter">Recruiter</option>;
-                    <option value="Manager">Manager</option>;
-                    <option value="Viewer">Viewer</option>;
-=======
-
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;"
-
-                      <TooltipContent>;
-
-              ;"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <TableBody>;
-
-              <TableRow key={member && member.id}>;
-
-                <TableCell>;
-                  <div className="font-medium">{member && member.name}</div>;""
-                  <div className="text-sm text-muted-foreground">;"
-
-                  <select;"
-                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring""
-                    defaultValue={member && member.role}>;
-</select>"
-                    <option value="Admin">Admin</option>;""
-                    <option value="Recruiter">Recruiter</option>;""
-                    <option value="Manager">Manager</option>;""
-                    <option value="Viewer">Viewer</option>;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </select>;
                 <TableCell className="text-center">;"
 
                     checked={member && member.permissions.viewCandidates} 
                     onCheckedChange={(checked) => ;
 
-
                     checked={member && member.permissions.editCandidates} 
-
 
                     checked={member && member.permissions.createJobs} 
 
-
                     checked={member && member.permissions.manageTeam} 
-
 
                     checked={member && member.permissions.viewBilling} 
 
-
             ))}
-
 
                     onCheckedChange={(checked) => ;
 </Switch>
                 </TableCell>;
               </TableRow>;
                   <Switch;
-<<<<<<< HEAD
-                    checked={member.permissions.view_candidates}
+checked={member.permissions.view_candidates}
                     onCheckedChange={(checked) =>;
                       handlePermissionChange (member.id, "view_candidates", checked);
                     }
@@ -1934,12 +1362,6 @@ export function RoleManagement() {
                   />;
                 </TableCell>;
               </TableRow>))}
-=======
-                    checked={member.permissions.viewBilling} 
-
-            ))}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </TableBody>;
 </Switch>
         </Table>;
@@ -1949,11 +1371,7 @@ export function RoleManagement() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;}
  import {
   Table;
@@ -1986,33 +1404,12 @@ TooltipProvider;
             </div>))}
       <div className="rounded - md border">;"
 
-
-
               <TableHead > Team Member;
               <TableHead > Role;"
               <TableHead className="text - center">;"
                 <div className="flex items - center justify - center gap - 1">;"
 
-
                         <InfoIcon className="h - 4 w - 4 text - muted - foreground" />;"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
               <TableRow key={member.id}>;
 
@@ -2027,15 +1424,11 @@ TooltipProvider;
                     checked={member.permissions.view_candidates}
                     onCheckedChange={(checked) =>;
 
-
                     checked={member.permissions.edit_candidates}
-
 
                     checked={member.permissions.create_jobs}
 
-
                     checked={member.permissions.manage_team}
-
 
                     checked={member.permissions.view_billing}
 
@@ -2057,20 +1450,12 @@ pr-12325
   )
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

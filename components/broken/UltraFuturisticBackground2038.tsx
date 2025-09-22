@@ -19,7 +19,7 @@ interface UltraFuturisticBackground2038Props {
 }
 
 const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
+      '(prefers-reduced-motion: reduce)';
     ).matches;
     const intensityMultiplier =
       intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
@@ -45,7 +45,7 @@ ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
       switch (theme) {
         case 'consciousness':
           return {
-primary: [
+primary: [;
               '#ff0080',
               '#00ffff',
               '#ffff00',
@@ -53,7 +53,7 @@ primary: [
               '#8000ff',
               '#00ff80',
             ],
-            secondary: [
+            secondary: [;
               '#ff8000'
               '#0080ff'
               '#ff4080'
@@ -61,7 +61,7 @@ primary: [
               '#ffff40'
               '#ff40ff'
             ]
-            accent: [
+            accent: [;
               '#ff6b6b'
               '#4ecdc4'
               '#45b7d1'
@@ -69,7 +69,7 @@ primary: [
               '#feca57'
               '#ff9ff3'
             ]
-            quantum: [
+            quantum: [;
               '#8b5cf6'
               '#06b6d4'
               '#ec4899'
@@ -79,7 +79,7 @@ primary: [
             ]
         case 'neon':
           return {
-            primary: [
+            primary: [;
               '#ff0080'
               '#00ffff'
               '#ffff00'
@@ -87,7 +87,7 @@ primary: [
               '#8000ff'
               '#00ff80'
             ]
-            secondary: [
+            secondary: [;
               '#ff8000'
               '#0080ff'
               '#ff4080'
@@ -95,7 +95,7 @@ primary: [
               '#ffff40'
               '#ff40ff'
             ]
-            accent: [
+            accent: [;
               '#ff6b6b'
               '#4ecdc4'
               '#45b7d1'
@@ -103,7 +103,7 @@ primary: [
               '#feca57'
               '#ff9ff3'
             ]
-            quantum: [
+            quantum: [;
               '#8b5cf6'
               '#06b6d4'
               '#ec4899'
@@ -117,7 +117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const colors = getThemeColors();
         case 'cyberpunk':
           return {
-            primary: [
+            primary: [;
               '#ff0055'
               '#00ffff'
               '#ffff00'
@@ -125,7 +125,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#8000ff'
               '#00ff80'
             ]
-            secondary: [
+            secondary: [;
               '#ff8000'
               '#0080ff'
               '#ff4080'
@@ -133,7 +133,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#ffff40'
               '#ff40ff'
             ]
-            accent: [
+            accent: [;
               '#ffff40'
               '#ff40ff'
               '#ff6b6b'
@@ -141,7 +141,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#45b7d1'
               '#96ceb4'
             ]
-            quantum: [
+            quantum: [;
               '#8b5cf6'
               '#06b6d4'
               '#ec4899'
@@ -152,7 +152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
         case 'space':
           return {
-            primary: [
+            primary: [;
               '#1e3a8a'
               '#7c3aed'
               '#059669'
@@ -160,7 +160,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#ea580c'
               '#0891b2'
             ]
-            secondary: [
+            secondary: [;
               '#8b5cf6'
               '#ec4899'
               '#f59e0b'
@@ -168,7 +168,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#06b6d4'
               '#a855f7'
             ]
-            accent: [
+            accent: [;
               '#f97316'
               '#ef4444'
               '#84cc16'
@@ -176,7 +176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#a855f7'
               '#f97316'
             ]
-            quantum: [
+            quantum: [;
               '#8b5cf6'
               '#06b6d4'
               '#ec4899'
@@ -185,9 +185,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#ef4444'
             ]
           }
-        default: // quantum
+        default: // quantum;
           return {
-            primary: [
+            primary: [;
               '#8b5cf6'
               '#06b6d4'
               '#ec4899'
@@ -195,7 +195,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#f59e0b'
               '#ef4444'
             ]
-            secondary: [
+            secondary: [;
               '#f59e0b'
               '#ef4444'
               '#8b5cf6'
@@ -203,7 +203,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#ec4899'
               '#10b981'
             ]
-            accent: [
+            accent: [;
               '#ec4899'
               '#10b981'
               '#f59e0b'
@@ -211,7 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               '#8b5cf6'
               '#06b6d4'
             ]
-            quantum: [
+            quantum: [;
               '#8b5cf6',
               '#06b6d4',
               '#ec4899',
@@ -249,8 +249,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       entanglement: number[],
       consciousness: number,
       for (let i = 0, i < particleCount, i++) {'
-        const type = Math.random() > 0.7 ? 'consciousness' :'
-                    Math.random() > 0.5 ? 'quantum-field' :'
+        const type = Math.random() > 0.7 ? 'consciousness' :';
+                    Math.random() > 0.5 ? 'quantum-field' :';
                     Math.random() > 0.3 ? 'hologram' : 'particle';
       quantumState: number;
     }> = [];
@@ -263,9 +263,9 @@ for (let i = 0; i < particleCount; i++) {
         const type =
           Math.random() > 0.7
             ? 'consciousness'
-            : Math.random() > 0.5
+            : Math.random() > 0.5;
               ? 'quantum-field'
-              : Math.random() > 0.3
+              : Math.random() > 0.3;
                 ? 'hologram'
                 : 'particle';
         particles.push({
@@ -737,7 +737,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ref={canvasRef}'
         className='w-full h-full'
         style={{}
-          background:'
+          background:';
             theme === 'consciousness''
               ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)''
               : theme === 'quantum''
@@ -815,9 +815,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   opacity: [0.2, 0.6, 0.2],
                 }}
                 transition={{
-                  duration: 3 + i * 0.2
-                  repeat: Infinity
-                  ease: "easeInOut"
+                  duration: 3 + i * 0.2;
+                  repeat: Infinity;
+                  ease: "easeInOut";
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,
 `
@@ -885,8 +885,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   repeat: Infinity,"
                   ease: "easeInOut";
                   duration: 4 + i * 0.3;
-                  repeat: Infinity"
-                  ease: "easeInOut"`
+                  repeat: Infinity";
+                  ease: "easeInOut"`;
                   top: `${(i * 7) % 100}%`,
 
                 }}
@@ -942,7 +942,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   top: `${(i * 8) % 100}%`,
 "
                   ease: "easeInOut"
-
+;
 `
                   left: `${(i * 12) % 100}%`,
 
@@ -952,7 +952,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }%`,
 "
                   ease: \"easeInOut\"
-
+;
                   left: `${(i * 12) % 10}
 }%`
 

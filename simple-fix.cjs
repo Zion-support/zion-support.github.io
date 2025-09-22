@@ -7,18 +7,8 @@ function fixFile(filePath) {
 
     const originalContent = content;
 
-<<<<<<< HEAD
-    // Remove merge conflict markers
-<<<<<<< HEAD
-=======
-    content = content.replace(/
-    content = content.replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-    
-    // Fix common syntax issues
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+// Remove merge conflict markers
+// Fix common syntax issues
     content = content.replace(/\{_/g, '{');
     content = content.replace(/_}/g, '}');
     content = content.replace(/_/g, ' ');
@@ -41,4 +31,3 @@ for (const file of adminFiles) {
   if (fs.existsSync(file)) {
     if (fixFile(file)) {
       fixedCount++;
-

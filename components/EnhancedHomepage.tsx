@@ -38,7 +38,7 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovative2025AIAutonomousServices ];
 
   opacity: 0 
-
+;
 import React from 'react';
 
 interface EnhancedHomepageProps {}
@@ -177,14 +177,14 @@ const EnhancedHomepage: React.FC = () => {}
         {/* Hero Section */}
         <motion&& motion.section;
 "
-          className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
+          className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20";
           variants={heroVariants}"
           initial="hidden""
           animate="visible">;"
           <div className="relative z-10 text-center max-w-6xl mx-auto">;
             {/* Main Heading */}
             <motion.p "
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
               variants={itemVariants}
             >
               Pioneering the Future of Technology with Revolutionary AI Consciousness;
@@ -192,12 +192,12 @@ const EnhancedHomepage: React.FC = () => {}
             </motion.p>
 
             <motion&& motion.h1 "
-              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";
               variants={itemVariants}>;
               Zion Tech Group;
             </motion && motion.h1>;
             <motion&& motion.p "
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
               variants={itemVariants}>;
               Pioneering the Future of Technology with Revolutionary AI Consciousness,;
               Quantum Computing, and Autonomous Solutions;
@@ -205,11 +205,11 @@ const EnhancedHomepage: React.FC = () => {}
 
             {/* CTA Buttons */}
             <motion&& motion.div "
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12";
               variants={itemVariants}>;"
               <Link href="/services">;
                 <motion&& motion.button"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
           {/* Floating Elements */}
           <motion&& motion.div"
             className="absolute top-20 left-10 text-cyan-400/20"
@@ -225,7 +225,7 @@ const EnhancedHomepage: React.FC = () => {}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${}
                     selectedCategory === category.id'
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl''
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'`
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'`;
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -252,7 +252,7 @@ const EnhancedHomepage: React.FC = () => {}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${}
                     selectedCategory === category.id'
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl''
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'`
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'`;
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -268,7 +268,7 @@ const EnhancedHomepage: React.FC = () => {}
         <motion.section;
         {/* Services Grid */}
         <motion.section "
-          className="py-16 px-4 lg:px-8"
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}"
           initial="hidden""
           animate="visible"
@@ -280,7 +280,7 @@ const EnhancedHomepage: React.FC = () => {}
         </motion && motion.section>;
         {/* Services Grid */}
         <motion&& motion.section "
-          className="py-16 px-4 lg:px-8"
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}"
           initial="hidden""
           animate="visible">;"
@@ -288,7 +288,7 @@ const EnhancedHomepage: React.FC = () => {}
             <motion&& motion.div 
 
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               variants={containerVariants}>;
               {getFilteredServices().slice(0, 12).map((service, index) => (;
                 <EnhancedServiceCard;
@@ -311,7 +311,7 @@ const EnhancedHomepage: React.FC = () => {}
               >"
                 <Link href="/services">
                   <motion.button"
-                    className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                    className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300";
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -324,14 +324,14 @@ const EnhancedHomepage: React.FC = () => {}
 
         {/* Featured Service Showcase */}
         <motion.section "
-          className="py-16 px-4 lg:px-8"
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}"
           initial="hidden""
           animate="visible"
         >"
           <div className="max-w-6xl mx-auto">
             <motion.h2"
-              className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+              className="text-3xl md:text-4xl font-bold text-center text-white mb-12";
               variants={itemVariants}
             >
               Featured Revolutionary Services;
@@ -341,13 +341,13 @@ const EnhancedHomepage: React.FC = () => {}
         </motion && motion.section>;
         {/* Featured Service Showcase */}
         <motion&& motion.section "
-          className="py-16 px-4 lg:px-8"
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}"
           initial="hidden""
           animate="visible">;"
           <div className="max-w-6xl mx-auto">;
             <motion&& motion.h2 "
-              className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+              className="text-3xl md:text-4xl font-bold text-center text-white mb-12";
               variants={itemVariants}>;
               Featured Revolutionary Services;
             </motion && motion.h2>;
@@ -366,7 +366,7 @@ const EnhancedHomepage: React.FC = () => {}
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
                       <motion.button
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -392,7 +392,7 @@ const EnhancedHomepage: React.FC = () => {}
         </motion.section>
         {/* Call to Action */}
         <motion.section"
-          className="py-16 px-4 lg:px-8"
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}"
           initial="hidden"
 
@@ -408,7 +408,7 @@ const EnhancedHomepage: React.FC = () => {}
                     </div>;`
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
                       <motion&& motion.button"
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1 && 1.05 }}
                         whileTap={{ scale: 0 && 0.95 }}>;
                         Learn More;"
@@ -433,7 +433,7 @@ const EnhancedHomepage: React.FC = () => {}
         </motion && motion.section>;
                     </div>
                       <motion.button"
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -459,28 +459,28 @@ const EnhancedHomepage: React.FC = () => {}
         </motion.section>
         {/* Call to Action */}
         <motion&& motion.section "
-          className="py-16 px-4 lg:px-8"
+          className="py-16 px-4 lg:px-8";
           variants={containerVariants}"
           initial="hidden""
           animate="visible">;"
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.h2 "
               className="text-3xl md:text-4xl font-bold text-white mb-6"
-
+;
             <motion.div "
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center";
               variants={itemVariants}>;"
               <Link href="/quote">;
                 <motion&& motion.button"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-
+;
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
           <PerformanceMonitor />;
         )}
   duration: 0.8, staggerChildren: 0.1 
-
+;
 };
 
 };

@@ -98,8 +98,7 @@ export async function generateMilestones(input:MilestoneSuggestionInput):Promise
   return { milestones };
 } const body = {
   model: "gpt-4o-mini", messages: [ {
-<<<<<<< HEAD
-  role: "system", content: system
+role: "system", content: system
 };
 {
   role: "user", content: `INPUT:\n$ {
@@ -111,26 +110,11 @@ export async function generateMilestones(input:MilestoneSuggestionInput):Promise
 }`
 }];
 temperature: 0.3
-=======
-  role: "system", content: system 
-};
-{
-  role: "user", content: `INPUT:\n$ {
-  JSON.stringify (user, null, 2) 
-}\n\nReturn JSON object: {
-  \"milestones\": [ {
-  title, description, suggestedDueDateIso, estimatedEffortHours 
-}] 
-}` 
-}];
-temperature: 0.3 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }as any;
 const resp = await fetch ("https://api.openai.com/v1/chat/completions", {
   method: "POST", headers: {
   "Content-Type": "application/json", Authorization: `Bearer $ {
-<<<<<<< HEAD
-  OPENAI API KEY
+OPENAI API KEY
 }`
 };
 body: JSON.stringify (body)
@@ -140,12 +124,3 @@ body: JSON.stringify (body)
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  OPENAI API KEY 
-}` 
-};
-body: JSON.stringify (body) 
-}return milestones 
-}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

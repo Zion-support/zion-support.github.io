@@ -1,10 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {}
@@ -18,7 +13,6 @@ interface SEOHeadProps {}
   structuredData?: object;
 }
 
-<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced IT & AI Solutions',
   description = 'Leading provider of cutting-edge IT services, AI solutions, and digital transformation services. Expert cybersecurity, cloud migration, and custom software development.',
@@ -27,11 +21,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = '/og-image.jpg',
 <<<<<<< HEAD
   canonical = 'https://ziontechgroup.com',
-=======
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
@@ -63,27 +52,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
-      <link rel="canonical" href={canonical} />
-
-=======
-      <link rel="canonical" href={canonicalUrl} />
-      
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+<link rel="canonical" href={canonical} />
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-<<<<<<< HEAD
-      <meta property="og:url" content={canonical} />
+<meta property="og:url" content={canonical} />
       <meta property="og:type" content="website" />
-
-=======
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -93,28 +68,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-=======
-const SEOHead: React.FC<SEOHeadProps> = ({'
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: Record<string, any>;
-}
-const SEOHead: React.FC<SEOHeadProps> = ({,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title = 'Zion Tech Group - Advanced Technology Solutions','
   description = 'Leading AI & Technology Solutions for a Smarter Future. We provide comprehensive AI services, cybersecurity, cloud infrastructure, and custom software development.','
   keywords = 'AI, technology, cybersecurity, cloud, software development, machine learning, automation','
   ogImage = '/og-image.jpg','
-<<<<<<< HEAD
-  canonical = 'https://ziontechgroup.com'
+canonical = 'https://ziontechgroup.com'
 }) => {}
   return (
     <Helmet>
@@ -122,40 +80,26 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta name="description" content={description} />"
       <meta name="keywords" content={keywords} />"
       <link rel="canonical" href={canonical} />
-      
-      {/* Open Graph */}"
-=======
-  canonical = 'https://ziontechgroup.com''
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
-  return (
-<Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <link rel="canonical" href={canonical} />"
-      {/* Open Graph */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      {/* Open Graph */}"
       <meta property="og:title" content={title} />"
       <meta property="og:description" content={description} />"
       <meta property="og:image" content={ogImage} />"
       <meta property="og:url" content={canonical} />"
-<<<<<<< HEAD
-      <meta property="og:type" content="website" />
-      
+<meta property="og:type" content="website" />
+
       {/* Twitter */}"
       <meta name="twitter:card" content="summary_large_image" />"
       <meta name="twitter:title" content={title} />"
       <meta name="twitter:description" content={description} />"
       <meta name="twitter:image" content={ogImage} />
-      
+
       {/* Additional SEO */}"
       <meta name="robots" content="index, follow" />"
       <meta name="author" content="Zion Tech Group" />"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
@@ -164,34 +108,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   );
 };
 
-<<<<<<< HEAD
 export default SEOHead;
-=======
-<<<<<<< HEAD
-export default SEOHead;
-=======
- import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {;
-   title?: string;
-   description?: string;
-   keywords?: string;
-   image?: string;
-   url?: string;""
-   type?: 'website' | 'article' | 'service';""
-   structuredData?: object} export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https: '''
-}
- import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {
-   title?: string
-   description?: string
-   keywords?: string
-   image?: string
-   url?: string
-   type?: 'website' | 'article' | 'service'
-   structuredData?: object
-} export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https:'''
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-export default SEOHead;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
       <meta property="og:type" content="website" />"
       {/* Twitter */}

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/jobs/JobMatchCard.tsx
-<<<<<<< HEAD
+:src/components/jobs/JobMatchCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
@@ -82,7 +81,7 @@ export function JobMatchCard({;
   // Generate a formatted date for display
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
-  
+
   return (
     <Card className="overflow-hidden">
       <CardContent className="p-0">
@@ -104,13 +103,13 @@ export function JobMatchCard({;
               Available
             </Badge>
           </div>
-          
+
           <div className="text-lg font-medium mb-2">{title}</div>
-          
+
           <div className="flex flex-wrap gap-2 mb-3">
             <Badge variant="outline">{category}</Badge>
           </div>
-          
+
           <div className="flex items-center gap-2 mb-2">
             <Avatar className="h-6 w-6">
               {avatar ? (
@@ -123,14 +122,14 @@ export function JobMatchCard({;
             </Avatar>
             <span className="text-sm font-medium">{company || 'Independent'}</span>
           </div>
-          
+
           <div className="space-y-1 text-sm text-muted-foreground mb-3">
             <div className="flex items-center gap-1">
               <MapPin className="h-3.5 w-3.5" />
               <span>{location || 'Remote'}</span>
             </div>
           </div>
-          
+
           <div className="flex flex-wrap gap-1 mb-4">
             {skills?.slice(0, 5).map((skill) => (
               <Badge key={skill} variant="secondary" className="text-xs">
@@ -138,7 +137,7 @@ export function JobMatchCard({;
               </Badge>;
             ))}
           </div>
-          
+
           <div className="flex gap-2 justify-end">
             {onInvite && (
               <Button onClick={handleInvite} variant="default" size="sm">
@@ -162,11 +161,6 @@ export function JobMatchCard({;
   );
 }
 ;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobMatchCard.tsx
 }
 
   talentId
@@ -191,15 +185,9 @@ export function JobMatchCard({;
   match_percent,
 }
 }
-<<<<<<< HEAD:src/components/jobs/JobMatchCard.tsx
-<<<<<<< HEAD
+:src/components/jobs/JobMatchCard.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -259,9 +247,6 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }"
 }
 }
-<<<<<<< HEAD:src/components/jobs/JobMatchCard.tsx
+:src/components/jobs/JobMatchCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobMatchCard.tsx

@@ -1,38 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 class ComprehensiveTestAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
 
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};"
     })};"
@@ -45,19 +27,9 @@ class ComprehensiveTestAutomation {}
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
-<<<<<<< HEAD
-      fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
-      console.error('Failed to write to log "file": ', error.message)};
-  };
-  async runUnitTests() {}
-    this.log('Running unit tests...');
-    try {}
-      execSync('npm test -- --coverage --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
+
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
         "stdio": 'pipe',
         "timeout": 120000;
       }
@@ -75,11 +47,9 @@ class ComprehensiveTestAutomation {}
     this.log('Running TypeScript type checking...');
     try {}
       execSync('npx tsc --noEmit', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
+
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -97,11 +67,9 @@ class ComprehensiveTestAutomation {}
     this.log('Running ESLint...');
     try {}
       execSync('npx eslint . --max-warnings 0', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
+
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -119,11 +87,9 @@ class ComprehensiveTestAutomation {}
     this.log('Running build test...');
     try {}
       execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
+
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -140,29 +106,18 @@ class ComprehensiveTestAutomation {}
   async runPerformanceTests() {}
     this.log('Running performance tests...');
     const performanceResults = ;{};
-<<<<<<< HEAD
-    try {}
-      // Check bundle size;
-      const buildOutput = execSync('npm run build', { })
-        "cwd": this.projectRoot,
-=======
 
     try {}
       // Check bundle size;
       const buildOutput = execSync('npm run build', { })
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Extract bundle size information;
       const bundleSizeMatch = buildOutput.match(/First Load JS shared by all\s+(\d+\.?\d*)\s+kB;/;);
       if ( {})
@@ -174,66 +129,29 @@ class ComprehensiveTestAutomation {}
       const pageSizeMatches = buildOutput.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB/;g;);
         performanceResults.pageSizes = pageSizeMatches.map(match => {})
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB) {}
-<<<<<<< HEAD
-     {}
-        performanceResults.pageSizes = pageSizeMatches.map(match => {})
-          const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);
-          return { "page": parts[1], "size": parseFloat(parts[2]) }})};
-      this.results.performance = performanceResults;
-      this.results.tests.push({ "type": 'performance-tests', "status": 'passed' }
-});
-      this.log('Performance tests completed');
-      return { "status": 'passed', "results": performanceResults }} catch(error) {}
-      this.results.tests.push({ "type": 'performance-tests', "status": 'failed', "error": error.message }
-});
-      this.log(`Performance tests "failed": ${error.message}`, 'ERROR');
-      return { "status": 'failed', "error": error.message }};
-  };
-  async runAccessibilityTests() {}
-    this.log('Running accessibility tests...');
-    const accessibilityResults = ;{};
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Check for alt text in images;
       const pagesDir = path.join(this.projectRoot, 'pages';);
       const componentsDir = path.join(this.projectRoot, 'components';);
-=======
+
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);"
           return { "page": parts[1], "size": parseFloat(parts[2]) }})};"
       this.results.performance = performanceResults;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let totalImages = ;0;
       let imagesWithAlt = ;0;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       [pagesDir, componentsDir].forEach(dir => {})
           const files = this.findReactFiles(dir) {}
           const files = this.findReactFiles(dir})
 
             const images = content.match(/<img[^>]*>/g) || [];
-<<<<<<< HEAD
-            totalImages += images.length;
-            const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [];
-            imagesWithAlt += altTexts.length})};
-      }
-});
-<<<<<<< HEAD
-      accessibilityResults.totalImages = totalImages;
-      accessibilityResults.imagesWithAlt = imagesWithAlt;
-      accessibilityResults.altTextCoverage = totalImages > 0 ? Math.round((imagesWithAlt / totalImages) * 100) : 100;
-=======
 
       accessibilityResults.totalImages = totalImages;
       accessibilityResults.imagesWithAlt = imagesWithAlt;
       accessibilityResults.altTextCoverage = totalImages > 0 ? Math.round((imagesWithAlt / totalImages) * 100) : 100;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Check for heading structure;
       let headingStructure = [];
       [pagesDir, componentsDir].forEach(dir => {})
@@ -248,13 +166,9 @@ class ComprehensiveTestAutomation {}
             headingStructure.push(...headings)})};
       }
 });
-<<<<<<< HEAD
-      accessibilityResults.headingStructure = headingStructure;
-=======
 
       accessibilityResults.headingStructure = headingStructure;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.results.accessibility = accessibilityResults;
       this.results.tests.push({ "type": 'accessibility-tests', "status": 'passed' }
 });
@@ -268,19 +182,14 @@ class ComprehensiveTestAutomation {}
   async runSecurityTests() {}
     this.log('Running security tests...');
     const securityResults = ;{};
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Run npm audit;
       try {}
         execSync('npm audit --audit-level=moderate', { })
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
+
           "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
           "stdio": 'pipe',
           "timeout": 60000;
         }
@@ -310,17 +219,11 @@ class ComprehensiveTestAutomation {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-<<<<<<< HEAD
+
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-=======
-    
-    items.forEach(item => {})
-      const fullPath = path.join(dir, item;);
-      const stat = fs.statSync(fullPath;);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -335,10 +238,7 @@ class ComprehensiveTestAutomation {}
     const passedTests = this.results.tests.filter(test => test.status === 'passed').lengt;h;
     const failedTests = this.results.tests.filter(test => test.status === 'failed').lengt;h;
     const successRate = totalTests > 0 ? Math.round((passedTests / totalTests) * 100) :;0;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.results.summary = {}
       totalTests,
       passedTests,
@@ -346,10 +246,7 @@ class ComprehensiveTestAutomation {}
       successRate,
       "timestamp": new Date().toISOString();
     };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.log(`Test "Summary": ${passedTests}/${totalTests} tests passed (${successRate}%)`)};
   async run() {}
     this.log('Starting Comprehensive Test Automation...');
@@ -360,21 +257,14 @@ class ComprehensiveTestAutomation {}
       await this.runPerformanceTests();
       await this.runAccessibilityTests();
       await this.runSecurityTests();
-<<<<<<< HEAD
-      this.generateSummary();
-=======
 
       this.generateSummary();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Save results;
       const reportFile = path.join(this.projectRoot, 'test-results', 'comprehensive-test-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Test report saved to ${reportFile}`);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log('Comprehensive Test Automation completed successfully!');
       return this.results} catch(error) {}
       this.log(`Comprehensive Test Automation "failed": ${error.message}`, 'ERROR');
@@ -386,28 +276,12 @@ if ( {})
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = ComprehensiveTestAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = ComprehensiveTestAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ComprehensiveTestAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 module.exports = ComprehensiveTestAutomation;
-=======
+
+module.exports = ComprehensiveTestAutomation;
+
+module.exports = ComprehensiveTestAutomation;
+
 </img>
             const headings = content.match(/<h[1-6][^>]*>/g) || [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

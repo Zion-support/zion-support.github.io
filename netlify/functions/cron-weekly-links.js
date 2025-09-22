@@ -1,41 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
 async function fetchHtml(url) {
 
-<<<<<<< HEAD
-  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
+if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.text();
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -50,9 +26,6 @@ function extractLinks(html, base) {}
     .map(h =>'
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -82,16 +55,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 exports.handler = async function () {
   try {
-=======
-exports.handler = async function () {}
-  try {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const base = process.env.URL |process.env.DEPLOY_URL |'';
   return Array && Array.from(new Set(links));
 exports && exports.handler = async function () {}
@@ -101,11 +67,6 @@ exports && exports.handler = async function () {}
     const checked = [];
     const broken = [];
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
           }
@@ -132,14 +93,7 @@ exports && exports.handler = async function () {}
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ${p}`);
         const links = extract_links (html, base);
@@ -168,30 +122,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      await upsert_file ({
-        owner,
-        repo,
-        path: 'data / reports / links / weekly - links.json',
-        content: JSON.stringify (report, null, 2),
-        message: 'chore (automation): weekly link check',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         token,
       });
@@ -200,12 +134,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
@@ -239,18 +167,9 @@ if ( {) {
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-<<<<<<< HEAD
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
@@ -298,23 +217,11 @@ function extractLinks(html, base) {}
     .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`)),
   return Array && Array.from(new Set(links))
 }
-<<<<<<< HEAD
 exports && exports.handler = async function() {
   try {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
@@ -322,17 +229,9 @@ exports && exports.handler = async function() {
     const checked = [],
     const broken = [],
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -348,13 +247,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 },
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -407,12 +299,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 },
 },
 
-<<<<<<< HEAD
-
-    if (owner && repo && token) {
+if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
-
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
 
@@ -420,25 +309,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
-=======
-=======
-exports && exports.handler = async function() {}
-  try {}
-'
-    const base = process.env.URL |process.env.DEPLOY_URL |'''
-    const pages = ['//learn/dao/certifications']
-    const checked = []
-    const broken = []
-    for (const p of pages) {}
-      try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 },
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function fetchHtml(url) {}
@@ -492,19 +364,8 @@ exports.handler = async function() {}
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function fetchHtml(url) {
@@ -552,7 +413,6 @@ exports.handler = async function() {
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 
-
     const report = { updatedAt: Date.now(), checked: checked.length, broken },
 
     const owner = process.env.GITHUB_OWNER);
@@ -567,26 +427,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 },
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-=======
-},},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
-<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 },
@@ -595,8 +444,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
-<<<<<<< HEAD
 function extractLinks(html, base) {
   const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
   const links = aTags
@@ -648,17 +495,8 @@ exports.handler = async function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -672,16 +510,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

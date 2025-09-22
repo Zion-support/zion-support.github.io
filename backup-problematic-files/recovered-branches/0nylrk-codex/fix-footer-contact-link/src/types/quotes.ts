@@ -60,7 +60,4 @@ export interface QuoteRequest {;
   created_at:string;
   updated_at:string;
 } export type QuoteStatus = 'new' | 'in review' | 'accepted' | 'responded' | 'closed' | 'archived';
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

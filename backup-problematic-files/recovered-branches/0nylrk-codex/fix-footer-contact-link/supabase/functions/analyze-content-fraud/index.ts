@@ -207,7 +207,7 @@ if (!request.content) {
   if (!request.contentType) {
     throw new Error(&quot;No content type provided&quot;);
   }
-  
+
   return request
 },
 
@@ -215,19 +215,10 @@ if (!request.content) {
 const _createAnalysisPrompt = (contentType: string, content: string): string => {_return `
     You are an AI fraud detection assistant for the Zion AI Marketplace.
     Analyze this ${contentType} for signs of fraud, spam, phishing, or abuse.
-<<<<<<< HEAD
-
-    Content to analyze:
+Content to analyze:
     &quot;"&quot;
     ${content}
     &quot;"&quot;
-=======
-    
-    Content to analyze:
-    &quot;"&quot;
-    ${content}
-    &quot;"&quot;    
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     Respond with one of these classifications: SAFE / SUSPICIOUS / DANGEROUS
     followed by a brief explanation (max 1-2 sentences) of your reasoning.
     Format your response exactly like: "CLASSIFICATION: explanation"
@@ -236,79 +227,12 @@ const _createAnalysisPrompt = (contentType: string, content: string): string => 
 // Call OpenAI API for content analysis
 const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
   try {
-<<<<<<< HEAD
 
-=======
-    const response = await fetch(&quot;https://api.openai.com/v1/chat/completions&quot;, {
-      method: &quot;POST&quot;,
-      headers: {
-        &quot;Content-Type&quot;: &quot;application/json&quot;,
-        &quot;Authorization&quot;: `Bearer ${openaiApiKey}`},
-      body: JSON.stringify({
-        model: &quot;gpt-4o-mini&quot;,
-        messages: [
-          { role: &quot;system&quot;, content: &quot;You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse.&quot; },
-          { role: &quot;user&quot;, content: prompt }        ],
-        temperature: 0.3,
-        max_tokens: 150
-      })
-    }),
-    
-    const data = await response.json(),
-    
-    if (!response.ok) {
-      console.error("OpenAI API error:", data.error),
-      throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
-    }
-    
-    const analysisText = data.choices[0]?.message?.content || "",
-    // // // console.log("OpenAI analysis result:", analysisText),
-    
-    // Parse the result
-    let classification = "SAFE",
-    let explanation = "No issues detected.",
-    
-    if (analysisText.includes("SUSPICIOUS")) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       classification = "SUSPICIOUS"
     } else if (analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
     }
-<<<<<<< HEAD
-
-    // Extract explanation
-=======
-    
-    // Extract explanation
-    if (analysisText.includes(": ")) {
-      explanation = analysisText.split(":")[1].trim()    }
-    
-    return { classification, explanation }
-  } catch (error) {
-    console.error("Error calling OpenAI:", error),
-    throw error  }
-},
-    const _data = await response.json();
-    
-    if (!response.ok) {_throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`);
-    }
-    
-    const _analysisText = data.choices[0]?.message?.content || "";
-    
-    
-    // Parse the result
-    let _classification = "SAFE";
-    let _explanation = "No issues detected.";
-    
-    if (analysisText.includes("SUSPICIOUS")) {_classification = "SUSPICIOUS";} else if (analysisText.includes("DANGEROUS")) {_classification = "DANGEROUS";}
-    
-    // Extract explanation
-    if (analysisText.includes(":")) {_explanation = analysisText.split(":")[1].trim();}
-    
-    return {_classification, _explanation};
-  } catch (error) {_throw error;}
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+// Extract explanation
 
 // Update flag in database if flagId was provided
 const _updateFraudFlag = async (
@@ -318,36 +242,14 @@ const _updateFraudFlag = async (
   explanation: string
 ): Promise<void> => {
   if (!flagId) return,
-<<<<<<< HEAD
-
-  const { error } = await supabase
+const { error } = await supabase
     .from(&quot;fraud_flags&quot;)
     .update({
-
-=======
-  
-  const { error } = await supabase
-    .from(&quot;fraud_flags&quot;)
-    .update({
-      gpt_classification: classification.toLowerCase(),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       gpt_explanation: explanation,
       updated_at: new Date().toISOString()
     })
     .eq("id", flagId),
-<<<<<<< HEAD
-
-  if (error) {
-=======
-  
-  if (error) {
-    console.error("Error updating fraud flag:", error),
-    throw new Error(`Error updating fraud flag: ${error.message}`)
-  }
-  
-  // // // console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
-},};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (error) {
 
 // Main request handler
 serve(async (req) => {
@@ -357,9 +259,7 @@ serve(async (req) => {
   }
 
   try {
-<<<<<<< HEAD
-
-    // Initialize services
+// Initialize services
     const { supabase, openaiApiKey } = initializeServices(),
 
     // Parse and validate request
@@ -367,100 +267,17 @@ serve(async (req) => {
     // Create prompt and analyze with OpenAI
     const prompt = createAnalysisPrompt(contentType, content),
     const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey),
-
-=======
-    // // // console.log("Received content analysis request"),    
-    // Initialize services
-    const { supabase, openaiApiKey } = initializeServices(),
-    
-    // Parse and validate request
-    const requestData = await req.json().catch(err => {
-      console.error("Error parsing request JSON:", err),
-      throw new Error("Invalid JSON in request body")
-    }),
-    
-    const { content, contentType, flagId } = validateRequest(requestData),
-    // // // console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`),    
-    // Create prompt and analyze with OpenAI
-    const prompt = createAnalysisPrompt(contentType, content),
-    const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey),
-    
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Update flag if flagId was provided
     if (flagId) {
       await updateFraudFlag(supabase, flagId, classification, explanation)
     }
-<<<<<<< HEAD
-
-    // Return the analysis result
+// Return the analysis result
     const result: AnalysisResult = {
 
       headers: { ...corsHeaders, "Content-Type": "application/json" }
     })
 
   } catch (error) {
-
-=======
-    
-    // Return the analysis result
-    const result: AnalysisResult = {
-      classification: classification.toLowerCase(),
-      explanation,
-      success: true},
-    
-    // // // console.log("Analysis completed successfully:", result),
-    return new Response(JSON.stringify(result), { 
-      headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    })
-
-  } catch (error) {
-    console.error("Error analyzing content:", error),
-    
-    // Determine appropriate status code based on error
-    const statusCode = error.message?.includes("Invalid") ? 400 : 500,    
-    return new Response(
-      JSON.stringify({ 
-        error: error.message || &quot;An unexpected error occurred&quot;,
-        success: false}),
-      { 
-        status: statusCode, 
-        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json" } 
-serve(_async (req) => {_// Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, _{ headers: corsHeaders});
-  }
-
-  try {_// Initialize services
-    const { supabase, _openaiApiKey} = initializeServices();
-    
-    // Parse and validate request
-    const _requestData = await req.json().catch(err => {_throw new Error("Invalid JSON in request body");});
-    
-    const {_content, _contentType, _flagId} = validateRequest(requestData);
-    
-    
-    // Create prompt and analyze with OpenAI
-    const _prompt = createAnalysisPrompt(contentType, content);
-    const {_classification, _explanation} = await analyzeWithOpenAI(prompt, openaiApiKey);
-    
-    // Update flag if flagId was provided
-    if (flagId) {_await updateFraudFlag(supabase, _flagId, _classification, _explanation);}
-    
-    // Return the analysis result
-    const result: AnalysisResult = {_classification: classification.toLowerCase(), _explanation, _success: true};
-    
-    
-    return new Response(JSON.stringify(result), {_headers: { ...corsHeaders, _"Content-Type": "application/json"} 
-    });
-
-  } catch (error) {_// Determine appropriate status code based on error
-    const _statusCode = error.message?.includes("Invalid") ? 400 : 500;
-    
-    return new Response(
-      JSON.stringify({ 
-        error: error.message || "An unexpected error occurred", _success: false}),
-      {_status: statusCode, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     )
   }
@@ -468,8 +285,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
 };
 //Create prompt for OpenAI const createAnalysisPrompt = (contentType: string, content: string) : string => {
   return ` You are an AI fraud detection assistant for the Zion AI Marketplace. Analyze this $ {
-<<<<<<< HEAD
-  contentType
+contentType
 }for signs of fraud, spam, phishing, or abuse. Content to analyze: Respond with one of these classifications: SAFE / SUSPICIOUS /DANGEROUS followed by a brief explanation (max 1-2 sentences) of your reasoning. //Call OpenAI API for content analysis ];
 temperature: 0.3;
 max tokens: 150
@@ -479,39 +295,18 @@ max tokens: 150
   classification, explanation
 }
 }catch (error) {
-
-=======
-  contentType 
-}for signs of fraud, spam, phishing, or abuse. Content to analyze: Respond with one of these classifications: SAFE / SUSPICIOUS /DANGEROUS followed by a brief explanation (max 1-2 sentences) of your reasoning. //Call OpenAI API for content analysis ];
-temperature: 0.3;
-max tokens: 150 
-}) 
-});
-}return {
-  classification, explanation 
-}
-}catch (error) {
-  
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 };
 flagId: string;
 classification: string;
-<<<<<<< HEAD
 explanation: string
 };
   supabase, openaiApiKey
-=======
-explanation: string 
-};
-  supabase, openaiApiKey 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }= initializeServices ();
 //Parse and validate request const requestData = await req.json () .catch (err => {
   //Create prompt and analyze with OpenAI const prompt = createAnalysisPrompt (contentType, content);
 const {
-<<<<<<< HEAD
-  classification, explanation
+classification, explanation
 }= await analyzeWithOpenAI (prompt, openaiApiKey);
 //Update flag if flagId was provided if (flagId) {
   await updateFraudFlag (supabase, flagId, classification, explanation)
@@ -523,38 +318,12 @@ success: true
 return new Response (JSON.stringify ({
   error: error.message || "An unexpected error occurred";
 success: false
-=======
-  classification, explanation 
-}= await analyzeWithOpenAI (prompt, openaiApiKey);
-//Update flag if flagId was provided if (flagId) {
-  await updateFraudFlag (supabase, flagId, classification, explanation) 
-}//Return the analysis result const result: AnalysisResult = {
-  classification: classification.toLowerCase ();
-explanation;
-success: true 
-};
-return new Response (JSON.stringify ({
-  error: error.message || "An unexpected error occurred";
-success: false 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
 {
   status: statusCode;
 headers: {
-<<<<<<< HEAD
-  ...corsHeaders, "Content-Type" : "application/json"
+...corsHeaders, "Content-Type" : "application/json"
 }
 })
 }
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  ...corsHeaders, "Content-Type" : "application/json" 
-}
-}) 
-}
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

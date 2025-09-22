@@ -1,23 +1,7 @@
-<<<<<<< HEAD:src_backup/pages/Status.tsx
-=======
-
-interface ServiceStatus {
-  name: string,
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance'',
-  description: string,
-  lastChecked: string
-}
-  name: string
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
-  description: string
-  lastChecked: string
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Status.tsx
+:src_backup/pages/Status.tsx
 import React, { useState, useEffect } from 'react' import { motion    } from 'framer-motion' import { SEO } from '../components/SEO' import {  CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink    } from 'lucide-react'  export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()) const [isRefreshing, setIsRefreshing] = useState(false) ;""
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
-
-
-
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
@@ -213,9 +197,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 }
   const formatUptime = (seconds:,  number) => {,
 
-
-
-<<<<<<< HEAD:src_backup/pages/Status.tsx
+:src_backup/pages/Status.tsx
   )
 import { SEO } from '@/components/SEO';
 import { useState, useEffect } from 'react';
@@ -231,8 +213,6 @@ import {
 } from '@/components/ui/card';
 import { logWarn } from '@/utils/productionLogger';
 interface ServiceStatus {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Status.tsx
   );
 
 };

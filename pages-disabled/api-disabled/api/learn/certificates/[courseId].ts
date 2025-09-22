@@ -1,19 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD:pages/api/learn/certificates/[courseId].ts
-<<<<<<< HEAD
-
+:pages/api/learn/certificates/[courseId].ts
 import path from 'path';
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
+:pages/api-disabled/api/learn/certificates/[courseId].ts
 <<<<<<< HEAD
 const doc = new PDFDocument ({
-=======
-;
-const doc = new PDFDocument ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/certificates/[courseId].ts
   size: 'A4', margin: 50
 });
 // Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
@@ -47,16 +38,10 @@ export default function handler($2) {;
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
     res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
-<<<<<<< HEAD:pages/api/learn/certificates/[courseId].ts
+:pages/api/learn/certificates/[courseId].ts
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/certificates/[courseId].ts
     // Pipe to response
     // @ts-ignore;
     doc && doc.pipe(res);
@@ -88,7 +73,7 @@ export default function handler($2) {;
     doc.moveDown(0.5);'
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
-<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
+:pages/api-disabled/api/learn/certificates/[courseId].ts
     doc
       .fontSize(12)
       .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
@@ -102,7 +87,6 @@ export default function handler($2) {;
     res
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
-<<<<<<< HEAD:pages/api/learn/certificates/[courseId].ts
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ certificate: 'PDF certificate' });
@@ -125,11 +109,6 @@ function readJson(p: string) {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/certificates/[courseId].ts
   }
 }
 ;
@@ -185,9 +164,8 @@ export default function handler($2) {;
     doc.moveDown(2);
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
     doc.end()
-<<<<<<< HEAD:pages/api/learn/certificates/[courseId].ts
-<<<<<<< HEAD
-  }
+:pages/api/learn/certificates/[courseId].ts
+}
 }
 ;
 export default function handler(req, res) {
@@ -245,19 +223,8 @@ export default function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch (e: any) {
-=======
-  } catch (e: any) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/certificates/[courseId].ts
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
   }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
     res.set_header ('Allow', 'GET');
@@ -269,7 +236,6 @@ export default function handler(req, res) {
   }
   try {;
 =======
-
 
   } catch (e: any) {}
     res;
@@ -297,7 +263,7 @@ export default function handler(req, res) {
   $2;
 }'
     res.set_header ('Content - Type', 'application / pdf');
-<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
+:pages/api-disabled/api/learn/certificates/[courseId].ts
     res.set_header (
       'Content - Disposition'
       `attachment; filename="${course_id}-certificate.pdf"`);
@@ -305,15 +271,6 @@ export default function handler(req, res) {
     res.set_header ('Content - Typeapplication / pdf');
     res.set_header ('Content - Disposition', `attachment, filename="${course_id}-certificate.pdf"`);
     const doc = new PDFDocument ({ size: 'A4', margin: 50 })
-=======
-    res.set_header ('
-      'Content - Disposition',`
-      `attachment; filename="${course_id}-certificate.pdf"`);'
-    const doc = new PDFDocument ({ size: 'A4', margin: 50 });'
-    res.set_header ('Content - Typeapplication / pdf');'"`
-    res.set_header ('Content - Disposition', `attachment, filename="${course_id}-certificate.pdf"`);'
-    const doc = new PDFDocument ({ size: 'A4', margin: 50 }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     // Pipe to response;
     // @ts - ignore;
     doc.pipe (res);
@@ -342,16 +299,12 @@ export default function handler(req, res) {
     doc.font_size (12).text (`Date: ${date}`, { align: 'center' });
 ;
     doc.end ();
-<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
+:pages/api-disabled/api/learn/certificates/[courseId].ts
   } catch (e: any) {;
-=======
-  } catch (e: any) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     res;
       .status (500);'
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
-<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
-<<<<<<< HEAD:pages/api/learn/certificates/[courseId].ts
+:pages/api-disabled/api/learn/certificates/[courseId].ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -365,9 +318,6 @@ export default function handler(req, res) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/certificates/[courseId].ts
   }
 }
 
@@ -384,16 +334,10 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages/api/learn/certificates/[courseId].ts
-=======
-
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+:pages/api/learn/certificates/[courseId].ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/certificates/[courseId].ts
-=======
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts

@@ -50,7 +50,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 staggerChildren: 0.1,
       },
@@ -61,8 +61,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1;
+      y: 0;
       transition: {
 export default function Revolutionary2026ServicesShowcase() {;
   // Get featured services from each category;
@@ -116,7 +116,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='max-w-7xl mx-auto relative z-10' />
  ;
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
       {/* Enhanced Background Effects */}'
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
 
@@ -145,12 +145,12 @@ className='text-center mb-20'
               2026 Revolutionary Innovations;
             </span>
           </div>'
-          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8 leading-tight'>'
+          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8 leading-tight'>';
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
               The Future is Now;
             </span>
           </h2>'
-          <p className='text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed'>;
             Experience the most advanced AI, quantum computing, and metaverse;
             technologies ever created.'
             <span className='text-purple-400 font-semibold'>'
@@ -196,17 +196,17 @@ className='text-center mb-20'
             <Sparkles className="w-5 h-5 text-purple-400" />"
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>
           </div>"
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">"
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">";
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               The Future is Now;
             </span>
           </h2>"
-          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">;
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created."
             <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
           </p>
           {/* Service Statistics */}"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">"
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">";
             <div className="text-center">"
               <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026.length}</div>"
               <div className="text-gray-400 text-sm">AI Autonomous Services</div>
@@ -318,7 +318,7 @@ initial='hidden'
             </div>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+;
           viewport={{ once: true ;}
 }
 
@@ -338,7 +338,7 @@ initial='hidden'
             </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredAIServices.map((service, index) => (
               <motion.div;
@@ -353,8 +353,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 className='group relative'
                />
-                <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500' /></div>
-                <div className='relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full' />
+                <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500' /></div>;
+                <div className='relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full' />;
                   <div className='flex items-center space-x-3 mb-4' />
                     <div className='text-3xl' />{service.icon}</div>
                     <div />
@@ -407,7 +407,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={service.link} 
 
 "
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium";
                   >"
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </span>
@@ -418,7 +418,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <Link;
 href={service.link}
-                    className='inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors text-sm font-medium'
+                    className='inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors text-sm font-medium';
                    />
                     Learn More <ArrowRight className='w-4 h-4 ml-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -445,7 +445,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='text-center mt-8' />
             <Link;
 href='/services?category=ai-autonomous'
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
+              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30';
              />
               View All AI Autonomous Services{' '}
               <ArrowRight className='w-5 h-5 ml-2' />
@@ -513,8 +513,8 @@ initial='hidden'
             </div>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredQuantumServices.map((service, index) => (
               <motion.div;
@@ -522,8 +522,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variants={itemVariants}
 className='group relative'
               >
-                <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
-                <div className='relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full'>
+                <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
+                <div className='relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full'>;
                   <div className='flex items-center space-x-3 mb-4'>
                     <div className='text-3xl'>{service.icon}</div>
                     <div>
@@ -587,7 +587,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={service.link} 
 
 "
-                    className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
+                    className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium";
                   >"
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </span>
@@ -598,7 +598,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <Link;
 href={service.link}
-                    className='inline-flex items-center text-indigo-400 hover: text-indigo-300 transition-colors text-sm font-medium'
+                    className='inline-flex items-center text-indigo-400 hover: text-indigo-300 transition-colors text-sm font-medium';
                    />
                     Learn More <ArrowRight className='w-4 h-4 ml-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -616,7 +616,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
               View All Quantum Space Services{' '}
               href="/services?category=quantum-space"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
             >"
               View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />'"
               <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">;
@@ -732,7 +732,7 @@ initial='hidden'
             </div>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+;
           viewport={{ once: true ;}
 }
 
@@ -752,7 +752,7 @@ initial='hidden'
             </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredMetaverseServices.map((service, index) => (
               <motion.div;
@@ -767,8 +767,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 className='group relative'
                />
-                <div className='absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500' /></div>
-                <div className='relative bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300 h-full' />
+                <div className='absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500' /></div>;
+                <div className='relative bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300 h-full' />;
                   <div className='flex items-center space-x-3 mb-4' />
                     <div className='text-3xl' />{service.icon}</div>
                     <div />
@@ -822,7 +822,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={service.link} 
 
 "
-                    className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
+                    className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium";
                   >"
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </span>
@@ -833,7 +833,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <Link;
 href={service.link}
-                    className='inline-flex items-center text-pink-400 hover: text-pink-300 transition-colors text-sm font-medium'
+                    className='inline-flex items-center text-pink-400 hover: text-pink-300 transition-colors text-sm font-medium';
                    />
                     Learn More <ArrowRight className='w-4 h-4 ml-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -851,7 +851,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
               View All Metaverse Services{' '}
               href="/services?category=metaverse"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
             >"
               View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />'"
               <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">;
@@ -899,25 +899,25 @@ className='text-center'
               <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.
             </p>"
               <p className="text-gray-400 text-sm mb-2">Contact Information</p>"
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">"
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">";
                 <span className="text-purple-300">📱 +1 302 464 0950</span>"
                 <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>"
                 <span className="text-purple-300">🌐 ziontechgroup.com</span>
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
               <Link
                 href='/contact'
 
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6' />
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6' />;
               <Link;
 href='/contact'
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30';
                />
                 <Zap className='w-5 h-5 mr-2' />
                 Get Started Today;
               </Link>
               <Link;
 href='/services'
-                className='inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300'
+                className='inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300';
                />
                 Explore All Services;
                 <ArrowRight className='w-5 h-5 ml-2' />
@@ -925,7 +925,7 @@ href='/services'
             </div>
             <div className='mt-8 text-center' />
               <p className='text-gray-400 text-sm mb-2' />Contact Information</p>
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm' />
+              <div className='flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm' />;
                 <span className='text-purple-300' />📱 +1 302 464 0950</span>
                 <span className='text-purple-300' />
                   ✉️ kleber@ziontechgroup.com;

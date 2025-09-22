@@ -1,15 +1,10 @@
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
+:pages_backup/api/integrations/connect.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
 import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-=======
-  if (req.method !== "POST");
-    return res.status(405).json({ error: "Method not allowed" });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: "Invalid providerId" });
@@ -21,31 +16,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const { providerId, syncRules } = req.body as {
     providerId?: string;
     syncRules?: SyncRules;
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/connect.ts
 
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {}
     const existingIdx = state && state.connections.findIndex(
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-      (c) => c && c.providerId === providerId
-=======
-(c) => c && c.providerId === providerId,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
+:pages_backup/api/integrations/connect.ts
+(c) => c && c.providerId === providerId
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';
-=======
-      (c) => c && c.providerId === providerId,
-
-import type { NextApiRequest, NextApiResponse } from './next';'
-import { write_state  } from '../../../lib / integrations / file_store';'
-import { getProviderById  } from '../../../lib / integrations / registry';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/connect.ts
 import { ProviderConnection, SyncRules  } from '../../../lib / integrations / types';
 export default /**;
  * handler - Function description;
@@ -70,48 +50,10 @@ function handler() {}
       (c) => c.provider_id === provider_id
 
     );
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
+:pages_backup/api/integrations/connect.ts
     const connection: ProviderConnection = {
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/connect.ts
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-provider_id: provider_id as any,
-      status: "connected",
-      access_token: "mock_access_token",
-      refresh_token: "mock_refresh_token",
-      expires_at: now + 1000 * 60 * 60,
-      connected_at: now,
-      sync_rules: sync_rules || {},
-      lastSyncAt: undefined,
-      lastError: null,
-    };
-    if (existingIdx >= 0) state.connections[existingIdx] = connection;
-    else state.connections.push(connection);
-    state.logs.push({
-      id: `${now}-${providerId}-connect`,
-      timestamp: now,
-      provider_id: provider_id as any,
-      level: "info",
-      action: "connect",
-      details: { sync_rules },
-      provider_id: provider_id as any;
-      status: "connected";
-      access_token: "mock_access_token";
-      refresh_token: "mock_refresh_token";
-      expires_at: now + 1000 * 60 * 60;
-      connected_at: now;
-      sync_rules: sync_rules || {};
-      lastSyncAt: undefined;
-      timestamp: now;
-      provider_id: provider_id as any;
-      level: "info";
-      action: "connect";
-      details: { sync_rules };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
       provider_id: provider_id as any
       status: "connected"
       access_token: "mock_access_token"
@@ -125,14 +67,8 @@ provider_id: provider_id as any,
       level: "info"
       action: "connect"
       details: { sync_rules }
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-<<<<<<< HEAD
+:pages_backup/api/integrations/connect.ts
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/connect.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
     });
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -164,27 +100,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-=======
-    const connection: ProviderConnection = {}
-      provider_id: provider_id as any,"
-      status: "connected","
-      access_token: "mock_access_token","
-      refresh_token: "mock_refresh_token",
-      expires_at: now + 1000 * 60 * 60,
-      connected_at: now,
-      sync_rules: sync_rules || {},
-      lastSyncAt: undefined,
-
-      timestamp: now,
-      provider_id: provider_id as any,"
-      level: "info","
-      action: "connect",
-      details: { sync_rules },
-    });
-  });
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/connect.ts
+:pages_backup/api/integrations/connect.ts
 =======
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
@@ -196,69 +112,36 @@ export default function handler(req, res) {
   const now = Date.now();
   const updated = writeState(state => {}
     const existingIdx = state.connections.findIndex(c => c.providerId === providerId);
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
+:pages_backup/api/integrations/connect.ts
     const connection: ProviderConnection = {
       providerId: providerId as any, status: 'connected'
       accessToken: 'mock_access_token', refreshToken: 'mock_refresh_token'
       expiresAt: now + 1000 * 60 * 60, connectedAt: now
       syncRules: syncRules || {}
       lastSyncAt: undefined
-=======
-    const connection: ProviderConnection = {'
-      providerId: providerId as any, status: 'connected','
-      accessToken: 'mock_access_token', refreshToken: 'mock_refresh_token',
-      expiresAt: now + 1000 * 60 * 60, connectedAt: now,
-      syncRules: syncRules || {},
-      lastSyncAt: undefined,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/connect.ts
       lastError: null};
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);'
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
+:pages_backup/api/integrations/connect.ts
 
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/api/integrations/connect.ts
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
 
 }
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
+:pages_backup/api/integrations/connect.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/connect.ts
-=======
-
-
-  res.status (200).json ({}
-=======
-  res.status (200).json ({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
     ok: true,
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   });
 }
 
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-
-
-
-
+:pages_backup/api/integrations/connect.ts
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/connect.ts
-=======
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

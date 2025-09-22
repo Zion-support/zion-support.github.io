@@ -3,18 +3,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface PostFormValues {
 
   title: string
@@ -24,27 +14,19 @@ interface PostFormValues {
   tags: string
 }
 
-
-
-
-
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
 
-
       const tagsArray = values.tags.split(",").map(tag => tag.trim()),
-      
 
       toast({
         title: "Post created"
         description: "Your post has been published successfully"
 
       }),
-      
-
 
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`)
@@ -55,10 +37,6 @@ interface PostFormValues {
         variant: "destructive"
       })
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
@@ -73,22 +51,15 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
 <<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface PostFormValues {
@@ -108,8 +79,6 @@ interface PostFormValues {}
   categoryId: ForumCategory;
   tags: string;
 }
-<<<<<<< HEAD
-
 export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -127,10 +96,10 @@ export default function CreatePostPage() {
   const navigate = useNavigate(),
   const { toast } = useToast(),
   const [searchParams] = useSearchParams(),
-  
+
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null,
-  
+
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const initialValues: Partial<PostFormValues> = {
     categoryId: initialCategory || "project-help"
@@ -170,8 +139,6 @@ interface PostFormValues {;
   tags: string;
 }
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",
@@ -186,30 +153,16 @@ import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
 interface PostFormValues {
-<<<<<<< HEAD
-
-  title: string
+title: string
   content: string
   categoryId: ForumCategory
 
   tags: string}
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-  tags: string;
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export default function CreatePostPage() { return null; }
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 export default function CreatePostPage() {
 
@@ -245,39 +198,19 @@ export default function CreatePostPage() {
       });
 
     }
-=======
-  }
-=======
-=======
-    }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
   return (
 
     <AppLayout>;
-
-<<<<<<< HEAD
-=======
-  return (
-    <AppLayout>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function CreatePostPage() {
 
   const navigate = useNavigate();
   const { toast } = useToast();
-<<<<<<< HEAD
-  const [searchParams] = useSearchParams();
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+const [searchParams] = useSearchParams();
   // Get category from URL query params if available
 =======
   const navigate = useNavigate();
@@ -321,11 +254,7 @@ export default function CreatePostPage() {
     }
   }
     }
-<<<<<<< HEAD
-  }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
     }
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -360,15 +289,12 @@ pr-12325
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
   return (
     <AppLayout>
       <SEO"
         title="Create New Post | Community Forum | Zion AI Marketplace""
         description="Create a new discussion post in the Zion AI Marketplace community forum.""
         keywords="community, forum, discussion, create post, new thread"
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
       />
 "
@@ -384,28 +310,11 @@ pr-12325
           <span className="text-sm font-medium">Create Post</span>
         </div>
 "
-=======
-      />
-
-      <div className="container py-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Link
-            to="/community"
-            className="text-sm text-muted-foreground hover:text-foreground"
-          >
-            Forum
-          </Link>
-          <span className="text-muted-foreground">/</span>
-          <span className="text-sm font-medium">Create Post</span>
-        </div>
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
       </div>
     </AppLayout>
-<<<<<<< HEAD
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
@@ -415,11 +324,6 @@ pr-12325
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -433,9 +337,6 @@ interface PostFormValues {;
   content: string,;
   categoryId: ForumCategory,;
   tags: string;
-=======
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
 export default function CreatePostPage() { return null; }
@@ -472,39 +373,14 @@ export default function CreatePostPage() { return null; }
         title="Create New Post | Community Forum | Zion AI Marketplace";"
         description="Create a new discussion post in the Zion AI Marketplace community forum.";"
         keywords="community, forum, discussion, create post, new thread";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
-=======
-      />;
-
-import { useState, useEffect } from "react",;
-import { Link, useNavigate, useSearchParams } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { Button } from "@/components/ui/button",;
-import PostForm from "@/components/community/PostForm",;
-import { useToast } from "@/hooks/use-toast",;
-import { ForumCategory } from "@/types/community",;
-;
-interface PostFormValues {;
-  title:string,;
-  content:string,;
-  categoryId:ForumCategory,;
-  tags:string;
-=======
-  );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+/>;
 }
 ;
 export default function CreatePostPage() {;
   const navigate = useNavigate(),;
   const { toast } = useToast(),;
   const [searchParams] = useSearchParams(),;
-<<<<<<< HEAD
-  ;
+;
   // Get category from URL query params if available;
   const initialCategory = searchParams.get("category") as ForumCategory | null,;
   ;
@@ -547,10 +423,6 @@ export default function CreatePostPage() {;
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="container py-8">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   // Get category from URL query params if available;
   const initialCategory = searchParams.get("category") as ForumCategory | null,;
@@ -663,19 +535,6 @@ export default function CreatePostPage() {;
           <span className="text-muted-foreground">/</span>;"
           <span className="text-sm font-medium">Create Post</span>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
-
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
-      </div>;
-    </AppLayout>;
-  );
-}
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -683,26 +542,6 @@ import { SEO } from '@/components / SEO';
 import { Button } from '@/components / ui / button';
 import PostForm from "@/components / community / PostForm";
 import { use_toast } from '@/hooks / use - toast';
-=======
-"
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
-
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
-      </div>;
-    </AppLayout>;
-  );
-}
-
-
-'
-import { useState, useEffect } from './react';'
-import { Link, use_navigate, useSearchParams } from './react-router-dom';'
-import { AppLayout } from '@/layout / AppLayout';'
-import { SEO } from '@/components / SEO';'
-import { Button } from '@/components / ui / button';"
-import PostForm from "@/components / community / PostForm";'
-import { use_toast } from '@/hooks / use - toast';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ForumCategory } from '@/types / community';
 interface PostFormValues {}
   title: string,
@@ -718,8 +557,7 @@ function CreatePostPage() {}
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
-<<<<<<< HEAD
-  // Get category from URL query params if available;
+// Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
 ;
   const initial_values: Partial < PostFormValues> = {
@@ -853,29 +691,18 @@ function CreatePostPage() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
         ;"
-=======
-=======
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 ;
         ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
         ;
-<<<<<<< HEAD
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
+<PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
       </div>;
     </AppLayout>;
-<<<<<<< HEAD
-  ),; interface PostFormValues {}
+),; interface PostFormValues {}
   title: string;
 content: string;
 categoryId: ForumCategory;
@@ -905,18 +732,12 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 ;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -938,7 +759,7 @@ const [searchParams] = useSearchParams ();
 }`) 
 }catch (error) {
   toast ({
-  
+
 }
 ;
 =======

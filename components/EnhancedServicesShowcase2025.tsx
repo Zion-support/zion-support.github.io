@@ -54,15 +54,15 @@ interface Service {
   technologies: string[];
   benefits: string[];
 
-  color: string;  id: string
-  name: string
-  description: string
+  color: string;  id: string;
+  name: string;
+  description: string;
   icon: React.ReactNode
-
-    enterprise: number
+;
+    enterprise: number;
   },
   technologies: string[];
-  benefits: string[]
+  benefits: string[];
 }
 
 interface ServiceCategory {
@@ -71,7 +71,7 @@ interface ServiceCategory {
   description: string;
   icon: React.ReactNode;
 origin/cursor/automate-test-improve-and-merge-code-2533
-  color: string
+  color: string;
 }
 
   color: string;  id: string,
@@ -84,87 +84,87 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories: ServiceCategory[] = []
   {}
 '
-    id: 'ai-ml''
-    name: 'AI & Machine Learning'
-    description:'
+    id: 'ai-ml'';
+    name: 'AI & Machine Learning';
+    description:';
       'Cutting-edge artificial intelligence and machine learning solutions''
     icon: <FaBrain className='w-8 h-8' />'
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500';
   },  {'
-    id: 'cloud''
-    name: 'Cloud & DevOps''
-    description: 'Scalable cloud infrastructure and development operations''
+    id: 'cloud'';
+    name: 'Cloud & DevOps'';
+    description: 'Scalable cloud infrastructure and development operations'';
     icon: <FaCloud className='w-8 h-8' />'
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500';
   },  {'
-    id: 'security''
-    name: 'Cybersecurity''
-    description: 'Advanced security solutions for modern threats''
+    id: 'security'';
+    name: 'Cybersecurity'';
+    description: 'Advanced security solutions for modern threats'';
     icon: <FaShieldAlt className='w-8 h-8' />'
-    color: 'from-red-500 to-orange-500'
+    color: 'from-red-500 to-orange-500';
   },  {'
-    id: 'data''
-    name: 'Data & Analytics''
-    description: 'Comprehensive data management and analytics platforms''
+    id: 'data'';
+    name: 'Data & Analytics'';
+    description: 'Comprehensive data management and analytics platforms'';
     icon: <FaDatabase className='w-8 h-8' />'
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500';
   },  {'
-    id: 'iot''
-    name: 'IoT & Edge Computing''
-    description: 'Internet of Things and edge computing solutions''
+    id: 'iot'';
+    name: 'IoT & Edge Computing'';
+    description: 'Internet of Things and edge computing solutions'';
     icon: <FaNetworkWired className='w-8 h-8' />'
-    color: 'from-indigo-500 to-purple-500'
+    color: 'from-indigo-500 to-purple-500';
   },  {'
-    id: 'automation''
-    name: 'Process Automation''
-    description: 'Intelligent automation for business processes''
+    id: 'automation'';
+    name: 'Process Automation'';
+    description: 'Intelligent automation for business processes'';
     icon: <FaRobot className='w-8 h-8' />'
-    color: 'from-yellow-500 to-orange-500''
-  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions'
+    color: 'from-yellow-500 to-orange-500'';
+  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions';
     icon: <FaBrain className="w-8 h-8" />'
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500';
   }'
-    id: 'cloud''
-    name: 'Cloud & DevOps''
-    description: 'Scalable cloud infrastructure and development operations''
+    id: 'cloud'';
+    name: 'Cloud & DevOps'';
+    description: 'Scalable cloud infrastructure and development operations'';
     icon: <FaCloud className='w-8 h-8' />'
-    color: 'from-blue-500 to-cyan-500'"
+    color: 'from-blue-500 to-cyan-500'";
   },    icon: <FaCloud className="w-8 h-8" />'
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500';
   }
   {'
-    id: 'security''
-    name: 'Cybersecurity''
-    description: 'Advanced security solutions for modern threats''
+    id: 'security'';
+    name: 'Cybersecurity'';
+    description: 'Advanced security solutions for modern threats'';
     icon: <FaShieldAlt className='w-8 h-8' />'
-    color: 'from-red-500 to-orange-500'"
+    color: 'from-red-500 to-orange-500'";
   },    icon: <FaShieldAlt className="w-8 h-8" />'
-    color: 'from-red-500 to-orange-500'
+    color: 'from-red-500 to-orange-500';
   }
   {'
-    id: 'data''
-    name: 'Data & Analytics''
-    description: 'Comprehensive data management and analytics platforms''
+    id: 'data'';
+    name: 'Data & Analytics'';
+    description: 'Comprehensive data management and analytics platforms'';
     icon: <FaDatabase className='w-8 h-8' />'
-    color: 'from-green-500 to-emerald-500'"
+    color: 'from-green-500 to-emerald-500'";
   },    icon: <FaDatabase className="w-8 h-8" />'
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500';
   }
   {'
-    id: 'iot''
-    name: 'IoT & Edge Computing''
-    description: 'Internet of Things and edge computing solutions''
+    id: 'iot'';
+    name: 'IoT & Edge Computing'';
+    description: 'Internet of Things and edge computing solutions'';
     icon: <FaNetworkWired className='w-8 h-8' />'
-    color: 'from-indigo-500 to-purple-500'"
+    color: 'from-indigo-500 to-purple-500'";
   },    icon: <FaNetworkWired className="w-8 h-8" />'
-    color: 'from-indigo-500 to-purple-500'
+    color: 'from-indigo-500 to-purple-500';
   }
   {'
-    id: 'automation''
-    name: 'Process Automation''
-    description: 'Intelligent automation for business processes''
+    id: 'automation'';
+    name: 'Process Automation'';
+    description: 'Intelligent automation for business processes'';
     icon: <FaRobot className='w-8 h-8' />'
-    color: 'from-yellow-500 to-orange-500'"
+    color: 'from-yellow-500 to-orange-500'";
   },    icon: <FaRobot className="w-8 h-8" />
     id: 'ai-ml';
     name: 'AI & Machine Learning';
@@ -182,7 +182,7 @@ description:
     icon: <FaRobot className='w-6 h-6' />,
     category: 'automation',
     features: [
-
+;
   {
     id: 'security',
     name: 'Cybersecurity',
@@ -229,7 +229,7 @@ description:
       professional: 799,
       enterprise: 1999,
     },
-    technologies: [
+    technologies: [;
       'TensorFlow',
       'PyTorch',
       'OpenAI',
@@ -237,7 +237,7 @@ description:
       'React',
       'Node.js',
     ],
-    benefits: [
+    benefits: [;
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
       '24/7 automated operations',
@@ -251,7 +251,7 @@ description:
       'Next-generation quantum computing solutions for complex problem solving',
     icon: <FaBrain className='w-6 h-6' />,
     category: 'ai-ml',
-    features: [
+    features: [;
       'Quantum algorithm optimization',
       'Hybrid classical-quantum computing',
       'Quantum machine learning',
@@ -265,7 +265,7 @@ description:
       enterprise: 4999,
     },
     technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
-    benefits: [
+    benefits: [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
       'Future-proof technology',
@@ -279,7 +279,7 @@ description:
       'Distributed artificial intelligence at the edge for real-time processing',
     icon: <FaNetworkWired className='w-6 h-6' />,
     category: 'iot',
-    features: [
+    features: [;
       'Edge device optimization',
       'Real-time AI inference',
       'Distributed learning',
@@ -292,14 +292,14 @@ description:
       professional: 599,
       enterprise: 1499,
     },
-    technologies: [
+    technologies: [;
       'TensorFlow Lite',
       'ONNX Runtime',
       'Edge TPU',
       'Raspberry Pi',
       'Arduino',
     ],
-    benefits: [
+    benefits: [;
       'Reduced latency by 90%',
       'Lower bandwidth costs',
       'Enhanced privacy',
@@ -313,7 +313,7 @@ description:
       'Advanced security solutions leveraging quantum-resistant cryptography',
     icon: <FaShieldAlt className='w-6 h-6' />,
     category: 'security',
-    features: [
+    features: [;
       'Post-quantum cryptography',
       'Quantum key distribution',
       'Advanced threat detection',
@@ -327,7 +327,7 @@ description:
       enterprise: 2499,
     },
     technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
-    benefits: [
+    benefits: [;
       'Future-proof security',
       'Quantum-resistant encryption',
       'Comprehensive compliance',
@@ -341,7 +341,7 @@ description:
       'Unified data management and analytics across all sources and formats',
     icon: <FaDatabase className='w-6 h-6' />,
     category: 'data',
-    features: [
+    features: [;
       'Unified data access',
       'Real-time analytics',
       'Data governance',
@@ -354,7 +354,7 @@ description:
       professional: 799,
       enterprise: 1999,
     },
-    technologies: [
+    technologies: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
       'Apache Kafka',
       'Apache Spark',
@@ -371,7 +371,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Modern cloud - native development and deployment platform','
     icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
     ];
-    benefits: [
+    benefits: [;
       'Unified data view',
       'Real-time insights',
       'Improved data quality',
@@ -594,7 +594,7 @@ const services: Service[] = [;
 
 icon: <FaCloud className='w-6 h-6' />,
     category: 'cloud',
-    features: [
+    features: [;
       'Kubernetes orchestration',
       'Microservices architecture',
       'CI/CD pipelines',
@@ -607,7 +607,7 @@ icon: <FaCloud className='w-6 h-6' />,
       professional: 599,
       enterprise: 1499,
     },
-    technologies: [
+    technologies: [;
       'TensorFlow'
       'PyTorch'
       'OpenAI'
@@ -615,7 +615,7 @@ icon: <FaCloud className='w-6 h-6' />,
       'React'
       'Node.js'
     ]
-    benefits: [
+    benefits: [;
       'Faster deployment',
       'Improved scalability',
       'Better resource utilization',
@@ -714,10 +714,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 className='text-center mb-16'
         >
-          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
             2025 Services Showcase
           </h1>
-          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
             Discover our cutting-edge technology solutions designed for the
             future. From AI-powered automation to quantum computing, we're
             building tomorrow's innovations today.
@@ -733,7 +733,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
+          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
             <div className='relative flex-1 max-w-md'>
               <input'
                 type='text''
@@ -818,7 +818,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option value="category">Sort by Category</option>;
             </select>;
           </div>;
-              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500';
             >
               <option value='name'>Sort by Name</option>
               <option value='price'>Sort by Price</option>
@@ -857,7 +857,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${}
                   selectedCategory === category.id;`
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`'
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               <button;
                 key={category && category.id}
                 onClick={() => setSelectedCategory(category && category.id)}`
@@ -877,7 +877,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{ opacity: 1, y: 0 }}
 
           transition={{ duration: 0.8, delay: 0.6 }}
-className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           {filteredServices.map((service, index) => (
@@ -887,10 +887,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               whileHover={{ y: -5, scale: 1 && 1.02 }}'
-              className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
+              className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300';
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
+className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() => handleServiceSelect(service)}
             >;'
@@ -940,7 +940,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>"
                   <span className="text-sm text-gray-400 font-normal">/month</span>
                 </div>"
-                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;
 <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>
                   ${service.pricing.starter}
@@ -948,7 +948,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     /month
                   </span>
                 </div>
-                <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>
+                <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Learn More
                 </button>
@@ -1038,7 +1038,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <button;
                   onClick={closeModal}
-className='p-2 hover:bg-white/10 rounded-lg transition-colors'
+className='p-2 hover:bg-white/10 rounded-lg transition-colors';
                 >
                   <span className='text-2xl'>×</span>
                 </button>
@@ -1046,7 +1046,7 @@ className='p-2 hover:bg-white/10 rounded-lg transition-colors'
               <p className='text-gray-300 text-lg mb-8'>
                 {selectedService.description}
               </p>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Features */}
                 <div>;'
@@ -1141,7 +1141,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className='text-xl font-bold text-white mb-4'>
                   Pricing Plans
                 </h3>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
                   {Object.entries(selectedService.pricing).map(
                     ([plan, price]) => (
                       <div
@@ -1157,7 +1157,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             /month
                           </span>
                         </div>
-                        <button className='w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>
+                        <button className='w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>;
                           Get Started
                         </button>
                       </div>

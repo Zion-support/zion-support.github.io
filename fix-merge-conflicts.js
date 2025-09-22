@@ -7,19 +7,19 @@ import path from 'path';
 function resolveMergeConflicts(content) {
   // Remove all merge conflict markers and keep only the HEAD version
   let resolved = content;
-  
-  // Handle simple conflicts (<<<<<<< HEAD ... ======= ... >>>>>>> branch)
-  resolved = resolved.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-  
+
+  // Handle simple conflicts (...
+  resolved = resolved.replace(/\n([\s\S]*?)\n
+
   // Handle nested conflicts
-  resolved = resolved.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-  
+  resolved = resolved.replace(/\n([\s\S]*?)\n
+
   // Remove any remaining conflict markers
   resolved = resolved.replace(/^[<>=]{7}.*$/gm, '');
-  
+
   // Clean up extra newlines
   resolved = resolved.replace(/\n{3,}/g, '\n\n');
-  
+
   return resolved;
 }
 
@@ -27,7 +27,7 @@ function resolveMergeConflicts(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflicts
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`Processing: ${filePath}`);
@@ -46,14 +46,14 @@ function processFile(filePath) {
 // Function to recursively find and process files
 function processDirectory(dirPath, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   let processedCount = 0;
-  
+
   try {
     const items = fs.readdirSync(dirPath);
-    
+
     for (const item of items) {
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // Skip node_modules, .git, and other common directories
         if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
@@ -71,7 +71,7 @@ function processDirectory(dirPath, extensions = ['.tsx', '.ts', '.jsx', '.js']) 
   } catch (error) {
     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
-  
+
   return processedCount;
 }
 

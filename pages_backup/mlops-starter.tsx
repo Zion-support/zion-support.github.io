@@ -1,33 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/mlops-starter.tsx
 <<<<<<< HEAD:pages/mlops-starter.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
 						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-
-
-						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
-						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/mlops-starter.tsx
 					</div>
@@ -35,12 +14,8 @@
 			</section>
 		</>
 	)
-<<<<<<< HEAD:pages_backup/mlops-starter.tsx
+:pages_backup/mlops-starter.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/mlops-starter.tsx
-
 
 import React from 'react','
 import SEO from '../components / SEO',
@@ -64,8 +39,7 @@ return (
   </>);
 }
 
-
-<<<<<<< HEAD:pages_backup/mlops-starter.tsx
+:pages_backup/mlops-starter.tsx
 import React from 'react';
 import SEO from '../components/SEO';
 export default function MLOpsStarterPage() {
@@ -91,11 +65,6 @@ export default function MLOpsStarterPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -106,34 +75,11 @@ export default function MLOpsStarterPage() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
-
-
-
-
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/mlops-starter.tsx
-
-
-<<<<<<< HEAD:pages_backup/mlops-starter.tsx
+:pages_backup/mlops-starter.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/mlops-starter.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import SEO from '../components/SEO';
 export default function MLOpsStarterPage() {
@@ -171,21 +117,8 @@ export default function MLOpsStarterPage() {
       </section>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/mlops-starter.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/mlops-starter.tsx
-=======
-
-
-
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/mlops-starter.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD:src_backup/pages/admin/SupportRequests.tsx
+:src_backup/pages/admin/SupportRequests.tsx
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -7,17 +7,6 @@ import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-=======
-
-
-import React, { useState } from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/admin/SupportRequests.tsx
 import { Badge } from "@/components/ui/badge";
 import React, { useState } from 'react'
 import {
@@ -52,10 +41,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
 
-
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
-
 
               New Support Case
             </Button>
@@ -108,9 +95,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
 
-
-
-
         {/* Status Cards */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
           <Card>
@@ -119,9 +103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
-
-
-
 
           <Card>
             <CardHeader className='pb-2'>
@@ -132,9 +113,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardHeader>
           </Card>
 
-
-
-
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>
@@ -143,9 +121,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
-
-
-
 
           <Card>
             <CardHeader className='pb-2'>
@@ -162,9 +137,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <TabsTrigger value="need-response">Need Response</TabsTrigger>"
           </TabsList>
 
-
         <Tabs defaultValue="all" className="mb-8">
-
 
           <TabsList>
             <TabsTrigger value='all'>All Requests</TabsTrigger>
@@ -328,7 +301,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <TabsContent value='all' className='mt-6'>;
 
-
           <TabsContent value="all" className="mt-6">
 
             {/* Search and Filters */}
@@ -336,7 +308,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='relative flex-1'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />;
                 <Input
-
 
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
@@ -362,8 +333,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </SelectContent>
               </Select>
 
-
-
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value=''>All Statuses</SelectItem>
@@ -372,7 +341,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <SelectItem value='resolved'>Resolved</SelectItem>
                 </SelectContent>
               </Select>
-
 
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
@@ -392,8 +360,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </SelectContent>
               </Select>
 
-
-
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value=''>All Priorities</SelectItem>
@@ -402,7 +368,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <SelectItem value='low'>Low</SelectItem>
                 </SelectContent>
               </Select>
-
 
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
@@ -424,8 +389,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
-
-
 
                 </SelectTrigger>
                 <SelectContent>
@@ -451,7 +414,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
-
 
             {/* Support Requests Table */}
             <Card>
@@ -885,7 +847,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
           </TabsContent>
 
-
           <TabsContent value="escalated" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
@@ -910,57 +871,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
 
-
               </p>
             </div>
           </TabsContent>
         </Tabs>
       </div>
     </>
-<<<<<<< HEAD:src_backup/pages/admin/SupportRequests.tsx
-=======
-  )
-
-                  </TableBody>;
-                </Table>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-          <TabsContent value='escalated' className='mt-6'>;
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;
-              <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>;
-              <p className='text-zion-slate-light'>;
-                This tab will show support requests that have been escalated by;
-                agents or the system.;
-              </p>;
-            </div>;
-          </TabsContent>;
-
-          <TabsContent value='ai-flagged' className='mt-6'>;
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;
-              <h3 className='text-xl font-medium mb-4'>AI Flagged Issues</h3>;
-              <p className='text-zion-slate-light'>;
-                This tab shows issues that our AI system has identified as;
-                requiring human attention.;
-              </p>;
-            </div>;
-          </TabsContent>;
-
-          <TabsContent value='need-response' className='mt-6'>;
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;
-              <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>;
-              <p className='text-zion-slate-light'>;
-                These support requests have been waiting for an agent response;
-                for over 24 hours.;
-              </p>;
-            </div>;
-          </TabsContent>;
-        </Tabs>;
-      </div>;
-    </>;
-  );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/admin/SupportRequests.tsx
+:src_backup/pages/admin/SupportRequests.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
@@ -969,113 +886,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 //Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8"> <div> <h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Support Requests </h1> <p className=" text-zion-slate-light mt-2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt-4 md:mt-0"> <Button className=" bg-zion-purple hover:bg-zion-purple-light"> New Support Case </Button> </div> </div> <CardDescription>Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription>In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai-flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need-response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in-progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {;
   /* Support Requests Table */ ";
 }<Card> <CardContent className=" p-0"> <Table> <TableHeader> <TableRow> <TableHead>ID</TableHead> <TableHead>User</TableHead> <TableHead>Issue</TableHead> <TableHead>Status</TableHead> <TableHead>Priority</TableHead> <TableHead>Category</TableHead> <TableHead>Created</TableHead> <TableHead>Last Updated</TableHead> <TableHead>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-<<<<<<< HEAD:src_backup/pages/admin/SupportRequests.tsx
-=======
-  filteredRequests && filteredRequests.map ( (request) => (<TableRowkey= {
-  request && request.id
-}> <TableCell> <Badgevariant= {
-  request && request.status === 'open' ? 'default' : request && request.status === 'in-progress' ? 'secondary' : 'outline' '
-}> {;
-  request && request.status ;
-}</Badge> </TableCell> <TableCell> <Badgevariant= {''
-  request && request.priority === 'high' ? 'destructive' : request && request.priority === 'medium' ? 'default' : 'outline' '
-  request && request.id 
-}> <TableCell> <Badgevariant= {
-  request && request.status === 'open' ? 'default' : request && request.status === 'in-progress' ? 'secondary' : 'outline' 
-}> {;
-  request && request.status ;
-}</Badge> </TableCell> <TableCell> <Badgevariant= {'
-  request && request.priority === 'high' ? 'destructive' : request && request.priority === 'medium' ? 'default' : 'outline' 
-}> {;
-  request && request.priority ;
-}</Badge> </TableCell> <TableCell> {;
-  request && request.category ;
-}</TableCell> <TableCell> {;
-  new Date (request && request.createdAt) .toLocaleDateString () ;
-}</TableCell> <TableCell> {;
-  new Date (request && request.lastUpdated) .toLocaleDateString () ";
-}
-;
-}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
-}'"}"
-
-}
-;
-
-
-}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
-}'"}
-
-
-                      </TableRow>))}
-                  </TableBody>;
-                </Table>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          <TabsContent value='escalated' className='mt - 6'>;
-            <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>;
-              <h3 className='text - xl font - medium mb - 4'>Escalated Requests</h3>;
-              <p className='text - zion - slate - light'>;
-                This tab will show support requests that have been escalated by;
-                agents or the system.;
-              </p>;
-            </div>;
-          </TabsContent>;
-          <TabsContent value='ai - flagged' className='mt - 6'>;
-            <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>;
-              <h3 className='text - xl font - medium mb - 4'>AI Flagged Issues</h3>;
-              <p className='text - zion - slate - light'>;
-                This tab shows issues that our AI system has identified as;
-                requiring human attention.;
-              </p>;
-            </div>;
-          </TabsContent>;
-          <TabsContent value='need - response' className='mt - 6'>;
-            <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>;
-              <h3 className='text - xl font - medium mb - 4'>Awaiting Response</h3>;
-              <p className='text - zion - slate - light'>;
-                These support requests have been waiting for an agent response;
-                for over 24 hours.;
-              </p>;
-            </div>;
-          </TabsContent>;
-        </Tabs>;
-      </div>;
-    </>);
-  return true;
-});
-//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx - auto px - 4 py - 8"> <div className=" flex flex - col md:flex - row items - start md:items - center justify - between mb - 8"> <div> <h1 className=" text - 3xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent"> Support Requests </h1> <p className=" text - zion - slate - light mt - 2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt - 4 md:mt - 0"> <Button className=" bg - zion - purple hover:bg - zion - purple - light"> New Support Case </Button> </div> </div> <CardDescription > Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription > In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription > Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription > Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs default_value=" all"className=" mb - 8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai - flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need - response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in - progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {"
-  /* Support Requests Table */ ";
-}<Card> <CardContent className=" p - 0"> <Table> <TableHeader> <TableRow> <TableHead > ID</TableHead> <TableHead > User</TableHead> <TableHead > Issue</TableHead> <TableHead > Status</TableHead> <TableHead > Priority</TableHead> <TableHead > Category</TableHead> <TableHead > Created</TableHead> <TableHead > Last Updated</TableHead> <TableHead > Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
-//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx - auto px - 4 py - 8"> <div className=" flex flex - col md:flex - row items - start md:items - center justify - between mb - 8"> <div> <h1 className=" text - 3xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent"> Support Requests </h1> <p className=" text - zion - slate - light mt - 2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt - 4 md:mt - 0"> <Button className=" bg - zion - purple hover:bg - zion - purple - light"> New Support Case </Button> </div> </div> <CardDescription > Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription > In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription > Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription > Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs default_value=" all"className=" mb - 8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai - flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need - response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in - progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {
-  /* Support Requests Table */ ";
-}<Card> <CardContent className=" p - 0"> <Table> <TableHeader> <TableRow> <TableHead > ID</TableHead> <TableHead > User</TableHead> <TableHead > Issue</TableHead> <TableHead > Status</TableHead> <TableHead > Priority</TableHead> <TableHead > Category</TableHead> <TableHead > Created</TableHead> <TableHead > Last Updated</TableHead> <TableHead > Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  filtered_requests.map ( (request) => (<TableRow key= {
-  request.id;
-}> <TableCell> <Badge variant= {
-  request.status === 'open' ? 'default' : request.status === 'in - progress' ? 'secondary' : 'outline';
-}> {
-  request.status;
-}</Badge> </TableCell> <TableCell> <Badge variant= {';
-  request.priority === 'high' ? 'destructive' : request.priority === 'medium' ? 'default' : 'outline';
-}> {
-  request.priority;
-}</Badge> </TableCell> <TableCell> {
-  request.category;
-}</TableCell> <TableCell> {
-  new Date (request.created_at) .toLocaleDateString ();
-}</TableCell> <TableCell> {
-  new Date (request.last_updated) .toLocaleDateString () ";
-}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
-}'"}]
-}
-;
-}'"}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/admin/SupportRequests.tsx
+:src_backup/pages/admin/SupportRequests.tsx
   filteredRequests.map ( (request) => (<TableRow key= {;
   request.id ;
 }> <TableCell> <Badge variant= {;

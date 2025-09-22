@@ -35,7 +35,7 @@
 }</motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our Solution Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive technology solutions designed to address the most complex business challenges </p> </motion.div> > <div className= {}
   `w-16 h-16 bg-gradient-to-br $ {}
   solution.color;`
-}rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`
+}rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`;
 }> {}
   solution.icon;
 }</div> </li>) )"
@@ -100,7 +100,7 @@ import React from 'react';
 }</motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our Solution Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive technology solutions designed to address the most complex business challenges </p> </motion && motion.div> > <divclassName= {}`
   `w-16 h-16 bg-gradient-to-br $ {}
   solution && solution.color;`
-}rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300` 
+}rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300` ;
 }> {;
   solution && solution.icon ;
 }</div> </li>) ) ;"
@@ -151,7 +151,7 @@ import React from 'react';
   once: true;
 }className= {}`
   `bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 $ {'
-  solution && solution.featured ? 'border-green-500/30' : 'border-gray-700/50' `
+  solution && solution.featured ? 'border-green-500/30' : 'border-gray-700/50' `;
 }` "
 }> > Learn More <ArrowRight className="ml-2 w-4 h-4" /> </a> </motion && motion.div>) ) ;
 }</div> </motion && motion.div>) ) ;
@@ -169,7 +169,7 @@ const SolutionsPage: React.FC = () => {}
   const industrySolutions = []
     {'
       category: 'Healthcare & Life Sciences',
-      solutions: []
+      solutions: [];
         {'
           name: 'Healthcare AI Solutions','
           description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms','
@@ -191,7 +191,7 @@ const SolutionsPage: React.FC = () => {}
     };
     {'
       category: 'Financial Services',
-      solutions: []
+      solutions: [];
         {'
           name: 'Financial Solutions','
           description: 'Comprehensive financial technology solutions for modern enterprises','
@@ -212,7 +212,7 @@ const SolutionsPage: React.FC = () => {}
     };
     {'
       category: 'Manufacturing & Industry',
-      solutions: []
+      solutions: [];
         {'
           name: 'Manufacturing AI Solutions','
           description: 'AI-powered automation and optimization for manufacturing processes','
@@ -233,7 +233,7 @@ const SolutionsPage: React.FC = () => {}
     };
     {'
       category: 'Retail & E-commerce',
-      solutions: []
+      solutions: [];
         {'
           name: 'Retail Technology Solutions','
           description: 'Advanced technology solutions for modern retail operations','
@@ -254,7 +254,7 @@ const SolutionsPage: React.FC = () => {}
     };
     {'
       category: 'Government & Public Sector',
-      solutions: []
+      solutions: [];
         {'
           name: 'Government Technology Solutions','
           description: 'Innovative technology solutions for government agencies and public services','
@@ -275,7 +275,7 @@ const SolutionsPage: React.FC = () => {}
     };
     {'
       category: 'Education & Training',
-      solutions: []
+      solutions: [];
         {'
           name: 'Education Technology Solutions','
           description: 'Innovative technology solutions for modern education and training','
@@ -296,7 +296,7 @@ const SolutionsPage: React.FC = () => {}
     };
     {'
       category: 'Sustainability & Energy',
-      solutions: []
+      solutions: [];
         {'
           name: 'Energy & Utilities Solutions','
           description: 'Technology solutions for energy optimization and sustainability','
@@ -324,10 +324,10 @@ const SolutionsPage: React.FC = () => {}
           <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
         {/* Hero Section */}"
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
+        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">";
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 "
-              className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+              className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";
               initial={{ opacity: 0;, y: 30 ;}}
               animate={{ opacity: 1;, y: 0 ;}}
               transition={{ duration: 0.8 ;}}
@@ -341,7 +341,7 @@ const SolutionsPage: React.FC = () => {}
             >
             {/* Stats Grid */}
             <motion.div "
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto";
               initial={{ opacity: 0;, y: 30 ;}}
               animate={{ opacity: 1;, y: 0 ;}}
               transition={{ duration: 0.8;, delay: 0.4 ;}}
@@ -357,7 +357,7 @@ const SolutionsPage: React.FC = () => {}
             </motion.div>
           </div>
         </section>"
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
+        <section className="py-20 px-4 sm:px-6 lg:px-8">";
           <div className="max-w-7xl mx-auto">
             <motion.div "
               className="text-center mb-16"
@@ -372,11 +372,11 @@ const SolutionsPage: React.FC = () => {}
                 Comprehensive technology solutions designed to address the most complex business challenges;
               </p>
             </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {solutions.map((solution, index) => (
                 <motion.div;
                   key={index}"
-                  className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105";
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -392,7 +392,7 @@ const SolutionsPage: React.FC = () => {}
                   </ul>
                   <a;
                     href={solution.href}"
-                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"
+                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1";
                   >
                     <span>Learn More</span>"
                     <ArrowRight className="w-4 h-4" />
@@ -402,20 +402,20 @@ const SolutionsPage: React.FC = () => {}
             </div>
               Industry Solutions;
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">'
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">';
               Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link"
                 href="/contact""
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300";
               >
                 Get Started"
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </Link>
               <Link"
                 href="/demo""
-                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
+                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10";
               >
                 Request Demo;
               </Link>
@@ -431,7 +431,7 @@ const SolutionsPage: React.FC = () => {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Industry-Specific Solutions;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
@@ -450,7 +450,7 @@ const SolutionsPage: React.FC = () => {}
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">
                   {category.category}
                 </h3>"
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                   {category.solutions.map((solution, solutionIndex) => (
                     <motion.div;
                       key={solution.name}
@@ -459,7 +459,7 @@ const SolutionsPage: React.FC = () => {}
                       transition={{ duration: 0.6, delay: solutionIndex * 0.1 }}
                       viewport={{ once: true }}`
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${'
-                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50'`
+                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50'`;
                       }`}
                     >
                       {solution.featured && ("
@@ -475,7 +475,7 @@ const SolutionsPage: React.FC = () => {}
                       <p className="text-gray-300 mb-4 text-sm">{solution.description}</p>
                       <Link;
                         href={solution.href}"
-                        className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors text-sm font-medium"
+                        className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors text-sm font-medium";
                       >"
                         Learn More <ArrowRight className="ml-2 w-4 h-4" />
                       </Link>
@@ -501,17 +501,17 @@ const SolutionsPage: React.FC = () => {}
             <p className="text-xl text-gray-300 mb-8">'
               Let's discuss how our industry-specific solutions can drive innovation and growth for your organization.
             </p>"
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
               <Link"
                 href="/contact""
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300";
               >
                 Start Your Transformation"
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </Link>
               <Link"
                 href="/services""
-                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
+                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10";
               >
                 View All Services;
               </Link>

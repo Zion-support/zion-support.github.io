@@ -11,8 +11,8 @@ import { supabase } from '../../utils/supabase/client';
     const normalized = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
@@ -55,9 +55,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const { data, error } = await supabase'
       .from('email_signups')
       .insert({}
-        email: normalized'
-        source: 'mobile-launch'
-        created_at: new Date().toISOString()'
+        email: normalized';
+        source: 'mobile-launch';
+        created_at: new Date().toISOString()';
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
 pr-12243
       .select('*')

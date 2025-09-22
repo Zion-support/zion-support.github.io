@@ -1,27 +1,18 @@
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
+:src/pages/EquipmentPage.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 }
 
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-<<<<<<< HEAD
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
 import { ProductListing } from '@/types/listings',
@@ -33,18 +24,6 @@ import Spinner from '@/components/ui/spinner',
 import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
-import { ProductListing  } from '@/types/listings';
-import { SkeletonCard  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -72,11 +51,8 @@ import { SkeletonCard } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
+:src/pages/EquipmentPage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary  } from '@/components/EquipmentErrorBoundary';
 import { useCurrency  } from '@/hooks/useCurrency';
@@ -85,13 +61,8 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
+:src/pages/EquipmentPage.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "nvidia-a100-server",
@@ -262,20 +233,14 @@ const EquipmentFilterControls = ({
   </div>
 ),
 
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
+:src/pages/EquipmentPage.tsx
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
-    <Card className="h-full hover:shadow-lg transition-shadow">
+:src/pages/EquipmentPage.tsx
+<Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <div className="flex-1 min-w-0">
@@ -418,16 +383,6 @@ function EquipmentPageContent() {;
       throw new Error('Failed to load equipment data. Please try again.');
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
-
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -456,14 +411,6 @@ const EquipmentPage: React.FC = () => {
 };
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -582,12 +529,8 @@ const EquipmentPage: React.FC = () => {
         />
       </motion.div>
 
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
+:src/pages/EquipmentPage.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {equipment.map((item, index) => (
@@ -674,27 +617,8 @@ export default function EquipmentPage() {;
     </EquipmentErrorBoundary>;
   );
 }
-<<<<<<< HEAD
-=======
-
-
 
 ;
-}
-// Main export with error boundary;
-export default /**
- * EquipmentPage - Function description
- */
-function EquipmentPage() {
-  return (
-    <EquipmentErrorBoundary>;
-      <EquipmentPageContent />;
-    </EquipmentErrorBoundary>);
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 export default EquipmentPage;
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
@@ -871,9 +795,6 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
+:src/pages/EquipmentPage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx

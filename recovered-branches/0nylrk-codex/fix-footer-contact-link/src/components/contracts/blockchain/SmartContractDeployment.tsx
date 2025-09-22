@@ -1,19 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -29,15 +18,11 @@ import {Switch} from "@/components/ui/switch";
 import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
 import {Loader2, ShieldCheck, Download} from "lucide-react";
 import {toast} from "sonner";
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -54,19 +39,11 @@ import { Loader2, ShieldCheck, Download } from "lucide-react";
 import { toast } from "sonner";
 import { Loader2, ShieldCheck, Download } from "lucide-react",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { toast } from "sonner",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SmartContractDeploymentProps {
 =======
@@ -102,20 +79,7 @@ interface SmartContractDeploymentProps {
 }
 
 <<<<<<< HEAD
-
-
-
-
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function SmartContractDeployment({
   solidityCode;
   onDeploy;
@@ -127,20 +91,11 @@ export function SmartContractDeployment({ ;
 export function SmartContractDeployment({ 
   solidityCode,
   onDeploy,
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   isDeploying
-<<<<<<< HEAD
-=======
-import { toast } from "sonner",  isDeploying
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
 import { toast } from "sonner",  isDeploying
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -149,21 +104,17 @@ import { toast } from "sonner",  isDeploying
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-  isDeploying;
+isDeploying;
 }: SmartContractDeploymentProps) {}
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({}
     network: 'none'
-<<<<<<< HEAD
-    useEscrow: true
+useEscrow: true
     deployToChain: false
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,12 +123,6 @@ import { toast } from "sonner",  isDeploying
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    walletAddress: ''
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -206,18 +151,6 @@ function SmartContractDeployment() {
   });
 ;
 
-<<<<<<< HEAD
-=======
-
-  }),
-=======
-    useEscrow: true;
-    deployToChain: false'
-    walletAddress: ''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
   const handleDeployContract = async () => {}
     // Check condition;
 if ( {) {}
@@ -228,22 +161,10 @@ if ( {) {}
     }
     try {}
       await on_deploy (deployment_options);
-<<<<<<< HEAD
-    } catch (error) {
+} catch (error) {
       console.error ("Deployment error:", error);
     }
 <<<<<<< HEAD
-
-
-=======
-
-
-  }),
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleDeployContract = async () => {
     // Check condition
 if ( {) {
@@ -255,56 +176,21 @@ if ( {) {
     try {
       await on_deploy (deployment_options);
     } catch (error) {
-<<<<<<< HEAD
-=======
-    } catch (error) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      console.error ("Deployment error:", error);
-    }
-<<<<<<< HEAD
-=======
 
-  },
-  
-  const handleDownloadSolidity = () => {}
-    // Create a blob from the Solidity code'
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),
-    const url = URL.createObjectURL(blob),
-    
-    // Create a temporary anchor to trigger download'
-    const a = document.createElement('a'),
-    a.href = url,'
-=======
       console.error ("Deployment error:", error);
     }
 
-
-  },
-  
-  const handleDownloadSolidity = () => {
-    // Create a blob from the Solidity code
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),
-    const url = URL.createObjectURL(blob),
-    
-    // Create a temporary anchor to trigger download
-    const a = document.createElement('a'),
-    a.href = url,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     a.download = 'ZionContract.sol',
     document.body.appendChild(a),
     a.click(),
-    
-<<<<<<< HEAD
-    // Clean up;
+
+// Clean up;
     URL.revokeObjectURL(url),
     document.body.removeChild(a),
     "
     toast.success("Solidity contract downloaded")
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-
 
   return ("
     <Card className="w-full">
@@ -321,17 +207,8 @@ if ( {) {
         <div className="space-y-4">"
           <div className="flex items-center space-x-2">
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Switch
               id="deploy-blockchain"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               checked={deploymentOptions.deployToChain}
 =======
     walletAddress: ''              checked={deploymentOptions.deployToChain}
@@ -343,11 +220,9 @@ if ( {) {
     // Clean up
     URL.revokeObjectURL(url),
     document.body.removeChild(a),
-    
+
     toast.success("Solidity contract downloaded")
   },
-
-
 
   return (
     <Card className="w-full">
@@ -381,17 +256,8 @@ import { Switch } from "@/components/ui/switch",;
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
 import { Loader2, ShieldCheck, Download } from "lucide-react",;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { toast } from "sonner",;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 import { toast } from "sonner",;
   }
@@ -406,36 +272,7 @@ import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
 import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
 import {Loader2, ShieldCheck, Download} from "lucide-react";
-<<<<<<< HEAD
-=======
 
-              checked={deploymentOptions.deployToChain}
-              onCheckedChange={(checked) => setDeploymentOptions({}
-                ...deploymentOptions;
-                deployToChain: checked;
-            <Switch "
-              id="deploy-blockchain""
-import React, { useState } from "react",;"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
-import { Button } from "@/components/ui/button",;"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;"
-import { Label } from "@/components/ui/label",;"
-import { Input } from "@/components/ui/input",;"
-import { Switch } from "@/components/ui/switch",;"
-import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;"
-import { Loader2, ShieldCheck, Download } from "lucide-react",;"
-import { toast } from "sonner",;
-"
-import React, { useState } from "react";"
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Button} from "@/components/ui/button";"
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";"
-import {Label} from "@/components/ui/label";"
-import {Input} from "@/components/ui/input";"
-import {Switch} from "@/components/ui/switch";"
-import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";"
-import {Loader2, ShieldCheck, Download} from "lucide-react";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {toast} from "sonner";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -447,13 +284,7 @@ interface SmartContractDeploymentProps {;
   isDeploying: boolean;
 }
 
-<<<<<<< HEAD
-
-
-  isDeploying;
-=======
-import { toast } from "sonner",;  isDeploying;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+isDeploying;
 =======
 import { toast } from "sonner",;  isDeploying;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -469,14 +300,9 @@ export function SmartContractDeployment(): any ({ ;
     useEscrow: true,;
     deployToChain: false,;'
     walletAddress: '';
-<<<<<<< HEAD
-  });
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+});
 
-
-<<<<<<< HEAD
-    try {;
+try {;
       await onDeploy(deploymentOptions);
     } catch (error) {;
       console && console.error("Deployment error:", error);
@@ -510,54 +336,9 @@ export function SmartContractDeployment(): any ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
-  const handleDownloadSolidity = () =>: any {
-    // Create a blob from the Solidity code;
-    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
-    const url = URL.createObjectURL (blob);
-;
-    // Create a temporary anchor to trigger download;
-    const array = document.create_element ('a');
-    a.href = url;
-    a.download = 'ZionContract.sol';
-    document.body.append_child (a);
-    a.click ();
-;
-    // Clean up;
-    URL.revokeObjectURL (url);
-    document.body.remove_child (a);
-;
-    toast.success ("Solidity contract downloaded");
-  }
-;
-  return (
-    <Card className="w - full">;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <ShieldCheck className="h - 5 w - 5 text - primary" />;
-=======
-"
-    <Card className="w-full">;
-      <CardHeader>;"
-        <CardTitle className="flex items-center gap-2">;"
-          <ShieldCheck className="h-5 w-5 text-primary" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   }
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  }  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  }  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -574,28 +355,8 @@ export function SmartContractDeployment(): any ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <CardContent className="space-y-6">;
-        <div className="space-y-4">;
-          <div className="flex items-center space-x-2">;
-            <Switch;
-              id="deploy-blockchain";
-              checked={deploymentOptions.deployToChain}
-              onCheckedChange={(checked) => setDeploymentOptions({;
-                ...deploymentOptions,;
-                deployToChain: checked;
-=======
-
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               })}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -613,23 +374,10 @@ export function SmartContractDeployment(): any ({ ;
             <>"
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  onValueChange={(value) => setDeploymentOptions({
+onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;
                     network: value as BlockchainNetwork
 <<<<<<< HEAD
-
-=======
-                <RadioGroup 
-=======
-                <RadioGroup;
-                  onValueChange={(value) => setDeploymentOptions({}
-                    ...deploymentOptions;
-                    network: value as BlockchainNetwork;
-                <RadioGroup;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
@@ -637,7 +385,6 @@ export function SmartContractDeployment(): any ({ ;
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   })}
                   className="flex flex-col space-y-1"
@@ -661,73 +408,15 @@ export function SmartContractDeployment(): any ({ ;
                 />
               </div>
               <div className="flex items-center space-x-2">
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-                <RadioGroup
-                  onValueChange={(value) => setDeploymentOptions({
-                    ...deploymentOptions;
-                    network: value as BlockchainNetwork
-                <RadioGroup 
-                  defaultValue={deploymentOptions.network}
-=======
-
-                  })}
-
-
-
-
-                  })}
-
-            />;"
-            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
-          </div>;
-          {deploymentOptions && deploymentOptions.deployToChain && (;
-            <>;"
-              <div className="space-y-2">;
-                <Label>Select blockchain network</Label>;
-                <RadioGroup;
-                  defaultValue={deploymentOptions && deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    network: value as BlockchainNetwork;
-      ;"
-      <CardContent className="space-y-6">;"
-        <div className="space-y-4">;"
-          <div className="flex items-center space-x-2">;
-            <Switch ;"
-              id="deploy-blockchain";
-              checked={deploymentOptions.deployToChain}
-              onCheckedChange={(checked) => setDeploymentOptions({;
-                ...deploymentOptions,;
-                deployToChain:checked;
-              })}
-            />;"
-            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
-          </div>;
-          ;
-          {deploymentOptions.deployToChain && (;
-            <>;"
-              <div className="space-y-2">;
-                <Label>Select blockchain network</Label>;
-                <RadioGroup ;                  defaultValue={deploymentOptions.network}
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -743,12 +432,7 @@ export function SmartContractDeployment(): any ({ ;
               </div>
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
-
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               })}
@@ -767,74 +451,9 @@ export function SmartContractDeployment(): any ({ ;
 
                     ...deploymentOptions;
                     network: value as BlockchainNetwork;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  })}
-
-
-
-                  })}
-
-            />;
-            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
-          </div>;
-          {deploymentOptions && deploymentOptions.deployToChain && (;
-            <>;
-              <div className="space-y-2">;
-                <Label>Select blockchain network</Label>;
-                <RadioGroup
-                  defaultValue={deploymentOptions && deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    network: value as BlockchainNetwork;
-      ;
-      <CardContent className="space-y-6">;
-        <div className="space-y-4">;
-          <div className="flex items-center space-x-2">;
-            <Switch ;
-              id="deploy-blockchain";
-              checked={deploymentOptions.deployToChain}
-              onCheckedChange={(checked) => setDeploymentOptions({;
-                ...deploymentOptions,;
-                deployToChain:checked;
-              })}
-            />;
-            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
-          </div>;
-          ;
-          {deploymentOptions.deployToChain && (;
-            <>;
-              <div className="space-y-2">;
-                <Label>Select blockchain network</Label>;
-                <RadioGroup ;                  defaultValue={deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({;
-                    ...deploymentOptions,;
-                    network: value as BlockchainNetwork;
-                  defaultValue={deploymentOptions && deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({;
-
-                    ...deploymentOptions;
-                    network: value as BlockchainNetwork;
-
-
-                  })}
-
-                  className="flex flex-col space-y-1";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                >;
+>;
                   <div className="flex items-center space-x-2">;
                     <RadioGroupItem value="ethereum" id="ethereum" />;
-=======
-
-
-                  })}
-"
-                  className="flex flex-col space-y-1";
-                >;"
-                  <div className="flex items-center space-x-2">;"
-                    <RadioGroupItem value="ethereum" id="ethereum" />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
                   </div>;"
                   <div className="flex items-center space-x-2">;"
@@ -848,15 +467,7 @@ export function SmartContractDeployment(): any ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="space-y-2">;
-=======
-"
-              <div className="space-y-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
                 <Input"
                   id="wallet-address" "
@@ -873,27 +484,9 @@ export function SmartContractDeployment(): any ({ ;
 
                     ...deploymentOptions;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     walletAddress: e && e.target.value;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-                    walletAddress: e && e.target.value;
-=======
-
-=======
-                <Input
-                  id="wallet-address"
-                  placeholder="0x..."
-                  value={deploymentOptions.walletAddress |''}
-                  onChange={(e) => setDeploymentOptions({
-                    ...deploymentOptions;
-                    walletAddress: e.target.value
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -916,8 +509,6 @@ export function SmartContractDeployment(): any ({ ;
                   onChange={(e) => setDeploymentOptions({
 =======
 
-
-
                 <Input "
                   id="wallet-address" "
                   placeholder="0x..." '
@@ -931,8 +522,7 @@ export function SmartContractDeployment(): any ({ ;
                     walletAddress: e.target.value;
 
                   })}
-<<<<<<< HEAD
-                />;
+/>;
               </div>;
               <div className="flex items-center space-x-2">;
                 <Switch
@@ -947,33 +537,12 @@ export function SmartContractDeployment(): any ({ ;
                   id="use-escrow"
                   checked={deploymentOptions.useEscrow}
 
-<<<<<<< HEAD
-=======
-
-                <Switch"
-                  id="use-escrow"
-                  checked={deploymentOptions && deploymentOptions.useEscrow}
-                  onCheckedChange={(checked) => setDeploymentOptions({;
-                    ...deploymentOptions;
-
-                <Switch "
-                  id="use-escrow"
-                  checked={deploymentOptions.useEscrow}
-
-
-
-                  onCheckedChange={(checked) => setDeploymentOptions({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    ...deploymentOptions;
+...deploymentOptions;
                     useEscrow: checked;
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   })}
                 />;"
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
@@ -984,18 +553,6 @@ export function SmartContractDeployment(): any ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  onChange={(e) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    walletAddress: e.target.value;
-                  onChange={(e) => setDeploymentOptions({
-                    ...deploymentOptions;
-                    walletAddress: e.target.value
-                  onChange={(e) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    walletAddress: e.target.value;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   })}
                 />
               </div>
@@ -1013,30 +570,6 @@ export function SmartContractDeployment(): any ({ ;
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
-=======
-                    useEscrow: checked;
-              ;
-              <div className="space-y-2">;
-                <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
-                <Input ;
-                  id="wallet-address" ;
-                  placeholder="0x..." ;
-                  value={deploymentOptions.walletAddress || ''}
-                  onChange={(e) => setDeploymentOptions({;
-                    ...deploymentOptions,;
-                    walletAddress:e.target.value;
-                  })}
-                />;
-              </div>;
-              ;
-              <div className="flex items-center space-x-2">;
-                <Switch ;
-                  id="use-escrow";
-                  checked={deploymentOptions.useEscrow}
-                  onCheckedChange={(checked) => setDeploymentOptions({;
-                    ...deploymentOptions,;
-                    useEscrow:checked;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;
 =======
@@ -1046,59 +579,14 @@ export function SmartContractDeployment(): any ({ ;
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   })}
                 />
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>
               </div>
             </>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-onChange={(e) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    walletAddress: e.target.value;
-                  onChange={(e) => setDeploymentOptions({
-                    ...deploymentOptions;
-                    walletAddress: e.target.value
-                  onChange={(e) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    walletAddress: e.target.value;
-                  })}
-                />
-              </div>
-              <div className="flex items-center space-x-2">
-                <Switch
-                  id="use-escrow"
-                  checked={deploymentOptions.useEscrow}
-                  onCheckedChange={(checked) => setDeploymentOptions({
-                    ...deploymentOptions;
-
-                    useEscrow: checked
-                <Switch 
-                  id="use-escrow"
-                  checked={deploymentOptions.useEscrow}
-                  onCheckedChange={(checked) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    useEscrow: checked;
-                  onCheckedChange={(checked) => setDeploymentOptions({
-                    ...deploymentOptions;
-                    useEscrow: checked
-                  onCheckedChange={(checked) => setDeploymentOptions({;
-                    ...deploymentOptions;
-                    useEscrow: checked;
-                  })}
-                />
-                <Label htmlFor="use-escrow">Use escrow for payments</Label>
-              </div>
-            </>
-          )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          <div className="rounded-md bg-muted p-4">
+<div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
               <pre>{solidityCode.slice(0, 500)}...</pre>
@@ -1121,20 +609,9 @@ onChange={(e) => setDeploymentOptions({;
             'Deploy Contract'
           )}
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 ;
-=======
-        </Button>
-      </CardFooter>
-    </Card>
-  )
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1148,8 +625,6 @@ onChange={(e) => setDeploymentOptions({;
       </CardFooter>
     </Card>
   )
-
-
 
 import React, { useState } from "react";""
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -1212,7 +687,6 @@ if ( {) {
       console.error ("Deployment error:", error);"
     }
 
-
   },
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code;"
@@ -1230,8 +704,6 @@ if ( {) {
     '
     toast.success("Solidity contract downloaded")"
   },
-
-
 
   return ("
     <Card className="w-full">"
@@ -1559,15 +1031,9 @@ interface SmartContractDeploymentProps {;
   );
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <CardContent className="space-y-6">;
         <div className="space-y-4">;
           <div className="flex items - center space-x-2">;
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="rounded-md bg-muted p-4">;
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
@@ -1576,32 +1042,8 @@ interface SmartContractDeploymentProps {;
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      <CardContent className="space-y-6">;
-        <div className="space-y-4">;
-          <div className="flex items - center space-x-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Switch;
-=======
-
-"
-          <div className="rounded-md bg-muted p-4">;"
-            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;"
-            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
-              <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
-
-
-
-
-
-"
-      <CardContent className="space - y-6">;"
-        <div className="space - y-4">;"
-          <div className="flex items - center space - x-2">;
-            <Switch;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               id="deploy - blockchain";
               checked={deployment_options.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions ({}
@@ -1612,18 +1054,9 @@ interface SmartContractDeploymentProps {;
             <Label html_for="deploy - blockchain">Deploy to blockchain</Label>;
           </div>;
           {deployment_options.deployToChain && (
-<<<<<<< HEAD
-            <>;
-<<<<<<< HEAD
+<>;
 <<<<<<< HEAD
               <div className="space-y-2">;
-=======
-            <>;"
-              <div className="space - y-2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <div className="space - y-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
               <div className="space-y-2">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1633,8 +1066,7 @@ interface SmartContractDeploymentProps {;
                   onValueChange={(value) => setDeploymentOptions ({}
                     ...deployment_options;
                     network: value as BlockchainNetwork;
-<<<<<<< HEAD
-                  })}
+})}
                   className="flex flex - col space-y-1";
                 >;
                   <div className="flex items - center space-x-2">;
@@ -1648,27 +1080,7 @@ interface SmartContractDeploymentProps {;
                 </RadioGroup>;
               </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
               <div className="space-y-2">;
-=======
-                  })}"
-                  className="flex flex - col space - y-1";
-                >;"
-                  <div className="flex items - center space - x-2">;"
-                    <RadioGroupItem value="ethereum" id="ethereum" />;"
-                    <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;
-                  </div>;"
-                  <div className="flex items - center space - x-2">;"
-                    <RadioGroupItem value="polygon" id="polygon" />;"
-                    <Label html_for="polygon">Polygon (lower fees, faster)</Label>;
-                  </div>;
-                </RadioGroup>;
-              </div>;"
-              <div className="space - y-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <div className="space - y-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
               <div className="space-y-2">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1682,15 +1094,9 @@ interface SmartContractDeploymentProps {;
                     wallet_address: e.target.value;
                   })}
                 />;
-<<<<<<< HEAD
-              </div>;
+</div>;
               <div className="flex items - center space-x-2">;
                 <Switch;
-=======
-              </div>;"
-              <div className="flex items - center space - x-2">;
-                <Switch;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   id="use - escrow";
                   checked={deployment_options.use_escrow}
                   onCheckedChange={(checked) => setDeploymentOptions ({}
@@ -1700,8 +1106,7 @@ interface SmartContractDeploymentProps {;
                 />;"
                 <Label html_for="use - escrow">Use escrow for payments</Label>;
               </div>;
-<<<<<<< HEAD
-            </>)}
+</>)}
           <div className="rounded - md bg - muted p-4">;
             <h4 className="text - sm font - medium mb-2">Smart Contract Preview</h4>;
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font-mono">;
@@ -1711,23 +1116,13 @@ interface SmartContractDeploymentProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ;
-=======
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="rounded-md bg-muted p-4">;
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
               <pre>{solidityCode.slice(0, 500)}...</pre>;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1740,8 +1135,6 @@ interface SmartContractDeploymentProps {;
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font - mono">;
               <pre>{solidity_code.slice (0, 500)}...</pre>;
 
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1753,14 +1146,6 @@ interface SmartContractDeploymentProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-<<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1770,16 +1155,7 @@ interface SmartContractDeploymentProps {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <CardFooter className="flex justify - between">;
-=======
-}
-<CardFooter className="flex justify - between">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Button variant="outline" on_click={handleDownloadSolidity}>;
           <Download className="mr - 2 h - 4 w - 4" />;
           Download .sol File;
@@ -1795,19 +1171,7 @@ interface SmartContractDeploymentProps {;
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-      ;
-      <CardFooter className="flex justify-between">;
-        <Button variant="outline" onClick={handleDownloadSolidity}>;
-=======
-
-
-      ;"
-      <CardFooter className="flex justify-between">;"
-        <Button variant="outline" onClick={handleDownloadSolidity}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
       ;
       <CardFooter className="flex justify-between">;
@@ -1819,26 +1183,17 @@ interface SmartContractDeploymentProps {;
         ;
         <Button onClick={handleDeployContract} disabled={isDeploying}>;
           {isDeploying ? (;
-<<<<<<< HEAD
-            <>;"
+<>;"
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Deploying...;
             </>;
           ) :(;'
-=======
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Deploying...;
-            </>;
-          ) :(;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             'Deploy Contract';
           )}
         </Button>;
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-  ),; interface SmartContractDeploymentProps {}
+),; interface SmartContractDeploymentProps {}
   solidityCode: string;
 onDeploy: (options: DeploymentOptions) => Promise<void>;
 isDeploying: boolean;
@@ -1867,25 +1222,10 @@ const handleDownloadSolidity = () => {}
 const url = URL.createObjectURL (blob);'
 //Create a temporary anchor to trigger download const a = document.createElement ('a');
 a.href = url;'
-=======
-  ),; interface SmartContractDeploymentProps {
-  solidityCode: string;
-}
-<<<<<<< HEAD
-};
-const handleDownloadSolidity = () => {
-  //Create a blob from the Solidity code const blob = new Blob ([solidityCode], {
-  type: 'text/plain' 
-});
-const url = URL.createObjectURL (blob);
-//Create a temporary anchor to trigger download const a = document.createElement ('a');
-a.href = url;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 a.download = 'ZionContract.sol';
 document.body.appendChild (a);
 a.click ();
 //Clean up URL.revokeObjectURL (url);
-<<<<<<< HEAD
 document.body.removeChild (a);"
 flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className=" space-y-6"> <div className=" space-y-4"> <div className=" flex items-center space-x-2"> <Switch /> <Label htmlFor=" deploy-blockchain">Deploy to blockchain</Label> </div> > <div className=" flex items-center space-x-2"> <RadioGroupItem value=" ethereum"id=" ethereum"/> <Label htmlFor=" ethereum">Ethereum (higher fees, more secure) </Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" polygon"id=" polygon"/> <Label htmlFor=" polygon">Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className=" space-y-2"> <Label htmlFor=" wallet-address">Wallet address for transactions</Label> <Input /> </div> <div className=" flex items-center space-x-2"> <Switch /> <Label htmlFor=" use-escrow">Use escrow for payments</Label> </div> </>) 
 }</div> </div> </div> </CardContent> Download .sol File </Button> <Button onClick= {}
@@ -1897,8 +1237,6 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 }</Button> </CardFooter> </Card>) 
 }
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 document.body.removeChild (a);
 flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className=" space-y-6"> <div className=" space-y-4"> <div className=" flex items-center space-x-2"> <Switch /> <Label htmlFor=" deploy-blockchain">Deploy to blockchain</Label> </div> > <div className=" flex items-center space-x-2"> <RadioGroupItem value=" ethereum"id=" ethereum"/> <Label htmlFor=" ethereum">Ethereum (higher fees, more secure) </Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" polygon"id=" polygon"/> <Label htmlFor=" polygon">Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className=" space-y-2"> <Label htmlFor=" wallet-address">Wallet address for transactions</Label> <Input /> </div> <div className=" flex items-center space-x-2"> <Switch /> <Label htmlFor=" use-escrow">Use escrow for payments</Label> </div> </>) 
 }</div> </div> </div> </CardContent> Download .sol File </Button> <Button onClick= {
@@ -1906,7 +1244,6 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 =======
 ;}
 ;
-
 
 import React, { useState } from "react";""
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -1965,7 +1302,6 @@ if ( {) {
     } catch (error) {"
       console.error ("Deployment error:", error);"
 
-
   },
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code;"
@@ -1981,8 +1317,6 @@ if ( {) {
     URL.revokeObjectURL(url),
     document.body.removeChild(a),
     toast.success("Solidity contract downloaded")"
-
-
 
   return ("
     <Card className="w-full">"
@@ -2164,24 +1498,14 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
-
 
 }
 ;
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
-;}
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '"

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:pages/api/support/requests.ts
-<<<<<<< HEAD
+:pages/api/support/requests.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -7,18 +6,7 @@ import { readJson, writeJson } from '../../../utils/fsDb';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',;
 ;
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', []),
@@ -41,22 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ ok: true, id })
   }
-<<<<<<< HEAD:pages/api/support/requests.ts
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-  return res.status(405).json({ error: 'Method not allowed' });
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+:pages/api/support/requests.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-  return res.status(405).json({ error: 'Method not allowed' });
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler($2) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/support/requests.ts
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -71,7 +45,6 @@ export default async function handler(req, res) {;
     } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
@@ -80,8 +53,6 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (req.method === 'GET') {
     const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string },;
     const requests = readJson<any[]>('support/requests.json', []),;
@@ -99,19 +70,7 @@ export default async function handler(req, res) {;
   }
 =======
   return res.status(405).json({ error: 'Method not allowed' })
-<<<<<<< HEAD
-
 }
-
-=======
-<<<<<<< HEAD
-  return res.status(405).json({ error: 'Method not allowed' })
-
-=======
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -126,7 +85,6 @@ if ( {) {
     const requests = read_json < any[]>('support / requests.json', []),
     return res.status (200).json ({ requests });
   }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   } catch (error) {
@@ -134,8 +92,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-  return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed' });
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -152,31 +109,7 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-=======
-  // Check condition
-if ( {) {
-  $2
-}
-    const { session_id, reason, tag } = req.body as { session_id: string, reason?: string, tag?: string },
-    const requests = read_json < any[]>('support / requests.json', []),
-    const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`,
-    const record = { id, session_id, reason: reason ?? 'User request', tag: tag ?? 'manual', status: 'open', created_at: Date.now () },
-    requests.push (record),
-    write_json ('support / requests.json', requests),
-    return res.status (200).json ({ ok: true, id });
-  }
-  return res.status (405).json ({ error: 'Method not allowed' });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======

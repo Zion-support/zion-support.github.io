@@ -3,15 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
@@ -31,27 +23,16 @@ import {ServiceIncludes} from "@/components/services/PageSections/ServiceInclude
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
 
-
-
-  
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-  
+
   // Check for success parameter in URL
   const success = searchParams.get("success");
 import { useState, useEffect } from "react",
@@ -66,36 +47,18 @@ import { toast } from "@/hooks/use-toast",
 import { PageHero } from "@/components/services/PageSections/PageHero",
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
 import { GlobalServiceSection } from "@/components/GlobalServiceSection";
 import { QuoteFormSection } from "@/components/QuoteFormSection";
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from "react";"
-import { useSearchParams } from "react-router-dom";"
-import { AppLayout } from "@/layout/AppLayout";"
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";"
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";"
-import { QuoteFormSection } from "@/components/QuoteFormSection";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { TrustedBySection } from "@/components/TrustedBySection";
 import {}
   CountryPricing,
-<<<<<<< HEAD
-=======
-import { TrustedBySection } from "@/components/TrustedBySection";
-import {
-  CountryPricing,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
   onsiteServicePricing,
 } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
@@ -103,15 +66,8 @@ import { PageHero } from "@/components/services/PageSections/PageHero";
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-=======
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   onsiteServicePricing,";
 } from "@/data/onsiteServicePricing";"
@@ -136,53 +92,27 @@ export default function ITOnsiteServicesPage() {};
   // Check for success parameter in URL"
   const success = searchParams.get("success");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
       toast({
-=======
-  // Show success toast if redirected from successful payment;
-  useEffect(() => {"
-    if (success === "true") {}
-      toast({"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         title: "Payment Successful",
         description:"
           "Your IT onsite service request has been received. Our team will contact you shortly.",
       });
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }, [success]),
-  
+
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
-  
-<<<<<<< HEAD
-=======
-  }, [success]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   // Popular countries for the featured cards;
   const popularCountries = ["
@@ -195,18 +125,8 @@ export default function ITOnsiteServicesPage() {};
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -222,45 +142,19 @@ export default function ITOnsiteServicesPage() {};
     .sort((a, b) => {
       // First, sort by popular status
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-  // Filter countries based on search query;
-  const filteredCountries = onsiteServicePricing;
-    .filter((country) =>
-      country.country.toLowerCase().includes(searchQuery.toLowerCase()),
-    )
-    .sort((a, b) => {}
-      // First, sort by popular status;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
 
       if (aIsPopular && !bIsPopular) return -1;
       if (!aIsPopular && bIsPopular) return 1;
 
-<<<<<<< HEAD
-      // Then sort alphabetically;
+// Then sort alphabetically;
       return a.country.localeCompare(b.country);
     });
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleCountrySelect = (country: CountryPricing) => {
-<<<<<<< HEAD
-=======
-  const handleCountrySelect = (country: CountryPricing) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
   const handleCountrySelect = (country: CountryPricing) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -268,33 +162,14 @@ export default function ITOnsiteServicesPage() {};
     // Scroll to the service details section
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
+}, 100)
 <<<<<<< HEAD
-<<<<<<< HEAD
-    }, 100)
-<<<<<<< HEAD
-
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
-  
-=======
-=======
-    }, 100)  const handleCountrySelect = (country: CountryPricing) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     }, 100)  const handleCountrySelect = (country: CountryPricing) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
 
   const handleCountrySelect = (country: CountryPricing) => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -312,35 +187,18 @@ export default function ITOnsiteServicesPage() {};
           .getElementById("service-details")"
           ?.scrollIntoView({ behavior: "smooth" });
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       }, 100));
   };
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-      }, 100))
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      }, 100))
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }
 
   },
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -357,18 +215,8 @@ export default function ITOnsiteServicesPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -388,21 +236,10 @@ export default function ITOnsiteServicesPage() {;
   const [searchParams] = useSearchParams(),;
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-  // Check for success parameter in URL;
+// Check for success parameter in URL;
   const success = searchParams && searchParams.get("success");
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const [searchParams] = useSearchParams();
-=======
-const [searchParams] = useSearchParams();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
   // Check for success parameter in URL;
@@ -434,12 +271,7 @@ export default function ITOnsiteServicesPage() {;
   ;
   // Check for success parameter in URL;
   const success = searchParams.get("success"),;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -482,70 +314,22 @@ export default function ITOnsiteServicesPage() {;
     setTimeout(() => {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }, 100);
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    }, 100);
-  };
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
-<<<<<<< HEAD
-    <AppLayout>;
+<AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
-import { useState, useEffect } from "react",;"
-import { useSearchParams } from "react-router-dom",;"
-import { AppLayout } from "@/layout/AppLayout",;"
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",;"
-import { GlobalServiceSection } from "@/components/GlobalServiceSection",;"
-import { QuoteFormSection } from "@/components/QuoteFormSection",;"
-import { TrustedBySection } from "@/components/TrustedBySection",;"
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;"
-import { toast } from "@/hooks/use-toast",;"
-import { PageHero } from "@/components/services/PageSections/PageHero",;"
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs",;"
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",;"
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",;"
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",;"
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",;
-export default function ITOnsiteServicesPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {/* Hero Section with Features */}
           <PageHero />
 
           {/* Country Selection Tabs */}"
           <div className="mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-            <CountryTabs
-<<<<<<< HEAD
-            <CountryTabs 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          <div className="mb-12">
-            <CountryTabs
-            <CountryTabs 
-          {/* Hero Section with Features */}
-            <CountryTabs
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -616,33 +400,15 @@ pr-12325
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              setSearchQuery={setSearchQuery}          {/* Service Details Section */}
-=======
-              setSearchQuery={setSearchQuery}
-            />
-          </div>
-
-            />
-          </div>
-          {/* Service Details Section */}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              setSearchQuery={setSearchQuery}          {/* Service Details Section */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+setSearchQuery={setSearchQuery}          {/* Service Details Section */}
           <ServiceDetailsSection
 =======
               setSearchQuery={setSearchQuery}
             />
           </div>
 
-
             />
           </div>
-
-
 
           {/* Service Details Section */}
           <ServiceDetailsSection;
@@ -657,10 +423,6 @@ pr-12325
           {/* What's Included Section */}
           <ServiceIncludes />
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           />
           {/* How It Works Section */}
           <ServiceProcessSteps />'
@@ -685,29 +447,9 @@ pr-12325
       <QuoteFormSection />
     </AppLayout>
   )
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-          />;
-          ;
-          {/* How It Works Section */}
-          <ServiceProcessSteps />;
-          ;'
-          {/* What's Included Section */}
-          <ServiceIncludes />;
-          ;
-<<<<<<< HEAD
-          {/* Complete Pricing Table */}
-          <div id="pricing-table" className="my-16">
-            <div className="text-center mb-8">
-=======
-
-          {/* Complete Pricing Table */}"
-          <div id="pricing-table" className="my-16">"
-            <div className="text-center mb-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-2xl font-bold text-white mb-4">
                 Full IT Onsite Services Pricing;
               </h2>"
@@ -732,7 +474,6 @@ pr-12325
   );
 }
 
-<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -755,37 +496,6 @@ function ITOnsiteServicesPage() {
   const [search_params] = useSearchParams ();
   const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);
   const [search_query, setSearchQuery] = useState ("");
-
-=======
-
-
-'
-import { useState, useEffect } from './react';'
-import { useSearchParams } from './react-router-dom';'
-import { AppLayout } from '@/layout / AppLayout';'
-import { ITServicePricingTable } from '@/components / services / ITServicePricingTable';'
-import { GlobalServiceSection } from '@/components / GlobalServiceSection';'
-import { QuoteFormSection } from '@/components / QuoteFormSection';'
-import { TrustedBySection } from '@/components / TrustedBySection';'
-import { CountryPricing, onsiteServicePricing } from '@/data / onsiteServicePricing';'
-import { toast } from '@/hooks / use - toast';'
-import { PageHero } from '@/components / services / PageSections / PageHero';'
-import { CountryTabs } from '@/components / services / PageSections / CountryTabs';'
-import { ServiceDetailsSection } from '@/components / services / PageSections / ServiceDetailsSection';'
-import { ServiceProcessSteps } from '@/components / services / PageSections / ServiceProcessSteps';'
-import { ServiceIncludes } from '@/components / services / PageSections / ServiceIncludes';'
-import { EnterpriseCallToAction } from '@/components / services / PageSections / EnterpriseCallToAction';
-export default /**;
- * ITOnsiteServicesPage - Function description;
- */
-function ITOnsiteServicesPage() {}
-  const [search_params] = useSearchParams ();
-  const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);"
-  const [search_query, setSearchQuery] = useState ("");
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
       toast ({"
         title: "Payment Successful","
@@ -810,7 +520,6 @@ function ITOnsiteServicesPage() {}
 
           <ServiceIncludes />
 
-
           <div id="pricing-table" className="my-16">"
 </div>"
             <div className="text-center mb-8">"
@@ -834,13 +543,6 @@ function ITOnsiteServicesPage() {}
               <h2 className="text-2xl font-bold text-white mb-4">"
 </h2>
               </h2>"
-
-
-
-
-
-
-
 
   const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);"
   const [search_query, setSearchQuery] = useState ("");"
@@ -882,28 +584,14 @@ if (return 1) {}
   }
 ;
   return (
-<<<<<<< HEAD
-    <AppLayout>;
+<AppLayout>;
       <section className="py - 16 bg - zion-blue">;
         <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
           {/* Hero Section with Features */}
           <PageHero />;
           {/* Country Selection Tabs */}
 <<<<<<< HEAD
-<<<<<<< HEAD
           <div className="mb-12">;
-=======
-    <AppLayout>;"
-      <section className="py - 16 bg - zion - blue">;"
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          {/* Hero Section with Features */}
-          <PageHero />;
-          {/* Country Selection Tabs */}"
-          <div className="mb - 12">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <div className="mb - 12">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           <div className="mb-12">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -924,30 +612,12 @@ if (return 1) {}
           <ServiceProcessSteps />;'
           {/* What's Included Section */}
           <ServiceIncludes />;
+{/* Complete Pricing Table */}
 <<<<<<< HEAD
-          {/* Complete Pricing Table */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div id="pricing - table" className="my-16">;
             <div className="text - center mb-8">;
               <h2 className="text - 2xl font - bold text - white mb-4">Full IT Onsite Services Pricing</h2>;
               <p className="text - zion - slate - light mb-6">;
-<<<<<<< HEAD
-=======
-          {/* Complete Pricing Table */}"
-          <div id="pricing - table" className="my - 16">;"
-            <div className="text - center mb - 8">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Full IT Onsite Services Pricing</h2>;"
-              <p className="text - zion - slate - light mb - 6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <div id="pricing - table" className="my - 16">;
-            <div className="text - center mb - 8">;
-              <h2 className="text - 2xl font - bold text - white mb - 4">Full IT Onsite Services Pricing</h2>;
-              <p className="text - zion - slate - light mb - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Our per - incident prices include transportation costs and the first hour of onsite service.;
@@ -963,23 +633,12 @@ if (return 1) {}
       <TrustedBySection />;
       <QuoteFormSection />;
     </AppLayout>);
-<<<<<<< HEAD
 }
 }
   ),; //Show success toast if redirected from successful payment useEffect ( () => {
   if (success === "true") {
   toast ({
-<<<<<<< HEAD
-  
-=======
 
-
-  ),; //Show success toast if redirected from successful payment useEffect ( () => {"
-  if (success === "true") {}
-  toast ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 }
@@ -1016,20 +675,11 @@ if (return 1) {}
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 }
 
@@ -1067,7 +717,6 @@ if (return 1) {
 
           </div>;
             selected_country={selected_country}
-
 
           <div id="pricing - table" className="my - 16">;"
             <div className="text - center mb - 8">;"

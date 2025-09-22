@@ -1,19 +1,9 @@
-<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
-<<<<<<< HEAD
+:src/components/GlobalErrorHandler.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { toast } from '@/hooks/use-toast',;
 import { Button } from '@/components/ui/button',;
-=======
-reportError: (error: Error, context?: any) => void;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/GlobalErrorHandler.tsx
 reportError: (error: Error, context?: any) => void;
 
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
@@ -33,18 +23,14 @@ import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
-<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
+:src/components/GlobalErrorHandler.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/GlobalErrorHandler.tsx
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
+:src_backup/components/GlobalErrorHandler.tsx
   clearAllErrors: () => void
-<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -101,11 +87,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             label: 'Log In'
             onClick: loginAction
           }import { toast } from '@/hooks/use-toast';
-=======
-=======
-=======
-  clearAllErrors: () => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/GlobalErrorHandler.tsx
   create_context,
   useContext,
   useState,
@@ -564,8 +545,7 @@ export function useErrorHandler() { return null; }
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it;
   }, [])
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
-
+:src_backup/components/GlobalErrorHandler.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/GlobalErrorHandler.tsx
 import { toast } from '@/hooks/use-toast';
@@ -574,13 +554,6 @@ import { Button } from '@/components/ui/button';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs',;
-=======
-'
-import { toast } from '@/hooks/use-toast';'
-import { Button } from '@/components/ui/button';'
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';'
-import * as Sentry from '@sentry/nextjs',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/GlobalErrorHandler.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface ErrorContextType {;
   reportError: (error: Error, context?: any) => void,;
@@ -640,7 +613,7 @@ export function GlobalErrorHandler() { return null; }
 
   const showNetworkError = useCallback((retryAction?: () => void) => {'
     const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true,
-    
+
     toast({"
       title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline "
@@ -669,24 +642,17 @@ export function GlobalErrorHandler() { return null; }
     // Clear any active toasts would go here if the toast system supports it;
   }, []),
 
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
+:src_backup/components/GlobalErrorHandler.tsx
   const contextValue: ErrorContextType = {
-=======
-
-
-  const contextValue: ErrorContextType = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/GlobalErrorHandler.tsx
     reportError,
     showRetryableError,
     showNetworkError,
     showAuthError,
-<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
+:src/components/GlobalErrorHandler.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     clearAllErrors},
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <ErrorContext.Provider value={contextValue}>
@@ -702,14 +668,11 @@ export function useGlobalErrorHandler(): ErrorContextType {;
   }
   return context;
 }
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
 
-<<<<<<< HEAD
-  if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
+if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
 ;
@@ -766,7 +729,7 @@ export function useErrorHandler() {;
   ): Promise<T | null> => {
     try {
       const result = await operation(),
-      
+
       if (options?.successMessage) {
         toast({
           title: "Success",
@@ -798,10 +761,6 @@ export function useErrorHandler() {;
     handleAsyncOperation}
 } ;
 =======
-  const message = error.message.toLowerCase(),
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     clearAllErrors},
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -812,9 +771,7 @@ export function useErrorHandler() {;
 =======
 =======
 
-
-
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
+:src_backup/components/GlobalErrorHandler.tsx
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
@@ -826,14 +783,5 @@ function getErrorMessage(error: Error): string {
   };
     handleAsyncOperation}
 }
-<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/GlobalErrorHandler.tsx
-=======
-// Helper function to convert technical errors to user-friendly messages;
-function getErrorMessage(error: Error): string {}
-  const message = error.message.toLowerCase(),'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/GlobalErrorHandler.tsx

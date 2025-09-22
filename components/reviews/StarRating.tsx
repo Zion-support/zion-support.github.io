@@ -81,7 +81,7 @@ pr-12243
           >;
             <svg
 
-xmlns='http://www.w3.org/2000/svg'
+xmlns='http://www.w3.org/2000/svg';
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
               width={size}
@@ -91,7 +91,7 @@ pr-12243
 
 export default StarRating;
 "
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg";
               width={size}'
               stroke={active ? 'gold' : 'current_color'}'
               stroke_width='2';'

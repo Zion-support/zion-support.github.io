@@ -1,19 +1,5 @@
-<<<<<<< HEAD:pages/api/sync/metrics.ts
+:pages/api/sync/metrics.ts
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -23,19 +9,9 @@ import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -51,34 +27,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/metrics.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 ;
 ;
 export default function handler($2) {;
 
-
   const state = readState();
   const events = filterEventsByScope(state.events, state.config.scope);
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
@@ -95,30 +59,16 @@ export default function handler($2) {;
   const state = readState();
   const events = filterEventsByScope(state.events, state.config.scope);
 
-
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
-<<<<<<< HEAD:pages/api/sync/metrics.ts
+:pages/api/sync/metrics.ts
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-
-
-
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -136,25 +86,10 @@ export default function handler($2) {;
   const state = readState();
   const events = filterEventsByScope(state.events, state.config.scope);
 
-
-<<<<<<< HEAD:pages/api/sync/metrics.ts
+:pages/api/sync/metrics.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
-=======
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, filterEventsByScope } from "../../../utils/sync/storage";
-;
-;
-export default function handler($2) {;
-
-
-  const state = readState();
-  const events = filterEventsByScope(state.events, state.config.scope);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/metrics.ts
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
@@ -164,34 +99,18 @@ export default function handler($2) {;
     totalVoteCount: 0;
     lastSyncedAt: Date.now()
   });
-<<<<<<< HEAD:pages/api/sync/metrics.ts
+:pages/api/sync/metrics.ts
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  const totalsByToken: Record<string, number> = {},
-  const contributionsBySubject: Record<string, number> = {},
-  let globalVotes = 0,
-<<<<<<< HEAD
-  const totalsByToken: Record<string, number> = {},
-  const contributionsBySubject: Record<string, number> = {},
-  let globalVotes = 0,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -218,27 +137,15 @@ export default function handler($2) {;
     } else if (e.type === "leaderboard_entry") {;
       const p = e.payload as any;
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
-<<<<<<< HEAD:pages/api/sync/metrics.ts
-<<<<<<< HEAD
+:pages/api/sync/metrics.ts
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } else if (e.type === "proposal") {
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const p = e.payload as any
       const p = e.payload as any,
-=======
-    } else if (e.type === "proposal") {;
-      const p = e.payload as any;
-      const p = e.payload as any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/metrics.ts
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
   }
@@ -333,21 +240,11 @@ export default function handler($2) {;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 
-
-
       const p = e.payload as any;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
-=======
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

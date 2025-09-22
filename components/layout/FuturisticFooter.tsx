@@ -36,7 +36,7 @@ export default function FuturisticFooter() {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com'
+    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
   const quickLinks = [;'
@@ -136,7 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { name: 'LinkedIn', href: 'https://www && www.linkedin.com/company/zion-tech-group', icon: '💼' },;'
     { name: 'X', href: 'https://x && x.com/ziontechgroup', icon: '🐦' },;'
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: '💻' }],;
-                  className='w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'
+                  className='w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40';
                 >
                   <span className='text-lg'>{social.icon}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -178,7 +178,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block';
                   >
                     {link.name}
                   </Link>
@@ -198,7 +198,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block';
                   >
                     {service.name}
                   </Link>
@@ -288,7 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-white font-medium">Phone</p>
                   <a;
                     href={`tel:${contactInfo.mobile}`}"
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200";
             <div className='space-y-4'>
               <div className='flex items-start space-x-3'>
 
@@ -299,7 +299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-white font-medium' />Phone</p>
                   <a;
 href={`tel: ${contactInfo.mobile;}`}
-                    className='text-gray-400 hover:text-blue-400 transition-colors duration-200'
+                    className='text-gray-400 hover:text-blue-400 transition-colors duration-200';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                    />
@@ -310,7 +310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-white font-medium">Email</p>
                   <a;`
                     href={`mailto:${contactInfo.email}`}"
-                    className="text-gray-400 hover:text-green-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-green-400 transition-colors duration-200";
 <div className='flex items-start space-x-3'>
 
 <div className='flex items-start space-x-3' />
@@ -319,7 +319,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-white font-medium' />Email</p>
                   <a;
 href={`mailto: ${contactInfo.email;}`}
-                    className='text-gray-400 hover:text-green-400 transition-colors duration-200'
+                    className='text-gray-400 hover:text-green-400 transition-colors duration-200';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                    />
@@ -342,7 +342,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         {/* Bottom section */}
 <div className='pt-8 border-t border-gray-800'>
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             <div className='text-gray-400 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
@@ -353,7 +353,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='text-gray-400 hover:text-white transition-colors duration-200'>;
 
 <div className='pt-8 border-t border-gray-800' />
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0' />
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0' />;
             <div className='text-gray-400 text-sm' />
               © {currentYea}
 } Zion Tech Group. All rights reserved.
@@ -374,18 +374,18 @@ href='/privacy'
                 href='/cookies'
             </div>"
             <div className="flex space-x-6 text-sm">"
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">;
                 Privacy Policy;
               </Link>"
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">;
                 Terms of Service;
               </Link>"
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
-
+;
               <Link;
 href='/cookies'
 
-                className='text-gray-400 hover: text-white transition-colors duration-200'
+                className='text-gray-400 hover: text-white transition-colors duration-200';
                />
                 Cookie Policy;
 

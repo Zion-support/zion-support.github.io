@@ -3,17 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-<<<<<<< HEAD
-  Card
+Card
   CardContent
   CardDescription
   CardHeader
@@ -22,17 +16,7 @@ import {
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
 import { useReviews } from "@/hooks/useReviews";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
@@ -44,11 +28,6 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -59,14 +38,6 @@ import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
 import { Star } from "lucide-react",
@@ -76,18 +47,8 @@ import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -107,8 +68,7 @@ import {}
   CardContent,
   CardDescription,
   CardHeader,
-<<<<<<< HEAD
-  CardTitle,";
+CardTitle,";
 } from "@/components/ui/card";"
 import { ReviewsList } from "@/components/reviews/ReviewsList";"
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";"
@@ -121,27 +81,12 @@ interface ProjectReviewSectionProps {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-=======
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(
     project.id,
   );
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const isCompleted = project.status === "completed";
   const isClient = user?.id === project.client_id;
   const isTalent = user?.id === project.talent_id;
@@ -158,10 +103,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {};
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
   const hasLeftReview = userReview != null;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
@@ -169,24 +110,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
 
-<<<<<<< HEAD
-
-=======
-  const { reviews, userReview, isLoading, reportReview } = useReviews(
-    project.id
-  );
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-<<<<<<< HEAD
-=======
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
+
 =======
 =======
   CardTitle,
@@ -213,8 +143,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {}
   );
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -225,16 +153,6 @@ import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",  
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { useAuth } from "@/hooks/useAuth",  
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-  "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   const isCompleted = project.status === "completed";
   const isClient = user?.id === project.client_id;
@@ -263,33 +181,26 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     project.id
   );
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-  
+
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
-  
+
   const clientProfile = project.client_profile,
   const talentProfile = project.talent_profile,
-  
+
   // Determine who the current user needs to review;
   const revieweeId = isClient ? project.talent_id : project.client_id,
   const revieweeName = isClient "
     ? talentProfile?.full_name || "Talent" "
     : clientProfile?.display_name || "Client",
-  
+
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
-  
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 =======
-
-
-
 
   return ("
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -300,32 +211,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           Reviews;
         </CardTitle>
         <CardDescription>
-<<<<<<< HEAD
-          Reviews are visible once the project is completed and both parties;
+Reviews are visible once the project is completed and both parties;
           submit feedback;
-=======
-          Reviews are visible once the project is completed and both parties
-          submit feedback
-  // Determine who the current user needs to review;
-  const revieweeId = isClient ? project.talent_id : project.client_id,
-  const revieweeName = isClient;"
-    ? talentProfile?.full_name || "Talent"""
-    : clientProfile?.display_name || "Client","
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,
-  return ("
-    <Card className="mt-6">"
-</Card>
-      <CardHeader>
-</CardHeader>"
-        <CardTitle className="flex items-center gap-2">"
-</CardTitle>"
-          <Star className="h-5 w-5 text-yellow-400" />"
-</Star>
-        </CardTitle>
-        <CardDescription>
-</CardDescription>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </CardDescription>
       </CardHeader>
 
@@ -335,14 +222,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
             {(isClient || isTalent) && ("
               <div className="border-b pb-4 mb-4">
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                {canLeaveReview ? (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-{canLeaveReview ? (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
 =======
@@ -362,22 +241,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                   <div className="bg-muted/20 rounded-lg p-4 text-center">"
                     <h3 className="font-medium mb-2">
                       Thank you for your review!
-<<<<<<< HEAD
-                    </h3>
+</h3>
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is{" "}
                       {userReview.status === "approved"
                         ? "published"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    </h3>"
-                    <p className="text-sm text-muted-foreground mb-3">"
-                      Your review is{" "}"
-                      {userReview.status === "approved""
-                        ? "published""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         : "pending approval"}
                     </p>"
                     {userReview.status === "pending" && (
@@ -416,10 +286,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       >
                         Edit Review;
                       </Button>
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -460,52 +327,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
   const hasLeftReview = userReview != null;
 <<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
-  return (
-
-import { useState } from "react",;
-import { Star } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReviewsList } from "@/components/reviews/ReviewsList",;
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",;
-import { useReviews } from "@/hooks/useReviews",;
-import { Project } from "@/types/projects",;
-import { useAuth } from "@/hooks/useAuth",;
-;
-interface ProjectReviewSectionProps {;
-  project:Project;
-}
-;
-export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
-  const { user } = useAuth(),;
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),;
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),;
-  ;
-  const isCompleted = project.status === "completed",;
-  const isClient = user?.id === project.client_id,;
-  const isTalent = user?.id === project.talent_id,;
-  ;
-  const clientProfile = project.client_profile,;
-  const talentProfile = project.talent_profile,;
-  ;
-  // Determine who the current user needs to review;
-  const revieweeId = isClient ? project.talent_id :project.client_id,;
-  const revieweeName = isClient ;
-    ? talentProfile?.full_name || "Talent" ;
-    :clientProfile?.display_name || "Client",;
-  ;
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,;
-  const hasLeftReview = userReview != null,;
-  ;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="mt-6">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -516,14 +339,7 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
           Reviews are visible once the project is completed and both parties submit feedback;
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardContent>;
         {isCompleted ? (;
           <div className="space-y-6">;
@@ -539,9 +355,7 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
                       Leave Review;
                     </Button>;
                   </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                ) : hasLeftReview ? (;
+) : hasLeftReview ? (;
                   <div className="bg-muted/20 rounded-lg p-4 text-center">;
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>;
                     <p className="text-sm text-muted-foreground mb-3">;
@@ -553,14 +367,7 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
                       </Button>;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
                         : "pending approval"}
                 {canLeaveReview ? (
@@ -702,32 +509,19 @@ function ProjectReviewSection() {
                         onClick={() => setIsReviewModalOpen(true)}
 </Button>
                       </Button>
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     )}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>;
               </div>;
-<<<<<<< HEAD
-            )}
+)}
 
-<<<<<<< HEAD
-            <ReviewsList;
-=======
-            <ReviewsList
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <ReviewsList;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<ReviewsList;
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
             />
-<<<<<<< HEAD
-          </div>
-<<<<<<< HEAD
-        ) : ("
+</div>
+) : ("
           <div className="bg-muted/20 rounded-lg p-6 text-center">"
             <h3 className="font-medium mb-2">
               Reviews will be available once the project is completed;
@@ -735,28 +529,6 @@ function ProjectReviewSection() {
             <p className="text-sm text-muted-foreground">
               After the project is marked as completed, both parties will be;
               able to leave reviews;
-=======
-        ) : (
-          <div className="bg-muted/20 rounded-lg p-6 text-center">
-            <h3 className="font-medium mb-2">
-              Reviews will be available once the project is completed
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              After the project is marked as completed, both parties will be
-              able to leave reviews
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-</ReviewsList>
-          </div>"
-          <div className="bg-muted/20 rounded-lg p-6 text-center">"
-</div>"
-            <h3 className="font-medium mb-2">"
-</h3>
-            </h3>"
-            <p className="text-sm text-muted-foreground">"
-</p>
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </p>
           </div>
       </CardContent>
@@ -764,22 +536,12 @@ function ProjectReviewSection() {
       {/* Review Modal */}
       {(isClient || isTalent) && (;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-      {(isClient || isTalent) && (
-
+{(isClient || isTalent) && (
 
 <<<<<<< HEAD
 >>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Review Modal */}
       {(isClient || isTalent) && (;
-=======
-                        : "pending approval"}      {(isClient || isTalent) && (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                         : "pending approval"}      {(isClient || isTalent) && (;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -837,27 +599,15 @@ function ProjectReviewSection() {
         )}
       </CardContent>
 
-
-
       {/* Review Modal */}
       {(isClient || isTalent) && (;
 
       {(isClient || isTalent) && (
-<<<<<<< HEAD
-        <LeaveReviewModal
+<LeaveReviewModal
           projectId={project.id}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-        <LeaveReviewModal;
-          projectId={project && project.id}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           revieweeId={revieweeId}
@@ -865,15 +615,6 @@ function ProjectReviewSection() {
           isOpen={isReviewModalOpen}
           onClose={() => setIsReviewModalOpen(false)}
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -927,26 +668,13 @@ function ProjectReviewSection() {
               is_loading={is_loading}
               onReportReview={report_review}
             />;
-<<<<<<< HEAD
-          </div>) : (
+</div>) : (
           <div className="bg - muted / 20 rounded - lg p - 6 text-center">;
             <h3 className="font - medium mb-2">;
               Reviews will be available once the project is completed;
             </h3>;
 <<<<<<< HEAD
-<<<<<<< HEAD
             <p className="text - sm text - muted-foreground">;
-=======
-          </div>) : ("
-          <div className="bg - muted / 20 rounded - lg p - 6 text - center">;"
-            <h3 className="font - medium mb - 2">;
-              Reviews will be available once the project is completed;
-            </h3>;"
-            <p className="text - sm text - muted - foreground">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <p className="text - sm text - muted - foreground">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
             <p className="text - sm text - muted-foreground">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -971,7 +699,6 @@ function ProjectReviewSection() {
           <Star className="h-5 w-5 text-yellow-400" />"
 
         <CardDescription>
-
 
       <CardContent>
           <div className="space-y-6">"
@@ -1003,7 +730,6 @@ function ProjectReviewSection() {
       <CardContent>;
           <div className="space - y-6">;"
               <div className="border - b pb - 4 mb - 4">;"
-
 
                   </div>;
             <ReviewsList;
@@ -1057,18 +783,4 @@ pr-12325
         />)}
     </Card>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-
-    );"
-pr-12325
-</LeaveReviewModal>
-    </Card>);"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

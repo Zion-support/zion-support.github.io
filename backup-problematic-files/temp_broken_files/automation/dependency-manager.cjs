@@ -10,72 +10,35 @@ class DependencyManager {}
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;`
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    );
-
-=======
-    
-    );
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+);
     try {}
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
       console.error('Failed to write to log "file": ', error.message)};
   };
   async checkOutdatedDependencies() {}
     this.log('Checking for outdated dependencies...');
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       const result = execSync('npm outdated --json', { })
         "stdio": 'pipe',
         "encoding": 'utf8'
       };);
-<<<<<<< HEAD
-
-      const outdated = JSON.parse(result;);
+const outdated = JSON.parse(result;);
       const outdatedCount = Object.keys(outdated).lengt;h;
-
-=======
-      
-      const outdated = JSON.parse(result;);
-      const outdatedCount = Object.keys(outdated).lengt;h;
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    );
-    try {}
-      fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
-
-      };);
-      const outdated = JSON.parse(result;);
-      const outdatedCount = Object.keys(outdated).lengt;h;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if ( {})
         this.issues.push({})
 
           "timestamp": new Date().toISOString();"
         })) {}
      {}
-<<<<<<< HEAD
-        this.issues.push({})
+this.issues.push({})
           "type": 'outdated',
           "count": outdatedCount,
           "dependencies": outdated,
           "timestamp": new Date().toISOString();
         })};
         this.log(`Found ${outdatedCount} outdated dependencies`, 'WARN');
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        // Log critical outdated dependencies;
+// Log critical outdated dependencies;
         Object.entries(outdated).forEach(([dep, info]) => {}
           if ( {})
             this.log(`  - ${dep}: ${info.current} → ${info.latest}`, 'WARN')};
@@ -86,34 +49,20 @@ class DependencyManager {}
             this.log(`  - ${dep}: ${info.current} → ${info.latest}`, 'WARN')};
         })} else {}
         this.log('All dependencies are up to date')};
-=======
-        this.issues.push({})"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return true}} catch (error) {}
       // npm outdated returns non-zero exit code when packages are outdated;
           const outdated = JSON.parse(error.stdout) {}
           const outdated = JSON.parse(error.stdout})
 });
-<<<<<<< HEAD
-          const outdatedCount = Object.keys(outdated).lengt;h;
-<<<<<<< HEAD
-
-=======
-          
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          this.issues.push({})
+const outdatedCount = Object.keys(outdated).lengt;h;
+this.issues.push({})
             "type": 'outdated',
             "count": outdatedCount,
             "dependencies": outdated,
             "timestamp": new Date().toISOString();
           }
 });
-<<<<<<< HEAD
 
-=======
-          
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           this.log(`Found ${outdatedCount} outdated dependencies`, 'WARN')} catch (parseError) {`}
           this.log('Could not parse outdated dependencies output', 'WARN')};
       };
@@ -121,54 +70,24 @@ class DependencyManager {}
   };
   async checkSecurityVulnerabilities() {}
     this.log('Checking for security vulnerabilities...');
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       const result = execSync('npm audit --json', { })
         "stdio": 'pipe',
         "encoding": 'utf8'
       };);
-<<<<<<< HEAD
-
-      const auditData = JSON.parse(result;);
-
-=======
-      
-      const auditData = JSON.parse(result;);
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+const auditData = JSON.parse(result;);
       if ( {})
-=======
-
-      const auditData = JSON.parse(result;);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const vulnCount = Object.keys(auditData.vulnerabilities).lengt) {}
         const vulnCount = Object.keys(auditData.vulnerabilities).lengt}h;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        this.issues.push({})
+this.issues.push({})
           "type": 'security',
           "count": vulnCount,
           "vulnerabilities": auditData.vulnerabilities,
           "timestamp": new Date().toISOString();
         }
 });
-<<<<<<< HEAD
-
-        this.log(`Found ${vulnCount} security vulnerabilities`, 'WARN');
-
-=======
-        
-        this.log(`Found ${vulnCount} security vulnerabilities`, 'WARN');
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+this.log(`Found ${vulnCount} security vulnerabilities`, 'WARN');
         // Log high severity vulnerabilities;
         Object.entries(auditData.vulnerabilities).forEach(([packageName, vuln]) => {}
           if ( {})
@@ -186,11 +105,7 @@ class DependencyManager {}
   };
   async checkUnusedDependencies() {}
     this.log('Checking for unused dependencies...');
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       const dependencies = Object.keys(packageJson.dependencies || {}
@@ -198,22 +113,7 @@ class DependencyManager {}
       const devDependencies = Object.keys(packageJson.devDependencies || {}
 });
       const allDeps = [...dependencies, ...devDependencies];
-<<<<<<< HEAD
-
-      const unusedDeps = [];
-
-=======
-      
-      const unusedDeps = [];
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-      const dependencies = Object.keys(packageJson.dependencies || {})
-      const devDependencies = Object.keys(packageJson.devDependencies || {})
-      const allDeps = [...dependencies, ...devDependencies];
-      const unusedDeps = [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const unusedDeps = [];
       // Check if dependencies are actually used in the codebase;
       allDeps.forEach(dep => {})
         if () {}
@@ -224,77 +124,36 @@ class DependencyManager {}
   isDependencyUsed(dependency) {}
       // Check if dependency is imported in source files;
       const sourceFiles = this.getSourceFiles(;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      for (const file of sourceFiles) {}
+for (const file of sourceFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8';);
-
-=======
-      
-      for (const file of sourceFiles) {}
-        try {}
-          const content = fs.readFileSync(file, 'utf8';);
-          
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           // Check for various import patterns;
           const importPatterns = [new RegExp(`import.*from\\s+['"]${dependency}['"]`, 'g'),`
             new RegExp(`require\\s*\\(\\s*['"]${dependency}['"]\\s*\\)`, 'g'),`
             new RegExp(`import\\s+['"]${dependency}['"]`, 'g'),`
             new RegExp(`from\\s+['"]${dependency}['"]`, 'g');
          ];
-<<<<<<< HEAD
-
-=======
-          
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      for (const file of sourceFiles) {}
-
-         ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           for (const pattern of importPatterns) {}
               return true}};
         } catch (error) {}
           // Ignore file read errors;
 
     const sourceFiles = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const scanDirectory = (dir) => {}
         if () retu) {}
     ) retu}r;n;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        const files = fs.readdirSync(dir;);
+const files = fs.readdirSync(dir;);
 
         files.forEach(file => {})
           const filePath = path.join(dir, file;);
           const stat = fs.statSync(filePath;);
-
-=======
-        
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const files = fs.readdirSync(dir;);
         files.forEach(file => {})
           const filePath = path.join(dir, file;);
           const stat = fs.statSync(filePath;);
-<<<<<<< HEAD
-          
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           if (&& !file.startsWith('.') && file !== 'node_modules') {}
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             scanDirectory(filePath)} else if (stat.isFile()) {}
             const ext = path.extname(file) {}
     && !file.startsWith('.') && file !== 'node_modules') {}
@@ -306,36 +165,19 @@ class DependencyManager {}
         // Ignore permission errors;
 
       scanDirectory(dir)}
-<<<<<<< HEAD
 });
 <<<<<<< HEAD
 
     return sourceFiles};
   async checkDuplicateDependencies() {}
     this.log('Checking for duplicate dependencies...');
-
-=======
-    
-    return sourceFiles};
-  async checkDuplicateDependencies() {}
-    this.log('Checking for duplicate dependencies...');
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       const dependencies = Object.keys(packageJson.dependencies || {}
 });
       const devDependencies = Object.keys(packageJson.devDependencies || {}
 });
-<<<<<<< HEAD
-
-      const duplicates = dependencies.filter(dep => devDependencies.includes(dep;););
-
-=======
-      
-      const duplicates = dependencies.filter(dep => devDependencies.includes(dep;););
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+const duplicates = dependencies.filter(dep => devDependencies.includes(dep;););
       if ( {})
         this.issues.push({})
           "type": 'duplicate',
@@ -360,15 +202,7 @@ class DependencyManager {}
   };
   async autoUpdateDependencies() {}
     this.log('Attempting to auto-update dependencies...');
-<<<<<<< HEAD
-
-    let updatedCount = ;0;
-
-=======
-    
-    let updatedCount = ;0;
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+let updatedCount = ;0;
     try {}
       // Update patch and minor versions;
       this.log('Updating patch and minor versions...');
@@ -376,11 +210,7 @@ class DependencyManager {}
 });
       updatedCount++;
       this.log('Dependencies updated successfully');
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Fix security vulnerabilities;
       if () {}
         this.log('Fixing security vulnerabilities...')) {}
@@ -400,17 +230,8 @@ class DependencyManager {}
   };
   async runDependencyManagement() {}
     this.log('Starting dependency management...');
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const checks = [this.checkOutdatedDependencies(),]
-=======
-    return sourceFiles};
-  async checkDuplicateDependencies() {}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.checkSecurityVulnerabilities(),
       this.checkUnusedDependencies(),
       this.checkDuplicateDependencies();
@@ -422,27 +243,14 @@ class DependencyManager {}
 `;
     this.log(`Dependency management "completed": ${this.issues.length} issues found in ${duration}ms`);"
 
-<<<<<<< HEAD
-    this.log(`Dependency management "completed": ${this.issues.length} issues found in ${duration}ms`);
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    if ( {})
+this.log(`Dependency management "completed": ${this.issues.length} issues found in ${duration}ms`);
+if ( {})
       this.log(`Issues "found": ${this.issues.length}`, 'WARN')) {`}
      {}
       this.log(`Issues "found": ${this.issues.length}`, 'WARN')};
       this.issues.forEach(issue => {})
         this.log(`  - ${issue.type}: ${issue.count} items`, 'WARN')}
 });
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Attempt auto-update;
       await this.autoUpdateDependencies()} else {}
       this.log('No dependency issues found')};
@@ -458,14 +266,4 @@ class DependencyManager {}
       process.exit(success ? 0 : 1)}
 
       process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = DependencyManager;
-module.exports = DependencyManager;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-module.exports = DependencyManager;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

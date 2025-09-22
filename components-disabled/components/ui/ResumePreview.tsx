@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export type ResumeData = {;
 import React, { forward_ref } from 'react';
 export type ResumeData = {};
@@ -49,7 +48,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {children}
 
 export type ResumePreviewProps = {;
-<<<<<<< HEAD
 bullets?: string[];
   }>;
   education?: Array<{
@@ -69,9 +67,6 @@ bullets?: string[];
 export type ResumePreviewProps = {
 origin/cursor/automate-test-improve-and-merge-code-2533
   data: ResumeData;
-=======
-  data: ResumeData;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
 }
@@ -105,7 +100,6 @@ export type ResumePreviewProps = {;
     title: string,
     description?: string;
     link?: string;
-
 
   data: ResumeData,;
 
@@ -199,17 +193,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {data.contact.website}
                 </a>)}
               {data.contact?.linkedin && (
-<<<<<<< HEAD
 <a
-=======
-                <a'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className='underline'
                   href={data.contact.linkedin}'
                   target='_blank''
                   rel='noreferrer'
-<<<<<<< HEAD
-                >
+>
                   LinkedIn
                 </a>
               )}
@@ -221,23 +210,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   rel='noreferrer'
                 >
                   GitHub
-=======
-                >                  LinkedIn;
-                </a>
-              )}"
-              {data.contact?.github && (                <a className="underline" href={data.contact.linkedin} target="_blank" rel="noreferrer">
-                  LinkedIn;
-                </a>
-              )}
-              {data.contact?.github && (
-                <a'
-                  className='underline'
-                  href={data.contact.github}'
-                  target='_blank''
-                  rel='noreferrer'"
-                >                  GitHub                <a className="underline" href={data.contact.github} target="_blank" rel="noreferrer">
-                  GitHub;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               )}
             </div>
@@ -245,9 +217,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             </div>;
           </header>;
-
-
-
 
           {/* Summary */}
 
@@ -273,10 +242,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           {/* Skills & Technologies */}
 
-
-
-
-
           )}
 
           {/* Skills & Technologies */}
@@ -291,7 +256,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && ('
             <section className='mb-5'>
-<<<<<<< HEAD
 <section className='mb-5'>
               <SectionTitle>Professional Summary</SectionTitle>
               <p className='mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
@@ -304,9 +268,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='mb-5'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <SectionTitle>Skills & Technologies</SectionTitle>
-=======
-              <SectionTitle>Skills & Technologies</SectionTitle>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className='mt-2 text-sm flex flex-wrap gap-2'>
                 {data.skills?.map((s, idx) => (
                   <span;
@@ -370,7 +331,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span key={`skill-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;'
                     className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
 
-
                   >                    {t}
 
                     {s}
@@ -422,7 +382,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>"
                       <div className="text-xs text-gray-600 dark:text-gray-300">
-<<<<<<< HEAD
 <section className='mb-5'>
               <SectionTitle>Work Experience</SectionTitle>
               <div className='mt-2 space-y-3'>
@@ -438,10 +397,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                           <span>
                             {role.start |''}
-=======
-                          <span>'
-                            {role.start |''}'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
           {data && data.experience?.length ? (;'
@@ -509,15 +464,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {role.location ? ` • ${role.location}` : ''}
                       </div>
                     </div>
-<<<<<<< HEAD
-                    {role.bullets?.length ? (
+{role.bullets?.length ? (
 <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>
                         {role.bullets.map((b, bIdx) => (
-=======
-                    {role.bullets?.length ? ('"
-                      <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
-                        {role.bullets.map((b, bIdx) => (`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>
                         ))}
                       </ul>
@@ -530,12 +479,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Education */}
 
-
 `
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
 
                         .filter(Boolean)
-
 
           {/* Education */}
           {data && data.education?.length ? (;'
@@ -568,7 +515,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>"
                     <div className="text-gray-700 dark:text-gray-300">`
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
-<<<<<<< HEAD
 <section className='mb-5'>
               <SectionTitle>Education</SectionTitle>
               <div className='mt-2 space-y-2'>
@@ -586,9 +532,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ]
 origin/cursor/automate-test-improve-and-merge-code-2533
                         .filter(Boolean)
-=======
-                        .filter(Boolean)'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         .join(' • ')}
                     </div>
                   </div>
@@ -601,15 +544,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <section className="mb-5">
               <SectionTitle>Certifications</SectionTitle>"
               <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
-<<<<<<< HEAD
 <section className='mb-5'>
               <SectionTitle>Certifications</SectionTitle>
               <ul className='mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {data.certifications.map((c, idx) => (
-=======
-                {data.certifications.map((c, idx) => (`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <li key={`cert-${idx}`}>{c}</li>
                 ))}
               </div>;
@@ -722,13 +661,7 @@ export default ResumePreview;'
         </div>;
       </div>);
   }
-<<<<<<< HEAD
 ResumePreview.displayName = 'ResumePreview';
 
 export default ResumePreview;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

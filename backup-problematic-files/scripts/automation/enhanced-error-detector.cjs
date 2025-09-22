@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -94,7 +92,7 @@ async function detectAllErrors() {
 function parseTypeScriptErrors(output) {
   const errors = [];
   const lines = output.split("\n");
-  
+
   for (const line of lines) {
     if (line.includes("error TS")) {
       const match = line.match(/(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
@@ -109,14 +107,14 @@ function parseTypeScriptErrors(output) {
       }
     }
   }
-  
+
   return errors;
 }
 
 function parseLintingErrors(output) {
   const errors = [];
   const lines = output.split("\n");
-  
+
   for (const line of lines) {
     if (line.includes("error") && 
         (line.includes(".tsx") || 
@@ -135,14 +133,14 @@ function parseLintingErrors(output) {
       }
     }
   }
-  
+
   return errors;
 }
 
 function parseBuildErrors(output) {
   const errors = [];
   const lines = output.split("\n");
-  
+
   for (const line of lines) {
     if (line.includes("Failed to compile") || 
         line.includes("Type error") || 
@@ -153,7 +151,7 @@ function parseBuildErrors(output) {
       });
     }
   }
-  
+
   return errors;
 }
 
@@ -175,7 +173,7 @@ function parseDependencyIssues(auditData) {
 async function detectSyntaxErrors() {
   const errors = [];
   const sourceDirs = ["src", "components", "pages", "utils", "hooks"];
-  
+
   for (const dir of sourceDirs) {
     if (fs.existsSync(dir)) {
       const files = getAllFiles(dir);
@@ -199,13 +197,13 @@ async function detectSyntaxErrors() {
       }
     }
   }
-  
+
   return errors;
 }
 
 function getAllFiles(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
     for (const item of items) {
@@ -218,27 +216,27 @@ function getAllFiles(dir) {
       }
     }
   }
-  
+
   traverse(dir);
   return files;
 }
 
 function checkSyntaxErrors(content, filePath) {
   const errors = [];
-  
+
   // Check for common syntax issues
   const lines = content.split("\n");
-  
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const lineNumber = i + 1;
-    
+
     // Check for unmatched brackets
     const openBrackets = (line.match(/\{/g) || []).length;
     const closeBrackets = (line.match(/\}/g) || []).length;
     const openParens = (line.match(/\(/g) || []).length;
     const closeParens = (line.match(/\)/g) || []).length;
-    
+
     if (openBrackets !== closeBrackets || openParens !== closeParens) {
       errors.push({
         file: filePath,
@@ -247,7 +245,7 @@ function checkSyntaxErrors(content, filePath) {
         type: "syntax"
       });
     }
-    
+
     // Check for missing semicolons in JS/TS files
     if ((filePath.endsWith(".js") || filePath.endsWith(".ts")) && 
         line.trim() && 
@@ -268,7 +266,7 @@ function checkSyntaxErrors(content, filePath) {
       });
     }
   }
-  
+
   return errors;
 }
 
@@ -285,9 +283,6 @@ if (require.main === module) {
 }
 
 module.exports = { detectAllErrors };
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -414,11 +409,4 @@ function checkSyntaxErrors(content")
         "message": "Missing semicolon"
         "type": "syntax"
   console.error(" Error detection "failed": ")
-<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-  console.error(" Error detection "failed": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

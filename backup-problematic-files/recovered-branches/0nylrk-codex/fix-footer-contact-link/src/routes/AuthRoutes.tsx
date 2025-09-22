@@ -40,4 +40,3 @@ const AuthRoutes = () => {;
         } ;
       />;
     </Routes>;
-

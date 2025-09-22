@@ -1,35 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/Input.js.jsx.backup
-=======
-<<<<<<<< HEAD:src.disabled/src/components/ui/Input.js.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-========
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 :backup-merge-conflicts/Input.js.jsx.backup
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = React.forwardRef((_a,ref) => {} var { className,type } = _a,\'; props = __rest(_a,[\'className\',type\']);\'; return _jsx(\''; \'input\',; Object.assign() {} \"type\": \'type\',\'; \"className\": cn(\''; \'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\',; className; ),; \"ref\": \'ref\'},; props; ); );});\'; Input.displayName = \'Input\'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
 
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
-=======
-var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = React.forwardRef((_a,ref) => {} var { className,type } = _a,\'; props = __rest(_a,[\'className\',type\']);\'; return _jsx(\''; \'input\',; Object.assign() {} \"type\": \'type\',\'; \"className\": cn(\''; \'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\',; className; ),; \"ref\": \'ref\'},; props; ); );});\'; Input.displayName = \'Input\'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
-var __rest =; (this && this.__rest) |; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = React.forwardRef((_a,ref) => {} var { className,type } = _a,"; props = __rest(_a,["className",type"]);"; return _jsx(""; "input",; Object.assign() { return; } type: "type","; className: cn(""; "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",; className; ),; ref: "ref"},; props; ); );});"; Input.displayName = "Input"; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };"""
-var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/components/ui/Input.js.jsx
 =======
 >>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/src.disabled/src/components/ui/Input.js.jsx
@@ -37,10 +11,7 @@ var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -55,21 +26,12 @@ var __rest =; (this && this.__rest) |; function (s,e) {} var t = {}; for (var p 
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 =======
@@ -78,14 +40,9 @@ var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = React.forwardRef((_a,ref) => {} var { className,type } = _a,\'; props = __rest(_a,[\'className\',type\']);\'; return _jsx(\''; \'input\',; Object.assign() {} \"type\": \'type\',\'; \"className\": cn(\''; \'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\',; className; ),; \"ref\": \'ref\'},; props; ); );});\'; Input.displayName = \'Input\'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
 var __rest =; (this && this.__rest) |; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = React.forwardRef((_a,ref) => {} var { className,type } = _a,"; props = __rest(_a,["className",type"]);"; return _jsx(""; "input",; Object.assign() { return; } type: "type","; className: cn(""; "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",; className; ),; ref: "ref"},; props; ); );});"; Input.displayName = "Input"; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };"""
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
-<<<<<<<< HEAD:src.disabled/src/components/ui/Input.js.jsx
-<<<<<<< HEAD
+<:src.disabled/src/components/ui/Input.js.jsx
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -94,10 +51,7 @@ var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -115,9 +69,6 @@ var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = React.forwardRef((_a,ref) => {} var { className,type } = _a,\'; props = __rest(_a,[\'className\',type\']);\'; return _jsx(\''; \'input\',; Object.assign() {} \"type\": \'type\',\'; \"className\": cn(\''; \'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\',; className; ),; \"ref\": \'ref\'},; props; ); );});\'; Input.displayName = \'Input\'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };"
 var __rest =; (this && this.__rest) |; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = React.forwardRef((_a,ref) => {} var { className,type } = _a,"; props = __rest(_a,["className",type"]);"; return _jsx(""; "input",; Object.assign() { return; } type: "type","; className: cn(""; "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",; className; ),; ref: "ref"},; props; ); );});"; Input.displayName = "Input"; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };"""'"
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Input = _React.forwardRef((_a,ref) => {} var { className,type } = _a,'; props = __rest(_a,['className',type']);'; return _jsx(''; 'input',; Object.assign() {} "type": 'type','; "className": cn(''; 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; ),; "ref": 'ref'},; props; ); );});'; Input.displayName = 'Input'; export { Input }; export { Input }; export { Input }; export { Input }; export { Input }; export { Input };
-
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

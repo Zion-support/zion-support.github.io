@@ -25,7 +25,7 @@ interface PasswordStrengthResult {}
   details: {}
     entropy: number;
   }
-  suggestions: string[]
+  suggestions: string[];
 }
 export default async function handler(;
     // Calculate score;
@@ -137,13 +137,13 @@ interface PasswordStrengthResult {}
     hasSymbols: boolean;
 
     hasCommonPatterns: boolean
-
+;
     hasCommonPatterns: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
-    entropy: number
+    entropy: number;
   }
   suggestions: string[]
-
+;
     hasCommonPatterns: boolean;
     entropy: number;
 }
@@ -198,9 +198,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     );
     // Calculate entropy (simplified)
 const charsetSize =
-      (hasUppercase ? 26 : 0) +
-      (hasLowercase ? 26 : 0) +
-      (hasNumbers ? 10 : 0) +
+      (hasUppercase ? 26 : 0) +;
+      (hasLowercase ? 26 : 0) +;
+      (hasNumbers ? 10 : 0) +;
       (hasSymbols ? 32 : 0);
     const entropy =
       charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;

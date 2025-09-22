@@ -6,16 +6,7 @@
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ComprehensiveAutomationRunner {
@@ -40,32 +31,18 @@ class ComprehensiveAutomationRunner {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message};
     console.log(logMessage);
-<<<<<<< HEAD
-    // Write to log file
+// Write to log file
     const logFile = path.join(this.logDir, 'comprehensive-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
   async runCommand(command, description, timeout = 30000) {
     this.log(`🔧 ${description}`);
     try {
-<<<<<<< HEAD
-      const result = execSync(command, {
+const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
         timeout: timeout
-=======
-      const result = execSync(command, { 
-        encoding: 'utf8', 
-        stdio: 'pipe',
-        timeout: timeout 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
-=======
-    // Write to log file;
-
-        timeout: timeout;)
-      });`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
 
@@ -111,7 +88,6 @@ class ComprehensiveAutomationRunner {
     for (const script of additionalScripts) {
       const scriptPath = path.join(scriptsDir, script.name);
       fs.writeFileSync(scriptPath, script.content);
-
 
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
@@ -189,15 +165,6 @@ module.exports = HealthCheckAutomation;`;
 // Run if called directly;
   const runner = new ComprehensiveAutomationRunner();
   runner.run().catch(console.error);
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = ComprehensiveAutomationRunner;
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

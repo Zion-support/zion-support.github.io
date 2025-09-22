@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-
-      "timestamp"
+"timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
       console.log(" Code quality checks completed")
@@ -35,15 +33,7 @@
 // console.log(`"Warnings"`)
     console.log("=")
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    console.log(`� Report saved "to"`)
-    console.log(`� Report saved "to"`)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

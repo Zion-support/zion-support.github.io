@@ -1,33 +1,13 @@
-<<<<<<< HEAD:pages/api/whitepaper/share.ts
-<<<<<<< HEAD
+:pages/api/whitepaper/share.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// In-memory store for demo purposes. Replace with persistent storage in production.
-const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {};
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { markdown, publicPreview } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import { randomUUID } from 'crypto';
 
@@ -48,41 +28,6 @@ export function getShared(id: string) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return store[id]
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-}
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
-}
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-}
-  return store[id];
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-// In-memory store for demo purposes. Replace with persistent storage in production.;
-const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { markdown, publicPreview } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -110,24 +55,11 @@ export /**
  */
 function get_shared() {
   return store[id];
-<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
@@ -157,7 +89,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 export function getShared(id: string) {;
   return store[id]
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return store[id];
@@ -188,20 +119,12 @@ export function getShared(id: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

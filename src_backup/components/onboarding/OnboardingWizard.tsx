@@ -1,13 +1,7 @@
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
 
 import { useState, useEffect  } from 'react';
 import { useRouter  } from 'next/router';
@@ -18,11 +12,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
-=======
-import { useState, useEffect } from 'react''
-import { useRouter } from 'next/router''
-import { useAuth } from '@/hooks/useAuth''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
 import { Button } from '@/components/ui/button'
 import {};
   Card;
@@ -40,22 +29,12 @@ import {};
 } from 'lucide-react''
 import { cn } from '@/lib/utils''
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-=======
-'
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
 import { cn } from '@/lib/utils';
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
+:src/components/onboarding/OnboardingWizard.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils';
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
 interface WizardStep {;
   title: string,
   description: string;
@@ -84,13 +63,9 @@ import {}
 import { cn } from '@/lib / utils';'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';'
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
 interface WizardStep {
   title: string,
-=======
-interface WizardStep {}
-  title: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
   description: string;
   icon: React.ReactNode;
   action: {}
@@ -98,7 +73,7 @@ interface WizardStep {}
     url: string;
 
   }
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
   skipText?: string
 interface OnboardingWizardProps {
 
@@ -109,35 +84,11 @@ interface OnboardingWizardProps {
 interface OnboardingWizardProps {;
 
 <<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-=======
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
   className?: string
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-
-=======
-  skipText?: string;
-interface OnboardingWizardProps {}
-    url: string;
-  };
-  skipText?: string;
-
-interface OnboardingWizardProps {;
-'
-  type: 'client' | 'talent';
-  onComplete: () => void;
-  onSkip: () => void;
-  className?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
+:src/components/onboarding/OnboardingWizard.tsx
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
@@ -158,15 +109,11 @@ export function OnboardingWizard(): any ({;
         <div className='flex flex-col items-center text-center p-4'>;'
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -205,31 +152,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0),;
   const router = useRouter(), // Changed from useNavigate to useRouter;
   const { user } = useAuth(),
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
       title: "Post your first job",
       description: "Describe the talent you need for your project",
-=======
-  // Define steps based on user type;
-  const clientSteps: WizardStep[] = []
-    {}
-      title: "Post your first job","
-      description: "Describe the talent you need for your project","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {"
         text: "Post a Job","
@@ -251,22 +180,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       title: "Contact talent","
       description: "Reach out to the talent that fits your needs","
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
       action: {
-<<<<<<< HEAD
-        text: "Browse Talent",
+text: "Browse Talent",
         url: "/talent"
       }
     }
   ],
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const talentSteps: WizardStep[] = [
@@ -311,13 +231,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       title: "Enable AI matchmaking","
       description: "Let our AI find the perfect opportunities for you","
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
       action: {
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
@@ -346,16 +263,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
-  
+
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardHeader>
         <CardTitle className='text-center text-white'>
           {type === 'client'
@@ -366,51 +276,20 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardContent>;
         <div className='flex items-center mb-6'>;
           {/* Step dots */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      action: {}
-      <CardHeader>"
-        <CardTitle className="text-center text-white">'
-          {type === 'client' ? "
-            "Ready to find top IT talent?" : '"
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>"
-        <div className="flex items-center mb-6">
-          {/* Step dots */}
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
           <div className="flex items-center justify-center flex-1">
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
+:src/components/onboarding/OnboardingWizard.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
             {steps.map((_, index) => (
               <div;
                 key={index}
                 className={cn(
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-=======
+:src_backup/components/onboarding/OnboardingWizard.tsx
 
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
                   "h-2 w-2 rounded-full mx-1",
 }
 
@@ -439,117 +318,59 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {steps[currentStep]?.icon}
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
           </div>
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
           <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
         </div>
       </CardContent>
       <CardFooter className="flex flex-col space-y-2">
+<Button
 <<<<<<< HEAD
-        <Button
-<<<<<<< HEAD
-=======
-
-=======
-          </div>;'
-          <h3 className='text-xl font-bold text-white mb-2'>;
-            {steps[currentStep]?.title}
-          </h3>;'
-          <p className='text-zion-slate-light mb-6'>;
-            {steps[currentStep]?.description}
-          </p>;
-        </div>;
-      </CardContent>;'
-      <CardFooter className='flex flex-col space-y-2'>;
-        <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
           onClick={handleAction}>;
           {steps[currentStep]?.action && action.text}
         </Button>;
 
         {steps[currentStep]?.skipText && (;
 
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
+:src_backup/components/onboarding/OnboardingWizard.tsx
 <<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
 
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
+:src/components/onboarding/OnboardingWizard.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
-=======
-          <Button'
-            variant='ghost''
-            className='text-zion-slate-light hover:text-white'
-            onClick={handleSkip}>;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
         >;
           {steps[currentStep]?.action.text}
         </Button>
-        
+
         {steps[currentStep]?.skipText && (
           <Button"
             variant="ghost""
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}
           >;
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-            {steps[currentStep]?.skipText}
+:src/components/onboarding/OnboardingWizard.tsx
+{steps[currentStep]?.skipText}
           </Button>;
         )}
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {steps[currentStep]?.skipText}
           </Button>
         )}
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
-
-<<<<<<< HEAD
+:src/components/onboarding/OnboardingWizard.tsx
 
 ;
 }
 
-
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
       </CardFooter>;
     </Card>;
   );
 }
-
-<<<<<<< HEAD
 
 '
   type: 'client' | 'talent';
@@ -719,19 +540,10 @@ if ( {) {}
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 <<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
 <<<<<<< HEAD
-=======
-        <Button          <Button
-            variant='ghost'
-            className='text-zion-slate-light hover:text-white'
-            onClick={handleSkip}>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======

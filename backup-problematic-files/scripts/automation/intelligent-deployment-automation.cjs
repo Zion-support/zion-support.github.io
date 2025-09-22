@@ -16,8 +16,7 @@ const http = require('http')
         throw new Error('package.json not found')
       if (!await this.fileExists('node_modules')
         throw new Error('Dependencies not installed')
-<<<<<<< HEAD
-        throw new Error('Current environment is not healthy')
+throw new Error('Current environment is not healthy')
       this.log(`⚠ Health check warning: ${error.message}`, 'WARN'`)
     this.log('� Building and testing...')
       { name: 'Install Dependencies', command: 'npm install'}
@@ -71,15 +70,8 @@ const http = require('http')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
-      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

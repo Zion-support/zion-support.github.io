@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/developers/ApiLogs.tsx
-<<<<<<< HEAD
+:src/components/developers/ApiLogs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -16,21 +15,21 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
-  
+
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
-  
+
   const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   },
-  
+
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   },
-  
+
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -43,7 +42,7 @@ export function ApiLogs() {
       return <Badge className="bg-blue-700">Other</Badge>
     }
   },
-  
+
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize),
   const hasNextPage = currentPage < totalPages - 1,
@@ -59,7 +58,7 @@ export function ApiLogs() {
           View logs of requests made using your API keys.
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
@@ -138,7 +137,7 @@ export function ApiLogs() {;
             </Select>
             <span className="text-sm text-zinc-400">per page</span>
           </div>
-          
+
           <Button variant="outline" size="sm" onClick={handleRefresh}>
             <RefreshCw size={14} className="mr-1" /> Refresh
           </Button>
@@ -222,7 +221,7 @@ export function ApiLogs() {;
             </tbody>
           </table>
         </div>
-        
+
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
@@ -253,11 +252,6 @@ export function ApiLogs() {;
   );
 }
 ;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiLogs.tsx
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
@@ -265,19 +259,7 @@ import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components / ui / select';
 import { Badge  } from '@/components / ui / badge';
-<<<<<<< HEAD:src_backup/components/developers/ApiLogs.tsx
-=======
-import { ApiLogsChart  } from './ApiLogsChart';
-export /**
- * ApiLogs - Function description
-import { useState, useEffect  } from './react';
-import { format  } from './date - fns';
-import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks/ useApiKeys';
-import { Button  } from '@/components/ui/ button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/ card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/ select';
-import { Badge  } from '@/components/ui/ badge';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/developers/ApiLogs.tsx
+:src_backup/components/developers/ApiLogs.tsx
 import { ApiLogsChart  } from './ApiLogsChart';
 export /**
  * ApiLogs - Function description;
@@ -292,18 +274,9 @@ function ApiLogs() {
 }
   );
 }
-<<<<<<< HEAD:src/components/developers/ApiLogs.tsx
-<<<<<<< HEAD
+:src/components/developers/ApiLogs.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-<<<<<<< HEAD:src_backup/components/developers/ApiLogs.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -350,7 +323,6 @@ import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
 import { useApiKeys } from '@/hooks/useApiKeys';
-
 
 import { Badge } from "@/components/ui/badge";
 import { ApiLogsChart } from "./ApiLogsChart";
@@ -503,7 +475,7 @@ export function ApiLogs() {
       </CardContent>
     </Card>
 
-<<<<<<< HEAD:src_backup/components/developers/ApiLogs.tsx
+:src_backup/components/developers/ApiLogs.tsx
 };
 //Calculate pagination info const totalPages = Math.ceil (totalLogs / pageSize);
 const hasNextPage = currentPage < totalPages - 1;
@@ -520,11 +492,5 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 }</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) ;
 }</CardContent> </Card>) ;
 }'"
-<<<<<<< HEAD:src/components/developers/ApiLogs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiLogs.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/developers/ApiLogs.tsx

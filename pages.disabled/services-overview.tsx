@@ -1,34 +1,18 @@
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-<<<<<<< HEAD
+:pages_backup/services-overview.tsx
 <<<<<<< HEAD:pages/services-overview.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
 
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
 export default Page;
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services-overview.tsx
+:pages_backup/services-overview.tsx
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -145,12 +129,7 @@ const stats = [;
   { number: "50+", label: "Countries Served" },
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-=======
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-import Layout from '../components/Layout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
+:pages_backup/services-overview.tsx
 import {
   Activity,
   ArrowRight,
@@ -306,30 +285,7 @@ title: "Expert Team"
 ];
 export default function ServicesOverviewPage() {
 
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
+:pages_backup/services-overview.tsx
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -2678,10 +2634,7 @@ const serviceCategories = [;
   },;
 ];
 
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
+:pages_backup/services-overview.tsx
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -2848,20 +2801,14 @@ We offer a comprehensive range of technology services to meet all your business 
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
+:pages_backup/services-overview.tsx
 
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
 
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
+:pages_backup/services-overview.tsx
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -2879,7 +2826,7 @@ We offer a comprehensive range of technology services to meet all your business 
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
-                    
+
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Services:</h4>
                       <ul className="space-y-1">
@@ -2898,45 +2845,7 @@ We offer a comprehensive range of technology services to meet all your business 
               </p>;
             </motion && motion.div>;
 
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-=======
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {serviceCategories && serviceCategories.map((category, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
-                  <div
-                    className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
-                    <category && category.icon className="w-16 h-16 text-white" />;
-                  </div>;
-                  <div className="p-6">;
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
-                      {category && category.title}
-                    </h3>;
-                    <p className="text-gray-600 mb-4 leading-relaxed">;
-                      {category && category.description}
-                    </p>;
-                    <div className="space-y-2 mb-6">;
-                      <h4 className="font-semibold text-gray-900 text-sm">;
-                        Key Services:;
-                      </h4>;
-                      <ul className="space-y-1">;
-                        {category && category.services.map((service, idx) => (;
-                          <li
-                            key={idx}
-                            className="flex items-center text-sm text-gray-600">;
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
-                            {service}
-                          </li>;
-                        ))}
-
-                      </ul>;
-                    </div>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
+:pages_backup/services-overview.tsx
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -3161,15 +3070,10 @@ className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white 
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-<<<<<<< HEAD
+:pages_backup/services-overview.tsx
 <<<<<<< HEAD:pages/services-overview.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/services-overview.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -3189,15 +3093,9 @@ const Page = () => {
   );
 };
 
-<<<<<<< HEAD:pages_backup/services-overview.tsx
-<<<<<<< HEAD
+:pages_backup/services-overview.tsx
 export default Page;
-=======
-export default Page;
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 

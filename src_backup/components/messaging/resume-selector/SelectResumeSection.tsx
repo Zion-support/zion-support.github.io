@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/messaging/resume-selector/SelectResumeSection.tsx
-<<<<<<< HEAD
+:src/components/messaging/resume-selector/SelectResumeSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,13 +54,6 @@ export function SelectResumeSection({
             />;
           )}
         </>;
-=======
-import React from 'react';
-import { FileText } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function SelectResumeSection({
 =======
@@ -106,13 +98,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </button>
           ))}
-          
-
-          
-
-          
-
-          
 
           {resumeOptions.map((option) => (
             <button
@@ -148,76 +133,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </>
       )}
   );
-<<<<<<< HEAD
 }}
-=======
-}};
 };
 
-    </div>;
-  );
-}
-;
-import React from 'react';
-import { FileText } from 'lucide-react';
-
-interface ResumeOption {
-  id: string;
-  title: string;
-  description: string;
-  lastModified: string;
-  fileSize: string;
-  url: string;
-}
-
-interface Resume {
-  id: string;
-  title: string;
-  description: string;
-  lastModified: string;
-  fileSize: string;
-  url: string;
-}
-
-interface ResumePreviewCardProps {
-  resume: Resume;
-  isSelected: boolean;
-  onSelect: (resume: Resume) => void;
-}
-
-const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
-  resume,
-  isSelected,
-  onSelect,
-}) => {
-  return (
-    <div
-      className={`p-4 border rounded-lg cursor-pointer transition-colors ${
-        isSelected
-          ? 'border-blue-500 bg-blue-50'
-          : 'border-gray-200 hover:border-gray-300'
-      }`}
-      onClick={() => onSelect(resume)}
-    >
-      <div className="flex items-start space-x-3">
-        <FileText className="h-8 w-8 text-gray-400" />
-        <div className="flex-1">
-          <h3 className="font-medium text-gray-900">{resume.title}</h3>
-          <p className="text-sm text-gray-500 mt-1">{resume.description}</p>
-          <div className="flex items-center space-x-4 mt-2 text-xs text-gray-400">
-            <span>Modified: {resume.lastModified}</span>
-            <span>{resume.fileSize}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD:src/components/messaging/resume-selector/SelectResumeSection.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-};
-
-<<<<<<< HEAD
 interface SelectResumeSectionProps {
   resumes: ResumeOption[];
   selectedResume: ResumeOption | null;
@@ -242,7 +160,7 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
           Upload New
         </button>
       </div>
-      
+
       {resumes.length === 0 ? (
         <div className="text-center py-8">
           <FileText className="mx-auto h-12 w-12 text-gray-400" />
@@ -266,19 +184,8 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
       )}
     </div>;
   );
-<<<<<<< HEAD
 }
 ;
-=======
-};
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    </div>;
-  );
-}
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

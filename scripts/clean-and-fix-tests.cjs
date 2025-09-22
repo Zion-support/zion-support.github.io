@@ -7,29 +7,28 @@ console.log('🧹 Cleaning and fixing test files...');
 function cleanTestFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[^>]*>/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^>]*>/g, '');
-    
+    content = content.replace(//g, '');
+    content = content.replace(/
+
     // Remove corrupted lines with branch names
     content = content.replace(/cursor\/[^;]*;/g, '');
-    
+
     // Fix common syntax issues
     content = content.replace(/\);}\s*\);/g, ');');
     content = content.replace(/\);}\s*expect/g, ');\n    expect');
     content = content.replace(/\);}\s*describe/g, ');\n  });\n\n  describe');
     content = content.replace(/\);}\s*it/g, ');\n  });\n\n  it');
-    
+
     // Fix unterminated strings
     content = content.replace(/describe\('[^']*$/gm, "describe('Test', () => {");
     content = content.replace(/it\('[^']*$/gm, "it('should work', () => {");
-    
+
     // Remove duplicate imports and exports
     content = content.replace(/module\.exports = \{\}[^;]*;/g, '');
     content = content.replace(/export \{\}[^;]*;/g, '');
-    
+
     // Ensure proper test structure
     if (!content.includes('describe(') && !content.includes('test(')) {
       content = `import { describe, it, expect } from 'vitest';
@@ -41,7 +40,7 @@ describe('Test', () => {
 });
 `;
     }
-    
+
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed: ${filePath}`);
     return true;
@@ -61,7 +60,7 @@ describe('Test', () => {
   });
 });
 `;
-  
+
   try {
     fs.writeFileSync(filePath, content);
     console.log(`✅ Created minimal test: ${filePath}`);
@@ -86,13 +85,13 @@ testDirs.forEach(dir => {
   const testDir = path.join(process.cwd(), dir);
   if (fs.existsSync(testDir)) {
     console.log(`\n📁 Processing directory: ${dir}`);
-    
+
     const files = fs.readdirSync(testDir, { withFileTypes: true });
-    
+
     files.forEach(file => {
       if (file.isFile() && (file.name.endsWith('.test.js') || file.name.endsWith('.test.ts') || file.name.endsWith('.test.tsx') || file.name.endsWith('.spec.ts'))) {
         const filePath = path.join(testDir, file.name);
-        
+
         // Try to clean the file first
         if (cleanTestFile(filePath)) {
           fixedCount++;
@@ -119,7 +118,7 @@ rootTestFiles.forEach(fileName => {
   const filePath = path.join(process.cwd(), fileName);
   if (fs.existsSync(filePath)) {
     console.log(`\n📄 Processing root test file: ${fileName}`);
-    
+
     if (cleanTestFile(filePath)) {
       fixedCount++;
     } else {

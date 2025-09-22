@@ -1,14 +1,10 @@
-<<<<<<< HEAD:src_backup/pages/AITalentMatchingPage.tsx
-<<<<<<< HEAD
+:src_backup/pages/AITalentMatchingPage.tsx
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
       icon: Bot,;
       title: "AI-Powered Matching",;
       description: "Advanced algorithms match the right talent with the right opportunities";
-=======
-export default function AITalentMatchingPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AITalentMatchingPage.tsx
     },;
     {;
       icon: Users,;"
@@ -22,66 +18,27 @@ export default function AITalentMatchingPage() { return null; }
     }
   ];
 
-<<<<<<< HEAD:src_backup/pages/AITalentMatchingPage.tsx
+:src_backup/pages/AITalentMatchingPage.tsx
 <<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
-<<<<<<< HEAD
-
-  const benefits = [
+const benefits = [
     {
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
-=======
-  const benefits = [
-    {
-
-
-      title: "Precise Candidate Matching",
-      description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      icon: <Bot className="h-8 w-8" />},
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-import React from 'react';
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
-import { Bot, Users, TrendingUp } from 'lucide-react';
-
-export default function AITalentMatchingPage() {
-title: 'Precise Candidate Matching',
-      description:
-        'Leverage AI algorithms to pair your roles with the most qualified experts.',
-      icon: <Bot className='h-8 w-8' />,
-    },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
       icon: <Users className="h-8 w-8" />},
     {
-<<<<<<< HEAD
-      title: "Scalable Talent Pools",
+title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> pr-12243
       icon: <Bot className = "h-8 w-8" />},
     {
       title: "Streamlined Hiring Workflow",
@@ -91,10 +48,7 @@ title: 'Precise Candidate Matching',
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className = "h-8 w-8" />}],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -104,21 +58,9 @@ title: 'Precise Candidate Matching',
     {
       name: "Emily Stone",
       role: "HR Director",
-<<<<<<< HEAD
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
+text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
 =======
-<<<<<<< HEAD
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
-=======
-<<<<<<< HEAD
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
-<<<<<<< HEAD
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
-=======
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
->>>>>>> main
+text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
@@ -127,57 +69,7 @@ title: 'Precise Candidate Matching',
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
-<<<<<<< HEAD
-      avatar: "/placeholder.svg"}],
-
-=======
-
-  const features = [;
-    "Machine learning-based candidate matching",;
-    "Comprehensive skill assessment tools",;
-    "Real-time market analysis",;
-    "Automated interview scheduling",;
-    "Performance analytics dashboard",;
-=======
-"
-import React from "react","
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
-import { Bot, Users, TrendingUp } from 'lucide-react'
-
-export default function AITalentMatchingPage() {}
-  const benefits = []
-    {}
-"
-      title: "Precise Candidate Matching","
-      description: "Leverage AI algorithms to pair your roles with the most qualified experts.","
-      icon: <Bot className="h-8 w-8" />},
-    {"
-      title: "Streamlined Hiring Workflow","
-      description: "Automated screening and ranking saves your team valuable time.","
-      icon: <Users className="h-8 w-8" />},
-    {"
-      title: "Scalable Talent Pools","
-      description: "Access a global network of vetted professionals ready for your projects.","
-      icon: <TrendingUp className="h-8 w-8" />}],
-
-  const testimonials = []
-    {"
-      name: "Emily Stone","
-      role: "HR Director",'"
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.","
-      avatar: "/placeholder.svg"},
-    {"
-      name: "Raj Patel","
-      role: "Startup Founder",'"
-      text: "The quality of candidates has improved dramatically since using Zion's platform.",;
-;
-  const features = [;"
-    "Machine learning-based candidate matching",;"
-    "Comprehensive skill assessment tools",;"
-    "Real-time market analysis",;"
-    "Automated interview scheduling",;"
-    "Performance analytics dashboard",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AITalentMatchingPage.tsx
+avatar: "/placeholder.svg"}],
     "Custom matching criteria";
   ];
 
@@ -195,18 +87,13 @@ export default /**;
  */
 function AITalentMatchingPage() {}
   const benefits = [;
-<<<<<<< HEAD:src_backup/pages/AITalentMatchingPage.tsx
+:src_backup/pages/AITalentMatchingPage.tsx
     {
       icon: Bot,
       title: "AI-Powered Matching",
       description:
         "Advanced algorithms match the right talent with the right opportunities",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
+
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
     },
@@ -214,10 +101,7 @@ function AITalentMatchingPage() {}
       icon: Users,
       title: "Verified Professionals",
       description: "All candidates are pre-screened and verified for quality",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
 =======
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -228,10 +112,7 @@ function AITalentMatchingPage() {}
       title: "Success Tracking",
       description: "Monitor performance and success rates of placements",
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
 =======
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -244,10 +125,7 @@ function AITalentMatchingPage() {}
     "Automated interview scheduling",
     "Performance analytics dashboard",
     "Custom matching criteria",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
 =======
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -256,43 +134,10 @@ function AITalentMatchingPage() {}
   const stats = [;
     { label: "Successful Placements", value: "95%" },
     { label: "Client Satisfaction", value: "98%" },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    {}
-      icon: Bot,"
-      title: "AI - Powered Matching","
-      description: "Advanced algorithms match the right talent with the right opportunities";
-    },
-    {}
-      icon: Users,"
-      title: "Verified Professionals","
-      description: "All candidates are pre - screened and verified for quality";
-    },
-    {}
-      icon: TrendingUp,"
-      title: "Success Tracking","
-      description: "Monitor performance and success rates of placements";
-    }
-  ];
-  const features = [;"
-    "Machine learning - based candidate matching","
-    "Comprehensive skill assessment tools","
-    "Real - time market analysis","
-    "Automated interview scheduling","
-    "Performance analytics dashboard","
-    "Custom matching criteria";
-  ];
-  const stats = [;"
-    { label: "Successful Placements", value: "95%" },"
-    { label: "Client Satisfaction", value: "98%" },"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AITalentMatchingPage.tsx
+
     { label: "Time to Hire", value: "50% faster" }
   ];
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
       title: 'Scalable Talent Pools',
@@ -317,7 +162,6 @@ function AITalentMatchingPage() {}
     },
   ];
 
-  
     />
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -363,11 +207,7 @@ export default function AITalentMatchingPage() { return null; }
       subtitle="Find the perfect experts for your projects with intelligent matching.";"
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";"
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
 =======
 >>>>>>> pr-12243
     { label: "Time to Hire", value: "50% faster" },
@@ -377,10 +217,7 @@ export default function AITalentMatchingPage() { return null; }
       title="AI Talent Matching";
       subtitle="Find the perfect talent with our AI - powered matching system";
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients.";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -389,34 +226,14 @@ export default function AITalentMatchingPage() { return null; }
       benefits={benefits}
       features={features}
       stats={stats}
-<<<<<<< HEAD
-
-    />;
+/>;
   );
-<<<<<<< HEAD:src_backup/pages/AITalentMatchingPage.tsx
 <<<<<<< HEAD
-=======
-
-      cta_text="Start Matching Talent";
-=======
-"
-      cta_text="Start Matching Talent";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AITalentMatchingPage.tsx
       cta_link="/contact";
     />);
 }
 
 }
-<<<<<<< HEAD:src_backup/pages/AITalentMatchingPage.tsx
+:src_backup/pages/AITalentMatchingPage.tsx
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-      ctaText="Start Matching Talent"
-      ctaLink="/contact"
-    />
-  )
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AITalentMatchingPage.tsx

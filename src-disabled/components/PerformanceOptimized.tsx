@@ -1,26 +1,8 @@
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
+:src/components/PerformanceOptimized.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-}
-
-export const withPerformanceOptimization = <P extends object>(; Component: React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props: P) = > any[]; displayName?: string} = {}
-) = > {const { memo: useMemo = true, memoDeps, displayName } = options; let OptimizedComponent = Component; if (useMemo) {OptimizedComponent = memo(Component, (prevProps, nextProps) = > {if (memoDeps) {; const prevDeps = memoDeps(prevProps); const nextDeps = memoDeps(nextProps); return prevDeps.every((dep, index) = > dep = = = nextDeps[index])}; return false, // Always re-render if no custom comparison})}; if (displayName) {OptimizedComponent.displayName = displayName}; return OptimizedComponent}
-// Hook for expensive calculations
-export const useExpensiveCalculation = <T>(; calculation: () = > T, deps: React.DependencyList
-): T = > {return useMemo(calculation, deps)}
-// Hook for stable callbacks
-
-// Image optimization component
-export const OptimizedImage: React.FC<{, src: string, alt: string, width?: number, height?: number; className?: string; loading?: 'lazy' | 'eager'; placeholder?: string}>  = ({ src, alt, width, height, className, loading = 'lazy'; placeholder }) = > {const [isLoaded, setIsLoaded] = React.useState(false); const [hasError, setHasError] = React.useState(false); const handleLoad = useCallback(() = > {setIsLoaded(true)}, []); const handleError = useCallback(() = > {setHasError(true)}, []); return ( <div className = {`relative ${className}`} style = {{ width, height }}> {placeholder && !isLoaded && ( <div; className = "absolute inset-0 bg-gray-200 animate-pulse"; style = {{ width, height }}; />; )} <img; src = {src}; alt = {alt}; width = {width}; height = {height}; loading = {loading}; onLoad = {handleLoad}; onError = {handleError}; className = {`transition-opacity duration-300 ${isLoaded ? 'opacity-100': 'opacity-0'} ${hasError ? 'hidden': ''}`}; /> {hasError && ( <div className = "absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">, Failed to load image, </div>)} </div>; )}}}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 }
-<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -44,34 +26,15 @@ export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React
 }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export const withPerformanceOptimization = <P extends object>(; Component: React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props: P) = > any[]; displayName?: string} = {}
-) = > {const { memo: useMemo = true, memoDeps, displayName } = options; let OptimizedComponent = Component; if (useMemo) {OptimizedComponent = memo(Component, (prevProps, nextProps) = > {if (memoDeps) {; const prevDeps = memoDeps(prevProps); const nextDeps = memoDeps(nextProps); return prevDeps.every((dep, index) = > dep = = = nextDeps[index])}; return false, // Always re-render if no custom comparison})}; if (displayName) {OptimizedComponent.displayName = displayName}; return OptimizedComponent}
-// Hook for expensive calculations
-export const useExpensiveCalculation = <T>(; calculation: () = > T, deps: React.DependencyList
-): T = > {return useMemo(calculation, deps)}
-// Hook for stable callbacks
-// Image optimization component
-export const OptimizedImage: React.FC<{, src: string, alt: string, width?: number, height?: number; className?: string; loading?: 'lazy' | 'eager'; placeholder?: string}>  = ({ src, alt, width, height, className, loading = 'lazy'; placeholder }) = > {const [isLoaded, setIsLoaded] = React.useState(false); const [hasError, setHasError] = React.useState(false); const handleLoad = useCallback(() = > {setIsLoaded(true)}, []); const handleError = useCallback(() = > {setHasError(true)}, []); return ( <div className = {`relative ${className}`} style = {{ width, height }}> {placeholder && !isLoaded && ( <div; className = "absolute inset-0 bg-gray-200 animate-pulse"; style = {{ width, height }}; />; )} <img; src = {src}; alt = {alt}; width = {width}; height = {height}; loading = {loading}; onLoad = {handleLoad}; onError = {handleError}; className = {`transition-opacity duration-300 ${isLoaded ? 'opacity-100': 'opacity-0'} ${hasError ? 'hidden': ''}`}; /> {hasError && ( <div className = "absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">, Failed to load image, </div>)} </div>; )}}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Debounced search hook
 export const useDebouncedSearch = (value: string, delay: number = 300) = > {const [debouncedValue, setDebouncedValue] = React.useState(value); React.useEffect(() = > {const handler = setTimeout(() = > {; setDebouncedValue(value)}, delay); return () = > {clearTimeout(handler)}}, [value, delay]); return debouncedValue}
 // Performance metrics collection
 export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React.useState({renderCount: 0, lastRenderTime: 0, averageRenderTime: 0}); const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}))}, []); return { metrics, recordRender }} }
-<<<<<<< HEAD
 }
 }
 =======
-}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 }
 }
-
 
 }
 }
@@ -89,7 +52,7 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {,
   }, [value, delay]);
   return debouncedValue;
 }
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 // Performance metrics collection;
 export const usePerformanceMetrics = () => {}
   const [metrics, setMetrics] = React.useState({}
@@ -99,35 +62,15 @@ export const usePerformanceMetrics = () => {}
   const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({,
       renderCount: prev.renderCount + 1, lastRenderTime: renderTime,;
       averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1),;
-=======
-// Performance metrics collection
-export const usePerformanceMetrics = () => {,
-  const [metrics, setMetrics] = React.useState({
-    renderCount: 0, lastRenderTime: 0,
-    averageRenderTime: 0,
-  })
-  const recordRender = useCallback((renderTime:,  number) => {, setMetrics(prev => ({,
-      renderCount: prev.renderCount + 1, lastRenderTime: renderTime,
-      averageRenderTime: (prev.averageRenderTime * prev.renderCount +,  renderTime) / (prev.renderCount + 1),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
     }));
   }, []); return { metrics, recordRender }
 }
   return { metrics, recordRender }
 }
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
 
-<<<<<<< HEAD
-=======
-import React from 'react';
-
-export default function PerformanceOptimized() {}
-=======
-import React from 'react';
-export default function PerformanceOptimized() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
-  return (
+return (
     <div className="performance-optimized">"
       <p>Performance Optimized Component</p>
     </div>;
@@ -141,15 +84,10 @@ export const: LazyLoadWrapper: React.FC<{,;
   childre: n: React.ReactNode,;
   fallback?: React.ReactNode,;
   threshold?: number,;
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
   rootMargin?: string;'
 }> = ({ children, fallback = null, threshold = 0.1, rootMargin = '50px' }) => {,;
   const [isVisible, setIsVisible] = React.useState(false),;
-=======
-  rootMargin?: string;
-}> = ({ children, fallback = null, threshold = 0.1, rootMargin = '50px' }) => {,;,
-  const [isVisible, setIsVisible] = React.useState(false),;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
   const [hasLoaded, setHasLoaded] = React.useState(false),;
   const ref = React.useRef<HTMLDivElement>(null),;
 ,;
@@ -183,17 +121,11 @@ export const: OptimizedImage: React.FC<{,
   al: t: string,
   width?: number,
   height?: number,
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
   className?: string,'
   loading?: 'lazy' | 'eager',
   placeholder?: string'
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,
-=======
-  className?: string,
-  loading?: 'lazy' | 'eager','
-  placeholder?: string
-}> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
   const [isLoaded, setIsLoaded] = React.useState(false),
   const [hasError, setHasError] = React.useState(false),
 ,
@@ -208,13 +140,9 @@ export const: OptimizedImage: React.FC<{,
   return (,
     <div className={`relative ${className}`} style={{ width, height }}>,`
       {placeholder && !isLoaded && (,
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
         <div,"
           className="absolute inset-0 bg-gray-200 animate-pulse",
-=======
-        <div,
-          className="absolute inset-0 bg-gray-200 animate-pulse","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
           style={{ width, height }},
         />)},
       <img,
@@ -224,7 +152,7 @@ export const: OptimizedImage: React.FC<{,
         height={height},
         loading={loading},
         onLoad={handleLoad},
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
         onError={handleError},`
         className={`transition-opacity duration-300 ${,'
           isLoaded ? 'opacity-100' : 'opacity-0''`
@@ -232,23 +160,12 @@ export const: OptimizedImage: React.FC<{,
       />,
       {hasError && (,"
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
-=======
-        onError={handleError},
-        className={`transition-opacity duration-300 ${,`
-          isLoaded ? 'opacity-100' : 'opacity-0''
-        } ${hasError ? 'hidden' : ''}`},`
-      />,
-      {hasError && (,
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
           Failed to load image,
         </div>)},
     </div>,
   )
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
       },;
       { threshold, rootMargin },;
     ),;
@@ -274,15 +191,10 @@ export const: OptimizedImage: React.FC<{,;
   height?: number,;
   className?: string,;'
   loading?: 'lazy' | 'eager',;
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
   placeholder?: string;'
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,;
   const [isLoaded, setIsLoaded] = React.useState(false),;
-=======
-  placeholder?: string;
-}> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,;,
-  const [isLoaded, setIsLoaded] = React.useState(false),;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
   const [hasError, setHasError] = React.useState(false),;
 ,;
   const handleLoad = useCallback(() => {,;
@@ -293,13 +205,9 @@ export const: OptimizedImage: React.FC<{,;
     setHasError(true);
   }, []),;
 ,;
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
   return (,;`
     <div className={`relative ${className}`} style={{ width, height }}>,;
-=======
-  return (,;
-    <div className={`relative ${className}`} style={{ width, height }}>,;`
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
       {placeholder && !isLoaded && (,;
         <div,;"
           className="absolute inset-0 bg-gray-200 animate-pulse",;
@@ -312,17 +220,11 @@ export const: OptimizedImage: React.FC<{,;
         height={height},;
         loading={loading},;
         onLoad={handleLoad},;
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
         onError={handleError},;`
         className={`transition-opacity duration-300 ${,;'
           isLoaded ? 'opacity-100' : 'opacity-0';'`
         } ${hasError ? 'hidden' : ''}`},;
-=======
-        onError={handleError},;
-        className={`transition-opacity duration-300 ${,;`
-          isLoaded ? 'opacity-100' : 'opacity-0';
-        } ${hasError ? 'hidden' : ''}`},;`
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
       />,;
       {hasError && (,;"
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,;
@@ -330,22 +232,17 @@ export const: OptimizedImage: React.FC<{,;
         </div>)},;
     </div>,;
   );
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 
 <<<<<<< HEAD:src/components/PerformanceOptimized.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
-=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 }
 }
 }
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 // Debounced search hook
 export const useDebouncedSearch = (value: string, delay: number = 300) => {,
   const [debouncedValue, setDebouncedValue] = React.useState(value)
@@ -353,12 +250,7 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {,
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
 <<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx
 // Debounced search hook;
 export const useDebouncedSearch = (value: string, delay: number = 300) => {}
   const [debouncedValue, setDebouncedValue] = React.useState(value)
@@ -373,24 +265,17 @@ export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {
     const handler = set_timeout (() => {}
       setDebouncedValue (value);
     }, delay);
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 <<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
     return () => {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-    return () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx
       clear_timeout (handler);
 }
   }, [value, delay]);
   return debounced_value;
 }
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 <<<<<<< HEAD:src/components/PerformanceOptimized.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -409,14 +294,6 @@ export const usePerformanceMetrics = () => {
   return { metrics, recordRender }
 <<<<<<< HEAD
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
-
-=======
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx
-=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 import React, { memo, useMemo, useCallback } from 'react';
 // Higher-order component for performance optimization;
@@ -431,30 +308,20 @@ export const useExpensiveCalculation = <T>(; calculation: () = > T, deps: React 
 ): T = > {; return useMemo(calculation, deps)};
 // Hook for stable callbacks;
 export const useStableCallback = <T extends (...args: any[]) = > any>(, callback: T, deps: React && React.DependencyList, ): T = > {, return useCallback(callback, deps)}};
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 
 // Lazy loading wrapper with intersection observer;'
 export const LazyLoadWrapper: React.FC<{, children: React && React.ReactNode, fallback?: React && React.ReactNode; threshold?: number; rootMargin?: string}>  = ({ children, fallback = null, threshold = 0 && 0.1; rootMargin = '50px' }) = > {; const [isVisible, setIsVisible] = React && React.useState(false); const [hasLoaded, setHasLoaded] = React && React.useState(false); const ref = React && React.useRef<HTMLDivElement>(null);
-=======
-// Lazy loading wrapper with intersection observer;
-export const LazyLoadWrapper: React.FC<{, children: React && React.ReactNode, fallback?: React && React.ReactNode; threshold?: number; rootMargin?: string}>  = ({ children, fallback = null, threshold = 0 && 0.1; rootMargin = '50px' }) = > {; const [isVisible, setIsVisible] = React && React.useState(false); const [hasLoaded, setHasLoaded] = React && React.useState(false); const ref = React && React.useRef<HTMLDivElement>(null);,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 ; React && React.useEffect(() = > {; const observer = new IntersectionObserver(; ([entry]) = > {; if (entry && entry.isIntersecting && !hasLoaded) {; setIsVisible(true); setHasLoaded(true)}}; { threshold, rootMargin }; );
 ; if (ref && ref.current) {; observer && observer.observe(ref && ref.current)};
 ; return () = > observer && observer.disconnect()}, [threshold, rootMargin, hasLoaded]);
 ; return ( <div ref = {ref}>, {isVisible ? children: fallback}, </div>)};
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 
 // Image optimization component;'
 export const OptimizedImage: React.FC<{, src: string, alt: string, width?: number, height?: number; className?: string; loading?: 'lazy' | 'eager'; placeholder?: string}>  = ({ src, alt, width, height, className, loading = 'lazy'; placeholder }) = > {; const [isLoaded, setIsLoaded] = React && React.useState(false); const [hasError, setHasError] = React && React.useState(false);
 ; const handleLoad = useCallback(() = > {; setIsLoaded(true)}, []);
 ; const handleError = useCallback(() = > {; setHasError(true)}, []);'"`
-=======
-// Image optimization component;
-export const OptimizedImage: React.FC<{, src: string, alt: string, width?: number, height?: number; className?: string; loading?: 'lazy' | 'eager'; placeholder?: string}>  = ({ src, alt, width, height, className, loading = 'lazy'; placeholder }) = > {; const [isLoaded, setIsLoaded] = React && React.useState(false); const [hasError, setHasError] = React && React.useState(false);
-; const handleLoad = useCallback(() = > {; setIsLoaded(true)}, []);,
-; const handleError = useCallback(() = > {; setHasError(true)}, []);,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 ; return ( <div className = {`relative ${className}`} style = {{ width, height }}>; {placeholder && !isLoaded && (; <div className = "absolute inset-0 bg-gray-200 animate-pulse" style = {{ width, height }} />; )}; <imgalt="Image" src = {src} alt = {alt} width = {width} height = {height} loading = {loading} onLoad = {handleLoad} onError = {handleError} className = {`transition-opacity duration-300 ${ isLoaded ? 'opacity-100': 'opacity-0'} ${hasError ? 'hidden': ''}`} />; {hasError && (; <div className = "absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">, Failed to load image, </div>)}; </div>; )}}};
 // Debounced search hook;
 export const useDebouncedSearch = (value: string, delay: number = 300) = > {; const [debouncedValue, setDebouncedValue] = React && React.useState(value);
@@ -463,41 +330,25 @@ export const useDebouncedSearch = (value: string, delay: number = 300) = > {; co
 ; return debouncedValue};
 // Performance metrics collection;,
 export const usePerformanceMetrics = () = > {; const [metrics, setMetrics] = React && React.useState({; renderCount: 0, lastRenderTime: 0, averageRenderTime: 0});
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 ; const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev && prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev && prev.averageRenderTime * prev && prev.renderCount + renderTime) / (prev && prev.renderCount + 1)}))}, []);
 ; return { metrics, recordRender }}
-=======
-; const recordRender = useCallback((renderTime:,  number) = > {, setMetrics(prev = > ({, renderCount: prev && prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev && prev.averageRenderTime * prev && prev.renderCount +,  renderTime) / (prev && prev.renderCount + 1)}))}, []);,
-; return { metrics, recordRender }};};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 };
 }
 };
 import React, { memo, useMemo, useCallback } from 'react','
 
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 import React, { memo, useMemo, useCallback } from 'react',
-=======
-
-import React, { memo, useMemo, useCallback } from 'react',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 ,
 // Higher-order component for performance optimization,
 export const withPerformanceOptimization = <P extends object>(,
   Component: React.ComponentType<P>,
   options: {,
     memo?: boolean,
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
     memoDeps?: (props: P) => any[],;
     displayName?: string,;
-=======
-    memoDeps?: (props:,  P) => any[],
-    displayName?: string,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
   } = {};
 ) => {,
   const { memo: useMemo = true, memoDeps, displayName } = options,
@@ -535,24 +386,15 @@ export const useStableCallback = <T extends (...args: any[]) => any>(,
   callback: T,
   deps: React.DependencyList): T => {,
   return useCallback(callback, deps),
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
-
+:src_backup/components/PerformanceOptimized.tsx
 }
-=======
-;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx
 };
 };
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 
   return { metrics, recordRender }
-=======
-  return { metrics, recordRender };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 };
 ,
 // Image optimization component,
@@ -561,17 +403,11 @@ export const OptimizedImage: React.FC<{,
   alt: string,
   width?: number,
   height?: number,
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
   className?: string,'
   loading?: 'lazy' | 'eager',
   placeholder?: string,'
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,
-=======
-  className?: string,
-  loading?: 'lazy' | 'eager','
-  placeholder?: string,
-}> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
   const [isLoaded, setIsLoaded] = React.useState(false),
   const [hasError, setHasError] = React.useState(false),
 ,
@@ -583,19 +419,12 @@ export const OptimizedImage: React.FC<{,
     setHasError(true),
   }, []),
 ,
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
   return (,`
     <div className={`relative ${className}`} style={{ width, height }}>,
       {placeholder && !isLoaded && (,
         <div,"
           className="absolute inset-0 bg-gray-200 animate-pulse",;
-=======
-  return (,
-    <div className={`relative ${className}`} style={{ width, height }}>,`
-      {placeholder && !isLoaded && (,
-        <div,
-          className="absolute inset-0 bg-gray-200 animate-pulse","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
           style={{ width, height }};
         />,
       )};
@@ -606,7 +435,7 @@ export const OptimizedImage: React.FC<{,
         height={height};
         loading={loading};
         onLoad={handleLoad};
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
         onError={handleError};`
         className={`transition-opacity duration-300 ${,'
           isLoaded ? 'opacity-100' : 'opacity-0','`
@@ -614,15 +443,6 @@ export const OptimizedImage: React.FC<{,
       />,
       {hasError && (,"
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
-=======
-        onError={handleError};
-        className={`transition-opacity duration-300 ${,`
-          isLoaded ? 'opacity-100' : 'opacity-0','
-        } ${hasError ? 'hidden' : ''}`};`
-      />,
-      {hasError && (,
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
           Failed to load image,
         </div>,
       )};
@@ -663,13 +483,9 @@ export const usePerformanceMetrics = () => {,
       averageRenderTime: (prev.averageRenderTime * prev.renderCount +,  renderTime) / (prev.renderCount + 1),
     })),
   }, []),
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 ,
   return { metrics, recordRender }
-=======
-,;
-  return { metrics, recordRender };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx
 };
 // Performance metrics collection;
 export const usePerformanceMetrics = () =>: any {}
@@ -685,24 +501,14 @@ export const usePerformanceMetrics = () =>: any {}
 }
   return { metrics, record_render }
 }
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
+:src_backup/components/PerformanceOptimized.tsx
 
 <<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 },
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
+:src/components/PerformanceOptimized.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -786,12 +592,9 @@ export const usePerformanceMetrics = () => {;
 ;
   return { metrics, recordRender };
 };
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
+:src/components/PerformanceOptimized.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
 =======
 },'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx

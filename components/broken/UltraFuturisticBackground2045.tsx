@@ -39,7 +39,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // Particle system const particles: Array< {
   alpha: Math.random () * 0.8 + 0.2;
-life: Math.random () * 100 + 50
+life: Math.random () * 100 + 50;
 })
 }// Animation loop // Wrap around edges if (particle.x < 0) particle.x = canvas.width;
 if (particle.x > canvas.width) particle.x = 0;
@@ -55,14 +55,14 @@ ctx.restore ();
   Math.random () * 360
 }, 70%, 60%) `;
 alpha: Math.random () * 0.8 + 0.2;
-life: Math.random () * 100 + 50
-const UltraFuturisticBackground2045: React.FC<
+life: Math.random () * 100 + 50;
+const UltraFuturisticBackground2045: React.FC<;
   UltraFuturisticBackground2045Props
 > = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2045Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props> = ({ children }) => {
   const canvasRef = null;
@@ -228,7 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div'
           className='absolute inset-0 opacity-20'
           style={{}`
-            backgroundImage: `
+            backgroundImage: `;
           }}
           animate={{'
             backgroundPosition: ['0px 0px', '50px 50px']
@@ -253,7 +253,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 20;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}      }
       {/* Animated Canvas Background */}
       <canvas;
@@ -266,8 +266,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div"
           className="absolute inset-0 opacity-20"
           style={{}`
-            backgroundImage: `'
-            backgroundSize: '50px 50px'
+            backgroundImage: `';
+            backgroundSize: '50px 50px';
 ;
   return (
     <div className="relative min - h-screen bg-black overflow-hidden">;
@@ -359,16 +359,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.3, 0 && 0.7, 0 && 0.3]}}
           transition={{}
             duration: 6;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           transition={{}
             duration: 6;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           transition={{}
             duration: 6;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
           }}
           animate={{}
             rotate: [45, 405]
@@ -376,16 +376,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.3, 0 && 0.5, 0 && 0.3]}}
           transition={{}
             duration: 10;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           transition={{}
             duration: 10;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           transition={{}
             duration: 10;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
           }}
         {/* Additional floating elements */}
         <motion&& motion.div'
@@ -398,7 +398,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'easeInOut',          }}
           transition={{}
             duration: 4;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
             duration: 8,
             repeat: Infinity,'
@@ -447,7 +447,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounde
             opacity: [0.2, 0.5, 0.2]}}
           transition={{}
             duration: 4;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           transition={{}
             duration: 10,
@@ -474,7 +474,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounde
             ease: 'easeInOut',          }}
           transition={{}
             duration: 3;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
             scale: [1, 1.5, 1];
             opacity: [0.5, 1, 0.5];
@@ -592,7 +592,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 15;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}
         />;
       </div>;

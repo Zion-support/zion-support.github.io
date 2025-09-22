@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
-<<<<<<< HEAD
+:src/components/SocialShareSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,26 +9,26 @@ import { toast } from "./ui/use-toast",
 import { useTranslation } from 'react-i18next',
 export function SocialShareSection() {
   const { t } = useTranslation(),
-  
+
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = typeof window !== 'undefined'
     ? encodeURIComponent(window.location.href)
     : '',
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),
-  
+
   // Social sharing functions
   const shareToTwitter = () => {
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
   },
-  
+
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
   },
-  
+
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
-  
+
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
@@ -45,11 +44,6 @@ export function SocialShareSection() {
         })
       })
   },
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const shareLinks = [
     {
       name: "Twitter",
@@ -76,12 +70,6 @@ export function SocialShareSection() {
       onClick: copyLinkToClipboard
     }],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx
 import { Button } from './ui/button';
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from './ui/use-toast';
@@ -90,22 +78,13 @@ export function SocialShareSection() {
   const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = null;
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
+:src/components/SocialShareSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx
   return (
 return (
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
+:src/components/SocialShareSection.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx
     <section className="py-12 bg-zion-blue">
 =======
   return (    <section className="py-12 bg-zion-blue">
@@ -117,10 +96,7 @@ return (
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
 
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx
+:src/components/SocialShareSection.tsx
 };
 }</div> </div> </div> </section>) ;
 }'"
@@ -198,14 +174,7 @@ export function SocialShareSection() {;
     <section className="py-12 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
-<<<<<<< HEAD
-=======
-          <div>;
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx
+
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
@@ -246,8 +215,6 @@ export function SocialShareSection() {;
 }'"
 }
 
-
-
       name: 'Twitter',
       icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,
       color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
@@ -278,7 +245,7 @@ export function SocialShareSection() {;
         <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div>;
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
+:src/components/SocialShareSection.tsx
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
@@ -303,19 +270,7 @@ export function SocialShareSection() {;
     </section>;
   );
 }
-<<<<<<< HEAD
-=======
-}</div> </div> </div> </section>);
-}'";
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-            <h3 className='text-xl font-bold text-white mb-2'>;              Share Zion with Your Network;
-=======
-=======
-            <h3 className='text - xl font - bold text - white mb - 2'>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx
 
               Share Zion with Your Network;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -324,9 +279,8 @@ export function SocialShareSection() {;
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
-<<<<<<< HEAD
-          <div className='flex flex-wrap gap-3'>;
+:src/components/SocialShareSection.tsx
+<div className='flex flex-wrap gap-3'>;
             {shareLinks && shareLinks.map((link, index) => (              <Button
                 key = {index,}
                 className={`${link && link.color} text-white`}
@@ -340,13 +294,6 @@ export function SocialShareSection() {;
               </Button>;
             ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx
           <div className='flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
                 key = {index, }
@@ -372,9 +319,6 @@ export function SocialShareSection() {;
 }
 }</div> </div> </div> </section>)
 }'"
-<<<<<<< HEAD:src/components/SocialShareSection.tsx
+:src/components/SocialShareSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SocialShareSection.tsx

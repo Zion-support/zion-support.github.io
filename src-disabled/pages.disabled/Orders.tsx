@@ -1,18 +1,8 @@
-<<<<<<< HEAD:src_backup/pages/Orders.tsx
-<<<<<<< HEAD:src/pages/Orders.tsx
+:src_backup/pages/Orders.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-=======
-  TableRow,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  TableRow,
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 =======
 import React from "react";
@@ -30,7 +20,6 @@ const Orders: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 import {
 
   Table
@@ -38,27 +27,9 @@ import {
   TableCell
   TableHead
   TableHeader
-<<<<<<< HEAD:src/pages/Orders.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-
 =======
-<<<<<<< HEAD
-import {
-  Table,
-  TableBody,
-  TableCell,
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
 
@@ -68,10 +39,8 @@ export default function OrdersPage() {;
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
-<<<<<<< HEAD:src/pages/Orders.tsx
-<<<<<<< HEAD
-
-  const getStatusBadge = (status: string,) => {;
+:src/pages/Orders.tsx
+const getStatusBadge = (status: string,) => {;
     switch (status) {;
       case 'in_escrow':;
 
@@ -113,18 +82,10 @@ import {
   TableBody,
   TableCell,
 <<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
 TableRow;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Orders.tsx
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth  } from '@/hooks/useAuth';
@@ -152,9 +113,8 @@ export default function OrdersPage() {;
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
-<<<<<<< HEAD:src_backup/pages/Orders.tsx
-<<<<<<< HEAD:src/pages/Orders.tsx
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
+:src_backup/pages/Orders.tsx
+const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   TableHead,
@@ -166,19 +126,12 @@ import { EmptyState } from '@/components/ui/empty-state',
 export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
-<<<<<<< HEAD:src/pages/Orders.tsx
-<<<<<<< HEAD
+:src/pages/Orders.tsx
 <<<<<<< HEAD
   const getStatusBadge = (status: string) => {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     switch (status) {
       case 'in_escrow':
         return (
@@ -202,15 +155,8 @@ export default function OrdersPage() {
       default:
         return status
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
   const formatDate = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -243,11 +189,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
@@ -264,11 +206,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
@@ -285,51 +223,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </TableCell>
               </TableRow>
             ))}
-<<<<<<< HEAD
-=======
 
-
-;
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </TableBody>;
         </Table>;
       )}
     </div>;
   );
-<<<<<<< HEAD:src_backup/pages/Orders.tsx
-<<<<<<< HEAD:src/pages/Orders.tsx
+:src_backup/pages/Orders.tsx
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
-=======
-
-
-;
-  TableRow,
-
-} from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import Skeleton from '@/components / ui / skeleton';
-import { EmptyState } from '@/components / ui / empty - state';
-export default /**
- * OrdersPage - Function description
- */
-function OrdersPage() {
-  const { user } = use_auth ();
-  const { data: orders, is_loading } = useGetOrdersQuery (user?.id);
-;
-  const format_date = (date: string) =>: any new Date (date).toLocaleDateString ();
-  const getStatusBadge = (status: string, ) =>: any {
-    switch (status) {
-      case 'in_escrow':;
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
-=======
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Orders.tsx
         return (
           <Badge variant='warning' className='flex items - center gap - 1'>;
             <Clock className='h - 3 w - 3' /> In Escrow;
@@ -342,15 +245,14 @@ function OrdersPage() {
           </Badge>);
       case 'disputed':;
         return (
-<<<<<<< HEAD:src_backup/pages/Orders.tsx
+:src_backup/pages/Orders.tsx
           <Badge variant='destructive' className='flex items - center gap - 1'>;
             <ShieldAlert className='h - 3 w - 3' /> Disputed;
           </Badge>),
       default:;
         return status;
     }
-<<<<<<< HEAD:src/pages/Orders.tsx
-  }
+}
 ;
   return (
     <div className='container max - w-4xl py - 10'>;
@@ -423,12 +325,6 @@ function OrdersPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-export default Orders;
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -437,7 +333,6 @@ export default Orders;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx

@@ -134,7 +134,7 @@ return (
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
           );
         case 'rating':
-origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533;
           return b.rating - a.rating;
         case 'customers':;
           return b.customers - a.customers;
@@ -169,36 +169,36 @@ default:
       count: allServices.filter(s => s.category.includes('AI')).length,
     },
     {
-      id: 'Quantum'
-      name: 'Quantum Computing'
-      icon: Atom
+      id: 'Quantum';
+      name: 'Quantum Computing';
+      icon: Atom;
       count: allServices.filter(s => s.category.includes('Quantum')).length
     }
     {
-      id: 'Emerging'
-      name: 'Emerging Technology'
-      icon: Sparkles
+      id: 'Emerging';
+      name: 'Emerging Technology';
+      icon: Sparkles;
       count: allServices.filter(s => s.category.includes('Emerging')).length
     }
     {
-      id: 'IT'
-      name: 'IT & Infrastructure'
-      icon: Shield
-      count: allServices.filter(
+      id: 'IT';
+      name: 'IT & Infrastructure';
+      icon: Shield;
+      count: allServices.filter(;
         s => s.category.includes('IT') |s.category.includes('Infrastructure')
       ).length
     }
     {
-      id: 'Autonomous'
-      name: 'Autonomous Systems'
-      icon: Target
+      id: 'Autonomous';
+      name: 'Autonomous Systems';
+      icon: Target;
       count: allServices.filter(s => s.category.includes('Autonomous')).length
     }
     {
-      id: 'Cloud'
-      name: 'Cloud & DevOps'
-      icon: Cloud
-      count: allServices.filter(
+      id: 'Cloud';
+      name: 'Cloud & DevOps';
+      icon: Cloud;
+      count: allServices.filter(;
         s => s.category.includes('Cloud') || s.category.includes('DevOps')
       ).length,
     },
@@ -221,7 +221,7 @@ website: 'https://ziontechgroup.com',
           </title>
           <meta
             name='description'
-            content="Explore Zion Tech Group's revolutionary 2026 services including AI, quantum computing, emerging technologies, and comprehensive IT solutions. Contact: +1 302 464 0950"
+            content="Explore Zion Tech Group's revolutionary 2026 services including AI, quantum computing, emerging technologies, and comprehensive IT solutions. Contact: +1 302 464 0950";
           />
           <meta
             name='keywords'
@@ -230,40 +230,40 @@ website: 'https://ziontechgroup.com',
           <meta name='author' content='Zion Tech Group' />
           <meta name='robots' content='index, follow' />
           <meta
-            property='og:title'
+            property='og:title';
             content='Zion Tech Group - 2026 Revolutionary Services Showcase'
           />
           <meta
-            property='og:description'
-            content='1500+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950'
+            property='og:description';
+            content='1500+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950';
           />
           <meta
-            property='og:url'
-            content='https://ziontechgroup.com/2026-services-showcase'
+            property='og:url';
+            content='https://ziontechgroup.com/2026-services-showcase';
           />
           <meta property='og:type' content='website' />
           <link
             rel='canonical'
-            href='https://ziontechgroup.com/2026-services-showcase'
+            href='https://ziontechgroup.com/2026-services-showcase';
           />
         </Head>
 
         {/* Navigation */}
         <UltraAdvancedNavigation />
         {/* Hero Section */}
-<section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
+<section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<h1 className='text-5xl md:text-7xl font-bold mb-6'>
+<h1 className='text-5xl md:text-7xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
                   2026 Revolutionary Services
                 </span>
               </h1>
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
                 Discover the future of technology with our revolutionary AI
                 quantum computing, emerging technologies, and comprehensive IT
                 solutions
@@ -300,13 +300,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     }
                 </span>
               </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
 
                   </div>
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                     {/* Service Header */}'
                     <div className='flex items-start justify-between mb-4'>'
                       <div className='text-4xl'>{service.icon}</div>
@@ -327,7 +327,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
                     {/* Price */}'
                     <div className='flex items-center justify-between mb-4'>'"
-                      <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                      <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
         {/* Services Grid */}'
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;'
           <div className='max-w-7xl mx-auto'>;'"
@@ -364,7 +364,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="flex items - start justify-between mb-4">;
                       <div className="text-4xl">{service.icon}</div>;
                       {service.popular && (
-<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
                       {service.name}
                     </h3>
                     {/* Tagline */}
@@ -429,7 +429,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>;
                     {/* Features */}"
                     <div className="mb-4">"
-                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>"
+                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>";
                       <ul className="space-y-1">
                         {service.features.slice(0, 3).map((feature, idx) => ("
                           <li key={idx} className="text-gray-400 text-xs flex items-center">"
@@ -466,7 +466,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
                         Key Features:
-                      </h4>
+                      </h4>;
                       <ul className='space-y-1'>
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li
@@ -518,7 +518,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* CTA Button */}
                     <a
                       href={service.link}
-className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
+className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block';
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       Learn More;
@@ -554,7 +554,7 @@ className='text-center py-16'
         </section>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Contact Section */}
-<section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
+<section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -684,7 +684,7 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bord
                 Join thousands of companies already leveraging our revolutionary
                 2026 AI, quantum, and IT solutions
               </p>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
                 <div className='flex items-center justify-center space-x-3 text-cyan-300'>
                   <span className='text-2xl'>📱</span>
                   <span className='font-semibold'>{contactInfo.mobile}</span>
@@ -700,17 +700,17 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bord
                   </span>
                 </div>
               </div>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                 <a
                   href='/contact'
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
                 >
                   Contact Us Now
                 </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <a
 href='/pricing'
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300';
                 >
                   View Pricing;
                 </a>

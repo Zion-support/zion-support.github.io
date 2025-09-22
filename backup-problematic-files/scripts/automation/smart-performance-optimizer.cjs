@@ -21,33 +21,24 @@ class SmartPerformanceOptimizer {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-<<<<<<< HEAD
-    analyzeBundleSize() {}
+analyzeBundleSize() {}
         this.log('Analyzing bundle size...');
-        
+
         try {}
             // Build the project first;
             execSync('npm run build', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
-            
+
             // Analyze bundle;
             const bundleAnalysis = execSync('npm run analyze', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
+
             this.log('Bundle analysis completed');
             return { "status": 'success', "output": bundleAnalysis }} catch (error) {}
             this.log(`Bundle analysis "failed": ${error.message}`);
@@ -55,23 +46,19 @@ class SmartPerformanceOptimizer {}
     };
     checkBuildPerformance() {}
         this.log('Checking build performance...');
-        
+
         const startTime = Date.now(;);
-        
+
         try {}
             execSync('npm run build', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
-            
+
             const buildTime = Date.now() - startTi;m;e;
             this.log(`Build completed in ${buildTime}ms`);
-            
+
             return {;}
                 "status": 'success',
                 "buildTime": buildTime,
@@ -82,15 +69,15 @@ class SmartPerformanceOptimizer {}
     };
     optimizeImages() {}
         this.log('Optimizing images...');
-        
+
         try {}
             // This would typically use a tool like imagemin;
             // For now, we'll just check if images exist;
             const publicDir = path.join(this.projectRoot, 'public';);
             const imageFiles = this.findImageFiles(publicDir;);
-            
+
             this.log(`Found ${imageFiles.length} image files`);
-            
+
             return {;}
                 "status": 'success',
                 "imagesFound": imageFiles.length,
@@ -104,10 +91,6 @@ class SmartPerformanceOptimizer {}
     };
     findImageFiles(dir) {}
         const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
-=======
-    analyzeBundleSize() {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const files = [];
         if () return file) {}
     ) return file}s;
@@ -144,17 +127,8 @@ if ( {})
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = SmartPerformanceOptimizer;
-module.exports = SmartPerformanceOptimizer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = SmartPerformanceOptimizer;
 "`;

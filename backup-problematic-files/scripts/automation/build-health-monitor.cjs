@@ -67,8 +67,7 @@ class BuildHealthMonitor {}
       );
 
       const dir = path.dirname(reportPath);
-<<<<<<< HEAD
-      if (!fs.existsSync(dir)) {}
+if (!fs.existsSync(dir)) {}
   fs.mkdirSync(dir, { "recursive": true })};
 ;
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Build health report saved "to": ${reportPath}`)} catch (error) {  this.log(`Error monitoring build "health": ${error.message  }`)};
@@ -89,16 +88,8 @@ class BuildHealthMonitor {}
 ;
 const monitor = new BuildHealthMonitor();
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-monitor.run().catch(console.error);
-monitor.run().catch(console.error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       if (!fs.existsSync(dir)) {}"
   fs.mkdirSync(dir, { "recursive": true })};"

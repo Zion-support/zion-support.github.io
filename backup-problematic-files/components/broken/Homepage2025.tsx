@@ -112,7 +112,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Explore Services
               </button>
             </motion.div>
-            
+
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -275,7 +275,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Future of Technology
             </span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -574,7 +574,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="text-xl text-gray-300 mb-8">
               Contact us today to learn how our innovative services can revolutionize your operations.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
                 <div className="text-3xl mb-4"></div>
@@ -599,7 +599,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </p>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com"
@@ -656,11 +656,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
                 <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
-<<<<<<< HEAD:components/Homepage2025.tsx.backup.1755991636
+:components/Homepage2025.tsx.backup.1755991636
                 <li><a href="https://twitter.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
-=======
-                <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter/X</a></li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/broken/Homepage2025.tsx
               </ul>
             </div>
           </div>

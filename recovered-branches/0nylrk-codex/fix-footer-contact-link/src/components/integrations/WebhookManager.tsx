@@ -1,12 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -22,22 +14,9 @@ export function WebhookManager() {;
     webhooks;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-    loading, ;
-=======
-export function WebhookManager() {
-  const { ;
-    webhooks;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useEffect, useState } from "react",
-=======
-    loading, ;import React, { useEffect, useState } from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     loading, ;import React, { useEffect, useState } from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -54,15 +33,7 @@ import { PlusCircle, Save, Trash, Play } from "lucide-react",
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     loading,
-=======
-    loading
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -91,13 +62,8 @@ export function WebhookManager() {}
   const {};
     webhooks;
 
-<<<<<<< HEAD
-    loading;
+loading;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    loading
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     error;
@@ -106,23 +72,7 @@ export function WebhookManager() {}
     createWebhook;
     toggleWebhook;
     deleteWebhook;
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-=======
-    testWebhook
-  } = useWebhooks();
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-export function WebhookManager() {
-  const { 
-    webhooks,
-    loading, 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    error,
+error,
     testResult,
     fetchWebhooks,
     createWebhook,
@@ -130,13 +80,6 @@ export function WebhookManager() {
     deleteWebhook,
     testWebhook
   } = useWebhooks(),
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [newWebhook, setNewWebhook] = useState({
 =======
@@ -149,11 +92,7 @@ export function WebhookManager() {
     testWebhook;
   } = useWebhooks();
 
-
-
-
-<<<<<<< HEAD
-  const [newWebhook, setNewWebhook] = useState({
+const [newWebhook, setNewWebhook] = useState({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     name: ""
@@ -163,47 +102,14 @@ export function WebhookManager() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const [newWebhook, setNewWebhook] = useState({}
-"
-    name: """
-    url: """
-    selectedEvent: "" as WebhookEventType;
-    eventTypes: [] as WebhookEventType[]
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     secret: ""
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     secret: ""
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }),
-  
-
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  });
-  }),
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -211,28 +117,13 @@ export function WebhookManager() {
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
     { value: "milestone_approved", label: "Milestone Approved" }
-<<<<<<< HEAD
-=======
 
-
-
-  const eventOptions: { value: WebhookEventType, label: string }[] = ["
-    { value: "new_application", label: "New Application Received" }"
-    { value: "quote_received", label: "Quote Request Received" }"
-    { value: "milestone_approved", label: "Milestone Approved" }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { value: "talent_hired", label: "Talent Hired" }
 
   useEffect(() => {}
     fetchWebhooks()
   }, []);
 
-<<<<<<< HEAD
-=======
-  const handleAddEvent = () => {
-<<<<<<< HEAD
-    if (!newWebhook.selectedEvent) return;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ],
 =======
     secret: ""  ],
@@ -243,7 +134,6 @@ export function WebhookManager() {
 =======
     { value: "talent_hired", label: "Talent Hired" }
 
-
   useEffect(() => {
     fetchWebhooks()
   }, []);
@@ -252,24 +142,15 @@ export function WebhookManager() {
     if (!newWebhook.selectedEvent) return;
   ],
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  
+
   useEffect(() => {
     fetchWebhooks()
   }, []),
-  
+
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return,
-    
-<<<<<<< HEAD
+
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -289,30 +170,12 @@ export function WebhookManager() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  const handleAddEvent = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
-  
-
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -327,76 +190,31 @@ export function WebhookManager() {
     }
     setNewWebhook({}
       ...newWebhook,
-<<<<<<< HEAD
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     })
 <<<<<<< HEAD
   }
   },
-  
+
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
-=======
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],"
-      selectedEvent: "" as WebhookEventType;
-    })
-
-  const handleRemoveEvent = (event: WebhookEventType) => {}
-    setNewWebhook({}
-      ...newWebhook;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
 
-<<<<<<< HEAD
-=======
-    })
-  }
-  },
-  
-  const handleRemoveEvent = (event: WebhookEventType) => {
-    setNewWebhook({
-      ...newWebhook
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event)
-    })
-
-
-  },
-  
-  const handleCreateWebhook = async () => {
-    if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
-      toast.error("Please fill in all required fields"),
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return
     }
     await createWebhook(
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-  }
-  const handleCreateWebhook = async () => {
-    if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length === 0) {
-      toast.error("Please fill in all required fields");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
-  
+
   const handleCreateWebhook = async () => {}
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {"
       toast.error("Please fill in all required fields"),
@@ -412,15 +230,7 @@ export function WebhookManager() {
       newWebhook.secret || undefined
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ),
-    
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Reset form
 =======
@@ -441,19 +251,6 @@ export function WebhookManager() {
     })
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
@@ -468,44 +265,33 @@ export function WebhookManager() {
       secret: ""
     })
 
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
-  
+
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {}
     await testWebhook(webhookId, eventType)
   },
-  
+
 =======
 
-
   },
-  
+
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   },
-  
-
 
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {}
+const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {}
     await testWebhook(webhookId, eventType)
   }
 
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
@@ -531,33 +317,14 @@ export function WebhookManager() {
                 value={newWebhook.name}
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
               />
-<<<<<<< HEAD
-            </div>
+</div>
             <div className="space-y-2">
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Label htmlFor="webhook-url">URL</Label>
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-              <Input
-                id="webhook-url"
-                placeholder="https://example.com/webhook"
-              <Input 
-                id="webhook-url" 
-                placeholder="https://example.com/webhook"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useEffect, useState } from "react",;
-=======
-              <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
               <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -571,11 +338,7 @@ import React, { useEffect, useState } from "react",;
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
 import React, { useEffect, useState } from "react",;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -660,18 +423,8 @@ export function WebhookManager() { return null; }
 };
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     await testWebhook(webhookId, eventType)
 };
-=======
-    await testWebhook(webhookId, eventType);
-  };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    await testWebhook(webhookId, eventType)
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (;
 =======
     await testWebhook(webhookId, eventType);
@@ -686,14 +439,9 @@ export function WebhookManager() { return null; }
             Define webhooks to notify external systems when events occur in Zion.;
           </CardDescription>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         </CardHeader>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-        </CardHeader>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CardContent className="space-y-4">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div className="space-y-2">;
@@ -711,25 +459,12 @@ export function WebhookManager() { return null; }
                 id="webhook-url";
                 placeholder="https://example.com/webhook";
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -738,21 +473,12 @@ export function WebhookManager() { return null; }
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
             </div>
-<<<<<<< HEAD
-          </div>"
+</div>"
           <div className="space-y-2">
             <Label>Events</Label>"
             <div className="flex flex-wrap gap-2 mb-2">
               {newWebhook.eventTypes.map(event => (
                 <ClickableBadge;
-=======
-          </div>
-          <div className="space-y-2">
-            <Label>Events</Label>
-            <div className="flex flex-wrap gap-2 mb-2">
-              {newWebhook.eventTypes.map(event => (
-                <ClickableBadge
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   key={event}
                   onRemove={() => handleRemoveEvent(event)}
                 >
@@ -761,14 +487,6 @@ export function WebhookManager() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-              ))}
-=======
-))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
             <div className="flex space-x-2">
               <Select
@@ -794,12 +512,6 @@ export function WebhookManager() { return null; }
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   const [newWebhook, setNewWebhook] = useState({;"
     name: "",;"
@@ -840,22 +552,14 @@ export function WebhookManager() { return null; }
   const handleAddEvent = () => {;
     if (!newWebhook && newWebhook.selectedEvent) return;
 
-<<<<<<< HEAD
-    if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {;"
-=======
-    if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {;"
       toast && toast.error("This event is already added");
       return;
     }
 
     setNewWebhook({;
       ...newWebhook;
-<<<<<<< HEAD
-      eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent];"
-=======
-      eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent];"
       selectedEvent: "" as WebhookEventType;
     });
   };
@@ -868,11 +572,7 @@ export function WebhookManager() { return null; }
   };
 
   const handleCreateWebhook = async () => {;
-<<<<<<< HEAD
-    if (!newWebhook && newWebhook.name || !newWebhook && newWebhook.url || newWebhook && newWebhook.eventTypes.length === 0) {;"
-=======
-    if (!newWebhook && newWebhook.name || !newWebhook && newWebhook.url || newWebhook && newWebhook.eventTypes.length === 0) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+if (!newWebhook && newWebhook.name || !newWebhook && newWebhook.url || newWebhook && newWebhook.eventTypes.length === 0) {;"
       toast && toast.error("Please fill in all required fields");
       return;
     }
@@ -885,19 +585,11 @@ export function WebhookManager() { return null; }
     );
 
     // Reset form;
-<<<<<<< HEAD
-    setNewWebhook({;"
+setNewWebhook({;"
       name: "",;"
       url: "",;"
       selectedEvent: "" as WebhookEventType,;
       eventTypes: [],;"
-=======
-    setNewWebhook({;
-      name: "",;
-      url: "",;
-      selectedEvent: "" as WebhookEventType,;
-      eventTypes: [],;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       secret: "";
     });
   };
@@ -905,13 +597,7 @@ export function WebhookManager() { return null; }
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
     await testWebhook(webhookId, eventType);
   };
-<<<<<<< HEAD
 "
-=======
-
-  return (
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 return (
 
@@ -1015,11 +701,6 @@ export function WebhookManager() {;
           <CardTitle>Create Webhook</CardTitle>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useState } from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -1123,16 +804,8 @@ if ( {) {
       <Card>;
         <CardHeader>;
           <CardTitle > Create Webhook</CardTitle>;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -1143,33 +816,12 @@ if ( {) {
         </CardHeader>;
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Input 
               id="webhook-secret" 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Input 
-              id="webhook-secret" 
-
-
-<<<<<<< HEAD
-=======
-            <Input
               id="webhook-secret"
-            <Input 
-              id="webhook-secret" 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 "
@@ -1306,18 +958,8 @@ if ( {) {
           </div>
         </CardContent>
         <CardFooter>
-<<<<<<< HEAD
-          <Button onClick={handleCreateWebhook}>"
+<Button onClick={handleCreateWebhook}>"
             <Save className="h-4 w-4 mr-2" /> Create Webhook;
-=======
-          <Button onClick={handleCreateWebhook}>
-            <Save className="h-4 w-4 mr-2" /> Create Webhook
-</CardFooter>
-          <Button onClick={handleCreateWebhook}>
-</Button>"
-            <Save className="h-4 w-4 mr-2" /> Create Webhook;"
-</Save>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Button>
         </CardFooter>
       </Card>
@@ -1328,13 +970,6 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        <CardContent className="space - y-4">;
-=======
-<CardContent className="space - y-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <div className="space - y-2">;
               <Label html_for="webhook - name">Webhook Name</Label>;
@@ -1395,10 +1030,7 @@ if ( {) {
               on_change={(e) => setNewWebhook ({...new_webhook, secret: e.target.value})}
             />;
             <p className="text - xs text - muted - foreground">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -1424,13 +1056,6 @@ if ( {) {
                       </div>
                       <div className="flex-shrink-0">
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <CardContent className="space-y-4">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div className="space-y-2">;
@@ -1495,11 +1120,7 @@ if ( {) {
               onChange={(e) => setNewWebhook({...newWebhook, secret:e.target.value})}
             />;
             <p className="text-xs text-muted-foreground">;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               If provided, this secret will be used to sign the webhook payload.;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1517,8 +1138,7 @@ if ( {) {
           </div>;
         </CardContent>;
         <CardFooter>;
-<<<<<<< HEAD
-          <Button on_click={handleCreateWebhook}>;
+<Button on_click={handleCreateWebhook}>;
             <Save className="h - 4 w - 4 mr-2" /> Create Webhook;
 </CardFooter>
           <Button on_click={handleCreateWebhook}>;
@@ -1543,47 +1163,13 @@ if ( {) {
                     <div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
                       <CardTitle className="text - lg">{webhook.name}</CardTitle>;
-=======
-
-        {loading ? (
-          <p > Loading webhooks...</p>) : error ? ("
-          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
-          <p > No webhooks configured yet. Create your first webhook above.</p>) : ("
-          <div className="space - y-4">;
-            {webhooks.map (webhook => (
-              <Card key={webhook.id}>;"
-                <CardHeader className="pb - 2">;"
-                  <div className="flex justify - between items - start">;
-                    <div>;"
-                      <CardTitle className="text - lg">{webhook.name}</CardTitle>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                      <CardTitle className="text - lg">{webhook.name}</CardTitle>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <CardDescription className="truncate max - w-md">;
                         {webhook.url}
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <Button 
-                          variant="outline" 
-
-
-<<<<<<< HEAD
-=======
-                        <Button
                           variant="outline"
-                        <Button 
-                          variant="outline" 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 "
@@ -1656,31 +1242,11 @@ if ( {) {
                           <ClickableBadge key={event} variant="secondary">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-                            {eventOptions.find(e => e.value === event)?.label || event}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-
-                            {eventOptions.find(e => e.value === event)?.label |event}
+{eventOptions.find(e => e.value === event)?.label |event}
                             {eventOptions.find(e => e.value === event)?.label || event}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           </ClickableBadge>
                         ))}
                       </div>
@@ -1689,38 +1255,6 @@ if ( {) {
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                        : 'Never triggered'}
-                    </div>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex justify-between pt-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => deleteWebhook(webhook.id)}
-                  >
-                    <Trash className="h-4 w-4 mr-2" /> Delete
-                  </Button>
-                  <Select
-                    onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
-                  >
-                    <SelectTrigger className="w-[180px]">
-                      <SelectValue placeholder="Test webhook" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="test_event">Test (generic)</SelectItem>
-                      {webhook.event_types.map(event => (
-                        <SelectItem key={event} value={event}>
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </SelectContent>;
               </Select>;"
               <Button type="button" onClick={handleAddEvent} variant="outline">;"
@@ -1767,7 +1301,6 @@ if ( {) {
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
 "
           <div className="space-y-2">;"
             <Label htmlFor="webhook-secret">Secret (optional)</Label>;
@@ -1777,25 +1310,13 @@ if ( {) {
               value={newWebhook && newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e && e.target.value})}
             />;"
-=======
-
-          <div className="space-y-2">;
-            <Label htmlFor="webhook-secret">Secret (optional)</Label>;
-            <Input
-              id="webhook-secret" 
-              placeholder="A secret key to verify the webhook source"
-              value={newWebhook && newWebhook.secret}
-              onChange={(e) => setNewWebhook({...newWebhook, secret: e && e.target.value})}
-            />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.;
             </p>;
           </div>;
         </CardContent>;
         <CardFooter>;
-<<<<<<< HEAD
-          <Button onClick={handleCreateWebhook}>;"
+<Button onClick={handleCreateWebhook}>;"
             <Save className="h-4 w-4 mr-2" /> Create Webhook;
           </Button>;
         </CardFooter>;
@@ -1821,17 +1342,12 @@ if ( {) {
                       <CardDescription className="truncate max-w-md">;
                         {webhook && webhook.url}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button onClick={handleCreateWebhook}>;
             <Save className="h-4 w-4 mr-2" /> Create Webhook;
           </Button>;
         </CardFooter>;
       </Card>;
-<<<<<<< HEAD
-      ;
+;
       <div>;
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
         ;
@@ -1852,14 +1368,6 @@ if ( {) {
                       <CardDescription className="truncate max-w-md">;
                         {webhook.url}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-                            {eventOptions.find(e => e.value === event)?.label || event}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-                            {eventOptions.find(e => e.value === event)?.label || event}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1884,41 +1392,12 @@ if ( {) {
                       <CardTitle className="text-lg">{webhook && webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
                         {webhook && webhook.url}
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-<Button onClick={handleCreateWebhook}>;
-            <Save className="h-4 w-4 mr-2" /> Create Webhook;
-          </Button>;
-        </CardFooter>;
-      </Card>;
-      ;
-      <div>;
-        <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
-        ;
-        {loading ? (;
-          <p>Loading webhooks...</p>;
-        ) :error ? (;
-          <p className="text-red-500">{error}</p>;
-        ) :webhooks.length === 0 ? (;
-          <p>No webhooks configured yet. Create your first webhook above.</p>;
-        ) :(;
-          <div className="space-y-4">;
-            {webhooks.map(webhook => (;
-              <Card key={webhook.id}>;
-                <CardHeader className="pb-2">;
-                  <div className="flex justify-between items-start">;
-                    <div>;
-                      <CardTitle className="text-lg">{webhook.name}</CardTitle>;
-                      <CardDescription className="truncate max-w-md">;
-                        {webhook.url}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </CardDescription>;
                     </div>;"
                     <div className="flex items-center">;"
                       <div className="mr-2 flex items-center">;
-<<<<<<< HEAD
-                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook && webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>;
+<div className={`h-2 w-2 rounded-full mr-2 ${webhook && webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>;
                         <span className="text-sm">{webhook && webhook.is_active ? 'Active' : 'Inactive'}</span>;
                       </div>;
                       <div className="flex-shrink-0">;
@@ -1927,35 +1406,7 @@ if ( {) {
                           size="sm"
                           onClick={() => toggleWebhook(webhook && webhook.id, !webhook && webhook.is_active)}
                         >;
-<<<<<<< HEAD
-                          {webhook && webhook.is_active ? 'Disable' : 'Enable'}                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' :'bg-gray-400'}`}></div>;
-=======
-
-'`
-                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' :'bg-gray-400'}`}></div>;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                          {webhook && webhook.is_active ? 'Disable' : 'Enable'}
-</CardDescription>;
-                    </div>;
-                    <div className="flex items - center">;
-                      <div className="mr - 2 flex items - center">;
-                        <div className={`h - 2 w - 2 rounded - full mr - 2 ${webhook.is_active ? 'bg - green - 500' : 'bg - gray - 400'}`}></div>;
-                        <span className="text - sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>;
-                      </div>;
-                      <div className="flex - shrink - 0">;
-                        <Button;
-                          variant="outline";
-                          size="sm";
-                          on_click={() => toggle_webhook (webhook.id, !webhook.is_active)}
-                        >;
-                          {webhook.is_active ? 'Disable' : 'Enable'}
-                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' :'bg-gray-400'}`}></div>;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                          {webhook && webhook.is_active ? 'Disable' : 'Enable'}                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' :'bg-gray-400'}`}></div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+{webhook && webhook.is_active ? 'Disable' : 'Enable'}                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' :'bg-gray-400'}`}></div>;
                         <span className="text-sm">{webhook.is_active ? 'Active' :'Inactive'}</span>;
                       </div>;"
                       <div className="flex-shrink-0">;
@@ -1967,14 +1418,8 @@ if ( {) {
                           {webhook.is_active ? 'Disable' :'Enable'}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2083,13 +1528,6 @@ if ( {) {
                 </CardHeader>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -2108,21 +1546,13 @@ if ( {) {
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2137,10 +1567,6 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
                     onClick={() => deleteWebhook(webhook && webhook.id)}
                   >;"
@@ -2156,80 +1582,20 @@ if ( {) {
                     size="sm";
                     on_click={() => delete_webhook (webhook.id)}
                   >;"
-=======
-
-                    onClick={() => deleteWebhook(webhook && webhook.id)}
-                  >;
-                    <Trash className="h-4 w-4 mr-2" /> Delete;
-                      ))}
-
-                </CardHeader>;"
-                <CardContent className="py - 2">;"
-</CardContent>"
-                  <div className="flex flex - col space - y-2">;"
-</div>
-                    <div>;
-</div>"
-                      <Label className="text - sm">Events</Label>;""
-                      <div className="flex flex - wrap gap - 2 mt - 1">;"
-</div>"
-                          <ClickableBadge key={event} variant="secondary">;"
-</ClickableBadge>
-                          </ClickableBadge>))}
-                      </div>;
-                    </div>;"
-                    <div className="text - xs text - muted - foreground">;"
-</div>
-                    </div>;
-                  </div>;
-                </CardContent>;"
-                    <Trash className="h-4 w-4 mr-2" /> Delete;"
-</Trash>
-                  </Button>;
-                  <Select;
-                    onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
-                <CardFooter className="flex justify - between pt - 2">;
-                  <Button;
-                    variant="outline";
-                    size="sm";
-</Select>"
-                <CardFooter className="flex justify - between pt - 2">;"
-</CardFooter>
-                  <Button;"
-                    variant="outline";""
-                    size="sm";"
-                    on_click={() => delete_webhook (webhook.id)}
-<<<<<<< HEAD
-                  >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Trash className="h - 4 w - 4 mr - 2" /> Delete;
-=======
-</Button>"
-                    <Trash className="h - 4 w - 4 mr - 2" /> Delete;"
-</Trash>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </Button>;
                   <Select;
                     onValueChange={(value) => handleTestWebhook (webhook.id, value as WebhookEventType)}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-                  >;"
+>;"
                     <SelectTrigger className="w-[180px]">;"
                       <SelectValue placeholder="Test webhook" />;
                     </SelectTrigger>;
                     <SelectContent>;"
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
 
-
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
 <CardContent className="py-2">;
@@ -2290,14 +1656,9 @@ if ( {) {
                       <SelectItem value="test_event">Test (generic)</SelectItem>;"
                         </SelectItem>;
 
-<<<<<<< HEAD
-                      ))}
+))}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       ))}
-=======
-                      ))}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </SelectContent>;
@@ -2307,65 +1668,16 @@ if ( {) {
             ))}
           </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-                          Test {eventOptions.find(e => e.value === event)?.label |event}
-                        </SelectItem>
-                          Test {eventOptions.find(e => e.value === event)?.label || event}
-                        </SelectItem>;
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        )}
-        {testResult && (
-          <Card className="mt-4 border-blue-200">
-            <CardHeader>
-              <CardTitle className="text-lg">Webhook Test Result</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="font-medium">Status:</span>
-                  <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>
-                    {testResult.status} {testResult.statusText}
-                  </span>
-                </div>
-                <div>
-                  <span className="font-medium">Response:</span>
-                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 '
                     {testResult.responseBody || '<empty>'}
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    {testResult.responseBody |'<empty>'}
-                    {testResult.responseBody || '<empty>'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -2401,13 +1713,7 @@ Test {eventOptions.find(e => e.value === event)?.label |event}
 
                     {testResult.responseBody || '<empty>'}
 
-<<<<<<< HEAD
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                    {testResult.responseBody |'<empty>'}
-                    {testResult.responseBody || '<empty>'}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </pre>
                 </div>
               </div>
@@ -2417,9 +1723,7 @@ Test {eventOptions.find(e => e.value === event)?.label |event}
       </div>
     </div>
   )
-<<<<<<< HEAD
-
-        {testResult && (;"
+{testResult && (;"
           <Card className="mt-4 border-blue-200">;
             <CardHeader>;"
               <CardTitle className="text-lg">Webhook Test Result</CardTitle>;
@@ -2438,12 +1742,7 @@ Test {eventOptions.find(e => e.value === event)?.label |event}
 '
                     {testResult.responseBody || '<empty>'}
 
-
-
                   </pre>;
-=======
-        )}                  </pre>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         )}                  </pre>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2497,30 +1796,16 @@ Test {eventOptions.find(e => e.value === event)?.label |event}
                     {test_result.response_body || '<empty>'}
                     {testResult.responseBody || '<empty>'}
                   </pre>;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        )}                  </pre>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </div>;
             </CardContent>;
 
-<<<<<<< HEAD
-          </Card>)}
+</Card>)}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           </Card>;
         )}
@@ -2568,9 +1853,6 @@ export function WebhookManager() {
     testWebhook;
   } = useWebhooks();
 
-
-
-
   const [newWebhook, setNewWebhook] = useState({
 "
     name: ""","
@@ -2579,7 +1861,6 @@ export function WebhookManager() {
   eventTypes: [] as WebhookEventType[]
     secret: """)
   }),
-
 
   const eventOptions: { value: WebhookEventType, label: string }[] = ["
     { value: "new_application", label: "New Application Received" }""
@@ -2597,7 +1878,6 @@ export function WebhookManager() {
   }, []),
     if (!newWebhook.selectedEvent) return,
 
-
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {"
       toast.error("This event is already added");"
       return;
@@ -2607,9 +1887,7 @@ export function WebhookManager() {
       selectedEvent: "" as WebhookEventType;")
     })
 
-
   },
-
 
       toast.error("This event is already added"),"
       ...newWebhook,
@@ -2617,7 +1895,6 @@ export function WebhookManager() {
   const handleRemoveEvent = (event: WebhookEventType) => {
       ...newWebhook;)
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
-
 
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {"
@@ -2630,16 +1907,12 @@ export function WebhookManager() {
       newWebhook.secret || undefined;)
     ),
 
-
     // Reset form;
     setNewWebhook({"
   eventTypes: []"
 
-
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
-
-
 
   return ("
     <div className="space-y-8">"
@@ -2695,9 +1968,6 @@ export function WebhookManager() {
                 <ClickableBadge;
                   key={event}
                   onRemove={() => handleRemoveEvent(event)}
-
-
-
 
               id="webhook-secret"""
               placeholder="A secret key to verify the webhook source""

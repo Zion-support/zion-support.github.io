@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-<<<<<<< HEAD
+:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 <<<<<<< HEAD
 
 import { useState } from 'react',;
@@ -93,9 +92,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           Add any professional certifications, licenses, or credentials you have earned.
         </p>
       </div>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
 
     <div className='space-y-6'>;
@@ -110,10 +106,6 @@ return (
       </div>;
 
       {certifications && certifications.length > 0 && (;
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -182,16 +174,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onDelete={handleDelete}        />;
       )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {certifications.length > 0 && (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
@@ -220,37 +205,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline'
                 onClick={() => {
                   if (editingId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    setEditingId(null),
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+setEditingId(null),
 
                     setEditingId(null),
                     setEditingId(null),
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     form.reset({
-<<<<<<< HEAD:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-<<<<<<< HEAD
-                      name: '',
+:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
+name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                     setEditingId(null),
                     setEditingId(null),
@@ -262,9 +233,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       credential_id: '',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       credential_url: ''})
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
                       name: ''
                       issuing_organization: ''
                       issue_date: ''
@@ -280,12 +248,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -298,11 +260,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Next
@@ -313,44 +271,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Form>
       </div>
     </div>
-<<<<<<< HEAD:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-<<<<<<< HEAD
-  )
+:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
+)
 <<<<<<< HEAD
 }
-=======
-
-              </Button>;
-
-              <div className='flex gap-2'>;
-                <Button type='submit' disabled={isLoading}>;
-                  {isLoading && (;
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  )}
-                  {editingId ? 'Update' : 'Add'} Certification;
-                </Button>;
-
-                <Button type='button' onClick={onComplete}>;
-                  Next;
-                </Button>;
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-      </div>;
-    </div>;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
   );
 
 }> {;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-<<<<<<< HEAD:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-<<<<<<< HEAD
+:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 }'"}
 
       // Check condition
@@ -468,13 +398,4 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;
-=======
-}'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}'"
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx

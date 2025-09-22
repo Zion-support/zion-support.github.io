@@ -24,25 +24,14 @@ class $1 {}
     process.on("uncaughtException", (error) => {}
   this.log("error", "Uncaught "exception": ", error);      this.shutdown()})};"
   log(level, ...args) {}
-<<<<<<< HEAD
-  const timestamp = new Date().toISOString();
+const timestamp = new Date().toISOString();
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    const logFile = path.join(this.logDir, "error-monitor.log");
+const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\n")};
 ;
-=======
-  const timestamp = new Date().toISOString();"
-
-    fs.appendFileSync(logFile, message + "\n")};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runLintCheck() {}
   return new Promise((resolve) => {}"
   exec("npm run lint", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
@@ -203,17 +192,8 @@ monitor.start().catch(error => {})"
   console.error("Failed to start Error "Monitor": ", error);"
   process.exit(1)}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-});
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 });
 "`;

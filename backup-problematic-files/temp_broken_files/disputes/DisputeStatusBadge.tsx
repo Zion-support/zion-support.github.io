@@ -37,4 +37,3 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
 <<<<<<< HEAD
-

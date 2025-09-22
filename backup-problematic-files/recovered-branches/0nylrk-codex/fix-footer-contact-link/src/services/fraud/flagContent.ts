@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag } from '@/types/fraud';
@@ -64,17 +60,10 @@ ipAddress?: string userId;
 contentType;
 contentId;
 reason;
-<<<<<<< HEAD
 severity
 });
 const {
   error
-=======
-severity 
-});
-const {
-  error 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }= await supabase.from ('fraud flags') .insert ({
   user id: userId;
 user email: userEmail;
@@ -84,15 +73,7 @@ content excerpt: contentExcerpt.substring (0, 200), // Limit excerpt length seve
 reason;
 ip address: ipAddress;
 timestamp: new Date () .toISOString ();
-<<<<<<< HEAD
 status: 'pending'
 });
 }
 <<<<<<< HEAD
-
-=======
-status: 'pending' 
-});
-}
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

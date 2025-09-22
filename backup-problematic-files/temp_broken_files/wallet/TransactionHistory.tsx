@@ -47,4 +47,3 @@ export function TransactionHistory() {;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
-

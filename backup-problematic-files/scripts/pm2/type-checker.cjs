@@ -26,8 +26,7 @@ class TypeChecker {}
     console.error(message);
   async runTypeCheck() {}
     try {}
-<<<<<<< HEAD
-      this.log('Running TypeScript type check...');
+this.log('Running TypeScript type check...');
       execSync('npm run type-check', { })
         stdio: 'pipe',
         cwd: process.cwd();
@@ -37,37 +36,14 @@ class TypeChecker {}
       return { success: true, errors: 0 };
     } catch (err) {}
       this.error(`TypeScript type check failed: ${err.message}`);
-<<<<<<< HEAD
-
-      // Parse TypeScript errors from stderr;
+// Parse TypeScript errors from stderr;
       const errorOutput = err.stderr ? err.stderr.toString() : err.message;
       const errors = this.parseTypeScriptErrors(errorOutput);
-
-=======
-      
-      // Parse TypeScript errors from stderr;
-      const errorOutput = err.stderr ? err.stderr.toString() : err.message;
-      const errors = this.parseTypeScriptErrors(errorOutput);
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-      // Parse TypeScript errors from stderr;
-      const errorOutput = err.stderr ? err.stderr.toString() : err.message;
-      const errors = this.parseTypeScriptErrors(errorOutput);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { success: false, errors: errors.length, errorDetails: errors };
   parseTypeScriptErrors(output) {}
     const errors = [];
     const lines = output.split('\n');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const line of lines) {}
       const match = line.match(/^(.+)\((\d+),(\d+)\):\s+error\s+TS(\d+):\s*(.+)$/);
       if (match) {}
@@ -80,22 +56,8 @@ class TypeChecker {}
     return errors;
   async fixTypeScriptErrors(errors) {}`;
     this.log(`Attempting to fix ${errors.length} TypeScript errors...`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    let fixedCount = 0;
+let fixedCount = 0;
     const filesToFix = new Set();
-
-=======
-    
-    let fixedCount = 0;
-    const filesToFix = new Set();
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    let fixedCount = 0;
-    const filesToFix = new Set();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Group errors by file;
     for (const error of errors) {}
       filesToFix.add(error.file);
@@ -110,14 +72,7 @@ class TypeChecker {}
   async fixFileErrors(filePath, fileErrors) {}
 
       let modified = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const error of fileErrors) {}
         const fix = this.getFixForError(error, content);
         if (fix) {}
@@ -131,25 +86,12 @@ class TypeChecker {}
   getFixForError(error, content) {}
     const lines = content.split('\n');
     const lineIndex = error.line - 1;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (lineIndex < 0 || lineIndex >= lines.length) {}
       return null;
     const line = lines[lineIndex];
     let fixedLine = line;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    switch (error.code) {}
+switch (error.code) {}
       case '1005': // ';' expected;
         if (line.trim().endsWith(')') && !line.trim().endsWith(');')) {}
           fixedLine = line.replace(/\)$/, ');');
@@ -157,62 +99,38 @@ class TypeChecker {}
           fixedLine = line.replace(/\}$/, '};');
         };
         break;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case '1435': // Unknown keyword or identifier;
         if (line.includes('with out')) {}
           fixedLine = line.replace(/with out/g, 'without');
         };
         break;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case '1003': // Identifier expected;
         if (line.includes('import') && line.includes(';;')) {}
           fixedLine = line.replace(/;;/g, ';');
         };
         break;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case '1128': // Declaration or statement expected;
         if (line.includes('interface') && line.includes('{')) {}
           // Fix malformed interface declarations;
           fixedLine = line.replace(/\{\s*,\s*\}/g, '{}');
         };
         break;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case '1009': // Expression expected;
         if (line.includes('render(<App: />)')) {}
           fixedLine = line.replace(/render\(<App:\s*\/>\)/g, 'render(<App />)');
         };
         break;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case '1109': // Expression expected;
         if (line.includes('expect(') && line.includes('))')) {}
           fixedLine = line.replace(/\)\)/g, ')');
         };
         break;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       default:
         // Generic fixes for common patterns;
         if (line.includes(';;')) {}
@@ -232,26 +150,13 @@ class TypeChecker {}
   };
   async fixCommonTypeScriptIssues() {}
     this.log('Fixing common TypeScript issues...');
-<<<<<<< HEAD
-
-    const files = this.getTypeScriptFiles();
+const files = this.getTypeScriptFiles();
     let fixedCount = 0;
-
-=======
-    
-    const files = this.getTypeScriptFiles();
-    let fixedCount = 0;
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const file of files) {}
       try {}
         let content = fs.readFileSync(file, 'utf8');
         let modified = false;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Common TypeScript fixes;
         const fixes = []
           {}
@@ -288,11 +193,7 @@ class TypeChecker {}
             description: 'Fix test structure'
           };
         ];
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         for (const fix of fixes) {}
           const before = content;
           if (typeof fix.replacement === 'function') {}
@@ -320,11 +221,7 @@ class TypeChecker {}
     const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
     const extensions = ['.ts', '.tsx'];
     const files = [];
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
@@ -334,19 +231,9 @@ class TypeChecker {}
   };
   getFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
-<<<<<<< HEAD
-
-    for (const item of items) {}
+for (const item of items) {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-
-=======
-    
-    for (const item of items) {}
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (stat.isDirectory()) {}
         this.getFilesRecursively(fullPath, extensions, files);
       } else if (extensions.some(ext => item.endsWith(ext))) {}
@@ -356,11 +243,7 @@ class TypeChecker {}
   };
   startWatching() {}
     this.log('Starting TypeScript file watcher...');
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const watchPatterns = []
       'src/**/*.{ts,tsx}',
       'pages/**/*.{ts,tsx}',
@@ -404,11 +287,7 @@ class TypeChecker {}
   };
   async processFile(filePath) {}
     this.log(`Processing TypeScript file: ${filePath}`);
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       // Run type check on the specific file;
       execSync(`npx tsc --noEmit "${filePath}"`, { `})
@@ -419,11 +298,7 @@ class TypeChecker {}
       this.log(`Type check passed for ${filePath}`);
     } catch (err) {}
       this.log(`Type check failed for ${filePath}: ${err.message}`);
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Try to fix the errors;
       const errors = this.parseTypeScriptErrors(err.stderr ? err.stderr.toString() : err.message);
       if (errors.length > 0) {}
@@ -439,9 +314,7 @@ class TypeChecker {}
   };
   async run() {}
     this.log('Starting TypeScript type checking automation...');
-<<<<<<< HEAD
-
-    try {}
+try {}
       // Fix common issues first;
       await this.fixCommonTypeScriptIssues();
 
@@ -451,21 +324,6 @@ class TypeChecker {}
       if (!result.success && result.errors > 0) {}
         this.log(`Found ${result.errors} TypeScript errors, attempting to fix...`);
         await this.fixTypeScriptErrors(result.errorDetails);
-
-=======
-    
-    try {}
-      // Fix common issues first;
-      await this.fixCommonTypeScriptIssues();
-      
-      // Run type check;
-      const result = await this.runTypeCheck();
-      
-      if (!result.success && result.errors > 0) {}
-        this.log(`Found ${result.errors} TypeScript errors, attempting to fix...`);
-        await this.fixTypeScriptErrors(result.errorDetails);
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Run type check again;
         const retryResult = await this.runTypeCheck();
         if (retryResult.success) {}
@@ -476,11 +334,7 @@ class TypeChecker {}
       };
       // Start watching for changes;
       this.startWatching();
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Keep the process running;
       process.on('SIGINT', () => {}
         this.log('Received SIGINT, stopping...');
@@ -488,26 +342,14 @@ class TypeChecker {}
         process.exit(0);
       }
 });
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       process.on('SIGTERM', () => {}
         this.log('Received SIGTERM, stopping...');
         this.stopWatching();
         process.exit(0);
       }
 });
-<<<<<<< HEAD
-
-      this.log('TypeScript type checking automation is running...');
-
-=======
-      
-      this.log('TypeScript type checking automation is running...');
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+this.log('TypeScript type checking automation is running...');
     } catch (err) {}
       this.error(`Error in run: ${err.message}`);
       return { success: false, error: err.message };
@@ -517,15 +359,7 @@ class TypeChecker {}
 // Run if called directly;
 if (require.main === module) {}
   const checker = new TypeChecker();
-<<<<<<< HEAD
-
-  const command = process.argv[2];
-
-=======
-  
-  const command = process.argv[2];
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+const command = process.argv[2];
   if (command === 'watch') {}
     checker.run();
   } else if (command === 'fix') {}
@@ -544,16 +378,8 @@ if (require.main === module) {}
   };
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    switch (error.code) {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = TypeChecker;
-module.exports = TypeChecker;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

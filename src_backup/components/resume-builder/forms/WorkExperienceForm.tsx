@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
+:src/components/resume-builder/forms/WorkExperienceForm.tsx
 <<<<<<< HEAD
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -38,9 +37,6 @@ interface WorkExperienceFormProps {;
   workExperiences: WorkExperience[],;
   onComplete: () => void,;
   onBack: () => void;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
       // Check condition
 if ( {) {
@@ -51,22 +47,11 @@ if ( {) {
         success = await addWorkExperience(resumeId, experienceData)
       }
 
-<<<<<<< HEAD
-      setError(err.message || 'An error occurred')
+setError(err.message || 'An error occurred')
 };
-=======
-      setError(err.message || 'An error occurred');
-    };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   const handleEdit = (work: WorkExperience) => {;
 
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -109,12 +94,9 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
   };
 
   const handleEdit = (work: WorkExperience) => {
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
+:src/components/resume-builder/forms/WorkExperienceForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -183,8 +165,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     } catch (err: any) {;
       setError(err.message || 'An error occurred');
     }
-<<<<<<< HEAD
-  },;
+},;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
     form.reset({;
@@ -195,27 +176,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this work experience?')) {;
       await deleteWorkExperience(id);
-=======
-  }
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);    form.reset ({
-      ...work,
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);
-    form.reset ({
-      start_date: formatDateValue (work.start_date),
-      end_date:;
-        work.end_date && !work.is_current;
-          ? formatDateValue (work.end_date);
-          : undefined,
-    });
-  }
-  const handle_delete = async (id: string, ) => {
-    if () {) {
-  $2
-}
-      await deleteWorkExperience (id);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   },
 
@@ -234,14 +194,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       {workExperiences.length > 0 && (
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -431,22 +384,12 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
+:src/components/resume-builder/forms/WorkExperienceForm.tsx
 <<<<<<< HEAD
                   </div>
                   <div className="flex gap-2">
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                  </div>
-                  <div className="flex gap-2">
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
                     <Button
-<<<<<<< HEAD
-                      variant="ghost"
+variant="ghost"
                       size="icon"
                       onClick={() => handleEdit(work)}
                       aria-label="Edit experience"
@@ -613,11 +556,6 @@ export function WorkExperienceForm(): any ({;
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-=======
-=======
-                  </div>;
-                  <div className='flex gap-2'>;                    <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     setEditingId(null),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     setEditingId(null),
@@ -630,37 +568,7 @@ export function WorkExperienceForm(): any ({;
                       location: ''})
                   } else {
                     onBack()
-<<<<<<< HEAD
-=======
-            />;
 
-            {error && (;
-              <Alert variant='destructive'>;
-                <AlertDescription>{error}</AlertDescription>;
-              </Alert>;
-            )}
-
-            <div className='flex justify-between pt-2'>;
-              <Button
-                type='button'
-                variant='outline'
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
-                    form && form.reset({;
-                      company_name: '',;
-                      role_title: '',;
-                      start_date: format(new Date(), 'yyyy-MM-dd'),;
-                      is_current: false,,
-  description: '',;
-                      location: '',;
-                    });
-                  } else {;
-                    onBack();
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
 =======
@@ -678,12 +586,9 @@ export function WorkExperienceForm(): any ({;
                     })
                   } else {
                     onBack()
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
+:src/components/resume-builder/forms/WorkExperienceForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
                   }
                 }}
               >;
@@ -691,20 +596,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
-
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -717,7 +613,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
+:src/components/resume-builder/forms/WorkExperienceForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               </div>;
@@ -728,9 +624,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 }
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </Button>;
 
@@ -809,14 +702,8 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>);
 }'"  );
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
               </div>
             </div>
           </form>
@@ -830,9 +717,6 @@ if ( {) {
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
+:src/components/resume-builder/forms/WorkExperienceForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx

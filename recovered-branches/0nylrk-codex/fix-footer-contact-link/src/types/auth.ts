@@ -1,18 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface UserDetails {
-<<<<<<< HEAD
-=======
-export interface UserDetails {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   id?: string;
   name?: string;
   email?: string;
@@ -34,15 +23,9 @@ export interface UserDetails {};
   company_id?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -50,8 +33,6 @@ export interface UserDetails {};
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface UserDetails {
 =======
-
-
 
 export interface UserDetails {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -76,26 +57,10 @@ pr-12325
   createdAt?: string;
   updatedAt?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface UserProfile {
 
 export interface UserProfile {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-  permissions?: string[];
-  company_id?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  bio?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  bio?: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   created_at?: string;
   updated_at?: string;
 }
@@ -117,27 +82,14 @@ export interface UserProfile {;
 
   permissions?: string[],
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   company_id?: string;
-
-=======
-  company_id?: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   permissions?: string[],
   companyId?: string;
   bio?: string;
   createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string;
+updatedAt?: string;
 }
 export interface UserProfile {};
-=======
-  updatedAt?: string
-}
-export interface UserProfile {
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface UserProfile {;
   id?: string;
   displayName?: string;
@@ -154,24 +106,14 @@ export interface UserProfile {;
 
   permissions?: string[]
 
-<<<<<<< HEAD
-  companyId?: string;
+companyId?: string;
 }
 // Update AuthContextType definition to match implementation;
-=======
-  companyId?: string
-}
-// Update AuthContextType definition to match implementation
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
 
-<<<<<<< HEAD
-  isAuthenticated: boolean;
-=======
-  isAuthenticated: boolean
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+isAuthenticated: boolean;
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
   logout: () => Promise<void>
@@ -187,20 +129,8 @@ export interface AuthContextType {;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-<<<<<<< HEAD
-=======
-  company_id?: string;}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
   company_id?: string;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -247,14 +177,7 @@ export interface UserProfile {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -271,7 +194,6 @@ export interface UserDetails {;
   // TODO: Implement
 export interface UserDetails {;
   permissions?: string[],
-
 
   created_at?: string;
   updated_at?: string;
@@ -298,8 +220,6 @@ export interface AuthContextType {;
   user: UserDetails | null;,
   isLoading: boolean;
 
-
-
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>,;
@@ -315,24 +235,12 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// Update AuthContextType definition to match implementation;
-export interface AuthContextType {};
-=======
-// Update AuthContextType definition to match implementation;
-export interface AuthContextType {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   user: UserDetails | null;
   isLoading: boolean;
   isAuthenticated: boolean;
   login: (
     email: string,
     password: string,
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ) => Promise<{ data?: any; error?: any }>;
   signup: (,
   email: string,
@@ -347,9 +255,6 @@ export interface AuthContextType {
   ) => Promise<{ error: any }>;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 export interface UserDetails {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -360,10 +265,6 @@ export interface UserDetails {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -371,8 +272,6 @@ export interface UserDetails {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -441,27 +340,17 @@ pr-12325
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 }
 ;
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -26,16 +26,16 @@ export default function LanguageSwitcher() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = null;
-  en: 'us'
-  pt: 'br'
-  es: 'es'
-  ar: 'sa'
+  en: 'us';
+  pt: 'br';
+  es: 'es';
+  ar: 'sa';
 };  ar: 'sa'}
 const localeLabelKey: Record<string, string> = {
-  en: 'lang.english'
-  pt: 'lang.portuguese'
-  es: 'lang.spanish'
-  ar: 'lang.arabic'
+  en: 'lang.english';
+  pt: 'lang.portuguese';
+  es: 'lang.spanish';
+  ar: 'lang.arabic';
 };  ar: 'lang.arabic'}
 export default function LanguageSwitcher() {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -55,7 +55,7 @@ setOpen(false);
       <button'
         aria-haspopup='listbox'
         aria-expanded={open}'
-        className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800'
+        className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800';
         onClick={() => setOpen(v => !v)}
         <svg'
           width='16''
@@ -79,19 +79,19 @@ setOpen(false);
               <button'
                 role='option'
                 aria-selected={current.startsWith(lng)}
-                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
+                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900';
  ;
   return (
     <div className="relative">;
       <button"
         aria-haspopup="listbox"
         aria-expanded={open}"
-        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800";
         onClick={() => setOpen((v) => !v)}
               <button"
                 role="option"
                 aria-selected={current && current.startsWith(lng)}"
-                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
+                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900";
                 onClick={() => changeLanguage(lng)}
               >;
                 <span className={`fi fi-${localeToFlag[lng]}`} /></span>;

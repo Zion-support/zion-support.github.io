@@ -7,42 +7,20 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.scanInterval = parseInt(process.env.SCAN_INTERVAL) || 300000; // 5 minutes default;
-<<<<<<< HEAD
-    this.autoFix = process.env.AUTO_FIX === 'true';
+this.autoFix = process.env.AUTO_FIX === 'true';
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -63,17 +41,10 @@ class ErrorDetectionService {}
       timestamp,
       level,
       message,
-<<<<<<< HEAD
-      data,
-<<<<<<< HEAD
-      "service": 'error-detection-service'
+data,
+"service": 'error-detection-service'
     };
 <<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (level === 'error') {}
@@ -91,11 +62,6 @@ class ErrorDetectionService {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting Error Detection Service...');
-    
-=======
-      data,"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       // Create necessary directories;
       this.ensureDirectories();
@@ -105,20 +71,10 @@ class ErrorDetectionService {}
       this.startContinuousMonitoring();
       // Start file watching for real-time detection;
       this.startFileWatching();
+this.log('info', 'Error Detection Service started successfully');
 <<<<<<< HEAD
-      
-      this.log('info', 'Error Detection Service started successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
-      
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -129,18 +85,10 @@ class ErrorDetectionService {}
       }, this.scanInterval)} catch (error) {}
 
     ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     dirs.forEach(dir => {})
@@ -188,8 +136,7 @@ class ErrorDetectionService {}
       const result = this.runTypeScriptCheck();
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.typescript = result.errors.map(error => ({})
-<<<<<<< HEAD
-          "file": error.file,
+"file": error.file,
           "type": 'typescript',
           "severity": this.categorizeTypeScriptSeverity(error),
           "description": error.message,
@@ -202,11 +149,11 @@ class ErrorDetectionService {}
   };
   async scanForESLintErrors() {}
     this.log('info', 'Scanning for ESLint errors...');
-    
+
     try {}
       // Run ESLint check;
       const result = this.runESLintCheck();
-      
+
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.eslint = result.errors.map(error => ({})
           "file": error.filePath,
@@ -223,11 +170,11 @@ class ErrorDetectionService {}
   };
   async scanForBuildErrors() {}
     this.log('info', 'Scanning for build errors...');
-    
+
     try {}
       // Try to build the project;
       const result = this.runBuildCheck();
-      
+
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.build = result.errors.map(error => ({})
           "file": error.file || 'build',
@@ -241,11 +188,11 @@ class ErrorDetectionService {}
   };
   async scanForDependencyErrors() {}
     this.log('info', 'Scanning for dependency errors...');
-    
+
     try {}
       // Check for dependency issues;
       const result = this.runDependencyCheck();
-      
+
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.dependency = result.errors.map(error => ({})
           "package": error.package,
@@ -260,7 +207,7 @@ class ErrorDetectionService {}
   };
   async scanForConfigurationErrors() {}
     this.log('info', 'Scanning for configuration errors...');
-    
+
     try {}
       const configFiles = ['package.json',]
         'tsconfig.json',
@@ -268,20 +215,7 @@ class ErrorDetectionService {}
         'vite.config.ts',
         'tailwind.config.js'
       ];
-<<<<<<< HEAD
-=======
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -290,18 +224,7 @@ class ErrorDetectionService {}
             this.errorTypes.configuration.push({})"
 
     const files = [];
-<<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     sourceDirs.forEach(dir => {})
@@ -333,18 +256,8 @@ class ErrorDetectionService {}
     const closeComments = (content.match(/\*\//g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (openComments !== closeComments) {}
@@ -352,17 +265,9 @@ class ErrorDetectionService {}
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i].trim();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') &&
-=======
-      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') && 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') &&
           !line.endsWith('[') && !line.endsWith(']') && !line.endsWith('(') && !line.endsWith(')') &&
           !line.startsWith('//') && !line.startsWith('/*') && !line.startsWith('*') &&
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           !line.includes('function') && !line.includes('class') && !line.includes('const') &&
           !line.includes('let') && !line.includes('var') && !line.includes('import') &&
           !line.includes('export') && !line.includes('return') && !line.includes('if') &&
@@ -376,22 +281,13 @@ class ErrorDetectionService {}
         return i + 1};
     return 1};
   runTypeScriptCheck() {}
-<<<<<<< HEAD
-    try {}
+try {}
       const result = execSync('npx tsc --noEmit --json', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}"
@@ -399,73 +295,48 @@ class ErrorDetectionService {}
       const stderr = error.stderr ? error.stderr.toString() : ;
       return this.parseTypeScriptErrors(stderr)};
   runESLintCheck() {}
-<<<<<<< HEAD
-    try {}
+try {}
       const result = execSync('npx eslint . --format json', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
+
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}
       // ESLint check failed, extract errors from stderr;
       const stderr = error.stderr ? error.stderr.toString() : '';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return this.parseESLintErrors(stderr)};
   runBuildCheck() {}
-<<<<<<< HEAD
-    try {}
+try {}
       const result = execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
+
       return { "errors": [] }} catch (error) {}
       // Build failed, extract errors from stderr;
       const stderr = error.stderr ? error.stderr.toString() : '';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return this.parseBuildErrors(stderr)};
   runDependencyCheck() {}
-<<<<<<< HEAD
-    try {}
+try {}
       const result = execSync('npm audit --json', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
+
       if (result) {}
         const audit = JSON.parse(result);
         return this.parseDependencyErrors(audit)};
       return { "errors": [] }} catch (error) {}
       return { "errors": [] }};
   };
-=======
-
-      return { "errors": [] }};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   parseTypeScriptErrors(stderr) {}
     const errors = [];"
     const lines = stderr.split('\n');
@@ -484,30 +355,17 @@ class ErrorDetectionService {}
 
           "resolution": vuln.recommendation;"
         })})};
-<<<<<<< HEAD
-    return { errors }};
+return { errors }};
   categorizeTypeScriptSeverity(error) {}
-<<<<<<< HEAD
-    if (error.message.includes('Cannot find module') ||
+if (error.message.includes('Cannot find module') ||
         error.message.includes('Module not found')) {}
       return 'critical'} else if (error.message.includes('Type') ||
-=======
-    if (error.message.includes('Cannot find module') || 
-        error.message.includes('Module not found')) {}
-      return 'critical'} else if (error.message.includes('Type') || 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                error.message.includes('Interface')) {}
       return 'medium'} else {}
       return 'low'};
   };
   hasConfigurationIssues(content, filename) {}
     try {}
-=======
-  categorizeTypeScriptSeverity(error) {}"
-    if (error.message.includes('Cannot find module') ||
-        error.message.includes('Module not found')) {}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (filename.endsWith('.json')) {}
         JSON.parse(content)} else if (filename.endsWith('.js') || filename.endsWith('.ts')) {}
         // Basic syntax check for JS/TS config files;
@@ -533,18 +391,8 @@ class ErrorDetectionService {}
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
-      
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -600,8 +448,6 @@ class ErrorDetectionService {}
       this.errorTypes[type] = this.errorTypes[type].filter(error => error.file !== filePath)})};
 // Start the service;
 const service = new ErrorDetectionService();
-<<<<<<< HEAD
-
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   service.log('info', 'Received SIGINT, shutting down gracefully...');
@@ -630,16 +476,8 @@ service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// Handle graceful shutdown;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-});
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

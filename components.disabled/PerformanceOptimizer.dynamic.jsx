@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default PerformanceOptimizer\' ,
 const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{"; loading: () => <p>Loading.</p,>,}) export: "default PerformanceOptimizer" ,"""
 const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default PerformanceOptimizer' ,'
@@ -6,30 +5,9 @@ const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{'; loading: () => <p />Loading...</p,>,}) export: 'default PerformanceOptimizer' ,'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 </p>'
 </p>'
 ursor/add-new-services-and-deploy-updates-0462
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-</p>'
-</p>'
-<<<<<<< HEAD
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
-</p>'
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 </p>'
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -39,18 +17,11 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 =======
 
 '
 </p>'
-
-
-
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -59,13 +30,10 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 </p>'
 
-
-<<<<<<< HEAD
 </p>'
 
 </p>'
 
-<<<<<<< HEAD
 </p>'
 </p>'
 </p>'
@@ -76,31 +44,14 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> 207d7230e0649fa517bb469b27623282180528c9
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 </p>'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-<<<<<<< HEAD
-</p>'
-=======
-</p>'
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
-</p>'
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-=======
 </p>'
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 </p>'</p>'
@@ -113,7 +64,6 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 '
 </p>'
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -46,4 +46,3 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                       Define how changes to the contract are handled;
                     </FormDescription>;
                   </div>;
-

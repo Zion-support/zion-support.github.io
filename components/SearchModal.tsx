@@ -10,41 +10,41 @@ interface SearchModalProps {}
   on_close: () => void;
 }
   {}
-    title: "Cybersecurity""
+    title: "Cybersecurity"";
     description: "Security audits, penetration testing, and compliance""
-    url: "/cybersecurity""
-    category: "Services"
+    url: "/cybersecurity"";
+    category: "Services";
   }
   {}
   {"
-    title: "About Us""
-    description: "Learn about Zion Tech Group and our mission""
-    url: "/about""
-    category: "Company"
+    title: "About Us"";
+    description: "Learn about Zion Tech Group and our mission"";
+    url: "/about"";
+    category: "Company";
   }
   {"
-    title: "Contact""
-    description: "Get in touch with our team""
-    url: "/contact""
-    category: "Company"
+    title: "Contact"";
+    description: "Get in touch with our team"";
+    url: "/contact"";
+    category: "Company";
   }
   {"
-    title: "Careers""
-    description: "Join our team and build the future""
-    url: "/careers""
-    category: "Company"
+    title: "Careers"";
+    description: "Join our team and build the future"";
+    url: "/careers"";
+    category: "Company";
   }
   {"
-    title: "Blog""
-    description: "Latest insights and technology trends""
-    url: "/blog""
-    category: "Company"
+    title: "Blog"";
+    description: "Latest insights and technology trends"";
+    url: "/blog"";
+    category: "Company";
   }
   {"
-    title: "Pricing""
-    description: "Transparent pricing for all our services""
-    url: "/pricing""
-    category: "Company"
+    title: "Pricing"";
+    description: "Transparent pricing for all our services"";
+    url: "/pricing"";
+    category: "Company";
   }
 ];
 
@@ -254,14 +254,14 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                         <ArrowRight className="w - 4 h - 4 text - gray-400 mt-1" />;
                       </div>;
                     </div>))}
-                </div>) : (
+                </div>) : (;
                 <div className="p - 8 text - center text-gray-500">;
                   <Search className="w - 12 h - 12 mx - auto mb - 4 text-gray-300" />;
                   <p > No results found for "{query}"</p>;
                   <p className="text-sm mt-2">;
                     Try different keywords or check our services page;
                   </p>;
-                </div>)) : (
+                </div>)) : (;
               <div className="p-4">;
                 {recent_searches.length > 0 && (
                   <div className="mb-6">;

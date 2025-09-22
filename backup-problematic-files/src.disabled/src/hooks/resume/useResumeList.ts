@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 >>>>>>> origin/main
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 export default function Page() {;
 );
         .order('created_at', { "ascending": false });
       if(resumeError) throw resumeError;
-<<<<<<< HEAD
-      if(!resumeData || resumeData.length === 0) {;
+if(!resumeData || resumeData.length === 0) {;
         setResumes([]);
         return []}
       ;
@@ -21,37 +17,15 @@ export default function Page() {;
           "title": resume.title,
           "headline": resume.headline,
           "summary": resume.summary},
-=======
-      if(!resumeData || resumeData && resumeData.length === 0) {;
-        setResumes([]);
-        return []}
-
-      const "transformedResumes": Resume[] = resumeData && resumeData.map(resume => ({;
-        id: resume && resume.id,
-        "user_id": resume && resume.user_id,
-        "basic_info": {;
-          id: resume && resume.id,
-          "title": resume && resume.title,
-          "headline": resume && resume.headline,
-          "summary": resume && resume.summary},
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "work_experience": [],
         "education": [],
         "skills": [],
         "certifications": [],
-<<<<<<< HEAD
-        "is_active": resume.is_active}));
+"is_active": resume.is_active}));
       setResumes(transformedResumes);
       return transformedResumes} catch("e": any) {;
       console.error('Error fetching resumes:', e);
       setError(e.message);
-=======
-        "is_active": resume && resume.is_active}));
-      setResumes(transformedResumes);
-      return transformedResumes} catch("e": any) {;
-      console && console.error('Error fetching resumes:', e);
-      setError(e && e.message);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setResumes([]); // Clear resumes on error;
       return []} finally {;
       setIsLoading(false)}
@@ -68,7 +42,6 @@ export default function Page() {;
     isLoading,
     error,
     resumes,
-<<<<<<< HEAD
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: 'false' }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData.length === 0) {; setResumes([]); return [];,} ; const transformedResumes: Resume[] = resumeData.map(resume => ({; id: resume.id,; user_id: 'resume.user_id',; basic_info: {; id: resume.id,; title: 'resume.title',; headline: 'resume.headline',; summary: 'resume.summary;',},; work_experience: '[]',; education: '[]',; skills: '[]',; certifications: '[]',; is_active: 'resume.is_active;',})); ; setResumes(transformedResumes); return transformedResumes;,} catch(e: any) {; console.error('Error fetching resumes:',e); setError(e.message); setResumes([]); return [];,} finally {; setIsLoading(false);,} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes();,} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,; error,; resumes,; fetchResumes;,};,}
     fetchResumes}}
 >>>>>>> main
@@ -78,19 +51,6 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: false }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData.length === 0) {; setResumes([]); return [],} ; const transformedResumes: Resume[] = resumeData.map(resume => ({; id: resume.id,user_id: resume.user_id,basic_info: {; id: resume.id,title: resume.title,headline: resume.headline,summary: resume.summary,},work_experience: [],education: [],skills: [],certifications: [],is_active: resume.is_active,})); ; setResumes(transformedResumes); return transformedResumes,} catch(e: any) {; console.error('Error fetching resumes:',e); setError(e.message); setResumes([]); return [],} finally {; setIsLoading(false),} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes(),} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,error,resumes,fetchResumes,},}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
-    fetchResumes,
-},
-}
-import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: 'false' }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData && resumeData.length === 0) {; setResumes([]); return [];,} ; const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({; id: resume && resume.id,; user_id: 'resume && resume.user_id',; basic_info: {; id: resume && resume.id,; title: 'resume && resume.title',; headline: 'resume && resume.headline',; summary: 'resume && resume.summary;',},; work_experience: '[]',; education: '[]',; skills: '[]',; certifications: '[]',; is_active: 'resume && resume.is_active;',})); ; setResumes(transformedResumes); return transformedResumes;,} catch(e: any) {; console && console.error('Error fetching resumes:',e); setError(e && e.message); setResumes([]); return [];,} finally {; setIsLoading(false);,} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes();,} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,; error,; resumes,; fetchResumes;,};,}
-    fetchResumes}}
-
-
-=======
-import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: false }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData && resumeData.length === 0) {; setResumes([]); return [],} ; const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({; id: resume && resume.id,user_id: resume && resume.user_id,basic_info: {; id: resume && resume.id,title: resume && resume.title,headline: resume && resume.headline,summary: resume && resume.summary,},work_experience: [],education: [],skills: [],certifications: [],is_active: resume && resume.is_active,})); ; setResumes(transformedResumes); return transformedResumes,} catch(e: any) {; console && console.error('Error fetching resumes:',e); setError(e && e.message); setResumes([]); return [],} finally {; setIsLoading(false),} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes(),} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,error,resumes,fetchResumes,},}
-import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: false }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData && resumeData.length === 0) {; setResumes([]); return [],} ; const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({; id: resume && resume.id,user_id: resume && resume.user_id,basic_info: {; id: resume && resume.id,title: resume && resume.title,headline: resume && resume.headline,summary: resume && resume.summary,},work_experience: [],education: [],skills: [],certifications: [],is_active: resume && resume.is_active,})); ; setResumes(transformedResumes); return transformedResumes,} catch(e: any) {; console && console.error('Error fetching resumes:',e); setError(e && e.message); setResumes([]); return [],} finally {; setIsLoading(false),} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes(),} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,error,resumes,fetchResumes,},}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/src/hooks/resume/useResumeList.ts
-=======
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,12 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
 const fs = require('fs');
 const http = require('http');
@@ -29,16 +25,9 @@ function pingPreview() {
 	console.log('Healthy');
 })();
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const http = require("http");"const distOk = fs.existsSync("dist/index.html");function pingPreview() {return new Promise((resolve) => {"const req = http.request({ host: "127.0.0.1", port: 4173, path: "/", timeout: 2000 }, (res) => {resolve(res.statusCode && res.statusCode < 500)});"req.on("error", () => resolve(false));req.end()})}(async () => {const ok = distOk && (await pingPreview());if (!ok) {"console.error("Healthcheck failed");process.exit(1)}"console.log("Healthy")})();''"
-<<<<<<< HEAD
-
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -58,16 +47,11 @@ function pingPreview() {
 	if (!ok) {
 		console.error('Healthcheck failed');
 <<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 		process.exit(1)};
-<<<<<<< HEAD
-	console.log('Healthy')})();    // Check disk space
+console.log('Healthy')})();    // Check disk space
 const path = require('path');
 class HealthChecker {
   constructor() {
@@ -212,15 +196,6 @@ class HealthChecker {
   }
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-=======
-		process.exit(1)};
-	console.log('Healthy')})();
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
-=======
-	console.log('Healthy')})();
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Check disk space
 =======
 		process.exit(1);
@@ -353,23 +328,13 @@ async function main() {
 
 if (require.main === module) {
   main();
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-module.exports = HealthChecker;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 module.exports = HealthChecker;
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 const http = require('http');
 const distOk = fs.existsSync('dist/index.html');
@@ -389,10 +354,3 @@ function pingPreview() {}
 		process.exit(1)};
 	console.log('Healthy')})();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

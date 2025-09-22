@@ -130,23 +130,12 @@ class $1 {}
       error.message.includes("console");"
   await this.fixConsoleError(error, lines)} else if (;)"
       error.rule === "prefer-const" ||;
-<<<<<<< HEAD
-      error.message.includes("prefer const");
+error.message.includes("prefer const");
     ) {}
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } else if (;)
       error.rule === "prefer-const" ||;
       error.message.includes("prefer const");
     ) {}
-=======
-      error.message.includes("prefer const");"
-} else if (;)"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   await this.fixPreferConstError(error, lines)} else {}
   await this.fixGenericESLintError(error, lines)};
   async fixUnusedVariableError(error, lines) {}
@@ -283,23 +272,14 @@ if (require.main === module) {}
     .then(report => {})"`;
   console.log("ESLint Error Fixer completed successfully`);"
       process.exit(0)}
-<<<<<<< HEAD
 });
     .catch(error => {})
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ESLintErrorFixer;
-module.exports = ESLintErrorFixer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     .catch(error => {})"
 

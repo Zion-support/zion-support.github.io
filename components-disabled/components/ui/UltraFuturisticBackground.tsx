@@ -1,12 +1,6 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:components/ui/UltraFuturisticBackground.tsx
-<<<<<<< HEAD
 
 ;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/ui/UltraFuturisticBackground.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import React from 'react';
 
 ;
@@ -53,7 +47,7 @@ export default function UltraFuturisticBackground({
         return `${baseClasses} bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
 
   };
-  
+
   return ()`;
     <div className={`${getBackgroundClasses()} ${className}`}>
 </div>
@@ -73,7 +67,7 @@ export default function UltraFuturisticBackground({
   const getBackgroundClasses = (
    ;
   const baseClasses = 'min-h-screen relative overflow-hidden';
-    
+
     switch (variant) {
       case 'quantum':) => {
   return $3;}
@@ -87,7 +81,7 @@ export default function UltraFuturisticBackground({
 } bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
     }
   };
-  
+
   return (
     <div className={`${getBackgroundClasses()} ${className}`} />
       {children}
@@ -128,7 +122,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   const getBackgroundClasses = (
    ;
   const baseClasses = 'relative overflow-hidden';
-    
+
     const baseClasses = 'relative overflow-hidden';
     switch (variant) {
       case 'quantum':) => {
@@ -169,4 +163,3 @@ export default UltraFuturisticBackground;
 
 export default UltraFuturisticBackground;
 export default UltraFuturisticBackground;
-

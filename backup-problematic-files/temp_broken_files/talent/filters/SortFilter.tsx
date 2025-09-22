@@ -24,4 +24,3 @@ export function SortFilter({ sortOption, setSortOption } SortFilterProps) {;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
 <<<<<<< HEAD
-

@@ -1,14 +1,6 @@
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
-<<<<<<< HEAD:src/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobsList.tsx
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -28,12 +20,9 @@ import { format } from 'date-fns';
 import Link from 'next/link';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-<<<<<<< HEAD:src/components/jobs/JobsList.tsx
+:src/components/jobs/JobsList.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobsList.tsx
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -51,14 +40,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'"
 import { format } from "date-fns",
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -84,37 +66,26 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {}
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
   useEffect(() => {
 
-<<<<<<< HEAD:src/components/jobs/JobsList.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-  useEffect(() => {}
-    const fetchJobs = async () => {}
-      if (!user) return,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobsList.tsx
       try {
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
-<<<<<<< HEAD
-          .order("created_at", { ascending: false }),
+.order("created_at", { ascending: false }),
 
         if (filter) {
           query = query.eq("status", filter)
@@ -163,35 +134,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 
     fetchJobs()
   }, [user, filter]),
-
-=======
-
-import { useState, useEffect  } from './react';
-import { use_auth  } from '@/hooks / use_auth';
-import { supabase  } from '@/integrations / supabase / client';
-import { Job, JobStatus  } from '@/types / jobs';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-import { Loader2, Edit, X, Eye } from 'lucide-react'import { format  } from './date - fns';
-import Link from './next / link';
-=======
-      try {}
-        let query = supabase"
-          .from("jobs")"
-          .select("*")"
-          .eq("client_id", user.id)
-';
-import { useState, useEffect  } from './react';'
-import { use_auth  } from '@/hooks / use_auth';'
-import { supabase  } from '@/integrations / supabase / client';'
-import { Job, JobStatus  } from '@/types / jobs';'
-import { Button  } from '@/components / ui / button';'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';'
-import { Badge  } from '@/components / ui / badge';'
-import { Loader2, Edit, X, Eye } from 'lucide-react'import { format  } from './date - fns';'
-import Link from './next / link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
 import {logErrorToProduction} from '@/utils / production_logger';
 interface JobsListProps {}
   filter?: JobStatus;
@@ -240,7 +182,7 @@ if (throw error) {}
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
     return (
       <div className="flex justify - center items - center p-8">;
         <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
@@ -254,77 +196,37 @@ if ( {) {
     return (<div className="text - center p - 8 border rounded - md bg-muted / 20">;
         <p className="text - lg text - muted-foreground">;
           {filter;
-=======
-    return ("
-      <div className="flex justify - center items - center p - 8">;"
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
-      </div>);
-  }
-
-  // Check condition;
-if ( {) {}
-  $2;
-}"
-    return (<div className="text - center p - 8 border rounded - md bg - muted / 20">;"
-        <p className="text - lg text - muted - foreground">;
-          {filter;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
             ? `No jobs with status "${filter}" found.`;
 '"
             : "You haven't posted any jobs yet.", }
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
         </p>;
         <Button as_child className="mt-4">;
-=======
-        </p>;"
-        <Button as_child className="mt - 4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
           <Link href="/post - job">Post Your First Job</Link>;
         </Button>;
       </div>);
   }
 
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
           .order("created_at", { ascending: false }),
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
-=======
-"
-          .order("created_at", { ascending: false }),
-
-  if (isLoading) {}
-    return ("
-      <div className="flex justify-center items-center p-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
 
   if (jobs.length === 0) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
-=======
-  if (jobs.length === 0) {}
-    return ("
-      <div className="text-center p-8 border rounded-md bg-muted/20">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
         <p className="text-lg text-muted-foreground">
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {filter 
-            ? `No jobs with status "${filter}" found.` 
-=======
-          {filter "`
-            ? `No jobs with status "${filter}" found.` '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
+            ? `No jobs with status "${filter}" found.`
             : "You haven't posted any jobs yet."
           }
 
@@ -337,8 +239,6 @@ if ( {) {}
   }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
       case "new": return "bg-blue-100 text-blue-800",
@@ -346,13 +246,6 @@ if ( {) {}
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
-=======
-
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "closed":
@@ -402,23 +295,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
     }
-<<<<<<< HEAD
-  },
-
-=======
-
-  },
-
-  },
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
-<<<<<<< HEAD:src/components/jobs/JobsList.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+},
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -463,11 +340,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {job.description}
             </p>"
             <div className="flex flex-wrap gap-1 mt-2">
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {job.skills.slice(0, 3).map((skill, index) => (
 =======
               {job.skills.slice(0, 3).map((skill, index) => ("
@@ -475,17 +348,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Badge key={index} variant="outline" className="text-xs">
     },;
     fetchJobs();
-<<<<<<< HEAD
-  }, [user, filter]),;
+}, [user, filter]),;
   if (isLoading) {;
     return (;
-=======
-  }, [user, filter]);
-
-  if (isLoading) {;
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
-    return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="flex justify-center items-center p-8">;
 =======
     return ("
@@ -495,7 +360,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     );
   }
-<<<<<<< HEAD
 ;
   if (jobs.length === 0) {;
     return (;
@@ -505,16 +369,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ? `No jobs with status "${filter}" found.`;
             : "You haven't posted any jobs yet.";
           }
-=======
-
-  if (jobs && jobs.length === 0) {;"
-    return (<div className="text-center p-8 border rounded-md bg-muted/20">;"
-        <p className="text-lg text-muted-foreground">;
-          {filter ;"`
-            ? `No jobs with status "${filter}" found.` ;'"
-            : "You haven't posted any jobs yet.", }
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </p>;
         <Button asChild className="mt-4">;
 =======
@@ -526,7 +380,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     );
   }
-<<<<<<< HEAD
 ;
   const getStatusColor = (status: JobStatus) => {;
     switch (status) {;
@@ -550,69 +403,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onSelectJob ? "cursor-pointer" : "";
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
-=======
-
-  const getStatusColor = (status: JobStatus,) => {;
-    switch (status) {;"
-      case "new": return "bg-blue-100 text-blue-800";"
-      case "in_progress":;"
-        return "bg-yellow-100 text-yellow-800";"
-      case "filled":;"
-        return "bg-green-100 text-green-800";"
-      case "closed":;"
-        return "bg-gray-100 text-gray-800",;
-      default:;"
-        return "bg-gray-100 text-gray-800";
-  const getStatusColor = (status: JobStatus, ) =>: any {}
-    switch (status) {"
-      case "new": return "bg - blue - 100 text - blue - 800";"
-      case "in_progress":;"
-        return "bg - yellow - 100 text - yellow - 800";"
-      case "filled":;"
-        return "bg - green - 100 text - green - 800";"
-      case "closed":;"
-        return "bg - gray - 100 text - gray - 800",
-      default:;"
-        return "bg - gray - 100 text - gray - 800";
-    }
-  }
-
-  return (
-"
-    <div className="grid gap-6 md:grid-cols-2">;
-      {jobs && jobs.map((job,) => (;
-        <Card;
-          key = {job && job.id,}
-`
-          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${"
-            onSelectJob ? "cursor-pointer" : ""`
-          }`}
-          onClick = {(,) => onSelectJob?.(job && job.id, job && job.title),}
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         >;
           <CardHeader className="p-4">;
             <div className="flex justify-between items-start">;
               <div>;
-<<<<<<< HEAD
-                <CardTitle className="text-xl">{job.title}</CardTitle>;
+<CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
                   Posted {format(new Date(job.created_at), "PPP")}
                 </CardDescription>;
               </div>;
               <Badge className={getStatusColor(job.status)}>;
                 {job.status.replace("_", " ").toUpperCase()}
-=======
-                <CardTitle className="text-xl">{job && job.title}</CardTitle>;
-                <CardDescription className="mt-1">;
-=======
-        >;"
-          <CardHeader className="p-4">;"
-            <div className="flex justify-between items-start">;
-              <div>;"
-                <CardTitle className="text-xl">{job && job.title}</CardTitle>;"
-                <CardDescription className="mt-1">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
                   Posted {format(new Date(job && job.created_at), "PPP")}
                 </CardDescription>;
               </div>;
@@ -624,8 +425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardHeader>;"
           <CardContent className="p-4 pt-0">;"
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
-<<<<<<< HEAD
-              {job.description}
+{job.description}
             </p>;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job.skills.slice(0, 3).map((skill, index) => (;
@@ -640,31 +440,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
             <div className="mt-3 text-sm">;
-=======
-              {job && job.description}
-            </p>;"
-            <div className="flex flex-wrap gap-1 mt-2">;
-              {job && job.skills.slice(0, 3).map((skill, index,) => (;"
-                <Badge key={index} variant="outline" className="text-xs">;
-
-                  {skill}
-                </Badge>;
-              ))}
-              {job && job.skills.length > 3 && (;"
-                <Badge variant="outline" className="text-xs">;
-                  +{job && job.skills.length - 3} more;
-                </Badge>;
-              )}
-
-    </div>;
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
-  )
-};";
-=======
-  );
-"
-};";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
 return (<div className="grid gap-6 md:grid-cols-2" > {;
   jobs && jobs.map ( (job) => (<Cardkey= {}
   job && job.id;
@@ -685,13 +460,9 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) ;
 }</div>) ;'"
 }'"}
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
 
     <div className="grid gap - 6 md:grid - cols-2">;
-=======
-"
-    <div className="grid gap - 6 md:grid - cols - 2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
       {jobs.map ((job, ) => (
         <Card;
           key = {job.id, }`
@@ -699,21 +470,13 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
             onSelectJob ? "cursor - pointer" : "";`
           }`}
           on_click = {(, ) => onSelectJob?.(job.id, job.title), }
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
         >;
           <CardHeader className="p-4">;
             <div className="flex justify - between items-start">;
               <div>;
                 <CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
-=======
-        >;"
-          <CardHeader className="p - 4">;"
-            <div className="flex justify - between items - start">;
-              <div>;"
-                <CardTitle className="text - xl">{job.title}</CardTitle>;"
-                <CardDescription className="mt - 1">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
                   Posted {format (new Date (job.created_at), "PPP")}
                 </CardDescription>;
               </div>;
@@ -721,7 +484,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
                 {job.status.replace ("_", " ").toUpperCase ()}
               </Badge>;
             </div>;
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
           </CardHeader>;
           <CardContent className="p - 4 pt-0">;
             <p className="line - clamp - 3 text - sm text - muted - foreground mb-2">;
@@ -758,59 +521,15 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
               </Button>;
               <Button variant="outline" size="sm">;
                 <X className="h - 4 w-4" />;
-=======
-          </CardHeader>;"
-          <CardContent className="p - 4 pt - 0">;"
-            <p className="line - clamp - 3 text - sm text - muted - foreground mb - 2">;
-              {job.description}
-            </p>;"
-            <div className="flex flex - wrap gap - 1 mt - 2">;
-              {job.skills.slice (0, 3).map ((skill, index, ) => ("
-                <Badge key={index} variant="outline" className="text - xs">;
-                  {skill}
-                </Badge>))}
-              {job.skills.length > 3 && ("
-                <Badge variant="outline" className="text - xs">;
-                  +{job.skills.length - 3} more;
-                </Badge>)}
-            </div>;"
-            <div className="mt - 3 text - sm">;"
-              <span className="font - medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
-            </div>;"
-            <div className="mt - 1 text - sm">;"
-              <span className="font - medium">Deadline:</span> {format (new Date (job.deadline), "PPP")}
-            </div>;
-          </CardContent>;"
-          <CardFooter className="flex justify - between p - 4 pt - 0 gap - 2">;"
-            <Button variant="outline" size="sm" as_child>;`
-              <Link href={`/jobs/${job.id}`}>;"
-                <Eye className="h - 4 w - 4 mr - 1" /> View Details;
-              </Link>;
-            </Button>;"
-            <div className="flex gap - 2">;"
-              <Button variant="outline" size="sm" as_child>;`
-                <Link href={`/jobs/${job.id}/edit`}>;"
-                  <Edit className="h - 4 w - 4" />;
-                </Link>;
-              </Button>;"
-              <Button variant="outline" size="sm">;"
-                <X className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
               </Button>;
             </div>;
           </CardFooter>;
         </Card>))}
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
     </div>);
 }";
 return (<div className="grid gap - 6 md:grid - cols-2" > {
   jobs.map ( (job) => (<Card key= {
-=======
-    </div>);"
-}";"
-return (<div className="grid gap - 6 md:grid - cols - 2" > {}
-  jobs.map ( (job) => (<Card key= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
   job.id;
 }className= {"`
   `overflow - hidden cursor - pointer transition - shadow hover:shadow - md $ {";"
@@ -819,7 +538,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {}
 }on_click={}
   () => onSelectJob?. (job.id, job.title);
 }job.description;
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
 }</p> + {
   job.skills.length - 3;
 }more </Badge>) ";
@@ -833,20 +552,6 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {}
             </div>
             <div className="mt-3 text-sm">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}</p> + {}
-  job.skills.length - 3;"
-}more </Badge>) ";"
-}</div> <div className="mt - 3 text - sm"> <span className="font - medium">Budget:</span> $ {}
-  job.budget.min;
-}- $ {"
-  job.budget.max ";"
-}</div> <div className="mt - 1 text - sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w - 4" /> </Button> </div> </CardFooter> </Card>) );
-}</div>);'"
-}'"}
-            </div>"
-            <div className="mt-3 text-sm">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
             </div>"
             <div className="mt-1 text-sm">"
@@ -869,8 +574,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {}
                 <X className="h-4 w-4" />
               </Button>
             </div>
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
-<<<<<<< HEAD:src/components/jobs/JobsList.tsx
+:src_backup/components/jobs/JobsList.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -882,22 +586,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {}
 }
 ;
 =======
-          </CardFooter>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-          </CardFooter>
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobsList.tsx
         </Card>
       ))}
     </div>
@@ -924,12 +613,9 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) ;
 }</div>) ;
 }'"
-<<<<<<< HEAD:src/components/jobs/JobsList.tsx
+:src/components/jobs/JobsList.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobsList.tsx
 =======
           </CardFooter>'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobsList.tsx

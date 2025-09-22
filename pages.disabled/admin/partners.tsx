@@ -1,17 +1,8 @@
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD:pages/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
@@ -25,7 +16,6 @@
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
 import { useEffect, useState  } from 'react';
 export default function AdminPartners() {
@@ -37,50 +27,29 @@ export default function AdminPartners() {
       try {
         const res = null;
     setFlags(json.flags || [])
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD:pages/admin/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from 'react';
 '
 import Head from 'next / head';
 ;
 
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 interface Partner {
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 interface Partner {
-=======
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface Partner {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 interface Partner {}
 '
@@ -95,58 +64,8 @@ interface Partner {;
   name: string;'
   status: 'active' | 'inactive' | 'pending';
   commission: number;
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-const mockPartners: Partner[] = [;
-  {;
-    id: '1',;
-    code: 'PART001',;
-    name: 'Tech Solutions Inc.',;
-    status: 'active',;
-    commission: 15,;
-    contactEmail: 'contact@techsolutions && techsolutions.com',;
-    contactPhone: '+1-555-0123',;
-    joinedAt: '2024-01-15T00:00:00Z',;
-    lastActivity: '2025-01-15T10:30:00Z',;
-    totalReferrals: 25,;
-    totalEarnings: 12500;
-  },;
-  {;
-    id: '2',;
-    code: 'PART002',;
-    name: 'Digital Marketing Pro',;
-    status: 'active',;
-    commission: 12,;
-    contactEmail: 'hello@digitalmarketingpro && digitalmarketingpro.com',;
-    contactPhone: '+1-555-0456',;
-    joinedAt: '2024-03-20T00:00:00Z',;
-    lastActivity: '2025-01-14T16:45:00Z',;
-    totalReferrals: 18,;
-    totalEarnings: 8750;
-  },;
-  {;
-    id: '3',;
-    code: 'PART003',;
-    name: 'Cloud Services LLC',;
-    status: 'pending',;
-    commission: 10,;
-    contactEmail: 'info@cloudservices && cloudservices.com',;
-    contactPhone: '+1-555-0789',;
-    joinedAt: '2025-01-10T00:00:00Z',;
-    lastActivity: '2025-01-10T00:00:00Z',;
-    totalReferrals: 0,;
-    totalEarnings: 0;
-  }
-];
-const AdminPartnersPage: React.FC = () => {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
@@ -154,9 +73,7 @@ const AdminPartnersPage: React.FC = () => {;
   const [loading, setLoading] = useState(true);'
   const [searchTerm, setSearchTerm] = useState('');'
   const [statusFilter, setStatusFilter] = useState('all');
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useEffect(() => {
+useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
       setPartners(mockPartners);
@@ -180,26 +97,7 @@ const AdminPartnersPage: React.FC = () => {;
     setFlags(json.flags |[]);
 
   }
-=======
-    const json = await res.json();
-    setFlags(json.flags |[]);
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-
-=======
-=======
-=======
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    const json = await res.json();
-    setFlags(json.flags |[]);
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
@@ -209,12 +107,8 @@ export default function AdminPartners() {};
   const [partners, setPartners] = useState<any[]>([]);'
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
 import { useEffect, useState } from 'react';
 export default function AdminPartners(req, res) {
@@ -227,12 +121,8 @@ export default function AdminPartners(req, res) {
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/partners.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }, 1000);  }, []);
 
   async function updatePartner(): any (code: string, updates: any) {;
@@ -240,8 +130,7 @@ export default function AdminPartners(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ code, ...updates }),;
-<<<<<<< HEAD
-    });
+});
     const res = await fetch('/api/admin/partners/list');
 <<<<<<< HEAD
     const json = await res && res.json();
@@ -253,18 +142,6 @@ export default function AdminPartners(req, res) {
     );
 
   }
-=======
-    const json = await res.json();
-    setPartners(json.partners || []);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }, 1000);
   }, []);
 
@@ -287,26 +164,15 @@ const res = await fetch(
     );
     const json = await res.json();
     setFlags(json.flags |[]);
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
 ;
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
@@ -316,13 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="space-y-6">
@@ -346,19 +206,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <td className="py-2 pr-4">{p.status}</td>
                 <td className="py-2 pr-4">
                   <input
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
-                    type='number'                    defaultValue={p.commission_rate}
+:pages_backup/admin/partners.tsx
+type='number'                    defaultValue={p.commission_rate}
                     min={0}
                     max={1}
                     step={0.01}
                     onBlur={e =>
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
+:pages_backup/admin/partners.tsx
                     type='number'
                     defaultValue={p.commission_rate}
                     min={0}
@@ -399,11 +253,6 @@ onBlur={e =>
 }
                     className="w-24 border rounded px-2 py-1"
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
   return (
     <div className='space-y-6'>;
@@ -428,7 +277,6 @@ onBlur={e =>
                 <td className='py-2 pr-4'>;
                   <input
 
-
                     }
                     className='w-24 border rounded px-2 py-1';
                   />;
@@ -452,10 +300,6 @@ onBlur={e =>
                     className='px - 2 py - 1 rounded border';
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
-=======
-
-  return (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
                     }
                   >;
@@ -581,73 +425,8 @@ useEffect(() => {
                     Reject;
                   </button>;
 
-
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-=======
-useEffect(() => {
-    (async () => {
-      try {
-        const res = await fetch('/api/admin/partners/list');
-        const json = await res.json();
-        setPartners(json.partners || [])
-      } catch {}
-    })()
-  }, []);
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || [])
-  }
-  async function viewFlags(code: string) {
-    setSelected(code);
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-    const json = await res.json();
-    setFlags(json.flags || [])
-  }
-  useEffect(() => {;
-    // Simulate loading partners;
-    setTimeout(() => {;
-      setPartners(mockPartners);
-      setLoading(false);
-    }, 1000);  }, []);
-  async function updatePartner(): any (code: string, updates: any) {;
-    await fetch('/api/admin/partners/update', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ code, ...updates }),;
-    });
-    const res = await fetch('/api/admin/partners/list');
-
-    const json = await res.json();
-    setPartners(json.partners || []);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function viewFlags(code: string) {;
-    setSelected(code);
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-
-
-
-    const json = await res.json();
-    setFlags(json.flags || []);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-<<<<<<< HEAD
+:pages_backup/admin/partners.tsx
+return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
@@ -671,7 +450,6 @@ useEffect(() => {
                 <td className='py-2 pr-4'>;
                   <input
 
-
                     }
                     className='w-24 border rounded px-2 py-1';
                   />;
@@ -686,7 +464,6 @@ useEffect(() => {
                   >;
                     Approve;
                   </button>;
-
 
                     }
                   >;
@@ -700,22 +477,13 @@ useEffect(() => {
                 </td>
 <<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
-=======
-                  />
-                </td>
-<<<<<<< HEAD:pages/admin/partners.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
                 <td className="py-2 pr-4 space-x-2">
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 
         <div className="p-4 rounded border">
@@ -723,25 +491,8 @@ useEffect(() => {
           <ul className="list-disc pl-6">
             {flags.map((f, idx) => (
               <li key={idx}>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-                  />
-                </td>
-                <td className="py-2 pr-4 space-x-2">'"
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>'"
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>"
-                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
-                </td>
-              </tr>
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
             ))}
@@ -749,7 +500,7 @@ useEffect(() => {
           </tbody>;
         </table>;
       </div>;
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
       {selected && (;'
         <div className='p-4 rounded border'>;'
           <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;'
@@ -757,30 +508,18 @@ useEffect(() => {
             {flags && flags.map((f, idx) => (;
               <li key={idx}>;'
                 <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}'
-=======
-      {selected && (;
-        <div className='p-4 rounded border'>;
-          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;
-          <ul className='list-disc pl-6'>;
-            {flags && flags.map((f, idx) => (;
-              <li key={idx}>;
-                <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
                 {f && f.note && <span className='text-gray-500'>({f && f.note})</span>}
               </li>;
 
             ))}
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
             {flags && flags.length === 0 && (;'
-=======
-            {flags && flags.length === 0 && (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
               <li className='text-gray-500 list-none'>No flags</li>;
             )}
 
           </ul>;
         </div>;
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
         {/* Stats Cards */}"
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;"
           <div className="bg-white rounded-lg shadow p-4">;"
@@ -797,39 +536,14 @@ useEffect(() => {
           </div>;"
           <div className="bg-white rounded-lg shadow p-4">;"
             <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>;"
-=======
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>;
-            <p className="text-2xl font-bold">{totalPartners}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>;
-            <p className="text-2xl font-bold text-green-600">{activePartners}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>;
-            <p className="text-2xl font-bold">{totalReferrals}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
             <p className="text-2xl font-bold text-blue-600">${totalEarnings && totalEarnings.toLocaleString()}</p>;
           </div>;
         </div>;
 
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -897,17 +611,10 @@ useEffect(() => {
             <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
           </div>
         </div>
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD:pages/admin/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
@@ -931,15 +638,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div>;"
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
               <select
                 value={statusFilter}
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
 
                   <button;
                     className='px - 2 py - 1 rounded border';
@@ -998,37 +701,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div>;
               <label className="block text - sm font - medium mb - 2">Filter by Status</label>;
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
+:pages_backup/admin/partners.tsx
               <select;
                 value={statusFilter}
 
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              <select;
-                value={status_filter}
-                on_change={(e) => setStatusFilter (e.target.value)}
-                className="w - full p - 2 border rounded - md";
-              >;
-                <option value="all">All Statuses</option>;
-                <option value="active">Active</option>;
-                <option value="inactive">Inactive</option>;
-                <option value="pending">Pending</option>;
-              </select>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Partners Table */}
-        <div className="bg - white rounded - lg shadow overflow - hidden">;
-          <div className="px - 6 py - 4 border - b">;
-            <h2 className="text - lg font - semibold">Partners ({filtered_partners.length})</h2>;
-          </div>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
 =======
@@ -1094,13 +772,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;"
                         <div className="flex space - x-2">;'
                           {partner.status === 'pending' && (
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
 
                 onChange={(e) => setStatusFilter(e && e.target.value)}
                 className="w-full p-2 border rounded-md";
@@ -1183,12 +857,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {partner && partner.status === 'pending' && (;
                             <>;
 
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
 =======
@@ -1224,26 +894,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               Activate;
                             </button>;
                           )}
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )}
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
 
                           <button className="text-blue-600 hover:text-blue-900">;
                             <>;
@@ -1294,18 +956,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 ;
 
-
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-=======
-                    </tr>))}
-                </tbody>;
-              </table>;
-            </div>)}
-        </div>;
-      </main>;
-    </>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+:pages_backup/admin/partners.tsx
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1316,28 +967,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )  } catch (error) {
     console.error("Error:", error);
 =======
@@ -1355,27 +990,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
+:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx

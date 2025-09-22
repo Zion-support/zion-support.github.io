@@ -65,4 +65,3 @@ export function QuickAccess() {;
           </p>;
         </div>;
 <<<<<<< HEAD
-

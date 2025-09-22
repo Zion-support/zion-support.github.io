@@ -70,4 +70,3 @@ export function ServiceIncludes() {;
             <div>;
               <h3 className="text-white font-medium">Service Documentation</h3>;
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>;
-

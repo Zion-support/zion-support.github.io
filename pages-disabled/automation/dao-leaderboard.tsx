@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // @ts-ignore
 import data from '../../data/dao-leaderboard.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -13,39 +8,21 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/dao-leaderboard.json',
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/dao-leaderboard.json',
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function DaoLeaderboardPage() {
 
 =======
-
 
 export default function DaoLeaderboardPage() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const items: any[] = (data?.items |[]).slice(0, 25)
 
-<<<<<<< HEAD
-=======
-=======
-  const items: any[] = (data?.items || []).slice(0, 25);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
@@ -61,18 +38,12 @@ export default function DaoLeaderboardPage() {}
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           ))}
         </ul>
       </div>
     </EnhancedLayout>
   );
 };
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ))  } catch (error) {
     console.error("Error:", error);
 =======
@@ -81,15 +52,10 @@ export default function DaoLeaderboardPage() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function DaoLeaderboardPage() {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-  const items: any[] = (data?.items |[]).slice(0, 25)
+const items: any[] = (data?.items |[]).slice(0, 25)
 
   return (
     <EnhancedLayout>
@@ -111,24 +77,11 @@ export default function DaoLeaderboardPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-}
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 =======
 
 }
-
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout',;
 // @ts - ignore;'
@@ -156,8 +109,6 @@ function DaoLeaderboardPage() {}
         </ul>;
       </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </EnhancedLayout>;
   );
   } catch (error) {
@@ -166,16 +117,11 @@ function DaoLeaderboardPage() {}
   }
 }
 }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;'
 import data from '../../data/dao-leaderboard.json',
-
 
 export default function DaoLeaderboardPage() {}
   const items: any[] = (data?.items |[]).slice(0, 25)
@@ -196,19 +142,10 @@ export default function DaoLeaderboardPage() {}
 
             </li>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ))}
         </ul>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
 <<<<<<< HEAD
   )
 
@@ -223,26 +160,10 @@ export default function DaoLeaderboardPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  )
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
-
 
 ;
 '";

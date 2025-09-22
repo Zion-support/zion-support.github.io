@@ -30,4 +30,3 @@ export const QuoteRequestsList:React.FC<QuoteRequestsListProps> = ({;
           key={quote.id}
           quote={quote}
           onViewDetails={onViewDetails}
-

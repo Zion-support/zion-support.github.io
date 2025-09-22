@@ -425,7 +425,7 @@ className='mt-1 w-full border rounded p-2'
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
       <div className="grid gap-4 max-w-3xl">
-        <div className="grid md:grid-cols-2 gap-3">
+        <div className="grid md:grid-cols-2 gap-3">;
           <label className="text-sm">Program
             <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
 
@@ -444,7 +444,7 @@ className='mt-1 w-full border rounded p-2'
           timeline,
           budgetAmount: Number(budgetAmount || 0),
           budgetCurrency,
-          supportingLinks: supportingLinks
+          supportingLinks: supportingLinks;
             .split('\n')
             .map((s) => s.trim())
             .filter(Boolean),
@@ -459,7 +459,7 @@ className='mt-1 w-full border rounded p-2'
       setLoading(true);
       setError(null)
       const resp = await fetch('/api/grants', {
-        method: 'POST'
+        method: 'POST';
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 program,
@@ -469,13 +469,13 @@ program,
           timeline,
           budgetAmount: Number(budgetAmount || 0),
           budgetCurrency,
-          supportingLinks: supportingLinks
+          supportingLinks: supportingLinks;
             .split('\n')
             .map(s => s.trim())
             .filter(Boolean)
           pitchDeckUrl
           region
-          sector: (sector as any) |undefined
+          sector: (sector as any) |undefined;
           submit
         })
       });
@@ -495,7 +495,7 @@ program,
           >;
             onClick={() = /> save(true)}
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'>
-
+;
             Submit for Review;
           </button>        </div>;
       </div>;
@@ -530,7 +530,7 @@ projectName,
 teamInfo;
 proposalSummary,
 timeline;
-budgetAmount: Number(budgetAmount |0)
+budgetAmount: Number(budgetAmount |0);
           budgetCurrency;
 supportingLinks: supportingLinks;
             .split('\n')
@@ -549,7 +549,7 @@ const data = await resp.json();
     } catch (e: any) {;}
       setError(e.message);}
     } finally {}
-      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
+      setLoading(false);    }          budgetAmount: Number(budgetAmount |0);
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n')
@@ -641,7 +641,7 @@ const data = await resp.json();
             onChange={e => setTimeline(e.target.value)}
           />
         </label>
-        <div className='grid md:grid-cols-3 gap-3'>
+        <div className='grid md:grid-cols-3 gap-3'>;
           <label className='text-sm'>
             Budget Amount
             <input
@@ -708,14 +708,14 @@ pr-12243
           <button;
             disabled={loading}
             onClick={() => save(false)}'
-            className='px-4 py-2 border rounded disabled:opacity-50'
+            className='px-4 py-2 border rounded disabled:opacity-50';
           >
             Save Draft;
           </button>
           <button;
             disabled={loading}
             onClick={() => save(true)}'
-            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
+            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
           >
             Submit for Review
 

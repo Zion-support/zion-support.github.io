@@ -69,4 +69,3 @@ export function IntegrationsHub() {;
           </TabsContent>;
         </div>;
       </Tabs>;
-

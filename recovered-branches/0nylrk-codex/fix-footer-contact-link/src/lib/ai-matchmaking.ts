@@ -1,25 +1,6 @@
-<<<<<<< HEAD
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-// AI Matchmaking utility functions;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface MatchResultItem {
-=======
-=======
-// AI Matchmaking utility functions;
-export interface MatchResultItem {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface MatchResultItem {
-
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -27,34 +8,14 @@ export interface MatchResultItem {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
 export interface MatchResultItem {};
 export interface MatchResultItem {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-// AI Matchmaking utility functions
-export interface MatchResultItem {
-
-export interface MatchResultItem {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface MatchResultItem {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 
 export interface MatchResultItem {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -64,48 +25,19 @@ export interface MatchResultItem {};
   category: string;
   price?: number;
 
-<<<<<<< HEAD
-  skills?: string[],
+skills?: string[],
   image?: string;
 
 }
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface MatchResult {
-=======
-=======
-export interface MatchResult {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-
 
 export interface MatchResult {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   item: MatchResultItem;
-=======
-export interface MatchResultItem {export interface MatchResultItem {
-=======
-export interface MatchResultItem {
-// AI Matchmaking utility functions;
-export interface MatchResultItem {
-export interface MatchResultItem {
-<<<<<<< HEAD
-
-
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export interface MatchResultItem {;
 
@@ -113,17 +45,7 @@ export interface MatchResultItem {;
 export interface MatchResultItem {
 
 export interface MatchResultItem {;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-export interface MatchResultItem {export interface MatchResultItem {
-
-export interface MatchResultItem {;
-export interface MatchResultItem {// AI Matchmaking utility functions
-export interface MatchResultItem {
-
-export interface MatchResultItem {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 export interface MatchResultItem {
   id: string;
@@ -157,7 +79,6 @@ export interface MatchResultItem {
   category: string;
   price?: number;
 
-
 }
 
 export interface MatchResult {;
@@ -176,14 +97,8 @@ item: MatchResultItem;
   image?: string;
 }
 export interface MatchResult {
-<<<<<<< HEAD
-  item: MatchResultItem;
+item: MatchResultItem;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  // TODO: Implement
-}
-  item: MatchResultItem;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   score: number;
 =======
 
@@ -194,19 +109,13 @@ export interface MatchResult {
 }
 // Sample data for testing when API is not available;
 const sample_data: MatchResultItem[] = [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface MatchResult {
 
 export interface MatchResult {;
 export interface MatchResult {
   item: MatchResultItem;
   score: number;
-<<<<<<< HEAD
-  {
+{
     id: "talent - 1";
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
@@ -214,24 +123,6 @@ export interface MatchResult {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-    price: 120
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    price: 120,
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
-
-=======
-    price: 120,
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-    price: 120,
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -243,7 +134,6 @@ export interface MatchResult {
 =======
     price: 120,
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
@@ -260,8 +150,6 @@ export interface MatchResult {
   {
     id: "equipment - 1";
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     title: "NVIDIA A100 GPU Server";
     description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
@@ -269,21 +157,6 @@ export interface MatchResult {
 
 <<<<<<< HEAD
   type: string = ""
-=======
-<<<<<<< HEAD
-
-
-
-=======
-=======
-  skills?: string[]
-
-  image?: string
-}
-export interface MatchResult {
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export interface MatchResult {};
 export interface MatchResult {;
@@ -297,17 +170,12 @@ export interface MatchResult {};
     description: "Experienced AI engineer with expertise in machine learning and computer vision";"
     category: "Talent - Engineering";
 
-
-
-
   }
   {"
     id: "service - 1";"
     title: "AI Model Training";"
     description: "Custom AI model training service with data preparation and deployment";"
     category: "Services - AI Development";
-
-
 
   }
   {"
@@ -316,16 +184,9 @@ export interface MatchResult {};
     description: "High - performance GPU server for AI model training and inference";"
     category: "Equipment - Hardware";
 
-
-
-<<<<<<< HEAD
-  type: string = ""
+type: string = ""
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -344,19 +205,7 @@ export interface MatchResult {;
   reason: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     title: "NVIDIA A100 GPU Server",
@@ -375,9 +224,6 @@ export interface MatchResult {;
     description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
 
-
-
-
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -396,30 +242,16 @@ export interface MatchResult {;
   reason: string;
 }
 
-
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
-<<<<<<< HEAD
-    id: "talent-1",
+id: "talent-1",
     title: "Senior AI Engineer",
     description: "Experienced AI engineer with expertise in machine learning and computer vision",
-=======
-
-
-
-// Sample data for testing when API is not available;
-const sampleData: MatchResultItem[] = []
-  {"
-    id: "talent-1","
-    title: "Senior AI Engineer","
-    description: "Experienced AI engineer with expertise in machine learning and computer vision","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category: "Talent - Engineering",
     price: 120,"
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
@@ -443,8 +275,6 @@ const sampleData: MatchResultItem[] = []
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Function to find matches based on query and type
 <<<<<<< HEAD
 
@@ -452,47 +282,21 @@ const sampleData: MatchResultItem[] = []
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-// Function to find matches based on query and type;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export async function findMatches(
   query: string,
 "
   type: string = "",
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-// Function to find matches based on query and type
-
-export async function findMatches(
-  query: string,
-
-  type: string = "",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export async function findMatches(;
   query: string;
 export async function findMatches(
   query: string,
   type: string = "",
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   limit: number = 5
 ): Promise<MatchResult[]> {
-=======
-// Function to find matches based on query and type): Promise<MatchResult[]> {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 // Function to find matches based on query and type): Promise<MatchResult[]> {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -506,67 +310,8 @@ export async function findMatches(
     // Simulate API call delay
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 ;
-=======
-
-
-    await new Promise(resolve => setTimeout(resolve, 1000)),
-    
-
-
-    // Filter by type if provided
-    let filteredItems = sampleData;
-    if (type && type !== "all") {
-
-      filteredItems = sampleData && sampleData.filter(item => 
-        item && item.category.toLowerCase().includes(type && type.toLowerCase())
-
-      )
-    }
-    // Sort by simulated relevance (random for now)
-
-    const matches: MatchResult[] = filteredItems && filteredItems.map(item => ({
-      item,
-      score: Math && Math.floor(Math && Math.random() * 40) + 60, // Random score between 60 and 99
-      matchedSkills: item && item.skills?.slice(0, 2) || [];
-      reason: `This ${item && item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
-
-    }));
-    // Sort by score
-    return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
-  } catch (error) {
-
-    console && console.error("Error in matchmaking:", error);
-
-    return []
-      matchedSkills: item.skills?.slice(0, 2) || [],
-      reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
-    })),
-    
-    // Sort by score
-    return matches.sort((a, b) => b.score - a.score).slice(0, limit)
-  } catch (error) {
-    console.error("Error in matchmaking:", error),
-=======
-
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
-  },
-  {
-
-    skills: ["Machine Learning", "Model Training", "AI Deployment"]
-  },
-  {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return []
 ;
 // Sample data for testing when API is not available;
@@ -608,7 +353,6 @@ export async function findMatches(;
     // For now, we'll simulate a response with sample data;
     // Simulate API call delay;
     await new Promise(resolve => setTimeout(resolve, 1000)),
-    
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -622,29 +366,6 @@ export async function findMatches(;
     }
     // Sort by simulated relevance (random for now)
 
-
-<<<<<<< HEAD
-=======
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    await new Promise(resolve => setTimeout(resolve, 1000)),
-    
-    // Filter by type if provided
-    let filteredItems = sampleData,
-    if (type && type !== "all") {
-      filteredItems = sampleData.filter(item =>
-        item.category.toLowerCase().includes(type.toLowerCase())
-      )
-    }
-    // Sort by simulated relevance (random for now)
-    const matches: MatchResult[] = filteredItems.map(item => ({
-      item
-      score: Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99
-<<<<<<< HEAD
-
-=======
-      matchedSkills: item.skills?.slice(0, 2) |[];
-      reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -653,52 +374,12 @@ export async function findMatches(;
     }));
     // Sort by score;
     return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
-<<<<<<< HEAD
-  } catch (error) {
-<<<<<<< HEAD
+} catch (error) {
 <<<<<<< HEAD
 
     console && console.error("Error in matchmaking:", error);
 
     return []
-=======
-    price: 15000,
-    skills: ["GPU Computing", "High Performance", "AI Hardware"];
-  }
-];
-;
-// Function to find matches based on query and type;
-export async function find_matches (
-  query: string;
-  type: string = "",
-  limit: number = 5): Promise < MatchResult[]> {
-  try {
-    // In production, we would call an API endpoint here;
-    // For now, we'll simulate a response with sample data;
-}
-    // In production, we would call an API endpoint here;"
-    // For now, we'll simulate a response with sample data;'
-    // Simulate API call delay;
-    await new Promise (resolve => set_timeout (resolve, 1000));
-;
-    // Filter by type if provided;
-    let filtered_items = sample_data;
-    // Check condition
-if ( {) {
-  $2
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-    console.error("Error in matchmaking:", error);
-
-    return []
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -710,7 +391,7 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
-    
+
     // Sort by score;
     return matches.sort((a, b) => b.score - a.score).slice(0, limit)
   } catch (error) {"
@@ -719,14 +400,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
@@ -750,32 +424,18 @@ const sampleData: MatchResultItem[] = [;
     price: 120,;"
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
   },;
-<<<<<<< HEAD
-  {;
+{;
     id: "service-1",;
     title: "AI Model Training",,
   description: "Custom AI model training service with data preparation and deployment",;
-=======
-  {;"
-    id: "service-1",;"
-    title: "AI Model Training",;"
-    description: "Custom AI model training service with data preparation and deployment",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category: "Services - AI Development",;
     price: 5000,;"
     skills: ["Machine Learning", "Model Training", "AI Deployment"];
   },;
-<<<<<<< HEAD
-  {;
+{;
     id: "equipment-1",;
     title: "NVIDIA A100 GPU Server",,
   description: "High-performance GPU server for AI model training and inference",;
-=======
-  {;"
-    id: "equipment-1",;"
-    title: "NVIDIA A100 GPU Server",;"
-    description: "High-performance GPU server for AI model training and inference",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category: "Equipment - Hardware",;
     price: 15000,;"
     skills: ["GPU Computing", "High Performance", "AI Hardware"];
@@ -812,10 +472,7 @@ export async function findMatches(;
   } catch (error) {;"
     console.error("Error in matchmaking:", error);
     return [];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   }
 ];
 ;
@@ -832,19 +489,11 @@ export async function find_matches (;
 ;
     // Filter by type if provided;
     let filtered_items = sample_data;
-<<<<<<< HEAD
-    // Check condition
+// Check condition
 if ( {) {
-<<<<<<< HEAD
 <<<<<<< HEAD
   $2
 <<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  $2  }
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     // Check condition;
 if ( {) {
@@ -857,12 +506,9 @@ if ( {) {
   } catch (error) {
     console.error("Error in matchmaking:", error),"
     return []
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     // Check condition;
 if ( {) {}
@@ -877,8 +523,7 @@ if ( {) {}
       filtered_items = sample_data.filter (item =>;)
         item.category.toLowerCase ().includes (type.toLowerCase ()));
     // Sort by simulated relevance (random for now);
-<<<<<<< HEAD
-    const matches: MatchResult[] = filtered_items.map (item => ({}
+const matches: MatchResult[] = filtered_items.map (item => ({}
       item,
       score: Math.floor (Math.random () * 40) + 60, // Random score between 60 and 99;
       matched_skills: item.skills?.slice (0, 2) || [];'`
@@ -888,228 +533,27 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-    const matches: MatchResult[] = filtered_items.map (item => ({
-      item,)
-      score: Math.floor (Math.random () * 40) + 60, // Random score between 60 and 99;
-      matched_skills: item.skills?.slice (0, 2) || [];"`;
-      reason: `This ${item.category.split (' - ')[0].toLowerCase ()} matches your needs based on the provided description.`;
-    }));
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Sort by score;
     return matches.sort ((a, b) => b.score - a.score).slice (0, limit);
     console.error ("Error in matchmaking:", error);"
     return [];
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
 }
-=======
-
-// AI Matchmaking utility functions;
-;
-export interface MatchResultItem {;
-  id:string,;
-  title:string,;
-  description:string,;
-  category:string,;
-  price?:number,;
-  skills?:string[],;
-  image?:string;}
-;
-export interface MatchResult {;
-  item:MatchResultItem,;
-  score:number,;
-  matchedSkills:string[],;
-  reason:string;
-}
-;
-// Sample data for testing when API is not available;
-const sampleData:MatchResultItem[] = [;
-  {;
-    id:"talent-1",;
-    title:"Senior AI Engineer",;
-    description:"Experienced AI engineer with expertise in machine learning and computer vision",;
-    category:"Talent - Engineering",;
-    price:120,;
-    skills:["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
-  },;
-  {;
-    id:"service-1",;
-    title:"AI Model Training",;
-    description:"Custom AI model training service with data preparation and deployment",;
-    category:"Services - AI Development",;
-    price:5000,;
-    skills:["Machine Learning", "Model Training", "AI Deployment"];
-  },;
-  {;
-    id:"equipment-1",;
-    title:"NVIDIA A100 GPU Server",;
-    description:"High-performance GPU server for AI model training and inference",;
-    category:"Equipment - Hardware",;
-    price:15000,;
-    skills:["GPU Computing", "High Performance", "AI Hardware"];
-  }
-],;
-;
-// Function to find matches based on query and type;
-export async function findMatches(;
-  query:string,;
-  type:string = "",;
-  limit:number = 5;
-):Promise<MatchResult[]> {;
-  try {;
-    // In production, we would call an API endpoint here;
-    // For now, we'll simulate a response with sample data;
-    ;
-    // Simulate API call delay;
-    await new Promise(resolve => setTimeout(resolve, 1000)),;
-    ;
-    // Filter by type if provided;
-    let filteredItems = sampleData,;
-    if (type && type !== "all") {;
-      filteredItems = sampleData.filter(item => ;
-        item.category.toLowerCase().includes(type.toLowerCase());
-      ),;
-    }
-    ;
-    // Sort by simulated relevance (random for now);
-    const matches:MatchResult[] = filteredItems.map(item => ({;
-      item,;
-      score:Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99;
-      matchedSkills:item.skills?.slice(0, 2) || [],;
-      reason:`This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`;
-    })),;
-    ;
-    // Sort by score;
-    return matches.sort((a, b) => b.score - a.score).slice(0, limit),;
-  } catch (error) {;
-    console.error("Error in matchmaking:", error),;
-    return [],;
-  } // AI Matchmaking utility functions if (type && type !== "all") {
-  
-}
-}
-  }
-}
-<<<<<<< HEAD
-=======
-
-// AI Matchmaking utility functions;
-;
-export interface MatchResultItem {;
-  id:string,;
-  title:string,;
-  description:string,;
-  category:string,;
-  price?:number,;
-  skills?:string[],;
-  image?:string;}
-;
-export interface MatchResult {;
-  item:MatchResultItem,;
-  score:number,;
-  matchedSkills:string[],;
-  reason:string;
-}
-;
-// Sample data for testing when API is not available;
-const sampleData:MatchResultItem[] = [;
-  {;
-    id:"talent-1",;
-    title:"Senior AI Engineer",;
-    description:"Experienced AI engineer with expertise in machine learning and computer vision",;
-    category:"Talent - Engineering",;
-    price:120,;
-    skills:["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
-  },;
-  {;
-    id:"service-1",;
-    title:"AI Model Training",;
-    description:"Custom AI model training service with data preparation and deployment",;
-    category:"Services - AI Development",;
-    price:5000,;
-    skills:["Machine Learning", "Model Training", "AI Deployment"];
-  },;
-  {;
-    id:"equipment-1",;
-    title:"NVIDIA A100 GPU Server",;
-    description:"High-performance GPU server for AI model training and inference",;
-    category:"Equipment - Hardware",;
-    price:15000,;
-    skills:["GPU Computing", "High Performance", "AI Hardware"];
-  }
-],;
-;
-// Function to find matches based on query and type;
-export async function findMatches(;
-  query:string,;
-  type:string = "",;
-  limit:number = 5;
-):Promise<MatchResult[]> {;
-  try {;
-    // In production, we would call an API endpoint here;
-    // For now, we'll simulate a response with sample data;
-    ;
-    // Simulate API call delay;
-    await new Promise(resolve => setTimeout(resolve, 1000)),;
-    ;
-    // Filter by type if provided;
-    let filteredItems = sampleData,;
-    if (type && type !== "all") {;
-      filteredItems = sampleData.filter(item => ;
-        item.category.toLowerCase().includes(type.toLowerCase());
-      ),;
-    }
-    ;
-    // Sort by simulated relevance (random for now);
-    const matches:MatchResult[] = filteredItems.map(item => ({;
-      item,;
-      score:Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99;
-      matchedSkills:item.skills?.slice(0, 2) || [],;
-      reason:`This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`;
-    })),;
-    ;
-    // Sort by score;
-    return matches.sort((a, b) => b.score - a.score).slice(0, limit),;
-  } catch (error) {;
-    console.error("Error in matchmaking:", error),;
-    return [],;
-  } // AI Matchmaking utility functions if (type && type !== "all") {
-}
-}
-  }
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   }
 }
 ;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  $2  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   $2  }
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

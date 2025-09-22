@@ -1,25 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileAvailability.tsx
-=======
-import { Availability } from "@/types/profile",;
-import { Badge } from "@/components/ui/badge",;
-import { Calendar, Clock, Check } from "lucide-react",;
-=======
-import { Availability } from "@/types/profile",;
-import { Badge } from "@/components/ui/badge",;
-=======
-import { Availability } from "@/types/profile";""
-import { Badge } from "@/components/ui/badge";""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Calendar, Clock, Check } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/ProfileAvailability.tsx
-=======
-import { Availability } from "@/types/profile",;
-import { Badge } from "@/components/ui/badge",;
-import { Calendar, Clock, Check } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 interface ProfileAvailabilityProps {;
   availability:Availability;
@@ -66,53 +48,9 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
 
                   <span>{slot.hours}</span>;
               </div>;            ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileAvailability.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/ProfileAvailability.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileAvailability.tsx
-
-=======
-  ),;}
- import {;
-  {;
-  {;
-  Calendar,  Clock, Check ;
-}from 'lucide-react' interface ProfileAvailabilityProps {;
-  availability: Availability ;
-}availability ;
-}: ProfileAvailabilityProps) {';
-  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {;
-  switch (status) {;
-  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Availability</h3> <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4" > <Badge >{;
-  getStatusText (availability.status) ;
-}</Badge> <span>Next available: {;
-  availability.nextAvailable ;
-}</span> </div>) ;
-}</div> </div> </div>) ) ;
-}</div> </div>) ;
-:temp_broken_files/profile/ProfileAvailability.tsx
-}</div>) ;"}'"
-}</div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileAvailability.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Availability</h3> <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4" > <Badge >{;"
-} <span>Next available: {;
-</span>)
-}</span> </div>) ;
-}</div> </div> </div>) ) ;
-}</div> </div>) ;"
-}</div>) ;"}'""
-}</div>) ;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

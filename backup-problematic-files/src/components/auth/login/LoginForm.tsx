@@ -222,4 +222,3 @@ headers: {';
 }<div className=" flex justify-between mt-4" > <Button > {';
   isResending ? 'Sending...': 'Resend / Verify e-mail' ;
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
-

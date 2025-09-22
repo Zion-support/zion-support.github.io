@@ -1,21 +1,11 @@
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Button } from './ui/button'
-=======
-import Link from 'next/link''
-import { GradientHeading } from './GradientHeading''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs''
-import { Button } from './ui/button''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
 import { fireEvent } from '@/lib/analytics'
 import {};
   Users;
@@ -36,7 +26,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs""
 import { Button } from "./ui/button"'
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react''
 import { Zap } from 'lucide-react'
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 export function FeaturesGuideSection() {
   const features = [
     {
@@ -44,15 +34,6 @@ export function FeaturesGuideSection() {
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
-=======
-export function FeaturesGuideSection() {}
-  const features = []
-    {}
-'
-        'Navigate to the AI Matcher page from the homepage or marketplace','
-        'Fill in your project requirements and specifications','
-        'Review the AI-recommended matches tailored to your needs','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         'Connect with matched talents or services directly',
       ],'
       link: '/match','
@@ -61,10 +42,7 @@ export function FeaturesGuideSection() {}
     {'
       id: 'talent-directory','
       title: 'Talent Directory',
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -326,7 +304,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={feature.id} 
                 value={feature.id}"
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from "next/link",
@@ -340,14 +318,8 @@ export function FeaturesGuideSection() {
   const features = [
     {
 
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -506,20 +478,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "./ui/button",;'
 import { fireEvent } from '@/lib/analytics',;'
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 export function FeaturesGuideSection() {;
   const features = [;,
   const features = [;
     {;
       id: "ai-matcher",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "AI Matcher",,
+title: "AI Matcher",,
   description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
-=======
-      title: "AI Matcher",;
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace",;
@@ -532,22 +498,9 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "talent-directory",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       title: "Talent Directory",,
   description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;
-=======
-export function FeaturesGuideSection() { return null; }
-    },;
-    {;"
-      id: "talent-directory",;"
-      title: "Talent Directory",;"
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-      title: "Talent Directory",;
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;
-      icon: <Users className="h-10 w-10 text-zion-purple" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <Users className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
         "Access the talent directory from the main navigation",;"
@@ -558,23 +511,11 @@ export function FeaturesGuideSection() { return null; }
       link: "/talents",;"
       buttonText: "Explore Talents";
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: "services",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Services Marketplace",,
+title: "Services Marketplace",,
   description: "Discover professional services for your AI and tech needs, from development to consulting.",;
-=======
-    {;"
-      id: "services",;"
-      title: "Services Marketplace",;"
-      description: "Discover professional services for your AI and tech needs, from development to consulting.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-      title: "Services Marketplace",;
-      description: "Discover professional services for your AI and tech needs, from development to consulting.",;
-      icon: <Zap className="h-10 w-10 text-zion-cyan" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;"
         "Browse service categories on the marketplace",;"
@@ -585,23 +526,11 @@ export function FeaturesGuideSection() { return null; }
       link: "/services",;"
       buttonText: "View Services";
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: "equipment",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Equipment Catalog",,
+title: "Equipment Catalog",,
   description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
-=======
-    {;"
-      id: "equipment",;"
-      title: "Equipment Catalog",;"
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-      title: "Equipment Catalog",;
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
-      icon: <Settings className="h-10 w-10 text-zion-purple" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <Settings className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
         "Search the equipment catalog by category or specifications",;"
@@ -612,23 +541,11 @@ export function FeaturesGuideSection() { return null; }
       link: "/equipment",;"
       buttonText: "Browse Equipment";
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: "analytics",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Marketplace Analytics",,
+title: "Marketplace Analytics",,
   description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",;
-=======
-    {;"
-      id: "analytics",;"
-      title: "Marketplace Analytics",;"
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-      title: "Marketplace Analytics",;
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",;
-      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;"
         "Access analytics from your user dashboard",;"
@@ -639,23 +556,11 @@ export function FeaturesGuideSection() { return null; }
       link: "/analytics",;"
       buttonText: "View Analytics";
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: "ai-assistant",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Zion AI Assistant",,
+title: "Zion AI Assistant",,
   description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",;
-=======
-    {;"
-      id: "ai-assistant",;"
-      title: "Zion AI Assistant",;"
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-      title: "Zion AI Assistant",;
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",;
-      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
         "Click on the chat icon in the bottom right corner",;"
@@ -667,23 +572,11 @@ export function FeaturesGuideSection() { return null; }
       buttonText: "Chat with Assistant",;"
       action: "openChat";
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: "publishing",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "List Your Services",,
+title: "List Your Services",,
   description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
-=======
-    {;"
-      id: "publishing",;"
-      title: "List Your Services",;"
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-      title: "List Your Services",;
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
-      icon: <Plus className="h-10 w-10 text-zion-cyan" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <Plus className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;"
         "Create or log in to your account",;'"
@@ -694,50 +587,30 @@ export function FeaturesGuideSection() { return null; }
       link: "/create-profile",;"
       buttonText: "Create Listing";
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: "help-center",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Help & Resources",,
+title: "Help & Resources",,
   description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",;
-=======
-    {;"
-      id: "help-center",;"
-      title: "Help & Resources",;"
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-      title: "Help & Resources",;
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",;
-      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
         "Visit our comprehensive knowledge base",;"
         "Watch video tutorials on specific features",;"
         "Join community forums to connect with other users",;"
         "Contact our support team for personalized assistance";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ],;"
       link: "/help";"
       buttonText: "View Resources";
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 =======
       ],;
       link: "/help";",
       buttonText: "View Resources";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
   ];
   return (;
     <section className="py-20 bg-zion-blue-dark">;
@@ -754,14 +627,6 @@ export function FeaturesGuideSection() { return null; }
             {features.slice(0, 4).map(feature => (;
               <TabsTrigger;
                 key={feature.id} ;
-=======
-    {
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      id: 'talent-directory'
-=======
-    {'
-      id: 'talent-directory''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       title: 'Talent Directory'
       description:'
         'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.''
@@ -1004,29 +869,20 @@ export function FeaturesGuideSection() { return null; }
                 key={feature.id}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
 
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/FeaturesGuideSection.tsx
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
@@ -1282,7 +1138,7 @@ import {;
   Plus,;
   HelpCircle,;'
 } from 'lucide-react';
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 export function FeaturesGuideSection() { return null; }
 import { GradientHeading } from "./GradientHeading";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
@@ -1290,17 +1146,8 @@ import { Button } from "./ui/button";'
 import { fireEvent } from '@/lib/analytics';'
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';'
 import { Zap } from 'lucide-react';'
-=======
-export function FeaturesGuideSection() {;,
-  const features = [;
-    {import Link from "next/link";
-import { GradientHeading } from "./GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "./ui/button";
-import { fireEvent } from '@/lib/analytics';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 import { Zap } from 'lucide-react';
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 export function FeaturesGuideSection() {;
@@ -1325,215 +1172,108 @@ export function FeaturesGuideSection() {;
       title: 'Talent Directory',,
   description:;
         'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.',;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-export function FeaturesGuideSection() { return null; }
-    },;
-    {;'
-      id: 'talent-directory',;'
-      title: 'Talent Directory',;
-      description:;'
-        'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-      icon: <Users className='h-10 w-10 text-zion-purple' />,;
+icon: <Users className='h-10 w-10 text-zion-purple' />,;
       instructions: [;'
         'Access the talent directory from the main navigation',;'
         'Use filters to narrow down by skills, experience, and pricing',;'
         'Save favorite profiles for future reference',;'
-=======
-      icon: <Users className='h-10 w-10 text-zion-purple' />,;,
-      instructions: [;
-        'Access the talent directory from the main navigation',;
-        'Use filters to narrow down by skills, experience, and pricing',;
-        'Save favorite profiles for future reference',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         'Contact talents directly or request quotes through their profiles',;
       ],;'
       link: '/talents',;'
       buttonText: 'Explore Talents',;
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: 'services',;
       title: 'Services Marketplace',,
   description:;
         'Discover professional services for your AI and tech needs, from development to consulting.',;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-    {;'
-      id: 'services',;'
-      title: 'Services Marketplace',;
-      description:;'
-        'Discover professional services for your AI and tech needs, from development to consulting.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-      icon: <Zap className='h-10 w-10 text-zion-cyan' />,;
+icon: <Zap className='h-10 w-10 text-zion-cyan' />,;
       instructions: [;'
         'Browse service categories on the marketplace',;'
         'Compare service offerings and pricing options',;'
         'Request customized quotes for specific requirements',;'
-=======
-      icon: <Zap className='h-10 w-10 text-zion-cyan' />,;,
-      instructions: [;
-        'Browse service categories on the marketplace',;
-        'Compare service offerings and pricing options',;
-        'Request customized quotes for specific requirements',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         'Book and manage services through your dashboard',;
       ],;'
       link: '/services',;'
       buttonText: 'View Services',;
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: 'equipment',;
       title: 'Equipment Catalog',,
   description:;
         'Rent or buy specialized hardware and tech equipment for AI development and research.',;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-    {;'
-      id: 'equipment',;'
-      title: 'Equipment Catalog',;
-      description:;'
-        'Rent or buy specialized hardware and tech equipment for AI development and research.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-      icon: <Settings className='h-10 w-10 text-zion-purple' />,;
+icon: <Settings className='h-10 w-10 text-zion-purple' />,;
       instructions: [;'
         'Search the equipment catalog by category or specifications',;'
         'Check availability and rental/purchase options',;'
         'Request quotes for bulk orders or specialized equipment',;'
-=======
-      icon: <Settings className='h-10 w-10 text-zion-purple' />,;,
-      instructions: [;
-        'Search the equipment catalog by category or specifications',;
-        'Check availability and rental/purchase options',;
-        'Request quotes for bulk orders or specialized equipment',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         'Schedule delivery or pickup through the platform',;
       ],;'
       link: '/equipment',;'
       buttonText: 'Browse Equipment',;
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: 'analytics',;
       title: 'Marketplace Analytics',,
   description:;
         'Gain insights into industry trends, pricing benchmarks, and marketplace activity.',;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-    {;'
-      id: 'analytics',;'
-      title: 'Marketplace Analytics',;
-      description:;'
-        'Gain insights into industry trends, pricing benchmarks, and marketplace activity.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-      icon: <BarChart3 className='h-10 w-10 text-zion-cyan' />,;
+icon: <BarChart3 className='h-10 w-10 text-zion-cyan' />,;
       instructions: [;'
         'Access analytics from your user dashboard',;'
         'View interactive charts on market trends and rates',;'
         'Export reports for your business planning',;'
-=======
-      icon: <BarChart3 className='h-10 w-10 text-zion-cyan' />,;,
-      instructions: [;
-        'Access analytics from your user dashboard',;
-        'View interactive charts on market trends and rates',;
-        'Export reports for your business planning',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         'Set up alerts for changes in your areas of interest',;
       ],;'
       link: '/analytics',;'
       buttonText: 'View Analytics',;
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: 'ai-assistant',;
       title: 'Zion AI Assistant',,
   description:;
         'Get real-time help, recommendations, and marketplace guidance from our AI assistant.',;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-    {;'
-      id: 'ai-assistant',;'
-      title: 'Zion AI Assistant',;
-      description:;'
-        'Get real-time help, recommendations, and marketplace guidance from our AI assistant.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-      icon: <MessageSquare className='h-10 w-10 text-zion-purple' />,;
+icon: <MessageSquare className='h-10 w-10 text-zion-purple' />,;
       instructions: [;'
         'Click on the chat icon in the bottom right corner',;'
         'Ask questions about available services or talents',;'
         'Get recommendations based on your project needs',;'
-=======
-      icon: <MessageSquare className='h-10 w-10 text-zion-purple' />,;,
-      instructions: [;
-        'Click on the chat icon in the bottom right corner',;
-        'Ask questions about available services or talents',;
-        'Get recommendations based on your project needs',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         'Receive step-by-step guidance for using platform features',;
       ],;'
       link: '#',;'
       buttonText: 'Chat with Assistant',;'
       action: 'openChat',;
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: 'publishing',;
       title: 'List Your Services',,
   description:;
         'Showcase your AI and tech expertise by creating your own listings on the marketplace.',;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-    {;'
-      id: 'publishing',;'
-      title: 'List Your Services',;
-      description:;'
-        'Showcase your AI and tech expertise by creating your own listings on the marketplace.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-      icon: <Plus className='h-10 w-10 text-zion-cyan' />,;
+icon: <Plus className='h-10 w-10 text-zion-cyan' />,;
       instructions: [;'
         'Create or log in to your account',;'"
         "Navigate to 'Create Listing' in your dashboard",;'
         'Choose between talent profile, service, or equipment listing',;'
-=======
-      icon: <Plus className='h-10 w-10 text-zion-cyan' />,;,
-      instructions: [;
-        'Create or log in to your account',;
-        "Navigate to 'Create Listing' in your dashboard",;
-        'Choose between talent profile, service, or equipment listing',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         'Complete the guided form and publish your listing',;
       ],;'
       link: '/create-profile',;'
       buttonText: 'Create Listing',;
     },;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {;
       id: 'help-center',;
       title: 'Help & Resources',,
   description:;
         'Access guides, tutorials, and support resources to maximize your marketplace experience.',;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-    {;'
-      id: 'help-center',;'
-      title: 'Help & Resources',;
-      description:;'
-        'Access guides, tutorials, and support resources to maximize your marketplace experience.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-      icon: <HelpCircle className='h-10 w-10 text-zion-purple' />,;
+icon: <HelpCircle className='h-10 w-10 text-zion-purple' />,;
       instructions: [;'
         'Visit our comprehensive knowledge base',;'
         'Watch video tutorials on specific features',;'
         'Join community forums to connect with other users',;'
-=======
-      icon: <HelpCircle className='h-10 w-10 text-zion-purple' />,;,
-      instructions: [;
-        'Visit our comprehensive knowledge base',;
-        'Watch video tutorials on specific features',;
-        'Join community forums to connect with other users',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         'Contact our support team for personalized assistance',;
       ],;'
       link: '/help',;'
@@ -1541,17 +1281,12 @@ export function FeaturesGuideSection() { return null; }
     },;
   ];
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className='py-20 bg-zion-blue-dark'>;
       <div className='container mx-auto px-4'>;
-=======
-  return ('
-    <section className='py-20 bg-zion-blue-dark'>;'
-      <div className='container mx-auto px-4'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         <div className='text-center mb-12'>;
           <GradientHeading>Your Complete Guide to Zion</GradientHeading>;'
           <p className='text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto'>;
@@ -1559,208 +1294,97 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             navigate the world of AI and tech services;
           </p>;
         </div>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 '
         <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>;'
-=======
-        <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>;
             {features && features.slice(0, 4).map(feature => (;
               <TabsTrigger;
                 key={feature && feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                 value={feature && feature.id}'"
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'>                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
       instructions: [;"
         "Navigate to the AI Matcher page from the homepage or marketplace";"
         "Fill in your project requirements and specifications";"
         "Review the AI-recommended matches tailored to your needs";"
-=======
-                value={feature && feature.id}
-                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'>                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";,
-      instructions: [;
-        "Navigate to the AI Matcher page from the homepage or marketplace";
-        "Fill in your project requirements and specifications";
-        "Review the AI-recommended matches tailored to your needs";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         "Connect with matched talents or services directly";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
       link: "/match",;
       buttonText: "Try AI Matcher"
 };
     {;
       id: "talent-directory",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Talent Directory",,
+title: "Talent Directory",,
   description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
-=======
-      ];"
-      link: "/match",;"
-      buttonText: "Try AI Matcher";
-    };
-    {;"
-      id: "talent-directory",;"
-      title: "Talent Directory",;"
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <Users className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
         "Access the talent directory from the main navigation";"
         "Use filters to narrow down by skills, experience, and pricing";"
         "Save favorite profiles for future reference";"
-=======
-      title: "Talent Directory",;
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
-      icon: <Users className="h-10 w-10 text-zion-purple" />,;,
-      instructions: [;
-        "Access the talent directory from the main navigation";
-        "Use filters to narrow down by skills, experience, and pricing";
-        "Save favorite profiles for future reference";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         "Contact talents directly or request quotes through their profiles";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
       link: "/talents",;
       buttonText: "Explore Talents"
 };
     {;
       id: "services",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Services Marketplace",,
+title: "Services Marketplace",,
   description: "Discover professional services for your AI and tech needs, from development to consulting.";
-=======
-      ];"
-      link: "/talents",;"
-      buttonText: "Explore Talents";
-    };
-    {;"
-      id: "services",;"
-      title: "Services Marketplace",;"
-      description: "Discover professional services for your AI and tech needs, from development to consulting.";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;"
         "Browse service categories on the marketplace";"
         "Compare service offerings and pricing options";"
         "Request customized quotes for specific requirements";"
-=======
-      title: "Services Marketplace",;
-      description: "Discover professional services for your AI and tech needs, from development to consulting.";
-      icon: <Zap className="h-10 w-10 text-zion-cyan" />,;,
-      instructions: [;
-        "Browse service categories on the marketplace";
-        "Compare service offerings and pricing options";
-        "Request customized quotes for specific requirements";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         "Book and manage services through your dashboard";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
       link: "/services",;
       buttonText: "View Services"
 };
     {;
       id: "equipment",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Equipment Catalog",,
+title: "Equipment Catalog",,
   description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
-=======
-      ];"
-      link: "/services",;"
-      buttonText: "View Services";
-    };
-    {;"
-      id: "equipment",;"
-      title: "Equipment Catalog",;"
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <Settings className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
         "Search the equipment catalog by category or specifications";"
         "Check availability and rental/purchase options";"
         "Request quotes for bulk orders or specialized equipment";"
-=======
-      title: "Equipment Catalog",;
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
-      icon: <Settings className="h-10 w-10 text-zion-purple" />,;,
-      instructions: [;
-        "Search the equipment catalog by category or specifications";
-        "Check availability and rental/purchase options";
-        "Request quotes for bulk orders or specialized equipment";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         "Schedule delivery or pickup through the platform";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
       link: "/equipment",;
       buttonText: "Browse Equipment"
 };
     {;
       id: "analytics",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Marketplace Analytics",,
+title: "Marketplace Analytics",,
   description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
-=======
-      ];"
-      link: "/equipment",;"
-      buttonText: "Browse Equipment";
-    };
-    {;"
-      id: "analytics",;"
-      title: "Marketplace Analytics",;"
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;"
         "Access analytics from your user dashboard";"
         "View interactive charts on market trends and rates";"
         "Export reports for your business planning";"
-=======
-      title: "Marketplace Analytics",;
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
-      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;,
-      instructions: [;
-        "Access analytics from your user dashboard";
-        "View interactive charts on market trends and rates";
-        "Export reports for your business planning";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         "Set up alerts for changes in your areas of interest";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
       link: "/analytics",;
       buttonText: "View Analytics"
 };
     {;
       id: "ai-assistant",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "Zion AI Assistant",,
+title: "Zion AI Assistant",,
   description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
-=======
-      ];"
-      link: "/analytics",;"
-      buttonText: "View Analytics";
-    };
-    {;"
-      id: "ai-assistant",;"
-      title: "Zion AI Assistant",;"
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
         "Click on the chat icon in the bottom right corner";"
         "Ask questions about available services or talents";"
         "Get recommendations based on your project needs";"
-=======
-      title: "Zion AI Assistant",;
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
-      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;,
-      instructions: [;
-        "Click on the chat icon in the bottom right corner";
-        "Ask questions about available services or talents";
-        "Get recommendations based on your project needs";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         "Receive step-by-step guidance for using platform features";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
       link: "#",;
       buttonText: "Chat with Assistant",;
@@ -1768,36 +1392,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
     {;
       id: "publishing",;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      title: "List Your Services",,
+title: "List Your Services",,
   description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
-=======
-      ];"
-      link: "#",;"
-      buttonText: "Chat with Assistant",;"
-      action: "openChat";
-    };
-    {;"
-      id: "publishing",;"
-      title: "List Your Services",;"
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <Plus className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;"
         "Create or log in to your account";'"
         "Navigate to 'Create Listing' in your dashboard";"
         "Choose between talent profile, service, or equipment listing";"
-=======
-      title: "List Your Services",;
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
-      icon: <Plus className="h-10 w-10 text-zion-cyan" />,;,
-      instructions: [;
-        "Create or log in to your account";
-        "Navigate to 'Create Listing' in your dashboard";
-        "Choose between talent profile, service, or equipment listing";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
         "Complete the guided form and publish your listing";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
       link: "/create-profile",;
       buttonText: "Create Listing"
@@ -1811,21 +1414,6 @@ import Link from 'next/link';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import { Button } from './ui / button';
-=======
-      ];"
-      link: "/create-profile",;"
-      buttonText: "Create Listing";
-    };
-    {;"
-      id: "help-center",;"
-      title: "Help & Resources",;"
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";"
-      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;'
-import Link from 'next / link';'
-import { GradientHeading } from './GradientHeading';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
-import { Button } from './ui / button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
 import { fire_event } from '@/lib / analytics';
 import {}
   Users,
@@ -1841,7 +1429,7 @@ import {}
 export /**;
  * FeaturesGuideSection - Function description;
  */
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 function FeaturesGuideSection() {}
   const features = [;'
     {import Link from './next / link';'
@@ -1849,20 +1437,11 @@ import { GradientHeading  } from './GradientHeading';'
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';'
 import { Button  } from './ui / button';'
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';'
-=======
-function FeaturesGuideSection() {,
-  const features = [;
-    {import Link from './next / link';
-import { GradientHeading  } from './GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { Button  } from './ui / button';
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 import { Zap } from 'lucide-react';
 export /**;
  * FeaturesGuideSection - Function description;
  */
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 function FeaturesGuideSection() {}
   const features = [;
     {'
@@ -1985,130 +1564,6 @@ function FeaturesGuideSection() {}
       ],'
       link: '/help','
       button_text: 'View Resources',
-=======
-function FeaturesGuideSection() {
-  const features = [;,
-    {
-      id: 'ai - matcher','
-      title: 'AI Matcher','
-      description:;
-        'Find the perfect match for your project needs with our intelligent AI - powered matching system.','
-      icon: <Sparkles className='h - 10 w - 10 text - zion - cyan' />,',
-      instructions: [;
-        'Navigate to the AI Matcher page from the homepage or marketplace','
-        'Fill in your project requirements and specifications','
-        'Review the AI - recommended matches tailored to your needs','
-        'Connect with matched talents or services directly','
-      ],
-      link: '/match','
-      button_text: 'Try AI Matcher','
-    },
-    {
-      id: 'talent - directory','
-      title: 'Talent Directory','
-      description:;
-        'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.','
-      icon: <Users className='h - 10 w - 10 text - zion - purple' />,',
-      instructions: [;
-        'Access the talent directory from the main navigation','
-        'Use filters to narrow down by skills, experience, and pricing','
-        'Save favorite profiles for future reference','
-        'Contact talents directly or request quotes through their profiles','
-      ],
-      link: '/talents','
-      button_text: 'Explore Talents','
-    },
-    {
-      id: 'services','
-      title: 'Services Marketplace','
-      description:;
-        'Discover professional services for your AI and tech needs, from development to consulting.','
-      icon: <Zap className='h - 10 w - 10 text - zion - cyan' />,',
-      instructions: [;
-        'Browse service categories on the marketplace','
-        'Compare service offerings and pricing options','
-        'Request customized quotes for specific requirements','
-        'Book and manage services through your dashboard','
-      ],
-      link: '/services','
-      button_text: 'View Services','
-    },
-    {
-      id: 'equipment','
-      title: 'Equipment Catalog','
-      description:;
-        'Rent or buy specialized hardware and tech equipment for AI development and research.','
-      icon: <Settings className='h - 10 w - 10 text - zion - purple' />,',
-      instructions: [;
-        'Search the equipment catalog by category or specifications','
-        'Check availability and rental / purchase options','
-        'Request quotes for bulk orders or specialized equipment','
-        'Schedule delivery or pickup through the platform','
-      ],
-      link: '/equipment','
-      button_text: 'Browse Equipment','
-    },
-    {
-      id: 'analytics','
-      title: 'Marketplace Analytics','
-      description:;
-        'Gain insights into industry trends, pricing benchmarks, and marketplace activity.','
-      icon: <BarChart3 className='h - 10 w - 10 text - zion - cyan' />,',
-      instructions: [;
-        'Access analytics from your user dashboard','
-        'View interactive charts on market trends and rates','
-        'Export reports for your business planning','
-        'Set up alerts for changes in your areas of interest','
-      ],
-      link: '/analytics','
-      button_text: 'View Analytics','
-    },
-    {
-      id: 'ai - assistant','
-      title: 'Zion AI Assistant','
-      description:;
-        'Get real - time help, recommendations, and marketplace guidance from our AI assistant.','
-      icon: <MessageSquare className='h - 10 w - 10 text - zion - purple' />,',
-      instructions: [;
-        'Click on the chat icon in the bottom right corner','
-        'Ask questions about available services or talents','
-        'Get recommendations based on your project needs','
-        'Receive step - by - step guidance for using platform features','
-      ],
-      link: '#','
-      button_text: 'Chat with Assistant','
-      action: 'open_chat','
-    },
-    {
-      id: 'publishing','
-      title: 'List Your Services','
-      description:;
-        'Showcase your AI and tech expertise by creating your own listings on the marketplace.','
-      icon: <Plus className='h - 10 w - 10 text - zion - cyan' />,',
-      instructions: [;
-        'Create or log in to your account','
-        "Navigate to 'Create Listing' in your dashboard","
-        'Choose between talent profile, service, or equipment listing','
-        'Complete the guided form and publish your listing','
-      ],
-      link: '/create - profile','
-      button_text: 'Create Listing','
-    },
-    {
-      id: 'help - center','
-      title: 'Help & Resources','
-      description:;
-        'Access guides, tutorials, and support resources to maximize your marketplace experience.','
-      icon: <HelpCircle className='h - 10 w - 10 text - zion - purple' />,',
-      instructions: [;
-        'Visit our comprehensive knowledge base','
-        'Watch video tutorials on specific features','
-        'Join community forums to connect with other users','
-        'Contact our support team for personalized assistance','
-      ],
-      link: '/help','
-      button_text: 'View Resources','
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
     },
   ];
   return ('
@@ -2126,292 +1581,138 @@ function FeaturesGuideSection() {
             {features.slice (0, 4).map (feature => (
               <TabsTrigger;
                 key={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
-=======
-                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace";
         "Fill in your project requirements and specifications";
         "Review the AI - recommended matches tailored to your needs";
-=======
-                value={feature.id}'"
-                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
-      instructions: [;"
-        "Navigate to the AI Matcher page from the homepage or marketplace";"
-        "Fill in your project requirements and specifications";"
-        "Review the AI - recommended matches tailored to your needs";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Connect with matched talents or services directly";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];"
-=======
-      ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       link: "/match","
       button_text: "Try AI Matcher";
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {
       id: "talent - directory","
       title: "Talent Directory","
       description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      icon: <Users className="h - 10 w - 10 text - zion-purple" />,
-=======
-      icon: <Users className="h - 10 w - 10 text - zion - purple" />,",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+icon: <Users className="h - 10 w - 10 text - zion-purple" />,
       instructions: [;
         "Access the talent directory from the main navigation";
         "Use filters to narrow down by skills, experience, and pricing";
         "Save favorite profiles for future reference";
-=======
-    {"
-      id: "talent - directory","
-      title: "Talent Directory","
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";"
-      icon: <Users className="h - 10 w - 10 text - zion - purple" />,
-      instructions: [;"
-        "Access the talent directory from the main navigation";"
-        "Use filters to narrow down by skills, experience, and pricing";"
-        "Save favorite profiles for future reference";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Contact talents directly or request quotes through their profiles";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];"
-=======
-      ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       link: "/talents","
       button_text: "Explore Talents";
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {
       id: "services","
       title: "Services Marketplace","
       description: "Discover professional services for your AI and tech needs, from development to consulting.";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      icon: <Zap className="h - 10 w - 10 text - zion-cyan" />,
-=======
-      icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+icon: <Zap className="h - 10 w - 10 text - zion-cyan" />,
       instructions: [;
         "Browse service categories on the marketplace";
         "Compare service offerings and pricing options";
         "Request customized quotes for specific requirements";
-=======
-    {"
-      id: "services","
-      title: "Services Marketplace","
-      description: "Discover professional services for your AI and tech needs, from development to consulting.";"
-      icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
-      instructions: [;"
-        "Browse service categories on the marketplace";"
-        "Compare service offerings and pricing options";"
-        "Request customized quotes for specific requirements";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Book and manage services through your dashboard";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];"
-=======
-      ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       link: "/services","
       button_text: "View Services";
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      id: "equipment",
+id: "equipment",
       title: "Equipment Catalog",
       description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
       icon: <Settings className="h - 10 w - 10 text - zion-purple" />,
-=======
-      id: "equipment","
-      title: "Equipment Catalog","
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research.","
-      icon: <Settings className="h - 10 w - 10 text - zion - purple" />,",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       instructions: [;
         "Search the equipment catalog by category or specifications";
         "Check availability and rental / purchase options";
         "Request quotes for bulk orders or specialized equipment";
-=======
-    {"
-      id: "equipment","
-      title: "Equipment Catalog","
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research.","
-      icon: <Settings className="h - 10 w - 10 text - zion - purple" />,
-      instructions: [;"
-        "Search the equipment catalog by category or specifications";"
-        "Check availability and rental / purchase options";"
-        "Request quotes for bulk orders or specialized equipment";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Schedule delivery or pickup through the platform";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];"
-=======
-      ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       link: "/equipment","
       button_text: "Browse Equipment";
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {
       id: "analytics","
       title: "Marketplace Analytics","
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      icon: <BarChart3 className="h - 10 w - 10 text - zion-cyan" />,
-=======
-      icon: <BarChart3 className="h - 10 w - 10 text - zion - cyan" />,",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+icon: <BarChart3 className="h - 10 w - 10 text - zion-cyan" />,
       instructions: [;
         "Access analytics from your user dashboard";
         "View interactive charts on market trends and rates";
         "Export reports for your business planning";
-=======
-    {"
-      id: "analytics","
-      title: "Marketplace Analytics","
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";"
-      icon: <BarChart3 className="h - 10 w - 10 text - zion - cyan" />,
-      instructions: [;"
-        "Access analytics from your user dashboard";"
-        "View interactive charts on market trends and rates";"
-        "Export reports for your business planning";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Set up alerts for changes in your areas of interest";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];"
-=======
-      ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       link: "/analytics","
       button_text: "View Analytics";
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {
       id: "ai - assistant","
       title: "Zion AI Assistant","
       description: "Get real - time help, recommendations, and marketplace guidance from our AI assistant.";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      icon: <MessageSquare className="h - 10 w - 10 text - zion-purple" />,
-=======
-      icon: <MessageSquare className="h - 10 w - 10 text - zion - purple" />,",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+icon: <MessageSquare className="h - 10 w - 10 text - zion-purple" />,
       instructions: [;
         "Click on the chat icon in the bottom right corner";
         "Ask questions about available services or talents";
         "Get recommendations based on your project needs";
-=======
-    {"
-      id: "ai - assistant","
-      title: "Zion AI Assistant","
-      description: "Get real - time help, recommendations, and marketplace guidance from our AI assistant.";"
-      icon: <MessageSquare className="h - 10 w - 10 text - zion - purple" />,
-      instructions: [;"
-        "Click on the chat icon in the bottom right corner";"
-        "Ask questions about available services or talents";"
-        "Get recommendations based on your project needs";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Receive step - by - step guidance for using platform features";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];"
-=======
-      ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       link: "#","
       button_text: "Chat with Assistant","
       action: "open_chat";
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      id: "publishing",
+id: "publishing",
       title: "List Your Services",
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
       icon: <Plus className="h - 10 w - 10 text - zion-cyan" />,
-=======
-      id: "publishing","
-      title: "List Your Services","
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.","
-      icon: <Plus className="h - 10 w - 10 text - zion - cyan" />,",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       instructions: [;
         "Create or log in to your account";
         "Navigate to 'Create Listing' in your dashboard";
         "Choose between talent profile, service, or equipment listing";
-=======
-    {"
-      id: "publishing","
-      title: "List Your Services","
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.","
-      icon: <Plus className="h - 10 w - 10 text - zion - cyan" />,
-      instructions: [;"
-        "Create or log in to your account";'"
-        "Navigate to 'Create Listing' in your dashboard";"
-        "Choose between talent profile, service, or equipment listing";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Complete the guided form and publish your listing";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];"
-=======
-      ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
       link: "/create - profile","
       button_text: "Create Listing";
     }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
     {
       id: "help - center","
       title: "Help & Resources","
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-      icon: <HelpCircle className="h - 10 w - 10 text - zion-purple" />,
-=======
-      icon: <HelpCircle className="h - 10 w - 10 text - zion - purple" />,",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+icon: <HelpCircle className="h - 10 w - 10 text - zion-purple" />,
       instructions: [;
         "Visit our comprehensive knowledge base";
         "Watch video tutorials on specific features";
         "Join community forums to connect with other users";
         "Contact our support team for personalized assistance";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
       ];
 
 <<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-
-=======
-    {"
-      id: "help - center","
-      title: "Help & Resources","
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";"
-      icon: <HelpCircle className="h - 10 w - 10 text - zion - purple" />,
-      instructions: [;"
-        "Visit our comprehensive knowledge base";"
-        "Watch video tutorials on specific features";"
-        "Join community forums to connect with other users";"
-        "Contact our support team for personalized assistance";
-      ];
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
 
-
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src/components/FeaturesGuideSection.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
@@ -2427,34 +1728,17 @@ function FeaturesGuideSection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ))}
           </TabsList>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 =======
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2470,38 +1754,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger;
                 key={feature.id}
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger;
                 key={feature.id} 
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-=======
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">"
-            {features.slice(4).map(feature => (
-              <TabsTrigger
-                key={feature.id}
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 =======
@@ -2516,35 +1781,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </TabsList>
 
-<<<<<<< HEAD
-          {features.map(feature => (
-=======
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+{features.map(feature => (
               >
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
           {features.map(feature => (
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD
-      link: "/help",
-=======
-      link: "/help","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
+link: "/help",
       button_text: "View Resources";
     }
   ];
@@ -2564,32 +1812,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger;
                 key={feature.id}
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
-=======
-"
-      link: "/help","
-      button_text: "View Resources";
-    }
-  ];
-  return ("
-    <section className="py - 20 bg - zion - blue - dark">;"
-      <div className="container mx - auto px - 4">;"
-        <div className="text - center mb - 12">;
-          <GradientHeading > Your Complete Guide to Zion</GradientHeading>;"
-          <p className="text - zion - slate - light text - xl mt - 4 max - w-3xl mx - auto">;
-            Discover all the powerful tools and features available to help you navigate;
-            the world of AI and tech services;
-          </p>;
-        </div>;"
-        <Tabs default_value="ai - matcher" className="w - full max - w-5xl mx - auto">;"
-          <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
-            {features.slice (0, 4).map (feature => (
-              <TabsTrigger;
-                key={feature.id}
-                value={feature.id}"
-                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
 =======
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";,
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
@@ -2601,32 +1825,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {features.slice (4).map (feature => (
               <TabsTrigger;
                 key={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
+className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
             {features.slice (4).map (feature => (
               <TabsTrigger;
                 key={feature.id}
                 value={feature.id}
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
-=======
-                value={feature.id}'"
-                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
-            {features.slice (4).map (feature => (
-              <TabsTrigger;
-                key={feature.id}
-                value={feature.id}"
-                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
-=======
-                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";,
-            {features.slice (4).map (feature => (
-              <TabsTrigger;
-                key={feature.id}
-                value={feature.id},
-                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
               >;
                 {feature.title}
               </TabsTrigger>))}
@@ -2643,16 +1849,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>;'
                   <p className='text - zion - slate - light mb - 6'>;
                     {feature.description}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">
@@ -2667,41 +1866,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>"
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-=======
-            <TabsContent key={feature.id} value={feature.id} className="mt-8">"
-              <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">"
-                <div className="md:w-1/3 flex flex-col items-center md:items-start">"
-                  <div className="bg-zion-blue-dark p-4 rounded-xl mb-4">"
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>"
-                  <p className="text-zion-slate-light mb-6">{feature.description}</p>"
-                  <Button
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"",
-                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                  <Button
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
                   <Button 
 =======
                   <Button "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 =======
@@ -2720,161 +1893,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                   <Button
                     className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src/components/FeaturesGuideSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
                     asChild
                   >
                     <Link href={feature.link} />
                       {feature.buttonText}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
-=======
-                    asChild;
-                  >
-                    <Link href={feature.link}>
-                      {feature.buttonText}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-                
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src_backup/components/FeaturesGuideSection.tsx
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
-=======
-                  <Button
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"                <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
                     {feature.instructions.map((instruction, idx) => (
                       <li key={idx} className="text-zion-slate-light">
-<<<<<<< HEAD
-                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>
-<<<<<<< HEAD
-                        {instruction}
+<span className="text-zion-cyan mr-2">{idx + 1}.</span>
+{instruction}
                       </li>;
-=======
-                      <ArrowRight className="ml-2 h-4 w-4" />"
-                    </Link>
-                  </Button>
-                </div>
-
-                    {feature.instructions.map((instruction, idx,) => (
-                      <li key={idx} className="text-zion-slate-light">"
-                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>"
-      link: "/help";
-      buttonText: "View Resources";
-    }
-  ];
-  return (;
-    <section className="py-20 bg-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-12">;
-          <GradientHeading>Your Complete Guide to Zion</GradientHeading>;
-          <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
-            Discover all the powerful tools and features available to help you navigate ;
-            Discover all the powerful tools and features available to help you navigate;
-            the world of AI and tech services;
-          </p>;
-        </div>;
-        <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">;
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">;
-            {features && features.slice(0, 4).map(feature => (;
-              <TabsTrigger
-                key={feature && feature.id}
-                value={feature && feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan">;,
-                {feature && feature.title}
-              </TabsTrigger>;
-            ))}
-          </TabsList>;
-          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>;
-            {features && features.slice(4).map(feature => (;
-              <TabsTrigger
-                key={feature && feature.id}
-                value={feature && feature.id}
-                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'>                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";,
-            {features && features.slice(4).map(feature => (;
-              <TabsTrigger
-                key={feature && feature.id}
-                value={feature && feature.id},
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan">;,
-                {feature && feature.title}
-              </TabsTrigger>;
-            ))}
-          </TabsList>;
-          {features && features.map(feature => (;
-            <TabsContent key={feature && feature.id} value={feature && feature.id} className='mt-8'>;
-              <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>;
-                <div className='md:w-1/3 flex flex-col items-center md:items-start'>;
-                  <div className='bg-zion-blue-dark p-4 rounded-xl mb-4'>;
-                    {feature && feature.icon}
-                  </div>;
-                  <h3 className='text-2xl font-bold text-white mb-3'>;
-                    {feature && feature.title}
-                  </h3>;
-                  <p className='text-zion-slate-light mb-6'>;
-                    {feature && feature.description}
-                  </p>;
-                  <Button
-                    className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'                    asChild>;
-                    <Link href={feature && feature.link} />;
-                      {feature && feature.buttonText}
-                      <ArrowRight className='ml-2 h-4 w-4' />                  <h3 className="text-2xl font-bold text-white mb-3">{feature && feature.title}</h3>;
-                  <p className="text-zion-slate-light mb-6">{feature && feature.description}</p>;
-                  <Button
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-                    <Link href={feature && feature.link} />;
-                      {feature && feature.buttonText}
-                      <ArrowRight className='ml-2 h-4 w-4' />;
-                    </Link>;
-                  </Button>;
-                </div>;
-                <div className='md:w-2/3 bg-zion-blue-dark p-6 rounded-lg'>;
-                  <h4 className='text-xl font-semibold text-white mb-4'>;
-                    How to Use;
-                  </h4>;
-                  <ol className='list-decimal list-inside space-y-3 pl-4'>;
-                    {feature && feature.instructions.map((instruction, idx) => (;
-                      <li key={idx} className='text-zion-slate-light'>;
-                        <span className='text-zion-cyan mr-2'>{idx + 1}.</span>                        {instruction}                ;
-                <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">;
-                  <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>;
-                  <ol className="list-decimal list-inside space-y-3 pl-4">;
-                    {feature && feature.instructions.map((instruction, idx,) => (;
-                      <li key={idx} className="text-zion-slate-light">;
-                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
-            {features.slice(0, 4).map(feature => (;
-              <TabsTrigger;
-                key={feature.id} ;
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
-              >;
-                {feature.title}
-              </TabsTrigger>;
-            ))}
-          </TabsList>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-            {features.slice(4).map(feature => (
-              <TabsTrigger 
-                key={feature.id} 
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>;
-            ))}
-          </TabsList>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 
           {features.map(feature => (
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
@@ -2918,8 +1958,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick = {() => fireEvent('explore_marketplace_click'),}'
               onClick = {() => fireEvent('explore_marketplace_click'),}
 
-
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                     ))}
                   </ol>;
                 </div>;
@@ -2928,18 +1967,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </Tabs>
 <<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
         <div className="mt-12 text-center">
-=======
-
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
 =======
@@ -3034,28 +2063,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>;
 
                     ))}
-<<<<<<< HEAD
-=======
-                  </ol>;
-                </div>;
-              </div>;
-            </TabsContent>;
-          ))}
 
-
-          <Button'
-            variant='outline''
-            className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
-            asChild>;
-            <Link'
-              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}"
-              href="/marketplace";'
-              onClick = {() => fireEvent('explore_marketplace_click'),}
-
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 <ArrowRight className='ml-2 h-4 w-4' />
                     </Link>
                   </Button>
@@ -3079,34 +2087,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </TabsContent>
           ))}
         </Tabs>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-        
-        <div className="mt-12 text-center">
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 
         <div className="mt-12 text-center">
 
+        <div className="mt-12 text-center">
 
 <div className='mt-12 text-center'>
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src/components/FeaturesGuideSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
           <Button
 =======
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>          <Button
@@ -3116,32 +2110,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         "
         <div className="mt-12 text-center">
 
-
           <Button"
             variant="outline""
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild;
           >
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
             <Link
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
               href="/marketplace"
 =======
             <Link;
@@ -3154,18 +2132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ArrowRight className="ml-2 h-4 w-4" />
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-              href='/marketplace'
-              onClick={() => fireEvent('explore_marketplace_click')}
-            >
-              Explore Full Marketplace
-              <ArrowRight className='ml-2 h-4 w-4' />
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3177,21 +2144,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </section>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
             >;
               Explore Full Marketplace;'"
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
@@ -3204,15 +2161,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   )
 };
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
   );
@@ -3221,32 +2171,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Button;'
                     className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple'                    as_child;
                   >;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                     <Link href={feature.link}>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-=======
-                    <Link href={feature.link} />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
-                      {feature.button_text}
+{feature.button_text}
                       <ArrowRight className='ml - 2 h - 4 w - 4' />                  <h3 className="text - 2xl font - bold text - white mb-3">{feature.title}</h3>;
                   <p className="text - zion - slate - light mb-6">{feature.description}</p>;
                   <Button;
                     className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
-=======
-                      {feature.button_text}'"
-                      <ArrowRight className='ml - 2 h - 4 w - 4' />                  <h3 className="text - 2xl font - bold text - white mb - 3">{feature.title}</h3>;"
-                  <p className="text - zion - slate - light mb - 6">{feature.description}</p>;
-                  <Button;"
-                    className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                   >;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                     <Link href={feature.link}>;
                       {feature.button_text}'
-=======
-                    <Link href={feature.link} />;
-                      {feature.button_text}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
                       <ArrowRight className='ml - 2 h - 4 w - 4' />;
                     </Link>;
                   </Button>;
@@ -3256,34 +2191,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     How to Use;
                   </h4>;'
                   <ol className='list - decimal list - inside space - y-3 pl - 4'>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
                     {feature.instructions.map ((instruction, idx) => (
                       <li key={idx} className='text - zion - slate - light'>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-                        <span className='text - zion - cyan mr - 2'>{idx + 1}.</span>                        {instruction}
+<span className='text - zion - cyan mr - 2'>{idx + 1}.</span>                        {instruction}
                 <div className="md:w - 2/3 bg - zion - blue - dark p - 6 rounded-lg">;
                   <h4 className="text - xl font - semibold text - white mb-4">How to Use</h4>;
                   <ol className="list - decimal list - inside space - y-3 pl-4">;
-=======
-                        <span className='text - zion - cyan mr - 2'>{idx + 1}.</span>                        {instruction}'
-                <div className="md:w - 2/3 bg - zion - blue - dark p - 6 rounded - lg">;
-                  <h4 className="text - xl font - semibold text - white mb - 4">How to Use</h4>;
-                  <ol className="list - decimal list - inside space - y-3 pl - 4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
                     {feature.instructions.map ((instruction, idx, ) => (
                       <li key={idx} className="text - zion - slate-light">;
                         <span className="text - zion - cyan mr-2">{idx + 1}.</span>;
-=======
-                    {feature.instructions.map ((instruction, idx) => ('
-                      <li key={idx} className='text - zion - slate - light'>;'
-                        <span className='text - zion - cyan mr - 2'>{idx + 1}.</span>                        {instruction}"
-                <div className="md:w - 2/3 bg - zion - blue - dark p - 6 rounded - lg">;"
-                  <h4 className="text - xl font - semibold text - white mb - 4">How to Use</h4>;"
-                  <ol className="list - decimal list - inside space - y-3 pl - 4">;
-                    {feature.instructions.map ((instruction, idx, ) => ("
-                      <li key={idx} className="text - zion - slate - light">;"
-                        <span className="text - zion - cyan mr - 2">{idx + 1}.</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                       </li>))}
                   </ol>;
                 </div>;
@@ -3291,7 +2208,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </TabsContent>))}
         </Tabs>;'
         <div className='mt - 12 text - center'>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
           <Button;'
             variant='outline';'
             className='border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10';
@@ -3301,36 +2218,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/marketplace'              on_click={() => fire_event ('explore_marketplace_click')}"
               href="/marketplace";'
               on_click = {() => fire_event ('explore_marketplace_click'), }
-=======
-          <Button;
-            variant='outline';
-            className='border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10';',
-            as_child;
-          >;
-            <Link ;
-              href='/marketplace'              on_click={() = /> fire_event ('explore_marketplace_click')}'
-              href="/marketplace";
-              on_click = {() => fire_event ('explore_marketplace_click'), }'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
             >;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
               Explore Full Marketplace;
               <ArrowRight className='ml - 2 h - 4 w - 4' />            </Link>              <ArrowRight className="ml - 2 h - 4 w-4" />;
-=======
-              Explore Full Marketplace;'"
-              <ArrowRight className='ml - 2 h - 4 w - 4' />            </Link>              <ArrowRight className="ml - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
             </Link>;
           </Button>;
         </div>;
       </div>;
     </section>);
 }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
   ),;}
  import { ;
   {;
@@ -3359,7 +2258,7 @@ const features = [ {;
         </div>
       </div>
     </section>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
   )
 };
   )
@@ -3372,13 +2271,8 @@ const features = [ {;
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   )
 }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
@@ -3390,16 +2284,10 @@ const features = [ {;
 }
 }
   )
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src_backup/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 }
   )
 }
@@ -3412,16 +2300,9 @@ const features = [ {;
 }
   );
 }
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
+:src/components/FeaturesGuideSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-=======
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
 =======
       id: 'talent-directory',
       title: 'Talent Directory',
@@ -3502,9 +2383,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       icon: <HelpCircle className='h-10 w-10 text-zion-purple' />
 
-
-
-
       id: "ai-matcher",""
       title: "AI Matcher",""
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",""
@@ -3580,8 +2458,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">"
 
-
-
     <section className="py - 20 bg - zion - blue - dark">;"
       <div className="container mx - auto px - 4">;"
         <div className="text - center mb - 12">;"
@@ -3597,8 +2473,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
           ;"
           <TabsList className='grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1'>;
-
-
 
             <TabsContent key={feature.id} value={feature.id} className='mt - 8'>;
 
@@ -3643,8 +2517,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ;
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>;
 
-
-
             <TabsContent key={feature && feature.id} value={feature && feature.id} className='mt-8'>;
 
               <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>;
@@ -3686,8 +2558,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Link;
               href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
 
-
-
         <div className="mt-12 text-center">"
             variant="outline"""
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10""
@@ -3695,7 +2565,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Link;"
               href="/marketplace"""
               onClick={() => fireEvent('explore_marketplace_click')}
-
 
               <ArrowRight className='ml-2 h-4 w-4' />                          <ArrowRight className="ml-2 h-4 w-4" />;"
 

@@ -50,7 +50,7 @@ export default function FavoritesPage() { return null; }
             </li>;'
             <li aria-hidden='true'>/</li>;
             <li'
-              className='text-gray-900 dark:text-gray-100''
+              className='text-gray-900 dark:text-gray-100'';
               aria-current='page'>;
               Favorites;
             </li>          </ol>;
@@ -123,7 +123,7 @@ function FavoritesPage() {}
               </a>;
             </Link>;
           </div>;
-        </div>) : ('
+        </div>) : (';
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (
             <div;

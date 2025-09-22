@@ -70,7 +70,7 @@ interface UltraFuturisticBackground2028Props {;
     const canvas = canvasRef && canvasRef.current;
 export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
   const canvasRef = null;
-              ease: "easeInOut"
+              ease: "easeInOut";
   useEffect(() => {
     const canvas = canvasRef.current;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -263,8 +263,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0.2, 0.5, 0.2],
           }}
           transition={{
-            duration: 10
-            repeat: Infinity
+            duration: 10;
+            repeat: Infinity;
             ease: 'easeInOut',          }}
           animate={{}
             rotate: [45, 405]
@@ -278,7 +278,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             scale: [1, 1 && 1.15, 1],
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
           transition={{'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
             duration: 10,
             repeat: Infinity,
 ease: 'easeInOut',
@@ -314,7 +314,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 6;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           animate={{}
             coordinate_y: [0, -20, 0];
@@ -325,11 +325,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
           transition={{}
             duration: 7;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           transition={{}
             duration: 5;
-            repeat: Infinity'"
+            repeat: Infinity'";
             ease: 'easeInOut',          }}          className="absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full"
           animate={{}
             y: [0, -20, 0]
@@ -337,8 +337,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 6;
-            repeat: Infinity'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            repeat: Infinity'";
+            ease: 'easeInOut',            ease: "easeInOut";
           animate={{}
             y: [0, 25, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
@@ -377,7 +377,7 @@ ease: 'easeInOut',
 
             duration: 5,
             repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
         />
         <motion.div
 className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full'
@@ -460,9 +460,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 6;
-            repeat: Infinity'
-            ease: 'linear'"
-            delay: 2,            ease: "linear"
+            repeat: Infinity';
+            ease: 'linear'";
+            delay: 2,            ease: "linear";
             delay: 2;
         />;
         <motion.div;"
@@ -479,11 +479,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0, 1, 0]
           transition={{}
             duration: 8;
-            repeat: Infinity'
-            ease: 'linear'"
+            repeat: Infinity';
+            ease: 'linear'";
             delay: 4,            ease: "linear"
-
-            delay: 4
+;
+            delay: 4;
 <div
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 3 }}
@@ -573,13 +573,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{}
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
-              delay: Math.random() * 3'"
+              delay: Math.random() * 3'";
               ease: 'easeInOut',            }}              ease: "easeInOut"
-
+;
             }}
           />;
 '"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
           />;
             transition={{}
@@ -609,7 +609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>"
       {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>
               delay: Math.random() * 3,"
-              ease: "easeInOut"`
+              ease: "easeInOut"`;
               left: `${Math.random () * 100}%`,`
               top: `${Math.random () * 100}%`;
             }}

@@ -1,46 +1,18 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-
-import {NotificationType} from './types';
-=======
-
-
-
-import {NotificationType} from './types';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {createNotification} from './createNotification';
-
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-
-<<<<<<< HEAD
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 /**
@@ -51,10 +23,6 @@ export async function createTestNotification(userId: string) {}
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
 
   const titles = {'
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
@@ -63,31 +31,12 @@ export async function createTestNotification(userId: string) {}
   const messages = {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-}
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
-
-  const titles = {
-    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update
-  const messages = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!
   };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -105,7 +54,6 @@ import {NotificationType} from './types';'
 import {create_notification} from './create_notification';
 /**;
 */;
-<<<<<<< HEAD
 export async /**;
  * createTestNotification - Function description;
  */
@@ -121,14 +69,7 @@ function createTestNotification() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -157,8 +98,6 @@ pr-12325
     'onboarding': { url: '/profile', text: 'Complete Profile' }
 =======
 
-
-
   const actions = {'
     'message': { url: '/messages', text: 'View Messages' }'
     'quote_request': { url: '/quotes', text: 'View Quote' }'
@@ -168,8 +107,6 @@ pr-12325
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'system': { url: '/dashboard', text: 'Learn More' }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,28 +114,6 @@ pr-12325
 <<<<<<< HEAD
     actionText: actions[randomType].text
   })
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
-  return createNotification({
-    userId;
-    title: titles[randomType];
-    message: messages[randomType];
-    type: randomType;
-    sendEmail: true;
-    actionUrl: actions[randomType].url
-
-    actionText: actions[randomType].text
-  })
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { NotificationType } from './types',;
 =======
@@ -208,7 +123,6 @@ import { NotificationType } from './types',;
   }import { NotificationType } from './types',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '
 import { NotificationType } from './types',;'
@@ -228,51 +142,22 @@ return createNotification({
   })
 }
 import { NotificationType } from './types',;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  }import { NotificationType } from './types',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { createNotification } from './createNotification',;
 /**;
  * Demo function to create test notifications for the current user;
  */;
-<<<<<<< HEAD
 export async function createTestNotification() { return null; }
-=======
-
-import { NotificationType } from './types',;
-import { createNotification } from './createNotification',;
-/**;
-pr-12325
-export async function createTestNotification(userId: string) {;
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],;
-  const randomType = types[Math.floor(Math.random() * types.length)],;
-  const titles = {;
-    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },;
   const messages = {;'
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   },;
-<<<<<<< HEAD
-  const actions = {;'
+const actions = {;'
     'message': { url: '/messages', text: 'View Messages' },;'
     'quote_request': { url: '/quotes', text: 'View Quote' },;'
     'booking_confirmation': { url: '/bookings', text: 'View Booking' },;'
     'hire_request': { url: '/dashboard', text: 'View Request' },;'
     'onboarding': { url: '/profile', text: 'Complete Profile' },;'
-=======
-  },;
-  const messages = {;
-pr-12325
-  const actions = {;
-    'message': { url: '/messages', text: 'View Messages' },;
-    'quote_request': { url: '/quotes', text: 'View Quote' },;
-    'booking_confirmation': { url: '/bookings', text: 'View Booking' },;
-    'hire_request': { url: '/dashboard', text: 'View Request' },;
-    'onboarding': { url: '/profile', text: 'Complete Profile' },;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     'system': { url: '/dashboard', text: 'Learn More' }
  * createTestNotification - Function description;
  */
@@ -337,25 +222,8 @@ pr-12325
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -363,15 +231,12 @@ pr-12325
 =======
 =======
 
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 =======
 }
 ;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
     sendEmail: true;,
   actionUrl: actions[randomType].url;
@@ -388,19 +253,8 @@ pr-12325
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  return create_notification ({
-=======
-
-;
-  return create_notification ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     user_id;
     title: titles[random_type];
     message: messages[random_type];
@@ -409,65 +263,8 @@ pr-12325
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-}}
-=======
-}
-}
-
-import { NotificationType } from './types',;
-import { createNotification } from './createNotification',;
 }}
 ;
-    sendEmail: true;,
-  actionUrl: actions[randomType].url;
-    actionText: actions[randomType].text;)
-  });
-
-
-
-
-
-  return create_notification ({
-    user_id;
-
-    title: titles[random_type];,
-  message: messages[random_type];
-    type: random_type;,
-  send_email: true;
-    action_url: actions[random_type].url,
-    action_text: actions[random_type].text;)
-
-/**;
-export async function createTestNotification(userId:string) {;
-  const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;
-    'message':'New Message Receivedquote_request':'Quote Request Submittedbooking_confirmation':'Booking Confirmedhire_request':'New Hire Requestonboarding':'Complete Your Profilesystem':'System Update';
-    'message':'You have received a new message from a potential client.quote_request':'A client has submitted a quote request for your services.booking_confirmation':'Your booking has been confirmed and scheduled.hire_request':'A client wants to hire you for a project. Check your dashboard for details.onboarding':'Complete your profile to get more visibility and job matches.system':'Our platform has been updated with new features. Check them out!';
-    'message':{ url:'/messages', text:'View Messages' },;
-    'quote_request':{ url:'/quotes', text:'View Quote' },;
-    'booking_confirmation':{ url:'/bookings', text:'View Booking' },;
-    'hire_request':{ url:'/dashboard', text:'View Request' },;
-    'onboarding':{ url:'/profile', text:'Complete Profile' },;
-    'system':{ url:'/dashboard', text:'Learn More' }
-    title:titles[randomType],;
-    message:messages[randomType],;
-    type:randomType,;
-    sendEmail:true,;
-    actionUrl:actions[randomType].url,;
-    actionText:actions[randomType].text;)
-  }),;
-pr-12325
-} 
-}
-}
-;
-}
-;
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-;
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /**;
@@ -510,17 +307,10 @@ export async function createTestNotification(userId:string) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 }
 ;

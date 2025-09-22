@@ -38,13 +38,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     s => !s.completed && s.ctaHref && s.ctaLabel;
   );
   return ('
-    <div className='rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm'>'
+    <div className='rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm'>';
       <div className='flex items-center justify-between'>'
         <h3 className='text-lg font-semibold'>{title}</h3>'
         <div className='text-sm opacity-75'>{percentage}% complete</div>
       </div>
       {/* Progress Bar */}'
-      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>;
         <div
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
@@ -60,13 +60,13 @@ function computePercentage(): any (steps: OnboardingStep[]): number {;
   if (!steps || steps && steps.length === 0) return 0;
   const completedCount = steps && steps.filter(s => s && s.completed).length;
   return Math && Math.round((completedCount / steps && steps.length) * 100);  ctaLabel?: string;
-  ctaHref?: string
+  ctaHref?: string;
 };
 
 export type OnboardingProgressCardProps = {;
   title: string,;
   steps: OnboardingStep[],;
-  highlightColorClass?: string
+  highlightColorClass?: string;
 };
 
 function computePercentage(): any (steps: OnboardingStep[]): number {;
@@ -111,7 +111,7 @@ export type OnboardingProgressCardProps = {}
 export type OnboardingProgressCardProps = {}
   title: string,
   steps: OnboardingStep[],
-  highlightColorClass?: string
+  highlightColorClass?: string;
 };
 
 function computePercentage(steps: OnboardingStep[]): number {}
@@ -151,19 +151,19 @@ function computePercentage(steps: OnboardingStep[]): number {}
           </Link>;
 
         <div className="text-sm opacity-75">{percentage}% complete</div>
-      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden' />
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden' />;
         <div;
 className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
 }
  ;
   return (
-    <div className=\"rounded-xl border border-gray-200 dark: border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm\" />"
+    <div className=\"rounded-xl border border-gray-200 dark: border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm\" />";
       <div className=\"flex items-center justify-between\" />"
         <h3 className=\"text-lg font-semibold\" />{title}</h3>"
         <div className=\"text-sm opacity-75\" />{percentage}% complete</div>
       </div>
       {/* Progress Bar */}"
-      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
+      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">;
         <div;
           className={}`
             `h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`
@@ -173,7 +173,7 @@ className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
       </div>
 
       {allDone ? (
-<div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
+<div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>;
           <PartyPopper size={18} />
           <span className='text-sm'>All steps completed — great job!</span>
         </div>
@@ -186,10 +186,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <li key={step.id} className='flex items-center justify-between'>
             <div className='flex items-center gap-2'>
                 <CheckCircle2'
-                  className='text-green-600 dark:text-green-400'
+                  className='text-green-600 dark:text-green-400';
                   size={18}
                 />
-              ) : ('
+              ) : (';
                 <Circle className='text-gray-400' size={18} />
               )}'
               <span className={step.completed ? 'line-through opacity-70' : ''}>
@@ -200,8 +200,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>'"
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-
-                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>
+;
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {step.ctaLabel}
                 </a>
@@ -210,7 +210,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link href={step.ctaHref} />
 
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark: border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition' />
-
+;
                   {step.ctaLabe}
 }
                 </a>;
@@ -223,10 +223,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {!allDone && firstIncomplete ? ("
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>"
-            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
+            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">;
 <div className='mt-5'>
           <Link href={firstIncomplete.ctaHref!}>
-            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               {firstIncomplete.ctaLabel}
             </a>
@@ -246,7 +246,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mt-5' />}
           <Link href={firstIncomplete.ctaHref!} />
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark: text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition' />
-
+;
               {firstIncomplete.ctaLabe}
 }
             </a>;

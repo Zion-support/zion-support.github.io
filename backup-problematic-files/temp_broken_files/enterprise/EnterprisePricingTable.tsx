@@ -99,4 +99,3 @@ export function EnterprisePricingTable() {;
             </TableBody>;
           </Table>;
         </div>;
-

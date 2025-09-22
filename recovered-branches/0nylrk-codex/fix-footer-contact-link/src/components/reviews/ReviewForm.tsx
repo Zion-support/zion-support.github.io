@@ -1,48 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {useForm} from "react-hook-form";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
-import {Switch} from "@/components/ui/switch";
-import {Review} from "@/types/reviews";
-interface ReviewFormValues {;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface ReviewFormValues {
-<<<<<<< HEAD
-=======
-import {useState} from "react";"
-import {Star} from "lucide-react";"
-import {useForm} from "react-hook-form";"
-import {Button} from "@/components/ui/button";"
-import {Textarea} from "@/components/ui/textarea";"
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";"
-import {Switch} from "@/components/ui/switch";"
-import {Review} from "@/types/reviews";
 
-import { useState } from './react';'
-import { Star } from './lucide-react';'
-import { use_form } from './react - hook - form';'
-import { Button } from '@/components / ui / button';'
-import { Textarea } from '@/components / ui / textarea';'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';'
-import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';'
-import { Switch } from '@/components / ui / switch';'
-import { Review } from '@/types / reviews';
-interface ReviewFormValues {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   // TODO: Implement
 }
@@ -69,23 +28,10 @@ interface ReviewFormValues {
   would_work_again?: boolean;}
   is_anonymous?: boolean;}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
-=======
-"
-import { useState } from "react","
-import { Star } from "lucide-react","
-import { useForm } from "react-hook-form",";
-import { Button } from "@/components/ui/button";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Textarea } from "@/components/ui/textarea";
 import {};
   Form;
@@ -102,7 +48,6 @@ import {}
   FormItem,
   FormLabel,"
   FormMessage} from "@/components/ui/form",
-<<<<<<< HEAD
 import {
   RadioGroup;
   RadioGroupItem} from "@/components/ui/radio-group",
@@ -115,10 +60,6 @@ import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-import { Review } from "@/types/reviews",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -137,47 +78,21 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ReviewFormValues {
-=======
-import {};
-  RadioGroup;"
-  RadioGroupItem} from "@/components/ui/radio-group","
-import { Switch } from "@/components/ui/switch";"
-import { Review } from "@/types/reviews";"
-import { Switch } from "@/components/ui/switch","
-import { Review } from "@/types/reviews",
-
-interface ReviewFormValues {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-interface ReviewFormValues {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   rating?: number,
   review_text?: string,
   communication_rating?: number,
   quality_rating?: number,
   timeliness_rating?: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  would_work_again?: boolean,
+would_work_again?: boolean,
   is_anonymous?: boolean
 
 <<<<<<< HEAD
   defaultValues?: Review;
   isSubmitting: boolean;
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -189,53 +104,25 @@ interface ReviewFormValues {
   would_work_again?: boolean,
   is_anonymous?: boolean
 
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
   onSubmit: (data: any) => Promise<boolean>, ;
-<<<<<<< HEAD
-
-  defaultValues?: Review;
+defaultValues?: Review;
   isSubmitting: boolean;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  defaultValues?: Review;
-  isSubmitting: boolean;
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 export function ReviewForm(): any ({;
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectId;
   revieweeId;
   revieweeName;
   onSubmit;
   defaultValues;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 =======
 import { Review } from "@/types/reviews",import { useState } from "react",;
@@ -245,24 +132,13 @@ import { Review } from "@/types/reviews",import { useState } from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",;
-=======
-
-
-"
-import { useState } from "react",;"
-import { Star } from "lucide-react",;"
-import { useForm } from "react-hook-form",;"
-import { Button } from "@/components/ui/button",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Textarea } from "@/components/ui/textarea",;
 import {;
   Form,;
@@ -298,16 +174,11 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ReviewForm({
-=======
-export function ReviewForm({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   projectId,
   revieweeId,
   revieweeName,
@@ -316,14 +187,6 @@ export function ReviewForm({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   isSubmitting}: ReviewFormProps) {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -333,28 +196,15 @@ export function ReviewForm({}
   const [hoveredStar, setHoveredStar] = useState<number>(0),
 
   isSubmitting}: ReviewFormProps) {
-<<<<<<< HEAD
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const [hoveredStar, setHoveredStar] = useState<number>(0);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   isSubmitting}: ReviewFormProps) {}
   const [hoveredStar, setHoveredStar] = useState<number>(0),
 <<<<<<< HEAD
-  
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   isSubmitting}: ReviewFormProps) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [hoveredStar, setHoveredStar] = useState<number>(0);
@@ -362,16 +212,9 @@ const [hoveredStar, setHoveredStar] = useState<number>(0);
 
 =======
   const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  isSubmitting}: ReviewFormProps) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   isSubmitting}: ReviewFormProps) {
@@ -385,53 +228,14 @@ const [hoveredStar, setHoveredStar] = useState<number>(0);
       timeliness_rating: defaultValues.timeliness_rating
       would_work_again: defaultValues.would_work_again
       is_anonymous: defaultValues.is_anonymous} : {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      rating: 0
-      review_text: ""
-      communication_rating: undefined
-      quality_rating: undefined
-      timeliness_rating: undefined
-      would_work_again: undefined
-      is_anonymous: false}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-  isSubmitting}: ReviewFormProps) {}
-  const form = useForm<ReviewFormValues>({}
-    defaultValues: defaultValues ? {};
-      rating: defaultValues.rating;
-      review_text: defaultValues.review_text;
-      communication_rating: defaultValues.communication_rating;
-      quality_rating: defaultValues.quality_rating;
-      timeliness_rating: defaultValues.timeliness_rating;
-      would_work_again: defaultValues.would_work_again;
-      is_anonymous: defaultValues.is_anonymous} : {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   });
   const handleSubmit = async (values: ReviewFormValues) => {}
     const formattedData = {}
       ...values;
       project_id: projectId;
       reviewee_id: revieweeId}
-<<<<<<< HEAD
-=======
-    const success = await onSubmit(formattedData);
 
-
-  });
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -489,7 +293,6 @@ return (
   });
 
   const handleSubmit = async (values: ReviewFormValues) => {;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const formattedData = {;
       ...values,;
@@ -500,12 +303,6 @@ return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -513,28 +310,16 @@ return (
   const [hoveredStar, setHoveredStar] = useState<number>(0);
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const success = await onSubmit(formattedData);
     if (success) {
       form.reset()
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
+}
   const watchRating = form.watch("rating");
 
   return (
@@ -548,44 +333,20 @@ return (
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   const watchRating = form && form.watch("rating");
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   };
 "
   const watchRating = form && form.watch("rating");
 
-
-
   };
 "
   const watchRating = form && form.watch("rating");
-
-
 
   return (
-<<<<<<< HEAD
-=======
-    const success = await onSubmit(formattedData);
-    if (success) {;
-      form && form.reset();
-    }  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
     const success = await onSubmit(formattedData);
     if (success) {;
@@ -602,12 +363,9 @@ return (
 
   const watchRating = form && form.watch("rating");
 
-
-
   };
 
   const watchRating = form && form.watch("rating");
-
 
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -622,23 +380,10 @@ return (
           control={form && form.control}"
           name="rating""
           rules={{ required: "Rating is required" }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
-=======
-
-"
-import { useState } from "react",;"
-import { Star } from "lucide-react",;"
-import { useForm } from "react-hook-form",;"
-import { Button } from "@/components/ui/button",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Textarea } from "@/components/ui/textarea",;
 import {;
   Form,;
@@ -704,64 +449,9 @@ export function ReviewForm() { return null; }
           control={form.control}"
           name="rating";"
           rules={{ required:"Rating is required" }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      key={star}
+key={star}
                       type="button";
                       onClick={() => field.onChange(star)}
-=======
-
-          render={({ field }) => (;
-            <FormItem>;"
-              <FormLabel className="block text-center mb-2">;
-                How was your experience with {revieweeName}?;
-              </FormLabel>;
-              <FormControl>;"
-                <div className="flex justify-center gap-1">;
-                  {[1, 2, 3, 4, 5].map((star) => (;
-
-                    <button;
-                      key={star}"
-                      type="button";
-                      onClick={() => field.onChange(star)}
-
-                      onMouseEnter={() => setHoveredStar(star)}
-                      onMouseLeave={() => setHoveredStar(0)}"
-                      className="focus:outline-none transition-transform hover:scale-110";
-                    >;
-"
-                            ? "fill-yellow-400 text-yellow-400""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel className="block text-center mb-2">;
-                How was your experience with {revieweeName}?;
-              </FormLabel>;
-              <FormControl>;
-                <div className="flex justify-center gap-1">;
-                  {[1, 2, 3, 4, 5].map((star) => (;
-                    <button
-                      key={star}
-                      type="button"
-                      onClick={() => field && field.onChange(star)}
-                    <button;
-                      key={star}
-                      type="button";
-                      onClick={() => field.onChange(star)}
-                      onMouseEnter={() => setHoveredStar(star)}
-                      onMouseLeave={() => setHoveredStar(0)}
-                      className="focus:outline-none transition-transform hover:scale-110";
-                    >;
-                      <Star
-                        className={`h-10 w-10 ${
-
-                          star <= (hoveredStar || field && field.value || 0)
-
-                            ? "fill-yellow-400 text-yellow-400"
-                            : "text-gray-300"
-                            ? "fill-yellow-400 text-yellow-400"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             : "text-gray-300"
                       <Star;
                         className={`h-10 w-10 ${;
@@ -771,14 +461,7 @@ export function ReviewForm() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         } transition-colors`}
@@ -786,38 +469,19 @@ export function ReviewForm() { return null; }
                     </button>;
                   ))}
                 </div>;
-<<<<<<< HEAD
-              </FormControl>;"
-=======
-              </FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+</FormControl>;"
               <div className="text-center mt-1 h-5">;
                 <FormMessage />;
               </div>;
             </FormItem>;
           )}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       rating: 0,
-=======
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         />;
 
-
-
-
-<<<<<<< HEAD
-        {/* Review Text */}
+{/* Review Text */}
         <FormField;
           control={form && form.control}"
           name="review_text"
@@ -827,8 +491,6 @@ export function ReviewForm() { return null; }
               value: 20;
 "
               message: "Review must be at least 20 characters"}}}
-
-
 
           render={({ field }) => (;
             <FormItem>;
@@ -869,8 +531,7 @@ function ReviewForm() {}
       timeliness_rating: undefined,
       would_work_again: undefined,
       is_anonymous: false}
-<<<<<<< HEAD
-  }),;
+}),;
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
@@ -881,13 +542,13 @@ function ReviewForm() {}
       form.reset();
     }
   },
-  
+
   const watchRating = form.watch("rating"),
-  
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-        
+
   },;
   const watchRating = form.watch("rating"),;
   return (;
@@ -896,19 +557,10 @@ function ReviewForm() {}
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         />;
-
-
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        />;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         />;
 
@@ -988,42 +640,20 @@ if ( {) {}
   const watch_rating = form.watch ("rating");
 ;
   return (
-<<<<<<< HEAD
-    <Form {...form}>;
-<<<<<<< HEAD
-      <form on_submit={form.handle_submit (handle_submit)} className="space-y-6">;
-=======
-    <Form {...form}>;"
-      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<Form {...form}>;
+<form on_submit={form.handle_submit (handle_submit)} className="space-y-6">;
         {/* Main Rating */}
         <FormField;
           control={form.control}"
           name="rating";"
           rules={{ required: "Rating is required" }}
           render={({ field }) => (
-<<<<<<< HEAD
-            <FormItem>;
+<FormItem>;
               <FormLabel className="block text - center mb - 2">;
                 How was your experience with {reviewee_name}?;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-                <div className="flex justify - center gap-1">;
-=======
-            <FormItem>;"
-              <FormLabel className="block text - center mb - 2">;
-                How was your experience with {reviewee_name}?;
-              </FormLabel>;
-              <FormControl>;"
-                <div className="flex justify - center gap - 1">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                <div className="flex justify - center gap - 1">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<div className="flex justify - center gap-1">;
                   {[1, 2, 3, 4, 5].map ((star) => (
                     <button;
                       key={star}
@@ -1046,51 +676,20 @@ if ( {) {}
             <FormItem>;
               <FormLabel > Your Review</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-                <Textarea;
-                  placeholder="Share your experience and feedback...";
-<<<<<<< HEAD
-                  className="min - h-24 resize-none";
-=======
-                <Textarea;"
-                  placeholder="Share your experience and feedback...";"
-                  className="min - h-24 resize - none";
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  className="min - h-24 resize - none";
 <Textarea;
                   placeholder="Share your experience and feedback...";
-                  className="min-h-24 resize-none";
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  className="min - h-24 resize-none";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+className="min - h-24 resize-none";
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
 
-<<<<<<< HEAD
-        />;
-<<<<<<< HEAD
+/>;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-</FormItem>;
-          )}
-        />;
-        ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
@@ -1117,14 +716,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
-            
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1133,13 +725,7 @@ if ( {) {}
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Communication */}
@@ -1147,20 +733,11 @@ if ( {) {}
               control={form && form.control}
               name="communication_rating"
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
             {/* Communication */}
             <FormField;
               control={form && form.control}"
               name="communication_rating"
-
-
 
               render={({ field }) => (;"
                 <FormItem className="space-y-2">;
@@ -1168,13 +745,8 @@ if ( {) {}
                   <FormControl>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <RadioGroup
                       onValueChange={(value) => field && field.onChange(parseInt(value))}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1200,115 +772,14 @@ if ( {) {}
                           key={value}
                           className="flex items-center space-x-2">;
                           <FormControl>;
-<<<<<<< HEAD
-                            <RadioGroupItem value={value && value.toString()} />;                        </FormItem>;
+<RadioGroupItem value={value && value.toString()} />;                        </FormItem>;
                       ))}
-=======
-
-                    <RadioGroup;
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
-                      defaultValue={field && field.value?.toString()}"
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
-                          key={value}"
-                          className="flex items-center space-x-2">;
-                          <FormControl>;
-                            <RadioGroupItem value={value && value.toString()} />;
-<<<<<<< HEAD
-
-
-
-                          </FormControl>;"
-=======
-<RadioGroup;
-                      onValueChange={(value) => field.onChange(parseInt(value))}
-                      defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
-                          key={value}
-                          className="flex items-center space-x-2";
-                        >;
-                          <FormControl>;
-                            <RadioGroupItem value={value.toString()} />;
-                          </FormControl>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <FormLabel className="cursor-pointer font-normal">;
                             {value}
                           </FormLabel>;
 
-
                         </FormItem>;
                       ))}
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-</FormItem>;                      ))}
-                        </FormItem>;
-                      ))}
-                            <RadioGroupItem value={value && value.toString()} />;                        </FormItem>;
-                      ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    </RadioGroup>;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-
-<<<<<<< HEAD
-            />;
-=======
-                            <RadioGroupItem value={value && value.toString()} />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                          </FormControl>;
-                          <FormLabel className="cursor-pointer font-normal">;
-                            {value}
-                          </FormLabel>;
-=======
-            {/* Quality */}
-            <FormField;
-              control={form && form.control}"
-              name="quality_rating"
-
-
-
-              render={({ field }) => (;"
-                <FormItem className="space-y-2">;
-                  <FormLabel>Quality of Work</FormLabel>;
-                  <FormControl>;
-
-                    <RadioGroup;
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
-                      defaultValue={field && field.value?.toString()}"
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
-                          key={value}"
-                          className="flex items-center space-x-2">;
-                          <FormControl>;
-                            <RadioGroupItem value={value && value.toString()} />;
-
-
-
-                          </FormControl>;"
-                          <FormLabel className="cursor-pointer font-normal">;
-                            {value}
-                          </FormLabel>;
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                        </FormItem>;
-                      ))}
-                        </FormItem>;
-                      ))}
-<<<<<<< HEAD
-=======
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </RadioGroup>;
                   </FormControl>;
@@ -1316,108 +787,62 @@ if ( {) {}
                 </FormItem>;
               )}
 
-<<<<<<< HEAD
-            />;
-<<<<<<< HEAD
-=======
-            {/* Timeliness */}
-            <FormField;
-              control={form && form.control}"
-              name="timeliness_rating"
-
-
-
-              render={({ field }) => (;"
-                <FormItem className="space-y-2">;
-                  <FormLabel>Timeliness</FormLabel>;
-                  <FormControl>;
-
-                    <RadioGroup;
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
-                      defaultValue={field && field.value?.toString()}"
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
-                          key={value}"
-                          className="flex items-center space-x-2">;
-                          <FormControl>;
-                            <RadioGroupItem value={value && value.toString()} />;
-
-
-
-                          </FormControl>;"
-                          <FormLabel className="cursor-pointer font-normal">;
-                            {value}
-                          </FormLabel>;
-
-
-                        </FormItem>;
-                      ))}
-
-=======
-
-            {/* Quality */}
-            <FormField
-              control={form && form.control}
-              name="quality_rating"
 />;
-            ;
-            {/* Quality */}
-            <FormField;
-              control={form.control}
-              name="quality_rating";
-              render={({ field }) => (;
-                <FormItem className="space-y-2">;
-                  <FormLabel>Quality of Work</FormLabel>;
-                  <FormControl>;
-                    <RadioGroup
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
-                      defaultValue={field && field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem
-                          key={value}
-                          className="flex items-center space-x-2">;
-                          <FormControl>;
-                            <RadioGroupItem value={value && value.toString()} />;
-<RadioGroup;
-                      onValueChange={(value) => field.onChange(parseInt(value))}
-                      defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
-                          key={value}
-                          className="flex items-center space-x-2";
-                        >;
-                          <FormControl>;
-                            <RadioGroupItem value={value.toString()} />;
                           </FormControl>;
                           <FormLabel className="cursor-pointer font-normal">;
                             {value}
                           </FormLabel>;
+=======
+            {/* Quality */}
+            <FormField;
+              control={form && form.control}"
+              name="quality_rating"
+
+              render={({ field }) => (;"
+                <FormItem className="space-y-2">;
+                  <FormLabel>Quality of Work</FormLabel>;
+                  <FormControl>;
+
+                    <RadioGroup;
+                      onValueChange={(value) => field && field.onChange(parseInt(value))}
+                      defaultValue={field && field.value?.toString()}"
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem;
+                          key={value}"
+                          className="flex items-center space-x-2">;
+                          <FormControl>;
+                            <RadioGroupItem value={value && value.toString()} />;
+
+                          </FormControl>;"
+                          <FormLabel className="cursor-pointer font-normal">;
+                            {value}
+                          </FormLabel>;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </FormItem>;
-                      ))}                        </FormItem>;
                       ))}
-</FormItem>;                      ))}
                         </FormItem>;
                       ))}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
                     </RadioGroup>;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
 
-<<<<<<< HEAD
-            {/* Would Work Again */}
+/>;
+</RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+
+{/* Would Work Again */}
             <FormField;
               control={form && form.control}"
               name="would_work_again"
-
-
 
               render={({ field }) => (;
                 <FormItem>;"
@@ -1431,91 +856,11 @@ if ( {) {}
                           onCheckedChange={field && field.onChange}
                         />;"
                         <span className="text-sm text-muted-foreground">;"
-=======
-            />;
-
-            {/* Timeliness */}
-            <FormField
-              control={form && form.control}
-              name="timeliness_rating"
-/>;
-            ;
-            {/* Timeliness */}
-            <FormField;
-              control={form.control}
-              name="timeliness_rating";
-              render={({ field }) => (;
-                <FormItem className="space-y-2">;
-                  <FormLabel>Timeliness</FormLabel>;
-                  <FormControl>;
-                    <RadioGroup
-                      onValueChange={(value) => field && field.onChange(parseInt(value))}
-                      defaultValue={field && field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem
-                          key={value}
-                          className="flex items-center space-x-2">;
-                          <FormControl>;
-                            <RadioGroupItem value={value && value.toString()} />;
-<RadioGroup;
-                      onValueChange={(value) => field.onChange(parseInt(value))}
-                      defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
-                          key={value}
-                          className="flex items-center space-x-2";
-                        >;
-                          <FormControl>;
-                            <RadioGroupItem value={value.toString()} />;
-                          </FormControl>;
-                          <FormLabel className="cursor-pointer font-normal">;
-                            {value}
-                          </FormLabel>;
-                        </FormItem>;
-                      ))}
-</FormItem>;                      ))}
-                        </FormItem>;
-                      ))}
-                    </RadioGroup>;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-
-            />;
-
-            {/* Would Work Again */}
-            <FormField
-              control={form && form.control}
-              name="would_work_again"
-/>;
-            ;
-            {/* Would Work Again */}
-            <FormField;
-              control={form.control}
-              name="would_work_again";
-              render={({ field }) => (;
-                <FormItem>;
-                  <div className="flex items-center gap-2">;
-                    <FormLabel>Would you work with {revieweeName} again?</FormLabel>;
-                    <FormControl>;
-                      <div className="flex items-center space-x-2">;
-                        <Switch
-                          checked={field && field.value}
-                          onCheckedChange={field && field.onChange}
-                        />;
-                        <span className="text-sm text-muted-foreground">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           {field && field.value ? "Yes" : "No"}
             </FormItem>)}
         />;
         {/* Additional Rating Categories (only shown if main rating is provided) */}
-<<<<<<< HEAD
-        {watch_rating > 0 && ("
+{watch_rating > 0 && ("
           <div className="space - y-6 border - t pt - 6">;"
             <h3 className="font - medium text - sm">Additional Ratings (Optional)</h3>;
             {/* Communication */}
@@ -1523,44 +868,22 @@ if ( {) {}
               control={form.control}"
               name="communication_rating";
               render={({ field }) => ("
-=======
-        {watch_rating > 0 && (
-          <div className="space - y-6 border - t pt - 6">;
-            <h3 className="font - medium text - sm">Additional Ratings (Optional)</h3>;
-            {/* Communication */}
-            <FormField;
-              control={form.control}
-              name="communication_rating";
-              render={({ field }) => (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <FormItem className="space - y-2">;
                   <FormLabel > Communication</FormLabel>;
                   <FormControl>;
                     <RadioGroup;
                       onValueChange={(value) => field.on_change (parse_int (value))}
-<<<<<<< HEAD
-                      default_value={field.value?.to_string ()}"
-=======
-                      default_value={field.value?.to_string ()}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+default_value={field.value?.to_string ()}"
                       className="flex flex - wrap gap - 4";
                     >;
                       {[1, 2, 3, 4, 5].map ((value) => (
                         <FormItem;
-<<<<<<< HEAD
-                          key={value}"
-=======
-                          key={value}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+key={value}"
                           className="flex items - center space - x-2";
                         >;
                           <FormControl>;
                             <RadioGroupItem value={value.to_string ()} />;
-<<<<<<< HEAD
-                          </FormControl>;"
-=======
-                          </FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+</FormControl>;"
                           <FormLabel className="cursor - pointer font - normal">;
                             {value}
                           </FormLabel>;
@@ -1572,43 +895,25 @@ if ( {) {}
             />;
             {/* Quality */}
             <FormField;
-<<<<<<< HEAD
-              control={form.control}"
+control={form.control}"
               name="quality_rating";
               render={({ field }) => ("
-=======
-              control={form.control}
-              name="quality_rating";
-              render={({ field }) => (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <FormItem className="space - y-2">;
                   <FormLabel > Quality of Work</FormLabel>;
                   <FormControl>;
                     <RadioGroup;
                       onValueChange={(value) => field.on_change (parse_int (value))}
-<<<<<<< HEAD
-                      default_value={field.value?.to_string ()}"
-=======
-                      default_value={field.value?.to_string ()}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+default_value={field.value?.to_string ()}"
                       className="flex flex - wrap gap - 4";
                     >;
                       {[1, 2, 3, 4, 5].map ((value) => (
                         <FormItem;
-<<<<<<< HEAD
-                          key={value}"
-=======
-                          key={value}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+key={value}"
                           className="flex items - center space - x-2";
                         >;
                           <FormControl>;
                             <RadioGroupItem value={value.to_string ()} />;
-<<<<<<< HEAD
-                          </FormControl>;"
-=======
-                          </FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+</FormControl>;"
                           <FormLabel className="cursor - pointer font - normal">;
                             {value}
                           </FormLabel>;
@@ -1620,43 +925,25 @@ if ( {) {}
             />;
             {/* Timeliness */}
             <FormField;
-<<<<<<< HEAD
-              control={form.control}"
+control={form.control}"
               name="timeliness_rating";
               render={({ field }) => ("
-=======
-              control={form.control}
-              name="timeliness_rating";
-              render={({ field }) => (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <FormItem className="space - y-2">;
                   <FormLabel > Timeliness</FormLabel>;
                   <FormControl>;
                     <RadioGroup;
                       onValueChange={(value) => field.on_change (parse_int (value))}
-<<<<<<< HEAD
-                      default_value={field.value?.to_string ()}"
-=======
-                      default_value={field.value?.to_string ()}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+default_value={field.value?.to_string ()}"
                       className="flex flex - wrap gap - 4";
                     >;
                       {[1, 2, 3, 4, 5].map ((value) => (
                         <FormItem;
-<<<<<<< HEAD
-                          key={value}"
-=======
-                          key={value}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+key={value}"
                           className="flex items - center space - x-2";
                         >;
                           <FormControl>;
                             <RadioGroupItem value={value.to_string ()} />;
-<<<<<<< HEAD
-                          </FormControl>;"
-=======
-                          </FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+</FormControl>;"
                           <FormLabel className="cursor - pointer font - normal">;
                             {value}
                           </FormLabel>;
@@ -1668,45 +955,20 @@ if ( {) {}
             />;
             {/* Would Work Again */}
             <FormField;
-<<<<<<< HEAD
-              control={form.control}"
+control={form.control}"
               name="would_work_again";
               render={({ field }) => (
                 <FormItem>;"
                   <div className="flex items - center gap - 2">;
                     <FormLabel > Would you work with {reviewee_name} again?</FormLabel>;
                     <FormControl>;"
-=======
-              control={form.control}
-              name="would_work_again";
-              render={({ field }) => (
-                <FormItem>;
-                  <div className="flex items - center gap - 2">;
-                    <FormLabel > Would you work with {reviewee_name} again?</FormLabel>;
-                    <FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <div className="flex items - center space - x-2">;
                         <Switch;
                           checked={field.value}
                           onCheckedChange={field.on_change}
-<<<<<<< HEAD
-                        />;"
+/>;"
                         <span className="text - sm text - muted - foreground">;"
                           {field.value ? "Yes" : "No"}
-
-
-
-=======
-                        />;
-                        <span className="text - sm text - muted - foreground">;
-                          {field.value ? "Yes" : "No"}
-<Switch;
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />;
-                        <span className="text-sm text-muted-foreground">;
-                          {field.value ? "Yes" :"No"}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         </span>;
                       </div>;
                     </FormControl>;
@@ -1714,43 +976,22 @@ if ( {) {}
                   <FormMessage />;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
         {/* Anonymous Review */}
         <FormField;
           control={form && form.control}"
           name="is_anonymous"
 
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Anonymous Review */}
         <FormField
           control={form && form.control}
           name="is_anonymous"
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-</FormItem>;              )}
-            />;
-          </div>;
-        )}
-        ;
-        {/* Anonymous Review */}
-        <FormField;
-          control={form.control}
-          name="is_anonymous";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           render={({ field }) => (;
             <FormItem>;"
               <div className="flex items-center gap-2">;
                 <FormControl>;
-<<<<<<< HEAD
-                  <Switch
+<Switch
                     checked={field && field.value}
                     onCheckedChange={field && field.onChange}
 <Switch;
@@ -1760,14 +1001,6 @@ if ( {) {}
                     onCheckedChange={field && field.onChange}                  <Switch
                     checked={field && field.value}
                     onCheckedChange={field && field.onChange}
-=======
-
-
-                  <Switch;
-                    checked={field && field.value}
-                    onCheckedChange={field && field.onChange}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   />;
                 </FormControl>;"
                 <FormLabel className="cursor-pointer font-normal">;
@@ -1781,14 +1014,9 @@ if ( {) {}
             </FormItem>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
           )}
 
 <<<<<<< HEAD
-=======
-          )}
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         />;
 
         <Button
@@ -1797,12 +1025,6 @@ if ( {) {}
           disabled={isSubmitting || !form && form.formState.isValid}>;
           {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        />;
-=======
-/>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }),;
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
@@ -1814,14 +1036,12 @@ if ( {) {}
       form.reset();
     }
   },
-<<<<<<< HEAD
-  
-  const watchRating = form.watch("rating"),
-  
+const watchRating = form.watch("rating"),
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-        
+
   },;
   const watchRating = form.watch("rating"),;
   return (;
@@ -1844,37 +1064,6 @@ if ( {) {}
                 <Textarea
                   placeholder="Share your experience and feedback..."
                   className="min-h-24 resize-none"
-=======
-  const watchRating = form.watch("rating"),
-    // Check condition;
-if ( {) {
-  $2;
-      form.reset ();
-  const watch_rating = form.watch ("rating");"
-  return (
-      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;"
-          rules={{ required: "Rating is required" }}"
-          render={({ field }) => (
-
-              <FormLabel className="block text - center mb - 2">;"
-
-                <div className="flex justify - center gap - 1">;"
-                      key={star}
-        {/* Review Text */}
-          control={form.control}"
-          name="review_text";"
-            required: "Please provide feedback","
-            min_length: {,
-  value: 20,"
-              message: "Review must be at least 20 characters"}}}")
-
-              <FormLabel > Your Review;
-
-                  placeholder="Share your experience and feedback...";""
-                  className="min - h-24 resize - none";"
-                  className="min-h-24 resize-none";"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {...field}
                 />
               </FormControl>
@@ -1886,10 +1075,7 @@ if ( {) {
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
-<<<<<<< HEAD
-            
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             {/* Communication */}
             <FormField
               control={form.control}
@@ -2047,16 +1233,7 @@ if ( {) {
     </Form>
   )
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -2074,38 +1251,22 @@ if ( {) {
           </div>)}
         {/* Anonymous Review */}
         <FormField;
-<<<<<<< HEAD
-          control={form.control}"
+control={form.control}"
           name="is_anonymous";
           render={({ field }) => (
             <FormItem>;"
-=======
-          control={form.control}
-          name="is_anonymous";
-          render={({ field }) => (
-            <FormItem>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className="flex items - center gap - 2">;
                 <FormControl>;
                   <Switch;
                     checked={field.value}
                     onCheckedChange={field.on_change}
                   />;
-<<<<<<< HEAD
-                </FormControl>;"
+</FormControl>;"
                 <FormLabel className="cursor - pointer font - normal">;
                   Submit anonymously;
                 </FormLabel>;
               </div>;"
               <p className="text - xs text - muted - foreground mt - 1">;'
-=======
-                </FormControl>;
-                <FormLabel className="cursor - pointer font - normal">;
-                  Submit anonymously;
-                </FormLabel>;
-              </div>;
-              <p className="text - xs text - muted - foreground mt - 1">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Anonymous reviews won't display your name but will still be linked to your account.;
 
                 />;
@@ -2129,21 +1290,13 @@ if ( {) {
                           key={value}"
                           className="flex items-center space-x-2">;"
 
-
                             <RadioGroupItem value={value && value.toString()} />;
 
                           <FormLabel className="cursor-pointer font-normal">;"
 
-
               name="quality_rating""
 
                   <FormLabel>Quality of Work;
-
-
-
-
-
-
 
 </FormLabel>
                           </FormLabel>;
@@ -2196,12 +1349,6 @@ if ( {) {
 
                   <FormLabel>Timeliness;
 
-
-
-
-
-
-
               name="would_work_again""
 
                   <div className="flex items-center gap-2">;"
@@ -2226,7 +1373,6 @@ if ( {) {
                           className="flex items - center space - x-2";"
                         >;
 
-
                             <RadioGroupItem value={value.to_string ()} />;
 
                           <FormLabel className="cursor - pointer font - normal">;"
@@ -2238,21 +1384,9 @@ if ( {) {
 
                   <FormLabel > Quality of Work;
 
-
-
-
-
-
-
               name="timeliness_rating";"
 
                   <FormLabel > Timeliness;
-
-
-
-
-
-
 
               name="would_work_again";"
 
@@ -2268,49 +1402,19 @@ if ( {) {
 
           name="is_anonymous"")
 
-
-
-
               </div>;"
               <p className="text-xs text-muted-foreground mt-1">;"
 </p>
 
               </p>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>)}
+</FormItem>)}
         />;
-<<<<<<< HEAD
-        <Button;"
+<Button;"
           type="submit";"
           className="w - full";
           disabled={is_submitting || !form.form_state.is_valid}
         >;"
-=======
-        <Button;
-          type="submit";
-          className="w - full";
-=======
-</FormMessage>
-            </FormItem>;
-
-        <Button;"
-          type="submit"""
-          className="w-full""
-          disabled={isSubmitting || !form && form.formState.isValid}>;
-
-      </form>;
-    ;)
-          </div>)}
-          name="is_anonymous";"
-
-
-
-
-              <p className="text - xs text - muted - foreground mt - 1">;"
-          type="submit";""
-          className="w - full";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           disabled={is_submitting || !form.form_state.is_valid}
         >;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -2318,77 +1422,43 @@ if ( {) {
         </Button>;
       </form>;
     </Form>);
-<<<<<<< HEAD
-
-
-        ;
+;
         <Button;"
           type="submit";"
           className="w-full";
           disabled={isSubmitting || !form.formState.isValid}
         >;"
-=======
-}
-}
-;
-        ;
-        <Button;
-          type="submit";
-          className="w-full";
-<<<<<<< HEAD
-          disabled={isSubmitting || !form.formState.isValid}
-        >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {isSubmitting ? "Submitting..." :defaultValues ? "Save Changes" :"Submit Review"}
         </Button>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-  ),; import {};
-=======
-  ),; import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+),; import {};
   Form;
 FormControl;
 FormField;
 FormItem;
 FormLabel;
-<<<<<<< HEAD
 interface ReviewFormValues {}
-=======
-interface ReviewFormValues {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   rating?: number;
 review text?: string;
 communication rating?: number;
 quality rating?: number;
 timeliness rating?: number;
 would work again?: boolean;
-<<<<<<< HEAD
 is anonymous?: boolean;
 }interface ReviewFormProps {}
-=======
-is anonymous?: boolean 
-}interface ReviewFormProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectId: string;
 revieweeId: string;
 revieweeName: string;
 onSubmit: (data: any) => Promise<boolean>;
 defaultValues?: Review;
-<<<<<<< HEAD
 isSubmitting: boolean;
 }export function ReviewForm ({};
-=======
-isSubmitting: boolean 
-}export function ReviewForm ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectId;
 revieweeId;
 revieweeName;
 onSubmit;
 defaultValues;
-<<<<<<< HEAD
 isSubmitting;
 }: ReviewFormProps) {}
   const [hoveredStar, setHoveredStar] = useState<number> (0);
@@ -2403,26 +1473,8 @@ defaultValues: defaultValues ? {}
   form.control "
 }name="rating" rules= {}
   {"
-=======
-isSubmitting 
-}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number> (0);
-defaultValues: defaultValues ? {
-  return (<Form {
-  ...form 
-}> <form onSubmit= {
-  form.handleSubmit (handleSubmit) 
-}className="space-y-6" > {
-  /* Main Rating */ 
-}<FormField control= {
-  form.control 
-}name="rating" rules= {
-  {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   required: "Rating is required" 
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     );
           className="w-full";"
@@ -2441,8 +1493,6 @@ onSubmit: (data: any) => Promise<boolean>;
   {"
   required: "Rating is required""
 
-
-<<<<<<< HEAD
 }render= {}
   ({}
   field;
@@ -2514,69 +1564,6 @@ onSubmit: (data: any) => Promise<boolean>;
   field.value;
 }onCheckedChange= {}
   field.onChange '"
-=======
-}render= {
-  ({
-  field;)
-}) => (<FormItem> revieweeName;
-}?  <FormControl> className="focus:outline-none transition-transform hover:scale-110" > <Star className= {"
-  star <= (hoveredStar || field.value || 0) /> </button>) ) "
-}</div>  <div className="text-center mt-1 h-5" > <FormMessage /> </div> )""
-}<FormField <FormItem> <FormLabel>Your Review <FormControl> <Textarea placeholder="Share your experience and feedback..." className="min-h-24 resize-none" {"
-
-}/>  <FormMessage /> ) 
-  watchRating > 0 && (<div className="space-y-6 border-t pt-6"> <h3 className="font-medium text-sm" >Additional Ratings (Optional) </h3> {"
-}<FormField <FormLabel>Communication <FormControl> <RadioGroup onValueChange= {
-
-  [1, 2, 3, 4, 5].map ( (value) => (<FormItem key= {
-  value 
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {
-  value.toString () 
-}/> </FormControl> </FormLabel> </FormItem>) ) 
-}</RadioGroup> </FormControl> <FormMessage /> </FormItem>) 
-}/> {
-  /* Quality */ 
-}<FormField <FormLabel>Quality of Work</FormLabel> <FormControl> <RadioGroup onValueChange= {
-  (value) => field.onChange (parseInt (value) ) 
-}defaultValue= {
-  field.value?.toString () 
-}className="flex flex-wrap gap-4" > {
-  [1, 2, 3, 4, 5].map ( (value) => (<FormItem key= {
-  value 
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {
-  value.toString () 
-}/> </FormControl> </FormLabel> </FormItem>) ) 
-}</RadioGroup> </FormControl> <FormMessage /> </FormItem>) 
-}/> {
-  /* Timeliness */ 
-}<FormField <FormLabel>Timeliness</FormLabel> <FormControl> <RadioGroup onValueChange= {
-  (value) => field.onChange (parseInt (value) ) 
-}defaultValue= {
-  field.value?.toString () 
-}className="flex flex-wrap gap-4" > {
-  [1, 2, 3, 4, 5].map ( (value) => (<FormItem key= {
-  value 
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {
-  value.toString () 
-}/> </FormControl> </FormLabel> </FormItem>) ) 
-}</RadioGroup> </FormControl> <FormMessage /> </FormItem>) 
-}/> {
-  /* Would Work Again */ 
-}<FormField <FormItem> <div className="flex items-center gap-2"> <FormLabel>Would you work with {
-  revieweeName 
-}again?</FormLabel> <FormControl> <div className="flex items-center space-x-2"> <Switch checked= {
-  field.value 
-}onCheckedChange= {
-  field.onChange 
-}/> </span> </div> </FormControl> </div> <FormMessage /> </FormItem>) 
-}/> </div>) 
-}{
-  /* Anonymous Review */ 
-}<FormField <FormItem> <div className="flex items-center gap-2"> <FormControl> <Switch checked= {
-  field.value 
-}onCheckedChange= {
-  field.onChange 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>) 
 }/> <Button </Button> </form> </Form>) 
 }
@@ -2584,21 +1571,12 @@ onSubmit: (data: any) => Promise<boolean>;
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2611,7 +1589,6 @@ onSubmit: (data: any) => Promise<boolean>;
 }  <FormMessage /> ) 
 
 }<FormField <FormLabel>Quality of Work <FormControl> <RadioGroup onValueChange= {
-
 
 }<FormField <FormLabel>Timeliness <FormControl> <RadioGroup onValueChange= {
 

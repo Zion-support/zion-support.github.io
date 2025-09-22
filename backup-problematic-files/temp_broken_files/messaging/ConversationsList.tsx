@@ -33,4 +33,3 @@ export function ConversationsList({ ;
             Start a conversation from a job or talent profile.;
           </p>;
         </div>;
-

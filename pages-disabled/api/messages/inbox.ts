@@ -1,36 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  res.status(200).json({ items })
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
-=======
-import { NextApiRequest, NextApiResponse } from 'next',;'
-import { requireUser } from '../../../utils/auth',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { listConversations } from '../../../utils/messaging/storage',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const user = requireUser(req, res),
   if (!user) return,'
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' }),
   const items = listConversations(user.id),
-<<<<<<< HEAD
-=======
->>>>>>> pr-12243
+
 import { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { requireUser } from '../../../utils/auth';
 import { listConversations } from '../../../utils/messaging/storage';
 export default function handler(req, res) {
   try {
-
 
   const user = requireUser(req, res);
   if (!user) return,;
@@ -47,17 +28,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-import { requireUser } from '../../../utils/auth',;
-import { listConversations } from '../../../utils/messaging/storage',;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res)
-  if (!user) return
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
-  const items = listConversations(user.id)
-<<<<<<< HEAD
-=======
->>>>>>> main
 =======
   const user = requireUser(req, res);
   if (!user) return;

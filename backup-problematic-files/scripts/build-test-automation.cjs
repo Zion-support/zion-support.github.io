@@ -15,21 +15,11 @@ class BuildTestAutomation {}
     }};"
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
@@ -40,15 +30,10 @@ class BuildTestAutomation {}
       message;
     })};
   async runCommand(command, description) {}
-<<<<<<< HEAD
-    try {}
+try {}
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
-<<<<<<< HEAD
-        "encoding": 'utf8',
-=======
-        "encoding": 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"encoding": 'utf8',
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
@@ -59,10 +44,6 @@ class BuildTestAutomation {}
         "step": description,
         "error": error.message,
         "timestamp": new Date().toISOString();
-=======
-
-        "timestamp": new Date().toISOString();"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
 });
       throw error};
@@ -98,17 +79,8 @@ class BuildTestAutomation {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = BuildTestAutomation;
-module.exports = BuildTestAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = BuildTestAutomation;
 `;

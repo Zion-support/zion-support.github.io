@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
-<<<<<<< HEAD:src/components/resume-builder/preview/PreviewHeader.tsx
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -25,16 +24,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/preview/PreviewHeader.tsx
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 
           position: absolute;
           left: 0;
@@ -42,17 +36,10 @@ import { useIsMobile } from '@/hooks/use-mobile';
           width: 100%;
 
         }
-<<<<<<< HEAD
-        .no - print {          display: none !important }
+.no - print {          display: none !important }
       }
 
 <<<<<<< HEAD
-=======
-=======
-        .no-print {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/preview/PreviewHeader.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/preview/PreviewHeader.tsx
 
           width: 100%;
         }
@@ -60,30 +47,18 @@ import { useIsMobile } from '@/hooks/use-mobile';
         .no-print {
           display: none !important }
       }
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 
         }
 
         }
-<<<<<<< HEAD:src/components/resume-builder/preview/PreviewHeader.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
         .print-section, .print-section * {;
           visibility: visible;
-=======
-        .print-section, .print-section * {
-          visibility: visible
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/preview/PreviewHeader.tsx
         }
-=======
-        }
-        .print - section, .print - section * {
-          visibility: visible;        }
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         }
         .print - section, .print - section * {
@@ -124,17 +99,17 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           top: 0,;
           width: 100%;
         }
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
         .no-print {;
           display: none !important;
         }
       }
     `,
     document.head.appendChild(style),
-    
+
     // Trigger print dialog
     window.print(),
-    
+
     // Remove the temporary style element after printing
     setTimeout(() => {
       document.head.removeChild(style),
@@ -142,7 +117,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
     }, 1000)
   },
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
@@ -154,12 +128,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       >
         <ArrowLeft className="h-4 w-4" />
         Back
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     `;
 =======
     `;`
@@ -170,14 +138,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
     setTimeout(() => {;
       document && document.head.removeChild(style);
       setIsPrinting(false);
-<<<<<<< HEAD
-    }, 1000)
+}, 1000)
 };
-=======
-    }, 1000);
-  };
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/preview/PreviewHeader.tsx
@@ -185,38 +147,26 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
         <ArrowLeft className='h-4 w-4' />        Back;
       </Button>;
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </Button>
-      
+
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
-        
+
         <Button 
           variant="outline" 
-          onClick={handleBrowserPrint} 
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/preview/PreviewHeader.tsx
+          onClick={handleBrowserPrint}
       </Button>
       <div
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;`
         <PdfExportButton resume={resume} />;
 
-<<<<<<< HEAD:src/components/resume-builder/preview/PreviewHeader.tsx
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/preview/PreviewHeader.tsx
-  const [isPrinting, setIsPrinting] = useState(false);
+:src/components/resume-builder/preview/PreviewHeader.tsx
+const [isPrinting, setIsPrinting] = useState(false);
   const isMobile = null;
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
@@ -241,7 +191,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onClick={handleBrowserPrint}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           disabled={isPrinting}
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 <<<<<<< HEAD:src/components/resume-builder/preview/PreviewHeader.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,19 +200,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <FileText className="h-4 w-4" />
           Print
         </Button>
-        
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
 =======
@@ -271,7 +212,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         <Button variant="outline" className="gap-2">"
           <Link className="h-4 w-4" />"
-
 
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
@@ -288,19 +228,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Add to Profile
         </Button>
       </div>
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
-<<<<<<< HEAD
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 <<<<<<< HEAD
     </div>
   )
 }
 ;
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/preview/PreviewHeader.tsx
           className='gap-2'>;
           <FileText className='h-4 w-4' />;
           Print;
@@ -362,68 +295,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
     </div>
-<<<<<<< HEAD:src_backup/components/resume-builder/preview/PreviewHeader.tsx
-<<<<<<< HEAD:src/components/resume-builder/preview/PreviewHeader.tsx
+:src_backup/components/resume-builder/preview/PreviewHeader.tsx
 <<<<<<< HEAD
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  )
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-  )
-        .no-print {;
-          display: none !important;
-        }
-      }
-    `,
-    document.head.appendChild(style),
-    // Trigger print dialog
-    window.print(),
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style),
-      setIsPrinting(false)
-    }, 1000)
-  },
-
-  return (
-    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
-      <Button 
-        variant="outline" 
-        onClick={onBack} 
-        className="gap-2 no-print"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        Back
-      </Button>
-      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
-        <PdfExportButton resume={resume} />
-        <Button 
-          variant="outline" 
-          onClick={handleBrowserPrint} 
-          disabled={isPrinting}
-          className="gap-2"
-        >
-          <FileText className="h-4 w-4" />
-          Print
-        </Button>
-        <Button variant="outline" className="gap-2">
-          <Link className="h-4 w-4" />
-          Add to Profile
-        </Button>
-      </div>
-    </div>
-  )
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/preview/PreviewHeader.tsx
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

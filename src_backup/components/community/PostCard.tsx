@@ -15,13 +15,8 @@ import React from 'react',
 import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
-<<<<<<< HEAD:src/components/community/PostCard.tsx
-<<<<<<< HEAD
-=======
+:src/components/community/PostCard.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -36,28 +31,18 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src/components/community/PostCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
 }
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
@@ -94,7 +79,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
           </div>
-          
+
           <div className="flex flex-wrap gap-2 mt-2">
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
@@ -180,7 +165,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {;
             <span className="text-sm">{post.replyCount} replies</span>
           </div>
         </div>
-        
+
         {post.isFeatured && (
           <div>
             <Badge className="bg-zion-purple">Featured</Badge>
@@ -192,16 +177,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {;
 },;
 export const PostCard = React.memo(PostCardComponent),;
 PostCard.displayName = 'PostCard';
-=======
-
-
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       "transition-shadow hover: shadow-md",
 import React from 'react';
 import { formatDistanceToNow } from './date - fns';
@@ -223,12 +198,8 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default PostCard;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/PostCard.tsx
@@ -239,7 +210,6 @@ PostCard.display_name = 'PostCard';
 export default PostCard;
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
-
 
 export default PostCard;
 
@@ -281,7 +251,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
     addSuffix: true,
   });
 
-  
     >
       <p>DEBUG: PostCard ID: {post?.id}</p>
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>
@@ -356,9 +325,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 };
 export default PostCard;
 '"
-<<<<<<< HEAD:src/components/community/PostCard.tsx
+:src/components/community/PostCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/PostCard.tsx

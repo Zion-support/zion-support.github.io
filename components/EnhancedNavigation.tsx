@@ -12,7 +12,7 @@ import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
   const toggleDropdown = (dropdown: string) => {}
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   }
   const closeAllDropdowns = () => {}
 const EnhancedNavigation: React.FC = () => {;
@@ -55,7 +55,7 @@ const EnhancedNavigation: React.FC = () => {;
     setIsOpen(false);
   }
   return ('
-        : 'bg-transparent'
+        : 'bg-transparent';
     }`}>;
       <div className="max-w-7xl mx-auto px-6">;"
         <div className="flex items-center justify-between h-20">;
@@ -86,13 +86,13 @@ const EnhancedNavigation: React.FC = () => {;
                       <Link;
                         key={service.name}
                         href={service.href}"
-                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors";
                         onClick={closeAllDropdowns}
                       >"
                         <div className="flex items-start space-x-3">"
                           <service.icon className="w-6 h-6 text-blue-600 mt-1" />
                           <div>"
-                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">;
                               {service.name}
                             </h3>"
                             <p className="text-sm text-gray-600">{service.description}</p>
@@ -108,7 +108,7 @@ const EnhancedNavigation: React.FC = () => {;
             <div className="relative">
               <button'
                 onClick={() => toggleDropdown('company')}"
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >
                 <span>Company</span>'`
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
@@ -133,7 +133,7 @@ const EnhancedNavigation: React.FC = () => {;
                       <Link;
                         key={service && service.name}
                         href={service && service.href}"
-                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors";
                         onClick={closeAllDropdowns}>;"
                         <div className="flex items-start space-x-3">;"
                           <service && service.icon className="w-6 h-6 text-blue-600 mt-1" />;
@@ -162,7 +162,7 @@ const EnhancedNavigation: React.FC = () => {;
                       <Link;
                         key={item && item.name}
                         href={item && item.href}"
-                        className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors";
                         onClick={closeAllDropdowns}>;"
                         <item && item.icon className="w-5 h-5 text-blue-600 mt-1" />;
                         <div>;"
@@ -198,7 +198,7 @@ const EnhancedNavigation: React.FC = () => {;
                     <Link;
                       key={service && service.name}
                       href={service && service.href}"
-                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors";
                       onClick={closeAllDropdowns}>;"
                       <service && service.icon className="w-5 h-5 text-blue-600 mt-1" />;
                       <div>;"
@@ -215,7 +215,7 @@ const EnhancedNavigation: React.FC = () => {;
                     <Link;
                       key={item && item.name}
                       href={item && item.href}"
-                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors";
                       onClick={closeAllDropdowns}>;"
                       <item && item.icon className="w-5 h-5 text-blue-600 mt-1" />;
                       <div>;"
@@ -228,7 +228,7 @@ const EnhancedNavigation: React.FC = () => {;
               <div className="pt-4 border-t border-gray-200">;
                 <Link"
                   href="/contact""
-                  className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
+                  className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors";
                   onClick={closeAllDropdowns}>;
 import Link from 'next/link';
 import {motion} from 'framer-motion';

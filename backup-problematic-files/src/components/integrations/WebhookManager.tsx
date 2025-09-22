@@ -192,4 +192,3 @@ export function WebhookManager() {;
 }</SelectContent> </Select> </CardFooter> </Card>) ) ;
 }</div>) ;
 }{";
-

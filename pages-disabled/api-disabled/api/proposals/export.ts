@@ -1,57 +1,38 @@
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
-<<<<<<< HEAD
+:pages/api-disabled/api/proposals/export.ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-<<<<<<< HEAD:pages/api/proposals/export.ts
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
 import {
-<<<<<<< HEAD
-  updateArtifacts
+updateArtifacts
   getProposal
   savePdf
   updateArtifacts,
   getProposal,
   savePdf,;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
 import fs from "fs";
 import path from "path";
-<<<<<<< HEAD:pages/api/proposals/export.ts
+:pages/api/proposals/export.ts
 function buildIpfsClient() {
   const projectId = process.env.IPFS_PROJECT_ID;
   const projectSecret = process.env.IPFS_PROJECT_SECRET;
   const apiUrl =
-<<<<<<< HEAD
-    process.env.IPFS_API_URL |"https: //ipfs.infura.io:5001/api/v0";
+process.env.IPFS_API_URL |"https: //ipfs.infura.io:5001/api/v0";
   if (!projectId |!projectSecret) return null;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-function buildIpfsClient() {;
-  const projectId = process && process.env.IPFS_PROJECT_ID;
-  const projectSecret = process && process.env.IPFS_PROJECT_SECRET;
-  const apiUrl =;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
 
     process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
 ;
   if (!projectId || !projectSecret) return null;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const auth =
-<<<<<<< HEAD:pages/api/proposals/export.ts
+:pages/api/proposals/export.ts
     "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
     url: apiUrl
@@ -88,25 +69,13 @@ function buildIpfsClient() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
-  return createIpfsClient({;
-    url: apiUrl;
-    headers: { authorization: auth } as any
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
-=======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
   });
 }
 ;
 
-
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
+:pages/api-disabled/api/proposals/export.ts
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   } catch (error) {;
     console.error("Error:", error);
@@ -115,16 +84,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
 ;
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
-<<<<<<< HEAD:pages/api/proposals/export.ts
-=======
-  const pdfDoc = await PDFDocument && PDFDocument.create();
-  const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
-  const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4;
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
@@ -140,18 +100,12 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {}
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown;
           current = word;
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
+:pages/api-disabled/api/proposals/export.ts
         } else {;
           current = test;
         }
       }
-<<<<<<< HEAD:pages/api/proposals/export.ts
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {;
@@ -170,13 +124,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {}
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
-=======
-        } else {}
-          current = test;
-        }
-      }
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
 
     });
   let y = page && page.getHeight() - margin;
@@ -192,9 +139,8 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {}
   y -= 24;
 ;
 
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
+:pages/api-disabled/api/proposals/export.ts
   for (const line of lines) {;
-
 
   return pdfDoc && pdfDoc.save();
 
@@ -204,34 +150,19 @@ export default async function handler(;
   res: NextApiResponse
 ) {;
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-<<<<<<< HEAD:pages/api/proposals/export.ts
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  for (const line of lines) {
-    if (y < margin + 12) {
-=======
-  for (const line of lines) {;
-    if (y < margin + 12) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
       y = page.getHeight() - margin;
       pdfDoc.addPage()
     }
     page.drawText(line, { x: margin, y, size: fontSize, font });
     y -= 14
   }
-<<<<<<< HEAD:pages/api/proposals/export.ts
+:pages/api/proposals/export.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-=======
-;
-export default async function handler(;
-  req: NextApiRequest;
-  res: NextApiResponse
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
 ) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   } catch (error) {;
@@ -239,7 +170,7 @@ export default async function handler(;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages/api/proposals/export.ts
+:pages/api/proposals/export.ts
 <<<<<<< HEAD
 ;
   return pdfDoc.save();
@@ -258,15 +189,8 @@ export default async function handler(
 export default async function handler(req, res) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
-=======
-  try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
 =======
 
   for (const line of lines) {}
@@ -282,23 +206,17 @@ export default async function handler() { return null; }
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
     if (!meta) return res && res.status($1).json({ $2 });
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
+:pages/api-disabled/api/proposals/export.ts
     const markdownPath = path && path.join(;
       process && process.cwd()
       "public";
       meta && meta.artifacts.markdownPath || ""
-=======
-    const markdownPath = path && path.join(
-      process && process.cwd(),"
-      "public","
-      meta && meta.artifacts.markdownPath || "",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
 
     );
     const markdown = fs && fs.existsSync(markdownPath)"
       ? fs && fs.readFileSync(markdownPath, "utf8")"
       : "# Proposal";
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
+:pages/api-disabled/api/proposals/export.ts
 ;
   return pdfDoc.save()
 }
@@ -325,16 +243,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (ipfs) {;
       try {;
         const { cid } = await ipfs.add(markdown);
-<<<<<<< HEAD:pages/api/proposals/export.ts
-        ipfsCid = cid.toString()
+ipfsCid = cid.toString()
         ipfsCid = cid.toString();
-=======
-<<<<<<< HEAD
-        const { cid } = await ipfs.add(markdown);
-    // Check condition
-=======
-    // Check condition;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
 if ( {) {
   $2
 }
@@ -402,117 +312,17 @@ if ( {) {
       ipfsCid
     });
     return res.status (200).json ({ meta: updated });
-<<<<<<< HEAD:pages/api/proposals/export.ts
+:pages/api/proposals/export.ts
   } catch (error: any) {
 <<<<<<< HEAD
     return res.status(500).json({ error: error?.message |"Export failed" });
 
     return res.status(500).json({ error: error?.message || "Export failed" });
       } catch {  } catch (error) {
-=======
-  } catch (error: any) {;
-    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {;
-=======
-
-
-    }
-    let ipfsCid: string | undefined;
-    const ipfs = buildIpfsClient();
-    if (ipfs) {}
-      try {}
-  const pdfDoc = await PDFDocument.create();
-  const page = pdfDoc.addPage([595.28, 841.89]); // A4;
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-  const fontSize = 11;
-  const margin = 40;
-  const maxWidth = page.getWidth() - margin * 2;
-  const lines = markdown;
-    .replace(/\r\n/g, '\n')'
-    .split('\n')
-    .flatMap((line) => {'
-      const words = line.split(' ');
-      const wrapped: string[] = [];'
-      let current = '';
-      for (const word of words) {'
-        const test = current.length ? current + ' ' + word : word;
-        const width = font.widthOfTextAtSize(test, fontSize);
-        if (width > maxWidth) {}
-          if (current) wrapped.push(current);
-          current = word;
-        } else {}
-          current = test;
-        }
-      }
-      if (current) wrapped.push(current);'
-      return wrapped.length ? wrapped : [' ']
-    });
-  let y = page.getHeight() - margin;
-  page.drawText(title, { x: margin, y, size: 16, font });
-  y -= 24;
-  for (const line of lines) {}
-    if (y < margin + 12) {}
-      y = page.getHeight() - margin;
-      pdfDoc.addPage()
-    }
-    page.drawText(line, { x: margin, y, size: fontSize, font });
-    y -= 14;
-  }
-
-
-  try {}
-    const { id } = req.body |{}
-    if (!id) return res.status($1).json({ $2 });
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({ $2 });
-    const markdownPath = path.join(
-      process.cwd()"
-      "public""
-      meta.artifacts.markdownPath |""
-    );
-    const markdown = fs.existsSync(markdownPath)"
-      ? fs.readFileSync(markdownPath, "utf8")"
-      : "# Proposal";
-
-    const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
-    const pdfUrl = savePdf(id, pdfBytes);'
-    const hasher = crypto.createHash('sha256');
-    hasher.update(markdown);'
-    const digest = '0x' + hasher.digest('hex');
-    let signature: string | undefined;
-    const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
-    if (privateKey) {}
-      const wallet = new ethers.Wallet(privateKey);
-      signature = await wallet.signMessage(ethers.getBytes(digest))
-    }
-    let ipfsCid: string | undefined;
-    const ipfs = buildIpfsClient();
-    if (ipfs) {}
-      try {}
-        const { cid } = await ipfs.add(markdown);
-
-        ipfsCid = cid.toString()
-
-      } catch {}
-    }
-
-
-    const updated = updateArtifacts(id, {}
-      pdfPath: pdfUrl;
-      signature;
-      ipfsCid;
-    });
-    return res.status (200).json ({ meta: updated });
-  } catch (error: any) {}
-    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
     return res.status(500).json({ error: error?.message || 'Export failed' })
 
   }
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
+:pages/api-disabled/api/proposals/export.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -541,18 +351,12 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD:pages/api/proposals/export.ts
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {;
     return res.status(500).json({ error: error?.message || 'Export failed' })
   }
-<<<<<<< HEAD:pages/api/proposals/export.ts
-<<<<<<< HEAD
+:pages/api/proposals/export.ts
 }
 }
   } catch (error) {
@@ -561,20 +365,9 @@ if ( {) {
   }
 }
   } catch (error) {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
-=======
-  }
-}
-
-  } catch (error) {;
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -582,33 +375,11 @@ if ( {) {
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD:pages/api/proposals/export.ts
-<<<<<<< HEAD
-
-  }
+:pages/api/proposals/export.ts
+}
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
@@ -616,33 +387,11 @@ if ( {) {
     return res.status(500).json({ error: error?.message || 'Export failed' })
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
-=======
 
-
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
-
-
-
-<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
+:pages/api-disabled/api/proposals/export.ts
   }
 }
 
@@ -660,8 +409,7 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-  }
+}
 }
 <<<<<<< HEAD
 ;
@@ -678,23 +426,10 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
-
-  }
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  }
-}
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts

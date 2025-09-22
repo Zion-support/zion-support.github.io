@@ -143,7 +143,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </a>
           </Link>
       </div>'
-      <div className='grid md:grid-cols-4 gap-4 mb-6'>
+      <div className='grid md:grid-cols-4 gap-4 mb-6'>;
         <select'
           className='border rounded p-2''
           value={filters.sector |''}
@@ -297,7 +297,7 @@ pr-12243
         {items.map (g => (<div;}
             key={g.id}
             className='border rounded p - 4 bg - white / 70 dark:bg - black / 40' />
-
+;
             <div className='flex items - center justify - between' />;
               <div />;
                 <h3 className='text - lg font - medium' />;
@@ -324,7 +324,7 @@ pr-12243
         {items.map(g => (
           <div
             key={g.id}
-            className='border rounded p-4 bg-white/70 dark:bg-black/40'
+            className='border rounded p-4 bg-white/70 dark:bg-black/40';
           >
             <div className='flex items-center justify-between'>
               <div>
@@ -333,7 +333,7 @@ pr-12243
                     <a>{g.projectName}</a>
                   </Link>
                 </h3>
-                <div className='text-xs text-gray-600 dark:text-gray-400'>
+                <div className='text-xs text-gray-600 dark:text-gray-400'>;
                   {g.sector |'General'} • {g.region |'Global'} •{' '}
         <select
           className='border rounded p-2'
@@ -392,7 +392,7 @@ pr-12243
         {items.map(g => (<div;}
             key={g.id}
             className='border rounded p-4 bg-white/70 dark:bg-black/40' />
-
+;
 pr-12243
 
 pr-12243

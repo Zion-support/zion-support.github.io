@@ -1,35 +1,13 @@
-<<<<<<< HEAD:pages_backup/test.tsx
+:pages_backup/test.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
-<<<<<<< HEAD:pages_backup/test.tsx
+:pages_backup/test.tsx
 <<<<<<< HEAD
 import Head from 'next/head';
 <<<<<<< HEAD
-=======
-
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/test.tsx
-
 
 export default function TestPage() {
   return (
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/main
-origin/automation-improvements-final
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -37,63 +15,29 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/test.tsx
 
-
-
-
-
-
-
-
 export default function TestPage() {}
   return (
-
 
     <Layout title="Test Page">"
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">"
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
-<<<<<<< HEAD:pages_backup/test.tsx
-<<<<<<< HEAD
-=======
-
-
-
-=======
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+:pages_backup/test.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
       </Head>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  );
-}
-
-export default function TestPage() {;
-  return (
-
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/test.tsx
-
 
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
       </Head>
 
-
 ;
   );
 }
-
-
 
     </Layout>;
   );
@@ -102,10 +46,8 @@ export default function TestPage() {;
 import React from 'react''
 import Head from 'next/head'
 
-
 export default function TestPage() {}
   return (
-
 
     <>
       <Head>
@@ -118,24 +60,15 @@ export default function TestPage() {}
 ;
 );
 
-
-
   );
-
-
 
     </>;
 
-
 );
 
-
 );
-<<<<<<< HEAD:pages_backup/test.tsx
+:pages_backup/test.tsx
 >>>>>>> origin/main
-=======
-);
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
@@ -143,32 +76,9 @@ export default function TestPage() {}
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">;
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>;
-      </div>;
-    </>;
-  );
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
-=======
-
-"
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">"
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
-      </div>
-    </>
-  )
-
-  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/test.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 
@@ -206,14 +116,12 @@ function TestPage() {}
     </>);
 }
 
-
 '
 import React from 'react';'
 import MainLayout from '../src/components/layout/MainLayout';
 =======
 import React from 'react';
-<<<<<<< HEAD:pages/test.tsx
-<<<<<<< HEAD
+:pages/test.tsx
 <<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -236,12 +144,6 @@ export default function TestPage() {}
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/test.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/test.tsx
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
@@ -250,8 +152,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
-
-
 
 export default function TestPage() {
   return (
@@ -269,9 +169,6 @@ origin/automation-improvements-final
   );
 
   return (
-
-
-
 
     <>
       <Head>
@@ -304,21 +201,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
     </>
   )
-<<<<<<< HEAD:pages_backup/test.tsx
-
+:pages_backup/test.tsx
 
 }
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/test.tsx
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -340,7 +230,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 }
-
 
   );
 }

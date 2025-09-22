@@ -8,8 +8,7 @@ class ComponentReplacer {}
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
-<<<<<<< HEAD
-  Bot,
+Bot,
   User,
   Send,
   Paperclip,
@@ -20,19 +19,6 @@ import { }
   ThumbsUp,
   ThumbsDown,
   Sparkles,
-=======
-  Bot, 
-  User, 
-  Send, 
-  Paperclip, 
-  Mic, 
-  MicOff, 
-  Settings, 
-  X, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Sparkles, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Clock,
   MessageCircle,
   HelpCircle,
@@ -58,8 +44,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 "
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
 
-<<<<<<< HEAD
-  // Sample welcome message;
+// Sample welcome message;
   useEffect(() => {}
     if (isOpen && messages.length === 0) {}
       const "welcomeMessage": ChatMessage = {}
@@ -88,10 +73,10 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   // Simulate AI response;
   const simulateAIResponse = useCallback(async ("userInput": string) => {}
     setIsTyping(true);
-    
+
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-    
+
     const responses = [{}]
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
@@ -145,7 +130,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
-    
+
     await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
 
   // Handle suggestion clicks;
@@ -170,15 +155,11 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
-<<<<<<< HEAD
-  // Rate response;
+// Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
@@ -186,8 +167,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return ()
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       {/* Chat Toggle Button */};
       <button;
@@ -296,8 +275,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 if (require.main === module) {}
   const automation = new ComponentReplacer();
   automation.run();
-<<<<<<< HEAD
-    .then(() => {}
+.then(() => {}
       console.log('Component Replacer completed successfully!');
       process.exit(0)}
 });
@@ -305,16 +283,8 @@ if (require.main === module) {}
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ComponentReplacer;
-module.exports = ComponentReplacer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     .then(() => {}"
 

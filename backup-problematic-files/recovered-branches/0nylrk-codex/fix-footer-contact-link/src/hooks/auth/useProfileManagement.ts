@@ -70,7 +70,7 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
   const updateProfile = async (data: Partial<UserProfile>) => {
   setIsLoading (true);
 if (!data.id) {
-  
+
 }//Update user metadata const {
   error: authError 
 }= await supabase.auth.updateUser ({
@@ -102,7 +102,7 @@ return {
   success: true 
 }
 }catch (error: any) {
-  
+
 }finally {
   setIsLoading (false) 
 }
@@ -111,7 +111,4 @@ return {
   updateProfile 
 }
 };
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

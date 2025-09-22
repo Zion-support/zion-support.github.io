@@ -74,8 +74,4 @@ export function saveProject(project: Project): Project {
 export function getProjectById(id: string): Project | undefined {
   const db = readDb()
   return db.projects.find((p) => p.id === id)
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

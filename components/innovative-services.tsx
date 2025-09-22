@@ -375,10 +375,10 @@ if ( {) {}
         }
   });
   const contactInfo = {'
-    mobile: '+1 302 464 0950''
-    email: 'kleber@ziontechgroup.com''
-    address: '364 E Main St STE 1008 Middletown DE 19709''
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+    mobile: '+1 302 464 0950'';
+    email: 'kleber@ziontechgroup.com'';
+    address: '364 E Main St STE 1008 Middletown DE 19709'';
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com';
   }
 
   // Search filter;
@@ -462,7 +462,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         placeholder="Search innovative services..."
                         value={searchQuery}
                       onChange={(e) => setSelectedCategory(e.target.value)}"
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                     >"
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
@@ -473,7 +473,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}'
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
                     >
                       {priceRanges.map(range => (
                         <option key={range.value} value={range.value}>
@@ -487,7 +487,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}'
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
                     >
                       {sortOptions.map(option => (
                         <option key={option.value} value={option.value}>
@@ -542,7 +542,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </section>
           {/* Services Grid/List */}
-<section className='px-4 sm:px-6 lg:px-8 mb-20'>
+<section className='px-4 sm:px-6 lg:px-8 mb-20'>;
             <div className='max-w-7xl mx-auto'>
               {filteredServices.length === 0 ? (
                 <div className='text-center py-20'>
@@ -554,12 +554,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Try adjusting your search criteria or filters
                   </p>
                 </div>
-              ) : (
+              ) : (;
                 <div
                   className={
                     viewMode === 'grid'
-                      ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                      : 'space-y-6'
+                      ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+                      : 'space-y-6';
                   }
                 >
                   {filteredServices.map(service => (
@@ -570,7 +570,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='flex items-center space-x-3'>
                             <div className='text-3xl'>{service.icon}</div>
                             <div>
-                              <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors'>
+                              <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors'>;
                                 {service.name}
                               </h3>
                               <p className='text-sm text-gray-400'>
@@ -713,7 +713,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Button
                             href={service.link}
                             variant='primary'
-                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'
+                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700';
                           >
                             Learn More
                             <ArrowRight className='w-4 h-4 ml-2' />
@@ -740,11 +740,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               )}
           {/* Call to Action */}
-<section className='px-4 sm:px-6 lg:px-8 mb-20'>
+<section className='px-4 sm:px-6 lg:px-8 mb-20'>;
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-
+;
                   Ready to Lead the Future?
                 </h2>'
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -752,7 +752,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Transform your business with quantum AI, autonomous systems;
                   and cutting-edge technology.
                 </p>'
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
             </div>;
           </section>;
 
@@ -782,7 +782,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Join the revolution with our breakthrough micro SAAS services.
                   Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
                 </p>"
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 </h2>;"
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
                   Join the revolution with our breakthrough micro SAAS services. ;
@@ -799,7 +799,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="mt-8 text-sm text-gray-400">
                   <div>Address: {contactInfo.address}</div>"
                   <div className="mt-1">Website: {contactInfo.website}</div>
-                    className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'
+                    className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg';
                   >
                     <Phone className='w-5 h-5 mr-2' />
                     Call Now: {contactInfo.mobile;}

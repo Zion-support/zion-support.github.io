@@ -1,16 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/api/admin/notes.ts
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 
@@ -27,53 +19,26 @@ type Note = {
   text: string,
   authorId: string,
   createdAt: number
-<<<<<<< HEAD:pages/api/admin/notes.ts
-<<<<<<< HEAD
+:pages/api/admin/notes.ts
 <<<<<<< HEAD
 }
 const notesStore: Note[] = []
 <<<<<<< HEAD
-=======
-
-=======
-=======
-}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { randomUUID } from 'crypto',;
-type Note = {
-  id: string
-  targetType: string
-  targetId: string
-  text: string
-  authorId: string
-  createdAt: number
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 type Note = {
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-  id: string;
+id: string;
   targetType: string;
   targetId: string;
   text: string;
   authorId: string;
   createdAt: number;
 };
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:pages/api/admin/notes.ts
-=======
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  id: string;
+id: string;
   targetType: string;
   targetId: string;
   text: string;
@@ -81,24 +46,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   createdAt: number;
 };
 
-<<<<<<< HEAD
 const notesStore: Note[] = [];
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { randomUUID } from 'crypto';
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
-<<<<<<< HEAD
-
-
-  }
+}
   if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] |'admin')
     const { targetType, targetId, text } = req.body |{}
@@ -112,10 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 }
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -144,7 +93,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const { targetType, targetId } = req.query;
       if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' });
       if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' });
-      
+
       const notes = notesStore
         .filter((n) => n.targetType === targetType && n.targetId === targetId);
       res.json({ notes });
@@ -163,14 +112,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else {
       res.setHeader('Allow', 'GET, POST');
       res.status(405).end('Method Not Allowed');
-<<<<<<< HEAD
-=======
-=======
-
-
-  }
-  if (req.method === 'POST') {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
@@ -189,23 +130,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
-<<<<<<< HEAD
 
-
-=======
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-<<<<<<< HEAD
-=======
-},
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
-=======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -213,7 +140,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function getAllNotes(): Note[] {
 
-<<<<<<< HEAD
 interface Note {
   id: string;
   targetType: string;
@@ -225,7 +151,6 @@ interface Note {
 
 let notesStore: Note[] = [];
 
-<<<<<<< HEAD
 export function getAllNotes(): Note[] {
   return notesStore;
 }
@@ -265,29 +190,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  if (req.method === 'GET') {
-    const { targetType, targetId } = req.query,
-    if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' }),
-    if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' }),
-    const notes = notesStore
-      .filter((n) => n.targetType === targetType && n.targetId === targetId)
-      .sort((a, b) => b.createdAt - a.createdAt),
-    return res.status(200).json({ notes })
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/admin/notes.ts
-<<<<<<< HEAD
-=======
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
-=======
-main
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] || 'admin'),
@@ -305,15 +209,7 @@ export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 };
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/api/admin/notes.ts
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -356,13 +252,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/admin/notes.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/notes.ts
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

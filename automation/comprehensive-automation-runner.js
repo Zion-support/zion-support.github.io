@@ -30,7 +30,6 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   const runner = new ComprehensiveAutomationRunner(),;
 origin/cursor/automate-test-improve-and-merge-code-2533
 #!/usr/bin/env node;
-<<<<<<< HEAD
 import fs from "fs";"
 import path from "path";"
 import { execSync, spawn } from "child_process";"
@@ -52,58 +51,24 @@ class ComprehensiveAutomationRunner {;
       performance: {;
       security: {;"
       overall: { status: "unknown", score: 0 ;
-=======
-import fs from "fs";""
-import path from "path";""
-import { execSync, spawn } from "child_process";""
-import { fileURLToPath } from "url";"
-;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-class ComprehensiveAutomationRunner {;
-  constructor() {;"
-    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log");""
-    this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json");"
-    this.ensureDirectories();
-    this.results = {;
-      timestamp: new Date().toISOString();,
-  tests: {;
-      builds: {;,
-  linting: {;
-      performance: {;,
-  security: {;"
-      overall: { status: "unknown", score: 0 ;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
     });
-<<<<<<< HEAD
 };
 ;"
   log(message, level = "INFO") {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;`
-=======
-;"
-  log(message, level = "INFO") {;"
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
   async runCommand(command, description) {;
-<<<<<<< HEAD
-    try {;`
-=======
-    try {;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+try {;`
       this.log(`Running: ${description}`);
       const startTime = Date.now();
       const output = execSync(command, {;"
         stdio: 'pipe';',)
   cwd: process.cwd();
         timeout: 300000 // 5 minutes;
-<<<<<<< HEAD
-      });
+});
       const duration = Date.now() - startTime;`
       this.log(`✓ ${description} completed in ${duration}ms`);
       return { success: true, output: output.toString(), duration };
@@ -125,29 +90,10 @@ class ComprehensiveAutomationRunner {;
       { cmd: "npm run lint", desc: "Linting check" ;"
       { cmd: "npm run type-check", desc: "TypeScript type checking" ;"
       { cmd: "npm run test:smoke", desc: "Smoke tests" ;
-=======
-      const duration = Date.now() - startTime;`;
-      this.log(`✓ ${description} completed in ${duration}ms`);
-      return { success: true, output: output.toString(), duration };
-    } catch (error) {;`;
-      this.log(`✗ ${description} failed: ${error.message}`, "ERROR");"
-      return {;
-        success: false;,
-  error: error.message;"
-        output: error.stdout?.toString() || error.stderr?.toString() || "";"
-  async runBuildTests() {;"
-    this.log("=== RUNNING BUILD TESTS ===");"
-    const buildTests = [;"
-      { cmd: "npm run build", desc: "Production build" ;""
-      { cmd: "npm run lint", desc: "Linting check" ;""
-      { cmd: "npm run type-check", desc: "TypeScript type checking" ;""
-      { cmd: "npm run test:smoke", desc: "Smoke tests" ;"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
     for (const test of buildTests) {;
       const result = await this.runCommand(test.cmd, test.desc);
       this.results.builds[test.desc] = result;
-<<<<<<< HEAD
 };
 };
 ;
@@ -159,16 +105,8 @@ class ComprehensiveAutomationRunner {;
       { cmd: "npm run perf:audit", desc: "Performance audit" ;
     ];
 ;
-=======
-  async runPerformanceTests() {;"
-    this.log("=== RUNNING PERFORMANCE TESTS ===");"
-    const perfTests = [;"
-      { cmd: "npm run build:analyze", desc: "Bundle analysis" ;""
-      { cmd: "npm run perf:audit", desc: "Performance audit" ;"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const test of perfTests) {;
       this.results.performance[test.desc] = result;
-<<<<<<< HEAD
 };
 };
 ;
@@ -180,16 +118,8 @@ class ComprehensiveAutomationRunner {;
       { cmd: "npm run security:audit", desc: "Enhanced security audit" ;
     ];
 ;
-=======
-  async runSecurityTests() {;"
-    this.log("=== RUNNING SECURITY TESTS ===");"
-    const securityTests = [;"
-      { cmd: "npm audit", desc: "Security audit" ;""
-      { cmd: "npm run security:audit", desc: "Enhanced security audit" ;"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const test of securityTests) {;
       this.results.security[test.desc] = result;
-<<<<<<< HEAD
 };
 };
 ;
@@ -202,14 +132,6 @@ class ComprehensiveAutomationRunner {;
       { cmd: "npm run test:coverage", desc: "Test coverage" ;
     ];
 ;
-=======
-  async runQualityTests() {;"
-    this.log("=== RUNNING QUALITY TESTS ===");"
-    const qualityTests = [;"
-      { cmd: "npm run lint:check", desc: "Lint check" ;""
-      { cmd: "npm run format:check", desc: "Format check" ;""
-      { cmd: "npm run test:coverage", desc: "Test coverage" ;"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const test of qualityTests) {;
       this.results.tests[test.desc] = result;
   calculateOverallScore() {;
@@ -233,16 +155,10 @@ class ComprehensiveAutomationRunner {;
     maxScore += 100 * 0.15;
     const finalScore = Math.round((totalScore / maxScore) * 100);
     this.results.overall.score = finalScore;"
-<<<<<<< HEAD
-    this.results.overall.status = finalScore >= 80 ? "excellent" :;"
+this.results.overall.status = finalScore >= 80 ? "excellent" :;"
                                  finalScore >= 60 ? "good" :;"
                                  finalScore >= 40 ? "fair" : "poor";
 ;
-=======
-    this.results.overall.status = finalScore >= 80 ? "excellent" :;""
-                                 finalScore >= 60 ? "good" :;""
-                                 finalScore >= 40 ? "fair" : "poor";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return finalScore;
   calculateCategoryScore(category) {;
     if (!category || Object.keys(category).length === 0) return 0;
@@ -253,38 +169,24 @@ class ComprehensiveAutomationRunner {;
     const recommendations = [];
     // Build recommendations;
     Object.entries(this.results.builds).forEach(([test, result]) => {;
-<<<<<<< HEAD
-      if (!result.success) {;`
-=======
-      if (!result.success) {;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {;`
         recommendations.push(`Fix ${test}: ${result.error}`);
     // Performance recommendations;
     Object.entries(this.results.performance).forEach(([test, result]) => {;
-<<<<<<< HEAD
-      if (!result.success) {;`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {;`
         recommendations.push(`Optimize ${test}: ${result.error}`);
     // Security recommendations;
     Object.entries(this.results.security).forEach(([test, result]) => {;
-<<<<<<< HEAD
-      if (!result.success) {;`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {;`
         recommendations.push(`Address security issue in ${test}: ${result.error}`);
     // Quality recommendations;
     Object.entries(this.results.tests).forEach(([test, result]) => {;
-<<<<<<< HEAD
-      if (!result.success) {;`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {;`
         recommendations.push(`Improve ${test}: ${result.error}`);
     return recommendations;
   async saveResults() {;
     this.results.recommendations = this.generateRecommendations();
     this.results.overall.score = this.calculateOverallScore();
-<<<<<<< HEAD
 ;
     fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2));`
     this.log(`Results saved to: ${this.resultsFile}`);
@@ -294,13 +196,6 @@ class ComprehensiveAutomationRunner {;
     this.log("🚀 Starting Comprehensive Automation Runner");"
     this.log("=" * 50);
 ;
-=======
-    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2));`;
-    this.log(`Results saved to: ${this.resultsFile}`);
-  async runAll() {;"
-    this.log("🚀 Starting Comprehensive Automation Runner");""
-    this.log("=" * 50);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {;
       await this.runBuildTests();
       await this.runPerformanceTests();
@@ -308,7 +203,6 @@ class ComprehensiveAutomationRunner {;
       await this.runQualityTests();
       const score = this.calculateOverallScore();
       await this.saveResults();
-<<<<<<< HEAD
 ;"
       this.log("=" * 50);`
       this.log(`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`);"
@@ -328,47 +222,22 @@ class ComprehensiveAutomationRunner {;
 };
 ;
 // Main execution;`
-=======
-      this.log("=" * 50);"`;
-      this.log(`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`);"
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json");"
-      if (score < 80) {;"
-        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN");"
-      } else {;"
-        this.log("✅ All systems performing well!", "SUCCESS");"
-    } catch (error) {;"`;
-      this.log(`❌ Automation runner failed: ${error.message}`, "ERROR");"
-      throw error;
-// Main execution;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (import.meta.url === `file: //${process.argv[1]}`) {;
   const runner = new ComprehensiveAutomationRunner();
   runner.runAll().catch(console.error);
 export default ComprehensiveAutomationRunner;
 #!/usr/bin/env node,"
-<<<<<<< HEAD
 import fs from "fs","
 import path from "path","
 import { execSync, spawn } from "child_process","
 import { fileURLToPath } from "url",
-=======
-import fs from "fs",""
-import path from "path",""
-import { execSync, spawn } from "child_process",""
-import { fileURLToPath } from "url","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 class ComprehensiveAutomationRunner {,
   constructor() {,"
-<<<<<<< HEAD
-    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"),"
+this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"),"
     this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"),
-=======
-    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"),""
-    this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"),"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.ensureDirectories(),
     this.results = {,
       timestamp: new Date().toISOString(),
@@ -376,8 +245,7 @@ class ComprehensiveAutomationRunner {,
       builds: {},
       linting: {},
       performance: {},
-<<<<<<< HEAD
-      security: {},";
+security: {},";
       overall: { status: "unknown", score: 0 };
     };
       };
@@ -387,20 +255,10 @@ class ComprehensiveAutomationRunner {,
   log(message, level = "INFO") {,
     const timestamp = new Date().toISOString(),`
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,`
-=======
-      security: {},"
-      overall: { status: "unknown", score: 0 };"
-    }),
-,"
-  log(message, level = "INFO") {,"
-    const timestamp = new Date().toISOString(),`;
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`,`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log(`[${level}] ${message}`),
     fs.appendFileSync(this.logFile, logMessage),
   async runCommand(command, description) {,
-<<<<<<< HEAD
-    try {,`
+try {,`
       this.log(`Running: ${description}`),
       const startTime = Date.now(),
       const output = execSync(command, {,'
@@ -429,36 +287,11 @@ class ComprehensiveAutomationRunner {,
       { cmd: "npm run lint", desc: "Linting check" },"
       { cmd: "npm run type-check", desc: "TypeScript type checking" },"
       { cmd: "npm run test:smoke", desc: "Smoke tests" };
-=======
-    try {,`;
-      this.log(`Running: ${description}`),
-      const startTime = Date.now(),
-      const output = execSync(command, {,"
-        stdio: 'pipe',')
-        cwd: process.cwd(),
-        timeout: 300000 // 5 minutes,
-      const duration = Date.now() - startTime,`;
-      this.log(`✓ ${description} completed in ${duration}ms`),
-    } catch (error) {,`;
-      this.log(`✗ ${description} failed: ${error.message}`, "ERROR"),"
-      return {,
-        success: false,
-        error: error.message,"
-        output: error.stdout?.toString() || error.stderr?.toString() || "","
-  async runBuildTests() {,"
-    this.log("=== RUNNING BUILD TESTS ==="),"
-    const buildTests = [,"
-      { cmd: "npm run build", desc: "Production build" },""
-      { cmd: "npm run lint", desc: "Linting check" },""
-      { cmd: "npm run type-check", desc: "TypeScript type checking" },""
-      { cmd: "npm run test:smoke", desc: "Smoke tests" };"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ],
     for (const test of buildTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.builds[test.desc] = result,
-<<<<<<< HEAD
-    };
+};
   };
 ,
   async runPerformanceTests() {,"
@@ -469,17 +302,9 @@ class ComprehensiveAutomationRunner {,
       { cmd: "npm run perf:audit", desc: "Performance audit" };
     ],
 ,
-=======
-  async runPerformanceTests() {,"
-    this.log("=== RUNNING PERFORMANCE TESTS ==="),"
-    const perfTests = [,"
-      { cmd: "npm run build:analyze", desc: "Bundle analysis" },""
-      { cmd: "npm run perf:audit", desc: "Performance audit" };"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const test of perfTests) {,
       this.results.performance[test.desc] = result,
-<<<<<<< HEAD
-    };
+};
   };
 ,
   async runSecurityTests() {,"
@@ -490,17 +315,9 @@ class ComprehensiveAutomationRunner {,
       { cmd: "npm run security:audit", desc: "Enhanced security audit" };
     ],
 ,
-=======
-  async runSecurityTests() {,"
-    this.log("=== RUNNING SECURITY TESTS ==="),"
-    const securityTests = [,"
-      { cmd: "npm audit", desc: "Security audit" },""
-      { cmd: "npm run security:audit", desc: "Enhanced security audit" };"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const test of securityTests) {,
       this.results.security[test.desc] = result,
-<<<<<<< HEAD
-    };
+};
   };
 ,
   async runQualityTests() {,"
@@ -512,14 +329,6 @@ class ComprehensiveAutomationRunner {,
       { cmd: "npm run test:coverage", desc: "Test coverage" };
     ],
 ,
-=======
-  async runQualityTests() {,"
-    this.log("=== RUNNING QUALITY TESTS ==="),"
-    const qualityTests = [,"
-      { cmd: "npm run lint:check", desc: "Lint check" },""
-      { cmd: "npm run format:check", desc: "Format check" },""
-      { cmd: "npm run test:coverage", desc: "Test coverage" };"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const test of qualityTests) {,
       this.results.tests[test.desc] = result,
   calculateOverallScore() {,
@@ -543,16 +352,10 @@ class ComprehensiveAutomationRunner {,
     maxScore += 100 * 0.15,
     const finalScore = Math.round((totalScore / maxScore) * 100),
     this.results.overall.score = finalScore,"
-<<<<<<< HEAD
-    this.results.overall.status = finalScore >= 80 ? "excellent" :,"
+this.results.overall.status = finalScore >= 80 ? "excellent" :,"
                                  finalScore >= 60 ? "good" :,"
                                  finalScore >= 40 ? "fair" : "poor",
 ,
-=======
-    this.results.overall.status = finalScore >= 80 ? "excellent" :,""
-                                 finalScore >= 60 ? "good" :,""
-                                 finalScore >= 40 ? "fair" : "poor","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return finalScore,
   calculateCategoryScore(category) {,
     if (!category || Object.keys(category).length === 0) return 0,
@@ -563,38 +366,24 @@ class ComprehensiveAutomationRunner {,
     const recommendations = [],
     // Build recommendations,
     Object.entries(this.results.builds).forEach(([test, result]) => {,
-<<<<<<< HEAD
-      if (!result.success) {,`
-=======
-      if (!result.success) {,`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {,`
         recommendations.push(`Fix ${test}: ${result.error}`),
     // Performance recommendations,
     Object.entries(this.results.performance).forEach(([test, result]) => {,
-<<<<<<< HEAD
-      if (!result.success) {,`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {,`
         recommendations.push(`Optimize ${test}: ${result.error}`),
     // Security recommendations,
     Object.entries(this.results.security).forEach(([test, result]) => {,
-<<<<<<< HEAD
-      if (!result.success) {,`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {,`
         recommendations.push(`Address security issue in ${test}: ${result.error}`),
     // Quality recommendations,
     Object.entries(this.results.tests).forEach(([test, result]) => {,
-<<<<<<< HEAD
-      if (!result.success) {,`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!result.success) {,`
         recommendations.push(`Improve ${test}: ${result.error}`),
     return recommendations,
   async saveResults() {,
     this.results.recommendations = this.generateRecommendations(),
     this.results.overall.score = this.calculateOverallScore(),
-<<<<<<< HEAD
 ,
     fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),`
     this.log(`Results saved to: ${this.resultsFile}`),
@@ -604,13 +393,6 @@ class ComprehensiveAutomationRunner {,
     this.log("🚀 Starting Comprehensive Automation Runner"),"
     this.log("=" * 50),
 ,
-=======
-    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),`;
-    this.log(`Results saved to: ${this.resultsFile}`),
-  async runAll() {,"
-    this.log("🚀 Starting Comprehensive Automation Runner"),""
-    this.log("=" * 50),"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {,
       await this.runBuildTests(),
       await this.runPerformanceTests(),
@@ -618,7 +400,6 @@ class ComprehensiveAutomationRunner {,
       await this.runQualityTests(),
       const score = this.calculateOverallScore(),
       await this.saveResults(),
-<<<<<<< HEAD
 ,"
       this.log("=" * 50),`
       this.log(`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`),"
@@ -638,26 +419,10 @@ class ComprehensiveAutomationRunner {,
 };
 ,
 // Main execution,`
-=======
-      this.log("=" * 50),"`;
-      this.log(`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`),"
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),"
-      if (score < 80) {,"
-        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN"),"
-      } else {,"
-        this.log("✅ All systems performing well!", "SUCCESS"),"
-    } catch (error) {,"`;
-      this.log(`❌ Automation runner failed: ${error.message}`, "ERROR"),"
-      throw error,
-// Main execution,`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (import.meta.url === `file: //${process.argv[1]}`) {,
   const runner = new ComprehensiveAutomationRunner(),
   runner.runAll().catch(console.error),
 export default ComprehensiveAutomationRunner,
-<<<<<<< HEAD
-
-
 class ComprehensiveAutomationRunner {; constructor() {; this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"); this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"); this.ensureDirectories(); this.results = {; timestamp: new Date().toISOString(),
     tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: { status: "unknown", score: 0 }}}})};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
@@ -690,12 +455,3 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const runner = new Co
 ;
 export default ComprehensiveAutomationRunner;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'";`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-"`;
-pr-12325
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

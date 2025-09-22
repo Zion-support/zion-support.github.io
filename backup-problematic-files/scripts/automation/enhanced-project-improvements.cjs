@@ -2,8 +2,7 @@
 </p>"
         <div className="min-h-screen flex items-center justify-center bg-gray-50"
             <h1 className="text-2xl font-bold text-gray-900 mb-4"
-<<<<<<< HEAD
-            <p className=text-gray-600 mb-4>We"
+<p className=text-gray-600 mb-4>We"
               className="px-4 py-2 bg-blue-600 text-white rounded "hover": bg-blue-700"
     fs.writeFileSync(path.join(this.projectRoot, "src/components/ErrorBoundary.tsx")
     this.improvementsList.push("Error boundary component")
@@ -83,16 +82,8 @@ export * from "@testing-"library/react""
   "analyzerMode": "static"
           "openAnalyzer"
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    fs.writeFileSync(path.join(this.projectRoot, ")
-    fs.writeFileSync(path.join(this.projectRoot, ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
             <p className=text-gray-600 mb-4>We
 </div>"

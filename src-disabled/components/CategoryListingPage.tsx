@@ -1,237 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-interface Listing {
-  id: string;,
-  title: string;,
-  description: string;,
-  price: number;,
-  category: string;,
-  rating: number;,
-  image: string;,
-  tags: string[];,
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  category: string;
-
-  author_image?: string;
-  ai_score?: number;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  price?: number | null;
-
-interface CategoryListingPageProps {
-
-  title: string
-  description: string;
-  listings: Listing[];
-
-  sortOptions?: { label: string, value: string }[],
-  filterOptions?: { label: string, value: string }[]
-}
-
-export function CategoryListingPage({ 
-  title;
-  description;
-  listings: initialListings;
-  sortOptions;
-                    setSelectedFilter(filterOptions[0]?.value || 'all')
-                  }}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-
-                >
-                  Clear all filters
-                </Button>
-              </div>
-
-
-              </div>;
-            ) : (;
-              <div className="text-center py-20">;
-                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
-                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
-                <Button;
-                  variant="outline";
-
-                  onClick={() => {;
-                    setSearchQuery('');
-                    setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
-                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
-                >;
-                  Clear all filters;
-                </Button>;
-              </div>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-  rating: number;
-  image: string;
-  tags: string[];
-  createdAt: string;
-}
-interface CategoryListingPageProps {
-  category: string;,
-  listings: Listing[];,
-  loading?: boolean;
-}
-export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({,
-  category,
-  listings,
-  loading = false,
-}) => {,
-  const [searchTerm, setSearchTerm] = useState('');,
-  const [sortBy, setSortBy] = useState('newest');,
-  const [filterBy, setFilterBy] = useState('all');,
-  const [filteredListings, setFilteredListings] = useState<Listing[]>([]);,
-  useEffect(() => {
-    let filtered = listings;
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(
-        listing =>
-          listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          listing.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          listing.tags.some(tag =>
-            tag.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-      );
-    }
-    // Filter by category
-    if (filterBy !== 'all') {'
-      filtered = filtered.filter(listing => listing.category ===,  filterBy);
-    }
-    // Sort listings
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'newest':'
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-        case 'oldest':'
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
-        case 'price-low':'
-          return a.price - b.price;
-        case 'price-high':'
-          return b.price - a.price;
-        case 'rating':'
-          return b.rating - a.rating;
-        case 'name-asc':'
-          return a.title.localeCompare(b.title);
-        case 'name-desc':'
-          return b.title.localeCompare(a.title);
-        default:
-          return 0;
-      }
-    });
-    setFilteredListings(filtered);
-  }, [listings, searchTerm, sortBy, filterBy]);
-  const categories = Array.from(new Set(listings.map(listing => listing.category)));
-  if (loading) {
-    return (
-      <div className="container mx-auto px-4 py-8">"
-        <GradientHeading text={`${category} Listings`} />`
-        <ListingGridSkeleton />
-      </div>
-    );
-  }
-  return (
-
-      {/* Search and Filters */}
-      <div className="mb-8 space-y-4">"
-        <div className="flex flex-col sm:flex-row gap-4">"
-          <div className="flex-1">"
-            <div className="relative">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />"
-              <Input placeholder="Search listings...""
-                value={searchTerm}
-                onChange={(e) = /> setSearchTerm(e.target.value)}
-                className="pl-10""
-              />
-            </div>
-          </div>
-          <Select value={sortBy} onValueChange={setSortBy}>
-            <SelectTrigger className="w-full sm:w-48">"
-              <ArrowDownAZ className="h-4 w-4 mr-2" />"
-              Sort by
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="newest">Newest</SelectItem>"
-              <SelectItem value="oldest">Oldest</SelectItem>"
-              <SelectItem value="price-low">Price: Low to High</SelectItem>"
-              <SelectItem value="price-high">Price: High to Low</SelectItem>"
-              <SelectItem value="rating">Rating</SelectItem>"
-              <SelectItem value="name-asc">Name: A-Z</SelectItem>"
-              <SelectItem value="name-desc">Name: Z-A</SelectItem>"
-            </SelectContent>
-          </Select>
-          <Select value={filterBy} onValueChange={setFilterBy}>
-            <SelectTrigger className="w-full sm:w-48">"
-              <Filter className="h-4 w-4 mr-2" />"
-              Filter by
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All Categories</SelectItem>"
-              {categories.map(cat => (
-                <SelectItem key={cat} value={cat}>
-                  {cat}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-      {/* Results */}
-      <div className="mb-4">"
-        <p className="text-gray-600">"
-          Showing {filteredListings.length} of {listings.length} listings
-        </p>
-      </div>
-      {/* Listings Grid */}
-      {filteredListings.length === 0 ? (
-        <div className="text-center py-12">"
-          <div className="text-gray-400 mb-4">"
-            <Search className="h-12 w-12 mx-auto" />"
-          </div>
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No listings found</h3>"
-          <p className="text-gray-500">"
-            Try adjusting your search terms or filters.
-          </p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-          {filteredListings.map((listing) => (
-            <ListingScoreCard
-              key={listing.id}
-              listing={listing}
-              onView={() => {
-                // Handle view action
-                console.log('View listing:', listing.id);
-              }}
-              onEdit={() => {
-                // Handle edit action
-                console.log('Edit listing:', listing.id);
-              }}
-              onDelete={() => {
-                // Handle delete action
-                console.log('Delete listing:', listing.id);
-              }}
-            />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -241,29 +10,9 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
-<<<<<<< HEAD
-=======
-=======
-import { useState, useEffect } from 'react';
-import { GradientHeading } from '@/components/GradientHeading';
-import { ListingScoreCard } from '@/components/ListingScoreCard';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Select
-  SelectTrigger
-  SelectContent
-  SelectItem
-} from '@/components/ui/select'
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
-import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
-import { safeStorage } from "@/utils/safeStorage";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Example listing type
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 // Example listing type
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -282,35 +31,14 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
-<<<<<<< HEAD
-=======
-// Example listing typeinterface Listing {
-=======
-import { useState, useEffect } from 'react';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { ListingScoreCard } from '@/components/ListingScoreCard';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';
-import {}
-  Select,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,';
-} from '@/components/ui/select';'
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';'
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';'
-import { safeStorage } from '@/utils/safeStorage';
 
-interface Listing {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string,
   description: string;
   price: number;
   category: string;
 
-<<<<<<< HEAD
-  author_image?: string;
+author_image?: string;
   ai_score?: number;
   authorImage?: string;
   aiScore?: number;
@@ -319,9 +47,7 @@ interface Listing {}
   price?: number | null;
   createdAt: string
 interface CategoryListingPageProps {
-<<<<<<< HEAD
-
-  title: string
+title: string
   description: string;
   listings: Listing[];
   sortOptions?: { label: string; value: string }[]
@@ -417,8 +143,6 @@ export function CategoryListingPage({
             <GradientHeading>{title}</GradientHeading>
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -432,14 +156,7 @@ import { safeStorage } from "@/utils/safeStorage",;
 interface Listing {;
   id: string,;
 <<<<<<< HEAD
-<<<<<<< HEAD
   title: string,;
-=======
-  title: string,,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  title: string,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string,;
   category: string,;
   subcategory?: string,;
@@ -454,29 +171,13 @@ interface Listing {;
   createdAt: string;
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 interface CategoryListingPageProps {;
   title: string,;
-=======
-;
-interface CategoryListingPageProps {;
-  title: string,,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-;
-interface CategoryListingPageProps {;
-  title: string,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string,;
   listings: Listing[],;
   sortOptions?: { label: string, value: string }[],;
   filterOptions?: { label: string, value: string }[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export function CategoryListingPage({;
@@ -685,15 +386,7 @@ export function CategoryListingPage({;
     </>;
   );
 }
-<<<<<<< HEAD
-=======
 
-interface CategoryListingPageProps {
-  category: string;
-  listings: Listing[];
-  loading?: boolean;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 export function CategoryListingPage({;
@@ -964,46 +657,10 @@ export function CategoryListingPage({;
             </p>
           </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-20">
-                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
-                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setSearchQuery(""),
-                    setSelectedFilter(filterOptions[0]?.value || 'all')
-                  }}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-
-
-
-=======
-  title: string;
-  description: string;
-  listings: Listing[];
-  sortOptions?: { label: string, value: string }[],
-  filterOptions?: { label: string, value: string }[]
-}
-
-export function CategoryListingPage({ 
-  title;
-  description;
-  listings: initialListings;
-  sortOptions;
-                    setSelectedFilter(filterOptions[0]?.value || 'all')
-                  }}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Clear all filters
                 </Button>
               </div>
-
 
               </div>;
             ) : (;
@@ -1027,158 +684,7 @@ export function CategoryListingPage({
       </div>;
     </>;
   );
-=======
-  rating: number;
-  image: string;
-  tags: string[];
-  createdAt: string;
-}
-
-interface CategoryListingPageProps {}
-  category: string;
-  listings: Listing[];
-  loading?: boolean;
-}
-
-export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({}
-  category,
-  listings,
-  loading = false,
-}) => {';
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [sortBy, setSortBy] = useState('newest');'
-  const [filterBy, setFilterBy] = useState('all');
-  const [filteredListings, setFilteredListings] = useState<Listing[]>([]);
-
-  useEffect(() => {}
-    let filtered = listings;
-
-    // Filter by search term;
-    if (searchTerm) {}
-      filtered = filtered.filter(
-        listing =>
-          listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          listing.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          listing.tags.some(tag =>
-            tag.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-      );
-    }
-
-    // Filter by category'
-    if (filterBy !== 'all') {}
-      filtered = filtered.filter(listing => listing.category === filterBy);
-    }
-
-    // Sort listings;
-    filtered.sort((a, b) => {}
-      switch (sortBy) {'
-        case 'newest':
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'
-        case 'oldest':
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();'
-        case 'price-low':
-          return a.price - b.price;'
-        case 'price-high':
-          return b.price - a.price;'
-        case 'rating':
-          return b.rating - a.rating;'
-        case 'name-asc':
-          return a.title.localeCompare(b.title);'
-        case 'name-desc':
-          return b.title.localeCompare(a.title);
-        default:
-          return 0;
-      }
-    });
-
-    setFilteredListings(filtered);
-  }, [listings, searchTerm, sortBy, filterBy]);
-
-  const categories = Array.from(new Set(listings.map(listing => listing.category)));
-
-  if (loading) {}
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <GradientHeading text={`${category} Listings`} />
-        <ListingGridSkeleton />
-      </div>
-    );
-  }
-
-  return ("
-    <div className="container mx-auto px-4 py-8">`
-      <GradientHeading text={`${category} Listings`} />
-      
-      {/* Search and Filters */}"
-      <div className="mb-8 space-y-4">"
-        <div className="flex flex-col sm:flex-row gap-4">"
-          <div className="flex-1">"
-            <div className="relative">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-              <Input"
-                placeholder="Search listings..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}"
-                className="pl-10"
-              />
-            </div>
-          </div>
-          
-          <Select value={sortBy} onValueChange={setSortBy}>"
-            <SelectTrigger className="w-full sm:w-48">"
-              <ArrowDownAZ className="h-4 w-4 mr-2" />
-              Sort by;
-            </SelectTrigger>
-            <SelectContent>"
-              <SelectItem value="newest">Newest</SelectItem>"
-              <SelectItem value="oldest">Oldest</SelectItem>"
-              <SelectItem value="price-low">Price: Low to High</SelectItem>"
-              <SelectItem value="price-high">Price: High to Low</SelectItem>"
-              <SelectItem value="rating">Rating</SelectItem>"
-              <SelectItem value="name-asc">Name: A-Z</SelectItem>"
-              <SelectItem value="name-desc">Name: Z-A</SelectItem>
-            </SelectContent>
-          </Select>
-
-          <Select value={filterBy} onValueChange={setFilterBy}>"
-            <SelectTrigger className="w-full sm:w-48">"
-              <Filter className="h-4 w-4 mr-2" />
-              Filter by;
-            </SelectTrigger>
-            <SelectContent>"
-              <SelectItem value="all">All Categories</SelectItem>
-              {categories.map(cat => (
-                <SelectItem key={cat} value={cat}>
-                  {cat}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-<<<<<<< HEAD
-
-      {/* Results */}"
-      <div className="mb-4">"
-        <p className="text-gray-600">
-          Showing {filteredListings.length} of {listings.length} listings;
-        </p>
-      </div>
-
-      {/* Listings Grid */}
-      {filteredListings.length === 0 ? ("
-        <div className="text-center py-12">"
-          <div className="text-gray-400 mb-4">"
-            <Search className="h-12 w-12 mx-auto" />
-<<<<<<< HEAD
-          </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h3 className="text-lg font-medium text-gray-900 mb-2">No listings found</h3>
-=======
-          </div>"
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No listings found</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-gray-500">
             Try adjusting your search terms or filters.
           </p>
@@ -1207,55 +713,8 @@ export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({}
       )}
     </div>
   );
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-20">
-                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
-                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setSearchQuery(""),
-                    setSelectedFilter(filterOptions[0]?.value || 'all')
-                  }}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-
-                >
-                  Clear all filters
-                </Button>
-              </div>
-
-              </div>;
-            ) : (;
-              <div className="text-center py-20">;
-                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
-                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
-                <Button;
-                  variant="outline";
-
-                  onClick={() => {;
-                    setSearchQuery('');
-                    setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
-                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
-                >;
-                  Clear all filters;
-                </Button>;
-              </div>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1346,12 +805,8 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
 }'"
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-};'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,78 +1,48 @@
-
-import React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
   title?: string;
   description?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
 export default function SEO({
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  canonical,
-  ogImage = "/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image"
+  title = 'Zion Tech Group - AI Solutions & Technology Services',
+  description = 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
+  keywords = 'AI solutions, micro SaaS, IT services, technology consulting, automation',
+  image = '/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
 }: SEOProps) {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      <meta property="og: title" content={title;} />
-      <meta property="og: description" content={description;} />
-      <meta property="og: type" content={ogType;} />
-      <meta property="og: image" content={ogImage;} />
-      <meta name="twitter: card" content={twitterCard;} />
-      <meta name="twitter: title" content={title;} />
-      <meta name="twitter: description" content={description;} />
-      <meta name="twitter: image" content={ogImage;} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+      {/* Open Graph */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional SEO */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="theme-color" content="#3B82F6" />
+      <link rel="canonical" href={url} />
     </Head>
   );
 }
-
-import React from './react';
-import Head from './next / head';
-;
-interface SEOProps {
-interface SEOProps {;
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-}) => {
-
-const SEO: React.FC<SEOProps> = ({;
-  title = "Zion Tech Group - Technology Solutions",;
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
-}) => {;
-  return (
-}
-  image?: string;
-  url?: string;
-  type?: string;
-
-export default function SEO({
-  title = "Zion Tech Group - Advanced AI Solutions",
-  description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
-  image = "/og-image.jpg",
-  url,
-  type = "website",
-}: SEOProps) {
-  const router = useRouter();
-  const canonicalUrl = url || `https: //zion.app${router.asPath;}`;
-}
-export default SEO;
-}
-export default SEO;
-import React from 'react';
-import Head from 'next/head';
-
-pr-12243
-

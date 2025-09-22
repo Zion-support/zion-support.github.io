@@ -1,5 +1,4 @@
-<<<<<<< HEAD:pages/api/admin/pitch/export.ts
-<<<<<<< HEAD
+:pages/api/admin/pitch/export.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
@@ -8,13 +7,6 @@ import { ensureAdminFromApi } from '../../../../utils/auth',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { allowed } = await ensureAdminFromApi(req)
@@ -24,20 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { ensureAdminFromApi } from '../../../../utils/auth',;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req),
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
@@ -64,9 +42,7 @@ function escapeHtml(str: string) {;
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
-<<<<<<< HEAD:pages/api/admin/pitch/export.ts
-<<<<<<< HEAD
-
+:pages/api/admin/pitch/export.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true';
@@ -92,42 +68,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/admin/pitch/export.ts
     .replace(/'/g, '&#039,')
-<<<<<<< HEAD
 }
 
     .replace(/'/g, '&#039,');
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
-    .replace(/'/g, '&#039,')
-}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

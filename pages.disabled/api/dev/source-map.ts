@@ -1,36 +1,19 @@
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-<<<<<<< HEAD
+:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/dev/source-map.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Source map endpoint' });
 }
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -44,7 +27,6 @@ main
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 main
 pr-12243
@@ -62,22 +44,11 @@ import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
 ;
 export default function handler(req: any, res: any) {
   res.status(200).json({ message: 'Source map endpoint' });
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-<<<<<<< HEAD
+:pages_backup/api/dev/source-map.ts
 import type { NextApiRequest, NextApiResponse } from "next",
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
 import { getGitStatus, requireRoles } from "../../../utils/devAccess",
 <<<<<<< HEAD
-=======
-import type { NextApiRequest, NextApiResponse } from "next"
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
-import { getGitStatus, requireRoles } from "../../../utils/devAccess"
-
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/dev/source-map.ts
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -93,11 +64,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
 
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -121,18 +89,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-<<<<<<< HEAD
+:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
 import type { NextApiRequest, NextApiResponse } from './next';;
@@ -144,16 +104,7 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
 
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-=======
-
-
-}
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
-import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
 ;
 export default /**
  * handler - Function description
@@ -180,19 +131,10 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-<<<<<<< HEAD
+:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-      res.status(400).json({ error: "Invalid path" })
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
-=======
-      res.status(400).json({ error: "Invalid path" })
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 res.status(400).json({ error: "Invalid path" }),
 
@@ -358,17 +300,10 @@ export default function handler(req, res) {
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
@@ -399,84 +334,7 @@ if ( {) {
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
       res.status(400).json({ error: "Invalid path" }),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-
-=======
-    if () {) {
-  $2
-}
-      res.status (400).json ({ error: "Invalid path" }),
-      return;
-    }
-    const result = deployBasicTemplateForPath (repoRelativePath),
-    res.status (200).json ({ ok: true, result }),
-    return;
-  }
-  res.set_header ("Allow", "GET, POST"),
-  res.status (405).end ("Method Not Allowed");
-}
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
-import { getGitStatus, requireRoles } from "../../../utils/devAccess";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  const identity = requireRoles(req, res, ["admin", "maintainer"])
-  if (!identity) return
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",;
-import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
-;
-export default function handler(req: any, res: any) {
-  res.status(200).json({ message: 'Source map endpoint' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
-import { getGitStatus, requireRoles } from "../../../utils/devAccess",
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const identity = requireRoles(req, res, ["admin", "maintainer"]),
-  if (!identity) return,
-  if (req.method === "GET") {
-    const nodes = getSourceMapWithExistence()
-    const git = getGitStatus()
-    res.status(200).json({ nodes, status: { gitConnected: git.connected, gitBranch: git.branch } })
-    return
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  if (req.method === "POST") {
-    const { path: repoRelativePath } = req.body |{}
-    if (typeof repoRelativePath !== "string" |!repoRelativePath.startsWith("/")) {
-      res.status(400).json({ error: "Invalid path" })
-      return
-    }
-    const result = deployBasicTemplateForPath(repoRelativePath)
-    res.status(200).json({ ok: true, result })
-    return
-  }
-  res.setHeader("Allow", "GET, POST")
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/dev/source-map.ts
-<<<<<<< HEAD
-
-  res.status(405).end("Method Not Allowed")
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (req.method === "POST") {
-    const { path: repoRelativePath } = req.body || {},
-    if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
-      res.status(400).json({ error: "Invalid path" }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return
     }
     const result = deployBasicTemplateForPath(repoRelativePath),
@@ -487,8 +345,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Allow", "GET, POST"),
   res.status(405).end("Method Not Allowed");
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -586,23 +442,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 }
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-<<<<<<< HEAD
+:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -613,7 +458,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 }
-
 
 }
 
@@ -622,22 +466,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 
-
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-<<<<<<< HEAD
+:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD:pages/api/dev/source-map.ts
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -645,9 +479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
-<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/dev/source-map.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/dev/source-map.ts

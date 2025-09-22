@@ -21,4 +21,3 @@ function ProjectMilestones() {;
         <Footer />;
       </>;
 <<<<<<< HEAD
-

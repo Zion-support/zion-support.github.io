@@ -4,7 +4,7 @@ export default function AnimatedBackground() {}
       <div'
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{}
-          background:'
+          background:';
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
         }};
             transform: translateY(0px) rotate(0deg);
@@ -80,8 +80,8 @@ function AnimatedBackground() {}
         }}
         transition={{}
           duration: 20;
-          repeat: Infinity"
-          ease: "easeInOut"
+          repeat: Infinity";
+          ease: "easeInOut";
         }}"
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
         animate={{}
@@ -98,8 +98,8 @@ function AnimatedBackground() {}
         }}
         transition={{}
           duration: 25;
-          repeat: Infinity"
-          ease: "easeInOut"
+          repeat: Infinity";
+          ease: "easeInOut";
         }}"
         className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"
         animate={{}
@@ -116,15 +116,15 @@ function AnimatedBackground() {}
         }}
         transition={{}
           duration: 30;
-          repeat: Infinity"
-          ease: "easeInOut"
+          repeat: Infinity";
+          ease: "easeInOut";
         }}
       {/* Grid Pattern */}
       <div"
         className="absolute inset-0 opacity-10"
         style={{}`
           backgroundImage: `
-
+;
       `}</style />
     </div>
   );

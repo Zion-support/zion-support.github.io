@@ -17,15 +17,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD:backup-problematic-files/src.pages.disabled/AIAnalytics.jsx
+:backup-problematic-files/src.pages.disabled/AIAnalytics.jsx
 
-<<<<<<< HEAD
-=======
-const AIAnalytics = ({ className }) => {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-const AIAnalytics = ({ className }) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 interface IndexProps {;
   // Add props here as needed;
@@ -38,16 +31,7 @@ export default function Index(): any ({ }: IndexProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD:backup-problematic-files/src.pages.disabled/AIAnalytics.jsx
-<<<<<<< HEAD
+:backup-problematic-files/src.pages.disabled/AIAnalytics.jsx
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
-
-}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp_exclude/pages.blog.disabled/index.tsx

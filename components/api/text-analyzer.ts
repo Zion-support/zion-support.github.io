@@ -234,12 +234,12 @@ text,
       },
 origin/cursor/automate-test-improve-and-merge-code-2533
       readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
-        gunningFog: Math.round(gunningFog * 100) / 100
-        smog: Math.round(smog * 100) / 100
-        colemanLiau: Math.round(colemanLiau * 100) / 100
-        automatedReadability: Math.round(automatedReadability * 100) / 100
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100;
+        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100;
+        gunningFog: Math.round(gunningFog * 100) / 100;
+        smog: Math.round(smog * 100) / 100;
+        colemanLiau: Math.round(colemanLiau * 100) / 100;
+        automatedReadability: Math.round(automatedReadability * 100) / 100;
         averageGrade
       }
       sentiment: {}

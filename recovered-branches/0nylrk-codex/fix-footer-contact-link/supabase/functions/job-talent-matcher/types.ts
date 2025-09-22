@@ -1,21 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-export interface JobData {
-export interface JobData {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export interface JobData {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 export interface JobData {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -27,9 +14,7 @@ export interface JobData {};
   description: string;
   skills: string[];
   category: string;
-<<<<<<< HEAD
-  budget: {
-<<<<<<< HEAD
+budget: {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,18 +25,6 @@ export interface JobData {};
 
     max: number
 <<<<<<< HEAD
-=======
-  }
-  deadline: string
-}
-<<<<<<< HEAD
-export interface TalentProfile {
-
-export interface TalentProfile {;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     min: number,
     max: number;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -86,27 +59,7 @@ export interface TalentProfile {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface TalentProfile {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
-  deadline: string
-}
-export interface TalentProfile {
-<<<<<<< HEAD
-
-export interface TalentProfile {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -131,39 +84,16 @@ export interface TalentProfile {;
   years_experience: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   hourly_rate?: number;
   availability_type?: string;
 }
-
 
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface TalentMatch {
-=======
-export interface TalentMatch {
-  hourly_rate?: number
-
-  availability_type?: string
-}
-export interface TalentMatch {
-
-export interface TalentMatch {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  talent_id: string;
-  job_id: string;
-  match_score: number;}
-export interface TalentMatch {
-
-export interface TalentMatch {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   talent_id: string;
   job_id: string;
@@ -186,12 +116,7 @@ export interface TalentMatch {;
   match_score: number;}
 
 export interface TalentMatch {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-export interface TalentMatch {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -201,10 +126,6 @@ export interface TalentMatch {;
 export interface MatchResult {};
   talentId: string;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   score: number;
 
 }
@@ -248,17 +169,10 @@ export interface MatchResult {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   matched_skills: string[]
 
   created_at: string;
 }
-<<<<<<< HEAD
 export interface MatchResult {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -274,45 +188,12 @@ export interface MatchResult {
   reason?: string
 }
 export interface JobData {;
-=======
-=======
-=======
-export interface MatchResult {};
-export interface MatchResult {;
-  talentId: string;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  matched_skills: string[]
-
-  created_at: string
-}
-export interface MatchResult {
-
-export interface MatchResult {;
-  talentId: string;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  matched_skills: string[],
-  // TODO: Implement
-export interface MatchResult {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent_id: string;
   job_id: string;,
   match_score: number;
 }
-<<<<<<< HEAD
-
-  score: number;
-<<<<<<< HEAD
+score: number;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  score: number;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  score: number;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string,;
   title: string,;
   description: string,;
@@ -336,54 +217,25 @@ export interface TalentMatch {;
   talentId: string,;
   score: number,;
   matchedSkills: string[];
-<<<<<<< HEAD
-
-  reason?: string;
+reason?: string;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   reason?: string
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-export interface MatchResult {
-  talent_id: string;
-  score: number;
-
-  matched_skills: string[],
-  reason?: string;
-  // TODO: Implement
-
-<<<<<<< HEAD
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
 export interface JobData {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 }
 <<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  score: number;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   score: number;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

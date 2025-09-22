@@ -1,17 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { ArrowLeft } from 'lucide-react'
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return (
 import React from 'react';
 import { Button } from "@/components/ui/button";
@@ -21,54 +14,27 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import { Button } from "@/components/ui/button";"
 import Link from "next/link";'
 import { ArrowLeft } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-    <div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;
+<div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;
       <div className='text - red - 400 mb - 4 text - xl'>;
-=======
-
-';
-    <div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;'
-      <div className='text - red - 400 mb - 4 text - xl'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {error || 'Something went wrong'}
       </div>;
       <Button as_child>;
         <Link;'
           href='/talents';'
           className='bg - zion - purple hover:bg - zion - purple - dark';
-<<<<<<< HEAD
-        >;
+>;
           <ArrowLeft className='mr - 2 h - 4 w - 4' />          Back to Talent Directory;
         <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple-dark">;
           <ArrowLeft className="mr - 2 h - 4 w-4" />;
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ProfileErrorStateProps {
   error: string | null
 =======
@@ -85,9 +51,6 @@ interface ProfileErrorStateProps {}
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark" />"
           <ArrowLeft className="mr-2 h-4 w-4" />"
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,14 +59,6 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>
       <Button asChild>
-=======
-
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -139,28 +94,12 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
   )
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </div>
-=======
-
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    </div>
-
-    </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -173,8 +112,7 @@ import Link from 'next/link';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ArrowLeft } from 'lucide-react';
 interface ProfileErrorStateProps {;
-<<<<<<< HEAD
-  error: string | null;
+error: string | null;
 
 export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
   return ('
@@ -183,81 +121,28 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
         {error || 'Something went wrong'}
       </div>;
       <Button asChild>;
-<<<<<<< HEAD
-        <Link
+<Link
           href='/talents'
           className='bg-zion-purple hover:bg-zion-purple-dark'>;
-=======
-  error: string | null;,
-export function ProfileErrorState(): any ({ error }:,  ProfileErrorStateProps) {;
-  return (
-    <div className='min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4'>;
-      <div className='text-red-400 mb-4 text-xl'>;
-        {error || 'Something went wrong'}'
-      </div>;
-      <Button asChild>;
-        <Link href='/talents''
-          className='bg-zion-purple hover:bg-zion-purple-dark' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory;
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark" />;
           <ArrowLeft className="mr-2 h-4 w-4" />;
 import React from 'react';
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  )
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from "next/link";
-=======
-        <Link'
-          href='/talents''
-          className='bg-zion-purple hover:bg-zion-purple-dark'>;'
-          <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory;"
-        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;"
-          <ArrowLeft className="mr-2 h-4 w-4" />;'
-import React from 'react';"
-import { Button } from "@/components/ui/button";"
-import Link from "next/link";'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ArrowLeft } from 'lucide-react';
 interface ProfileErrorStateProps {;
   error: string | null;
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
-export function ProfileErrorState({ error }:,  ProfileErrorStateProps) {;
-export function ProfileErrorState({ error }: ProfileErrorStateProps) {;
-  return (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
   return (    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-;
-export function ProfileErrorState() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
-<<<<<<< HEAD
-      <Button asChild>;"
+<Button asChild>;"
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;"
-=======
-      <Button asChild>;
-        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark" />;
-        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowLeft className="mr-2 h-4 w-4" />;
           Back to Talent Directory;
         </Link>;
@@ -265,53 +150,17 @@ export function ProfileErrorState() { return null; }
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
-  );
-}
-export /**;
- * ProfileErrorState - Function description;
- */
-<<<<<<< HEAD
-function ProfileErrorState() {
-  return (
-    <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p-4">;
-      <div className="text - red - 400 mb - 4 text-xl">{error || "Something went wrong"}</div>;
-      <Button as_child>;
-<<<<<<< HEAD
-        <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple-dark">;
-          <ArrowLeft className="mr - 2 h - 4 w-4" />;
-=======
-function ProfileErrorState() {}
-  return ("
-    <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4">;"
-      <div className="text - red - 400 mb - 4 text - xl">{error || "Something went wrong"}</div>;
-      <Button as_child>;"
-        <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple - dark">;"
-=======
-        <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple - dark" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowLeft className="mr - 2 h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           Back to Talent Directory;
         </Link>;
       </Button>;
     </div>);
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 })
 ;
@@ -326,9 +175,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ArrowLeft className="mr - 2 h - 4 w - 4" />;"
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">"
           <ArrowLeft className="mr-2 h-4 w-4" />"
-
-
-
 
     </div>"
     <div className='min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4'>;

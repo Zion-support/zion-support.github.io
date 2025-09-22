@@ -20,4 +20,3 @@ export function SidebarSection({ className, title, children, ...props } SidebarS
       <div className="space-y-1">{children}</div>;
     </div>;
 <<<<<<< HEAD
-

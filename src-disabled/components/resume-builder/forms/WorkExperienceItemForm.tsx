@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -48,15 +46,8 @@ export function WorkExperienceItemForm({
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Set up form
   const form = useForm<FormValues>({
-=======
-// Set up form;
-  const form = useForm<FormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(formSchema)
     defaultValues: {}
 import { useState } from 'react';'
@@ -84,20 +75,15 @@ import { cn } from '@/lib / utils';'
 import { Switch } from '@/components / ui / switch';'
 import { format } from 'date - fns';
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       company_name: initialData?.company_name || "",
-=======
-      company_name: initialData?.company_name || "","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
-<<<<<<< HEAD
-      description: initialData?.description || "",
+description: initialData?.description || "",
       location: initialData?.location || ""}}),
-  
+
   const { isSubmitting } = form.formState,
   const watchIsCurrent = form.watch("is_current"),
   const watchRoleTitle = form.watch("role_title"),
@@ -115,7 +101,7 @@ import { format } from 'date - fns';
       description: values.description,    // Optional
       location: values.location,          // Optional
     },
-    
+
     await onSubmit(workExperience)
   },
 
@@ -123,10 +109,6 @@ import { format } from 'date - fns';
     form.setValue("description", content, { shouldDirty: true }),
     setIsEnhancementDialogOpen(false)
   },
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <Form {...form}>"
@@ -134,14 +116,7 @@ import { format } from 'date - fns';
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField;
               control={form.control}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="company_name"
               render={({ field }: { field: any }) => (
                 <FormItem>
@@ -152,21 +127,7 @@ import { format } from 'date - fns';
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
-=======
-
-
-
-        }}
-        initialContent={form.getValues('description') |''}      />
-
-import { useState  } from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
 import { z } from "zod",;
@@ -180,30 +141,7 @@ import { Textarea } from "@/components/ui/textarea",;
 import { cn } from "@/lib/utils",;
 import { Switch } from "@/components/ui/switch",;
 import { format } from "date-fns",;
-<<<<<<< HEAD
 import { CalendarIcon, Loader2 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { AIEnhancementButton } from '@/components / ai - enhancement / AIEnhancementButton';
-=======
-'
-import { useState } from 'react',;"
-import { zodResolver } from "@hookform/resolvers/zod",;"
-import { useForm } from "react-hook-form",;"
-import { z } from "zod",;"
-import { WorkExperience } from "@/types/resume",;"
-import { Button } from "@/components/ui/button",;"
-import { Calendar } from "@/components/ui/calendar",;"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;"
-import { Input } from "@/components/ui/input",;"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;"
-import { Textarea } from "@/components/ui/textarea",;"
-import { cn } from "@/lib/utils",;"
-import { Switch } from "@/components/ui/switch",;"
-import { format } from "date-fns",;'
-import { CalendarIcon, Loader2 } from 'lucide-react';'
-import { AIEnhancementButton } from '@/components / ai - enhancement / AIEnhancementButton';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AIEnhancementDialog } from '@/components / ai - enhancement / AIEnhancementDialog';
 // Define form schema;
 const form_schema = z.object ({'
@@ -267,22 +205,12 @@ function WorkExperienceItemForm() {}
     setIsEnhancementDialogOpen(false)
   }
 
-<<<<<<< HEAD
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { WorkExperience } from '@/types/resume';
 import { Button } from '@/components/ui/button';
-=======
-'
-import { useState } from 'react';'
-import { zodResolver } from '@hookform/resolvers/zod';'
-import { useForm } from 'react-hook-form';'
-import { z } from 'zod';'
-import { WorkExperience } from '@/types/resume';'
-import { Button } from '@/components/ui/button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Calendar } from '@/components/ui/calendar';
 import {;
   Form,;
@@ -296,8 +224,7 @@ import { Input } from '@/components/ui/input';
 import {;
   Popover,;
   PopoverContent,;
-<<<<<<< HEAD
-  PopoverTrigger,;
+PopoverTrigger,;
 } from '@/components/ui/popover';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
@@ -318,20 +245,7 @@ export function WorkExperienceItemForm(): any ({;
   onCancel,;
 }: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
-=======
-  PopoverTrigger,;'
-} from '@/components/ui/popover';'
-import { Textarea } from '@/components/ui/textarea';'
-import { cn } from '@/lib/utils';'
-import { Switch } from '@/components/ui/switch';'
-import { format } from 'date-fns';'
-import { CalendarIcon, Loader2 } from 'lucide-react';"
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
 // Define form schema;
 const formSchema = z.object({;"
@@ -350,15 +264,12 @@ interface WorkExperienceItemFormProps {;
   onCancel: () => void;
 }
 ;
-<<<<<<< HEAD
 export function WorkExperienceItemForm({;
   initialData,;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
@@ -392,39 +303,12 @@ export function WorkExperienceItemForm() { return null; }
   },;
   return (;
     <>;
-<<<<<<< HEAD
-      <Form {...form}>;
-
-=======
-      <Form {...form}>;"
-        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField;
-              control={form.control}"
-              name="company_name";
-              render={({ field }: { field: any }) => (;
-                <FormItem>;
-                  <FormLabel>Company Name</FormLabel>;
-                  <FormControl>;"
-                    <Input placeholder="e.g. Acme Corporation" {...field} />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<Form {...form}>;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-=======
 
-            />;
-
-<<<<<<< HEAD
-            <FormField
-              control={form && form.control}
-=======
-
-            <FormField;
-              control={form && form.control}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name='role_title'
               render={({ field }: { field: any }) => (                <FormItem>;
                   <FormLabel>Role Title</FormLabel>;
@@ -470,11 +354,7 @@ export function WorkExperienceItemForm() { return null; }
             />;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
-=======
 
-            />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="role_title"
               render={({ field }: { field: any }) => (
                 <FormItem>
@@ -489,25 +369,13 @@ export function WorkExperienceItemForm() { return null; }
             />
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <FormField
 
                 </FormItem>)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               control={form.control}
-=======
-            <FormField;
-                </FormItem>)}
-              control={form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="location"
               render={({ field }: { field: any }) => (
                 <FormItem>
@@ -521,8 +389,7 @@ export function WorkExperienceItemForm() { return null; }
               )}
             />;
             <FormField;
-<<<<<<< HEAD
-              control={form.control}
+control={form.control}
               name='is_current';
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex - col'>                  <FormLabel > Current Position</FormLabel>;
@@ -531,29 +398,11 @@ export function WorkExperienceItemForm() { return null; }
                       aria - label='Current position';
                       checked={field.value}
                       onCheckedChange={field.onChange}
-=======
-              control={form.control}"
-              name="is_current"
-              render={({ field }: { field: any }) => ("
-                <FormItem className="flex flex-col">
-                  <FormLabel>Current Position</FormLabel>"
-                  <div className="flex items-center gap-2 h-10">
-                    <Switch"
-                      aria-label="Current position"
-                      checked={field.value}
-
-                      onCheckedChange={field.onChange}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       id="current-position"
                     />"
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
 
-<<<<<<< HEAD
-                      I currently work here
-=======
-
-                      I currently work here;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+I currently work here
                     </label>
                   </div>
                   <FormMessage />
@@ -562,15 +411,7 @@ export function WorkExperienceItemForm() { return null; }
             />
           </div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
-            />;
-          </div>;
-
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
 =======
@@ -588,27 +429,15 @@ export function WorkExperienceItemForm() { return null; }
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
-<<<<<<< HEAD
-                        <Button
-<<<<<<< HEAD
-=======
+<Button
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                        <Button;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           variant={"outline"}
                           className={cn("
                             "w-full pl-3 text-left font-normal","
                             !field.value && "text-muted-foreground"
                           )}
                         >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           {field.value ? (
                             format(field.value, 'MMM yyyy')
                           ) : (
@@ -663,16 +492,8 @@ export function WorkExperienceItemForm() { return null; }
                       </FormControl>
                     </PopoverTrigger>"
                     <PopoverContent className="w-auto p-0" align="start">
-<<<<<<< HEAD
-                      <Calendar
-<<<<<<< HEAD
-=======
+<Calendar
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                      <Calendar;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         mode="single"
                         selected={field.value}
                         onSelect={field.onChange}
@@ -689,156 +510,43 @@ export function WorkExperienceItemForm() { return null; }
             />;
 
             {!watchIsCurrent && (;
-<<<<<<< HEAD
-=======
 
-              <FormField;
-                control={form && form.control}'
-                name='end_date'
-                render={({ field }: { field: any }) => (;'
-                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>;
-                    <Popover>;
-                      <PopoverTrigger asChild>;
-                        <FormControl>;
-<<<<<<< HEAD
-                          <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             variant={'outline'}
                             className={cn(
 
             />;
             {!watchIsCurrent && (;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <FormField;
                 control={form.control}
                 name="end_date"
                 render={({ field }: { field: any }) => (
                   <FormItem className="flex flex-col">
                     <FormLabel>End Date</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             variant={"outline"}
                             className={cn(
                               "w-full pl-3 text-left font-normal",
                               !field.value && "text-muted-foreground"
                             )}
                           >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                            {field.value ? (
+{field.value ? (
                               format(field.value, "MMM yyyy")
                             ) : (
                               <span>Select date</span>
                             )}
-=======
-
-                            {field.value ? (
-                              format(field.value, 'MMM yyyy')
-                            ) : (
-                              <span>Select date</span>
-                              'w-full pl-3 text-left font-normal',
-                              !field && field.value && 'text-muted-foreground'
-                            )}>;
-                            {field && field.value ? (;
-                              format(field && field.value, 'MMM yyyy');
-                            ) : (;
-                              <span>Select date</span>;
-                            )}
-
-                    <PopoverContent className='w - auto p - 0' align='start'>;
-                      <Calendar;
-                        mode='single';
-                        selected={field.value}
-                        on_select={field.on_change}
-                        initial_focus;
-                        caption_layout='dropdown - buttons';
-                        from_year={1990}
-                        to_year={new Date ().getFullYear ()}                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            {!watchIsCurrent && (
-              <FormField;
-                control={form.control}
-                name='end_date';
-                render={({ field }: { field: any }) => (
-                  <FormItem className='flex flex - col'>                    <FormLabel > End Date</FormLabel>;
-                    <Popover>;
-                      <PopoverTrigger as_child>;
-                        <FormControl>;
-                          <Button;
-                            variant={'outline'}
-                            className={cn (
-                              'w - full pl - 3 text - left font - normal',
-                              !field.value && 'text - muted - foreground')}                          >;
-                            {field.value ? (
-                              format (field.value, 'MMM yyyy')) : (
-                              <span > Select date</span>)}
-                            <CalendarIcon;
-                              className='ml - auto h - 4 w - 4 opacity - 50';
-                              aria - hidden='true';
-
-                            />;
-                          </Button>;
-                        </FormControl>;
-                      </PopoverTrigger>;
-
-                          selected={field && field.value || undefined}
-                          onSelect={field && field.onChange}
-
-                          initialFocus
-                          captionLayout='dropdown-buttons'
-                          fromYear={1990}
-                          toYear={new Date().getFullYear()}
-                          disabled={date => date > new Date()}                        />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                           </Button>
                         </FormControl>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           mode="single"
                           selected={field.value || undefined}
                           onSelect={field.onChange}
@@ -852,23 +560,10 @@ export function WorkExperienceItemForm() { return null; }
                     </Popover>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD
-                )}
+)}
               />;
             )}
-<<<<<<< HEAD
-=======
-=======
-
-
-
-                )}
-              />;
-            )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-          </div>;
-
+</div>;
 
           <FormField
             control={form && form.control}
@@ -890,13 +585,8 @@ export function WorkExperienceItemForm() { return null; }
                         });
 
                       }
-<<<<<<< HEAD
-                      buttonText='Enhance with AI'
+buttonText='Enhance with AI'
                     />
-=======
-                      buttonText='Enhance with AI';
-                    />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Button
                       type='button'
                       variant='outline'
@@ -960,11 +650,7 @@ export function WorkExperienceItemForm() { return null; }
                 </FormControl>;
                 <FormMessage />;
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
           <FormField;
             control={form.control}
@@ -973,12 +659,10 @@ export function WorkExperienceItemForm() { return null; }
               <FormItem>
                 <div className="flex justify-between items-center">
 
-
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
-<<<<<<< HEAD
 <<<<<<< HEAD
                         enhancementType: "work-description",
                         content: field.value || "",
@@ -994,26 +678,13 @@ export function WorkExperienceItemForm() { return null; }
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs"
                     >
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       AI Writer
                     </Button>
                   </div>
                 </div>
                 <FormControl>
                   <Textarea
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
+placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
                     {...field}
                   />;
@@ -1022,11 +693,7 @@ export function WorkExperienceItemForm() { return null; }
               </FormItem>;
             )}
           />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={onCancel}>
               Cancel
@@ -1035,30 +702,6 @@ export function WorkExperienceItemForm() { return null; }
               {isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-=======
-
-                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
-                    className="min-h-[150px]"
-
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          
-          <div className="flex justify-end gap-2">
-            <Button type="button" variant="outline" onClick={onCancel}>
-
-              Cancel
-            </Button>
-            <Button type='submit' disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   Saving...
                 </>
               ) : (
@@ -1068,18 +711,12 @@ export function WorkExperienceItemForm() { return null; }
           </div>
         </form>
       </Form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <AIEnhancementDialog
+<AIEnhancementDialog
         title="Enhance Work Experience Description"
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
         defaultOptions={{
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />;
 
           <div className='flex justify-end gap-2'>;
@@ -1113,40 +750,18 @@ export function WorkExperienceItemForm() { return null; }
         </form>;
       </Form>;
 
-
         title="Enhance Work Experience Description"
-
 
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
 
-
           enhancementType: 'work-description',
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
 
-
         }}
         initialContent={form.getValues('description') |''}      />
-
-=======
-import { useState  } from 'react';
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {
   Form
   FormControl
@@ -1202,11 +817,7 @@ type FormValues = z.infer < typeof form_schema>;
 //Create a properly typed WorkExperience object with all required fields const work_experience: WorkExperience = {
   await on_submit (work_experience);
 }
-<<<<<<< HEAD
 setIsEnhancementDialogOpen (false)
-=======
-setIsEnhancementDialogOpen (false);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
         defaultOptions={{;
@@ -1249,8 +860,6 @@ setIsEnhancementDialogOpen (false);
 }
 }
 
-
-
 }/> <FormField </FormControl> <FormMessage /> </FormItem>);
 }/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormField <FormLabel > Current Position</FormLabel> <div className="flex items - center gap - 2 h - 10" > <Switch /> <label html_for="current - position" className="text - sm text - muted - foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";
@@ -1277,10 +886,7 @@ setIsEnhancementDialogOpen (false);
 };
 };
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           enhancementType: "work-description",
           content: form.getValues("description") || "",
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
@@ -1290,17 +896,10 @@ setIsEnhancementDialogOpen (false);
   )
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
 =======
@@ -1315,13 +914,8 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                          <Button;
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />"
@@ -1337,15 +931,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
 
-
-
                 name='end_date
 
                   <FormItem className='flex flex-col'>                    <FormLabel>End Date;
 
-
                       <PopoverTrigger asChild>;
-
 
                           <Button;)
 pr-12325

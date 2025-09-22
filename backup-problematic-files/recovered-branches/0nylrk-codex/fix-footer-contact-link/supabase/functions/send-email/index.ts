@@ -30,20 +30,15 @@ serve(async (req) => {;
       headers:{ ...corsHeaders, "Content-Type":"application/json" };
       status:500});  }
 });
- 
+
 }try {
   const {
-<<<<<<< HEAD
-  to, subject, html
-=======
-  to, subject, html 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+to, subject, html
 }= await req.json ();
 const emailResponse = await resend.emails.send ({
   from: "Lovable <onboarding@resend.dev>";
 to: [to];
 subject;
-<<<<<<< HEAD
 html
 });
 return new Response (JSON.stringify (emailResponse), {
@@ -51,16 +46,3 @@ return new Response (JSON.stringify (emailResponse), {
 });
 }
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-html 
-});
-return new Response (JSON.stringify (emailResponse), {
-  status: 500 
-});
-}
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

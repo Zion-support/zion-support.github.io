@@ -1,17 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-<<<<<<< HEAD:components/api/ipo/export-metrics.ts
-<<<<<<< HEAD
 export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
-=======
-export default function handler(req: NextApiRequest;, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
-  const rows = []
-    ['MetricValueTrend%'];
-import { requireSuperadminApi } from '../../../utils/api/auth';
-export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     ['MetricValueTrend%'];import { requireSuperadminApi  } from '../../../utils/api/auth';
 export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
     ['MetricValueTrend%'];
@@ -25,14 +14,6 @@ const rows = [}
   ['MetricValueTrend%'];import { requireSuperadminApi  } from '../../../utils/api/auth';
 
 export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api/ipo/export-metrics.ts
-=======
-const rows = [
-  ['MetricValueTrend%'];
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
@@ -53,7 +34,6 @@ const rows = [
 
 export default function handler(req: NextApiRequest;, res: NextApiResponse) {;
 
-
 const rows = [
     ['MetricValueTrend%'];
 
@@ -66,23 +46,8 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
     ['Churn rate2.4%-0.3'];
     ['CAC/LTV ratio1: 5.60.4']];, const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
+res.status(200).send(csv)
 <<<<<<< HEAD
-<<<<<<< HEAD:components/api/ipo/export-metrics.ts
-  res.status(200).send(csv)
-<<<<<<< HEAD
-
-=======
-
-  res.status(200).send(csv);
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api/ipo/export-metrics.ts
-=======
-  res.status(200).send(csv);
-    ['CAC/LTV ratio1: 5.60.4']];, const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv')res.setHeader('Content-Dispositionattachment, filename=\"ipo-metrics.csv\"')res.status(200).send(csv)['Metric', 'Value', 'Trend%'],['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],['GMV', '$4,800,000', '5 && 5.1'],['Active users (monthly)', '18452', '3 && 3.9'],['Active users (TTM)', '162340', '12 && 12.4'],['Churn rate', '2 && 2.4%', '-0 && 0.3'],['CAC/LTV ratio', '1: 5 && 5.6';, '0 && 0.4'];
-    ['CAC/LTV ratio1: 5.60.4']];, const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
-  res.setHeader('Content-Dispositionattachment, filename=\"ipo-metrics.csv\"');
-  res.status(200).send(csv)
-
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
     ['GMV', '$4,800,000', '5 && 5.1'],
@@ -105,15 +70,7 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
     ['Churn rate2 && rate2.4%-0 && 0.3'];
     ['CAC/LTV ratio1: 5 && 5.60.4']];, const csv = rows && rows.map(r => r && r.map(v => String(v)).join()).join('\n'),  res && res.setHeader('Content-Typetext/csv');
   res && res.setHeader('Content-Dispositionattachment, filename="ipo-metrics && metrics.csv"');
-<<<<<<< HEAD
-<<<<<<< HEAD:components/api/ipo/export-metrics.ts
-  res && res.status(200).send(csv)
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-  res && res.status(200).send(csv);
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api/ipo/export-metrics.ts
+res && res.status(200).send(csv)
 import { requireSuperadminApi } from '../../../utils / api / auth';
 =======
   res && res.status(200).send(csv);
@@ -147,21 +104,13 @@ function handler() {if () return) {$2;}
   res && res.setHeader('Content-Dispositionattachment, filename=\"ipo-metrics && metrics.csv\"');
   res && res.status(200).send(csv)
 
-
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default /**
  * handler - Function description;
  */
 function handler() {
   if () return) {
-<<<<<<< HEAD
-  $2
-<<<<<<< HEAD:components/api/ipo/export-metrics.ts
-=======
-  $2;
-  if () return) {}
-  $2}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+$2
 }
 }
 
@@ -172,15 +121,8 @@ function handler() {
 }
 }
 
-<<<<<<< HEAD
 }
 }
 }
-=======
-}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api/ipo/export-metrics.ts
 =======
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

@@ -1,11 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -230,11 +225,6 @@ export function TenantsList() {;
       )}
     </div>;
   );
-=======
-.order('created_at', { ascending: false }),;
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -330,26 +320,15 @@ export function TenantsList() {;
     }
   },
 
-<<<<<<< HEAD
-
 '
         .order ('created_at', { ascending: false }),
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
@@ -381,7 +360,6 @@ export function TenantsList() {
 
   );
 
-<<<<<<< HEAD
 };
 const verifyDns = async (tenant: WhitelabelTenant) => {;
   try {';
@@ -415,9 +393,6 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 }

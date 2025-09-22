@@ -1,59 +1,23 @@
-<<<<<<< HEAD:pages_backup/api/messages/compose.ts
-<<<<<<< HEAD
+:pages_backup/api/messages/compose.ts
 <<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '[^']*';
 import { sendMessage } from '[^']*';
 import { ConversationContext } from '[^']*';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { sendMessage } from '../../../utils/messaging/storage';
 import { ConversationContext } from '../../../utils/messaging/types';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import { sendMessage } from "../../../utils/messaging/storage";
 import { ConversationContext } from "../../../utils/messaging/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
-<<<<<<< HEAD
-  const user = requireUser(req, res);
-  if (!user) return;
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
-=======
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const user = requireUser(req, res);
   if (!user) return;
 
     recipientId,
-=======
-import { NextApiRequest, NextApiResponse  } from './next';
-import { require_user  } from '../../../utils / auth';
-import { send_message  } from '../../../utils / messaging / storage';
-import { ConversationContext  } from '../../../utils / messaging / types';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const user = require_user (req, res);
-  // Check condition
-if (return) {
-  $2
-}
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const {
 =======
 
@@ -87,21 +51,14 @@ if (return) {
     link_url,
     attachmentBase64,
 
-
     context,
-
 
   });
 
 }
 
-
-
   res.status (200).json ({ conversation, message });
 }
-
-
-
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {}
@@ -113,10 +70,8 @@ if (return) {
     context?: ConversationContext;
   };'
   if (!recipientId || !body) return res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD:pages_backup/api/messages/compose.ts
+:pages_backup/api/messages/compose.ts
   const { conversation, message } = sendMessage({
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   const { conversation, message } = sendMessage({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts
@@ -125,8 +80,7 @@ if (return) {
     body,
     linkUrl,
     attachmentBase64,
-<<<<<<< HEAD:pages_backup/api/messages/compose.ts
-<<<<<<< HEAD
+:pages_backup/api/messages/compose.ts
 <<<<<<< HEAD
     attachmentName,
     context
@@ -161,9 +115,6 @@ export default function handler(req, res) {
     linkUrl,;
     attachmentBase64,;
     attachmentName;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     context});
   res.status(200).json({ conversation, message });
   } catch (error) {
@@ -179,30 +130,11 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-=======
-    attachmentName,
-    context,
-  });
-  res.status(200).json({ conversation, message })
-}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-    attachmentName,
-context,
-  });
-  res.status(200).json({ conversation, message });
-
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts

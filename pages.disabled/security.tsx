@@ -1,45 +1,10 @@
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD
+:pages_backup/security.tsx
 <<<<<<< HEAD:pages_backup/security.tsx
 <<<<<<< HEAD:pages/security.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Security - Zion Tech Group"
-      description="Security solutions from Zion Tech Group"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Security</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-<<<<<<< HEAD:pages_backup/security.tsx
-export default Page;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/security.tsx
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -59,12 +24,6 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { motion } from 'framer-motion';
 import {
@@ -159,16 +118,9 @@ export default function Security() {
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-6'>
           <div className='max-w-4xl mx-auto text-center'>
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/security.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/security.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
@@ -228,22 +180,11 @@ export default function SecurityPage() {}
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>"
           <div className="container mx-auto px-4 relative z-10">
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
+:pages_backup/security.tsx
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
-=======
-'
-import Head from 'next/head';'
-import { motion } from 'framer-motion';'
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';'
-import EnhancedNavigation from '../components/EnhancedNavigation';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function Security(req, res) {}
   try {};
@@ -313,20 +254,10 @@ export default function Security(req, res) {}
 }"
         <section className="pt-32 pb-20 px-6">"
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
-            <motion.div
+:pages_backup/security.tsx
+<motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
-=======
-
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -386,7 +317,7 @@ export default function Security(req, res) {}
             </motion.p>
           </div>
         </section>
-<<<<<<< HEAD:pages_backup/security.tsx
+:pages_backup/security.tsx
         {/* Security Stats */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -401,38 +332,19 @@ export default function Security(req, res) {}
 
         {/* Security Overview */  } catch (error) {
     console.error("Error:", error);
-=======
-
-        {/* Security Overview */  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
         <section className="py-20 px-6">"
           <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
-            <motion.div
+:pages_backup/security.tsx
+<motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className='flex items-center justify-center mb-6'
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
-
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center"
-            >"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
                 Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Protection</span>
               </h1>"
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -457,25 +369,15 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
               comprehensive security measures and industry-leading practices.
             </motion.p>
           </div>
-<<<<<<< HEAD:pages_backup/security.tsx
+:pages_backup/security.tsx
         </section>
-<<<<<<< HEAD:pages_backup/security.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/security.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-=======
-        </section>"
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;"
-          <div className="absolute inset-0">;"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;"
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
           </div>;
 "
@@ -501,17 +403,9 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
           </div>;
         </section>;
 
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
-        {/* Security Features */}
+:pages_backup/security.tsx
+{/* Security Features */}
         <section className="py-16">;
-=======
-
-        {/* Security Features */}"
-        <section className="py-16">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
           <div className="container mx-auto px-4">;
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -697,17 +591,9 @@ function SecurityPage() {}
           </div>;
         </section>;
 
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
-        {/* Compliance Section */}
+:pages_backup/security.tsx
+{/* Compliance Section */}
         <section className="py-16 bg-white">;
-=======
-
-        {/* Compliance Section */}"
-        <section className="py-16 bg-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
           <div className="container mx-auto px-4">;
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -754,10 +640,7 @@ function SecurityPage() {}
                 </div>;"
                 <h3 className="text-lg font-bold text-gray-900 mb-2">HIPAA</h3>;"
                 <p className="text-gray-600 text-sm">Health Insurance Portability and Accountability Act</p>;
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
+:pages_backup/security.tsx
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 p - 6";
                 >;"
                   <div className="flex items - center mb - 4">;"
@@ -776,10 +659,7 @@ function SecurityPage() {}
                         <li key={idx} className="flex items - center text - sm text - gray - 600">;"
                           <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                           {detail}
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
+:pages_backup/security.tsx
                         </li>))}
                     </ul>;
                   </div>;
@@ -787,27 +667,9 @@ function SecurityPage() {}
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
-</li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
-        {/* Compliance Section */}
+:pages_backup/security.tsx
+{/* Compliance Section */}
         <section className="py - 16 bg - white">;
-=======
-
-
-        {/* Compliance Section */}"
-        <section className="py - 16 bg - white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
           <div className="container mx - auto px - 4">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -856,15 +718,9 @@ function SecurityPage() {}
           </div>;
         </section>;
 
-<<<<<<< HEAD:pages_backup/security.tsx
+:pages_backup/security.tsx
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-=======
-
-"
-        <section className="py-16 bg-white">"
-          <div className="container mx-auto px-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {securityStats.map((stat, index) => (
                 <motion.div;
@@ -889,13 +745,8 @@ function SecurityPage() {}
   }
 }"
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/security.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/security.tsx
+
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
 
@@ -929,14 +780,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
 =======
 
-
                 >"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
 
-<<<<<<< HEAD:pages_backup/security.tsx
+:pages_backup/security.tsx
                   <ul className='space-y-3'>
                     {measure.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-start'>
@@ -1175,7 +1025,6 @@ className='bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 bor
                 >
                   View Compliance Details
 
-<<<<<<< HEAD:pages_backup/security.tsx
 ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import {motion} from 'framer-motion';
@@ -1245,32 +1094,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                   </div>
                 </div>
 </Link>
-=======
-
-</Link>
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
               </div>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:pages_backup/security.tsx
+:pages_backup/security.tsx
     </Layout>
       </div>
-<<<<<<< HEAD:pages_backup/security.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD:pages/security.tsx
-=======
-
-
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -1281,7 +1114,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       </div>;
     </Layout>;
 
-<<<<<<< HEAD:pages_backup/security.tsx
+:pages_backup/security.tsx
     </>
 ursor/integrate-build-improve-and-re-verify-8f7d
   );
@@ -1300,20 +1133,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/fix-lint-push-and-merge-to-main-ae4e
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-
-
-
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
 
 }
   );
-
 
   );
 }  )
@@ -1322,7 +1144,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
   );
 }
-
 
   )
 }
@@ -1364,7 +1185,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 );
 }
 
-
 '
 import React from 'react';'
 import MainLayout from '../components/layout/MainLayout';
@@ -1386,18 +1206,10 @@ const Page = () => {}
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/security.tsx
+:pages_backup/security.tsx
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
     </>
 );
@@ -1414,7 +1226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
 =======
-
 
     </>
 );

@@ -36,7 +36,6 @@ function canMergePR(prNumber) {
         draft: pr.draft;
       };
 
-
 // Function to resolve merge conflicts;
 function resolveMergeConflicts() {"
   console.log('\n🔧 Resolving merge conflicts...\n');
@@ -46,38 +45,25 @@ function resolveMergeConflicts() {"
       const conflictedFiles = statusResult;
         .split('\n')
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
-<<<<<<< HEAD
-        .map(line => line.split(' ').pop());
-      
+.map(line => line.split(' ').pop());
+
       console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
-      
+
       // Try to resolve conflicts automatically
       for (const file of conflictedFiles) {
         if (fs.existsSync(file)) {
           console.log(`🔧 Resolving conflicts in ${file}...`);
-          
+
           try {
             let content = fs.readFileSync(file, 'utf8');
-            
+
             // Remove conflict markers and keep both versions where possible
             content = content
-<<<<<<< HEAD
-              .replace(/[^\n]+\n/g, '')
+.replace(/[^\n]+\n/g, '')
               .replace(/<<<<<<< [^\n]+\n/g, '')
-              .replace(/=======\n/g, '')
-              .replace(/[^\n]+\n/g, '');
-=======
               .replace(/
-              .replace(/<<<<<<< [^\n]+\n/g, '')
-<<<<<<< HEAD
-              .replace(/\n/g, '')
-              .replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              .replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            
+
             fs.writeFileSync(file, content);
             console.log(`✅ Resolved conflicts in ${file}`);
           } catch (error) {
@@ -85,10 +71,10 @@ function resolveMergeConflicts() {"
           }
         }
       }
-      
+
       // Add resolved files
       runGitCommand('git add .', 'Adding resolved files');
-      
+
       // Commit the merge
       runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing merge resolution');
     }
@@ -142,4 +128,3 @@ async function main() {
   // TODO: Implement
         console.log(`⚠️  PR #${pr.number} cannot be merged automatically`);
   // Update local main branch;
-

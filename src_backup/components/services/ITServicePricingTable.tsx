@@ -16,8 +16,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     direction: 'ascending',;
   });
 
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
-<<<<<<< HEAD
+:src/components/services/ITServicePricingTable.tsx
 <<<<<<< HEAD
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
@@ -36,21 +35,18 @@ export function ITServicePricingTable() {
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
-    
+
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }
-    
+
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const sortedData = useMemo(() => {;
     let filteredData = [...onsiteServicePricing];
     // Filter by search query;
@@ -58,9 +54,6 @@ export function ITServicePricingTable() {
       filteredData = filteredData && filteredData.filter(item =>;
         item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ITServicePricingTable.tsx
   const sortedData = null;
 import { useState, useMemo } from 'react'
 import {
@@ -102,38 +95,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
-<<<<<<< HEAD
+:src/components/services/ITServicePricingTable.tsx
 <<<<<<< HEAD
       if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
       }
       return 0;
     });
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
-=======
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-      }
-      return 0
-    }),
-    
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/services/ITServicePricingTable.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ITServicePricingTable.tsx
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
-<<<<<<< HEAD
-      key,
+:src/components/services/ITServicePricingTable.tsx
+key,
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
@@ -149,10 +123,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           : 'ascending',;
     })
 };
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ITServicePricingTable.tsx
       key
       direction:
         sortConfig.key === key && sortConfig.direction === 'ascending'
@@ -170,7 +140,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
       return 0
     }),
-    
+
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 
@@ -189,10 +159,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             placeholder="Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -205,25 +172,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Table>
           <TableHeader className="bg-zion-blue">
             <TableRow>
-<<<<<<< HEAD
-=======
 
-            onChange={e => setSearchQuery(e && e.target.value)}
-            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />;
-        </div>;
-      </div>;
-
-      <div className='rounded-md border border-zion-blue-light overflow-hidden'>;
-        <Table>;
-          <TableHeader className='bg-zion-blue'>;
-            <TableRow>;
-              <TableHead className='text-zion-cyan font-medium'>;
-
-                <Button
-                  variant='ghost'
-                  onClick={() => handleSort('country')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <TableHead className="text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -233,7 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
+:src/components/services/ITServicePricingTable.tsx
 <<<<<<< HEAD
               </TableHead>
 <<<<<<< HEAD
@@ -245,10 +194,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ITServicePricingTable.tsx
               </TableHead>
               <TableHead className='text-right text-zion-cyan font-medium'>
                 <Button
@@ -262,8 +207,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </TableHead>
             </TableRow>
           </TableHeader>
-<<<<<<< HEAD
-          <TableBody className="bg-zion-blue-dark">
+<TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
               sortedData.map((item) => (
                 <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
@@ -272,27 +216,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-white">{item.country}</span>
                   </TableCell>
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
-=======
-          <TableBody className='bg-zion-blue-dark'>
-            {sortedData.length > 0 ? (
-              sortedData.map(item => (
-                <TableRow
-                  key={item.country}
-                  className='border-b border-zion-blue-light hover:bg-zion-blue/50'
-                >
-                  <TableCell className='flex items-center space-x-2'>
-                    <Globe className='h-4 w-4 text-zion-purple' />
-                    <span className='text-white'>{item.country}</span>
-                  </TableCell>
-                  <TableCell className='text-right font-medium text-white'>
-                    ${item.pricePerIncident.toFixed(2)}                  </TableCell>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </TableRow>
               ))
             ) : (
               <TableRow>
-<<<<<<< HEAD
-                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
+<TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
                   No countries match your search
                 </TableCell>
               </TableRow>
@@ -403,26 +331,4 @@ export function ITServicePricingTable() {;
   );
 }
 ;
-=======
-              </TableHead>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                <TableCell
-                  colSpan={2}
-                  className='text-center py-10 text-zion-slate-light'
-                >
-                  No countries match your search
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ITServicePricingTable.tsx

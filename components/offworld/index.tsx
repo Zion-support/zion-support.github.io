@@ -4,10 +4,10 @@
   const [name, setName] = useState('');'
   const [skills, setSkills] = useState('');'
   const [status, setStatus] = useState('');'
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
+    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
   }
   async function syncProfile() { return null; }
-    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
+    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
   }
   async function broadcast() { return null; }
     });'
@@ -16,16 +16,16 @@
 import { useState  } from 'react';
 import Head from 'next/head';
     const res = null;
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
   }
 
     const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST'
+      method: 'POST';
       headers: { 'content-type': 'application/json' }
       body: JSON.stringify({ from: 'anon', text: chat })
     });
     setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed');
   }
   async function castVote() {
     setStatus('Recording vote...');

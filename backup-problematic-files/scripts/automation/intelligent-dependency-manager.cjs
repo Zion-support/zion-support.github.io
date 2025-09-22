@@ -21,66 +21,43 @@ class IntelligentDependencyManager {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-<<<<<<< HEAD
-    analyzeDependencies() {}
+analyzeDependencies() {}
         this.log('Analyzing current dependencies...');
-        
+
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            
+
             const dependencies = {}
                 "production": Object.keys(packageJson.dependencies || {}),
                 "development": Object.keys(packageJson.devDependencies || {}),
-<<<<<<< HEAD
-                "total": Object.keys(packageJson.dependencies || {}).length +
-=======
-                "total": Object.keys(packageJson.dependencies || {}).length + 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    analyzeDependencies() {}"
-
-                "total": Object.keys(packageJson.dependencies || {}).length +"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+"total": Object.keys(packageJson.dependencies || {}).length +
                        Object.keys(packageJson.devDependencies || {}).length;
            };`;
             this.log(`Found ${dependencies.total} total dependencies`);
-<<<<<<< HEAD
-            return dependencies} catch (error) {}
+return dependencies} catch (error) {}
             this.log(`Dependency analysis "failed": ${error.message}`);
             return { "error": error.message }};
     };
     checkOutdatedPackages() {}
         this.log('Checking for outdated packages...');
-        
+
         try {}
             const outdatedResult = execSync('npm outdated --json', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
+
             const outdated = JSON.parse(outdatedResult;);
             const outdatedCount = Object.keys(outdated).lengt;h;
-            
-=======
-
-            return { "error": error.message }};"
-    checkOutdatedPackages() {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             this.log(`Found ${outdatedCount} outdated packages`);
             return { "count": outdatedCount, "packages": outdated }} catch (error) {}"
             // npm outdated returns exit code 1 when packages are outdated;
             if ( {})
                     const outdated = JSON.parse(error.stdout) {}
      {}
-<<<<<<< HEAD
-                try {}
+try {}
                     const outdated = JSON.parse(error.stdout}
 });
                     const outdatedCount = Object.keys(outdated).lengt;h;
@@ -94,29 +71,18 @@ class IntelligentDependencyManager {}
     };
     checkSecurityVulnerabilities() {}
         this.log('Checking for security vulnerabilities...');
-        
+
         try {}
             const auditResult = execSync('npm audit --json', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
-=======
-                    const outdated = JSON.parse(error.stdout})
-                    this.log(`Found ${outdatedCount} outdated packages`);"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;`;
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
-<<<<<<< HEAD
-                "vulnerabilities": vulnerabilities,
+"vulnerabilities": vulnerabilities,
                 "details": auditData.vulnerabilities,
                 "metadata": auditData.metadata;
             }} catch (error) {}
@@ -125,19 +91,15 @@ class IntelligentDependencyManager {}
     };
     updateDependencies() {}
         this.log('Updating dependencies...');
-        
+
         try {}
             // Update minor and patch versions;
             execSync('npm update', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
-            
+
             this.log('Dependencies updated successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`Dependency update "failed": ${error.message}`);
@@ -145,18 +107,14 @@ class IntelligentDependencyManager {}
     };
     fixSecurityIssues() {}
         this.log('Fixing security issues...');
-        
+
         try {}
             execSync('npm audit fix', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
-            
+
             this.log('Security issues fixed successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`Security fix "failed": ${error.message}`);
@@ -164,7 +122,7 @@ class IntelligentDependencyManager {}
     };
     generateDependencyReport() {}
         this.log('Generating dependency management report...');
-        
+
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -179,8 +137,6 @@ class IntelligentDependencyManager {}
             },
             "recommendations": this.generateRecommendations();
        };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             "analysis": {}"
                 dependencies: this.analyzeDependencies(),"
@@ -198,17 +154,8 @@ class IntelligentDependencyManager {}
     const manager = new IntelligentDependencyManager}(;);
     manager.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = IntelligentDependencyManager;
-module.exports = IntelligentDependencyManager;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = IntelligentDependencyManager;
 "`;

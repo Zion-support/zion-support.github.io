@@ -1,6 +1,6 @@
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,9 +10,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 origin/cursor/automate-test-improve-and-merge-code-2533
   // In production: verify signature, mint or issue POAP
   console.log(
-    "[NFT Claim] address:"
+    "[NFT Claim] address:";
     address"
-    "signature:""
+    "signature:"";
     signature.slice(0, 18) + "…"
   );
   return res.status(200).json({ ok: true });

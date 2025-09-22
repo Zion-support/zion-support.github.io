@@ -1,24 +1,8 @@
 import React from 'react';
 
-
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -35,15 +19,8 @@ import { generateSearchSuggestions } from "@/data/marketplaceData",;
 import { useNavigate } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { useState } from "react";
@@ -52,33 +29,8 @@ import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
 import {UserMenu} from './UserMenu';
 import {LanguageSelector} from './LanguageSelector';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-import { Link  } from 'react-router-dom';'
-import { Logo  } from './Logo';'
-import { UserMenu  } from './UserMenu';'
-import { LanguageSelector  } from './LanguageSelector';'
-import { MainNavigation  } from '@/layout/MainNavigation';'
-import { useAuth  } from '@/hooks/useAuth';'
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput","
-import { generateSearchSuggestions } from "@/data/marketplaceData",";
-import { useNavigate } from "react-router-dom";"
-import { useState } from "react";
-'
-import {Link} from 'react-router-dom';'
-import {Logo} from './Logo';'
-import {UserMenu} from './UserMenu';'
-import {LanguageSelector} from './LanguageSelector';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
+=======
 
   // If we have a white-label tenant and no specific customTheme is provided;
   // use the tenant's primary color;
@@ -95,7 +47,6 @@ import React from 'react';
     textColor: '#ffffff', // Default light text;
   } : undefined);
 
-
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -109,7 +60,6 @@ import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
 
-
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
@@ -119,8 +69,6 @@ export interface HeaderProps {
   customLogo?: string,
   customTheme?: {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
 
   // If we have a white-label tenant and no specific customTheme is provided;'
   // use the tenant's primary color;
@@ -137,11 +85,6 @@ import React from 'react';
     textColor: '#ffffff', // Default light text;
   } : undefined);
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {MainNavigation} from '@/layout/MainNavigation';
 import {useAuth} from '@/hooks/useAuth';
 import {useWhitelabel} from '@/context/WhitelabelContext';
@@ -152,9 +95,7 @@ import {useState} from "react";
 export interface HeaderProps {;
   hideLogin?: boolean;
   customLogo?: string;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -170,12 +111,7 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -198,20 +134,7 @@ import { useState } from "react",
 export interface HeaderProps {}
   hideLogin?: boolean,
   customLogo?: string,
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface HeaderProps {
-  hideLogin?: boolean,
-  customLogo?: string,
-export interface HeaderProps {
-  hideLogin?: boolean,
-  customLogo?: string,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export interface HeaderProps {
   hideLogin?: boolean,
@@ -227,7 +150,6 @@ import { useState } from "react";  customTheme?: {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 export interface HeaderProps {}
   hideLogin?: boolean,
@@ -248,30 +170,11 @@ import { useState } from "react";  customTheme?: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
@@ -302,7 +205,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const navigate = useNavigate(),"
   const [query, setQuery] = useState(""),
   const searchSuggestions = generateSearchSuggestions(),
-  
+
   // If we have a white-label tenant and no specific customTheme is provided,'
   // use the tenant's primary color;
   const effectiveTheme = customTheme || (isWhitelabel ? {}
@@ -311,17 +214,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     textColor: '#ffffff', // Default light text;
   } : undefined),
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
@@ -334,85 +230,30 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     borderColor: `${effectiveTheme.primaryColor}20`
 
-<<<<<<< HEAD
-  const handleSubmit = (e: React.FormEvent) => {
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim()) {
-=======
-  const headerStyle = effectiveTheme ? {;
-    backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
-    color: effectiveTheme && effectiveTheme.textColor,;`
-=======
-  
-  const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor
-    color: effectiveTheme.textColor
-    borderColor: `${effectiveTheme.primaryColor}20`
-
-  const headerStyle = effectiveTheme ? {;
-    backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
-    color: effectiveTheme && effectiveTheme.textColor,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     borderColor: `${effectiveTheme && effectiveTheme.primaryColor}20`;
   } : {};
 
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault(),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (query && query.trim()) {;
+if (query && query.trim()) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       navigate(`/search?q=${encodeURIComponent(query)}`);
-=======
-    if (query && query.trim()) {;`
-      navigate(`/search?q=${encodeURIComponent(query)}`);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setQuery("");
     }
 
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <header"
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
-
-
 
           <EnhancedSearchInput;
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          />
-        </form>
-        <div className="flex items-center gap-2">
-          <LanguageSelector />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
             <EnhancedSearchInput
 =======
@@ -526,23 +367,7 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
         </form>;
         <div className="flex items-center gap-2">;
           <LanguageSelector />;
-<<<<<<< HEAD
-
-
-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <EnhancedSearchInput
-            value={query}
-            onChange={setQuery}
-            searchSuggestions={searchSuggestions}          {!hideLogin && <UserMenu />}
-        </div>
-      </div>
-    </header>
-  )
-}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -556,11 +381,7 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import { Link } from 'react-router-dom',;
@@ -573,20 +394,6 @@ import { useWhitelabel } from '@/context/WhitelabelContext',;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
 import { generateSearchSuggestions } from "@/data/marketplaceData",;
 import { useNavigate } from "react-router-dom",;
-=======
-'
-import React from 'react',;'
-import { Link } from 'react-router-dom',;'
-import { Logo } from './Logo',;'
-import { UserMenu } from './UserMenu',;'
-import { LanguageSelector } from './LanguageSelector',;'
-import { MainNavigation } from '@/layout/MainNavigation',;'
-import { useAuth } from '@/hooks/useAuth',;'
-import { useWhitelabel } from '@/context/WhitelabelContext',;"
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;"
-import { generateSearchSuggestions } from "@/data/marketplaceData",;"
-import { useNavigate } from "react-router-dom",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useState } from "react",;
 export interface HeaderProps {;
   hideLogin?: boolean;
@@ -640,8 +447,6 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
             searchSuggestions={searchSuggestions}
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           />;
         </form>;
 
@@ -650,29 +455,13 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-
-
-
-<<<<<<< HEAD
-          />;
+/>;
         </form>;
         <div className="flex items-center gap-2">;
           <LanguageSelector />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {!hideLogin && <UserMenu />}
         </div>
       </div>
@@ -680,16 +469,8 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
   )
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -703,7 +484,6 @@ import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { use_navigate } from './react-router-dom';
 =======
-
 
 '
 import {MainNavigation} from '@/layout / MainNavigation';'
@@ -733,85 +513,9 @@ function Header() {}
   const [query, set_query] = useState ("");
   const search_suggestions = generateSearchSuggestions ();
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 
 <<<<<<< HEAD
-=======
-;
-  // If we have a white - label tenant and no specific custom_theme is provided;
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",""
-import { generateSearchSuggestions } from "@/data/marketplaceData",""
-import { useNavigate } from "react-router-dom";""
-import { useState } from "react";""
-import {Link} from 'react-router-dom';
-import {Logo} from './Logo';
-import {UserMenu} from './UserMenu';
-import {LanguageSelector} from './LanguageSelector';
-  // If we have a white-label tenant and no specific customTheme is provided;
-  // use the tenant's primary color;
-  const effectiveTheme = customTheme || (isWhitelabel ? {;
-
-import React from 'react';')
-  const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();
-
-  const navigate = useNavigate();"
-  const [query, setQuery] = useState("");"
-  const searchSuggestions = generateSearchSuggestions();
-    primaryColor;"
-    backgroundColor: '#0f172a', // Default dark background;
-    textColor: '#ffffff', // Default light text;
-  } : undefined);
-;
-  const header_style = effective_theme ? {
-    background_color: effective_theme.background_color,
-    color: effective_theme.text_color,
-    border_color: `${effective_theme.primary_color}20`;
-  } : {}
-;
-  const handle_submit = (e: React.FormEvent) =>: any {
-    e.prevent_default (),
-    if () {) {
-  $2
-}
-      navigate (`/search?q=${encodeURIComponent (query)}`);
-      set_query ("");
-    }
-  }
-;
-  return (
-    <header;
-      className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md";
-      style={header_style}
-    >;
-      <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
-        <Logo custom_logo={custom_logo} custom_color={effective_theme?.primary_color} />;
-        <div className="ml - 6 flex - 1">;
-          <MainNavigation />;
-        </div>;
-        <form on_submit={handle_submit} className="hidden md:block w - 64 mx - 4">;
-          <EnhancedSearchInput;
-            value={query}
-            on_change={set_query}
-            search_suggestions={search_suggestions}
-          />;
-        </form>;
-        <div className="flex items - center gap - 2">;
-          <LanguageSelector />;
-          {!hide_login && <UserMenu />}
-        </div>;
-      </div>;
-    </header>);
-}
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react',;
 import { Link } from 'react-router-dom',;
 import { Logo } from './Logo',;
@@ -834,8 +538,6 @@ export interface HeaderProps {
     primaryColor: string;,
   backgroundColor: string;
     textColor: string;
-
-
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const navigate = useNavigate();"
@@ -912,11 +614,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <div className="flex items-center gap-2">;"
           <LanguageSelector />;
 
-
-
-
-
-
           {!hideLogin && <UserMenu />}
 </UserMenu>
         </div>
@@ -945,9 +642,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     <header ;"
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md";"
 
-
-
-
     </header>;"
 return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <EnhancedSearchInput value= {"
 }/> </form> <div className="flex items-center gap-2" > <LanguageSelector /> {"
@@ -955,20 +649,12 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
 }</div> </div> </header>) 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

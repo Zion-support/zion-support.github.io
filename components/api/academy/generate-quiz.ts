@@ -5,8 +5,8 @@ import OpenAI from 'openai';
           ]
           answerIndex: 1;
         }'
-          question: 'What does DAO commonly refer to?'
-          options: ['
+          question: 'What does DAO commonly refer to?';
+          options: [';
             'Data Access Object''
             'Decentralized Autonomous Organization''
             'Digital Asset Option''
@@ -15,8 +15,8 @@ import OpenAI from 'openai';
           answerIndex: 1;
         }
         {'
-          question: 'What should be configured during deployment?'
-          options: ['
+          question: 'What should be configured during deployment?';
+          options: [';
             'Genesis Deploy Kit & modules''
             'Only UI colors''
             'Nothing''
@@ -25,8 +25,8 @@ import OpenAI from 'openai';
           answerIndex: 0;
         }
         {'
-          question: 'Who are key community roles to hire?'
-          options: ['
+          question: 'Who are key community roles to hire?';
+          options: [';
             'Moderators, educators, ambassadors''
             'Astronauts''
             'Comedians''
@@ -35,8 +35,8 @@ import OpenAI from 'openai';
           answerIndex: 0;
         }
         {'
-          question: 'Which docs are needed for launch?'
-          options: ['
+          question: 'Which docs are needed for launch?';
+          options: [';
             'Whitepaper + governance docs''
             'Novel''
             'Recipe book''
@@ -67,8 +67,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
         {
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+      model: 'gpt-4o-mini';
+      messages: [;
 {
 origin/cursor/automate-test-improve-and-merge-code-2533
           role: 'system',

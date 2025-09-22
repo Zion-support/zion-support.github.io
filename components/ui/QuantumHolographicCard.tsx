@@ -93,7 +93,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
   const glow_variants = {}
     initial: { opacity: 0.5, scale: 1 },
     animate: {
-      website: string
+      website: string;
     },
     realImplementation: boolean;
 
@@ -101,9 +101,9 @@ interface QuantumHolographicCardProps  {service: {id: string;
     launchDate: string;
     customers: number;
     rating: number;
-    reviews: number
+    reviews: number;
   },
-  className?: string
+  className?: string;
 }
 
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className;
@@ -512,16 +512,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.a;
             href={service.link}'
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-
-className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+;
+className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
 origin/cursor/automate-test-improve-and-merge-code-2533
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >'
             <span className='mr-2'>Get Started</span>'
-            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />
+            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
             {/* Button glow effect */}'
-            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
           </motion.a>
           {/* CTA Button */}
             whileHover={{ scale: 1 && 1.02 }}
@@ -539,9 +539,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileTap={{ scale: 0.98 }}
           >"
             <span className="mr-2">Get Started</span>"
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />;
             {/* Button glow effect */}"
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />;
           </motion.a>
 export default QuantumHolographicCard;  )
 }
@@ -572,7 +572,7 @@ export default QuantumHolographicCard);
 export default QuantumHolographicCard;
 ;
               href={service.link}
-              className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'
+              className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300';
             >
               <span>Learn more about {service.name}</span>
               <ExternalLink className='w-3 h-3' />

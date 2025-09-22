@@ -29,7 +29,6 @@ class ErrorMonitor {}
 
         "timeout": 60000}"
 
-
       return { "success": false, "output": error.message };"
   async countErrors(output) {}
     if (!output) return 0;
@@ -88,16 +87,6 @@ if (require.main === module) {}
 
     process.exit(1);
   }
-<<<<<<< HEAD
 });
 };
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ErrorMonitor;
-module.exports = ErrorMonitor;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-module.exports = ErrorMonitor;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

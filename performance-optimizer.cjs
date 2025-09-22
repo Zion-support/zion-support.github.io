@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/performance-optimizer.cjs
-
 
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -125,13 +117,11 @@ const optimizer = new PerformanceOptimizer;(;);
 optimizer.generateOptimizationReport().then(report => {
   }).catch(error => {
   console.error('❌ Optimization "failed": ', error)});
-<<<<<<< HEAD:backup-problematic-files/performance-optimizer.cjs
+:backup-problematic-files/performance-optimizer.cjs
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:performance-optimizer.cjs
 const { execSync } = require('child_process')
           "type"
           "action"
@@ -146,10 +136,9 @@ const { execSync } = require('child_process')
         "priority"
         "message"
   console.log(' Performance optimization report "generated")
-<<<<<<< HEAD:backup-problematic-files/performance-optimizer.cjs
+:backup-problematic-files/performance-optimizer.cjs
 
-<<<<<<< HEAD
-  console.error(' Optimization "failed")
+console.error(' Optimization "failed")
 
   console.error(' Optimization "failed")
 <<<<<<< HEAD
@@ -158,9 +147,6 @@ const { execSync } = require('child_process')
   console.error(' Optimization "failed")
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(' Optimization "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:performance-optimizer.cjs
   console.error(' Optimization "failed")
 #!/usr/bin/env node
 const fs = require('fs');
@@ -252,32 +238,19 @@ function optimizePerformance() {
   return report;
 }
 // Run performance optimization
-<<<<<<< HEAD:backup-problematic-files/performance-optimizer.cjs
+:backup-problematic-files/performance-optimizer.cjs
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-optimizePerformance();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:performance-optimizer.cjs
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
 
-
     await this.optimizeImages();
     // Optimize bundle
     await this.optimizeBundle();
 
-<<<<<<< HEAD
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

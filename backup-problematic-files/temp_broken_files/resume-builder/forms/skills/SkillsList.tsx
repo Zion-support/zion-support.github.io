@@ -47,4 +47,3 @@ export const SkillsList = ({ skills, onDeleteSkill } SkillsListProps) => {;
       </div>;
     </div>;
 <<<<<<< HEAD
-

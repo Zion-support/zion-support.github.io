@@ -66,4 +66,3 @@ export function RolePicker({ onSelect } RolePickerProps) {;
               {selectedRole === 'client' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
-

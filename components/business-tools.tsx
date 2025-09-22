@@ -55,13 +55,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function BusinessToolsPage() {
   const businessTools = [
     {
-      category: 'Project Management'
-      tools: [
+      category: 'Project Management';
+      tools: [;
         {
           name: 'Notion',
 description:
             'All-in-one workspace for notes, docs, projects, and team collaboration.',
-          features: [
+          features: [;
             'Templates',
             'Database views',
             'Real-time editing',
@@ -78,7 +78,7 @@ description:
           name: 'Asana',
           description:
             'Work management platform for teams to organize, track, and manage their work.',
-          features: [
+          features: [;
             'Task management',
             'Project timelines',
             'Team collaboration',
@@ -94,17 +94,17 @@ description:
           name: 'Monday.com',
           description:
             'Visual project management platform with customizable workflows and automation.',
-          features: [
+          features: [;
             'Visual boards'
             'Automation'
             'Time tracking'
             'Integrations'
             'Analytics'
           ]'
-          pricing: '$8/month - $16/month''
-          website: 'https://monday.com''
+          pricing: '$8/month - $16/month'';
+          website: 'https://monday.com'';
           icon: <Calendar className='w-6 h-6' />'
-          color: 'bg-gradient-to-br from-red-500 to-pink-600'
+          color: 'bg-gradient-to-br from-red-500 to-pink-600';
         }
 
       ];
@@ -127,12 +127,12 @@ description:
     {
       category: 'Communication & Collaboration',
 origin/cursor/automate-test-improve-and-merge-code-2533
-      tools: [
+      tools: [;
         {
           name: 'Slack',
 description:
             'Team communication platform for modern businesses with channels and integrations.',
-          features: [
+          features: [;
             'Channels',
             'Direct messages',
             'File sharing',
@@ -149,7 +149,7 @@ description:
           name: 'Microsoft Teams',
           description:
             'Unified communication platform with chat, video meetings, and file collaboration.',
-          features: [
+          features: [;
             'Chat',
             'Video meetings',
             'File sharing',
@@ -165,7 +165,7 @@ description:
           name: 'Zoom',
           description:
             'Video conferencing platform for meetings, webinars, and team collaboration.',
-          features: [
+          features: [;
             'HD video',
             'Screen sharing',
             'Recording',
@@ -181,12 +181,12 @@ description:
     },
     {
       category: 'Marketing & Sales',
-      tools: [
+      tools: [;
         {
           name: 'HubSpot',
 description:
             'All-in-one inbound marketing, sales, and customer service platform.',
-          features: [
+          features: [;
             'CRM',
             'Email marketing',
             'Lead generation',
@@ -203,7 +203,7 @@ description:
           name: 'Mailchimp',
           description:
             'Email marketing platform for growing businesses and creators.',
-          features: [
+          features: [;
             'Email templates',
             'Automation',
             'Analytics',
@@ -219,7 +219,7 @@ description:
           name: 'Salesforce',
           description:
             'Customer relationship management platform for sales, service, and marketing.',
-          features: [
+          features: [;
             'Sales CRM',
             'Service cloud',
             'Marketing automation',
@@ -235,12 +235,12 @@ description:
     },
     {
       category: 'Finance & Accounting',
-      tools: [
+      tools: [;
         {
           name: 'QuickBooks',
 description:
             'Small business accounting software for invoicing, expenses, and financial reporting.',
-          features: [
+          features: [;
             'Invoicing',
             'Expense tracking',
             'Financial reports',
@@ -256,7 +256,7 @@ description:
         {
           name: 'Stripe',
           description: 'Payment processing platform for internet businesses.',
-          features: [
+          features: [;
             'Global payments',
             'Subscription billing',
             'Fraud prevention',
@@ -272,7 +272,7 @@ description:
           name: 'Xero',
           description:
             'Cloud-based accounting software for small businesses and accountants.',
-          features: [
+          features: [;
             'Bank reconciliation',
             'Invoicing',
             'Expense claims',
@@ -288,12 +288,12 @@ description:
     },
     {
       category: 'Design & Creative',
-      tools: [
+      tools: [;
         {
           name: 'Figma',
 description:
             'Collaborative interface design tool for teams building digital products.',
-          features: [
+          features: [;
             'Real-time collaboration',
             'Design systems',
             'Prototyping',
@@ -310,7 +310,7 @@ description:
           name: 'Canva',
           description:
             'Create professional designs with drag-and-drop simplicity.',
-          features: [
+          features: [;
             'Templates library',
             'Stock photos',
             'Brand kit',
@@ -326,7 +326,7 @@ description:
           name: 'Adobe Creative Cloud',
           description:
             'Complete creative software suite for design, photography, and video.',
-          features: [
+          features: [;
             'Photoshop',
             'Illustrator',
             'InDesign',
@@ -342,12 +342,12 @@ description:
     },
     {
       category: 'Analytics & Business Intelligence',
-      tools: [
+      tools: [;
         {
           name: 'Google Analytics',
 description:
             'Free web analytics service that tracks and reports website traffic.',
-          features: [
+          features: [;
             'Real-time data',
             'Audience insights',
             'Conversion tracking',
@@ -364,7 +364,7 @@ description:
           name: 'Tableau',
           description:
             'Data visualization and business intelligence platform for analytics.',
-          features: [
+          features: [;
             'Interactive dashboards',
             'Data blending',
             'Real-time analytics',
@@ -380,17 +380,17 @@ description:
           name: 'Mixpanel',
           description:
             'Product analytics platform for understanding user behavior and product usage.',
-          features: [
+          features: [;
             'Event tracking'
             'Funnel analysis'
             'Cohort analysis'
             'A/B testing'
             'Real-time data'
           ]'
-          pricing: 'Free - $25/month''
-          website: 'https://mixpanel.com''
+          pricing: 'Free - $25/month'';
+          website: 'https://mixpanel.com'';
           icon: <TrendingUp className='w-6 h-6' />'
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600';
         }
       ]
 
@@ -461,24 +461,24 @@ description:
       color: 'text-cyan-400',
     },
     {
-      title: 'Cloud-Native Platforms'
-      description:'
+      title: 'Cloud-Native Platforms';
+      description:';
         'Business applications built for scalability and global accessibility.''
-      trend: '☁️ Mainstream''
-      color: 'text-cyan-400'
+      trend: '☁️ Mainstream'';
+      color: 'text-cyan-400';
     },    {'
-      title: 'Security & Compliance''
-      description: 'Tools ensuring data protection and regulatory compliance.''
-      trend: '🔒 Critical''
-      color: 'text-orange-400''
-    },  ];      color: 'text-cyan-400'
+      title: 'Security & Compliance'';
+      description: 'Tools ensuring data protection and regulatory compliance.'';
+      trend: '🔒 Critical'';
+      color: 'text-orange-400'';
+    },  ];      color: 'text-cyan-400';
     }
     {'
-      title: 'Security & Compliance''
-      description: 'Tools ensuring data protection and regulatory compliance.''
-      trend: '🔒 Critical''
-      color: 'text-orange-400''
-    },      color: 'text-orange-400'
+      title: 'Security & Compliance'';
+      description: 'Tools ensuring data protection and regulatory compliance.'';
+      trend: '🔒 Critical'';
+      color: 'text-orange-400'';
+    },      color: 'text-orange-400';
     }
     }
   ];
@@ -542,17 +542,17 @@ description:
     {
       title: 'Focus on Integration',
       description:
-        'Choose tools that work well together to avoid data silos and manual work.'
+        'Choose tools that work well together to avoid data silos and manual work.';
       icon: <Cog className='w-6 h-6 text-blue-400' />
     }
     {
-      title: 'Measure ROI'
+      title: 'Measure ROI';
       description:
-        "Track how each tool improves your team's productivity and business outcomes."
+        "Track how each tool improves your team's productivity and business outcomes.";
       icon: <ChartBar className='w-6 h-6 text-purple-400' />
     }
     {
-      title: 'Train Your Team'
+      title: 'Train Your Team';
       description:
         'Invest in proper training to maximize the value of your chosen tools.',
       icon: <Users className='w-6 h-6 text-orange-400' />,
@@ -568,11 +568,11 @@ description:
           content='Essential business tools for project management, communication, marketing, finance, and productivity. Real pricing and features for growing businesses.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Business Tools & Productivity - Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Comprehensive business tools directory with pricing and features.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -608,7 +608,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {businessInsights.map((insight, index) => (
                   className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight && insight.color} bg-gray-800/50`}>                  {insight && insight.trend}              Business Tool Trends & Insights;
             </h2>;"
@@ -630,7 +630,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               landscape and emerging opportunities.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {businessInsights.map((insight, index) => (
               <Card
                 key={index}
@@ -679,7 +679,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="text-3xl font-bold text-white mb-4">{category.category}</h3>"
                 <div className="w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full" />
               </div>"
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
                   <Card;
                     key={toolIndex}'`
                     className={`card-hover border-gradient-blue group ${tool && tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
@@ -710,7 +710,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full' />
               </div>
 
-              <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
                 {category.tools.map((tool, toolIndex) => (
                   <Card
                     key={toolIndex}
@@ -774,7 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={tool.website}
 variant='primary'
                       size='sm'
-                      className='w-full group-hover:scale-105 transition-transform duration-300'
+                      className='w-full group-hover:scale-105 transition-transform duration-300';
                       external;
                     >
                       Visit Website
@@ -789,7 +789,7 @@ variant='primary'
                       href={tool && tool.website}'
                       variant='primary''
                       size='sm''
-                      className='w-full group-hover:scale-105 transition-transform duration-300'
+                      className='w-full group-hover:scale-105 transition-transform duration-300';
                       external>;
                       Visit Website;'"
                       <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant="primary";"
@@ -810,7 +810,7 @@ variant='primary'
               strategies and best practices.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {productivityTips.map((tip, index) => (
         </div>;
       </section>;
@@ -895,7 +895,7 @@ variant='primary'
               strategies and best practices.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {productivityTips.map((tip, index) => (
               <Card;
                 key={index}
@@ -970,7 +970,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8'>
           </h2>'
@@ -979,7 +979,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             collaboration, and drive growth. Start with the essentials and build;
             your tech stack strategically.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button'
               href='/micro-saas''
               variant='secondary''
@@ -987,7 +987,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'>;
               Explore Micro SaaS;
             </Button>;
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl';
             >
               Explore Micro SaaS
             </Button>
@@ -998,7 +998,7 @@ href='/contact'
               size='lg'
 "
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">"
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />"
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />";
         <div className="container-cursor text-center relative z-10">"
           <h2 className="text-responsive-lg font-bold text-white mb-8">
             Ready to Transform Your Business Operations?
@@ -1007,12 +1007,12 @@ href='/contact'
             These business tools can streamline your operations, improve team collaboration, and drive growth. 
             Start with the essentials and build your tech stack strategically.
           </p>"
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">;
             <Button"
               href="/micro-saas""
               variant="secondary""
               size="lg""
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl";
             >
               Explore Micro SaaS;
             </Button>
@@ -1020,7 +1020,7 @@ href='/contact'
               href="/contact""
               variant="outline""
               size="lg""
-              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
+              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl";
             >
 
               Get Business Consultation;
@@ -1033,7 +1033,7 @@ href='/contact'
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas""
               variant="secondary""
               size="lg""
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl";
               Explore Micro SaaS;
             </Button>
 

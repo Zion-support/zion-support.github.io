@@ -11,20 +11,12 @@ export default function AutomationInsightsPage() {
 
   return (
     <div>
-<<<<<<< HEAD
-      <Head><title>Automation Insights — Zion</title></Head>
-=======
-      <Head><title>Automation Insights  Zion</title></Head>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+<Head><title>Automation Insights — Zion</title></Head>
       <h1 className="text-2xl font-semibold mb-4">Automation Insights</h1>
       <section className="mb-8">
         <h2 className="font-medium">Market Intelligence</h2>
         {!intel ? (
-<<<<<<< HEAD
-          <div className="text-sm text-gray-500">Loading…</div>
-=======
-          <div className="text-sm text-gray-500">Loading</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+<div className="text-sm text-gray-500">Loading…</div>
         ) : (
           <div className="mt-3 text-sm">
             <div className="text-xs text-gray-500">Generated at {intel.generatedAt}</div>
@@ -51,11 +43,7 @@ export default function AutomationInsightsPage() {
       <section id="talent" className="mb-8">
         <h2 className="font-medium">Talent Highlights</h2>
         {!talentMd ? (
-<<<<<<< HEAD
-          <div className="text-sm text-gray-500">Loading…</div>
-=======
-          <div className="text-sm text-gray-500">Loading</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+<div className="text-sm text-gray-500">Loading…</div>
         ) : (
           <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>
         )}

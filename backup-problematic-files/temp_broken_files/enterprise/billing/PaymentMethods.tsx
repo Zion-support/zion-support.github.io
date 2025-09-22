@@ -11,4 +11,3 @@ export function PaymentMethods() {;
   const paymentMethods = [;
     {;
 <<<<<<< HEAD
-

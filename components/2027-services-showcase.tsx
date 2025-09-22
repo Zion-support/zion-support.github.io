@@ -136,7 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'name':
         return a.name.localeCompare(b.name);'
       case 'price':
-        return ('
+        return (';
           parseInt(a && a.price.replace(/[^0-9]/g, '')) -;'
           parseInt(b && b.price.replace(/[^0-9]/g, ''));
 return (
@@ -176,67 +176,67 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         .length
     }
     {
-      id: 'Quantum Consciousness'
-      name: 'Quantum Consciousness'
-      icon: '⚛️'
+      id: 'Quantum Consciousness';
+      name: 'Quantum Consciousness';
+      icon: '⚛️';
       count: allServices.filter(s =>
         s.category.includes('Quantum Consciousness')
       ).length
     }
     {
-      id: 'AI Civilization'
-      name: 'AI Civilization'
-      icon: '🏛️'
+      id: 'AI Civilization';
+      name: 'AI Civilization';
+      icon: '🏛️';
       count: allServices.filter(s => s.category.includes('AI Civilization'))
         .length
     }
     {
-      id: 'Quantum Time'
-      name: 'Quantum Time'
-      icon: '⏰'
+      id: 'Quantum Time';
+      name: 'Quantum Time';
+      icon: '⏰';
       count: allServices.filter(s => s.category.includes('Quantum Time'))
         .length
     }
     {
-      id: 'AI Multiverse'
-      name: 'AI Multiverse'
-      icon: '🌌'
+      id: 'AI Multiverse';
+      name: 'AI Multiverse';
+      icon: '🌌';
       count: allServices.filter(s => s.category.includes('AI Multiverse'))
         .length
     }
     {
-      id: 'Customer Success Automation'
-      name: 'Customer Success'
-      icon: '🎯'
+      id: 'Customer Success Automation';
+      name: 'Customer Success';
+      icon: '🎯';
       count: allServices.filter(s => s.category.includes('Customer Success'))
         .length
     }
     {
-      id: 'Content Marketing Automation'
-      name: 'Content Marketing'
-      icon: '📝'
+      id: 'Content Marketing Automation';
+      name: 'Content Marketing';
+      icon: '📝';
       count: allServices.filter(s => s.category.includes('Content Marketing'))
         .length
     }
     {
-      id: 'Inventory Management'
-      name: 'Inventory Management'
-      icon: '📦'
+      id: 'Inventory Management';
+      name: 'Inventory Management';
+      icon: '📦';
       count: allServices.filter(s =>
         s.category.includes('Inventory Management')
       ).length
     }
     {
-      id: 'HR Automation'
-      name: 'HR Automation'
-      icon: '👥'
+      id: 'HR Automation';
+      name: 'HR Automation';
+      icon: '👥';
       count: allServices.filter(s => s.category.includes('HR Automation'))
         .length
     }
     {
-      id: 'Financial Automation'
-      name: 'Financial Automation'
-      icon: '💰'
+      id: 'Financial Automation';
+      name: 'Financial Automation';
+      icon: '💰';
       count: allServices.filter(s =>
         s.category.includes('Financial Automation')
       ).length,
@@ -248,23 +248,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {
       id: 'low',
       name: 'Under $1K/month',
-      count: allServices.filter(
+      count: allServices.filter(;
         s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000
       ).length
     }
     {
-      id: 'medium'
-      name: '$1K - $10K/month'
-      count: allServices.filter(
+      id: 'medium';
+      name: '$1K - $10K/month';
+      count: allServices.filter(;
         s =>
           parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 &&
           parseInt(s.price.replace(/[^0-9]/g, '')) < 10000
       ).length
     }
     {
-      id: 'high'
-      name: '$10K+/month'
-      count: allServices.filter(
+      id: 'high';
+      name: '$10K+/month';
+      count: allServices.filter(;
         s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000
       ).length,
     },
@@ -296,46 +296,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           rel='canonical'
         {/* Open Graph */}
         <meta'
-          property='og:title''
+          property='og:title'';
           content='2027 Services Showcase - Zion Tech Group'
         <meta'
-          property='og:url'
+          property='og:url';
         {/* Twitter */}'
         <meta name='twitter:card' content='summary_large_image' />;
         <meta'
-          name='twitter:title''
+          name='twitter:title'';
           content='2027 Services Showcase - Zion Tech Group'
         <meta'
-          name='twitter:description''
+          name='twitter:description'';
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
         />      </Head>        {/* Open Graph */}
               </span>
             </h1>"
-            <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">;
               Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.
             </p>
             {/* Stats */}"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">";
               <div className="text-center">"
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">;
                   {allServices.length}+
                 </div>"
                 <div className="text-cyan-300">Services</div>
               </div>"
               <div className="text-center">"
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">;
                   15+
                 </div>"
                 <div className="text-purple-300">Categories</div>
               </div>"
               <div className="text-center">"
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">;
                   1000+
                 </div>"
                 <div className="text-pink-300">Customers</div>
               </div>"
               <div className="text-center">"
-                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">;
                   4.9★
                 </div>"
                 <div className="text-green-300">Rating</div>
@@ -353,62 +353,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <UltraFuturisticNavigation2027 />
       {/* Hero Section */}
-<section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
+<section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<h1 className='text-5xl md:text-7xl font-bold mb-6'>
+<h1 className='text-5xl md:text-7xl font-bold mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 2027 Services Showcase
               </span>
             </h1>
-            <p className='text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>
+            <p className='text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;
               Experience the future of technology with our revolutionary 2027
               services. From AI consciousness evolution to practical micro SAAS
               solutions.
             </p>
             {/* Stats */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
               <div className='text-center'>
-                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
+                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
                   {allServices.length}+
                 </div>
                 <div className='text-cyan-300'>Services</div>
               </div>
               <div className='text-center'>
-                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>
+                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>;
                   15+
                 </div>
                 <div className='text-purple-300'>Categories</div>
               </div>
               <div className='text-center'>
-                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>
+                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>;
                   1000+
                 </div>
                 <div className='text-pink-300'>Customers</div>
               </div>
               <div className='text-center'>
-                <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
+                <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>;
                   4.9★
                 </div>
                 <div className='text-green-300'>Rating</div>
               </div>
             </div>
             {/* CTA Buttons */}
-<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Link
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2';
               >
                 <Rocket className='w-5 h-5' />
                 <span>Get Started</span>
               </Link>
               <Link
                 href='/pricing'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2';
               >
                 <DollarSign className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -455,7 +455,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <option key={range && range.id} value={range && range.id}>;
                       {range && range.name} ({range && range.count});
                     </option>;
-<section className='px-4 sm:px-6 lg:px-8 mb-16'>
+<section className='px-4 sm:px-6 lg:px-8 mb-16'>;
         <div className='max-w-7xl mx-auto'>
           <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>
             {/* Search Bar */}
@@ -467,12 +467,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder='Search services...'
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20'
+                  className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20';
                 />
               </div>
             </div>
             {/* Filters */}
-<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
               {/* Category Filter */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -481,7 +481,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <select
                   value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >
                   {categories.map(category => (
                     <option key={category.id} value={category.id}>
@@ -498,7 +498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <select
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >
                   {priceRanges.map(range => (
                     <option key={range.id} value={range.id}>
@@ -535,16 +535,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       {/* Services Grid */}"
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">"
+      <section className="px-4 sm:px-6 lg:px-8 mb-20">";
         <div className="max-w-7xl mx-auto">"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
 <label className='block text-cyan-400 font-medium mb-2'>
                   Sort By
                 </label>
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >
                   <option value='name'>Name</option>
                   <option value='price'>Price</option>
@@ -556,9 +556,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* Services Grid */}
-<section className='px-4 sm:px-6 lg:px-8 mb-20'>
+<section className='px-4 sm:px-6 lg:px-8 mb-20'>;
         <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <AnimatePresence>
       {/* Services Grid */}
@@ -577,7 +577,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   exit={{ opacity: 0, y: -30, scale: 0.9 }}
 className='group'
                 >
-                  <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>
+                  <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>;
                     {/* Service Header */}
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>🚀</div>
@@ -629,7 +629,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-6'>
                       <h4 className='text-cyan-400 font-semibold mb-3'>
                         Key Features:
-                      </h4>
+                      </h4>;
                       <div className='space-y-2'>
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <div
@@ -685,16 +685,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link'
                         href='/contact'
                         href={service.link}
-                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm'
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm';
 origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         Learn More;
                       </Link>
                       <Link"
                         href="/contact""
-                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
+                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm";
 href='/contact'
-                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm';
 origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         Contact;
@@ -734,7 +734,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   setSelectedCategory('all');'
                   setSelectedPriceRange('all');
                 }}'
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all');
 '
                   setSelectedPriceRange('all')
 
@@ -753,16 +753,16 @@ className='text-center py-20'
                   setSelectedCategory('all');
 setSelectedPriceRange('all');
                 }}
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
               >
                 Clear Filters;
               </button>
             </motion.div>
           )}
       {/* Contact Section */}
-<section className='px-4 sm:px-6 lg:px-8 mb-20'>
+<section className='px-4 sm:px-6 lg:px-8 mb-20'>;
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
@@ -773,7 +773,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Contact our team to discuss how our 2027 services can;
               revolutionize your operations and drive unprecedented growth.
             </p>'
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>'
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>';
               <div className='flex items-center justify-center space-x-3'>'
                 <Phone className='w-5 h-5 text-cyan-400' />'
                 <span className='text-white'>{contactInfo.mobile}</span>
@@ -787,7 +787,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-white'>{contactInfo.address}</span>
               </div>
             </div>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
           )}
               <Link'
                 href='/contact''
@@ -835,7 +835,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="text-cyan-300 text-sm">
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>"
             <p className="mt-2">"
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
+              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>;
 "
           <div className="text-cyan-300 text-sm">;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;"

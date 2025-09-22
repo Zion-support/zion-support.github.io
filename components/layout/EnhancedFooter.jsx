@@ -30,16 +30,16 @@ const EnhancedFooter = () => {}
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
           {/* Company Info */}"
             <ul className="space-y-2">"
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Development</Link></li>"
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>"
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>"
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
-          <div className="lg:col-span-2">
+              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Development</Link></li>";
+              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>";
+              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>";
+              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>;
+          <div className="lg:col-span-2">;
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
 
-          <div className=\"lg:col-span-2\" />
+          <div className=\"lg:col-span-2\" />;
             <div className=\"flex items-center space-x-2 mb-4\" />
               <div className=\"w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center\" />
                 <span className=\"text-white font-bold text-xl\" />Z</span>
@@ -58,7 +58,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
               <li />
                 <Link;
 href='/services'
-                  className='text-gray-300 hover: text-white transition-colors'
+                  className='text-gray-300 hover: text-white transition-colors';
                  />
                   AI Development;
                 </Link>
@@ -66,7 +66,7 @@ href='/services'
               <li />
                 <Link;
 href='/services'
-                  className='text-gray-300 hover:text-white transition-colors'
+                  className='text-gray-300 hover:text-white transition-colors';
                  />
                   Cloud Services;
                 </Link>
@@ -74,7 +74,7 @@ href='/services'
               <li />
                 <Link;
 href='/services'
-                  className='text-gray-300 hover:text-white transition-colors'
+                  className='text-gray-300 hover:text-white transition-colors';
                  />
                   Blockchain Solutions;
                 </Link>
@@ -82,7 +82,7 @@ href='/services'
               <li />
                 <Link;
 href='/services'
-                  className='text-gray-300 hover:text-white transition-colors'
+                  className='text-gray-300 hover:text-white transition-colors';
                  />
                   Data Analytics;
                 </Link>
@@ -97,7 +97,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li>
                 <Link'
                   href='/about''
-                  className='text-gray-300 hover:text-white transition-colors'
+                  className='text-gray-300 hover:text-white transition-colors';
                 >
                   About Us;
                 </Link>
@@ -105,7 +105,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li>
                 <Link'
                   href='/talent''
-                  className='text-gray-300 hover:text-white transition-colors'
+                  className='text-gray-300 hover:text-white transition-colors';
                 >
                   Careers;
                 </Link>
@@ -113,7 +113,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li>
                 <Link'
                   href='/contact''
-                  className='text-gray-300 hover:text-white transition-colors'
+                  className='text-gray-300 hover:text-white transition-colors';
                 >
                   Contact;
                 </Link>
@@ -121,7 +121,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li>
                 <Link'
                   href='/blog''
-                  className='text-gray-300 hover:text-white transition-colors'
+                  className='text-gray-300 hover:text-white transition-colors';
                 >
                   Blog
                 </Link>

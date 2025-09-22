@@ -1,10 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -13,49 +7,22 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-<<<<<<< HEAD
-=======
-import { Textarea } from "@/components/ui/textarea";
-=======
-import {useState} from "react";"
-import {toast} from "@/hooks/use-toast";"
-import {Button} from "@/components/ui/button";"
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
-import {AIMatchingResults} from "@/components/AIMatchingResults";"
-import {findMatches, MatchResult} from "@/lib/ai-matchmaking";"
-import {Textarea} from "@/components/ui/textarea";"
-import {Sparkles, Search} from "lucide-react";"
-import { useState } from "react","
-import { toast } from "@/hooks/use-toast","
-import { Button } from "@/components/ui/button","
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
-import { AIMatchingResults } from "@/components/AIMatchingResults","
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",";
-import { Textarea } from "@/components/ui/textarea";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { Sparkles, Search } from "lucide-react";
 interface AIMatchmakerProps {}
-=======
-
-interface AIMatchmakerProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface AIMatchmakerProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;}
   className?: string;}
 }
-<<<<<<< HEAD
 "
 export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
 "
@@ -64,34 +31,20 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
 
-<<<<<<< HEAD
-  onMatchSelect?: (match: any) => void
+onMatchSelect?: (match: any) => void
 import { Textarea } from "@/components/ui/textarea",
-=======
-
-  onMatchSelect?: (match: any) => void"
-import { Textarea } from "@/components/ui/textarea","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, Search } from "lucide-react",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-interface AIMatchmakerProps {
-=======
-interface AIMatchmakerProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   serviceType?: string,
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
-<<<<<<< HEAD
-
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
@@ -110,13 +63,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -124,36 +71,19 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "Tell us what you're looking for so we can find matches."
         variant: "destructive"})
       return
-<<<<<<< HEAD
 
-=======
-"
-export function AIMatchmaker() { return null; }
-export function AIMatchmaker() { return null; }
-  const handleSearch = async () => {}
-    if (!query.trim()) {}
-      toast({"
-        title: "Please enter a description""
-        description: "Tell us what you're looking for so we can find matches.""
-        variant: "destructive"})
-      return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
-<<<<<<< HEAD
-      // Get AI matches
+// Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
 
-<<<<<<< HEAD
-      ),
-      
+),
+
       // // // console.log("AI matching results:", results),
       setMatches(results),
-      
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } finally {
@@ -168,15 +98,7 @@ export function AIMatchmaker() { return null; }
         onMatchSelect(matchResult)
       }
     }
-=======
-    }
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
-=======
-    try {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
 
       // Get AI matches;
@@ -197,38 +119,19 @@ export function AIMatchmaker() { return null; }
         variant: "destructive"})
       // Set empty matches to show no results found UI;
       setMatches([])
-<<<<<<< HEAD
-    } finally {
+} finally {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   // Extract just the items from each MatchResult
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    } finally {}
-  }
-  // Extract just the items from each MatchResult;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const matchItems = matches.map(match => match.item);
 
   };
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-  const matchItems = matches.map(match => match.item)
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const matchItems = matches.map(match => match.item)
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       setIsMatchmaking(false)
 
   };
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
@@ -237,23 +140,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { AIMatchingResults } from "@/components/AIMatchingResults",;
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
 import { Textarea } from "@/components/ui/textarea",;
-=======
-"
-import { useState } from "react",;"
-import { toast } from "@/hooks/use-toast",;"
-import { Button } from "@/components/ui/button",;"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;"
-import { AIMatchingResults } from "@/components/AIMatchingResults",;"
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;"
-import { Textarea } from "@/components/ui/textarea",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, Search } from "lucide-react",;
 interface AIMatchmakerProps {;
   serviceType?: string,;
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
-<<<<<<< HEAD
 ;
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
   const [query, setQuery] = useState(""),;
@@ -265,10 +157,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({;
         title: "Please enter a description",,
   description: "Tell us what you're looking for so we can find matches.",;
-=======
-;"
-export function AIMatchmaker() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"}),;
       return;
     }
@@ -281,31 +169,18 @@ export function AIMatchmaker() { return null; }
         onMatchSelect(matchResult)
       }
     }
-<<<<<<< HEAD
-  },
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+},
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  
+
   // Extract just the items from each MatchResult;
   const matchItems = matches.map(match => match.item),
-  
-<<<<<<< HEAD
+
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
-=======
-  return ("`
-    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>"
-      <CardHeader className="pb-2">"
-        <CardTitle className="flex items-center text-white">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
           AI Matchmaker;
         </CardTitle>"
@@ -316,37 +191,14 @@ export function AIMatchmaker() { return null; }
       <CardContent>"
         <div className="space-y-4">"
           <div className="space-y-2">
-<<<<<<< HEAD
-=======
-=======
 
-  return (
-    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |\"\"}`} />
-      <CardHeader className=\"pb-2\" />
-        <CardTitle className=\"flex items-center text-white\" />
-          <Sparkles className=\"h-5 w-5 mr-2 text-zion-cyan\" />
-          AI Matchmaker;
-        </CardTitle>
-        <p className=\"text-sm text-zion-slate-light\" />
-          Describe what you're looking for and our AI will find the best matches;
-        </p>
-      </CardHeader>
-      <CardContent />
-        <div className=\"space-y-4\" />
-          <div className=\"space-y-2\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
-<<<<<<< HEAD
-  }
+}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
-<<<<<<< HEAD
-      <CardContent>;
+<CardContent>;
             <Button;
               onClick={handleSearch}
               disabled={isMatchmaking}"
@@ -361,23 +213,6 @@ export function AIMatchmaker() { return null; }
               )}
             <AIMatchingResults;
               matches={matchItems}
-=======
-      <CardContent />;
-            <Button;
-onClick={handleSearch}
-              disabled={isMatchmaking}
-              className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white\" />;
-              {isMatchmaking ? (;
-                <>Analyzing your needs...</>;
-              ) : (;
-                <>;
-                  <Search className=\"h-4 w-4 mr-2\" />;
-                  Find Matches;}
-                </>;}
-              )}
-            <AIMatchingResults;
-matches={matchItems}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
@@ -386,8 +221,7 @@ matches={matchItems}
         </div />;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-  );
+);
         <div className=\"space-y-4\" />;
           <div className=\"space-y-2\" />;
             <Textarea;
@@ -404,33 +238,8 @@ matches={matchItems}
               {is_matchmaking ? (
                 <>Analyzing your needs...</>) : (
                 <>;
-<<<<<<< HEAD
-                  <Search className="h - 4 w - 4 mr-2" />;
-=======
-  );"
-        <div className="space - y-4">;"
-          <div className="space - y-2">;
-            <Textarea;'"
-              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
-              value={query}
-              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}"
-              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
-            />;
-            <Button;
-              on_click={handle_search}
-              disabled={is_matchmaking}"
-              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
-            >;
-              {is_matchmaking ? (
-                <>Analyzing your needs...</>) : (
-                <>;"
-                  <Search className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<Search className="h - 4 w - 4 mr-2" />;
                   Find Matches;
-=======
-                  <Search className=\"h - 4 w - 4 mr-2\" />;}
-                  Find Matches;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </>)}
             </Button>;
           </div>;

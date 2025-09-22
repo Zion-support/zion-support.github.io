@@ -1,16 +1,4 @@
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    setIsSubmitting(true),
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
+:src_backup/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button'
@@ -20,25 +8,11 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
-=======
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState, useRef } from 'react';
-import { Mail } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
-
-
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
 <<<<<<< HEAD
-=======
-=======
->>>>>>> pr-12243
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -48,19 +22,11 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState('');
-=======
-
-export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState('');
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
-<<<<<<< HEAD
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-  const lastSubmit = useRef(0);
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const lastSubmit = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,38 +52,13 @@ export function EnhancedNewsletterForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed }),
       });
-=======
-
-
-import { Button } from '@/components/ui/button''
-import { Input } from '@/components/ui/input''
-import { useState, useRef } from 'react''
-import { Mail } from 'lucide-react''
-import { useToast } from "@/hooks/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function EnhancedNewsletterForm() {,
-  const [email, setEmail] = useState("");,
-  const [isSubmitting, setIsSubmitting] = useState(false);,
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;,
-
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState, useRef } from 'react';
-import { Mail } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
-
 
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
-
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
 
       if (res.ok) {
         // Handle different success statuses
@@ -140,9 +81,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
       setIsSubmitting(false)
     }
   }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/EnhancedNewsletterForm.tsx
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;"
@@ -160,24 +98,15 @@ import { logErrorToProduction } from '@/utils/productionLogger';
     }
   },
 
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  const EMAIL_REGEX = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
 =======
-
-
 
   return ("
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">"
@@ -217,21 +146,13 @@ import { logErrorToProduction } from '@/utils/productionLogger';
           </p>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
 
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">
             We&apos;ll keep you updated with the latest from Zion.
           </p>
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/EnhancedNewsletterForm.tsx
-      
-
-
-
 '
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;'
         <div className='flex -space-x-1 mr-2'>;
@@ -240,16 +161,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
             <div;
               key={i}'
               className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'>              {String && String.fromCharCode(65 + i)}
-=======
-
-
-      <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;
-        <div className='flex -space-x-1 mr-2'>;,
-          {[...Array(3)].map((_, i) => (;
-            <div
-              key={i}
-              className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'>              {String && String.fromCharCode(65 +,  i)}'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
             </div>;
           ))}
             We&apos;ll keep you updated with the latest from Zion.
@@ -259,24 +170,12 @@ import { logErrorToProduction } from '@/utils/productionLogger';
           <p className="text-white font-medium">Thank you for subscribing!</p>"
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>'
 
-
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
-      {isSubmitted ? (
+:src_backup/components/EnhancedNewsletterForm.tsx
+{isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-=======
-
-      {isSubmitted ? ("
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">"
-          <p className="text-white font-medium">Thank you for subscribing!</p>'"
-          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
         </div>
       ) : (
         <form;
@@ -292,26 +191,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';
             name="email""
             placeholder="Enter your email""
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
-=======
-        </div>
-      ) : (
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2""
-        >
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">"
-            Email address for newsletter subscription
-          </label>
-          <Input type="email""
-            id="enhanced-newsletter-email""
-            name="email""
-            placeholder="Enter your email""
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement />) =>,
               setEmail(e.target.value)
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
             }"
             autoComplete="email"
             required;
@@ -335,108 +218,20 @@ import { logErrorToProduction } from '@/utils/productionLogger';
             >"
               {" "}
               {String.fromCharCode(65 + i)}
-=======
-            }
-            autoComplete="email""
-            required
-          />
-          <Button
-            type="submit""
-            disabled={isSubmitting}
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple""
-          >
-            {isSubmitting ? "Subscribing..." : "Subscribe"}"
-          </Button>
-        </form>
-      )}
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">"
-        <div className="flex -space-x-1 mr-2">"
-          {[...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan""
-            >
-              {" "}"
-              {String.fromCharCode(65 +,  i)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
             </div>
           ))}
         </div>
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
   )
-=======
-  )
-}
-type="email""
-            id="enhanced-newsletter-email""
-            name="email""
-            placeholder="Enter your email""
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"",
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-            autoComplete="email""
-            required
-          />
-          <Button
-            type="submit" "
-            disabled={isSubmitting}
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple""
-          >
-            {isSubmitting ? "Subscribing..." : "Subscribe"}"
-          </Button>
-        </form>
-      )}
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">"
-        <div className="flex -space-x-1 mr-2">",
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">"
-    } catch (err:,  any) {;,
-    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
-      <div className="flex items-center mb-4">
-        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
-          <Mail className="h-6 w-6" />
-        </div>
-        <div>
-          <h3 className="text-lg font-bold text-white">Stay Updated</h3>
-          <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
-        </div>
-      </div>
-      {isSubmitted ? (
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
-          <p className="text-white font-medium">Thank you for subscribing!</p>
-          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">
-            Email address for newsletter subscription
-          </label>
-          <Input
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
-
 
             type="email"
             id="enhanced-newsletter-email"
             name="email"
             placeholder="Enter your email"
-=======
-  )
-
-
-
-
-
-"
-            type="email""
-            id="enhanced-newsletter-email""
-            name="email""
-            placeholder="Enter your email""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/EnhancedNewsletterForm.tsx
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}"
@@ -452,12 +247,9 @@ type="email""
           </Button>
         </form>
       )}
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
       "
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">"
-=======
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => ("
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
@@ -489,23 +281,12 @@ type="email""
           <label htmlFor="enhanced-newsletter-email" className="sr-only">;
             Email address for newsletter subscription;
           </label>;
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
           <Input;"
             type="email";"
             id="enhanced-newsletter-email";"
             name="email";"
             placeholder="Enter your email";"
-=======
-          <Input ;
-          <Input;
-            type="email";
-            id="enhanced-newsletter-email";
-            name="email";
-            placeholder="Enter your email";
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";",
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement />) => setEmail(e.target.value)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}"
@@ -516,28 +297,15 @@ type="email""
             type="submit";
             disabled={isSubmitting}"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
           >;"
-=======
-          >;
-            {isSubmitting ? "Subscribing..." : "Subscribe"}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>;
         </form>;
       )}
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
 ;"
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">;"
-=======
-;
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
-        <div className="flex -space-x-1 mr-2">;,
-          {[...Array(3)].map((_, i) => (;
-            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
-              {String.fromCharCode(65 +,  i)}
-            </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
         <div className="flex -space-x-1 mr-2">;
           {[...Array(3)].map((_, i) => (;"
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
@@ -549,21 +317,8 @@ type="email""
       </div>;
     </div>;
   );
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
 }
-
-
-=======
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
-
-
 
       {is_submitted ? ('
         <div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;'
@@ -579,21 +334,13 @@ type="email""
           <label html_for='enhanced - newsletter - email' className='sr - only'>;
             Email address for newsletter subscription;
           </label>;
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
           <Input;'
             type='email';'
             id='enhanced - newsletter - email';'
             name='email';'
             placeholder='Enter your email';'
             className='flex - grow bg - zion - blue - dark text - white border - zion - purple / 20 focus:border - zion - purple focus:ring - zion - purple';
-=======
-          <Input ;
-            type='email';
-            id='enhanced - newsletter - email';
-            name='email';
-            placeholder='Enter your email';
-            className='flex - grow bg - zion - blue - dark text - white border - zion - purple / 20 focus:border - zion - purple focus:ring - zion - purple';',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
             value={email}
             on_change={(e: React.ChangeEvent < HTMLInputElement />) =>;,
               set_email (e.target.value);
@@ -603,15 +350,10 @@ type="email""
           />;
           <Button;'
             type='submit';
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
             disabled={is_submitting}'
             className='bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white hover:from - zion - purple - light hover:to - zion - purple'          >;'
             {is_submitting ? 'Subscribing...' : 'Subscribe'}
-=======
-            disabled={is_submitting}
-            className='bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white hover:from - zion - purple - light hover:to - zion - purple'          >;
-            {is_submitting ? 'Subscribing...' : 'Subscribe'}'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
           </Button>;
         </form>)}'
       <div className='mt - 4 flex items - center text - xs text - zion - slate - light'>;'
@@ -628,13 +370,9 @@ type="email""
     </div>);
 const res = await fetch('/api/newsletter', {
 
-
 }
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
-      const res = await fetch('/api/newsletter', {
+:src_backup/components/EnhancedNewsletterForm.tsx
+const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: trimmed })
@@ -768,17 +506,10 @@ pr-12325
     </div>
   );
 }
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
+:src_backup/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
 =======
 
@@ -787,7 +518,6 @@ pr-12325
 =======
 
 }
-
 
 }
 )

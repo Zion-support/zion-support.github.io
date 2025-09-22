@@ -1,21 +1,13 @@
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
 import React from 'react';
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Cpu, Network, Zap, Shield, Database, Globe;
   ArrowRight, CheckCircle, Star, TrendingUp, Users
  } from 'lucide-react';
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Cpu, Network, Zap, Shield, Database, Globe;
@@ -48,39 +40,32 @@ import { motion } from 'framer-motion',;
 import {
   Cpu, Network, Zap, Shield, Database, Globe,
   ArrowRight, CheckCircle, Star, TrendingUp, Users
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }'
@@ -89,110 +74,21 @@ import React from 'react';
 import EnhancedNavigation from '../components/EnhancedNavigation';'
 import EnhancedFooter from '../components/EnhancedFooter';
 
-
-
-
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function EdgeComputingPage() {
-<<<<<<< HEAD
-
-  const features = [
+const features = [
     {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-      icon: Cpu,
-      title: "Edge Orchestration",
-      description: "Intelligent distribution and management of computing workloads across edge nodes for optimal performance.",
-      color: "from-blue-500 to-cyan-500"
-    };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-      icon: Cpu,
-      title: "Edge Orchestration",
-      description: "Intelligent distribution and management of computing workloads across edge nodes for optimal performance.",
-      color: "from-blue-500 to-cyan-500"
-    };
-
-<<<<<<< HEAD
-=======
-    {
-      icon: Network,
-      title: "IoT Management",
-      description: "Comprehensive management of IoT devices with real-time monitoring and automated control systems.",
-      color: "from-purple-500 to-pink-500"
-
-    },
-
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Ultra-low latency data processing at the network edge for mission-critical applications.",
-      color: "from-green-500 to-emerald-500"
-
-    },
-
-    {
-      icon: Shield,
-      title: "Edge Security",
-      description: "Advanced security protocols designed specifically for distributed edge computing environments.",
-      color: "from-red-500 to-orange-500"
-
-    },
-
-    {
-      icon: Database,
-      title: "Data Synchronization",
-      description: "Seamless data synchronization between edge nodes and central systems with conflict resolution.",
-      color: "from-indigo-500 to-purple-500"
-
-export default function EdgeComputingPage() {;
-  const features = [;
-    {;
-      icon: Cpu,;
-      title: 'Edge Orchestration',;
-      description:;
-        'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.',;
-      color: 'from-blue-500 to-cyan-500',;
-    },;
-  ];
-
-=======
-      title: "Global Distribution",
-      description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
-      color: "from-yellow-500 to-orange-500"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-export default function EdgeComputingPage() {
-<<<<<<< HEAD:pages/edge-computing-orchestration.tsx
-<<<<<<< HEAD
-
-  const features = [
-    {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const benefits = [
     "Reduce latency by 80-90% with edge processing",
@@ -200,25 +96,6 @@ export default function EdgeComputingPage() {
     "Improve reliability with distributed computing architecture",
     "Scale seamlessly across global edge networks",
     "Enable real-time AI and machine learning at the edge",
-=======
-
-
-export default function EdgeComputingPage() {}
-  const features = []
-    {}
-      } catch (error) {};
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-  const benefits = ["
-    "Reduce latency by 80-90% with edge processing","
-    "Cut bandwidth costs by 60% through local data processing","
-    "Improve reliability with distributed computing architecture","
-    "Scale seamlessly across global edge networks","
-    "Enable real-time AI and machine learning at the edge","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
     "Reduce central server load and improve overall performance"
   ],
   const useCases = []
@@ -247,15 +124,9 @@ export default function EdgeComputingPage() {}
   }
 }
   ],
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const pricing = [
     {
       plan: "Starter",
@@ -263,235 +134,23 @@ export default function EdgeComputingPage() {}
       period: "/month",
       description: "Basic edge computing for small deployments",
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        "Up to 10 edge nodes";
-        "Basic orchestration";
-        "Standard monitoring";
-        "Email support";
-        "Basic security features";
-        "Up to 100 IoT devices"
-      ];
-      popular: false
-    };
-=======
-        "Up to 10 edge nodes",
-        "Basic orchestration",
-        "Standard monitoring",
-        "Email support",
-        "Basic security features",
-        "Up to 100 IoT devices"
-      ],
-      popular: false
-    },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       plan: "Professional",
       price: "$999",
       period: "/month",
       description: "Advanced features for growing edge networks",
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        "Everything in Starter";
-        "Up to 100 edge nodes";
-        "Advanced orchestration";
-        "Real-time monitoring";
-        "Priority support";
-        "Advanced security";
-        "Up to 1000 IoT devices";
-        "Custom integrations"
-      ];
-      popular: true
-    };
-=======
-        "Everything in Starter",
-        "Up to 100 edge nodes",
-        "Advanced orchestration",
-        "Real-time monitoring",
-        "Priority support",
-        "Advanced security",
-        "Up to 1000 IoT devices",
-        "Custom integrations"
-      ],
-      popular: true
-    },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
       description: "Full-scale solution for large organizations",
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        "Everything in Professional";
-        "Unlimited edge nodes";
-        "Custom orchestration";
-        "Dedicated support team";
-        "Unlimited IoT devices";
-        "On-premise deployment";
-        "Custom training";
-        "SLA guarantees"
-      ];
-      popular: false
-    }
 
-  ];
-  const benefits = [;
-    'Reduce latency by 80-90% with edge processing',;
-    'Cut bandwidth costs by 60% through local data processing',;
-    'Improve reliability with distributed computing architecture',;
-    'Scale seamlessly across global edge networks',;
-    'Enable real-time AI and machine learning at the edge',;
-    'Reduce central server load and improve overall performance',  ];
-  const useCases = [;
-    {;
-      industry: 'Manufacturing',;
-      description:;
-        'Real-time quality control, predictive maintenance, and production optimization',;
-      results: '30% reduction in downtime, 25% improvement in product quality',;
-    },;
-    {;
-      industry: 'Healthcare',;
-      description:;
-        'Patient monitoring, medical device management, and telemedicine support',;
-      results: '40% faster response times, improved patient outcomes',;
-    },;
-    {;
-      industry: 'Transportation',;
-      description:;
-        'Autonomous vehicle support, traffic management, and fleet optimization',;
-      results: '50% reduction in accidents, 35% improvement in efficiency',;
-    },;
-    {;
-      industry: 'Retail',;
-      description:;
-        'Inventory management, customer analytics, and supply chain optimization',;
-      results:;
-        '45% reduction in stockouts, 30% improvement in customer satisfaction',;
-    },  ];
-  const pricing = [;
-    {;
-      plan: 'Starter',;
-      price: '$399',;
-      period: '/month',;
-      description: 'Basic edge computing for small deployments',;
-      features: [;
-        'Up to 10 edge nodes',;
-        'Basic orchestration',;
-        'Standard monitoring',;
-        'Email support',;
-        'Basic security features',;
-        'Up to 100 IoT devices',;
-      ],;
-      popular: false,;
-    },;
-    {;
-      plan: 'Professional',;
-      price: '$999',;
-      period: '/month',;
-      description: 'Advanced features for growing edge networks',;
-      features: [;
-        'Everything in Starter',;
-        'Up to 100 edge nodes',;
-        'Advanced orchestration',;
-        'Real-time monitoring',;
-        'Priority support',;
-        'Advanced security',;
-        'Up to 1000 IoT devices',;
-        'Custom integrations',;
-      ],;
-      popular: true,;
-    },;
-    {;
-      plan: 'Enterprise',;
-      price: 'Custom',;
-      period: '',;
-      description: 'Full-scale solution for large organizations',;
-      features: [;
-        'Everything in Professional',;
-        'Unlimited edge nodes',;
-        'Custom orchestration',;
-        'Dedicated support team',;
-        'Unlimited IoT devices',;
-        'On-premise deployment',;
-        'Custom training',;
-        'SLA guarantees',;
-      ],;
-      popular: false,;
-    },  ];
-  return (
-
-          content='https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration'
-        />      </Head>;
-      <EnhancedNavigation />;
-
-
-      {/* Hero Section */}
-      <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-        <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}
-            className='text-center'>;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
-              Edge Computing;
-              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
-                {' '}
-                Orchestration;
-              </span>;
-            </h1>;
-            <p className='text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8'>;
-              Bring computing power to the edge of your network. Our edge;
-              computing platform reduces latency, cuts bandwidth costs, and;
-              enables real-time processing for mission-critical applications.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a
-                href='/contact'
-                className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
-                Get Started Today;
-              </a>;
-              <a
-                href='#demo'
-
-    <>
-      <Head>
-        <title>Edge Computing Orchestration - Zion Tech Group</title>
-=======
-    },
-    {
-      icon: Globe,
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: Cpu,
 title: 'Edge Orchestration',
       description:
@@ -629,9 +288,6 @@ plan: 'Starter',
     <>
       <Head>
         <title>Edge Computing Orchestration - Zion Tech Group</title>
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <meta name="description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform." />
         <meta name="keywords" content="edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group" />
@@ -641,244 +297,17 @@ plan: 'Starter',
         <meta property="og:url" content="https://ziontechgroup.com/edge-computing-orchestration" />
       </Head>
       <EnhancedNavigation />
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-=======
-<meta
-          name='description'
-          content='Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform.'
-        />
-        <meta
-          name='keywords'
-          content='edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group'
-        />
-        <meta
-          property='og:title'
-          content='Edge Computing Orchestration - Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing.'
-        />
-        <meta property='og:type' content='website' />
-        <meta
-          property='og:url'
-          content='https://ziontechgroup.com/edge-computing-orchestration'
-        />
-      </Head>
-
-      <EnhancedNavigation />
-      {/* Hero Section */}
-<section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-        <div className='max-w-7xl mx-auto px-6'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="text-center"
-=======
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {;
-  Cpu, Network, Zap, Shield, Database, Globe,;
-  ArrowRight, CheckCircle, Star, TrendingUp, Users;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-export default function EdgeComputingPage(req, res) {
-  try {
-  const features = [;
-    {;
-      icon: Cpu;
-      title: "Edge Orchestration";
-      description: "Intelligent distribution and management of computing workloads across edge nodes for optimal window.window.window.performance.";
-      color: "from-blue-500 to-cyan-500";
-    };
-    {;
-      icon: Network,;
-      title: "IoT Management",;
-      description: "Comprehensive management of IoT devices with real-time monitoring and automated control systems.",;
-      color: "from-purple-500 to-pink-500";
-    },;
-    {;
-      icon: Zap,;
-      title: "Real-time Processing",;
-      description: "Ultra-low latency data processing at the network edge for mission-critical applications.",;
-      color: "from-green-500 to-emerald-500";
-    },;
-    {;
-      icon: Shield,;
-      title: "Edge Security",;
-      description: "Advanced security protocols designed specifically for distributed edge computing environments.",;
-      color: "from-red-500 to-orange-500";
-    },;
-    {;
-      icon: Database,;
-      title: "Data Synchronization",;
-      description: "Seamless data synchronization between edge nodes and central systems with conflict resolution.",;
-      color: "from-indigo-500 to-purple-500";
-    },;
-    {;
-      icon: Globe,;
-      title: "Global Distribution",;
-      description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",;
-      color: "from-yellow-500 to-orange-500";
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
-  const benefits = [;
-    "Reduce latency by 80-90% with edge processing";
-    "Cut bandwidth costs by 60% through local data processing";
-    "Improve reliability with distributed computing architecture";
-    "Scale seamlessly across global edge networks";
-    "Enable real-time AI and machine learning at the edge",;
-    "Reduce central server load and improve overall performance";
-  ],;
-  const useCases = [;
-    {;
-      industry: "Manufacturing";
-      description: "Real-time quality control, predictive maintenance, and production optimization",;
-      results: "30% reduction in downtime, 25% improvement in product quality";
-    },;
-    {;
-      industry: "Healthcare",;
-      description: "Patient monitoring, medical device management, and telemedicine support",;
-      results: "40% faster response times, improved patient outcomes";
-    },;
-    {;
-      industry: "Transportation",;
-      description: "Autonomous vehicle support, traffic management, and fleet optimization",;
-      results: "50% reduction in accidents, 35% improvement in efficiency";
-    },;
-    {;
-      industry: "Retail",;
-      description: "Inventory management, customer analytics, and supply chain optimization",;
-      results: "45% reduction in stockouts, 30% improvement in customer satisfaction";
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
-  const pricing = [;
-    {;
-      plan: "Starter";
-      price: "$399";
-      period: "/month";
-      description: "Basic edge computing for small deployments";
-      features: [;
-        "Up to 10 edge nodes",;
-        "Basic orchestration",;
-        "Standard monitoring",;
-        "Email support",;
-        "Basic security features",;
-        "Up to 100 IoT devices";
-      ],;
-      popular: false;
-    },;
-    {;
-      plan: "Professional",;
-      price: "$999",;
-      period: "/month",;
-      description: "Advanced features for growing edge networks",;
-      features: [;
-        "Everything in Starter",;
-        "Up to 100 edge nodes",;
-        "Advanced orchestration",;
-        "Real-time monitoring",;
-        "Priority support",;
-        "Advanced security",;
-        "Up to 1000 IoT devices",;
-        "Custom integrations";
-      ],;
-      popular: true;
-    },;
-    {;
-      plan: "Enterprise",;
-      price: "Custom",;
-      period: "",;
-      description: "Full-scale solution for large organizations",;
-      features: [;
-        "Everything in Professional",;
-        "Unlimited edge nodes",;
-        "Custom orchestration",;
-        "Dedicated support team",;
-        "Unlimited IoT devices",;
-        "On-premise deployment",;
-        "Custom training",;
-        "SLA guarantees";
-      ],;
-      popular: false;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
-  return (;
-    <>;
-      <Head>;
-        <title>Edge Computing Orchestration - Zion Tech Group</title>;
-        <meta name="description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform." />;
-        <meta name="keywords" content="edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group" />;
-        <meta property="og:title" content="Edge Computing Orchestration - Zion Tech Group" />;
-        <meta property="og:description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing." />;
-        <meta property="og:type" content="website" />;
-        <meta property="og:url" content="https://ziontechgroup.com/edge-computing-orchestration" />;
-      </Head>;
-      <EnhancedNavigation />;
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-        <div className="max-w-7xl mx-auto px-6">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center"
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+className="text-center"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-className='text-center'
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/edge-computing-orchestration.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -886,62 +315,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                {" "}Orchestration
-=======
-
-
-  const pricing = []
-    {"
-      plan: "Starter","
-      price: "$399","
-      period: "/month","
-      description: "Basic edge computing for small deployments",
-      features: []
-    {"
-      plan: "Professional","
-      price: "$999","
-      period: "/month","
-      description: "Advanced features for growing edge networks",
-      features: []
-    {"
-      plan: "Enterprise","
-      price: "Custom","
-      period: "","
-      description: "Full-scale solution for large organizations",
-      features: []
-          >"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Edge Computing"
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">"
-                {" "}Orchestration;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
+{" "}Orchestration
               </span>
             </h1>"
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              Bring computing power to the edge of your network. Our edge computing platform reduces latency;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
               cuts bandwidth costs, and enables real-time processing for mission-critical applications.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
               <a
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 <<<<<<< HEAD
                 href="/contact"
@@ -949,37 +337,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Started Today
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-              </a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
-<<<<<<< HEAD
+Watch Demo
                 Watch Demo
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                Watch Demo
-<<<<<<< HEAD
 
-=======
-              </a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-                href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 href='/contact'
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1012,52 +378,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 <<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
-                Watch Demo;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Features */}
-=======
-      {/* Features */}
-<<<<<<< HEAD:pages/edge-computing-orchestration.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
-<<<<<<< HEAD
               <motion.div
                 key={feature.title}
-=======
-
-
-      {/* Features */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
-      {/* Features */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1065,8 +395,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="text-center mb-16"
+className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Edge Computing Features</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -1080,31 +409,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <motion.div
                 key={feature.title}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
+initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-className='text-center mb-16'
-          >
-            <h2 className='text-4xl font-bold text-slate-900 mb-6'>
-              Powerful Edge Computing Features
-            </h2>
-            <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
-              Everything you need to deploy, manage, and optimize edge computing
-              infrastructure.
-            </p>
-          </motion.div>
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <motion.div
-                key={feature.title}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
 =======
@@ -1126,8 +432,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               infrastructure.;
             </p>;
           </motion && motion.div>;
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -1135,13 +440,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
 
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
@@ -1153,18 +454,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className="text-slate-600 leading-relaxed">{feature.description}</p>
               </motion.div>
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
-              <motion&& motion.div
-                key={feature && feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2'
               >
@@ -1180,17 +473,9 @@ className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duratio
                   {feature.description}
                 </p>
               </motion.div>
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1200,37 +485,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
       {/* Benefits */}
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className='py-20 bg-slate-50'>;
         <div className='max-w-7xl mx-auto px-6'>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion&& motion.div
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       {/* Benefits */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
-=======
-      {/* Benefits */}'
-      <section className='py-20 bg-slate-50'>;'
-        <div className='max-w-7xl mx-auto px-6'>;'
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion&& motion.div;
-      {/* Benefits */}"
-      <section className="py-20 bg-slate-50">"
-        <div className="max-w-7xl mx-auto px-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div;
               initial={{ opacity: 0, x: -20 }}
@@ -1244,17 +511,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                   <motion.div
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               transition={{ duration: 0 && 0.6 }}>;
 =======
                   <motion.div;
@@ -1265,14 +526,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>;'
               <p className='text-lg text-slate-600 leading-relaxed mb-8'>;
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next / head';
 import {motion} from 'framer-motion';
 import {Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users, } from 'lucide-react';
@@ -1513,72 +768,20 @@ function EdgeComputingPage() {}
                 <h3 className='text - xl font - bold text - slate - 900 mb - 4'>;
                   {feature.title}
                 </h3>;
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <p className='text - slate - 600 leading - relaxed'>;
-                  {feature.description}
-                </p>              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Benefits */}
-      <section className='py - 20 bg - slate - 50'>;
-        <div className='max - w-7xl mx - auto px - 6'>;
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_x: -20 }}
-              whileInView={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 0.6 }}
-            >;
-              <h2 className='text - 4xl font - bold text - slate - 900 mb - 6'>;
-                Why Choose Edge Computing?;
-              </h2>;
-              <p className='text - lg text - slate - 600 leading - relaxed mb - 8'>;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
                 Edge computing brings processing power closer to where data is;
                 generated, enabling faster response times, reduced bandwidth;
                 usage, and improved reliability for distributed applications.;
               </p>;
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-                ))}
-
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
-            >
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Performance Metrics</h3>
-              <div className="space-y-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">80-90%</div>
-                  <div className="text-slate-600">Latency Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-600 mb-2">60%</div>
-                  <div className="text-slate-600">Bandwidth Cost Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-                  <div className="text-slate-600">Uptime Guarantee</div>
-                </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 bg-slate-50'>
@@ -1643,17 +846,10 @@ className='bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8'
                   </div>
                   <div className='text-slate-600'>Uptime Guarantee</div>
                 </div>
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1665,20 +861,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-              <motion.div
-                key={useCase.industry}
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
               </div>;
             </motion && motion.div>;
 
@@ -1714,32 +900,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Use Cases */}
-=======
-      {/* Use Cases */}
-<<<<<<< HEAD:pages/edge-computing-orchestration.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      {/* Use Cases */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
@@ -1768,33 +939,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div;
                 key={useCase && useCase.industry}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
-              >
-
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
 =======
       {/* Use Cases */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1848,18 +1002,10 @@ className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duratio
                   </p>
                 </div>
               </motion.div>
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1872,35 +1018,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
       {/* Architecture */}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
       <section className='py-20 bg-slate-900'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0.6 }}
-              className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
               transition={{ duration: 0.6 }}
@@ -1938,13 +1066,8 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 te
               <p className='text-white/70 text-sm'>
                 Distributed computing nodes deployed at strategic locations for
                 optimal performance
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
-              </p>            </motion.div>
-=======
-=======
-              </p>            </motion.div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
+</p>            </motion.div>
 
       {/* Architecture */}
       <section className="py-20 bg-slate-900">
@@ -1974,20 +1097,10 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 te
               <p className="text-white/70 text-sm">Distributed computing nodes deployed at strategic locations for optimal performance</p>
             </motion.div>
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-              </p>
-            </motion.div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/edge-computing-orchestration.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -2001,14 +1114,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
             >
@@ -2019,14 +1127,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-white/70 text-sm">Intelligent workload distribution and management across the edge network</p>
             </motion.div>
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
@@ -2043,17 +1146,10 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 te
               </p>
             </motion.div>
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
@@ -2061,14 +1157,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
@@ -2085,12 +1177,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
               transition={{ duration: 0 && 0.6 }}
               className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'>;
               <div className='w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4'>;
@@ -2158,35 +1246,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Pricing */}
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
 =======
-
 
       {/* Pricing */}'
       <section className='py-20 bg-white'>;'
@@ -2209,40 +1284,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map((plan, index) => (;
               <motion&& motion.div;
                 key={plan && plan.plan}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
-
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
 <<<<<<< HEAD
                   ))}
                 </ul>
-
-=======
-
-
-                </ul>
-=======
-=======
-
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                className={`relative bg-slate-50 rounded-2xl p-8 ${
-                  ))}
-                </ul>
-
-                </ul>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>;
@@ -2265,20 +1318,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </ul>;
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                 <a
                   href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'>;
                   Get Started;
                 </a>;
               </motion && motion.div>;
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                 <h3 className='text-2xl font-bold text-slate-900 mb-4'>
                   {useCase.industry}
                 </h3>
@@ -2345,13 +1392,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/edge-computing-orchestration.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
@@ -2366,13 +1407,8 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 te
               <p className='text-white/70 text-sm'>
                 Centralized control and monitoring with real-time insights and
                 analytics
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
-              </p>            </motion.div>
-=======
-=======
-              </p>            </motion.div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
+</p>            </motion.div>
               </p>
             </motion.div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2380,20 +1416,15 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 te
         </div>
       </section>
       {/* Pricing */}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center mb-16'
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
           <motion.div
@@ -2411,10 +1442,8 @@ className='text-center mb-16'
               include our core orchestration features.
             </p>
           </motion.div>
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
@@ -2422,17 +1451,12 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   ))}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
@@ -2451,15 +1475,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >
                 {plan.popular && (
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                     Most Popular
                   </div>
@@ -2478,30 +1496,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <span className="text-slate-700">{feature}</span>
                     </li>
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}`
-                className={`relative bg-slate-50 rounded-2xl p-8 ${}
-'
-                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''`
-                }`}
-              >
-                {plan.popular && (
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
                   ))}
 '
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                    Most Popular;
                   </div>
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                 )}
                 <div className='text-center mb-8'>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                   ))}
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                    Most Popular
@@ -2532,27 +1535,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-slate-600'>{plan.description}</p>
                 </div>'
                 <ul className='space-y-4 mb-8'>
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
-                  {plan.features.map(feature => ('
-                    <li key={feature} className='flex items-center space-x-3'>'
-                      <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
                       <span className='text-slate-700'>{feature}</span>                    </li>
 
                   ))}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                      <span className='text-slate-700'>{feature}</span>                    </li>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                       <span className='text-slate-700'>{feature}</span>
                     </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3003,24 +1994,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
                 </ul>
@@ -3030,25 +2013,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href="/contact""
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                   Get Started
 
               </motion.div>
-<<<<<<< HEAD
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-                </ul>
-
-                <a
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
-
-                  href="/contact"
-                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3062,15 +2031,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* CTA */}
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
-=======
-=======
-      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
-        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
 <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>
           <motion.div
@@ -3083,15 +2047,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-=======
-
-            ))}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                   Get Started;
                 </a>
@@ -3106,7 +2063,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
-
 
       {/* CTA */}'
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;'
@@ -3130,24 +2086,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a'
                 href='/contact'
 
-
-
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
-=======
-          >"
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
             <p className="text-xl text-blue-100 mb-8">
               Join the edge computing revolution and transform your business with real-time processing capabilities.
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a"
@@ -3159,19 +2106,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href="/contact""
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-                Schedule Demo
+Schedule Demo
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-              </a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
@@ -3185,25 +2122,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
-                href="/contact"
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
                 href='/contact'
                 className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Start Free Trial
               <a
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-=======
-                href="/contact"
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
-              >
-                Schedule Demo
-              </a>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 href='/contact'
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3217,22 +2143,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD:pages/edge-computing-orchestration.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-      <EnhancedFooter />
-    </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
 =======
@@ -3253,31 +2170,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   );
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
-
 
 }
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
-<<<<<<< HEAD
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx
   )
 }
 
@@ -3333,16 +2235,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 ;
 
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -3351,22 +2245,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <EnhancedFooter />
     </>
 );
-<<<<<<< HEAD:pages_backup/edge-computing-orchestration.tsx
+:pages_backup/edge-computing-orchestration.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-      <EnhancedFooter />
-    </>
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/edge-computing-orchestration.tsx
-=======
-
-
-
-
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/edge-computing-orchestration.tsx

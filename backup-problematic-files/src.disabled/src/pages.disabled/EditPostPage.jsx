@@ -13,21 +13,13 @@ class ErrorBoundary extends React.Component {
   }
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-      return <div>Something went wrong.</div>;
+return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
 }
 import React from 'react';
 
-<<<<<<< HEAD
-=======
-const EditPostPage = ({ className }) => {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-const EditPostPage = ({ className }) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={className || ''}>
 =======
@@ -38,13 +30,8 @@ const EditPostPage = ({ className }) => {
       <h1>EditPostPage</h1>
       <p>This component is under development.</p>
     </div>
+);
 <<<<<<< HEAD
-  );
-<<<<<<< HEAD
-=======
-  )
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     </div>'
 pr-12325

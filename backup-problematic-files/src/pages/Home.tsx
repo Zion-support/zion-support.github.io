@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 const HomePage: React.FC = () => {
   return (
@@ -25,7 +22,6 @@ const HomePage: React.FC = () => {
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus""
           >
 
-          
           <a;"
             href="https://ziontechgroup.com"""
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus""
@@ -73,19 +69,11 @@ const HomePage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
+);
 };
 
 function Card({ title, description, href, icon }: { 
-  title: string; 
-=======
-  )
-};
-
-function Card({ title, description, href, icon }: { 
-  title: string,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  title: string;
   description: string; 
   href: string; 
   icon: string; 
@@ -103,11 +91,7 @@ function Card({ title, description, href, icon }: {
 }
 
 function FeatureCard({ title, description }: { 
-<<<<<<< HEAD
-  title: string; 
-=======
-  title: string,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+title: string;
   description: string; 
 }) {
   return (

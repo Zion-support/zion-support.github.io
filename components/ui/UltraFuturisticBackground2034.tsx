@@ -334,10 +334,10 @@ if (return) {}
         <div'
           className='absolute inset-0'
           style={{}`
-            backgroundImage: `
+            backgroundImage: `;
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)`
           `'
-            backgroundSize: '50px 50px'
+            backgroundSize: '50px 50px';
           }}
         />      </div>
       {/* Floating Geometric Shapes */}
@@ -358,12 +358,12 @@ if (return) {}
         className="absolute inset-0 w-full h-full"
         transition={{}
           duration: 20;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'linear',        }}
         transition={{}
           duration: 20;
-          repeat: Infinity'"
-          ease: 'linear',          ease: "linear"
+          repeat: Infinity'";
+          ease: 'linear',          ease: "linear";
         }}
         />
       </div>
@@ -401,7 +401,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           opacity: [0.2, 0.5, 0.2];
         transition={{}
           duration: 25;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'linear',        }}
 ease: 'linear',
         }}
@@ -415,16 +415,16 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
           opacity: [0.4, 0.7, 0.4],
         }}
         transition={{
-          duration: 18
-          repeat: Infinity
+          duration: 18;
+          repeat: Infinity;
           duration: 18,
           repeat: Infinity,'"
           ease: 'linear',        }}        className="absolute bottom - 32 left - 1/4 w - 20 h - 20 border border - pink - 400 / 30 rounded - lg";
         animate={{}
         transition={{}
           duration: 18;
-          repeat: Infinity'"
-          ease: 'linear',          ease: "linear"
+          repeat: Infinity'";
+          ease: 'linear',          ease: "linear";
           duration: 18,
           repeat: Infinity,
 ease: 'linear',
@@ -444,7 +444,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         animate={{}
         transition={{}
           duration: 4;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'easeInOut',        }}
         }}
       />;
@@ -461,14 +461,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           opacity: [0.4, 0.9, 0.4]
         transition={{}
           duration: 5;
-          repeat: Infinity'
-          ease: 'easeInOut'"
-          delay: 1,          ease: "easeInOut""
+          repeat: Infinity';
+          ease: 'easeInOut'";
+          delay: 1,          ease: "easeInOut"";
           ease: "easeInOut",
 
           duration: 5;
-          repeat: Infinity'
-          ease: 'easeInOut'
+          repeat: Infinity';
+          ease: 'easeInOut';
           delay: 1,        }}
       {/* Quantum Field Lines */}'"
       <div className='absolute inset-0'>        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm";
@@ -526,16 +526,16 @@ ease: 'easeInOut',
             style={{
               left: `${(i + 1) * 12.5}%`
 origin/cursor/automate-test-improve-and-merge-code-2533
-              top: '20%'
+              top: '20%';
               left: `${(i + 1) * 12.5}%`,
               top: '20%';
             }}
             animate={{}
               duration: 3 + i * 0.5;
-              repeat: Infinity'
-              ease: 'easeInOut'"
-              delay: i * 0.2,              ease: "easeInOut"
-              delay: i * 0.2
+              repeat: Infinity';
+              ease: 'easeInOut'";
+              delay: i * 0.2,              ease: "easeInOut";
+              delay: i * 0.2;
               height: [32, 64, 32],
               opacity: [0.2, 0.6, 0.2],
             }}
@@ -561,12 +561,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],        }}
         transition={{}
           duration: 30;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'linear',        }}
         transition={{}
           duration: 30;
-          repeat: Infinity'"
-          ease: 'linear',          ease: "linear"
+          repeat: Infinity'";
+          ease: 'linear',          ease: "linear";
         }}
         animate={{}
           rotate: -360;
@@ -692,7 +692,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             key={i}'
             className='absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent'
             style={{'
-              top: '-20px'
+              top: '-20px';
             }}
             animate={{}
               y: [0, window && window.innerHeight + 20]
@@ -709,7 +709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent'
             style={{
               left: `${(i + 1) * 16.66}%`
-              top: '-20px'
+              top: '-20px';
             }}
             animate={{
               y: [0, window.innerHeight + 20],
@@ -720,7 +720,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               duration: 8 + i * 0.5,
               repeat: Infinity,"
               ease: "linear",
-              delay: i * 1.5
+              delay: i * 1.5;
 ease: 'linear',
               delay: i * 1.5,
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -745,16 +745,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <motion&& motion.div'
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
         animate={{}
-          boxShadow: []
+          boxShadow: [];
           ],        }}
         transition={{}
           duration: 2;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'easeInOut',        }}
       </div>
 
         animate={{}
-          boxShadow: ['
+          boxShadow: [';
             '0 0 10px rgba(0, 255, 255, 0 && 0.5)0 0 30px rgba(0, 255, 255, 0 && 0.8)0 0 10px rgba(0, 255, 255, 0 && 0.5)'
           ]"
               delay: i * 1.5,              ease: "linear",
@@ -787,9 +787,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ];
         transition={{}
           duration: 2;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'easeInOut'
-
+;
         }}
 
       />
@@ -801,7 +801,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
           delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{}
-          boxShadow: ['
+          boxShadow: [';
             '0 0 10px rgba(0, 255, 255, 0 && 0.5)0 0 30px rgba(0, 255, 255, 0 && 0.8)0 0 10px rgba(0, 255, 255, 0 && 0.5)'
           ]
         transition={{}
@@ -812,16 +812,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }}
         transition={{}
           duration: 40;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'linear',        }}
           duration: 40,
           repeat: Infinity,"
           ease: "linear"
-
+;
       <motion.div
 className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
         animate={{
-          boxShadow: [
+          boxShadow: [;
             '0 0 10px rgba(0, 255, 255, 0.5)',
             '0 0 30px rgba(0, 255, 255, 0.8)',
             '0 0 10px rgba(0, 255, 255, 0.5)',
@@ -836,7 +836,7 @@ ease: 'easeInOut',
       <motion.div
 className='absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full'
         animate={{
-          boxShadow: [
+          boxShadow: [;
             '0 0 10px rgba(0, 255, 255, 0.5)',
             '0 0 30px rgba(0, 255, 255, 0.8)',
             '0 0 10px rgba(0, 255, 255, 0.5)',

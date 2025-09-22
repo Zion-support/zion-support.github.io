@@ -69,28 +69,28 @@ interface Service {
   ];
 
   icon: React.ComponentType<any>;
-  color: string
+  color: string;
 }
 
 const EnhancedServicesShowcase: React.FC;
   color: string;} from 'lucide-react';
 interface Service {
-  id: string
-  name: string
-  tagline: string
-  category: string
-  price: string
-  period: string
-  setupTime: string
-  customers: string
-  features: string[]
-  benefits: string[]
-  roi: string
-  marketSize: string
-  growthRate: string
+  id: string;
+  name: string;
+  tagline: string;
+  category: string;
+  price: string;
+  period: string;
+  setupTime: string;
+  customers: string;
+  features: string[];
+  benefits: string[];
+  roi: string;
+  marketSize: string;
+  growthRate: string;
   popular?: boolean;
-  icon: React.ComponentType<any>
-  color: string
+  icon: React.ComponentType<any>;
+  color: string;
 }
 const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -106,13 +106,13 @@ tagline:
       period: '/month',
       setupTime: '2-3 weeks',
       customers: '150+',
-features: [
+features: [;
         'AI-powered dashboards',
         'Predictive analytics',
         'Real-time insights',
         'Custom reporting',
       ],
-      benefits: [
+      benefits: [;
         '30% faster decision making',
         'Improved data accuracy',
         'Cost reduction',
@@ -134,13 +134,13 @@ color: 'from-purple-500 to-pink-500',
       period: '/month',
       setupTime: '4-6 weeks',
       customers: '75+',
-features: [
+features: [;
         'Quantum-resistant encryption',
         'AI threat detection',
         'Zero-trust architecture',
         '24/7 monitoring',
       ],
-      benefits: [
+      benefits: [;
         '99.99% threat prevention',
         'Compliance ready',
         'Reduced security incidents',
@@ -162,13 +162,13 @@ color: 'from-red-500 to-orange-500',
       period: '/month',
       setupTime: '1-2 weeks',
       customers: '200+',
-features: [
+features: [;
         'Edge node management',
         'IoT device management',
         'Real-time monitoring',
         'Auto-scaling',
       ],
-      benefits: [
+      benefits: [;
         '50% latency reduction',
         'Improved reliability',
         'Cost optimization',
@@ -184,23 +184,23 @@ color: 'from-emerald-500 to-teal-500',
       id: 'space-tech',
       name: 'Space Technology Innovation',
       tagline:
-        'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Infrastructure',      color: 'from-red-500 to-orange-500'
+        'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Infrastructure',      color: 'from-red-500 to-orange-500';
     }
     {
-      id: 'edge-computing'
-      name: 'Edge Computing Orchestration'
-      tagline: 'Deploy and manage applications at the edge with intelligent orchestration'
-      price: '$349'
-      period: '/month'
-      setupTime: '1-2 weeks'
-      customers: '200+'
-      features: [
+      id: 'edge-computing';
+      name: 'Edge Computing Orchestration';
+      tagline: 'Deploy and manage applications at the edge with intelligent orchestration';
+      price: '$349';
+      period: '/month';
+      setupTime: '1-2 weeks';
+      customers: '200+';
+      features: [;
         'Edge node management'
         'IoT device management'
         'Real-time monitoring'
         'Auto-scaling'
       ]
-      benefits: [
+      benefits: [;
         'Mission success rate 95%+',
         'Reduced launch costs',
         'Advanced capabilities',
@@ -222,13 +222,13 @@ color: 'from-violet-500 to-purple-500',
       period: '/month',
       setupTime: '6-8 weeks',
       customers: '40+',
-features: [
+features: [;
         'BCI development tools',
         'Neural signal processing',
         'AI pattern recognition',
         'Safety protocols',
       ],
-      benefits: [
+      benefits: [;
         'Revolutionary UX',
         'Accessibility improvements',
         'Research advancement',
@@ -249,13 +249,13 @@ color: 'from-pink-500 to-rose-500',
 period: '/month',
       setupTime: '10-14 weeks',
       customers: '15+',
-      features: [
+      features: [;
         'Quantum neural networks'
         'Consciousness simulation'
         'Advanced learning'
         'Quantum optimization'
       ]
-      benefits: [
+      benefits: [;
         'Unprecedented AI capabilities',
         'Breakthrough research',
         'Competitive advantage',
@@ -310,7 +310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}"
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12";
             >
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
@@ -321,7 +321,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
               Our Services
             </span>
@@ -332,13 +332,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
         {/* Filters */}
-<div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
+<div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>;
           {/* Category Filter */}
           <div className='relative'>
             <select
               value={selectedCategory}
               onChange={e => setSelectedCategory(e.target.value)}
-              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12'
+              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12';
             >
               {categories.map(category => (
                 <option
@@ -373,22 +373,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={searchTerm}
 
               onChange={(e) => setSearchTerm(e.target.value)}"
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64";
             />"
             <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
               onChange={e => setSearchTerm(e.target.value)}
-              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64'
+              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64';
             />
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
         {/* Services Grid */}
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices.map((service, index) => (
             <div;
               key={service.id}'
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
             >
               {/* Popular Badge */}
               {service.popular && (
@@ -657,7 +657,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-right'>
                     <div className='text-xs text-white/60 mb-1'>
                       {getCategoryIcon(service.category)({
-                        className: 'w-3 h-3'
+                        className: 'w-3 h-3';
                       })}
                     </div>
                     <div className='text-xs text-white/40'>
@@ -696,7 +696,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
                     Key Features:
-                  </h4>
+                  </h4>;
                   <div className='space-y-2'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div
@@ -714,7 +714,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
                     Key Benefits:
-                  </h4>'
+                  </h4>';
                   <div className='space-y-2'>
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <div;
@@ -781,23 +781,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex gap-3">
                   <button;`
                     onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}"
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105"
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105";
 <div className='flex gap-3'>
                   <button
                     onClick={() =>
                       (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`)
                     }
-                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105'
+                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     Get Started;
                   </button>
                   <button"
-                    className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                    className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
 onClick={() =>
                       (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`)
                     }
-                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     Demo;
@@ -822,7 +822,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Let's discuss how our cutting-edge technology solutions can;
               accelerate your digital transformation journey.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
           ))}
         {/* CTA Section */}'
         <div className='text-center mt-16'>;'
@@ -841,7 +841,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Schedule Consultation;
               </a>;
               <a'
-                href='tel:+13024640950''
+                href='tel:+13024640950'';
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>              Ready to Transform Your Business?;
             </h3>;"
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">;'
@@ -854,8 +854,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Schedule Consultation;
               </a>;
               <a'
-                href='tel:+13024640950''"
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
+                href='tel:+13024640950''";
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950";
             </div>))}
         </div>;
         {/* CTA Section */}'
@@ -919,13 +919,13 @@ export default EnhancedServicesShowcase;
 }
 export default EnhancedServicesShowcase;
                 href='mailto:kleber@ziontechgroup.com?subject=Consultation Request'
-                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
               >
                 Schedule Consultation
               </a>
               <a
-href='tel:+13024640950'
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+href='tel:+13024640950';
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
               >
                 Call Now
               </a>

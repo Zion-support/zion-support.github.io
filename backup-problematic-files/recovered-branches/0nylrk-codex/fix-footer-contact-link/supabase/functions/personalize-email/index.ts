@@ -114,7 +114,7 @@ serve(async (req) => {;
 });
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
+
 }try {
   //Get personalization request data const {
   break;
@@ -167,13 +167,10 @@ if (jsonMatch) {
   try {
   generatedContent = JSON.parse (jsonMatch[0]) 
 }catch (e2) {
-  
+
 }
 }// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {
-  
+
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

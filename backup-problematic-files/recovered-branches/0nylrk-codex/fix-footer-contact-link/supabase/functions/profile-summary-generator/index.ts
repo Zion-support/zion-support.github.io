@@ -114,7 +114,7 @@ serve(async (req) => {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
 };
 //Handle CORS preflight requests if (req.method === 'OPTIONS') {
-  
+
 }//Create a request to OpenAI API const openAIResponse = await fetch ('https://api.openai.com/v1/chat/completions', {
   method: 'POST', headers: {
   'Authorization': `Bearer $ {
@@ -156,7 +156,4 @@ return new Response (JSON.stringify ({
 }) 
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

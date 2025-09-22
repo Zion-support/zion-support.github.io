@@ -38,7 +38,7 @@ type TalentSummary = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
+      <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>;
       <p className="text-gray-600">Profiles are periodically enriched with AI-generated summaries.</p>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
       <div className="grid grid-cols-1 gap-4">

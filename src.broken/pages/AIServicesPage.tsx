@@ -276,7 +276,6 @@ import {;
   Twitter,;
   Github;'
 } from 'lucide-react',;
-<<<<<<< HEAD
 export default function AIServicesPage() {;
   const aiServices = [;
     {;
@@ -299,11 +298,6 @@ export default function AIServicesPage() {;
         enterprise: "$1,299/month";
       },;
       marketPrice: "$500-800/month",;
-=======
-export default function AIServicesPage() { return null; }
-      },;"
-      marketPrice: "$500-800/month",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       useCases: ["Marketing agencies", "Content creators", "E-commerce businesses", "Bloggers", "Social media managers"],;
       benefits: [;"
         "10x faster content creation",;"
@@ -314,15 +308,9 @@ export default function AIServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/ai-content-generation";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "AI Customer Service Platform",,
   description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.",;
-=======
-    {;"
-      name: "AI Customer Service Platform",;"
-      description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <MessageSquare className="w-12 h-12 text-green-500" />,;
       features: [;"
         "Natural language understanding",;"
@@ -350,15 +338,9 @@ export default function AIServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/ai-customer-service";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "AI Sales Intelligence Platform",,
   description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.",;
-=======
-    {;"
-      name: "AI Sales Intelligence Platform",;"
-      description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <BarChart3 className="w-12 h-12 text-purple-500" />,;
       features: [;"
         "Advanced lead scoring algorithms",;"
@@ -386,15 +368,9 @@ export default function AIServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/ai-sales-intelligence";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "AI-Powered Search & RAG System",,
   description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.",;
-=======
-    {;"
-      name: "AI-Powered Search & RAG System",;"
-      description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Search className="w-12 h-12 text-orange-500" />,;
       features: [;"
         "Vector-based semantic search",;"
@@ -422,15 +398,9 @@ export default function AIServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/ai-search-rag";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "AI Security & Guardrails",,
   description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.",;
-=======
-    {;"
-      name: "AI Security & Guardrails",;"
-      description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Shield className="w-12 h-12 text-red-500" />,;
       features: [;"
         "Content safety filtering",;"
@@ -458,15 +428,9 @@ export default function AIServicesPage() { return null; }
       ],;"
       website: "https://ziontechgroup.com/ai-security-guardrails";
     },;
-<<<<<<< HEAD
-    {;
+{;
       name: "AI Evaluation & Testing Lab",,
   description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.",;
-=======
-    {;"
-      name: "AI Evaluation & Testing Lab",;"
-      description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Brain className="w-12 h-12 text-indigo-500" />,;
       features: [;"
         "Automated model testing",;"

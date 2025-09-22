@@ -1,32 +1,21 @@
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Projects.tsx
-<<<<<<< HEAD
-=======
-import {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-=======
-import {}
-class ErrorBoundary extends React.Component {}
-  constructor(props) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Projects.tsx
-    super(props);
+:temp_exclude/hooks.disabled/Projects.tsx
+super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }'
@@ -51,7 +40,7 @@ import { Button } from '@/components/ui/button''
 import { Badge } from '@/components/ui/badge''
 import Link from 'next/link'
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Projects.tsx
+:temp_exclude/hooks.disabled/Projects.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
@@ -59,71 +48,10 @@ import { SEO } from "@/components/SEO",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-=======
-import React from "react","
-import { useProjects } from "@/hooks/useProjects","
-import { SEO } from "@/components/SEO","
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card","
-import { Button } from "@/components/ui/button","
-import { Badge } from "@/components/ui/badge","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Projects.tsx
 import Link from "next/link",
-<<<<<<< HEAD
 import { Clock, Briefcase } from 'lucide-react'
-
-=======
-
-'
-import { Clock, Briefcase } from 'lucide-react'
-
-;
-  Card;
-  CardContent;
-  CardDescription;
-  CardFooter;
-  CardHeader;
-  CardTitle'
-} from '@/components/ui/card''
-import { Button } from '@/components/ui/button''
-import { Badge } from '@/components/ui/badge''
-import Link from 'next/link'
-'
-import { Clock, Briefcase } from 'lucide-react'
-function ProjectsContent() { const { projects, isLoading  } = useProjects()
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Projects.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function ProjectsContent() {
   const { projects, isLoading } = useProjects(),
-=======
-function ProjectsContent() {}
-  const { projects, isLoading } = useProjects()
-;
-function ProjectsContent() { const { projects, isLoading  } = useProjects(),;
-function ProjectsContent() { return null; }
-  const { projects, isLoading } = useProjects(),;
-
-  return (
-    <>;
-      <SEO'
-        title='My Projects | Zion AI Marketplace''
-        description='View and manage your projects.'
-"
-import React from "react";"
-import { useProjects } from "@/hooks/useProjects";"
-import { SEO } from "@/components/SEO";"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
-import { Badge } from "@/components/ui/badge";"
-import Link from "next/link";'
-import { Clock, Briefcase } from 'lucide-react'';
-import { Badge } from '@/components/ui/badge';'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
-import { Star } from 'lucide-react';
-
-
-function ProjectsContent() { const { projects, isLoading  } = useProjects(),
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Projects.tsx
 
   return (
     <>"
@@ -138,15 +66,9 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
         ) : projects.length === 0 ? ('
           <p>You don't have any projects yet.</p>
         ) : (
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Projects.tsx
-<<<<<<< HEAD
-          <div className="grid gap-6">
+:temp_exclude/hooks.disabled/Projects.tsx
+<div className="grid gap-6">
             {projects.map((project) => (
-=======
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Projects.tsx
           <div className="grid gap-6">
             {projects.map((project) => (
 "
@@ -154,7 +76,6 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
             {projects.map((project) => ("
           <div className="grid gap-6">
             {projects.map((project) => (
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Card key={project.id}>
@@ -172,7 +93,7 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Projects.tsx
+:temp_exclude/hooks.disabled/Projects.tsx
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {project.job?.description || "Project details"}
                   </p>
@@ -233,13 +154,8 @@ function ProjectsContent() {;
                   </Button>;
                 </CardFooter>;
               </Card>;
-=======
-'"
-                  <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Projects.tsx
             ))}
-<<<<<<< HEAD
-          </div>;
+</div>;
         )}
       </main>;
     </>;
@@ -250,11 +166,3 @@ export default function Projects() {;
   return <ProjectsContent />;
 }
 ;
-=======
-          </div>
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Projects.tsx
-        )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        )}'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Projects.tsx

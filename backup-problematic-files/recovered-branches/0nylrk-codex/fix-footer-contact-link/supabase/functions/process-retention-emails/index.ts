@@ -108,7 +108,7 @@ serve(async (req) => {;
 });
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
+
 }try {
   //Call the database function to schedule retention emails const {
   data: scheduledCount, error: scheduleError 
@@ -122,7 +122,7 @@ serve(async (req) => {;
 for (const job of pendingJobs) {
   try {
   //Call the send-retention-email function for each job //Update job status to failed await supabase .from ("scheduled jobs") .update ({
-  
+
 }else {
   processedJobs.push (job.id) 
 }
@@ -131,7 +131,7 @@ for (const job of pendingJobs) {
   job.id 
 }:`, error);
 //Update job status to failed scheduled jobs") .update ({
-  
+
 }
 }
 }return new Response (return new Response (JSON.stringify ({
@@ -143,7 +143,4 @@ details: error.message
 );
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
