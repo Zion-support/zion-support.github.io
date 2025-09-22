@@ -1,10 +1,18 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
-export default function InnovationInEnterpriseTechnologyPage() {
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+const InnovationInEnterpriseTechnology: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Innovation in Enterprise Technology</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Article coming soon.</p>
-    </div>
-  );
-}
+    <div>
+      <Head>
+        <title>InnovationInEnterpriseTechnology - Zion Tech Solutions</title>
+        <meta name="description" content="InnovationInEnterpriseTechnology page" />
+      </Head>
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+

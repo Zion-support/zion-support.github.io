@@ -1,19 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
-
+import { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
+import { UserRole } from '../../../utils/messaging/types',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-  const { email, password, code } = req.body || {};
-  if (!email || !password || !code) {
-    return res.status(400).json({ error: 'Missing credentials' });
-  }
-  const result = validateCredentials(email, password, code);
-  if (!result.ok || !result.role) {
-    return res.status(401).json({ error: 'Invalid credentials' });
-  }
-  const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
-  res.setHeader('Set-Cookie', cookie);
-  return res.status(200).json({ ok: true });
-}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { name, role } = req.body as { name: string, role: UserRole }
+  if (!name || !role) return res.status(400).json({ error: 'Missing name or role' })
+  ensureDemoUsers()
+  const user = generateUser(name, role)
+  upsertUser(user)
+  setUserCookie(res, user)
+  res.status(200).json({ user })
+};

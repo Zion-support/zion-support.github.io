@@ -1,43 +1,87 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
 
-export default function ApiPerformanceTestingPage() {
-	const features = [
-		'k6/Gatling-compatible test runner',
-		'SLO-aware latency reports',
-		'Regression baselines per endpoint',
-		'CI checks and PR annotations',
-		'Synthetic traffic for staging'
-	];
-
-	return (
-		<>
-			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
-			<main id="main" className="container mx-auto px-4 py-24">
-				<section className="max-w-5xl mx-auto">
-					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>
-					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
-						{features.map((f) => (
-							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
-								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-								<p className="text-gray-200">{f}</p>
-							</div>
-						))}
-					</div>
-					<div className="mt-8 flex flex-wrap items-center gap-4">
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200">Start from $129/mo</a>
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
-						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> k6 Docs
-							</a>
-						<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> Gatling OSS
-							</a>
-					</div>
-				</section>
-			</main>
-		</>
-	);
-}
+          <div className='mt-14'>
+            <h2 className='text-2xl font-semibold'>Pricing</h2>
+            <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
+              <div className='rounded-2xl border border-cyan-400/30 p-6'>
+                <h3 className='text-xl font-bold'>Starter</h3>
+                <p className='mt-2 text-gray-300'>
+                  Up to 250 RPS, 1 region, CI integration.
+                </p>
+                <p className='mt-4 text-3xl font-bold'>
+                  $149
+                  <span className='text-base font-normal text-gray-300'>
+                    /mo
+                  </span>
+                </p>
+              </div>
+              <div className='rounded-2xl border border-fuchsia-400/30 p-6'>
+                <h3 className='text-xl font-bold'>Growth</h3>
+                <p className='mt-2 text-gray-300'>
+                  Up to 2k RPS, 3 regions, regression gates.
+                </p>
+                <p className='mt-4 text-3xl font-bold'>
+                  $590
+                  <span className='text-base font-normal text-gray-300'>
+                    /mo
+                  </span>
+                </p>
+              </div>
+              <div className='rounded-2xl border border-emerald-400/30 p-6'>
+                <h3 className='text-xl font-bold'>Enterprise</h3>
+                <p className='mt-2 text-gray-300'>
+                  Unlimited scale, private agents, SSO, and SRE support.
+                </p>
+                <p className='mt-4 text-3xl font-bold'>Custom</p>
+              </div>
+            </div>
+            <p className='mt-4 text-sm text-gray-400'>
+              Market references:{' '}
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://k6.io/pricing/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Grafana k6
+              </a>
+              ,{' '}
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://www.loadmill.com/pricing'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Loadmill
+              </a>
+              ,{' '}
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://www.blazemeter.com/pricing'
+                target='_blank'
+                rel='noreferrer'
+              >
+                BlazeMeter
+              </a>
+              .
+            </p>
+          </div>
+<div className='mt-14 flex flex-wrap items-center gap-4'>
+            <Link
+              href='/contact'
+              className='px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold'
+            >
+              Talk to Sales
+            </Link>
+            <a
+              href='mailto:kleber@ziontechgroup.com'
+              className='px-5 py-3 rounded-lg border border-white/20'
+            >
+              Email: kleber@ziontechgroup.com
+            </a>
+            <span className='text-gray-400'>Call: +1 302 464 0950</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

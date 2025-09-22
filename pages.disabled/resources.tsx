@@ -1,368 +1,941 @@
+
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Container from '../components/ui/Container';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import MainLayout from '../components/layout/MainLayout';
+
 
 export default function ResourcesPage() {
-  const resourceCategories = [
-    {
-      title: 'Documentation',
-      description: 'Comprehensive guides and technical documentation for our platform and services.',
-      icon: '📚',
-      color: 'bg-gradient-to-br from-blue-400 to-indigo-500',
-      resources: [
-        { name: 'Platform API Reference', type: 'PDF', size: '2.3 MB' },
-        { name: 'Integration Guide', type: 'PDF', size: '1.8 MB' },
-        { name: 'Best Practices', type: 'PDF', size: '3.1 MB' },
-        { name: 'Troubleshooting', type: 'PDF', size: '1.5 MB' },
-      ],
-    },
-    {
-      title: 'Whitepapers',
-      description: 'In-depth research and analysis on autonomous technology and industry trends.',
-      icon: '📄',
-      color: 'bg-gradient-to-br from-green-400 to-emerald-500',
-      resources: [
-        { name: 'AI Automation ROI Study', type: 'PDF', size: '4.2 MB' },
-        { name: 'Future of Autonomous Systems', type: 'PDF', size: '3.8 MB' },
-        { name: 'Cloud-Native Architecture', type: 'PDF', size: '2.9 MB' },
-        { name: 'Security in AI Systems', type: 'PDF', size: '3.5 MB' },
-      ],
-    },
-    {
-      title: 'Case Studies',
-      description: 'Real-world examples of successful autonomous technology implementations.',
-      icon: '📊',
-      color: 'bg-gradient-to-br from-purple-400 to-pink-500',
-      resources: [
-        { name: 'E-commerce Transformation', type: 'PDF', size: '2.7 MB' },
-        { name: 'Healthcare AI Platform', type: 'PDF', size: '3.2 MB' },
-        { name: 'Financial Services Automation', type: 'PDF', size: '2.8 MB' },
-        { name: 'Manufacturing IoT Solution', type: 'PDF', size: '3.0 MB' },
-      ],
-    },
-    {
-      title: 'Webinars & Videos',
-      description: 'Educational content and expert insights on autonomous technology.',
-      icon: '🎥',
-      color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
-      resources: [
-        { name: 'Getting Started with AI', type: 'Video', size: '45 min' },
-        { name: 'Advanced Automation', type: 'Video', size: '60 min' },
-        { name: 'Cloud Migration Guide', type: 'Video', size: '30 min' },
-        { name: 'Security Best Practices', type: 'Video', size: '40 min' },
-      ],
-    },
-    {
-      title: 'Templates & Tools',
-      description: 'Ready-to-use templates and development tools to accelerate your projects.',
-      icon: '🛠️',
-      color: 'bg-gradient-to-br from-red-400 to-pink-500',
-      resources: [
-        { name: 'Project Planning Template', type: 'Excel', size: '156 KB' },
-        { name: 'API Testing Suite', type: 'Tool', size: '2.1 MB' },
-        { name: 'Performance Monitoring', type: 'Tool', size: '1.8 MB' },
-        { name: 'Security Checklist', type: 'PDF', size: '890 KB' },
-      ],
-    },
-    {
-      title: 'Community Resources',
-      description: 'Connect with other developers and share knowledge in our community.',
-      icon: '👥',
-      color: 'bg-gradient-to-br from-cyan-400 to-blue-500',
-      resources: [
-        { name: 'Developer Forum', type: 'Community', size: 'Active' },
-        { name: 'Code Examples', type: 'Repository', size: 'GitHub' },
-        { name: 'User Groups', type: 'Community', size: 'Local' },
-        { name: 'Expert Q&A', type: 'Community', size: 'Live' },
-      ],
-    },
-  ];
-
-  const featuredResources = [
-    {
-      title: 'Complete Platform Guide',
-      description: 'Everything you need to know about our autonomous technology platform.',
-      type: 'Comprehensive Guide',
-      size: '15.2 MB',
-      downloads: '2,847',
-      rating: 4.9,
-      icon: '📖',
-      color: 'bg-gradient-to-br from-blue-400 to-indigo-500',
-    },
-    {
-      title: 'AI Implementation Playbook',
-      description: 'Step-by-step guide to implementing AI automation in your organization.',
-      type: 'Implementation Guide',
-      size: '8.7 MB',
-      downloads: '1,923',
-      rating: 4.8,
-      icon: '🤖',
-      color: 'bg-gradient-to-br from-green-400 to-emerald-500',
-    },
-    {
-      title: 'Performance Optimization Handbook',
-      description: 'Advanced techniques for optimizing autonomous systems performance.',
-      type: 'Technical Guide',
-      size: '6.3 MB',
-      downloads: '1,456',
-      rating: 4.7,
-      icon: '⚡',
-      color: 'bg-gradient-to-br from-purple-400 to-pink-500',
-    },
-  ];
-
   return (
-    <>
-      <Head>
-        <title>Resources | Zion Tech Group</title>
-        <meta name="description" content="Access comprehensive resources including documentation, whitepapers, case studies, and tools to help you succeed with autonomous technology." />
-        <meta property="og:title" content="Resources | Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive resources for autonomous technology success." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+    <MainLayout title="Resources - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Resources</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the resources page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
 
-      {/* Hero Section */}
-      <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
-        <Container>
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-              Resources & Tools
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Everything you need to succeed with autonomous technology - from documentation to implementation guides
-            </p>
-            <Button href="/contact" size="lg">
-              Get Expert Help
-            </Button>
-          </div>
-        </Container>
-      </section>
-
-      {/* Featured Resources */}
-      <section className="py-16 lg:py-24 bg-white">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Most Popular Resources
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our most downloaded and highly-rated resources
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredResources.map((resource, index) => (
-              <Card key={index} className="overflow-hidden">
-                <div className={`w-full h-48 ${resource.color} flex items-center justify-center`}>
-                  <span className="text-6xl">{resource.icon}</span>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">
-                      {resource.type}
-                    </span>
-                    <div className="flex items-center gap-1">
-                      <span className="text-yellow-400">⭐</span>
-                      <span className="text-sm font-medium text-gray-900">{resource.rating}</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {resource.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4">
-                    {resource.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
-                    <span>{resource.size}</span>
-                    <span>{resource.downloads} downloads</span>
-                  </div>
-                  
-                  <Button href="/resources/download" variant="outline" className="w-full">
-                    Download Now
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Resource Categories */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Browse by Category
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find the resources you need organized by topic and type
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.map((category, index) => (
-              <Card key={index} className="overflow-hidden">
-                <div className={`w-full h-32 ${category.color} flex items-center justify-center`}>
-                  <span className="text-5xl">{category.icon}</span>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {category.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    {category.description}
-                  </p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {category.resources.slice(0, 3).map((resource, resourceIndex) => (
-                      <div key={resourceIndex} className="flex items-center justify-between text-sm">
-                        <span className="text-gray-700">{resource.name}</span>
-                        <span className="text-gray-500">{resource.size}</span>
-                      </div>
-                    ))}
-                    {category.resources.length > 3 && (
-                      <div className="text-sm text-blue-600 font-medium">
-                        +{category.resources.length - 3} more resources
-                      </div>
-                    )}
-                  </div>
-                  
-                  <Button href={`/resources/${category.title.toLowerCase().replace(/ /g, '-')}`} variant="outline" className="w-full">
-                    View All
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Quick Access Tools */}
-      <section className="py-16 lg:py-24 bg-white">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Quick Access Tools
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Essential tools and utilities to help you get started quickly
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🔍</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Search Resources</h3>
-              <p className="text-gray-600 text-sm mb-4">Find exactly what you need</p>
-              <Button href="/resources/search" variant="ghost" size="sm">
-                Search Now
-              </Button>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📥</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Download Center</h3>
-              <p className="text-gray-600 text-sm mb-4">Access all resources</p>
-              <Button href="/resources/downloads" variant="ghost" size="sm">
-                Browse All
-              </Button>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">💬</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Get Support</h3>
-              <p className="text-gray-600 text-sm mb-4">Expert help when you need it</p>
-              <Button href="/contact" variant="ghost" size="sm">
-                Contact Us
-              </Button>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📧</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Newsletter</h3>
-              <p className="text-gray-600 text-sm mb-4">Stay updated on new resources</p>
-              <Button href="/resources/newsletter" variant="ghost" size="sm">
-                Subscribe
-              </Button>
-            </Card>
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-purple-600">
-        <Container>
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Need Help Finding Resources?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Our team of experts is here to help you find the right resources for your project
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="secondary" size="lg">
-                Get Expert Help
-              </Button>
-              <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
-                Explore Services
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
-    </>
-=======
+import React from 'react';
 import SEO from '../components/SEO';
+
+import React from 'react',;
+import SEO from '../components/SEO',;
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-
 export default function ResourcesPage() {
   return (
+
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
       <div className="container mx-auto px-4 py-16 text-white">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>
-          <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
+<p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
+
             { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
             { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
             { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' },
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
-            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
+            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           ].map((it) => (
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
               <div className="text-sm text-gray-400">Resource</div>
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
-              <div className="mt-3 text-cyan-300">Open →</div>
+<div className="mt-3 text-cyan-300">Open →</div>
             </Link>
-          ))}
-        </div>
-      </div>
-    </UltraFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1967
+
+import React from 'react',
+import SEO from '../components / SEO',
+import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground',
+import Link from 'next / link',
+export default /**
+ * ResourcesPage - Function description
+ */
+function ResourcesPage() {
+  return (
+    <UltraFuturisticBackground intensity="high" variant="quantum">;
+      <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com / resources/" />;
+      <div className="container mx - auto px - 4 py - 16 text - white">;
+        <div className="text - center max - w-3xl mx - auto">;
+          <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">Resources</h1>;
+          <p className="mt - 3 text - gray - 300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>;
+        </div>;
+        <div className="mt - 10 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+          {[;
+            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
+            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
+            { name: 'Market Pricing', href: '/market - pricing', blurb: 'Vendor links and typical budgets.' },
+            { name: 'Services Advertising', href: '/services - advertising', blurb: 'Features, capabilities, and benefits.' },
+            { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },
+            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
+          ].map ((it) => (
+            <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover:border - cyan - 500 / 50 transition - colors block">;
+              <div className="text - sm text - gray - 400">Resource</div>;
+              <h3 className="text - xl font - semibold text - white">{it.name}</h3>;
+              <p className="mt - 1 text - gray - 300">{it.blurb}</p>;
+              <div className="mt - 3 text - cyan - 300">Open →</div>;
+            </Link>))}
+        </div>;
+      </div>;
+    </UltraFuturisticBackground>);
+},
+      {/* Whitepapers */}
+      <section id="whitepapers" className="py - 20 bg - slate - 50">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </div>;
+    </UltraFuturisticBackground>;
   );
 };
+      {/* Whitepapers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section id="whitepapers" className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-export default ResourcesPage;
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Whitepapers & Guides</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              In-depth research and comprehensive guides on the latest technology trends and best practices.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {whitepapers.map((paper, index) => (
+              <motion.div
+className="text - center mb - 16";
+          >;
+            <h2 className="text - 4xl font - bold text - slate - 900 mb - 6">Whitepapers & Guides</h2>;
+            <p className="text - xl text - slate - 600 max - w-3xl mx - auto">;
+              In - depth research and comprehensive guides on the latest technology trends and best practices.;
+            </p>;
+          </motion.div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 2 gap - 8">;
+            {whitepapers.map ((paper, index) => (
+              <motion.div;
+                key={paper.title}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+className="bg - white rounded - 2xl shadow - lg overflow - hidden hover:shadow - xl transition - all duration - 300";
+              >;
+                <div className="bg - gradient - to - br from - blue - 500 to - cyan - 500 p - 8">;
+                  <div className="flex items - center justify - between mb - 4">;
+                    <span className="inline - block bg - white / 20 px - 3 py - 1 rounded - full text - sm text - white">;
+                      {paper.category}
+                key={paper.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+              >
+                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
+
+                      {paper.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                    </span>
+                    <span className="text-white/80 text-sm">{paper.pages} pages</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
+                  <p className="text-blue-100 leading-relaxed">{paper.description}</p>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-slate-600 text-sm">
+                      {paper.downloadCount} downloads
+                    </span>
+                    <a
+href={paper.downloadUrl  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                    >
+                      <Download className="w-5 h-5" />
+                      <span>Download</span>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+</span>;
+                    <span className="text - white / 80 text - sm">{paper.pages} pages</span>;
+                  </div>;
+                  <h3 className="text - 2xl font - bold text - white mb - 3 leading - tight">{paper.title}</h3>;
+                  <p className="text - blue - 100 leading - relaxed">{paper.description}</p>;
+                </div>;
+                <div className="p - 8">;
+                  <div className="flex items - center justify - between mb - 6">;
+                    <span className="text - slate - 600 text - sm">;
+                      {paper.download_count} downloads;
+                    </span>;
+                    <a;
+                      href={paper.download_url}
+                      className="inline - flex items - center space - x-2 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white px - 6 py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105";
+                    >;
+                      <Download className="w - 5 h - 5" />;
+                      <span > Download</span>;
+                    </a>;
+                  </div>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Case Studies */}
+      <section className="py - 20 bg - white">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Case Studies */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Case Studies</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Real-world examples of how our solutions have transformed businesses across industries.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <motion.div
+className="text - center mb - 16";
+          >;
+            <h2 className="text - 4xl font - bold text - slate - 900 mb - 6">Case Studies</h2>;
+            <p className="text - xl text - slate - 600 max - w-3xl mx - auto">;
+              Real - world examples of how our solutions have transformed businesses across industries.;
+            </p>;
+          </motion.div>;
+          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
+            {case_studies.map ((study, index) => (
+              <motion.div;
+                key={study.title}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
+                  {study.industry}
+                  {study.industry  } catch (error) {
+key={study.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
+                      {paper.category}
+                      {paper.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>
+                    <span className="text-white/80 text-sm">{paper.pages} pages</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
+                  <p className="text-blue-100 leading-relaxed">{paper.description}</p>
+                </div>
+                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
+
+                  {study.industry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </span>
+                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{study.title}</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">{study.description}</p>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-slate-900 mb-3">Key Results:</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, idx) => (
+                      <li key={idx} className="text-sm text-slate-600 flex items-center space-x-2">
+                        <ArrowRight className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                        <span>{result}</span>
+                      </li>
+
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </ul>;
+                </div>;
+                <a;
+                  href={study.readUrl  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                >
+                  <span>Read Case Study</span>
+                  <ArrowRight className="w-4 h-4" />
+      {/* Videos */}
+      <section className="py - 20 bg - slate - 900">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+
+                </Link>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Videos */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Video Resources</h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Visual learning resources and expert insights on technology trends and implementations.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {videos.map((video, index) => (
+              <motion.div
+                key={video.title}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+className="bg - white / 5 backdrop - blur - xl rounded - 2xl border border - white / 10 overflow - hidden hover:bg - white / 10 transition - all duration - 300";
+              >;
+                <div className="bg - gradient - to - br from - blue - 500 to - cyan - 500 p - 6 text - center">;
+                  <Play className="w - 12 h - 12 text - white mx - auto mb - 3" />;
+                  <span className="inline - block bg - white / 20 px - 3 py - 1 rounded - full text - sm text - white">;
+                    {video.category}
+                key={video.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
+                  <Play className="w-12 h-12 text-white mx-auto mb-3" />
+                  <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
+                    {video.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+</span>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-white mb-3 leading-tight">{video.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed mb-4">{video.description}</p>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-white/60 text-sm">{video.duration}</span>
+                  </div>
+                  <a
+
+                    href={video.watchUrl  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </span>
+                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{study.title}</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">{study.description}</p>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-slate-900 mb-3">Key Results:</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, idx) => (
+                      <li key={idx} className="text-sm text-slate-600 flex items-center space-x-2">
+                        <ArrowRight className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                        <span>{result}</span>
+                      </li>
+
+                    className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                  >
+                    Watch Video
+                  </a>
+                </div>
+                <a
+                  href={study.readUrl}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </ul>;
+                </div>;
+                <a;
+                  href={study.readUrl  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                >
+                  <span>Read Case Study</span>
+                  <ArrowRight className="w-4 h-4" />
+      {/* Videos */}
+      <section className="py - 20 bg - slate - 900">;
+                </a>
+              </motion.div>
+
+                  </span>;
+                </div>;
+                <div className="p - 6">;
+                  <h3 className="text - lg font - bold text - white mb - 3 leading - tight">{video.title}</h3>;
+                  <p className="text - white / 70 text - sm leading - relaxed mb - 4">{video.description}</p>;
+                  <div className="flex items - center justify - between mb - 4">;
+                    <span className="text - white / 60 text - sm">{video.duration}</span>;
+                  </div>;
+                  <a;
+                    href={video.watch_url}
+                    className="block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105";
+                  >;
+                    Watch Video;
+                  </a>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Documentation */}
+      <section className="py - 20 bg - white">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+                </Link>
+              </motion.div>
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Videos */  } catch (error) {
+      {/* Documentation */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Video Resources</h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Visual learning resources and expert insights on technology trends and implementations.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {videos.map((video, index) => (
+              <motion.div
+                key={video.title}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                key={video.title  } catch (error) {
+
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Documentation</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Technical documentation, implementation guides, and best practices for our solutions.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {documentation.map((doc, index) => (
+              <motion.div
+
+            className="text - center mb - 16";
+          >;
+            <h2 className="text - 4xl font - bold text - slate - 900 mb - 6">Documentation</h2>;
+            <p className="text - xl text - slate - 600 max - w-3xl mx - auto">;
+              Technical documentation, implementation guides, and best practices for our solutions.;
+            </p>;
+          </motion.div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+            {documentation.map ((doc, index) => (
+              <motion.div;
+
+                key={doc.title}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+
+                key={doc.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
+
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
+                  <Play className="w-12 h-12 text-white mx-auto mb-3" />
+                  <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
+                    {video.category}
+                    {video.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </span>
+                </div>
+
+                  {doc.type  } catch (error) {
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-white mb-3 leading-tight">{video.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed mb-4">{video.description}</p>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-white/60 text-sm">{video.duration}</span>
+                  </div>
+                  <a
+                    className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                  >
+                    Watch Video
+                  </a>
+                </div>
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Documentation</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Technical documentation, implementation guides, and best practices for our solutions.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {documentation.map((doc, index) => (
+              <motion.div
+                key={doc.title}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
+                  {doc.type}
+                  {doc.type  } catch (error) {
+<span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
+
+                  {doc.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                </span>
+                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{doc.title}</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">{doc.description}</p>
+                <div className="flex items-center justify-between mb-6 text-sm text-slate-500">
+                  <span>{doc.pages} pages</span>
+                  <span>Updated {doc.lastUpdated}</span>
+                </div>
+                <a
+
+                  href={doc.downloadUrl  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                >
+                  Download
+                </a>
+              </motion.div>
+      {/* CTA */}
+className="bg - slate - 50 rounded - 2xl p - 8 hover:bg - slate - 100 transition - all duration - 300 transform hover:-translate - y-2";
+              >;
+                <div className="w - 16 h - 16 rounded - xl bg - gradient - to - br from - blue - 500 to - cyan - 500 flex items - center justify - center mb - 6">;
+                  <BookOpen className="w - 8 h - 8 text - white" />;
+                </div>;
+                <span className="inline - block bg - blue - 100 text - blue - 800 text - xs font - medium px - 3 py - 1 rounded - full mb - 4">;
+                  {doc.type}
+                </span>;
+                <h3 className="text - xl font - bold text - slate - 900 mb - 4 leading - tight">{doc.title}</h3>;
+                <p className="text - slate - 600 leading - relaxed mb - 6">{doc.description}</p>;
+                <div className="flex items - center justify - between mb - 6 text - sm text - slate - 500">;
+                  <span>{doc.pages} pages</span>;
+                  <span > Updated {doc.last_updated}</span>;
+                </div>;
+                <a;
+                  href={doc.download_url}
+                  className="block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105";
+                >;
+                  Download;
+                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* CTA */}
+      <section className="py - 20 bg - gradient - to - r from - blue - 600 to - cyan - 600">;
+        <div className="max - w-4xl mx - auto px - 6 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Can't find what you're looking for? Our team is here to help with custom research
+
+              Can't find what you're looking for? Our team is here to help with custom research,
+              Can't find what you're looking for? Our team is here to help with custom research, 
+              Can't find what you're looking for? Our team is here to help with custom research,
+Can't find what you're looking for? Our team is here to help with custom research,
+
+              Can't find what you're looking for? Our team is here to help with custom research, 
+              Can't find what you're looking for? Our team is here to help with custom research,
+    <UltraFuturisticBackground intensity;
+origin/cursor/automate-test-improve-and-merge-code-2533
+              personalized consultations, and tailored solutions for your specific needs.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+              >
+                Contact Our Experts
+              </a>
+              <a
+                href="/contact"
+                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
+              >
+                Request Custom Research
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <EnhancedFooter />
+    </>
+  )
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>;
+            <p className="text-xl text-blue-100 mb-8">;
+              Can't find what you're looking for? Our team is here to help with custom research;
+              personalized consultations, and tailored solutions for your specific needs.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <a;
+                href="/contact";
+<section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
+        <div className="max-w-4xl mx-auto px-6 text-center">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+          >;
+            <h2 className="text - 4xl font - bold text - white mb - 6">Need More Resources?</h2>;
+            <p className="text - xl text - blue - 100 mb - 8">;
+              Can't find what you're looking for? Our team is here to help with custom research,
+              personalized consultations, and tailored solutions for your specific needs.;
+            </p>;
+            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+              <a;
+                href="/contact";
+                className="bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105";
+              >;
+                Contact Our Experts;
+              </a>;
+              <a;
+                href="/contact";
+className="border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200";
+              >;
+                Request Custom Research;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+</>);
+              <a
+                href=&quot;/contact&quot;
+                className=&quot;bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105&quot;
+              >
+                Contact Our Experts
+              </Link>
+              <a
+                href=&quot;/contact&quot;
+                className=&quot;border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200&quot;
+              >
+                Request Custom Research
+              </Link>
+                key={doc.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function ResourcesPage() {
+  return (
+    <MainLayout title="Resources - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Resources</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the resources page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+}
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

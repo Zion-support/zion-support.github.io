@@ -1,24 +1,66 @@
-import React from 'react';
-import Head from 'next/head';
-  return (
 
-export default function [slug]Page() {
-  return (
-    <>
-              <Head>
-        <title>search/[slug] - Zion App</title>
-        <meta name="description" content="search/[slug] page" />
-              </Head>
-              <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">search/[slug]</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-        <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home</a>
-              </div>
-              </div>
-        </>
-  );
+import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { Search, Filter, Grid, List } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+origin/cursor/automate-test-improve-and-merge-code-2533
 
-  );
+import ProductCard from '@/components/ProductCard';
+import { TalentCard  } from '@/components/talent/TalentCard';
+import { CategoryCard  } from '@/components/CategoryCard';
+import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { useDebounce  } from '@/hooks/useDebounce';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface BaseSearchResult {
+
+
+interface BaseSearchResult {
+  id: string;
+  title: string;
+  description?: string;
+  slug: string;
+  image?: string;
+  author?: {;
+    name: string;
+  author?: {
+    name: string;
+
+    avatar?: string;
+  }
+  tags?: string[];
+  category?: string;
+  date?: string;
+
+;
+
+  author?: {
+    name: string;
+
+    avatar?: string
+  },
+  tags?: string[],
+  category?: string;
+  date?: string
 }
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+interface ProductSearchResult extends BaseSearchResult {
+  type: 'product' | 'equipment';
+  price?: number;
+
+
+interface BlogSearchResult extends BaseSearchResult {
+  type: 'blog';
+
+interface CategorySearchResult extends BaseSearchResult {
+  type: 'category';
+
+

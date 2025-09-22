@@ -1,10 +1,18 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
-export default function DataAnalyticsImplementationPage() {
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+const DataAnalyticsImplementation: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Data Analytics Implementation</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Article coming soon.</p>
-    </div>
-  );
-}
+    <div>
+      <Head>
+        <title>DataAnalyticsImplementation - Zion Tech Solutions</title>
+        <meta name="description" content="DataAnalyticsImplementation page" />
+      </Head>
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+

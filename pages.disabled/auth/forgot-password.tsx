@@ -1,10 +1,18 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
-export default function ForgotPasswordPage() {
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+const ForgotPassword: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Forgot Password</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Enter your email to reset your password.</p>
-    </div>
-  );
-}
+    <div>
+      <Head>
+        <title>ForgotPassword - Zion Tech Solutions</title>
+        <meta name="description" content="ForgotPassword page" />
+      </Head>
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+

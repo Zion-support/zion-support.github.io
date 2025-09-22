@@ -1,24 +1,43 @@
-import React from 'react';
-import Head from 'next/head';
+export default function OnboardingPage() {return (;
+export default function OnboardingPage(req, res) {
+  try {
+export default function OnboardingPage() {;
+export default function OnboardingPage(req, res) {
+  try {
+
+import OnboardingWizard from '../components / onboarding / OnboardingWizard';
+export default /**
+ * OnboardingPage - Function description
+ */
+function OnboardingPage() {
   return (
 
-export default function OnboardingPage() {
-  return (
-    <>
-              <Head>
-        <title>onboarding - Zion App</title>
-        <meta name="description" content="onboarding page" />
-              </Head>
-              <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">onboarding</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-        <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home</a>
-              </div>
-              </div>
-        </>
+    <div>;
+      <OnboardingWizard />;
+    </div>);
+}
+import OnboardingWizard from '../components/onboarding/OnboardingWizard';
+export default function OnboardingPage() {return (;
+export default function OnboardingPage(req, res) {
+  try {
+export default function OnboardingPage() {;
+export default function OnboardingPage(req, res) {
+  try {
+
+  return (;
+
+  return (;
+    <div>;
+      <OnboardingWizard />;
+    </div>;
   );
 
-  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+}
+}
 }

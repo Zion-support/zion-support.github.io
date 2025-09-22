@@ -1,10 +1,18 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
-export default function BlockchainSolutionsPage() {
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+const BlockchainSolutions: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Blockchain Solutions</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Content coming soon.</p>
-    </div>
-  );
-}
+    <div>
+      <Head>
+        <title>BlockchainSolutions - Zion Tech Solutions</title>
+        <meta name="description" content="BlockchainSolutions page" />
+      </Head>
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+

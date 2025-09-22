@@ -1,4 +1,35 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
+
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+function log(message, level = 'INFO')
+    execSync(command, { "stdio"})
+    log(` ${description} "failed"`)
+  const aiAssistantContent = "
+      "sender"
+        "sender"
+          <div key={message.id} className={\"}
+            <div className={\"}
+    log(` App improvements "failed"`)
+=======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -7,11 +38,7 @@ console.log('🚀 Starting Comprehensive App Improvements...');
 
 class ComprehensiveAppImprover {
   constructor() {
-    this.reportFile = path.join(
-      __dirname,
-      '..',
-      'comprehensive-improvements-report.json'
-    );
+    this.reportFile = path.join(__dirname, '..', 'comprehensive-improvements-report.json');
     this.results = {
       timestamp: new Date().toISOString(),
       build: null,
@@ -20,17 +47,17 @@ class ComprehensiveAppImprover {
       performance: null,
       codeQuality: null,
       automation: null,
-      overall: { status: 'unknown', score: 0 },
+      overall: { status: 'unknown', score: 0 }
     };
   }
 
-  runCommand(command, description) {
+  async runCommand(command, description) {
     try {
       console.log(`🔍 ${description}...`);
-      const result = execSync(command, {
-        encoding: 'utf8',
+      const result = execSync(command, { 
+        encoding: 'utf8', 
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..'),
+        cwd: path.join(__dirname, '..')
       });
       console.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -40,119 +67,105 @@ class ComprehensiveAppImprover {
     }
   }
 
-  runBuild() {
-    const result = this.runCommand('npm run build', 'Production Build');
+  async runBuild() {
+    const result = await this.runCommand('npm run build', 'Production Build');
     this.results.build = result;
   }
 
-  runTests() {
-    const result = this.runCommand(
-      'npx vitest run --reporter=dot --passWithNoTests',
-      'Unit Tests'
-    );
+  async runTests() {
+    const result = await this.runCommand('npm run test:smoke', 'Smoke Tests');
     this.results.tests = result;
   }
 
-  runSecurity() {
-    const result = this.runCommand(
-      'node scripts/security-audit.cjs',
-      'Security Audit'
-    );
+  async runSecurity() {
+    const result = await this.runCommand('node scripts/security-audit.cjs', 'Security Audit');
     this.results.security = result;
   }
 
-  runPerformance() {
-    // Fallback to optimize-performance.js if the .cjs variant isn't present
-    const perfCmd = fs.existsSync(
-      path.join(__dirname, 'optimize-performance.cjs')
-    )
-      ? 'node scripts/optimize-performance.cjs'
-      : 'node scripts/optimize-performance.js';
-    const result = this.runCommand(perfCmd, 'Performance Optimization');
+  async runPerformance() {
+    const result = await this.runCommand('node scripts/performance-optimizer.cjs', 'Performance Optimization');
     this.results.performance = result;
   }
 
-  runCodeQuality() {
-    const result = this.runCommand('npm run lint:check', 'Code Quality Check');
+  async runCodeQuality() {
+    const result = await this.runCommand('npm run lint:check', 'Code Quality Check');
     this.results.codeQuality = result;
   }
 
-  runAutomation() {
-    // Prefer scripts/master-automation-orchestrator.cjs if exists; otherwise noop
-    const orchestrator = path.join(
-      __dirname,
-      'master-automation-orchestrator.cjs'
-    );
-    if (fs.existsSync(orchestrator)) {
-      const result = this.runCommand(
-        'node scripts/master-automation-orchestrator.cjs',
-        'Automation Orchestrator'
-      );
-      this.results.automation = result;
-    } else {
-      this.results.automation = {
-        success: true,
-        result: 'No orchestrator found, skipped.',
-      };
-    }
+  async runAutomation() {
+    const result = await this.runCommand('node automation/master-orchestrator.cjs', 'Automation Orchestrator');
+    this.results.automation = result;
   }
 
   calculateOverallScore() {
     let totalScore = 0;
     let maxScore = 0;
 
-    if (this.results.build?.success) totalScore += 100 * 0.25;
+    // Build (25% weight)
+    if (this.results.build?.success) {
+      totalScore += 100 * 0.25;
+    }
     maxScore += 100 * 0.25;
 
-    if (this.results.tests?.success) totalScore += 100 * 0.2;
+    // Tests (20% weight)
+    if (this.results.tests?.success) {
+      totalScore += 100 * 0.2;
+    }
     maxScore += 100 * 0.2;
 
-    if (this.results.security?.success) totalScore += 100 * 0.2;
+    // Security (20% weight)
+    if (this.results.security?.success) {
+      totalScore += 100 * 0.2;
+    }
     maxScore += 100 * 0.2;
 
-    if (this.results.performance?.success) totalScore += 100 * 0.15;
+    // Performance (15% weight)
+    if (this.results.performance?.success) {
+      totalScore += 100 * 0.15;
+    }
     maxScore += 100 * 0.15;
 
-    if (this.results.codeQuality?.success) totalScore += 100 * 0.1;
+    // Code Quality (10% weight)
+    if (this.results.codeQuality?.success) {
+      totalScore += 100 * 0.1;
+    }
     maxScore += 100 * 0.1;
 
-    if (this.results.automation?.success) totalScore += 100 * 0.1;
+    // Automation (10% weight)
+    if (this.results.automation?.success) {
+      totalScore += 100 * 0.1;
+    }
     maxScore += 100 * 0.1;
 
     const finalScore = Math.round((totalScore / maxScore) * 100);
     this.results.overall.score = finalScore;
-    this.results.overall.status =
-      finalScore >= 80
-        ? 'excellent'
-        : finalScore >= 60
-          ? 'good'
-          : finalScore >= 40
-            ? 'fair'
-            : 'poor';
+    this.results.overall.status = finalScore >= 80 ? 'excellent' : 
+                                 finalScore >= 60 ? 'good' : 
+                                 finalScore >= 40 ? 'fair' : 'poor';
+    
     return finalScore;
   }
 
-  generateReport() {
+  async generateReport() {
     const score = this.calculateOverallScore();
+    
     fs.writeFileSync(this.reportFile, JSON.stringify(this.results, null, 2));
-    console.log(
-      `📊 Comprehensive improvements report saved to: ${this.reportFile}`
-    );
-    console.log(
-      `🎯 Overall App Score: ${score}/100 (${this.results.overall.status})`
-    );
+    console.log(`📊 Comprehensive improvements report saved to: ${this.reportFile}`);
+    console.log(`🎯 Overall App Score: ${score}/100 (${this.results.overall.status})`);
   }
 
-  run() {
+  async run() {
     try {
-      console.log('🚀 Running comprehensive app improvements...');
-      this.runBuild();
-      this.runTests();
-      this.runSecurity();
-      this.runPerformance();
-      this.runCodeQuality();
-      this.runAutomation();
-      this.generateReport();
+      console.log('🚀 Starting comprehensive app improvements...');
+      
+      await this.runBuild();
+      await this.runTests();
+      await this.runSecurity();
+      await this.runPerformance();
+      await this.runCodeQuality();
+      await this.runAutomation();
+      await this.generateReport();
+      
       console.log('🎉 Comprehensive app improvements completed successfully!');
     } catch (error) {
       console.log(`❌ Comprehensive app improvements failed: ${error.message}`);
@@ -161,4 +174,27 @@ class ComprehensiveAppImprover {
   }
 }
 
-new ComprehensiveAppImprover().run();
+// Run the comprehensive app improver
+const improver = new ComprehensiveAppImprover();
+improver.run().catch(console.error);
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

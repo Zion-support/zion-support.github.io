@@ -1,83 +1,153 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, ArrowRight } from 'lucide-react';
 
-export type ServiceItem = {
-  id?: string;
-  slug?: string;
+
+pr-12243
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import Link from 'next/link';
+
+interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
-  provider: string;
-  priceFromUSD?: number;
-  priceRangeUSD?: [number, number];
-  categories: string[];
-  rating?: number; // 0-5
-};
-
-type Props = {
-  service: ServiceItem;
-  onRequestQuote: (service: ServiceItem) => void;
-};
-
-export default function EnhancedMarketplaceCard({ service, onRequestQuote }: Props) {
-  const minPrice = service.priceFromUSD ?? (service.priceRangeUSD ? service.priceRangeUSD[0] : undefined);
-
-  return (
-    <motion.div
-      whileHover={{ y: -4, scale: 1.01 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      className="group relative rounded-2xl border border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur p-5 shadow-[0_8px_30px_rgba(0,0,0,0.12)] overflow-hidden"
-    >
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-        style={{
-          background: 'radial-gradient(600px circle at var(--x,50%) var(--y,50%), rgba(56,189,248,0.15), transparent 40%)',
-        }}
-      />
-      <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h3 className="text-lg font-semibold tracking-tight text-white">
-            {service.title}
-          </h3>
-          <p className="mt-2 text-sm text-white/80 line-clamp-3">{service.description}</p>
-        </div>
-        {typeof service.rating === 'number' && (
-          <div className="flex items-center gap-1 shrink-0">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} size={16} className={i < (service.rating ?? 0) ? 'text-yellow-400 fill-yellow-400' : 'text-white/20'} />
-            ))}
-            <span className="ml-1 text-xs text-white/70">{service.rating?.toFixed(1)}</span>
-          </div>
-        )}
-      </div>
-
-      <div className="mt-3 text-xs text-white/70">By {service.provider}</div>
-
-      <div className="mt-3 flex flex-wrap gap-2">
-        {service.categories.map((cat) => (
-          <span key={cat} className="px-2 py-1 text-xs rounded-full border border-cyan-300/30 text-cyan-200 bg-cyan-400/10">
-            {cat}
-          </span>
-        ))}
-      </div>
-
-      <div className="mt-4 flex items-center justify-between">
-        <div className="text-sm">
-          {minPrice !== undefined ? (
-            <span className="text-white font-medium">From ${minPrice.toLocaleString()}</span>
-          ) : (
-            <span className="text-white/70">Custom pricing</span>
-          )}
-        </div>
-        <button
-          onClick={() => onRequestQuote(service)}
-          className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white shadow hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
-        >
-          Request Quote
-          <ArrowRight size={16} />
-        </button>
-      </div>
-    </motion.div>
-  );
+  price?: string;
+  href: string, image?: string
+import React from 'react';
+import { Star, Heart, ShoppingCart } from 'lucide-react';
+pr-12243
+  image?: string;
+  href: string;
+  category?: string;
+  rating?: number;
+  reviews?: number;
+  features?: string[];
+  isNew?: boolean;
+  isPopular?: boolean;
 }
+
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
+  title,
+  description,
+  price,
+  image,
+  href,
+  category,
+  rating,
+  reviews,
+  features = [],
+  isNew = false,
+  isPopular = false,
+}) => {
+  return (
+    <Link href={href} className="group block">
+      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+        {/* Image */}
+        <div className="relative h-48 bg-gray-200">
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="h-full w-full bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-400 text-sm">No Image</span>
+            </div>
+          )}
+          {/* Badges */}
+          <div className="absolute top-2 left-2 flex flex-col gap-1">
+            {isNew && (
+              <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                New
+              </span>
+            )}
+            {isPopular && (
+              <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                Popular
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-4">
+          {/* Category */}
+          {category && (
+            <span className="text-xs text-gray-500 uppercase tracking-wide">
+              {category}
+            </span>
+          )}
+
+          {/* Title */}
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+            {title}
+          </h3>
+
+          {/* Description */}
+          <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+            {description}
+          </p>
+
+          {/* Features */}
+          {features.length > 0 && (
+            <div className="mt-3">
+              <ul className="text-xs text-gray-500 space-y-1">
+                {features.slice(0, 3).map((feature, index) => (
+                  <li key={index} className="flex items-center">
+                    <span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Rating */}
+          {rating && (
+            <div className="mt-3 flex items-center">
+              <div className="flex items-center">
+                {[...Array(5)].map((_, i) => (
+                  <span
+                    key={i}
+                    className={`text-sm ${
+                      i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'
+                    }`}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+              <span className="text-xs text-gray-500 ml-2">
+                {rating} ({reviews} reviews)
+              </span>
+            </div>
+          )}
+
+          {/* Price */}
+          <div className="mt-4 flex items-center justify-between">
+            {price && (
+              <span className="text-lg font-bold text-blue-600">
+                {price}
+              </span>
+            )}
+            <span className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors">
+              Learn More →
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export default EnhancedMarketplaceCard;
+
+interface MarketplaceCardProps {
+interface EnhancedMarketplaceCardProps {
+  title: string;
+  description: string;
+  price?: string;
+  image?: string;
+}
+

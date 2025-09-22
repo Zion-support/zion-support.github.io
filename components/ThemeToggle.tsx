@@ -1,186 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, Monitor } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
-type Theme = 'dark' | 'light' | 'system';
-
-interface ThemeToggleProps {
-  currentTheme: 'dark' | 'light';
-  onThemeChange: (theme: 'dark' | 'light') => void;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
-  const [theme, setTheme] = useState<Theme>('dark');
-  const [mounted, setMounted] = useState(false);
+export default function ThemeToggle() {
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    setMounted(true);
-    // Get theme from localStorage or system preference
-    const savedTheme = localStorage.getItem('theme') as Theme;
+    // Check for saved theme preference or default to dark mode
+    const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      // Check system preference
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(systemPrefersDark ? 'dark' : 'light');
+      setIsDark(savedTheme === 'dark');
     }
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
-
-    const root = document.documentElement;
-    
-    if (theme === 'system') {
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.classList.toggle('dark', systemPrefersDark);
-      root.classList.toggle('light', !systemPrefersDark);
+    // Apply theme to document
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
-      root.classList.toggle('dark', theme === 'dark');
-      root.classList.toggle('light', theme === 'light');
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
+  }, [isDark]);
 
-    // Save to localStorage
-    localStorage.setItem('theme', theme);
-  }, [theme, mounted]);
-
-  // Listen for system theme changes
-  useEffect(() => {
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      const handleChange = () => {
-        const root = document.documentElement;
-        root.classList.toggle('dark', mediaQuery.matches);
-        root.classList.toggle('light', !mediaQuery.matches);
-      };
-
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    }
-  }, [theme]);
-
-  const handleThemeChange = (newTheme: Theme) => {
-    setTheme(newTheme);
-  };
-
-  if (!mounted) {
-    return (
-      <div className={`w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-full animate-pulse ${className}`} />
-    );
+  const toggleTheme = () => {
+    setIsDark(!isDark);
   }
-
-  const getThemeIcon = () => {
-    switch (theme) {
-      case 'light':
-        return <Sun className="w-5 h-5" />;
-      case 'dark':
-        return <Moon className="w-5 h-5" />;
-      case 'system':
-        return <Monitor className="w-5 h-5" />;
-      default:
-        return <Sun className="w-5 h-5" />;
-    }
-  };
-
-  const getThemeLabel = () => {
-    switch (theme) {
-      case 'light':
-        return 'Light Mode';
-      case 'dark':
-        return 'Dark Mode';
-      case 'system':
-        return 'System Theme';
-      default:
-        return 'Theme';
-    }
-  };
-
   return (
-    <div className="fixed top-32 right-6 z-50">
-      <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
-        <div className="flex flex-col gap-2">
-          {themes.map((theme) => {
-            const Icon = theme.icon;
-            const isActive = currentTheme === theme.id;
-            
-            return (
-              <motion.button
-                key={theme.id}
-                onClick={() => onThemeChange(theme.id)}
-                className={`relative p-3 rounded-xl transition-all duration-300 ${
-                  isActive 
-                    ? 'bg-gradient-to-br ' + theme.color + ' text-white shadow-lg' 
-                    : 'text-gray-400 hover:text-white hover:bg-white/10'
-                }`}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                title={theme.label}
-                aria-label={`Switch to ${theme.label}`}
-              >
-                <Icon className="w-5 h-5" />
-                
-                {/* Active indicator */}
-                {isActive && (
-                  <motion.div
-                    className="absolute inset-0 rounded-xl border-2 border-white/30"
-                    layoutId="activeTheme"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-              </motion.button>
-            );
-          })}
-        </div>
-      </div>
-      
-      {/* Theme indicator */}
-      <motion.div
-        className="mt-3 text-center"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-      >
-        {getThemeLabel()}
-      </motion.div>
-
-      {/* Quick Theme Selection Menu */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="absolute top-16 right-0 bg-black/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-2 shadow-xl min-w-[160px] z-50"
-      >
-        <div className="space-y-1">
-          {(['dark', 'light', 'system'] as Theme[]).map((themeOption) => (
-            <button
-              key={themeOption}
-              onClick={() => handleThemeChange(themeOption)}
-              className={`w-full flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
-                theme === themeOption
-                  ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                  : 'text-gray-300 hover:bg-white/10 hover:text-white'
-              }`}
-            >
-              <div className="w-4 h-4">
-                {themeOption === 'dark' && <Moon className="w-4 h-4" />}
-                {themeOption === 'light' && <Sun className="w-4 h-4" />}
-                {themeOption === 'system' && <Monitor className="w-4 h-4" />}
-              </div>
-              <span className="capitalize">
-                {themeOption === 'system' ? 'System' : themeOption}
-              </span>
-              {theme === themeOption && (
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"
-                />
-              )}
-            </button>
-          ))}
-        </div>
-      </motion.div>
-    </div>
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+    >
+      {isDark ? (
+        <svg className="h-5 w-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      ) : (
+        <svg className="h-5 w-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      )}
+    </button>
   );
-};
-
-export default ThemeToggle;
+}

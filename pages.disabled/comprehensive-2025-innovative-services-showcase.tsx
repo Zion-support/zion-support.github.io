@@ -1,484 +1,3826 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { 
-  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
-  Rocket, Lock, Palette, Factory, Database, Cloud, 
-  Cpu, Eye, Target, Users, BarChart3
-} from 'lucide-react';
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
-  const categories = [
-    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' },
-    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' },
-    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' },
-    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
-    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
-    { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
-  ];
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight, CheckCircle, Globe
+  Search, Grid, List, Star as StarIcon
+  Phone, Mail, MapPin
+} from 'lucide-react'
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import { 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  ArrowRight, CheckCircle, Globe;
+  Search, Grid, List, Star as StarIcon;
+  Phone, Mail, MapPin
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
-// Import existing services for comprehensive showcase
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
 
-// Combine all services
-const allServices = [
-  ...innovativeMicroSaas2025ExpansionV2,
-  ...emergingTechInnovations2025,
-  ...realMicroSaasServices2025
-];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+import { 
+  ArrowRight, CheckCircle, Globe;
+  Search, Grid, List, Star as StarIcon;
+  Phone, Mail, MapPin
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-// Service categories
-const serviceCategories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Quantum Computing',
-  'Cybersecurity',
-  'Healthcare & Biotech',
-  'Finance & Investment',
-  'Supply Chain & Logistics',
-  'Manufacturing & Industry 4.0',
-  'Space Technology',
-  'Blockchain & Web3',
-  'Education & Learning',
-  'Legal & Compliance',
-  'Energy & Sustainability',
-  'Autonomous Vehicles',
-  'IoT & Edge Computing',
-  'Metaverse & VR',
-  'Neuroscience & BCI'
-];
-
-// Helper function to get service category
-const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  if (service.type) return service.type;
-  return 'Other';
-};
-
-// Helper function to get service pricing
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  return 'Contact for pricing';
-};
-
-// Helper function to get service features
-const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
-
-// Helper function to get service description
-const getServiceDescription = (service: any) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return '';
-};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+} from 'lucide-react',;
+import EnhancedNavigation from '../components/EnhancedNavigation',;
+import EnhancedFooter from '../components/EnhancedFooter',;
+import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;
+import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',;
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default function Comprehensive2025InnovativeServicesShowcase() {
+<<<<<<< HEAD
+=======
+=======
 
 export default function Comprehensive2025InnovativeServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
+  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all'),
 
-  // Filter and sort services
+  // Combine all services
+  const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default function Comprehensive2025InnovativeServicesShowcase() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+  const categories = [
+    { id: 'all', name: 'All Services', count: allServices.length },
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length },
+    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category.includes('Edge')).length },
+    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length },
+    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s => s.category.includes('Financial')).length },
+    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s => s.category.includes('Education')).length },
+    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },
+    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s => s.category.includes('Energy')).length },
+    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s => s.category.includes('Consciousness')).length },
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length },
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },
+    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },
+=======
+
+import {};
+  ArrowRight, CheckCircle, Globe;
+  Search, Grid, List, Star as StarIcon;
+  Phone, Mail, MapPin;
+} from 'lucide-react',;'
+import EnhancedNavigation from '../components/EnhancedNavigation',;'
+import EnhancedFooter from '../components/EnhancedFooter',;'
+import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;'
+import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',;
+export default function Comprehensive2025InnovativeServicesShowcase() {}
+  const categories = ['
+    { id: 'all', name: 'All Services', count: allServices.length },'
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },'
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length },'
+    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },'
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category.includes('Edge')).length },'
+    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length },'
+    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s => s.category.includes('Financial')).length },'
+    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s => s.category.includes('Education')).length },'
+    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },'
+    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s => s.category.includes('Energy')).length },'
+    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s => s.category.includes('Consciousness')).length },'
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length },'
+    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length },'
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },'
+    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
+  ],
+
+  const getPriceRange = (price: string) => {'
+    const numPrice = parseFloat(price.replace('$', '').replace(, '')),'
+    if (numPrice < 1000) return 'budget','
+    if (numPrice < 5000) return 'mid','
+    return 'enterprise'
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+import React, { useState } from 'react';
+import Head from 'next/head';
+=======
+';
+import React, { useState } from 'react';'
+import Head from 'next/head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+import { motion } from 'framer-motion';
+import {;
+  ArrowRight, CheckCircle, Globe,;
+  Search, Grid, List, Star as StarIcon,;
+  Phone, Mail, MapPin;'
+} from 'lucide-react',;
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Search,
+  Grid,
+  List,
+  Star as StarIcon,
+  Phone,
+  Mail,
+  MapPin,;
+} from 'lucide-react';
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
+import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
+  try {
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
+  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      return matchesSearch && matchesCategory && matchesPrice
+=======
+      return matchesSearch && matchesCategory && matchesPrice
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      return matchesSearch && matchesCategory && matchesPrice
+      return matchesSearch && matchesCategory && matchesPrice
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+  };
+
   const filteredServices = allServices
     .filter(service => {
-      const serviceName = (service as any).title || (service as any).name || '';
-      const matchesSearch = serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false;
-      const matchesCategory = selectedCategory === 'All Services' || 
-                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]);
-      return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
-      const aName = (a as any).title || (a as any).name || '';
-      const bName = (b as any).title || (b as any).name || '';
-      switch (sortBy) {
-        case 'name':
-          return aName.localeCompare(bName);
-        case 'price':
-          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0);
-        case 'rating':
-          return ((b as any).rating || 0) - ((a as any).rating || 0);
-        case 'popularity':
-        default:
-          return ((b as any).customers || 0) - ((a as any).customers || 0);
-      }
-    });
+const matchesSearch =
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory =
+        selectedCategory === 'all' ||
+        service.category.includes(selectedCategory);
+      const matchesPrice =
+        priceRange === 'all' || getPriceRange(service.price) === priceRange;
+      return matchesSearch && matchesCategory && matchesPrice;
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+'
+import EnhancedNavigation from '../components/EnhancedNavigation';'
+import EnhancedFooter from '../components/EnhancedFooter';'
+import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';'
+import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
+
+      return matchesSearch && matchesCategory && matchesPrice;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+    })
+    .sort((a, b) => {}
+      switch (sortBy) {'
+        case 'popularity':
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)'
+        case 'price':
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+
+        default: return 0;
+      }
+    })
+  const containerVariants = {}
+    visible: {}
+      opacity: 1;
+      transition: {}
+        stagger_children: 0.1;
+      }
+    }
+
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+  };
+=======
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
         staggerChildren: 0.1
       }
     }
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-  const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.icon : Star;
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
+        default: return 0
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+        default: return 0
+      }
+    })
+  const containerVariants = {
+
+    hidden: { opacity: 0 }
+import React, { useState } from 'react',
+import Head from 'next / head',
+import { motion } from 'framer-motion',
+import {
+  ArrowRight, CheckCircle, Globe,
+  Search, Grid, List, Star as StarIcon,
+  Phone, Mail, MapPin;
+} from 'lucide-react',
+import EnhancedNavigation from '../components / EnhancedNavigation',
+import EnhancedFooter from '../components / EnhancedFooter',
+import { comprehensiveInnovativeServices } from '../data / comprehensive - 2025 - innovative - services - expansion',
+import { specializedEnterpriseServices } from '../data / specialized - 2025 - enterprise - services',
+export default /**
+ * Comprehensive2025InnovativeServicesShowcase - Function description
+ */
+function Comprehensive2025InnovativeServicesShowcase() {
+  const [search_term, setSearchTerm] = useState (''),
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sort_by, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
+  const [price_range, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all'),
+  // Combine all services;
+  const all_services = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],
+  const categories = [;
+    { id: 'all', name: 'All Services', count: all_services.length },
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: all_services.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning')).length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: all_services.filter (string => s.category.includes ('Cybersecurity')).length },
+    { id: 'DevOps & Infrastructure', name: 'DevOps', count: all_services.filter (string => s.category.includes ('DevOps')).length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: all_services.filter (string => s.category.includes ('Edge')).length },
+    { id: 'Healthcare AI', name: 'Healthcare', count: all_services.filter (string => s.category.includes ('Healthcare')).length },
+    { id: 'Financial Technology', name: 'FinTech', count: all_services.filter (string => s.category.includes ('Financial')).length },
+    { id: 'Education Technology', name: 'EdTech', count: all_services.filter (string => s.category.includes ('Education')).length },
+    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: all_services.filter (string => s.category.includes ('Supply Chain')).length },
+    { id: 'Energy & Sustainability', name: 'Energy', count: all_services.filter (string => s.category.includes ('Energy')).length },
+    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: all_services.filter (string => s.category.includes ('Consciousness')).length },
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: all_services.filter (string => s.category.includes ('Quantum')).length },
+    { id: 'Space Technology', name: 'Space Tech', count: all_services.filter (string => s.category.includes ('Space')).length },
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: all_services.filter (string => s.category.includes ('Neural')).length },
+    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: all_services.filter (string => s.category.includes ('Advanced IoT')).length },
+    { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: all_services.filter (string => s.category.includes ('Advanced Analytics')).length }
+  ],
+  const getPriceRange = (price: string) =>: any {
+    const num_price = parse_float (price.replace ('$', '').replace (, '')),
+    // Check condition
+if (return 'budget', ) {
+  $2
+}
+    // Check condition
+if (return 'mid', ) {
+  $2
+}
+    return 'enterprise';
+  },
+  const filtered_services = all_services;
+    .filter (service => {
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.tagline.toLowerCase ().includes (search_term.toLowerCase ()),
+      const matches_category = selected_category === 'all' || service.category.includes (selected_category),
+      const matches_price = price_range === 'all' || getPriceRange (service.price) === price_range,
+      return matches_search && matches_category && matches_price;
+    });
+    .sort ((a, b) => {
+      switch (sort_by) {
+        case 'popularity':;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        case 'price':;
+          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, '')),
+        case 'rating':;
+          return b.rating - a.rating,
+        case 'newest':;
+          return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time (),
+        default: return 0;
+      }
+    }),
+  const container_variants = {
+    hidden: { opacity: 0 },
+
+        default: return 0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+return (
+            parseFloat(a.price.replace('$', '').replace(',', '')) -
+            parseFloat(b.price.replace('$', '').replace(',', ''))
+          );
+        case 'rating':
+          return b.rating - a.rating
+        case 'newest':
+          return (
+            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
+          );
+        default:
+          return 0;
+origin/cursor/automate-test-improve-and-merge-code-2533
+      }
+    })
+  const containerVariants = {
+    visible: {
+      opacity: 1
+      transition: {
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+        stagger_children: 0.1;
+      }
+    }
+
+  };
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+staggerChildren: 0.1,
+      },
+    },
   };
 
-  const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.color : 'from-gray-500 to-gray-600';
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1
+      y: 0
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+  },
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      transition: {
+=======
+      transition: {
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      transition: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+=======
+  const itemVariants = {}
+    hidden: { opacity: 0, y: 20 }
+    visible: {}
+      opacity: 1;
+      y: 0;
+      transition: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+        duration: 0.5;
+      }
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
+  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
+  // Combine all services;
+  const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],;
+  const categories = [;
+    { id: 'all', name: 'All Services', count: allServices.length },;
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length },;
+    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },;
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category.includes('Edge')).length },;
+    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length },;
+    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s => s.category.includes('Financial')).length },;
+    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s => s.category.includes('Education')).length },;
+    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },;
+    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s => s.category.includes('Energy')).length },;
+    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s => s.category.includes('Consciousness')).length },;
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length },;
+    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length },;
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },;
+    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },;
+    { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const getPriceRange = (price: string) => {;
+    const numPrice = parseFloat(price.replace('$', '').replace(, '')),;
+    if (numPrice < 1000) return 'budget',;
+    if (numPrice < 5000) return 'mid',;
+    return 'enterprise';
+  },;
+  const filteredServices = allServices;
+    .filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange;
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+    .sort((a, b) => {;
+      switch (sortBy) {;
+        case 'popularity':;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),;
+        case 'price':;
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),;
+        case 'rating':;
+          return b.rating - a.rating,;
+        case 'newest':;
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),;
+        default: return 0;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    }),;
+  const containerVariants = {;
+    hidden: { opacity: 0 };
+    visible: {;
+      opacity: 1;
+      transition: {;
+        staggerChildren: 0.1;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0.5;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+=======
+  },
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+=======
+  const contactInfo = {'
+    mobile: '+1 302 464 0950''
+    email: 'kleber@ziontechgroup.com''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+
+
+  };
+<<<<<<< HEAD
+        case 'popularity':
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        case 'price':
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+  },
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+    website: 'https://ziontechgroup.com'
+  }
+  },
+    website: 'https://ziontechgroup.com'
+}
+      transition: {
+        duration: 0.5
+      }
+    }
+  }
+    website: 'https://ziontechgroup.com'
+
+  },
 
   return (
-    <Layout>
-      <SEO 
-<<<<<<< HEAD
-        title="2025 Comprehensive Innovative Services Showcase | Zion Tech Group"
-        description="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and cutting-edge technology platforms. From quantum computing to healthcare AI, explore the future of business technology."
-        keywords={["innovative micro SAAS", "AI services", "quantum computing", "healthcare AI", "cybersecurity", "blockchain", "space technology", "autonomous vehicles", "IoT", "metaverse", "Zion Tech Group"]}
-        ogImage="https://ziontechgroup.com/og-innovative-services-2025.jpg"
-=======
-        title="2025 Innovative Services Showcase | Zion Tech Group"
-        description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
-        keywords={[
-          'innovative services 2025',
-          'micro SAAS',
-          'quantum computing',
-          'space technology',
-          'AI platforms',
-          'autonomous systems'
-        ]}
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      <Head>
+        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
+        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
+      </Head>
+      <EnhancedNavigation />
+
+  },
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
+  },
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white overflow - hidden">;
+      <Head>;
+        <title > Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>;
+        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting - edge IT services. Transform your business with Zion Tech Group." />;
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />;
+        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting - edge IT services." />;
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />;
+        <link rel="canonical" href="https://ziontechgroup.com / comprehensive - 2025 - services - showcase" />;
+      </Head>;
+      <EnhancedNavigation />;
+
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
-        {/* Enhanced Background Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse"></div>
-          <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500"></div>
-          <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500"></div>
+
+      {/* Hero Section */  } catch (error) {
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    website: 'https://ziontechgroup.com'
+  }
+  },
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  const contactInfo = {'
+    mobile: '+1 302 464 0950','
+    email: 'kleber@ziontechgroup.com','
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    website: 'https://ziontechgroup.com'
+}
+
+      transition: {}
+        duration: 0.5;
+      }
+    }
+  }
+'
+    website: 'https://ziontechgroup.com'
+
+  },
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      <Head>
+        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>"
+        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />"
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />"
+        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />"
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />"
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
+      </Head>
+      <EnhancedNavigation />
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+  },
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
+  },
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white overflow - hidden">;
+      <Head>;
+        <title > Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>;
+        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting - edge IT services. Transform your business with Zion Tech Group." />;
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />;
+        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting - edge IT services." />;
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />;
+        <link rel="canonical" href="https://ziontechgroup.com / comprehensive - 2025 - services - showcase" />;
+      </Head>;
+      <EnhancedNavigation />;
+
+      {/* Hero Section */}
+
+
+      {/* Hero Section */  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+      transition: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+duration: 0.5,
+      },
+    },
+  };
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+website: 'https://ziontechgroup.com',
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden'>
+      <Head>
+        <title>
+          Comprehensive 2025 Innovative Services Showcase — Zion Tech Group
+        </title>
+        <meta
+          name='description'
+          content='Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group.'
+        />
+        <meta
+          property='og:title'
+          content='Comprehensive 2025 Innovative Services Showcase — Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services.'
+        />
+        <meta
+          name='keywords'
+          content='micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group'
+        />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/comprehensive-2025-services-showcase'
+        />
+      </Head>
+      <EnhancedNavigation />
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+              2025 Comprehensive Services Showcase
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+=======
+=======
+
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+      {/* Hero Section */}
+<section className='relative py-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      {/* Hero Section */}
+<section className='relative py-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+      {/* Hero Section */}
+<section className='relative py-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+            {/* Contact Information */}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+      <section className="relative py - 20 px - 6">;
+=======
+"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+      <section className="relative py-20 px-6">"
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+"
+      <section className="relative py - 20 px - 6">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+        <div className="max - w-7xl mx - auto text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+            {/* Contact Information */}
+              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions, 
+
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+            {/* Contact Information */}
+=======
+              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions, 
+
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+            {/* Contact Information */}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+          >
+<h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
+              2025 Comprehensive Services Showcase
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8'>
+              Discover our extensive collection of cutting-edge micro SAAS
+              services, AI solutions, quantum technologies, and revolutionary IT
+              services that are transforming industries worldwide.
+origin/cursor/automate-test-improve-and-merge-code-2533
+            </p>
+
+            {/* Contact Information */}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions,
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+            {/* Contact Information */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
+              <div className="flex items-center gap-2">
+=======
+
+"
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">"
+              <div className="flex items-center gap-2">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                <Phone className="w-5 h-5" />
+                <span>{contactInfo.mobile}</span>
+              </div>"
+              <div className="flex items-center gap-2">"
+                <Mail className="w-5 h-5" />
+                <span>{contactInfo.email}</span>
+              </div>"
+              <div className="flex items-center gap-2">"
+                <MapPin className="w-5 h-5" />
+=======
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-5 h-5" />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+
+            {/* Stats */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            <div className='flex flex-wrap justify-center gap-6 mb-8 text-white/70'>
+              <div className='flex items-center gap-2'>
+                <Phone className='w-5 h-5' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Mail className='w-5 h-5' />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <MapPin className='w-5 h-5' />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+            {/* Stats */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
+                <div className="text-white/60">Services Available</div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-400">{allServices.filter(s => s.popular).length}</div>
+=======
+
+"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">"
+              <div className="text-center">"
+                <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>"
+                <div className="text-white/60">Services Available</div>
+              </div>"
+              <div className="text-center">"
+                <div className="text-3xl font-bold text-purple-400">{allServices.filter(s => s.popular).length}</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                <div className="text-white/60">Popular Services</div>
+              </div>"
+              <div className="text-center">"
+                <div className="text-3xl font-bold text-green-400">{allServices.filter(s => s.realService).length}</div>"
+                <div className="text-white/60">Real Services</div>
+              </div>"
+              <div className="text-center">"
+                <div className="text-3xl font-bold text-orange-400">{allServices.filter(s => s.rating >= 4.5).length}</div>"
+                <div className="text-white/60">Top Rated</div>
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-400">{allServices.filter(s => s.popular).length}</div>
+                <div className="text-white/60">Popular Services</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400">{allServices.filter(s => s.realService).length}</div>
+                <div className="text-white/60">Real Services</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-orange-400">{allServices.filter(s => s.rating >= 4.5).length}</div>
+                <div className="text-white/60">Top Rated</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            {/* Stats */}
+<div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-cyan-400'>
+                  {allServices.length}+
+                </div>
+                <div className='text-white/60'>Services Available</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-purple-400'>
+                  {allServices.filter(s => s.popular).length}
+                </div>
+                <div className='text-white/60'>Popular Services</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-green-400'>
+                  {allServices.filter(s => s.realService).length}
+                </div>
+                <div className='text-white/60'>Real Services</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-orange-400'>
+                  {allServices.filter(s => s.rating >= 4.5).length}
+                </div>
+                <div className='text-white/60'>Top Rated</div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+              </div>
+            </div>
+          </motion.div>
         </div>
-        
-        <div className="text-center max-w-6xl mx-auto relative z-10">
+      </section>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+      {/* Search and Filters */}
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+
+            transition={{ duration: 0.6 }}"
+            className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
+          >;
+            {/* Search Bar */}
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+            <div className="mb-6">
+              <div className="relative max-w-2xl mx-auto">
+=======
+"
+            <div className="mb-6">"
+              <div className="relative max-w-2xl mx-auto">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
+                <input"
+                  type="text""
+                  placeholder="Search services by name, description, or features..."
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+                  value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      {/* Search and Filters */}
+=======
+      {/* Search and Filters */}
+
+          >;
+            <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
+              2025 Comprehensive Services Showcase;
+            </h1>;
+            <p className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto leading - relaxed mb - 8">;
+              Discover our extensive collection of cutting - edge micro SAAS services, AI solutions,
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.;
+            </p>;
+            {/* Contact Information */}
+            <div className="flex flex - wrap justify - center gap - 6 mb - 8 text - white / 70">;
+              <div className="flex items - center gap - 2">;
+                <Phone className="w - 5 h - 5" />;
+                <span>{contact_info.mobile}</span>;
+              </div>;
+              <div className="flex items - center gap - 2">;
+                <Mail className="w - 5 h - 5" />;
+                <span>{contact_info.email}</span>;
+              </div>;
+              <div className="flex items - center gap - 2">;
+                <MapPin className="w - 5 h - 5" />;
+                <span>{contact_info.address}</span>;
+              </div>;
+            </div>;
+            {/* Stats */}
+            <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto">;
+              <div className="text - center">;
+                <div className="text - 3xl font - bold text - cyan - 400">{all_services.length}+</div>;
+                <div className="text - white / 60">Services Available</div>;
+              </div>;
+              <div className="text - center">;
+                <div className="text - 3xl font - bold text - purple - 400">{all_services.filter (string => s.popular).length}</div>;
+                <div className="text - white / 60">Popular Services</div>;
+              </div>;
+              <div className="text - center">;
+                <div className="text - 3xl font - bold text - green - 400">{all_services.filter (string => s.real_service).length}</div>;
+                <div className="text - white / 60">Real Services</div>;
+              </div>;
+              <div className="text - center">;
+                <div className="text - 3xl font - bold text - orange - 400">{all_services.filter (string => s.rating >= 4.5).length}</div>;
+                <div className="text - white / 60">Top Rated</div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+
+      {/* Search and Filters */}
+
+      <section className="px - 6 pb - 12">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
+          >;
+            {/* Search Bar */}
+
+            <div className="mb-6">
+              <div className="relative max-w-2xl mx-auto">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services by name, description, or features..."
+
+                  value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+            transition={{ duration: 0.6 }}
+            className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
+          >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+<section className='px-6 pb-12'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
+            transition={{ duration: 0.6 }}
+className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
           >
-            {/* Enhanced Company Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
-            >
-              <Star className="w-5 h-5" />
-              <span>Innovation Leader 2025</span>
-            </motion.div>
-            
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              2025 Innovative Services
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms
-            </p>
-            
-            {/* Enhanced Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-            >
-              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">50+</div>
-                <div className="text-gray-300 text-sm">Innovative Services</div>
-              </div>
-              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-blue-400/20">
-                <div className="text-3xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">100+</div>
-                <div className="text-gray-300 text-sm">Quantum Solutions</div>
-              </div>
-              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2 group-hover:text-purple-300 transition-colors">24/7</div>
-                <div className="text-gray-300 text-sm">Autonomous Operations</div>
-              </div>
-              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>
-                <div className="text-gray-300 text-sm">Future Possibilities</div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            {/* Search Bar */}
+            <div className='mb-6'>
+              <div className='relative max-w-2xl mx-auto'>
+                <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5' />
+                <input
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                  type="text"
+                  placeholder="Search services by name, description, or features..."
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-      {/* Services Categories */}
-      <section className="py-20 px-4 bg-black/30 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Service Categories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Explore our comprehensive range of innovative services across cutting-edge technology domains
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category, index) => {
-              const IconComponent = category.icon;
-              return (
-                <motion.div
-                  key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group relative"
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                  className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
+                />
+              </div>
+            </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            <div className="mb - 6">;
+              <div className="relative max - w-2xl mx - auto">;
+                <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5" />;
+                <input;
+                  type="text";
+                  placeholder="Search services by name, description, or features...";
+                  value={search_term}
+                  on_change={(e) => setSearchTerm (e.target.value)}
+                  className="w - full pl - 12 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:border - cyan - 400 / 50 focus:bg - white / 15 transition - all duration - 300";
+                />;
+              </div>;
+            </div>;
+
+            {/* Filters */}
+            <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4">;
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              {/* Category Filter */}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+            {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+=======
+
+              {/* Category Filter */}
+
+
+
+            {/* Filters */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              {/* Category Filter */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
+                <select
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              {/* Category Filter */}
+
+            {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                  type='text'
+                  placeholder='Search services by name, description, or features...'
+                  value={searchTerm}
+                  onChange={e => setSearchTerm(e.target.value)}
+                  className='w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300'
+                />
+              </div>
+            </div>
+            {/* Filters */}
+<div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
+              {/* Category Filter */}
+origin/cursor/automate-test-improve-and-merge-code-2533
+              <div>
+                <label className='block text-sm font-medium text-white/70 mb-2'>
+                  Category
+                </label>
+                <select
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                  value={selectedCategory  } catch (error) {
+    console.error("Error:", error);
+=======
+              <div>"
+                <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
+                <select;
+                  value={selectedCategory  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSelectedCategory(e.target.value)  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>
-                    <div className="text-center">
-                      <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
-                      <div className="text-gray-300 text-sm">
-                        {innovative2025MicroSaasBatch.filter(service => service.category === category.name).length} Services
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                  {categories.map((category) => (
+=======
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                >
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name} ({category.count})
+                    </option>
+
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </select>;
+              </div>;
+              {/* Price Range Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">Price Range</label>
+                <select
+                  value={priceRange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setPriceRange(e.target.value as any)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                >
+                  <option value="all">All Prices</option>
+                  <option value="budget">Budget ($0 - $999)</option>
+                  <option value="mid">Mid-Range ($1,000 - $4,999)</option>
+                  <option value="enterprise">Enterprise ($5,000+)</option>
+                </select>
+              </div>
+
+              {/* Sort By */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
+                <select
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value as any)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                >
+                  <option value="popularity">Popularity</option>
+                  <option value="price">Price (Low to High)</option>
+                  <option value="rating">Rating</option>
+                  <option value="newest">Newest</option>
+                </select>
+              </div>
+
+              {/* View Mode */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
+                <div className="flex gap-2">
+                  <button
+
+                      viewMode === 'grid' 
+                        ? 'bg-cyan-500 text-white' 
+
+                        : 'bg-white/10 text-white/70 hover:bg-white/20'
+                    }`}
+
+                    onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 ${;
+                      viewMode === 'grid';
+                        ? 'bg-cyan-500 text-white';
+                        : 'bg-white/10 text-white/70 hover:bg-white/20';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  >
+                    <Grid className="w-4 h-4" />
+                  </button>
+                  <button
+
+                        : 'bg-white/10 text-white/70 hover:bg-white/20'
+                    }`}
+
+                    onClick={() => setViewMode('list')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 ${;
+                      viewMode === 'list';
+                        ? 'bg-cyan-500 text-white';
+                        : 'bg-white/10 text-white/70 hover:bg-white/20';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  >
+                    <List className="w-4 h-4" />
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                  value={selectedCategory}
+                  onChange={e => setSelectedCategory(e.target.value)}
+                  className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                >
+                  {categories.map(category => (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                    <option key={category.id} value={category.id}>
+                      {category.name} ({category.count})
+                    </option>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </select>;
+              </div>;
+              {/* Price Range Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">Price Range</label>
+                <select
+                  value={priceRange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setPriceRange(e.target.value as any)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                >"
+                  <option value="all">All Prices</option>"
+                  <option value="budget">Budget ($0 - $999)</option>"
+                  <option value="mid">Mid-Range ($1,000 - $4,999)</option>"
+                  <option value="enterprise">Enterprise ($5,000+)</option>
+                </select>
+              </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+              {/* Sort By */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
+                <select
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value as any)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                >"
+                  <option value="popularity">Popularity</option>"
+                  <option value="price">Price (Low to High)</option>"
+                  <option value="rating">Rating</option>"
+                  <option value="newest">Newest</option>
+                </select>
+              </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+              {/* View Mode */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              <div>
+                <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
+                <div className="flex gap-2">
+                  <button
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+
+                      viewMode === 'grid' 
+                        ? 'bg-cyan-500 text-white' 
+
+                        : 'bg-white/10 text-white/70 hover:bg-white/20'
+                    }`}
+=======
+
+                    onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 ${;
+                      viewMode === 'grid';
+                        ? 'bg-cyan-500 text-white';
+                        : 'bg-white/10 text-white/70 hover:bg-white/20';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                  >
+                    <Grid className="w-4 h-4" />
+                  </button>
+                  <button
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+
+                        : 'bg-white/10 text-white/70 hover:bg-white/20'
+                    }`}
+=======
+
+                    onClick={() => setViewMode('list')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 ${;
+                      viewMode === 'list';
+                        ? 'bg-cyan-500 text-white';
+                        : 'bg-white/10 text-white/70 hover:bg-white/20';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                  >
+=======
+
+
+              <div>"
+                <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>"
+                <div className="flex gap-2">
+                  <button;
+                  >"
+                    <Grid className="w-4 h-4" />
+                  </button>
+                  <button;
+                  >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                    <List className="w-4 h-4" />
+=======
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                  ))}
+                </select>
+              </div>
+              {/* Price Range Filter */}
+              <div>
+<label className='block text-sm font-medium text-white/70 mb-2'>
+                  Price Range
+                </label>
+                <select
+                  value={priceRange}
+                  onChange={e => setPriceRange(e.target.value as any)}
+                  className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                >
+                  <option value='all'>All Prices</option>
+                  <option value='budget'>Budget ($0 - $999)</option>
+                  <option value='mid'>Mid-Range ($1,000 - $4,999)</option>
+                  <option value='enterprise'>Enterprise ($5,000+)</option>
+                </select>
+              </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+              {/* Sort By */}
+              <div>
+<label className='block text-sm font-medium text-white/70 mb-2'>
+                  Sort By
+                </label>
+                <select
+                  value={sortBy}
+                  onChange={e => setSortBy(e.target.value as any)}
+                  className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                >
+                  <option value='popularity'>Popularity</option>
+                  <option value='price'>Price (Low to High)</option>
+                  <option value='rating'>Rating</option>
+                  <option value='newest'>Newest</option>
+                </select>
+              </div>
+              <div>
+<label className='block text-sm font-medium text-white/70 mb-2'>
+                  View Mode
+                </label>
+                <div className='flex gap-2'>
+                  <button
+                  >
+                    <Grid className='w-4 h-4' />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 ${
+viewMode === 'list'
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-white/10 text-white/70 hover:bg-white/20'
+                    }`}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  >
+                    <List className='w-4 h-4' />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-      {/* Featured Services */}
-      <section className="py-20 px-4">
+      <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-              Featured Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Our most popular and innovative services that are transforming industries
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category);
-              return (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group relative"
-                >
-                  <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm">
-                    {/* Popular Badge */}
-                    {service.popular && (
-                      <div className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
-                        Popular
-                      </div>
-                    )}
-                    
-                    <div className="text-center mb-6">
-                      <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-4xl`}>
-                        {service.icon}
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-                      <div className="text-3xl font-bold text-cyan-400 mb-2">
-                        {service.price}<span className="text-lg text-gray-400">/{service.period}</span>
-                      </div>
-                    </div>
-<<<<<<< HEAD
-                    <span className="text-gray-300 text-sm">
-                      {(service as any).rating || 0} ({(service as any).reviews || 0} reviews)
-                    </span>
-                  </div>
-                </div>
+            variants={containerVariants}
 
-                {/* Service Details */}
-                <div className={`p-6 bg-white/5 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  {/* Key Benefits */}
-                  <div className="mb-4">
-                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-green-400" />
-                      Key Benefits
-                    </h4>
-                    <ul className="space-y-1">
-                      {(service as any).benefits?.slice(0, 3)?.map((benefit: string, idx: number) => (
-                        <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
-                          <Check className="w-3 h-3 text-green-400 mt-1 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-blue-400" />
-                      Key Features
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-                    
-                    <div className="space-y-3 mb-6">
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Market Info */}
-                    <div className="border-t border-white/10 pt-4 space-y-2">
-                      <div className="text-xs text-gray-400">
-                        Market Price: <span className="text-green-400">{service.marketPrice}</span>
-                      </div>
-                      <div className="text-xs text-gray-400">
-                        Category: <span className="text-cyan-400">{service.category}</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
 
-      {/* All Services Grid */}
-      <section className="py-20 px-4 bg-black/30 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
+            variants={containerVariants  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            variants={containerVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+            initial="hidden"
+            animate="visible"
+=======
+
+"
+            initial="hidden""
+            animate="visible""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+            className="mb-8"
+          >"
+            <div className="text-center mb-8">"
+              <h2 className="text-3xl font-bold text-white mb-2">
+                {filteredServices.length} Services Found;
+              </h2>"
+              <p className="text-white/60">
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+                Showing results for &quot,{searchTerm |'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+
+                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+
+=======
+
+                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            initial="hidden"
+            animate="visible"
+            className="mb-8"
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+            initial="hidden"
+            animate="visible"
+            className="mb-8"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
-              Complete Service Portfolio
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Explore our entire collection of innovative services designed for the future
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {innovative2025MicroSaasBatch.map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category);
-              return (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="group relative"
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-2">
+                {filteredServices.length} Services Found
+              </h2>
+              <p className="text-white/60">
+
+                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+
+                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+
+            initial="hidden"
+            animate="visible"
+            className="mb-8"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+      {/* Services Grid */}
+<section className='px-6 pb-20'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+            variants={containerVariants}
+            initial='hidden'
+            animate='visible'
+            className='mb-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+          >
+            <div className='text-center mb-8'>
+              <h2 className='text-3xl font-bold text-white mb-2'>
+                {filteredServices.length} Services Found
+              </h2>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+              <p className="text-white/60">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'"
+                Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+              </p>
+            </div>
+            {filteredServices.length === 0 ? ("
+              <div className="text-center py-20">"
+                <div className="text-6xl mb-4">🔍</div>"
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
+                <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+                <button
+                  onClick={() => {
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+
+                    setPriceRange('all')
+
+
+                  }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                <button;
+                  onClick={() => {}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
+
+                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+              </p>
+            </div>
+            {filteredServices.length === 0 ? (
+              <div className="text-center py-20">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+              <p className='text-white/60'>
+                Showing results for &quot;{searchTerm || 'all services'}&quot;
+                in{' '}
+                {selectedCategory === 'all'
+                  ? 'all categories'
+                  : selectedCategory}
+origin/cursor/automate-test-improve-and-merge-code-2533
+              </p>
+            </div>
+            {filteredServices.length === 0 ? (
+<div className='text-center py-20'>
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No services found
+                </h3>
+                <p className='text-white/60 mb-6'>
+                  Try adjusting your search criteria or filters
+                </p>
+                <button
+                  onClick={() => {
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+
+                    setPriceRange('all')
+
+                  }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+setPriceRange('all');
+                  }}
+                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300'
+                    setPriceRange('all')
+                  }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
-                  <div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm">
-                    <div className="flex items-start space-x-4">
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>
-                        {service.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-bold text-white mb-1 truncate">{service.name}</h3>
-                        <p className="text-gray-400 text-sm mb-2 line-clamp-2">{service.tagline}</p>
-                        <div className="text-cyan-400 font-semibold text-sm">
-                          {service.price}<span className="text-gray-400">/{service.period}</span>
+                  Clear Filters;
+                </button>
+              </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            ) : (
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+                : 'space-y-6'
+              }>
+                {filteredServices.map((service, index) => (
+                  <motion.div
+<<<<<<< HEAD
+
+                    {/* Service Card Content */}
+                    <div className={`p - 6 ${view_mode === 'list' ? 'flex - 1' : ''}`}>;
+                      {/* Header */}
+=======
+<<<<<<< HEAD
+                    key={service.id}
+=======
+
+=======
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">Category</label>;
+                <select;
+                  value={selected_category}
+                  on_change={(e) => setSelectedCategory (e.target.value)}
+                  className="w - full px - 3 py - 2 bg - white / 10 border border - white / 20 rounded - lg text - white focus:outline - none focus:border - cyan - 400 / 50";
+                >;
+                  {categories.map ((category) => (
+                    <option key={category.id} value={category.id}>;
+                      {category.name} ({category.count});
+                    </option>))}
+                </select>;
+              </div>;
+              {/* Price Range Filter */}
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">Price Range</label>;
+                <select;
+                  value={price_range}
+                  on_change={(e) => setPriceRange (e.target.value as any)}
+                  className="w - full px - 3 py - 2 bg - white / 10 border border - white / 20 rounded - lg text - white focus:outline - none focus:border - cyan - 400 / 50";
+                >;
+                  <option value="all">All Prices</option>;
+                  <option value="budget">Budget ($0 - $999)</option>;
+                  <option value="mid">Mid - Range ($1, 000 - $4, 999)</option>;
+                  <option value="enterprise">Enterprise ($5, 000+)</option>;
+                </select>;
+              </div>;
+              {/* Sort By */}
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">Sort By</label>;
+                <select;
+                  value={sort_by}
+                  on_change={(e) => setSortBy (e.target.value as any)}
+                  className="w - full px - 3 py - 2 bg - white / 10 border border - white / 20 rounded - lg text - white focus:outline - none focus:border - cyan - 400 / 50";
+                >;
+                  <option value="popularity">Popularity</option>;
+                  <option value="price">Price (Low to High)</option>;
+                  <option value="rating">Rating</option>;
+                  <option value="newest">Newest</option>;
+                </select>;
+              </div>;
+              {/* View Mode */}
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">View Mode</label>;
+                <div className="flex gap - 2">;
+                  <button;
+                    on_click={() => setViewMode ('grid')}
+                    className={`px - 3 py - 2 rounded - lg transition - all duration - 300 ${
+                      view_mode === 'grid';
+                        ? 'bg - cyan - 500 text - white';
+                        : 'bg - white / 10 text - white / 70 hover:bg - white / 20';
+                    }`}
+=======
+
+
+                  >;
+                    <Grid className="w - 4 h - 4" />;
+                  </button>;
+                  <button;
+                    on_click={() => setViewMode ('list')}
+                    className={`px - 3 py - 2 rounded - lg transition - all duration - 300 ${
+                      view_mode === 'list';
+                        ? 'bg - cyan - 500 text - white';
+                        : 'bg - white / 10 text - white / 70 hover:bg - white / 20';
+                    }`}
+                  >;
+                    <List className="w - 4 h - 4" />;
+                  </button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Services Grid */}
+      <section className="px - 6 pb - 20">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.div;
+            variants={container_variants}
+            initial="hidden";
+            animate="visible";
+            className="mb - 8";
+          >;
+            <div className="text - center mb - 8">;
+              <h2 className="text - 3xl font - bold text - white mb - 2">;
+                {filtered_services.length} Services Found;
+              </h2>;
+              <p className="text - white / 60">;
+                Showing results for &quot, {search_term || 'all services'}&quot, in {selected_category === 'all' ? 'all categories' : selected_category}
+              </p>;
+            </div>;
+            {filtered_services.length === 0 ? (
+              <div className="text - center py - 20">;
+                <div className="text - 6xl mb - 4">🔍</div>;
+                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
+                <p className="text - white / 60 mb - 6">Try adjusting your search criteria or filters</p>;
+                <button;
+                  on_click={() => {
+                    setSearchTerm (''),
+                    setSelectedCategory ('all'),
+                    setPriceRange ('all');
+                  }}
+                  className="px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 rounded - lg transition - colors duration - 300";
+                >;
+                  Clear Filters;
+                </button>;
+              </div>) : (
+              <div className={view_mode === 'grid';
+                ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
+                : 'space - y-6';
+              }>;
+                {filtered_services.map ((service, index) => (
+                  <motion.div;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            ) : (
+=======
+            ) : (
+
+                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+                : 'space-y-6'
+              }>
+                {filteredServices.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">Category</label>;
+                <select;
+                  value={selected_category}
+                  on_change={(e) => setSelectedCategory (e.target.value)}
+                  className="w - full px - 3 py - 2 bg - white / 10 border border - white / 20 rounded - lg text - white focus:outline - none focus:border - cyan - 400 / 50";
+                >;
+                  {categories.map ((category) => (
+                    <option key={category.id} value={category.id}>;
+                      {category.name} ({category.count});
+                    </option>))}
+                </select>;
+              </div>;
+              {/* Price Range Filter */}
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">Price Range</label>;
+                <select;
+                  value={price_range}
+                  on_change={(e) => setPriceRange (e.target.value as any)}
+                  className="w - full px - 3 py - 2 bg - white / 10 border border - white / 20 rounded - lg text - white focus:outline - none focus:border - cyan - 400 / 50";
+                >;
+                  <option value="all">All Prices</option>;
+                  <option value="budget">Budget ($0 - $999)</option>;
+                  <option value="mid">Mid - Range ($1, 000 - $4, 999)</option>;
+                  <option value="enterprise">Enterprise ($5, 000+)</option>;
+                </select>;
+              </div>;
+              {/* Sort By */}
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">Sort By</label>;
+                <select;
+                  value={sort_by}
+                  on_change={(e) => setSortBy (e.target.value as any)}
+                  className="w - full px - 3 py - 2 bg - white / 10 border border - white / 20 rounded - lg text - white focus:outline - none focus:border - cyan - 400 / 50";
+                >;
+                  <option value="popularity">Popularity</option>;
+                  <option value="price">Price (Low to High)</option>;
+                  <option value="rating">Rating</option>;
+                  <option value="newest">Newest</option>;
+                </select>;
+              </div>;
+              {/* View Mode */}
+              <div>;
+                <label className="block text - sm font - medium text - white / 70 mb - 2">View Mode</label>;
+                <div className="flex gap - 2">;
+                  <button;
+                    on_click={() => setViewMode ('grid')}
+                    className={`px - 3 py - 2 rounded - lg transition - all duration - 300 ${
+                      view_mode === 'grid';
+                        ? 'bg - cyan - 500 text - white';
+                        : 'bg - white / 10 text - white / 70 hover:bg - white / 20';
+                    }`}
+
+                  >;
+                    <Grid className="w - 4 h - 4" />;
+                  </button>;
+                  <button;
+                    on_click={() => setViewMode ('list')}
+                    className={`px - 3 py - 2 rounded - lg transition - all duration - 300 ${
+                      view_mode === 'list';
+                        ? 'bg - cyan - 500 text - white';
+                        : 'bg - white / 10 text - white / 70 hover:bg - white / 20';
+                    }`}
+                  >;
+                    <List className="w - 4 h - 4" />;
+                  </button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Services Grid */}
+      <section className="px - 6 pb - 20">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.div;
+            variants={container_variants}
+            initial="hidden";
+            animate="visible";
+            className="mb - 8";
+          >;
+            <div className="text - center mb - 8">;
+              <h2 className="text - 3xl font - bold text - white mb - 2">;
+                {filtered_services.length} Services Found;
+              </h2>;
+              <p className="text - white / 60">;
+                Showing results for &quot, {search_term || 'all services'}&quot, in {selected_category === 'all' ? 'all categories' : selected_category}
+              </p>;
+            </div>;
+            {filtered_services.length === 0 ? (
+              <div className="text - center py - 20">;
+                <div className="text - 6xl mb - 4">🔍</div>;
+                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
+                <p className="text - white / 60 mb - 6">Try adjusting your search criteria or filters</p>;
+                <button;
+                  on_click={() => {
+                    setSearchTerm (''),
+                    setSelectedCategory ('all'),
+                    setPriceRange ('all');
+                  }}
+                  className="px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 rounded - lg transition - colors duration - 300";
+                >;
+                  Clear Filters;
+                </button>;
+              </div>) : (
+              <div className={view_mode === 'grid';
+                ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
+                : 'space - y-6';
+              }>;
+                {filtered_services.map ((service, index) => (
+                  <motion.div;
+                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+                : 'space-y-6'
+              }>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+<div
+                className={
+                  viewMode === 'grid'
+                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+                    : 'space-y-6'
+                }
+              >
+origin/cursor/automate-test-improve-and-merge-code-2533
+                {filteredServices.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
+                : 'space-y-6'
+              }>
+                {filteredServices.map((service, index) => (
+                  <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                    key={service.id}
+                    variants={item_variants}
+                    className={`group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${'
+                      view_mode === 'list' ? 'flex' : '';`
+                    }`}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+                  >;
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+                  >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  >;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                    {/* Service Card Content */  } catch (error) {
+    console.error("Error:", error);
+=======
+                    {/* Service Card Content */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}'`
+                    <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>;
+                      {/* Header */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex items-center gap-3">
+=======
+"
+                      <div className="flex items-start justify-between mb-4">"
+                        <div className="flex items-center gap-3">'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                          <div className={`text-3xl ${service.color.includes('from-') ? '' : service.color}`}>
+                            {service.icon  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </div>
+                          <div>"
+                            <h3 className="font-bold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300">
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                              {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                            </h3>
+                            <p className="text-sm text-white/60">{service.tagline}</p>
+                          </div>
                         </div>
-                        <div className="text-xs text-gray-500 mt-2">
-                          {service.category}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                        {service.popular && (
+                          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                            Popular
+                          </div>
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                        )}
+                      </div>
+                      {/* Description */}
+                      <p className="text-white/80 text-sm mb-4 line-clamp-3">
+                        {service.description}
+                      </p>
+                      {/* Features */}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                        {service.popular && (
+=======
+
+                              {service.name  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+                            </h3>"
+                            <p className="text-sm text-white/60">{service.tagline}</p>
+                          </div>
+                        </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+
+                        {service.popular && (
+"
+                          <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full">;
+                            Popular;
+                          </div>)}
+                      </div>;
+
+                      {/* Description */}
+
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                        {service.popular && (
+                          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                  >
+                    {/* Service Card Content */}
+<div
+                      className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}
+                    >
+                      {/* Header */}
+                      <div className='flex items-start justify-between mb-4'>
+                        <div className='flex items-center gap-3'>
+                          <div
+                            className={`text-3xl ${service.color.includes('from-') ? '' : service.color}`}
+                          >
+                            {service.icon}
+                          </div>
+                          <div>
+                            <h3 className='font-bold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                              {service.name}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                            </h3>
+                            <p className='text-sm text-white/60'>
+                              {service.tagline}
+                            </p>
+                          </div>
+                        </div>
+                        {service.popular && (
+                          <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full'>
+                            Popular
+                          </div>
+                        )}
+                      </div>
+                      {/* Description */}
+                      <p className="text-white/80 text-sm mb-4 line-clamp-3">
+                        {service.description}
+                      </p>
+                      {/* Features */}
+                        {service.popular && (
+
+                          <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full">;
+                            Popular;
+                          </div>)}
+                      </div>;
+
+                      {/* Description */}
+
+<p className='text-white/80 text-sm mb-4 line-clamp-3'>
+                        {service.description}
+                      </p>
+                      {/* Features */}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                        )  } catch (error) {
+    console.error("Error:", error);
+=======
+
+                        )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </div>;
+                      {/* Description */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                      <p className="text-white/80 text-sm mb-4 line-clamp-3">
+                        {service.description  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </p>;
+                      {/* Features */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
+=======
+
+"
+                      <div className="mb-4">"
+                        <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                        <div className="grid grid-cols-1 gap-1">
+                          {service.features.slice(0, 3).map((feature, idx) => ("
+                            <div key={idx} className="flex items-center gap-2 text-xs text-white/60">"
+                              <CheckCircle className="w-3 h-3 text-green-400" />
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                          {service.features.length > 3 && (
+                            <div className="text-xs text-white/40">
+                              +{service.features.length - 3} more features
+                            </div>
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+                        </div>;
+                      </div>;
+                      {/* Price and Rating */  } catch (error) {
+=======
+<<<<<<< HEAD
+=======
+=======
+
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
+                        <div className="grid grid-cols-1 gap-1">
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-xs text-white/60">
+                              <CheckCircle className="w-3 h-3 text-green-400" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+                      <p className="text - white / 80 text - sm mb - 4 line - clamp - 3">;
+                        {service.description}
+
+                              {feature}
+                            </div>))}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                              {feature  } catch (error) {
+    console.error("Error:", error);
+=======
+
+                              {feature  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                            </div>;
+                          ))  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+
+                          {service.features.length > 3 && (
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                          {service.features.length > 3 && (
+
+
+                          {service.price}
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                          <span className="text - sm text - white / 60">{service.period}</span>;
+                        </div>;"
+                        <div className="flex items - center gap - 1">;"
+                          <StarIcon className="w - 4 h - 4 text - yellow - 400 fill - current" />;"
+                          <span className="text - sm text - white / 70">{service.rating}</span>;"
+                          <span className="text - xs text - white / 50">({service.reviews})</span>;
+                        </div>;
+                      </div>;
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          href={service.link}
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+
+                          href={service.link}
+
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                      {/* Action Buttons */  } catch (error) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                          href={service.link}
+
+                      {/* Action Buttons */}
+                      <div className="flex gap - 2">;
+                        <a;
+                          href={service.link}
+
+                      {/* Action Buttons */  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-2xl font-bold text-cyan-400">
+                          {service.price  } catch (error) {
+=======
+<<<<<<< HEAD
+=======
+                      <div className="flex gap-2">
+                        <a
+                          href={service.link  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                      <div className="flex gap-2">
+                        <a
+                          href={service.link  } catch (error) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          <span className="text-sm text-white/60">{service.period}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <StarIcon className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-sm text-white/70">{service.rating}</span>
+                          <span className="text-xs text-white/50">({service.reviews})</span>
+                        </div>
+                      </div>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                          {service.features.length > 3 && (
+
+
+                          {service.price}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                          target="_blank"
+                          rel="noopener noreferrer"
+=======
+
+                      {/* Action Buttons */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+                          target="_blank""
+                          rel="noopener noreferrer""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                          className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
+=======
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+<div className='mb-4'>
+                        <h4 className='text-sm font-semibold text-white/70 mb-2'>
+                          Key Features:
+                        </h4>
+                        <div className='grid grid-cols-1 gap-1'>
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <div
+                              key={idx}
+                              className='flex items-center gap-2 text-xs text-white/60'
+                            >
+                              <CheckCircle className='w-3 h-3 text-green-400' />
+                              {feature}
+                            </div>
+                          ))}
+                          {service.features.length > 3 && (
+<div className='text-xs text-white/40'>
+                              +{service.features.length - 3} more features
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      {/* Price and Rating */}
+<div className='flex items-center justify-between mb-4'>
+                        <div className='text-2xl font-bold text-cyan-400'>
+                          {service.price}
+                          <span className='text-sm text-white/60'>
+                            {service.period}
+                          </span>
+                        </div>
+                        <div className='flex items-center gap-1'>
+                          <StarIcon className='w-4 h-4 text-yellow-400 fill-current' />
+                          <span className='text-sm text-white/70'>
+                            {service.rating}
+                          </span>
+                          <span className='text-xs text-white/50'>
+                            ({service.reviews})
+                          </span>
+                        </div>
+                      </div>
+                      {/* Action Buttons */}
+<div className='flex gap-2'>
+                        <a
+                          href={service.link}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105'
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                        >
+                          Learn More;
+                        </a>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+                        <a
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+                          href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                        <a;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                          className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
+=======
+=======
+
+                          className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                          className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
+                          href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                          href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+                          href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                        >
+                          Contact;
+                        </a>
+                      </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+                      {/* Additional Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                      <div className="mt-4 pt-4 border-t border-white/10">
+=======
+
+"
+                      <div className="mt-4 pt-4 border-t border-white/10">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                        <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
+                          <div>"
+                            <span className="block text-white/70">Setup Time:</span>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+=======
+                      <div className="mt-4 pt-4 border-t border-white/10">
+                        <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
+                          <div>
+                            <span className="block text-white/70">Setup Time:</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+                            {service.setupTime  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                          </div>
+                          <div>"
+                            <span className="block text-white/70">Trial:</span>
+                            {service.trialDays} days;
+                          </div>
+                          <div>"
+                            <span className="block text-white/70">Customers:</span>
+                            {service.customers}+
+                          </div>
+                          <div>"
+                            <span className="block text-white/70">ROI:</span>'"
+                            <span className="text-green-400">{service.roi.split(' ').slice(0, 3).join(' ')}...</span>
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                          </div>
+                          <div>
+                            <span className="block text-white/70">Trial:</span>
+                            {service.trialDays} days
+                          </div>
+                          <div>
+                            <span className="block text-white/70">Customers:</span>
+                            {service.customers}+
+                          </div>
+                          <div>
+                            <span className="block text-white/70">ROI:</span>
+                            <span className="text-green-400">{service.roi.split(' ').slice(0, 3).join(' ')}...</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                      {/* Additional Info */}
+<div className='mt-4 pt-4 border-t border-white/10'>
+                        <div className='grid grid-cols-2 gap-4 text-xs text-white/50'>
+                          <div>
+                            <span className='block text-white/70'>
+                              Setup Time:
+                            </span>
+                            {service.setupTime}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                          </div>
+                          <div>
+                            <span className='block text-white/70'>Trial:</span>
+                            {service.trialDays} days
+                          </div>
+                          <div>
+                            <span className='block text-white/70'>
+                              Customers:
+                            </span>
+                            {service.customers}+
+                          </div>
+                          <div>
+                            <span className='block text-white/70'>ROI:</span>
+                            <span className='text-green-400'>
+                              {service.roi.split(' ').slice(0, 3).join(' ')}...
+                            </span>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+                  </motion.div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                          target="_blank";
+                          rel="noopener noreferrer";
+                          className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 rounded - lg text - white text - sm font - medium text - center transition - all duration - 300 transform hover:scale - 105";
+                        >;
+                          Learn More;
+                        </a>;
+                        <a;
+                          href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
+                          className="px - 4 py - 2 border border - white / 20 hover:border - cyan - 400 / 50 rounded - lg text - white text - sm font - medium transition - all duration - 300 hover:bg - white / 10";
+                        >;
+                          Contact;
+                        </a>;
+                      </div>;
+                      {/* Additional Info */}
+                      <div className="mt - 4 pt - 4 border - t border - white / 10">;
+                        <div className="grid grid - cols - 2 gap - 4 text - xs text - white / 50">;
+                          <div>;
+                            <span className="block text - white / 70">Setup Time:</span>;
+                            {service.setup_time}
+                          </div>;
+                          <div>;
+                            <span className="block text - white / 70">Trial:</span>;
+                            {service.trial_days} days;
+                          </div>;
+                          <div>;
+                            <span className="block text - white / 70">Customers:</span>;
+                            {service.customers}+;
+                          </div>;
+                          <div>;
+                            <span className="block text - white / 70">ROI:</span>;
+                            <span className="text - green - 400">{service.roi.split (' ').slice (0, 3).join (' ')}...</span>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </motion.div>))}
+              </div>)}
+          </motion.div>;
+        </div>;
+      </section>;
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Contact CTA */}
-      <section className="py-20 px-4">
+=======
+      {/* Contact CTA */}
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      {/* Contact CTA */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+      <section className="px - 6 pb - 20">;
+=======
+
+      {/* Contact CTA */}"
+      <section className="px - 6 pb - 20">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+        <div className="max - w-4xl mx - auto text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                ))  } catch (error) {
+    console.error("Error:", error);
+=======
+
+                ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            )  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Contact CTA */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+      <section className="px-6 pb-20">"
         <div className="max-w-4xl mx-auto text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
+          >"
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>"
+            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
+              Our team of experts is ready to help you implement the perfect solution for your business needs.
+              Our team of experts is ready to help you implement the perfect solution for your business needs. 
+              Our team of experts is ready to help you implement the perfect solution for your business needs.
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+      {/* Contact CTA */}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+<section className='px-6 pb-20'>
+        <div className='max-w-4xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Get in touch with our team to discuss how our innovative services can drive your success
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+              Get in touch today for a personalized consultation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"
+              <a
+
+                href={`mailto:${contactInfo.email}?subject=Business Consultation Request`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              Get in touch today for a personalized consultation.
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+              <a
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+                href={`mailto:${contactInfo.email}?subject=Business Consultation Request`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              Get in touch today for a personalized consultation.
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            <p className='text-xl text-white/80 mb-8 max-w-2xl mx-auto'>
+              Our team of experts is ready to help you implement the perfect
+              solution for your business needs. Get in touch today for a
+              personalized consultation.
+origin/cursor/automate-test-improve-and-merge-code-2533
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <a;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
               >
-                <Zap className="w-5 h-5" />
-                <span>Call Now: +1 302 464 0950</span>
+                Schedule Consultation"
+                <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+
+              </Link>
+              <a
+                href={`tel:${contactInfo.mobile}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+                className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
+              >"
+                <Phone className="w-5 h-5" />
+                Call Now;
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+            </div>"
+            <div className="mt-8 text-white/60">
+              <p>Contact us directly:</p>"
+              <div className="flex flex-wrap justify-center gap-6 mt-4">
+=======
+                className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
-                Email Us
+                <Phone className="w-5 h-5" />
+                Call Now
               </a>
             </div>
-            
-            <div className="text-sm text-gray-400">
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
+            <div className="mt-8 text-white/60">
+              <p>Contact us directly:</p>
+              <div className="flex flex-wrap justify-center gap-6 mt-4">
+                className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+                href={`mailto:${contactInfo.email}?subject=Business Consultation Request`}
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2'
+              >
+                Schedule Consultation
+                <ArrowRight className='w-5 h-5' />
+              </a>
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <Phone className='w-5 h-5' />
+                Call Now
+              </a>
+            </div>
+            <div className='mt-8 text-white/60'>
+              <p>Contact us directly:</p>
+              <div className='flex flex-wrap justify-center gap-6 mt-4'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                <span>{contactInfo.mobile}</span>
+                <span>{contactInfo.email}</span>
+                <span>{contactInfo.address}</span>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
-    </Layout>
+      <EnhancedFooter />
+    </div>
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-export default Comprehensive2025InnovativeServicesShowcase;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+
+=======
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+            className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 backdrop - blur - xl rounded - 3xl p - 12 border border - cyan - 400 / 20";
+          >;"
+            <h2 className="text - 4xl font - bold text - white mb - 6">;
+              Ready to Transform Your Business?;
+            </h2>;"
+            <p className="text - xl text - white / 80 mb - 8 max - w-2xl mx - auto">;
+              Our team of experts is ready to help you implement the perfect solution for your business needs.;
+              Get in touch today for a personalized consultation.;
+            </p>;"
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <a;`
+                href={`mailto:${contact_info.email}?subject = Business Consultation Request`}"
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2";
+              >;
+                Schedule Consultation;"
+                <ArrowRight className="w - 5 h - 5" />;
+              </a>;
+              <a;`
+                href={`tel:${contact_info.mobile}`}"
+                className="px - 8 py - 4 border border - white / 20 hover:border - cyan - 400 / 50 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10 flex items - center justify - center gap - 2";
+              >;"
+                <Phone className="w - 5 h - 5" />;
+                Call Now;
+              </a>;
+            </div>;"
+            <div className="mt - 8 text - white / 60">;
+              <p > Contact us directly:</p>;"
+              <div className="flex flex - wrap justify - center gap - 6 mt - 4">;
+                <span>{contact_info.mobile}</span>;
+                <span>{contact_info.email}</span>;
+                <span>{contact_info.address}</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </div>);
+}
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+
+
+
+
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+);
+<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx

@@ -1,551 +1,852 @@
+<<<<<<< HEAD:pages_backup/docs.tsx
 <<<<<<< HEAD
-import React, { useState } from 'react';
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../components/layout/MainLayout';
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { 
-  BookOpen, Code, FileText, Search, ArrowRight, 
-  Download, ExternalLink, ChevronRight, CheckCircle
+import Link from 'next/link';
+import {
+  BookOpen,
+  Search,
+  FileText,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Users,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Clock,
 } from 'lucide-react';
 
 export default function Documentation() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Documentation', count: 45 },
-    { id: 'getting-started', name: 'Getting Started', count: 8 },
-    { id: 'api-reference', name: 'API Reference', count: 15 },
-    { id: 'tutorials', name: 'Tutorials', count: 12 },
-    { id: 'deployment', name: 'Deployment', count: 6 },
-    { id: 'troubleshooting', name: 'Troubleshooting', count: 4 }
-  ];
-
-  const documentationItems = [
-    {
-      id: 1,
-      title: 'Quick Start Guide',
-      category: 'getting-started',
-      description: 'Get up and running with Zion Tech Group services in under 10 minutes',
-      difficulty: 'Beginner',
-      readTime: '10 min',
-      lastUpdated: '2024-01-15',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'AI Services API Reference',
-      category: 'api-reference',
-      description: 'Complete API documentation for AI and machine learning services',
-      difficulty: 'Intermediate',
-      readTime: '45 min',
-      lastUpdated: '2024-01-12',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Quantum Computing Setup',
-      category: 'tutorials',
-      description: 'Step-by-step guide to setting up quantum computing environments',
-      difficulty: 'Advanced',
-      readTime: '30 min',
-      lastUpdated: '2024-01-10',
-      featured: true
-    },
-    {
-      id: 4,
-      title: 'Authentication & Security',
-      category: 'getting-started',
-      description: 'Learn about our security protocols and authentication methods',
-      difficulty: 'Beginner',
-      readTime: '20 min',
-      lastUpdated: '2024-01-08',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Cloud Deployment Guide',
-      category: 'deployment',
-      description: 'Deploy your applications to major cloud platforms',
-      difficulty: 'Intermediate',
-      readTime: '25 min',
-      lastUpdated: '2024-01-05',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Performance Optimization',
-      category: 'tutorials',
-      description: 'Best practices for optimizing your applications and services',
-      difficulty: 'Advanced',
-      readTime: '35 min',
-      lastUpdated: '2024-01-03',
-      featured: false
-    },
-    {
-      id: 7,
-      title: 'Error Handling & Debugging',
-      category: 'troubleshooting',
-      description: 'Common issues and how to resolve them effectively',
-      difficulty: 'Intermediate',
-      readTime: '15 min',
-      lastUpdated: '2024-01-01',
-      featured: false
-    },
-    {
-      id: 8,
-      title: 'Integration Examples',
-      category: 'tutorials',
-      description: 'Real-world examples of integrating our services',
-      difficulty: 'Intermediate',
-      readTime: '40 min',
-      lastUpdated: '2023-12-28',
-      featured: false
-    }
-=======
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-export default function DocsPage() {
   const contact = {
-    mobile: '+1 302 464 0950',
+    phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const sections = [
+    site: 'https://ziontechgroup.com'
+  }
+  const documentationSections = [
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     {
       title: 'Getting Started',
-      links: [
-        { name: 'Overview', href: '/enhanced-services-showcase' },
-        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
-        { name: 'Contact Sales', href: '/contact' },
-      ]
+      description: 'Quick start guides and setup instructions',
+      icon: BookOpen,
+      docs: [
+        {
+          title: 'Quick Start Guide',
+          description: 'Get up and running in minutes',
+          time: '5 min read',
+        },
+        {
+          title: 'Installation Guide',
+          description: 'Step-by-step installation instructions',
+          time: '10 min read',
+        },
+        {
+          title: 'Configuration',
+          description: 'Configure your environment',
+          time: '15 min read',
+        },
+        {
+          title: 'First Project',
+          description: 'Create your first project',
+          time: '20 min read',
+        },
+      ],
     },
     {
-      title: 'AI Services Docs',
-      links: [
-        { name: 'AI Guardrails', href: '/ai-guardrails' },
-        { name: 'AI Evals', href: '/ai-evals' },
-        { name: 'Agentic RAG', href: '/agentic-rag' },
-      ]
+      title: 'API Reference',
+      description: 'Complete API documentation and endpoints',
+      icon: Code,
+      docs: [
+        {
+          title: 'Authentication',
+          description: 'API authentication and security',
+          time: '8 min read',
+        },
+        {
+          title: 'Endpoints',
+          description: 'All available API endpoints',
+          time: '25 min read',
+        },
+        {
+          title: 'Rate Limits',
+          description: 'API rate limiting and quotas',
+          time: '5 min read',
+        },
+        {
+          title: 'Error Codes',
+          description: 'Common error codes and solutions',
+          time: '10 min read',
+        },
+      ],
     },
     {
-      title: 'IT & Platform Docs',
-      links: [
-        { name: 'API Observability', href: '/api-observability' },
-        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-        { name: 'Status Pages & SLO', href: '/status-pages-slo' },
-      ]
+      title: 'AI Services',
+      description: 'AI and machine learning service documentation',
+      icon: Database,
+      docs: [
+        {
+          title: 'AI Models',
+          description: 'Available AI models and capabilities',
+          time: '15 min read',
+        },
+        {
+          title: 'Training Data',
+          description: 'Data preparation and training',
+          time: '20 min read',
+        },
+        {
+          title: 'Model Deployment',
+          description: 'Deploy and manage AI models',
+          time: '12 min read',
+        },
+        {
+          title: 'Performance Tuning',
+          description: 'Optimize model performance',
+          time: '18 min read',
+        },
+      ],
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and deployment guides',
+      icon: Cloud,
+      docs: [
+        {
+          title: 'Cloud Setup',
+          description: 'Configure cloud environments',
+          time: '15 min read',
+        },
+        {
+          title: 'Deployment',
+          description: 'Deploy applications to cloud',
+          time: '20 min read',
+        },
+        {
+          title: 'Scaling',
+          description: 'Scale your applications',
+          time: '12 min read',
+        },
+        {
+          title: 'Monitoring',
+          description: 'Monitor cloud resources',
+          time: '10 min read',
+        },
+      ],
+    },
+    {
+      title: 'Security',
+      description: 'Security best practices and guidelines',
+      icon: Shield,
+      docs: [
+        {
+          title: 'Security Overview',
+          description: 'Security architecture and principles',
+          time: '12 min read',
+        },
+        {
+          title: 'Authentication',
+          description: 'User authentication and authorization',
+          time: '15 min read',
+        },
+        {
+          title: 'Data Protection',
+          description: 'Protect sensitive data',
+          time: '18 min read',
+        },
+        {
+          title: 'Compliance',
+          description: 'Meet compliance requirements',
+          time: '20 min read',
+        },
+      ],
+    },
+    {
+      title: 'Support',
+      description: 'Help and support resources',
+      icon: Users,
+      docs: [
+        {
+          title: 'FAQ',
+          description: 'Frequently asked questions',
+          time: '10 min read',
+        },
+        {
+          title: 'Troubleshooting',
+          description: 'Common issues and solutions',
+          time: '15 min read',
+        },
+        {
+          title: 'Contact Support',
+          description: 'Get help from our team',
+          time: '5 min read',
+        },
+        {
+          title: 'Community',
+          description: 'Join our developer community',
+          time: '8 min read',
+        },
+      ],
     },
   ];
 
-  const external = [
-    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
-    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
-    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
-    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' },
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
+  const popularDocs = [
+    {
+      title: 'Quick Start Guide',
+      description: 'Get started with Zion Tech Group services in minutes',
+      category: 'Getting Started',
+      views: '12.5k',
+      rating: 4.9,
+    },
+    {
+      title: 'API Authentication',
+      description: 'Learn how to authenticate with our APIs',
+      category: 'API Reference',
+      views: '8.2k',
+      rating: 4.8,
+    },
+    {
+      title: 'AI Model Training',
+      description: 'Train custom AI models for your use case',
+      category: 'AI Services',
+      views: '6.7k',
+      rating: 4.9,
+    },
+    {
+      title: 'Cloud Deployment',
+      description: 'Deploy your applications to the cloud',
+      category: 'Cloud Services',
+      views: '5.9k',
+      rating: 4.7,
+    },
   ];
 
-  const quickLinks = [
-    {
-      title: 'API Status',
-      description: 'Check service availability and performance',
-      icon: <CheckCircle className="w-6 h-6" />,
-      href: '/status',
-      color: 'text-green-400'
-    },
+  const resources = [
     {
       title: 'SDK Downloads',
-      description: 'Get the latest SDKs and client libraries',
-      icon: <Download className="w-6 h-6" />,
-      href: '/downloads',
-      color: 'text-blue-400'
+      description: 'Download our SDKs for popular programming languages',
+      icon: Download,
+      items: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
     },
     {
-      title: 'Support Portal',
-      description: 'Get help from our technical support team',
-      icon: <ExternalLink className="w-6 h-6" />,
-      href: '/support',
-      color: 'text-purple-400'
+      title: 'Code Examples',
+      description: 'Ready-to-use code examples and snippets',
+      icon: Code,
+      items: [
+        'REST API Examples',
+        'Webhook Examples',
+        'Integration Examples',
+        'Best Practices',
+      ],
     },
     {
-      title: 'Community Forum',
-      description: 'Connect with other developers and users',
-      icon: <ExternalLink className="w-6 h-6" />,
-      href: '/community',
-      color: 'text-yellow-400'
-    }
+      title: 'Video Tutorials',
+      description: 'Step-by-step video tutorials',
+      icon: ExternalLink,
+      items: [
+        'Getting Started',
+        'Advanced Features',
+        'Troubleshooting',
+        'Case Studies',
+      ],
+    },
   ];
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-  const filteredDocs = documentationItems.filter(doc => {
-    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Beginner': return 'bg-green-500/20 text-green-400';
-      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
-      case 'Advanced': return 'bg-red-500/20 text-red-400';
-      default: return 'bg-gray-500/20 text-gray-400';
-    }
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    });
-  };
-
+const Page = () => {
   return (
 <<<<<<< HEAD
-    <Layout>
-      <Head>
-        <title>Documentation - Zion Tech Group | Technical Guides & API Reference</title>
-        <meta name="description" content="Comprehensive documentation, API references, and technical guides for Zion Tech Group services. Get started quickly with our detailed guides and tutorials." />
-        <meta name="keywords" content="documentation, API reference, technical guides, tutorials, Zion Tech Group, developer resources" />
-        <meta property="og:title" content="Documentation - Zion Tech Group" />
-        <meta property="og:description" content="Technical guides and API references for developers." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/docs" />
-      </Head>
-
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-            Documentation
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive guides, API references, and tutorials to help you integrate 
-            and optimize Zion Tech Group services in your applications.
-          </p>
-        </motion.div>
-
-        {/* Quick Links */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300 group"
-              >
-                <div className={`w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 ${link.color}`}>
-                  {link.icon}
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                  {link.title}
-                </h3>
-                <p className="text-gray-300 text-sm">{link.description}</p>
-              </a>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Search and Filter */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-12"
-        >
-          <div className="max-w-4xl mx-auto">
-            {/* Search Bar */}
-            <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search documentation..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                  }`}
-                >
-                  {category.name}
-                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                    {category.count}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Featured Documentation */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Featured Guides</h2>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {documentationItems.filter(doc => doc.featured).map((doc, index) => (
-              <motion.div
-                key={doc.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 rounded-2xl border border-gray-600/20 overflow-hidden hover:border-blue-500/30 transition-all duration-300 group"
-              >
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(doc.difficulty)}`}>
-                      {doc.difficulty}
-                    </span>
-                    <span className="text-gray-400 text-sm">{doc.readTime}</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
-                    {doc.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-4">{doc.description}</p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>Updated {formatDate(doc.lastUpdated)}</span>
-                    <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full text-xs">
-                      {categories.find(c => c.id === doc.category)?.name}
-                    </span>
-                  </div>
-
-                  <a 
-                    href={`/docs/${doc.id}`}
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                  >
-                    Read Guide
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* All Documentation */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">All Documentation</h2>
-          
-          {filteredDocs.length === 0 ? (
-            <div className="text-center py-12">
-              <BookOpen className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No Documentation Found</h3>
-              <p className="text-gray-500">
-                Try adjusting your search terms or category filter to find relevant documentation.
-              </p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 gap-6">
-              {filteredDocs.filter(doc => !doc.featured).map((doc, index) => (
-                <motion.div
-                  key={doc.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                  className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 rounded-2xl border border-gray-600/20 overflow-hidden hover:border-purple-500/30 transition-all duration-300 group"
-                >
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(doc.difficulty)}`}>
-                        {doc.difficulty}
-                      </span>
-                      <span className="text-gray-400 text-sm">{doc.readTime}</span>
-                    </div>
-                    
-                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-                      {doc.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-4 line-clamp-2">{doc.description}</p>
-                    
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <span>Updated {formatDate(doc.lastUpdated)}</span>
-                      <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full text-xs">
-                        {categories.find(c => c.id === doc.category)?.name}
-                      </span>
-                    </div>
-
-                    <a 
-                      href={`/docs/${doc.id}`}
-                      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
-                    >
-                      Read Guide
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
-        </motion.div>
-
-        {/* Additional Resources */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Additional Resources</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-gray-900/40 to-green-900/20 p-8 rounded-2xl border border-gray-600/20">
-              <div className="flex items-center mb-4">
-                <Code className="w-8 h-8 text-green-400 mr-3" />
-                <h3 className="text-2xl font-bold text-white">Code Examples</h3>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Browse our collection of code examples and sample implementations 
-                to get started quickly with our services.
-              </p>
-              <a 
-                href="/examples"
-                className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors duration-300"
-              >
-                View Examples
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900/40 to-yellow-900/20 p-8 rounded-2xl border border-gray-600/20">
-              <div className="flex items-center mb-4">
-                <FileText className="w-8 h-8 text-yellow-400 mr-3" />
-                <h3 className="text-2xl font-bold text-white">Best Practices</h3>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Learn industry best practices and optimization techniques 
-                to maximize the performance of your applications.
-              </p>
-              <a 
-                href="/best-practices"
-                className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
-              >
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.6 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Need Help Getting Started?</h2>
-            <p className="text-gray-300 mb-6">
-              Our technical support team is here to help you succeed with our services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Support
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a 
-                href="/support" 
-                className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
-                Support Portal
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </Layout>
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
 =======
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>Documentation | Zion Tech Group</title>
-        <meta name="description" content="Guides and references for Zion Tech Group AI, platform, and IT services." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs" />
-      </Head>
 
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Documentation</h1>
-            <p className="text-slate-300 mt-4">Quick links, references, and integration guides for our services.</p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sections.map((s) => (
-              <Card key={s.title} className="p-6 bg-black/40 border border-gray-700/50">
-                <h2 className="text-xl font-semibold mb-4 text-white">{s.title}</h2>
-                <ul className="space-y-2">
-                  {s.links.map((l) => (
-                    <li key={l.name}>
-                      <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
 
-          <Card className="p-6 bg-black/40 border border-gray-700/50">
-            <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
-              {external.map((e) => (
-                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
-              ))}
-            </ul>
-          </Card>
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 
-          <Card className="p-6 bg-black/40 border border-gray-700/50">
-            <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">Contact Support</Button>
-              <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
-              <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
-              <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
-            </div>
-          </Card>
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
+    </MainLayout>
+  );
+};
+
+export default Page;
+<<<<<<< HEAD:pages_backup/docs.tsx
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import React from 'react',
+origin/cursor/automate-test-improve-and-merge-code-2533
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+export default function DocsPage() {
+	return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+<<<<<<< HEAD:pages_backup/docs.tsx
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+export default function DocsPage() {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+
+}
+<<<<<<< HEAD
+;
+=======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+export default function DocsPage() {
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+import React from 'react',
+import Head from 'next / head',
+import Layout from '../components / layout / Layout',
+export default /**
+ * DocsPage - Function description
+ */
+function DocsPage() {
+return (
+  <Layout>;
+  <Head>;
+    <title > Documentation | Zion Tech Group</title>;
+    <link rel="canonical" href="https://ziontechgroup.com / docs" />;
+  </Head>;
+  <section className="container mx - auto px - 4 py - 24">;
+    <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">Documentation</h1>;
+    <p className="text - gray - 300">Guides, API docs, and best practices. Coming soon.</p>;
+  </section>;
+  </Layout>);
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+=======
+
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/docs&quot; />
+			</Head>
+			<section className=&quot;container mx-auto px-4 py-24&quot;>
+				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>Documentation</h1>
+				<p className=&quot;text-gray-300&quot;>Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+}
+
+import React from 'react';
+
+<<<<<<< HEAD:pages_backup/docs.tsx
+
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+<<<<<<< HEAD:pages_backup/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/docs.tsx
+;
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+
+
+
+
+<<<<<<< HEAD:pages_backup/docs.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+;
+
+
+
+;
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+  return (
+    <Layout>
+      <Head>
+        <title>Documentation | Zion Tech Group</title>
+        <link rel='canonical' href='https://ziontechgroup.com/docs' />
+      </Head>
+      <section className='container mx-auto px-4 py-24'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
+          Documentation
+        </h1>
+        <p className='text-gray-300'>
+          Guides, API docs, and best practices. Coming soon.
+        </p>
+      </section>
+    </Layout>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+    <>
+      <Head>
+        <title>Documentation - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Comprehensive documentation for Zion Tech Group services. Get started with our APIs, AI services, and cloud solutions."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Documentation
+              </h1>
+              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+                Everything you need to get started with Zion Tech Group services
+                and APIs.
+              </p>
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search documentation..."
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Popular Documentation */}
+        <section className="py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Popular Documentation
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Most viewed and highly rated documentation
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {popularDocs.map((doc, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 hover: shadow-xl transition-shadow"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {doc.title}
+                      </h3>
+                      <p className="text-gray-600 mb-3">{doc.description}</p>
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        {doc.category}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {doc.views} views
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-yellow-400">★</span>
+                        {doc.rating}
+                      </div>
+                    </div>
+                    <Link
+                      href="#"
+                      className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
+                    >
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Documentation Categories */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Documentation Categories
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Browse documentation by category
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {docCategories.map((category, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <category.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{category.description}</p>
+                  <div className="space-y-2">
+                    {category.docs.map((doc, docIndex) => (
+                      <div
+                        key={docIndex}
+                        className="flex items-center justify-between p-2 hover: bg-white rounded-lg transition-colors"
+                      >
+                        <div className="flex-1">
+                          <h4 className="text-sm font-semibold text-gray-900">
+                            {doc.title}
+                          </h4>
+                          <p className="text-xs text-gray-600">
+                            {doc.description}
+                          </p>
+                        </div>
+                        <div className="flex items-center text-xs text-gray-500">
+                          <Clock className="w-3 h-3 mr-1" />
+                          {doc.time}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href="#"
+                    className="text-blue-600 hover: text-blue-700 font-semibold flex items-center mt-4"
+                  >
+                    View All
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Resources */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Additional Resources
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Tools and resources to help you succeed
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {resources.map((resource, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <resource.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{resource.description}</p>
+                  <ul className="space-y-2 text-left">
+                    {resource.items.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="flex items-center text-sm text-gray-700"
+                      >
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Need Help?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Can&apos;t find what you&apos;re looking for? Our support team is
+              here to help.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <Link href="/contact">
+                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Contact Support
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
+              </Link>
+              <Link href="/help">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Help Center
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
+<<<<<<< HEAD:pages_backup/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
