@@ -1,36 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Expense Tracker - Zion Tech Group',
+  description: 'Professional expense tracker services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function ExpenseTrackerPage() {}
-
-function FeatureItem({}
-
-function PricingCard({}
-
-function WorkflowStep({}
-
-function BenefitCard({}
-
-function CategoryCard({ icon, name }: { icon: string; name: string }) {}
-
-function IntegrationCard({ name, icon }: { name: string; icon: string }) {}
-
-function UseCaseCard({}
-
-function CTA() {}
-
+  return (
+    <div>
+      <h1>Expense Tracker</h1>
+      <p>Professional expense tracker services tailored to your business needs.</p>
+    </div>
+  );
+}

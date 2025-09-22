@@ -1,11 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-
-export default function AIServicesPage() {
-function TechCard({ name, icon }: { name: string; icon: string }) {
+  title: 'Ai Services - Zion Tech Group',
+  description: 'Professional ai services services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
+  return (
+    <div>
+      <h1>Ai Services</h1>
+      <p>Professional ai services services tailored to your business needs.</p>
+    </div>
+  );
+}

@@ -1,28 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Marketing Automation - Zion Tech Group',
+  description: 'Professional ai marketing automation services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-export default function AIMarketingAutomationPage() {
-
-function FeatureCard({ icon, title, description, benefits }: {
-
-function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
-
-function PricingSection() {
-
-function PricingCard({
-
-function CaseStudy({ company, industry, result, description, metrics }: {
-
-export default function AIMarketingAutomationPage() {
-
+  return (
+    <div>
+      <h1>Ai Marketing Automation</h1>
+      <p>Professional ai marketing automation services tailored to your business needs.</p>
+    </div>
+  );
+}

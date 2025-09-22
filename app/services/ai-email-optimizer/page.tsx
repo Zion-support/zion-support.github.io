@@ -1,20 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Email Optimizer - Zion Tech Group',
+  description: 'Professional ai email optimizer services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function AIEmailOptimizerPage() {
-
+  return (
+    <div>
+      <h1>Ai Email Optimizer</h1>
+      <p>Professional ai email optimizer services tailored to your business needs.</p>
+    </div>
+  );
+}

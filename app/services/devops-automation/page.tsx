@@ -1,24 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Devops Automation - Zion Tech Group',
+  description: 'Professional devops automation services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function ServicePage() {
-
-        
-
-          
-
-          
-
-function Plan({ name, price, duration, features }: {
-
-function PricingCard({
-
+  return (
+    <div>
+      <h1>Devops Automation</h1>
+      <p>Professional devops automation services tailored to your business needs.</p>
+    </div>
+  );
+}

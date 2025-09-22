@@ -1,22 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'email automation - Zion Tech Group',
+  description: 'Professional email automation services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-export default function EmailAutomationPage() {
-
-function Item({ title, details }: { title: string; details: string[] }) {}
-
-function Pricing() {}
-
-function Plan({ name, price, duration, features }: {
-
+  return (
+    <div>
+      <h1>email automation</h1>
+      <p>Professional email automation services tailored to your business needs.</p>
+    </div>
+  );
+}

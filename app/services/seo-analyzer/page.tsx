@@ -1,26 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Seo Analyzer - Zion Tech Group',
+  description: 'Professional seo analyzer services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function SEOAnalyzerPage() {}
-
-function FeatureItem({}
-
-function PricingCard({}
-
-function BenefitCard({}
-
+  return (
+    <div>
+      <h1>Seo Analyzer</h1>
+      <p>Professional seo analyzer services tailored to your business needs.</p>
+    </div>
+  );
+}

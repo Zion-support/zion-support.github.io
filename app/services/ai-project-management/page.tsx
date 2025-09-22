@@ -1,12 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'AI Project Management - Zion Tech Group',
+  description: 'Professional AI project management services by Zion Tech Group.',
+};
 
-function FeatureCard({ title, features }: { title: string; features: string[] }) {
-
-function Pricing() {
-
-function Plan({ name, price, features, popular = false }: { name: string; price: string; features: string[]; popular?: boolean }) {
-
+export default function ServicePage() {
+  return (
+    <div>
+      <h1>AI Project Management</h1>
+      <p>Professional AI project management services tailored to your business needs.</p>
+    </div>
+  );
+}

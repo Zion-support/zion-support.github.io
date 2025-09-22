@@ -1,18 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
+  title: 'Business Automation - Zion Tech Group',
+  description: 'Professional business automation services by Zion Tech Group.',
+};
 
-export default function BusinessAutomationPage() {
-
-function AutomationServiceCard({ title, description, features, pricing, icon }: { 
-
-function AutomationTech({ title, technologies }: { title: string; technologies: string[] }) {
-
-function AutomationProcessStep({ step, title, description }: { step: string; title: string; description: string }) {
-
-function Pricing() {
-
-function AutomationPlan({ name, price, duration, features, popular }: { 
-
+export default function ServicePage() {
+  return (
+    <div>
+      <h1>Business Automation</h1>
+      <p>Professional business automation services tailored to your business needs.</p>
+    </div>
+  );
+}

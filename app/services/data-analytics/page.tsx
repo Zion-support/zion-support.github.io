@@ -1,30 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Data Analytics - Zion Tech Group',
+  description: 'Professional data analytics services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-export default function DataAnalyticsPage() {
-
-        
-
-          
-
-          
-
-      
-
-function DataAnalyticsServiceCard({ title, description, features, price, icon }: { 
-
-function Plan({ name, price, duration, features }: { 
-
-function CTASection() {}
-
+  return (
+    <div>
+      <h1>Data Analytics</h1>
+      <p>Professional data analytics services tailored to your business needs.</p>
+    </div>
+  );
+}

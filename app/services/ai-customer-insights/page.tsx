@@ -1,24 +1,16 @@
 import React from 'react';
-
-import Link from 'next/link';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Customer Insights - Zion Tech Group',
+  description: 'Professional ai customer insights services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-function FeatureItem({
-
-function PricingCard({
-
-function InsightCategory({
-
-function BenefitCard({
-
-function DataSourceCard({ name, icon }: { name: string; icon: string }) {
-
-function UseCaseCard({
-
-function CTA() {
-
+  return (
+    <div>
+      <h1>Ai Customer Insights</h1>
+      <p>Professional ai customer insights services tailored to your business needs.</p>
+    </div>
+  );
+}

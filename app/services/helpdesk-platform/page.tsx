@@ -1,22 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'helpdesk platform - Zion Tech Group',
+  description: 'Professional helpdesk platform services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-export default function HelpdeskPlatformPage() {
-
-function Item({ title, details }: { title: string; details: string[] }) {}
-
-function Pricing() {}
-
-function Plan({ name, price, duration, features }: {
-
+  return (
+    <div>
+      <h1>helpdesk platform</h1>
+      <p>Professional helpdesk platform services tailored to your business needs.</p>
+    </div>
+  );
+}

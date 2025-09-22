@@ -1,24 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Video Generator - Zion Tech Group',
+  description: 'Professional ai video generator services by Zion Tech Group.',
+};
 
 export default function ServicePage() {
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function AIVideoGeneratorPage() {
-
-        
-
-          
-
-          
-
-function PricingSection() {}
-
-function PricingPlan({
-
+  return (
+    <div>
+      <h1>Ai Video Generator</h1>
+      <p>Professional ai video generator services tailored to your business needs.</p>
+    </div>
+  );
+}

@@ -1,22 +1,16 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Powered Tools - Zion Tech Group',
+  description: 'Professional ai powered tools services by Zion Tech Group.',
+};
 
-// eslint-disable-next-line react-refresh/only-export-components
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-function AITool({}
-
-function AITechnology({}
-
-function Integration({}
-
-function AIPricingPlan({}
-
-function SuccessStory({}
-
+export default function ServicePage() {
+  return (
+    <div>
+      <h1>Ai Powered Tools</h1>
+      <p>Professional ai powered tools services tailored to your business needs.</p>
+    </div>
+  );
+}

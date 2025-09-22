@@ -1,9 +1,16 @@
 import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
+};
 
 export default function Home() {
-
-function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
-
-function FeatureCard({ title, description }: { title: string; description: string }) {
-function FeatureCard({ title, description }: { title: string; description: string }) {
-
+  return (
+    <div>
+      <h1>Welcome to Zion Tech Group</h1>
+      <p>Your AI-powered technology solutions partner.</p>
+    </div>
+  );
+}
