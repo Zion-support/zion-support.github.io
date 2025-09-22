@@ -44,10 +44,10 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
         </div>
       </div>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">🧠 Core Technologies</h2>
-          
-          <div className="space-y-6">
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">🧠 Core Technologies</h2>
+        
+        <div className="space-y-6">
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">⚛️ Quantum Neural Networks (QNNs)</h3>
               <p className="text-gray-700 mb-4">
