@@ -124,7 +124,7 @@ export default function FAQ() {
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-4">Still Have Questions?</h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Can't find the answer you're looking for? Our team is here to help. Get in touch with us and we'll provide personalized assistance.
+                Can&apos;t find the answer you&apos;re looking for? Our team is here to help. Get in touch with us and we&apos;ll provide personalized assistance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">

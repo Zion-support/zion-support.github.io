@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Globe } from 'lucide-react'
 
 interface CountryPricing {
@@ -30,9 +30,9 @@ export default function CountrySelector({ selectedCountry, onCountrySelect }: Co
   const [topCountries] = useState(onsiteServicePricing.slice(0, 4));
 
   const handleCountryChange = (countryName: string) => {
-    const country = onsiteServicePricing.find(c => c.country === countryName);
-    if (country) {
-      onCountrySelect(country);
+    const selectedCountry = onsiteServicePricing.find(c => c.country === countryName);
+    if (selectedCountry) {
+      onCountrySelect(selectedCountry);
     }
   };
 

@@ -56,7 +56,7 @@ const PerformanceMonitor = () => {
       }).observe({ entryTypes: ['paint'] });
 
       // Time to First Byte
-      const navigation = performance.getEntriesByType('navigation')[0];
+      const [navigation] = performance.getEntriesByType('navigation');
       if (navigation) {
         setMetrics(prev => ({ 
           ...prev, 
@@ -88,11 +88,11 @@ const PerformanceMonitor = () => {
     return 'text-red-400';
   };
 
-  const getScoreText = (value, thresholds) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
-    return 'Poor';
-  };
+  // const getScoreText = (value, thresholds) => {
+  //   if (value <= thresholds.good) return 'Good';
+  //   if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+  //   return 'Poor';
+  // };
 
   return (
     <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
