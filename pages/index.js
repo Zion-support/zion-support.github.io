@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import SEO from '../components/seo/SEO'
+import Header from '../components/layout/Header'
+import Footer from '../components/layout/Footer'
+import Button from '../components/ui/Button'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -45,29 +47,14 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Head>
-        <title>Zion Tech Group — Advanced IT & AI Services</title>
-        <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
-        <meta name="keywords" content="IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO
+        title="Zion Tech Group — Advanced IT & AI Services"
+        description="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses."
+        keywords="IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation"
+        url="https://ziontechgroup.com"
+      />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-white">Zion Tech Group</h1>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
-              <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
-              <Link href="/contact" className="text-white hover:text-purple-300 transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
       <main className="pt-20">
@@ -83,12 +70,12 @@ export default function HomePage() {
               Transform your business with cutting-edge technology, artificial intelligence, and innovative IT solutions designed for the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
+              <Button href="/services" variant="primary">
                 Explore Services
-              </Link>
-              <Link href="/contact" className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all">
+              </Button>
+              <Button href="/contact" variant="secondary">
                 Get Started
-              </Link>
+              </Button>
             </div>
           </div>
 
@@ -111,9 +98,9 @@ export default function HomePage() {
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <Link href={service.href} className="text-purple-400 hover:text-purple-300 font-semibold">
+                  <Button href={service.href} variant="outline" size="sm">
                     Learn More →
-                  </Link>
+                  </Button>
                 </div>
               ))}
             </div>
@@ -126,27 +113,15 @@ export default function HomePage() {
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 Join hundreds of companies that trust Zion Tech Group for their technology needs. Let's build the future together.
               </p>
-              <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 inline-block">
+              <Button href="/contact" variant="primary">
                 Start Your Project Today
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-gray-400">
-            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-            <div className="mt-4 flex justify-center space-x-6">
-              <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

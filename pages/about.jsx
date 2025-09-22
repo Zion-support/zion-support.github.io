@@ -1,29 +1,19 @@
 import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import SEO from '../components/seo/SEO'
+import Header from '../components/layout/Header'
+import Footer from '../components/layout/Footer'
+import Button from '../components/ui/Button'
 
 function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Head>
-        <title>About Us — Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge IT and AI solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <SEO
+        title="About Us"
+        description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge IT and AI solutions."
+        url="https://ziontechgroup.com/about"
+      />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="text-purple-300 font-semibold">About</Link>
-              <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
-              <Link href="/contact" className="text-white hover:text-purple-300 transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <main className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -103,27 +93,15 @@ function About() {
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 Let's discuss how we can help transform your business with innovative technology solutions.
               </p>
-              <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 inline-block">
+              <Button href="/contact" variant="primary">
                 Get In Touch
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-gray-400">
-            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-            <div className="mt-4 flex justify-center space-x-6">
-              <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
