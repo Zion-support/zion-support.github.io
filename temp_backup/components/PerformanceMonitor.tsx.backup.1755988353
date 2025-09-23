@@ -1,0 +1,441 @@
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
+import { Activity, Zap, Clock, TrendingUp, CheckCircle } from 'lucide-react';
+
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  domLoad: number | null;
+  windowLoad: number | null;
+}
+
+interface PerformanceMonitorProps {
+  className?: string;
+  enabled?: boolean;
+  showMetrics?: boolean;
+}
+
+interface PerformanceAlert {
+  id: string;
+  type: 'warning' | 'error' | 'info' | 'success';
+  message: string;
+  metric: keyof PerformanceMetrics;
+  value: number;
+  threshold: number;
+  timestamp: Date;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  className = '', 
+  enabled = true, 
+  showMetrics = false 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    domLoad: null,
+    windowLoad: null
+  });
+  
+  const [deviceInfo, setDeviceInfo] = useState<DeviceInfo>({
+    type: 'desktop',
+    screenSize: '0x0',
+    userAgent: '',
+    connection: 'unknown'
+  });
+  
+  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [optimizationTips, setOptimizationTips] = useState<string[]>([]);
+
+  // Performance monitoring
+  useEffect(() => {
+    if (!enabled || typeof window === 'undefined') return;
+
+    // First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcpEntry) {
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+      }
+    });
+
+    // Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lcpEntry = entries[entries.length - 1];
+      if (lcpEntry) {
+        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
+      }
+    });
+
+    // First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fidEntry = entries[0] as PerformanceEventTiming;
+      if (fidEntry && 'processingStart' in fidEntry) {
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+      }
+    });
+
+    // Cumulative Layout Shift
+    const clsObserver = new PerformanceObserver((list) => {
+      let clsValue = 0;
+      for (const entry of list.getEntries()) {
+        const layoutShiftEntry = entry as LayoutShiftEntry;
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value;
+        }
+      }
+      setMetrics(prev => ({ ...prev, cls: clsValue }));
+    });
+
+    try {
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('Performance monitoring not supported:', error);
+    }
+
+    // Time to First Byte
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    }
+
+    // DOM and Window load times
+    const domLoadTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+    const windowLoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    
+    setMetrics(prev => ({ 
+      ...prev, 
+      domLoad: domLoadTime > 0 ? domLoadTime : null,
+      windowLoad: windowLoadTime > 0 ? windowLoadTime : null
+    }));
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('load', measureSpeedIndex);
+    };
+  }, [enabled]);
+
+  // Generate optimization tips based on metrics
+  useEffect(() => {
+    const tips: string[] = [];
+    
+    if (metrics.fcp && metrics.fcp > 1800) {
+      tips.push('First Contentful Paint is slow. Consider optimizing critical rendering path.');
+    }
+    
+    if (metrics.lcp && metrics.lcp > 2500) {
+      tips.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.');
+    }
+    
+    if (metrics.fid && metrics.fid > 100) {
+      tips.push('First Input Delay is high. Consider code splitting and reducing JavaScript execution time.');
+    }
+    
+    if (metrics.cls && metrics.cls > 0.1) {
+      tips.push('Cumulative Layout Shift is high. Ensure stable layouts and avoid content jumping.');
+    }
+    
+    if (metrics.ttfb && metrics.ttfb > 600) {
+      tips.push('Time to First Byte is slow. Optimize server response time and reduce blocking requests.');
+    }
+
+    setOptimizationTips(tips);
+  }, [metrics]);
+
+  // Performance optimization functions
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+    });
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css'
+    ];
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const enableResourceHints = useCallback(() => {
+    // DNS prefetch for external domains
+    const externalDomains = [
+      'fonts.googleapis.com',
+      'fonts.gstatic.com',
+      'cdn.jsdelivr.net'
+    ];
+    
+    externalDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = `//${domain}`;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Apply optimizations on mount
+  useEffect(() => {
+    if (enabled) {
+      optimizeImages();
+      preloadCriticalResources();
+      enableResourceHints();
+    }
+  }, [enabled, optimizeImages, preloadCriticalResources, enableResourceHints]);
+
+  // Memory usage monitoring
+  useEffect(() => {
+    if (!enabled || !('memory' in performance)) return;
+
+    const checkMemoryUsage = () => {
+      const memory = (performance as any).memory;
+      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
+        console.warn('High memory usage detected. Consider optimizing memory usage.');
+      }
+    };
+
+    const interval = setInterval(checkMemoryUsage, 10000);
+    return () => clearInterval(interval);
+  }, [enabled]);
+
+  // Network monitoring
+  useEffect(() => {
+    if (!enabled || !('connection' in navigator)) return;
+
+    const connection = (navigator as any).connection;
+    if (connection) {
+      const updateNetworkInfo = () => {
+        const effectiveType = connection.effectiveType;
+        const downlink = connection.downlink;
+        
+        if (effectiveType === 'slow-2g' || effectiveType === '2g') {
+          console.warn('Slow network detected. Consider enabling low-bandwidth mode.');
+        }
+        
+        if (downlink < 1) {
+          console.warn('Very slow connection detected. Optimizing for low bandwidth.');
+        }
+      };
+
+      connection.addEventListener('change', updateNetworkInfo);
+      updateNetworkInfo();
+
+      return () => connection.removeEventListener('change', updateNetworkInfo);
+    }
+  }, [enabled]);
+
+  // Calculate performance scores
+  const getPerformanceScore = (metric: keyof PerformanceMetrics): number => {
+    const value = metrics[metric];
+    if (value === null) return 0;
+
+  const clearOptimizationHistory = useCallback(() => {
+    setOptimizationHistory([]);
+  }, []);
+
+  // Calculate overall performance score
+  const overallScore = useMemo(() => {
+    const scores = Object.entries(metrics).map(([metric, value]) => {
+      if (value === 0) return 100;
+      const grade = getGrade(metric as keyof PerformanceMetrics, value);
+      switch (grade) {
+        case 'good': return 100;
+        case 'needs-improvement': return 60;
+        case 'poor': return 20;
+        default: return 0;
+      }
+    }).filter(score => score > 0);
+    
+    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
+  }, [metrics, getGrade]);
+
+  // Get score color
+  const getScoreColor = useCallback((score: number): string => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 70) return 'text-yellow-400';
+    return 'text-red-400';
+  }, []);
+
+  const getPerformanceIcon = (score: number) => {
+    if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
+    if (score >= 70) return <TrendingUp className="w-5 h-5 text-yellow-400" />;
+    return <CheckCircle className="w-5 h-5 text-red-400" />;
+  };
+
+  const getStatusIcon = (status: 'good' | 'needs-improvement' | 'poor') => {
+    switch (status) {
+      case 'good': return <CheckCircle className="w-4 h-4" />;
+      case 'needs-improvement': return <TrendingUp className="w-4 h-4" />;
+      case 'poor': return <CheckCircle className="w-4 h-4" />;
+      default: return <Clock className="w-4 h-4" />;
+    }
+  };
+
+  const formatMetric = (value: number | null, unit: string = 'ms') => {
+    if (value === null) return 'N/A';
+    if (unit === 'ms') return `${Math.round(value)}ms`;
+    return `${value.toFixed(3)}`;
+  };
+
+  const overallScore = getOverallScore();
+  const overallStatus = getPerformanceStatus(overallScore);
+
+  if (!enabled || !showMetrics) {
+    return (
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className={`fixed bottom-4 right-4 bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black ${className}`}
+        onClick={() => setIsVisible(true)}
+        aria-label="Open performance monitor"
+      >
+        <Activity className="w-6 h-6" />
+      </motion.button>
+    );
+  }
+
+  return (
+    <>
+      {/* Floating Performance Button */}
+      <motion.div
+        className="fixed bottom-8 left-8 z-40"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className={`p-4 rounded-full shadow-lg transition-all duration-200 ${
+            isVisible 
+              ? 'bg-red-500 hover:bg-red-600 text-white' 
+              : 'bg-cyan-500 hover:bg-cyan-600 text-white'
+          }`}
+          aria-label="Toggle performance monitor"
+        >
+          <Activity className="w-6 h-6" />
+        </button>
+      </motion.div>
+
+      {/* Performance Monitor Panel */}
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            className="fixed bottom-24 left-8 z-50 w-96 max-h-[80vh] overflow-hidden"
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="bg-black/90 backdrop-blur-xl rounded-2xl border border-cyan-500/30 shadow-2xl">
+              {/* Header */}
+              <div className="flex items-center justify-between p-4 border-b border-cyan-500/30">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-cyan-400" />
+                  <h3 className="text-white font-semibold">Performance Monitor</h3>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="p-1 text-cyan-400 hover:text-cyan-300 transition-colors"
+                    aria-label="Toggle expanded view"
+                  >
+                    <BarChart3 className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => setIsVisible(false)}
+                    className="p-1 text-gray-400 hover:text-white transition-colors"
+                    aria-label="Close performance monitor"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+      {/* Quick Actions */}
+      <div className="mt-4 flex gap-2">
+        <button
+          onClick={() => window.location.reload()}
+          className="flex-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors"
+          aria-label="Refresh page to measure performance"
+        >
+          <Zap className="w-4 h-4 inline mr-1" />
+          Refresh
+        </button>
+        <button
+          onClick={() => {
+            setMetrics({
+              fcp: null,
+              lcp: null,
+              fid: null,
+              cls: null,
+              ttfb: null,
+              domLoad: null,
+              windowLoad: null
+            });
+          }}
+          className="flex-1 px-3 py-2 bg-gray-600 hover:bg-gray-500 text-white text-sm rounded-lg transition-colors"
+          aria-label="Reset performance metrics"
+        >
+          <Clock className="w-4 h-4 inline mr-1" />
+          Reset
+        </button>
+      </div>
+
+      {/* Optimization Tips */}
+      {optimizationTips.length > 0 && (
+        <div className="mt-4 p-3 bg-gray-800/50 rounded-lg">
+          <div className="text-sm font-medium mb-2">Optimization Tips:</div>
+          <ul className="space-y-1 text-xs text-gray-300">
+            {optimizationTips.slice(0, 2).map((tip, index) => (
+              <li key={index}>• {tip}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </motion.div>
+  );
+};
+
+// Helper function to get score colors
+const getScoreColor = (score: string): string => {
+  switch (score) {
+    case 'Good':
+    case 'Excellent':
+      return 'text-green-400';
+    case 'Needs Improvement':
+      return 'text-yellow-400';
+    case 'Poor':
+      return 'text-red-400';
+    default:
+      return 'text-white/60';
+  }
+};
+
+export default PerformanceMonitor;
