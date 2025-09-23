@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
+import { Calculator, DollarSign, TrendingUp, ArrowRight, Clock } from 'lucide-react';
 
 // Metadata will be handled by SEO component
 
@@ -205,12 +206,11 @@ export default function AI2026ROICalculator() {
               <div className="grid grid-cols-1 gap-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-<<<<<<< HEAD:app_backup/tools/ai-2026-roi-calculator/page.tsx
-                      <span className="text-green-600 mr-2">💰</span>
-                      <DollarSign className="w-5 h-5 text-green-600 mr-2" />
-                      <span className="text-sm font-medium text-gray-700">Annual Savings</span>
-                    </div>
+                  <div className="flex items-center">
+                    <span className="text-green-600 mr-2">💰</span>
+                    <DollarSign className="w-5 h-5 text-green-600 mr-2" />
+                    <span className="text-sm font-medium text-gray-700">Annual Savings</span>
+                  </div>
                     <span className="text-lg font-bold text-green-600">
                       {formatCurrency(results.annualSavings)}
                     </span>
@@ -219,12 +219,11 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-<<<<<<< HEAD:app_backup/tools/ai-2026-roi-calculator/page.tsx
-                      <span className="text-red-600 mr-2">💸</span>
-                      <DollarSign className="w-5 h-5 text-red-600 mr-2" />
-                      <span className="text-sm font-medium text-gray-700">Total Costs</span>
-                    </div>
+                  <div className="flex items-center">
+                    <span className="text-red-600 mr-2">💸</span>
+                    <DollarSign className="w-5 h-5 text-red-600 mr-2" />
+                    <span className="text-sm font-medium text-gray-700">Total Costs</span>
+                  </div>
                     <span className="text-lg font-bold text-red-600">
                       {formatCurrency(results.totalCosts)}
                     </span>
@@ -233,12 +232,11 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-<<<<<<< HEAD:app_backup/tools/ai-2026-roi-calculator/page.tsx
-                      <span className="text-blue-600 mr-2">📈</span>
-                      <TrendingUp className="w-5 h-5 text-blue-600 mr-2" />
-                      <span className="text-sm font-medium text-gray-700">Net Benefit</span>
-                    </div>
+                  <div className="flex items-center">
+                    <span className="text-blue-600 mr-2">📈</span>
+                    <TrendingUp className="w-5 h-5 text-blue-600 mr-2" />
+                    <span className="text-sm font-medium text-gray-700">Net Benefit</span>
+                  </div>
                     <span className="text-lg font-bold text-blue-600">
                       {formatCurrency(results.netBenefit)}
                     </span>
@@ -247,12 +245,11 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-<<<<<<< HEAD:app_backup/tools/ai-2026-roi-calculator/page.tsx
-                      <span className="text-purple-600 mr-2">🎯</span>
-                      <ArrowRight className="w-5 h-5 text-purple-600 mr-2" />
-                      <span className="text-sm font-medium text-gray-700">ROI</span>
-                    </div>
+                  <div className="flex items-center">
+                    <span className="text-purple-600 mr-2">🎯</span>
+                    <ArrowRight className="w-5 h-5 text-purple-600 mr-2" />
+                    <span className="text-sm font-medium text-gray-700">ROI</span>
+                  </div>
                     <span className="text-lg font-bold text-purple-600">
                       {formatPercentage(results.roi)}
                     </span>
@@ -261,12 +258,11 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-<<<<<<< HEAD:app_backup/tools/ai-2026-roi-calculator/page.tsx
-                      <span className="text-orange-600 mr-2">⏰</span>
-                      <Clock className="w-5 h-5 text-orange-600 mr-2" />
-                      <span className="text-sm font-medium text-gray-700">Payback Period</span>
-                    </div>
+                  <div className="flex items-center">
+                    <span className="text-orange-600 mr-2">⏰</span>
+                    <Clock className="w-5 h-5 text-orange-600 mr-2" />
+                    <span className="text-sm font-medium text-gray-700">Payback Period</span>
+                  </div>
                     <span className="text-lg font-bold text-orange-600">
                       {results.paybackPeriod.toFixed(1)} months
                     </span>
