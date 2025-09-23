@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import type { ReactNode } from 'react'
 
-type SEOHeadProps = {
+interface SEOHeadProps {
 	title?: string
 	description?: string
 	keywords?: string[]
@@ -11,19 +11,7 @@ type SEOHeadProps = {
 	twitterCard?: string
 	noIndex?: boolean
 	structuredData?: object
-=======
-import Head from 'next/head';
-
-interface SEOHeadProps {
-	title?: string;
-	description?: string;
-	keywords?: string[];
-	canonical?: string;
-	ogImage?: string;
-	ogType?: string;
-	twitterCard?: string;
-	noIndex?: boolean;
-	structuredData?: object;
+	children?: ReactNode
 }
 
 export default function SEOHead({
@@ -36,30 +24,41 @@ export default function SEOHead({
 	twitterCard = 'summary_large_image',
 	noIndex = false,
 	structuredData,
+	children,
 }: SEOHeadProps) {
 	const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
 	const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 
-=======
-type Props = {
-	title?: string
-	description?: string
-	children?: ReactNode
-}
-
-export default function SEO({ title = 'Zion Tech Group', description = 'AI & Technology Solutions', children }: Props) {
 	return (
 		<Head>
-			<title>{title}</title>
+			<title>{fullTitle}</title>
 			<meta name="description" content={description} />
+			<meta name="keywords" content={keywords.join(', ')} />
+			{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+			{noIndex && <meta name="robots" content="noindex,nofollow" />}
+			
+			{/* Open Graph */}
+			<meta property="og:title" content={fullTitle} />
+			<meta property="og:description" content={description} />
+			<meta property="og:type" content={ogType} />
+			<meta property="og:image" content={ogImage} />
+			{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+			
+			{/* Twitter */}
+			<meta name="twitter:card" content={twitterCard} />
+			<meta name="twitter:title" content={fullTitle} />
+			<meta name="twitter:description" content={description} />
+			<meta name="twitter:image" content={ogImage} />
+			
+			{/* Structured Data */}
+			{structuredData && (
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+				/>
+			)}
+			
 			{children}
 		</Head>
 	)
 }
-
-export default SEO
-=======
-	);
-}
->>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
