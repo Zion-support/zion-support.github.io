@@ -5,12 +5,21 @@
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx"
+    ".next/types/**/*.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     ".next",
+    "dist",
+    "out",
+    "coverage",
+    "build",
+    "public/build",
+    "components/**",
+    "lib/**",
+    "types/**",
     "**/*.test.*",
     "__tests__/**"
   ]

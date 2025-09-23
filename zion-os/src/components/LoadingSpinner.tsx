@@ -29,4 +29,38 @@ export function LoadingSpinner({ size = "md", color = "primary", text }: Loading
   );
 }
 
+export function LoadingDots({ text }: { text?: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center space-y-4">
+      <div className="flex space-x-2">
+        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce animation-delay-100"></div>
+        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce animation-delay-200"></div>
+      </div>
+      {text && (
+        <p className="text-sm text-gray-400">{text}</p>
+      )}
+    </div>
+  );
+}
+
+export function LoadingBar({ progress = 0, text }: { progress?: number; text?: string }) {
+  return (
+    <div className="w-full max-w-md space-y-4">
+      {text && (
+        <p className="text-sm text-gray-400 text-center">{text}</p>
+      )}
+      <div className="w-full bg-gray-700 rounded-full h-2">
+        <div 
+          className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+        ></div>
+      </div>
+      <div className="text-center text-sm text-gray-400">
+        {Math.round(progress)}%
+      </div>
+    </div>
+  );
+}
+
 export default LoadingSpinner;

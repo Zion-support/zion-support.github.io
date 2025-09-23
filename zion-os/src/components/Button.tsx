@@ -20,22 +20,23 @@ interface ButtonProps {
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
-  children,
-  variant = 'primary',
-  size = 'md',
-  href,
-  onClick,
-  disabled = false,
-  loading = false,
-  icon,
-  iconPosition = 'left',
-  className = '',
-  type = 'button',
-  fullWidth = false,
-  rounded = 'md'
-}, ref) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+  const {
+    children,
+    variant = 'primary',
+    size = 'md',
+    href,
+    onClick,
+    disabled = false,
+    loading = false,
+    icon,
+    iconPosition = 'right',
+    className = '',
+    type = 'button',
+    fullWidth = false,
+    rounded = 'lg',
+  } = props;
+  const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
   
   const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
@@ -100,5 +101,55 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 
 Button.displayName = 'Button';
 
-export { Button };
 export default Button;
+
+// Specialized button variants
+export function PrimaryButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant="primary" />;
+}
+
+export function SecondaryButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant="secondary" />;
+}
+
+export function OutlineButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant="outline" />;
+}
+
+export function GhostButton(props: Omit<ButtonProps, 'variant'>) {
+  return <Button {...props} variant="ghost" />;
+}
+
+// Icon button variant
+export function IconButton({
+  icon,
+  children,
+  ...props
+}: ButtonProps & { icon: React.ReactNode }) {
+  return (
+    <Button {...props} icon={icon} iconPosition="left" size="sm">
+      {children}
+    </Button>
+  );
+}
+
+// Floating action button
+export function FloatingActionButton({
+  icon,
+  onClick,
+  className = '',
+  ...props
+}: ButtonProps & { icon: React.ReactNode }) {
+  return (
+    <Button
+      {...props}
+      icon={icon}
+      onClick={onClick}
+      className={`fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 ${className}`}
+      size="lg"
+      rounded="full"
+    />
+  );
+}
+
+ 
