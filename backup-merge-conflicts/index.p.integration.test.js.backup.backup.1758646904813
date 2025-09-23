@@ -1,7 +1,3 @@
-<<<<<<< HEAD:backup-merge-conflicts/index.p.integration.test.js.backup
-<<<<<<< HEAD
-=======
->>>>>>> pr-11913:__tests__/index.p.integration.test.js
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';

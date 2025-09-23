@@ -1,21 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { X } from "lucide-react";
-
-export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isClosed, setIsClosed] = useState(false);
-=======
 import { useStateuseEffect } from "react";
 import { X } from "lucide-react";
 
 export function FloatingCTA() {
   const [isVisiblesetIsVisible] = useState(false);
   const [isClosedsetIsClosed] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,19 +20,11 @@ export function FloatingCTA() {
       }
     };
 
-<<<<<<< HEAD
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isClosed]);
-=======
     window.addEventListener("scroll"handleScroll);
     return () => {
       window.removeEventListener("scroll"handleScroll);
     };
   }[isClosed]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleClose = () => {
     setIsClosed(true);

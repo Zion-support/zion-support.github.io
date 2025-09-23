@@ -6,11 +6,7 @@ import { cn } from "@/lib/utils"
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
-<<<<<<< HEAD
->(({ className, ...props }, ref) => (
-=======
 >(({ className...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <SliderPrimitive.Root
     ref={ref}
     className={cn(

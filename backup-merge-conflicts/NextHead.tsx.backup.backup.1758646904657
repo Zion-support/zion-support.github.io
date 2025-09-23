@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Head from 'next/head';
 interface NextHeadProps {;
@@ -31,7 +29,6 @@ const NextHead: Reac t.FC<NextHeadProps> = ({';';
 =======
 =======
 "}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/NextHead.tsx
 ;

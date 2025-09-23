@@ -4,12 +4,7 @@ import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils
 
 const variantStyles = {
   info: { background: '#1e3a8a', color: '#fff' },
-<<<<<<< HEAD
-  error: { background: '#7f1d1d', color: '#fff' },
-};
-=======
   error: { background: '#7f1d1d', color: '#fff' }};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Deduplication settings
 const DEDUPE_DELAY = 3000; // 3 seconds
@@ -50,12 +45,7 @@ const toastAdapter = (props: ToastProps | string) => {
   if (typeof props === 'string') {
     return globalToastManager.showToast({
       message: props,
-<<<<<<< HEAD
-      type: ToastType.INFO,
-    });
-=======
       type: ToastType.INFO});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   const { 
@@ -95,12 +85,7 @@ const toastAdapter = (props: ToastProps | string) => {
     duration,
     persistent,
     action,
-<<<<<<< HEAD
-    onRetry,
-  });
-=======
     onRetry});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 // Convenience methods that use the global toast manager
@@ -153,11 +138,6 @@ export const useToast = () => ({
   networkError: showToast.networkError,
   authError: showToast.authError,
   validationError: showToast.validationError,
-<<<<<<< HEAD
-  criticalError: showToast.criticalError,
-});
-=======
   criticalError: showToast.criticalError});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export const toast = toastAdapter;

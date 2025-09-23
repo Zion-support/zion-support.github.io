@@ -3,9 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 
-<<<<<<< HEAD
-
-=======
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
 
@@ -264,4 +261,3 @@ async function main() {}
     process.exit(1)};
 };
 main();
->>>>>>> main

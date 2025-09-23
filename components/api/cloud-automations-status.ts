@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -10,22 +8,11 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const dir = path.resolve(process.cwd(), 'data/cloud-automations');
-  const data: Record<string, any> = {};
-  try {
-    if (fs.existsSync(dir)) {
-      for (const f of fs.readdirSync(dir)) {
-        if (f.endsWith('.json')) {
-          const fp = path.join(dir, f);
-          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'));
-=======
 
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
@@ -75,7 +62,6 @@ function handler() {
           );
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           );
 
 
@@ -105,19 +91,12 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
       }
     }
   } catch (e) {
-<<<<<<< HEAD
-    // ignore
-  }
-  res.status(200).json({ ok: true, data });
-}
-=======
 // ignore;
   }
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

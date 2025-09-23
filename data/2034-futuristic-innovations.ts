@@ -25,10 +25,6 @@ export interface Service2034 {
   contact: string;
   website: string;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const futuristic2034Services: Service2034[] = [
   {
     id: 'ai-quantum-hybrid-brain',

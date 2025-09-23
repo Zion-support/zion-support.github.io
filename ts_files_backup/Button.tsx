@@ -11,19 +11,11 @@ interface ButtonProps {
 }
 
 export default function Button({ 
-<<<<<<< HEAD
-  children, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
-  onClick, 
-=======
   children
   variant = 'primary'
   size = 'md'
   className = ', '
   onClick
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   type = 'button',
   disabled = false 
 }: ButtonProps) {

@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-=======
 import { Route, Routes  } from 'react-router-dom.ts';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";
@@ -15,23 +9,13 @@ import Analytics from "@/pages/Analytics";
 import ProjectMilestones from "@/pages/ProjectMilestones";
 import ProjectDetails from "@/pages/ProjectDetails";
 import ProjectRoom from "@/pages/ProjectRoom";
-<<<<<<< HEAD
-import MessagingInbox from "@/pages/MessagingInbox";
-=======
 // MessagingInbox import removed - page not found
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Payments from "@/pages/Payments";
 import Interviews from "@/pages/Interviews";
 import Notifications from "@/pages/Notifications";
 import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
 import HiringTracker from "@/pages/HiringTracker";
 import PortfolioBuilder from "@/pages/PortfolioBuilder";
-<<<<<<< HEAD
-import Referrals from "@/pages/Referrals";
-import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
-import ContractBuilder from "@/pages/ContractBuilder";
-=======
 // Referrals import removed - page not found
 import DeveloperPortal from "@/pages/DeveloperPortal";
 // WalletPage import removed - page not found
@@ -39,7 +23,6 @@ import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
 import Projects from "@/pages/Projects";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const DashboardRoutes = () => {
   return (
@@ -113,11 +96,7 @@ const DashboardRoutes = () => {
         path="/messages"
         element={
           <ProtectedRoute>
-<<<<<<< HEAD
-            <MessagingInbox />
-=======
             <div>Messages Page</div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </ProtectedRoute>
         } 
       />
@@ -125,11 +104,7 @@ const DashboardRoutes = () => {
         path="/inbox" 
         element={
           <ProtectedRoute>
-<<<<<<< HEAD
-            <MessagingInbox />
-=======
             <div>Inbox Page</div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </ProtectedRoute>
         } 
       />
@@ -165,23 +140,12 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-<<<<<<< HEAD
-      <Route 
-        path="/hiring-tracker" 
-=======
       <Route
         path="/hiring-tracker"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         element={
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-<<<<<<< HEAD
-        } 
-      />
-      <Route 
-        path="/portfolio-builder" 
-=======
         }
       />
       <Route
@@ -194,7 +158,6 @@ const DashboardRoutes = () => {
       />
       <Route
         path="/portfolio-builder"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         element={
           <ProtectedRoute>
             <PortfolioBuilder />
@@ -205,11 +168,7 @@ const DashboardRoutes = () => {
         path="/referrals" 
         element={
           <ProtectedRoute>
-<<<<<<< HEAD
-            <Referrals />
-=======
             <div>Referrals Page</div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </ProtectedRoute>
         } 
       />
@@ -225,9 +184,6 @@ const DashboardRoutes = () => {
         path="/wallet"
         element={
           <ProtectedRoute>
-<<<<<<< HEAD
-            <WalletPage />
-=======
             <div>Wallet Page</div>
           </ProtectedRoute>
         }
@@ -245,7 +201,6 @@ const DashboardRoutes = () => {
         element={
           <ProtectedRoute>
             <OrderDetailPage />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </ProtectedRoute>
         }
       />

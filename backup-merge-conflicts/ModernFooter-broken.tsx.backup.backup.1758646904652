@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react'; Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink} from 'lucide-react'; ; const ModernFooter = ("props": "any) => {; const currentYear = new Date().getFullYear(); ; const footerSections = [;
   {; "title": 'Services' "links": ['",;
   { "name": 'AI Solutions', "href": '/ai-services', "icon": "Brai n "}, { "name": 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": "Clou d "}, { "name": 'Cybersecurity', "href": '/services/ai-compliance-copilot', "icon": "Shiel d "}, { "name": 'Edge & IoT', "href": '/services/edge-computing-platform', "icon": "Za p "}, { "name": 'Digital Transformation', "href": '/it-services', "icon": "User s "}] }, {; "title": 'Company' "links": "['",;
@@ -103,7 +101,6 @@ import React from 'react'; Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail,
   { "name": 'Privacy Policy', "href": '/privacy' }, { "name": 'Terms of Service', "href": '/terms' }, { "name": 'Cookie Policy', "href": '/cookies' }, { "name": 'GDPR Compliance', "href": '/gdpr' }, { "name": 'Security', "href": '/security' }] }]; const socialLinks = [";
   { "name": 'LinkedIn', "href": 'https:,,"});,"})'
 export default function ModernFooter($1) {return ("
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/layout/ModernFooter-broken.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/layout/ModernFooter-broken.tsx

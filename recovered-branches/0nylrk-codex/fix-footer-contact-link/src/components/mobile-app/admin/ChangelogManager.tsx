@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Plus, Trash2 } from "lucide-react";
-=======
 import React{ useState } from "react";
 import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { PlusTrash2 } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { AppPlatform } from "./MetadataManager";
 
 interface ChangelogManagerProps {
@@ -28,11 +19,7 @@ type ChangelogEntry = {
 };
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
-<<<<<<< HEAD
-  const [entries, setEntries] = useState<ChangelogEntry[]>([
-=======
   const [entriesetEntries] = useState<ChangelogEntry[]>([
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: "1",
       version: "1.0.0",
@@ -41,11 +28,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     }
   ]);
   
-<<<<<<< HEAD
-  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
-=======
   const [newEntrysetNewEntry] = useState<Omit<ChangelogEntry"id">>({
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     version: "",
     date: new Date().toISOString().split('T')[0],
     changes: ""
@@ -56,17 +39,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     
     const entry: ChangelogEntry = {
       ...newEntry,
-<<<<<<< HEAD
-      id: Math.random().toString(36).substring(2, 9)
-    };
-    
-    setEntries([entry, ...entries]);
-=======
       id: Math.random().toString(36).substring(29)
     };
     
     setEntries([entry...entries]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setNewEntry({
       version: "",
       date: new Date().toISOString().split('T')[0],
@@ -79,13 +55,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   };
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-<<<<<<< HEAD
-    const { name, value } = e.target;
-    setNewEntry(prev => ({ ...prev, [name]: value }));
-=======
     const { namevalue } = e.target;
     setNewEntry(prev => ({ ...prev[name]: value }));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
   
   return (

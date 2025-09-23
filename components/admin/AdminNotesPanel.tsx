@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react';
-
-export type AdminNotesPanelProps = {
-  targetType: string; // e.g., 'user' | 'listing'
-  targetId: string;   // unique identifier for the target
-};
-
-type Note = {
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
-
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-=======
 "use client";
 
 
@@ -88,7 +69,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -96,29 +76,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
 
-<<<<<<< HEAD
-  async function fetchNotes() {
-    try {
-      setLoading(true);
-      const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
-        headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
-      });
-      if (!res.ok) {
-        setNotes([]);
-        return;
-      }
-      const data = await res.json();
-      setNotes(data.notes || []);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    if (isAdmin) fetchNotes();
-  }, [isAdmin, targetType, targetId]);
-
-=======
 
   async function fetchNotes() {;
     try {;
@@ -212,26 +169,11 @@ if ( {) {
   useEffect(() => {
     if (isAdmin) fetchNotes()
   }, [isAdmin, targetType, targetId]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   async function addNote() {
     if (!text.trim()) return;
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
-<<<<<<< HEAD
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Admin': isAdmin ? 'true' : 'false', 'X-Admin-User': adminId },
-        body: JSON.stringify({ targetType, targetId, text }),
-      });
-      if (!res.ok) {
-        alert('Failed to add note');
-        return;
-      }
-      setText('');
-      await fetchNotes();
-    } finally {
-      setAdding(false);
-=======
         method: 'POST'
         headers: {
           'Content-Type': 'application/json'
@@ -269,22 +211,11 @@ if ( {) {
       setAdding(false);    }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   }
 
   if (!isAdmin) {
     return (
-<<<<<<< HEAD
-      <div className="rounded border p-3">
-        <div className="flex items-center gap-2 text-sm">
-          <input id="isAdminToggle" type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-          <label htmlFor="isAdminToggle">Admin</label>
-        </div>
-        <div className="text-xs opacity-60 mt-2">Admin-only notes hidden.</div>
-      </div>
-    );
-=======
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
           <input
@@ -516,7 +447,6 @@ if ( {) {
       </div>
 
     )
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   return (
@@ -549,16 +479,6 @@ if ( {) {
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
                 <div>{n.text}</div>
-<<<<<<< HEAD
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
-  );
-}
-=======
 
           onChange={e => setText(e.target.value)}
         />
@@ -616,4 +536,3 @@ if ( {) {
       </div>
     </div>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

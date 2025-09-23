@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface RealMarketService {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface RealMarketService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const realMarketServices: RealMarketService[] = [
   // AI-Powered Business Intelligence
   {
@@ -100,10 +92,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 950
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Customer Success Automation Platform
   {
     id: 'customer-success-automation',
@@ -156,10 +144,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 680
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // API Security & Monitoring Suite
   {
     id: 'api-security-monitoring-suite',
@@ -212,10 +196,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6,
     reviews: 520
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // E-commerce Automation Platform
   {
     id: 'ecommerce-automation-platform',
@@ -268,10 +248,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1100
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // HR Automation Suite
   {
     id: 'hr-automation-suite',
@@ -324,10 +300,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 890
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Financial Analytics Platform
   {
     id: 'financial-analytics-platform',
@@ -380,10 +352,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 780
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Project Management AI Platform
   {
     id: 'project-management-ai-platform',
@@ -436,10 +404,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 1050
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Marketing Automation Suite
   {
     id: 'marketing-automation-suite',
@@ -492,10 +456,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1250
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Legal Document Automation
   {
     id: 'legal-document-automation',

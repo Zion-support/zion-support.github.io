@@ -5,12 +5,6 @@ export default function TestPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-        <title>Test Page | Zion Tech Group</title>
-      </Head>
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
-=======
         <title>Test - Zion Tech Group</title>
         <meta name="description" content="test page" />
       </Head>
@@ -22,7 +16,6 @@ export default function TestPage() {
             ← Back to Home
           </a>
         </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </>
   );

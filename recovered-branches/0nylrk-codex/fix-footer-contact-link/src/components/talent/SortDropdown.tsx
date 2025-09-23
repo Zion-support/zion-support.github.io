@@ -2,29 +2,16 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
-<<<<<<< HEAD
-import { SortDesc, ChevronDown } from "lucide-react";
-=======
 import { SortDescChevronDown } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-=======
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
-<<<<<<< HEAD
-  );
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 export function SortDropdown({ sortOptionsetSortOption }: SortDropdownProps) {

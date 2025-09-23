@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export { default } from './open-app';
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -23,4 +20,3 @@ export default function OpenApp.pagePage() {
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

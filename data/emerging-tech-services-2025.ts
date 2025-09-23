@@ -14,10 +14,6 @@ export interface EmergingTechService2025 {
     address: string;
   };
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform",

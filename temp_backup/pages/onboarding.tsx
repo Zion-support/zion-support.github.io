@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import OnboardingWizard from '../components/onboarding/OnboardingWizard'
-
-export default function OnboardingPage() {
-  return (
-    <div>
-      <OnboardingWizard />
-    </div>
-  )
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -29,5 +19,4 @@ export default function OnboardingPage() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

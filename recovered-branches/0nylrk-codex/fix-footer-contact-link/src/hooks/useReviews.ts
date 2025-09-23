@@ -14,10 +14,7 @@ export function useReviews(projectId?: string) {
   
   // Fetch reviews for a project
   const fetchProjectReviews = async (projectId: string) => {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (!projectId) return;
     
     setIsLoading(true);
@@ -55,12 +52,7 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to load reviews",
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsLoading(false);
     }
@@ -92,13 +84,8 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to load reviews",
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsLoading(false);
     }
@@ -120,12 +107,7 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "You must be logged in to submit a review",
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return false;
     }
     
@@ -136,12 +118,7 @@ export function useReviews(projectId?: string) {
         .from("reviews")
         .insert({
           ...review,
-<<<<<<< HEAD
-          reviewer_id: user.id,
-        })
-=======
           reviewer_id: user.id})
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         .select()
         .single();
         
@@ -149,12 +126,7 @@ export function useReviews(projectId?: string) {
       
       toast({
         title: "Success",
-<<<<<<< HEAD
-        description: "Your review has been submitted and is pending approval",
-      });
-=======
         description: "Your review has been submitted and is pending approval"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       setUserReview(data);
       return true;
@@ -166,22 +138,12 @@ export function useReviews(projectId?: string) {
         toast({
           title: "Error",
           description: "You have already submitted a review for this project",
-<<<<<<< HEAD
-          variant: "destructive",
-        });
-=======
           variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } else {
         toast({
           title: "Error",
           description: "Failed to submit review",
-<<<<<<< HEAD
-          variant: "destructive",
-        });
-=======
           variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
       return false;
     } finally {
@@ -207,12 +169,7 @@ export function useReviews(projectId?: string) {
       
       toast({
         title: "Success",
-<<<<<<< HEAD
-        description: "Your review has been updated",
-      });
-=======
         description: "Your review has been updated"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       if (userReview) {
         setUserReview({ ...userReview, ...updates });
@@ -224,12 +181,7 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to update review",
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return false;
     } finally {
       setIsSubmitting(false);
@@ -246,12 +198,7 @@ export function useReviews(projectId?: string) {
         .insert({
           review_id: reviewId,
           reporter_id: user.id,
-<<<<<<< HEAD
-          reason,
-        });
-=======
           reason});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
       if (error) {
         // Check for unique constraint violation
@@ -259,25 +206,15 @@ export function useReviews(projectId?: string) {
           toast({
             title: "Error",
             description: "You have already reported this review",
-<<<<<<< HEAD
-            variant: "destructive",
-          });
-=======
             variant: "destructive"});
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         } else {
           throw error;
         }
       } else {
         toast({
           title: "Report Submitted",
-<<<<<<< HEAD
-          description: "Thank you. Our team will review your report",
-        });
-=======
           description: "Thank you. Our team will review your report"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         return true;
       }
     } catch (err: any) {
@@ -285,12 +222,7 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to report review",
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
     
     return false;
@@ -310,10 +242,5 @@ export function useReviews(projectId?: string) {
     fetchUserReviews,
     submitReview,
     updateReview,
-<<<<<<< HEAD
-    reportReview,
-  };
-=======
     reportReview};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

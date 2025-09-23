@@ -2,11 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
-=======
 CheckXStarTrendingUpDollarSignZap
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function PricingComparisonPage() {
   const serviceComparisons = [
@@ -22,41 +18,25 @@ export default function PricingComparisonPage() {
           name: 'Jasper AI',
           pricing: '$39/month',
           rating: '4.8/5',
-<<<<<<< HEAD
-          pros: ['Excellent templates', 'Good AI quality', 'Wide integrations'],
-          cons: ['Higher pricing', 'Limited customization', 'No unlimited plan'],
-=======
           pros: ['Excellent 'templates', 'Good AI 'quality', 'Wide integrations'],
           cons: ['Higher 'pricing', 'Limited 'customization', 'No unlimited plan'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Save $20/month with Zion'
         },
         {
           name: 'Copy.ai',
           pricing: '$36/month',
           rating: '4.6/5',
-<<<<<<< HEAD
-          pros: ['Unlimited words', 'Good value', 'Simple interface'],
-          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
-=======
           pros: ['Unlimited 'words', 'Good 'value', 'Simple interface'],
           cons: ['Basic 'features', 'Limited 'templates', 'No advanced SEO'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Save $17/month with Zion'
         },
         {
           name: 'Writesonic',
           pricing: '$19/month',
           rating: '4.4/5',
-<<<<<<< HEAD
-          pros: ['Affordable', 'Good for beginners', 'Basic features'],
-          cons: ['Limited features', 'Basic AI models', 'No team features'],
-          savings: 'Same price, better features'
-=======
           pros: [', 'Affordable', 'Good for 'beginners', 'Basic features'],
           cons: ['Limited 'features', 'Basic AI 'models', 'No team features'],
           savings: 'Same pricebetter features'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
       ],
       features: [
@@ -82,39 +62,24 @@ export default function PricingComparisonPage() {
           name: 'Datadog',
           pricing: '$15/host/month',
           rating: '4.7/5',
-<<<<<<< HEAD
-          pros: ['Comprehensive features', 'Great integrations', 'Advanced analytics'],
-          cons: ['Very expensive', 'Complex pricing', 'Steep learning curve'],
-=======
           pros: ['Comprehensive 'features', 'Great 'integrations', 'Advanced analytics'],
           cons: ['Very 'expensive', 'Complex 'pricing', 'Steep learning curve'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Save $121/month for 10 servers'
         },
         {
           name: 'New Relic',
           pricing: '$99/user/month',
           rating: '4.5/5',
-<<<<<<< HEAD
-          pros: ['Good APM', 'User-based pricing', 'Reliable'],
-          cons: ['Expensive for teams', 'Limited server monitoring', 'Complex setup'],
-=======
           pros: ['Good 'APM', 'User-based 'pricing', 'Reliable'],
           cons: ['Expensive for 'teams', 'Limited server 'monitoring', 'Complex setup'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Save $396/month for 5 users'
         },
         {
           name: 'Prometheus + Grafana',
           pricing: 'Free',
           rating: '4.3/5',
-<<<<<<< HEAD
-          pros: ['Completely free', 'Highly customizable', 'Open source'],
-          cons: ['Requires DevOps expertise', 'No managed service', 'Maintenance overhead'],
-=======
           pros: ['Completely 'free', 'Highly 'customizable', 'Open source'],
           cons: ['Requires DevOps 'expertise', 'No managed 'service', 'Maintenance overhead'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Professional service for $29/month'
         }
       ],
@@ -141,39 +106,24 @@ export default function PricingComparisonPage() {
           name: 'GitHub Actions',
           pricing: 'Free + $0.008/min',
           rating: '4.6/5',
-<<<<<<< HEAD
-          pros: ['GitHub native', 'Good free tier', 'Wide adoption'],
-          cons: ['Expensive for teams', 'Limited features', 'Complex pricing'],
-=======
           pros: ['GitHub 'native', 'Good free 'tier', 'Wide adoption'],
           cons: ['Expensive for 'teams', 'Limited 'features', 'Complex pricing'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Save $200+/month for active teams'
         },
         {
           name: 'GitLab CI/CD',
           pricing: '$19/user/month',
           rating: '4.4/5',
-<<<<<<< HEAD
-          pros: ['Integrated platform', 'Good CI/CD', 'Unlimited repos'],
-          cons: ['User-based pricing', 'Limited integrations', 'Higher cost for teams'],
-=======
           pros: ['Integrated 'platform', 'Good CI/'CD', 'Unlimited repos'],
           cons: ['User-based 'pricing', 'Limited 'integrations', 'Higher cost for teams'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Save $56/month for 5 users'
         },
         {
           name: 'Jenkins',
           pricing: 'Free',
           rating: '4.2/5',
-<<<<<<< HEAD
-          pros: ['Completely free', 'Highly customizable', 'Open source'],
-          cons: ['Requires maintenance', 'No managed service', 'Complex setup'],
-=======
           pros: ['Completely 'free', 'Highly 'customizable', 'Open source'],
           cons: ['Requires 'maintenance', 'No managed 'service', 'Complex setup'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           savings: 'Professional service for $39/month'
         }
       ],
@@ -217,15 +167,9 @@ export default function PricingComparisonPage() {
     <>
       <Head>
         <title>Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition</title>
-<<<<<<< HEAD
-        <meta name="description" content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value." />
-        <meta property="og:title" content="Pricing Comparison - Zion Tech Group" />
-        <meta property="og:description" content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features." />
-=======
         <meta name="description" content="See how 'Zion', 's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value." />
         <meta property="og:title" content="Pricing Comparison - Zion Tech Group" />
         <meta property="og:description" content="Compare 'Zion', 's pricing to Jasper AIDatadogGitHub Actions and more. Save 30-60% with better features." />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -243,11 +187,7 @@ export default function PricingComparisonPage() {
               How We Compare to the Competition
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-<<<<<<< HEAD
-              See how Zion's micro SaaS services stack up against market leaders. 
-=======
               See how 'Zion', 's micro SaaS services stack up against market leaders. 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               Get professional-grade features at startup-friendly prices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -283,11 +223,7 @@ export default function PricingComparisonPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-              {marketInsights.map((insight, index) => (
-=======
               {marketInsights.map((insightindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300"
@@ -296,10 +232,7 @@ export default function PricingComparisonPage() {
                     {insight.icon}
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     {insight.insight}
                   </p>
                 </Card>
@@ -316,19 +249,11 @@ export default function PricingComparisonPage() {
                 Detailed Service Comparison
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                See exactly how each service compares in features, pricing, and value.
-              </p>
-            </div>
-
-            {serviceComparisons.map((service, serviceIndex) => (
-=======
                 See exactly how each service compares in featurespricingand value.
               </p>
             </div>
 
             {serviceComparisons.map((serviceIndex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div key={serviceIndex} className="mb-24">
                 <div className="text-center mb-16">
                   <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>
@@ -352,11 +277,7 @@ export default function PricingComparisonPage() {
                         </div>
                         <h4 className="text-xl font-bold text-white mb-4">Best Value</h4>
                         <div className="space-y-3 mb-6">
-<<<<<<< HEAD
-                          {service.features.map((feature, featureIndex) => (
-=======
                           {service.features.map((featureIndex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             <div key={featureIndex} className="flex items-center text-gray-300">
                               <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                               <span className="text-sm">{feature}</span>
@@ -372,11 +293,7 @@ export default function PricingComparisonPage() {
                   </div>
 
                   {/* Competitors */}
-<<<<<<< HEAD
-                  {service.competitors.map((competitor, compIndex) => (
-=======
                   {service.competitors.map((competitorcompIndex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div key={compIndex} className="lg:col-span-1">
                       <Card className="h-full border border-gray-700">
                         <div className="text-center p-6">
@@ -384,11 +301,7 @@ export default function PricingComparisonPage() {
                             {competitor.name}
                           </div>
                           <div className="flex items-center justify-center mb-4">
-<<<<<<< HEAD
-                            {[...Array(5)].map((_, i) => (
-=======
                             {[...Array(5)].map((_i) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -407,11 +320,7 @@ export default function PricingComparisonPage() {
                             <div>
                               <p className="text-green-400 font-medium mb-1">Pros:</p>
                               <ul className="text-gray-300 space-y-1">
-<<<<<<< HEAD
-                                {competitor.pros.map((pro, proIndex) => (
-=======
                                 {competitor.pros.map((proIndex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                   <li key={proIndex} className="flex items-center">
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                     {pro}
@@ -422,11 +331,7 @@ export default function PricingComparisonPage() {
                             <div>
                               <p className="text-red-400 font-medium mb-1">Cons:</p>
                               <ul className="text-gray-300 space-y-1">
-<<<<<<< HEAD
-                                {competitor.cons.map((con, conIndex) => (
-=======
                                 {competitor.cons.map((conIndex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                   <li key={conIndex} className="flex items-center">
                                     <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
                                     {con}

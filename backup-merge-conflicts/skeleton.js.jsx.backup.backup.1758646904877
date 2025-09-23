@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/skeleton.js.jsx.backup
-=======
 const { cn } from "@/lib/utils"; function Skeleton({ className,.props }) {} return null} return()"; <div>Broken JSX</div> /> );} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };""
 =======
 const { cn } from "@/lib/utils"; function Skeleton({ className,.props }) {} return null} return()"; <div>Broken JSX</div> /> );} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };""
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/ui/skeleton.js.jsx
 =======
 const { cn } from "@/lib/utils"; function Skeleton({ className,.props }) {} return null} return()"; <div>Broken JSX</div> /> );} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };""
 >>>>>>> pr-11935

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-
-export interface Branding {
-=======
 
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 export interface Branding {logoUrl?: string;
@@ -13,17 +8,10 @@ export interface Branding {logoUrl?: string;
 export interface DeployModules {marketplace: boolean;
 
 export interface Branding {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
-<<<<<<< HEAD
-}
-
-export interface DeployModules {
-  marketplace: boolean;
-=======
 
   logoUrl?: string,;
   primaryColor?: string,;
@@ -40,7 +28,6 @@ export interface DeployModules {;
   marketplace: boolean;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -51,12 +38,8 @@ export interface DeployModules {;
   roadmapWhitepaper: boolean;
   apiDocsWiki: boolean;
   zionBrain: boolean;
-<<<<<<< HEAD
-  // Bonus
-=======
   // Bonus;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
   referralAmbassadors?: boolean;
@@ -64,10 +47,6 @@ export interface DeployModules {;
   trailer?: boolean;
   bookStore?: boolean;
 }
-<<<<<<< HEAD
-
-export interface DeployInput {
-=======
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
@@ -125,38 +104,16 @@ export interface GeneratedAsset {;
 }
 ;
 export interface DeployInput {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   governanceMode: GovernanceMode;
   branding: Branding;
   modules: DeployModules;
   requestedRoutes?: string[];
 }
-<<<<<<< HEAD
-
-export interface DeployLogEntry {
-  timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string, unknown> | string;
-}
-
-export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
-}
-
-export interface DeployResult {
-  success: boolean;
-=======
 ;
 export interface DeployLogEntry {;
   timestamp: string;
@@ -207,21 +164,12 @@ export interface DeployResult {;
   success: boolean;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-<<<<<<< HEAD
-}
-
-export interface AccessControlConfig {
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
-}
-=======
 
 }
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
@@ -238,7 +186,6 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 

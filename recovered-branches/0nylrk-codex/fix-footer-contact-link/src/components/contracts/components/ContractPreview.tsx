@@ -18,28 +18,17 @@ interface ContractPreviewProps {
 }
 
 export function ContractPreview({ 
-<<<<<<< HEAD
-  contractContent, 
-  generatedContract, 
-  status = 'ready', 
-  onDeploy, 
-=======
   contractContent
   generatedContract
   status = 'ready'
   onDeploy
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onSign,
   onClose,
   deployStatus,
   deploymentInfo
 }: ContractPreviewProps) {
   
-<<<<<<< HEAD
-  // Use either contractContent or generatedContract, whichever is provided
-=======
   // Use either contractContent or generatedContractwhichever is provided
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const displayContent = contractContent || generatedContract || "";
   
   return (

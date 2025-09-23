@@ -1,12 +1,9 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/IntegrationConnectionModal.jsx.backup
-=======
 <<<<<<< HEAD
 " " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
 <<<<<<< HEAD:backup-merge-conflicts/IntegrationConnectionModal.jsx.backup
 =======
 ' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
->>>>>>> main
 =======
 ' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/integrations/IntegrationConnectionModal.jsx

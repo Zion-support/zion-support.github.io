@@ -1,13 +1,4 @@
-<<<<<<< HEAD:app-disabled/quantum-ai-2026-business-transformation-ultimate-guide/page.tsx
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../components/SEO';
-import RelatedContentWidget from '../components/RelatedContentWidget';
-import SocialShareButtons from '../components/SocialShareButtons';
-=======
 "use client";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/quantum-ai-2026-business-transformation-ultimate-guide/page.tsx
 
 export default function Page() {
 	return (

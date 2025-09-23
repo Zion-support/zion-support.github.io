@@ -6,15 +6,6 @@ class AppEnhancementSuite {}
   constructor(projectRoot) {}
     this.projectRoot = projectRoot;
     this.enhancements = [];
-<<<<<<< HEAD
-  }
-
-  log(message) {
-    .toISOString()}] ${message}`);
-  }
-
-  createPerformanceOptimizations() {
-=======
   };
   log(message) {}
     console.log(message);
@@ -199,7 +190,6 @@ monitor.monitorAppHealth().catch(console.error);
       '',
     ];
     const monitoringScript = monitoringLines.join('\n');
->>>>>>> main
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'app-monitor.cjs'),

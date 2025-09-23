@@ -1,53 +1,6 @@
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
-const { execSync } = require("child_process")
-class AutoFixer {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.logDir = path.join(this.projectRoot, "logs")
-    this.fixesApplied = []
-    this.startTime = new Date()
-    // Ensure logs directory exists
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { "recursive": true })}
-  }
-  log(level, message) {
-    const timestamp = new Date().toISOString()
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    // Write to log file
-    const logFile = path.join(this.logDir, "auto-fixer.log")
-    fs.appendFileSync(logFile, logMessage + "\n")}
-  getAllSourceFiles() {
-    const sourceFiles = []
-    const scanDirectory = (dir) => {
-      if (!fs.existsSync(dir)) return
-      const files = fs.readdirSync(dir)
-      files.forEach(file => {
-        const filePath = path.join(dir, file)
-        const stat = fs.statSync(filePath)
-        if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
-          scanDirectory(filePath)} else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-          sourceFiles.push(filePath)}
-      })}
-    scanDirectory(path.join(this.projectRoot, "src"))
-    scanDirectory(path.join(this.projectRoot, "pages"))
-    scanDirectory(path.join(this.projectRoot, "scripts"))
-    return sourceFiles}
-  async fixMergeConflicts() {
-    this.log("info", "Fixing merge conflicts...")
-    let fixedFiles = 0
-    const files = this.getAllSourceFiles()
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file, "utf8")
-        const originalContent = content
-        // Remove merge conflict markers
-        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?        content = content.replace(/[\s\S]*?                if (content !== originalContent) {
-          fs.writeFileSync(file, content)
-          this.log("info", `Fixed merge conflicts in ${file}`)
-=======
 const { execSync } = require("child_process");
 class AutoFixer {}
   constructor() {}
@@ -228,4 +181,3 @@ if (require.main === module) {}
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
 module.exports = AutoFixer;
->>>>>>> main

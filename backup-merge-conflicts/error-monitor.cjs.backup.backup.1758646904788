@@ -1,90 +1,6 @@
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
-const { execSync } = require("child_process")
-class ErrorMonitor {
-  constructor() {
-    this.logDir = path.join(process.cwd(), "logs")
-    this.reportsDir = path.join(process.cwd(), "error-reports")
-    this.projectRoot = process.cwd()
-    // Ensure directories exist
-    [this.logDir, this.reportsDir].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { "recursive": true })}
-    })}
-  log(level, message) {
-    const timestamp = new Date().toISOString()
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    // Write to log file
-    const logFile = path.join(this.logDir, "error-monitor.log")
-    fs.appendFileSync(logFile, logMessage + "\n")}
-  async checkTypeScriptErrors() {
-    try {
-      this.log("info", "Checking TypeScript errors...")
-      const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";
-        stdio: "pipe"})
-      return { "status": "clean", "errors": [] }
-    } catch (error) {
-      const errors = error.stdout || error.stderr || error.message
-      this.log("warn", `TypeScript errors "found": ${errors.length} characters`)
-      return { "status": "errors", "errors": errors.toString() }
-    }
-  }
-  async checkLintingErrors() {
-    try {
-      this.log("info", "Checking linting errors...")
-      const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";
-        stdio: "pipe"})
-      return { "status": "clean", "errors": [] }
-    } catch (error) {
-      const errors = error.stdout || error.stderr || error.message
-      this.log("warn", `Linting errors "found": ${errors.length} characters`)
-      return { "status": "errors", "errors": errors.toString() }
-    }
-  }
-  async checkBuildErrors() {
-    try {
-      this.log("info", "Checking build errors...")
-      const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";
-        stdio: "pipe"})
-      return { "status": "clean", "errors": [] }
-    } catch (error) {
-      const errors = error.stdout || error.stderr || error.message
-      this.log("warn", `Build errors "found": ${errors.length} characters`)
-      return { "status": "errors", "errors": errors.toString() }
-    }
-  }
-  async checkTestErrors() {
-    try {
-      this.log("info", "Checking test errors...")
-      const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";
-        stdio: "pipe"})
-      return { "status": "clean", "errors": [] }
-    } catch (error) {
-      const errors = error.stdout || error.stderr || error.message
-      this.log("warn", `Test errors "found": ${errors.length} characters`)
-      return { "status": "errors", "errors": errors.toString() }
-    }
-  }
-  async scanLogFiles() {
-    this.log("info", "Scanning log files for errors...")
-    const logFiles = []
-    // Find all log files
-    const findLogFiles = (dir) => {
-      if (!fs.existsSync(dir)) return
-      const files = fs.readdirSync(dir)
-      files.forEach(file => {
-        const filePath = path.join(dir, file)
-        const stat = fs.statSync(filePath)
-        if (stat.isDirectory()) {
-          findLogFiles(filePath)} else if (file.endsWith(".log") || file.endsWith(".txt")) {
-          logFiles.push(filePath)}
-      })}
-    findLogFiles(this.logDir)
-    findLogFiles(path.join(this.projectRoot, "logs"))
-    const errorPatterns = [/error/i,/exception/i,/failed/i;
-=======
 const { execSync } = require("child_process");
 class ErrorMonitor {}
   constructor() {}
@@ -363,4 +279,3 @@ if (require.main === module) {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
 module.exports = ErrorMonitor;
->>>>>>> main

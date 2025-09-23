@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 interface EmptyStateProps {;
   title?: "string;
@@ -32,7 +30,6 @@ const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
 =======
 =======
 "}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/empty-state.tsx
 ;

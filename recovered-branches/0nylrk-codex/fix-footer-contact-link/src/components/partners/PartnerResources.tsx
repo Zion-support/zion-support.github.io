@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
-=======
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { DownloadFileImageFileTextFileTypeFileVideoLink } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { toast } from "@/hooks/use-toast";
 
 interface ResourceItem {
@@ -23,11 +17,7 @@ export function PartnerResources() {
     {
       id: 'logo-pack',
       title: 'Zion AI Logo Pack',
-<<<<<<< HEAD
-      description: 'Official logos in various formats (PNG, SVG, JPG)',
-=======
       description: 'Official logos in various formats (PNGSVGJPG)',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
@@ -75,20 +65,11 @@ export function PartnerResources() {
   ];
 
   const handleDownload = (resource: ResourceItem) => {
-<<<<<<< HEAD
-    // In a real app, this would download the actual resource
-    toast({
-      title: "Download started",
-      description: `Downloading ${resource.title}`,
-      variant: "default",
-    });
-=======
     // In a real appthis would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
       variant: "default"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (
@@ -168,11 +149,7 @@ export function PartnerResources() {
         <CardContent className="flex flex-col items-center text-center py-6">
           <p className="text-zion-slate-light mb-4">
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.
-<<<<<<< HEAD
-            Feel free to reach out if you have questions about promotions, resources, or payment.
-=======
             Feel free to reach out if you have questions about promotionsresourcesor payment.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </p>
           <Button className="bg-zion-purple hover:bg-zion-purple-dark">
             Contact Partner Support

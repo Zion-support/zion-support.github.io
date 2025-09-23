@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/data/microSaasServicesData.ts
 export interface MicroSaasService {;
   "id": "string;
   "title": string;

@@ -9,12 +9,7 @@ import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
-  TabsTrigger,
-} from "@/components/ui/tabs";
-=======
   TabsTrigger} from "@/components/ui/tabs";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export function AdminDashboard() {
   return (

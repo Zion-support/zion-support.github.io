@@ -35,10 +35,7 @@ export function usePortfolio() {
       console.error('Error fetching portfolio projects:', e);
       setError(e.message);
       return [];
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsLoading(false);
     }

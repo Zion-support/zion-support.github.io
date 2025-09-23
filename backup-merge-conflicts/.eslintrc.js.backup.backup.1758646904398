@@ -1,7 +1,4 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
-export default {
-=======
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -62,13 +59,8 @@ export default {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:.eslintrc.js
 >>>>>>> pr-11935
 module.exports = {
-<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
-    'no-useless-escape': 'warn'
-=======
->>>>>>> pr-11935
     '@typescript-eslint/no-explicit-any': 'warn',
     'no-console': 'off',
     'react/no-unescaped-entities': 'warn',
@@ -90,29 +82,17 @@ module.exports = {
   env: {
     browser: true,
 =======
-<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
 =======
-=======
->>>>>>> pr-11935
     node: true,
     es6: true,
     dom: true
   },
-=======
-<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
 =======
   extends: ['next/core-web-vitals'],
   rules: {
     'react/no-unescaped-entities': 'off',
     'no-unused-vars': 'warn',
     '@next/next/no-img-element': 'warn'
->>>>>>> main
   }
 };
 =======

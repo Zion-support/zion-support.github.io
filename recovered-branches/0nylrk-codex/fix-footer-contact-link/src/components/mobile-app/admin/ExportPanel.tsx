@@ -1,16 +1,9 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { AppPlatform, AppMetadataValues } from "./MetadataManager";
-=======
 import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { AppPlatformAppMetadataValues } from "./MetadataManager";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { toast } from "sonner";
 
 interface ExportPanelProps {
@@ -18,30 +11,18 @@ interface ExportPanelProps {
   metadata: AppMetadataValues;
 }
 
-<<<<<<< HEAD
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
-=======
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const handleExport = (format: 'json' | 'csv') => {
     try {
       let content: string;
       let fileName: string;
       
       if (format === 'json') {
-<<<<<<< HEAD
-        content = JSON.stringify(metadata, null, 2);
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`;
-      } else {
-        // Convert object to CSV format
-        const headers = ['appTitle', 'shortDescription', 'longDescription', 'version', 'platform'];
-=======
         content = JSON.stringify(metadatanull2);
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`;
       } else {
         // Convert object to CSV format
         const headers = ['appTitle'shortDescription'longDescription'version'platform'];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         const values = [
           metadata.appTitle,
           metadata.shortDescription,
@@ -50,11 +31,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => 
           metadata.platform
         ];
         
-<<<<<<< HEAD
-        content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(',');
-=======
         content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g'""')}"`).join(',');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
         // Add keywords as additional rows
         content += '\n\nKeywords:\n' + metadata.keywords.join(',');
@@ -63,11 +40,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => 
       }
       
       // Create download link
-<<<<<<< HEAD
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' });
-=======
       const blob = new Blob([content]{ type: format === 'json' ? 'application/json' : 'text/csv' });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
@@ -79,11 +52,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => 
       
       toast.success(`Exported ${format.toUpperCase()} file successfully`);
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Export failed:", error);
-=======
       console.error("Export failed:"error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       toast.error(`Failed to export ${format.toUpperCase()} file`);
     }
   };

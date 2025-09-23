@@ -1,18 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-import Layout from '../components/layout/Layout';
-
-export default function GitHubComplianceBotPage() {
-  return (
-    <Layout>
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 export default function GitHubComplianceBotPage() {
   return (
     <UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Head>
         <title>GitHub Compliance Bot | Zion Tech Group</title>
         <meta name="description" content="Automated GitHub compliance checks for SOC 2, ISO 27001, secrets scanning, and repo hygiene with reports and alerts." />
@@ -33,11 +25,7 @@ export default function GitHubComplianceBotPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
     </UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }
 

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-const fs = require('fs');
-
-console.log('🔧 Simple merge resolver - fixing syntax errors...');
-
-<<<<<<< HEAD
-  async log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    }
-=======
 // Fix the specific syntax errors we identified
 const files = [
   'components/Footer.tsx',
@@ -119,5 +107,4 @@ const util = require('util')
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main
 >>>>>>> main

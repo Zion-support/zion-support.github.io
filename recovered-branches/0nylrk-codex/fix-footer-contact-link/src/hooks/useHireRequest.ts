@@ -43,12 +43,7 @@ export function useHireRequest() {
       // Show success message
       toast({
         title: "Request Submitted",
-<<<<<<< HEAD
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`,
-      });
-=======
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       return { success: true, requestId: response?.request_id };
     } catch (error) {
@@ -63,12 +58,7 @@ export function useHireRequest() {
       toast({
         title: "Error",
         description: errorMessage,
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       return { success: false, error: errorMessage };
     } finally {

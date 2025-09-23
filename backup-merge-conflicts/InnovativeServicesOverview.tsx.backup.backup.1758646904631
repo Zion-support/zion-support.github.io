@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
 <<<<<<< HEAD:backup-merge-conflicts/InnovativeServicesOverview.tsx.backup
@@ -18,7 +16,6 @@ const "InnovativeServicesOverview": "React.FC<InnovativeServicesOverviewProps> =
   showViewAllButton?: boolean}
 const "InnovativeServicesOverview": React.FC<InnovativeServicesOverviewProps> = ({
 maxServices:  6,;
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/services/InnovativeServicesOverview.tsx
   category,;

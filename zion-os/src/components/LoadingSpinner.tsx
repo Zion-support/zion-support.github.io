@@ -21,15 +21,6 @@ export default function LoadingSpinner({ size = 'md', text }: LoadingSpinnerProp
     </div>
   );
 }
-<<<<<<< HEAD
-export default function LoadingSpinner() {
-	return (
-		<div role="status" aria-live="polite" aria-busy="true">
-			Loading...
-		</div>
-	);
-}
-=======
 "use client";
 
 interface LoadingSpinnerProps {
@@ -71,4 +62,3 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

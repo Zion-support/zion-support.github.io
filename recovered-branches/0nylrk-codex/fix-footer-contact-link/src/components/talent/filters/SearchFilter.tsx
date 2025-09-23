@@ -3,11 +3,7 @@ import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 
-<<<<<<< HEAD
-export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
-=======
 export function SearchFilter({ searchTermsetSearchTerm }: SearchFilterProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="mb-6">
       <div className="relative">

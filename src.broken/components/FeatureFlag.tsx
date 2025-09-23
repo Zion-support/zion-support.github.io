@@ -6,11 +6,7 @@ interface FeatureFlagProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-export function FeatureFlag({ name, children }: FeatureFlagProps) {
-=======
 export function FeatureFlag({ namechildren }: FeatureFlagProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { isEnabled } = useFeatureFlags();
   if (!isEnabled(name)) return null;
   return <>{children}</>;

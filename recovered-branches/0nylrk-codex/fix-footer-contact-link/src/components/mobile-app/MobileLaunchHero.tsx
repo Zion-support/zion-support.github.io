@@ -1,17 +1,10 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { ArrowRight, Smartphone } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { AppStoreButtons } from "./AppStoreButtons";
-import { Card, CardContent } from "@/components/ui/card";
-=======
 import { ArrowRightSmartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 import { CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
@@ -29,11 +22,7 @@ export const MobileLaunchHero: React.FC = () => {
             </h1>
             
             <p className="text-lg md:text-xl opacity-90 mb-8">
-<<<<<<< HEAD
-              Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
-=======
               Find top AI talent or global IT jobs on the go. Track projectsmessage candidatesand get AI-powered matches instantly with our mobile app.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </p>
             
             <div className="mb-8">
@@ -68,11 +57,7 @@ export const MobileLaunchHero: React.FC = () => {
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
-<<<<<<< HEAD
-                    {/* In production, replace with actual app screenshot */}
-=======
                     {/* In productionreplace with actual app screenshot */}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </div>
                 </CardContent>
               </Card>

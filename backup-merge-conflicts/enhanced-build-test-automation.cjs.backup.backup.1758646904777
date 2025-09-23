@@ -4,31 +4,6 @@ const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "enhanced-build-test.log")
-<<<<<<< HEAD
-    this.results = {
-      "timestamp": new Date().toISOString();
-      steps: [];
-      summary: { total: 0, "passed": 0, "failed": 0, "warnings": 0 }
-    }
-    this.ensureDirectories()}
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-  log(message, level = "info") {
-    const timestamp = new Date().toISOString()
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    fs.appendFileSync(this.logFile, logMessage + "\n")}
-  async runCommand(command, description) {
-    this.log(`🚀 "Starting": ${description}`)
-    const step = {"name": description,command,"startTime": Date.now();
-      status: "running"}
-    try {
-      const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8";
-        timeout: 300000 // 5 minutes timeout})
-      step.endTime = Date.now()
-      step.duration = step.endTime - step.startTime
-=======
       "timestamp"
       summary: { total: 0, "passed": 0, "failed": 0, "warnings"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -74,4 +49,3 @@ const path = require("path")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
       return { "success": false, "error"}
->>>>>>> main

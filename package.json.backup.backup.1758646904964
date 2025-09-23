@@ -303,24 +303,6 @@
     "multi-computer:verify": "npm run distributed-ai:verify",
     "multi-computer:report": "npm run distributed-ai:report",
     "multi-computer:status": "npm run ai-coordinator:status",
-<<<<<<< HEAD
-    "build:optimize": "node scripts/replace-console-statements.cjs && npm run lint -- --fix && npm run build",
-    "improve:all": "node scripts/automated-app-improvement.cjs",
-    "dev:fix": "NODE_OPTIONS='--no-deprecation --max-old-space-size=4096' next dev",
-    "auto-commit": "node scripts/auto-commit-improvements.cjs",
-    "auto-deploy": "node scripts/auto-deploy-to-netlify.cjs",
-    "fix-watchpack": "node scripts/fix-watchpack-issue.cjs",
-    "auto:fix": "node scripts/comprehensive-app-automation.cjs",
-    "auto:improve": "node scripts/continuous-improvement.cjs",
-    "auto:full": "node scripts/comprehensive-app-automation.cjs --full",
-    "auto:monitor": "node scripts/comprehensive-app-automation.cjs --monitor",
-    "improve:continuous": "npm run auto:improve",
-    "dev:stable": "NODE_OPTIONS='--no-deprecation --max-old-space-size=4096' next dev --turbo",
-    "dev:legacy": "NODE_OPTIONS='--no-deprecation --max-old-space-size=4096' next dev --no-turbo"
-  },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
-=======
     "improve:automated": "node scripts/automated-app-improver.cjs",
     "improve:ai-syntax": "node scripts/ai-syntax-fixer.cjs",
     "improve:orchestrator": "node scripts/app-improvement-orchestrator.cjs",
@@ -381,6 +363,5 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "typescript": "^5.0.0"
->>>>>>> origin/auto/autonomy-17186719616
   }
 }

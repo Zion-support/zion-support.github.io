@@ -113,10 +113,5 @@ export function useResumeActions() {
     error,
     createResume,
     updateBasicInfo,
-<<<<<<< HEAD
-    setActiveResume,
-  };
-=======
     setActiveResume};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

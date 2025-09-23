@@ -100,18 +100,6 @@ class $1 {}
 ;
     this.log = (message, level = "INFO") => {}
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-      const logMessage = `[${timestamp}] [${level}] ${message}`;
-      
-
-      try {
-  
-      try {
-  fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {
-  console.error("Failed to write to log "file": ", error.message)}
-    }
-  }
-=======
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
 
@@ -937,4 +925,3 @@ if (require.main === module) {}
 ;
 module.exports = PM2SyncMonitor;
 module.exports = PM2SyncMonitor;
->>>>>>> main

@@ -21,28 +21,6 @@ class SimpleAutomationOrchestrator {}
     const dirs = ["automation/logs", "scripts/automation/reports", "reports"];
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
-<<<<<<< HEAD
-      if () {
-        fs.mkdirSync(dirPath, { "recursive": true })}
-    })}
-
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString() {
-    ) {
-        fs.mkdirSync(dirPath, { "recursive": true })}
-    })}
-
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] [${level}] ${message};`;
-    
-    try {
-      fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {
-      console.error("Failed to write to log "file": ", error.message)}
-  }
-
-  async runStep(stepName, stepFunction) {
-=======
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
@@ -398,4 +376,3 @@ if ( {})
   const orchestrator = new SimpleAutomationOrchestrator}(;);
   orchestrator.run().catch(console.error)};
 module.exports = SimpleAutomationOrchestrator;
->>>>>>> main

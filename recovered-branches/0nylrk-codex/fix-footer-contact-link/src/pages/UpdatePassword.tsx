@@ -1,30 +1,4 @@
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { LockKeyhole } from "lucide-react";
-
-import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { toast } from "@/hooks/use-toast";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { cleanupAuthState } from "@/utils/authUtils";
-
-// Form validation schema
-=======
 
 
 
@@ -73,7 +47,6 @@ export default function UpdatePassword() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -86,19 +59,6 @@ const updatePasswordSchema = z
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
-<<<<<<< HEAD
-      .max(64, "Password must be less than 64 characters"),
-    confirmPassword: z.string(),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"],
-  });
-
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
-
-export default function UpdatePassword() {
-=======
       .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
@@ -119,39 +79,12 @@ export default function UpdatePassword() {
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 export default function UpdatePassword() {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-<<<<<<< HEAD
-
-  // Initialize react-hook-form
-  const form = useForm<UpdatePasswordFormValues>({
-    resolver: zodResolver(updatePasswordSchema),
-    defaultValues: {
-      password: "",
-      confirmPassword: "",
-    },
-  });
-
-  useEffect(() => {
-    // Extract access token from URL hash
-    const hashParams = new URLSearchParams(location.hash.substring(1));
-    const token = hashParams.get("access_token");
-    
-    if (token) {
-      setAccessToken(token);
-    } else {
-      setError("No access token found. Please request a new password reset link.");
-    }
-
-    // Clean up auth state to prevent issues
-    cleanupAuthState();
-  }, [location]);
-=======
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false),
   const [accessToken, setAccessToken] = useState<string | null>(null),
@@ -187,64 +120,10 @@ export default function UpdatePassword() {
   }, [location]);
   }, [location]),
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
-<<<<<<< HEAD
-      setError("No access token found. Please request a new password reset link.");
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      // Set the session with the access token
-      await supabase.auth.setSession({
-        access_token: accessToken,
-        refresh_token: '',
-      });
-
-      // Update the password
-      const { error } = await supabase.auth.updateUser({
-        password: data.password,
-      });
-
-      if (error) {
-        toast({
-          title: "Password update failed",
-          description: error.message,
-          variant: "destructive",
-        });
-        setError(error.message);
-        return;
-      }
-
-      // Show success message and clean up auth state
-      setSuccess(true);
-      toast({
-        title: "Password updated successfully",
-        description: "You can now log in with your new password.",
-      });
-
-      // Clean auth state and redirect after a delay
-      cleanupAuthState();
-      setTimeout(() => {
-        navigate("/login");
-      }, 3000);
-    } catch (error: any) {
-      console.error("Password update error:", error);
-      toast({
-        title: "Password update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive",
-      });
-      setError(error.message || "An unexpected error occurred");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-=======
       setError("No access token found. Please request a new password reset link.")
       return
 
@@ -326,7 +205,6 @@ export default function UpdatePassword() {
       setIsLoading(false)
     }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <>
@@ -342,19 +220,10 @@ export default function UpdatePassword() {
                 Enter your new password below.
               </p>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
-<<<<<<< HEAD
-                  <Button 
-                    className="mt-3 text-xs"
-                    variant="outline"
-=======
 
                   <Button
                     className="mt-3 text-xs"
@@ -504,7 +373,6 @@ export default function UpdatePassword() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     onClick={() => navigate('/forgot-password')}
                   >
                     Request new reset link
@@ -512,8 +380,6 @@ export default function UpdatePassword() {;
                 </div>
               )}
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -521,7 +387,6 @@ export default function UpdatePassword() {;
                     className="mt-3 text-xs"
                     variant="outline"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
@@ -551,14 +416,6 @@ export default function UpdatePassword() {;
               ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-<<<<<<< HEAD
-                    <FormField
-                      control={form.control}
-                      name="password"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">New Password</FormLabel>
-=======
 
 
               {success ? (;
@@ -607,16 +464,11 @@ export default function UpdatePassword() {;
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           <FormControl>
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-<<<<<<< HEAD
-                              placeholder="••••••••"
-=======
                               placeholder=""
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                               disabled={isLoading}
                               {...field}
                             />
@@ -625,37 +477,6 @@ export default function UpdatePassword() {;
                         </FormItem>
                       )}
                     />
-<<<<<<< HEAD
-
-                    <FormField
-                      control={form.control}
-                      name="confirmPassword"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="password"
-                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              placeholder="••••••••"
-                              disabled={isLoading}
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading || !accessToken}
-                    >
-                      {isLoading ? "Updating..." : "Update Password"}
-                    </Button>
-
-=======
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -663,7 +484,6 @@ export default function UpdatePassword() {;
                     >
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div className="text-center">
                       <Button
                         variant="link"
@@ -680,11 +500,7 @@ export default function UpdatePassword() {;
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="hidden lg:block relative w-0 flex-1">
-=======
         <div className="hidden lg: block relative w-0 flex-1">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
             <div className="flex flex-col justify-center items-center h-full px-8">
               <div className="max-w-md text-center">
@@ -699,10 +515,6 @@ export default function UpdatePassword() {;
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 
 
@@ -787,4 +599,3 @@ export default function UpdatePassword() {;
 ;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

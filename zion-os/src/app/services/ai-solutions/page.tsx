@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-export default function AiSolutionsPage() {
-	return (
-		<div className="min-h-screen py-20 px-4">
-			<div className="max-w-5xl mx-auto">
-				<h1 className="text-3xl font-bold mb-4">AI Solutions</h1>
-				<p className="text-zinc-500">Explore our AI solution offerings.</p>
-			</div>
-		</div>
-	);
-}
-
-
-=======
 "use client";
 
 import { useState } from "react";
@@ -29,7 +15,6 @@ interface AIService {
   features: string[];
   integration: string[];
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
 
 
 
@@ -39,8 +24,6 @@ interface AIService {
 
 
 
-<<<<<<< HEAD
-=======
             {/* CTA */}
             <div className="space-y-3 pt-4 border-t border-white/10">
               <a
@@ -93,4 +76,3 @@ interface AIService {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

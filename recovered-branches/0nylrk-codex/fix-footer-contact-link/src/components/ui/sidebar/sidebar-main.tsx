@@ -1,11 +1,7 @@
 
 import * as React from "react"
 import type { CSSProperties } from "react"
-<<<<<<< HEAD
-import { Sheet, SheetContent } from "@/components/ui/sheet"
-=======
 import { SheetContent } from "@/components/ui/sheet"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"
@@ -16,13 +12,8 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   collapsible?: "offcanvas" | "icon" | "none"
 }
 
-<<<<<<< HEAD
-export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-=======
 export const Sidebar = React.forwardRef<HTMLDivElementSidebarProps>((propsref) => {
   const { isMobilestateopenMobilesetOpenMobile } = useSidebar()
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   if (props.collapsible === "none") {
     return (
@@ -48,12 +39,7 @@ export const Sidebar = React.forwardRef<HTMLDivElementSidebarProps>((propsref) =
           className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
           style={
             {
-<<<<<<< HEAD
-              "--sidebar-width": "18rem",
-            } as CSSProperties
-=======
               "--sidebar-width": "18rem"} as CSSProperties
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }
           side={props.side}
         >
@@ -112,11 +98,7 @@ Sidebar.displayName = "Sidebar"
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<"button">
-<<<<<<< HEAD
->((props, ref) => {
-=======
 >((propsref) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -145,11 +127,7 @@ SidebarRail.displayName = "SidebarRail"
 export const SidebarInset = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"main">
-<<<<<<< HEAD
->((props, ref) => {
-=======
 >((propsref) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}

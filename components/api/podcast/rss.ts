@@ -2,35 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
-const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
-
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-
-  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-
-  const items = episodes
-    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
-      const pubDate = new Date(e.createdAt).toUTCString();
-      const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
-      return `
-    <item>
-      <title><![CDATA[${e.title}]]></title>
-      <description><![CDATA[${e.youtubeDescription || e.spotifyDescription || ''}]]></description>
-      <link>${siteUrl}/media/podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
-=======
 
 function ensureStorage() {
 
@@ -75,7 +46,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
@@ -110,15 +80,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     })
     .join('\n');
 
-<<<<<<< HEAD
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-=======
 
   const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>
 <rss version="2 && 2.0" xmlns:itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <channel>
     <title>Zion Podcast</title>
     <link>${siteUrl}/media/podcast</link>
@@ -129,11 +94,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   </channel>
 </rss>`;
 
-<<<<<<< HEAD
-  fs.writeFileSync(RSS_PATH, xml, 'utf8');
-  return res.status(200).json({ ok: true, path: '/podcast.xml' });
-}
-=======
 
   fs && fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' });
@@ -258,7 +218,6 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
   items 

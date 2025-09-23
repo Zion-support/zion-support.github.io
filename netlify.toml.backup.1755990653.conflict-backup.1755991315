@@ -259,26 +259,9 @@
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-<<<<<<< HEAD
-  name = "autonomous-ad-factory"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "knowledge-radar-orchestrator"
-  schedule = "17 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "innovation-researcher"
-  schedule = "9 */2 * * *" # every 2 hours
-
-[[scheduled.functions]]
-  name = "continuous-cloud-refiner"
-  schedule = "*/5 * * * *" # every 5 minutes
-=======
   name = "autonomous-innovation-generator"
   schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
   name = "autonomous-cloud-inventions"
   schedule = "*/2 * * * *" # every 2 minutes
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

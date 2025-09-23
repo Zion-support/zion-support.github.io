@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface InnovativeBusinessSolution {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface InnovativeBusinessSolution {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [
   // AI-Powered Marketing Automation Platform
   {
@@ -100,10 +92,6 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.9,
     reviews: 156
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform',
@@ -156,10 +144,6 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.8,
     reviews: 112
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered HR Management Platform
   {
     id: 'ai-hr-management-platform',
@@ -212,10 +196,6 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.7,
     reviews: 89
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Financial Analytics Platform
   {
     id: 'ai-financial-analytics-platform',
@@ -268,10 +248,6 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.9,
     reviews: 98
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization',

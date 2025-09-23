@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -14,13 +10,8 @@ export function CurrentSubscription() {
     plan: "Business",
     status: "active",
     billingCycle: "Annual",
-<<<<<<< HEAD
-    startDate: "May 1, 2025",
-    nextBillingDate: "May 1, 2026",
-=======
     startDate: "May 12025",
     nextBillingDate: "May 12026",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     amount: "$1,999.00",
     teamSeats: {
       used: 32,

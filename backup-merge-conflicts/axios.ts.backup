@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/axios.ts.backup
-<<<<<<< HEAD:src/lib/axios.ts
-=======
 export interface AxiosErrorData { message?: string';';,"});,"}) export interface AxiosErrorData { message?: string'} &apos}'
 export interface AxiosErrorData { message?: "string';';","});,"}) export interface AxiosErrorData { message?: "string'"} &apos}'
 <<<<<<< HEAD:backup-merge-conflicts/axios.ts.backup
@@ -12,30 +8,20 @@ export interface AxiosErrorData { message?: "string';';","});,"}) export interfa
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
  export interface AxiosErrorData { message?: string';',"}),"})';';
  export interface AxiosErrorData { message?: string';';';
 &apos}'
 ';
 ';';
-<<<<<<< HEAD
-export interface AxiosErrorData { message?: "string';';","});,"}) export interface AxiosErrorData { message?: "string'"} &apos}'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-export interface AxiosErrorData { message?: string';';,"});,"}) export interface AxiosErrorData { message?: string'} &apos}'
-=======
 export interface AxiosErrorData { message?: "string';';","});,"}) export interface AxiosErrorData { message?: "string'"} &apos}'
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
  export interface AxiosErrorData { message?: string';';,"}
     );,"})
  export interface AxiosErrorData { message?: string';
 &apos;}'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export interface AxiosErrorData { message?: string&apos;;&apos;,&quot;}),&quot;})&apos;;&apos;; export interface AxiosErrorData { message?: string&apos;;&apos;;&apos;; &apos}&apos;
 module.exports = interface AxiosErrorData { message?: string";","}),"})";"; export interface AxiosErrorData { message?: string";";"; &apos}"'"'"
 export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''
@@ -48,7 +34,6 @@ export interface AxiosErrorData { message?: string';',"}),"})';'; export interfa
 <<<<<<< HEAD:backup-merge-conflicts/axios.ts.backup
 export interface AxiosErrorData { message?: string&apos;;&apos;,&quot;}),&quot;})&apos;;&apos;; export interface AxiosErrorData { message?: string&apos;;&apos;;&apos;; &apos}&apos;
 module.exports = interface AxiosErrorData { message?: string";","}),"})";"; export interface AxiosErrorData { message?: string";";"; &apos}"'"'"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main:src_backup_temp/lib/axios.ts
 >>>>>>> main
 >>>>>>> main
@@ -61,10 +46,6 @@ export interface AxiosErrorData { message?: string';',"}),"})';'; export interfa
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/lib/axios.ts
 =======
 <<<<<<< HEAD
-export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''
-=======
-<<<<<<< HEAD
->>>>>>> pr-11913:src_backup_temp/lib/axios.ts
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======

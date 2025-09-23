@@ -30,8 +30,6 @@ export function Accordion($1) {;
           ? prev.filter(item => item !== value);
           : "[...prev", value];
       )};
-<<<<<<< HEAD
-=======
 
   return ()`
     <div className={`space-y-1 ${className}`}>
@@ -65,7 +63,6 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   children: Reac t.ReactNode;
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/accordion.tsx
     </div>;
@@ -100,8 +97,6 @@ export function AccordionItem(props: any) {;
   );
 }
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
-<<<<<<< HEAD
-=======
 
   children: Reac t.ReactNode;
 =======
@@ -109,7 +104,6 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode;
 =======
   "children": Reac t.ReactNode;
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/accordion.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/accordion.tsx
@@ -140,14 +134,8 @@ export function AccordionItem($1) {;
   );
 }
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
-<<<<<<< HEAD
-
-  children: React.ReactNode;
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 =======
 
   children: React.ReactNode;
@@ -202,8 +190,6 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;"
 >>>>>>> main
     </button>;
   )}
-<<<<<<< HEAD
-=======
           isOpen ? 'rotate-180' : '';`
     </button>;
   )}
@@ -212,7 +198,6 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
           isOpen ? 'rotate-180' : '';`;
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/accordion.tsx
         }`} ;      />;
@@ -220,14 +205,9 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
   )}
 ;
   "children": "React.ReactNode;
-<<<<<<< HEAD
-
-  children: React.ReactNode;
-=======
 =======
 ;
   "children": React.ReactNode;
->>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/accordion.tsx
   className?: string;

@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-=======
 import React{ useState } from "react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,21 +22,12 @@ interface AIListingFormProps {
   };
 }
 
-<<<<<<< HEAD
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-=======
 export function AIListingForm({ onSubmitisLoadinginitialValues = {} }: AIListingFormProps) {
   const { toast } = useToast();
   const [titlesetTitle] = useState(initialValues.title || "");
   const [categorysetCategory] = useState(initialValues.category || "");
   const [keyFeaturesetKeyFeatures] = useState(initialValues.keyFeatures || "");
   const [targetAudiencesetTargetAudience] = useState(initialValues.targetAudience || "");
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleSubmit = () => {
     if (!title || !category) {
@@ -79,11 +66,7 @@ export function AIListingForm({ onSubmitisLoadinginitialValues = {} }: AIListing
           id="category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-<<<<<<< HEAD
-          placeholder="e.g. AI Tool, Digital Product, Service"
-=======
           placeholder="e.g. AI ToolDigital ProductService"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />
@@ -105,11 +88,7 @@ export function AIListingForm({ onSubmitisLoadinginitialValues = {} }: AIListing
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
-<<<<<<< HEAD
-          placeholder="e.g. Developers, Marketers, Startups"
-=======
           placeholder="e.g. DevelopersMarketersStartups"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />

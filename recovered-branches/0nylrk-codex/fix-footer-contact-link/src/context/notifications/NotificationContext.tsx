@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-=======
 import React{ createContextuseContextuseEffectReactNode } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { useNotificationOperations } from './useNotificationOperations';
@@ -21,12 +17,7 @@ const defaultContext: NotificationContextType = {
   markAllAsRead: async () => {},
   dismissNotification: async () => {},
   setFilter: () => {},
-<<<<<<< HEAD
-  fetchNotifications: async () => {},
-};
-=======
   fetchNotifications: async () => {}};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Cast the default context value to avoid issues when React types are missing.
 const NotificationContext = createContext(
@@ -53,25 +44,15 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     if (user) {
       const channel = supabase
         .channel('notifications-changes')
-<<<<<<< HEAD
-        .on('postgres_changes', 
-          {
-            event: '*', 
-=======
         .on('postgres_changes'
           {
             event: '*'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             schema: 'public',
             table: 'notifications',
             filter: `user_id=eq.${user.id}`
           },
           (payload) => {
-<<<<<<< HEAD
-            console.log('Notification change received:', payload);
-=======
             console.log('Notification change received:'payload);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             notificationOps.fetchNotifications();
           }
         )
@@ -81,11 +62,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
         supabase.removeChannel(channel);
       };
     }
-<<<<<<< HEAD
-  }, [user]);
-=======
   }[user]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   return (
     <NotificationContext.Provider value={notificationOps}>

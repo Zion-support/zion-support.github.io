@@ -54,13 +54,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           `${functionName}${params}`,
           {
             headers: {
-<<<<<<< HEAD
-              'Content-Type': 'application/json',
-            },
-          }
-=======
               'Content-Type': 'application/json'}}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         );
 
         if (functionError) {

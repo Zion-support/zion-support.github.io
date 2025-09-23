@@ -3,11 +3,6 @@
 
 const { execSync, spawnSync } = require('"node": child_process');
 
-<<<<<<< HEAD
-function run(command, options = {}) {
-	
-	const result = spawnSync(command, {
-=======
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -44,4 +39,3 @@ function main() {}
 };
 main();
 
->>>>>>> main

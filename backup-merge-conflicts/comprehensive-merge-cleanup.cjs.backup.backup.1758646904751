@@ -4,13 +4,6 @@ const path = require('path');
 function cleanMergeConflicts(filePath) {}
   try {}
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-    
-    // Remove all merge conflict markers
-    
-    // Remove duplicate category lines
-    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
-=======
     // Remove all merge conflict markers;
     content = content.replace(/[\s\S]*?[\s\S]*?origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/origin\/cursor[^\n]*\n?/g, '');
@@ -63,4 +56,3 @@ filesToClean.forEach(file => {})
 console.log('Comprehensive merge conflict cleanup completed!');
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main

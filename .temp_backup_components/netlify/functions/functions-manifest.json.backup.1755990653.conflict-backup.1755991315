@@ -1,43 +1,7 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-11T23:27:25.385Z",
-  "functions": [
-    "a11y-alt-text-runner",
-    "adaptive-orchestrator",
-    "ai-changelog-runner",
-    "anchor-integrity-runner",
-    "auto-scheduler",
-    "automation-atlas-runner",
-    "automation-matrix",
-    "autonomous-ad-factory",
-    "autonomous-invention-orchestrator",
-    "branch-cleanup-runner",
-    "broken-image-scanner",
-    "broken-image-scanner-runner",
-    "canonical-auditor",
-    "cloud-swarm-committer",
-    "cloud_orchestrator",
-    "continuous-cloud-refiner",
-    "continuous-front-runner",
-    "continuous-orchestrator",
-    "contributing-refresher",
-    "dead-code-audit",
-    "dead-code-report",
-    "dependency-freshness-radar",
-    "deps-auto-upgrade-runner",
-    "design-tokens-curator",
-    "docs-index-runner",
-    "docs-link-audit-runner",
-    "docs-search-index-runner",
-    "duplicate-assets-scanner",
-    "external-link-check-runner",
-    "fast-front-promoter",
-    "fast-front-promoter",
-=======
   "generatedAt": "2025-08-15T03:13:06.770Z",
 =======
   "generatedAt": "2025-08-12T01:40:00.000Z",
->>>>>>> origin/cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
   "functions": [
     "ai-changelog-runner",
     "auto-scheduler",
@@ -65,10 +29,6 @@
     "features-capabilities-benefits-advertiser",
     "front-ads-promoter",
     "front-enhancer",
-<<<<<<< HEAD
-    "front-index-auto-advertiser-runner",
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     "front-index-futurizer",
     "front-index-orchestrator",
     "front-index-scheduler",
@@ -108,14 +68,10 @@
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-<<<<<<< HEAD
-    "revenue-ideas-orchestrator",
-=======
     "readme-advertiser",
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
@@ -123,29 +79,6 @@
     "schema-org-enhancer",
     "security-audit",
     "security-audit-runner",
-<<<<<<< HEAD
-    "seo-content-gap",
-    "site-crawler",
-    "sitemap-prioritizer",
-    "sitemap_runner",
-    "smart-redirector",
-    "stale-content-auditor-runner",
-    "structured-data-generator",
-    "todo-scanner-runner",
-    "todo-summary-runner",
-    "topic-cluster-builder-runner",
-    "topics-map-runner",
-    "trigger-all-and-commit",
-    "type-health-monitor",
-    "ui-enhancer",
-    "ui-evolution-beautify",
-    "ultrafast-front-orchestrator",
-    "ultrafast-orchestrator",
-    "ux-a11y-auditor",
-    "ux-heuristics-runner"
-  ]
-}
-=======
     "security-audit",
     "security-audit-runner",
     "site-crawler",
@@ -158,4 +91,3 @@
     "ultrafast-orchestrator"
   ]
 }
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

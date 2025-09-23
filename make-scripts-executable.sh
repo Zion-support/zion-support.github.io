@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/bin/bash
-=======
 #!/usr/bin/env bash
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 # Make all script files executable
 chmod +x setup.sh

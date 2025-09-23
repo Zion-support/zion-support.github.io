@@ -1,34 +1,4 @@
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { AppHeader } from "@/layout/AppHeader"; 
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
-import { useAuth } from "@/hooks/useAuth";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";
-import { MyApplications } from "@/components/jobs/MyApplications";
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
-
-  return (
-    <>
-      <SEO 
-        title="Talent Dashboard | Zion AI Marketplace" 
-        description="Your personalized talent dashboard with job matches and professional opportunities." 
-=======
 
 
 
@@ -60,7 +30,6 @@ function TalentDashboardContent() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   return (
@@ -91,15 +60,8 @@ function TalentDashboardContent() {;
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-
-=======
-        {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">
@@ -108,28 +70,16 @@ function TalentDashboardContent() {;
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
-<<<<<<< HEAD
-                        <img src={user.avatarUrl} alt={user.displayName || "User"} />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {user?.displayName?.charAt(0) || "U"}
-=======
                         <img src={user.avatarUrl} alt={user.displayName |"User"} />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) |"U"}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         </div>
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
-                      <CardTitle>{user?.displayName || "User"}</CardTitle>
-                      <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
-=======
                       <CardTitle>{user?.displayName |"User"}</CardTitle>
                       <CardDescription>{user?.headline |"AI Professional"}</CardDescription>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -149,10 +99,6 @@ function TalentDashboardContent() {;
                     <span className="text-xs text-muted-foreground">Projects</span>
                   </div>
                 </div>
-<<<<<<< HEAD
-                
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link to="/messages">
@@ -163,12 +109,6 @@ function TalentDashboardContent() {;
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-            
-            {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />
-            
-=======
 
             
 import { useState, useEffect } from "react",;
@@ -274,7 +214,6 @@ function TalentDashboardContent() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -289,10 +228,6 @@ function TalentDashboardContent() {;
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
-<<<<<<< HEAD
-            
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <Card className="mt-8">
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
@@ -319,10 +254,6 @@ function TalentDashboardContent() {;
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
-          
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -333,17 +264,9 @@ function TalentDashboardContent() {;
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-<<<<<<< HEAD
-              
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
-              
-=======
-              <TabsContent value="job-matches" className="mt-0">
-                <SuggestedJobs />
-              </TabsContent>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <TabsContent value="applications" className="mt-0">
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
@@ -354,10 +277,6 @@ function TalentDashboardContent() {;
                   </Button>
                 </div>
               </TabsContent>
-<<<<<<< HEAD
-              
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
@@ -376,11 +295,7 @@ function TalentDashboardContent() {;
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-=======
   )
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 export default function TalentDashboard() {
@@ -388,10 +303,6 @@ export default function TalentDashboard() {
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 }
 
@@ -416,7 +327,6 @@ export default function TalentDashboard() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

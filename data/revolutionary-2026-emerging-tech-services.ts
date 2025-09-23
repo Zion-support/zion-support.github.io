@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface Revolutionary2026EmergingTechService {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface Revolutionary2026EmergingTechService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [
   // Holographic Metaverse Development Platform
   {
@@ -100,10 +92,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.8,
     reviews: 234
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Space Debris Management AI Platform
   {
     id: 'space-debris-management-ai-platform',
@@ -156,10 +144,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.9,
     reviews: 67
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI Climate Prediction Platform
   {
     id: 'ai-climate-prediction-platform',
@@ -212,10 +196,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.7,
     reviews: 345
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Manufacturing AI Platform
   {
     id: 'autonomous-manufacturing-ai-platform',
@@ -268,10 +248,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.8,
     reviews: 123
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Internet Infrastructure Platform
   {
     id: 'quantum-internet-infrastructure-platform',

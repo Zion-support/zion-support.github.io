@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/reportWebVitals.ts
 type Reporter = ("metric": "any) => void;
 ;
 function defaultReporter("metric": any): void {;
@@ -42,23 +39,7 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
       const onFCP = mod.onFCP ?? mod.getFCP;
       const onLCP = mod.onLCP ?? mod.getLCP;
       const onTTFB = mod.onTTFB ?? mod.getTTFB;
-<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
-<<<<<<< HEAD
-;
-      try { onCLS && onCLS(reporter); "} catch {}
-      try { onFID && onFID(reporter); } catch {}
-      try { onFCP && onFCP(reporter); } catch {}
-      try { onLCP && onLCP(reporter); } catch {}
-      try { onTTFB && onTTFB(reporter); } catch {}
-    });
-    .catch(() => {;
-      // ignore if web-vitals isn't available;
-    });
-}
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
       try { onCLS && onCLS(reporter)} catch {}
       try { onFID && onFID(reporter)} catch {}
       try { onFCP && onFCP(reporter)} catch {}
@@ -67,6 +48,3 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     })';
     .catch(() => {
       // ignore if web-vitals isn't available
-<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
-=======
->>>>>>> pr-11935

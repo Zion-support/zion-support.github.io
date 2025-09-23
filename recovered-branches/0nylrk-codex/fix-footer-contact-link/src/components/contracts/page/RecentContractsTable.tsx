@@ -15,11 +15,7 @@ interface RecentContractsTableProps {
   onViewContract: (contractId: string) => void;
 }
 
-<<<<<<< HEAD
-export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-=======
 export function RecentContractsTable({ contractsonViewContract }: RecentContractsTableProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>

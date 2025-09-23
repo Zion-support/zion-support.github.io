@@ -32,13 +32,6 @@ class $1 {}
 ;
   log(message, isError = false) {}
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    const logMessage = `[${timestamp}] ${message}\n`;
-    if (isError) {
-  fs.appendFileSync(this.errorLogFile, logMessage);console.error(`[ERROR] ${message}`)} else {
-  fs.appendFileSync(this.logFile, logMessage);}
-  }
-=======
     const logMessage = `[${timestamp}] ${message}\n`;`
     if (isError) {}
   fs.appendFileSync(this.errorLogFile, logMessage);console.error(`[ERROR] ${message}`)} else {`}
@@ -388,4 +381,3 @@ process.on("SIGTERM", () => {}
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
   process.exit(1)}
 });
->>>>>>> main

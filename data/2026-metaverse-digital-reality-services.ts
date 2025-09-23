@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 export const metaverseDigitalRealityServices2026 = [] as any[];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface MetaverseDigitalRealityService2026 {
   id: string;
   name: string;
@@ -18,10 +15,6 @@ export interface MetaverseDigitalRealityService2026 {
     address: string;
   };
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
   {
     id: "2026-metaverse-digital-reality",

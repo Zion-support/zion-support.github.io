@@ -1,14 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/MobileAppRoutes.jsx.backup
-<<<<<<< HEAD
-import React from &apos;react&apos;; import MobileLaunchPage from &apos;@/pages/MobileLaunchPage export default function MobileAppRoutes($1) { return (<> <Route path=&quot;launch&quot; element={<MobileLaunchPage />}/> </>)} ;&apos;;&apos;;
-=======
-<<<<<<< HEAD
 const React from "react"; import MobileLaunchPage from "@/pages/MobileLaunchPage export default function MobileAppRoutes($1) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;";";"""
 <<<<<<< HEAD:backup-merge-conflicts/MobileAppRoutes.jsx.backup
 =======
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
->>>>>>> main
 =======
 import React from 'react';
 // Next.js routing - no need for react-router-dom;
@@ -23,9 +17,6 @@ export default function MobileAppRoutes("props": "any) {;
 =======
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/routes/MobileAppRoutes.jsx
-<<<<<<< HEAD
-=======
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

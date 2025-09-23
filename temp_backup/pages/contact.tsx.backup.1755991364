@@ -17,9 +17,6 @@ const Contact: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Contact;
-=======
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 export default function Contact() {
@@ -29,4 +26,3 @@ export default function Contact() {
     </EnhancedLayout>
   );
 }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

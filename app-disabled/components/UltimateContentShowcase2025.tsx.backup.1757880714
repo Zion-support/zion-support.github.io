@@ -1,16 +1,10 @@
 <<<<<<< HEAD
 'use client';
 
-import React, { useState, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-'use client';
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 =======
 import React from 'react';
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 import Link from 'next/link';
 
 const UltimateContentShowcase2025 = () => {
@@ -113,38 +107,15 @@ const UltimateContentShowcase2025 = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW 2025 CONTENT</span>
-=======
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium">⭐ ULTIMATE CONTENT COLLECTION</span>
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ultimate AI Content Showcase 2025
           </h2>
-<<<<<<< HEAD
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest AI transformation guides, case studies, and success stories featuring 
-            <span className="font-bold text-yellow-300"> 1,000%+ ROI</span> results from Fortune 500 companies.
-          </p>
-        </div>
-=======
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
             Our comprehensive content library provides everything from beginner guides to advanced implementation strategies. 
             Learn from real-world case studies and access practical tools to accelerate your AI transformation.
@@ -217,7 +188,6 @@ const UltimateContentShowcase2025 = () => {
                   </div>
                 </div>
               </div>
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 
         {/* Featured Content Card */}
         <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 mb-12 border border-white border-opacity-20">
@@ -330,47 +300,6 @@ const UltimateContentShowcase2025 = () => {
               }`}
               onClick={() => setCurrentIndex(index)}
             >
-<<<<<<< HEAD
-              <div className="flex items-center gap-2 mb-3">
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-bold">
-                  {content.type.toUpperCase()}
-                </span>
-                {content.isNew && (
-                  <span className="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
-                    NEW
-                  </span>
-                )}
-              </div>
-              
-              <h4 className="text-lg font-bold mb-2 line-clamp-2">
-                {content.title}
-              </h4>
-              
-              <p className="text-sm opacity-75 mb-4 line-clamp-2">
-                {content.description}
-              </p>
-
-              <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold text-yellow-300">
-                  {content.metrics.roi}
-                </div>
-                <div className="text-sm opacity-75">
-                  {content.readingTime}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <Link
-            href="/contact"
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105"
-          >
-            Get Your Custom AI Strategy
-          </Link>
-=======
               Get Free Consultation
             </Link>
             <Link
@@ -380,7 +309,6 @@ const UltimateContentShowcase2025 = () => {
               Explore All Content
             </Link>
           </div>
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
         </div>
       </div>
     </div>

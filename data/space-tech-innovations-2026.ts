@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface SpaceTechInnovation2026 {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface SpaceTechInnovation2026 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
   // Space Technology AI Platform
   {
@@ -100,10 +92,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.9,
     reviews: 80
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Space Mining Platform
   {
     id: 'quantum-space-mining-platform',
@@ -156,10 +144,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 45
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Satellite Operations AI
   {
     id: 'satellite-operations-ai',
@@ -212,10 +196,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 95
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Space Debris Tracking System
   {
     id: 'space-debris-tracking-system',
@@ -268,10 +248,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.7,
     reviews: 55
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Space Weather Monitoring Platform
   {
     id: 'space-weather-monitoring-platform',

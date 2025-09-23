@@ -1,11 +1,6 @@
 export default function StructuredData() {
   return null;
 }
-<<<<<<< HEAD
-export default function StructuredData() {
-	return null;
-}
-=======
 "use client";
 
 export function StructuredData() {
@@ -65,4 +60,3 @@ export function StructuredData() {
     />
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

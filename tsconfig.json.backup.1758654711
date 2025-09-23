@@ -61,14 +61,10 @@
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
-<<<<<<< HEAD
-    "app/**/*.disabled/**"
-=======
     "src/pages_backup/**",
     "src/pages.broken/**",
     "src.broken/**",
     "src.disabled/**",
     "src.pages.disabled/**"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
   ]
 }

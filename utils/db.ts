@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-
-const DATA_ROOT = path.join(process.cwd(), 'data', 'marketplace');
-
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_ROOT)) {
-    fs.mkdirSync(DATA_ROOT, { recursive: true });
-  }
-}
-
-function getFilePath(fileName: string): string {
-  ensureDataDir();
-  return path.join(DATA_ROOT, fileName);
-}
-
-export function readJsonFile<T>(fileName: string, defaultValue: T): T {
-  try {
-    const filePath = getFilePath(fileName);
-    if (!fs.existsSync(filePath)) {
-      return defaultValue;
-    }
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as T;
-  } catch (error) {
-    return defaultValue;
-  }
-}
-
-export function writeJsonFile<T>(fileName: string, data: T): void {
-=======
 
 // Mock database utility
 import fs from 'fs';
@@ -56,7 +24,6 @@ export function writeJsonFile<T>(fileName: string, data: T): void {
 
 export function writeJsonFile<T>(fileName: string, data: T): void {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -67,13 +34,6 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
   fs.renameSync(tmpPath, filePath);
 }
 
-<<<<<<< HEAD
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, []);
-  items.push(item);
-  writeJsonFile<T[]>(fileName, items);
-}
-=======
 
 
 
@@ -162,7 +122,6 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 

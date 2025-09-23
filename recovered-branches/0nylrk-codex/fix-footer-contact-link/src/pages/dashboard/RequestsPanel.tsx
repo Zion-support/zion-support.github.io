@@ -1,26 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { 
-  RequestsHeader, 
-  QuoteRequestsList 
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-
-export default function RequestsPanel() {
-  const { user } = useAuth();
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-=======
 
 
 
@@ -71,7 +49,6 @@ export default function RequestsPanel() {
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const {
     quotes,
@@ -84,23 +61,6 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
-<<<<<<< HEAD
-  } = useTalentQuotes();
-
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true);
-    
-    // If status is new, mark as viewed
-    if (quote.status === 'new') {
-      markAsViewed(quote.id);
-    }
-  };
-
-  // Filter quotes by archive status
-  const activeQuotes = quotes.filter(q => !q.is_archived);
-  const archivedQuotes = quotes.filter(q => q.is_archived);
-=======
 
   } = useTalentQuotes();
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -128,7 +88,6 @@ export default function RequestsPanel() {
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <ProtectedRoute>
@@ -137,8 +96,6 @@ export default function RequestsPanel() {
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -199,7 +156,6 @@ export default function RequestsPanel() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -213,18 +169,6 @@ export default function RequestsPanel() {;
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-<<<<<<< HEAD
-            />
-            
-            {/* Main Content */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Requests</TabsTrigger>
-                <TabsTrigger value="archived">Archived</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="active">
-=======
 
             />;
 
@@ -237,7 +181,6 @@ export default function RequestsPanel() {;
 
               <TabsContent value="active">;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -245,19 +188,12 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-<<<<<<< HEAD
-                />
-              </TabsContent>
-              
-              <TabsContent value="archived">
-=======
 
                 />;
               </TabsContent>;
 
               <TabsContent value="archived">;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -265,14 +201,6 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-<<<<<<< HEAD
-                />
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-        
-=======
 
                 />;
               </TabsContent>;
@@ -281,24 +209,10 @@ export default function RequestsPanel() {;
         </div>;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-<<<<<<< HEAD
-          onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
-          }}
-        />
-        
-        <Footer />
-      </div>
-    </ProtectedRoute>
-  );
-}
-=======
 
           onClose={() => {
             setShowDetails(false);
@@ -313,7 +227,6 @@ export default function RequestsPanel() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

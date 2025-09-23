@@ -3,9 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-
-=======
 console.log('🔧 Comprehensive fix for all files...');
 
 // List of problematic files
@@ -63,4 +60,3 @@ for (const file of filesToFix) {
 }
 
 console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
->>>>>>> main

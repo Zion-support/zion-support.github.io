@@ -1,11 +1,6 @@
 export default function AutomationStatus(){
-<<<<<<< HEAD
-  return <div style={{padding:20}}>Automation Status</div>
-}
-=======
   return <div className="max-w-3xl mx-auto p-6">Automation Status</div>;
 }
 =======
 export default function AdminAutomationStatusPage() { return null }
->>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

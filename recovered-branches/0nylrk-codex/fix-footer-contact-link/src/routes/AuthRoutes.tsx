@@ -1,10 +1,6 @@
 
 import { Fragment } from "react";
-<<<<<<< HEAD
-import { Route, Routes } from "react-router-dom";
-=======
 import { Routes } from "react-router-dom";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";

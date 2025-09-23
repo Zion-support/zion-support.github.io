@@ -1,15 +1,9 @@
 
 import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Card, CardContent } from "@/components/ui/card";
-=======
 import { Loader2EditTrashStarOff } from "lucide-react";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Separator } from "@/components/ui/separator";
 import {
   AlertDialog,
@@ -19,12 +13,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-=======
   AlertDialogTitle} from "@/components/ui/alert-dialog";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useState } from "react";
 
 interface TemplateListProps {
@@ -40,13 +29,8 @@ export function TemplateList({
   onSelect,
   onEdit
 }: TemplateListProps) {
-<<<<<<< HEAD
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-=======
   const [templateToDeletesetTemplateToDelete] = useState<string | null>(null);
   const { deleteTemplatesetDefaultTemplate } = useContractTemplates();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId);

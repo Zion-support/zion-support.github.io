@@ -1,20 +1,4 @@
 
-<<<<<<< HEAD
-import { Header } from "@/components/header";
-import { Footer } from "@/components/Footer";
-import { JobPostingForm } from "@/components/jobs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { useIsMobile } from "@/hooks/use-mobile";
-
-export default function PostJob() {
-  const { isAuthenticated, isLoading } = useAuth();
-  const isMobile = useIsMobile();
-  
-  if (isLoading) {
-=======
 
 
 
@@ -45,21 +29,10 @@ export default function PostJob() {
 
   if (isLoading) {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>
-<<<<<<< HEAD
-    );
-  }
-  
-  return (
-    <>
-      <SEO 
-        title="Post a Job | Zion AI Marketplace" 
-        description="Post a job to find the perfect AI talent for your project." 
-=======
     )
   }
   return (
@@ -118,7 +91,6 @@ export default function PostJob() {;
 
         title="Post a Job | Zion AI Marketplace"
         description="Post a job to find the perfect AI talent for your project."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       />
       <Header />
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
@@ -138,10 +110,6 @@ export default function PostJob() {;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 }
     return (
@@ -181,7 +149,6 @@ export default function PostJob() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

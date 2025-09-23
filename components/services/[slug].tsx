@@ -1,11 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
-<<<<<<< HEAD
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-=======
 CheckMailMapPinPhoneExternalLink
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -39,11 +35,7 @@ function getPriceValue(price: Service['price']): string {
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
-<<<<<<< HEAD
-		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
-=======
 		.concat(extraServices as Service[]additionalEnhancedServices as Service[])
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 		.concat(newlyAddedServices as unknown as Service[])
 		.concat(curatedMarketServices as Service[])
 		.concat(new2025Services as unknown as Service[])
@@ -52,29 +44,18 @@ function getAllServices(): Service[] {
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realServicesQ32025 as unknown as Service[]);
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 		.concat(newVerifiedServicesQ22025 as unknown as Service[]);
 }
 
 function toSlug(value: string): string {
-<<<<<<< HEAD
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-=======
 	return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
-<<<<<<< HEAD
-		const path = url.pathname.replace(/^\/+|\/+$/g, '');
-=======
 		const path = url.pathname.replace(/^\/+|\/+$/g', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length);
 		}
@@ -91,11 +72,7 @@ export async function getStaticPaths() {
 	// Define static service slugs that should not be handled by this dynamic route
 	const staticServiceSlugs = [
 		'ai-evaluation-orchestrator',
-<<<<<<< HEAD
-		'ai-support-triage-router', 
-=======
 		'ai-support-triage-router'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 		'ai-code-review-assistant-pro',
 		'ai-revenue-forecasting-copilot'
 	];
@@ -127,11 +104,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices();
-<<<<<<< HEAD
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-=======
 	const incomingSlug = (params?.slug || ', ').replace(/^\/+|\/+$/g', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false;
@@ -140,11 +113,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	});
 
 	if (!service) {
-<<<<<<< HEAD
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
-=======
 		service = services.find((s) => toSlug(s.id || ', ') === incomingSlug || toSlug(s.name || ', ') === incomingSlug);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	}
 
 	if (!service) {
@@ -210,11 +179,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
-<<<<<<< HEAD
-								{(service.features || []).slice(0, 12).map((f: string) => (
-=======
 								{(service.features || []).slice(012).map((f: string) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -230,11 +195,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<div>
 									<div className="text-sm text-gray-400 mb-2">Use Cases</div>
 									<ul className="list-disc list-inside space-y-1">
-<<<<<<< HEAD
-										{(service.useCases || []).slice(0, 8).map((u: string) => (
-=======
 										{(service.useCases || []).slice(08).map((u: string) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 											<li key={u}>{u}</li>
 										))}
 									</ul>
@@ -242,11 +203,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<div>
 									<div className="text-sm text-gray-400 mb-2">Integrations</div>
 									<div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-										{(service.integrations || []).slice(0, 10).map((i: string) => (
-=======
 										{(service.integrations || []).slice(010).map((i: string) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 											<span key={i} className="px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs">{i}</span>
 										))}
 									</div>
@@ -259,11 +216,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>
-<<<<<<< HEAD
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
-=======
 							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(')}</div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 							<div className="mt-6 flex gap-3">
 								<a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">Contact Sales</a>
 								<a href={service.link} className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300"><ExternalLink className="w-4 h-4 mr-2 inline" /> Learn More</a>
@@ -273,11 +226,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<h3 className="text-white font-semibold mb-3">Contact</h3>
 							<div className="space-y-3 text-sm">
-<<<<<<< HEAD
-								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
-=======
 								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g', ')}`} className="hover:underline">{contactInfo.mobile}</a></div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{contactInfo.address}</a></div>
 							</div>
@@ -290,11 +239,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								{service.marketPosition && <p className="leading-relaxed"><span className="text-gray-400">Position:</span> {service.marketPosition}</p>}
 								{service.roi && <p className="leading-relaxed"><span className="text-gray-400">ROI:</span> {service.roi}</p>}
 								{service.competitors?.length ? (
-<<<<<<< HEAD
-									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join(', ')}</p>
-=======
 									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join(')}</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 								) : null}
 								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover:text-cyan-200">See average market prices →</a>
 							</div>
@@ -364,8 +309,5 @@ const ServiceDetail: NextPage = () => {
 };
 
 export default ServiceDetail;
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

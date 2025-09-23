@@ -1,23 +1,17 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
->>>>>>> pr-11914:backup-merge-conflicts/apiErrorHandler.ts.backup
 // comment;
 export const apiErrorHandler = {};
     "variant": 'destructive',
     error?.message || fallbackMessage || 'An unexpected error occurred';  toast({};
     "description": message});
   // Log error for debugging;
-<<<<<<< HEAD
-=======
 export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-merge-conflicts/apiErrorHandler.ts.backup
->>>>>>> main
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
 >>>>>>> main
 =======

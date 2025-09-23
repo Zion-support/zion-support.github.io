@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-=======
 import React{ createContextuseStateuseContextuseEffectReactNode } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -32,21 +28,12 @@ export interface AnalyticsEvent {
   elementId?: string;
   timestamp: number;
   userId?: string | null;
-<<<<<<< HEAD
-  metadata?: Record<string, any>;
-}
-
-export interface AnalyticsContextType {
-  trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
-  trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
-=======
   metadata?: Record<stringany>;
 }
 
 export interface AnalyticsContextType {
   trackEvent: (type: AnalyticsEventTypemetadata?: Record<stringany>) => void;
   trackConversion: (conversionType: stringvalue?: numbermetadata?: Record<stringany>) => void;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   pageViews: number;
   lastEvent: AnalyticsEvent | null;
   events: AnalyticsEvent[];
@@ -58,29 +45,14 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 );
 
 export function AnalyticsProvider({ children }: { children: ReactNode }) {
-<<<<<<< HEAD
-  const [pageViews, setPageViews] = useState(0);
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
-  const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
-=======
   const [pageViewsetPageViews] = useState(0);
   const [eventsetEvents] = useState<AnalyticsEvent[]>([]);
   const [lastEventsetLastEvent] = useState<AnalyticsEvent | null>(null);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const location = useLocation();
   const { user } = useAuth();
 
   // Track page views when location changes
   useEffect(() => {
-<<<<<<< HEAD
-    trackEvent('page_view', { path: location.pathname });
-    setPageViews((prev) => prev + 1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname]);
-
-  // Function to track general analytics events
-  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {
-=======
     trackEvent('page_view'{ path: location.pathname });
     setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -88,7 +60,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 
   // Function to track general analytics events
   const trackEvent = async (type: AnalyticsEventTypemetadata: Record<stringany> = {}) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const event: AnalyticsEvent = {
       type,
       path: location.pathname,
@@ -97,11 +68,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
       metadata
     };
     
-<<<<<<< HEAD
-    setEvents((prevEvents) => [...prevEvents, event]);
-=======
     setEvents((prevEvents) => [...prevEventsevent]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setLastEvent(event);
     
     try {
@@ -113,30 +80,17 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         metadata: metadata
       }]);
       
-<<<<<<< HEAD
-      console.log(`Analytics event tracked: ${type}`, metadata);
-    } catch (error) {
-      console.error('Error logging analytics event:', error);
-=======
       console.log(`Analytics event tracked: ${type}`metadata);
     } catch (error) {
       console.error('Error logging analytics event:'error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 
   // Function to track conversion events
-<<<<<<< HEAD
-  const trackConversion = (conversionType: string, value?: number, metadata: Record<string, any> = {}) => {
-    trackEvent('conversion', { 
-      conversionType, 
-      value, 
-=======
   const trackConversion = (conversionType: stringvalue?: numbermetadata: Record<stringany> = {}) => {
     trackEvent('conversion'{ 
       conversionType
       value
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ...metadata 
     });
   };

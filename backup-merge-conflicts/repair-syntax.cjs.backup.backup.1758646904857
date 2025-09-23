@@ -73,15 +73,6 @@ function processFile(file) {}
 function main() {}
   const targets = ROOT_DIRS.flatMap((d) => (fs.existsSync(d) ? listFiles(d) : []));
   let fixed = 0;
-<<<<<<< HEAD
-  for (const f of targets) {
-    try {
-      if (processFile(f)) fixed++} catch (e) {
-      console.error('Error fixing', f, e.message)}
-  }
-  }
-
-=======
   for (const f of targets) {}
     try {}
       if (processFile(f)) fixed++} catch (e) {}
@@ -89,4 +80,3 @@ function main() {}
   };
   console.log(`Repaired ${fixed} files out of ${targets.length}.`)};
 main();
->>>>>>> main

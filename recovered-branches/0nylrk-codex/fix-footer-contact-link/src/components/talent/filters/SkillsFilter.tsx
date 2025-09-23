@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp } from "lucide-react";
-=======
 import { ChevronDownChevronUp } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
@@ -28,11 +24,7 @@ const POPULAR_SKILLS = [
   "Security"
 ];
 
-<<<<<<< HEAD
-export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
-=======
 export function SkillsFilter({ selectedSkillstoggleSkillexpandedtoggleSectionisMobileFilterOpen }: SkillsFilterProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

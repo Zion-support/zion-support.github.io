@@ -1,15 +1,9 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react";
-=======
 import { CardContent } from "@/components/ui/card";
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { BuildingMapPinClockDollarSignStar } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 
@@ -30,20 +24,6 @@ interface JobMatchProps {
 }
 
 export function JobMatchCard({ 
-<<<<<<< HEAD
-  matchId, 
-  talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
-  skills,
-  onApply, 
-  onViewDetails, 
-=======
   matchId
   talentId
   name
@@ -56,7 +36,6 @@ export function JobMatchCard({
   skills,
   onApply
   onViewDetails
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onInvite 
 }: JobMatchProps) {
   const handleApply = () => {
@@ -91,11 +70,7 @@ export function JobMatchCard({
             <span className="font-medium">{matchPercent}% Match</span>
           </div>
           <Badge variant="outline" className="bg-background">
-<<<<<<< HEAD
-            {formatDistanceToNow(postedDate, { addSuffix: true })}
-=======
             {formatDistanceToNow(postedDate{ addSuffix: true })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </Badge>
         </div>
         
@@ -135,11 +110,7 @@ export function JobMatchCard({
           </div>
           
           <div className="flex flex-wrap gap-1 mb-4">
-<<<<<<< HEAD
-            {skills?.slice(0, 5).map((skill) => (
-=======
             {skills?.slice(05).map((skill) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Badge key={skill} variant="secondary" className="text-xs">
                 {skill}
               </Badge>

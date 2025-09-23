@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
 "use client";
 import React{ useEffect } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Head from 'next/head';
 
 interface SEOProps {
@@ -24,15 +20,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-<<<<<<< HEAD
-  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',
-  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',
-=======
   title = 'Zion Tech Group - Revolutionary AIQuantum Computing & Space Technology Solutions',
   description = 'Pioneering the future of technology with revolutionary AI consciousnessquantum computingand autonomous solutions that transform businesses worldwide. Leading-edge services in AIcybersecurityspace techand quantum solutions.',
   keywords = 'AIartificial intelligencequantum computingspace technologycybersecuritymachine learningautomationZion Tech Grouptechnology solutionsenterprise softwarecloud computingblockchainIoTrobotics',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   image = '/images/zion-tech-group-og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
@@ -43,12 +33,7 @@ const SEO: React.FC<SEOProps> = ({
   tags = [],
   structuredData,
   noindex = false,
-<<<<<<< HEAD
-  nofollow = false,
-}) => {
-=======
   nofollow = false}) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
@@ -58,11 +43,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
-      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
-=======
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(') : keywords} />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name="robots" content="nofollow" />}
@@ -70,11 +51,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Robots Meta */}
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
-<<<<<<< HEAD
-      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
-=======
       {!noindex && !nofollow && <meta name="robots" content="indexfollow" />}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
@@ -100,22 +77,14 @@ const SEO: React.FC<SEOProps> = ({
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
           {author && <meta property="article:author" content={author} />}
           {section && <meta property="article:section" content={section} />}
-<<<<<<< HEAD
-          {tags.map((tag, index) => (
-=======
           {tags.map((tagindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <meta key={index} property="article:tag" content={tag} />
           ))}
         </>
       )}
       
       {/* Additional Meta Tags */}
-<<<<<<< HEAD
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-=======
       <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <meta name="theme-color" content="#000000" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="apple-mobile-web-app-capable" content="yes" />

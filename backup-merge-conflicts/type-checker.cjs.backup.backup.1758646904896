@@ -21,12 +21,6 @@ class TypeChecker {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-    
-  }
-
-  error(message) {
-=======
     console.log(message);
   };
   error(message) {}
@@ -429,4 +423,3 @@ if (require.main === module) {}
   };
 };
 module.exports = TypeChecker;
->>>>>>> main

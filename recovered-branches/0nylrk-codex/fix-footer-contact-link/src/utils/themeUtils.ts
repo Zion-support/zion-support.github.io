@@ -12,10 +12,7 @@ export interface ThemeColors {
 
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   switch (preset) {
     case 'dark':
       return {
@@ -24,12 +21,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#e2e8f0',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-<<<<<<< HEAD
-        cardBackground: '#1e293b',
-      };
-=======
         cardBackground: '#1e293b'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     case 'neon':
       return {
         primaryColor,
@@ -37,12 +29,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#f8fafc',
         accentColor: '#00ffbb',
         buttonColor: primaryColor,
-<<<<<<< HEAD
-        cardBackground: '#0f172a',
-      };
-=======
         cardBackground: '#0f172a'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     case 'corporate':
       return {
         primaryColor,
@@ -50,12 +37,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#334155',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-<<<<<<< HEAD
-        cardBackground: '#ffffff',
-      };
-=======
         cardBackground: '#ffffff'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     case 'startup':
       return {
         primaryColor,
@@ -63,12 +45,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#fafafa',
         accentColor: '#ff7f50',
         buttonColor: primaryColor,
-<<<<<<< HEAD
-        cardBackground: '#1e2127',
-      };
-=======
         cardBackground: '#1e2127'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     case 'light':
     default:
       return {
@@ -77,12 +54,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#0f172a',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-<<<<<<< HEAD
-        cardBackground: '#f8fafc',
-      };
-=======
         cardBackground: '#f8fafc'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 }
 

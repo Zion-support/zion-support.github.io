@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-=======
 import { CardHeaderCardContentCardTitle } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { TalentProfile } from "@/types/talent";
 
 interface ProfileCardProps {

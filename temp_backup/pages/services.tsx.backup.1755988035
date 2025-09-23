@@ -129,14 +129,6 @@ const getServiceDescription = (service: any) => {
 
 // Create unified services array
 const allServices = [
-<<<<<<< HEAD
-  ...realMicroSaasServices2025,
-  ...innovativeAIServices2025,
-  ...innovativeITServices2025,
-  ...emergingTechServices2025,
-  ...additionalRealServices2025,
-  ...newInnovativeAIServices
-=======
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
@@ -214,7 +206,6 @@ const allServices = [
   
   // Our new 2025 innovative business solutions expansion
   ...innovativeBusinessSolutionsExpansion2025
->>>>>>> origin/main
 ];
 
 const categories = [

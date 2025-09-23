@@ -1,19 +1,9 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedErrorBoundary.dynamic.jsx.backup
-<<<<<<< HEAD
-const EnhancedErrorBoundary = dynamic(() => import("./EnhancedErrorBoundary"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedErrorBoundary" ,"""
-=======
 <<<<<<< HEAD
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/EnhancedErrorBoundary.dynamic.jsx
 >>>>>>> pr-11935
 const EnhancedErrorBoundary = dynamic(() => import("./EnhancedErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedErrorBoundary' ,'
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedErrorBoundary.dynamic.jsx.backup
->>>>>>> main
->>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/EnhancedErrorBoundary.dynamic.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

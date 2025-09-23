@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-export default function Button(props: ButtonProps) {
-	return (
-		<button {...props} />
-	);
-}
-=======
 'use client';
 
 import React, { forwardRef } from 'react';
@@ -104,4 +93,3 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     </button>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

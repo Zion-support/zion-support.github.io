@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export { default } from './mobile-launch';
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -23,4 +20,3 @@ export default function Download.pagePage() {
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

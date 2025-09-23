@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-type OperatorEvent = {
-  type: string;
-  sessionId: string;
-  payload?: any;
-};
-
-export async function logSupportEventToOperator(event: OperatorEvent): Promise<void> {
-  // Placeholder for real Operator integration; could POST to external service
-  // For now, we just no-op to avoid failures
-  return Promise.resolve();
-}
-
-export async function tagOperatorSession(sessionId: string, tag: string): Promise<void> {
-  return Promise.resolve();
-}
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 

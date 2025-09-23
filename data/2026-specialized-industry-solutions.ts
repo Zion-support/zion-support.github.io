@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface SpecializedIndustrySolution {
-=======
 export interface SpecializedIndustrySolution2026 {
->>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 =======
 export interface SpecializedIndustrySolution {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
@@ -44,10 +39,6 @@ export interface SpecializedIndustrySolution {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
   benefits: string[];
   capabilities: string[];
   marketAdvantage: string;
@@ -55,7 +46,6 @@ export interface SpecializedIndustrySolution {
   featuresCapabilities: string[];
 }
 
->>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 =======
 }
 
@@ -66,11 +56,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -105,8 +91,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     customers: 28,
     rating: 4.9,
     reviews: 22
-<<<<<<< HEAD
-=======
 
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [
   // Simplified version for now
@@ -154,7 +138,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     marketAdvantage: 'AI-powered risk management at 90% lower cost than traditional solutions',
     averageMarketPrice: '$18,000/year',
     featuresCapabilities: ['Risk assessment', 'Portfolio optimization', 'Predictive analytics']
->>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   }
@@ -166,14 +149,9 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Manufacturing Technology',
   'Retail Technology',
   'Logistics Technology'
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-=======
 ];
 
 export default specializedIndustrySolutions2026;
->>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 =======
 ];
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f

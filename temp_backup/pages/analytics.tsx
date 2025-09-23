@@ -1,10 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { Button } from '../components/ui/Button';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function AnalyticsPage() {
   const features = [
@@ -70,17 +67,6 @@ export default function AnalyticsPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-<<<<<<< HEAD
-              <a
-                href="/contact" className="shadow-2xl shadow-blue-500/25">
-                Start Analyzing
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="/contact" className="border-white/20 hover:border-white/40">
-                View Demo
-              </a>
-=======
               <Button
                 href="/contact"
                 size="lg"
@@ -97,7 +83,6 @@ export default function AnalyticsPage() {
               >
                 View Demo
               </Button>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </section>
@@ -117,13 +102,9 @@ export default function AnalyticsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
-<<<<<<< HEAD
-                  key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
-=======
                   key={index}
                   className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
                 >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                     {feature.icon}
                   </div>
@@ -190,16 +171,6 @@ export default function AnalyticsPage() {
               Start gaining insights from your data today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <a
-                href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
-                Start Free Trial
-              </a>
-              <a
-                href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
-                Schedule Demo
-              </a>
-=======
               <Button
                 href="/contact"
                 variant="secondary"
@@ -216,7 +187,6 @@ export default function AnalyticsPage() {
               >
                 Schedule Demo
               </Button>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </section>

@@ -1,13 +1,8 @@
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from';react' export: interface AdvancedMicroSaasService {';
-=======
 =======
 <<<<<<< HEAD
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/advancedMicroSaasServices2025.ts
 >>>>>>> pr-11935
 import React from';react' "export": interface AdvancedMicroSaasService {';
 >>>>>>> main
@@ -34,9 +29,6 @@ import React from';react' export: interface AdvancedMicroSaasService {';
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-<<<<<<< HEAD
-   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [''',
-=======
 import React from';react' export: interface AdvancedMicroSaasService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string} website: 'strin',g} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string}export: const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [''';,;
    website: strin,g} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}"export": const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [''',
 import React from';react' export: interface AdvancedMicroSaasService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [''',
@@ -49,5 +41,4 @@ import React from';react' export: interface AdvancedMicroSaasService {'; id: str
 import React from';react' export: interface AdvancedMicroSaasService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string} website: 'strin',g} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string}export: const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [''';,;
    website: strin,g} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}"export": const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [''',
 import React from';react' export: interface AdvancedMicroSaasService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [''',
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/advancedMicroSaasServices2025.ts
 >>>>>>> pr-11935

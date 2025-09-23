@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD:backup-merge-conflicts/ResponsiveLayout.tsx.backup
 <<<<<<< HEAD
@@ -58,7 +56,6 @@ export function ResponsiveLayout({ children }: ResponsiveLayoutProps) {
         max-w-7xl mx-auto
         ${isMobile ? 'space-y-4' : isTablet ? 'space-y-6' : 'space-y-8'}
       `}>
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ResponsiveLayout.tsx
         {children}

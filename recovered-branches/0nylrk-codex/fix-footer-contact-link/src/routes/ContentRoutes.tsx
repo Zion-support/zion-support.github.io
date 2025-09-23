@@ -1,10 +1,6 @@
 
 import { Fragment } from "react";
-<<<<<<< HEAD
-import { Route, Routes, Navigate } from "react-router-dom";
-=======
 import { RoutesNavigate } from "react-router-dom";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Blog from "@/pages/Blog";

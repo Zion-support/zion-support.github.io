@@ -6,28 +6,6 @@
 const fs = require("child_process")
 const path = require("path")
     this.projectRoot = path.resolve(__dirname, "..")
-<<<<<<< HEAD
-    this.placeholderPages = []
-    this.generatedContent = new Map()}
-  async generateContent() {
-    try {
-      // Read the website analysis report
-      const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
-      if (fs.existsSync(reportPath)) {
-        const report = JSON.parse(fs.readFileSync(reportPath, "utf8"))
-        this.placeholderPages = report.placeholderPages || []}
-      // Generate content for key pages
-      await this.generateServicePages()
-      await this.generateSolutionPages()
-      await this.generateLandingPages()
-      this.saveReport()
-      } catch (error) {
-      console.error("❌ Error generating "content": ", error)}
-  }
-  async generateServicePages() {
-    const serviceTemplates = {
-      "ai-services": {"title": "AI Services","description": "Comprehensive AI solutions for modern businesses";
-=======
     console.log(" Starting Content Generation...")
       const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
         const report = JSON.parse(fs.readFileSync(reportPath, "utf8")
@@ -50,4 +28,3 @@ const path = require("path")
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
     console.log(`� Report saved "to"`)
->>>>>>> main

@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
-
-=======
 
 import type {
 
@@ -14,15 +10,12 @@ import type {
   UpdateGrantPayload,;
 
 } from '../../../types/grants';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
 
-<<<<<<< HEAD
-=======
   }
 }
 
@@ -126,7 +119,6 @@ function writeGrant(record: GrantApplication) {
 
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 

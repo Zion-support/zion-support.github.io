@@ -14,10 +14,6 @@ export interface VerifiedRealService2025Batch2 {
     address: string;
   };
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
     id: "ai-quality-assurance",

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-export interface EmergingTechBreakthrough2029 {
-=======
 
 export interface EmergingTechBreakthrough2029 {
 export interface EmergingTechBreakthrough2029 {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -17,10 +13,6 @@ export interface EmergingTechBreakthrough2029 {;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
 
     address: string;
   }
@@ -87,7 +79,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
     }
@@ -256,7 +247,4 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     }
   }
 ];
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

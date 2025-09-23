@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 =======
 import useSWR from 'swr';
 import { captureException } from '@/utils/sentry';
@@ -86,7 +84,6 @@ export function useQuoteWizard(
   search = "
 ) {
   const params = new URLSearchParams({ "page": Strin g(page) };);
->>>>>>> main:src_backup_temp/hooks/useQuoteWizard.ts
 =======
   const params = new URLSearchParams({ "page": Strin g(page) };);
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/useQuoteWizard.ts
@@ -96,10 +93,7 @@ export function useQuoteWizard(
     "onErrorRetry": (error, key, config, revalidate, { retryCount }) => {
       if (retryCount >= 1) return;
       const timeout = Math.pow(2, retryCount) * 1000; // 1s, 2s, 4s
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/hooks/useQuoteWizard.ts
       setTimeout(() => revalidate({ retryCount: retryCoun t + 1 }), timeout);
     },
     dedupingInterval: 60000 0,

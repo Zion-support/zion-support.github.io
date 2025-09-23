@@ -13,10 +13,6 @@ const required = [;]
   path.join(process.cwd(), "package.json"),;
 ];
 const missing = required.filter(p => !fileExists(p));
-<<<<<<< HEAD
-if (missing.length > 0) {;
-  , p)).join(", ");
-=======
 if (missing.length > 0) {;}
   console.warn(;)
     "[pre-build-health-check] Missing "files": ",;
@@ -26,4 +22,3 @@ if (missing.length > 0) {;}
 ;
 console.log("[pre-build-health-check] OK");
 process.exit(0);
->>>>>>> main

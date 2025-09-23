@@ -1,10 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
-=======
 PhoneMailMapPinCheckArrowRightEye
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 

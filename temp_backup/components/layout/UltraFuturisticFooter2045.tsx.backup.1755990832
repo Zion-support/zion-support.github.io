@@ -268,15 +268,11 @@ const NewsletterSignup: React.FC = () => {
                     className="p-2 rounded-lg bg-gray-900/50 border border-cyan-500/20 text-gray-400 transition-all duration-200 hover:scale-110 hover:border-cyan-500/50"
                     aria-label={social.name}
                   >
-<<<<<<< HEAD
-                    {social.icon}
-=======
                     key={link.name}
                     href={link.href}
                     className="text-sm text-white/70 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                   </Link>
                 ))}
               </div>

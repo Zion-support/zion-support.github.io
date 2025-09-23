@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 "use client";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React from 'react';
 import type { Room } from 'livekit-client';
 
@@ -11,17 +8,10 @@ type Props = {
   accent?: 'blue' | 'cyan';
 };
 
-<<<<<<< HEAD
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-  const [micEnabled, setMicEnabled] = React.useState(true);
-  const [camEnabled, setCamEnabled] = React.useState(true);
-  const [sharing, setSharing] = React.useState(false);
-=======
 export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
   const [micEnabledsetMicEnabled] = React.useState(true);
   const [camEnabledsetCamEnabled] = React.useState(true);
   const [sharingsetSharing] = React.useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
 
@@ -43,11 +33,7 @@ export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {
-<<<<<<< HEAD
-      console.warn('Screen share failed', e);
-=======
       console.warn('Screen share 'failed', 'e);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 

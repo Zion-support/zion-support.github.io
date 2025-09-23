@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  DollarSign,
-  Clock,
-  Users,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Network
-} from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react';
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 
 const pricingPlans = [
   {
@@ -299,9 +276,5 @@ export default function PricingPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> main
 }

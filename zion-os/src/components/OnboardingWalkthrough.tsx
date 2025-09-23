@@ -1,11 +1,6 @@
 export default function OnboardingWalkthrough() {
   return null;
 }
-<<<<<<< HEAD
-export default function OnboardingWalkthrough() {
-	return null;
-}
-=======
 "use client";
 
 import { useState, useEffect } from "react";
@@ -196,4 +191,3 @@ export function useWalkthroughTarget(id: string) {
     id,
   };
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

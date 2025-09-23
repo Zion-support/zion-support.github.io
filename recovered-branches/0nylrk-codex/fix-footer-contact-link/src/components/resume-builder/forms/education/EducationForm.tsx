@@ -9,15 +9,6 @@ import { EducationList } from './EducationList';
 import { EducationFormFields } from './EducationFormFields';
 
 export function EducationForm({ 
-<<<<<<< HEAD
-  resumeId, 
-  educationEntries, 
-  onComplete, 
-  onBack 
-}: EducationFormProps) {
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-=======
   resumeId
   educationEntries
   onComplete
@@ -25,17 +16,12 @@ export function EducationForm({
 }: EducationFormProps) {
   const { addEducationupdateEducationdeleteEducationisLoading } = useResume();
   const [editingIdsetEditingId] = useState<string | null>(null);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
-<<<<<<< HEAD
-    return format(dateValue, 'yyyy-MM-dd');
-=======
     return format(dateValue'yyyy-MM-dd');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const handleAddOrUpdate = async (data: any) => {
@@ -47,16 +33,6 @@ export function EducationForm({
       end_date: data.is_current ? undefined : (data.end_date || undefined),
       is_current: data.is_current,
       description: data.description,
-<<<<<<< HEAD
-      location: data.location,
-    };
-
-    let success;
-    if (editingId) {
-      success = await updateEducation(editingId, educationData);
-    } else {
-      success = await addEducation(resumeId, educationData);
-=======
       location: data.location};
 
     let success;
@@ -64,7 +40,6 @@ export function EducationForm({
       success = await updateEducation(editingIdeducationData);
     } else {
       success = await addEducation(resumeIdeducationData);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
 
     if (success) {
@@ -111,10 +86,7 @@ export function EducationForm({
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}

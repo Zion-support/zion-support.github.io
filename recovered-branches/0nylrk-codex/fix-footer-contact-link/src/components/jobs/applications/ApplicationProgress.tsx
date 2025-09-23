@@ -1,11 +1,7 @@
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
-<<<<<<< HEAD
-import { CheckCircle2, Circle, CircleDot } from "lucide-react";
-=======
 import { CheckCircle2CircleDot } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { cn } from "@/lib/utils";
 
 interface ApplicationProgressProps {
@@ -13,11 +9,7 @@ interface ApplicationProgressProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
-=======
 export function ApplicationProgress({ statusclassName }: ApplicationProgressProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
@@ -34,11 +26,7 @@ export function ApplicationProgress({ statusclassName }: ApplicationProgressProp
   const progressValue = getProgressValue();
   
   return (
-<<<<<<< HEAD
-    <div className={cn("w-full space-y-2", className)}>
-=======
     <div className={cn("w-full space-y-2"className)}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Progress value={progressValue} className="h-2" />
       
       <div className="flex justify-between text-xs text-muted-foreground">
@@ -67,26 +55,15 @@ export function ApplicationProgress({ statusclassName }: ApplicationProgressProp
   );
 }
 
-<<<<<<< HEAD
-function StatusIcon({ status, current }: { status: ApplicationStatus; current: ApplicationStatus }) {
-  // Helper to determine if this step is active, completed, or inactive
-  const statusRank: Record<ApplicationStatus, number> = {
-=======
 function StatusIcon({ statuscurrent }: { status: ApplicationStatus; current: ApplicationStatus }) {
   // Helper to determine if this step is activecompletedor inactive
   const statusRank: Record<ApplicationStatusnumber> = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     new: 1,
     viewed: 2,
     shortlisted: 3,
     interview: 4,
     hired: 5,
-<<<<<<< HEAD
-    rejected: 5,
-  };
-=======
     rejected: 5};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];

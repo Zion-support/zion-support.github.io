@@ -14,10 +14,6 @@ export interface EnterpriseItService {
     address: string;
   };
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const enterpriseITServices: EnterpriseItService[] = [
   {
     id: "enterprise-architecture",

@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
-<<<<<<< HEAD:src/components/ui/use-toast.ts
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 import { toast   } from 'react-hot-toast';
 import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
@@ -19,7 +15,6 @@ import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "num
 
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
 =======
->>>>>>> pr-11913:src_backup_temp/components/ui/use-toast.ts
 import { toast } from 'react-hot-toast'
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { toast } from 'react-hot-toast'
@@ -34,11 +29,8 @@ export function useToast() {
   };
   return { showToast };
 };
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 =======

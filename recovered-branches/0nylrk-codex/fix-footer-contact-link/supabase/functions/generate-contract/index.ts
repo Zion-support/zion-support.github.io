@@ -4,12 +4,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-};
-=======
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface Milestone {
   title: string;
@@ -108,35 +103,17 @@ serve(async (req) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-<<<<<<< HEAD
-        'Authorization': `Bearer ${apiKey}`,
-      },
-=======
         'Authorization': `Bearer ${apiKey}`},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       body: JSON.stringify({
         model: 'gpt-4o',
         messages: [
           {
             role: 'system',
-<<<<<<< HEAD
-            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.',
-          },
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
-        temperature: 0.7,
-      }),
-    });
-=======
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'},
           {
             role: 'user',
             content: prompt}],
         temperature: 0.7})});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const data = await response.json();
     
@@ -150,12 +127,7 @@ serve(async (req) => {
       success: true, 
       contract 
     }), {
-<<<<<<< HEAD
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
-=======
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   } catch (error) {
     console.error('Error generating contract:', error);
     return new Response(
@@ -165,12 +137,7 @@ serve(async (req) => {
       }),
       { 
         status: 500, 
-<<<<<<< HEAD
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
-=======
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   }
 });

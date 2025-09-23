@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceMonitor.dynamic.test.js.backup
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:__tests__/PerformanceMonitor.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/PerformanceMonitor.dynamic.test.js
 import React from 'react';
@@ -28,11 +23,8 @@ describe('PerformanceMonitordynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceMonitordynamic from "./components/PerformanceMonitor.dynamic"; describe("PerformanceMonitordynamic",() => { test("renders without crashing",() => { render(<PerformanceMonitordynamic />); expect( screen.getByTestId("performancemonitor.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceMonitordynamic />)}); test("handles user interactions",() => { render(<PerformanceMonitordynamic />)}); test("applies correct styling",() => { render(<PerformanceMonitordynamic />)})});''"
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:__tests__/PerformanceMonitor.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import PerformanceMonitordynamic from '../components/PerformanceMonitor.dynamic'; describe('PerformanceMonitordynamic',() => { test('renders without crashing',() => { render(<PerformanceMonitordynamic />); expect( screen.getByTestId('performancemonitor.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<PerformanceMonitordynamic />)}); test('handles user interactions',() => { render(<PerformanceMonitordynamic />)}); test('applies correct styling',() => { render(<PerformanceMonitordynamic />)})});
 >>>>>>> main
 =======

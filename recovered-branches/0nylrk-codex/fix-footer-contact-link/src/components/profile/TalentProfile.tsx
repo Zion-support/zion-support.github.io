@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Handshake, MessageSquare, Star } from "lucide-react";
-=======
 import { HandshakeMessageSquareStar } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 
 import { HireNowCTA } from "./HireNowCTA";
@@ -26,11 +22,7 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
-<<<<<<< HEAD
-  profile, 
-=======
   profile
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
@@ -50,11 +42,7 @@ export function TalentProfile({
   })) || [];
   
   // Create proper projects array for ProfileProjects component
-<<<<<<< HEAD
-  const projectsArray = profile.key_projects?.map((proj, i) => ({
-=======
   const projectsArray = profile.key_projects?.map((proji) => ({
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     id: `project-${i}`,
     title: proj.title,
     description: proj.description,

@@ -1,0 +1,39 @@
+=======
+<<<<<<< HEAD:backup-merge-conflicts/zionTechGroup2025ComprehensiveServices.ts.backup
+<<<<<<< HEAD
+<<<<<<< HEAD
+export: interface ZionService {
+=======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/zionTechGroup2025ComprehensiveServices.ts
+>>>>>>> pr-11935
+"export": interface ZionService {
+>>>>>>> main
+   id: string;
+   title: string;
+   description: string;
+   category,:  "Micro": SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';
+   price: string;
+   billing: 'month' | 'year' | 'project' | 'hour';
+   features: string[];
+   benefits: string[];
+   useCases: string[];
+   targetAudience: string[];
+   contactInfo: {
+   mobile: string;
+   email: string;
+   address: string;
+=======
+<<<<<<< HEAD:backup-merge-conflicts/zionTechGroup2025ComprehensiveServices.ts.backup
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} ctaLabel: 'string: href: string: external?: boolean'} export: const zionTechGroup2025Services: ZionService[] = ['';,;
+=======
+   website: strin,g} "ctaLabel": string: href: string: external?: boolean} "export": const zionTechGroup2025Services: ZionService[] = ['',
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
+=======
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} ctaLabel: 'string: href: string: external?: boolean'} export: const zionTechGroup2025Services: ZionService[] = ['';,;
+   website: strin,g} "ctaLabel": string: href: string: external?: boolean} "export": const zionTechGroup2025Services: ZionService[] = ['',
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
+>>>>>>> pr-11935

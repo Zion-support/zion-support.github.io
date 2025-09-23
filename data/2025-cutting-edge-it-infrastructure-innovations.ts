@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const cuttingEdgeITInfrastructureInnovations2025 = [
   // Quantum-Safe Cloud Infrastructure Platform
   {
@@ -103,10 +95,6 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/quantum-safe-cloud-infrastructure-platform'
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Edge Computing Network
   {
     id: 'autonomous-edge-computing-network',
@@ -162,10 +150,6 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-edge-computing-network'
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Neuromorphic Computing Infrastructure
   {
     id: 'neuromorphic-computing-infrastructure',
@@ -221,10 +205,6 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/neuromorphic-computing-infrastructure'
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Data Center Management Platform
   {
     id: 'autonomous-data-center-management-platform',

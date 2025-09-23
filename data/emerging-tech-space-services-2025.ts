@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface EmergingTechSpaceService2025 {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface EmergingTechSpaceService2025 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
   // Space Technology & Mining
   {

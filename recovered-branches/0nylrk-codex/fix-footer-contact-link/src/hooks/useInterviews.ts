@@ -39,12 +39,7 @@ export function useInterviews() {
           meeting_platform: interviewRequest.meeting_platform,
           interview_type: interviewRequest.interview_type,
           title: interviewRequest.title,
-<<<<<<< HEAD
-          status: 'requested',
-        })
-=======
           status: 'requested'})
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         .select('*')
         .single();
 
@@ -120,12 +115,7 @@ export function useInterviews() {
         client_name: interview.clients?.display_name,
         talent_name: interview.talents?.full_name,
         client_avatar: interview.clients?.avatar_url,
-<<<<<<< HEAD
-        talent_avatar: interview.talents?.profile_picture_url,
-      }));
-=======
         talent_avatar: interview.talents?.profile_picture_url}));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
       setInterviews(formattedInterviews);
       return formattedInterviews;
@@ -233,12 +223,7 @@ export function useInterviews() {
         type,
         title,
         message,
-<<<<<<< HEAD
-        related_id: relatedId,
-      });
-=======
         related_id: relatedId});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } catch (error) {
       console.error("Error creating notification:", error);
     }
@@ -317,10 +302,5 @@ export function useInterviews() {
     requestInterview,
     fetchInterviews,
     respondToInterview,
-<<<<<<< HEAD
-    cancelInterview,
-  };
-=======
     cancelInterview};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

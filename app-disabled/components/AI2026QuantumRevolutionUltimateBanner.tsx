@@ -1,7 +1,3 @@
-<<<<<<< HEAD:app-disabled/components/AI2026QuantumRevolutionUltimateBanner.tsx
-<<<<<<< HEAD
-export { default } from "../../components/AI2026QuantumRevolutionUltimateBanner";
-=======
 "use client";
 
 import React from 'react';
@@ -18,7 +14,6 @@ const AI2026QuantumRevolutionUltimateBanner: React.FC = () => {
 
 export default AI2026QuantumRevolutionUltimateBanner;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 =======
 'use client';
 

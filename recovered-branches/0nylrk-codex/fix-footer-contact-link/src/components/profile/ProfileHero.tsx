@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-=======
 import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
@@ -54,11 +50,7 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
-<<<<<<< HEAD
-                  {name.substring(0, 2).toUpperCase()}
-=======
                   {name.substring(02).toUpperCase()}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </AvatarFallback>
               )}
             </Avatar>

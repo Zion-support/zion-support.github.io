@@ -1,9 +1,5 @@
 import { Fragment } from "react";
-<<<<<<< HEAD
-import { Route, Routes } from "react-router-dom";
-=======
 import { Routes } from "react-router-dom";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import CommunityPage from "../pages/CommunityPage";
 import ForumCategoryPage from "../pages/ForumCategoryPage";

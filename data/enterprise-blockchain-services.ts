@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface EnterpriseBlockchainService {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface EnterpriseBlockchainService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
   // Enterprise Blockchain Platform
   {
@@ -100,10 +92,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.8,
     reviews: 67
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // DeFi Platform for Enterprises
   {
     id: 'defi-enterprise-platform',
@@ -156,10 +144,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.9,
     reviews: 38
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // NFT Enterprise Platform
   {
     id: 'nft-enterprise-platform',
@@ -212,10 +196,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.7,
     reviews: 134
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Blockchain Supply Chain Platform
   {
     id: 'blockchain-supply-chain-platform',
@@ -268,10 +248,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.8,
     reviews: 62
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Blockchain Identity Management
   {
     id: 'blockchain-identity-management',

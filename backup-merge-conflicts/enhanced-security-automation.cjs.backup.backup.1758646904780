@@ -29,11 +29,6 @@ class EnhancedSecurityAutomation {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-        }
-
-    runSecurityAudit() {
-=======
         console.log(message)};
     runSecurityAudit() {}
         this.log('Running security audit...');
@@ -246,4 +241,3 @@ if ( {})
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
 module.exports = EnhancedSecurityAutomation;
->>>>>>> main

@@ -1,46 +1,4 @@
 
-<<<<<<< HEAD
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { AIMatchmaker } from "@/components/AIMatchmaker";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { toast } from "@/hooks/use-toast";
-import { MatchResult } from "@/lib/ai-matchmaking";
-
-export default function AIMatcherPage() {
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service";
-    const category = match.item.category.toLowerCase();
-    
-    if (category.includes("talent") || category === "engineering" || 
-        category === "data science" || category === "development") {
-      itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {
-      itemType = "equipment";
-    }
-    
-    toast({
-      title: "Match Selected",
-      description: `You've selected ${match.item.title}`,
-    });
-    
-    // Navigate to the quote request page with the selected item
-    navigate("/request-quote", {
-      state: { 
-        serviceType: itemType,
-        specificItem: match.item
-      }
-    });
-  };
-  
-=======
 
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
@@ -110,7 +68,6 @@ export default function AIMatcherPage() {
   },
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <Header />
@@ -122,10 +79,6 @@ export default function AIMatcherPage() {
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.
             </p>
           </div>
-<<<<<<< HEAD
-          
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -143,13 +96,8 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
-            
-            <AIMatchmaker 
-=======
 
             <AIMatchmaker
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
             />
@@ -158,10 +106,6 @@ export default function AIMatcherPage() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 }
             
@@ -330,4 +274,3 @@ if (|| category === "hardware") {) {
 ;
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

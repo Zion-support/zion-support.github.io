@@ -31,12 +31,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         : '';
       const headers = {
         ...instance.defaults.headers.common,
-<<<<<<< HEAD
-        ...(init as any).headers,
-      };
-=======
         ...(init as any).headers};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       const opts = { ...init, headers } as RequestInit;
       delete (opts as any).params;
       return request(baseURL + url + params, 'GET', opts);
@@ -45,19 +40,10 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       const headers = {
         'Content-Type': 'application/json',
         ...instance.defaults.headers.common,
-<<<<<<< HEAD
-        ...(init as any).headers,
-      };
-      const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit;
-      return request(baseURL + url, 'POST', opts);
-    },
-  };
-=======
         ...(init as any).headers};
       const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit;
       return request(baseURL + url, 'POST', opts);
     }};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Request interceptor
   instance.interceptors.request.use(

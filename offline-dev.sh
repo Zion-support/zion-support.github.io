@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/bin/bash
-=======
 #!/usr/bin/env bash
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 # Make sure the script fails if any command fails
 set -e

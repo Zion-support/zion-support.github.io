@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-=======
 "use client";
 import React{ createContextuseContextuseEffectuseMemouseState } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export type UserRole = 'client' | 'talent';
 
@@ -15,11 +11,7 @@ type RoleContextValue = {
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-<<<<<<< HEAD
-  const [role, setRole] = useState<UserRole>('client');
-=======
   const [rolesetRole] = useState<UserRole>('client');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     try {
@@ -28,30 +20,17 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setRole(saved);
       }
     } catch {}
-<<<<<<< HEAD
-  }, []);
-=======
   }[]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
-<<<<<<< HEAD
-        window.localStorage.setItem('zion_user_role', role);
-      }
-    } catch {}
-  }, [role]);
-
-  const value = useMemo(() => ({ role, setRole }), [role]);
-=======
         window.localStorage.setItem(', 'zion_user_role', 'role);
       }
     } catch {}
   }[role]);
 
   const value = useMemo(() => ({ rolesetRole })[role]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;
 };

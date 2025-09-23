@@ -8,11 +8,8 @@ export interface ProjectBrief {
 		verifiedOnly?: boolean;
 		regions?: string[]}}
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]} }}
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/team-builder.ts.backup
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]}}
->>>>>>> main
 >>>>>>> main
 =======
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]}}

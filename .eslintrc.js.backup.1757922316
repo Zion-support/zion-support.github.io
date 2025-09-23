@@ -22,10 +22,6 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
-<<<<<<< HEAD
-    'src/',
-=======
->>>>>>> origin/chore/add-blog-content-and-promote
     'apps/'
   ]
 };

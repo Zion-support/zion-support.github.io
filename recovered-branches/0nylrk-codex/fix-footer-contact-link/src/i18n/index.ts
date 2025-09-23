@@ -36,12 +36,7 @@ i18n
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'zion_language',
       caches: ['localStorage']
-<<<<<<< HEAD
-    },
-  });
-=======
     }});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // For RTL language support
 document.documentElement.dir = i18n.dir();

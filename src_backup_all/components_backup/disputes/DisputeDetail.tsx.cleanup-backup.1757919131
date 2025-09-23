@@ -135,18 +135,11 @@ export function DisputeDetail() {
     
     const success = await resolveDispute(disputeId, {
       summary: resolution.summary,
-<<<<<<< HEAD
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
-    if (success && dispute) {
-      setDispute({
-        ...dispute,
-=======
     const success = await resolveDispute(disputeId, { ...resolution, resolution_type: resolution.resolution_type || "compromise" });
     if (success && dispute) {
       setDispute({
         ...dispute, 
         status: "resolved", 
->>>>>>> origin/new-fix
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()}),

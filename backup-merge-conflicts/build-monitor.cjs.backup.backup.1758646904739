@@ -5,13 +5,6 @@ const path = require('path');
 class BuildMonitor {}
   constructor() {}
     this.isRunning = false;
-<<<<<<< HEAD
-    this.interval = 60000; // 1 minute
-    this.lastBuildTime = null}
-
-  async start() {
-    
-=======
     this.interval = 60000; // 1 minute;
     this.lastBuildTime = null};
   async start() {}
@@ -111,4 +104,3 @@ if ( {})
   
   monitor.start().catch(console.error)};
 module.exports = BuildMonitor;
->>>>>>> main

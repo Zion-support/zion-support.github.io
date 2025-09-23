@@ -108,11 +108,7 @@ const trustedCompanies = [
 
 export function TrustedBySection() {
   // Use state to track logos that failed to load
-<<<<<<< HEAD
-  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
-=======
   const [failedLogosetFailedLogos] = useState<Record<stringboolean>>({});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleImageError = (companyName: string) => {
     setFailedLogos(prev => ({
@@ -130,11 +126,7 @@ export function TrustedBySection() {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">
-<<<<<<< HEAD
-          {trustedCompanies.map((company, index) => (
-=======
           {trustedCompanies.map((companyindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div 
               key={index} 
               className="flex items-center justify-center bg-zion-blue-light p-5 rounded-lg border border-zion-purple/10 h-20 transition-all duration-300 hover:border-zion-purple/30 hover:bg-zion-blue group"

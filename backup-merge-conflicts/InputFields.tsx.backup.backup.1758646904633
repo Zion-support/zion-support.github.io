@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 interface InputFieldsProps {;
 <<<<<<< HEAD:backup-merge-conflicts/InputFields.tsx.backup
@@ -41,7 +39,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
       ...inputData,;
       [field]: value;
     });
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
@@ -105,8 +102,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
             value={inputData?.companyName || ''}
             onChange={(e) => handleInputChange('companyName', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
-<<<<<<< HEAD
-=======
             className="w-full p-3 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";
             placeholder="Enter company name";
             required;
@@ -152,7 +147,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
             onChange={(e) => handleInputChange('description', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";
             rows={4"}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
             placeholder="Brief description of your company";
@@ -205,8 +199,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
             type="text";';
             value={inputData?.targetAudience || "}
             onChange={(e) => handleInputChange('targetAudience', e.target.value)}
-<<<<<<< HEAD
-=======
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             placeholder="e.g., Small businesses, Enterprise clients"
           />
@@ -224,7 +216,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
 =======
             className="w-full p-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
             placeholder="e.g., Small businesses, Enterprise clients";
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
           />;

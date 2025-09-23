@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface EmergingTech2026ServiceV4 {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface EmergingTech2026ServiceV4 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
   // Neuromorphic Computing Platform
   {
@@ -100,10 +92,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 12
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Internet Security Gateway
   {
     id: 'quantum-internet-security-gateway',
@@ -156,10 +144,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.8,
     reviews: 38
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Synthetic Biology AI Platform
   {
     id: 'synthetic-biology-ai-platform',
@@ -212,10 +196,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 20
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Drone Fleet Management
   {
     id: 'autonomous-drone-fleet-management',
@@ -268,10 +248,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.7,
     reviews: 65
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Brain-Computer Interface Development Kit
   {
     id: 'brain-computer-interface-devkit',
@@ -324,10 +300,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 15
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -380,10 +352,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.8,
     reviews: 28
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform-2026',
@@ -436,10 +404,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.9,
     reviews: 12
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Digital Twin Platform for Smart Cities
   {
     id: 'digital-twin-smart-cities',

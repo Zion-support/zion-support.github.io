@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/specializedITInfrastructureServices2025.ts.backup
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
 ""
@@ -11,7 +7,6 @@ import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings
 =======
 import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
 ""
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ";";"
 =======
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""

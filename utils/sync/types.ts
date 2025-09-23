@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-export type SyncScope = "full" | "dao" | "marketplace";
-
-export interface Peer {
-  id: string;
-  baseUrl: string; // e.g., https://zion-latam.example.org
-  scope?: SyncScope;
-  paused?: boolean;
-}
-
-export interface InstanceConfig {
-  instanceId: string;
-=======
 
 
 
@@ -19,27 +6,11 @@ export interface InstanceConfig {
   paused?: boolean;
 }
 export interface InstanceConfig {instanceId: string;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   optIn: boolean;
   paused: boolean;
   scope: SyncScope;
   peers: Peer[];
   secretConfigured: boolean;
-<<<<<<< HEAD
-}
-
-export type SyncEventType =
-  | "proposal"
-  | "token_transfer"
-  | "talent_mobility"
-  | "dao_endorsement"
-  | "leaderboard_entry";
-
-export interface BaseEventPayload {
-  id: string;
-}
-
-=======
 
 export interface Peer {;
   id: string;
@@ -137,23 +108,10 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
   }
 }
 ;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface ProposalVoteEntry {
   voterId: string;
   weight: number;
   choice: string;
-<<<<<<< HEAD
-}
-
-export interface ProposalPayload extends BaseEventPayload {
-  proposalId: string;
-  title: string;
-  votes: ProposalVoteEntry[];
-}
-
-export interface TokenTransferPayload extends BaseEventPayload {
-  txId: string;
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -174,18 +132,11 @@ export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   token: string;
   amount: number;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
-<<<<<<< HEAD
-}
-
-export interface TalentMobilityPayload extends BaseEventPayload {
-  personId: string;
-=======
 
 }
 export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
@@ -198,63 +149,19 @@ export interface TalentMobilityPayload extends BaseEventPayload {personId: strin
 export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
-<<<<<<< HEAD
-}
-
-export interface DaoEndorsementPayload extends BaseEventPayload {
-  fromDAO: string;
-=======
 
 }
 export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   toDAO: string;
   resolutionId: string;
   decision: "endorse" | "reject";
   timestamp: number;
 }
-<<<<<<< HEAD
-
-export interface LeaderboardEntryPayload extends BaseEventPayload {
-  subjectId: string; // userId or teamId
-  score: number;
-  category: string; // e.g., grants, contributions
-  rank?: number;
-  period?: string; // e.g., 2025-Q3
-}
-
-export type SyncEventPayload =
-  | ProposalPayload
-  | TokenTransferPayload
-  | TalentMobilityPayload
-  | DaoEndorsementPayload
-  | LeaderboardEntryPayload;
-
-export interface SyncEvent {
-  eventId: string;
-  type: SyncEventType;
-  payload: SyncEventPayload;
-  originInstanceId: string;
-  version: number;
-  timestamp: number;
-  merkleRoot?: string; // required for proposal events
-}
-
-export interface MultiverseState {
-  config: InstanceConfig;
-  lastSyncedAt: number;
-  seenEventIds: Record<string, true>;
-  latestVersionByEntityId: Record<string, number>;
-  proposalMerkleById: Record<string, string>;
-  events: SyncEvent[];
-}
-=======
 export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: string, // userId or teamId;
   score: number;
   category: string, // e.g., grants, contributions;
@@ -270,7 +177,6 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: st
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 ;

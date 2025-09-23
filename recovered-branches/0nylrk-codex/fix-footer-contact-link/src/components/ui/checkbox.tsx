@@ -1,25 +1,13 @@
 
 "use client"
 
-<<<<<<< HEAD
-import * as React from "react"
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
-import { Check } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
-<<<<<<< HEAD
->(({ className, ...props }, ref) => (
-=======
 >(({ className...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(

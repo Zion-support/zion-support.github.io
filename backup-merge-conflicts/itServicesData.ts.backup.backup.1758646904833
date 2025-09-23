@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/data/itServicesData.ts
 export interface ITService {;
   "id": "string;
   "title": string;

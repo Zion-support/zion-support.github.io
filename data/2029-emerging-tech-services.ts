@@ -14,10 +14,6 @@ export interface EmergingTechService2029 {
     address: string;
   };
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const emergingTechServices2029: EmergingTechService2029[] = [
   {
     id: "2029-emerging-tech-service",

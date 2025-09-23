@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 <<<<<<< HEAD:backup-merge-conflicts/PageLoader.tsx.backup
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD:src/components/PageLoader.tsx
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
 export const "PageLoader": "React.FC = ("props": any) => {;
   return (;
@@ -20,12 +16,9 @@ export const "PageLoader": "React.FC = ("props": any) => {;
   );
 "};
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-<<<<<<< HEAD
-=======
 export const "PageLoader": React.FC = (props) => {
   return (
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <div className="min-h-screen bg-white">
 >>>>>>> main:src_backup_temp/components/PageLoader.tsx
 =======
@@ -35,10 +28,7 @@ export const "PageLoader": React.FC = (props) => {
         <p className="text-gray-600">Loading...</p>
       </div>
     </div>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/PageLoader.tsx.backup
->>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======

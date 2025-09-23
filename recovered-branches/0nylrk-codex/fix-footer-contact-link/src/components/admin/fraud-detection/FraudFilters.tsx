@@ -1,25 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter } from "lucide-react";
-
-interface FraudFiltersProps {
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
-  statusFilter: string | null;
-  setStatusFilter: (value: string | null) => void;
-  severityFilter: string | null;
-  setSeverityFilter: (value: string | null) => void;
-  contentTypeFilter: string | null;
-  setContentTypeFilter: (value: string | null) => void;
-  resetFilters: () => void;
-}
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-=======
 
 import React from "react";
 import {Input} from "@/components/ui/input";
@@ -91,7 +70,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   contentTypeFilter;
 
   setContentTypeFilter
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -100,23 +78,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter,
   contentTypeFilter,
   setContentTypeFilter,
-<<<<<<< HEAD
-  resetFilters,
-}) => {
-  return (
-    <div className="flex flex-col md:flex-row gap-4 mb-6">
-      <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-        <Input
-          placeholder="Search by user or content..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="pl-10"
-        />
-      </div>
-      
-      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-=======
 
   resetFilters}) => {
 
@@ -141,7 +102,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -157,15 +117,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-      
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-=======
 
       <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -176,15 +131,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-      
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-=======
 
       <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
         </SelectTrigger>
@@ -197,15 +147,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="review">Reviews</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-      
-      <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-        <Filter className="h-4 w-4 mr-2" /> Reset Filters
-      </Button>
-    </div>
-  );
-};
-=======
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
@@ -312,7 +253,6 @@ export default FraudFilters;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

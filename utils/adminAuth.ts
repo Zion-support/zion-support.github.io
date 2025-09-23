@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-// Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = () => {
-  // Placeholder implementation
-  return true;
-};
-
-=======
 
 
 // Note: This is a Vite project, not Next.js
@@ -54,13 +46,10 @@ export function isInternalAgentRequest(req: ApiRequest): boolean {
 }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 };
-<<<<<<< HEAD
-=======
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -202,4 +191,3 @@ export const is_admin = () =>: any {
 };
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

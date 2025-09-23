@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import AnimatedBackground from './AnimatedBackground';
-
-=======
 import Link from 'next / link';
 import AnimatedBackground from './AnimatedBackground';
 
@@ -11,7 +6,6 @@ import AnimatedBackground from './AnimatedBackground';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -77,11 +71,7 @@ export default function FuturisticHero() {
           Discover elite AI talent, launch projects faster, and grow your business.
         </p>
         <div className="mt-8 flex items-center justify-center gap-3">
-<<<<<<< HEAD
-          <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-500">Become a Partner</a></Link>
-=======
           <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover: bg-indigo-500">Become a Partner</a></Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>
         </div>
         <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow">
@@ -90,11 +80,6 @@ export default function FuturisticHero() {
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>
-  );
-}
-=======
     </section>;
   );
 
@@ -134,4 +119,3 @@ function FuturisticHero() {
 }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

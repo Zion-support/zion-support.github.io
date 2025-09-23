@@ -7,29 +7,6 @@ import TopContactBar from './TopContactBar';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
-import ThemeToggle from '../ThemeToggle';
-import LoadingSkeleton from '../LoadingSkeleton';
-import ErrorBoundary from '../ErrorBoundary';
-
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  canonicalUrl?: string;
-}
-
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions",
-  description = "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.",
-  keywords = "AI, artificial intelligence, quantum computing, space technology, cybersecurity, cloud infrastructure, enterprise solutions, autonomous systems, consciousness AI",
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  canonicalUrl
-}: LayoutProps) {
-=======
 import React, { useState } from 'react';
 import UltraAdvancedFuturisticNavigation2040 from './UltraAdvancedFuturisticNavigation2040';
 import UltraAdvancedFuturisticFooter2040 from './UltraAdvancedFuturisticFooter2040';
@@ -45,7 +22,6 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, seo }: LayoutProps) {
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -135,9 +111,6 @@ export default function Layout({ children, seo }: LayoutProps) {
           </div>
         )}
       </div>
-<<<<<<< HEAD
-    </>
-=======
         {/* Analytics Dashboard */}
         <Analytics showUI={true} autoRefresh={true} refreshInterval={60000} />
       </div>
@@ -152,7 +125,6 @@ export default function Layout({ children, seo }: LayoutProps) {
       <AccessibilityEnhancer />
       <PerformanceOptimizer showMetrics={true} autoOptimize={true} />
     </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
 >>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
   );
 };

@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
 "use client";
 import React{ useState } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Star, TrendingUp, Users, Award, Clock, Heart, 
-  Brain, Atom, Shield, Rocket, Zap, Globe, 
-  CheckCircle, ArrowRight, Search, Filter,
-  ChevronDown, ChevronUp, Eye, Play, Sparkles,
-  Target, Microscope, Lock, Cloud, BarChart3,
-  Settings, Cpu, Database, Network, Server,
-  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon,
-  UsersIcon, CheckCircleIcon, ArrowRightIcon,
-  CpuIcon, DollarSign, Phone, Mail, MapPin,
-  Dna, Target as TargetIcon, Shield as ShieldIcon,
-  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon,
-  Brain as BrainIcon, Play as PlayIcon
-=======
   StarTrendingUpUsersAwardClockHeart
   BrainAtomShieldRocketZapGlobe
   CheckCircleArrowRightSearchFilter,
@@ -34,7 +16,6 @@ import {
   DnaTarget as TargetShield as ShieldIcon,
   BookOpenSparkles as SparklesIconZap as ZapIcon,
   Brain as BrainIconPlay as PlayIcon
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
@@ -120,19 +101,6 @@ const serviceCategories = [
 ];
 
 const stats = [
-<<<<<<< HEAD
-  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },
-  { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
-  { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
-];
-
-export default function UltimateFuturisticServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-  const [viewMode, setViewMode] = useState('grid');
-=======
   { number: '15+'label: 'Revolutionary 'Services', 'icon: Starcolor: 'text-cyan-400' },
   { number: '1000%+'label: 'Average 'ROI', 'icon: TrendingUpcolor: 'text-purple-400' },
   { number: '99.9%'label: 'Success 'Rate', 'icon: Awardcolor: 'text-green-400' },
@@ -144,7 +112,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('all');
   const [sortBysetSortBy] = useState('popular');
   const [viewModesetViewMode] = useState('grid');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -154,21 +121,12 @@ export default function UltimateFuturisticServicesShowcase2025() {
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-      case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-=======
   const sortedServices = [...filteredServices].sort((ab) => {
     switch (sortBy) {
       case 'price-low':
         return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', '));
       case 'price-high':
         return parseFloat(b.price.replace(/[^0-9.]/g', ')) - parseFloat(a.price.replace(/[^0-9.]/g', '));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       case 'rating':
         return b.rating - a.rating;
       case 'customers':
@@ -189,11 +147,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
   };
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { y: 20, opacity: 0 },
-=======
     hidden: { y: 20opacity: 0 },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     visible: {
       y: 0,
       opacity: 1,
@@ -207,17 +161,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
     <Layout>
       <Head>
         <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />
-        <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations." />
-=======
         <meta name="description" content="Discover our revolutionary futuristic services including AI consciousnessquantum computingspace technologyand breakthrough innovations. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="futuristic servicesAI consciousnessquantum computingspace technologybreakthrough innovationsZion Tech Group" />
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />
         <meta property="og:description" content="Discover our revolutionary futuristic services including AI consciousnessquantum computingspace technologyand breakthrough innovations." />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <meta property="og:url" content="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
@@ -237,27 +184,12 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 Ultimate Futuristic
               </span>
               <br />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
                 Services 2025
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-              Experience the future of technology with our revolutionary services that combine AI consciousness, 
-              quantum computing, space technology, and breakthrough innovations to transform your business.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-=======
               Experience the future of technology with our revolutionary services that combine AI consciousness
               quantum computingspace technologyand breakthrough innovations to transform your business.
             </p>
@@ -268,7 +200,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{ opacity: 1scale: 1 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-6 h-6 ${stat.color}`} />
@@ -365,11 +296,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
-<<<<<<< HEAD
-            {sortedServices.map((service, index) => (
-=======
             {sortedServices.map((serviceindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -418,11 +345,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     Key Features
                   </h4>
                   <div className="grid grid-cols-1 gap-2">
-<<<<<<< HEAD
-                    {service.features.slice(0, 4).map((feature, idx) => (
-=======
                     {service.features.slice(04).map((featureidx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -512,11 +435,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
               <button
                 onClick={() => {
-<<<<<<< HEAD
-                  setSearchTerm('');
-=======
                   setSearchTerm(', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   setSelectedCategory('all');
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"

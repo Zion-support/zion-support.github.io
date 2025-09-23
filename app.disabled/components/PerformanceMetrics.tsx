@@ -1,34 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-export default function PerformanceMetrics() {
-  return (
-    <div className="p-6 rounded-lg bg-white/10 text-white">
-      <h3 className="text-xl font-semibold mb-4">Performance Metrics</h3>
-      <div className="space-y-4">
-        <div className="flex justify-between">
-          <span>Uptime</span>
-          <span className="text-green-400">99.9%</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Response Time</span>
-          <span className="text-blue-400">&lt;100ms</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Throughput</span>
-          <span className="text-purple-400">10K req/s</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 =======
 "use client";
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 export default function PerformanceMetrics() {
 	return (
 		<div className="p-6 rounded-lg bg-white/10 text-white">
@@ -37,7 +9,3 @@ export default function PerformanceMetrics() {
 		</div>
 	);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1

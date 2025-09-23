@@ -1,12 +1,3 @@
-<<<<<<< HEAD:app-disabled/components/RelatedContentWidget.tsx
-"use client";
-<<<<<<< HEAD
-import React from 'react';
-
-export default function RelatedContentWidget() {
-  return null;
-}
-=======
 
 import React from 'react';
 import Link from 'next/link';
@@ -52,18 +43,9 @@ export default function RelatedContentWidget({ title = 'Related Content', posts 
         {items.map((l) => (
           <li key={l.slug}>
             <Link className="hover:underline" href={l.slug}>{l.title}</Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/RelatedContentWidget.tsx
           </li>
         ))}
       </ul>
     </aside>
   );
-<<<<<<< HEAD:app-disabled/components/RelatedContentWidget.tsx
-};
-
-export default RelatedContentWidget;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
-
-=======
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/RelatedContentWidget.tsx

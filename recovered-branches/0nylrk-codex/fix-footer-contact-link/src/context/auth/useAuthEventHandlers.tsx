@@ -17,23 +17,14 @@ export function useAuthEventHandlers(
     toast({
       title: "Welcome back!",
       description: `You're now signed in as ${mappedUser.displayName || mappedUser.email}`,
-<<<<<<< HEAD
-      variant: "default",
-    });
-=======
       variant: "default"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     // Check for new registration and send welcome email if needed
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser);
       }
-<<<<<<< HEAD
-    }, 0);
-=======
     }0);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
@@ -41,12 +32,7 @@ export function useAuthEventHandlers(
       toast({
         title: "Complete your profile",
         description: "Please complete your profile information to get started",
-<<<<<<< HEAD
-        variant: "default",
-      });
-=======
         variant: "default"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       navigate('/onboarding');
     }
   };
@@ -55,12 +41,7 @@ export function useAuthEventHandlers(
     toast({
       title: "Signed out",
       description: "You have been successfully logged out",
-<<<<<<< HEAD
-      variant: "default",
-    });
-=======
       variant: "default"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return {

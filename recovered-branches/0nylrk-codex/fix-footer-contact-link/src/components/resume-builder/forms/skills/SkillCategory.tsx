@@ -2,11 +2,7 @@
 import { SkillCategoryProps } from './types';
 import { SkillItem } from './SkillItem';
 
-<<<<<<< HEAD
-export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
-=======
 export const SkillCategory = ({ categoryskillsonDelete }: SkillCategoryProps) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (!skills || skills.length === 0) return null;
   
   return (

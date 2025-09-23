@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-'use client';
-
-'use client';
-=======
 "use client";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React, { useState, useEffect } from 'react';
 
 interface APIEndpoint {

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-
-export async function getStaticProps() {
-	return (getSlugStaticProps as any)({ params: { slug: 'automated-financial-analytics-platform' } });
-}
-
-export default function AutomatedFinancialAnalyticsPlatform(props: any) {
-	return <ServicePage {...props} />;
-=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -488,5 +478,4 @@ export default function AutomatedFinancialAnalyticsPlatform() {
       </section>
     </div>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

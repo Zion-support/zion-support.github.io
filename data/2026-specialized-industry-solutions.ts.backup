@@ -806,9 +806,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Energy management',
       'Performance analytics'
     ]
-<<<<<<< HEAD
-  }
-=======
   },
   {
     id: 'ai-powered-healthcare-diagnostics',

@@ -182,10 +182,5 @@ export function useConversations(
 
   return {
     fetchConversations,
-<<<<<<< HEAD
-    createConversation,
-  };
-=======
     createConversation};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

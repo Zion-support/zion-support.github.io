@@ -1,9 +1,5 @@
 [
   "accessibility",
-<<<<<<< HEAD
-  "ai-autonomous-vehicle-ai-platform",
-=======
->>>>>>> origin/main
   "ai-consciousness-evolution",
   "ai-content-marketing-automation",
   "ai-creativity-orchestrator",
@@ -13,10 +9,7 @@
   "ai-ethics-governance",
   "ai-financial-fraud-detection",
   "ai-powered-enterprise-security",
-<<<<<<< HEAD
-=======
   "ai-threat-detection",
->>>>>>> origin/main
   "autonomous-devops-platform",
   "autonomous-it-operations",
   "autonomous-vehicle-ai",
@@ -37,10 +30,6 @@
   "quantum-threat-detection",
   "services/data-contracts-hub",
   "services/serverless-lakehouse-starter",
-<<<<<<< HEAD
-  "space-data-analytics",
-  "space-mining-automation-platform"
-=======
   "quantum-risk-financial-manager",
   "quantum-supply-chain-optimizer",
   "quantum-threat-detection",
@@ -50,5 +39,4 @@
   "space-data-analytics",
   "space-mining-automation-platform",
   "space-mining-platform"
->>>>>>> origin/main
 ]

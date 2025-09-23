@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom';
 import { useConsent } from '@/context/ConsentContext';
 
 export function CookieBanner() {
-<<<<<<< HEAD
-  const { acceptAll, rejectNonEssential } = useConsent();
-=======
   const { acceptAllrejectNonEssential } = useConsent();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <CookieConsent

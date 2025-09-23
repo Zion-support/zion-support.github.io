@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,7 +21,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -31,38 +28,6 @@ interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
-<<<<<<< HEAD
-  rounded?: string;
-}
-
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
-  height = 'h-4', 
-  width = 'w-full', 
-  rounded = 'rounded' 
-}) => {
-  return (
-    <motion.div
-      className={`bg-white/10 animate-pulse ${height} ${width} ${rounded} ${className}`}
-      animate={{
-        opacity: [0.3, 0.6, 0.3],
-      }}
-      transition={{
-        duration: 1.5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    />
-  );
-};
-
-interface ServiceCardSkeletonProps {
-  className?: string;
-}
-
-export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
-  return (
-=======
 
 
   return (
@@ -85,7 +50,6 @@ interface ServiceCardSkeletonProps {
 export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ class_name = '' }) => {
   return (
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>
       <div className="flex items-center space-x-4 mb-6">
         <Skeleton className="w-16 h-16 rounded-2xl" />
@@ -98,17 +62,6 @@ export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ clas
       <Skeleton className="h-4 w-5/6 mb-2" />
       <Skeleton className="h-4 w-4/6" />
     </div>
-<<<<<<< HEAD
-  );
-};
-
-interface HeroSkeletonProps {
-  className?: string;
-}
-
-export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {
-  return (
-=======
   )
 }
   );
@@ -127,42 +80,17 @@ interface HeroSkeletonProps {
 export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' }) => {
   return (
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>
       <div className="text-center max-w-6xl mx-auto">
         <Skeleton className="h-20 w-96 mx-auto mb-6" />
         <Skeleton className="h-8 w-2/3 mx-auto mb-8" />
         <Skeleton className="h-6 w-1/2 mx-auto mb-12" />
-<<<<<<< HEAD
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
         <div className="flex flex-col sm: flex-row gap-4 justify-center">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Skeleton className="h-14 w-32" />
           <Skeleton className="h-14 w-32" />
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-};
-
-interface StatsSkeletonProps {
-  className?: string;
-}
-
-export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
-  return (
-    <div className={`py-20 px-6 ${className}`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[...Array(4)].map((_, index) => (
-            <div key={index} className="text-center">
-              <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
-              <Skeleton className="h-10 w-20 mx-auto mb-2" />
-              <Skeleton className="h-5 w-24 mx-auto" />
-            </div>
-=======
   )
 }
   );
@@ -180,17 +108,10 @@ interface StatsSkeletonProps {
 
             </div>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           ))}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-};
-
-export default Skeleton;
-=======
 
         duration: 1 && 1.5,
         repeat: Infinity,
@@ -237,4 +158,3 @@ interface SkeletonProps {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

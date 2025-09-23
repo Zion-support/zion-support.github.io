@@ -1,12 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { setSessionCookie } from '../../../utils/adminAuth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method Not Allowed' });
-    return;
-=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -26,7 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     return
@@ -39,13 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date.now() });
-<<<<<<< HEAD
-    res.status(200).json({ ok: true });
-  } else {
-    res.status(401).json({ error: 'Invalid credentials' });
-  }
-}
-=======
     res.status(200).json({ ok: true })
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' });
@@ -56,6 +40,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,14 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
 
 
 
@@ -23,7 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -37,13 +31,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body || {};
   const commits = readJsonFile('deal/soft-commits.json', [] as any[]);
-<<<<<<< HEAD
-  const record = { amount, timestamp: new Date().toISOString() };
-  commits.push(record);
-  writeJsonFile('deal/soft-commits.json', commits);
-  res.status(200).json(record);
-}
-=======
   const record = { amount, timestamp: new Date().toISOString() }
   commits.push(record);
   writeJsonFile('deal/soft-commits.json', commits);
@@ -100,7 +87,6 @@ function handler() {
   res.status (200).json (record);  res.status (200).json (record);
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 

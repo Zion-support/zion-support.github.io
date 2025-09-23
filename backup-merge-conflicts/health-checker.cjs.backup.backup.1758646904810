@@ -5,41 +5,6 @@
  */
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
-const { execSync } = require("child_process")
-class HealthChecker {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.healthStatus = {"overall": "healthy","checks": [],"issues": [];
-      recommendations: []}
-  }
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    }
-  async runHealthChecks() {
-    try {
-      this.log("Running comprehensive health checks...")
-      await this.checkProjectStructure()
-      await this.checkDependencies()
-      await this.checkConfiguration()
-      await this.checkCodeQuality()
-      await this.checkBuildHealth()
-      await this.checkSecurity()
-      this.determineOverallHealth()
-      this.log("Health checks completed", "success")} catch (error) {
-      this.log(`Health checks "failed": ${error.message}`, "error")}
-  }
-  async checkProjectStructure() {
-    try {
-      this.log("Checking project structure...")
-      const requiredDirs = ["src", "pages", "components", "public"]
-      const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"]
-      for (const dir of requiredDirs) {
-        if (fs.existsSync(dir)) {
-          this.healthStatus.checks.push({
-            "name": `Directory: ${dir}`;
-=======
 const { execSync } = require("child_process");
 class HealthChecker {}
   constructor() {}
@@ -271,4 +236,3 @@ if (require.main === module) {}
   const checker = new HealthChecker();
   checker.run().catch(console.error)};
 module.exports = HealthChecker;
->>>>>>> main

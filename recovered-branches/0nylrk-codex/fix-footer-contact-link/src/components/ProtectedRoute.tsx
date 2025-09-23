@@ -13,24 +13,14 @@ export interface ProtectedRouteProps {
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-<<<<<<< HEAD
-  children, 
-=======
   children
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   adminOnly = false,
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
-<<<<<<< HEAD
-  const { user, isLoading } = useAuth();
-  const { tenant } = useWhitelabel();
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
-=======
   const { userisLoading } = useAuth();
   const { tenant } = useWhitelabel();
   const { isAdmin: isTenantAdminisLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 

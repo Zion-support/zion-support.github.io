@@ -1,30 +1,4 @@
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";
-import { QuoteFormSection } from "@/components/QuoteFormSection";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-import { PageHero } from "@/components/services/PageSections/PageHero";
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-
-export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  
-  // Check for success parameter in URL
-  const success = searchParams.get("success");
-  
-=======
 
 
 
@@ -66,7 +40,6 @@ export default function ITOnsiteServicesPage() {
 
   
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -77,20 +50,6 @@ export default function ITOnsiteServicesPage() {
   useEffect(() => {
     if (success === "true") {
       toast({
-<<<<<<< HEAD
-        title: "Payment Successful",
-        description: "Your IT onsite service request has been received. Our team will contact you shortly.",
-      });
-    }
-  }, [success]);
-  
-  // Popular countries for the featured cards
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
-  
-  // Filter countries based on search query
-  const filteredCountries = onsiteServicePricing
-    .filter(country => 
-=======
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
@@ -107,32 +66,10 @@ export default function ITOnsiteServicesPage() {
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       country.country.toLowerCase().includes(searchQuery.toLowerCase())
     )
     .sort((a, b) => {
       // First, sort by popular status
-<<<<<<< HEAD
-      const aIsPopular = popularCountries.includes(a.country);
-      const bIsPopular = popularCountries.includes(b.country);
-      
-      if (aIsPopular && !bIsPopular) return -1;
-      if (!aIsPopular && bIsPopular) return 1;
-      
-      // Then sort alphabetically
-      return a.country.localeCompare(b.country);
-    });
-  
-  const handleCountrySelect = (country: CountryPricing) => {
-    setSelectedCountry(country);
-    
-    // Scroll to the service details section
-    setTimeout(() => {
-      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-  
-=======
 
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
@@ -164,19 +101,10 @@ export default function ITOnsiteServicesPage() {
   },
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-          {/* Hero Section with Features */}
-          <PageHero />
-          
-          {/* Country Selection Tabs */}
-          <div className="mb-12">
-            <CountryTabs 
-=======
 
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
@@ -249,7 +177,6 @@ export default function ITOnsiteServicesPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -275,23 +202,6 @@ export default function ITOnsiteServicesPage() {;
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-<<<<<<< HEAD
-            />
-          </div>
-          
-          {/* Service Details Section */}
-          <ServiceDetailsSection 
-            selectedCountry={selectedCountry}
-            setSelectedCountry={setSelectedCountry}
-          />
-          
-          {/* How It Works Section */}
-          <ServiceProcessSteps />
-          
-          {/* What's Included Section */}
-          <ServiceIncludes />
-          
-=======
 
             />;
           </div>;
@@ -310,7 +220,6 @@ export default function ITOnsiteServicesPage() {;
           {/* What's Included Section */}
           <ServiceIncludes />;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           {/* Complete Pricing Table */}
           <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">
@@ -320,30 +229,15 @@ export default function ITOnsiteServicesPage() {;
                 Additional hours are billed separately at standard rates.
               </p>
             </div>
-<<<<<<< HEAD
-            
-            <ITServicePricingTable />
-          </div>
-          
-          <EnterpriseCallToAction />
-        </div>
-      </section>
-      
-=======
             <ITServicePricingTable />
           </div>
           <EnterpriseCallToAction />
         </div>
       </section>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <GlobalServiceSection />
       <TrustedBySection />
       <QuoteFormSection />
     </AppLayout>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 
 }
@@ -444,7 +338,6 @@ if (return 1) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

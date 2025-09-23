@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
-=======
 
 
 
@@ -27,7 +12,6 @@ import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -51,21 +35,11 @@ const NotFound = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">404</h1>
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-<<<<<<< HEAD
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-=======
         <a href="/" className="text-blue-500 hover: text-blue-700 underline">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           Return to Home
         </a>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-};
-
-export default NotFound;
-=======
   )
 
 }
@@ -102,7 +76,6 @@ const NotFound = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
 

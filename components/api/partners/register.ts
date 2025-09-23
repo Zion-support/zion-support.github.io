@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createPartner } from "../../../utils/api/partnerAuth";
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" });
-  }
-  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
-  if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
-    return res.status(400).json({ error: "Missing required fields" });
-=======
 
       req && req.body || {};
 
@@ -80,7 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status (500).json ({ error: "Failed to create partner" });
     }
     return res.status (500).json ({ error: "Failed to create partner" });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
   try {
     const { partner, apiKey } = await createPartner({
@@ -88,12 +74,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       entityType,
       pointOfContact,
       useCaseType,
-<<<<<<< HEAD
-      brand,
-    });
-=======
       brand}),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return res.status(201).json({
       partner: {
         id: partner.id,
@@ -101,17 +82,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         status: partner.status,
         entityType: partner.entityType,
         useCaseType: partner.useCaseType,
-<<<<<<< HEAD
-        createdAt: partner.createdAt,
-      },
-      apiKey: apiKey.key,
-      dashboardUrl: `/partners/dashboard?pid=${partner.id}`,
-    });
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to create partner" });
-  }
-}
-=======
         createdAt: partner.createdAt},
       apiKey: apiKey.key,
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
@@ -145,4 +115,3 @@ import { createPartner } from "../../../utils/api/partnerAuth";
 }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

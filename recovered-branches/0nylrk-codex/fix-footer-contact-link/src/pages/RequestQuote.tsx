@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-=======
 
 
 
@@ -17,7 +12,6 @@ import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function RequestQuote() {
   return (
@@ -28,10 +22,6 @@ export default function RequestQuote() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 
 }
@@ -77,4 +67,3 @@ function RequestQuote() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

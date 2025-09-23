@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-export interface EmergingTechService2028 {
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2028Service {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-=======
   period: string;
   description: string;
   features: string[];
@@ -37,38 +26,10 @@ export interface EmergingTech2028Service {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-  };
-}
-
-export const emergingTech2028Services: EmergingTechService2028[] = [
-  {
-    id: "2028-emerging-tech-service",
-    name: "2028 Emerging Tech Service Platform",
-    tagline: "Emerging tech services for 2028",
-    price: "$299/month",
-    description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    features: [
-      "Emerging tech services",
-      "Innovation platform",
-      "Future capabilities",
-      "Advanced features",
-      "Expert insights"
-    ],
-    link: "/services/2028-emerging-tech-service",
-    category: "Emerging Tech Services 2028",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -494,6 +455,5 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     customers: 110,
     rating: 4.8,
     reviews: 89
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];

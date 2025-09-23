@@ -74,12 +74,7 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
-<<<<<<< HEAD
-  },
-];
-=======
   }];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key);

@@ -1,12 +1,9 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; ,} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
 =======
 =======
->>>>>>> pr-11913:src.disabled/src/hooks/use-toast.js
 import React, { useState, useCallback } from "react";
 // comment;
 export const toast = ({ title, description, variant = "default" }) => {};
@@ -30,10 +27,7 @@ setTimeout(() => {}}
   return {};
     toast, dismiss,    toasts}};"`
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(Toast [${variant}]: ${title} -,${description}"");,} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]);,} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]);,} setTimeout(() => {}} },5000);,} return id},[]);,} const dismiss = useCallback((id) => {}} },[]);,} return {}; toast,dismiss,toasts}};"`
-<<<<<<< HEAD:backup-merge-conflicts/use-toast.js.backup
-=======
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 =======

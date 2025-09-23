@@ -1,14 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/CommunityRoutes.jsx.backup
-<<<<<<< HEAD
-import React from &apos;react&apos;; import CommunityPage from &apos;@/pages/CommunityPage export default function CommunityRoutes($1) { return (<> <Route path=&quot; element={<CommunityPage />}/> </>)} ;&apos;;&apos;;
-=======
-<<<<<<< HEAD
 const React from "react"; import CommunityPage from "@/pages/CommunityPage export default function CommunityRoutes($1) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;";";"""
 <<<<<<< HEAD:backup-merge-conflicts/CommunityRoutes.jsx.backup
 =======
 import _React from 'react'; import CommunityPage from '@/pages/CommunityPage export default function CommunityRoutes(_) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;';';
->>>>>>> main
 =======
 import React from 'react';
 // Next.js routing - no need for react-router-dom;
@@ -23,9 +17,6 @@ export default function CommunityRoutes("props": "any) {;
 =======
 import _React from 'react'; import CommunityPage from '@/pages/CommunityPage export default function CommunityRoutes(_) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;';';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/routes/CommunityRoutes.jsx
-<<<<<<< HEAD
-=======
 import _React from 'react'; import CommunityPage from '@/pages/CommunityPage export default function CommunityRoutes(_) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;';';
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

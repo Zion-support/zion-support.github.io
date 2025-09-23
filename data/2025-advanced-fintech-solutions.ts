@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface AdvancedFintechSolution2025 {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface AdvancedFintechSolution2025 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
   {
     id: 'ai-powered-credit-risk-assessment',
@@ -85,11 +77,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],
     marketSize: '$35B credit scoring market',
     growthRate: '25% annual growth',
-<<<<<<< HEAD
-    variant: 'ai-finance-enterprise',
-=======
     variant: 'fintech',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -242,11 +230,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     competitors: ['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
     marketSize: '$20B insurtech market',
     growthRate: '30% annual growth',
-<<<<<<< HEAD
-    variant: 'ai-finance-enterprise',
-=======
     variant: 'fintech',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

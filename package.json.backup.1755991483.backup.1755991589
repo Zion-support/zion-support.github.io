@@ -652,12 +652,6 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-<<<<<<< HEAD
-    "deploy:ipfs": "ts-node scripts/deploy-zion-ipfs.ts"
-  },
-  "bin": {
-    "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.cjs"
-=======
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -745,7 +739,6 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   },
   "dependencies": {
@@ -832,56 +825,6 @@
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.20",
     "@types/mocha": "^10.0.10",
-<<<<<<< HEAD
-    "@types/node": "^24.2.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^17.0.34",
-    "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "autoprefixer": "^10.4.16",
-    "dotenv": "^17.2.1",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.0.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "hardhat": "^2.26.2",
-    "hardhat-gas-reporter": "^2.3.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.4",
-    "postcss": "^8.4.32",
-    "solidity-coverage": "^0.8.16",
-    "tailwindcss": "^3.4.0",
-    "ts-node": "^10.9.2",
-    "typechain": "^8.3.2",
-    "typescript": "^5.6.3"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
-  "name": "zion-sdk-monorepo",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Monorepo for Zion OS SDKs and CLI scaffolder",
-  "workspaces": [
-    "packages/*"
-  ],
-  "engines": {
-    "node": ">=18.18.0"
-  },
-  "scripts": {
-    "build": "npm -w @zion/sdk run build && npm -w create-zion-instance run build",
-    "lint": "npm -w @zion/sdk run lint || true",
-    "test": "npm -w @zion/sdk run test || true",
-    "clean": "rimraf node_modules packages/*/node_modules packages/*/dist"
-  },
-  "devDependencies": {
-    "rimraf": "^6.0.1"
-  }
-  },
-  "type": "module"
-=======
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
@@ -900,5 +843,4 @@
   "dependencies": {
     "js-yaml": "^4.1.0"
   }
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 }

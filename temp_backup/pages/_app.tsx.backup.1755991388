@@ -1,15 +1,9 @@
 import type { AppProps } from 'next/app';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-import '../styles/globals.css';
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-=======
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   return (
     <EnhancedLayout>
       <Component {...pageProps} />

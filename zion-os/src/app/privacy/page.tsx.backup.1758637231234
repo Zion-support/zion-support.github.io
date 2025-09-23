@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-export default function PrivacyPage() {return (;
-export default function PrivacyPage() {;
-  return (;
-    <div className="min-h-screen bg-white">;
-
-export default /**
- * PrivacyPage - Function description
- */
-function PrivacyPage() {
-  return (
-    <div className="min - h-screen bg - white">;
-
-export default function PrivacyPage() {;
-  return (;
-=======
 
 
 =======
@@ -450,4 +433,3 @@ export default function PrivacyPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

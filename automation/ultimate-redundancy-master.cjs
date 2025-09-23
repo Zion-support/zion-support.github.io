@@ -9,14 +9,6 @@ const crypto = require("crypto");
 class UltimateRedundancyMaster {
   constructor() {
     this.config = {
-<<<<<<< HEAD
-      pm2: {
-        ecosystemFiles: [
-          "ecosystem.pm2.cjs",
-          "ecosystem.redundancy.cjs", 
-          "ecosystem.comprehensive-redundancy.cjs",
-          "ecosystem.redundancy.pm2.cjs"
-=======
       // PM2 Redundancy Configuration
       pm2: {
         ecosystemFiles: [
@@ -24,18 +16,13 @@ class UltimateRedundancyMaster {
           "ecosystem.redundancy.cjs",
           "ecosystem.comprehensive-redundancy.cjs",
           "ecosystem-redundancy.pm2.cjs"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ],
         processes: [
           "zion-auto-sync",
           "zion-auto-sync-cron",
           "redundancy-automation-system",
           "redundancy-health-monitor",
-<<<<<<< HEAD
-          "redundancy-git-sync", 
-=======
           "redundancy-git-sync",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           "redundancy-build-monitor",
           "master-redundancy-orchestrator",
           "enhanced-pm2-redundancy",
@@ -53,14 +40,6 @@ class UltimateRedundancyMaster {
         processMonitoring: true,
         logRotation: true
       },
-<<<<<<< HEAD
-      githubActions: {
-        workflows: [
-          ".github/workflows/marketing-sync.yml",
-          ".github/workflows/sync-health.yml",
-          ".github/workflows/marketing-sync-backup.yml",
-          ".github/workflows/sync-health-backup.yml"
-=======
       
       // GitHub Actions Redundancy Configuration
       github: {
@@ -71,7 +50,6 @@ class UltimateRedundancyMaster {
         backupWorkflows: [
           "marketing-sync-backup",
           "sync-health-backup"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ],
         healthCheckInterval: 30000,
         maxFailureThreshold: 5,
@@ -80,14 +58,10 @@ class UltimateRedundancyMaster {
         workflowValidation: true,
         apiHealthCheck: true
       },
-<<<<<<< HEAD
-      netlifyFunctions: {
-=======
       
       // Netlify Functions Redundancy Configuration
       netlify: {
         functionsDir: "netlify/functions",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         manifestFile: "netlify/functions/functions-manifest.json",
         healthCheckInterval: 60000,
         maxFailureThreshold: 3,
@@ -243,11 +217,8 @@ class UltimateRedundancyMaster {
               continue;
             }
           }
-<<<<<<< HEAD
-=======
         } else {
           this.log(`Workflow ${workflow} is present and healthy`);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
       }
     }
@@ -459,11 +430,7 @@ class UltimateRedundancyMaster {
 if (require.main === module) {
   const master = new UltimateRedundancyMaster();
   
-<<<<<<< HEAD
-  const command = process.argv[2];
-=======
   const redundancyMaster = new UltimateRedundancyMaster();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   switch (command) {
     case 'start':
@@ -485,12 +452,9 @@ if (require.main === module) {
   }
 }
 
-<<<<<<< HEAD
-=======
 // Run if called directly
 if (require.main === module) {
   main();
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 module.exports = UltimateRedundancyMaster;

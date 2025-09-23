@@ -25,10 +25,6 @@ export interface EnterpriseService2034 {
   contact: string;
   website: string;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const enterprise2034Services: EnterpriseService2034[] = [
   {
     id: 'quantum-zero-trust-architecture',

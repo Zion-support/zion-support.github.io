@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useInterviews } from "@/hooks/useInterviews";
-import { Interview } from "@/types/interview";
-import { format, isPast, parseISO } from "date-fns";
-import { Link } from "react-router-dom";
-import { Calendar, Clock, Video } from "lucide-react";
-=======
 import React{ useEffectuseState } from "react";
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,18 +7,12 @@ import { Interview } from "@/types/interview";
 import { formatisPastparseISO } from "date-fns";
 import { Link } from "react-router-dom";
 import { CalendarClockVideo } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Avatar } from "@/components/ui/avatar";
 
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
-<<<<<<< HEAD
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-=======
   const [upcomingInterviewsetUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     const loadInterviews = async () => {
@@ -43,16 +27,6 @@ export function UpcomingInterviewsCard() {
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
-<<<<<<< HEAD
-          .sort((a, b) => 
-            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-          )
-          .slice(0, 3); // Take only the next 3 interviews
-        
-        setUpcomingInterviews(upcoming);
-      } catch (error) {
-        console.error("Error loading upcoming interviews:", error);
-=======
           .sort((ab) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
@@ -61,18 +35,13 @@ export function UpcomingInterviewsCard() {
         setUpcomingInterviews(upcoming);
       } catch (error) {
         console.error("Error loading upcoming interviews:"error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } finally {
         setIsLoading(false);
       }
     };
 
     loadInterviews();
-<<<<<<< HEAD
-  }, []);
-=======
   }[]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   if (isLoading) {
     return (
@@ -85,11 +54,7 @@ export function UpcomingInterviewsCard() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-<<<<<<< HEAD
-            {[1, 2].map(i => (
-=======
             {[12].map(i => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div key={i} className="flex items-center gap-3 animate-pulse">
                 <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>
                 <div className="flex-1">
@@ -104,10 +69,7 @@ export function UpcomingInterviewsCard() {
     );
   }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (upcomingInterviews.length === 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -142,13 +104,8 @@ export function UpcomingInterviewsCard() {
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
-<<<<<<< HEAD
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
-=======
             const formattedDate = format(interviewDate'EEEMMM d');
             const formattedTime = format(interviewDate'h:mm a');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
