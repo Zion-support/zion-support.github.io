@@ -9,7 +9,7 @@ export default function SignInPage() {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const { signIn } = useAuth();
+  const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function SignInPage() {
     setError("");
 
     try {
-      await signIn(email, password);
+      await login(email, password);
     } catch (error) {
       setError(error instanceof Error ? error.message : "Login failed");
     } finally {
