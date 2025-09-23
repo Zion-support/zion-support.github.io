@@ -1,141 +1,71 @@
-node_modules/
-.next/
-dist/
-out/
-coverage/
-
-# Backups, archives, and generated folders
-automation/
-apps.backup/
-backups/
-backup/
-backup-merge-conflicts/
-backup-problematic-files/
-recovered-branches/
-ts_files_backup/
-temp_backup/
-temp_exclude/
-temp_*/
-
-# Disabled or quarantined content
-components.disabled/
-components.disabled_full/
-pages-disabled/
-pages.disabled/
-pages.bak/
-pages._archive_corrupted/
-pages._quarantine/
-pages.blog.disabled/
-pages_backup/
-pages_backup_before_cleanup/
-pages.broken/
-pages.corrupted*
-
-# Other large or external subprojects
-zion-os/
-zion-os.*
-zion-ai-assistant/**
-zion-website/**
-
-# Server and e2e not part of lint scope
-server/**
-e2e/
-
-# File patterns
-**/*.backup.*
-**/*.cleanup-backup.*
-**/*.bak/**
-*
-!zion-website
-!zion-website/**
-
-# Always ignore dependencies and build outputs
+# Base ignores
 node_modules/
 .next/
 dist/
 build/
-coverage/
 out/
-*.log
-*.tmp
-backups/
-backup/
-backup-merge-conflicts/
-backup-problematic-files/
-recovered-branches/
-corrupted_backup/
-api.disabled/
-api.disabled.temp/
-app-disabled/
-app_backup/
-apps.backup/
+coverage/
 
-# Exclude most component suites and APIs that are archived/experimental
-components/
-components.disabled/
-components.disabled_full/
-components-disabled/
-components-disabled_full/
+# Massive backup/quarantine/disabled folders
+backup/**
+backups/**
+backup-merge-conflicts/**
+backup-problematic-files/**
+*.backup/**
+*backup*/**
+*backups*/**
+.pages/**
+pages.bak/**
+pages-backup/**
+pages_backup/**
+pages_backup_before_cleanup/**
+pages.__backup/**
+pages._archive_corrupted/**
+pages._quarantine/**
+pages-quarantine/**
+pages-disabled/**
+pages.disabled/**
+pages.disabled_auto/**
+pages.disabled_build/**
+pages.disabled.full/**
+pages.disabled_full/**
+pages.broken/**
+pages.corrupted*/**
+pages.old/**
+pages.blog.disabled/**
 
-# Exclude problematic page backups
-pages-disabled/
-pages.disabled/
-pages_disabled/
-pages.disabled_full/
-pages.disabled_auto/
-pages_backup/
-pages_backup_before_cleanup/
-pages_backup_conflict/
-pages_backup_conflicts/
-pages._archive_corrupted/
-pages.broken/
-pages.corrupted.*/
-pages_minimal/
-pages.old/
-pages-quarantine/
-pages._quarantine/
+src_backup/**
+src_backup_temp/**
+src.disabled/**
+src.broken/**
+src-corrupted/**
+src.corrupted/**
+lib_backup/**
+lib.disabled/**
+components.disabled/**
+components.disabled_full/**
+services_backup/**
+solutions.disabled/**
+solutions_backup/**
 
-# Source backups/disabled
-src_backup/
-src_backup_temp/
-src.broken/
-src.corrupted/
-src-disabled/
-src.disabled/
-src.pages.disabled/
+recovered-branches/**
+workflow_backups/**
+automation/backups/**
 
-# Temp directories
-temp-backup/
-temp_backup/
-temp_broken_files/
-temp_components/
-temp_conflicts/
-temp-disabled/
-temp_exclude/
+# Misc temp
+.temp*/**
+.temp_*/**
+.temp*/
+**/*.conflict*/**
+**/*.broken/**
+**/*.disabled/**
+**/*.disabled/**
+**/*.disabled_full/**
 
-# Additional noisy or non-primary directories
-ts_files_backup/
-utils/
-types/
-zion-os/
-zion-website/
-zion-ai-assistant/
+# Logs and reports
+playwright-report/**
+playwright-logs/**
+ci-cd-reports/**
+reports/**
+**/*-report*/**
 
-# Misc backups
-lib_backup/
-lib.broken/
-lib.disabled/
-
-# Catch-all patterns for backups/disabled variants
-**/*.backup*
-**/*.backups*/
-**/*.corrupted*/
-**/*.disabled*/
-
-# Additional exclusions to avoid linting corrupted or out-of-scope code
-utils/
-types/
-ts_files_backup/
-zion-os/
-zion-ai-assistant/
-zion-website/
