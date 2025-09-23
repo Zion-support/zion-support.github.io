@@ -169,6 +169,7 @@ export default function Services() {
         </div>
       </main>
 
+      {/* Footer */}
       <Footer />
     </div>
   )

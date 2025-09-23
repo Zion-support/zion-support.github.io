@@ -6,9 +6,16 @@ import Button from '../components/ui/Button'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setIsVisible(true)
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+      setIsLoading(false)
+    }, 500)
+
+    return () => clearTimeout(timer)
   }, [])
 
   const services = [
@@ -44,6 +51,14 @@ export default function HomePage() {
     { number: "99.9%", label: "Uptime Guarantee" },
     { number: "24/7", label: "Support Available" }
   ]
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <LoadingSpinner size="lg" />
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -82,7 +97,7 @@ export default function HomePage() {
           {/* Stats Section */}
           <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" role="region" aria-label={`${stat.number} ${stat.label}`}>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </div>
@@ -94,8 +109,8 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold text-white text-center mb-12">Our Core Services</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all transform hover:scale-105">
-                  <div className="text-4xl mb-4">{service.icon}</div>
+                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all transform hover:scale-105 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-opacity-50">
+                  <div className="text-4xl mb-4" role="img" aria-label={service.title}>{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <Button href={service.href} variant="outline" size="sm">
@@ -121,6 +136,7 @@ export default function HomePage() {
         </div>
       </main>
 
+      {/* Footer */}
       <Footer />
     </div>
   )
