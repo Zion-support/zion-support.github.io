@@ -25,7 +25,10 @@
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
     "postinstall": "echo 'Dependencies installed successfully'",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "health": "node scripts/health-check.js",
+    "health:check": "npm run health",
+    "ci": "npm run lint && npm run type-check && npm run test && npm run build"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
