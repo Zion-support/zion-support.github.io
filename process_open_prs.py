@@ -26,7 +26,7 @@ def run_command(cmd: str, cwd: str = None) -> tuple[int, str, str]:
 def load_open_prs() -> List[Dict]:
     """Load open PRs from the JSON file."""
     try:
-        with open('/workspace/_open_prs.json', 'r') as f:
+        with open('/workspace/open_prs.json', 'r') as f:
             all_prs = json.load(f)
         
         # Filter only open PRs
@@ -110,29 +110,31 @@ def resolve_file_conflicts(file_path: str) -> bool:
             content = f.read()
         
         # Simple conflict resolution strategies
-        if '            # For most files, prefer the HEAD version (main branch)
-            lines = content.split('\n')
-            new_lines = []
-            skip_until_marker = False
+        # For most files, prefer the HEAD version (main branch)
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_marker = False
+        
+        for line in lines:
+            if '<<<<<<< ' in line:
+                skip_until_marker = True
+                continue
+            elif '=======' in line:
+                skip_until_marker = False
+                continue
+            elif '>>>>>>>' in line:
+                skip_until_marker = False
+                continue
             
-            for line in lines:
-                if '                    skip_until_marker = False
-                    continue
-                elif '                    skip_until_marker = True
-                    continue
-                elif '>>>>>>>' in line:
-                    skip_until_marker = False
-                    continue
-                
-                if not skip_until_marker:
-                    new_lines.append(line)
-            
-            # Write the resolved content
-            with open(file_path, 'w') as f:
-                f.write('\n'.join(new_lines))
-            
-            print(f"Resolved conflicts in {file_path}")
-            return True
+            if not skip_until_marker:
+                new_lines.append(line)
+        
+        # Write the resolved content
+        with open(file_path, 'w') as f:
+            f.write('\n'.join(new_lines))
+        
+        print(f"Resolved conflicts in {file_path}")
+        return True
     
     except Exception as e:
         print(f"Error resolving conflicts in {file_path}: {e}")
