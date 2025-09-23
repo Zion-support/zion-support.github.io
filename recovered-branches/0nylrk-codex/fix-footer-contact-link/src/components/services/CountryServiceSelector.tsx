@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
 import { CountrySelector } from "./CountrySelector";
 import { PaymentSection } from "./PaymentSection";
@@ -26,32 +25,6 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
     </div>
   );
 }
-=======
-
-import {
-  onsiteServicePricing,
-  CountryPricing,
-} from "@/data/onsiteServicePricing";
-import { CountrySelector } from "./CountrySelector";
-import { PaymentSection } from "./PaymentSection";
-import { ServiceDetails } from "./ServiceDetails";
-import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
-import {CountrySelector} from "./CountrySelector";
-import {PaymentSection} from "./PaymentSection";
-import {ServiceDetails} from "./ServiceDetails";
-
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { CountrySelector } from "./CountrySelector",
-import { PaymentSection } from "./PaymentSection",
-import { ServiceDetails } from "./ServiceDetails",
-
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 

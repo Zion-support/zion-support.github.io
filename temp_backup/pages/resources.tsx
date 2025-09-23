@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-=======
-import React from 'react',
-import SEO from '../components/SEO',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Link from 'next/link',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function ResourcesPage() {
   return (
@@ -38,7 +31,6 @@ export default function ResourcesPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
   );
 };
 
@@ -296,9 +288,3 @@ export default function ResourcesPage() {
     </>
   );
 }
-=======
-  ),
-},
-
-export default ResourcesPage,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

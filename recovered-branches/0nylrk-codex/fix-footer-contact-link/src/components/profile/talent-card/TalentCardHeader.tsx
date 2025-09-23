@@ -13,15 +13,9 @@ interface TalentCardHeaderProps {
 }
 
 export function TalentCardHeader({ 
-<<<<<<< HEAD
   fullName, 
   professionalTitle, 
   profilePicture, 
-=======
-  fullName
-  professionalTitle
-  profilePicture
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {

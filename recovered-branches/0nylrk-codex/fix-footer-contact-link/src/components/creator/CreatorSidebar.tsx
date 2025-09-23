@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
-=======
-import { BellFileTextHomeMailSearchSettingsUsers } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Sidebar,
   SidebarContent,
@@ -12,12 +8,8 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-<<<<<<< HEAD
   SidebarGroupContent,
 } from "@/components/ui/sidebar";
-=======
-  SidebarGroupContent} from "@/components/ui/sidebar";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export function AppSidebar() {
   return (

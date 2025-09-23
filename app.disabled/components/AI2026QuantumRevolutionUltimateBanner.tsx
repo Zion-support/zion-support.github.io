@@ -1,4 +1,3 @@
-<<<<<<< HEAD:app/components/AI2026QuantumRevolutionUltimateBanner.tsx
 import React from 'react';
 
 const AI2026QuantumRevolutionUltimateBanner: React.FC = () => {
@@ -14,6 +13,3 @@ const AI2026QuantumRevolutionUltimateBanner: React.FC = () => {
 
 export default AI2026QuantumRevolutionUltimateBanner;
 
-=======
-export default function AI2026QuantumRevolutionUltimateBanner() { return null; }
->>>>>>> origin/main:app.disabled/components/AI2026QuantumRevolutionUltimateBanner.tsx

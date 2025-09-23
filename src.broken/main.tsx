@@ -5,11 +5,7 @@ import App from './App.tsx';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
-<<<<<<< HEAD
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-=======
-import { QueryClientProvider } from '@tanstack/react-query';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { showApiError } from '@/utils/apiErrorHandler';
 import './utils/globalFetchInterceptor';
 
@@ -35,7 +31,6 @@ import { registerServiceWorker } from './serviceWorkerRegistration';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-<<<<<<< HEAD
       onError: (error) => showApiError(error),
     },
     mutations: {
@@ -43,11 +38,6 @@ const queryClient = new QueryClient({
     },
   },
 });
-=======
-      onError: (error) => showApiError(error)},
-    mutations: {
-      onError: (error) => showApiError(error)}}});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 try {
   console.log("main.tsx: Before ReactDOM.createRoot");
@@ -62,11 +52,7 @@ try {
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <CurrencyProvider>
-<<<<<<< HEAD
                       <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-=======
-                      <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         <ViewModeProvider>
                           <CartProvider>
                             <AppLayout>
@@ -88,11 +74,7 @@ try {
   );
   console.log("main.tsx: After ReactDOM.createRoot");
 } catch (error) {
-<<<<<<< HEAD
   console.error("Global error caught in main.tsx:", error);
-=======
-  console.error("Global error caught in main.tsx:"error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   console.log("main.tsx: Global error caught");
   const rootElement = document.getElementById('root');
   if (rootElement) {

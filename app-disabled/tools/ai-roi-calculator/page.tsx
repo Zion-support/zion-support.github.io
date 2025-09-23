@@ -1,5 +1,4 @@
 "use client";
-<<<<<<< HEAD:app-disabled/tools/ai-roi-calculator/page.tsx
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calculator, TrendingUp, DollarSign, Users, Clock, ArrowRight } from 'lucide-react';
@@ -14,22 +13,6 @@ export default function AIROICalculator() {
     maintenanceCost: '',
     trainingCost: ''
   });
-=======
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-
-export default function AI2026ROICalculator() {
-	const [inputs, setInputs] = useState({
-		annualRevenue: '',
-		employees: '',
-		currentEfficiency: '',
-		expectedEfficiency: '',
-		implementationCost: '',
-		maintenanceCost: '',
-		trainingCost: ''
-	});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8:app/tools/ai-2026-roi-calculator/page.tsx
 
 	const [results, setResults] = useState({
 		annualSavings: 0,
@@ -74,7 +57,6 @@ export default function AI2026ROICalculator() {
 						<p className="text-gray-600">Calculate the potential return on investment for your AI implementation</p>
 					</div>
 
-<<<<<<< HEAD:app-disabled/tools/ai-roi-calculator/page.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -86,11 +68,6 @@ export default function AI2026ROICalculator() {
             <h1 className="text-3xl font-bold text-gray-900 mb-2">AI ROI Calculator</h1>
             <p className="text-gray-600">Calculate the potential return on investment for your AI implementation</p>
           </div>
-=======
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-						<div className="space-y-6">
-							<h2 className="text-xl font-semibold text-gray-900 mb-4">Business Information</h2>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8:app/tools/ai-2026-roi-calculator/page.tsx
 
 							<div>
 								<label className="block text-sm font-medium text-gray-700 mb-2">Annual Revenue ($)</label>
@@ -137,7 +114,6 @@ export default function AI2026ROICalculator() {
 								<div className="bg-orange-50 border border-orange-200 rounded-lg p-4 flex items-center justify-between"><span>Payback Period</span><span className="font-bold text-orange-700">{results.paybackPeriod.toFixed(1)} months</span></div>
 							</div>
 
-<<<<<<< HEAD:app-disabled/tools/ai-roi-calculator/page.tsx
             {/* Results */}
             <div className="space-y-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">ROI Analysis Results</h2>
@@ -252,15 +228,4 @@ export default function AI2026ROICalculator() {
       </div>
     </div>
   );
-=======
-							<div className="mt-8 text-center">
-								<Link href="/contact" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">Get Expert Consultation</Link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8:app/tools/ai-2026-roi-calculator/page.tsx
 }

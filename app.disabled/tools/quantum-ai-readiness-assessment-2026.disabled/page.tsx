@@ -1,15 +1,3 @@
-<<<<<<<< HEAD:app.disabled/tools/quantum-ai-readiness-assessment-2026.disabled/page.tsx
-<<<<<<< HEAD:app-disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
-========
-export default function Page() {
-  return (
-    <main style={{ padding: 32 }}>
-      <h1>Quantum AI Readiness Assessment 2026</h1>
-      <p>Temporarily simplified to unblock build.</p>
-    </main>
-  );
-}
->>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:app.disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';

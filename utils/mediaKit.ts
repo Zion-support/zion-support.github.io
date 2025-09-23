@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
@@ -104,21 +103,6 @@ export function buildTimeline(startDate: Date) {
 function titleCase(s: string) {
   return s.replace(/\w\S*/g, (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
 }
-=======
-
-
-
-
-
-
-  };
-
-
-  }
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

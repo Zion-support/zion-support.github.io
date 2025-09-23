@@ -1,21 +1,5 @@
-<<<<<<<< HEAD:app.disabled/resources/ai-2025-ultimate-implementation-master-guide.disabled/page.tsx
 "use client";
-========
-export default function Page() {
-  return (
-    <main style={{ padding: 32 }}>
-      <h1>AI 2025 Ultimate Implementation Master Guide</h1>
-      <p>Content temporarily simplified to unblock build.</p>
-    </main>
-  );
-}
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react';
->>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:app.disabled/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
 
-<<<<<<< HEAD:app-disabled/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
 export default function AI2025UltimateImplementationMasterGuide() {
   return (
     <div className="min-h-screen bg-white">
@@ -445,13 +429,4 @@ export default function AI2025UltimateImplementationMasterGuide() {
 
     </div>
   );
-=======
-export default function Page() {
-	return (
-		<div className="max-w-3xl mx-auto py-16 px-4">
-			<h1 className="text-3xl font-bold">AI 2025 Ultimate Implementation Master Guide</h1>
-			<p className="mt-4 text-gray-600">This guide is temporarily simplified while we resolve content merge issues.</p>
-		</div>
-	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
 }

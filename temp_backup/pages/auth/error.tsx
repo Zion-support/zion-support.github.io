@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -44,27 +43,4 @@ export default function AuthErrorPage() {
       </div>
     </>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-
-export default function ErrorPage() {
-  return (
-    <>
-      <Head>
-        <title>Error - Zion Tech Group</title>
-        <meta name="description" content="error page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Error</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

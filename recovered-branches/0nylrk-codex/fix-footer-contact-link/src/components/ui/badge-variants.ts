@@ -18,7 +18,6 @@ export const badgeVariants = cva(
         warning:
           "border-transparent bg-yellow-100 text-yellow-800 hover:bg-yellow-200/80",
         info:
-<<<<<<< HEAD
           "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80",
       },
     },
@@ -26,9 +25,4 @@ export const badgeVariants = cva(
       variant: "default",
     },
   }
-=======
-          "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80"}},
-    defaultVariants: {
-      variant: "default"}}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 );

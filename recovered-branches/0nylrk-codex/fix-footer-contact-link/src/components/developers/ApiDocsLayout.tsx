@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Link, useLocation } from "react-router-dom";
-=======
-import { LinkuseLocation } from "react-router-dom";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -18,21 +14,12 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const currentPath = location.pathname;
   
   const navigationItems = [
-<<<<<<< HEAD
     { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
     { title: "Sample Code", path: "/developers/docs/samples" },
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" },
   ];
-=======
-    { title: "Getting Started"path: "/developers/docs/getting-started" },
-    { title: "API Reference"path: "/developers/docs/reference" },
-    { title: "Webhooks"path: "/developers/docs/webhooks" },
-    { title: "Sample Code"path: "/developers/docs/samples" },
-    { title: "Error Codes & Rate Limits"path: "/developers/docs/errors" }];
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="flex min-h-screen bg-zinc-950">

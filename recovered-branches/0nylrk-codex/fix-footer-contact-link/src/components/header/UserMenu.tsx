@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
-<<<<<<< HEAD
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { 
@@ -10,24 +9,11 @@ import {
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuSeparator, 
-=======
-import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { 
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuSeparator
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 
 export function UserMenu() {
-<<<<<<< HEAD
   const { user, logout } = useAuth();
-=======
-  const { userlogout } = useAuth();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { toast } = useToast();
 
   const handleSignOut = async () => {
@@ -37,12 +23,8 @@ export function UserMenu() {
       toast({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
-<<<<<<< HEAD
         variant: "destructive",
       });
-=======
-        variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 

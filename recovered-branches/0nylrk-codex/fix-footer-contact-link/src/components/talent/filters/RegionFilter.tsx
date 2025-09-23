@@ -1,14 +1,9 @@
 
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react";
-=======
-import { ChevronDownChevronUp } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
 
 const REGION_OPTIONS = [
-<<<<<<< HEAD
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
   { id: "Asia", label: "Asia" },
@@ -18,17 +13,6 @@ const REGION_OPTIONS = [
 ];
 
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
-=======
-  { id: "North America"label: "North America" },
-  { id: "Europe"label: "Europe" },
-  { id: "Asia"label: "Asia" },
-  { id: "South America"label: "South America" },
-  { id: "Australia"label: "Australia" },
-  { id: "Africa"label: "Africa" }
-];
-
-export function RegionFilter({ selectedRegionstoggleRegionexpandedtoggleSectionisMobileFilterOpen }: RegionFilterProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

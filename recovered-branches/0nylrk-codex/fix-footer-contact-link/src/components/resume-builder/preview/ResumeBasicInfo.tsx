@@ -13,9 +13,5 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
         <p className="text-sm">{basicInfo.summary}</p>
       )}
     </div>
-<<<<<<< HEAD
   );
-=======
-  )
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

@@ -1,18 +1,12 @@
 import { UnifiedService } from '../types/unified-service-types';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
@@ -25,11 +19,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-3 weeks',
-<<<<<<< HEAD
       enterprise: 'Custom enterprise pricing available'
-=======
-      enterprise: 'Custom pricing available'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
@@ -44,7 +34,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Integration capabilities',
       'Custom workflows'
     ],
-<<<<<<< HEAD
     benefits: [
       'Reduce risk exposure by 60%',
       'Improve compliance by 85%',
@@ -91,33 +80,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-=======
-    popular: true,
-    icon: '⚠️',
-    color: 'from-orange-600 via-red-600 to-pink-600',
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
-    marketPosition: 'Leading AI enterprise risk management platform with intelligent automation',
-    targetAudience: 'Fortune 500 companies, Financial institutions, Healthcare organizations, Government agencies',
-    category: 'Enterprise AI',
-    realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Risk Analytics', 'Compliance', 'Automation'],
-    integrations: ['ERP systems', 'GRC platforms', 'Compliance tools', 'Security systems', 'Business intelligence tools'],
-    useCases: ['Risk assessment', 'Compliance management', 'Incident response', 'Business continuity', 'Strategic planning'],
-    roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',
-    competitors: ['MetricStream', 'ServiceNow', 'IBM OpenPages', 'RSA Archer', 'SAP GRC'],
-    marketSize: '$12.8B enterprise risk management market',
-    growthRate: '25% annual growth',
-    customers: 45,
-    rating: 4.8,
-    reviews: 67,
-    contactInfo: contact
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   {
     id: 'autonomous-business-process-optimization',
     name: 'Autonomous Business Process Optimization',
     tagline: 'AI-powered business process automation and optimization',
-<<<<<<< HEAD
     price: {
       monthly: 699,
       yearly: 6990,
@@ -126,10 +93,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       setupTime: '2-3 weeks',
       enterprise: 'Custom enterprise pricing available'
     },
-=======
-    price: '$699',
-    period: '/month',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
     features: [
       'Process analysis AI',
@@ -143,7 +106,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Custom workflows',
       'Reporting dashboard'
     ],
-<<<<<<< HEAD
     benefits: [
       'Improve process efficiency by 70%',
       'Reduce operational costs by 45%',
@@ -190,28 +152,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-=======
-    popular: true,
-    icon: '⚙️',
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-business-process-optimization',
-    marketPosition: 'Leading autonomous business process optimization platform with AI intelligence',
-    targetAudience: 'Large enterprises, Manufacturing companies, Service organizations, Government agencies',
-    category: 'AI Automation',
-    realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Process Mining', 'Automation', 'Workflow Management'],
-    integrations: ['ERP systems', 'CRM platforms', 'BPM tools', 'Workflow engines', 'Business intelligence tools'],
-    useCases: ['Process optimization', 'Workflow automation', 'Cost reduction', 'Efficiency improvement', 'Compliance'],
-    roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
-    competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Pega', 'Appian'],
-    marketSize: '$19.6B business process automation market',
-    growthRate: '31% annual growth',
-    customers: 38,
-    rating: 4.7,
-    reviews: 52,
-    contactInfo: contact
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   {
     id: 'ai-enterprise-knowledge-management',

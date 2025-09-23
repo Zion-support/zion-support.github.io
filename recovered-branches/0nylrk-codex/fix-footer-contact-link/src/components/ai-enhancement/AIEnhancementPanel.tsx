@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -7,15 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-=======
-import React{ useState } from 'react';
-import { CardContentCardHeaderCardTitleCardFooter } from '@/components/ui/card';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { SparklesLoader2CopyCheck } from '@/components/icons';
-import { useAIContentEnhancerAIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface AIEnhancementPanelProps {
   title: string;
@@ -34,7 +24,6 @@ export function AIEnhancementPanel({
   showInstructions = true,
   initialContent = ''
 }: AIEnhancementPanelProps) {
-<<<<<<< HEAD
   const [options, setOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions,
     content: initialContent || defaultOptions.content,
@@ -42,14 +31,6 @@ export function AIEnhancementPanel({
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-=======
-  const [optionsetOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions,
-    content: initialContent || defaultOptions.content});
-  const [generatedContentsetGeneratedContent] = useState<string>('');
-  const [copiedsetCopied] = useState(false);
-  const { enhanceContentisEnhancing } = useAIContentEnhancer();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleGenerate = async () => {
     const result = await enhanceContent(options);
@@ -64,12 +45,8 @@ export function AIEnhancementPanel({
   ) => {
     setOptions({
       ...options,
-<<<<<<< HEAD
       [field]: e.target.value,
     });
-=======
-      [field]: e.target.value});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const handleApply = () => {
@@ -80,11 +57,7 @@ export function AIEnhancementPanel({
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
-<<<<<<< HEAD
     setTimeout(() => setCopied(false), 2000);
-=======
-    setTimeout(() => setCopied(false)2000);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (
@@ -103,11 +76,7 @@ export function AIEnhancementPanel({
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
-<<<<<<< HEAD
             onChange={(e) => handleInputChange(e, 'content')}
-=======
-            onChange={(e) => handleInputChange(e'content')}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           />
         </div>
 
@@ -118,11 +87,7 @@ export function AIEnhancementPanel({
             placeholder="Add any relevant context to guide the AI..."
             className="min-h-[60px]"
             value={options.context}
-<<<<<<< HEAD
             onChange={(e) => handleInputChange(e, 'context')}
-=======
-            onChange={(e) => handleInputChange(e'context')}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           />
         </div>
 
@@ -131,15 +96,9 @@ export function AIEnhancementPanel({
           <div className="space-y-2">
             <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
-<<<<<<< HEAD
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
-=======
-              placeholder="E.g.'Make it more conversational' or 'Focus on leadership skills'"
-              value={options.instructions}
-              onChange={(e) => handleInputChange(e'instructions')}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             />
           </div>
         )}
@@ -171,10 +130,6 @@ export function AIEnhancementPanel({
               <Button 
                 variant="ghost" 
                 size="sm" 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 onClick={handleCopy}
                 className="h-8"
               >

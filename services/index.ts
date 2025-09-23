@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 // Export all micro SaaS services
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
-<<<<<<< HEAD
 
 // Export service types and interfaces
 export type {
@@ -172,19 +167,6 @@ export const getServiceStats = () => {
     }
   };
 };
-=======
-// Export service types and interfaces
-export type {;
-  ShortUrl;
-  UrlAnalytics;
-  ClickEvent;
-  CreateShortUrlRequest;
-} from './urlShortenerService';
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -16,19 +15,4 @@ export default function ApiDocsPage() {
       </div>
     </>
   );
-=======
-import { GetServerSideProps } from 'next';
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination: '/developers/docs',
-      permanent: true,
-    },
-  };
-};
-
-export default function ApiDocsRedirect() {
-  return null;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

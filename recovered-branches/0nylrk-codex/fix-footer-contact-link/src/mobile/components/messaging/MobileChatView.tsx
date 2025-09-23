@@ -1,17 +1,9 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react";
-=======
-import React{ useState } from "react";
-import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { SendPaperclipIconChevronLeftMoreVerticalVideoPhone } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
@@ -38,13 +30,8 @@ interface MobileChatViewProps {
   onSendMessage: (content: string) => void;
 }
 
-<<<<<<< HEAD
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState("");
-=======
-export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileChatViewProps) {
-  const [newMessagesetNewMessage] = useState("");
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const navigate = useNavigate();
   
   const handleSend = () => {
@@ -63,11 +50,7 @@ export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileCha
   
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
-<<<<<<< HEAD
     toast.success("Starting video call", {
-=======
-    toast.success("Starting video call"{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       description: `Connecting with ${contact.name}...`
     });
     
@@ -77,11 +60,7 @@ export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileCha
   
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
-<<<<<<< HEAD
     toast.success("Starting audio call", {
-=======
-    toast.success("Starting audio call"{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       description: `Connecting with ${contact.name}...`
     });
     

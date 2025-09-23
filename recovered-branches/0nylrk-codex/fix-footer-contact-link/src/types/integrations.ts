@@ -11,11 +11,6 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string;
   type: IntegrationType;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 export interface SyncLog {

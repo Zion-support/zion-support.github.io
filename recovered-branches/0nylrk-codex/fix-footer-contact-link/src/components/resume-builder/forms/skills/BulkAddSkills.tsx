@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
 import { Loader2, Sparkles } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import { useResume } from '@/hooks/useResume';
@@ -13,19 +12,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const [bulkSkills, setBulkSkills] = useState('');
   const [error, setError] = useState<string | null>(null);
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
-=======
-Loader2Sparkles
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-import { useResume } from '@/hooks/useResume';
-import { BulkAddSkillsProps } from './types';
-import { AlertDescription } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
-
-export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
-  const [bulkSkillsetBulkSkills] = useState('');
-  const [errorsetError] = useState<string | null>(null);
-  const { enhanceContentisEnhancing } = useResumeEnhancer();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { addSkill } = useResume();
 
   const handleCategorizeSkills = async () => {
@@ -47,7 +33,6 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
           const categorizedSkills = JSON.parse(enhancedContent);
           
           // Add the categorized skills
-<<<<<<< HEAD
           for (const [category, skillsList] of Object.entries(categorizedSkills)) {
             if (Array.isArray(skillsList)) {
               for (const skillName of skillsList as string[]) {
@@ -56,15 +41,6 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
                   category: category,
                   proficiency: 3,
                 });
-=======
-          for (const [categoryskillsList] of Object.entries(categorizedSkills)) {
-            if (Array.isArray(skillsList)) {
-              for (const skillName of skillsList as string[]) {
-                await addSkill(resumeId{
-                  name: skillName,
-                  category: category,
-                  proficiency: 3});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               }
             }
           }
@@ -91,11 +67,7 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea 
             className="min-h-24"
-<<<<<<< HEAD
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-=======
-            placeholder="PythonReactTypeScriptProject ManagementCommunication..."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />

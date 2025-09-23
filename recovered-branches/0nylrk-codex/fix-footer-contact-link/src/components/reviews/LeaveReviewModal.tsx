@@ -1,25 +1,15 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
-=======
-import { useStateuseEffect } from "react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-=======
-  DialogTrigger} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 
@@ -36,7 +26,6 @@ export function LeaveReviewModal({
   revieweeId,
   revieweeName,
   isOpen,
-<<<<<<< HEAD
   onClose,
 }: LeaveReviewModalProps) {
   const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
@@ -45,15 +34,6 @@ export function LeaveReviewModal({
   useEffect(() => {
     setOpen(isOpen);
   }, [isOpen]);
-=======
-  onClose}: LeaveReviewModalProps) {
-  const { userReviewsubmitReviewupdateReviewisSubmitting } = useReviews(projectId);
-  const [opensetOpen] = useState(isOpen);
-  
-  useEffect(() => {
-    setOpen(isOpen);
-  }[isOpen]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleOpenChange = (open: boolean) => {
     setOpen(open);
@@ -65,13 +45,8 @@ export function LeaveReviewModal({
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review
-<<<<<<< HEAD
       const { project_id, reviewee_id, ...updates } = formValues;
       const success = await updateReview(userReview.id, updates);
-=======
-      const { project_idreviewee_id...updates } = formValues;
-      const success = await updateReview(userReview.idupdates);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       if (success) {
         handleOpenChange(false);
       }

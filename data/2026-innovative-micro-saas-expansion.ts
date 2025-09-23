@@ -483,10 +483,6 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return price >= minPrice && price <= maxPrice;
   });
 };

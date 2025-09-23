@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -352,24 +351,6 @@ export default function Compliance() {
         </section>
 
         <EnhancedFooter />
-=======
-
-export default function CompliancePage() {
-  return (
-    <>
-      <Head>
-        <title>Compliance - Zion Tech Group</title>
-        <meta name="description" content="compliance page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Compliance</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </>
   );

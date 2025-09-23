@@ -1,22 +1,14 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { Sparkles, RefreshCcw } from "lucide-react";
-=======
-import { SparklesRefreshCcw } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
   isProcessing: boolean;
 }
 
-<<<<<<< HEAD
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
-=======
-export function EmptyMatchesCard({ onRefreshisProcessing }: EmptyMatchesCardProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">

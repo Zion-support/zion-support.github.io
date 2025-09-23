@@ -1,12 +1,7 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
-=======
-import { CardContent } from "@/components/ui/card";
-import { MessageSquareArchiveIcon } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type EmptyStateCardProps = {
   type: 'active' | 'archived';

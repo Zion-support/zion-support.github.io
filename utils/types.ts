@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 
 export type Job = {
@@ -52,25 +51,6 @@ export type Conversation = {
   updatedAtIso: string;
   messages: Message[];
 };
-=======
-
-export interface Application {
-export interface Application {;
-  id: string;
-  name: string;
-  email: string;
-  position: string;
-  experience: number;
-  skills: string[];
-  createdAt: string;
-  updatedAt?: string;
-}
-
-
-export interface Application {;
-
-  id: string;
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   job_id: string;
   talent_slug: string;

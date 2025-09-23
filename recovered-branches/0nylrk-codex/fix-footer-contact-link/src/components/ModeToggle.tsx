@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 import { Moon, Sun } from "lucide-react"
-=======
-import { MoonSun } from "lucide-react"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button"
 
 // Create a simplified theme hook for offline mode
@@ -13,11 +9,7 @@ const useTheme = () => ({
 });
 
 export function ModeToggle() {
-<<<<<<< HEAD
   const { theme, setTheme } = useTheme();
-=======
-  const { themesetTheme } = useTheme();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <Button

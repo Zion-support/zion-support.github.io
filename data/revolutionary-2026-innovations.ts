@@ -14,10 +14,7 @@ export interface Revolutionary2026Innovation {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
   {
     id: "2026-revolutionary-innovation",

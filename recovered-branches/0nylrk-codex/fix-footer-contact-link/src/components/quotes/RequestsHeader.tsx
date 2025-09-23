@@ -2,17 +2,10 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
-<<<<<<< HEAD
   Select, 
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
-=======
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   SelectValue 
 } from "@/components/ui/select";
 import type { QuoteStatus } from "@/types/quotes";

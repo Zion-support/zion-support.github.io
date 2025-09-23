@@ -14,11 +14,7 @@ interface HireNowCTAProps {
 }
 
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
-<<<<<<< HEAD
   const [modalOpen, setModalOpen] = useState(false);
-=======
-  const [modalOpensetModalOpen] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleOpenModal = () => {
     setModalOpen(true);
@@ -90,17 +86,10 @@ function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   
   const fields = [
-<<<<<<< HEAD
     'full_name', 
     'professional_title', 
     'bio', 
     'skills', 
-=======
-    'full_name'
-    'professional_title'
-    'bio'
-    'skills'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     'hourly_rate',
     'location',
     'portfolio_links',
@@ -118,9 +107,5 @@ function calculateProfileCompleteness(profile: any) {
     totalFields++;
   });
   
-<<<<<<< HEAD
   return Math.min(Math.round((completedFields / totalFields) * 100), 100);
-=======
-  return Math.min(Math.round((completedFields / totalFields) * 100);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

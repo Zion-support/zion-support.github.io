@@ -1,14 +1,8 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-=======
-import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export function UsageOverview() {
   // Mock usage data
@@ -92,11 +86,7 @@ export function UsageOverview() {
             </div>
             
             <div className="pt-4 text-sm text-muted-foreground">
-<<<<<<< HEAD
               <p>Current billing period: May 1, 2025 - May 31, 2025</p>
-=======
-              <p>Current billing period: May 12025 - May 312025</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <p className="mt-1">Usage resets at the beginning of each billing period.</p>
             </div>
           </TabsContent>

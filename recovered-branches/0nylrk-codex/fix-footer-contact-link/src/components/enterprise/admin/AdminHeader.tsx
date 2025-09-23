@@ -2,11 +2,7 @@
 import React from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { Download, Settings } from "lucide-react";
-=======
-import { DownloadSettings } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 
 export function AdminHeader() {
@@ -19,11 +15,7 @@ export function AdminHeader() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
           <p className="text-muted-foreground mt-1">
-<<<<<<< HEAD
             Manage your company's account, team members, and subscription
-=======
-            Manage your company's accounteam membersand subscription
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </p>
         </div>
         <div className="flex items-center gap-2">

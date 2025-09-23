@@ -15,12 +15,8 @@ export function useReferrals() {
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
-<<<<<<< HEAD
     totalRewards: 0,
   });
-=======
-    totalRewards: 0});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     if (user) {
@@ -136,12 +132,8 @@ export function useReferrals() {
         toast({
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
-<<<<<<< HEAD
           variant: "destructive",
         });
-=======
-          variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         return;
       }
 
@@ -154,12 +146,8 @@ export function useReferrals() {
       toast({
         title: "Success!",
         description: "Your referral code has been generated",
-<<<<<<< HEAD
         variant: "success",
       });
-=======
-        variant: "success"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
       // Refresh the code
       fetchReferralCode();
@@ -170,12 +158,8 @@ export function useReferrals() {
       toast({
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
-<<<<<<< HEAD
         variant: "destructive",
       });
-=======
-        variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 
@@ -195,22 +179,14 @@ export function useReferrals() {
       toast({
         title: "Copied!",
         description: "Referral link copied to clipboard",
-<<<<<<< HEAD
         variant: "success",
       });
-=======
-        variant: "success"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } else {
       toast({
         title: "Cannot copy link",
         description: "Please generate a referral code first",
-<<<<<<< HEAD
         variant: "destructive",
       });
-=======
-        variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 
@@ -223,12 +199,8 @@ export function useReferrals() {
       toast({
         title: "Cannot share",
         description: "Please generate a referral code first",
-<<<<<<< HEAD
         variant: "destructive",
       });
-=======
-        variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return;
     }
     

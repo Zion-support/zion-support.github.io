@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { createContext, useContext, ReactNode } from 'react';
-=======
-import { createContextuseContextReactNode } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import type { UnitSystem } from '@/utils/unitConversion';
 
@@ -25,7 +21,6 @@ interface UnitContextState {
 const UnitContext = createContext<UnitContextState>({
   unit: 'metric',
   setUnit: () => {},
-<<<<<<< HEAD
   toggleUnit: () => {},
 });
 
@@ -34,15 +29,6 @@ export function UnitProvider({ children }: { children: ReactNode }) {
   const toggleUnit = () => setUnit(unit === 'metric' ? 'imperial' : 'metric');
   return (
     <UnitContext.Provider value={{ unit, setUnit, toggleUnit }}>
-=======
-  toggleUnit: () => {}});
-
-export function UnitProvider({ children }: { children: ReactNode }) {
-  const [unitsetUnit] = useLocalStorage<UnitSystem>('unitSystem'getDefaultUnit());
-  const toggleUnit = () => setUnit(unit === 'metric' ? 'imperial' : 'metric');
-  return (
-    <UnitContext.Provider value={{ unitsetUnitoggleUnit }}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {children}
     </UnitContext.Provider>
   );

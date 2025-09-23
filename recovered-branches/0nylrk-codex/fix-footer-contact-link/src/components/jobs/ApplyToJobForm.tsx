@@ -7,15 +7,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-<<<<<<< HEAD
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle, FileText, Loader2 } from "lucide-react";
-=======
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-import { AlertDescription } from "@/components/ui/alert";
-import { AlertCircleFileTextLoader2 } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
@@ -25,7 +19,6 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void;
 }
 
-<<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
@@ -36,29 +29,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const [selectedResumeId, setSelectedResumeId] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-=======
-export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {
-  const { user } = useAuth();
-  const { applyToJob } = useJobApplications();
-  const { resumesisLoading: isResumesLoading } = useResume();
-  const navigate = useNavigate();
-  
-  const [coverLettersetCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
-  const [selectedResumeIdsetSelectedResumeId] = useState<string>("");
-  const [isSubmittingsetIsSubmitting] = useState(false);
-  const [errorsetError] = useState<string | null>(null);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!user) {
       toast.error("You must be logged in to apply");
-<<<<<<< HEAD
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } });
-=======
-      navigate("/login"{ state: { returnTo: `/jobs/${job.id}` } });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return;
     }
     
@@ -71,11 +48,7 @@ export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {
     setError(null);
     
     try {
-<<<<<<< HEAD
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined);
-=======
-      const success = await applyToJob(job.idcoverLetterselectedResumeId || undefined);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       if (success) {
         toast.success("Your application has been submitted!");
@@ -96,11 +69,7 @@ export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {
       <div>
         <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>
         <p className="text-sm text-muted-foreground mb-4">
-<<<<<<< HEAD
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
-=======
-          Posted {formatDistanceToNow(new Date(job.created_at){ addSuffix: true })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </p>
       </div>
       

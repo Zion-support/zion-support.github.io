@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:app.disabled/tools/quantum-ai-readiness-assessment-2026.disabled/page.tsx
-<<<<<<< HEAD:app-disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
-========
-export default function Page() {
-  return (
-    <main style={{ padding: 32 }}>
-      <h1>Quantum AI Readiness Assessment 2026</h1>
-      <p>Temporarily simplified to unblock build.</p>
-    </main>
-  );
-}
->>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:app.disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
 =======
-<<<<<<< HEAD:app-disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 "use client";
 import React, { useState, useEffect } from 'react';
@@ -659,15 +645,4 @@ export default function QuantumAIReadinessAssessment() {
       </div>
     </div>
   );
-=======
-export const metadata = { title: 'Quantum AI Readiness Assessment 2026' };
-
-export default function Page() {
-	return (
-		<main className="max-w-4xl mx-auto p-8">
-			<h1 className="text-3xl font-bold mb-4">Quantum AI Readiness Assessment 2026</h1>
-			<p className="text-gray-600">Interactive assessment will be available soon.</p>
-		</main>
-	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 }

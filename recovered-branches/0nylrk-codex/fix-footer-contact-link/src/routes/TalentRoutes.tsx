@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom";
-=======
-import { Routes } from "react-router-dom";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";

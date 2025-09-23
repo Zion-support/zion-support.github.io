@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
@@ -11,21 +10,6 @@ interface FraudStatsCardsProps {
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
-=======
-
-
-
-
-
-
-import {;
-  Card,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } from "@/components/ui/card";
@@ -58,18 +42,7 @@ interface FraudStatsCardsProps {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
       
-=======
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -87,22 +60,11 @@ interface FraudStatsCardsProps {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-<<<<<<< HEAD
       
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-2xl font-bold text-amber-500">{stats.suspicious_count}</CardTitle>
-=======
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -122,22 +84,11 @@ interface FraudStatsCardsProps {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
       
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-2xl font-bold text-red-500">{stats.dangerous_count}</CardTitle>
-=======
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -157,7 +108,6 @@ interface FraudStatsCardsProps {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
       
       <Card>
         <CardHeader className="pb-2">
@@ -175,16 +125,6 @@ interface FraudStatsCardsProps {
     </div>
   );
 };
-=======
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

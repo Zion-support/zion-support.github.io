@@ -128,7 +128,6 @@ class PerformanceMonitor {
       window.addEventListener('load', () => {
 
     this.metrics.pageLoadTime = performance.now(),
-    <<<<<<< HEAD
         this.reportMetrics()});
 
       // Monitor Web Vitals

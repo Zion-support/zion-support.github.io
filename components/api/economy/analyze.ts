@@ -1,55 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 export type AnalyzeRequestBody = {
   operatorPrompt: string;
-=======
-
-
-
-
-const user = [ `Operator Prompt: $ {
-  operatorPrompt
-}`;
-context ? `Context: $ {
-  JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
-const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-
-
-
-
-
-  role: 'system', content: system
-}
-export type AnalyzeResponse = {
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = {
-  operatorPrompt: string
-  context?: Record<string, unknown>
-}
-export type AnalyzeResponse = {
-  analysis: string
-
-
-
-
-
-
-
-  role: 'system', content: system 
-};
-
-export type AnalyzeResponse = {;
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = {
-  operatorPrompt: string,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   context?: Record<string, unknown>;
 };
 
@@ -57,7 +10,6 @@ export type AnalyzeResponse = {
   analysis: string;
 };
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -106,13 +58,6 @@ export default async function handler(
     return res.status(500).json({ error: 'Failed to generate analysis' });
   }
 }
-=======
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

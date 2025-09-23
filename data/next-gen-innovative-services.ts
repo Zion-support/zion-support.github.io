@@ -38,10 +38,7 @@ export interface NextGenInnovativeService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -95,10 +92,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 8
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Space Technology Platform
   {
     id: 'space-technology-platform',
@@ -151,10 +145,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 12
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Biotech AI Platform
   {
     id: 'biotech-ai-platform',
@@ -207,10 +198,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 18
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading',
@@ -263,10 +251,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 15
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -319,10 +304,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 22
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Cybersecurity Platform
   {
     id: 'quantum-cybersecurity-platform',
@@ -375,10 +357,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 28
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform',
@@ -431,10 +410,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 32
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -487,10 +463,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 19
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Legal Contract Analyzer
   {
     id: 'ai-legal-contract-analyzer',
@@ -543,10 +516,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.6,
     reviews: 45
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum IoT Platform
   {
     id: 'quantum-iot-platform',

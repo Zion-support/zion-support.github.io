@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 export type WatchlistMatch = {
-=======
-
-export type WatchlistMatch = {
-export type WatchlistMatch = {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
-<<<<<<< HEAD
 };
 
 export type AmlCheckResult = {
@@ -62,21 +55,6 @@ export function setAmlProvider(custom: AmlProvider) {
 export function getAmlProvider(): AmlProvider {
   return provider;
 }
-=======
-
-}
-;
-
-export type AmlCheckResult = {
-};
-
-export type AmlCheckResult = {;
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

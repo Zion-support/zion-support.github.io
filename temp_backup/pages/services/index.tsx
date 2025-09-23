@@ -22,7 +22,6 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-<<<<<<< HEAD
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
 
@@ -106,26 +105,6 @@ const sampleServices: Service[] = [
     link: '/space-tech'
   }
 ];
-=======
-import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
-
-const mapLocalToServiceItem = (item: any): ServiceItem => ({
-  slug: item.slug,
-  title: item.name,
-  description: item.description,
-  provider: 'Zion Provider',
-  priceRangeUSD: item.priceRangeUSD,
-  categories: [item.category],
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10,
-});
-
-const ServicesPage: NextPage = () => {
-  const [services, setServices] = React.useState<ServiceItem[]>([]);
-  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
-  const [filters, setFilters] = React.useState<Filters>({ categories: [] });
-  const [modalOpen, setModalOpen] = React.useState(false);
-  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -148,86 +127,11 @@ export default function ServicesIndexPage() {
       real2025Q2Additions as unknown[],
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
-<<<<<<< HEAD
       realServicesQ32025 as unknown[],
       realServicesQ42025 as unknown[]
     );
     return acc;
   }, {} as Record<string, Service[]>);
-=======
-      real2025Q3Additions as unknown[]
-    );
-  const byCategory: Record<string, unknown[]> = {};
-  for (const c of categories) byCategory[c] = [];
-  // Normalize various category labels into our main buckets
-  const categoryAliases: Record<string, string> = {
-    'AI & Data': 'AI & Data',
-    'AI & Machine Learning': 'AI & Data',
-    'GenAI': 'AI & Data',
-    'Cloud & FinOps': 'Cloud & FinOps',
-    'Cloud & Data': 'Cloud & FinOps',
-    'Platform Engineering': 'Cloud & FinOps',
-    'Observability': 'Observability',
-    'Observability & Telemetry': 'Observability',
-    'Quality & Monitoring': 'Quality & Monitoring',
-    'Security & Reliability': 'Quality & Monitoring',
-    'Security & Compliance': 'Quality & Monitoring',
-    'Developer Tools': 'Developer Tools',
-    'Growth & Marketing': 'Developer Tools'
-  };
-  for (const s of all) {
-    const service = s as { category?: string };
-    const rawCat = (service.category || '').trim();
-    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
-    byCategory[mapped].push(s);
-  }
-
-  React.useEffect(() => {
-    const next = services.filter((s) => {
-      // Category
-      if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false;
-      // Price
-      const min = s.priceFromUSD ?? s.priceRangeUSD?.[0];
-      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD;
-      if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false;
-      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false;
-      // Rating
-      if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false;
-      // Delivery time (not available in data; simulate pass-through)
-      return true;
-    });
-    setFiltered(next);
-  }, [filters, services]);
-
-  const availableCategories = React.useMemo(() => {
-    const set = new Set<string>();
-    services.forEach((s) => s.categories.forEach((c) => set.add(c)));
-    return Array.from(set);
-  }, [services]);
-
-  const handleRequestQuote = (service: ServiceItem) => {
-    setSelected(service);
-    setModalOpen(true);
-  };
-
-  const handleSubmit = async (values: QuoteFormValues) => {
-    const res = await fetch('/api/quote-request', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        service: values.serviceTitle,
-        description: values.projectDescription,
-        timeline: { start: values.timelineStart, end: values.timelineEnd },
-        budgetRange: values.budgetRange,
-        email: values.email,
-      }),
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.message || 'Failed to submit');
-    }
-  };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -250,7 +154,6 @@ export default function ServicesIndexPage() {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
             {/* Featured Services */}
@@ -587,9 +490,6 @@ export default function ServicesIndexPage() {
             </motion.div>
           </div>
         </section>
-=======
-        </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </UltraAdvancedFuturisticBackground>
   );
@@ -603,10 +503,4 @@ export default function ServicesIndexPage() {
       />
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-export default ServicesPage;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

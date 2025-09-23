@@ -1,4 +1,3 @@
-<<<<<<< HEAD:app/components/ROICalculator.tsx
 'use client';
 
 import React from 'react';
@@ -13,7 +12,3 @@ const ROICalculator: React.FC = () => {
 
 export default ROICalculator;
 
-=======
-"use client";
-export default function ROICalculator() { return null; }
->>>>>>> origin/main:app.disabled/components/ROICalculator.tsx

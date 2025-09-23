@@ -10,11 +10,7 @@ export const basicInfoSchema = z.object({
   website: z.string().url().optional().or(z.literal("")),
   linkedin: z.string().optional(),
   github: z.string().optional(),
-<<<<<<< HEAD
   hourlyRate: z.number().positive().optional(),
 });
-=======
-  hourlyRate: z.number().positive().optional()});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;

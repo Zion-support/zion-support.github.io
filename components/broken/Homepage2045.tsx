@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-=======
-"use client";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
-=======
-  ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
-  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
-  PhoneMailMapPinSearchGridListAtomTargetSparkles
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -28,13 +18,8 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
-<<<<<<< HEAD
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-=======
-      initial={{ opacity: 0scale: 0.5 }}
-      animate={{ opacity: 1scale: 1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       transition={{ duration: 0.5 }}
       className="text-center"
     >
@@ -49,32 +34,19 @@ const LoadingFallback = () => (
 );
 
 const Homepage2045: React.FC = () => {
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-=======
-  const [isLoadingsetIsLoading] = useState(true);
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeSectionsetActiveSection] = useState('hero');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     // Simulate content loading with better timing
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsVisible(true);
-<<<<<<< HEAD
     }, 800);
 
     return () => clearTimeout(timer);
   }, []);
-=======
-    }800);
-
-    return () => clearTimeout(timer);
-  }[]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Intersection Observer for better performance
   useEffect(() => {
@@ -87,11 +59,7 @@ const Homepage2045: React.FC = () => {
             }
           });
         },
-<<<<<<< HEAD
         { threshold: 0.3, rootMargin: '-100px' }
-=======
-        { threshold: 0.3rootMargin: '-100px' }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       );
 
       const sections = document.querySelectorAll('section[id]');
@@ -99,29 +67,17 @@ const Homepage2045: React.FC = () => {
 
       return () => observer.disconnect();
     }
-<<<<<<< HEAD
   }, []);
-=======
-  }[]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-<<<<<<< HEAD
     transition: { duration: 0.6, ease: "easeOut" }
-=======
-    transition: { duration: 0.6ease: "easeOut" }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const staggerContainer = {
     animate: {
       transition: {
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -129,15 +85,9 @@ const Homepage2045: React.FC = () => {
   };
 
   const backgroundVariants = {
-<<<<<<< HEAD
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: "easeOut" }
-=======
-    initial: { opacity: 0scale: 0.8 },
-    animate: { opacity: 1scale: 1 },
-    transition: { duration: 1.2ease: "easeOut" }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const getColorClasses = (index: number) => {
@@ -173,16 +123,10 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
               animate={{
-<<<<<<< HEAD
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
                 opacity: [0.3, 0.6, 0.3],
               }}
-=======
-                rotate: [0360],
-                scale: [1.1],
-                opacity: [0.30.60.3]}}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               transition={{
                 duration: 8,
                 repeat: Infinity,
@@ -192,16 +136,10 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
               animate={{
-<<<<<<< HEAD
                 rotate: [360, 0],
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.7, 0.3],
               }}
-=======
-                rotate: [360],
-                scale: [1.21],
-                opacity: [0.30.70.3]}}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               transition={{
                 duration: 6,
                 repeat: Infinity,
@@ -211,16 +149,10 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
               animate={{
-<<<<<<< HEAD
                 rotate: [45, 405],
                 scale: [1, 1.15, 1],
                 opacity: [0.3, 0.5, 0.3],
               }}
-=======
-                rotate: [45405],
-                scale: [1.151],
-                opacity: [0.30.50.3]}}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               transition={{
                 duration: 10,
                 repeat: Infinity,
@@ -240,11 +172,7 @@ const Homepage2045: React.FC = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.2 }}
-=======
-                transition={{ duration: 0.8delay: 0.2 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -254,17 +182,10 @@ const Homepage2045: React.FC = () => {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
               >
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
-=======
-                transition={{ duration: 0.8delay: 0.4 }}
-                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-              >
-                Transform your business with Zion Tech 'Group', 's revolutionary AI servicesquantum computingand cutting-edge emerging technologies. Leading the future of technology innovation.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </motion.p>
             </motion.div>
 
@@ -272,11 +193,7 @@ const Homepage2045: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.6 }}
-=======
-              transition={{ duration: 0.8delay: 0.6 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
@@ -297,11 +214,7 @@ const Homepage2045: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.8 }}
-=======
-              transition={{ duration: 0.8delay: 0.8 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               <div className="text-center">
@@ -336,11 +249,7 @@ const Homepage2045: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
                 Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
-=======
-                Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of 'what', 's possible with technology.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
             </motion.div>
 
@@ -389,20 +298,12 @@ const Homepage2045: React.FC = () => {
                   color: "from-yellow-400 to-orange-500",
                   href: "/emerging-tech"
                 }
-<<<<<<< HEAD
               ].map((service, index) => (
-=======
-              ].map((serviceindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-=======
-                  transition={{ duration: 0.6delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   viewport={{ once: true }}
                   className="group"
                 >
@@ -447,21 +348,12 @@ const Homepage2045: React.FC = () => {
 
             {/* Featured New Services */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
               {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-=======
-              {revolutionary2043AdvancedServices.slice(04).map((serviceindex) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   viewport={{ once: true }}
                   className="group"
                 >
@@ -526,11 +418,7 @@ const Homepage2045: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
                 Let's discuss how our revolutionary technology solutions can drive your business into the future.
-=======
-                'Let', 's discuss how our revolutionary technology solutions can drive your business into the future.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link

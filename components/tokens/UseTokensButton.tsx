@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import UseTokensModal, { RedemptionType } from './UseTokensModal';
 
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string; defaultType?: RedemptionType }) {
   const [open, setOpen] = useState(false);
-=======
-"use client";
-import React{ useState } from 'react';
-import UseTokensModal{ RedemptionType } from './UseTokensModal';
-
-export default function UseTokensButton({ serviceIdefaultType }: { serviceId?: string; defaultType?: RedemptionType }) {
-  const [opensetOpen] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <button onClick={() => setOpen(true)} className="enhanced-button enhanced-button-primary">Use Tokens</button>

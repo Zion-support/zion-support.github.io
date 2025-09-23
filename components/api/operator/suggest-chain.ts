@@ -1,35 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { CHAINS } from '../../../utils/chains';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body || {};
   const stake = Number(stakeUsd || 0);
-=======
-
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { region, stakeUsd } = req.body |{}
-  const stake = Number(stakeUsd |0);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
-<<<<<<< HEAD
   let candidates = ['polygon', 'bnb', 'avalanche'];
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
 
@@ -45,14 +26,6 @@ export default async function handler(
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
 }
-=======
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

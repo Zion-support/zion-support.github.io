@@ -2,11 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 // Using an explicit empty object type for props to satisfy lint rules
-<<<<<<< HEAD
 type Props = Record<string, never>;
-=======
-type Props = Record<stringnever>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const ServicePage: NextPage<Props> = () => {
   return (

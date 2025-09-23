@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
@@ -623,31 +622,11 @@ export default function SearchResultsPage({
               )}
             </div>
           )}
-=======
-import React from 'react';
-import Head from 'next/head';
-
-export default function [slug]Page() {
-  return (
-    <>
-      <Head>
-        <title>[Slug] - Zion Tech Group</title>
-        <meta name="description" content="[slug] page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">[Slug]</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </div>
     </>
   );
 }
-<<<<<<< HEAD
 
 export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
@@ -708,5 +687,3 @@ export const getServerSideProps: GetServerSideProps<
     };
   }
 };
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

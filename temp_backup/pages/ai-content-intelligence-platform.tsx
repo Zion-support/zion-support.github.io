@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -463,25 +462,5 @@ export default function AIContentIntelligencePlatform() {
         </div>
       </section>
     </Layout>
-=======
-
-export default function AiContentIntelligencePlatformPage() {
-  return (
-    <>
-      <Head>
-        <title>Ai Content Intelligence Platform - Zion Tech Group</title>
-        <meta name="description" content="ai content intelligence platform page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Ai Content Intelligence Platform</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

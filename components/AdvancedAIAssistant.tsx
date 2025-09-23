@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 'use client';
 
-=======
-"use client";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React, { useState, useEffect, useRef } from 'react';
 
 interface Message {

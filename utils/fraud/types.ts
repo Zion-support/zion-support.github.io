@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
 
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
@@ -70,22 +69,6 @@ export interface MonthlyReport {
   falsePositives: number; // count of IGNORED actions
   topReasons: Array<{ reason: string; count: number }>;
 }
-=======
-
-// Fraud detection types
-export type AdminActionType =
-  | 'ban_user'
-  | 'suspend_user'
-  | 'flag_content'
-  | 'remove_content'
-  | 'investigate'
-  | 'dismiss'
-  | 'escalate';
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   id: string;
   case_id: string;

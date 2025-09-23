@@ -1,11 +1,7 @@
 
 import React from "react";
 import { Star } from "lucide-react";
-<<<<<<< HEAD
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-=======
-import { CardContentCardFooter } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const testimonials = [
   {
@@ -18,11 +14,7 @@ const testimonials = [
   {
     name: "Sarah Williams",
     role: "Tech Recruiter",
-<<<<<<< HEAD
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
-=======
-    text: "As a recruiterthis app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     rating: 5,
     avatar: "/placeholder.svg"
   },
@@ -47,7 +39,6 @@ export const AppTestimonials: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
               <CardContent className="pt-6">
@@ -55,16 +46,6 @@ export const AppTestimonials: React.FC = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star 
                       key={i}
-=======
-          {testimonials.map((testimonialindex) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {Array.from({ length: 5 }).map((_i) => (
-                    <Star 
-                      key={i}
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
                   ))}

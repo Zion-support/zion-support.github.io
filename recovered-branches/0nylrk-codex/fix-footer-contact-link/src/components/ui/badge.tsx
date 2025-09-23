@@ -16,7 +16,6 @@ export interface BadgeProps
     | "info"
 }
 
-<<<<<<< HEAD
 function Badge({ className, variant, ...props }: BadgeProps) {
   return (
     <span className={cn(badgeVariants({ variant }), className)} {...props} />
@@ -24,12 +23,3 @@ function Badge({ className, variant, ...props }: BadgeProps) {
 }
 
 export { Badge, badgeVariants }
-=======
-function Badge({ classNamevariant...props }: BadgeProps) {
-  return (
-    <span className={cn(badgeVariants({ variant })className)} {...props} />
-  )
-}
-
-export { BadgebadgeVariants }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

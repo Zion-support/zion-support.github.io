@@ -7,11 +7,7 @@ export interface TalentGridProps {
   isLoading: boolean;
   onTalentClick: (id: string) => void;
   savedTalentIds: string[];
-<<<<<<< HEAD
   onToggleSave: (id: string, isSaved: boolean) => void;
-=======
-  onToggleSave: (id: stringisSaved: boolean) => void;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   isAuthenticated: boolean;
   viewProfile?: (id: string) => void;
   clearFilters?: () => void;
@@ -19,19 +15,11 @@ export interface TalentGridProps {
 }
 
 export function TalentGrid({ 
-<<<<<<< HEAD
   talents, 
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
   onToggleSave, 
-=======
-  talents
-  isLoading
-  onTalentClick
-  savedTalentIds
-  onToggleSave
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   isAuthenticated,
   viewProfile,
   clearFilters,
@@ -42,11 +30,7 @@ export function TalentGrid({
       handleRequestHire(talent);
     } else {
       // Default implementation
-<<<<<<< HEAD
       console.log("Request to hire:", talent.id);
-=======
-      console.log("Request to hire:"talent.id);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 

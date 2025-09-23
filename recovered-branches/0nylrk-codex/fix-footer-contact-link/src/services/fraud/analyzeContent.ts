@@ -34,11 +34,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
   }
   
   // Check for poor grammar with repetitive punctuation
-<<<<<<< HEAD
   if (/[!?]{3,}/.test(content)) {
-=======
-  if (/[!?]{3}/.test(content)) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     reasons.push('Suspicious punctuation pattern');
   }
   

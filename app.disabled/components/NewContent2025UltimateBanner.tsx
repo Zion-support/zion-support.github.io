@@ -1,20 +1,7 @@
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-8578:app/components/NewContent2025UltimateBanner.tsx
 'use client';
 
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 import Link from 'next/link';
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { TrendingUp } from 'lucide-react';
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 
 const NewContent2025UltimateBanner = () => {
 	return (
@@ -56,8 +43,6 @@ const NewContent2025UltimateBanner: React.FC = () => {
 	);
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Data Analytics Revolution */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -223,13 +208,9 @@ const NewContent2025UltimateBanner: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
         </div>
 
         {/* Implementation Checklist */}
-=======
-          {/* Implementation Checklist */}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf:app/components/NewContent2025UltimateBanner.tsx
         <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -275,10 +256,7 @@ const NewContent2025UltimateBanner: React.FC = () => {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf:app/components/NewContent2025UltimateBanner.tsx
         {/* Resources Section */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-8">Free Implementation Resources</h3>
@@ -306,10 +284,7 @@ const NewContent2025UltimateBanner: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf:app/components/NewContent2025UltimateBanner.tsx
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
           <p className="text-gray-300 mb-4">Trusted by leading organizations worldwide</p>
@@ -342,13 +317,6 @@ export default function NewContent2025UltimateBanner() {
       </div>
     </section>
   );
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Link from 'next/link';
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-8578:app/components/NewContent2025UltimateBanner.tsx
 
 const NewContent2025UltimateBanner: React.FC = () => {
 	return (
@@ -369,9 +337,6 @@ const NewContent2025UltimateBanner: React.FC = () => {
 	);
 };
 
-<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 export default NewContent2025UltimateBanner;
 =======
 }

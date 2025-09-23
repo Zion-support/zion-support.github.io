@@ -1,4 +1,3 @@
-<<<<<<< HEAD:ts_files_backup/EnhancedErrorBoundary.tsx
 'use client';
 import React from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -187,7 +186,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     return this.props.children;
-<<<<<<< HEAD:ts_files_backup/EnhancedErrorBoundary.tsx
   }
   }
 }

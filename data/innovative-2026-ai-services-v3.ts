@@ -14,10 +14,7 @@ export interface Innovative2026AiServiceV3 {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
     id: "2026-innovative-ai-v3",

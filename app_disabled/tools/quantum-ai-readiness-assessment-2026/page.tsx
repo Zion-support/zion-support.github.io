@@ -2,10 +2,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD:app_disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;

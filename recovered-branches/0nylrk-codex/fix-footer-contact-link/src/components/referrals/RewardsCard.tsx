@@ -1,26 +1,15 @@
 
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from "lucide-react";
-=======
-import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals";
-import { formatDate } from "@/utils/referralUtils";
-import { BadgeDollarSignBadge } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean;
 }
 
-<<<<<<< HEAD
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-=======
-export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (isLoading) {
     return (
       <Card>
@@ -63,10 +52,6 @@ export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
   }
 
   return (
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -77,11 +62,7 @@ export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-<<<<<<< HEAD
           {rewards.map((reward, index) => (
-=======
-          {rewards.map((rewardindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div 
               key={reward.id}
               className={`flex justify-between items-start ${

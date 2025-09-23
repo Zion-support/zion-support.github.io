@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { authenticateRequest } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 
@@ -44,65 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
-=======
-
-
-    {
-      funnel: { stage: string; count: number }[];
-      timeToHireDays: number;
-      costPerHireUsd?: number;
-      updated_at: string;
-    }
-
-
-    funnel: { stage: string, count: number }[];
-    timeToHireDays: number;
-    costPerHireUsd?: number
-    updatedAt: string
-  }>
-}
-
-
-
-const FILE = 'reporting.json';
-const FALLBACK: ReportingData = { byTenant: {} }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  const method = (req.method |'GET').toUpperCase()
-  const method = (req.method || 'GET').toUpperCase(),;
-
-  const auth = authenticateRequest(req, method === 'GET');
-  if (!auth.ok) return res.status(401).json({ error: auth.error });
-  const tenantId = auth.tenantId!;
-  if (method === 'GET') {
-    const data = readJsonFile<ReportingData>(FILE, FALLBACK);
-    const entry = data.byTenant[tenantId] |{
-      funnel: []
-      timeToHireDays: 0
-      updatedAt: new Date().toISOString()
-    }
-    return res.status(200).json(entry);  }
-  if (method === 'POST') {
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
-    return res.status(200).json(entry)
-
-
-
-
-    funnel: { stage: string, count: number }[]
-    timeToHireDays: number
-    costPerHireUsd?: number,
-    updated_at: string;
-  }>;
-}
-
-
-  }
-  if (method === 'POST') {
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

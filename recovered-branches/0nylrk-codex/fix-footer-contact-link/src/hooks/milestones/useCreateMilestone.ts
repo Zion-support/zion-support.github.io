@@ -22,12 +22,8 @@ export const useCreateMilestone = (projectId?: string) => {
         .insert({
           ...milestoneData,
           project_id: projectId,
-<<<<<<< HEAD
           created_by: user.id,
         })
-=======
-          created_by: user.id})
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         .select()
         .single();
       

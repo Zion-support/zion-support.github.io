@@ -1,16 +1,11 @@
 
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-=======
-import { BriefcaseHardDriveLightbulbUsers } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const categories = [
   {
     title: "Services",
-<<<<<<< HEAD
     description: "On-demand IT support, consulting, development, and more",
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services",
@@ -30,36 +25,14 @@ const categories = [
     link: "/equipment",
     color: "from-amber-500 to-orange-600",
   },
-=======
-    description: "On-demand IT supportconsultingdevelopmentand more",
-    icon: <Briefcase className="w-10 h-10" />,
-    link: "/services",
-    color: "from-purple-500 to-indigo-600"},
-  {
-    title: "Talents",
-    description: "Connect with AI expertsdevelopersand tech specialists",
-    icon: <Users className="w-10 h-10" />,
-    link: "/talent",
-    color: "from-cyan-500 to-blue-600"},
-  {
-    title: "Equipment",
-    description: "Rent or buy specialized hardwareserversand devices",
-    icon: <HardDrive className="w-10 h-10" />,
-    link: "/equipment",
-    color: "from-amber-500 to-orange-600"},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     title: "Innovation",
     description: "Discover cutting-edge solutions and tech breakthroughs",
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
-<<<<<<< HEAD
     color: "from-emerald-500 to-green-600",
   },
 ];
-=======
-    color: "from-emerald-500 to-green-600"}];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const specialServices = [
   {
@@ -80,11 +53,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           <div className="text-center mb-16">
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
-=======
-              Discover our comprehensive ecosystem of tech servicestalentequipmentand innovation
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </p>
           </div>
         )}

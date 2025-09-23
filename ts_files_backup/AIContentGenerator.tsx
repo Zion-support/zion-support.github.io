@@ -1,4 +1,3 @@
-<<<<<<< HEAD:ts_files_backup/AIContentGenerator.tsx
 import React from 'react';
 
 interface AIContentGeneratorProps {

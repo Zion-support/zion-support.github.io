@@ -1,21 +1,13 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
 import { Check, ExternalLink } from 'lucide-react';
-=======
-CheckExternalLink
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function SecretsRotationAutomationPage() {
 	const features = [
 		'Automated key and secret rotation',
 		'JIT credentials with expirations',
 		'Policy approvals and audit trails',
-<<<<<<< HEAD
 		'CI/CD integration (GitHub Actions, CircleCI)',
-=======
-		'CI/CD integration (GitHub ActionsCircleCI)',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 		'Cloud KMS and Vault support'
 	];
 

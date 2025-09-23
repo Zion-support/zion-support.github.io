@@ -1,29 +1,16 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-=======
-import React{ useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { CardContent } from '@/components/ui/card';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
-=======
-  AccordionTrigger} from '@/components/ui/accordion';
-Loader2SparklesPlusCalendar
-import { formatparseISO } from 'date-fns';
-import { MilestoneInputGeneratedMilestoneuseMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Badge } from '@/components/ui/badge';
 
 interface AIMilestoneGeneratorProps {
@@ -43,13 +30,8 @@ export function AIMilestoneGenerator({
   onAddMilestones,
   onAddMilestone
 }: AIMilestoneGeneratorProps) {
-<<<<<<< HEAD
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
-=======
-  const { generateMilestonesgeneratedMilestonesisGeneratingclearGeneratedMilestones } = useMilestoneGenerator();
-  const [selectedMilestonesetSelectedMilestones] = useState<Record<stringboolean>>({});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
@@ -66,22 +48,14 @@ export function AIMilestoneGenerator({
     await generateMilestones(input);
     // Initially select all milestones
     const initialSelection = {};
-<<<<<<< HEAD
     generatedMilestones.forEach((_, index) => {
-=======
-    generatedMilestones.forEach((_index) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       initialSelection[index] = true;
     });
     setSelectedMilestones(initialSelection);
   };
 
   const handleAddToProject = () => {
-<<<<<<< HEAD
     const selectedMilestonesList = generatedMilestones.filter((_, index) => 
-=======
-    const selectedMilestonesList = generatedMilestones.filter((_index) => 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       selectedMilestones[index]
     );
     
@@ -103,11 +77,7 @@ export function AIMilestoneGenerator({
 
   const formatDate = (dateString: string) => {
     try {
-<<<<<<< HEAD
       return format(parseISO(dateString), 'MMM dd, yyyy');
-=======
-      return format(parseISO(dateString)'MMM ddyyyy');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } catch (error) {
       return dateString;
     }
@@ -155,11 +125,7 @@ export function AIMilestoneGenerator({
             </div>
 
             <Accordion type="multiple" className="w-full">
-<<<<<<< HEAD
               {generatedMilestones.map((milestone, index) => (
-=======
-              {generatedMilestones.map((milestoneindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center flex-1">

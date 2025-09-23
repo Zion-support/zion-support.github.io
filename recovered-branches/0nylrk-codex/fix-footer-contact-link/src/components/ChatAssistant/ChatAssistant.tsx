@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-=======
-import React{ useStateuseEffectuseRefReactNode } from 'react';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
@@ -31,11 +24,7 @@ export interface ChatAssistantProps {
   };
   conversationId?: string;
   initialMessages?: Message[];
-<<<<<<< HEAD
   onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-=======
-  onSendMessage: (message: stringconversationId?: string) => Promise<void>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   contextHeader?: ReactNode;
 }
 
@@ -48,30 +37,18 @@ export function ChatAssistant({
   onSendMessage,
   contextHeader
 }: ChatAssistantProps) {
-<<<<<<< HEAD
   const [messages, setMessages] = useState<Message[]>(initialMessages);
-=======
-  const [messagesetMessages] = useState<Message[]>(initialMessages);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {
     if (initialMessages.length > 0) {
       setMessages(initialMessages);
     }
-<<<<<<< HEAD
   }, [initialMessages]);
 
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-=======
-  }[initialMessages]);
-
-  useEffect(() => {
-    scrollToBottom();
-  }[messages]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -88,17 +65,10 @@ export function ChatAssistant({
       timestamp: new Date()
     };
     
-<<<<<<< HEAD
     setMessages((prev: Message[]) => [...prev, newMessage]);
     
     // Send message to recipient via the provided handler
     await onSendMessage(message, conversationId);
-=======
-    setMessages((prev: Message[]) => [...prevnewMessage]);
-    
-    // Send message to recipient via the provided handler
-    await onSendMessage(messageconversationId);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   if (!isOpen) return null;

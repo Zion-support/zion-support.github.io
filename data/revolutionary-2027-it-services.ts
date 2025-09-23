@@ -14,10 +14,7 @@ export interface Revolutionary2027ItService {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
     id: "2027-revolutionary-it",

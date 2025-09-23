@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { CheckCircle, Circle, ArrowRight } from "lucide-react";
-=======
-import { CheckCircleArrowRight } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -24,24 +20,15 @@ interface OnboardingTrackerProps {
 }
 
 export function OnboardingTracker({ 
-<<<<<<< HEAD
   steps, 
   title = "Complete Your Profile", 
-=======
-  steps
-  title = "Complete Your Profile"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   className 
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
 
   return (
-<<<<<<< HEAD
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
-=======
-    <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6"className)}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
