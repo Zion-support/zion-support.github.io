@@ -10,11 +10,7 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-<<<<<<< HEAD
-    "lint": "eslint .",
-=======
-    "lint": "eslint pages --no-error-on-unmatched-pattern",
->>>>>>> cursor/check-fix-push-and-merge-to-main-be63
+    "lint": "eslint . --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
