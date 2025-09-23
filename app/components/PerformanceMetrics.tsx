@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BoltIcon, ClockIcon, ChartBarIcon, CheckCircleIcon, CpuChipIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
 export default function PerformanceMetrics() {
-  const [metrics, setMetrics] = useState([
+  const [metrics] = useState([
     { label: 'System Uptime', value: '99.9%', color: 'text-green-600', icon: BoltIcon, trend: '+0.1%' },
     { label: 'Response Time', value: '<100ms', color: 'text-blue-600', icon: ClockIcon, trend: '-5ms' },
     { label: 'Throughput', value: '10K req/s', color: 'text-purple-600', icon: ChartBarIcon, trend: '+2K' },
