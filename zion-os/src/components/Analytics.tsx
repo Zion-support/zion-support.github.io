@@ -1,28 +1,65 @@
-import React, { useEffect } from 'react';
+"use client";
 
-export default function Analytics() {
+import { useEffect } from "react";
+
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Element;
+}
+
+export function Analytics() {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    try {
-      // Example: basic CLS logging without external dependencies
-      let cls = 0;
+    // Performance monitoring
+    if (typeof window !== "undefined") {
+      // Core Web Vitals monitoring
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const anyEntry = entry;
-          if ((anyEntry as any).hadRecentInput) continue;
-          const layoutShiftEntry = anyEntry;
-          if (typeof (layoutShiftEntry as any).value === 'number') {
-            cls += (layoutShiftEntry as any).value;
+          if (entry.entryType === "largest-contentful-paint") {
+            console.log("LCP:", entry.startTime);
+          }
+          if (entry.entryType === "first-input") {
+            const firstInputEntry = entry as FirstInputEntry;
+            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
           }
         }
-        // eslint-disable-next-line no-console
-        console.log('[analytics] cumulative layout shift', cls);
       });
-      observer.observe({ type: 'layout-shift', buffered: true } as any);
-      return () => observer.disconnect();
-    } catch {
-      // ignore unsupported browsers
+
+      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+
+      // Cumulative Layout Shift monitoring
+      let cls = 0;
+      const observer2 = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === "layout-shift") {
+            const layoutShiftEntry = entry as any;
+            cls += layoutShiftEntry.value;
+          }
+        }
+      });
+
+      observer2.observe({ entryTypes: ["layout-shift"] });
+
+      // Report metrics on page unload
+      window.addEventListener("beforeunload", () => {
+        console.log("CLS:", cls);
+      });
+
+      // Cleanup
+      return () => {
+        observer.disconnect();
+        observer2.disconnect();
+      };
     }
   }, []);
+
+  return null; // This component doesn't render anything
+}
+
+<<<<<<< HEAD
+
+export function Analytics(): React.ReactElement | null {
   return null;
 }
+
+export default Analytics;

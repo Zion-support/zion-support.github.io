@@ -4,6 +4,45 @@ export const metadata = {
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
 };
 
+<<<<<<< HEAD
+export default function CareersPage() {
+	const openPositions = [
+		{
+			title: 'Senior AI Research Engineer',
+			department: 'Research & Development',
+			location: 'Remote / Global',
+			type: 'Full-time',
+			description:
+				'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
+			requirements: [
+				'PhD in Computer Science, AI, or related field',
+				'5+ years experience in AI research',
+				'Expertise in machine learning and neural networks',
+				'Familiarity with quantum computing concepts',
+			],
+		},
+	];
+
+	const benefits = [
+		{ title: 'Remote First', description: 'Work from anywhere in the world with our distributed team.', icon: '🌍' },
+		{ title: 'Cutting-Edge Technology', description: 'Work with the latest AI and quantum technologies.', icon: '🚀' },
+		{ title: 'Flexible Hours', description: "Work when you're most productive with flexible scheduling.", icon: '⏰' },
+	];
+
+  return (
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
+        <p className="text-xl md:text-2xl opacity-80 mb-8 max-w-3xl mx-auto">
+          Help us build the future of AI-powered digital economies and autonomous business operations.
+        </p>
+        <p className="text-lg opacity-70 max-w-2xl mx-auto">
+          We're looking for passionate innovators who want to push the boundaries of what's possible 
+          in artificial intelligence, quantum computing, and blockchain technology.
+        </p>
+      </section>
+=======
 export const metadata = {
 	title: 'Careers - Zion Tech Group',
 	description:
@@ -74,6 +113,7 @@ export default function CareersPage() {
 		</div>
 	);
 }
+>>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
 
       {/* Open Positions */}
       <section className="py-16">
