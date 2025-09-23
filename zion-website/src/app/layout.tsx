@@ -3,7 +3,6 @@ import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
-import type { ReactNode } from 'react'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
