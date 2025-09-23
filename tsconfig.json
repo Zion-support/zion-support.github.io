@@ -34,8 +34,6 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
     "app/**/*.ts",
     "app/**/*.tsx",
     "types/**/*.d.ts"
@@ -58,6 +56,8 @@
     "backup/**",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "src/**",
+    "app/components/**"
   ]
 }
