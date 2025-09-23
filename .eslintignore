@@ -59,6 +59,14 @@ temp_conflicts/
 temp-disabled/
 temp_exclude/
 
+# Additional noisy or non-primary directories
+ts_files_backup/
+utils/
+types/
+zion-os/
+zion-website/
+zion-ai-assistant/
+
 # Misc backups
 lib_backup/
 lib.broken/
