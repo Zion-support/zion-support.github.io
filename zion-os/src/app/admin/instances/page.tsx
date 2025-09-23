@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Globe, Rocket } from "lucide-react";
+
 // import { prisma } from "@/lib/prisma";
 
 interface InstanceWithCounts {

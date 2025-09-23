@@ -56,14 +56,8 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 }
 
-<<<<<<< HEAD
 export function LoadingSpinner({ size = "md", className = "" }: {
   size?: "sm" | "md" | "lg";
-=======
-// Loading spinner component
-export function LoadingSpinner({ size = "md", className = "" }: { 
-  size?: "sm" | "md" | "lg"; 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
   className?: string;
 }) {
   const sizeClasses = {
@@ -100,17 +94,9 @@ export function usePerformanceMonitor(componentName: string) {
     endMeasure: () => {
       const endTime = performance.now();
       const duration = endTime - startTime;
-<<<<<<< HEAD
       if (process.env.NODE_ENV === "development") {
         console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
       }
-=======
-      
-      if (process.env.NODE_ENV === "development") {
-        console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
-      }
-      
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
       if (process.env.NODE_ENV === "production" && duration > 100) {
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
