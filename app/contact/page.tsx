@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import Card from '../components/Card'
-import Button from '../components/Button'
+import { Card } from '../components/Card'
+import { Button } from '../components/Button'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
