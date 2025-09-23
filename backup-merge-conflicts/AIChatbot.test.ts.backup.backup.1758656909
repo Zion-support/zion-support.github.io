@@ -1,10 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> pr-11914:backup-merge-conflicts/AIChatbot.test.ts.backup
 import AIChatbot from './AIChatbot;
 describe('AIChatbot', () => {;
   it('renders without crashing', () => {;
@@ -17,9 +14,7 @@ describe('AIChatbot', () => {;
     render(<AIChatbot />);
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
 // Add interaction tests based on component functionality})});
-<<<<<<< HEAD
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
-=======
 <<<<<<< HEAD:components.disabled_full/AIChatbot.test.ts
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
 // Add interaction tests based on component functionality})});
@@ -28,7 +23,6 @@ import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders 
 }),
 });
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

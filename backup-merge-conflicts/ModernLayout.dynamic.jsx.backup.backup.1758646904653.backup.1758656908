@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const ModernLayout = dynamic(() => import("./ModernLayout"),{"; loading: () => <p>Loading.</p,>}) export: "default ModernLayout" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const ModernLayout = dynamic(() => import("./ModernLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ModernLayout' ,'
 >>>>>>> main
 >>>>>>> main

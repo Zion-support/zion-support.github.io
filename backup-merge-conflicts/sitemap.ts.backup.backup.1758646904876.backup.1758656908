@@ -1,9 +1,6 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> pr-11913:pages.disabled/build-hold/api/sitemap.ts
 import { NextApiRequest, NextApiResponse } from;
   "next"";"export": default function handler(req: NextApiReques,t, "res": NextApiResponse) {";
   const: baseUrl ,=,

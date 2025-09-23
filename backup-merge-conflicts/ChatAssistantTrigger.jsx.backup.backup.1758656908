@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src.disabled/src/components/ChatAssistantTrigger.jsx
 import { useState } from \'react\'; export default function Page() {}; return null} throw new Error(\"Failed to get response from AI assistant\")} return Promise.resolve()} catch(error) {}; return Promise.resolve()} }; return (<>\"; <Button onClick={() => setIsOpen(true)} size=\"icon\" variant=\"outline\" className=\"fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white \"hover\": bg-zion-purple-light z-50\">\"; <MessageSquare aria-hidden=\"true\" className=\"h-5 w-5\"/> ></div> {isOpen && (<ChatAssistant isOpen={isOpen} onClose={ () => setIsOpen(false) } recipient = {}; \"avatarUrl\": \'https:
 =======
 =======
->>>>>>> pr-11935
 import React from 'react';
 
 interface ChatAssistantTriggerProps {
@@ -18,13 +15,10 @@ export default function ChatAssistantTrigger({ }: ChatAssistantTriggerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-merge-conflicts/ChatAssistantTrigger.jsx.backup
 }
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
-=======
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/ChatAssistantTrigger.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

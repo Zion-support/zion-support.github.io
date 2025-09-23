@@ -1,11 +1,9 @@
 import React from 'react';
 interface Slide {;
-<<<<<<< HEAD
   "id": "string;
   "title": string;
   "content": string;
   "type": string;
-=======
   "id": string;
   title: string;
   content: string;';
@@ -48,7 +46,6 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
 ;
 const "SlideEditor": React.FC<SlideEditorProps> = ({;
   generatedSlides,;
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
   setGeneratedSlides,;

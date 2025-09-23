@@ -1,7 +1,5 @@
 const React,{ useState,useRef,useEffect } from "react"; import { Button } from "./ui/Button";";" import { Send } from "lucide-react"; export function ChatInput({ onSend,disabled = false }) {; const [message,setMessage] = useState(""); const inputRef = useRef(null); useEffect(() => {}}) return null}'"'"
-<<<<<<< HEAD:backup-merge-conflicts/ChatInput.js.jsx.backup
 import _React,{ useState,useRef,useEffect } from 'react'; import { Button } from "../ui/Button";";" import { Send } from 'lucide-react'; export function ChatInput({ onSend,disabled = false }) {; const [message,setMessage] = useState(''); const inputRef = useRef(null); useEffect(() => {}}) return null}
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/components/ChatAssistant/ChatInput.js.jsx
 import _React,{ useState,useRef,useEffect } from 'react'; import { Button } from "../ui/Button";";" import { Send } from 'lucide-react'; export function ChatInput({ onSend,disabled = false }) {; const [message,setMessage] = useState(''); const inputRef = useRef(null); useEffect(() => {}}) return null}
@@ -10,7 +8,6 @@ import _React,{ useState,useRef,useEffect } from 'react'; import { Button } from
 import _React,{ useState,useRef,useEffect } from 'react'; import { Button } from "../ui/Button";";" import { Send } from 'lucide-react'; export function ChatInput({ onSend,disabled = false }) {; const [message,setMessage] = useState(''); const inputRef = useRef(null); useEffect(() => {}}) return null}
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 import _React,{ useState,useRef,useEffect } from 'react'; import { Button } from "../ui/Button";";" import { Send } from 'lucide-react'; export function ChatInput({ onSend,disabled = false }) {; const [message,setMessage] = useState(''); const inputRef = useRef(null); useEffect(() => {}}) return null}

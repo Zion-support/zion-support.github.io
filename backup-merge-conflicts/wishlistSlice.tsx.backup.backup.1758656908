@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/wishlistSlice.tsx.backup
 <<<<<<< HEAD
 ;
 export default function Wishlistslice("props": "any) {;
@@ -14,7 +13,6 @@ export default function Wishlistslice("props": "any) {;
     </div>;
   );
 "}
-=======
 
 export default function Wishlistslice(props: any) {
   return (
@@ -28,6 +26,5 @@ export default function Wishlistslice(props: any) {
     </div>
     );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/store/wishlistSlice.tsx

@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const OptimizedImage = dynamic(() => import("./OptimizedImage"),{"; loading: () => <p>Loading.</p,>}) export: "default OptimizedImage" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
 >>>>>>> main
 >>>>>>> main

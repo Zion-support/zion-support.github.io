@@ -1,9 +1,6 @@
 const React from "react"; import TalentDirectory from "@/pages/TalentDirectory import TalentsPage from "@/pages/TalentsPage"; export default function TalentRoutes($1) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;";";"""
-<<<<<<< HEAD:backup-merge-conflicts/TalentRoutes.jsx.backup
 import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';
-=======
 import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/routes/TalentRoutes.jsx
 =======
 import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';
 >>>>>>> pr-11935

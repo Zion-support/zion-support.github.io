@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
-<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 interface Message {;
   "id": "string;
@@ -57,7 +55,6 @@ const "AIChatAssistant": React.FC = (props) => {
         "text": `I understand: "${userMessage.text}". How can I help?`,
         "sender": 'ai'
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
       };
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);

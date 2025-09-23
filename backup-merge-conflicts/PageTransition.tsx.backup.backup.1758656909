@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:src/components/PageTransition.tsx
 ;
@@ -18,17 +16,13 @@ const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
 =======
 "}
 =======
->>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
 ;
 const "PageTransition": "React.FC<PageTransitionProps> = ({ children "}) => {;
   return (;
     <div className="min-h-screen">;
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface PageTransitionProps {
 
@@ -56,7 +50,6 @@ const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
   );
 };
 =======
-<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 "export default PageTransition;';
@@ -64,11 +57,9 @@ const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
 "export default PageTransition;
 </PageTransitionProps>;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 "export default PageTransition;';
 </PageTransitionProps>;';';
 import React from 'react'; ; interface PageTransitionProps {; children: React.ReactNode} const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => { return ( <div className="min-h-screen bg-white"> {children}; </div>; )}; "export default PageTransition;'; </PageTransitionProps>;';';
->>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 "export default PageTransition;';

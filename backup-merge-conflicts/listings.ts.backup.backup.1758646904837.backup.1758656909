@@ -1,12 +1,9 @@
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
 export: interface Listing {
-=======
 <<<<<<< HEAD
 =======
 =======
->>>>>>> pr-11935
 "export": interface Listing {
 >>>>>>> main
    id: string;

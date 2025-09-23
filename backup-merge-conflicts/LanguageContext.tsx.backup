@@ -2,7 +2,6 @@ import React, { createContext, useState, useContext, useEffect, ReactNode } from
 import { safeStorage } from '@/utils/safeStorage';
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default function Page(props: any) {';
 ,';';
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';
@@ -20,11 +19,9 @@ const "defaultLanguageContext": "LanguageContextTyp e = {;
 export default function Page(props: any) {
 ,
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
-=======
 export default function Page(props: any) {';
 ,';';
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';
->>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
 
@@ -75,7 +72,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 >>>>>>> main
   const { i18n, t } = useTranslation();
 <<<<<<< HEAD
-<<<<<<< HEAD
   const { isAuthenticated, user } = authState;';
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(';';
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'';
@@ -97,7 +93,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
   return () => {
     // Cleanup function
-=======
 <<<<<<< HEAD
   };';
 }, []);, []);';';
@@ -115,7 +110,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 =======
   };';
 }, []);, []);';';
->>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
   };
 }, []);, []);
     const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
@@ -132,7 +126,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
   return () => {
     // Cleanup function
-<<<<<<< HEAD
   };';
 }, []);, []);';';
     setIsRTL(i18n.dir() === 'rtl');
@@ -148,8 +141,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   return () => {;
     // Cleanup function;
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
   };
 }, []);, []);
     setIsRTL(i18n.dir() === 'rtl');
@@ -160,7 +151,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       document.documentElement.classList.add('rtl');
 =======
 =======
-<<<<<<< HEAD
     } else {;
     } else {;
 >>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
@@ -188,8 +178,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
           }';
         } catch(err) {';';
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
     const syncLanguageWithProfile = async () => {;
       if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked;
         try {;
@@ -231,7 +219,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     
     syncLanguageWithProfile();
 =======
-<<<<<<< HEAD
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
   const changeLanguage = async("lang": "SupportedLanguag e) => {;
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
@@ -271,8 +258,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     try {
       await i18n.changeLanguage(lang);
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
       console.error('Error changing "language":', err);
       setCurrentLanguage(lang); // This will trigger the RTL effect
       safeStorage.setItem('i18n_lang', lang);
@@ -302,7 +287,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   );
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 </LanguageContext>
 </any>
@@ -315,8 +299,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 </LanguageProviderProps>;
 =======
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
 
 </LanguageContext>
 </any>

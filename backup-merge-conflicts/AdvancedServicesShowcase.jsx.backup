@@ -87,7 +87,6 @@ export function AdvancedServicesShowcase("props": "any) {;
                     <span>AI "Score": "{service.aiScore"}</span>;
                   </div>;
                 </div>;
-<<<<<<< HEAD:backup-merge-conflicts/AdvancedServicesShowcase.jsx.backup
 
 export function AdvancedServicesShowcase($1) {
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
@@ -165,12 +164,10 @@ export function AdvancedServicesShowcase($1) {
                   <div className="text-2xl font-bold text-zion-cyan">;
                     {service.currency}{service.price?.toLocaleString()}
 =======
-=======
                   </div>;
                   <div className="text-sm text-zion-slate-light">Starting Price</div>;
                 </div>;
 
->>>>>>> pr-11935
                   </div>
                   <div className="text-sm text-zion-slate-light">Starting Price</div>
                 </div>

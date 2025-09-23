@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
@@ -86,8 +85,6 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
-=======
->>>>>>> main
 ];
 
 function fixFile(filePath) {
@@ -97,7 +94,6 @@ function fixFile(filePath) {
     }
 
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
     let modified = false;
     
     fixes.forEach(fix => {
@@ -136,7 +132,6 @@ function walkDirectory(dir) {
   
   return fixedCount}
     let fixes = 0;
-=======
 
 
 
@@ -192,7 +187,6 @@ filesToFix.forEach(file => {
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 if (totalFixes > 0) {
     

@@ -183,7 +183,6 @@ class BatchSyntaxFixer {
 
     // Generate report
     const report = {
-<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       totalFiles: files.length,
       fixedFiles: this.fixedFiles.length,
@@ -232,6 +231,4 @@ const { execSync } = require('child_process')
         line.includes('')
         !line.endsWith('')
         return line + ''
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

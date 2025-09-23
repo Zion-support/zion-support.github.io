@@ -1,7 +1,5 @@
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
-<<<<<<< HEAD:backup-merge-conflicts/ListingCard.jsx.backup
 '"export": function ListingCard ({' id,title,description,images,category,tags,author,className,profileType = 'service'}) {''''";";""}
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/ListingCard.jsx
 '"export": function ListingCard ({' id,title,description,images,category,tags,author,className,profileType = 'service'}) {''''";";""}
@@ -10,7 +8,6 @@
 '"export": function ListingCard ({' id,title,description,images,category,tags,author,className,profileType = 'service'}) {''''";";""}
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 '"export": function ListingCard ({' id,title,description,images,category,tags,author,className,profileType = 'service'}) {''''";";""}

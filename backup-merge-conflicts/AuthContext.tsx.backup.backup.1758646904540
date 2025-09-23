@@ -1,11 +1,9 @@
 import React, { createContext, useContext } from 'react';
-<<<<<<< HEAD
 ;
 interface User {;
 
   "id": "string;
   "email": string;
-=======
 interface User {
   "id": string;
   email: string;
@@ -64,7 +62,6 @@ login: (email: string, "password": string)  => Promise<any>;
   loginWithWeb3: ()  => Promise<any>}
 const AuthContext = createContext<AuthContextType | null>(null);
 export const useAuth = (props) => {;
->>>>>>> main
   const context = useContext(AuthContext);
   if (context = == null) {;';';
     throw new Error('useAuth must be used within an AuthProvider');

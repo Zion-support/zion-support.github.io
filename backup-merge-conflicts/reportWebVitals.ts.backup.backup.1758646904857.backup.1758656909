@@ -39,25 +39,3 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
       const onFCP = mod.onFCP ?? mod.getFCP;
       const onLCP = mod.onLCP ?? mod.getLCP;
       const onTTFB = mod.onTTFB ?? mod.getTTFB;
-<<<<<<< HEAD
-;
-      try { onCLS && onCLS(reporter); "} catch {}
-      try { onFID && onFID(reporter); } catch {}
-      try { onFCP && onFCP(reporter); } catch {}
-      try { onLCP && onLCP(reporter); } catch {}
-      try { onTTFB && onTTFB(reporter); } catch {}
-    });
-    .catch(() => {;
-      // ignore if web-vitals isn't available;
-    });
-}
-<<<<<<< HEAD
-=======
-      try { onCLS && onCLS(reporter)} catch {}
-      try { onFID && onFID(reporter)} catch {}
-      try { onFCP && onFCP(reporter)} catch {}
-      try { onLCP && onLCP(reporter)} catch {}
-      try { onTTFB && onTTFB(reporter)} catch {}
-    })';
-    .catch(() => {
-      // ignore if web-vitals isn't available

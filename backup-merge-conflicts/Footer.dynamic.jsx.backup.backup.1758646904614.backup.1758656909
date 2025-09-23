@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const Footer = dynamic(() => import("./Footer"),{"; loading: () => <p>Loading.</p,>}) export: "default Footer" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Footer' ,'
 >>>>>>> main
 >>>>>>> main

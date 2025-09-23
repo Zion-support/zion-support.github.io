@@ -20,7 +20,6 @@ class RunAllAutomations {
 
   log(message) {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     }
 
   async runAutomation(scriptName, scriptPath) {
@@ -169,7 +168,6 @@ if (require.main === module) {
 }
 
 module.exports = RunAllAutomations;
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -203,4 +201,3 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
->>>>>>> main

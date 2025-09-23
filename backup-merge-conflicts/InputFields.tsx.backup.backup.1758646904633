@@ -1,6 +1,5 @@
 import React from 'react';
 interface InputFieldsProps {;
-<<<<<<< HEAD
   "inputData": "an y;
   "setInputData": ("data": an y) => void;
   "onNext": () => void;
@@ -16,7 +15,6 @@ const "InputFields": "React.FC<InputFieldsProps> = ({ inputData", setInputData, 
   };
 ;
   const handleSubmit = ("props": "any) => {;
-=======
   "inputData": an y;
   setInputData: (data: an y) => void;
   onNext: () => void;
@@ -38,7 +36,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
       [field]: value;
     });
 =======
->>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
   };
   const handleSubmit = (props) => {;
     e.preventDefault();

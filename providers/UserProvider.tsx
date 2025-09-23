@@ -61,6 +61,17 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     }),
     [user]
   )
+      // Intentionally ignoring storage write errors (e.g., private mode)
+      // to avoid disrupting app state updates.
+    }
+  }, [user])
+
+  const value = useMemo<UserContextValue>(() => ({
+    user,
+    setUser,
+    logout: () => setUser(null),
+    completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev),
+  }), [user])
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

@@ -14,7 +14,6 @@ class CompleteImprovementSuite {
     this.reportsDir = path.join(this.projectRoot, 'improvement-reports');
     this.ensureDirectories();
     this.results = {
-<<<<<<< HEAD
       mergeConflicts: { resolved: 0, failed: 0 },
       syntaxErrors: { fixed: 0, failed: 0 },
       prsProcessed: { merged: 0, failed: 0 },
@@ -524,6 +523,4 @@ const { execSync } = require('child_process')
                 "name"
                 "chunks"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

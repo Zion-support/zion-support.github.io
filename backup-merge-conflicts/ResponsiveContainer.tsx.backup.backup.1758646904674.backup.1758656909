@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/ResponsiveContainer.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 interface ResponsiveContainerProps {;
   "children": "React.ReactNode;
@@ -75,7 +73,6 @@ export function ResponsiveContainer({
   return (
     <div className={containerClasses}>
 =======
->>>>>>> pr-11913:src_backup_temp/components/ResponsiveContainer.tsx
       {children}
     </div>;
   );

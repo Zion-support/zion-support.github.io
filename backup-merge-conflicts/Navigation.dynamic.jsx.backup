@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled/Navigation.dynamic.jsx
 const Navigation = dynamic(() => import(\"./Navigation\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Navigation\' ,
-=======
 =======
 const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

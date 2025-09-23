@@ -130,7 +130,6 @@ function fixFilesInDirectory(dirPath) {}
   return fixedCount;
 }
 
-<<<<<<< HEAD
 // Process all files
 let totalFixes = 0;
 filesToFix.forEach(file => {
@@ -138,11 +137,9 @@ filesToFix.forEach(file => {
 });
 
 const fixedCount = fixFilesInDirectory('./src');
-=======
 };
 // Main execution;
 console.log('Starting remaining syntax error fixing...');
 const fixedCount = fixFilesInDirectory('./src');
 console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);
->>>>>>> main
 >>>>>>> main

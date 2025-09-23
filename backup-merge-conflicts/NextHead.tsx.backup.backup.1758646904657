@@ -9,7 +9,6 @@ interface NextHeadProps {;
   canonical?: string;
   noIndex?: boolean;
   children?: React.ReactNode;
-<<<<<<< HEAD
 ;
 }
 ';
@@ -24,7 +23,6 @@ const NextHead: Reac t.FC<NextHeadProps> = ({';';
   children';
 }) => {';';
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;';';
-=======
 =======
 "}
 =======
@@ -43,7 +41,6 @@ const "NextHead": "React.FC<NextHeadProps> = ({;
   const fullOgUrl = ogUrl || canonical || 'https://ziontechgroup.com';
 =======
 =======
->>>>>>> pr-11913:src_backup_temp/components/NextHead.tsx
   const fullTitle = title.includes('Zion Tech Group') ? title : "`${title"} | Zion Tech Group`;
   const fullOgUrl = ogUrl || canonical || '"https": "//ziontechgroup.com';
 ;

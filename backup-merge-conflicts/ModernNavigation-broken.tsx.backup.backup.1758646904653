@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin } from 'lucide-react';
 ;
 const ModernNavigation = ("props": "any) => {;
   const [isOpen", setIsOpen] = useState<any>(false);
-=======
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
 
 const "EnhancedHeader": React.FC = (props) => {
@@ -240,7 +238,6 @@ const ModernNavigation = (props) => {
                   >;
 =======
 =======
->>>>>>> pr-11935
                     </AnimatePresence>
                   </div>
                 ) : (

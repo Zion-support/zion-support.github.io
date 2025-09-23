@@ -392,7 +392,6 @@ export default function HomePage() {
         <NewContent2025PromotionBanner />
         
         {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-<<<<<<< HEAD
         {/* NEW PROMOTIONAL BANNERS */}
         <NewContent2025UltimateShowcasePromotionBanner />
         <AI2025RevolutionaryContentBanner />
@@ -758,8 +757,6 @@ export default function HomePage() {
         <NewContent2025BreakthroughBanner />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-=======
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
         <AI2025UltimateBreakthroughRevolutionBanner />
         
         {/* NEW: AI 2026 BREAKTHROUGH REVOLUTIONARY CONTENT BANNER */}

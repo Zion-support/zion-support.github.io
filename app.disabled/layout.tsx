@@ -1,7 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import './globals.css'
-=======
 // global styles are optional; keeping layout minimal
 
 export const metadata = {
@@ -62,4 +60,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   )
 }
 =======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
