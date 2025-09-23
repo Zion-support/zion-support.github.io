@@ -53,28 +53,7 @@ const stats = [
   { name: 'Patents Filed', value: '25+' }
 ]
 
-const solutions = [
-  {
-    name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions/ai-autonomous-research'
-  },
-  {
-    name: 'Quantum Neural Networks',
-    description: 'Next-generation computing for complex problem solving.',
-    href: '/solutions/quantum-neural-networks'
-  },
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI-powered automation for enterprise efficiency.',
-    href: '/solutions/autonomous-business'
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Intelligent management of digital infrastructure.',
-    href: '/solutions/it-asset-management'
-  }
-]
+// Removed unused solutions array to satisfy linter
 
 export default function HomePage() {
   return (
