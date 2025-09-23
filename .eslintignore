@@ -15,6 +15,9 @@ api.disabled.temp/
 app-disabled/
 app_backup/
 apps.backup/
+zion-os/
+zion-website/
+ts_files_backup/
 
 # Exclude most component suites and APIs that are archived/experimental
 components/
@@ -69,3 +72,8 @@ lib.disabled/
 **/*.backups*/
 **/*.corrupted*/
 **/*.disabled*/
+**/*backup*/
+**/*conflict*/
+**/*temp*/
+utils.disabled/
+types/
