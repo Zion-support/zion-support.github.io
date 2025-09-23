@@ -42,8 +42,8 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
             while maintaining the learning capabilities of neural networks.
           </p>
         </div>
-      </div>
 
+      <div className="max-w-4xl mx-auto px-4 py-8">
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🧠 Core Technologies</h2>
           
@@ -247,7 +247,7 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
                   <li>• <strong>Qubits:</strong> 1000+ logical qubits</li>
                   <li>• <strong>Coherence Time:</strong> 100+ seconds</li>
                   <li>• <strong>Gate Fidelity:</strong> 99.99%</li>
-                  <li>• <strong>Error Rate:</strong> < 0.01%</li>
+                  <li>• <strong>Error Rate:</strong> &lt; 0.01%</li>
                   <li>• <strong>Processing Speed:</strong> 10^15 operations/second</li>
                 </ul>
               </div>
@@ -416,7 +416,7 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
             <span>Tags: AI 2026, quantum neural fusion, breakthrough, quantum computing, future predictions</span>
           </div>
         </footer>
-      </article>
-    </div>
+      </div>
+    </article>
   );
 }

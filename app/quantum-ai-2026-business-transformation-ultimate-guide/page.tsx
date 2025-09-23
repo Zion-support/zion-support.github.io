@@ -2,8 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import BlogPostLayout from '../../components/BlogPostLayout';
-import ContentPromotionBanner from '../../components/ContentPromotionBanner';
 import RelatedContentWidget from '../../components/RelatedContentWidget';
 import SocialShareButtons from '../../components/SocialShareButtons';
 
@@ -173,18 +171,22 @@ export default function QuantumAI2026BusinessTransformationPage() {
       
       <div className="min-h-screen bg-white">
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner 
-          title="⚛️ New: Quantum AI 2026 Business Transformation"
-          description="Discover how quantum AI will revolutionize business operations with exponential speedup and breakthrough capabilities"
-          ctaText="Read Full Guide"
-          ctaLink="/quantum-ai-2026-business-transformation-ultimate-guide"
-        />
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold mb-2">⚛️ New: Quantum AI 2026 Business Transformation</h2>
+            <p className="text-lg mb-4">Discover how quantum AI will revolutionize business operations with exponential speedup and breakthrough capabilities</p>
+            <Link href="/quantum-ai-2026-business-transformation-ultimate-guide" className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Read Full Guide
+            </Link>
+          </div>
+        </div>
 
         {/* Main Content */}
-        <BlogPostLayout
-          post={blogPost}
-          content={blogPost.content}
-        />
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <div className="prose prose-lg max-w-none">
+            {blogPost.content}
+          </div>
+        </div>
 
         {/* Social Share Buttons */}
         <SocialShareButtons 

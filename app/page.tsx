@@ -1002,6 +1002,6 @@ export default function HomePage() {
           />
         </Suspense>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
