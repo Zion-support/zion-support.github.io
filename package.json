@@ -2,6 +2,7 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
@@ -18,8 +19,11 @@
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit -p tsconfig.app.json || true",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
-    "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "rm -rf .next && npm run build",
+    "dev:clean": "rm -rf .next && npm run dev",
+    "preview": "npm run build && npm run start",
     "clean": "rm -rf .next out dist build",
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
