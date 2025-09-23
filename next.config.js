@@ -4,6 +4,8 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
+  // Disable SWC minifier to avoid WebpackError from version mismatch
+  swcMinify: false,
   
   // Enhanced build settings
   eslint: { ignoreDuringBuilds: true },
@@ -83,6 +85,12 @@ const nextConfig = {
   },
 
   webpack: (config, { isServer }) => {
+    // Disable minification to avoid WebpackError from minify plugin with mismatched versions
+    if (config.optimization) {
+      config.optimization.minimize = false;
+    } else {
+      config.optimization = { minimize: false };
+    }
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
