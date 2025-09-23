@@ -228,7 +228,7 @@ export async function createTestNotification(userId: string) {
   const types: NotificationType[] = ['message', 'quote_request', 'booking_confirmation', 'hire_request', 'onboarding', 'system'];
   const randomType = types[Math.floor(Math.random() * types.length)];
   
-  const titles = {
+  const titles ={
     'message': 'New Message Received',
     'quote_request': 'Quote Request Submitted',
     'booking_confirmation': 'Booking Confirmed',
@@ -237,7 +237,7 @@ export async function createTestNotification(userId: string) {
     'system': 'System Update'
   };
   
-  const messages = {
+  const messages ={
     'message': 'You have received a new message from a potential client.',
     'quote_request': 'A client has submitted a quote request for your services.',
     'booking_confirmation': 'Your booking has been confirmed and scheduled.',
@@ -246,7 +246,7 @@ export async function createTestNotification(userId: string) {
     'system': 'Our platform has been updated with new features. Check them out!'
   };
   
-  const actions = {
+  const actions ={
     'message': { url: '/messages', text: 'View Messages' },
     'quote_request': { url: '/quotes', text: 'View Quote' },
     'booking_confirmation': { url: '/bookings', text: 'View Booking' },

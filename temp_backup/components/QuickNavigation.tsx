@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 interface QuickNavItem {
@@ -107,7 +106,7 @@ export default function QuickNavigation() {
   };
 
   return (
-    <div className="bg-slate-900/50 border border-white/10 rounded-xl p-6 mb-8">
+    <div className="bg-slate-90o0/50 border border-white/10 rounded-xl p-6 mb-8">
       <div className="mb-6">
         <h2 className="text-xl font-bold text-white mb-2">Quick Navigation</h2>
         <p className="text-white/70">Quick access to key pages and features</p>
@@ -116,7 +115,7 @@ export default function QuickNavigation() {
       {/* Primary Navigation */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-          <span className="text-cyan-400">⭐</span>
+          <span className="text-cyan-40o0">⭐</span>
           Essential Pages
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -124,11 +123,11 @@ export default function QuickNavigation() {
             <Link
               key={item.href}
               href={item.href}
-              className="group bg-slate-800/50 border border-white/10 rounded-lg p-4 hover:border-cyan-400/50 hover:bg-slate-800/70 transition-all"
+              className="group bg-slate-80o0/50 border border-white/10 rounded-lg p-4 hover:border-cyan-40o0/50 hover:bg-slate-80o0/70 transition-all"
             >
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-2xl">{item.icon}</span>
-                <h4 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                <h4 className="font-semibold text-white group-hover:text-cyan-40o0 transition-colors">
                   {item.title}
                 </h4>
               </div>
@@ -141,7 +140,7 @@ export default function QuickNavigation() {
       {/* Secondary Navigation */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-          <span className="text-fuchsia-400">🔗</span>
+          <span className="text-fuchsia-40o0">🔗</span>
           Key Features
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -149,11 +148,11 @@ export default function QuickNavigation() {
             <Link
               key={item.href}
               href={item.href}
-              className="group bg-slate-800/30 border border-white/10 rounded-lg p-4 hover:border-fuchsia-400/50 hover:bg-slate-800/50 transition-all"
+              className="group bg-slate-80o0/30 border border-white/10 rounded-lg p-4 hover:border-fuchsia-40o0/50 hover:bg-slate-80o0/50 transition-all"
             >
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-xl">{item.icon}</span>
-                <h4 className="font-medium text-white group-hover:text-fuchsia-400 transition-colors">
+                <h4 className="font-medium text-white group-hover:text-fuchsia-40o0 transition-colors">
                   {item.title}
                 </h4>
               </div>
@@ -166,7 +165,7 @@ export default function QuickNavigation() {
       {/* Utility Navigation */}
       <div>
         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-          <span className="text-emerald-400">🛠️</span>
+          <span className="text-emerald-40o0">🛠️</span>
           Utilities
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -174,11 +173,11 @@ export default function QuickNavigation() {
             <Link
               key={item.href}
               href={item.href}
-              className="group bg-slate-800/20 border border-white/10 rounded-lg p-4 hover:border-emerald-400/50 hover:bg-slate-800/40 transition-all"
+              className="group bg-slate-80o0/20 border border-white/10 rounded-lg p-4 hover:border-emerald-40o0/50 hover:bg-slate-80o0/40 transition-all"
             >
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-lg">{item.icon}</span>
-                <h4 className="font-medium text-white group-hover:text-emerald-400 transition-colors">
+                <h4 className="font-medium text-white group-hover:text-emerald-40o0 transition-colors">
                   {item.title}
                 </h4>
               </div>

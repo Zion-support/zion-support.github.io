@@ -21,7 +21,7 @@ export interface SpecializedService {
   };
 }
 
-export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
+export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
   // AI-Powered Education Platform
   {
     id: "ai-education-platform",
@@ -29,8 +29,8 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     description: "Intelligent education platform that personalizes learning experiences, provides adaptive tutoring, and automates educational content creation.",
     category: "EdTech AI",
     subcategory: "Personalized Learning",
-    price: 1800,
-    marketPrice: "$1,800 - $4,800/month",
+    price: 180o0,
+    marketPrice: "$1,80o0 - $4,80o0/month",
     features: [
       "AI-powered personalized learning paths",
       "Adaptive tutoring systems",
@@ -69,7 +69,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     supportLevel: "premium",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -82,8 +82,8 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     description: "Next-generation cryptography platform using quantum key distribution and post-quantum algorithms for ultra-secure communications and data protection.",
     category: "Quantum Security",
     subcategory: "Cryptography",
-    price: 12000,
-    marketPrice: "$12,000 - $35,000/month",
+    price: 120o00,
+    marketPrice: "$12,0o00 - $35,0o00/month",
     features: [
       "Quantum key distribution (QKD)",
       "Post-quantum cryptography algorithms",
@@ -122,7 +122,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     supportLevel: "enterprise",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -135,8 +135,8 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     description: "Intelligent manufacturing platform that optimizes production processes, predicts equipment failures, and automates quality control using AI and IoT.",
     category: "Industrial AI",
     subcategory: "Smart Manufacturing",
-    price: 5500,
-    marketPrice: "$5,500 - $15,000/month",
+    price: 550o0,
+    marketPrice: "$5,50o0 - $15,0o00/month",
     features: [
       "Predictive maintenance",
       "Quality control automation",
@@ -175,7 +175,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     supportLevel: "enterprise",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -188,8 +188,8 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     description: "Decentralized identity management platform using blockchain technology for secure, verifiable, and privacy-preserving digital identities.",
     category: "Blockchain",
     subcategory: "Digital Identity",
-    price: 2800,
-    marketPrice: "$2,800 - $7,200/month",
+    price: 280o0,
+    marketPrice: "$2,80o0 - $7,20o0/month",
     features: [
       "Decentralized identity management",
       "Zero-knowledge proofs",
@@ -228,7 +228,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     supportLevel: "premium",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -241,8 +241,8 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     description: "Intelligent real estate platform that uses AI for property valuation, market analysis, investment recommendations, and automated property management.",
     category: "Real Estate AI",
     subcategory: "Property Intelligence",
-    price: 2200,
-    marketPrice: "$2,200 - $6,500/month",
+    price: 220o0,
+    marketPrice: "$2,20o0 - $6,50o0/month",
     features: [
       "AI-powered property valuation",
       "Market trend analysis",
@@ -281,7 +281,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     supportLevel: "premium",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -294,8 +294,8 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     description: "Revolutionary quantum internet infrastructure that enables ultra-secure, high-speed quantum communication networks for the future of the internet.",
     category: "Quantum Internet",
     subcategory: "Infrastructure",
-    price: 25000,
-    marketPrice: "$25,000 - $75,000/month",
+    price: 250o00,
+    marketPrice: "$25,0o00 - $75,0o00/month",
     features: [
       "Quantum network infrastructure",
       "Quantum repeaters",
@@ -334,11 +334,11 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     supportLevel: "enterprise",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   }
 ];
 
-export default SPECIALIZED_SERVICES_2025;
+export default SPECIALIZED_SERVICES_20o25;

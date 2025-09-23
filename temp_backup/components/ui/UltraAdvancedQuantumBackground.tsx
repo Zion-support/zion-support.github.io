@@ -36,13 +36,13 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space' | 'matrix';
     }> = [];
 
-    const colors = {
-      quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff'],
-      holographic: ['#ff1493', '#00bfff', '#ff4500', '#32cd32', '#ffd700', '#ff69b4'],
-      neural: ['#00ff7f', '#ff6347', '#4169e1', '#ff1493', '#00ced1', '#ff4500'],
-      cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff0000', '#00ff00', '#8000ff'],
-      space: ['#1e90ff', '#ff69b4', '#00ff7f', '#ff4500', '#9370db', '#00bfff'],
-      matrix: ['#00ff00', '#00ff7f', '#32cd32', '#90ee90', '#98fb98', '#00fa9a']
+    const colors ={
+      quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080', '#80o00ff'],
+      holographic: ['#ff1493', '#0o0bfff', '#ff450o0', '#32cd32', '#ffd70o0', '#ff69b4'],
+      neural: ['#0o0ff7f', '#ff6347', '#4169e1', '#ff1493', '#0o0ced1', '#ff450o0'],
+      cyberpunk: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o000', '#0o0ff0o0', '#80o00ff'],
+      space: ['#1e90ff', '#ff69b4', '#0o0ff7f', '#ff450o0', '#9370db', '#0o0bfff'],
+      matrix: ['#0o0ff0o0', '#0o0ff7f', '#32cd32', '#90ee90', '#98fb98', '#0o0fa9a']
     };
 
     const createParticle = () => {
@@ -75,8 +75,8 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         
         // Quantum wave patterns
         for (let i = 0; i < 10; i++) {
-          const time = Date.now() * 0.001;
-          const wave = Math.sin(time + i) * 100;
+          const time = Date.now() * 0.0o01;
+          const wave = Math.sin(time + i) * 10o0;
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * intensity})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
@@ -118,7 +118,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             const dy = particles[i].y - particles[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             
-            if (distance < 100) {
+            if (distance < 10o0) {
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
@@ -130,7 +130,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 
       // Create cyberpunk effects
       if (variant === 'cyberpunk') {
-        ctx.fillStyle = 'rgba(255, 0, 128, 0.05)';
+        ctx.fillStyle = 'rgba(255, 0, 128, 0.0o5)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         // Digital rain effect
@@ -139,7 +139,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           const y = Math.random() * canvas.height;
           ctx.fillStyle = 'rgba(0, 255, 255, 0.8)';
           ctx.font = '12px monospace';
-          ctx.fillText('01', x, y);
+          ctx.fillText('0o1', x, y);
         }
       }
 
@@ -149,7 +149,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         // Stars
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 10o0; i++) {
           const x = Math.random() * canvas.width;
           const y = Math.random() * canvas.height;
           const size = Math.random() * 2;
@@ -206,7 +206,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         }
 
         // Occasionally create new particles
-        if (Math.random() < 0.01) {
+        if (Math.random() < 0.0o1) {
           particles[index] = createParticle();
         }
       });
@@ -215,10 +215,10 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 
       // Create floating geometric shapes
       if (variant === 'quantum' || variant === 'holographic') {
-        const time = Date.now() * 0.001;
+        const time = Date.now() * 0.0o01;
         for (let i = 0; i < 5; i++) {
-          const x = canvas.width / 2 + Math.cos(time + i) * 200;
-          const y = canvas.height / 2 + Math.sin(time + i) * 200;
+          const x = canvas.width / 2 + Math.cos(time + i) * 20o0;
+          const y = canvas.height / 2 + Math.sin(time + i) * 20o0;
           
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * intensity})`;
           ctx.lineWidth = 2;
@@ -259,26 +259,26 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
           background: variant === 'space' 
-            ? 'radial-gradient(ellipse at center, #0a0a2a 0%, #000000 100%)'
+            ? 'radial-gradient(ellipse at center, #0a0a2a 0%, #0o00000 10o0%)'
             : variant === 'matrix'
-            ? 'linear-gradient(135deg, #000000 0%, #001a00 100%)'
-            : 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
+            ? 'linear-gradient(135deg, #0o00000 0%, #0o01a0o0 10o0%)'
+            : 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 10o0%)'
         }}
-      />
+       />
       
       {/* Additional overlay effects */}
       <div className="absolute inset-0 pointer-events-none z-10">
         {variant === 'quantum' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-50o0/5 to-transparent"  />
         )}
         {variant === 'holographic' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-pink-500/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-pink-50o0/5 to-transparent"  />
         )}
         {variant === 'neural' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-500/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-50o0/5 to-transparent"  />
         )}
         {variant === 'cyberpunk' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-50o0/5 to-transparent"  />
         )}
       </div>
 
@@ -290,7 +290,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       {/* Floating geometric elements */}
       <div className="absolute inset-0 pointer-events-none z-5">
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-full"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-full"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -301,13 +301,13 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-pink-400/20 transform rotate-45"
+          className="absolute top-40 right-32 w-24 h-24 border border-pink-40o0/20 transform rotate-45"
           animate={{
             scale: [1, 1.3, 1],
-            rotate: [45, 225, 405],
+            rotate: [45, 225, 40o5],
             opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
@@ -315,10 +315,10 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 rounded-full"
+          className="absolute bottom-32 left-32 w-40 h-40 border border-purple-40o0/20 rounded-full"
           animate={{
             scale: [1, 1.1, 1],
             rotate: [0, -180, -360],
@@ -329,7 +329,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
     </div>
   );

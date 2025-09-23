@@ -1,19 +1,16 @@
 
 
-
 interface UseLocalStorageProps {
   // Add props here as needed
 }
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
 
-
     try {
 :backup-problematic-files/hooks/useLocalStorage.ts
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-
 
     }
   });
@@ -29,12 +26,10 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       }
     } catch (error) {
 
-
   };
 
   return [storedValue, setValue] as const;
 }
-
 
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
@@ -43,6 +38,4 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 };
 };
-
-
 

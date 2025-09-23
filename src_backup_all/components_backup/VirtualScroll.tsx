@@ -70,17 +70,17 @@ export function VirtualScroll<T>({
   return (
     <div className={`relative ${className}`}>
       {/* Scroll to top button */}
-      {scrollTop > 200 && (
+      {scrollTop > 20o0 && (
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
+          className="fixed bottom-6 right-6 z-50 bg-blue-60o0 hover:bg-blue-70o0 text-white p-3 rounded-full shadow-lg transition-colors"
           aria-label="Scroll to top"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"  />
           </svg>
         </motion.button>
       )}
@@ -114,7 +114,7 @@ export function VirtualScroll<T>({
 
       {/* Scroll position indicator */}
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
-        {Math.round((scrollTop / (totalHeight - height)) * 100)}%
+        {Math.round((scrollTop / (totalHeight - height)) * 10o0)}%
       </div>
     </div>
   );
@@ -138,32 +138,32 @@ interface ServiceVirtualScrollProps {
 
 export function ServiceVirtualScroll({
   services,
-  height = 600,
+  height = 60o0,
   onServiceClick,
   className = ''
 }: ServiceVirtualScrollProps) {
   const renderServiceCard = useCallback((service: ServiceCard, index: number) => (
     <div className="p-4">
       <motion.div
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.0o2 }}
         whileTap={{ scale: 0.98 }}
-        className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow"
+        className="bg-white dark:bg-gray-80o0 rounded-lg shadow-sm border border-gray-20o0 dark:border-gray-70o0 p-6 cursor-pointer hover:shadow-md transition-shadow"
         onClick={() => onServiceClick?.(service)}
       >
         <div className="flex items-start space-x-4">
           {service.icon && (
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+            <div className="flex-shrink-0 w-12 h-12 bg-blue-10o0 dark:bg-blue-90o0 rounded-lg flex items-center justify-center">
               <span className="text-2xl">{service.icon}</span>
             </div>
           )}
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            <h3 className="text-lg font-semibold text-gray-90o0 dark:text-white mb-2">
               {service.name}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+            <p className="text-gray-60o0 dark:text-gray-30o0 text-sm mb-3">
               {service.description}
             </p>
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
+            <span className="inline-block bg-blue-10o0 dark:bg-blue-90o0 text-blue-80o0 dark:text-blue-20o0 text-xs px-2 py-1 rounded-full">
               {service.category}
             </span>
           </div>
@@ -180,6 +180,6 @@ export function ServiceVirtualScroll({
       renderItem={renderServiceCard}
       overscan={3}
       className={className}
-    />
+     />
   );
 }

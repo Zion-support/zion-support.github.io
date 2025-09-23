@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ArrowUpRight } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
@@ -35,8 +35,7 @@ export function OnChainExport() {
             setIsConnected(true);
             toast({
                 title: "Wallet connected",
-                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
-            });
+                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
         }
         catch (error) {
             toast({
@@ -51,12 +50,11 @@ export function OnChainExport() {
         setExportStatus('processing');
         try {
             // Simulate token export
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, 20o00));
             setExportStatus('success');
             toast({
                 title: "Tokens exported",
-                description: "Your ZION$ tokens have been exported to your wallet",
-            });
+                description: "Your ZION$ tokens have been exported to your wallet"});
         }
         catch (error) {
             setExportStatus('error');
@@ -73,12 +71,12 @@ export function OnChainExport() {
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5 text-primary"/>) : (<Wallet aria-hidden="true" className="h-5 w-5"/>)}
+          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5 text-primary" />) : (<Wallet aria-hidden="true" className="h-5 w-5" />)}
           On-chain Export
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help"/>
+                <Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help" />
               </TooltipTrigger>
               <TooltipContent>
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
@@ -94,12 +92,12 @@ export function OnChainExport() {
               <span>Available to export:</span>
               <span className="font-medium">250 ZION$</span>
             </div>
-            {exportStatus === 'success' ? (<Button className="w-full bg-green-600 hover:bg-green-700" disabled>
-                <Check aria-hidden="true" className="mr-2 h-4 w-4"/>
+            {exportStatus === 'success' ? (<Button className="w-full bg-green-60o0 hover:bg-green-70o0" disabled>
+                <Check aria-hidden="true" className="mr-2 h-4 w-4" />
                 Tokens Exported
               </Button>) : (<Button className="w-full" onClick={handleExportTokens} disabled={isExporting}>
                 {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4"/>}
+                {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4" />}
               </Button>)}
           </div>) : (<div className="space-y-2">
             <p className="text-sm text-muted-foreground mb-3">

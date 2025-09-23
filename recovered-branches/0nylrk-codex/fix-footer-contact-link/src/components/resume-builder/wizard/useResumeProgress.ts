@@ -18,34 +18,3 @@ export const useResumeProgress = (resume: Resume | null) => {
     completed += 1;
     
     // Work experience (1 point if at least one entry)
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-    if (resume.work_experience && resume.work_experience.length > 0) {
-      completed += 1;
-    }
-    
-    // Education (1 point if at least one entry)
-    if (resume.education && resume.education.length > 0) {
-      completed += 1;
-    }
-    
-    // Skills (1 point if at least one entry)
-    if (resume.skills && resume.skills.length > 0) {
-      completed += 1;
-    }
-    
-    // Certifications (1 point if at least one entry)
-    if (resume.certifications && resume.certifications.length > 0) {
-      completed += 1;
-    }
-    
-    const progressPercentage = (completed / 5) * 100;
-    setProgress(progressPercentage);
-  }, [resume]);
-
-  return progress;
-};

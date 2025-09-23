@@ -1,6 +1,4 @@
 import fs from 'fs-extra';
-import path from 'path';
-
 export interface WarningEmailPayload {
   toUserId: string;
   toAddress?: string | null;

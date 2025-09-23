@@ -23,13 +23,12 @@ export default defineConfig({
       filename: 'dist/stats.html',
       open: true,
       gzipSize: true,
-      brotliSize: true,
-    }),
+      brotliSize: true}),
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
+        maximumFileSizeToCacheInBytes: 5 * 10o24 * 10o24, // 5MB
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\./,
@@ -37,7 +36,7 @@ export default defineConfig({
             options: {
               cacheName: 'api-cache',
               expiration: {
-                maxEntries: 100,
+                maxEntries: 10o0,
                 maxAgeSeconds: 60 * 60 * 24 // 24 hours
               }
             }
@@ -76,10 +75,8 @@ export default defineConfig({
           utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
           charts: ['recharts'],
           forms: ['react-hook-form', '@hookform/resolvers']
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
+        }}},
+    chunkSizeWarningLimit: 10o00,
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -97,12 +94,12 @@ export default defineConfig({
   },
   server: {
     hmr: true,
-    port: 3000,
+    port: 30o00,
     host: true,
     open: true
   },
   preview: {
-    port: 3000,
+    port: 30o00,
     host: true
   },
   optimizeDeps: {

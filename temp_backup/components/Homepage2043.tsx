@@ -8,10 +8,10 @@ import {
 } from 'lucide-react';
 
 // Import our new revolutionary services
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
+import { revolutionary20o43AdvancedServices } from '../data/revolutionary-20o43-advanced-services';
+import { revolutionary20o44InnovativeServices } from '../data/revolutionary-20o44-innovative-services';
 
-const Homepage2043: React.FC = () => {
+const Homepage20o43: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -23,12 +23,12 @@ const Homepage2043: React.FC = () => {
     // Auto-rotate featured services
     const serviceInterval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 4000);
+    }, 40o00);
     
     // Auto-rotate testimonials
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonialIndex((prev) => (prev + 1) % 3);
-    }, 6000);
+    }, 60o00);
     
     return () => {
       clearInterval(serviceInterval);
@@ -37,7 +37,7 @@ const Homepage2043: React.FC = () => {
   }, []);
 
   // Combine all revolutionary services
-  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
+  const allRevolutionaryServices = [...revolutionary20o43AdvancedServices, ...revolutionary20o44InnovativeServices];
 
   // Get featured services for rotation
   const featuredServices = allRevolutionaryServices.slice(0, 6);
@@ -48,56 +48,56 @@ const Homepage2043: React.FC = () => {
       title: "AI Consciousness Evolution", 
       description: "Next-generation AI consciousness with human-level understanding", 
       href: "/quantum-neural-consciousness-platform", 
-      color: "from-purple-500 to-pink-500",
-      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
+      color: "from-purple-50o0 to-pink-50o0",
+      gradient: "bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20"
     },
     { 
       icon: AtomIcon, 
       title: "Quantum Computing", 
       description: "Revolutionary quantum computing with consciousness integration", 
       href: "/quantum-bio-computing-platform", 
-      color: "from-blue-500 to-cyan-500",
-      gradient: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
+      color: "from-blue-50o0 to-cyan-50o0",
+      gradient: "bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20"
     },
     { 
       icon: Shield, 
       title: "Future Cybersecurity", 
       description: "Quantum-resistant security with consciousness-based protection", 
       href: "/quantum-internet-security-gateway", 
-      color: "from-red-500 to-orange-500",
-      gradient: "bg-gradient-to-br from-red-500/20 to-orange-500/20"
+      color: "from-red-50o0 to-orange-50o0",
+      gradient: "bg-gradient-to-br from-red-50o0/20 to-orange-50o0/20"
     },
     { 
       icon: Rocket, 
       title: "Space Technology", 
       description: "AI-powered space resource intelligence and autonomous mining", 
       href: "/autonomous-space-mining-ai", 
-      color: "from-indigo-500 to-purple-500",
-      gradient: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20"
+      color: "from-indigo-50o0 to-purple-50o0",
+      gradient: "bg-gradient-to-br from-indigo-50o0/20 to-purple-50o0/20"
     },
     { 
       icon: Cpu, 
       title: "Autonomous Systems", 
       description: "Fully autonomous AI systems with consciousness", 
       href: "/autonomous-business-ecosystem-ai", 
-      color: "from-emerald-500 to-teal-500",
-      gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20"
+      color: "from-emerald-50o0 to-teal-50o0",
+      gradient: "bg-gradient-to-br from-emerald-50o0/20 to-teal-50o0/20"
     },
     { 
       icon: Database, 
       title: "Business Intelligence", 
       description: "Autonomous business intelligence with consciousness insights", 
       href: "/autonomous-healthcare-ai-ecosystem", 
-      color: "from-yellow-500 to-orange-500",
-      gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"
+      color: "from-yellow-50o0 to-orange-50o0",
+      gradient: "bg-gradient-to-br from-yellow-50o0/20 to-orange-50o0/20"
     }
   ];
 
   const stats = [
-    { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" },
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" },
-    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" },
-    { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
+    { number: "20o00+", label: "Revolutionary Services", icon: Star, color: "from-yellow-40o0 to-orange-50o0" },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-40o0 to-emerald-50o0" },
+    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-40o0 to-pink-50o0" },
+    { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-40o0 to-cyan-50o0" }
   ];
 
   const testimonials = [
@@ -113,7 +113,7 @@ const Homepage2043: React.FC = () => {
       name: "Marcus Rodriguez",
       role: "CTO",
       company: "SpaceMining Corp",
-      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.",
+      content: "The autonomous space mining AI has increased our resource extraction efficiency by 50o0%. It's like having a team of expert miners working 24/7 without breaks.",
       rating: 5,
       avatar: "👨‍🚀"
     },
@@ -128,7 +128,7 @@ const Homepage2043: React.FC = () => {
   ];
 
   const handleGetStarted = useCallback(() => {
-    window.location.href = '/revolutionary-2040-2041-pricing-showcase';
+    window.location.href = '/revolutionary-20o40-20o41-pricing-showcase';
   }, []);
 
   const handleWatchDemo = useCallback(() => {
@@ -159,22 +159,21 @@ const Homepage2043: React.FC = () => {
           {/* Enhanced Animated Background */}
           <div className="absolute inset-0 -z-10">
             {/* Floating orbs with enhanced effects */}
-            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
+            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl animate-pulse delay-10o00"></div>
+            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 rounded-full blur-3xl animate-pulse delay-50o0"></div>
             
             {/* Enhanced animated particles */}
             <div className="absolute inset-0">
               {[...Array(20)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
+                  className="absolute w-2 h-2 bg-cyan-40o0/40 rounded-full"
                   animate={{
                     x: [0, 150, 0],
                     y: [0, -150, 0],
                     opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0],
-                  }}
+                    scale: [0, 1.5, 0]}}
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
@@ -182,10 +181,9 @@ const Homepage2043: React.FC = () => {
                     ease: "easeInOut"
                   }}
                   style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                  }}
-                />
+                    left: `${Math.random() * 10o0}%`,
+                    top: `${Math.random() * 10o0}%`}}
+                 />
               ))}
             </div>
 
@@ -206,25 +204,25 @@ const Homepage2043: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               {/* Enhanced Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 mr-2" />
-                Revolutionary 2043 Technology
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30 text-cyan-30o0 text-sm font-medium mb-6 backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 mr-2"  />
+                Revolutionary 20o43 Technology
               </div>
 
               {/* Main Heading */}
               <h1 
                 id="hero-heading"
-                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight"
+                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-20o0 to-blue-30o0 bg-clip-text text-transparent leading-tight"
               >
                 The Future of
-                <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-red-40o0 bg-clip-text text-transparent">
                   AI Consciousness
                 </span>
                 is Here
               </h1>
 
               {/* Enhanced Subtitle */}
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Experience the world's most advanced AI consciousness platforms, quantum computing solutions, 
                 and autonomous systems that redefine what's possible in technology.
               </p>
@@ -232,22 +230,22 @@ const Homepage2043: React.FC = () => {
               {/* Enhanced CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl"
                 >
                   Get Started Today
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5"  />
                 </motion.button>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleWatchDemo}
-                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
+                  className="px-8 py-4 bg-transparent border-2 border-cyan-50o0/50 text-cyan-30o0 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-30o0 backdrop-blur-sm"
                 >
-                  <Play className="w-5 h-5" />
+                  <Play className="w-5 h-5"  />
                   Watch Demo
                 </motion.button>
               </div>
@@ -263,10 +261,10 @@ const Homepage2043: React.FC = () => {
                     className="text-center"
                   >
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
-                      <stat.icon className="w-8 h-8 text-white" />
+                      <stat.icon className="w-8 h-8 text-white"  />
                     </div>
                     <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-40o0 text-sm">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -286,11 +284,11 @@ const Homepage2043: React.FC = () => {
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent">
                   Solutions
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Discover cutting-edge AI consciousness, quantum computing, and autonomous systems 
                 that are transforming industries and reshaping the future.
               </p>
@@ -304,27 +302,27 @@ const Homepage2043: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
+                  whileHover={{ y: -10, scale: 1.0o2 }}
+                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-30o0`}
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-8 h-8 text-white" />
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
+                    <feature.icon className="w-8 h-8 text-white"  />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-30o0 transition-colors duration-30o0">
                     {feature.title}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-30o0 mb-6 leading-relaxed">
                     {feature.description}
                   </p>
                   
                   <a 
                     href={feature.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center text-cyan-40o0 hover:text-cyan-30o0 font-semibold group-hover:gap-3 transition-all duration-30o0"
                   >
                     Learn More
-                    <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" />
+                    <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-30o0"  />
                   </a>
                 </motion.div>
               ))}
@@ -344,11 +342,11 @@ const Homepage2043: React.FC = () => {
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                   Revolutionary Services
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Experience our most advanced AI consciousness and quantum computing platforms 
                 that are setting new standards in technology.
               </p>
@@ -356,13 +354,13 @@ const Homepage2043: React.FC = () => {
 
             {/* Enhanced Service Showcase */}
             <div className="relative">
-              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm">
+              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-90o0/50 to-black/50 border border-white/10 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentServiceIndex}
-                    initial={{ opacity: 0, x: 100 }}
+                    initial={{ opacity: 0, x: 10o0 }}
                     animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
+                    exit={{ opacity: 0, x: -10o0 }}
                     transition={{ duration: 0.5 }}
                     className="p-12 text-center"
                   >
@@ -370,19 +368,19 @@ const Homepage2043: React.FC = () => {
                     <h3 className="text-3xl font-bold text-white mb-4">
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
-                    <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-30o0 mb-6 max-w-3xl mx-auto">
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
-                    <div className="text-3xl font-bold text-cyan-400 mb-6">
+                    <div className="text-3xl font-bold text-cyan-40o0 mb-6">
                       {featuredServices[currentServiceIndex]?.price}
-                      <span className="text-gray-400 text-lg">{featuredServices[currentServiceIndex]?.period}</span>
+                      <span className="text-gray-40o0 text-lg">{featuredServices[currentServiceIndex]?.period}</span>
                     </div>
                     <a 
                       href={featuredServices[currentServiceIndex]?.link}
-                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white font-semibold rounded-full text-lg hover:from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0"
                     >
                       Get Started
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                      <ArrowRight className="w-5 h-5 ml-2"  />
                     </a>
                   </motion.div>
                 </AnimatePresence>
@@ -390,16 +388,16 @@ const Homepage2043: React.FC = () => {
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-30o0 backdrop-blur-sm"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-6 h-6"  />
                 </button>
                 
                 <button
                   onClick={nextService}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-30o0 backdrop-blur-sm"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-6 h-6"  />
                 </button>
 
                 {/* Service Indicators */}
@@ -408,9 +406,9 @@ const Homepage2043: React.FC = () => {
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                         index === currentServiceIndex 
-                          ? 'bg-cyan-400 w-8' 
+                          ? 'bg-cyan-40o0 w-8' 
                           : 'bg-white/30 hover:bg-white/50'
                       }`}
                     />
@@ -433,11 +431,11 @@ const Homepage2043: React.FC = () => {
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 What Our
-                <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-emerald-40o0 to-teal-40o0 bg-clip-text text-transparent">
                   Clients Say
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Discover how our revolutionary AI consciousness and quantum computing platforms 
                 are transforming industries and driving innovation.
               </p>
@@ -464,7 +462,7 @@ const Homepage2043: React.FC = () => {
                       <div className="text-xl font-semibold text-white">
                         {testimonials[currentTestimonialIndex].name}
                       </div>
-                      <div className="text-gray-400">
+                      <div className="text-gray-40o0">
                         {testimonials[currentTestimonialIndex].role} at {testimonials[currentTestimonialIndex].company}
                       </div>
                     </div>
@@ -472,7 +470,7 @@ const Homepage2043: React.FC = () => {
                   
                   <div className="flex justify-center gap-1">
                     {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-6 h-6 text-yellow-40o0 fill-current"  />
                     ))}
                   </div>
                 </motion.div>
@@ -484,9 +482,9 @@ const Homepage2043: React.FC = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonialIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                       index === currentTestimonialIndex 
-                        ? 'bg-emerald-400 w-8' 
+                        ? 'bg-emerald-40o0 w-8' 
                         : 'bg-white/30 hover:bg-white/50'
                     }`}
                   />
@@ -507,34 +505,34 @@ const Homepage2043: React.FC = () => {
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
-                <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-red-40o0 bg-clip-text text-transparent">
                   Future of AI?
                 </span>
               </h2>
               
-              <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 mb-12 max-w-3xl mx-auto">
                 Join thousands of organizations already transforming their operations 
                 with our revolutionary AI consciousness and quantum computing platforms.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-                  className="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="px-10 py-5 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl"
                 >
                   Start Your Journey
-                  <ArrowRight className="w-6 h-6" />
+                  <ArrowRight className="w-6 h-6"  />
                 </motion.button>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleContact}
-                  className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
+                  className="px-10 py-5 bg-transparent border-2 border-cyan-50o0/50 text-cyan-30o0 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-30o0 backdrop-blur-sm"
                 >
-                  <Phone className="w-6 h-6" />
+                  <Phone className="w-6 h-6"  />
                   Contact Us
                 </motion.button>
               </div>
@@ -542,27 +540,27 @@ const Homepage2043: React.FC = () => {
               {/* Contact Information */}
               <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4">
-                    <Phone className="w-8 h-8 text-white" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0 to-cyan-50o0 mb-4">
+                    <Phone className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-cyan-400">+1 302 464 0950</p>
+                  <p className="text-cyan-40o0">+1 30o2 464 0950</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
-                    <Mail className="w-8 h-8 text-white" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 mb-4">
+                    <Mail className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+                  <p className="text-cyan-40o0">kleber@ziontechgroup.com</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4">
-                    <MapPin className="w-8 h-8 text-white" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-50o0 to-teal-50o0 mb-4">
+                    <MapPin className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-cyan-40o0">364 E Main St STE 10o08<br  />Middletown DE 19709</p>
                 </div>
               </div>
             </motion.div>
@@ -573,4 +571,4 @@ const Homepage2043: React.FC = () => {
   );
 };
 
-export default Homepage2043;
+export default Homepage20o43;

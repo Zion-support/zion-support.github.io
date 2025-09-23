@@ -6,7 +6,7 @@ import {
   Atom, Cpu, Sparkles, Crown, Infinity
 } from 'lucide-react';
 
-interface UltraFuturisticServiceCard2040Props {
+interface UltraFuturisticServiceCard20o40Props {
   service: {
     id: string;
     name: string;
@@ -45,11 +45,11 @@ interface UltraFuturisticServiceCard2040Props {
   index: number;
 }
 
-export default function UltraFuturisticServiceCard2040({ service, index }: UltraFuturisticServiceCard2040Props) {
+export default function UltraFuturisticServiceCard20o40({ service, index }: UltraFuturisticServiceCard20o40Props) {
   const [isHovered, setIsHovered] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const cardVariants = {
+  const cardVariants ={
     hidden: { 
       opacity: 0, 
       y: 50,
@@ -68,7 +68,7 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
     },
     hover: {
       y: -10,
-      scale: 1.02,
+      scale: 1.0o2,
       rotateX: 5,
       transition: {
         duration: 0.3
@@ -76,7 +76,7 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
     }
   };
 
-  const contentVariants = {
+  const contentVariants ={
     hidden: { opacity: 0, height: 0 },
     visible: { 
       opacity: 1, 
@@ -87,7 +87,7 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
     }
   };
 
-  const neonGlowVariants = {
+  const neonGlowVariants ={
     initial: {
       boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor"
     },
@@ -100,27 +100,27 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
   };
 
   const getGradientClass = (color: string) => {
-    const colorMap: { [key: string]: string } = {
-      'from-blue-500 to-cyan-600': 'from-blue-500 via-cyan-500 to-cyan-600',
-      'from-green-500 to-emerald-600': 'from-green-500 via-emerald-500 to-emerald-600',
-      'from-purple-500 to-pink-600': 'from-purple-500 via-pink-500 to-pink-600',
-      'from-yellow-500 to-orange-600': 'from-yellow-500 via-orange-500 to-orange-600',
-      'from-indigo-500 to-purple-600': 'from-indigo-500 via-purple-500 to-purple-600',
-      'from-red-500 to-pink-600': 'from-red-500 via-pink-500 to-pink-600'
+    const colorMap: { [key: string]: string } ={
+      'from-blue-50o0 to-cyan-60o0': 'from-blue-50o0 via-cyan-50o0 to-cyan-60o0',
+      'from-green-50o0 to-emerald-60o0': 'from-green-50o0 via-emerald-50o0 to-emerald-60o0',
+      'from-purple-50o0 to-pink-60o0': 'from-purple-50o0 via-pink-50o0 to-pink-60o0',
+      'from-yellow-50o0 to-orange-60o0': 'from-yellow-50o0 via-orange-50o0 to-orange-60o0',
+      'from-indigo-50o0 to-purple-60o0': 'from-indigo-50o0 via-purple-50o0 to-purple-60o0',
+      'from-red-50o0 to-pink-60o0': 'from-red-50o0 via-pink-50o0 to-pink-60o0'
     };
     return colorMap[color] || color;
   };
 
   const getNeonColor = (color: string) => {
-    const colorMap: { [key: string]: string } = {
-      'from-blue-500 to-cyan-600': '#00d4ff',
-      'from-green-500 to-emerald-600': '#10b981',
-      'from-purple-500 to-pink-600': '#ec4899',
-      'from-yellow-500 to-orange-600': '#f59e0b',
-      'from-indigo-500 to-purple-600': '#8b5cf6',
-      'from-red-500 to-pink-600': '#ef4444'
+    const colorMap: { [key: string]: string } ={
+      'from-blue-50o0 to-cyan-60o0': '#0o0d4ff',
+      'from-green-50o0 to-emerald-60o0': '#10b981',
+      'from-purple-50o0 to-pink-60o0': '#ec4899',
+      'from-yellow-50o0 to-orange-60o0': '#f59e0b',
+      'from-indigo-50o0 to-purple-60o0': '#8b5cf6',
+      'from-red-50o0 to-pink-60o0': '#ef4444'
     };
-    return colorMap[color] || '#00d4ff';
+    return colorMap[color] || '#0o0d4ff';
   };
 
   const neonColor = getNeonColor(service.color);
@@ -136,13 +136,13 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
       className="relative group"
     >
       {/* Glowing border effect */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-10o0 transition-opacity duration-50o0"  />
       
       {/* Main card */}
       <div 
         className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden"
         style={{
-          background: `linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%)`,
+          background: `linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 10o0%)`,
           boxShadow: isHovered 
             ? `0 0 30px ${neonColor}40, 0 0 60px ${neonColor}20, 0 0 90px ${neonColor}10`
             : `0 0 20px rgba(0,0,0,0.5)`
@@ -161,10 +161,10 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
               {service.icon}
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-white to-gray-300 transition-all duration-300">
+              <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-white to-gray-30o0 transition-all duration-30o0">
                 {service.name}
               </h3>
-              <p className="text-sm text-gray-400 font-medium">
+              <p className="text-sm text-gray-40o0 font-medium">
                 {service.category}
               </p>
             </div>
@@ -176,21 +176,21 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="flex items-center space-x-1 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-bold text-black"
+              className="flex items-center space-x-1 px-3 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full text-xs font-bold text-black"
             >
-              <Star className="w-3 h-3 fill-current" />
+              <Star className="w-3 h-3 fill-current"  />
               <span>POPULAR</span>
             </motion.div>
           )}
         </div>
 
         {/* Tagline */}
-        <p className="text-gray-300 text-lg font-medium mb-3 leading-relaxed">
+        <p className="text-gray-30o0 text-lg font-medium mb-3 leading-relaxed">
           {service.tagline}
         </p>
 
         {/* Description */}
-        <p className="text-gray-400 text-sm leading-relaxed mb-4">
+        <p className="text-gray-40o0 text-sm leading-relaxed mb-4">
           {service.description}
         </p>
 
@@ -201,16 +201,16 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
               <span className="text-2xl font-bold text-white">
                 ${service.price.monthly.toLocaleString()}
               </span>
-              <span className="text-gray-400 ml-1">/month</span>
+              <span className="text-gray-40o0 ml-1">/month</span>
             </div>
             <div className="text-right">
-              <div className="text-sm text-gray-400">Yearly</div>
+              <div className="text-sm text-gray-40o0">Yearly</div>
               <div className="text-lg font-semibold text-white">
                 ${service.price.yearly.toLocaleString()}
               </div>
             </div>
           </div>
-          <div className="mt-2 text-xs text-gray-500">
+          <div className="mt-2 text-xs text-gray-50o0">
             {service.price.trialDays}-day free trial • Setup in {service.price.setupTime}
           </div>
         </div>
@@ -218,13 +218,13 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
         {/* Key features preview */}
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-white mb-2 flex items-center">
-            <Zap className="w-4 h-4 mr-2 text-yellow-400" />
+            <Zap className="w-4 h-4 mr-2 text-yellow-40o0"  />
             Key Features
           </h4>
           <div className="grid grid-cols-1 gap-2">
             {service.features.slice(0, 3).map((feature, idx) => (
-              <div key={idx} className="flex items-center text-sm text-gray-400">
-                <Check className="w-3 h-3 mr-2 text-green-400 flex-shrink-0" />
+              <div key={idx} className="flex items-center text-sm text-gray-40o0">
+                <Check className="w-3 h-3 mr-2 text-green-40o0 flex-shrink-0"  />
                 <span>{feature}</span>
               </div>
             ))}
@@ -235,15 +235,15 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
         <div className="grid grid-cols-3 gap-4 mb-4 text-center">
           <div className="p-2 rounded-lg bg-white/5">
             <div className="text-lg font-bold text-white">{service.customers.toLocaleString()}+</div>
-            <div className="text-xs text-gray-400">Customers</div>
+            <div className="text-xs text-gray-40o0">Customers</div>
           </div>
           <div className="p-2 rounded-lg bg-white/5">
             <div className="text-lg font-bold text-white">{service.rating}</div>
-            <div className="text-xs text-gray-400">Rating</div>
+            <div className="text-xs text-gray-40o0">Rating</div>
           </div>
           <div className="p-2 rounded-lg bg-white/5">
             <div className="text-lg font-bold text-white">{service.reviews.toLocaleString()}</div>
-            <div className="text-xs text-gray-400">Reviews</div>
+            <div className="text-xs text-gray-40o0">Reviews</div>
           </div>
         </div>
 
@@ -260,12 +260,12 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
               {/* Benefits */}
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2 flex items-center">
-                  <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
+                  <TrendingUp className="w-4 h-4 mr-2 text-green-40o0"  />
                   Benefits
                 </h4>
                 <div className="grid grid-cols-1 gap-2">
                   {service.benefits.slice(0, 3).map((benefit, idx) => (
-                    <div key={idx} className="text-sm text-gray-400">
+                    <div key={idx} className="text-sm text-gray-40o0">
                       • {benefit}
                     </div>
                   ))}
@@ -273,23 +273,23 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
               </div>
 
               {/* ROI */}
-              <div className="mb-4 p-3 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
-                <h4 className="text-sm font-semibold text-green-400 mb-1 flex items-center">
-                  <Award className="w-4 h-4 mr-2" />
+              <div className="mb-4 p-3 rounded-lg bg-gradient-to-r from-green-50o0/10 to-emerald-50o0/10 border border-green-50o0/20">
+                <h4 className="text-sm font-semibold text-green-40o0 mb-1 flex items-center">
+                  <Award className="w-4 h-4 mr-2"  />
                   ROI Impact
                 </h4>
-                <p className="text-sm text-gray-300">{service.roi}</p>
+                <p className="text-sm text-gray-30o0">{service.roi}</p>
               </div>
 
               {/* Use cases */}
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2 flex items-center">
-                  <Rocket className="w-4 h-4 mr-2 text-blue-400" />
+                  <Rocket className="w-4 h-4 mr-2 text-blue-40o0"  />
                   Use Cases
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {service.useCases.slice(0, 4).map((useCase, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">
+                    <span key={idx} className="px-2 py-1 bg-white/5 rounded-full text-xs text-gray-30o0 border border-white/10">
                       {useCase}
                     </span>
                   ))}
@@ -303,17 +303,17 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
         <div className="flex items-center justify-between pt-4 border-t border-white/10">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center text-sm text-gray-400 hover:text-white transition-colors duration-200"
+            className="flex items-center text-sm text-gray-40o0 hover:text-white transition-colors duration-20o0"
           >
-            <Eye className="w-4 h-4 mr-2" />
+            <Eye className="w-4 h-4 mr-2"  />
             {isExpanded ? 'Show Less' : 'Show More'}
           </button>
           
           <motion.a
             href={service.link}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.0o5 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center px-4 py-2 bg-gradient-to-r from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 border border-white/20 hover:border-white/30 rounded-lg text-white font-medium transition-all duration-200 group/btn"
+            className="flex items-center px-4 py-2 bg-gradient-to-r from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 border border-white/20 hover:border-white/30 rounded-lg text-white font-medium transition-all duration-20o0 group/btn"
             style={{
               boxShadow: isHovered 
                 ? `0 0 20px ${neonColor}40`
@@ -321,7 +321,7 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
             }}
           >
             <span>Get Started</span>
-            <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+            <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-20o0"  />
           </motion.a>
         </div>
 
@@ -345,7 +345,7 @@ export default function UltraFuturisticServiceCard2040({ service, index }: Ultra
                 repeat: -1,
                 delay: i * 0.5
               }}
-            />
+             />
           ))}
         </div>
       </div>

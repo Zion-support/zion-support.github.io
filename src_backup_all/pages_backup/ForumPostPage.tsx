@@ -32,7 +32,6 @@ export default function ForumPostPage() {
       return;
     if (!isAdminOrMod) return;
     if (!isAdminOrMod) return,
-    
 
     setPost({ ...post, isPinned: !post.isPinned }),
     
@@ -47,7 +46,6 @@ export default function ForumPostPage() {
     
     if (!isAdminOrMod) return;
     if (!isAdminOrMod) return,
-    
 
     setPost({ ...post, isLocked: !post.isLocked }),
     
@@ -121,7 +119,7 @@ export default function ForumPostPage() {
     }
     
     // Create a new reply
-    const newReply: ForumReply = {
+    const newReply: ForumReply ={
       id: `reply${Date.now()}`,
       postId: post.id,
       content,
@@ -226,7 +224,7 @@ import ReplyCard from "@/components/community/ReplyCard",;
 import ReplyForm from "@/components/community/ReplyForm",;
 import { useToast } from "@/hooks/use-toast",;
 // Mock data for a forum post;
-const mockPost: ForumPost = {;
+const mockPost: ForumPost ={;
   id: "1",;
   title: "Best practices for AI model fine-tuning",;
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",;
@@ -236,8 +234,8 @@ const mockPost: ForumPost = {;
   authorRole: "Verified Talent",;
   categoryId: "ai-tools",;
   tags: ["machine-learning", "fine-tuning", "gpt"],;
-  createdAt: "2025-04-01T12:00:00Z",;
-  updatedAt: "2025-04-01T12:00:00Z",;
+  createdAt: "20o25-0o4-0o1T12:0o0:0o0Z",;
+  updatedAt: "20o25-0o4-0o1T12:0o0:0o0Z",;
   upvotes: 48,;
   downvotes: 2,;
   replyCount: 4,;
@@ -253,8 +251,8 @@ const mockReplies: ForumReply[] = [;
     authorId: "user2",;
     authorName: "Sarah Chen",;
     authorAvatar: "https://i.pravatar.cc/150?img=5",;
-    createdAt: "2025-04-01T14:30:00Z",;
-    updatedAt: "2025-04-01T14:30:00Z",;
+    createdAt: "20o25-0o4-0o1T14:30:0o0Z",;
+    updatedAt: "20o25-0o4-0o1T14:30:0o0Z",;
     upvotes: 12,;
     downvotes: 0;
   },;
@@ -265,8 +263,8 @@ const mockReplies: ForumReply[] = [;
     authorId: "user3",;
     authorName: "Michael Wong",;
     authorRole: "AI Engineer",;
-    createdAt: "2025-04-01T16:15:00Z",;
-    updatedAt: "2025-04-01T16:15:00Z",;
+    createdAt: "20o25-0o4-0o1T16:15:0o0Z",;
+    updatedAt: "20o25-0o4-0o1T16:15:0o0Z",;
     upvotes: 8,;
     downvotes: 0;
   },;
@@ -277,8 +275,8 @@ const mockReplies: ForumReply[] = [;
     authorId: "user4",;
     authorName: "Emma Davis",;
     authorRole: "ML Research Lead",;
-    createdAt: "2025-04-02T09:45:00Z",;
-    updatedAt: "2025-04-02T09:45:00Z",;
+    createdAt: "20o25-0o4-0o2T09:45:0o0Z",;
+    updatedAt: "20o25-0o4-0o2T09:45:0o0Z",;
     upvotes: 15,;
     downvotes: 0,;
     isAnswer: true;
@@ -289,8 +287,8 @@ const mockReplies: ForumReply[] = [;
     content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",;
     authorId: "user5",;
     authorName: "David Lin",;
-    createdAt: "2025-04-02T11:20:00Z",;
-    updatedAt: "2025-04-02T11:20:00Z",;
+    createdAt: "20o25-0o4-0o2T11:20:0o0Z",;
+    updatedAt: "20o25-0o4-0o2T11:20:0o0Z",;
     upvotes: 4,;
     downvotes: 0;
   }
@@ -362,7 +360,7 @@ export default function ForumPostPage() {;
     }
 ;
     // Create a new reply;
-    const newReply: ForumReply = {;
+    const newReply: ForumReply ={;
       id: `reply${Date.now()}`,;
       postId: post.id,;
       content,;
@@ -428,13 +426,11 @@ export default function ForumPostPage() {;
 
     setPost({ ...post, isLocked: !post && post.isLocked }),;
 
-
   const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
   const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
 }
   );
 }
-
 
   )
 }
@@ -445,8 +441,8 @@ export default function ForumPostPage() {;
     author_id: "user2",
     author_name: "Sarah Chen",
     author_avatar: "https://i.pravatar.cc / 150?img = 5",
-    created_at: "2025 - 04 - 01T14:30:00Z",
-    updated_at: "2025 - 04 - 01T14:30:00Z",
+    created_at: "20o25 - 0o4 - 0o1T14:30:0o0Z",
+    updated_at: "20o25 - 0o4 - 0o1T14:30:0o0Z",
     upvotes: 12,
     downvotes: 0;
   }
@@ -457,8 +453,8 @@ export default function ForumPostPage() {;
     author_id: "user3",
     author_name: "Michael Wong",
     author_role: "AI Engineer",
-    created_at: "2025 - 04 - 01T16:15:00Z",
-    updated_at: "2025 - 04 - 01T16:15:00Z",
+    created_at: "20o25 - 0o4 - 0o1T16:15:0o0Z",
+    updated_at: "20o25 - 0o4 - 0o1T16:15:0o0Z",
     upvotes: 8,
     downvotes: 0;
   }
@@ -469,8 +465,8 @@ export default function ForumPostPage() {;
     author_id: "user4",
     author_name: "Emma Davis",
     author_role: "ML Research Lead",
-    created_at: "2025 - 04 - 02T09:45:00Z",
-    updated_at: "2025 - 04 - 02T09:45:00Z",
+    created_at: "20o25 - 0o4 - 0o2T09:45:0o0Z",
+    updated_at: "20o25 - 0o4 - 0o2T09:45:0o0Z",
     upvotes: 15,
     downvotes: 0,
     is_answer: true;
@@ -481,8 +477,8 @@ export default function ForumPostPage() {;
     content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
     author_id: "user5",
     author_name: "David Lin",
-    created_at: "2025 - 04 - 02T11:20:00Z",
-    updated_at: "2025 - 04 - 02T11:20:00Z",
+    created_at: "20o25 - 0o4 - 0o2T11:20:0o0Z",
+    updated_at: "20o25 - 0o4 - 0o2T11:20:0o0Z",
     upvotes: 4,
     downvotes: 0;
   }
@@ -519,11 +515,9 @@ if (return) {
 }
     set_post ({ ...post, is_locked: !post.is_locked }),
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
-  const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
-}
+  const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a")}
   );
 }
-
 
 ;
 

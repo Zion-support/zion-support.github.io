@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 
@@ -19,7 +18,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         aria-label="View details"
         onClick={() => alert("View details (would open a detailed view)")}
       >
-        <Eye className="h-4 w-4" />
+        <Eye className="h-4 w-4"  />
       </Button>
       <Button
         variant="ghost"
@@ -29,7 +28,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         onClick={() => onAction(flagId, 'warning')}
         disabled={status === 'actioned' || status === 'ignored'}
       >
-        <Info className="h-4 w-4" />
+        <Info className="h-4 w-4"  />
       </Button>
       <Button
         variant="ghost"
@@ -39,7 +38,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
       >
-        <AlertTriangle className="h-4 w-4" />
+        <AlertTriangle className="h-4 w-4"  />
       </Button>
       <Button
         variant="ghost"
@@ -49,7 +48,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
       >
-        <Ban className="h-4 w-4" />
+        <Ban className="h-4 w-4"  />
       </Button>
       {status === 'pending' && (
         <Button

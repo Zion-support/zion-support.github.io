@@ -12,7 +12,7 @@ const PAGES_DIR = path.join(__dirname, '..', 'pages');
 const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'search');
 
 // Content types to index
-const CONTENT_TYPES = {
+const CONTENT_TYPES ={
   'pages': {
     path: PAGES_DIR,
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
@@ -37,7 +37,7 @@ function extractTextFromJSX(content) {
 }
 
 function generateSearchIndex() {
-  const searchIndex = {
+  const searchIndex ={
     pages: [],
     blog: [],
     generated: new Date().toISOString()
@@ -68,10 +68,10 @@ function generateSearchIndex() {
               const content = fs.readFileSync(filePath, 'utf8');
               const text = extractTextFromJSX(content);
               
-              const entry = {
+              const entry ={
                 id: `${type}-${fileName}`,
                 title: fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-                content: text.substring(0, 500), // Limit content length
+                content: text.substring(0, 50o0), // Limit content length
                 url: `/${type === 'pages' ? '' : type + '/'}${fileName}`,
                 type: type,
                 lastModified: stats.mtime.toISOString()
@@ -104,4 +104,4 @@ if (require.main === module) {
   generateSearchIndex();
 }
 
-module.exports = { generateSearchIndex };
+module.exports ={ generateSearchIndex };

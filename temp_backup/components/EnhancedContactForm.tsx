@@ -72,7 +72,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
 
   // Validate form data
   const validateForm = (): boolean => {
-    const newErrors: Partial<ContactFormData> = {};
+    const newErrors: Partial<ContactFormData> ={};
 
     // Required field validation
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
@@ -134,7 +134,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 20o00));
       
       if (onSubmit) {
         onSubmit(formData);
@@ -158,7 +158,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           priority: 'medium'
         });
         setIsSubmitted(false);
-      }, 5000);
+      }, 50o00);
       
     } catch (error) {
       console.error('Form submission error:', error);
@@ -193,7 +193,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
   };
 
   // Get step progress percentage
-  const getStepProgress = () => (currentStep / totalSteps) * 100;
+  const getStepProgress = () => (currentStep / totalSteps) * 10o0;
 
   // Service options
   const serviceOptions = [
@@ -208,11 +208,11 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
 
   // Budget options
   const budgetOptions = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+',
+    'Under $10,0o00',
+    '$10,0o00 - $50,0o00',
+    '$50,0o00 - $10o0,0o00',
+    '$10o0,0o00 - $50o0,0o00',
+    '$50o0,0o00+',
     'To be discussed'
   ];
 
@@ -230,40 +230,40 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className={`text-center p-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl border border-green-400/20 ${className}`}
+        className={`text-center p-8 bg-gradient-to-r from-green-50o0/10 to-emerald-50o0/10 rounded-2xl border border-green-40o0/20 ${className}`}
       >
-        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+        <CheckCircle className="w-16 h-16 text-green-40o0 mx-auto mb-4"  />
         <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-        <p className="text-gray-300 mb-4">
+        <p className="text-gray-30o0 mb-4">
           Your message has been sent successfully. We'll get back to you within 24 hours.
         </p>
-        <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
+        <div className="flex items-center justify-center gap-4 text-sm text-gray-40o0">
           <div className="flex items-center gap-1">
-            <Clock className="w-4 h-4" />
+            <Clock className="w-4 h-4"  />
             <span>24h response</span>
           </div>
           <div className="flex items-center gap-1">
-            <Shield className="w-4 h-4" />
+            <Shield className="w-4 h-4"  />
             <span>Secure</span>
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-30o0 mb-2">
             Last Name *
           </label>
           <input
             type="text"
             value={formData.lastName}
             onChange={(e) => handleInputChange('lastName', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.lastName ? 'border-red-500' : 'border-gray-600'
+            className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
+              errors.lastName ? 'border-red-50o0' : 'border-gray-60o0'
             }`}
             placeholder="Enter your last name"
           />
           {errors.lastName && (
-            <p className="mt-1 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
+            <p className="mt-1 text-sm text-red-40o0 flex items-center">
+              <AlertCircle className="w-4 h-4 mr-1"  />
               {errors.lastName}
             </p>
           )}
@@ -272,42 +272,42 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-30o0 mb-2">
             Email Address *
           </label>
           <input
             type="email"
             value={formData.email}
             onChange={(e) => handleInputChange('email', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.email ? 'border-red-500' : 'border-gray-600'
+            className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
+              errors.email ? 'border-red-50o0' : 'border-gray-60o0'
             }`}
             placeholder="your.email@company.com"
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
+            <p className="mt-1 text-sm text-red-40o0 flex items-center">
+              <AlertCircle className="w-4 h-4 mr-1"  />
               {errors.email}
             </p>
           )}
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-30o0 mb-2">
             Company Name *
           </label>
           <input
             type="text"
             value={formData.company}
             onChange={(e) => handleInputChange('company', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.company ? 'border-red-500' : 'border-gray-600'
+            className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
+              errors.company ? 'border-red-50o0' : 'border-gray-60o0'
             }`}
             placeholder="Your company name"
           />
           {errors.company && (
-            <p className="mt-1 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
+            <p className="mt-1 text-sm text-red-40o0 flex items-center">
+              <AlertCircle className="w-4 h-4 mr-1"  />
               {errors.company}
             </p>
           )}
@@ -315,14 +315,14 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-30o0 mb-2">
           Phone Number
         </label>
         <input
           type="tel"
           value={formData.phone}
           onChange={(e) => handleInputChange('phone', e.target.value)}
-          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all"
           placeholder="+1 (555) 123-4567"
         />
       </div>
@@ -337,14 +337,14 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       className="space-y-6"
     >
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-30o0 mb-2">
           Service of Interest *
         </label>
         <select
           value={formData.service}
           onChange={(e) => handleInputChange('service', e.target.value)}
-          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-            errors.service ? 'border-red-500' : 'border-gray-600'
+          className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
+            errors.service ? 'border-red-50o0' : 'border-gray-60o0'
           }`}
         >
           <option value="">Select a service</option>
@@ -355,8 +355,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           ))}
         </select>
         {errors.service && (
-          <p className="mt-1 text-sm text-red-400 flex items-center">
-            <AlertCircle className="w-4 h-4 mr-1" />
+          <p className="mt-1 text-sm text-red-40o0 flex items-center">
+            <AlertCircle className="w-4 h-4 mr-1"  />
             {errors.service}
           </p>
         )}
@@ -364,13 +364,13 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-30o0 mb-2">
             Budget Range
           </label>
           <select
             value={formData.budget}
             onChange={(e) => handleInputChange('budget', e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all"
           >
             <option value="">Select budget range</option>
             {budgets.map((budget) => (
@@ -382,13 +382,13 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-30o0 mb-2">
             Timeline
           </label>
           <select
             value={formData.timeline}
             onChange={(e) => handleInputChange('timeline', e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all"
           >
             <option value="">Select timeline</option>
             {timelines.map((timeline) => (
@@ -401,7 +401,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-30o0 mb-2">
           Preferred Contact Method
         </label>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -412,8 +412,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                 key={method.value}
                 className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${
                   formData.preferredContact === method.value
-                    ? 'border-cyan-500 bg-cyan-500/10'
-                    : 'border-gray-600 hover:border-gray-500'
+                    ? 'border-cyan-50o0 bg-cyan-50o0/10'
+                    : 'border-gray-60o0 hover:border-gray-50o0'
                 }`}
               >
                 <input
@@ -424,7 +424,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                   onChange={(e) => handleInputChange('preferredContact', e.target.value)}
                   className="sr-only"
                 />
-                <Icon className="w-5 h-5 mr-3 text-cyan-400" />
+                <Icon className="w-5 h-5 mr-3 text-cyan-40o0"  />
                 <span className="text-sm font-medium">{method.label}</span>
               </label>
             );
@@ -442,26 +442,26 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       className="space-y-6"
     >
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-30o0 mb-2">
           Project Details *
         </label>
         <textarea
           value={formData.message}
           onChange={(e) => handleInputChange('message', e.target.value)}
           rows={6}
-          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none ${
-            errors.message ? 'border-red-500' : 'border-gray-600'
+          className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all resize-none ${
+            errors.message ? 'border-red-50o0' : 'border-gray-60o0'
           }`}
           placeholder="Tell us about your project, requirements, and goals..."
         />
         {errors.message && (
-          <p className="mt-1 text-sm text-red-400 flex items-center">
-            <AlertCircle className="w-4 h-4 mr-1" />
+          <p className="mt-1 text-sm text-red-40o0 flex items-center">
+            <AlertCircle className="w-4 h-4 mr-1"  />
             {errors.message}
           </p>
         )}
-        <p className="mt-2 text-sm text-gray-400">
-          {formData.message.length}/1000 characters
+        <p className="mt-2 text-sm text-gray-40o0">
+          {formData.message.length}/10o00 characters
         </p>
       </div>
 
@@ -471,9 +471,9 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             type="checkbox"
             checked={formData.newsletter}
             onChange={(e) => handleInputChange('newsletter', e.target.checked)}
-            className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2"
+            className="w-4 h-4 text-cyan-50o0 bg-gray-80o0 border-gray-60o0 rounded focus:ring-cyan-50o0 focus:ring-2"
           />
-          <span className="ml-3 text-sm text-gray-300">
+          <span className="ml-3 text-sm text-gray-30o0">
             Subscribe to our newsletter for technology insights and updates
           </span>
         </label>
@@ -483,19 +483,19 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             type="checkbox"
             checked={formData.gdprConsent}
             onChange={(e) => handleInputChange('gdprConsent', e.target.checked)}
-            className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2 mt-1"
+            className="w-4 h-4 text-cyan-50o0 bg-gray-80o0 border-gray-60o0 rounded focus:ring-cyan-50o0 focus:ring-2 mt-1"
           />
-          <span className="ml-3 text-sm text-gray-300">
+          <span className="ml-3 text-sm text-gray-30o0">
             I consent to Zion Tech Group processing my personal data in accordance with the{' '}
-            <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+            <a href="/privacy" className="text-cyan-40o0 hover:text-cyan-30o0 underline">
               Privacy Policy
             </a>
             . *
           </span>
         </label>
         {errors.gdprConsent && (
-          <p className="mt-1 text-sm text-red-400 flex items-center">
-            <AlertCircle className="w-4 h-4 mr-1" />
+          <p className="mt-1 text-sm text-red-40o0 flex items-center">
+            <AlertCircle className="w-4 h-4 mr-1"  />
             {errors.gdprConsent}
           </p>
         )}
@@ -508,7 +508,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       {/* Header */}
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-white mb-4">Get Started Today</h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
+        <p className="text-gray-30o0 max-w-2xl mx-auto">
           Ready to transform your business with cutting-edge AI, quantum computing, and autonomous solutions? 
           Let's discuss your project and create something extraordinary together.
         </p>
@@ -517,16 +517,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm text-gray-400">Step {currentStep} of {totalSteps}</span>
+          <span className="text-sm text-gray-40o0">Step {currentStep} of {totalSteps}</span>
           <span className="text-sm text-white">{Math.round(getStepProgress())}%</span>
         </div>
         <div className="w-full bg-white/20 rounded-full h-2">
           <motion.div
-            className="h-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
+            className="h-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${getStepProgress()}%` }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-          />
+           />
         </div>
       </div>
 
@@ -543,7 +543,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
               className="space-y-6"
             >
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                <User className="w-5 h-5 text-cyan-400" />
+                <User className="w-5 h-5 text-cyan-40o0"  />
                 Basic Information
               </h3>
               
@@ -559,15 +559,15 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="firstName"
                     value={formData.firstName}
                     onChange={(e) => handleInputChange('firstName', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.firstName ? 'border-red-400' : 'border-white/20'
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
+                      errors.firstName ? 'border-red-40o0' : 'border-white/20'
                     }`}
                     placeholder="Enter your first name"
                     aria-describedby={errors.firstName ? 'firstName-error' : undefined}
                   />
                   {errors.firstName && (
-                    <p id="firstName-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p id="firstName-error" className="mt-1 text-sm text-red-40o0 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4"  />
                       {errors.firstName}
                     </p>
                   )}
@@ -583,15 +583,15 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="lastName"
                     value={formData.lastName}
                     onChange={(e) => handleInputChange('lastName', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.lastName ? 'border-red-400' : 'border-white/20'
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
+                      errors.lastName ? 'border-red-40o0' : 'border-white/20'
                     }`}
                     placeholder="Enter your last name"
                     aria-describedby={errors.lastName ? 'lastName-error' : undefined}
                   />
                   {errors.lastName && (
-                    <p id="lastName-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p id="lastName-error" className="mt-1 text-sm text-red-40o0 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4"  />
                       {errors.lastName}
                     </p>
                   )}
@@ -608,15 +608,15 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                   name="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                    errors.email ? 'border-red-400' : 'border-white/20'
+                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
+                    errors.email ? 'border-red-40o0' : 'border-white/20'
                   }`}
                   placeholder="Enter your email address"
                   aria-describedby={errors.email ? 'email-error' : undefined}
                 />
                 {errors.email && (
-                  <p id="email-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                    <AlertCircle className="w-4 h-4" />
+                  <p id="email-error" className="mt-1 text-sm text-red-40o0 flex items-center gap-1">
+                    <AlertCircle className="w-4 h-4"  />
                     {errors.email}
                   </p>
                 )}
@@ -633,15 +633,15 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="phone"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.phone ? 'border-red-400' : 'border-white/20'
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
+                      errors.phone ? 'border-red-40o0' : 'border-white/20'
                     }`}
                     placeholder="Enter your phone number"
                     aria-describedby={errors.phone ? 'phone-error' : undefined}
                   />
                   {errors.phone && (
-                    <p id="phone-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p id="phone-error" className="mt-1 text-sm text-red-40o0 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4"  />
                       {errors.phone}
                     </p>
                   )}
@@ -656,7 +656,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="priority"
                     value={formData.priority}
                     onChange={(e) => handleInputChange('priority', e.target.value as ContactFormData['priority'])}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0"
                   >
                     <option value="low">Low Priority</option>
                     <option value="medium">Medium Priority</option>
@@ -678,7 +678,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
               className="space-y-6"
             >
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                <Building className="w-5 h-5 text-blue-400" />
+                <Building className="w-5 h-5 text-blue-40o0"  />
                 Company & Project Details
               </h3>
               
@@ -693,7 +693,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="company"
                     value={formData.company}
                     onChange={(e) => handleInputChange('company', e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0"
                     placeholder="Enter your company name"
                   />
                 </div>
@@ -708,15 +708,15 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="website"
                     value={formData.website}
                     onChange={(e) => handleInputChange('website', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.website ? 'border-red-400' : 'border-white/20'
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
+                      errors.website ? 'border-red-40o0' : 'border-white/20'
                     }`}
                     placeholder="https://yourcompany.com"
                     aria-describedby={errors.website ? 'website-error' : undefined}
                   />
                   {errors.website && (
-                    <p id="website-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
+                    <p id="website-error" className="mt-1 text-sm text-red-40o0 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4"  />
                       {errors.website}
                     </p>
                   )}
@@ -732,7 +732,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                   name="service"
                   value={formData.service}
                   onChange={(e) => handleInputChange('service', e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0"
                 >
                   <option value="">Select a service</option>
                   {serviceOptions.map((service) => (
@@ -751,7 +751,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="budget"
                     value={formData.budget}
                     onChange={(e) => handleInputChange('budget', e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0"
                   >
                     <option value="">Select budget range</option>
                     {budgetOptions.map((budget) => (
@@ -769,7 +769,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     name="timeline"
                     value={formData.timeline}
                     onChange={(e) => handleInputChange('timeline', e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0"
                   >
                     <option value="">Select timeline</option>
                     {timelineOptions.map((timeline) => (
@@ -791,7 +791,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
               className="space-y-6"
             >
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-purple-400" />
+                <MessageSquare className="w-5 h-5 text-purple-40o0"  />
                 Project Details
               </h3>
               
@@ -805,15 +805,15 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                   rows={6}
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none ${
-                    errors.message ? 'border-red-400' : 'border-white/20'
+                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 resize-none ${
+                    errors.message ? 'border-red-40o0' : 'border-white/20'
                   }`}
                   placeholder="Tell us about your project, goals, and requirements..."
                   aria-describedby={errors.message ? 'message-error' : undefined}
                 />
                 {errors.message && (
-                  <p id="message-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                    <AlertCircle className="w-4 h-4" />
+                  <p id="message-error" className="mt-1 text-sm text-red-40o0 flex items-center gap-1">
+                    <AlertCircle className="w-4 h-4"  />
                     {errors.message}
                   </p>
                 )}
@@ -821,17 +821,17 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
 
               {/* Trust Indicators */}
               <div className="bg-white/5 rounded-lg p-4">
-                <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
+                <div className="flex items-center justify-center gap-6 text-sm text-gray-40o0">
                   <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-green-400" />
+                    <Shield className="w-4 h-4 text-green-40o0"  />
                     <span>Secure & Private</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-blue-400" />
+                    <Clock className="w-4 h-4 text-blue-40o0"  />
                     <span>24h Response</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-yellow-400" />
+                    <Star className="w-4 h-4 text-yellow-40o0"  />
                     <span>Expert Team</span>
                   </div>
                 </div>
@@ -846,7 +846,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             type="button"
             onClick={handlePrevStep}
             disabled={currentStep === 1}
-            className="px-6 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
+            className="px-6 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-30o0 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:ring-offset-2 focus:ring-offset-black"
           >
             Previous
           </button>
@@ -855,7 +855,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             <button
               type="button"
               onClick={handleNextStep}
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
+              className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:ring-offset-2 focus:ring-offset-black"
             >
               Next Step
             </button>
@@ -863,16 +863,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             <button
               type="submit"
               disabled={isSubmitting || isValidating}
-              className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              className="px-8 py-3 bg-gradient-to-r from-green-50o0 to-emerald-60o0 text-white rounded-lg hover:from-green-60o0 hover:to-emerald-70o0 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-green-40o0 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
             >
               {isSubmitting ? (
                 <>
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
                   Sending...
                 </>
               ) : (
                 <>
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4"  />
                   Send Message
                 </>
               )}

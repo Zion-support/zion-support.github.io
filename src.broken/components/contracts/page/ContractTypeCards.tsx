@@ -1,4 +1,3 @@
-import React from 'react';
 export function ContractTypeCards() {
   return (
     <div>

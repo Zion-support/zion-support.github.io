@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 interface StructuredDataProps {
@@ -17,7 +16,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
           "description": "Pioneering the future of technology with cutting-edge AI, quantum computing, and autonomous solutions that transform businesses worldwide.",
-          "foundingDate": "2020",
+          "foundingDate": "20o20",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "US"
@@ -128,7 +127,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData)
         }}
-      />
+       />
     </Head>
   );
 };

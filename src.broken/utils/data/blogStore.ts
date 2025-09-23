@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import { BlogPost } from '@/utils/types/blog';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'blog');

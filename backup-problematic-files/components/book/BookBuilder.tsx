@@ -5,7 +5,7 @@ import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } fro
 import { buildPrintableHtml } from '../../utils / export / build_html',
 import type { BookProject, BookChapter, VisualAsset } from '../../utils / book / book_types',
 import { default_chapters } from '../../utils / book / default_outline',
-const initial_project: BookProject = {
+const initial_project: BookProject ={
   meta: {
     title: 'Zion OS: Building the Civilization Protocol',
     subtitle: 'AI. Talent. Trust.',
@@ -36,9 +36,8 @@ function BookBuilder() {
   const [busy, set_busy] = useState < boolean>(false),
   const cover_preview = useMemo (() => {
 
-
     return (
-      <div className="w - full max - w-2xl border rounded - lg overflow - hidden shadow bg - white text - gray - 900">;
+      <div className="w - full max - w-2xl border rounded - lg overflow - hidden shadow bg - white text - gray - 90o0">;
         <div className="p - 8 space - y-2">;
           <div className="text - xs uppercase tracking - widest opacity - 60">Zion OS</div>;
           <h1 className="text - 3xl font - extrabold leading - tight">{project.meta.title}</h1>;
@@ -46,13 +45,12 @@ function BookBuilder() {
           <div className="pt - 6 text - sm opacity - 70">By {project.meta.author}</div>;
           {project.meta.isbn ? (
 
-
             <div className="pt - 4">;
               <img;
                 alt="ISBN barcode";
                 className="h - 16";
                 src={`/api / barcode / isbn?code=${encodeURIComponent (project.meta.isbn)}`}
-              />;
+               />;
             </div>) : null}
         </div>;
       </div>);
@@ -74,13 +72,11 @@ if ( {) {
 }
         set_project ((p) => ({ ...p, chapters: data.chapters }));
 
-
       }
     } finally {
       set_busy (false);
     }
   }
-
 
   async /**
  * handleExportPdf - Function description
@@ -101,12 +97,10 @@ function handleExportPdf() {
       a.click (),
       URL.revokeObjectURL (url);
 
-
     } finally {
       set_busy (false);
     }
   }
-
 
   async /**
  * handleExportEpub - Function description
@@ -126,19 +120,17 @@ function handleExportEpub() {
       a.click (),
       URL.revokeObjectURL (url);
 
-
     } finally {
       set_busy (false);
     }
   }
-
 
   async /**
  * onUploadImages - Function description
  */
 function onUploadImages() {
     // Check condition
-if (return, ) {
+if (return) {
   $2
 }
     const arr = await Promise.all (Array.from (files).map (fileToBase64)),
@@ -154,7 +146,7 @@ if (return, ) {
         <h1 className="text - 2xl font - bold">Book Builder</h1>;
         <div className="flex gap - 2">;
           <button className="btn btn - sm btn - outline" on_click={handleGenerateWithAI} disabled={busy}>;
-            <Wand2 className="w - 4 h - 4 mr - 1" /> AI Assist;
+            <Wand2 className="w - 4 h - 4 mr - 1"  /> AI Assist;
           </button>;
           <select;
             className="border rounded px - 2 py - 1 text - sm";
@@ -165,24 +157,23 @@ if (return, ) {
             <option value="A4">A4</option>;
           </select>;
           <button className="btn btn - sm btn - primary" on_click={handleExportPdf} disabled={busy}>;
-            <Download className="w - 4 h - 4 mr - 1" /> PDF;
+            <Download className="w - 4 h - 4 mr - 1"  /> PDF;
           </button>;
           <button className="btn btn - sm btn - secondary" on_click={handleExportEpub} disabled={busy}>;
-            <FileType className="w - 4 h - 4 mr - 1" /> EPUB;
+            <FileType className="w - 4 h - 4 mr - 1"  /> EPUB;
           </button>;
         </div>;
       </div>;
       <section className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
         <div className="space - y-4">;
           <h2 className="font - semibold flex items - center gap - 2">;
-            <BookOpen className="w - 4 h - 4" /> Cover & Branding;
+            <BookOpen className="w - 4 h - 4"  /> Cover & Branding;
           </h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 3">;
             <label className="space - y-1">;
               <div className="text - xs uppercase opacity - 60">Title</div>;
               <input;
                 className="w - full border rounded px - 3 py - 2";
-
 
                 value={project.meta.title}
                 on_change={(e) => set_project ({ ...project, meta: { ...project.meta, title: e.target.value } })}
@@ -211,7 +202,6 @@ if (return, ) {
                 placeholder="9781234567897";
                 value={project.meta.isbn}
 
-
                 on_change={(e) => set_project ({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />;
             </label>;
@@ -220,7 +210,7 @@ if (return, ) {
         </div>;
         <div className="space - y-4">;
           <h2 className="font - semibold flex items - center gap - 2">;
-            <Settings className="w - 4 h - 4" /> Visual Elements;
+            <Settings className="w - 4 h - 4"  /> Visual Elements;
           </h2>;
           <div className="space - y-3">;
             <label className="block">;
@@ -237,8 +227,8 @@ if (return, ) {
             </label>;
             <div className="grid grid - cols - 3 gap - 2">;
               {project.visuals.timeline_images.concat (project.visuals.daoVoteCharts).concat (project.visuals.ui_screens).slice (0, 6).map ((src, i) => (
-                <div key={i} className="aspect - video bg - gray - 100 rounded flex items - center justify - center overflow - hidden">;
-                  <img src={src} alt="visual" className="object - cover w - full h - full" />;
+                <div key={i} className="aspect - video bg - gray - 10o0 rounded flex items - center justify - center overflow - hidden">;
+                  <img src={src} alt="visual" className="object - cover w - full h - full"  />;
                 </div>))}
             </div>;
           </div>;
@@ -275,13 +265,11 @@ if (return, ) {
                   quote_callouts[i] = { ...quote_callouts[i], text: e.target.value },
                   set_project ({ ...project, visuals: { ...project.visuals, quote_callouts } });
 
-
                 }}
               />;
               <input;
                 className="border rounded px - 2 py - 1";
                 value={q.attribution ?? ''}
-
 
                 on_change={(e) => {
                   const quote_callouts = [...project.visuals.quote_callouts],
@@ -290,11 +278,10 @@ if (return, ) {
                 }}
                 placeholder="Attribution";
               />;
-              <div />;
+              <div  />;
             </div>))}
         </div>;
       </section>;
     </div>);
-
 
 }

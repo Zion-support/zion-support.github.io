@@ -19,7 +19,7 @@ export function PartnerResources() {
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)',
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className="h-10 w-10 text-zion-purple"  />,
       url: '#'
     },
     {
@@ -27,7 +27,7 @@ export function PartnerResources() {
       title: 'Brand Guidelines',
       description: 'How to properly use our brand assets in your content',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className="h-10 w-10 text-zion-cyan"  />,
       url: '#'
     },
     {
@@ -35,7 +35,7 @@ export function PartnerResources() {
       title: 'Social Media Banners',
       description: 'Pre-designed graphics for your social channels',
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className="h-10 w-10 text-zion-purple"  />,
       url: '#'
     },
     {
@@ -43,7 +43,7 @@ export function PartnerResources() {
       title: 'Promotional Video',
       description: 'Short explainer video about Zion AI Marketplace',
       type: 'video',
-      icon: <FileVideo className="h-10 w-10 text-red-500" />,
+      icon: <FileVideo className="h-10 w-10 text-red-50o0"  />,
       url: '#'
     },
     {
@@ -51,7 +51,7 @@ export function PartnerResources() {
       title: 'Email Templates',
       description: 'Ready-to-use email templates for your audience',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className="h-10 w-10 text-zion-cyan"  />,
       url: '#'
     },
     {
@@ -59,7 +59,7 @@ export function PartnerResources() {
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className="h-10 w-10 text-zion-cyan"  />,
       url: '#'
     }
   ];
@@ -69,8 +69,7 @@ export function PartnerResources() {
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
-      variant: "default",
-    });
+      variant: "default"});
   };
 
   return (
@@ -98,7 +97,7 @@ export function PartnerResources() {
                     variant="outline"
                     className="w-full flex items-center gap-2"
                   >
-                    <Download className="h-4 w-4" />
+                    <Download className="h-4 w-4"  />
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>

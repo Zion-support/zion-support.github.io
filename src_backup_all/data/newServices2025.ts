@@ -13,7 +13,7 @@ export interface NewService {
   marketPrice: string;
 }
 
-export const NEW_SERVICES_2025: NewService[] = [
+export const NEW_SERVICES_20o25: NewService[] = [
   {
     id: 'rag-docs-chatbot',
     title: 'RAG Chatbot for Your Docs',
@@ -36,8 +36,7 @@ export const NEW_SERVICES_2025: NewService[] = [
       'Reduce onboarding time',
     ],
     tags: ['RAG', 'Chatbot', 'Docs', 'Embeddings'],
-    marketPrice: '$299–$999/mo + setup $2k–$10k',
-  },
+    marketPrice: '$299–$999/mo + setup $2k–$10k'},
   {
     id: 'ai-lead-scoring',
     title: 'AI Lead Scoring for CRM',
@@ -55,15 +54,14 @@ export const NEW_SERVICES_2025: NewService[] = [
     ],
     benefits: ['Higher win rates', 'Shorter cycles', 'Rep productivity +20%'],
     tags: ['Sales', 'CRM', 'ML'],
-    marketPrice: '$249–$1,499/mo + setup $3k–$15k',
-  },
+    marketPrice: '$249–$1,499/mo + setup $3k–$15k'},
   {
     id: 'etl-pipeline-starter',
     title: 'ETL Pipeline Starter Kit',
     description: 'Production-ready ELT/ETL template with orchestrator, dbt models, and observability.',
     category: 'Data & Analytics',
     subcategory: 'Pipelines',
-    price: 5000,
+    price: 50o00,
     currency: '$',
     pricingModel: 'fixed',
     features: [
@@ -74,8 +72,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     ],
     benefits: ['Weeks to days time-to-value', 'Best-practice stack', 'Lower maintenance'],
     tags: ['ETL', 'dbt', 'Airflow', 'Observability'],
-    marketPrice: '$5k–$25k fixed + support $1k/mo',
-  },
+    marketPrice: '$5k–$25k fixed + support $1k/mo'},
   {
     id: 'seo-technical-auditor',
     title: 'AI Technical SEO Auditor',
@@ -88,8 +85,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     features: ['Crawler + sitemaps', 'Core Web Vitals checks', 'AI rewrite suggestions', 'Issue tracker export'],
     benefits: ['More organic traffic', 'Better site health'],
     tags: ['SEO', 'CWV', 'Crawler'],
-    marketPrice: '$99–$499/mo',
-  },
+    marketPrice: '$99–$499/mo'},
   {
     id: 'gdpr-dsar-portal',
     title: 'GDPR/CCPA DSAR Portal',
@@ -102,8 +98,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     features: ['Identity verification', 'Workflow + SLAs', 'Export redaction tools', 'Evidence logs'],
     benefits: ['Avoid fines', 'Respond on time', 'Reduce manual effort'],
     tags: ['GDPR', 'CCPA', 'Privacy'],
-    marketPrice: '$399–$1,499/mo',
-  },
+    marketPrice: '$399–$1,499/mo'},
   {
     id: 'statuspage-saas',
     title: 'White‑Label Status Page',
@@ -116,8 +111,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     features: ['Incident templates', 'Subscriptions + webhooks', 'Metrics & SLAs', 'Custom domain'],
     benefits: ['Increase trust', 'Reduce support tickets'],
     tags: ['Status', 'SRE'],
-    marketPrice: '$49–$299/mo',
-  },
+    marketPrice: '$49–$299/mo'},
   {
     id: 'uptime-monitor',
     title: 'Global Uptime & API Monitor',
@@ -130,8 +124,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     features: ['HTTP/HTTPS/ICMP checks', 'Synthetic flows', 'On-call rotations', 'Slack/Email/SMS alerts'],
     benefits: ['Catch incidents earlier', 'Improve reliability'],
     tags: ['Uptime', 'Monitoring', 'Synthetics'],
-    marketPrice: '$29–$299/mo',
-  },
+    marketPrice: '$29–$299/mo'},
   {
     id: 'invoice-ocr',
     title: 'Invoice OCR & AP Automation',
@@ -144,7 +137,6 @@ export const NEW_SERVICES_2025: NewService[] = [
     features: ['OCR + LLM post-processing', 'Duplicate detection', 'Approvals', 'QuickBooks/Xero sync'],
     benefits: ['Reduce AP time by 70%', 'Fewer errors'],
     tags: ['OCR', 'Finance', 'AP'],
-    marketPrice: '$199–$999/mo + setup $2k–$8k',
-  },
+    marketPrice: '$199–$999/mo + setup $2k–$8k'},
 ];
 

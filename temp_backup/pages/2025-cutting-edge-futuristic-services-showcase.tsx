@@ -6,7 +6,7 @@ import {
   Brain, ArrowRight, Check,
   Star, TrendingUp, Zap, Globe
 } from 'lucide-react';
-import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuristic-services';
+import { cuttingEdgeFuturisticServices } from '../data/20o25-cutting-edge-futuristic-services';
 
 // Helper function to get service category
 const getServiceCategory = (service: { category?: string; type?: string }) => {
@@ -14,8 +14,6 @@ const getServiceCategory = (service: { category?: string; type?: string }) => {
   if (service.type) return service.type;
   return 'Other';
 };
-
-
 
 // Helper function to get service features
 const getServiceFeatures = (service: { features?: string[]; keyFeatures?: string[] }) => {
@@ -66,7 +64,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
       }
     });
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -76,7 +74,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -88,13 +86,13 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       <SEO 
-        title="2025 Cutting-Edge Futuristic Services Showcase | Zion Tech Group"
+        title="20o25 Cutting-Edge Futuristic Services Showcase | Zion Tech Group"
         description="Discover our revolutionary cutting-edge futuristic services including quantum AI, autonomous systems, holographic technology, and more. Transform your business with next-generation solutions."
                 keywords="cutting-edge services, futuristic technology, quantum AI, autonomous systems, holographic technology, AI automation, quantum computing, neural interfaces"
         ogImage="/og-cutting-edge-services.jpg"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -105,33 +103,33 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 Cutting-Edge
               </span>
-              <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <br  />
+              <span className="bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
                 Futuristic Services
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our revolutionary services that combine quantum computing, 
               autonomous AI, holographic technology, and neural interfaces to transform your business.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-40o0">
               <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 text-yellow-400" />
+                <Star className="w-5 h-5 text-yellow-40o0"  />
                 <span>Revolutionary Innovation</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-blue-400" />
+                <Zap className="w-5 h-5 text-blue-40o0"  />
                 <span>Quantum Technology</span>
               </div>
               <div className="flex items-center gap-2">
-                <Brain className="w-5 h-5 text-purple-400" />
+                <Brain className="w-5 h-5 text-purple-40o0"  />
                 <span>Autonomous AI</span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe className="w-5 h-5 text-green-400" />
+                <Globe className="w-5 h-5 text-green-40o0"  />
                 <span>Holographic Reality</span>
               </div>
             </div>
@@ -147,13 +145,13 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
               {/* Search */}
               <div className="flex-1 w-full">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                   <input
                     type="text"
                     placeholder="Search cutting-edge services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -164,10 +162,10 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                       selectedCategory === category
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                        ? 'bg-purple-60o0 text-white shadow-lg'
+                        : 'bg-white/10 text-gray-30o0 hover:bg-white/20'
                     }`}
                   >
                     {category}
@@ -179,7 +177,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'rating' | 'popularity')}
-                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0"
               >
                 <option value="popularity">Most Popular</option>
                 <option value="rating">Highest Rated</option>
@@ -191,23 +189,23 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
               <div className="flex gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-200 ${
+                  className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'grid'
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-white/10 text-gray-400 hover:bg-white/20'
+                      ? 'bg-purple-60o0 text-white'
+                      : 'bg-white/10 text-gray-40o0 hover:bg-white/20'
                   }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <Grid className="w-5 h-5"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all duration-200 ${
+                  className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'list'
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-white/10 text-gray-400 hover:bg-white/20'
+                      ? 'bg-purple-60o0 text-white'
+                      : 'bg-white/10 text-gray-40o0 hover:bg-white/20'
                   }`}
                 >
-                  <List className="w-5 h-5" />
+                  <List className="w-5 h-5"  />
                 </button>
               </div>
             </div>
@@ -230,8 +228,8 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                 variants={itemVariants}
                 className={`group ${
                   viewMode === 'grid'
-                    ? 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105'
-                    : 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300'
+                    ? 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5'
+                    : 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0'
                 }`}
               >
                 {/* Service Header */}
@@ -241,36 +239,36 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                       {service.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-200">
+                      <h3 className="text-xl font-bold text-white group-hover:text-purple-30o0 transition-colors duration-20o0">
                         {service.name}
                       </h3>
-                      <p className="text-sm text-gray-400">{getServiceCategory(service)}</p>
+                      <p className="text-sm text-gray-40o0">{getServiceCategory(service)}</p>
                     </div>
                   </div>
                   {service.popular && (
-                    <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full">
+                    <span className="px-2 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white text-xs font-medium rounded-full">
                       Popular
                     </span>
                   )}
                 </div>
 
                 {/* Service Description */}
-                <p className="text-gray-300 mb-4 line-clamp-3">
+                <p className="text-gray-30o0 mb-4 line-clamp-3">
                   {getServiceDescription(service)}
                 </p>
 
                 {/* Service Features */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-30o0 mb-2">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-1">
                     {getServiceFeatures(service).slice(0, 3).map((feature, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-gray-400">
-                        <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <div key={index} className="flex items-center gap-2 text-sm text-gray-40o0">
+                        <Check className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
                         <span className="line-clamp-1">{feature}</span>
                       </div>
                     ))}
                     {getServiceFeatures(service).length > 3 && (
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p className="text-xs text-gray-50o0 mt-1">
                         +{getServiceFeatures(service).length - 3} more features
                       </p>
                     )}
@@ -280,15 +278,15 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                 {/* Service Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                   <div className="text-center">
-                    <p className="text-gray-400">Rating</p>
+                    <p className="text-gray-40o0">Rating</p>
                     <div className="flex items-center justify-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
                       <span className="text-white font-semibold">{service.rating}</span>
-                      <span className="text-gray-500">({service.reviews})</span>
+                      <span className="text-gray-50o0">({service.reviews})</span>
                     </div>
                   </div>
                   <div className="text-center">
-                    <p className="text-gray-400">Customers</p>
+                    <p className="text-gray-40o0">Customers</p>
                     <p className="text-white font-semibold">{service.customers.toLocaleString()}</p>
                   </div>
                 </div>
@@ -297,10 +295,10 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <p className="text-2xl font-bold text-white">{service.price}</p>
-                    <p className="text-sm text-gray-400">{service.period}</p>
+                    <p className="text-sm text-gray-40o0">{service.period}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-gray-400">Trial</p>
+                    <p className="text-sm text-gray-40o0">Trial</p>
                     <p className="text-white font-semibold">{service.trialDays} days</p>
                   </div>
                 </div>
@@ -308,13 +306,13 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                 {/* Innovation Level */}
                 <div className="mb-4">
                   <div className="flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-blue-400" />
-                    <span className="text-sm text-gray-400">Innovation Level:</span>
+                    <TrendingUp className="w-4 h-4 text-blue-40o0"  />
+                    <span className="text-sm text-gray-40o0">Innovation Level:</span>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      service.innovationLevel === 'Revolutionary' ? 'bg-red-500/20 text-red-400' :
-                      service.innovationLevel === 'Breakthrough' ? 'bg-orange-500/20 text-orange-400' :
-                      service.innovationLevel === 'Advanced' ? 'bg-blue-500/20 text-blue-400' :
-                      'bg-green-500/20 text-green-400'
+                      service.innovationLevel === 'Revolutionary' ? 'bg-red-50o0/20 text-red-40o0' :
+                      service.innovationLevel === 'Breakthrough' ? 'bg-orange-50o0/20 text-orange-40o0' :
+                      service.innovationLevel === 'Advanced' ? 'bg-blue-50o0/20 text-blue-40o0' :
+                      'bg-green-50o0/20 text-green-40o0'
                     }`}>
                       {service.innovationLevel}
                     </span>
@@ -323,30 +321,30 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
 
                 {/* Market Position */}
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">
-                  <p className="text-xs text-gray-400 mb-1">Market Position</p>
+                  <p className="text-xs text-gray-40o0 mb-1">Market Position</p>
                   <p className="text-sm text-white">{service.marketPosition}</p>
                 </div>
 
                 {/* ROI */}
-                <div className="mb-4 p-3 bg-green-500/10 rounded-lg border border-green-500/20">
-                  <p className="text-xs text-green-400 mb-1">ROI Impact</p>
-                  <p className="text-sm text-green-300">{service.roi}</p>
+                <div className="mb-4 p-3 bg-green-50o0/10 rounded-lg border border-green-50o0/20">
+                  <p className="text-xs text-green-40o0 mb-1">ROI Impact</p>
+                  <p className="text-sm text-green-30o0">{service.roi}</p>
                 </div>
 
                 {/* Action Button */}
                 <a
                   href={service.link}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 hover:transform hover:scale-105 hover:shadow-lg"
+                  className="w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-20o0 hover:transform hover:scale-10o5 hover:shadow-lg"
                 >
                   Explore Service
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </a>
 
                 {/* Contact Info */}
                 <div className="mt-4 pt-4 border-t border-white/10">
                   <div className="text-center">
-                    <p className="text-xs text-gray-400 mb-2">Contact Zion Tech Group</p>
-                    <div className="flex flex-col gap-1 text-xs text-gray-300">
+                    <p className="text-xs text-gray-40o0 mb-2">Contact Zion Tech Group</p>
+                    <div className="flex flex-col gap-1 text-xs text-gray-30o0">
                       <p>📱 {service.contactInfo.mobile}</p>
                       <p>✉️ {service.contactInfo.email}</p>
                       <p>📍 {service.contactInfo.address}</p>
@@ -361,10 +359,10 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center">
-                <Search className="w-12 h-12 text-gray-400" />
+                <Search className="w-12 h-12 text-gray-40o0"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-gray-400">Try adjusting your search terms or filters</p>
+              <p className="text-gray-40o0">Try adjusting your search terms or filters</p>
             </div>
           )}
         </div>
@@ -378,25 +376,25 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
+            className="bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Experience the Future?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-30o0 mb-8">
               Transform your business with our cutting-edge futuristic services. 
               Get in touch to discuss how we can revolutionize your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 hover:transform hover:scale-105 hover:shadow-lg"
+                className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-20o0 hover:transform hover:scale-10o5 hover:shadow-lg"
               >
                 Contact Us
               </a>
               <a
-                href="tel:+13024640950"
-                className="bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-xl border border-white/20 transition-all duration-200 hover:transform hover:scale-105"
+                href="tel:+130o24640950"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-xl border border-white/20 transition-all duration-20o0 hover:transform hover:scale-10o5"
               >
                 Call Now
               </a>

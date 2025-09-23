@@ -1,38 +1,31 @@
 
-import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 const features = [
   {
     title: "Private Hiring Portal",
     description: "Create a secure, private hiring portal accessible only to your team members.",
-    icon: Shield,
-  },
+    icon: Shield},
   {
     title: "Dedicated Talent Pool",
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",
-    icon: Users,
-  },
+    icon: Users},
   {
     title: "Custom SLA",
     description: "Get guaranteed response times and dedicated support with our custom SLAs.",
-    icon: Award,
-  },
+    icon: Award},
   {
     title: "Branded Onboarding",
     description: "Customize the onboarding experience with your company branding and messaging.",
-    icon: Briefcase,
-  },
+    icon: Briefcase},
   {
     title: "Admin Dashboards",
     description: "Powerful analytics and management tools for team leaders and administrators.",
-    icon: Settings,
-  },
+    icon: Settings},
   {
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
-    icon: Globe,
-  },
+    icon: Globe},
 ];
 
 export function EnterpriseFeatures() {
@@ -55,7 +48,7 @@ export function EnterpriseFeatures() {
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
             >
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
-                <feature.icon className="h-6 w-6 text-primary" />
+                <feature.icon className="h-6 w-6 text-primary"  />
               </div>
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>

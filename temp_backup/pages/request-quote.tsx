@@ -7,7 +7,7 @@ import TimelineStep from '../components/quote/steps/TimelineStep';
 import BudgetStep from '../components/quote/steps/BudgetStep';
 import SummaryStep from '../components/quote/steps/SummaryStep';
 
-export type QuoteFormData = {
+export type QuoteFormData ={
   serviceTypes: string[];
   talentRoles: string[];
   equipmentNeeds: string[];
@@ -23,7 +23,7 @@ export type QuoteFormData = {
   company?: string;
 };
 
-const initialData: QuoteFormData = {
+const initialData: QuoteFormData ={
   serviceTypes: [],
   talentRoles: [],
   equipmentNeeds: [],
@@ -36,8 +36,7 @@ const initialData: QuoteFormData = {
   budgetRange: '',
   contactName: '',
   contactEmail: '',
-  company: '',
-};
+  company: ''};
 
 export default function RequestQuotePage() {
   const steps = useMemo(
@@ -59,8 +58,7 @@ export default function RequestQuotePage() {
       const res = await fetch('/api/quote-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+        body: JSON.stringify(formData)});
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || 'Submission failed');
       setSubmitResult({ ok: true, message: 'Request submitted successfully.' });
@@ -78,15 +76,15 @@ export default function RequestQuotePage() {
       </Head>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-semibold mb-6">Request a Quote</h1>
-        <StepIndicator steps={steps} currentStep={currentStep} />
+        <StepIndicator steps={steps} currentStep={currentStep}  />
 
-        <div className="mt-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm">
+        <div className="mt-6 bg-white dark:bg-gray-90o0 border border-gray-20o0 dark:border-gray-80o0 rounded-xl p-6 shadow-sm">
           {currentStep === 0 && (
             <ServiceSelectionStep
               value={formData}
               onChange={setFormData}
               onNext={goNext}
-            />
+             />
           )}
           {currentStep === 1 && (
             <ProjectDetailsStep
@@ -94,7 +92,7 @@ export default function RequestQuotePage() {
               onChange={setFormData}
               onBack={goBack}
               onNext={goNext}
-            />
+             />
           )}
           {currentStep === 2 && (
             <TimelineStep
@@ -102,7 +100,7 @@ export default function RequestQuotePage() {
               onChange={setFormData}
               onBack={goBack}
               onNext={goNext}
-            />
+             />
           )}
           {currentStep === 3 && (
             <BudgetStep
@@ -110,7 +108,7 @@ export default function RequestQuotePage() {
               onChange={setFormData}
               onBack={goBack}
               onNext={goNext}
-            />
+             />
           )}
           {currentStep === 4 && (
             <SummaryStep
@@ -119,7 +117,7 @@ export default function RequestQuotePage() {
               onSubmit={handleSubmit}
               submitting={submitting}
               result={submitResult}
-            />
+             />
           )}
         </div>
       </div>

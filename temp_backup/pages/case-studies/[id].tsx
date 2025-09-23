@@ -1,15 +1,12 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-
 export default function CaseStudyPage() {
   const router = useRouter();
   const { id } = router.query;
 
   // This would typically come from a database or API
   // For now, we'll show a generic case study page
-  const caseStudy = {
+  const caseStudy ={
     id: id as string,
     title: 'Case Study: ' + (id as string)?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
     company: 'Client Company',
@@ -40,16 +37,16 @@ export default function CaseStudyPage() {
     <>
       <Head>
         <title>{caseStudy.title} | Zion Tech Group</title>
-        <meta name="description" content={caseStudy.description} />
-        <meta property="og:title" content={caseStudy.title} />
-        <meta property="og:description" content={caseStudy.description} />
+        <meta name="description" content={caseStudy.description}  />
+        <meta property="og:title" content={caseStudy.title}  />
+        <meta property="og:description" content={caseStudy.description}  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-              <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/case-studies" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Case Studies
               </Link>
             </nav>
@@ -57,12 +54,12 @@ export default function CaseStudyPage() {
             <article className="prose prose-invert prose-lg max-w-none">
               <header className="mb-12 text-center">
                 <div className="flex items-center gap-3 justify-center mb-4">
-                  <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                  <span className="px-3 py-1 bg-cyan-40o0/20 text-cyan-40o0 text-sm rounded-full border border-cyan-40o0/30">
                     {caseStudy.industry}
                   </span>
                   <span className="text-white/60 text-sm">{caseStudy.duration}</span>
                 </div>
-                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
                   {caseStudy.title}
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -71,7 +68,7 @@ export default function CaseStudyPage() {
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Client Overview</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">Client Overview</h2>
                 <p className="text-white/90 mb-4">
                   <strong>Company:</strong> {caseStudy.company}
                 </p>
@@ -84,25 +81,25 @@ export default function CaseStudyPage() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">The Challenge</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-40o0">The Challenge</h2>
                 <p className="text-white/90 mb-4">
                   {caseStudy.challenge}
                 </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">Our Solution</h2>
                 <p className="text-white/90 mb-4">
                   {caseStudy.solution}
                 </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Results & Impact</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-40o0">Results & Impact</h2>
                 <ul className="space-y-3">
                   {caseStudy.results.map((result, index) => (
                     <li key={index} className="text-white/90 flex items-center gap-3">
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
                       {result}
                     </li>
                   ))}
@@ -110,7 +107,7 @@ export default function CaseStudyPage() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Conclusion</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   This case study demonstrates the transformative power of AI automation when properly implemented. 
                   The results speak for themselves, showing significant improvements in efficiency, accuracy, and cost savings.
@@ -125,10 +122,10 @@ export default function CaseStudyPage() {
             <div className="mt-16 pt-8 border-t border-white/20 text-center">
               <h3 className="text-xl font-semibold mb-6 text-white">Ready to Get Started?</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+                <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white rounded-lg font-semibold hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0">
                   Contact Us
                 </Link>
-                <Link href="/case-studies" className="px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300">
+                <Link href="/case-studies" className="px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-40o0/50 transition-all duration-30o0">
                   View All Case Studies
                 </Link>
               </div>

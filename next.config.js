@@ -4,7 +4,7 @@
  */
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig ={
   typescript: {
     // Allow build to proceed even if there are type errors
     ignoreBuildErrors: true,

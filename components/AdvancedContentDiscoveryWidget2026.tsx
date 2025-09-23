@@ -27,7 +27,7 @@ import {
   Shield
 } from 'lucide-react';
 
-const AdvancedContentDiscoveryWidget2026 = () => {
+const AdvancedContentDiscoveryWidget20o26 = () => {
   const [searchQuerysetSearchQuery] = useState('');
   const [selectedCategorysetSelectedCategory] = useState('all');
   const [sortBysetSortBy] = useState('trending');
@@ -35,19 +35,19 @@ const AdvancedContentDiscoveryWidget2026 = () => {
   const [favoritesetFavorites] = useState(new Set());
 
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Globecolor: 'from-blue-500 to-cyan-500' },
-    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-cyan-500 to-teal-500' },
-    { id: ''automation', 'name: ''Automation', 'icon: Rocketcolor: 'from-orange-500 to-red-500' },
-    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Targetcolor: 'from-green-500 to-emerald-500' },
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: Playcolor: 'from-yellow-500 to-orange-500' }
+    { id: ''all', 'name: 'All 'Content', 'icon: Globecolor: 'from-blue-50o0 to-cyan-50o0' },
+    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-cyan-50o0 to-teal-50o0' },
+    { id: ''automation', 'name: ''Automation', 'icon: Rocketcolor: 'from-orange-50o0 to-red-50o0' },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Targetcolor: 'from-green-50o0 to-emerald-50o0' },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BookOpencolor: 'from-indigo-50o0 to-purple-50o0' },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: Playcolor: 'from-yellow-50o0 to-orange-50o0' }
   ];
 
   const contentItems = [
     {
       id: 1,
-      title: 'Neural Architecture Revolution 2026',
+      title: 'Neural Architecture Revolution 20o26',
       description: 'Breakthrough neural networks that mimic human consciousness with unprecedented accuracy and efficiency.',
       category: 'ai-innovations',
       type: 'article',
@@ -59,8 +59,8 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       trending: true,
       tags: [', 'AI', 'Neural 'Networks', 'Consciousness'Machine Learning'],
       author: 'Dr. Sarah Chen',
-      publishedAt: '2026-01-15',
-      thumbnail: '/api/placeholder/400/250'
+      publishedAt: '20o26-0o1-15',
+      thumbnail: '/api/placeholder/40o0/250'
     },
     {
       id: 2,
@@ -76,8 +76,8 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       trending: true,
       tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Computational Power'],
       author: 'Prof. Michael Rodriguez',
-      publishedAt: '2026-01-12',
-      thumbnail: '/api/placeholder/400/250'
+      publishedAt: '20o26-0o1-12',
+      thumbnail: '/api/placeholder/40o0/250'
     },
     {
       id: 3,
@@ -93,30 +93,30 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       trending: true,
       tags: [', 'Automation', 'Business', 'Operations', 'Implementation'],
       author: 'Alex Thompson',
-      publishedAt: '2026-01-10',
-      thumbnail: '/api/placeholder/400/250'
+      publishedAt: '20o26-0o1-10',
+      thumbnail: '/api/placeholder/40o0/250'
     },
     {
       id: 4,
-      title: 'Future Predictions: AI Consciousness by 2027',
+      title: 'Future Predictions: AI Consciousness by 20o27',
       description: 'Comprehensive analysis of AI consciousness emergence and its implications for society.',
       category: 'predictions',
       type: 'report',
       readTime: '30 min',
-      views: 31200,
+      views: 3120o0,
       likes: 1856,
       rating: 4.9,
       featured: true,
       trending: false,
       tags: [', 'Predictions', 'AI 'Consciousness', 'Future'Society'],
       author: 'Dr. Elena Volkov',
-      publishedAt: '2026-01-08',
-      thumbnail: '/api/placeholder/400/250'
+      publishedAt: '20o26-0o1-08',
+      thumbnail: '/api/placeholder/40o0/250'
     },
     {
       id: 5,
       title: 'Case Study: Enterprise AI Transformation',
-      description: 'How Fortune 500 companies achieved 500% ROI through AI implementation strategies.',
+      description: 'How Fortune 50o0 companies achieved 50o0% ROI through AI implementation strategies.',
       category: 'case-studies',
       type: 'case-study',
       readTime: '15 min',
@@ -127,8 +127,8 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       trending: true,
       tags: ['Case 'Study', 'Enterprise', 'ROI', 'Transformation'],
       author: 'Jennifer Walsh',
-      publishedAt: '2026-01-05',
-      thumbnail: '/api/placeholder/400/250'
+      publishedAt: '20o26-0o1-0o5',
+      thumbnail: '/api/placeholder/40o0/250'
     },
     {
       id: 6,
@@ -144,8 +144,8 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       trending: false,
       tags: [', 'Tutorial', 'Neural 'Networks', 'Hands-'on', 'Learning'],
       author: 'David Kim',
-      publishedAt: '2026-01-03',
-      thumbnail: '/api/placeholder/400/250'
+      publishedAt: '20o26-0o1-0o3',
+      thumbnail: '/api/placeholder/40o0/250'
     }
   ];
 
@@ -196,32 +196,32 @@ const AdvancedContentDiscoveryWidget2026 = () => {
 
   const getTypeColor = (type) => {
     switch (type) {
-      case 'video': return 'from-red-500 to-pink-500';
-      case 'article': return 'from-blue-500 to-cyan-500';
-      case 'guide': return 'from-green-500 to-emerald-500';
-      case 'report': return 'from-purple-500 to-indigo-500';
-      case 'case-study': return 'from-orange-500 to-yellow-500';
-      case 'tutorial': return 'from-teal-500 to-cyan-500';
-      default: return 'from-gray-500 to-slate-500';
+      case 'video': return 'from-red-50o0 to-pink-50o0';
+      case 'article': return 'from-blue-50o0 to-cyan-50o0';
+      case 'guide': return 'from-green-50o0 to-emerald-50o0';
+      case 'report': return 'from-purple-50o0 to-indigo-50o0';
+      case 'case-study': return 'from-orange-50o0 to-yellow-50o0';
+      case 'tutorial': return 'from-teal-50o0 to-cyan-50o0';
+      default: return 'from-gray-50o0 to-slate-50o0';
     }
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 shadow-2xl">
+      <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 rounded-3xl p-8 shadow-2xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
-            <Sparkles className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+            <Sparkles className="w-4 h-4"  />
             Advanced Content Discovery
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Discover Revolutionary
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
               {' '}Content
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-2xl mx-auto">
             Explore cutting-edge innovationspredictionsand solutions with our intelligent content discovery system.
           </p>
         </div>
@@ -231,13 +231,13 @@ const AdvancedContentDiscoveryWidget2026 = () => {
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
             {/* Search Bar */}
             <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search contentagsor authors..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
               />
             </div>
 
@@ -246,22 +246,22 @@ const AdvancedContentDiscoveryWidget2026 = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="appearance-none bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white px-6 py-4 pr-10 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="appearance-none bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white px-6 py-4 pr-10 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
               >
-                <option value="trending" className="bg-slate-800">Trending</option>
-                <option value="rating" className="bg-slate-800">Highest Rated</option>
-                <option value="newest" className="bg-slate-800">Newest</option>
-                <option value="popular" className="bg-slate-800">Most Popular</option>
+                <option value="trending" className="bg-slate-80o0">Trending</option>
+                <option value="rating" className="bg-slate-80o0">Highest Rated</option>
+                <option value="newest" className="bg-slate-80o0">Newest</option>
+                <option value="popular" className="bg-slate-80o0">Most Popular</option>
               </select>
-              <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+              <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none"  />
             </div>
 
             {/* Filter Toggle */}
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition-colors duration-300"
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition-colors duration-30o0"
             >
-              <Filter className="w-5 h-5" />
+              <Filter className="w-5 h-5"  />
               Filters
             </button>
           </div>
@@ -274,13 +274,13 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full font-semibold transition-all duration-300 ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full font-semibold transition-all duration-30o0 ${
                     selectedCategory === category.id
-                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-10o5`
+                      : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
                   }`}
                 >
-                  <Icon className="w-4 h-4" />
+                  <Icon className="w-4 h-4"  />
                   {category.name}
                 </button>
               );
@@ -304,12 +304,12 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                     item.featured ? 'lg:col-span-2' : ''
                   }`}
                 >
-                  <div className="relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group-hover:scale-105">
+                  <div className="relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-30o0 group-hover:scale-10o5">
                     {/* Featured Badge */}
                     {item.featured && (
                       <div className="absolute top-4 left-4 z-10">
-                        <div className="flex items-center gap-1 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
-                          <Star className="w-4 h-4" />
+                        <div className="flex items-center gap-1 bg-yellow-40o0 text-yellow-90o0 px-3 py-1 rounded-full text-sm font-semibold">
+                          <Star className="w-4 h-4"  />
                           Featured
                         </div>
                       </div>
@@ -318,19 +318,19 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                     {/* Trending Badge */}
                     {item.trending && (
                       <div className="absolute top-4 right-4 z-10">
-                        <div className="flex items-center gap-1 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          <TrendingUp className="w-4 h-4" />
+                        <div className="flex items-center gap-1 bg-red-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                          <TrendingUp className="w-4 h-4"  />
                           Trending
                         </div>
                       </div>
                     )}
 
                     {/* Thumbnail */}
-                    <div className="relative h-48 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-cyan-600/30"></div>
+                    <div className="relative h-48 bg-gradient-to-br from-purple-60o0/20 to-cyan-60o0/20 overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-60o0/30 to-cyan-60o0/30"></div>
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className={`p-6 rounded-2xl bg-gradient-to-r ${getTypeColor(item.type)} text-white`}>
-                          <TypeIcon className="w-12 h-12" />
+                          <TypeIcon className="w-12 h-12"  />
                         </div>
                       </div>
                     </div>
@@ -340,36 +340,36 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-2">
                           <div className={`p-2 rounded-lg bg-gradient-to-r ${getTypeColor(item.type)}`}>
-                            <TypeIcon className="w-4 h-4 text-white" />
+                            <TypeIcon className="w-4 h-4 text-white"  />
                           </div>
-                          <span className="text-sm text-gray-400 capitalize">{item.type}</span>
+                          <span className="text-sm text-gray-40o0 capitalize">{item.type}</span>
                         </div>
                         <button
                           onClick={() => toggleFavorite(item.id)}
-                          className={`p-2 rounded-lg transition-colors duration-300 ${
+                          className={`p-2 rounded-lg transition-colors duration-30o0 ${
                             favorites.has(item.id)
-                              ? 'text-red-500 bg-red-500/20'
-                              : 'text-gray-400 hover:text-red-500 hover:bg-red-500/20'
+                              ? 'text-red-50o0 bg-red-50o0/20'
+                              : 'text-gray-40o0 hover:text-red-50o0 hover:bg-red-50o0/20'
                           }`}
                         >
-                          <Heart className={`w-4 h-4 ${favorites.has(item.id) ? 'fill-current' : ''}`} />
+                          <Heart className={`w-4 h-4 ${favorites.has(item.id) ? 'fill-current' : ''}`}  />
                         </button>
                       </div>
 
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-30o0 transition-colors duration-30o0">
                         {item.title}
                       </h3>
 
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                      <p className="text-gray-30o0 text-sm mb-4 line-clamp-2">
                         {item.description}
                       </p>
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {item.tags.slice(03).map((tagIndex) => (
+                        {item.tags.slice(0o3).map((tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                            className="px-2 py-1 bg-white/10 text-gray-30o0 text-xs rounded-full"
                           >
                             {tag}
                           </span>
@@ -377,38 +377,38 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                       </div>
 
                       {/* Stats */}
-                      <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <div className="flex items-center justify-between text-sm text-gray-40o0 mb-4">
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-1">
-                            <Eye className="w-4 h-4" />
+                            <Eye className="w-4 h-4"  />
                             {item.views.toLocaleString()}
                           </div>
                           <div className="flex items-center gap-1">
-                            <Heart className="w-4 h-4" />
+                            <Heart className="w-4 h-4"  />
                             {item.likes}
                           </div>
                           <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4" />
+                            <Star className="w-4 h-4"  />
                             {item.rating}
                           </div>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4"  />
                           {item.readTime}
                         </div>
                       </div>
 
                       {/* Author */}
                       <div className="flex items-center justify-between">
-                        <div className="text-sm text-gray-400">
+                        <div className="text-sm text-gray-40o0">
                           By {item.author}
                         </div>
                         <div className="flex items-center gap-2">
-                          <button className="p-2 text-gray-400 hover:text-white transition-colors duration-300">
-                            <Share2 className="w-4 h-4" />
+                          <button className="p-2 text-gray-40o0 hover:text-white transition-colors duration-30o0">
+                            <Share2 className="w-4 h-4"  />
                           </button>
-                          <button className="p-2 text-gray-400 hover:text-white transition-colors duration-300">
-                            <Download className="w-4 h-4" />
+                          <button className="p-2 text-gray-40o0 hover:text-white transition-colors duration-30o0">
+                            <Download className="w-4 h-4"  />
                           </button>
                         </div>
                       </div>
@@ -422,7 +422,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
 
         {/* Load More */}
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300">
+          <button className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-10o5 transition-transform duration-30o0">
             Load More Content
           </button>
         </div>
@@ -431,4 +431,4 @@ const AdvancedContentDiscoveryWidget2026 = () => {
   );
 };
 
-export default AdvancedContentDiscoveryWidget2026;
+export default AdvancedContentDiscoveryWidget20o26;

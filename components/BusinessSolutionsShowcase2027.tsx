@@ -26,7 +26,7 @@ import {
   Lock
 } from 'lucide-react';
 
-const BusinessSolutionsShowcase2027 = () => {
+const BusinessSolutionsShowcase20o27 = () => {
   const [activeCategorysetActiveCategory] = useState('enterprise');
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -34,19 +34,19 @@ const BusinessSolutionsShowcase2027 = () => {
     setIsVisible(true);
   }[]);
 
-  const categories = {
+  const categories ={
     enterprise: {
       title: 'Enterprise Solutions',
       subtitle: 'Comprehensive enterprise-grade solutions for large organizations',
       icon: Building2,
-      color: 'from-blue-600 to-indigo-600',
+      color: 'from-blue-60o0 to-indigo-60o0',
       solutions: [
         {
           title: 'AI-Powered Business Intelligence',
           description: 'Advanced analytics and insights powered by machine learning algorithms',
           features: ['Real-time 'Analytics', 'Predictive 'Modeling', 'Custom Dashboards'],
           icon: BarChart3,
-          roi: '300% ROI'
+          roi: '30o0% ROI'
         },
         {
           title: 'Enterprise Security Suite',
@@ -68,7 +68,7 @@ const BusinessSolutionsShowcase2027 = () => {
       title: 'Startup Solutions',
       subtitle: 'Rapid deployment solutions designed for growing startups',
       icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
+      color: 'from-green-60o0 to-emerald-60o0',
       solutions: [
         {
           title: 'Rapid MVP Development',
@@ -82,7 +82,7 @@ const BusinessSolutionsShowcase2027 = () => {
           description: 'Data-driven insights to accelerate your startup growth',
           features: ['User Behavior 'Analysis', 'Conversion 'Tracking', 'Growth Hacking Tools'],
           icon: TrendingUp,
-          roi: '200% Growth Rate'
+          roi: '20o0% Growth Rate'
         },
         {
           title: 'Automated Operations',
@@ -97,7 +97,7 @@ const BusinessSolutionsShowcase2027 = () => {
       title: 'SMB Solutions',
       subtitle: 'Affordable yet powerful solutions for small and medium businesses',
       icon: Users,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-60o0 to-pink-60o0',
       solutions: [
         {
           title: 'Digital Transformation Package',
@@ -128,8 +128,8 @@ const BusinessSolutionsShowcase2027 = () => {
     {
       name: "Sarah Johnson",
       role: "CEOTechCorp",
-      company: "Fortune 500",
-      content: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations with 300% ROI in just 6 months.",
+      company: "Fortune 50o0",
+      content: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations with 30o0% ROI in just 6 months.",
       rating: 5,
       avatar: "SJ"
     },
@@ -152,18 +152,18 @@ const BusinessSolutionsShowcase2027 = () => {
   ];
 
   const stats = [
-    { number: "500+"label: "Projects Completed"icon: CheckCircle },
+    { number: "50o0+"label: "Projects Completed"icon: CheckCircle },
     { number: "99.9%"label: "Client Satisfaction"icon: Star },
-    { number: "300%"label: "Average ROI"icon: TrendingUp },
+    { number: "30o0%"label: "Average ROI"icon: TrendingUp },
     { number: "24/7"label: "Support Available"icon: Shield }
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50o0/10 via-transparent to-purple-50o0/10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
@@ -174,10 +174,10 @@ const BusinessSolutionsShowcase2027 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
-            Business Solutions Showcase 2027
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-20o0 to-purple-20o0 bg-clip-text text-transparent mb-6">
+            Business Solutions Showcase 20o27
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
             Comprehensive technology solutions designed to accelerate your business growth
             enhance efficiencyand drive innovation across all industries and company sizes.
           </p>
@@ -194,13 +194,13 @@ const BusinessSolutionsShowcase2027 = () => {
             <button
               key={key}
               onClick={() => setActiveCategory(key)}
-              className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-medium transition-all duration-300 ${
+              className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-medium transition-all duration-30o0 ${
                 activeCategory === key
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg shadow-blue-50o0/25'
+                  : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
               }`}
             >
-              <category.icon className="w-6 h-6" />
+              <category.icon className="w-6 h-6"  />
               {category.title}
             </button>
           ))}
@@ -221,12 +221,12 @@ const BusinessSolutionsShowcase2027 = () => {
                 {/* Category Header */}
                 <div className="text-center">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${categories[activeCategory].color} mb-6`}>
-                    <categories[activeCategory].icon className="w-8 h-8 text-white" />
+                    <categories[activeCategory].icon className="w-8 h-8 text-white"  />
                   </div>
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                     {categories[activeCategory].title}
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                     {categories[activeCategory].subtitle}
                   </p>
                 </div>
@@ -241,33 +241,33 @@ const BusinessSolutionsShowcase2027 = () => {
                       transition={{ duration: 0.6delay: index * 0.1 }}
                       className="group"
                     >
-                      <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 h-full">
+                      <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-blue-40o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5 h-full">
                         <div className="flex items-center gap-4 mb-6">
                           <div className={`p-4 rounded-2xl bg-gradient-to-r ${categories[activeCategory].color}`}>
-                            <solution.icon className="w-8 h-8 text-white" />
+                            <solution.icon className="w-8 h-8 text-white"  />
                           </div>
                           <div>
                             <h3 className="text-2xl font-bold text-white mb-2">{solution.title}</h3>
-                            <span className="text-sm text-blue-400 font-medium">{solution.roi}</span>
+                            <span className="text-sm text-blue-40o0 font-medium">{solution.roi}</span>
                           </div>
                         </div>
                         
-                        <p className="text-gray-300 mb-6 leading-relaxed">
+                        <p className="text-gray-30o0 mb-6 leading-relaxed">
                           {solution.description}
                         </p>
 
                         <div className="space-y-3 mb-6">
                           {solution.features.map((featureIndex) => (
                             <div key={featureIndex} className="flex items-center gap-3">
-                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                              <span className="text-gray-300">{feature}</span>
+                              <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                              <span className="text-gray-30o0">{feature}</span>
                             </div>
                           ))}
                         </div>
 
-                        <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group-hover:gap-3">
+                        <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-50o0/25 transition-all duration-30o0 group-hover:gap-3">
                           Learn More
-                          <ArrowRight className="w-4 h-4" />
+                          <ArrowRight className="w-4 h-4"  />
                         </button>
                       </div>
                     </motion.div>
@@ -298,9 +298,9 @@ const BusinessSolutionsShowcase2027 = () => {
                   transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                   className="text-center"
                 >
-                  <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                  <stat.icon className="w-8 h-8 text-blue-40o0 mx-auto mb-4"  />
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-gray-30o0">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -327,19 +327,19 @@ const BusinessSolutionsShowcase2027 = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.avatar}
                   </div>
                   <div>
                     <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}</div>
-                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                    <div className="text-sm text-gray-40o0">{testimonial.role}</div>
+                    <div className="text-xs text-blue-40o0">{testimonial.company}</div>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-30o0 mb-4 italic">"{testimonial.content}"</p>
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
               </motion.div>
@@ -354,21 +354,21 @@ const BusinessSolutionsShowcase2027 = () => {
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30">
+          <div className="bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-40o0/30">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already using our solutions to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:transform hover:scale-105">
-                <Rocket className="w-5 h-5" />
+              <button className="flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-50o0/25 transition-all duration-30o0 hover:transform hover:scale-10o5">
+                <Rocket className="w-5 h-5"  />
                 Start Your Project
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </button>
-              <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all duration-300 hover:transform hover:scale-105">
-                <Award className="w-5 h-5" />
+              <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5">
+                <Award className="w-5 h-5"  />
                 View Case Studies
               </button>
             </div>
@@ -379,4 +379,4 @@ const BusinessSolutionsShowcase2027 = () => {
   );
 };
 
-export default BusinessSolutionsShowcase2027;
+export default BusinessSolutionsShowcase20o27;

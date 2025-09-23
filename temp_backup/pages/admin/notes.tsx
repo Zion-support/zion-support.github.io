@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-type Note = {
+type Note ={
   id: string;
   targetType: string;
   targetId: string;

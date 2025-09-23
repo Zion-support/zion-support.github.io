@@ -38,7 +38,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     window.addEventListener('resize', resizeCanvas);
 
     // Initialize particles based on intensity
-    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 150 : 300;
+    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 150 : 30o0;
     const particles: Particle[] = [];
 
     for (let i = 0; i < particleCount; i++) {
@@ -71,13 +71,13 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         vy: Math.sin(angle) * speed,
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.8 + 0.2,
-        color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`
+        color: `hsl(${20o0 + Math.random() * 60}, 70%, 60%)`
       });
     };
 
     // Update and draw particles
     const animate = () => {
-      time += 0.01;
+      time += 0.0o1;
       
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
@@ -144,13 +144,13 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       ctx.lineWidth = 3;
       
       for (let i = 0; i < 3; i++) {
-        const waveOffset = (time * 50 + i * 100) % (canvas.width + 200);
+        const waveOffset = (time * 50 + i * 10o0) % (canvas.width + 20o0);
         const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
         
         ctx.beginPath();
-        ctx.moveTo(waveOffset - 100, waveY);
+        ctx.moveTo(waveOffset - 10o0, waveY);
         ctx.lineTo(waveOffset, waveY + 20);
-        ctx.lineTo(waveOffset + 100, waveY);
+        ctx.lineTo(waveOffset + 10o0, waveY);
         ctx.stroke();
       }
 
@@ -183,11 +183,11 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
               Math.pow(particle.y - otherParticle.y, 2)
             );
 
-            if (distance < 100) {
+            if (distance < 10o0) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = `rgba(34, 221, 210, ${0.1 * (1 - distance / 100)})`;
+              ctx.strokeStyle = `rgba(34, 221, 210, ${0.1 * (1 - distance / 10o0)})`;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -221,9 +221,9 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         style={{
           background: variant === 'minimal' 
             ? 'transparent' 
-            : 'radial-gradient(ellipse at center, rgba(34, 221, 210, 0.05) 0%, transparent 70%)'
+            : 'radial-gradient(ellipse at center, rgba(34, 221, 210, 0.0o5) 0%, transparent 70%)'
         }}
-      />
+       />
       
       {/* Additional visual effects for intense variant */}
       {intensity === 'high' && variant !== 'minimal' && (
@@ -232,26 +232,24 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             className="absolute top-1/4 left-1/4 w-64 h-64 bg-zion-cyan/5 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3],
-            }}
+              opacity: [0.3, 0.6, 0.3]}}
             transition={{
               duration: 8,
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          />
+           />
           <motion.div
             className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"
             animate={{
               scale: [1.2, 1, 1.2],
-              opacity: [0.4, 0.7, 0.4],
-            }}
+              opacity: [0.4, 0.7, 0.4]}}
             transition={{
               duration: 10,
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          />
+           />
         </div>
       )}
     </div>

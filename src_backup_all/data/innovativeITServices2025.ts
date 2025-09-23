@@ -33,7 +33,7 @@ export interface InnovativeITService {
   marketSize?: string;
 }
 
-export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
+export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
   // Quantum Cloud Computing Infrastructure
   {
     id: "quantum-cloud-computing-infrastructure",
@@ -57,7 +57,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
       "Quantum security protocols"
     ],
     benefits: [
-      "10,000x faster computation for specific problems",
+      "10,0o00x faster computation for specific problems",
       "Reduce cloud costs by 60%",
       "Unprecedented computational power",
       "Future-proof technology",
@@ -80,23 +80,23 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["Quantum Computing", "Cloud Infrastructure", "High Performance", "Innovation", "Research"],
     estimatedDelivery: "20-24 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$15,999 - $45,000/month",
-    roi: "500-1000%",
+    marketPrice: "$15,999 - $45,0o00/month",
+    roi: "50o0-10o00%",
     innovationLevel: "Revolutionary",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Quantum Algorithms", "Python", "Qiskit", "AWS", "Azure", "React"],
       integrations: ["Quantum hardware", "Cloud platforms", "Scientific software", "ML frameworks"],
-      apiEndpoints: 500,
+      apiEndpoints: 50o0,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "Quantum-resistant encryption", "Zero-trust architecture"]
+      security: ["SOC 2", "ISO 270o01", "Quantum-resistant encryption", "Zero-trust architecture"]
     },
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
-    marketSize: "$89.7 billion by 2027"
+    marketSize: "$89.7 billion by 20o27"
   },
 
   // Blockchain-Based Supply Chain Management
@@ -122,7 +122,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
       "Mobile and IoT integration"
     ],
     benefits: [
-      "Improve supply chain transparency by 100%",
+      "Improve supply chain transparency by 10o0%",
       "Reduce fraud and counterfeiting by 90%",
       "Optimize inventory by 40%",
       "Automate compliance processes",
@@ -145,23 +145,23 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["Blockchain", "Supply Chain", "IoT", "Automation", "Transparency"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$4,499 - $12,000/month",
-    roi: "200-400%",
+    marketPrice: "$4,499 - $12,0o00/month",
+    roi: "20o0-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Ethereum", "Hyperledger", "React", "Node.js", "PostgreSQL"],
       integrations: ["ERP systems", "WMS", "TMS", "IoT devices", "Payment gateways"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Blockchain security", "End-to-end encryption"]
+      security: ["SOC 2", "ISO 270o01", "Blockchain security", "End-to-end encryption"]
     },
     competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain", "Maersk TradeLens"],
-    marketSize: "$67.8 billion by 2027"
+    marketSize: "$67.8 billion by 20o27"
   },
 
   // Edge Computing & IoT Management Platform
@@ -210,23 +210,23 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["Edge Computing", "IoT", "Real-time", "Automation", "AI"],
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$5,999 - $18,000/month",
+    marketPrice: "$5,999 - $18,0o00/month",
     roi: "250-450%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "Python", "React", "Node.js"],
       integrations: ["IoT protocols", "Cloud platforms", "Analytics tools", "Security systems"],
-      apiEndpoints: 400,
+      apiEndpoints: 40o0,
       uptime: "99.95%",
-      security: ["SOC 2", "ISO 27001", "Edge security", "Device authentication"]
+      security: ["SOC 2", "ISO 270o01", "Edge security", "Device authentication"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge"],
-    marketSize: "$43.4 billion by 2027"
+    marketSize: "$43.4 billion by 20o27"
   },
 
   // Zero-Trust Security Architecture
@@ -275,11 +275,11 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["Zero-Trust", "Cybersecurity", "Identity", "Access Control", "Compliance"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$7,999 - $22,000/month",
-    roi: "300-600%",
+    marketPrice: "$7,999 - $22,0o00/month",
+    roi: "30o0-60o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -288,10 +288,10 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
       integrations: ["Identity providers", "SIEM systems", "Cloud platforms", "Network devices"],
       apiEndpoints: 250,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]
+      security: ["SOC 2", "ISO 270o01", "FedRAMP", "Zero-trust architecture"]
     },
     competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
-    marketSize: "$51.6 billion by 2027"
+    marketSize: "$51.6 billion by 20o27"
   },
 
   // DevOps Automation & CI/CD Platform
@@ -340,23 +340,23 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["DevOps", "CI/CD", "Automation", "Cloud", "Monitoring"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "professional",
-    marketPrice: "$3,999 - $12,000/month",
-    roi: "200-400%",
+    marketPrice: "$3,999 - $12,0o00/month",
+    roi: "20o0-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Jenkins", "GitLab", "Docker", "Kubernetes", "React", "Node.js"],
       integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Secure pipelines", "Access control"]
+      security: ["SOC 2", "ISO 270o01", "Secure pipelines", "Access control"]
     },
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],
-    marketSize: "$25.8 billion by 2027"
+    marketSize: "$25.8 billion by 20o27"
   },
 
   // Data Center Modernization & Hybrid Cloud
@@ -405,11 +405,11 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["Data Center", "Hybrid Cloud", "Migration", "Optimization", "Automation"],
     estimatedDelivery: "18-24 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$8,999 - $25,000/month",
-    roi: "300-500%",
+    marketPrice: "$8,999 - $25,0o00/month",
+    roi: "30o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -418,10 +418,10 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
       integrations: ["Cloud platforms", "Storage systems", "Network devices", "Monitoring tools"],
       apiEndpoints: 350,
       uptime: "99.95%",
-      security: ["SOC 2", "ISO 27001", "Encryption", "Access control"]
+      security: ["SOC 2", "ISO 270o01", "Encryption", "Access control"]
     },
     competitors: ["VMware", "Microsoft", "IBM", "HPE"],
-    marketSize: "$78.9 billion by 2027"
+    marketSize: "$78.9 billion by 20o27"
   },
 
   // Network Virtualization & SDN Platform
@@ -470,11 +470,11 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["SDN", "Network Virtualization", "Automation", "Scalability", "Security"],
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$6,499 - $18,000/month",
+    marketPrice: "$6,499 - $18,0o00/month",
     roi: "250-450%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -483,10 +483,10 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
       integrations: ["Network devices", "Cloud platforms", "Monitoring tools", "Security systems"],
       apiEndpoints: 280,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Network segmentation", "Access control"]
+      security: ["SOC 2", "ISO 270o01", "Network segmentation", "Access control"]
     },
     competitors: ["Cisco", "VMware", "Juniper", "Arista"],
-    marketSize: "$32.7 billion by 2027"
+    marketSize: "$32.7 billion by 20o27"
   },
 
   // API Management & Integration Platform
@@ -535,11 +535,11 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["API Management", "Integration", "Microservices", "Security", "Developer Experience"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "professional",
-    marketPrice: "$3,499 - $10,000/month",
-    roi: "200-400%",
+    marketPrice: "$3,499 - $10,0o00/month",
+    roi: "20o0-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -551,7 +551,7 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
       security: ["SOC 2", "OAuth 2.0", "JWT", "API security"]
     },
     competitors: ["Apigee", "Kong", "MuleSoft", "Tyk"],
-    marketSize: "$19.8 billion by 2027"
+    marketSize: "$19.8 billion by 20o27"
   },
 
   // Digital Twin & Simulation Platform
@@ -600,22 +600,22 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     tags: ["Digital Twin", "Simulation", "IoT", "3D Modeling", "Predictive Analytics"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$7,999 - $22,000/month",
-    roi: "300-500%",
+    marketPrice: "$7,999 - $22,0o00/month",
+    roi: "30o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Unity3D", "Unreal Engine", "Python", "React", "Node.js", "PostgreSQL"],
       integrations: ["IoT platforms", "CAD software", "PLM systems", "Analytics tools"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Data encryption", "Access control"]
+      security: ["SOC 2", "ISO 270o01", "Data encryption", "Access control"]
     },
     competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"],
-    marketSize: "$86.1 billion by 2027"
+    marketSize: "$86.1 billion by 20o27"
   }
 ];

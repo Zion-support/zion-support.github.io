@@ -30,12 +30,12 @@ vi.mock('@/hooks/use-toast', () => ({'  toast: vi.fn()
 
 vi.mock('@/hooks/talent/useAuthStatus', () => ({'  useAuthStatus: vi.fn(() => ({
     isAuthenticated: true,
-    userDetails: { id: test-user-id' },  }))
+    userDetails: { id: test-user-id' }}))
 }));
 
 vi.mock('next/router', () => ({'  useRouter: vi.fn(() => ({
     push: vi.fn(),
-    asPath: /some-path',  }))
+    asPath: /some-path'}))
 }));
 
 describe('useSavedTalents', () => {'  beforeEach(() => {
@@ -102,7 +102,7 @@ describe('useSavedTalents', () => {'  beforeEach(() => {
     });
   });
 
-  describe('toggleSaveTalent', () => {'    it('should call showApiError with a retry callback if deleting a saved talent fails', async () => {'      const talentToToggle = { id: talent1', full_name: Talent One' } as any;      // Setup initial state as if talent1' is already saved'      supabase.eq.mockResolvedValueOnce({ data: [{ talent_id: talent1' }], error: null }); // For initial load of saved IDs'      supabase.in.mockResolvedValueOnce({ data: [talentToToggle], error: null });      // For initial load of talent profiles
+  describe('toggleSaveTalent', () => {'    it('should call showApiError with a retry callback if deleting a saved talent fails', async () => {'      const talentToToggle ={ id: talent1', full_name: Talent One' } as any;      // Setup initial state as if talent1' is already saved'      supabase.eq.mockResolvedValueOnce({ data: [{ talent_id: talent1' }], error: null }); // For initial load of saved IDs'      supabase.in.mockResolvedValueOnce({ data: [talentToToggle], error: null });      // For initial load of talent profiles
 
       const { _result } = renderHook(() => useSavedTalents());
       await act(async () => { await new Promise(resolve => setTimeout(resolve, 0)); }); // Initial fetch
@@ -141,7 +141,7 @@ describe('useSavedTalents', () => {'  beforeEach(() => {
       expect(supabase.delete).toHaveBeenCalledTimes(1); // Called once in the retry path
       expect(toast).toHaveBeenCalledWith(expect.objectContaining({ title: "Removed from favorites" }));"    });"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-    it('should call showApiError with a retry callback if inserting a new saved talent fails', async () => {'        const talentToToggle = { id: talent2', full_name: Talent Two' } as any;        // Initial state: no talents saved for the first call in useEffect
+    it('should call showApiError with a retry callback if inserting a new saved talent fails', async () => {'        const talentToToggle ={ id: talent2', full_name: Talent Two' } as any;        // Initial state: no talents saved for the first call in useEffect
         supabase.eq.mockResolvedValueOnce({ data: [], error: null });
         // No profiles needed if no IDs, so inFn won't be called for initial load
         const { _result } = renderHook(() => useSavedTalents());

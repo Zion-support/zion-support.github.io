@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -65,23 +64,23 @@ const Analytics = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-indigo-90o0 to-gray-90o0 text-white">
       <Head>
         <title>Analytics - bolt.new.zion.app</title>
-        <meta name="description" content="Comprehensive analytics and insights for bolt.new.zion.app" />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
+        <meta name="description" content="Comprehensive analytics and insights for bolt.new.zion.app"  />
+        <meta name="viewport" content="width=device-widthinitial-scale=1"  />
       </Head>
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+          <Link href="/" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
             ← Back to Home
           </Link>
-          <h1 className="text-4xl font-bold mt-4 bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mt-4 bg-gradient-to-r from-indigo-40o0 to-cyan-40o0 bg-clip-text text-transparent">
             Analytics Dashboard
           </h1>
-          <p className="text-gray-300 mt-2 text-lg">
+          <p className="text-gray-30o0 mt-2 text-lg">
             Comprehensive insights and performance metrics
           </p>
         </div>
@@ -91,38 +90,38 @@ const Analytics = () => {
           {keyMetrics.map((metricindex) => (
             <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-indigo-300">{metric.title}</h3>
-                <span className={`text-2xl ${metric.trend === 'up' ? 'text-green-400' : 'text-red-400'}`}>
+                <h3 className="text-lg font-semibold text-indigo-30o0">{metric.title}</h3>
+                <span className={`text-2xl ${metric.trend === 'up' ? 'text-green-40o0' : 'text-red-40o0'}`}>
                   {metric.trend === 'up' ? '↗' : '↘'}
                 </span>
               </div>
               <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
               <div className={`text-lg font-semibold mb-2 ${
-                metric.trend === 'up' ? 'text-green-400' : 'text-red-400'
+                metric.trend === 'up' ? 'text-green-40o0' : 'text-red-40o0'
               }`}>
                 {metric.change}
               </div>
-              <div className="text-xs text-gray-500">{metric.period}</div>
+              <div className="text-xs text-gray-50o0">{metric.period}</div>
             </div>
           ))}
         </div>
 
         {/* Traffic Sources */}
         <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-indigo-300">Traffic Sources</h2>
+          <h2 className="text-2xl font-bold mb-6 text-indigo-30o0">Traffic Sources</h2>
           <div className="space-y-4">
             {trafficSources.map((sourceindex) => (
               <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10">
                 <div className="flex items-center space-x-4">
-                  <div className="w-4 h-4 bg-gradient-to-r from-indigo-400 to-cyan-400 rounded-full"></div>
+                  <div className="w-4 h-4 bg-gradient-to-r from-indigo-40o0 to-cyan-40o0 rounded-full"></div>
                   <span className="font-medium text-white">{source.source}</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="text-right">
                     <div className="font-semibold text-white">{source.percentage}%</div>
-                    <div className="text-sm text-gray-400">of total traffic</div>
+                    <div className="text-sm text-gray-40o0">of total traffic</div>
                   </div>
-                  <span className="text-green-400 font-semibold">{source.change}</span>
+                  <span className="text-green-40o0 font-semibold">{source.change}</span>
                 </div>
               </div>
             ))}
@@ -132,30 +131,30 @@ const Analytics = () => {
         {/* Top Pages */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl">
-            <h2 className="text-2xl font-bold mb-6 text-indigo-300">Top Pages</h2>
+            <h2 className="text-2xl font-bold mb-6 text-indigo-30o0">Top Pages</h2>
             <div className="space-y-4">
               {topPages.map((pageindex) => (
                 <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10">
                   <div>
                     <div className="font-medium text-white">{page.page}</div>
-                    <div className="text-sm text-gray-400">{page.views} views</div>
+                    <div className="text-sm text-gray-40o0">{page.views} views</div>
                   </div>
-                  <span className="text-green-400 font-semibold">{page.change}</span>
+                  <span className="text-green-40o0 font-semibold">{page.change}</span>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl">
-            <h2 className="text-2xl font-bold mb-6 text-indigo-300">Geographic Distribution</h2>
+            <h2 className="text-2xl font-bold mb-6 text-indigo-30o0">Geographic Distribution</h2>
             <div className="space-y-4">
               {geographicData.map((geoindex) => (
                 <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10">
                   <div>
                     <div className="font-medium text-white">{geo.country}</div>
-                    <div className="text-sm text-gray-400">{geo.visitors} of visitors</div>
+                    <div className="text-sm text-gray-40o0">{geo.visitors} of visitors</div>
                   </div>
-                  <span className="text-green-400 font-semibold">{geo.change}</span>
+                  <span className="text-green-40o0 font-semibold">{geo.change}</span>
                 </div>
               ))}
             </div>
@@ -164,13 +163,13 @@ const Analytics = () => {
 
         {/* Device Breakdown */}
         <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-indigo-300">Device Breakdown</h2>
+          <h2 className="text-2xl font-bold mb-6 text-indigo-30o0">Device Breakdown</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {deviceBreakdown.map((deviceindex) => (
               <div key={index} className="text-center p-6 bg-white/5 rounded-lg border border-white/10">
                 <div className="text-3xl font-bold text-white mb-2">{device.percentage}%</div>
-                <div className="text-lg font-semibold text-indigo-300 mb-2">{device.device}</div>
-                <div className="text-green-400 font-semibold">{device.change}</div>
+                <div className="text-lg font-semibold text-indigo-30o0 mb-2">{device.device}</div>
+                <div className="text-green-40o0 font-semibold">{device.change}</div>
               </div>
             ))}
           </div>
@@ -178,30 +177,30 @@ const Analytics = () => {
 
         {/* Performance Insights */}
         <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-indigo-300">Performance Insights</h2>
+          <h2 className="text-2xl font-bold mb-6 text-indigo-30o0">Performance Insights</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-4 bg-white/5 rounded-lg border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-3">Conversion Rate</h3>
-              <div className="text-2xl font-bold text-green-400 mb-2">3.2%</div>
-              <div className="text-sm text-gray-400">+0.8% from last month</div>
+              <div className="text-2xl font-bold text-green-40o0 mb-2">3.2%</div>
+              <div className="text-sm text-gray-40o0">+0.8% from last month</div>
             </div>
             <div className="p-4 bg-white/5 rounded-lg border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-3">Engagement Score</h3>
-              <div className="text-2xl font-bold text-blue-400 mb-2">87/100</div>
-              <div className="text-sm text-gray-400">+5 points from last month</div>
+              <div className="text-2xl font-bold text-blue-40o0 mb-2">87/10o0</div>
+              <div className="text-sm text-gray-40o0">+5 points from last month</div>
             </div>
           </div>
         </div>
 
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link href="/dashboard" className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg transition-colors">
+          <Link href="/dashboard" className="px-6 py-3 bg-indigo-50o0 hover:bg-indigo-60o0 text-white font-semibold rounded-lg transition-colors">
             System Dashboard
           </Link>
-          <Link href="/reports" className="px-6 py-3 border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-black font-semibold rounded-lg transition-colors">
+          <Link href="/reports" className="px-6 py-3 border border-indigo-40o0 text-indigo-40o0 hover:bg-indigo-40o0 hover:text-black font-semibold rounded-lg transition-colors">
             View Reports
           </Link>
-          <Link href="/automation-health" className="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-colors">
+          <Link href="/automation-health" className="px-6 py-3 border border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black font-semibold rounded-lg transition-colors">
             Automation Health
           </Link>
         </div>

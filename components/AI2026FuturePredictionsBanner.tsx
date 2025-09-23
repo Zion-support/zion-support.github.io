@@ -1,31 +1,30 @@
-import React from 'react';
 import Link from 'next/link';
 
-export default function AI2026FuturePredictionsBanner() {
+export default function AI20o26FuturePredictionsBanner() {
   return (
-    <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
+    <section className="bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium">🔮 FUTURE PREDICTIONS</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            AI 2026 Future Predictions
+            AI 20o26 Future Predictions
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Explore groundbreaking AI predictions for 2026including quantum neural interfaces
+            Explore groundbreaking AI predictions for 20o26including quantum neural interfaces
             synthetic intelligenceand autonomous business ecosystems that will reshape our world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
-              href="/ai-2026-future-predictions-revolutionary"
-              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+              href="/ai-20o26-future-predictions-revolutionary"
+              className="bg-white text-indigo-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5"
             >
               View Predictions →
             </Link>
             <Link
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all"
             >
               Prepare Now
             </Link>

@@ -36,21 +36,21 @@ const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
       type: string;
     }> = [];
 
-    const colors = {
-      quantum: ['#00ffff', '#0080ff', '#0040ff', '#0000ff'],
-      holographic: ['#ff00ff', '#8000ff', '#4000ff', '#0000ff'],
-      cyberpunk: ['#ff0080', '#ff0040', '#ff0000', '#800000'],
-      neural: ['#00ff80', '#00ff40', '#00ff00', '#008000'],
-      matrix: ['#00ff00', '#40ff40', '#80ff80', '#c0ffc0']
+    const colors ={
+      quantum: ['#0o0ffff', '#0o080ff', '#0o040ff', '#0o000ff'],
+      holographic: ['#ff0o0ff', '#80o00ff', '#40o00ff', '#0o000ff'],
+      cyberpunk: ['#ff0o080', '#ff0o040', '#ff0o000', '#80o0000'],
+      neural: ['#0o0ff80', '#0o0ff40', '#0o0ff0o0', '#0o080o00'],
+      matrix: ['#0o0ff0o0', '#40ff40', '#80ff80', '#c0ffc0']
     };
 
-    const intensityMultiplier = {
+    const intensityMultiplier ={
       low: 0.5,
       medium: 1,
       high: 2
     };
 
-    const particleCount = Math.floor(100 * intensityMultiplier[intensity]);
+    const particleCount = Math.floor(10o0 * intensityMultiplier[intensity]);
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
@@ -126,33 +126,33 @@ const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
 
       // Add matrix rain effect for matrix variant
       if (variant === 'matrix') {
-        ctx.fillStyle = '#00ff00';
+        ctx.fillStyle = '#0o0ff0o0';
         ctx.font = '16px monospace';
         ctx.globalAlpha = 0.3;
         
         for (let i = 0; i < 20; i++) {
           const x = (i * 80) % canvas.width;
-          const y = (Date.now() * 0.01 + i * 20) % canvas.height;
-          ctx.fillText('01', x, y);
+          const y = (Date.now() * 0.0o1 + i * 20) % canvas.height;
+          ctx.fillText('0o1', x, y);
         }
         ctx.globalAlpha = 1;
       }
 
       // Add holographic interference pattern
       if (variant === 'holographic') {
-        ctx.strokeStyle = '#ff00ff';
+        ctx.strokeStyle = '#ff0o0ff';
         ctx.globalAlpha = 0.1;
         ctx.lineWidth = 1;
         
         for (let i = 0; i < 10; i++) {
           ctx.beginPath();
-          ctx.moveTo(0, i * 100);
-          ctx.lineTo(canvas.width, i * 100);
+          ctx.moveTo(0, i * 10o0);
+          ctx.lineTo(canvas.width, i * 10o0);
           ctx.stroke();
           
           ctx.beginPath();
-          ctx.moveTo(i * 100, 0);
-          ctx.lineTo(i * 100, canvas.height);
+          ctx.moveTo(i * 10o0, 0);
+          ctx.lineTo(i * 10o0, canvas.height);
           ctx.stroke();
         }
         ctx.globalAlpha = 1;
@@ -186,16 +186,16 @@ const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
           background: variant === 'matrix' 
-            ? 'linear-gradient(180deg, #000000 0%, #001100 50%, #000000 100%)'
+            ? 'linear-gradient(180deg, #0o00000 0%, #0o01100 50%, #0o00000 10o0%)'
             : variant === 'cyberpunk'
-            ? 'linear-gradient(180deg, #000000 0%, #200010 50%, #000000 100%)'
+            ? 'linear-gradient(180deg, #0o00000 0%, #20o0010 50%, #0o00000 10o0%)'
             : variant === 'holographic'
-            ? 'linear-gradient(180deg, #000000 0%, #100020 50%, #000000 100%)'
+            ? 'linear-gradient(180deg, #0o00000 0%, #10o0020 50%, #0o00000 10o0%)'
             : variant === 'neural'
-            ? 'linear-gradient(180deg, #000000 0%, #002000 50%, #000000 100%)'
-            : 'linear-gradient(180deg, #000000 0%, #001020 50%, #000000 100%)'
+            ? 'linear-gradient(180deg, #0o00000 0%, #0o02000 50%, #0o00000 10o0%)'
+            : 'linear-gradient(180deg, #0o00000 0%, #0o01020 50%, #0o00000 10o0%)'
         }}
-      />
+       />
 
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 pointer-events-none z-10">
@@ -203,27 +203,24 @@ const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
           <motion.div
             key={i}
             className={`absolute w-2 h-2 ${
-              variant === 'quantum' ? 'bg-cyan-400' :
-              variant === 'holographic' ? 'bg-purple-400' :
-              variant === 'cyberpunk' ? 'bg-pink-400' :
-              variant === 'neural' ? 'bg-green-400' :
-              'bg-green-400'
+              variant === 'quantum' ? 'bg-cyan-40o0' :
+              variant === 'holographic' ? 'bg-purple-40o0' :
+              variant === 'cyberpunk' ? 'bg-pink-40o0' :
+              variant === 'neural' ? 'bg-green-40o0' :
+              'bg-green-40o0'
             } rounded-full opacity-30`}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
             animate={{
               y: [0, -20, 0],
               opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1],
-            }}
+              scale: [1, 1.5, 1]}}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
+              delay: Math.random() * 2}}
+           />
         ))}
       </div>
 
@@ -233,25 +230,22 @@ const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
           <motion.div
             key={`line-${i}`}
             className={`absolute h-px w-full ${
-              variant === 'quantum' ? 'bg-gradient-to-r from-transparent via-cyan-400 to-transparent' :
-              variant === 'holographic' ? 'bg-gradient-to-r from-transparent via-purple-400 to-transparent' :
-              variant === 'cyberpunk' ? 'bg-gradient-to-r from-transparent via-pink-400 to-transparent' :
-              variant === 'neural' ? 'bg-gradient-to-r from-transparent via-green-400 to-transparent' :
-              'bg-gradient-to-r from-transparent via-green-400 to-transparent'
+              variant === 'quantum' ? 'bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent' :
+              variant === 'holographic' ? 'bg-gradient-to-r from-transparent via-purple-40o0 to-transparent' :
+              variant === 'cyberpunk' ? 'bg-gradient-to-r from-transparent via-pink-40o0 to-transparent' :
+              variant === 'neural' ? 'bg-gradient-to-r from-transparent via-green-40o0 to-transparent' :
+              'bg-gradient-to-r from-transparent via-green-40o0 to-transparent'
             }`}
             style={{
-              top: `${20 + i * 15}%`,
-            }}
+              top: `${20 + i * 15}%`}}
             animate={{
               opacity: [0, 1, 0],
-              scaleX: [0, 1, 0],
-            }}
+              scaleX: [0, 1, 0]}}
             transition={{
               duration: 4,
               repeat: Infinity,
-              delay: i * 0.8,
-            }}
-          />
+              delay: i * 0.8}}
+           />
         ))}
       </div>
 
@@ -264,22 +258,20 @@ const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
       <div className="absolute inset-0 pointer-events-none z-40">
         <motion.div
           className={`absolute inset-0 ${
-            variant === 'quantum' ? 'bg-gradient-radial from-cyan-500/5 via-transparent to-transparent' :
-            variant === 'holographic' ? 'bg-gradient-radial from-purple-500/5 via-transparent to-transparent' :
-            variant === 'cyberpunk' ? 'bg-gradient-radial from-pink-500/5 via-transparent to-transparent' :
-            variant === 'neural' ? 'bg-gradient-radial from-green-500/5 via-transparent to-transparent' :
-            'bg-gradient-radial from-green-500/5 via-transparent to-transparent'
+            variant === 'quantum' ? 'bg-gradient-radial from-cyan-50o0/5 via-transparent to-transparent' :
+            variant === 'holographic' ? 'bg-gradient-radial from-purple-50o0/5 via-transparent to-transparent' :
+            variant === 'cyberpunk' ? 'bg-gradient-radial from-pink-50o0/5 via-transparent to-transparent' :
+            variant === 'neural' ? 'bg-gradient-radial from-green-50o0/5 via-transparent to-transparent' :
+            'bg-gradient-radial from-green-50o0/5 via-transparent to-transparent'
           }`}
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.5, 0.8, 0.5],
-          }}
+            opacity: [0.5, 0.8, 0.5]}}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+            ease: "easeInOut"}}
+         />
       </div>
     </div>
   );

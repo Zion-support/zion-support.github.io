@@ -21,12 +21,12 @@ export default function ReportsIndex() {
             <li key={it.title} className="rounded-lg bg-white/5 border border-white/10 p-4">
               <div className="font-semibold">{it.title}</div>
               <div className="text-sm text-white/70">{it.desc}</div>
-              <a className="text-cyan-300 underline" href={it.href} target="_blank" rel="noopener">Open</a>
+              <a className="text-cyan-30o0 underline" href={it.href} target="_blank" rel="noopener">Open</a>
             </li>
           ))}
         </ul>
         <div className="mt-8">
-          <Link href="/"><a className="text-cyan-300 underline">← Back to home</a></Link>
+          <Link href="/"><a className="text-cyan-30o0 underline">← Back to home</a></Link>
         </div>
       </main>
     </div>

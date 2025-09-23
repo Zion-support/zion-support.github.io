@@ -1,4 +1,4 @@
-export interface SpecializedIndustrySolution2026 {
+export interface SpecializedIndustrySolution20o26 {
   id: string;
   title: string;
   description: string;
@@ -33,15 +33,15 @@ export interface SpecializedIndustrySolution2026 {
   marketSize?: string;
 }
 
-export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution2026[] = [
+export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20o26[] = [
   // Healthcare AI Platform
   {
-    id: "healthcare-ai-platform-2026",
-    title: "Healthcare AI Platform 2026",
+    id: "healthcare-ai-platform-20o26",
+    title: "Healthcare AI Platform 20o26",
     description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance, patient monitoring, and clinical decision support for healthcare providers.",
     category: "Healthcare",
     subcategory: "AI & Diagnostics",
-    price: 5500,
+    price: 550o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -80,33 +80,33 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Healthcare", "AI", "Diagnostics", "Telemedicine", "Compliance"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$5,500 - $15,000/month",
-    roi: "300-500%",
+    marketPrice: "$5,50o0 - $15,0o00/month",
+    roi: "30o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Machine Learning", "Computer Vision", "NLP", "Cloud Computing", "IoT"],
       integrations: ["EHR Systems", "PACS", "Lab Systems", "Telemedicine Platforms"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.99%",
-      security: ["HIPAA", "SOC 2", "ISO 27001", "Data Encryption"]
+      security: ["HIPAA", "SOC 2", "ISO 270o01", "Data Encryption"]
     },
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Epic"],
-    marketSize: "$45.2 billion by 2026"
+    marketSize: "$45.2 billion by 20o26"
   },
 
   // Financial Services AI Platform
   {
-    id: "financial-services-ai-platform-2026",
-    title: "Financial Services AI Platform 2026",
+    id: "financial-services-ai-platform-20o26",
+    title: "Financial Services AI Platform 20o26",
     description: "Advanced AI platform for financial services that provides fraud detection, risk assessment, algorithmic trading, and customer service automation.",
     category: "Financial Services",
     subcategory: "AI & FinTech",
-    price: 6800,
+    price: 680o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -145,33 +145,33 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Financial Services", "AI", "FinTech", "Compliance", "Risk Management"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$6,800 - $20,000/month",
-    roi: "400-600%",
+    marketPrice: "$6,80o0 - $20,0o00/month",
+    roi: "40o0-60o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Machine Learning", "Deep Learning", "NLP", "Blockchain", "Cloud Computing"],
       integrations: ["Core Banking Systems", "Trading Platforms", "CRM Systems", "Regulatory Systems"],
-      apiEndpoints: 500,
+      apiEndpoints: 50o0,
       uptime: "99.99%",
       security: ["SOC 2", "PCI DSS", "Financial Regulations", "Encryption"]
     },
     competitors: ["Palantir", "SAS", "FICO", "Experian", "Equifax"],
-    marketSize: "$67.8 billion by 2026"
+    marketSize: "$67.8 billion by 20o26"
   },
 
   // Manufacturing IoT Platform
   {
-    id: "manufacturing-iot-platform-2026",
-    title: "Manufacturing IoT Platform 2026",
+    id: "manufacturing-iot-platform-20o26",
+    title: "Manufacturing IoT Platform 20o26",
     description: "Comprehensive IoT platform for manufacturing that provides real-time monitoring, predictive maintenance, quality control, and supply chain optimization.",
     category: "Manufacturing",
     subcategory: "IoT & Industry 4.0",
-    price: 4200,
+    price: 420o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -210,33 +210,33 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Manufacturing", "IoT", "Industry 4.0", "Predictive Maintenance", "Quality Control"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$4,200 - $12,000/month",
-    roi: "250-400%",
+    marketPrice: "$4,20o0 - $12,0o00/month",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["IoT Sensors", "Edge Computing", "Cloud Computing", "Machine Learning", "Analytics"],
       integrations: ["ERP Systems", "MES Systems", "SCADA Systems", "PLM Systems"],
-      apiEndpoints: 400,
+      apiEndpoints: 40o0,
       uptime: "99.9%",
       security: ["Industrial Security", "Data Encryption", "Access Control", "Audit Logging"]
     },
     competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation", "ABB"],
-    marketSize: "$78.9 billion by 2026"
+    marketSize: "$78.9 billion by 20o26"
   },
 
   // Retail AI Platform
   {
-    id: "retail-ai-platform-2026",
-    title: "Retail AI Platform 2026",
+    id: "retail-ai-platform-20o26",
+    title: "Retail AI Platform 20o26",
     description: "AI-powered retail platform that provides personalized recommendations, inventory optimization, customer analytics, and omnichannel experience management.",
     category: "Retail",
     subcategory: "AI & E-commerce",
-    price: 2800,
+    price: 280o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -275,11 +275,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Retail", "AI", "E-commerce", "Customer Analytics", "Marketing"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "professional",
-    marketPrice: "$2,800 - $8,000/month",
-    roi: "200-350%",
+    marketPrice: "$2,80o0 - $8,0o00/month",
+    roi: "20o0-350%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -291,17 +291,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
       security: ["PCI DSS", "Data Encryption", "Access Control", "Fraud Detection"]
     },
     competitors: ["Salesforce", "Adobe", "Shopify", "BigCommerce", "WooCommerce"],
-    marketSize: "$34.5 billion by 2026"
+    marketSize: "$34.5 billion by 20o26"
   },
 
   // Education Technology Platform
   {
-    id: "education-technology-platform-2026",
-    title: "Education Technology Platform 2026",
+    id: "education-technology-platform-20o26",
+    title: "Education Technology Platform 20o26",
     description: "Comprehensive edtech platform that provides personalized learning, student analytics, content management, and virtual classroom capabilities.",
     category: "Education",
     subcategory: "EdTech & Learning",
-    price: 1800,
+    price: 180o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -340,11 +340,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Education", "EdTech", "Learning", "Analytics", "Collaboration"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "professional",
-    marketPrice: "$1,800 - $5,500/month",
-    roi: "200-300%",
+    marketPrice: "$1,80o0 - $5,50o0/month",
+    roi: "20o0-30o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -356,17 +356,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
       security: ["FERPA", "Data Encryption", "Access Control", "Privacy Protection"]
     },
     competitors: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
-    marketSize: "$28.7 billion by 2026"
+    marketSize: "$28.7 billion by 20o26"
   },
 
   // Transportation & Logistics Platform
   {
-    id: "transportation-logistics-platform-2026",
-    title: "Transportation & Logistics Platform 2026",
+    id: "transportation-logistics-platform-20o26",
+    title: "Transportation & Logistics Platform 20o26",
     description: "AI-powered transportation and logistics platform that provides route optimization, fleet management, supply chain visibility, and predictive analytics.",
     category: "Transportation",
     subcategory: "Logistics & Supply Chain",
-    price: 3500,
+    price: 350o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -405,33 +405,33 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Transportation", "Logistics", "Supply Chain", "Route Optimization", "Fleet Management"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,500 - $10,000/month",
-    roi: "250-400%",
+    marketPrice: "$3,50o0 - $10,0o00/month",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Machine Learning", "GPS", "IoT", "Cloud Computing", "Mobile"],
       integrations: ["TMS Systems", "WMS Systems", "ERP Systems", "GPS Systems"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.9%",
       security: ["Data Encryption", "Access Control", "Audit Logging", "Secure Communication"]
     },
     competitors: ["Manhattan Associates", "Oracle", "SAP", "JDA Software", "Blue Yonder"],
-    marketSize: "$56.3 billion by 2026"
+    marketSize: "$56.3 billion by 20o26"
   },
 
   // Energy Management Platform
   {
-    id: "energy-management-platform-2026",
-    title: "Energy Management Platform 2026",
+    id: "energy-management-platform-20o26",
+    title: "Energy Management Platform 20o26",
     description: "Comprehensive energy management platform that provides energy monitoring, optimization, renewable energy integration, and sustainability analytics.",
     category: "Energy",
     subcategory: "Energy Management & Sustainability",
-    price: 3800,
+    price: 380o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -470,11 +470,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Energy", "Sustainability", "Optimization", "Renewable Energy", "Monitoring"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,800 - $11,000/month",
-    roi: "250-400%",
+    marketPrice: "$3,80o0 - $11,0o00/month",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -486,17 +486,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
       security: ["Data Encryption", "Access Control", "Audit Logging", "Secure Communication"]
     },
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "ABB"],
-    marketSize: "$42.8 billion by 2026"
+    marketSize: "$42.8 billion by 20o26"
   },
 
   // Real Estate Technology Platform
   {
-    id: "real-estate-technology-platform-2026",
-    title: "Real Estate Technology Platform 2026",
+    id: "real-estate-technology-platform-20o26",
+    title: "Real Estate Technology Platform 20o26",
     description: "AI-powered real estate platform that provides property analytics, market insights, customer relationship management, and transaction automation.",
     category: "Real Estate",
     subcategory: "PropTech & Analytics",
-    price: 2200,
+    price: 220o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -535,11 +535,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Real Estate", "PropTech", "Analytics", "CRM", "Market Insights"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "professional",
-    marketPrice: "$2,200 - $6,500/month",
-    roi: "200-350%",
+    marketPrice: "$2,20o0 - $6,50o0/month",
+    roi: "20o0-350%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -551,17 +551,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
       security: ["Data Encryption", "Access Control", "Audit Logging", "Secure Communication"]
     },
     competitors: ["Zillow", "Redfin", "Realtor.com", "CoStar", "RealPage"],
-    marketSize: "$25.6 billion by 2026"
+    marketSize: "$25.6 billion by 20o26"
   },
 
   // Legal Technology Platform
   {
-    id: "legal-technology-platform-2026",
-    title: "Legal Technology Platform 2026",
+    id: "legal-technology-platform-20o26",
+    title: "Legal Technology Platform 20o26",
     description: "AI-powered legal technology platform that provides document analysis, contract management, legal research, and case management automation.",
     category: "Legal Services",
     subcategory: "LegalTech & Automation",
-    price: 3200,
+    price: 320o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -600,22 +600,22 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     tags: ["Legal", "LegalTech", "AI", "Document Analysis", "Automation"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,200 - $9,500/month",
-    roi: "250-400%",
+    marketPrice: "$3,20o0 - $9,50o0/month",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Machine Learning", "NLP", "Document Processing", "Cloud Computing", "Analytics"],
       integrations: ["Practice Management Systems", "Document Management", "Legal Databases", "CRM Systems"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
       security: ["Data Encryption", "Access Control", "Audit Logging", "Compliance"]
     },
     competitors: ["Relativity", "LexisNexis", "Westlaw", "Clio", "MyCase"],
-    marketSize: "$18.9 billion by 2026"
+    marketSize: "$18.9 billion by 20o26"
   }
 ];

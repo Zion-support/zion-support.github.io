@@ -1,15 +1,14 @@
-import React from 'react';
 import Link from 'next/link';
 
-const NewContentPromotionBanner2026 = () => {
+const NewContentPromotionBanner20o26 = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white py-16">
+    <section className="relative overflow-hidden bg-gradient-to-r from-violet-60o0 via-purple-60o0 to-fuchsia-60o0 text-white py-16">
       {/* Animated background particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-white rounded-full opacity-60 animate-ping"></div>
-        <div className="absolute top-3/4 right-1/6 w-3 h-3 bg-yellow-300 rounded-full opacity-60 animate-ping" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-300 rounded-full opacity-60 animate-ping" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-pink-300 rounded-full opacity-60 animate-ping" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-3/4 right-1/6 w-3 h-3 bg-yellow-30o0 rounded-full opacity-60 animate-ping" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-30o0 rounded-full opacity-60 animate-ping" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-pink-30o0 rounded-full opacity-60 animate-ping" style={{animationDelay: '0.5s'}}></div>
       </div>
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,8 +21,8 @@ const NewContentPromotionBanner2026 = () => {
           {/* Main heading */}
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Discover the Future of AI
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              AI 2026 Revolution
+            <span className="block bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent">
+              AI 20o26 Revolution
             </span>
           </h2>
           
@@ -55,14 +54,14 @@ const NewContentPromotionBanner2026 = () => {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/ai-2026-revolution"
-              className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 transform hover:scale-105"
+              href="/ai-20o26-revolution"
+              className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-30o0 transform hover:scale-10o5"
             >
-              Explore AI 2026 →
+              Explore AI 20o26 →
             </Link>
             <Link
-              href="/ai-2026-revolution/demo"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
+              href="/ai-20o26-revolution/demo"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0"
             >
               Try Interactive Demo
             </Link>
@@ -71,19 +70,19 @@ const NewContentPromotionBanner2026 = () => {
           {/* Stats */}
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
-              <div className="text-2xl font-bold text-yellow-400">1000%</div>
+              <div className="text-2xl font-bold text-yellow-40o0">10o00%</div>
               <div className="text-xs opacity-80">ROI Potential</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-cyan-400">∞</div>
+              <div className="text-2xl font-bold text-cyan-40o0">∞</div>
               <div className="text-xs opacity-80">Processing Speed</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-green-400">100%</div>
+              <div className="text-2xl font-bold text-green-40o0">10o0%</div>
               <div className="text-xs opacity-80">Autonomous</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-pink-400">2026</div>
+              <div className="text-2xl font-bold text-pink-40o0">20o26</div>
               <div className="text-xs opacity-80">Future Ready</div>
             </div>
           </div>
@@ -93,4 +92,4 @@ const NewContentPromotionBanner2026 = () => {
   );
 };
 
-export default NewContentPromotionBanner2026;
+export default NewContentPromotionBanner20o26;

@@ -1,7 +1,4 @@
-import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-
 interface BreadcrumbItem {
   label: string;
   href: string;
@@ -67,7 +64,7 @@ export default function Breadcrumbs() {
         <React.Fragment key={breadcrumb.href}>
           {index > 0 && (
             <svg className="w-4 h-4 text-white/40" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              <path fillRule="evenodd" d="M7.293 14.70o7a1 1 0 0o10-1.414L10.586 10 7.293 6.70o7a1 1 0 0o11.414-1.414l4 4a1 1 0 0o10 1.414l-4 4a1 1 0 0o1-1.414 0z" clipRule="evenodd"  />
             </svg>
           )}
           {breadcrumb.isCurrent ? (

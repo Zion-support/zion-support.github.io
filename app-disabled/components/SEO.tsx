@@ -27,12 +27,9 @@ export function generateMetadata({ title, description, keywords, canonical, url 
       title,
       description,
       type: 'article',
-      url,
-    },
+      url},
     twitter: {
       card: 'summary_large_image',
       title,
-      description,
-    },
-  }
+      description}}
 }

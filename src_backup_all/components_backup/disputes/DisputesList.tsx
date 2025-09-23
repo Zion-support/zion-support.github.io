@@ -9,14 +9,13 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+  TableRow} from "@/components/ui/table";
 import Skeleton from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
 import Link from "next/link";
 
-type DisputesListProps = {
+type DisputesListProps ={
   disputes: Dispute[];
   isLoading: boolean;
 };
@@ -48,7 +47,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       <div className="space-y-4">
         <div className="flex gap-2 mb-4">
           {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
-            <Skeleton key={status} className="h-10 w-24" />
+            <Skeleton key={status} className="h-10 w-24"  />
           ))}
         </div>
         <div className="border rounded-md">
@@ -66,12 +65,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             <TableBody>
               {[...Array(5)].map((_, i) => (
                 <TableRow key={i}>
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
-                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>
-                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
-                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>
-                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-24"  /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-40"  /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-32"  /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-24"  /></TableCell>
+                  <TableCell><Skeleton className="h-6 w-20"  /></TableCell>
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto"  /></TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -84,7 +83,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4"  />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter

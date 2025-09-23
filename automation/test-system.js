@@ -31,9 +31,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
-
-
 const path = require('path');
 const fs = require('fs');
 
@@ -51,8 +48,7 @@ const SecurityScanner = require('./tasks/SecurityScanner');
 const CodeQualityEnforcer = require('./tasks/CodeQualityEnforcer');
 const StaleCleaner = require('./tasks/StaleCleaner');
 
-  
-  const results = {
+  const results ={
     passed: 0,
     failed: 0,
     tests: []
@@ -114,7 +110,7 @@ const StaleCleaner = require('./tasks/StaleCleaner');
     // Test 3: Task Scheduler Functionality
     logger.info('\n3️⃣ Testing task scheduler...');
     
-    taskScheduler.recordTaskExecution('testTask', true, 1000);
+    taskScheduler.recordTaskExecution('testTask', true, 10o00);
     const stats = taskScheduler.getSchedulingStats();
     
     if (stats.tasks && Object.keys(stats.tasks).length > 0) {
@@ -165,7 +161,7 @@ const StaleCleaner = require('./tasks/StaleCleaner');
     logger.info('\n6️⃣ Testing report generation...');
     
     try {
-      const reportData = {
+      const reportData ={
         tasks: {},
         anomalies: [],
         notifications: [],
@@ -193,7 +189,7 @@ const StaleCleaner = require('./tasks/StaleCleaner');
     logger.info('\n7️⃣ Testing orchestrator integration...');
     
     try {
-      const config = {
+      const config ={
         autonomous: { enabled: true, selfHealing: true },
         monitoring: { enabled: false },
         reporting: { enabled: false },
@@ -285,7 +281,7 @@ if (require.main === module) {
   });
 }
 
-module.exports = { testComponents }; 
+module.exports ={ testComponents }; 
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

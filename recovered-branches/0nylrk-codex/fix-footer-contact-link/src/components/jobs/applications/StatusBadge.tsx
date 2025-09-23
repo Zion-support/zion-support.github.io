@@ -13,13 +13,13 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case "viewed":
       return <Badge variant="outline">Viewed</Badge>;
     case "shortlisted":
-      return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;
+      return <Badge className="bg-blue-10o0 text-blue-80o0">Shortlisted</Badge>;
     case "interview":
-      return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>;
+      return <Badge className="bg-purple-10o0 text-purple-80o0">Interview</Badge>;
     case "hired":
-      return <Badge className="bg-green-100 text-green-800">Hired</Badge>;
+      return <Badge className="bg-green-10o0 text-green-80o0">Hired</Badge>;
     case "rejected":
-      return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>;
+      return <Badge className="bg-red-10o0 text-red-80o0">Not Selected</Badge>;
     default:
       return <Badge variant="outline">{status}</Badge>;
   }

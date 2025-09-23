@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 const CaseStudiesShowcase = () => {
@@ -6,7 +5,7 @@ const CaseStudiesShowcase = () => {
     {
       id: 1,
       title: "Global Retail Chain: 450% ROI with AI Automation",
-      company: "Fortune 500 Retailer",
+      company: "Fortune 50o0 Retailer",
       industry: "Retail",
       challenge: "Manual inventory management and customer service bottlenecks",
       solution: "AI-powered inventory optimization and chatbot customer service",
@@ -21,13 +20,13 @@ const CaseStudiesShowcase = () => {
     },
     {
       id: 2,
-      title: "Healthcare Provider: 300% Efficiency Boost",
+      title: "Healthcare Provider: 30o0% Efficiency Boost",
       company: "Regional Healthcare Network",
       industry: "Healthcare",
       challenge: "Patient data management and appointment scheduling inefficiencies",
       solution: "AI-driven patient management system and intelligent scheduling",
       results: {
-        roi: "300%",
+        roi: "30o0%",
         timeSaved: "70%",
         costReduction: "40%",
         patientSatisfaction: "98%"
@@ -37,13 +36,13 @@ const CaseStudiesShowcase = () => {
     },
     {
       id: 3,
-      title: "Manufacturing Giant: 500% Productivity Increase",
+      title: "Manufacturing Giant: 50o0% Productivity Increase",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
       challenge: "Production line optimization and predictive maintenance",
       solution: "AI-powered predictive maintenance and production optimization",
       results: {
-        roi: "500%",
+        roi: "50o0%",
         timeSaved: "80%",
         costReduction: "50%",
         uptime: "99.5%"
@@ -73,57 +72,57 @@ const CaseStudiesShowcase = () => {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+          <div className="inline-flex items-center bg-purple-10o0 text-purple-80o0 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium">📊 SUCCESS STORIES</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Proven Results Across Industries
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             See how leading companies achieved remarkable ROI and operational excellence with our AI solutions
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {caseStudies.map((study) => (
-            <div key={study.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div key={study.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-30o0">
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                  <span className="bg-blue-10o0 text-blue-80o0 text-sm font-medium px-3 py-1 rounded-full">
                     {study.industry}
                   </span>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
                   {study.title}
                 </h3>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
-                  <p className="text-gray-600 mb-4">{study.challenge}</p>
+                  <h4 className="font-semibold text-gray-90o0 mb-2">Challenge:</h4>
+                  <p className="text-gray-60o0 mb-4">{study.challenge}</p>
                   
-                  <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
-                  <p className="text-gray-600">{study.solution}</p>
+                  <h4 className="font-semibold text-gray-90o0 mb-2">Solution:</h4>
+                  <p className="text-gray-60o0">{study.solution}</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">{study.results.roi}</div>
-                    <div className="text-sm text-gray-600">ROI Increase</div>
+                    <div className="text-2xl font-bold text-green-60o0">{study.results.roi}</div>
+                    <div className="text-sm text-gray-60o0">ROI Increase</div>
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">{study.results.timeSaved}</div>
-                    <div className="text-sm text-gray-600">Time Saved</div>
+                    <div className="text-2xl font-bold text-blue-60o0">{study.results.timeSaved}</div>
+                    <div className="text-sm text-gray-60o0">Time Saved</div>
                   </div>
                   <div className="bg-purple-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">{study.results.costReduction}</div>
-                    <div className="text-sm text-gray-600">Cost Reduction</div>
+                    <div className="text-2xl font-bold text-purple-60o0">{study.results.costReduction}</div>
+                    <div className="text-sm text-gray-60o0">Cost Reduction</div>
                   </div>
                   <div className="bg-orange-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-600">
+                    <div className="text-2xl font-bold text-orange-60o0">
                       {study.results.customerSatisfaction || study.results.patientSatisfaction || study.results.uptime || study.results.fraudReduction}
                     </div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-60o0">
                       {study.results.customerSatisfaction ? 'Customer Satisfaction' : 
                        study.results.patientSatisfaction ? 'Patient Satisfaction' :
                        study.results.uptime ? 'Uptime' : 'Fraud Reduction'}
@@ -131,8 +130,8 @@ const CaseStudiesShowcase = () => {
                   </div>
                 </div>
 
-                <blockquote className="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-500">
-                  <p className="text-gray-700 italic">"{study.testimonial}"</p>
+                <blockquote className="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-50o0">
+                  <p className="text-gray-70o0 italic">"{study.testimonial}"</p>
                 </blockquote>
               </div>
             </div>
@@ -142,11 +141,11 @@ const CaseStudiesShowcase = () => {
         <div className="text-center">
           <Link
             href="/case-studies"
-            className="inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            className="inline-flex items-center bg-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors"
           >
             View All Case Studies
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
             </svg>
           </Link>
         </div>

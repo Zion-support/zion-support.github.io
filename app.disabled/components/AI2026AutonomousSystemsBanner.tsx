@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AI2026AutonomousSystemsBanner() {
 	return (
 		<section className="p-8 rounded-2xl bg-white/10 text-white text-center">
@@ -14,3 +15,5 @@ export default function AI2026AutonomousSystemsBanner() {
 		</section>
 	);
 }
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

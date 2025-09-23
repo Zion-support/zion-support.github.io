@@ -5,22 +5,22 @@ import React{ useState } from 'react';
 import Link from 'next/link';
 SearchFilterArrowRightClockTrendingUpStarEyeBookOpenVideoFileTextUsersZap
 
-const UltimateContentDiscovery2025 = () => {
+const UltimateContentDiscovery20o25 = () => {
   const [searchQuerysetSearchQuery] = useState('');
   const [selectedCategorysetSelectedCategory] = useState('all');
 
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-5 h-5" /> },
-    { id: ''ai', 'name: 'AI & Machine 'Learning', 'icon: <Zap className="w-5 h-5" /> },
-    { id: ''automation', 'name: ''Automation', 'icon: <TrendingUp className="w-5 h-5" /> },
-    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: <Users className="w-5 h-5" /> },
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <Star className="w-5 h-5" /> }
+    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-5 h-5"  /> },
+    { id: ''ai', 'name: 'AI & Machine 'Learning', 'icon: <Zap className="w-5 h-5"  /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <TrendingUp className="w-5 h-5"  /> },
+    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: <Users className="w-5 h-5"  /> },
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <Star className="w-5 h-5"  /> }
   ];
 
   const contentItems = [
     {
       id: 1,
-      title: "AI-Powered Business Transformation Guide 2025",
+      title: "AI-Powered Business Transformation Guide 20o25",
       description: "Complete roadmap for implementing AI solutions in your organization",
       category: 'ai',
       type: 'guide',
@@ -28,7 +28,7 @@ const UltimateContentDiscovery2025 = () => {
       views: '12.5k',
       rating: 4.9,
       featured: true,
-      image: '/api/placeholder/400/250'
+      image: '/api/placeholder/40o0/250'
     },
     {
       id: 2,
@@ -40,7 +40,7 @@ const UltimateContentDiscovery2025 = () => {
       views: '8.2k',
       rating: 4.8,
       featured: false,
-      image: '/api/placeholder/400/250'
+      image: '/api/placeholder/40o0/250'
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const UltimateContentDiscovery2025 = () => {
       views: '15.3k',
       rating: 4.9,
       featured: true,
-      image: '/api/placeholder/400/250'
+      image: '/api/placeholder/40o0/250'
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ const UltimateContentDiscovery2025 = () => {
       views: '6.7k',
       rating: 4.7,
       featured: false,
-      image: '/api/placeholder/400/250'
+      image: '/api/placeholder/40o0/250'
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ const UltimateContentDiscovery2025 = () => {
       views: '9.8k',
       rating: 4.8,
       featured: false,
-      image: '/api/placeholder/400/250'
+      image: '/api/placeholder/40o0/250'
     },
     {
       id: 6,
@@ -88,18 +88,18 @@ const UltimateContentDiscovery2025 = () => {
       views: '11.2k',
       rating: 4.9,
       featured: true,
-      image: '/api/placeholder/400/250'
+      image: '/api/placeholder/40o0/250'
     }
   ];
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'video': return <Video className="w-4 h-4" />;
-      case 'article': return <FileText className="w-4 h-4" />;
-      case 'guide': return <BookOpen className="w-4 h-4" />;
-      case 'tutorial': return <Zap className="w-4 h-4" />;
-      case 'whitepaper': return <FileText className="w-4 h-4" />;
-      default: return <BookOpen className="w-4 h-4" />;
+      case 'video': return <Video className="w-4 h-4"  />;
+      case 'article': return <FileText className="w-4 h-4"  />;
+      case 'guide': return <BookOpen className="w-4 h-4"  />;
+      case 'tutorial': return <Zap className="w-4 h-4"  />;
+      case 'whitepaper': return <FileText className="w-4 h-4"  />;
+      default: return <BookOpen className="w-4 h-4"  />;
     }
   };
 
@@ -115,14 +115,14 @@ const UltimateContentDiscovery2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-4">
-            <Search className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-10o0 text-blue-80o0 text-sm font-medium mb-4">
+            <Search className="w-4 h-4 mr-2"  />
             Content Discovery
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Ultimate Content Hub 2025
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
+            Ultimate Content Hub 20o25
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discoverexploreand access our comprehensive library of cutting-edge technology contentguidesand resources.
           </p>
         </div>
@@ -133,13 +133,13 @@ const UltimateContentDiscovery2025 = () => {
             {/* Search Bar */}
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search contentguidesarticles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 border border-gray-20o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                 />
               </div>
             </div>
@@ -150,10 +150,10 @@ const UltimateContentDiscovery2025 = () => {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                     selectedCategory === category.id
-                      ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? 'bg-blue-60o0 text-white shadow-lg'
+                      : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'
                   }`}
                 >
                   {category.icon}
@@ -167,13 +167,13 @@ const UltimateContentDiscovery2025 = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
-            <div key={item.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div key={item.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-30o0 overflow-hidden group">
               {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 overflow-hidden">
+              <div className="relative h-48 bg-gradient-to-br from-blue-40o0 to-purple-50o0 overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute top-4 left-4 flex items-center space-x-2">
                   {item.featured && (
-                    <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-yellow-40o0 text-yellow-90o0 px-2 py-1 rounded-full text-xs font-medium">
                       Featured
                     </span>
                   )}
@@ -184,11 +184,11 @@ const UltimateContentDiscovery2025 = () => {
                 </div>
                 <div className="absolute bottom-4 right-4 flex items-center space-x-4 text-white text-sm">
                   <span className="flex items-center">
-                    <Eye className="w-4 h-4 mr-1" />
+                    <Eye className="w-4 h-4 mr-1"  />
                     {item.views}
                   </span>
                   <span className="flex items-center">
-                    <Star className="w-4 h-4 mr-1 fill-current" />
+                    <Star className="w-4 h-4 mr-1 fill-current"  />
                     {item.rating}
                   </span>
                 </div>
@@ -196,16 +196,16 @@ const UltimateContentDiscovery2025 = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-2 group-hover:text-blue-60o0 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">
+                <p className="text-gray-60o0 mb-4 line-clamp-2">
                   {item.description}
                 </p>
                 
                 <div className="flex items-center justify-between mb-4">
-                  <span className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
+                  <span className="flex items-center text-sm text-gray-50o0">
+                    <Clock className="w-4 h-4 mr-1"  />
                     {item.readTime}
                   </span>
                   <div className="flex items-center space-x-1">
@@ -214,20 +214,20 @@ const UltimateContentDiscovery2025 = () => {
                         key={i}
                         className={`w-4 h-4 ${
                           i < Math.floor(item.rating)
-                            ? 'text-yellow-400 fill-current'
-                            : 'text-gray-300'
+                            ? 'text-yellow-40o0 fill-current'
+                            : 'text-gray-30o0'
                         }`}
-                      />
+                       />
                     ))}
                   </div>
                 </div>
 
                 <Link
                   href={`/content/${item.id}`}
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group"
+                  className="inline-flex items-center text-blue-60o0 font-medium hover:text-blue-70o0 transition-colors group"
                 >
                   Read More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />
                 </Link>
               </div>
             </div>
@@ -236,23 +236,23 @@ const UltimateContentDiscovery2025 = () => {
 
         {/* Load More */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+          <button className="inline-flex items-center px-8 py-4 bg-blue-60o0 text-white font-semibold rounded-lg hover:bg-blue-70o0 transition-colors shadow-lg hover:shadow-xl">
             Load More Content
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2"  />
           </button>
         </div>
 
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: '500+'label: 'Articles & Guides' },
+            { number: '50o0+'label: 'Articles & Guides' },
             { number: '50+'label: 'Video Tutorials' },
-            { number: '100+'label: 'Case Studies' },
+            { number: '10o0+'label: 'Case Studies' },
             { number: '1M+'label: 'Monthly Readers' }
           ].map((statindex) => (
             <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
-              <div className="text-gray-600">{stat.label}</div>
+              <div className="text-3xl font-bold text-blue-60o0 mb-2">{stat.number}</div>
+              <div className="text-gray-60o0">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -261,4 +261,4 @@ const UltimateContentDiscovery2025 = () => {
   );
 };
 
-export default UltimateContentDiscovery2025;
+export default UltimateContentDiscovery20o25;

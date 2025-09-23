@@ -16,7 +16,7 @@ const Header = () => {
     <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-2xl font-bold text-white hover:text-purple-300 transition-colors">
+          <Link href="/" className="text-2xl font-bold text-white hover:text-purple-30o0 transition-colors">
             Zion Tech Group
           </Link>
           <div className="hidden md:flex space-x-8">
@@ -26,8 +26,8 @@ const Header = () => {
                 href={item.href}
                 className={`transition-colors ${
                   isActive(item.href)
-                    ? 'text-purple-300 font-semibold'
-                    : 'text-white hover:text-purple-300'
+                    ? 'text-purple-30o0 font-semibold'
+                    : 'text-white hover:text-purple-30o0'
                 }`}
               >
                 {item.label}

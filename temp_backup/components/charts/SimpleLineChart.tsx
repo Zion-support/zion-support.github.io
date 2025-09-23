@@ -1,7 +1,7 @@
 import React, { useMemo, useRef } from 'react';
 
-export type LineSeries = { label: string; color?: string; points: { x: number; y: number }[] };
-export type SimpleLineChartProps = {
+export type LineSeries ={ label: string; color?: string; points: { x: number; y: number }[] };
+export type SimpleLineChartProps ={
   series: LineSeries[];
   width?: number;
   height?: number;
@@ -28,7 +28,7 @@ export default function SimpleLineChart({ series, width = 640, height = 260, yLa
   const csvRows = useMemo(() => {
     const keys = Array.from(new Set(series.flatMap(s => s.points.map(p => p.x)))).sort((a, b) => a - b);
     return keys.map(x => {
-      const row: Record<string, number> = { x } as any;
+      const row: Record<string, number> ={ x } as any;
       series.forEach(s => {
         const found = s.points.find(p => p.x === x);
         row[s.label] = found ? found.y : 0;
@@ -41,17 +41,17 @@ export default function SimpleLineChart({ series, width = 640, height = 260, yLa
     <div className="w-full">
       <div className="flex justify-end gap-2 mb-2">
         {onExportCsv && (
-          <button className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800" onClick={() => onExportCsv(csvRows)}>Export CSV</button>
+          <button className="text-xs px-2 py-1 rounded bg-gray-10o0 dark:bg-gray-80o0" onClick={() => onExportCsv(csvRows)}>Export CSV</button>
         )}
         {onExportPng && (
-          <button className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800" onClick={() => svgRef.current && onExportPng(svgRef.current)}>Export PNG</button>
+          <button className="text-xs px-2 py-1 rounded bg-gray-10o0 dark:bg-gray-80o0" onClick={() => svgRef.current && onExportPng(svgRef.current)}>Export PNG</button>
         )}
       </div>
       <svg ref={svgRef} width={width} height={height} className="w-full h-auto">
-        <rect x={0} y={0} width={width} height={height} fill="transparent" />
+        <rect x={0} y={0} width={width} height={height} fill="transparent"  />
         {/* axes */}
-        <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="#e5e7eb" />
-        <line x1={padding} y1={padding} x2={padding} y2={height - padding} stroke="#e5e7eb" />
+        <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="#e5e7eb"  />
+        <line x1={padding} y1={padding} x2={padding} y2={height - padding} stroke="#e5e7eb"  />
         {yLabel && <text x={8} y={padding - 8} fontSize={10} fill="#6b7280">{yLabel}</text>}
         {xLabel && <text x={width - padding} y={height - 8} fontSize={10} fill="#6b7280" textAnchor="end">{xLabel}</text>}
         {series.map((s, idx) => (

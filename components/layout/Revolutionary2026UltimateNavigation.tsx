@@ -12,25 +12,25 @@ import {
 } from 'lucide-react';
 
 // Import all the new service data
-import { revolutionary2026AIAutomationServices } from '../../data/revolutionary-2026-ai-automation-services';
-import { revolutionary2026EmergingTechServices } from '../../data/revolutionary-2026-emerging-tech-services';
-import { revolutionary2026HealthcareBiotechServices } from '../../data/revolutionary-2026-healthcare-biotech-services';
-import { revolutionary2026FintechBlockchainServices } from '../../data/revolutionary-2026-fintech-blockchain-services';
+import { revolutionary20o26AIAutomationServices } from '../../data/revolutionary-20o26-ai-automation-services';
+import { revolutionary20o26EmergingTechServices } from '../../data/revolutionary-20o26-emerging-tech-services';
+import { revolutionary20o26HealthcareBiotechServices } from '../../data/revolutionary-20o26-healthcare-biotech-services';
+import { revolutionary20o26FintechBlockchainServices } from '../../data/revolutionary-20o26-fintech-blockchain-services';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const serviceCategories = [
   {
-    title: 'AI & Consciousness 2026',
+    title: 'AI & Consciousness 20o26',
     icon: Brain,
-    color: 'from-purple-600 to-pink-600',
+    color: 'from-purple-60o0 to-pink-60o0',
     description: 'Next-generation AI consciousness solutions',
-    services: revolutionary2026AIAutomationServices.slice(0, 4).map(service => ({
+    services: revolutionary20o26AIAutomationServices.slice(0, 4).map(service => ({
       name: service.name,
       href: service.link,
       description: service.tagline,
@@ -40,11 +40,11 @@ const serviceCategories = [
     }))
   },
   {
-    title: 'Emerging Technologies 2026',
+    title: 'Emerging Technologies 20o26',
     icon: Rocket,
-    color: 'from-green-600 to-emerald-600',
+    color: 'from-green-60o0 to-emerald-60o0',
     description: 'Cutting-edge emerging tech solutions',
-    services: revolutionary2026EmergingTechServices.slice(0, 4).map(service => ({
+    services: revolutionary20o26EmergingTechServices.slice(0, 4).map(service => ({
       name: service.name,
       href: service.link,
       description: service.tagline,
@@ -54,11 +54,11 @@ const serviceCategories = [
     }))
   },
   {
-    title: 'Healthcare & Biotech 2026',
+    title: 'Healthcare & Biotech 20o26',
     icon: Shield,
-    color: 'from-teal-600 to-cyan-600',
+    color: 'from-teal-60o0 to-cyan-60o0',
     description: 'Revolutionary healthcare innovations',
-    services: revolutionary2026HealthcareBiotechServices.slice(0, 4).map(service => ({
+    services: revolutionary20o26HealthcareBiotechServices.slice(0, 4).map(service => ({
       name: service.name,
       href: service.link,
       description: service.tagline,
@@ -68,11 +68,11 @@ const serviceCategories = [
     }))
   },
   {
-    title: 'Fintech & Blockchain 2026',
+    title: 'Fintech & Blockchain 20o26',
     icon: DollarSign,
-    color: 'from-yellow-600 to-orange-600',
+    color: 'from-yellow-60o0 to-orange-60o0',
     description: 'Next-generation financial technology',
-    services: revolutionary2026FintechBlockchainServices.slice(0, 4).map(service => ({
+    services: revolutionary20o26FintechBlockchainServices.slice(0, 4).map(service => ({
       name: service.name,
       href: service.link,
       description: service.tagline,
@@ -86,13 +86,13 @@ const serviceCategories = [
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
-  { name: '2026 Services', href: '/revolutionary-2026-services', icon: Rocket },
+  { name: '20o26 Services', href: '/revolutionary-20o26-services', icon: Rocket },
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
-const Revolutionary2026UltimateNavigation = () => {
+const Revolutionary20o26UltimateNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -116,30 +116,30 @@ const Revolutionary2026UltimateNavigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-purple-500/20' 
+        ? 'bg-gray-90o0/95 backdrop-blur-xl border-b border-purple-50o0/20' 
         : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-purple-900 to-cyan-900 border-b border-purple-500/20">
+      <div className="bg-gradient-to-r from-purple-90o0 to-cyan-90o0 border-b border-purple-50o0/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-2 text-sm">
-            <div className="flex items-center gap-6 text-gray-300">
+            <div className="flex items-center gap-6 text-gray-30o0">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-purple-400" />
+                <Phone className="w-4 h-4 text-purple-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-purple-400" />
+                <Mail className="w-4 h-4 text-purple-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/contact" className="text-purple-400 hover:text-white transition-colors">
+              <Link href="/contact" className="text-purple-40o0 hover:text-white transition-colors">
                 Get Started
               </Link>
-              <Link href="/pricing" className="text-purple-400 hover:text-white transition-colors">
+              <Link href="/pricing" className="text-purple-40o0 hover:text-white transition-colors">
                 View Pricing
               </Link>
             </div>
@@ -152,12 +152,12 @@ const Revolutionary2026UltimateNavigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <SparklesIcon className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <SparklesIcon className="w-6 h-6 text-white"  />
             </div>
             <div>
               <div className="text-xl font-bold text-white">Zion Tech Group</div>
-              <div className="text-xs text-purple-400">Revolutionary 2026</div>
+              <div className="text-xs text-purple-40o0">Revolutionary 20o26</div>
             </div>
           </Link>
 
@@ -167,11 +167,11 @@ const Revolutionary2026UltimateNavigation = () => {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('services')}
-                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors py-2"
+                className="flex items-center gap-2 text-gray-30o0 hover:text-white transition-colors py-2"
               >
-                <Rocket className="w-5 h-5" />
+                <Rocket className="w-5 h-5"  />
                 <span>Revolutionary Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`}  />
               </button>
 
               <AnimatePresence>
@@ -181,7 +181,7 @@ const Revolutionary2026UltimateNavigation = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl shadow-purple-500/10"
+                    className="absolute top-full left-0 mt-2 w-[80o0px] bg-gray-90o0/95 backdrop-blur-xl border border-purple-50o0/20 rounded-2xl shadow-2xl shadow-purple-50o0/10"
                   >
                     <div className="p-6">
                       <div className="grid grid-cols-2 gap-6">
@@ -189,11 +189,11 @@ const Revolutionary2026UltimateNavigation = () => {
                           <div key={category.title} className="space-y-4">
                             <div className="flex items-center gap-3">
                               <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                                <category.icon className="w-5 h-5 text-white" />
+                                <category.icon className="w-5 h-5 text-white"  />
                               </div>
                               <div>
                                 <h3 className="font-semibold text-white">{category.title}</h3>
-                                <p className="text-sm text-gray-400">{category.description}</p>
+                                <p className="text-sm text-gray-40o0">{category.description}</p>
                               </div>
                             </div>
                             <div className="space-y-2">
@@ -202,32 +202,32 @@ const Revolutionary2026UltimateNavigation = () => {
                                   key={service.name}
                                   href={service.href}
                                   onClick={closeAllDropdowns}
-                                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-purple-500/10 transition-colors group"
+                                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-purple-50o0/10 transition-colors group"
                                 >
                                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center text-sm`}>
                                     {service.icon}
                                   </div>
                                   <div className="flex-1">
-                                    <div className="font-medium text-white group-hover:text-purple-400 transition-colors">
+                                    <div className="font-medium text-white group-hover:text-purple-40o0 transition-colors">
                                       {service.name}
                                     </div>
-                                    <div className="text-sm text-gray-400">{service.description}</div>
+                                    <div className="text-sm text-gray-40o0">{service.description}</div>
                                   </div>
-                                  <div className="text-sm text-purple-400 font-semibold">{service.price}</div>
+                                  <div className="text-sm text-purple-40o0 font-semibold">{service.price}</div>
                                 </Link>
                               ))}
                             </div>
                           </div>
                         ))}
                       </div>
-                      <div className="mt-6 pt-6 border-t border-purple-500/20">
+                      <div className="mt-6 pt-6 border-t border-purple-50o0/20">
                         <Link
-                          href="/revolutionary-2026-services"
+                          href="/revolutionary-20o26-services"
                           onClick={closeAllDropdowns}
-                          className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+                          className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold rounded-xl transition-all duration-30o0 transform hover:scale-10o5"
                         >
                           View All Revolutionary Services
-                          <ArrowRight className="w-4 h-4" />
+                          <ArrowRight className="w-4 h-4"  />
                         </Link>
                       </div>
                     </div>
@@ -241,9 +241,9 @@ const Revolutionary2026UltimateNavigation = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors py-2"
+                className="flex items-center gap-2 text-gray-30o0 hover:text-white transition-colors py-2"
               >
-                <link.icon className="w-5 h-5" />
+                <link.icon className="w-5 h-5"  />
                 <span>{link.name}</span>
               </Link>
             ))}
@@ -251,14 +251,14 @@ const Revolutionary2026UltimateNavigation = () => {
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="p-2 text-gray-400 hover:text-white transition-colors">
-              <Search className="w-5 h-5" />
+            <button className="p-2 text-gray-40o0 hover:text-white transition-colors">
+              <Search className="w-5 h-5"  />
             </button>
-            <button className="p-2 text-gray-400 hover:text-white transition-colors">
-              <Bell className="w-5 h-5" />
+            <button className="p-2 text-gray-40o0 hover:text-white transition-colors">
+              <Bell className="w-5 h-5"  />
             </button>
             <Link href="/contact">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold py-2 px-6 rounded-xl transition-all duration-30o0 transform hover:scale-10o5">
                 Get Started
               </button>
             </Link>
@@ -267,9 +267,9 @@ const Revolutionary2026UltimateNavigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
+            className="lg:hidden p-2 text-gray-40o0 hover:text-white transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -282,7 +282,7 @@ const Revolutionary2026UltimateNavigation = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
+            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-purple-50o0/20"
           >
             <div className="px-4 py-6 space-y-6">
               {/* Mobile Services */}
@@ -291,8 +291,8 @@ const Revolutionary2026UltimateNavigation = () => {
                 <div className="space-y-3">
                   {serviceCategories.map((category) => (
                     <div key={category.title} className="space-y-2">
-                      <div className="flex items-center gap-3 text-purple-400">
-                        <category.icon className="w-5 h-5" />
+                      <div className="flex items-center gap-3 text-purple-40o0">
+                        <category.icon className="w-5 h-5"  />
                         <span className="font-medium">{category.title}</span>
                       </div>
                       <div className="ml-8 space-y-2">
@@ -301,7 +301,7 @@ const Revolutionary2026UltimateNavigation = () => {
                             key={service.name}
                             href={service.href}
                             onClick={closeAllDropdowns}
-                            className="block text-gray-300 hover:text-white transition-colors py-1"
+                            className="block text-gray-30o0 hover:text-white transition-colors py-1"
                           >
                             {service.name}
                           </Link>
@@ -319,27 +319,27 @@ const Revolutionary2026UltimateNavigation = () => {
                     key={link.name}
                     href={link.href}
                     onClick={closeAllDropdowns}
-                    className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors py-2"
+                    className="flex items-center gap-3 text-gray-30o0 hover:text-white transition-colors py-2"
                   >
-                    <link.icon className="w-5 h-5" />
+                    <link.icon className="w-5 h-5"  />
                     <span>{link.name}</span>
                   </Link>
                 ))}
               </div>
 
               {/* Mobile Contact Info */}
-              <div className="pt-6 border-t border-purple-500/20">
-                <div className="space-y-3 text-sm text-gray-400">
+              <div className="pt-6 border-t border-purple-50o0/20">
+                <div className="space-y-3 text-sm text-gray-40o0">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
+                    <Phone className="w-4 h-4 text-purple-40o0"  />
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4 text-purple-400" />
+                    <Mail className="w-4 h-4 text-purple-40o0"  />
                     <span>{contactInfo.email}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-purple-400" />
+                    <MapPin className="w-4 h-4 text-purple-40o0"  />
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
@@ -352,4 +352,4 @@ const Revolutionary2026UltimateNavigation = () => {
   );
 };
 
-export default Revolutionary2026UltimateNavigation;
+export default Revolutionary20o26UltimateNavigation;

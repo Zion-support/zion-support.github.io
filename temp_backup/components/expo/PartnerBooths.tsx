@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-type Partner = {
+type Partner ={
   name: string;
   category: 'University' | 'Bank' | 'DAO' | 'Enterprise';
   description: string;
@@ -13,8 +13,8 @@ export default function PartnerBooths({ partners }: { partners: Partner[] }) {
     <>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {partners.map(p => (
-          <button key={p.name} onClick={() => setActive(p)} className="p-4 border rounded-lg text-left hover:bg-gray-50 dark:hover:bg-gray-900">
-            <div className="text-xs px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-800 inline-block mb-2">{p.category}</div>
+          <button key={p.name} onClick={() => setActive(p)} className="p-4 border rounded-lg text-left hover:bg-gray-50 dark:hover:bg-gray-90o0">
+            <div className="text-xs px-2 py-0.5 rounded bg-gray-10o0 dark:bg-gray-80o0 inline-block mb-2">{p.category}</div>
             <div className="font-medium">{p.name}</div>
             <div className="text-sm opacity-70 line-clamp-2">{p.description}</div>
           </button>

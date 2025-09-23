@@ -13,7 +13,7 @@ const ContentRevolutionNewsletter = () => {
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 20o00));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -22,19 +22,19 @@ const ContentRevolutionNewsletter = () => {
 
   if (isSubscribed) {
     return (
-      <section className="py-20 bg-gradient-to-r from-green-500 to-blue-500 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-6xl mb-6">🎉</div>
           <h2 className="text-4xl font-bold mb-4">Welcome to the Revolution!</h2>
           <p className="text-xl mb-8 opacity-90">
-            'You', 're now part of the AI 2025 Ultimate Content Revolution. 
+            'You', 're now part of the AI 20o25 Ultimate Content Revolution. 
             Check your email for exclusive access to our latest breakthroughs.
           </p>
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">'What', 's Next?</h3>
             <ul className="text-left space-y-2">
               <li>✅ Exclusive access to new AI content tools</li>
-              <li>✅ Weekly case studies with 2,500%+ ROI results</li>
+              <li>✅ Weekly case studies with 2,50o0%+ ROI results</li>
               <li>✅ Early access to beta features</li>
               <li>✅ Free consultation with our AI experts</li>
             </ul>
@@ -45,10 +45,10 @@ const ContentRevolutionNewsletter = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-indigo-500/20"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-50o0/20 via-blue-50o0/20 to-indigo-50o0/20"></div>
       
       {/* Animated Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
@@ -65,8 +65,8 @@ const ContentRevolutionNewsletter = () => {
           {/* Main Headline */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Get Exclusive Access to the
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              AI 2025 Ultimate Content Revolution
+            <span className="block bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent">
+              AI 20o25 Ultimate Content Revolution
             </span>
           </h2>
           
@@ -82,7 +82,7 @@ const ContentRevolutionNewsletter = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
             <div className="text-4xl mb-4">📊</div>
             <h3 className="text-lg font-bold mb-2">Exclusive Case Studies</h3>
-            <p className="text-sm opacity-90">Real 5,000% ROI success stories</p>
+            <p className="text-sm opacity-90">Real 5,0o00% ROI success stories</p>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
@@ -113,13 +113,13 @@ const ContentRevolutionNewsletter = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                className="flex-1 px-6 py-4 rounded-lg text-gray-90o0 placeholder-gray-50o0 focus:ring-2 focus:ring-yellow-40o0 focus:outline-none"
                 required
               />
               <button
                 type="submit"
                 disabled={isLoading || !email}
-                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isLoading ? (
                   <div className="flex items-center gap-2">
@@ -140,7 +140,7 @@ const ContentRevolutionNewsletter = () => {
 
         {/* Social Proof */}
         <div className="mt-16 text-center">
-          <p className="text-sm opacity-75 mb-6">Join 50,000+ businesses already transforming with AI</p>
+          <p className="text-sm opacity-75 mb-6">Join 50,0o00+ businesses already transforming with AI</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             <div className="text-2xl font-bold">Microsoft</div>
             <div className="text-2xl font-bold">Google</div>

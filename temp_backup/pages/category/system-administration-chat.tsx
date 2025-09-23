@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function SystemAdministrationChatPage() {
@@ -6,7 +5,7 @@ export default function SystemAdministrationChatPage() {
     <>
       <Head>
         <title>System Administration Chat - Zion Tech Group</title>
-        <meta name="description" content="system administration chat page" />
+        <meta name="description" content="system administration chat page"  />
       </Head>
       
       <main>

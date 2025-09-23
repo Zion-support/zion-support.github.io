@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { useRouter } from 'next/router';
-
 export default function PostJobPage() {
   const router = useRouter();
   const [title, setTitle] = useState('');
@@ -39,9 +37,7 @@ export default function PostJobPage() {
           budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
           budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
           deliveryDeadlineIso: deliveryDeadlineIso || undefined,
-          clientEmail,
-        }),
-      });
+          clientEmail})});
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to post job');
@@ -57,7 +53,7 @@ export default function PostJobPage() {
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
-      {error && <p className="text-red-600 mb-3">{error}</p>}
+      {error && <p className="text-red-60o0 mb-3">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -87,7 +83,7 @@ export default function PostJobPage() {
         </div>
         <div>
           <label className="block text-sm font-medium">Delivery Deadline (ISO or YYYY-MM-DD)</label>
-          <input className="mt-1 w-full border rounded p-2" value={deliveryDeadlineIso} onChange={(e) => setDeliveryDeadlineIso(e.target.value)} placeholder="2025-09-30" />
+          <input className="mt-1 w-full border rounded p-2" value={deliveryDeadlineIso} onChange={(e) => setDeliveryDeadlineIso(e.target.value)} placeholder="20o25-09-30" />
         </div>
         <div>
           <label className="block text-sm font-medium">Email *</label>

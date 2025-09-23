@@ -41,7 +41,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ item, level = 0 }) => {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
             </svg>
           </button>
         )}
@@ -50,7 +50,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ item, level = 0 }) => {
       {hasChildren && isExpanded && (
         <div className="ml-4 space-y-1">
           {item.children!.map(child => (
-            <SidebarItem key={child.id} item={child} level={level + 1} />
+            <SidebarItem key={child.id} item={child} level={level + 1}  />
           ))}
         </div>
       )}
@@ -429,7 +429,7 @@ export default function SmartSidebar({
           {sidebarItems
             .sort((a, b) => (a.priority || 0) - (b.priority || 0))
             .map(item => (
-              <SidebarItem key={item.id} item={item} />
+              <SidebarItem key={item.id} item={item}  />
             ))
           }
         </nav>

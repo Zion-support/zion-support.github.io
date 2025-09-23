@@ -8,8 +8,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  SelectValue} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
 
@@ -21,15 +20,15 @@ export function MobileResumeBuilder() {
   const renderStepContent = () => {
     switch (currentStep) {
       case "basics":
-        return <BasicsStep />;
+        return <BasicsStep  />;
       case "experience":
-        return <ExperienceStep />;
+        return <ExperienceStep  />;
       case "education":
-        return <EducationStep />;
+        return <EducationStep  />;
       case "skills":
-        return <SkillsStep />;
+        return <SkillsStep  />;
       default:
-        return <BasicsStep />;
+        return <BasicsStep  />;
     }
   };
   
@@ -69,7 +68,7 @@ export function MobileResumeBuilder() {
       {renderStepContent()}
       
       <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
+        <Zap className="h-5 w-5"  /> Enhance with AI
       </Button>
       
       <Button variant="default" className="w-full" size="lg">
@@ -85,23 +84,23 @@ function BasicsStep() {
       <CardContent className="p-4 space-y-4">
         <div className="space-y-2">
           <Label htmlFor="title">Resume Title</Label>
-          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />
+          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer"  />
         </div>
         <div className="space-y-2">
           <Label htmlFor="fullName">Full Name</Label>
-          <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />
+          <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name"  />
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />
+          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email"  />
         </div>
         <div className="space-y-2">
           <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />
+          <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel"  />
         </div>
         <div className="space-y-2">
           <Label htmlFor="location">Location</Label>
-          <Input id="location" name="location" placeholder="City, Country" autoComplete="address-level2" />
+          <Input id="location" name="location" placeholder="City, Country" autoComplete="address-level2"  />
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
@@ -109,7 +108,7 @@ function BasicsStep() {
             id="summary" 
             placeholder="Write a brief summary about yourself" 
             rows={4}
-          />
+           />
         </div>
       </CardContent>
     </Card>
@@ -142,27 +141,27 @@ function ExperienceStep() {
                   onClick={() => removeExperience(exp.id)}
                   aria-label="Remove experience"
                 >
-                  <Trash2 className="h-5 w-5 text-destructive" />
+                  <Trash2 className="h-5 w-5 text-destructive"  />
                 </Button>
               )}
             </div>
             
             <div className="space-y-2">
               <Label htmlFor={`title-${exp.id}`}>Job Title</Label>
-              <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer" />
+              <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer"  />
             </div>
             <div className="space-y-2">
               <Label htmlFor={`company-${exp.id}`}>Company</Label>
-              <Input id={`company-${exp.id}`} placeholder="Company name" />
+              <Input id={`company-${exp.id}`} placeholder="Company name"  />
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-2">
                 <Label htmlFor={`startDate-${exp.id}`}>Start Date</Label>
-                <Input id={`startDate-${exp.id}`} type="month" />
+                <Input id={`startDate-${exp.id}`} type="month"  />
               </div>
               <div className="space-y-2">
                 <Label htmlFor={`endDate-${exp.id}`}>End Date</Label>
-                <Input id={`endDate-${exp.id}`} type="month" placeholder="Present" />
+                <Input id={`endDate-${exp.id}`} type="month" placeholder="Present"  />
               </div>
             </div>
             <div className="space-y-2">
@@ -171,7 +170,7 @@ function ExperienceStep() {
                 id={`description-${exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
                 rows={3}
-              />
+               />
             </div>
           </CardContent>
         </Card>
@@ -182,7 +181,7 @@ function ExperienceStep() {
         className="w-full gap-2" 
         onClick={addExperience}
       >
-        <Plus className="h-4 w-4" /> Add Another Experience
+        <Plus className="h-4 w-4"  /> Add Another Experience
       </Button>
     </div>
   );
@@ -214,31 +213,31 @@ function EducationStep() {
                   onClick={() => removeEducation(edu.id)}
                   aria-label="Remove education"
                 >
-                  <Trash2 className="h-5 w-5 text-destructive" />
+                  <Trash2 className="h-5 w-5 text-destructive"  />
                 </Button>
               )}
             </div>
             
             <div className="space-y-2">
               <Label htmlFor={`institution-${edu.id}`}>Institution</Label>
-              <Input id={`institution-${edu.id}`} placeholder="School or university name" />
+              <Input id={`institution-${edu.id}`} placeholder="School or university name"  />
             </div>
             <div className="space-y-2">
               <Label htmlFor={`degree-${edu.id}`}>Degree</Label>
-              <Input id={`degree-${edu.id}`} placeholder="e.g. Bachelor of Science" />
+              <Input id={`degree-${edu.id}`} placeholder="e.g. Bachelor of Science"  />
             </div>
             <div className="space-y-2">
               <Label htmlFor={`fieldOfStudy-${edu.id}`}>Field of Study</Label>
-              <Input id={`fieldOfStudy-${edu.id}`} placeholder="e.g. Computer Science" />
+              <Input id={`fieldOfStudy-${edu.id}`} placeholder="e.g. Computer Science"  />
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-2">
                 <Label htmlFor={`eduStartDate-${edu.id}`}>Start Date</Label>
-                <Input id={`eduStartDate-${edu.id}`} type="month" />
+                <Input id={`eduStartDate-${edu.id}`} type="month"  />
               </div>
               <div className="space-y-2">
                 <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>
-                <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />
+                <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present"  />
               </div>
             </div>
           </CardContent>
@@ -250,7 +249,7 @@ function EducationStep() {
         className="w-full gap-2" 
         onClick={addEducation}
       >
-        <Plus className="h-4 w-4" /> Add Another Education
+        <Plus className="h-4 w-4"  /> Add Another Education
       </Button>
     </div>
   );
@@ -294,7 +293,7 @@ function SkillsStep() {
                   onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
                 >
                   <SelectTrigger className="w-[130px]">
-                    <SelectValue placeholder="Level" />
+                    <SelectValue placeholder="Level"  />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="beginner">Beginner</SelectItem>
@@ -310,7 +309,7 @@ function SkillsStep() {
                     onClick={() => removeSkill(skill.id)}
                     aria-label="Remove skill"
                   >
-                    <Trash2 className="h-4 w-4 text-destructive" />
+                    <Trash2 className="h-4 w-4 text-destructive"  />
                   </Button>
                 )}
               </div>
@@ -321,7 +320,7 @@ function SkillsStep() {
               className="w-full gap-2" 
               onClick={addSkill}
             >
-              <Plus className="h-4 w-4" /> Add Another Skill
+              <Plus className="h-4 w-4"  /> Add Another Skill
             </Button>
           </div>
         </CardContent>

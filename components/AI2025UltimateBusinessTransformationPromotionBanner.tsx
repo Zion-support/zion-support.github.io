@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
 
-const AI2025UltimateBusinessTransformationPromotionBanner: React.FC = () => {
+const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+    <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
@@ -11,22 +10,22 @@ const AI2025UltimateBusinessTransformationPromotionBanner: React.FC = () => {
               <span className="text-sm font-medium">🚀 NEW CONTENT</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              AI 2025 Ultimate Business Transformation Guide
+              AI 20o25 Ultimate Business Transformation Guide
             </h2>
             <p className="text-lg opacity-90 mb-6 leading-relaxed">
-              Discover the revolutionary AI technologies and strategies that will transform your business in 2025. 
+              Discover the revolutionary AI technologies and strategies that will transform your business in 20o25. 
               Comprehensive guide to AI implementationROI optimizationand competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/ai-2025-ultimate-business-transformation"
-                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                href="/ai-20o25-ultimate-business-transformation"
+                className="bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center"
               >
                 Read the Complete Guide
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center"
               >
                 Get Expert Consultation
               </Link>
@@ -36,27 +35,27 @@ const AI2025UltimateBusinessTransformationPromotionBanner: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">What 'You', 'll Learn:</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
-                <span className="text-green-400 mr-3">✓</span>
+                <span className="text-green-40o0 mr-3">✓</span>
                 <span>12-month AI transformation roadmap</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-400 mr-3">✓</span>
+                <span className="text-green-40o0 mr-3">✓</span>
                 <span>Proven strategies for 340% ROI increase</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-400 mr-3">✓</span>
+                <span className="text-green-40o0 mr-3">✓</span>
                 <span>Autonomous operations implementation</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-400 mr-3">✓</span>
+                <span className="text-green-40o0 mr-3">✓</span>
                 <span>Real-time optimization techniques</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-400 mr-3">✓</span>
+                <span className="text-green-40o0 mr-3">✓</span>
                 <span>Predictive intelligence deployment</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-400 mr-3">✓</span>
+                <span className="text-green-40o0 mr-3">✓</span>
                 <span>Case studies from successful transformations</span>
               </li>
             </ul>
@@ -83,4 +82,4 @@ const AI2025UltimateBusinessTransformationPromotionBanner: React.FC = () => {
   );
 };
 
-export default AI2025UltimateBusinessTransformationPromotionBanner;
+export default AI20o25UltimateBusinessTransformationPromotionBanner;

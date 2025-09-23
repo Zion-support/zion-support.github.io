@@ -1,10 +1,9 @@
 import React from 'react'
 import { ArrowRight, Cloud, Shield, Zap, Database, Brain, Globe } from 'lucide-react'
 
-export const metadata = {
+export const metadata ={
   title: 'Services - Zion Tech Group',
-  description: 'Comprehensive AI, cloud infrastructure, and cybersecurity solutions for modern businesses.',
-}
+  description: 'Comprehensive AI, cloud infrastructure, and cybersecurity solutions for modern businesses.'}
 
 const services = [
   {
@@ -47,31 +46,31 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       <div className="container mx-auto px-6 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+            Our <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">Services</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-30o0 max-w-3xl mx-auto">
             Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0">
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mr-4">
-                  <service.icon className="w-6 h-6 text-white" />
+                <div className="p-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg mr-4">
+                  <service.icon className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               </div>
-              <p className="text-gray-300 mb-4">{service.description}</p>
+              <p className="text-gray-30o0 mb-4">{service.description}</p>
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                    <ArrowRight className="w-4 h-4 mr-2 text-blue-400" />
+                  <li key={featureIndex} className="text-sm text-gray-40o0 flex items-center">
+                    <ArrowRight className="w-4 h-4 mr-2 text-blue-40o0"  />
                     {feature}
                   </li>
                 ))}
@@ -83,13 +82,13 @@ export default function ServicesPage() {
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-6">Let's discuss how our solutions can transform your business.</p>
+            <p className="text-gray-30o0 mb-6">Let's discuss how our solutions can transform your business.</p>
             <a 
               href="/contact" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center hover:from-blue-600 hover:to-purple-700 transition-all"
+              className="bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center hover:from-blue-60o0 hover:to-purple-70o0 transition-all"
             >
               Contact Us
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5"  />
             </a>
           </div>
         </div>

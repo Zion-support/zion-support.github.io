@@ -14,30 +14,30 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentAnnouncement(prev => (prev + 1) % 3);
-    }4000);
+    }40o00);
     return () => clearInterval(interval);
   }[]);
 
   const announcements = [
     {
-      title: "AI 2025 Breakthrough Achieved",
-      description: "Revolutionary AI technology delivering 5,000% ROI increase",
+      title: "AI 20o25 Breakthrough Achieved",
+      description: "Revolutionary AI technology delivering 5,0o00% ROI increase",
       icon: Zap,
-      color: "from-purple-500 to-blue-500",
+      color: "from-purple-50o0 to-blue-50o0",
       urgency: "Just Announced"
     },
     {
       title: "Quantum Supremacy Unlocked",
       description: "Error-corrected quantum computers now available",
       icon: TrendingUp,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-50o0 to-cyan-50o0",
       urgency: "Breaking News"
     },
     {
       title: "Global Implementation Success",
       description: "10M+ users transformed across 150+ countries",
       icon: Users,
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-50o0 to-emerald-50o0",
       urgency: "Worldwide Impact"
     }
   ];
@@ -53,10 +53,10 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 py-12"
+      className="relative overflow-hidden bg-gradient-to-r from-red-90o0 via-orange-90o0 to-yellow-90o0 py-12"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.0o46-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -68,14 +68,14 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               transition={{ delay: 0.2duration: 0.6 }}
               className="mb-4"
             >
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                <Bell className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-60o0 to-orange-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <Bell className="w-4 h-4"  />
                 Revolutionary Tech Announcement
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-yellow-100 to-orange-200 bg-clip-text text-transparent mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-yellow-10o0 to-orange-20o0 bg-clip-text text-transparent mb-4">
                 Breaking: Technology Revolution
               </h2>
-              <p className="text-xl text-gray-300 mb-6 max-w-2xl">
+              <p className="text-xl text-gray-30o0 mb-6 max-w-2xl">
                 Revolutionary breakthroughs in AIquantum computingand automation are reshaping the future of technology. 
                 Be among the first to experience the transformation.
               </p>
@@ -87,20 +87,20 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 mb-6"
+              className="bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm border border-gray-70o0 rounded-2xl p-6 mb-6"
             >
               <div className="flex items-center gap-4">
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${announcements[currentAnnouncement].color}`}>
-                  <announcements[currentAnnouncement].icon className="w-6 h-6 text-white" />
+                  <announcements[currentAnnouncement].icon className="w-6 h-6 text-white"  />
                 </div>
                 <div>
-                  <div className="text-sm text-orange-400 font-semibold mb-1">
+                  <div className="text-sm text-orange-40o0 font-semibold mb-1">
                     {announcements[currentAnnouncement].urgency}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-1">
                     {announcements[currentAnnouncement].title}
                   </h3>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-30o0 text-sm">
                     {announcements[currentAnnouncement].description}
                   </p>
                 </div>
@@ -116,14 +116,14 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
             >
               <Link
                 href="/revolutionary-tech"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-60o0 to-orange-60o0 text-white px-6 py-3 rounded-full font-semibold hover:from-red-70o0 hover:to-orange-70o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Learn More
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 border-2 border-gray-400 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-300 hover:bg-gray-800/50 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border-2 border-gray-40o0 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-30o0 hover:bg-gray-80o0/50 transition-all duration-30o0"
               >
                 Get Early Access
               </Link>
@@ -137,7 +137,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
             transition={{ delay: 0.3duration: 0.6 }}
             className="flex-shrink-0"
           >
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
+            <div className="bg-gray-80o0/50 backdrop-blur-sm border border-gray-70o0 rounded-2xl p-8 min-w-[30o0px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Revolution Impact</h3>
               
               {/* Stats Grid */}
@@ -150,11 +150,11 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                     transition={{ delay: 0.8 + index * 0.1duration: 0.5 }}
                     className="text-center"
                   >
-                    <div className="inline-flex p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl mb-3">
-                      <stat.icon className="w-6 h-6 text-white" />
+                    <div className="inline-flex p-3 bg-gradient-to-r from-red-60o0 to-orange-60o0 rounded-xl mb-3">
+                      <stat.icon className="w-6 h-6 text-white"  />
                     </div>
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-40o0 text-sm">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -164,9 +164,9 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1duration: 0.5 }}
-                className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
+                className="mt-6 flex items-center justify-center gap-2 text-orange-40o0 text-sm"
               >
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4"  />
                 <span>Limited time - Act now!</span>
               </motion.div>
             </div>

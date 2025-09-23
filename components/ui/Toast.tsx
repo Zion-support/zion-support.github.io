@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
 interface ToastProps {
@@ -14,14 +12,14 @@ const Toast: React.FC<ToastProps> = ({ id, type, title, message, onRemove }) => 
   const getToastStyles = () => {
     switch (type) {
       case 'success':
-        return 'bg-green-500 text-white';
+        return 'bg-green-50o0 text-white';
       case 'error':
-        return 'bg-red-500 text-white';
+        return 'bg-red-50o0 text-white';
       case 'warning':
-        return 'bg-yellow-500 text-black';
+        return 'bg-yellow-50o0 text-black';
       case 'info':
       default:
-        return 'bg-blue-500 text-white';
+        return 'bg-blue-50o0 text-white';
     }
   };
 
@@ -34,7 +32,7 @@ const Toast: React.FC<ToastProps> = ({ id, type, title, message, onRemove }) => 
         </div>
         <button
           onClick={() => onRemove(id)}
-          className="ml-4 text-white hover:text-gray-200"
+          className="ml-4 text-white hover:text-gray-20o0"
         >
           ×
         </button>

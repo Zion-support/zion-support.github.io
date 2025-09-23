@@ -45,9 +45,9 @@ export default function AutonomousEnterpriseReadinessAssessment() {
       question: 'What is your AI implementation budget?',
       options: [
         { value: 'unlimited', label: 'Unlimited budget for AI initiatives', score: 4 },
-        { value: 'substantial', label: 'Substantial budget ($500K+)', score: 3 },
-        { value: 'moderate', label: 'Moderate budget ($100K-500K)', score: 2 },
-        { value: 'limited', label: 'Limited budget (<$100K)', score: 1 }
+        { value: 'substantial', label: 'Substantial budget ($50o0K+)', score: 3 },
+        { value: 'moderate', label: 'Moderate budget ($10o0K-50o0K)', score: 2 },
+        { value: 'limited', label: 'Limited budget (<$10o0K)', score: 1 }
       ]
     },
     {
@@ -113,68 +113,68 @@ export default function AutonomousEnterpriseReadinessAssessment() {
   if (showResults) {
     const readiness = getReadinessLevel(score);
     const maxScore = questions.length * 4;
-    const percentage = Math.round((score / maxScore) * 100);
+    const percentage = Math.round((score / maxScore) * 10o0);
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <TrendingUp className="w-8 h-8 text-blue-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-10o0 rounded-full mb-4">
+                <TrendingUp className="w-8 h-8 text-blue-60o0"  />
               </div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Autonomous Enterprise Readiness Assessment Results</h1>
-              <p className="text-gray-600">Your organization's autonomous enterprise readiness score</p>
+              <h1 className="text-3xl font-bold text-gray-90o0 mb-2">Autonomous Enterprise Readiness Assessment Results</h1>
+              <p className="text-gray-60o0">Your organization's autonomous enterprise readiness score</p>
             </div>
 
             <div className="text-center mb-8">
-              <div className="text-6xl font-bold text-gray-900 mb-2">{percentage}%</div>
-              <div className={`text-2xl font-semibold mb-2 text-${readiness.color}-600`}>
+              <div className="text-6xl font-bold text-gray-90o0 mb-2">{percentage}%</div>
+              <div className={`text-2xl font-semibold mb-2 text-${readiness.color}-60o0`}>
                 {readiness.level} Readiness
               </div>
-              <p className="text-gray-600">{readiness.description}</p>
+              <p className="text-gray-60o0">{readiness.description}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-2">{score}</div>
-                <div className="text-sm text-gray-600">Total Score</div>
+                <div className="text-2xl font-bold text-gray-90o0 mb-2">{score}</div>
+                <div className="text-sm text-gray-60o0">Total Score</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-2">{maxScore}</div>
-                <div className="text-sm text-gray-600">Maximum Score</div>
+                <div className="text-2xl font-bold text-gray-90o0 mb-2">{maxScore}</div>
+                <div className="text-sm text-gray-60o0">Maximum Score</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-2">{questions.length}</div>
-                <div className="text-sm text-gray-600">Questions Answered</div>
+                <div className="text-2xl font-bold text-gray-90o0 mb-2">{questions.length}</div>
+                <div className="text-sm text-gray-60o0">Questions Answered</div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Recommendations</h3>
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-4">Recommendations</h3>
               <div className="space-y-3">
                 {score < 10 && (
                   <div className="flex items-start">
-                    <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">Focus on data quality improvement and team training before AI implementation</span>
+                    <AlertCircle className="w-5 h-5 text-red-50o0 mr-3 mt-0.5 flex-shrink-0"  />
+                    <span className="text-sm text-gray-70o0">Focus on data quality improvement and team training before AI implementation</span>
                   </div>
                 )}
                 {score >= 10 && score < 14 && (
                   <div className="flex items-start">
-                    <AlertCircle className="w-5 h-5 text-yellow-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">Address infrastructure gaps and build AI capabilities before scaling</span>
+                    <AlertCircle className="w-5 h-5 text-yellow-50o0 mr-3 mt-0.5 flex-shrink-0"  />
+                    <span className="text-sm text-gray-70o0">Address infrastructure gaps and build AI capabilities before scaling</span>
                   </div>
                 )}
                 {score >= 14 && score < 18 && (
                   <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">Start with pilot projects and gradually scale AI implementation</span>
+                    <CheckCircle className="w-5 h-5 text-green-50o0 mr-3 mt-0.5 flex-shrink-0"  />
+                    <span className="text-sm text-gray-70o0">Start with pilot projects and gradually scale AI implementation</span>
                   </div>
                 )}
                 {score >= 18 && (
                   <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">Ready for full-scale AI implementation with proper planning</span>
+                    <CheckCircle className="w-5 h-5 text-green-50o0 mr-3 mt-0.5 flex-shrink-0"  />
+                    <span className="text-sm text-gray-70o0">Ready for full-scale AI implementation with proper planning</span>
                   </div>
                 )}
               </div>
@@ -183,13 +183,13 @@ export default function AutonomousEnterpriseReadinessAssessment() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={resetAssessment}
-                className="px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors"
+                className="px-6 py-3 bg-gray-60o0 text-white font-semibold rounded-lg hover:bg-gray-70o0 transition-colors"
               >
                 Retake Assessment
               </button>
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-center"
+                className="px-6 py-3 bg-blue-60o0 text-white font-semibold rounded-lg hover:bg-blue-70o0 transition-colors text-center"
               >
                 Get Expert Consultation
               </Link>
@@ -201,32 +201,32 @@ export default function AutonomousEnterpriseReadinessAssessment() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-              <ArrowRight className="w-8 h-8 text-blue-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-10o0 rounded-full mb-4">
+              <ArrowRight className="w-8 h-8 text-blue-60o0"  />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Autonomous Enterprise Readiness Assessment</h1>
-            <p className="text-gray-600">Evaluate your organization's readiness for autonomous enterprise transformation</p>
+            <h1 className="text-3xl font-bold text-gray-90o0 mb-2">Autonomous Enterprise Readiness Assessment</h1>
+            <p className="text-gray-60o0">Evaluate your organization's readiness for autonomous enterprise transformation</p>
           </div>
 
           <div className="mb-8">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Progress</span>
-              <span className="text-sm font-medium text-gray-700">{currentStep + 1} of {questions.length}</span>
+              <span className="text-sm font-medium text-gray-70o0">Progress</span>
+              <span className="text-sm font-medium text-gray-70o0">{currentStep + 1} of {questions.length}</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-20o0 rounded-full h-2">
               <div 
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}
+                className="bg-blue-60o0 h-2 rounded-full transition-all duration-30o0"
+                style={{ width: `${((currentStep + 1) / questions.length) * 10o0}%` }}
               ></div>
             </div>
           </div>
 
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-6">
+            <h2 className="text-xl font-semibold text-gray-90o0 mb-6">
               {questions[currentStep].question}
             </h2>
             <div className="space-y-3">
@@ -235,8 +235,8 @@ export default function AutonomousEnterpriseReadinessAssessment() {
                   key={option.value}
                   className={`flex items-start p-4 rounded-lg border-2 cursor-pointer transition-all ${
                     answers[questions[currentStep].id] === option.value
-                      ? 'border-blue-500 bg-blue-50'
-                      : 'border-gray-200 hover:border-gray-300'
+                      ? 'border-blue-50o0 bg-blue-50'
+                      : 'border-gray-20o0 hover:border-gray-30o0'
                   }`}
                 >
                   <input
@@ -247,7 +247,7 @@ export default function AutonomousEnterpriseReadinessAssessment() {
                     onChange={(e) => handleAnswer(questions[currentStep].id, e.target.value)}
                     className="mt-1 mr-3"
                   />
-                  <span className="text-gray-700">{option.label}</span>
+                  <span className="text-gray-70o0">{option.label}</span>
                 </label>
               ))}
             </div>
@@ -257,14 +257,14 @@ export default function AutonomousEnterpriseReadinessAssessment() {
             <button
               onClick={prevStep}
               disabled={currentStep === 0}
-              className="px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-3 bg-gray-60o0 text-white font-semibold rounded-lg hover:bg-gray-70o0 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Previous
             </button>
             <button
               onClick={nextStep}
               disabled={!answers[questions[currentStep].id]}
-              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-3 bg-blue-60o0 text-white font-semibold rounded-lg hover:bg-blue-70o0 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {currentStep === questions.length - 1 ? 'Get Results' : 'Next'}
             </button>

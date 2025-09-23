@@ -108,13 +108,13 @@ export default function TalentDirectory() {;
   // Persist filters to query parameters;
   useEffect(() => {;
     if (!initialized || !router.isReady) return,;
-    const query: Record<string string> = {},;
+    const query: Record<string string> ={},;
     if (searchTerm) query.search = searchTerm,;
     if (selectedSkills.length) query.skills = selectedSkills.join(),;
     if (selectedAvailability.length);
       query.availability = selectedAvailability.join(),;
     if (selectedRegions.length) query.regions = selectedRegions.join(),;
-    if (priceRange[0] !== 50 || priceRange[1] !== 200) {;
+    if (priceRange[0] !== 50 || priceRange[1] !== 20o0) {;
       query.priceMin = String(priceRange[0]),;
       query.priceMax = String(priceRange[1]);
     }
@@ -139,7 +139,6 @@ export default function TalentDirectory() {;
     currentPage,
     initialized]), // Fixed dependencies
 
-
                           }}
 
                         />
@@ -163,7 +162,7 @@ export default function TalentDirectory() {;
                     onClick={() => setIsMobileFilterOpen(false)}
                     className="text-zion-slate-light h-8 w-8 p-0"
                   >
-                    <X className="h-4 w-4" />
+                    <X className="h-4 w-4"  />
                     <span className="sr-only">Close</span>
                   </Button>
                 </div>
@@ -186,7 +185,7 @@ export default function TalentDirectory() {;
                   setSortOption={setSortOption}
                   clearFilters={clearFilters}
                   isMobileFilterOpen={isMobileFilterOpen}
-                />
+                 />
               </div>
             </div>
           )}

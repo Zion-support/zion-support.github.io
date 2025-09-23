@@ -1,6 +1,5 @@
 
 
-
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   // add more env variables as needed
@@ -13,7 +12,7 @@ interface ImportMeta {
 // Global type declarations
 declare namespace React {
   type ReactNode = React.ReactNode;
-  type FC<P = {}> = React.FC<P>;
+  type FC<P ={}> = React.FC<P>;
   type FormEvent<T = Element> = React.FormEvent<T>;
   type KeyboardEvent<T = Element> = React.KeyboardEvent<T>;
   type ChangeEvent<T = Element> = React.ChangeEvent<T>;

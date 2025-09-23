@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const metadata = {
+export const metadata ={
   title: "AI Chatbot Builder | Zion Tech Group",
   description:
     "Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement."};
@@ -9,10 +9,10 @@ export default function AIChatbotBuilderPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
           AI Chatbot Builder
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
           Build intelligent chatbots with our no-code platform. Create custom AI
           assistants for customer support, sales, and engagement that understand
           context and provide human-like responses.
@@ -28,7 +28,7 @@ export default function AIChatbotBuilderPage() {
             "Multi-language support",
             "Visual flow designer",
             "Template library"]}
-        />
+         />
         <FeatureCard
           title="AI Intelligence"
           details={[
@@ -37,7 +37,7 @@ export default function AIChatbotBuilderPage() {
             "Sentiment analysis",
             "Intent recognition",
             "Learning from conversations"]}
-        />
+         />
         <FeatureCard
           title="Integration & Analytics"
           details={[
@@ -46,29 +46,29 @@ export default function AIChatbotBuilderPage() {
             "Conversation analytics",
             "Performance metrics",
             "A/B testing tools"]}
-        />
+         />
       </div>
 
-      <PricingSection />
+      <PricingSection  />
 
-      <div className="mt-16 bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="mt-16 bg-gradient-to-r from-orange-50 to-red-50 border border-orange-20o0 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
           Ready to Build Your AI Chatbot?
         </h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        <p className="text-gray-60o0 mb-6 max-w-2xl mx-auto">
           Start building your intelligent chatbot today. No technical skills
           required - just drag, drop, and deploy.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-orange-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-70o0 transition-colors"
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors"
+            className="border-2 border-orange-60o0 text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-orange-60o0 hover:text-white transition-colors"
           >
             Email Us
           </a>
@@ -80,12 +80,12 @@ export default function AIChatbotBuilderPage() {
 
 function FeatureCard({ title, details }: { title: string; details: string[] }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
+    <div className="border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-60o0">
         {details.map((detail, index) => (
           <li key={index} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {detail}
+            <span className="text-orange-50o0 mr-2">•</span> {detail}
           </li>
         ))}
       </ul>
@@ -96,7 +96,7 @@ function FeatureCard({ title, details }: { title: string; details: string[] }) {
 function PricingSection() {
   return (
     <div className="mb-12">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+      <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-8">
         Pricing Plans
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -104,23 +104,23 @@ function PricingSection() {
           name="Starter"
           price="$29/mo"
           features={[
-            "Up to 1,000 conversations/month",
+            "Up to 1,0o00 conversations/month",
             "Basic AI responses",
             "Email support",
             "Standard integrations",
             "Basic analytics"]}
-        />
+         />
         <PricingPlan
           name="Professional"
           price="$99/mo"
           features={[
-            "Up to 10,000 conversations/month",
+            "Up to 10,0o00 conversations/month",
             "Advanced AI with context",
             "Priority support",
             "All integrations",
             "Advanced analytics & A/B testing"]}
           featured={true}
-        />
+         />
         <PricingPlan
           name="Enterprise"
           price="$299/mo"
@@ -130,7 +130,7 @@ function PricingSection() {
             "Dedicated support",
             "White-label solution",
             "Custom integrations & SLA"]}
-        />
+         />
       </div>
     </div>
   );
@@ -150,25 +150,25 @@ function PricingPlan({
     <div
       className={`border rounded-xl p-6 ${
         featured
-          ? "border-orange-500 bg-orange-50 shadow-lg"
-          : "border-gray-200 bg-white shadow-sm"
+          ? "border-orange-50o0 bg-orange-50 shadow-lg"
+          : "border-gray-20o0 bg-white shadow-sm"
       }`}
     >
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
+      <h4 className="text-xl font-bold text-gray-90o0 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-gray-90o0 mb-4">{price}</div>
+      <ul className="space-y-2 text-gray-60o0 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <span className="text-orange-500 mr-2">✓</span> {feature}
+            <span className="text-orange-50o0 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel:+130o24640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
           featured
-            ? "bg-orange-600 text-white hover:bg-orange-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? "bg-orange-60o0 text-white hover:bg-orange-70o0"
+            : "bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0"
         }`}
       >
         Get Started

@@ -18,7 +18,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   const getRegionEmoji = (countryName: string | undefined): string => {
     if (!countryName) return "🌐";
     
-    const emojiMap: Record<string, string> = {
+    const emojiMap: Record<string, string> ={
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
@@ -57,7 +57,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   };
   
   return (
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
+    <Card className={`h-full transition-all duration-30o0 hover:shadow-lg ${
       isPopular 
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
         : "bg-zion-blue-dark border-zion-blue-light"
@@ -80,19 +80,19 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
-            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1"  />
             <span>Typical response time: {getResponseTime(country.country)}</span>
           </div>
           <div className="flex items-start">
-            <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+            <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1"  />
             <span>Service available in major cities</span>
           </div>
           <div className="flex items-start">
-            <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+            <Server className="h-4 w-4 mr-2 text-zion-purple mt-1"  />
             <span>Hardware & network support</span>
           </div>
           <div className="flex items-start">
-            <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+            <Check className="h-4 w-4 mr-2 text-zion-purple mt-1"  />
             <span>First hour included</span>
           </div>
         </div>

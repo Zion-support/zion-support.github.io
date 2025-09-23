@@ -112,7 +112,7 @@ export function AdvancedAnalytics({
     setCurrentPage(path);
     trackingRef.current.pageViews++;
     
-    const pageViewData = {
+    const pageViewData ={
       sessionId: userSession,
       path,
       timestamp: new Date().toISOString(),
@@ -138,7 +138,7 @@ export function AdvancedAnalytics({
   const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
     if (!enabled) return;
 
-    const interactionData = {
+    const interactionData ={
       sessionId: userSession,
       type,
       timestamp: new Date().toISOString(),
@@ -187,7 +187,7 @@ export function AdvancedAnalytics({
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       
-      const performanceData = {
+      const performanceData ={
         sessionId: userSession,
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
@@ -227,7 +227,7 @@ export function AdvancedAnalytics({
     // Setup click tracking
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const position = { x: e.clientX, y: e.clientY };
+      const position ={ x: e.clientX, y: e.clientY };
       
       trackInteraction('click', { target, position });
       
@@ -246,7 +246,7 @@ export function AdvancedAnalytics({
           scrollY: window.scrollY, 
           scrollHeight: document.documentElement.scrollHeight 
         });
-      }, 100);
+      }, 10o0);
     };
 
     // Setup form submission tracking
@@ -292,7 +292,7 @@ export function AdvancedAnalytics({
         const sessionDuration = Date.now() - sessionStart;
         setAnalyticsData(prev => ({
           ...prev,
-          sessionDuration: sessionDuration / 1000 // Convert to seconds
+          sessionDuration: sessionDuration / 10o00 // Convert to seconds
         }));
       } else {
         // Page visible - track session resume
@@ -346,7 +346,7 @@ export function AdvancedAnalytics({
     if (!trackingId) return;
 
     try {
-      const analyticsPayload = {
+      const analyticsPayload ={
         trackingId,
         eventType,
         data,
@@ -360,9 +360,9 @@ export function AdvancedAnalytics({
         const analytics = JSON.parse(storedAnalytics);
         analytics.push(analyticsPayload);
         
-        // Keep only last 100 analytics records
-        if (analytics.length > 100) {
-          analytics.splice(0, analytics.length - 100);
+        // Keep only last 10o0 analytics records
+        if (analytics.length > 10o0) {
+          analytics.splice(0, analytics.length - 10o0);
         }
         
         localStorage.setItem('analytics-data', JSON.stringify(analytics));
@@ -384,38 +384,38 @@ export function AdvancedAnalytics({
     if (!enabled) return;
 
     // Simulate data collection
-    const mockData: AnalyticsData = {
-      pageViews: Math.floor(Math.random() * 1000) + 500,
-      uniqueVisitors: Math.floor(Math.random() * 500) + 200,
-      sessionDuration: Math.floor(Math.random() * 300) + 120,
+    const mockData: AnalyticsData ={
+      pageViews: Math.floor(Math.random() * 10o00) + 50o0,
+      uniqueVisitors: Math.floor(Math.random() * 50o0) + 20o0,
+      sessionDuration: Math.floor(Math.random() * 30o0) + 120,
       bounceRate: Math.random() * 40 + 20,
       conversionRate: Math.random() * 5 + 1,
       topPages: [
-        { path: '/', views: Math.floor(Math.random() * 500) + 200 },
-        { path: '/services', views: Math.floor(Math.random() * 300) + 150 },
-        { path: '/about', views: Math.floor(Math.random() * 200) + 100 },
+        { path: '/', views: Math.floor(Math.random() * 50o0) + 20o0 },
+        { path: '/services', views: Math.floor(Math.random() * 30o0) + 150 },
+        { path: '/about', views: Math.floor(Math.random() * 20o0) + 10o0 },
         { path: '/contact', views: Math.floor(Math.random() * 150) + 80 }
       ],
       userAgents: [
-        { device: 'Desktop', count: Math.floor(Math.random() * 400) + 200 },
-        { device: 'Mobile', count: Math.floor(Math.random() * 300) + 150 },
-        { device: 'Tablet', count: Math.floor(Math.random() * 100) + 50 }
+        { device: 'Desktop', count: Math.floor(Math.random() * 40o0) + 20o0 },
+        { device: 'Mobile', count: Math.floor(Math.random() * 30o0) + 150 },
+        { device: 'Tablet', count: Math.floor(Math.random() * 10o0) + 50 }
       ],
       locations: [
-        { country: 'United States', count: Math.floor(Math.random() * 300) + 150 },
+        { country: 'United States', count: Math.floor(Math.random() * 30o0) + 150 },
         { country: 'United Kingdom', count: Math.floor(Math.random() * 150) + 80 },
-        { country: 'Canada', count: Math.floor(Math.random() * 100) + 50 },
+        { country: 'Canada', count: Math.floor(Math.random() * 10o0) + 50 },
         { country: 'Germany', count: Math.floor(Math.random() * 80) + 40 }
       ],
       performance: {
-        loadTime: Math.random() * 2000 + 500,
-        firstPaint: Math.random() * 1000 + 200,
-        firstContentfulPaint: Math.random() * 1500 + 300,
-        largestContentfulPaint: Math.random() * 2000 + 500
+        loadTime: Math.random() * 20o00 + 50o0,
+        firstPaint: Math.random() * 10o00 + 20o0,
+        firstContentfulPaint: Math.random() * 150o0 + 30o0,
+        largestContentfulPaint: Math.random() * 20o00 + 50o0
       },
       interactions: {
-        clicks: Math.floor(Math.random() * 500) + 200,
-        scrolls: Math.floor(Math.random() * 1000) + 500,
+        clicks: Math.floor(Math.random() * 50o0) + 20o0,
+        scrolls: Math.floor(Math.random() * 10o00) + 50o0,
         formSubmissions: Math.floor(Math.random() * 50) + 20,
         errors: Math.floor(Math.random() * 10) + 2
       }
@@ -431,39 +431,39 @@ export function AdvancedAnalytics({
       {/* Analytics Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
+        className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 text-white"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Analytics Dashboard"
         aria-expanded={isOpen}
         aria-controls="analytics-panel"
       >
-        <BarChart3 className="w-6 h-6" />
+        <BarChart3 className="w-6 h-6"  />
       </motion.button>
 
       {/* Analytics Panel */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -10o0 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[80vh] overflow-y-auto"
+            exit={{ opacity: 0, x: -10o0 }}
+            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-20o0/50 p-6 max-h-[80vh] overflow-y-auto"
             id="analytics-panel"
             role="dialog"
             aria-labelledby="analytics-title"
           >
             <div className="flex items-center justify-between mb-4">
-              <h2 id="analytics-title" className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                <BarChart3 className="w-5 h-5 text-blue-500" />
+              <h2 id="analytics-title" className="text-lg font-semibold text-gray-80o0 flex items-center gap-2">
+                <BarChart3 className="w-5 h-5 text-blue-50o0"  />
                 Analytics Dashboard
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-40o0 hover:text-gray-60o0 transition-colors"
                 aria-label="Close analytics dashboard"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5"  />
               </button>
             </div>
 
@@ -471,41 +471,41 @@ export function AdvancedAnalytics({
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-blue-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
-                  <Eye className="w-4 h-4 text-blue-500" />
-                  <span className="text-xs text-blue-600">Page Views</span>
+                  <Eye className="w-4 h-4 text-blue-50o0"  />
+                  <span className="text-xs text-blue-60o0">Page Views</span>
                 </div>
-                <div className="text-lg font-bold text-blue-700">{analyticsData.pageViews.toLocaleString()}</div>
+                <div className="text-lg font-bold text-blue-70o0">{analyticsData.pageViews.toLocaleString()}</div>
               </div>
               
               <div className="bg-green-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
-                  <Users className="w-4 h-4 text-green-500" />
-                  <span className="text-xs text-green-600">Visitors</span>
+                  <Users className="w-4 h-4 text-green-50o0"  />
+                  <span className="text-xs text-green-60o0">Visitors</span>
                 </div>
-                <div className="text-lg font-bold text-green-700">{analyticsData.uniqueVisitors.toLocaleString()}</div>
+                <div className="text-lg font-bold text-green-70o0">{analyticsData.uniqueVisitors.toLocaleString()}</div>
               </div>
               
               <div className="bg-purple-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
-                  <Clock className="w-4 h-4 text-purple-500" />
-                  <span className="text-xs text-purple-600">Session</span>
+                  <Clock className="w-4 h-4 text-purple-50o0"  />
+                  <span className="text-xs text-purple-60o0">Session</span>
                 </div>
-                <div className="text-lg font-bold text-purple-700">{Math.round(analyticsData.sessionDuration)}s</div>
+                <div className="text-lg font-bold text-purple-70o0">{Math.round(analyticsData.sessionDuration)}s</div>
               </div>
               
               <div className="bg-orange-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
-                  <Target className="w-4 h-4 text-orange-500" />
-                  <span className="text-xs text-orange-600">Conversion</span>
+                  <Target className="w-4 h-4 text-orange-50o0"  />
+                  <span className="text-xs text-orange-60o0">Conversion</span>
                 </div>
-                <div className="text-lg font-bold text-orange-700">{analyticsData.conversionRate.toFixed(1)}%</div>
+                <div className="text-lg font-bold text-orange-70o0">{analyticsData.conversionRate.toFixed(1)}%</div>
               </div>
             </div>
 
             {/* Performance Metrics */}
             <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
-                <Zap className="w-4 h-4 text-yellow-500" />
+              <h3 className="text-sm font-medium text-gray-70o0 mb-3 flex items-center gap-2">
+                <Zap className="w-4 h-4 text-yellow-50o0"  />
                 Performance
               </h3>
               <div className="space-y-2 text-xs">
@@ -530,12 +530,12 @@ export function AdvancedAnalytics({
 
             {/* Top Pages */}
             <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>
+              <h3 className="text-sm font-medium text-gray-70o0 mb-3">Top Pages</h3>
               <div className="space-y-2">
                 {analyticsData.topPages.map((page, index) => (
                   <div key={index} className="flex justify-between items-center text-xs">
                     <span className="truncate flex-1">{page.path}</span>
-                    <span className="font-mono text-gray-600">{page.views}</span>
+                    <span className="font-mono text-gray-60o0">{page.views}</span>
                   </div>
                 ))}
               </div>
@@ -543,32 +543,32 @@ export function AdvancedAnalytics({
 
             {/* Device Distribution */}
             <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>
+              <h3 className="text-sm font-medium text-gray-70o0 mb-3">Device Distribution</h3>
               <div className="space-y-2">
                 {analyticsData.userAgents.map((device, index) => (
                   <div key={index} className="flex items-center gap-2 text-xs">
-                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500" />}
-                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500" />}
-                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500" />}
+                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-50o0"  />}
+                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-50o0"  />}
+                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-50o0"  />}
                     <span className="flex-1">{device.device}</span>
-                    <span className="font-mono text-gray-600">{device.count}</span>
+                    <span className="font-mono text-gray-60o0">{device.count}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Status Indicators */}
-            <div className="pt-4 border-t border-gray-200">
-              <div className="flex items-center justify-between text-xs text-gray-500">
+            <div className="pt-4 border-t border-gray-20o0">
+              <div className="flex items-center justify-between text-xs text-gray-50o0">
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`} />
+                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-50o0' : 'bg-red-50o0'}`}  />
                   <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
                 </div>
                 <button
                   onClick={() => window.location.reload()}
-                  className="text-blue-500 hover:text-blue-600"
+                  className="text-blue-50o0 hover:text-blue-60o0"
                 >
-                  <RefreshCw className="w-3 h-3" />
+                  <RefreshCw className="w-3 h-3"  />
                 </button>
               </div>
             </div>

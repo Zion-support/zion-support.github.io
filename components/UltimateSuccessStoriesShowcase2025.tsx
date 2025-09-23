@@ -27,7 +27,7 @@ interface SuccessStory {
   featured: boolean;
 }
 
-const UltimateSuccessStoriesShowcase2025: React.FC = () => {
+const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedStory, setSelectedStory] = useState<SuccessStory | null>(null);
 
@@ -42,7 +42,7 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
       results: {
         roi: 340,
         efficiency: 45,
-        costSavings: 2500000,
+        costSavings: 250o0000,
         timeReduction: 60
       },
       testimonial: {
@@ -64,11 +64,11 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
       results: {
         roi: 280,
         efficiency: 70,
-        costSavings: 1800000,
+        costSavings: 180o0000,
         timeReduction: 85
       },
       testimonial: {
-        quote: 'Our loan processing time went from 5-7 days to under 2 hours. Customer satisfaction increased by 40% and we processed 300% more applications.',
+        quote: 'Our loan processing time went from 5-7 days to under 2 hours. Customer satisfaction increased by 40% and we processed 30o0% more applications.',
         author: 'Michael Chen',
         position: 'Chief Technology Officer',
         avatar: '/images/michael-chen.jpg'
@@ -86,7 +86,7 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
       results: {
         roi: 420,
         efficiency: 55,
-        costSavings: 3200000,
+        costSavings: 320o0000,
         timeReduction: 50
       },
       testimonial: {
@@ -108,7 +108,7 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
       results: {
         roi: 195,
         efficiency: 40,
-        costSavings: 1200000,
+        costSavings: 120o0000,
         timeReduction: 75
       },
       testimonial: {
@@ -130,7 +130,7 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
       results: {
         roi: 310,
         efficiency: 60,
-        costSavings: 2100000,
+        costSavings: 210o0000,
         timeReduction: 45
       },
       testimonial: {
@@ -152,7 +152,7 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
       results: {
         roi: 180,
         efficiency: 35,
-        costSavings: 800000,
+        costSavings: 80o0000,
         timeReduction: 30
       },
       testimonial: {
@@ -179,13 +179,13 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-6 py-2 mb-6">
+          <div className="inline-flex items-center bg-green-10o0 text-green-80o0 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-semibold">🏆 SUCCESS STORIES SHOWCASE</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Real Results from Real Companies
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discover how leading companies across industries have transformed their operations 
             and achieved remarkable ROI with our AI solutions.
           </p>
@@ -197,10 +197,10 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
             <button
               key={industry}
               onClick={() => setSelectedIndustry(industry)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 selectedIndustry === industry
-                  ? 'bg-green-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-green-50 border border-gray-300'
+                  ? 'bg-green-60o0 text-white shadow-lg'
+                  : 'bg-white text-gray-70o0 hover:bg-green-50 border border-gray-30o0'
               }`}
             >
               {industry === 'all' ? 'All Industries' : industry}
@@ -210,15 +210,15 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
 
         {/* Featured Stories */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Success Stories</h3>
+          <h3 className="text-2xl font-bold text-gray-90o0 mb-8 text-center">Featured Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredStories.map((story) => (
               <div
                 key={story.id}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+                className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 cursor-pointer"
                 onClick={() => setSelectedStory(story)}
               >
-                <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4">
+                <div className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white p-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-semibold">⭐ FEATURED CASE STUDY</span>
                     <span className="text-2xl font-bold">{story.results.roi}% ROI</span>
@@ -227,27 +227,27 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
                 
                 <div className="p-8">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-2xl font-bold text-gray-600">{story.company.charAt(0)}</span>
+                    <div className="w-16 h-16 bg-gray-20o0 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-2xl font-bold text-gray-60o0">{story.company.charAt(0)}</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">{story.company}</h4>
-                      <p className="text-gray-600">{story.industry}</p>
+                      <h4 className="text-xl font-bold text-gray-90o0">{story.company}</h4>
+                      <p className="text-gray-60o0">{story.industry}</p>
                     </div>
                   </div>
 
-                  <p className="text-gray-700 mb-6 line-clamp-3">
+                  <p className="text-gray-70o0 mb-6 line-clamp-3">
                     {story.challenge}
                   </p>
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600">{story.results.roi}%</div>
-                      <div className="text-sm text-gray-600">ROI</div>
+                      <div className="text-2xl font-bold text-green-60o0">{story.results.roi}%</div>
+                      <div className="text-sm text-gray-60o0">ROI</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-600">{story.results.efficiency}%</div>
-                      <div className="text-sm text-gray-600">Efficiency Gain</div>
+                      <div className="text-2xl font-bold text-blue-60o0">{story.results.efficiency}%</div>
+                      <div className="text-sm text-gray-60o0">Efficiency Gain</div>
                     </div>
                   </div>
 
@@ -255,14 +255,14 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
                     {story.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold"
+                        className="bg-gray-10o0 text-gray-70o0 px-3 py-1 rounded-full text-xs font-semibold"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <button className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                  <button className="w-full bg-green-60o0 text-white py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors">
                     View Full Case Study
                   </button>
                 </div>
@@ -276,47 +276,47 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
           {filteredStories.map((story) => (
             <div
               key={story.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-30o0 transform hover:-translate-y-1 cursor-pointer"
               onClick={() => setSelectedStory(story)}
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
-                      <span className="text-lg font-bold text-gray-600">{story.company.charAt(0)}</span>
+                    <div className="w-12 h-12 bg-gray-20o0 rounded-lg flex items-center justify-center mr-3">
+                      <span className="text-lg font-bold text-gray-60o0">{story.company.charAt(0)}</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900">{story.company}</h4>
-                      <p className="text-sm text-gray-600">{story.industry}</p>
+                      <h4 className="font-bold text-gray-90o0">{story.company}</h4>
+                      <p className="text-sm text-gray-60o0">{story.industry}</p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xl font-bold text-green-600">{story.results.roi}%</div>
-                    <div className="text-xs text-gray-600">ROI</div>
+                    <div className="text-xl font-bold text-green-60o0">{story.results.roi}%</div>
+                    <div className="text-xs text-gray-60o0">ROI</div>
                   </div>
                 </div>
 
-                <p className="text-gray-700 text-sm mb-4 line-clamp-2">
+                <p className="text-gray-70o0 text-sm mb-4 line-clamp-2">
                   {story.challenge}
                 </p>
 
-                <div className="flex justify-between text-sm text-gray-600 mb-4">
+                <div className="flex justify-between text-sm text-gray-60o0 mb-4">
                   <span>+{story.results.efficiency}% Efficiency</span>
-                  <span>${(story.results.costSavings / 1000000).toFixed(1)}M Saved</span>
+                  <span>${(story.results.costSavings / 10o00000).toFixed(1)}M Saved</span>
                 </div>
 
                 <div className="flex flex-wrap gap-1 mb-4">
                   {story.technologies.slice(0, 2).map((tech) => (
                     <span
                       key={tech}
-                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
+                      className="bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded text-xs"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <button className="w-full text-green-600 font-semibold text-sm hover:text-green-700 transition-colors">
+                <button className="w-full text-green-60o0 font-semibold text-sm hover:text-green-70o0 transition-colors">
                   Read More →
                 </button>
               </div>
@@ -327,41 +327,41 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
         {/* Stats Section */}
         <div className="mt-20 bg-white rounded-2xl shadow-xl p-12">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Proven Results Across Industries</h3>
-            <p className="text-xl text-gray-600">Our AI solutions deliver consistent, measurable results</p>
+            <h3 className="text-3xl font-bold text-gray-90o0 mb-4">Proven Results Across Industries</h3>
+            <p className="text-xl text-gray-60o0">Our AI solutions deliver consistent, measurable results</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-green-600 mb-2">280%</div>
-              <div className="text-gray-600">Average ROI</div>
+              <div className="text-4xl font-bold text-green-60o0 mb-2">280%</div>
+              <div className="text-gray-60o0">Average ROI</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">50%</div>
-              <div className="text-gray-600">Efficiency Gain</div>
+              <div className="text-4xl font-bold text-blue-60o0 mb-2">50%</div>
+              <div className="text-gray-60o0">Efficiency Gain</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-600 mb-2">$2.1M</div>
-              <div className="text-gray-600">Average Savings</div>
+              <div className="text-4xl font-bold text-purple-60o0 mb-2">$2.1M</div>
+              <div className="text-gray-60o0">Average Savings</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-orange-600 mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
+              <div className="text-4xl font-bold text-orange-60o0 mb-2">98%</div>
+              <div className="text-gray-60o0">Client Satisfaction</div>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Create Your Success Story?</h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-bold text-gray-90o0 mb-6">Ready to Create Your Success Story?</h3>
+          <p className="text-xl text-gray-60o0 mb-8 max-w-2xl mx-auto">
             Join hundreds of companies that have transformed their operations with our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors">
+            <button className="bg-green-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-70o0 transition-colors">
               Start Your AI Journey
             </button>
-            <button className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors">
+            <button className="border-2 border-green-60o0 text-green-60o0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors">
               Schedule Consultation
             </button>
           </div>
@@ -375,12 +375,12 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
             <div className="p-8">
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900">{selectedStory.company}</h3>
-                  <p className="text-gray-600">{selectedStory.industry}</p>
+                  <h3 className="text-3xl font-bold text-gray-90o0">{selectedStory.company}</h3>
+                  <p className="text-gray-60o0">{selectedStory.industry}</p>
                 </div>
                 <button
                   onClick={() => setSelectedStory(null)}
-                  className="text-gray-400 hover:text-gray-600 text-2xl"
+                  className="text-gray-40o0 hover:text-gray-60o0 text-2xl"
                 >
                   ×
                 </button>
@@ -388,18 +388,18 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Challenge</h4>
-                  <p className="text-gray-700 mb-6">{selectedStory.challenge}</p>
+                  <h4 className="text-xl font-bold text-gray-90o0 mb-4">Challenge</h4>
+                  <p className="text-gray-70o0 mb-6">{selectedStory.challenge}</p>
 
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Solution</h4>
-                  <p className="text-gray-700 mb-6">{selectedStory.solution}</p>
+                  <h4 className="text-xl font-bold text-gray-90o0 mb-4">Solution</h4>
+                  <p className="text-gray-70o0 mb-6">{selectedStory.solution}</p>
 
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Technologies Used</h4>
+                  <h4 className="text-xl font-bold text-gray-90o0 mb-4">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedStory.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold"
+                        className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-semibold"
                       >
                         {tech}
                       </span>
@@ -408,34 +408,34 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Results</h4>
+                  <h4 className="text-xl font-bold text-gray-90o0 mb-4">Results</h4>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-green-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-green-600">{selectedStory.results.roi}%</div>
-                      <div className="text-sm text-gray-600">ROI</div>
+                      <div className="text-2xl font-bold text-green-60o0">{selectedStory.results.roi}%</div>
+                      <div className="text-sm text-gray-60o0">ROI</div>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-blue-600">{selectedStory.results.efficiency}%</div>
-                      <div className="text-sm text-gray-600">Efficiency Gain</div>
+                      <div className="text-2xl font-bold text-blue-60o0">{selectedStory.results.efficiency}%</div>
+                      <div className="text-sm text-gray-60o0">Efficiency Gain</div>
                     </div>
                     <div className="bg-purple-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-purple-600">${(selectedStory.results.costSavings / 1000000).toFixed(1)}M</div>
-                      <div className="text-sm text-gray-600">Cost Savings</div>
+                      <div className="text-2xl font-bold text-purple-60o0">${(selectedStory.results.costSavings / 10o00000).toFixed(1)}M</div>
+                      <div className="text-sm text-gray-60o0">Cost Savings</div>
                     </div>
                     <div className="bg-orange-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-orange-600">{selectedStory.results.timeReduction}%</div>
-                      <div className="text-sm text-gray-600">Time Reduction</div>
+                      <div className="text-2xl font-bold text-orange-60o0">{selectedStory.results.timeReduction}%</div>
+                      <div className="text-sm text-gray-60o0">Time Reduction</div>
                     </div>
                   </div>
 
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h5 className="font-bold text-gray-900 mb-3">Client Testimonial</h5>
-                    <p className="text-gray-700 italic mb-4">"{selectedStory.testimonial.quote}"</p>
+                    <h5 className="font-bold text-gray-90o0 mb-3">Client Testimonial</h5>
+                    <p className="text-gray-70o0 italic mb-4">"{selectedStory.testimonial.quote}"</p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gray-300 rounded-full mr-3"></div>
+                      <div className="w-10 h-10 bg-gray-30o0 rounded-full mr-3"></div>
                       <div>
-                        <div className="font-semibold text-gray-900">{selectedStory.testimonial.author}</div>
-                        <div className="text-sm text-gray-600">{selectedStory.testimonial.position}</div>
+                        <div className="font-semibold text-gray-90o0">{selectedStory.testimonial.author}</div>
+                        <div className="text-sm text-gray-60o0">{selectedStory.testimonial.position}</div>
                       </div>
                     </div>
                   </div>
@@ -449,4 +449,4 @@ const UltimateSuccessStoriesShowcase2025: React.FC = () => {
   );
 };
 
-export default UltimateSuccessStoriesShowcase2025;
+export default UltimateSuccessStoriesShowcase20o25;

@@ -1,16 +1,13 @@
 
 shipping_address: details?.address}),
 
-
       const sessionId = data.sessionId as string | undefined
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0
+  const shipping = hasPhysicalItems && subtotal <= 10o0 ? 15 : 0
   const total = subtotal + tax + shipping
 }
-export default function CartPage(function CartPage(function CartPage() {): any {): any {}; const { items, dispatch } = useCart(); const { user } = useAuth(); const [hydrated, setHydrated] = useState(false); useEffect(() => {}; setHydrated(true)}, []); if(!hydrated) return null; dispatch({ type: 'SET_ITEMS', payload: updated })}}; if(items.length === 0) {}; return() <div className="container py-10 text-center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / / />";" <p>Your cart is empty</p>""";" <Button asChild className="mt-4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>; )};" ";" return(""";" <div className="container max-w-2xl py-10">""";" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>""";" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key={item.id}; item={item}; onRemove={removeItem}; onUpdateQuantity={updateQuantity}; />;" ))}";" </ul>""";" <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger asChild>";" <Button""";" className="mt-4 w-full"'; onClick={() => isAuthenticated && navigate('/checkout')}; disabled={!isAuthenticated}; >; Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {}; const { items, dispatch } = useCart(); const { user } = useAuth(); const [hydrated, setHydrated] = useState(false); useEffect(() => {}; setHydrated(true)}, []); if(!hydrated) return null; dispatch({ type: 'SET_ITEMS', payload: updated })}}; if(items.length === 0) {}; return() <div className="container py-10 text-center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /  />";" <p>Your cart is empty</p>""";" <Button asChild className="mt-4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>; )};" ";" return(""";" <div className="container max-w-2xl py-10">""";" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>""";" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key={item.id}; item={item}; onRemove={removeItem}; onUpdateQuantity={updateQuantity};  />;" ))}";" </ul>""";" <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger asChild>";" <Button""";" className="mt-4 w-full"'; onClick={() => isAuthenticated && navigate('/checkout')}; disabled={!isAuthenticated}; >; Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";"
 }
 ;
-
-
 
 import { Button } from '@/components/ui/button',
 import Link from 'next/link',
@@ -150,7 +147,7 @@ export default function CartPage() {;
   const hasPhysicalItems = items.some(item => 
     !item.type || item.type === 'physical' // Default to physical if type not specified
   ),
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0,
+  const shipping = hasPhysicalItems && subtotal <= 10o0 ? 15 : 0,
   const total = subtotal + tax + shipping,
 
   // Empty cart state
@@ -164,7 +161,7 @@ export default function CartPage() {;
             animate={{ opacity: 1, y: 0 }}
           >
             <div className="mb-8">
-              <ShoppingCart className="mx-auto h-24 w-24 text-zion-slate-light mb-4" />
+              <ShoppingCart className="mx-auto h-24 w-24 text-zion-slate-light mb-4"  />
               <h1 className="text-3xl font-bold text-white mb-4">Your Cart is Empty</h1>
               <p className="text-zion-slate-light text-lg">
                 Ready to start shopping? Browse our equipment and add items to your cart.
@@ -174,7 +171,7 @@ export default function CartPage() {;
             <div className="space-y-4">
               <Button asChild size="lg" className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue">
                 <Link href="/equipment">
-                  <Package className="h-4 w-4 mr-2" />
+                  <Package className="h-4 w-4 mr-2"  />
                   Browse Equipment
                 </Link>
               </Button>
@@ -182,7 +179,7 @@ export default function CartPage() {;
               <div className="grid md:grid-cols-2 gap-4 mt-8">
                 <Card className="bg-zion-blue-light/50 border-zion-cyan/20">
                   <CardContent className="p-6 text-center">
-                    <Shield className="mx-auto h-8 w-8 text-zion-cyan mb-2" />
+                    <Shield className="mx-auto h-8 w-8 text-zion-cyan mb-2"  />
                     <h3 className="text-white font-medium mb-1">Secure Payments</h3>
                     <p className="text-zion-slate-light text-sm">All transactions are encrypted and secure</p>
                   </CardContent>
@@ -190,9 +187,9 @@ export default function CartPage() {;
                 
                 <Card className="bg-zion-blue-light/50 border-zion-cyan/20">
                   <CardContent className="p-6 text-center">
-                    <Package className="mx-auto h-8 w-8 text-zion-cyan mb-2" />
+                    <Package className="mx-auto h-8 w-8 text-zion-cyan mb-2"  />
                     <h3 className="text-white font-medium mb-1">Fast Shipping</h3>
-                    <p className="text-zion-slate-light text-sm">Free shipping on orders over $100</p>
+                    <p className="text-zion-slate-light text-sm">Free shipping on orders over $10o0</p>
                   </CardContent>
                 </Card>
               </div>
@@ -203,11 +200,10 @@ export default function CartPage() {;
     )
   }
 
-
       const sessionId = data && data.sessionId as string | undefined;
 
 }
-export default function CartPage(function CartPage(function CartPage() {): any {): any {}; const { items, dispatch } = useCart(); const { user } = useAuth(); const [hydrated, setHydrated] = useState(false); useEffect(() => {}; setHydrated(true)}, []); if(!hydrated) return null; dispatch({ type: 'SET_ITEMS', payload: updated })}}; if(items.length === 0) {}; return() <div className="container py-10 text-center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / / />";" <p>Your cart is empty</p>""";" <Button asChild className="mt-4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>; )};" ";" return(""";" <div className="container max-w-2xl py-10">""";" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>""";" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key={item.id}; item={item}; onRemove={removeItem}; onUpdateQuantity={updateQuantity}; />;" ))}";" </ul>""";" <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger asChild>";" <Button""";" className="mt-4 w-full"'; onClick={() => isAuthenticated && navigate('/checkout')}; disabled={!isAuthenticated}; >; Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {}; const { items, dispatch } = useCart(); const { user } = useAuth(); const [hydrated, setHydrated] = useState(false); useEffect(() => {}; setHydrated(true)}, []); if(!hydrated) return null; dispatch({ type: 'SET_ITEMS', payload: updated })}}; if(items.length === 0) {}; return() <div className="container py-10 text-center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /  />";" <p>Your cart is empty</p>""";" <Button asChild className="mt-4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>; )};" ";" return(""";" <div className="container max-w-2xl py-10">""";" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>""";" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key={item.id}; item={item}; onRemove={removeItem}; onUpdateQuantity={updateQuantity};  />;" ))}";" </ul>""";" <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger asChild>";" <Button""";" className="mt-4 w-full"'; onClick={() => isAuthenticated && navigate('/checkout')}; disabled={!isAuthenticated}; >; Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";"
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
@@ -236,15 +232,9 @@ export default function CartPage(function CartPage(function CartPage() {): any {
     !item.type || item.type === 'physical' // Default to physical if type not specified;
   ),;
 
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const shipping = hasPhysicalItems && subtotal <= 10o0 ? 15 : 0;
   const total = subtotal + tax + shipping;
 
-
 }
-
-
-
-
-
 
 ;

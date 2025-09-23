@@ -52,11 +52,11 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const mockSearchResults: SearchResult[] = [
     {
       id: '1',
-      name: 'AI Consciousness Evolution Platform 2045',
+      name: 'AI Consciousness Evolution Platform 20o45',
       description: 'Next-generation AI consciousness with emotional intelligence and self-awareness capabilities.',
       category: 'AI & Machine Learning',
       type: 'Platform',
-      slug: '/ai-consciousness-evolution-platform-2045',
+      slug: '/ai-consciousness-evolution-platform-20o45',
       relevance: 95,
       features: ['Emotional Intelligence'Self-Awareness'Consciousness Evolution'],
       pricing: { starter: '$999/month'enterprise: 'Contact Sales' }
@@ -86,10 +86,10 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   ];
 
   const categories = [
-    { id: 'ai'name: 'AI & ML'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { id: 'quantum'name: 'Quantum'icon: Atomcolor: 'from-blue-500 to-cyan-500' },
-    { id: 'security'name: 'Security'icon: Shieldcolor: 'from-red-500 to-orange-500' },
-    { id: 'business'name: 'Business'icon: Rocketcolor: 'from-emerald-500 to-teal-500' }
+    { id: 'ai'name: 'AI & ML'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'quantum'name: 'Quantum'icon: Atomcolor: 'from-blue-50o0 to-cyan-50o0' },
+    { id: 'security'name: 'Security'icon: Shieldcolor: 'from-red-50o0 to-orange-50o0' },
+    { id: 'business'name: 'Business'icon: Rocketcolor: 'from-emerald-50o0 to-teal-50o0' }
   ];
 
   // Debounced search function
@@ -126,8 +126,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           setResults(sortedResults);
           setShowResults(true);
           setIsSearching(false);
-        }300);
-      }300),
+        }30o0);
+      }30o0),
       [selectedFilters]
     ),
     [selectedFilters]
@@ -174,7 +174,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
 
   // Add search to history
   const addToSearchHistory = (searchTerm: string) => {
-    const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(05);
+    const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(0o5);
     setSearchHistory(newHistory);
     localStorage.setItem('zion-search-history'JSON.stringify(newHistory));
   };
@@ -219,13 +219,13 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       {/* Search Form */}
       <form onSubmit={handleSearch} className="relative">
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
           <input
             type="text"
             value={query}
             onChange={handleInputChange}
             placeholder={placeholder}
-            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+            className="w-full pl-12 pr-20 py-3 bg-gray-80o0/50 border border-gray-70o0 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0"
             onFocus={() => setShowResults(true)}
           />
           
@@ -234,16 +234,16 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             <button
               type="button"
               onClick={clearSearch}
-              className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+              className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-40o0 hover:text-white transition-colors"
             >
-              <X className="w-4 h-4" />
+              <X className="w-4 h-4"  />
             </button>
           )}
           
           {/* Search Button */}
           <button
             type="submit"
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-medium rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50"
           >
             Search
           </button>
@@ -258,27 +258,27 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             animate={{ opacity: 1y: 0scale: 1 }}
             exit={{ opacity: 0y: -10scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
+            className="absolute top-full left-0 right-0 mt-2 bg-gray-90o0/95 backdrop-blur-md border border-gray-70o0 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
           >
             {/* Filters */}
             {showFilters && (
-              <div className="p-4 border-b border-gray-700">
+              <div className="p-4 border-b border-gray-70o0">
                 <div className="flex items-center gap-2 mb-3">
-                  <Filter className="w-4 h-4 text-gray-400" />
-                  <span className="text-sm font-medium text-gray-300">Filter by Category</span>
+                  <Filter className="w-4 h-4 text-gray-40o0"  />
+                  <span className="text-sm font-medium text-gray-30o0">Filter by Category</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
                     <button
                       key={category.id}
                       onClick={() => toggleFilter(category.id)}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                      className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-30o0 ${
                         selectedFilters.includes(category.id)
                           ? `bg-gradient-to-r ${category.color} text-white`
-                          : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
+                          : 'bg-gray-70o0/50 text-gray-30o0 hover:bg-gray-60o0/50'
                       }`}
                     >
-                      <category.icon className="w-3 h-3" />
+                      <category.icon className="w-3 h-3"  />
                       {category.name}
                     </button>
                   )}
@@ -286,7 +286,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                     <button
                       onClick={() => handleSearch()}
                       disabled={isSearching || !query.trim()}
-                      className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-lg font-medium hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSearching ? 'Searching...' : 'Search'}
                     </button>
@@ -300,17 +300,17 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       initial={{ opacity: 0y: -10 }}
                       animate={{ opacity: 1y: 0 }}
                       exit={{ opacity: 0y: -10 }}
-                      className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"
+                      className="absolute top-full left-0 right-0 mt-2 bg-gray-90o0 border border-gray-70o0 rounded-xl shadow-2xl overflow-hidden z-10"
                     >
                       {/* Quick Actions */}
-                      <div className="p-4 border-b border-gray-700">
-                        <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3>
+                      <div className="p-4 border-b border-gray-70o0">
+                        <h3 className="text-sm font-medium text-gray-40o0 mb-3">Quick Actions</h3>
                         <div className="grid grid-cols-2 gap-2">
                           {quickActions.map((action) => (
                             <button
                               key={action.name}
                               onClick={() => handleQuickAction(action.action)}
-                              className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                              className="flex items-center space-x-2 p-2 text-sm text-gray-30o0 hover:text-white hover:bg-gray-80o0 rounded-lg transition-colors"
                             >
                               {action.icon}
                               <span>{action.name}</span>
@@ -325,18 +325,18 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           <button
                             key={suggestion.id}
                             onClick={() => handleSuggestionClick(suggestion)}
-                            className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-800 transition-colors"
+                            className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-80o0 transition-colors"
                           >
-                            <div className="text-gray-400">
+                            <div className="text-gray-40o0">
                               {suggestion.icon}
                             </div>
                             <div className="flex-1">
                               <div className="text-white">{suggestion.text}</div>
-                              <div className="text-sm text-gray-400 capitalize">
+                              <div className="text-sm text-gray-40o0 capitalize">
                                 {suggestion.type} • {suggestion.category}
                               </div>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400" />
+                            <ArrowRight className="w-4 h-4 text-gray-40o0"  />
                           </button>
                         ))}
                       </div>
@@ -350,35 +350,35 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             <div className="p-4">
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
-                  <span className="ml-3 text-gray-400">Searching...</span>
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-40o0"></div>
+                  <span className="ml-3 text-gray-40o0">Searching...</span>
                 </div>
               ) : results.length > 0 ? (
                 <div className="space-y-3">
                   {results.map((result) => (
                     <motion.div
                       key={result.id}
-                      whileHover={{ scale: 1.02 }}
-                      className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30"
+                      whileHover={{ scale: 1.0o2 }}
+                      className="p-3 bg-gray-80o0/50 rounded-lg cursor-pointer hover:bg-gray-70o0/50 transition-all duration-30o0 border border-transparent hover:border-cyan-40o0/30"
                       onClick={() => handleResultSelect(result)}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <h4 className="font-medium text-white mb-1">{result.name}</h4>
-                          <p className="text-sm text-gray-300 mb-2 line-clamp-2">{result.description}</p>
+                          <p className="text-sm text-gray-30o0 mb-2 line-clamp-2">{result.description}</p>
                           <div className="flex items-center gap-2">
-                            <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
+                            <span className="px-2 py-1 bg-cyan-50o0/20 text-cyan-40o0 text-xs rounded-full">
                               {result.category}
                             </span>
                             {result.pricing?.starter && (
-                              <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+                              <span className="px-2 py-1 bg-green-50o0/20 text-green-40o0 text-xs rounded-full">
                                 From {result.pricing.starter}
                               </span>
                             )}
                           </div>
                         </div>
-                        <div className="flex items-center gap-1 text-cyan-400">
-                          <Star className="w-4 h-4 fill-current" />
+                        <div className="flex items-center gap-1 text-cyan-40o0">
+                          <Star className="w-4 h-4 fill-current"  />
                           <span className="text-xs">{result.relevance}</span>
                         </div>
                       </div>
@@ -387,8 +387,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
-                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>
-                  <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>
+                  <div className="text-gray-40o0 mb-2">No results found for "{query}"</div>
+                  <div className="text-sm text-gray-50o0">Try adjusting your search terms or filters</div>
                 </div>
               ) : (
                 <div className="space-y-4">
@@ -396,15 +396,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                   {searchHistory.length > 0 && (
                     <div>
                       <div className="flex items-center gap-2 mb-3">
-                        <Clock className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm font-medium text-gray-300">Recent Searches</span>
+                        <Clock className="w-4 h-4 text-gray-40o0"  />
+                        <span className="text-sm font-medium text-gray-30o0">Recent Searches</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {searchHistory.map((termindex) => (
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
-                            className="px-3 py-1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors"
+                            className="px-3 py-1.5 bg-gray-70o0/50 text-gray-30o0 text-sm rounded-lg hover:bg-gray-60o0/50 transition-colors"
                           >
                             {term}
                           </button>
@@ -416,15 +416,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                   {/* Popular Searches */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <TrendingUp className="w-4 h-4 text-gray-400" />
-                      <span className="text-sm font-medium text-gray-300">Popular Searches</span>
+                      <TrendingUp className="w-4 h-4 text-gray-40o0"  />
+                      <span className="text-sm font-medium text-gray-30o0">Popular Searches</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {popularSearches.map((termindex) => (
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
-                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30"
+                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 text-cyan-40o0 text-sm rounded-lg hover:from-cyan-50o0/30 hover:to-blue-50o0/30 transition-all duration-30o0 border border-cyan-40o0/30"
                         >
                           {term}
                         </button>

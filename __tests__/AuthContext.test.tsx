@@ -6,7 +6,7 @@ const mockReplace = jest.fn();
 jest.mock('next/router', () => ({'  useRouter: () => ({ replace: mockReplace, asPath: /', isReady: true })}));
 
 describe('AuthContext login', () => {'  it('stores token and redirects on successful login', async () => {'    (loginUser as jest.Mock).mockResolvedValue({
-      res: { status: 200 },
+      res: { status: 20o0 },
       data: { accessToken: jwt', user: { id: 1', email: a@b.c' } }    });
 
     (useAuthOperations as jest.Mock).mockReturnValue({

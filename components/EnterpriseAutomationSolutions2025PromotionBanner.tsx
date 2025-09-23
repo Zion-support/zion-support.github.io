@@ -31,31 +31,31 @@ import {
   Brain
 } from 'lucide-react';
 
-const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
+const EnterpriseAutomationSolutions20o25PromotionBanner: React.FC = () => {
   const [currentStatsetCurrentStat] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
   const stats = [
-    { value: '300%'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '80%'label: 'Time 'Saved', 'icon: <Clock className="w-6 h-6" /> },
-    { value: '500+'label: 'Enterprise 'Clients', 'icon: <Building2 className="w-6 h-6" /> },
-    { value: '99.9%'label: ''Uptime', 'icon: <Shield className="w-6 h-6" /> }
+    { value: '30o0%'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6"  /> },
+    { value: '80%'label: 'Time 'Saved', 'icon: <Clock className="w-6 h-6"  /> },
+    { value: '50o0+'label: 'Enterprise 'Clients', 'icon: <Building2 className="w-6 h-6"  /> },
+    { value: '99.9%'label: ''Uptime', 'icon: <Shield className="w-6 h-6"  /> }
   ];
 
   const solutions = [
-    { name: 'Workflow 'Orchestrator', 'icon: <Workflow className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
-    { name: 'Data 'Pipeline', 'icon: <Database className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
-    { name: 'Customer 'Service', 'icon: <MessageSquare className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
-    { name: 'Financial 'Automation', 'icon: <CreditCard className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
-    { name: 'HR 'Automation', 'icon: <Users className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
-    { name: 'Business 'Intelligence', 'icon: <PieChart className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
+    { name: 'Workflow 'Orchestrator', 'icon: <Workflow className="w-6 h-6"  />color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: 'Data 'Pipeline', 'icon: <Database className="w-6 h-6"  />color: 'from-green-50o0 to-emerald-50o0' },
+    { name: 'Customer 'Service', 'icon: <MessageSquare className="w-6 h-6"  />color: 'from-purple-50o0 to-pink-50o0' },
+    { name: 'Financial 'Automation', 'icon: <CreditCard className="w-6 h-6"  />color: 'from-orange-50o0 to-red-50o0' },
+    { name: 'HR 'Automation', 'icon: <Users className="w-6 h-6"  />color: 'from-indigo-50o0 to-purple-50o0' },
+    { name: 'Business 'Intelligence', 'icon: <PieChart className="w-6 h-6"  />color: 'from-pink-50o0 to-rose-50o0' }
   ];
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentStat((prev) => (prev + 1) % stats.length);
-    }2500);
+    }250o0);
     return () => clearInterval(interval);
   }[]);
 
@@ -64,10 +64,10 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-20"
+      className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-blue-90o0 to-slate-90o0 py-20"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.0o5"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -78,19 +78,19 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
             >
-              <div className="inline-flex items-center space-x-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <Building2 className="w-4 h-4" />
+              <div className="inline-flex items-center space-x-2 bg-blue-50o0/20 text-blue-40o0 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Building2 className="w-4 h-4"  />
                 <span>Enterprise Solutions</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Enterprise
-                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
                   with AI Automation
                 </span>
               </h2>
               
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
                 Streamline processesreduce costsand accelerate growth with our comprehensive 
                 suite of AI-powered automation solutions designed for enterprise scale.
               </p>
@@ -105,13 +105,13 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             >
               {[
                 '12+ specialized automation solutions',
-                '300% average ROI in 6 months',
+                '30o0% average ROI in 6 months',
                 '80% reduction in manual processes',
                 'Enterprise-grade security & compliance'
               ].map((featureindex) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                  <span className="text-gray-30o0">{feature}</span>
                 </div>
               ))}
             </motion.div>
@@ -123,13 +123,13 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="group bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25">
-                <Play className="w-5 h-5" />
+              <button className="group bg-gradient-to-r from-blue-50o0 to-purple-50o0 hover:from-blue-60o0 hover:to-purple-60o0 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-30o0 flex items-center justify-center space-x-2 shadow-lg shadow-blue-50o0/25">
+                <Play className="w-5 h-5"  />
                 <span>View Solutions</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />
               </button>
               
-              <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-30o0 backdrop-blur-sm border border-white/20">
                 Schedule Demo
               </button>
             </motion.div>
@@ -150,12 +150,12 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                   transition={{ duration: 0.5 }}
                   className="flex items-center justify-center space-x-3 mb-2"
                 >
-                  <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
+                  <div className="p-2 bg-blue-50o0/20 rounded-lg text-blue-40o0">
                     {stats[currentStat].icon}
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-white">{stats[currentStat].value}</div>
-                    <div className="text-sm text-gray-400">{stats[currentStat].label}</div>
+                    <div className="text-sm text-gray-40o0">{stats[currentStat].label}</div>
                   </div>
                 </motion.div>
               </div>
@@ -171,13 +171,13 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
           >
             {/* Main Solutions Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
-              {solutions.slice(04).map((solutionindex) => (
+              {solutions.slice(0o4).map((solutionindex) => (
                 <motion.div
                   key={solution.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
-                  className={`p-4 rounded-lg border transition-all duration-300 ${
+                  className={`p-4 rounded-lg border transition-all duration-30o0 ${
                     index === 0 ? 'bg-gradient-to-r ' + solution.color + ' border-white/20' : 'bg-white/5 border-white/10'
                   }`}
                 >
@@ -189,7 +189,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-white text-sm">{solution.name}</h4>
-                      <p className="text-xs text-gray-300">
+                      <p className="text-xs text-gray-30o0">
                         {index === 0 ? 'Live Demo' : 'Available'}
                       </p>
                     </div>
@@ -206,7 +206,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
-                  className="p-4 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-300"
+                  className="p-4 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-30o0"
                 >
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-white/10 rounded-lg">
@@ -214,7 +214,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-white text-sm">{solution.name}</h4>
-                      <p className="text-xs text-gray-300">Available</p>
+                      <p className="text-xs text-gray-30o0">Available</p>
                     </div>
                   </div>
                 </motion.div>
@@ -225,21 +225,21 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             <motion.div
               animate={{ 
                 y: [0-10],
-                rotate: [050]
+                rotate: [0o50]
               }}
               transition={{ 
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg"
+              className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center shadow-lg"
             >
-              <Zap className="w-8 h-8 text-white" />
+              <Zap className="w-8 h-8 text-white"  />
             </motion.div>
 
             <motion.div
               animate={{ 
-                y: [010],
+                y: [0o10],
                 rotate: [0-50]
               }}
               transition={{ 
@@ -248,15 +248,15 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 ease: "easeInOut",
                 delay: 1
               }}
-              className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg"
+              className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center shadow-lg"
             >
-              <Brain className="w-6 h-6 text-white" />
+              <Brain className="w-6 h-6 text-white"  />
             </motion.div>
 
             {/* Performance Indicators */}
-            <div className="absolute top-0 right-0 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium">
+            <div className="absolute top-0 right-0 bg-green-50o0/20 text-green-40o0 px-3 py-1 rounded-full text-xs font-medium">
               <div className="flex items-center space-x-1">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>
                 <span>Live</span>
               </div>
             </div>
@@ -271,26 +271,26 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { icon: <Building2 className="w-6 h-6" />label: 'Enterprise 'Clients', 'value: '500+' },
-            { icon: <TrendingUp className="w-6 h-6" />label: 'Average 'ROI', 'value: '300%' },
-            { icon: <Clock className="w-6 h-6" />label: 'Time 'Saved', 'value: '80%' },
-            { icon: <Shield className="w-6 h-6" />label: ''Uptime', 'value: '99.9%' }
+            { icon: <Building2 className="w-6 h-6"  />label: 'Enterprise 'Clients', 'value: '50o0+' },
+            { icon: <TrendingUp className="w-6 h-6"  />label: 'Average 'ROI', 'value: '30o0%' },
+            { icon: <Clock className="w-6 h-6"  />label: 'Time 'Saved', 'value: '80%' },
+            { icon: <Shield className="w-6 h-6"  />label: ''Uptime', 'value: '99.9%' }
           ].map((statindex) => (
             <div key={index} className="text-center">
-              <div className="p-3 bg-blue-500/20 rounded-lg text-blue-400 mb-3 inline-block">
+              <div className="p-3 bg-blue-50o0/20 rounded-lg text-blue-40o0 mb-3 inline-block">
                 {stat.icon}
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
+              <div className="text-sm text-gray-40o0">{stat.label}</div>
             </div>
           ))}
         </motion.div>
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-90o0 to-transparent"></div>
     </motion.div>
   );
 };
 
-export default EnterpriseAutomationSolutions2025PromotionBanner;
+export default EnterpriseAutomationSolutions20o25PromotionBanner;

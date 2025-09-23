@@ -7,7 +7,7 @@ const ApiDevelopmentChat: NextPage = () => {
     <div>
       <Head>
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiDevelopmentChat service" />
+        <meta name="description" content="ApiDevelopmentChat service"  />
       </Head>
       
       <main>

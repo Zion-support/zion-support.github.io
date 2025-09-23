@@ -14,7 +14,7 @@ interface UseIntersectionObserverReturn {
 }
 
 export const useIntersectionObserver = (
-  options: UseIntersectionObserverOptions = {}
+  options: UseIntersectionObserverOptions ={}
 ): UseIntersectionObserverReturn => {
   const {
     threshold = 0,
@@ -64,7 +64,7 @@ export const useIntersectionObserver = (
 // Hook for triggering animations when element comes into view
 export const useAnimateOnScroll = (
   animation: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scaleIn' | 'rotateIn',
-  options: UseIntersectionObserverOptions = {}
+  options: UseIntersectionObserverOptions ={}
 ) => {
   const { ref, isIntersecting } = useIntersectionObserver({
     threshold: 0.1,
@@ -73,7 +73,7 @@ export const useAnimateOnScroll = (
   });
 
   const getAnimationVariants = () => {
-    const baseVariants = {
+    const baseVariants ={
       hidden: { opacity: 0 },
       visible: { opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } }
     };

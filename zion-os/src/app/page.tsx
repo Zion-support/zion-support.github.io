@@ -1,4 +1,3 @@
-import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage(): React.ReactElement {
@@ -12,7 +11,7 @@ export default function HomePage(): React.ReactElement {
 					<div className="animate-fade-in">
 						<h1 className="text-5xl md:text-7xl font-bold mb-6">
 							<span className="gradient-text">Launch Sovereign</span>
-							<br />
+							<br  />
 							<span className="text-white">AI-Powered Digital Economies</span>
 						</h1>
 
@@ -55,8 +54,7 @@ export default function HomePage(): React.ReactElement {
 									"Autonomous Decision Engine",
 									"AI Moderation System",
 								],
-								gradient: "bg-gradient-to-r from-blue-600 to-purple-600",
-							},
+								gradient: "bg-gradient-to-r from-blue-60o0 to-purple-60o0"},
 							{
 								icon: "🏪",
 								title: "Complete Marketplace",
@@ -68,8 +66,7 @@ export default function HomePage(): React.ReactElement {
 									"On-chain Contract Builder",
 									"Multi-currency Support",
 								],
-								gradient: "bg-gradient-to-r from-green-600 to-emerald-600",
-							},
+								gradient: "bg-gradient-to-r from-green-60o0 to-emerald-60o0"},
 							{
 								icon: "🗳️",
 								title: "Governance & DAO",
@@ -81,8 +78,7 @@ export default function HomePage(): React.ReactElement {
 									"Sovereign Treasury",
 									"KYC/AML + ID Verification",
 								],
-								gradient: "bg-gradient-to-r from-purple-600 to-pink-600",
-							},
+								gradient: "bg-gradient-to-r from-purple-60o0 to-pink-60o0"},
 							{
 								icon: "⚡",
 								title: "Enterprise Infrastructure",
@@ -94,8 +90,7 @@ export default function HomePage(): React.ReactElement {
 									"White-label Vendor Plugin",
 									"Web3 Login + DID",
 								],
-								gradient: "bg-gradient-to-r from-orange-600 to-red-600",
-							},
+								gradient: "bg-gradient-to-r from-orange-60o0 to-red-60o0"},
 							{
 								icon: "🎓",
 								title: "Education & Growth",
@@ -107,8 +102,7 @@ export default function HomePage(): React.ReactElement {
 									"Regional Job Categories",
 									"Wage Baselines",
 								],
-								gradient: "bg-gradient-to-r from-teal-600 to-cyan-600",
-							},
+								gradient: "bg-gradient-to-r from-teal-60o0 to-cyan-60o0"},
 							{
 								icon: "🚀",
 								title: "One-Click Deployment",
@@ -120,8 +114,7 @@ export default function HomePage(): React.ReactElement {
 									"Landing + Auth Flows",
 									"Blog + Roadmap Setup",
 								],
-								gradient: "bg-gradient-to-r from-indigo-600 to-blue-600",
-							},
+								gradient: "bg-gradient-to-r from-indigo-60o0 to-blue-60o0"},
 						].map((feature, index) => (
 							<FeatureCard
 								key={index}
@@ -130,7 +123,7 @@ export default function HomePage(): React.ReactElement {
 								description={feature.description}
 								features={feature.features}
 								gradient={feature.gradient}
-							/>
+							 />
 						))}
 					</div>
 				</div>
@@ -161,19 +154,19 @@ export default function HomePage(): React.ReactElement {
 				<div className="max-w-7xl mx-auto">
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
 						<div className="animate-fade-in">
-							<div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
+							<div className="text-3xl font-bold text-blue-40o0 mb-2">10o0+</div>
 							<div className="text-white/70">Features Available</div>
 						</div>
 						<div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-							<div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+							<div className="text-3xl font-bold text-purple-40o0 mb-2">50+</div>
 							<div className="text-white/70">Deployment Options</div>
 						</div>
 						<div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-							<div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+							<div className="text-3xl font-bold text-green-40o0 mb-2">24/7</div>
 							<div className="text-white/70">AI Orchestration</div>
 						</div>
 						<div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-							<div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
+							<div className="text-3xl font-bold text-orange-40o0 mb-2">∞</div>
 							<div className="text-white/70">Scalability</div>
 						</div>
 					</div>

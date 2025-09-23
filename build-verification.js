@@ -42,8 +42,7 @@ if (lucide.ok) {
     Brain: typeof Brain,
     Cloud: typeof Cloud,
     Shield: typeof Shield,
-    Zap: typeof Zap,
-  });
+    Zap: typeof Zap});
 } else {
   console.warn("⚠️ lucide-react not installed:", lucide.error && lucide.error.message ? lucide.error.message : lucide.error);
 }

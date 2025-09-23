@@ -1,4 +1,3 @@
-import React from 'react';
 import { Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils';
 
@@ -14,7 +13,7 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       className={cn('animate-spin', className)}
       width={size}
       height={size}
-    />
+     />
   )
 );
 Spinner.displayName = 'Spinner';

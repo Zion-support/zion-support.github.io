@@ -16,8 +16,7 @@ async function fetchTalentProfiles(page = 1, limit = 12): Promise<TalentListResp
 export function useTalentData(page = 1, limit = 12) {
   const { data, isLoading, error } = useQuery<TalentListResponse, Error>({
     queryKey: ['talent-profiles', page, limit],
-    queryFn: () => fetchTalentProfiles(page, limit),
-  });
+    queryFn: () => fetchTalentProfiles(page, limit)});
 
   return {
     talents: data?.talents ?? [],

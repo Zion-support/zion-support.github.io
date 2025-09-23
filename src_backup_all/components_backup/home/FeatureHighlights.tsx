@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react'
 import { cn } from "@/lib/utils";
@@ -64,7 +63,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                 <ul className="space-y-3">
                   {category.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0"  />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}

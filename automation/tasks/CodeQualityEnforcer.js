@@ -27,7 +27,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 class CodeQualityEnforcer extends AutomationTask {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super({
       name: 'CodeQualityEnforcer',
       schedule: 0 */4 * * *', // Every 4 hours
@@ -47,7 +47,7 @@ class CodeQualityEnforcer extends AutomationTask {
     logger.info('🎯 Starting code quality enforcement...');
     
     try {
-      const results = {
+      const results ={
         timestamp: new Date().toISOString(),
         eslint: {},
         prettier: {},
@@ -132,7 +132,7 @@ class CodeQualityEnforcer extends AutomationTask {
       
       const results = JSON.parse(output);
       
-      const summary = {
+      const summary ={
         totalFiles: results.length,
         totalErrors: 0,
         totalWarnings: 0,
@@ -183,7 +183,7 @@ class CodeQualityEnforcer extends AutomationTask {
   }
 
   processESLintResults(results) {
-    const summary = {
+    const summary ={
       totalFiles: results.length,
       totalErrors: 0,
       totalWarnings: 0,

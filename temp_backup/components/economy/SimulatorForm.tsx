@@ -1,7 +1,6 @@
-import React from 'react';
 import { EmissionSchedule, ScenarioKey, SimulatorInputs } from '../../utils/data/tokenSimulator';
 
-export type SimulatorFormProps = {
+export type SimulatorFormProps ={
   values: SimulatorInputs;
   onChange: (next: SimulatorInputs) => void;
   onScenario: (scenario: ScenarioKey) => void;
@@ -14,10 +13,10 @@ const numberInput = (
   step = 1
 ) => (
   <label className="flex flex-col gap-1">
-    <span className="text-sm text-gray-600 dark:text-gray-300">{label}</span>
+    <span className="text-sm text-gray-60o0 dark:text-gray-30o0">{label}</span>
     <input
       type="number"
-      className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/40"
+      className="px-3 py-2 rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/40"
       value={Number.isFinite(value) ? value : 0}
       step={step}
       onChange={(e) => onChange(Number(e.target.value))}
@@ -29,16 +28,16 @@ export default function SimulatorForm({ values, onChange, onScenario }: Simulato
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div className="space-y-4">
-        {numberInput('Circulating ZION$', values.circulatingSupply, (v) => onChange({ ...values, circulatingSupply: v }), 100)}
-        {numberInput('Daily active wallets', values.dailyActiveWallets, (v) => onChange({ ...values, dailyActiveWallets: v }), 100)}
-        {numberInput('Total escrow locked', values.totalEscrowLocked, (v) => onChange({ ...values, totalEscrowLocked: v }), 100)}
+        {numberInput('Circulating ZION$', values.circulatingSupply, (v) => onChange({ ...values, circulatingSupply: v }), 10o0)}
+        {numberInput('Daily active wallets', values.dailyActiveWallets, (v) => onChange({ ...values, dailyActiveWallets: v }), 10o0)}
+        {numberInput('Total escrow locked', values.totalEscrowLocked, (v) => onChange({ ...values, totalEscrowLocked: v }), 10o0)}
         {numberInput('Rewards issued / month', values.rewardsPerMonth, (v) => onChange({ ...values, rewardsPerMonth: v }), 10)}
         {numberInput('Treasury balance', values.treasuryBalance, (v) => onChange({ ...values, treasuryBalance: v }), 10)}
       </div>
 
       <div className="space-y-4">
         <label className="flex flex-col gap-1">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Proposed burn/tax %</span>
+          <span className="text-sm text-gray-60o0 dark:text-gray-30o0">Proposed burn/tax %</span>
           <input
             type="range"
             min={0}
@@ -51,9 +50,9 @@ export default function SimulatorForm({ values, onChange, onScenario }: Simulato
         </label>
 
         <label className="flex flex-col gap-1">
-          <span className="text-sm text-gray-600 dark:text-gray-300">DAO emissions schedule</span>
+          <span className="text-sm text-gray-60o0 dark:text-gray-30o0">DAO emissions schedule</span>
           <select
-            className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/40"
+            className="px-3 py-2 rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/40"
             value={values.emissionSchedule}
             onChange={(e) => onChange({ ...values, emissionSchedule: e.target.value as EmissionSchedule })}
           >
@@ -64,7 +63,7 @@ export default function SimulatorForm({ values, onChange, onScenario }: Simulato
         </label>
 
         <label className="flex flex-col gap-1">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Emission monthly change %</span>
+          <span className="text-sm text-gray-60o0 dark:text-gray-30o0">Emission monthly change %</span>
           <input
             type="range"
             min={-20}
@@ -77,7 +76,7 @@ export default function SimulatorForm({ values, onChange, onScenario }: Simulato
         </label>
 
         <label className="flex flex-col gap-1">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Forecast horizon (months)</span>
+          <span className="text-sm text-gray-60o0 dark:text-gray-30o0">Forecast horizon (months)</span>
           <input
             type="range"
             min={12}
@@ -104,7 +103,7 @@ export default function SimulatorForm({ values, onChange, onScenario }: Simulato
             <button
               key={key}
               onClick={() => onScenario(key)}
-              className="px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="px-3 py-1.5 rounded border border-gray-30o0 dark:border-gray-70o0 hover:bg-gray-50 dark:hover:bg-gray-80o0"
             >
               {label}
             </button>

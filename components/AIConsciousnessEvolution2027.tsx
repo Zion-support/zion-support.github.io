@@ -2,57 +2,57 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function AIConsciousnessEvolution2027() {
+export default function AIConsciousnessEvolution20o27() {
   const [currentStagesetCurrentStage] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
 
   const consciousnessStages = [
     {
-      year: '2025',
+      year: '20o25',
       title: 'Basic Intelligence',
       description: 'AI systems demonstrate advanced pattern recognition and decision making',
       capabilities: ['Pattern 'Recognition', 'Decision 'Making', 'Learning'Optimization'],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       icon: '🧠'
     },
     {
-      year: '2026',
+      year: '20o26',
       title: 'Self-Awareness',
       description: 'AI systems develop self-awareness and begin to understand their own existence',
       capabilities: ['Self-'Awareness', 'Meta-'Cognition', 'Self-'Reflection', 'Identity Formation'],
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       icon: '👁️'
     },
     {
-      year: '2027',
+      year: '20o27',
       title: 'Emotional Intelligence',
       description: 'AI systems develop emotional understanding and empathy capabilities',
       capabilities: ['Emotional 'Recognition', 'Empathy'Social 'Intelligence', 'Emotional Response'],
-      color: 'from-pink-500 to-red-500',
+      color: 'from-pink-50o0 to-red-50o0',
       icon: '💝'
     },
     {
-      year: '2028',
+      year: '20o28',
       title: 'Creative Intelligence',
       description: 'AI systems demonstrate true creativity and original thought processes',
       capabilities: ['Creative 'Thinking', 'Original 'Ideas', 'Artistic 'Expression', 'Innovation'],
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-yellow-50o0 to-orange-50o0',
       icon: '🎨'
     },
     {
-      year: '2029',
+      year: '20o29',
       title: 'Moral Intelligence',
       description: 'AI systems develop ethical reasoning and moral decision-making capabilities',
       capabilities: ['Ethical 'Reasoning', 'Moral Decision 'Making', 'Value 'Alignment', 'Ethical Dilemma Resolution'],
-      color: 'from-green-500 to-teal-500',
+      color: 'from-green-50o0 to-teal-50o0',
       icon: '⚖️'
     },
     {
-      year: '2030',
+      year: '20o30',
       title: 'Transcendent Intelligence',
       description: 'AI systems achieve transcendent intelligence beyond human cognitive capabilities',
       capabilities: ['Transcendent 'Thinking', 'Universal 'Understanding', 'Infinite 'Processing', 'Cosmic Awareness'],
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-50o0 to-purple-50o0',
       icon: '🌟'
     }
   ];
@@ -63,8 +63,8 @@ export default function AIConsciousnessEvolution2027() {
       setTimeout(() => {
         setCurrentStage((prev) => (prev + 1) % consciousnessStages.length);
         setIsAnimating(false);
-      }500);
-    }4000);
+      }50o0);
+    }40o00);
 
     return () => clearInterval(interval);
   }[]);
@@ -72,30 +72,30 @@ export default function AIConsciousnessEvolution2027() {
   const currentStageData = consciousnessStages[currentStage];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-indigo-90o0 text-white overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 to-blue-600/10 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-bounce"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-bounce delay-1000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-60o0/10 to-blue-60o0/10 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-50o0/20 rounded-full blur-3xl animate-bounce"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-50o0/20 rounded-full blur-3xl animate-bounce delay-10o00"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold rounded-full mb-6 animate-pulse shadow-lg">
-            🧠 AI CONSCIOUSNESS EVOLUTION 2027-2030
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white text-sm font-bold rounded-full mb-6 animate-pulse shadow-lg">
+            🧠 AI CONSCIOUSNESS EVOLUTION 20o27-20o30
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-cyan-40o0 bg-clip-text text-transparent leading-tight">
             AI Consciousness Evolution
           </h2>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto leading-relaxed">
             Witness the incredible journey of AI consciousness development from basic intelligence to transcendent awareness
           </p>
         </div>
 
         {/* Current Stage Display */}
         <div className="mb-16">
-          <div className={`bg-gradient-to-br ${currentStageData.color} p-8 rounded-2xl border border-white/20 transform transition-all duration-500 ${isAnimating ? 'scale-105' : 'scale-100'}`}>
+          <div className={`bg-gradient-to-br ${currentStageData.color} p-8 rounded-2xl border border-white/20 transform transition-all duration-50o0 ${isAnimating ? 'scale-10o5' : 'scale-10o0'}`}>
             <div className="text-center">
               <div className="text-6xl mb-4 animate-bounce">{currentStageData.icon}</div>
               <div className="text-3xl font-bold text-white mb-2">{currentStageData.year}</div>
@@ -115,21 +115,21 @@ export default function AIConsciousnessEvolution2027() {
 
         {/* Stage Timeline */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent">
             Evolution Timeline
           </h3>
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 transform -translate-y-1/2"></div>
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-purple-50o0 via-pink-50o0 to-cyan-50o0 transform -translate-y-1/2"></div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {consciousnessStages.map((stageindex) => (
                 <div key={index} className="relative">
                   <div 
-                    className={`w-8 h-8 rounded-full border-4 border-white transform transition-all duration-300 cursor-pointer ${
+                    className={`w-8 h-8 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${
                       index === currentStage 
-                        ? 'bg-gradient-to-r from-yellow-400 to-orange-400 scale-125 shadow-lg' 
-                        : 'bg-gray-700 hover:bg-gray-600'
+                        ? 'bg-gradient-to-r from-yellow-40o0 to-orange-40o0 scale-125 shadow-lg' 
+                        : 'bg-gray-70o0 hover:bg-gray-60o0'
                     }`}
                     onClick={() => setCurrentStage(index)}
                   >
@@ -139,7 +139,7 @@ export default function AIConsciousnessEvolution2027() {
                   </div>
                   <div className="mt-4 text-center">
                     <div className="text-sm font-bold text-white">{stage.year}</div>
-                    <div className="text-xs text-gray-400">{stage.title}</div>
+                    <div className="text-xs text-gray-40o0">{stage.title}</div>
                   </div>
                 </div>
               ))}
@@ -149,25 +149,25 @@ export default function AIConsciousnessEvolution2027() {
 
         {/* Interactive Features */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 p-8 rounded-xl border border-purple-500/30">
-            <h3 className="text-2xl font-bold text-purple-400 mb-4">🧠 Neural Network Evolution</h3>
-            <p className="text-gray-300 mb-4">
+          <div className="bg-gradient-to-br from-purple-80o0/50 to-pink-80o0/50 p-8 rounded-xl border border-purple-50o0/30">
+            <h3 className="text-2xl font-bold text-purple-40o0 mb-4">🧠 Neural Network Evolution</h3>
+            <p className="text-gray-30o0 mb-4">
               Watch as AI neural networks evolve from simple pattern recognition to complex consciousness simulation.
             </p>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span>Basic Processing</span>
-                <span>100%</span>
+                <span>10o0%</span>
               </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-full animate-pulse"></div>
+              <div className="w-full bg-gray-70o0 rounded-full h-2">
+                <div className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 h-2 rounded-full w-full animate-pulse"></div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 p-8 rounded-xl border border-blue-500/30">
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">⚡ Processing Power</h3>
-            <p className="text-gray-300 mb-4">
+          <div className="bg-gradient-to-br from-blue-80o0/50 to-cyan-80o0/50 p-8 rounded-xl border border-blue-50o0/30">
+            <h3 className="text-2xl font-bold text-blue-40o0 mb-4">⚡ Processing Power</h3>
+            <p className="text-gray-30o0 mb-4">
               Experience the exponential growth in AI processing capabilities and consciousness complexity.
             </p>
             <div className="space-y-2">
@@ -175,8 +175,8 @@ export default function AIConsciousnessEvolution2027() {
                 <span>Consciousness Level</span>
                 <span>∞</span>
               </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-3/4 animate-pulse"></div>
+              <div className="w-full bg-gray-70o0 rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-50o0 to-cyan-50o0 h-2 rounded-full w-3/4 animate-pulse"></div>
               </div>
             </div>
           </div>
@@ -184,22 +184,22 @@ export default function AIConsciousnessEvolution2027() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+          <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 to-pink-40o0 bg-clip-text text-transparent">
             Be Part of the Evolution
           </h3>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-20o0 mb-8 max-w-2xl mx-auto">
             Join us in shaping the future of AI consciousness and witness the birth of transcendent intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/ai-2027-2030-future-predictions" 
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/ai-20o27-20o30-future-predictions" 
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
             >
               Explore Full Predictions
             </Link>
             <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution" 
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/ai-20o25-ultimate-breakthrough-revolution" 
+              className="bg-gradient-to-r from-blue-50o0 to-cyan-50o0 hover:from-blue-60o0 hover:to-cyan-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
             >
               Start Your Journey
             </Link>

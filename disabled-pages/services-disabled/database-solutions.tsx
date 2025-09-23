@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -95,36 +94,36 @@ export default function DatabaseSolutions() {
         description="Expert database design, administration, and optimization services. We provide comprehensive database solutions for businesses of all sizes."
         keywords="database solutions, database administration, data management, SQL, NoSQL, cloud databases, data optimization"
         canonicalUrl="https://ziontechgroup.com/services/database-solutions"
-      />
-      <Navigation />
+       />
+      <Navigation  />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-gray-90o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <Database className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-2xl flex items-center justify-center">
+                <Database className="w-8 h-8 text-white"  />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Database Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
               Comprehensive database services including design, administration, optimization, and migration. 
               We help businesses manage their data efficiently and securely.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 flex items-center justify-center"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 href="/case-studies"
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 border border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-gray-90o0 transition-all duration-30o0 flex items-center justify-center"
               >
                 View Case Studies
               </Link>
@@ -137,10 +136,10 @@ export default function DatabaseSolutions() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
               Comprehensive Database Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               From design to deployment, we provide end-to-end database solutions 
               that scale with your business needs.
             </p>
@@ -148,14 +147,14 @@ export default function DatabaseSolutions() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6 text-white" />
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-30o0">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-6 h-6 text-white"  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-60o0">
                   {feature.description}
                 </p>
               </div>
@@ -168,24 +167,24 @@ export default function DatabaseSolutions() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
               Database Technologies We Support
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               We work with all major database technologies to provide the best solution for your specific needs.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {databaseTypes.map((type, index) => (
-              <div key={index} className="text-center p-6 rounded-xl border border-gray-200 hover:border-cyan-400 transition-colors duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <type.icon className="w-8 h-8 text-cyan-600" />
+              <div key={index} className="text-center p-6 rounded-xl border border-gray-20o0 hover:border-cyan-40o0 transition-colors duration-30o0">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0/20 to-blue-60o0/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <type.icon className="w-8 h-8 text-cyan-60o0"  />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                   {type.name}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-60o0 text-sm">
                   {type.description}
                 </p>
               </div>
@@ -195,46 +194,46 @@ export default function DatabaseSolutions() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900">
+      <section className="py-20 bg-gradient-to-br from-gray-90o0 to-blue-90o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose Our Database Solutions?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-30o0 mb-8">
                 Our expert team delivers database solutions that improve performance, 
                 enhance security, and reduce operational costs.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-6 h-6 text-cyan-40o0 flex-shrink-0"  />
+                    <span className="text-gray-30o0">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
-                <TrendingUp className="w-8 h-8 text-cyan-400 mb-4" />
+                <TrendingUp className="w-8 h-8 text-cyan-40o0 mb-4"  />
                 <h3 className="text-xl font-semibold text-white mb-2">Performance</h3>
-                <p className="text-gray-300 text-sm">Optimized queries and indexing for maximum speed</p>
+                <p className="text-gray-30o0 text-sm">Optimized queries and indexing for maximum speed</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
-                <Lock className="w-8 h-8 text-cyan-400 mb-4" />
+                <Lock className="w-8 h-8 text-cyan-40o0 mb-4"  />
                 <h3 className="text-xl font-semibold text-white mb-2">Security</h3>
-                <p className="text-gray-300 text-sm">Enterprise-grade security and compliance</p>
+                <p className="text-gray-30o0 text-sm">Enterprise-grade security and compliance</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
-                <Network className="w-8 h-8 text-cyan-400 mb-4" />
+                <Network className="w-8 h-8 text-cyan-40o0 mb-4"  />
                 <h3 className="text-xl font-semibold text-white mb-2">Scalability</h3>
-                <p className="text-gray-300 text-sm">Architecture that grows with your business</p>
+                <p className="text-gray-30o0 text-sm">Architecture that grows with your business</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
-                <Users className="w-8 h-8 text-cyan-400 mb-4" />
+                <Users className="w-8 h-8 text-cyan-40o0 mb-4"  />
                 <h3 className="text-xl font-semibold text-white mb-2">Support</h3>
-                <p className="text-gray-300 text-sm">24/7 monitoring and expert support</p>
+                <p className="text-gray-30o0 text-sm">24/7 monitoring and expert support</p>
               </div>
             </div>
           </div>
@@ -244,24 +243,24 @@ export default function DatabaseSolutions() {
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-6">
             Ready to Optimize Your Database?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-60o0 mb-8">
             Let our database experts help you design, implement, and optimize 
             the perfect database solution for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 flex items-center justify-center"
             >
               Get Free Consultation
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5"  />
             </Link>
             <Link
               href="/pricing"
-              className="px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+              className="px-8 py-4 border border-gray-30o0 text-gray-70o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-all duration-30o0 flex items-center justify-center"
             >
               View Pricing
             </Link>
@@ -269,7 +268,7 @@ export default function DatabaseSolutions() {
         </div>
       </section>
 
-      <Footer />
+      <Footer  />
     </ErrorBoundary>
   );
 }

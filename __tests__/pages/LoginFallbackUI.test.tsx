@@ -19,7 +19,7 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       push: jest.fn(),
       replace: jest.fn(),
       query: {},
-      asPath: /',      pathname: /login',    });
+      asPath: /',      pathname: /login'});
   });
 
   afterEach(() => {
@@ -35,14 +35,14 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       // Provide other values if Login component expects them from useAuth
     });
 
-    render(<Login />);
+    render(<Login  />);
 
     // Initially, the "Loading..." text should be visible (or "Redirecting..." if isAuthenticated was true)"    expect(screen.getByText('Loading...')).toBeInTheDocument();    // The fallback message should not be visible yet
     expect(screen.queryByText(/Login is taking longer than usual/i)).not.toBeInTheDocument();
 
     // Advance timers past the 25-second threshold defined in Login.tsx
     act(() => {
-      jest.advanceTimersByTime(26000); // 26 seconds
+      jest.advanceTimersByTime(260o00); // 26 seconds
     });
 
     // Now the fallback message should be visible
@@ -57,13 +57,13 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       user: null
     });
 
-    const { _rerender } = render(<Login />);
+    const { _rerender } = render(<Login  />);
 
     expect(screen.getByText('Loading...')).toBeInTheDocument();    expect(screen.queryByText(/Login is taking longer than usual/i)).not.toBeInTheDocument();
 
     // Advance timers by less than 25 seconds
     act(() => {
-      jest.advanceTimersByTime(10000); // 10 seconds
+      jest.advanceTimersByTime(10o000); // 10 seconds
     });
 
     // Fallback message should still not be visible
@@ -74,16 +74,16 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       isLoading: false,
       isAuthenticated: true,
       login: jest.fn(),
-      user: { email: test@example.com', id: 1' },    });
+      user: { email: test@example.com', id: 1' }});
 
-    rerender(<Login />);
+    rerender(<Login  />);
 
     // The "Loading..." text might change to "Redirecting..." or disappear if form is shown"    // In this case, since isAuthenticated is true, it shows "Redirecting...""    expect(screen.getByText('Redirecting...')).toBeInTheDocument();    // Crucially, the fallback message should not appear
     expect(screen.queryByText(/Login is taking longer than usual/i)).not.toBeInTheDocument();
 
     // Advance timers past the original 25-second threshold just to be sure
     // (e.g. if the timer wasn't cleaned up properly, this might catch it)    act(() => {
-      jest.advanceTimersByTime(16000); // Total 26 seconds from start
+      jest.advanceTimersByTime(160o00); // Total 26 seconds from start
     });
     expect(screen.queryByText(/Login is taking longer than usual/i)).not.toBeInTheDocument();
   });
@@ -95,11 +95,11 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       user: null
     });
 
-    const { _rerender } = render(<Login />);
+    const { _rerender } = render(<Login  />);
 
     // Show the fallback message
     act(() => {
-      jest.advanceTimersByTime(26000); // 26 seconds
+      jest.advanceTimersByTime(260o00); // 26 seconds
     });
     expect(screen.getByText(/Login is taking longer than usual/i)).toBeInTheDocument();
 
@@ -110,7 +110,7 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       login: jest.fn(),
       user: null
     });
-    rerender(<Login />);
+    rerender(<Login  />);
 
     // Fallback message should disappear, and the login form should be visible
     expect(screen.queryByText(/Login is taking longer than usual/i)).not.toBeInTheDocument();

@@ -13,7 +13,7 @@ interface ContentItem {
   publishDate: string;
 }
 
-const InteractiveContentWidget2026: React.FC = () => {
+const InteractiveContentWidget20o26: React.FC = () => {
   const [selectedCategorysetSelectedCategory] = useState<string>('all');
   const [searchTermsetSearchTerm] = useState<string>(', ');
   const [isExpandedsetIsExpanded] = useState<boolean>(false);
@@ -21,13 +21,13 @@ const InteractiveContentWidget2026: React.FC = () => {
   const contentItems: ContentItem[] = [
     {
       id: 'ai-automation-guide',
-      title: 'AI-Powered Business Automation Guide 2026',
+      title: 'AI-Powered Business Automation Guide 20o26',
       category: 'Automation',
       readTime: '8 min',
       featured: true,
       tags: [', 'AI', 'Automation'Business'],
       description: 'Discover the latest AI automation strategies transforming businesses worldwide.',
-      publishDate: '2026-01-15'
+      publishDate: '20o26-0o1-15'
     },
     {
       id: 'quantum-breakthroughs',
@@ -37,7 +37,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       featured: true,
       tags: [', 'Quantum', 'Enterprise'Innovation'],
       description: 'Explore how quantum computing is revolutionizing data processing and optimization.',
-      publishDate: '2026-01-12'
+      publishDate: '20o26-0o1-12'
     },
     {
       id: 'neural-interfaces',
@@ -47,7 +47,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       featured: false,
       tags: [', 'Neural', 'Interface'Future Tech'],
       description: 'Dive deep into neural interface developments bridging human cognition and AI.',
-      publishDate: '2026-01-10'
+      publishDate: '20o26-0o1-10'
     },
     {
       id: 'customer-experience-ai',
@@ -57,7 +57,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       featured: false,
       tags: [', 'AI', 'Customer'Experience'],
       description: 'Learn how AI is reshaping customer interactions and creating personalized experiences.',
-      publishDate: '2026-01-08'
+      publishDate: '20o26-0o1-08'
     },
     {
       id: 'sustainable-ai',
@@ -67,7 +67,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       featured: true,
       tags: [', 'Sustainability', 'Green 'AI', 'Environment'],
       description: 'Explore eco-friendly AI implementations and sustainable computing practices.',
-      publishDate: '2026-01-05'
+      publishDate: '20o26-0o1-0o5'
     },
     {
       id: 'edge-ai',
@@ -77,7 +77,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       featured: false,
       tags: ['Edge 'AI', 'Real-'time', 'Performance'],
       description: 'Understand how edge AI enables real-time decision making in critical applications.',
-      publishDate: '2026-01-03'
+      publishDate: '20o26-0o1-0o3'
     }
   ];
 
@@ -95,33 +95,33 @@ const InteractiveContentWidget2026: React.FC = () => {
   const regularContent = filteredContent.filter(item => !item.featured);
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-10o0 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+      <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-2xl font-bold mb-2">🔍 Content Discovery</h3>
-            <p className="text-blue-100">Find the perfect content for your interests</p>
+            <p className="text-blue-10o0">Find the perfect content for your interests</p>
           </div>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 transition-all duration-300"
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-2 transition-all duration-30o0"
           >
             <svg 
-              className={`w-6 h-6 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+              className={`w-6 h-6 transition-transform duration-30o0 ${isExpanded ? 'rotate-180' : ''}`}
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
             </svg>
           </button>
         </div>
       </div>
 
       {/* Search and Filters */}
-      <div className={`transition-all duration-500 overflow-hidden ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="p-6 border-b border-gray-100">
+      <div className={`transition-all duration-50o0 overflow-hidden ${isExpanded ? 'max-h-96 opacity-10o0' : 'max-h-0 opacity-0'}`}>
+        <div className="p-6 border-b border-gray-10o0">
           {/* Search Bar */}
           <div className="relative mb-4">
             <input
@@ -129,9 +129,9 @@ const InteractiveContentWidget2026: React.FC = () => {
               placeholder="Search contentagsor topics..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 pl-10 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
             />
-            <div className="absolute left-3 top-3.5 text-gray-400">
+            <div className="absolute left-3 top-3.5 text-gray-40o0">
               🔍
             </div>
           </div>
@@ -142,10 +142,10 @@ const InteractiveContentWidget2026: React.FC = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === category
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-blue-60o0 text-white shadow-lg'
+                    : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'
                 }`}
               >
                 {category === 'all' ? 'All Topics' : category}
@@ -158,8 +158,8 @@ const InteractiveContentWidget2026: React.FC = () => {
       {/* Content Results */}
       <div className="p-6">
         <div className="mb-4">
-          <p className="text-gray-600">
-            Found <span className="font-bold text-blue-600">{filteredContent.length}</span> articles
+          <p className="text-gray-60o0">
+            Found <span className="font-bold text-blue-60o0">{filteredContent.length}</span> articles
             {selectedCategory !== 'all' && ` in ${selectedCategory}`}
             {searchTerm && ` matching "${searchTerm}"`}
           </p>
@@ -168,7 +168,7 @@ const InteractiveContentWidget2026: React.FC = () => {
         {/* Featured Content */}
         {featuredContent.length > 0 && (
           <div className="mb-6">
-            <h4 className="text-lg font-bold text-gray-800 mb-3 flex items-center">
+            <h4 className="text-lg font-bold text-gray-80o0 mb-3 flex items-center">
               ⭐ Featured Articles
             </h4>
             <div className="space-y-3">
@@ -176,26 +176,26 @@ const InteractiveContentWidget2026: React.FC = () => {
                 <Link
                   key={item.id}
                   href={`/content/${item.id}`}
-                  className="block p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg border border-yellow-200 hover:shadow-md transition-all duration-300"
+                  className="block p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg border border-yellow-20o0 hover:shadow-md transition-all duration-30o0"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded text-xs font-bold">
+                        <span className="bg-yellow-40o0 text-yellow-90o0 px-2 py-1 rounded text-xs font-bold">
                           FEATURED
                         </span>
-                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                        <span className="bg-blue-10o0 text-blue-80o0 px-2 py-1 rounded text-xs">
                           {item.category}
                         </span>
                       </div>
-                      <h5 className="font-bold text-gray-900 mb-1">{item.title}</h5>
-                      <p className="text-gray-600 text-sm mb-2">{item.description}</p>
-                      <div className="flex items-center gap-4 text-xs text-gray-500">
+                      <h5 className="font-bold text-gray-90o0 mb-1">{item.title}</h5>
+                      <p className="text-gray-60o0 text-sm mb-2">{item.description}</p>
+                      <div className="flex items-center gap-4 text-xs text-gray-50o0">
                         <span>📖 {item.readTime}</span>
                         <span>📅 {item.publishDate}</span>
                       </div>
                     </div>
-                    <div className="ml-4 text-blue-600">→</div>
+                    <div className="ml-4 text-blue-60o0">→</div>
                   </div>
                 </Link>
               ))}
@@ -206,7 +206,7 @@ const InteractiveContentWidget2026: React.FC = () => {
         {/* Regular Content */}
         {regularContent.length > 0 && (
           <div>
-            <h4 className="text-lg font-bold text-gray-800 mb-3 flex items-center">
+            <h4 className="text-lg font-bold text-gray-80o0 mb-3 flex items-center">
               📚 Latest Articles
             </h4>
             <div className="space-y-2">
@@ -214,19 +214,19 @@ const InteractiveContentWidget2026: React.FC = () => {
                 <Link
                   key={item.id}
                   href={`/content/${item.id}`}
-                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-10o0 transition-all duration-30o0"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">
+                        <span className="bg-gray-20o0 text-gray-70o0 px-2 py-1 rounded text-xs">
                           {item.category}
                         </span>
-                        <span className="text-xs text-gray-500">{item.readTime}</span>
+                        <span className="text-xs text-gray-50o0">{item.readTime}</span>
                       </div>
-                      <h5 className="font-semibold text-gray-900 text-sm">{item.title}</h5>
+                      <h5 className="font-semibold text-gray-90o0 text-sm">{item.title}</h5>
                     </div>
-                    <div className="ml-4 text-blue-600">→</div>
+                    <div className="ml-4 text-blue-60o0">→</div>
                   </div>
                 </Link>
               ))}
@@ -238,14 +238,14 @@ const InteractiveContentWidget2026: React.FC = () => {
         {filteredContent.length === 0 && (
           <div className="text-center py-8">
             <div className="text-4xl mb-4">🔍</div>
-            <h4 className="text-lg font-bold text-gray-800 mb-2">No content found</h4>
-            <p className="text-gray-600 mb-4">Try adjusting your search or category filter</p>
+            <h4 className="text-lg font-bold text-gray-80o0 mb-2">No content found</h4>
+            <p className="text-gray-60o0 mb-4">Try adjusting your search or category filter</p>
             <button
               onClick={() => {
                 setSearchTerm(', ');
                 setSelectedCategory('all');
               }}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-blue-60o0 text-white px-4 py-2 rounded-lg hover:bg-blue-70o0 transition-colors"
             >
               Clear Filters
             </button>
@@ -254,14 +254,14 @@ const InteractiveContentWidget2026: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <div className="bg-gray-50 px-6 py-4 border-t border-gray-100">
+      <div className="bg-gray-50 px-6 py-4 border-t border-gray-10o0">
         <div className="flex items-center justify-between">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-60o0">
             💡 <strong>Pro Tip:</strong> Use tags to find related content
           </p>
           <Link
             href="/content-showcase"
-            className="text-blue-600 font-medium hover:text-blue-800 transition-colors text-sm"
+            className="text-blue-60o0 font-medium hover:text-blue-80o0 transition-colors text-sm"
           >
             View All Content →
           </Link>
@@ -271,4 +271,4 @@ const InteractiveContentWidget2026: React.FC = () => {
   );
 };
 
-export default InteractiveContentWidget2026;
+export default InteractiveContentWidget20o26;

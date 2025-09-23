@@ -27,15 +27,15 @@ interface NavigationItem {
   category?: string;
 }
 
-interface UltraFuturisticNavigation2036Props {
+interface UltraFuturisticNavigation20o36Props {
   onMenuToggle?: () => void;
   isMenuOpen?: boolean;
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -54,7 +54,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Services',
     href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Complete technology solutions',
     badge: 'Main',
     category: 'services',
@@ -63,73 +63,73 @@ const navigationItems: NavigationItem[] = [
         name: 'All Services', 
         href: '/services', 
         description: 'Complete services overview',
-        icon: <Grid className="w-4 h-4" />,
+        icon: <Grid className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'AI & Machine Learning', 
         href: '/ai-services', 
         description: 'Advanced AI solutions',
-        icon: <Cpu className="w-4 h-4" />
+        icon: <Cpu className="w-4 h-4"  />
       },
       { 
         name: 'Quantum Technology', 
         href: '/quantum-services', 
         description: 'Quantum computing solutions',
-        icon: <Cpu className="w-4 h-4" />
+        icon: <Cpu className="w-4 h-4"  />
       },
       { 
         name: 'Space Technology', 
         href: '/space-technology', 
         description: 'Space exploration solutions',
-        icon: <Rocket className="w-4 h-4" />
+        icon: <Rocket className="w-4 h-4"  />
       },
       { 
         name: 'IT Solutions', 
         href: '/it-services', 
         description: 'Enterprise IT infrastructure',
-        icon: <Shield className="w-4 h-4" />
+        icon: <Shield className="w-4 h-4"  />
       },
       { 
         name: 'Specialized Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
-        icon: <Star className="w-4 h-4" />
+        icon: <Star className="w-4 h-4"  />
       }
     ]
   },
   {
     name: 'Showcase & Pricing',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Star className="w-5 h-5" />,
+    href: '/comprehensive-services-showcase-20o25',
+    icon: <Star className="w-5 h-5"  />,
     description: 'Services portfolio & pricing',
     badge: 'Showcase',
     children: [
       { 
-        name: '2025 Services Showcase', 
-        href: '/comprehensive-services-showcase-2025', 
-        description: 'Complete 2025 services overview',
-        icon: <Star className="w-4 h-4" />,
+        name: '20o25 Services Showcase', 
+        href: '/comprehensive-services-showcase-20o25', 
+        description: 'Complete 20o25 services overview',
+        icon: <Star className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'Pricing Plans', 
-        href: '/revolutionary-2025-pricing', 
+        href: '/revolutionary-20o25-pricing', 
         description: 'Transparent pricing structure',
-        icon: <DollarSign className="w-4 h-4" />
+        icon: <DollarSign className="w-4 h-4"  />
       },
       { 
         name: 'Market Pricing', 
         href: '/market-pricing', 
         description: 'Market price references',
-        icon: <BarChart3 className="w-4 h-4" />
+        icon: <BarChart3 className="w-4 h-4"  />
       }
     ]
   },
   {
     name: 'Company',
     href: '/about',
-    icon: <Star className="w-5 h-5" />,
+    icon: <Star className="w-5 h-5"  />,
     description: 'About Zion Tech Group',
     category: 'company',
     children: [
@@ -137,63 +137,63 @@ const navigationItems: NavigationItem[] = [
         name: 'About Us', 
         href: '/about', 
         description: 'Company information',
-        icon: <Star className="w-4 h-4" />
+        icon: <Star className="w-4 h-4"  />
       },
       { 
         name: 'Contact', 
         href: '/contact', 
         description: 'Get in touch',
-        icon: <Mail className="w-4 h-4" />
+        icon: <Mail className="w-4 h-4"  />
       },
       { 
         name: 'Partners', 
         href: '/partners', 
         description: 'Partnership opportunities',
-        icon: <Star className="w-4 h-4" />
+        icon: <Star className="w-4 h-4"  />
       },
       { 
         name: 'Investors', 
         href: '/investors', 
         description: 'Investment information',
-        icon: <DollarSign className="w-4 h-4" />
+        icon: <DollarSign className="w-4 h-4"  />
       },
       { 
         name: 'Careers', 
         href: '/careers', 
         description: 'Join our team',
-        icon: <Star className="w-4 h-4" />
+        icon: <Star className="w-4 h-4"  />
       }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5"  />,
     description: 'Knowledge & documentation',
     children: [
       { 
         name: 'Documentation', 
         href: '/docs', 
         description: 'Technical documentation',
-        icon: <FileText className="w-4 h-4" />
+        icon: <FileText className="w-4 h-4"  />
       },
       { 
         name: 'White Papers', 
         href: '/white-papers', 
         description: 'Industry insights',
-        icon: <FileText className="w-4 h-4" />
+        icon: <FileText className="w-4 h-4"  />
       },
       { 
         name: 'Webinars', 
         href: '/webinars', 
         description: 'Educational content',
-        icon: <Video className="w-4 h-4" />
+        icon: <Video className="w-4 h-4"  />
       }
     ]
   }
 ];
 
-const UltraFuturisticNavigation2036: React.FC = () => {
+const UltraFuturisticNavigation20o36: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -225,8 +225,6 @@ const UltraFuturisticNavigation2036: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-
-
   // Handle escape key
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -252,9 +250,9 @@ const UltraFuturisticNavigation2036: React.FC = () => {
   );
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
-        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
+        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-80o0/50' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -267,10 +265,10 @@ const UltraFuturisticNavigation2036: React.FC = () => {
             className="flex-shrink-0"
           >
             <Link href="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Sparkles className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+                <Sparkles className="w-6 h-6 text-white"  />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                 Zion Tech
               </span>
             </Link>
@@ -288,13 +286,13 @@ const UltraFuturisticNavigation2036: React.FC = () => {
               >
                 <button
                   onClick={() => toggleDropdown(item.name)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group-hover:text-cyan-40o0"
                 >
                   {item.icon}
                   <span className="font-medium">{item.name}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                     activeDropdown === item.name ? 'rotate-180' : ''
-                  }`} />
+                  }`}  />
                 </button>
 
                 {/* Desktop Dropdown */}
@@ -314,30 +312,30 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                               <Link
                                 key={child.name}
                                 href={normalizeHref(child.href)}
-                                className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-200"
+                                className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-20o0"
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                                   {child.icon}
                                 </div>
                                 <div className="flex-1 min-w-0">
                                   <div className="flex items-center space-x-2">
-                                    <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                    <span className="text-sm font-medium text-white group-hover:text-cyan-40o0 transition-colors">
                                       {child.name}
                                     </span>
                                     {child.featured && (
-                                      <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full">
+                                      <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-full">
                                         Featured
                                       </span>
                                     )}
                                   </div>
                                   {child.description && (
-                                    <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                    <p className="text-xs text-gray-40o0 mt-1 line-clamp-2">
                                       {child.description}
                                     </p>
                                   )}
                                 </div>
-                                <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+                                <ArrowRight className="w-4 h-4 text-gray-50o0 group-hover:text-cyan-40o0 transition-colors"  />
                               </Link>
                             ))}
                           </div>
@@ -353,12 +351,12 @@ const UltraFuturisticNavigation2036: React.FC = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link href="/contact">
-              <button className="px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-all duration-200">
+              <button className="px-4 py-2 text-sm font-medium text-cyan-40o0 hover:text-white hover:bg-cyan-40o0/10 rounded-lg transition-all duration-20o0">
                 Contact
               </button>
             </Link>
             <Link href="/get-started">
-              <button className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+              <button className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 transform hover:scale-10o5">
                 Get Started
               </button>
             </Link>
@@ -366,12 +364,12 @@ const UltraFuturisticNavigation2036: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
+            className="lg:hidden p-2 text-white hover:text-cyan-40o0 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -380,9 +378,9 @@ const UltraFuturisticNavigation2036: React.FC = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, x: '10o0%' }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0, x: '10o0%' }}
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden overflow-y-auto"
           >
@@ -390,15 +388,15 @@ const UltraFuturisticNavigation2036: React.FC = () => {
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg"></div>
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-lg"></div>
                   <span className="text-white font-bold text-lg">ZionTech Group</span>
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-white hover:text-cyan-400 transition-colors"
+                  className="p-2 text-white hover:text-cyan-40o0 transition-colors"
                   aria-label="Close mobile menu"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6"  />
                 </button>
               </div>
 
@@ -431,7 +429,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                       <div className="p-4">
                         <div className="mb-4">
                           <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-40o0">{item.description}</p>
                         </div>
                         
                         <div className="space-y-2">
@@ -440,25 +438,25 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                               key={child.name}
                               href={normalizeHref(child.href)}
                               onClick={closeAllDropdowns}
-                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
+                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-80o0/50 transition-all duration-20o0 group"
                             >
-                              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
+                              <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30 rounded-lg flex items-center justify-center">
                                 {child.icon}
                               </div>
                               <div className="flex-1">
                                 <div className="flex items-center space-x-2">
-                                  <span className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                  <span className="font-medium text-white group-hover:text-cyan-40o0 transition-colors">
                                     {child.name}
                                   </span>
                                   {child.featured && (
-                                    <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-xs text-white rounded-full">
+                                    <span className="px-2 py-1 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-xs text-white rounded-full">
                                       Featured
                                     </span>
                                   )}
                                 </div>
-                                <p className="text-sm text-gray-400">{child.description}</p>
+                                <p className="text-sm text-gray-40o0">{child.description}</p>
                               </div>
-                              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+                              <ArrowRight className="w-4 h-4 text-gray-50o0 group-hover:text-cyan-40o0 transition-colors"  />
                             </Link>
                           ))}
                         </div>
@@ -476,16 +474,16 @@ const UltraFuturisticNavigation2036: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+              className="px-6 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-5 h-5"  />
             </motion.button>
             
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-cyan-50o0/25"
             >
               Get Started
             </motion.button>
@@ -497,9 +495,9 @@ const UltraFuturisticNavigation2036: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800 transition-colors duration-200"
+            className="lg:hidden p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-gray-80o0 transition-colors duration-20o0"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </motion.button>
         </div>
 
@@ -512,16 +510,16 @@ const UltraFuturisticNavigation2036: React.FC = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="py-4 border-t border-cyan-400/20"
+              className="py-4 border-t border-cyan-40o0/20"
             >
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />
                 <input
                   type="text"
                   placeholder="Search services, solutions, and more..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/5 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-white/5 border border-cyan-40o0/30 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent"
                   aria-label="Search"
                 />
               </div>
@@ -531,10 +529,10 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                 <div className="mt-4 max-h-96 overflow-y-auto">
                   <div className="grid gap-2">
                     {filteredItems.map((item) => (
-                      <div key={item.name} className="p-3 bg-white/5 rounded-lg border border-cyan-400/20">
+                      <div key={item.name} className="p-3 bg-white/5 rounded-lg border border-cyan-40o0/20">
                         <Link
                           href={normalizeHref(item.href)}
-                          className="block text-white hover:text-cyan-400 transition-colors"
+                          className="block text-white hover:text-cyan-40o0 transition-colors"
                           onClick={() => {
                             setIsSearchOpen(false);
                             setSearchQuery('');
@@ -544,7 +542,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                             {item.icon}
                             <div>
                               <p className="font-medium">{item.name}</p>
-                              <p className="text-sm text-gray-400">{item.description}</p>
+                              <p className="text-sm text-gray-40o0">{item.description}</p>
                             </div>
                           </div>
                         </Link>
@@ -567,27 +565,27 @@ const UltraFuturisticNavigation2036: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
+            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-70o0/50"
           >
             <div className="px-4 py-6 space-y-6">
               {/* Contact Info */}
-              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-lg p-4">
-                <h3 className="text-sm font-medium text-cyan-400 mb-3">Contact Information</h3>
-                <div className="space-y-2 text-sm text-gray-300">
+              <div className="bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-40o0/20 rounded-lg p-4">
+                <h3 className="text-sm font-medium text-cyan-40o0 mb-3">Contact Information</h3>
+                <div className="space-y-2 text-sm text-gray-30o0">
                   <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-cyan-400" />
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+                    <Phone className="w-4 h-4 text-cyan-40o0"  />
+                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-40o0 transition-colors">
                       {contactInfo.mobile}
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-cyan-400" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
+                    <Mail className="w-4 h-4 text-cyan-40o0"  />
+                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-40o0 transition-colors">
                       {contactInfo.email}
                     </a>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                    <MapPin className="w-4 h-4 text-cyan-40o0 mt-0.5"  />
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
@@ -598,15 +596,15 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                 <div key={item.name} className="space-y-2">
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-200"
+                    className="flex items-center justify-between w-full p-3 text-left text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 rounded-xl transition-all duration-20o0"
                   >
                     <div className="flex items-center space-x-3">
                       {item.icon}
                       <span className="font-medium">{item.name}</span>
                     </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
+                    }`}  />
                   </button>
                   
                   <AnimatePresence>
@@ -623,7 +621,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                             key={child.name}
                             href={normalizeHref(child.href)}
                             onClick={closeAllDropdowns}
-                            className="flex items-center space-x-3 p-3 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
+                            className="flex items-center space-x-3 p-3 text-gray-40o0 hover:text-white hover:bg-gray-80o0/50 rounded-lg transition-all duration-20o0"
                           >
                             {child.icon}
                             <span>{child.name}</span>
@@ -635,8 +633,8 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                 </div>
               ))}
               
-              <div className="pt-4 border-t border-gray-700/50">
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+              <div className="pt-4 border-t border-gray-70o0/50">
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0">
                   Get Started
                 </button>
               </div>
@@ -648,4 +646,4 @@ const UltraFuturisticNavigation2036: React.FC = () => {
   );
 };
 
-export default UltraFuturisticNavigation2036;
+export default UltraFuturisticNavigation20o36;

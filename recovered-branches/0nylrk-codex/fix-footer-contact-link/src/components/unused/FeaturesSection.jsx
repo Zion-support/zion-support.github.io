@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
 export function FeaturesSection() {
@@ -6,7 +5,7 @@ export function FeaturesSection() {
         {
             icon: CheckCircleIcon,
             title: "Proven Track Record",
-            description: "500+ successful projects delivered across various industries with measurable results",
+            description: "50o0+ successful projects delivered across various industries with measurable results",
             color: "text-zion-cyan"
         },
         {
@@ -40,7 +39,7 @@ export function FeaturesSection() {
             color: "text-zion-purple"
         }
     ];
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -49,7 +48,7 @@ export function FeaturesSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
@@ -80,14 +79,14 @@ export function FeaturesSection() {
         {/* Features Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (<motion.div key={index} variants={itemVariants} className="group">
-              <div className="bg-white rounded-2xl p-8 border border-zion-slate-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:shadow-xl hover:shadow-zion-cyan/10 hover:-translate-y-1">
+              <div className="bg-white rounded-2xl p-8 border border-zion-slate-light/20 hover:border-zion-cyan/30 transition-all duration-30o0 hover:shadow-xl hover:shadow-zion-cyan/10 hover:-translate-y-1">
                 {/* Icon */}
-                <div className={`w-16 h-16 bg-zion-slate-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-zion-cyan/10 transition-colors duration-300`}>
-                  <feature.icon className={`w-8 h-8 ${feature.color}`}/>
+                <div className={`w-16 h-16 bg-zion-slate-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-zion-cyan/10 transition-colors duration-30o0`}>
+                  <feature.icon className={`w-8 h-8 ${feature.color}`} />
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-zion-blue-dark mb-4 group-hover:text-zion-cyan transition-colors duration-300">
+                <h3 className="text-xl font-bold text-zion-blue-dark mb-4 group-hover:text-zion-cyan transition-colors duration-30o0">
                   {feature.title}
                 </h3>
                 <p className="text-zion-slate leading-relaxed">
@@ -108,10 +107,10 @@ export function FeaturesSection() {
               with our innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <button className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-30o0 hover:scale-10o5 hover:shadow-lg">
                 Get Started Today
               </button>
-              <button className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+              <button className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-30o0 hover:scale-10o5">
                 Learn More
               </button>
             </div>

@@ -100,32 +100,32 @@ export function WebhooksManager() {
   };
 
   return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
+    <Card className="bg-zinc-90o0 border-zinc-80o0 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-          <Webhook className="mr-2" size={20} /> Webhooks
+          <Webhook className="mr-2" size={20}  /> Webhooks
         </CardTitle>
-        <CardDescription className="text-zinc-400">
+        <CardDescription className="text-zinc-40o0">
           Set up webhooks to get notified when events happen in your Zion account.
         </CardDescription>
       </CardHeader>
       
       <CardContent>
         <div className="flex justify-between items-center mb-6">
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-zinc-40o0">
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
           
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant="default">
-                <Plus size={16} className="mr-1" /> Add Webhook
+                <Plus size={16} className="mr-1"  /> Add Webhook
               </Button>
             </DialogTrigger>
-            <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
+            <DialogContent className="bg-zinc-90o0 border-zinc-80o0 text-white">
               <DialogHeader>
                 <DialogTitle>Create Webhook</DialogTitle>
-                <DialogDescription className="text-zinc-400">
+                <DialogDescription className="text-zinc-40o0">
                   Add a webhook endpoint to receive event notifications.
                 </DialogDescription>
               </DialogHeader>
@@ -138,7 +138,7 @@ export function WebhooksManager() {
                     value={webhookName}
                     onChange={(e) => setWebhookName(e.target.value)}
                     placeholder="e.g. Application Notifications"
-                    className="bg-zinc-800 border-zinc-700"
+                    className="bg-zinc-80o0 border-zinc-70o0"
                   />
                 </div>
                 
@@ -149,9 +149,9 @@ export function WebhooksManager() {
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e.target.value)}
                     placeholder="https://example.com/webhook"
-                    className="bg-zinc-800 border-zinc-700"
+                    className="bg-zinc-80o0 border-zinc-70o0"
                   />
-                  <p className="text-xs text-zinc-500">
+                  <p className="text-xs text-zinc-50o0">
                     The URL where webhook payloads will be sent when events occur.
                   </p>
                 </div>
@@ -165,9 +165,9 @@ export function WebhooksManager() {
                     onChange={(e) => setWebhookSecret(e.target.value)}
                     placeholder="Enter secret key"
                     aria-label="Secret key"
-                    className="bg-zinc-800 border-zinc-700"
+                    className="bg-zinc-80o0 border-zinc-70o0"
                   />
-                  <p className="text-xs text-zinc-500">
+                  <p className="text-xs text-zinc-50o0">
                     Used to verify webhook payload signatures. Keep it secret and secure.
                   </p>
                 </div>
@@ -187,7 +187,7 @@ export function WebhooksManager() {
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {event.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
+                          <span className="block text-xs text-zinc-40o0 mt-1">{event.description}</span>
                         </Label>
                       </div>
                     ))}
@@ -217,21 +217,21 @@ export function WebhooksManager() {
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
-            <div className="text-center py-8 text-zinc-500">Loading webhooks...</div>
+            <div className="text-center py-8 text-zinc-50o0">Loading webhooks...</div>
           ) : webhooks.length === 0 ? (
-            <div className="text-center py-8 text-zinc-500">
-              <Webhook className="mx-auto mb-2 opacity-30" size={24} />
+            <div className="text-center py-8 text-zinc-50o0">
+              <Webhook className="mx-auto mb-2 opacity-30" size={24}  />
               <p>No webhooks found.</p>
               <p className="text-sm mt-1">Create one to receive event notifications.</p>
             </div>
           ) : (
             webhooks.map((webhook) => (
-              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
+              <div key={webhook.id} className="p-4 border border-zinc-80o0 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-medium">{webhook.name}</h3>
-                    <div className="flex items-center text-sm text-zinc-400 mt-1">
-                      <Globe size={14} className="mr-1" />
+                    <div className="flex items-center text-sm text-zinc-40o0 mt-1">
+                      <Globe size={14} className="mr-1"  />
                       <span className="max-w-md truncate">{webhook.url}</span>
                     </div>
                   </div>
@@ -251,21 +251,21 @@ export function WebhooksManager() {
                       <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon" aria-label="More options">
-                          <MoreVertical size={16} />
+                          <MoreVertical size={16}  />
                         </Button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
+                      <DropdownMenuContent align="end" className="bg-zinc-90o0 border-zinc-80o0 text-white">
                         <DropdownMenuItem
                           onClick={() => setShowTestDialog(webhook.id)}
                           className="cursor-pointer"
                         >
-                          <PlayCircle size={14} className="mr-2" /> Test
+                          <PlayCircle size={14} className="mr-2"  /> Test
                         </DropdownMenuItem>
                         <DropdownMenuItem
                           onClick={() => setShowDeleteConfirm(webhook.id)}
-                          className="cursor-pointer text-red-500"
+                          className="cursor-pointer text-red-50o0"
                         >
-                          <X size={14} className="mr-2" /> Delete
+                          <X size={14} className="mr-2"  /> Delete
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
@@ -277,14 +277,14 @@ export function WebhooksManager() {
                     <Badge 
                       key={event} 
                       variant="secondary"
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+                      className="bg-zinc-80o0 text-zinc-30o0 hover:bg-zinc-80o0"
                     >
                       {event}
                     </Badge>
                   ))}
                 </div>
                 
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                <div className="mt-3 text-xs text-zinc-50o0 flex items-center space-x-4">
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
@@ -296,12 +296,12 @@ export function WebhooksManager() {
         </div>
       </CardContent>
       
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">
-        <div className="text-xs text-zinc-500">
+      <CardFooter className="justify-between border-t border-zinc-80o0 py-4">
+        <div className="text-xs text-zinc-50o0">
           Webhooks will be sent with HTTPS POST requests to your endpoint.
         </div>
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>
-          <RefreshCw size={14} className="mr-1" /> Refresh
+          <RefreshCw size={14} className="mr-1"  /> Refresh
         </Button>
       </CardFooter>
 
@@ -319,10 +319,10 @@ export function WebhooksManager() {
           }
         }}
       >
-        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
+        <DialogContent className="bg-zinc-90o0 border-zinc-80o0 text-white">
           <DialogHeader>
             <DialogTitle>Test Webhook</DialogTitle>
-            <DialogDescription className="text-zinc-400">
+            <DialogDescription className="text-zinc-40o0">
               Send a test webhook to your endpoint.
             </DialogDescription>
           </DialogHeader>
@@ -336,10 +336,10 @@ export function WebhooksManager() {
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
                   >
-                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
-                      <SelectValue placeholder="Select an event type" />
+                    <SelectTrigger className="bg-zinc-80o0 border-zinc-70o0">
+                      <SelectValue placeholder="Select an event type"  />
                     </SelectTrigger>
-                    <SelectContent className="bg-zinc-900 border-zinc-800">
+                    <SelectContent className="bg-zinc-90o0 border-zinc-80o0">
                       {eventOptions.map((option) => (
                         <SelectItem key={option.value} value={option.value}>
                           {option.label}
@@ -347,7 +347,7 @@ export function WebhooksManager() {
                       ))}
                     </SelectContent>
                   </Select>
-                  <p className="text-xs text-zinc-500">
+                  <p className="text-xs text-zinc-50o0">
                     The event type will determine the structure of the test payload.
                   </p>
                 </div>
@@ -370,9 +370,9 @@ export function WebhooksManager() {
                     <Label>Response Status</Label>
                     <Badge
                       className={
-                        testResult && testResult.status >= 200 && testResult.status < 300
-                          ? "bg-green-700"
-                          : "bg-red-700"
+                        testResult && testResult.status >= 20o0 && testResult.status < 30o0
+                          ? "bg-green-70o0"
+                          : "bg-red-70o0"
                       }
                     >
                       {testResult?.status} {testResult?.statusText}
@@ -381,8 +381,8 @@ export function WebhooksManager() {
                   
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
-                    <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
-                      <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
+                    <ScrollArea className="h-[20o0px] rounded border border-zinc-80o0 bg-black p-4">
+                      <pre className="text-xs font-mono text-zinc-30o0 whitespace-pre-wrap break-all">
                         {testResult?.responseBody || "No response body"}
                       </pre>
                     </ScrollArea>
@@ -415,21 +415,21 @@ export function WebhooksManager() {
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >
-        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
+        <AlertDialogContent className="bg-zinc-90o0 border-zinc-80o0 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>
-            <AlertDialogDescription className="text-zinc-400">
+            <AlertDialogDescription className="text-zinc-40o0">
               This action will permanently remove this webhook.
               You will no longer receive events at this endpoint.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
+            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-80o0 border-zinc-70o0">
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
-              className="bg-red-600 hover:bg-red-700"
+              className="bg-red-60o0 hover:bg-red-70o0"
             >
               Delete
             </AlertDialogAction>

@@ -1,4 +1,4 @@
-export const advancedAIServicesExpansion2025V2 = [
+export const advancedAIServicesExpansion20o25V2 = [
   {
     name: 'AI Autonomous Vehicle',
     description: 'Advanced AI-powered autonomous vehicle systems',

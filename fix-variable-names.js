@@ -3,7 +3,7 @@ const path = require('path');
 function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
-      const numberWords = {
+      const numberWords ={
         '5': 'Five',
         '4': 'Four',
         '3': 'Three',
@@ -44,8 +44,8 @@ function fixFile(filePath) {
     );
     
     newContent = newContent.replace(
-      /<meta name="description" content=".*?" \/>/g,
-      `<meta name="description" content="${title} blog post" />`
+      /<meta name="description" content=".*?" \ />/g,
+      `<meta name="description" content="${title} blog post"  />`
     );
     
     // Update h1 content

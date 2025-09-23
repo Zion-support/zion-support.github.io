@@ -55,7 +55,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             setLoggedInMessages(newMessages);
         }
     };
-    const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
+    const debouncedApiCallParams = useDebounce(pendingApiCallParams, 30o00);
     useEffect(() => {
         if (debouncedApiCallParams) {
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId);
@@ -71,7 +71,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         if (!messageContent.trim())
             return;
         if (!isGuest) { // Logged-in user
-            const newMessage = {
+            const newMessage ={
                 id: Date.now().toString(),
                 role: 'user',
                 message: messageContent,
@@ -88,7 +88,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     const handleModalSendConfirm = () => {
         if (!guestMessage)
             return;
-        const newMessage = {
+        const newMessage ={
             id: Date.now().toString(),
             role: 'user',
             message: guestMessage,
@@ -139,7 +139,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
             <Avatar className="h-10 w-10 border border-zion-purple/20">
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}/>
+              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
               <AvatarFallback className="bg-zion-purple/20 text-white">
                 {recipient.name.charAt(0).toUpperCase()}
               </AvatarFallback>
@@ -152,7 +152,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             </div>
           </div>
           <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10 rounded-full" onClick={onClose} aria-label="Close chat">
-            <X className="h-5 w-5"/>
+            <X className="h-5 w-5" />
           </Button>
         </div>
         
@@ -165,17 +165,17 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
           {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">
               <p>Start a conversation with {recipient.name}</p>
-            </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
-          <div ref={messagesEndRef}/>
+            </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message} />)))}
+          <div ref={messagesEndRef} />
         </div>
         
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage}/>
+          <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
 
-      {showGuestModal && guestMessage && (<div ref={guestModalRef} className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title">
+      {showGuestModal && guestMessage && (<div ref={guestModalRef} className="fixed inset-0 bg-black/60 z-[10o0] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title">
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
             <h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4">Confirm Message</h3>
             <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">

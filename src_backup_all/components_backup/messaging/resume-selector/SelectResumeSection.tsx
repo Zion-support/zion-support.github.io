@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { FileText } from 'lucide-react'
 import { ResumeOption } from '../resume-selector/types';
 import { ResumePreviewCard } from './ResumePreviewCard';
@@ -37,7 +36,7 @@ export function SelectResumeSection({
               onClick={() => handleResumeSelect(option.id)}
             >
               <div className="flex items-center">
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan"  />
                 <span className="text-white">{option.title}</span>
               </div>
             </button>
@@ -48,7 +47,7 @@ export function SelectResumeSection({
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
-            />
+             />
           )}
         </>
       )}

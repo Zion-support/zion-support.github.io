@@ -15,7 +15,7 @@ export default function QuoteManager() {
     const [showDetails, setShowDetails] = useState(false);
     const { quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote } = useAdminQuotes();
     // Count quotes by status
-    const statusCounts = {
+    const statusCounts ={
         new: quotes.filter(q => q.status === 'new').length,
         in_review: quotes.filter(q => q.status === 'in_review').length,
         accepted: quotes.filter(q => q.status === 'accepted').length,
@@ -33,7 +33,7 @@ export default function QuoteManager() {
         setDateRange({ from: undefined, to: undefined });
     };
     if (!isAdmin) {
-        return <Navigate to="/unauthorized" replace/>;
+        return <Navigate to="/unauthorized" replace />;
     }
     return (<ProtectedRoute adminOnly>
       <div>
@@ -45,14 +45,14 @@ export default function QuoteManager() {
                 <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
                 <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
               </div>
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests"/>
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
             
             {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts}/>
+            <QuoteStatusCards statusCounts={statusCounts} />
             
             {/* Filters */}
-            <QuotesFilter searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} archiveFilter={archiveFilter} setArchiveFilter={setArchiveFilter} dateRange={dateRange} setDateRange={setDateRange} onReset={handleResetFilters}/>
+            <QuotesFilter searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} archiveFilter={archiveFilter} setArchiveFilter={setArchiveFilter} dateRange={dateRange} setDateRange={setDateRange} onReset={handleResetFilters} />
             
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">
@@ -82,8 +82,7 @@ export default function QuoteManager() {
             setShowDetails(false);
             setSelectedQuote(null);
         }}/>
-        
-        
+
       </div>
     </ProtectedRoute>);
 }

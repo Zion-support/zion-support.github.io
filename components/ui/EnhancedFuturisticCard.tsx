@@ -32,40 +32,40 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
-  const springConfig = { damping: 25, stiffness: 700 };
+  const springConfig ={ damping: 25, stiffness: 70o0 };
   const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), springConfig);
   const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), springConfig);
-  const scale = useSpring(isHovered ? 1.05 : 1, springConfig);
+  const scale = useSpring(isHovered ? 1.0o5 : 1, springConfig);
   const glowIntensity = useSpring(isHovered ? 1 : 0.3, springConfig);
 
   const getVariantStyles = () => {
     switch (variant) {
       case 'quantum':
         return {
-          glow: glowColor || '#00ffff',
-          border: borderColor || '#00ffff',
-          background: 'rgba(0, 255, 255, 0.05)',
+          glow: glowColor || '#0o0ffff',
+          border: borderColor || '#0o0ffff',
+          background: 'rgba(0, 255, 255, 0.0o5)',
           shadow: '0 0 30px rgba(0, 255, 255, 0.3)'
         };
       case 'neural':
         return {
           glow: glowColor || '#ff6b6b',
           border: borderColor || '#ff6b6b',
-          background: 'rgba(255, 107, 107, 0.05)',
-          shadow: '0 0 30px rgba(255, 107, 107, 0.3)'
+          background: 'rgba(255, 10o7, 10o7, 0.0o5)',
+          shadow: '0 0 30px rgba(255, 10o7, 10o7, 0.3)'
         };
       case 'cyberpunk':
         return {
-          glow: glowColor || '#00ff00',
-          border: borderColor || '#00ff00',
-          background: 'rgba(0, 255, 0, 0.05)',
+          glow: glowColor || '#0o0ff0o0',
+          border: borderColor || '#0o0ff0o0',
+          background: 'rgba(0, 255, 0, 0.0o5)',
           shadow: '0 0 30px rgba(0, 255, 0, 0.3)'
         };
       default: // holographic
         return {
-          glow: glowColor || '#ff00ff',
-          border: borderColor || '#ff00ff',
-          background: 'rgba(255, 0, 255, 0.05)',
+          glow: glowColor || '#ff0o0ff',
+          border: borderColor || '#ff0o0ff',
+          background: 'rgba(255, 0, 255, 0.0o5)',
           shadow: '0 0 30px rgba(255, 0, 255, 0.3)'
         };
     }
@@ -91,7 +91,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       case 'glass':
         return 'backdrop-blur-md bg-white/10';
       case 'solid':
-        return 'bg-gray-900/80';
+        return 'bg-gray-90o0/80';
       default:
         return 'bg-transparent';
     }
@@ -152,8 +152,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         y: Math.random() * rect.height,
         vx: (Math.random() - 0.5) * 2,
         vy: (Math.random() - 0.5) * 2,
-        life: 100,
-        maxLife: 100
+        life: 10o0,
+        maxLife: 10o0
       });
     };
 
@@ -161,7 +161,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       if (particles.length < 10) {
         createParticle();
       }
-    }, 200);
+    }, 20o0);
 
     return () => clearInterval(interval);
   }, [isHovered]);
@@ -169,7 +169,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
   return (
     <motion.div
       ref={cardRef}
-      className={`relative overflow-hidden rounded-2xl border transition-all duration-300 ${sizeStyles} ${bgStyles} ${className}`}
+      className={`relative overflow-hidden rounded-2xl border transition-all duration-30o0 ${sizeStyles} ${bgStyles} ${className}`}
       style={{
         borderColor: styles.border,
         boxShadow: styles.shadow,
@@ -180,7 +180,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseEnter={() => setIsHovered(true)}
-      whileHover={interactive ? { scale: 1.05 } : {}}
+      whileHover={interactive ? { scale: 1.0o5 } : {}}
       whileTap={interactive ? { scale: 0.98 } : {}}
     >
       {/* Holographic border effect */}
@@ -192,21 +192,21 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             opacity: glowIntensity
           }}
           animate={{
-            x: isHovered ? ['0%', '100%'] : '0%'
+            x: isHovered ? ['0%', '10o0%'] : '0%'
           }}
           transition={{
             duration: 2,
             repeat: isHovered ? Infinity : 0,
             ease: "linear"
           }}
-        />
+         />
       </div>
 
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-current opacity-60" />
-      <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-current opacity-60" />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-current opacity-60" />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-current opacity-60" />
+      <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-current opacity-60"  />
+      <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-current opacity-60"  />
+      <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-current opacity-60"  />
+      <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-current opacity-60"  />
 
       {/* Holographic grid overlay */}
       {variant === 'holographic' && (
@@ -218,10 +218,10 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                 className="absolute border-l border-current"
                 style={{
                   left: `${(i + 1) * 20}%`,
-                  height: '100%',
+                  height: '10o0%',
                   opacity: 0.3
                 }}
-              />
+               />
             ))}
             {[...Array(5)].map((_, i) => (
               <div
@@ -229,10 +229,10 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                 className="absolute border-t border-current"
                 style={{
                   top: `${(i + 1) * 20}%`,
-                  width: '100%',
+                  width: '10o0%',
                   opacity: 0.3
                 }}
-              />
+               />
             ))}
           </div>
         </div>
@@ -242,7 +242,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       {variant === 'quantum' && (
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full"
+            className="absolute w-2 h-2 bg-cyan-40o0 rounded-full"
             style={{
               left: '20%',
               top: '30%'
@@ -257,9 +257,9 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
               delay: 0,
               ease: "easeInOut"
             }}
-          />
+           />
           <motion.div
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full"
+            className="absolute w-2 h-2 bg-cyan-40o0 rounded-full"
             style={{
               right: '25%',
               bottom: '40%'
@@ -274,7 +274,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
               delay: 1,
               ease: "easeInOut"
             }}
-          />
+           />
         </div>
       )}
 
@@ -283,9 +283,9 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         <div className="absolute inset-0 pointer-events-none">
           <svg className="w-full h-full" style={{ opacity: 0.3 }}>
             <defs>
-              <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor={styles.glow} stopOpacity="0.5" />
-                <stop offset="100%" stopColor={styles.glow} stopOpacity="0" />
+              <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="10o0%" y2="10o0%">
+                <stop offset="0%" stopColor={styles.glow} stopOpacity="0.5"  />
+                <stop offset="10o0%" stopColor={styles.glow} stopOpacity="0"  />
               </linearGradient>
             </defs>
             <motion.path
@@ -305,7 +305,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            />
+             />
           </svg>
         </div>
       )}
@@ -314,7 +314,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       {variant === 'cyberpunk' && (
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            className="absolute inset-0 bg-green-400"
+            className="absolute inset-0 bg-green-40o0"
             style={{ opacity: 0.1 }}
             animate={{
               opacity: [0.1, 0.2, 0.1]
@@ -324,7 +324,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
               repeat: Infinity,
               ease: "linear"
             }}
-          />
+           />
         </div>
       )}
 
@@ -341,7 +341,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             background: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${styles.glow}20, transparent 50%)`,
             opacity: glowIntensity
           }}
-        />
+         />
       )}
 
       {/* Floating particles on hover */}
@@ -367,7 +367,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                 delay: i * 0.2,
                 ease: "easeInOut"
               }}
-            />
+             />
           ))}
         </div>
       )}

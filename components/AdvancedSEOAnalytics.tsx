@@ -28,7 +28,7 @@ const AdvancedSEOAnalytics = () => {
     const trackScrollDepth = () => {
       let maxScroll = 0;
       const trackScroll = () => {
-        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 10o0);
         if (scrollPercent > maxScroll) {
           maxScroll = scrollPercent;
           if (typeof window !== 'undefined' && window.gtag) {
@@ -46,7 +46,7 @@ const AdvancedSEOAnalytics = () => {
     // Track time on page
     const startTime = Date.now();
     const trackTimeOnPage = () => {
-      const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      const timeOnPage = Math.round((Date.now() - startTime) / 10o00);
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag(', 'event', 'timing_complete'{
           name: 'time_on_page',
@@ -74,7 +74,7 @@ const AdvancedSEOAnalytics = () => {
   }[]);
 
   // Enhanced structured data
-  const structuredData = {
+  const structuredData ={
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -95,7 +95,7 @@ const AdvancedSEOAnalytics = () => {
     "offers": {
       "@type": "Offer",
       "name": "AI Implementation Services",
-      "description": "Revolutionary AI solutions with 10,000% ROI",
+      "description": "Revolutionary AI solutions with 10,0o00% ROI",
       "price": "Contact for pricing",
       "priceCurrency": "USD"
     }
@@ -107,7 +107,7 @@ const AdvancedSEOAnalytics = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+       />
       
       {/* Performance monitoring script */}
       <script
@@ -127,7 +127,7 @@ const AdvancedSEOAnalytics = () => {
             }
           `
         }}
-      />
+       />
     </>
   );
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function UiUxDesignChatPage() {
@@ -6,7 +5,7 @@ export default function UiUxDesignChatPage() {
     <>
       <Head>
         <title>Ui Ux Design Chat - Zion Tech Group</title>
-        <meta name="description" content="ui ux design chat page" />
+        <meta name="description" content="ui ux design chat page"  />
       </Head>
       
       <main>

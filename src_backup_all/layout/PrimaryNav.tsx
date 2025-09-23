@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -61,7 +60,7 @@ export function PrimaryNav() {
         data-testid="header"
       >
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
-          <Logo />
+          <Logo  />
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
@@ -108,14 +107,14 @@ export function PrimaryNav() {
             
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
-              <PointsBadge />
-              <CartDrawer />
+              <PointsBadge  />
+              <CartDrawer  />
             </div>
             
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
-              <ModeToggle />
-              <LanguageSelector />
+              <ModeToggle  />
+              <LanguageSelector  />
             </div>
             
             {/* Auth links - flex wrap for very small screens */}
@@ -141,14 +140,14 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-              {isLoggedIn && <UserMenu />}
+              {isLoggedIn && <UserMenu  />}
             </div>
           </div>
           
           {/* Tablet view (md to lg) - simplified controls */}
           <div className="hidden md:flex lg:hidden items-center gap-2 order-2">
-            <ModeToggle />
-            <LanguageSelector />
+            <ModeToggle  />
+            <LanguageSelector  />
             {!isLoggedIn && (
               <Link
                 href="/auth/login"
@@ -162,7 +161,7 @@ export function PrimaryNav() {
                 {t('auth.login')}
               </Link>
             )}
-            {isLoggedIn && <UserMenu />}
+            {isLoggedIn && <UserMenu  />}
           </div>
           
           {/* Mobile menu button */}
@@ -173,9 +172,9 @@ export function PrimaryNav() {
             aria-label={t('general.toggle_mobile_menu')}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6"  />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6"  />
             )}
           </button>
         </div>
@@ -187,7 +186,7 @@ export function PrimaryNav() {
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(10o0vh-4rem)] overflow-y-auto">
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
@@ -196,8 +195,8 @@ export function PrimaryNav() {
           </div>
         </div>
       )}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      {isMobile && <MobileBottomNav unreadCount={unreadCount}  />}
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />
     </>
   );
 }

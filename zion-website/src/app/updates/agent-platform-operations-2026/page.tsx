@@ -5,11 +5,11 @@ export default function AgentPlatformOperationsPage() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
         <header className="mb-12">
-          <p className="text-sm text-blue-300">Guide • 2025-09-15</p>
+          <p className="text-sm text-blue-30o0">Guide • 20o25-09-15</p>
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mt-2">
-            AI 2026: Agent Platform Operations
+            AI 20o26: Agent Platform Operations
           </h1>
-          <p className="mt-4 text-gray-300">
+          <p className="mt-4 text-gray-30o0">
             Reference operating model: SLOs, incident response, and eval-gated change management.
           </p>
         </header>

@@ -37,9 +37,9 @@ const DropdownItem: React.FC<{ item: NavigationItem }> = ({ item }) => (
       <span>{item.label}</span>
       {item.status && (
         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-          item.status === 'active' ? 'bg-green-500/20 text-green-300' :
-          item.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-          'bg-blue-500/20 text-blue-300'
+          item.status === 'active' ? 'bg-green-50o0/20 text-green-30o0' :
+          item.status === 'beta' ? 'bg-yellow-50o0/20 text-yellow-30o0' :
+          'bg-blue-50o0/20 text-blue-30o0'
         }`}>
           {item.status}
         </span>
@@ -107,7 +107,7 @@ export default function SmartHeader() {
     if (!navigation) return [];
 
     // Create service categories dropdown
-    const servicesCategory = {
+    const servicesCategory ={
       id: 'services-dropdown',
       name: 'Services',
       items: navigation.services.sort((a, b) => (a.priority || 0) - (b.priority || 0))
@@ -208,7 +208,7 @@ export default function SmartHeader() {
 
   return (
     <header className="sticky top-0 z-50">
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 rounded bg-white px-3 py-2 text-slate-900">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 rounded bg-white px-3 py-2 text-slate-90o0">
         Skip to content
       </a>
       <div className="backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/50 border-b border-white/10">
@@ -216,7 +216,7 @@ export default function SmartHeader() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-3">
               <Link href="/" className="inline-flex items-center gap-2">
-                <span className="text-xl font-extrabold tracking-wide bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">
+                <span className="text-xl font-extrabold tracking-wide bg-gradient-to-r from-fuchsia-40o0 via-violet-40o0 to-cyan-40o0 bg-clip-text text-transparent drop-shadow-neon">
                   Zion
                 </span>
               </Link>
@@ -240,10 +240,10 @@ export default function SmartHeader() {
                           <p className="text-white/60 text-xs">Explore our AI-powered solutions</p>
                         </div>
                         {navigation?.services.slice(0, 8).map(service => (
-                          <DropdownItem key={service.id} item={service} />
+                          <DropdownItem key={service.id} item={service}  />
                         ))}
                         <div className="px-4 py-2 border-t border-white/20 mt-2">
-                          <Link href="/services" className="text-blue-400 hover:text-blue-300 text-sm">
+                          <Link href="/services" className="text-blue-40o0 hover:text-blue-30o0 text-sm">
                             View All Services →
                           </Link>
                         </div>
@@ -278,7 +278,7 @@ export default function SmartHeader() {
                           </Link>
                         ))}
                         <div className="px-4 py-2 border-t border-white/20 mt-2">
-                          <Link href="/explore" className="text-blue-400 hover:text-blue-300 text-sm">
+                          <Link href="/explore" className="text-blue-40o0 hover:text-blue-30o0 text-sm">
                             Explore All Categories →
                           </Link>
                         </div>
@@ -296,7 +296,7 @@ export default function SmartHeader() {
               
               <Link 
                 href="/main/front#features" 
-                className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-1.5 text-sm font-semibold shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_28px_rgba(34,211,238,0.6)] transition-shadow"
+                className="rounded-lg bg-gradient-to-r from-fuchsia-50o0 to-cyan-50o0 px-3 py-1.5 text-sm font-semibold shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_28px_rgba(34,211,238,0.6)] transition-shadow"
               >
                 Get Started
               </Link>
@@ -309,11 +309,11 @@ export default function SmartHeader() {
               aria-controls="mobile-nav"
               onClick={() => setMobileOpen((v) => !v)}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/20o00/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 {mobileOpen ? (
-                  <path d="M18 6L6 18M6 6l12 12" />
+                  <path d="M18 6L6 18M6 6l12 12"  />
                 ) : (
-                  <path d="M3 12h18M3 6h18M3 18h18" />
+                  <path d="M3 12h18M3 6h18M3 18h18"  />
                 )}
               </svg>
             </button>
@@ -351,9 +351,9 @@ export default function SmartHeader() {
                           <span className="text-sm">{service.label}</span>
                           {service.status && (
                             <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                              service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                              service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                              'bg-blue-500/20 text-blue-300'
+                              service.status === 'active' ? 'bg-green-50o0/20 text-green-30o0' :
+                              service.status === 'beta' ? 'bg-yellow-50o0/20 text-yellow-30o0' :
+                              'bg-blue-50o0/20 text-blue-30o0'
                             }`}>
                               {service.status}
                             </span>
@@ -387,7 +387,7 @@ export default function SmartHeader() {
               
               <Link 
                 href="/main/front#features" 
-                className="rounded-md bg-white/90 px-3 py-2 text-center font-semibold text-slate-900 hover:bg-white"
+                className="rounded-md bg-white/90 px-3 py-2 text-center font-semibold text-slate-90o0 hover:bg-white"
                 onClick={() => setMobileOpen(false)}
               >
                 Get Started

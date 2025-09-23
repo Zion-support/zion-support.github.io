@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 interface ContentCardProps {
@@ -25,14 +24,14 @@ const ContentCard: React.FC<ContentCardProps> = ({
   return (
     <Link
       href={href}
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-500 hover-lift ${glow}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-50o0 hover-lift ${glow}`}
     >
       {/* Background Glow */}
-      <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+      <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-50o0/0 via-cyan-40o0/10 to-cyan-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0"  />
       
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
-        <div className={`w-12 h-12 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+        <div className={`w-12 h-12 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0`}>
           <span className="text-2xl">{icon}</span>
         </div>
         
@@ -44,7 +43,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
       </div>
 
       {/* Content */}
-      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
+      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-40o0 transition-colors duration-30o0 line-clamp-2">
         {title}
       </h3>
       
@@ -54,9 +53,9 @@ const ContentCard: React.FC<ContentCardProps> = ({
 
       {/* Footer */}
       <div className="flex items-center justify-between">
-        <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">
+        <div className="inline-flex items-center text-cyan-40o0 font-semibold group-hover:text-cyan-30o0 transition-colors duration-30o0">
           Read More
-          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-30o0">→</span>
         </div>
         
         {date && (
@@ -67,7 +66,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
       </div>
 
       {/* Hover Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-blue-60o0/5 opacity-0 group-hover:opacity-10o0 transition-opacity duration-50o0"  />
     </Link>
   );
 };

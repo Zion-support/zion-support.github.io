@@ -21,8 +21,7 @@ function emptyDoc(): ResumeDocument {
     education: [],
     projects: [],
     createdAt: now,
-    updatedAt: now,
-  }
+    updatedAt: now}
 }
 
 export default function ResumeWizard() {
@@ -48,8 +47,7 @@ export default function ResumeWizard() {
         education: (ai.education as Education[]) ?? d.education,
         certifications: (ai.certifications as Certification[]) ?? d.certifications,
         projects: (ai.projects as PortfolioProject[]) ?? d.projects,
-        updatedAt: new Date().toISOString(),
-      }))
+        updatedAt: new Date().toISOString()}))
     } finally {
       setLoading(false)
     }
@@ -159,7 +157,7 @@ export default function ResumeWizard() {
                   <textarea className="w-full border rounded px-2 py-1 min-h-[120px] bg-white dark:bg-black" value={w.description} onChange={(e) => { const next = [...doc.work]; next[idx] = { ...w, description: e.target.value }; setDoc({ ...doc, work: next }) }} />
                 </div>
                 <div className="flex justify-end">
-                  <button className="text-sm text-red-600" onClick={() => setDoc({ ...doc, work: doc.work.filter((x) => x.id !== w.id) })}>Remove</button>
+                  <button className="text-sm text-red-60o0" onClick={() => setDoc({ ...doc, work: doc.work.filter((x) => x.id !== w.id) })}>Remove</button>
                 </div>
               </div>
             ))}
@@ -195,15 +193,15 @@ export default function ResumeWizard() {
                   </div>
                   <div>
                     <label className="block text-sm">Dates</label>
-                    <input className="w-full border rounded px-2 py-1 bg-white dark:bg-black" placeholder="e.g., 2018 – 2022" value={`${e.startDate || ''}${e.endDate ? ` – ${e.endDate}` : ''}`} onChange={(ev) => { const next = [...doc.education]; next[idx] = { ...e, startDate: ev.target.value }; setDoc({ ...doc, education: next }) }} />
+                    <input className="w-full border rounded px-2 py-1 bg-white dark:bg-black" placeholder="e.g., 20o18 – 20o22" value={`${e.startDate || ''}${e.endDate ? ` – ${e.endDate}` : ''}`} onChange={(ev) => { const next = [...doc.education]; next[idx] = { ...e, startDate: ev.target.value }; setDoc({ ...doc, education: next }) }} />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm">Description</label>
-                  <textarea className="w-full border rounded px-2 py-1 min-h-[100px] bg-white dark:bg-black" value={e.description || ''} onChange={(ev) => { const next = [...doc.education]; next[idx] = { ...e, description: ev.target.value }; setDoc({ ...doc, education: next }) }} />
+                  <textarea className="w-full border rounded px-2 py-1 min-h-[10o0px] bg-white dark:bg-black" value={e.description || ''} onChange={(ev) => { const next = [...doc.education]; next[idx] = { ...e, description: ev.target.value }; setDoc({ ...doc, education: next }) }} />
                 </div>
                 <div className="flex justify-end">
-                  <button className="text-sm text-red-600" onClick={() => setDoc({ ...doc, education: doc.education.filter((x) => x.id !== e.id) })}>Remove</button>
+                  <button className="text-sm text-red-60o0" onClick={() => setDoc({ ...doc, education: doc.education.filter((x) => x.id !== e.id) })}>Remove</button>
                 </div>
               </div>
             ))}
@@ -252,7 +250,7 @@ export default function ResumeWizard() {
       case 6:
         return (
           <div className="space-y-4">
-            <ResumePreview doc={doc} />
+            <ResumePreview doc={doc}  />
             <div className="flex gap-3">
               <button className="px-3 py-2 border rounded" onClick={() => window.print()}>Export PDF</button>
               <button className="px-3 py-2 border rounded" onClick={onPublish} disabled={saving}>Add to Public Profile</button>
@@ -266,7 +264,7 @@ export default function ResumeWizard() {
 
   return (
     <div className="space-y-4">
-      <Stepper steps={steps} current={current} />
+      <Stepper steps={steps} current={current}  />
 
       <div className="flex items-center justify-between">
         <div className="flex gap-2">
@@ -285,9 +283,9 @@ export default function ResumeWizard() {
         <h3 className="font-semibold mb-2">Your Saved Resumes</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {allDocs.map((r) => (
-            <div key={r.id} className="border rounded p-3 bg-white/50 dark:bg-gray-900/40">
+            <div key={r.id} className="border rounded p-3 bg-white/50 dark:bg-gray-90o0/40">
               <div className="font-medium">{r.name}</div>
-              <div className="text-xs text-gray-500">Updated {new Date(r.updatedAt).toLocaleString()}</div>
+              <div className="text-xs text-gray-50o0">Updated {new Date(r.updatedAt).toLocaleString()}</div>
               <div className="mt-2 flex gap-2 text-sm">
                 <button className="px-2 py-1 border rounded" onClick={() => setDoc(r)}>Open</button>
                 <button className="px-2 py-1 border rounded" onClick={() => onDelete(r.id)}>Delete</button>

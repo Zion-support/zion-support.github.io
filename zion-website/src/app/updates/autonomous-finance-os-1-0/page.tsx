@@ -5,14 +5,14 @@ export default function AutonomousFinanceOSPage() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
         <div className="mb-8">
-          <div className="flex items-center gap-3 text-xs text-gray-400">
-            <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">Launch</span>
-            <time dateTime="2025-09-15">{new Date('2025-09-15').toLocaleDateString()}</time>
+          <div className="flex items-center gap-3 text-xs text-gray-40o0">
+            <span className="rounded-full bg-blue-50o0/10 px-2 py-0.5 text-blue-30o0">Launch</span>
+            <time dateTime="20o25-09-15">{new Date('20o25-09-15').toLocaleDateString()}</time>
           </div>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Autonomous Finance OS (v1.0)
           </h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">
+          <p className="mt-4 text-lg leading-8 text-gray-30o0">
             Real-time cash visibility, autonomous close, and policy-as-code controls for finance teams operating at scale.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function AutonomousFinanceOSPage() {
           <h2>Get a demo</h2>
           <p>
             See how Autonomous Finance OS can reduce cycle times while improving control effectiveness.
-            <a href="/contact" className="text-blue-400 hover:text-blue-300"> Request a demo →</a>
+            <a href="/contact" className="text-blue-40o0 hover:text-blue-30o0"> Request a demo →</a>
           </p>
         </div>
       </div>

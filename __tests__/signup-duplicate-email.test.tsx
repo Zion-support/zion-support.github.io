@@ -38,7 +38,7 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     (useRouter as jest.Mock).mockReturnValue({
       push: mockPush,
       pathname: /signup',      query: {},
-      asPath: /signup',    });
+      asPath: /signup'});
 
     // Setup toast mock - fix TypeScript error
     const toastMock = toastHook.toast as jest.MockedFunction<typeof toastHook.toast>;
@@ -53,20 +53,20 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     mockedAxios.post.mockRejectedValue({
       response: {
         status: 409,
-        data: { message:' 'Email already registered' },      }
+        data: { message:' 'Email already registered' }}
     });
 
-    render(<Signup />);
+    render(<Signup  />);
     fillSignupForm('existing@example.com');    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     // Verify API call was made
     await waitFor(() => {
-      expect(mockedAxios.post).toHaveBeenCalledWith('/api/auth/register', {'        name: John Doe',        email: existing@example.com',        password: Password123',      });
+      expect(mockedAxios.post).toHaveBeenCalledWith('/api/auth/register', {'        name: John Doe',        email: existing@example.com',        password: Password123'});
     });
 
     // Verify toast notification was shown
     await waitFor(() => {
       expect(mockToast).toHaveBeenCalledWith({
-        title: Signup failed',        description: Email already registered',        variant: destructive',      });
+        title: Signup failed',        description: Email already registered',        variant: destructive'});
     });
   });
 
@@ -74,10 +74,10 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     mockedAxios.post.mockRejectedValue({
       response: {
         status: 409,
-        data: { message:' 'Email already registered' },      }
+        data: { message:' 'Email already registered' }}
     });
 
-    render(<Signup />);
+    render(<Signup  />);
     fillSignupForm('existing@example.com');    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     // Verify Alert component is displayed
     await waitFor(() => {
@@ -92,10 +92,10 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     mockedAxios.post.mockRejectedValue({
       response: {
         status: 409,
-        data: { message:' 'Email already registered' },      }
+        data: { message:' 'Email already registered' }}
     });
 
-    render(<Signup />);
+    render(<Signup  />);
     fillSignupForm('existing@example.com');    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     // Verify field-level error is shown
     await waitFor(() => {
@@ -107,10 +107,10 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     mockedAxios.post.mockRejectedValue({
       response: {
         status: 409,
-        data: { message:' 'Email already registered' },      }
+        data: { message:' 'Email already registered' }}
     });
 
-    render(<Signup />);
+    render(<Signup  />);
     fillSignupForm('existing@example.com');    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     // Wait for error to appear
     await waitFor(() => {
@@ -118,8 +118,8 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
 
     // Mock successful response for retry
     mockedAxios.post.mockResolvedValue({
-      status: 201,
-      data: { message:' 'Success' },    });
+      status: 20o1,
+      data: { message:' 'Success' }});
 
     // Change email and resubmit
     fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: new@example.com' } });    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
@@ -130,7 +130,7 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     // Verify success toast is shown
     await waitFor(() => {
       expect(mockToast).toHaveBeenCalledWith({
-        title: Account created successfully!',        description: Welcome to the platform. You can now log in.',      });
+        title: Account created successfully!',        description: Welcome to the platform. You can now log in.'});
     });
   });
 
@@ -138,15 +138,15 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     mockedAxios.post.mockRejectedValue({
       response: {
         status: 409,
-        data: { message:' 'User with this email already exists' },      }
+        data: { message:' 'User with this email already exists' }}
     });
 
-    render(<Signup />);
+    render(<Signup  />);
     fillSignupForm('existing@example.com');    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     // Should still show the standardized message
     await waitFor(() => {
       expect(mockToast).toHaveBeenCalledWith({
-        title: Signup failed',        description: Email already registered',        variant: destructive',      });
+        title: Signup failed',        description: Email already registered',        variant: destructive'});
     });
 
     await waitFor(() => {
@@ -157,10 +157,10 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     mockedAxios.post.mockRejectedValue({
       response: {
         status: 409,
-        data: { message:' 'Email already registered' },      }
+        data: { message:' 'Email already registered' }}
     });
 
-    render(<Signup />);
+    render(<Signup  />);
     fillSignupForm('existing@example.com');    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     // Wait for error handling
     await waitFor(() => {
@@ -178,12 +178,12 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
       }
     });
 
-    render(<Signup />);
+    render(<Signup  />);
     fillSignupForm('existing@example.com');    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     // Should still show the standardized duplicate email message
     await waitFor(() => {
       expect(mockToast).toHaveBeenCalledWith({
-        title: Signup failed',        description: Email already registered',        variant: destructive',      });
+        title: Signup failed',        description: Email already registered',        variant: destructive'});
     });
   });
 }); 

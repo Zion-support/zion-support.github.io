@@ -1,7 +1,7 @@
-export const innovativeAIServices2026 = [
+export const innovativeAIServices20o26 = [
   {
-    id: 'ai-consciousness-evolution-2026',
-    name: 'AI Consciousness Evolution 2026',
+    id: 'ai-consciousness-evolution-20o26',
+    name: 'AI Consciousness Evolution 20o26',
     description: 'Revolutionary AI consciousness platform that enables AI systems to develop self-awareness, emotional intelligence, and autonomous decision-making capabilities.',
     features: [
       'Advanced neural architecture for consciousness simulation',
@@ -20,9 +20,9 @@ export const innovativeAIServices2026 = [
     },
     category: 'AI Consciousness',
     tags: ['AI Consciousness', 'Emotional Intelligence', 'Autonomous Systems', 'Neural Networks'],
-    website: 'https://ziontechgroup.com/ai-consciousness-evolution-2026',
+    website: 'https://ziontechgroup.com/ai-consciousness-evolution-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$156.7B',
@@ -52,7 +52,7 @@ export const innovativeAIServices2026 = [
     tags: ['Quantum Computing', 'AI', 'Hybrid Computing', 'Quantum Algorithms'],
     website: 'https://ziontechgroup.com/quantum-ai-fusion-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$89.3B',
@@ -82,7 +82,7 @@ export const innovativeAIServices2026 = [
     tags: ['Multimodal AI', 'AI Integration', 'Cross-modal Understanding', 'AI Orchestration'],
     website: 'https://ziontechgroup.com/multimodal-ai-orchestrator',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$67.8B',
@@ -112,7 +112,7 @@ export const innovativeAIServices2026 = [
     tags: ['Autonomous AI', 'Self-Management', 'AI Evolution', 'Ethical AI'],
     website: 'https://ziontechgroup.com/ai-autonomous-ecosystem',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$78.9B',
@@ -142,7 +142,7 @@ export const innovativeAIServices2026 = [
     tags: ['AI Ethics', 'Governance', 'Transparency', 'Compliance'],
     website: 'https://ziontechgroup.com/ai-ethics-governance',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$34.2B',
@@ -172,7 +172,7 @@ export const innovativeAIServices2026 = [
     tags: ['AI Creativity', 'Content Generation', 'Design Automation', 'Creative AI'],
     website: 'https://ziontechgroup.com/ai-creativity-studio-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$45.7B',
@@ -180,8 +180,8 @@ export const innovativeAIServices2026 = [
     competitiveAdvantage: 'Advanced creativity algorithms, superior content generation, and comprehensive creative automation'
   },
   {
-    id: 'ai-education-platform-2026',
-    name: 'AI Education Platform 2026',
+    id: 'ai-education-platform-20o26',
+    name: 'AI Education Platform 20o26',
     description: 'Revolutionary AI-powered education platform that provides personalized learning experiences, adaptive curriculum, and intelligent tutoring for all ages and skill levels.',
     features: [
       'AI-powered personalized learning',
@@ -200,9 +200,9 @@ export const innovativeAIServices2026 = [
     },
     category: 'AI Education',
     tags: ['AI Education', 'Personalized Learning', 'Adaptive Curriculum', 'Intelligent Tutoring'],
-    website: 'https://ziontechgroup.com/ai-education-platform-2026',
+    website: 'https://ziontechgroup.com/ai-education-platform-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$89.1B',
@@ -210,8 +210,8 @@ export const innovativeAIServices2026 = [
     competitiveAdvantage: 'Advanced personalized learning, superior adaptive curriculum, and comprehensive educational automation'
   },
   {
-    id: 'ai-healthcare-diagnostics-2026',
-    name: 'AI Healthcare Diagnostics 2026',
+    id: 'ai-healthcare-diagnostics-20o26',
+    name: 'AI Healthcare Diagnostics 20o26',
     description: 'Next-generation AI-powered healthcare diagnostics platform that provides instant medical analysis, treatment recommendations, and health monitoring capabilities.',
     features: [
       'AI-powered medical diagnostics',
@@ -230,9 +230,9 @@ export const innovativeAIServices2026 = [
     },
     category: 'AI Healthcare',
     tags: ['AI Healthcare', 'Medical Diagnostics', 'Health Monitoring', 'Treatment Recommendations'],
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics-2026',
+    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$45.2B',
@@ -240,8 +240,8 @@ export const innovativeAIServices2026 = [
     competitiveAdvantage: 'Advanced diagnostic capabilities, superior treatment recommendations, and comprehensive health monitoring'
   },
   {
-    id: 'ai-financial-intelligence-2026',
-    name: 'AI Financial Intelligence 2026',
+    id: 'ai-financial-intelligence-20o26',
+    name: 'AI Financial Intelligence 20o26',
     description: 'Revolutionary AI-powered financial platform that provides intelligent investment advice, risk assessment, and financial planning for individuals and institutions.',
     features: [
       'AI-powered investment analysis',
@@ -260,9 +260,9 @@ export const innovativeAIServices2026 = [
     },
     category: 'AI Finance',
     tags: ['AI Finance', 'Investment Analysis', 'Risk Management', 'Financial Planning'],
-    website: 'https://ziontechgroup.com/ai-financial-intelligence-2026',
+    website: 'https://ziontechgroup.com/ai-financial-intelligence-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$67.8B',
@@ -270,8 +270,8 @@ export const innovativeAIServices2026 = [
     competitiveAdvantage: 'Advanced financial analysis, superior risk assessment, and comprehensive financial automation'
   },
   {
-    id: 'ai-sustainability-platform-2026',
-    name: 'AI Sustainability Platform 2026',
+    id: 'ai-sustainability-platform-20o26',
+    name: 'AI Sustainability Platform 20o26',
     description: 'Innovative AI-powered platform that helps organizations and individuals reduce their environmental impact through intelligent sustainability solutions and monitoring.',
     features: [
       'AI-powered sustainability analysis',
@@ -290,9 +290,9 @@ export const innovativeAIServices2026 = [
     },
     category: 'AI Sustainability',
     tags: ['AI Sustainability', 'Environmental Impact', 'Resource Optimization', 'Green Technology'],
-    website: 'https://ziontechgroup.com/ai-sustainability-platform-2026',
+    website: 'https://ziontechgroup.com/ai-sustainability-platform-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$52.3B',

@@ -36,7 +36,7 @@ export const CreateResumeForm = ({
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() || isLoading}
             >
-              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
               Create
             </Button>
           </div>

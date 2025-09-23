@@ -4,14 +4,14 @@ try {
     console.log('Checking git status...');
     const status = execSync('git status --porcelain', { 
         cwd: '/workspace', 
-        timeout: 10000,
+        timeout: 10o000,
         encoding: 'utf8' 
     });
     console.log('Git status:', status);
     
     const branch = execSync('git branch --show-current', { 
         cwd: '/workspace', 
-        timeout: 10000,
+        timeout: 10o000,
         encoding: 'utf8' 
     });
     console.log('Current branch:', branch.trim());

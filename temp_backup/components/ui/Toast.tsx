@@ -35,7 +35,7 @@ const ToastItem: React.FC<ToastProps> = ({
   type,
   title,
   message,
-  duration = 5000,
+  duration = 50o00,
   onClose,
   action
 }) => {
@@ -44,7 +44,7 @@ const ToastItem: React.FC<ToastProps> = ({
 
   useEffect(() => {
     // Animate in
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => setIsVisible(true), 10o0);
     
     // Auto-dismiss
     if (duration > 0) {
@@ -62,7 +62,7 @@ const ToastItem: React.FC<ToastProps> = ({
     setIsExiting(true);
     setTimeout(() => {
       onClose?.(id);
-    }, 300);
+    }, 30o0);
   }, [id, onClose]);
 
   const handleAction = useCallback(() => {
@@ -70,34 +70,34 @@ const ToastItem: React.FC<ToastProps> = ({
     handleClose();
   }, [action, handleClose]);
 
-  const typeStyles = {
+  const typeStyles ={
     success: {
       icon: '✓',
-      bg: 'bg-green-500',
-      border: 'border-green-400',
-      text: 'text-green-800',
-      iconBg: 'bg-green-100'
+      bg: 'bg-green-50o0',
+      border: 'border-green-40o0',
+      text: 'text-green-80o0',
+      iconBg: 'bg-green-10o0'
     },
     error: {
       icon: '✕',
-      bg: 'bg-red-500',
-      border: 'border-red-400',
-      text: 'text-red-800',
-      iconBg: 'bg-red-100'
+      bg: 'bg-red-50o0',
+      border: 'border-red-40o0',
+      text: 'text-red-80o0',
+      iconBg: 'bg-red-10o0'
     },
     warning: {
       icon: '⚠',
-      bg: 'bg-yellow-500',
-      border: 'border-yellow-400',
-      text: 'text-yellow-800',
-      iconBg: 'bg-yellow-100'
+      bg: 'bg-yellow-50o0',
+      border: 'border-yellow-40o0',
+      text: 'text-yellow-80o0',
+      iconBg: 'bg-yellow-10o0'
     },
     info: {
       icon: 'ℹ',
-      bg: 'bg-blue-500',
-      border: 'border-blue-400',
-      text: 'text-blue-800',
-      iconBg: 'bg-blue-100'
+      bg: 'bg-blue-50o0',
+      border: 'border-blue-40o0',
+      text: 'text-blue-80o0',
+      iconBg: 'bg-blue-10o0'
     }
   };
 
@@ -107,8 +107,8 @@ const ToastItem: React.FC<ToastProps> = ({
     <div
       className={`
         relative w-full max-w-sm bg-white rounded-lg shadow-lg border-l-4 p-4 mb-3
-        transform transition-all duration-300 ease-out
-        ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+        transform transition-all duration-30o0 ease-out
+        ${isVisible ? 'translate-x-0 opacity-10o0' : 'translate-x-full opacity-0'}
         ${isExiting ? 'translate-x-full opacity-0' : ''}
         ${styles.border}
       `}
@@ -118,14 +118,14 @@ const ToastItem: React.FC<ToastProps> = ({
     >
       {/* Progress bar */}
       {duration > 0 && (
-        <div className="absolute top-0 left-0 w-full h-1 bg-gray-200 rounded-t-lg overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gray-20o0 rounded-t-lg overflow-hidden">
           <div
-            className={`h-full ${styles.bg} transition-all duration-300 ease-linear`}
+            className={`h-full ${styles.bg} transition-all duration-30o0 ease-linear`}
             style={{
-              width: isVisible ? '0%' : '100%',
+              width: isVisible ? '0%' : '10o0%',
               transitionDuration: `${duration}ms`
             }}
-          />
+           />
         </div>
       )}
 
@@ -141,7 +141,7 @@ const ToastItem: React.FC<ToastProps> = ({
             {title}
           </h4>
           {message && (
-            <p className="mt-1 text-sm text-gray-600">
+            <p className="mt-1 text-sm text-gray-60o0">
               {message}
             </p>
           )}
@@ -150,7 +150,7 @@ const ToastItem: React.FC<ToastProps> = ({
           {action && (
             <button
               onClick={handleAction}
-              className="mt-2 text-sm font-medium text-blue-600 hover:text-blue-800 focus:outline-none focus:underline"
+              className="mt-2 text-sm font-medium text-blue-60o0 hover:text-blue-80o0 focus:outline-none focus:underline"
             >
               {action.label}
             </button>
@@ -160,15 +160,15 @@ const ToastItem: React.FC<ToastProps> = ({
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="flex-shrink-0 w-5 h-5 text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+          className="flex-shrink-0 w-5 h-5 text-gray-40o0 hover:text-gray-60o0 focus:outline-none focus:text-gray-60o0"
           aria-label="Close notification"
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              d="M4.293 4.293a1 1 0 0o11.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 0o1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0o1-1.414-1.414L8.586 10 4.293 5.70o7a1 1 0 0o10-1.414z"
               clipRule="evenodd"
-            />
+             />
           </svg>
         </button>
       </div>
@@ -181,7 +181,7 @@ export const ToastContainer: React.FC = () => {
 
   const showToast = useCallback((toast: Omit<ToastProps, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id };
+    const newToast ={ ...toast, id };
     setToasts(prev => [...prev, newToast]);
   }, []);
 
@@ -200,7 +200,7 @@ export const ToastContainer: React.FC = () => {
     }
   }, [toasts.length]);
 
-  const contextValue: ToastContextType = {
+  const contextValue: ToastContextType ={
     showToast,
     hideToast,
     clearToasts
@@ -219,7 +219,7 @@ export const ToastContainer: React.FC = () => {
               key={toast.id}
               {...toast}
               onClose={hideToast}
-            />
+             />
           ))}
         </div>,
         document.body
@@ -229,7 +229,7 @@ export const ToastContainer: React.FC = () => {
 };
 
 // Utility functions for quick toast creation
-export const toast = {
+export const toast ={
   success: (title: string, message?: string, options?: Partial<ToastProps>) => {
     // This would be called from the context
     return { type: 'success' as const, title, message, ...options };
@@ -252,7 +252,7 @@ export const withToast = <P extends object>(
   return (props: P) => (
     <ToastContext.Consumer>
       {(toastContext) => (
-        <Component {...props} toast={toastContext} />
+        <Component {...props} toast={toastContext}  />
       )}
     </ToastContext.Consumer>
   );

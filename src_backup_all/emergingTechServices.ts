@@ -33,7 +33,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Revolutionary edge computing platform that brings AI processing closer to data sources for real-time decision making and reduced latency.",
     category: "Edge Computing",
     subcategory: "AI Processing",
-    price: 5500,
+    price: 550o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -70,9 +70,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Edge Computing", "AI", "IoT", "Real-time", "Low Latency"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$5,500 - $18,000/month",
+    marketPrice: "$5,50o0 - $18,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -86,7 +86,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Next-generation quantum internet infrastructure that enables ultra-secure, high-speed quantum communication networks.",
     category: "Quantum Technology",
     subcategory: "Quantum Internet",
-    price: 35000,
+    price: 350o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -123,9 +123,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Quantum Internet", "Infrastructure", "Security", "Networking", "Government"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$35,000 - $100,000/month",
+    marketPrice: "$35,0o00 - $10o0,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -139,7 +139,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Advanced platform for designing and manufacturing brain-inspired neuromorphic AI chips that mimic neural networks for ultra-efficient processing.",
     category: "Hardware AI",
     subcategory: "Chip Design",
-    price: 45000,
+    price: 450o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -153,7 +153,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Custom solutions"
     ],
     benefits: [
-      "100x more energy efficient",
+      "10o0x more energy efficient",
       "Real-time learning",
       "Superior pattern recognition",
       "Future-proof technology",
@@ -176,9 +176,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Neuromorphic", "AI Chips", "Hardware", "Energy Efficient", "IoT"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$45,000 - $150,000/month",
+    marketPrice: "$45,0o00 - $150,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -192,7 +192,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Revolutionary platform for designing, simulating, and optimizing synthetic biological systems using AI and computational biology.",
     category: "Biotechnology",
     subcategory: "Synthetic Biology",
-    price: 28000,
+    price: 280o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -229,9 +229,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Synthetic Biology", "Biotechnology", "AI", "DNA Design", "Bioengineering"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$28,000 - $80,000/month",
+    marketPrice: "$28,0o00 - $80,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -245,7 +245,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Advanced quantum sensing platform that provides unprecedented precision in measurement and detection across various applications.",
     category: "Quantum Technology",
     subcategory: "Quantum Sensing",
-    price: 18000,
+    price: 180o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -259,7 +259,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Performance monitoring"
     ],
     benefits: [
-      "1000x more precise measurements",
+      "10o00x more precise measurements",
       "Quantum advantage in sensing",
       "New detection capabilities",
       "Competitive edge",
@@ -282,9 +282,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Quantum Sensing", "Measurement", "Precision", "Detection", "Imaging"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$18,000 - $50,000/month",
+    marketPrice: "$18,0o00 - $50,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -298,7 +298,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Innovative platform that combines artificial intelligence with space technology for satellite operations, space exploration, and Earth observation.",
     category: "Space Technology",
     subcategory: "AI Integration",
-    price: 42000,
+    price: 420o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -335,9 +335,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Space Technology", "AI", "Satellites", "Space Exploration", "Earth Observation"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$42,000 - $120,000/month",
+    marketPrice: "$42,0o00 - $120,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -351,7 +351,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Revolutionary hardware platform that combines quantum computing with machine learning for unprecedented computational power.",
     category: "Quantum Computing",
     subcategory: "Hardware",
-    price: 65000,
+    price: 650o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -365,7 +365,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Custom solutions"
     ],
     benefits: [
-      "1000x faster ML training",
+      "10o00x faster ML training",
       "Quantum advantage",
       "Breakthrough capabilities",
       "Future-proof investment",
@@ -388,9 +388,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Quantum Computing", "Machine Learning", "Hardware", "AI", "Research"],
     estimatedDelivery: "20-24 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$65,000 - $200,000/month",
+    marketPrice: "$65,0o00 - $20o0,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -404,7 +404,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Advanced platform for developing, testing, and deploying autonomous robots with AI-powered decision making and learning capabilities.",
     category: "Robotics",
     subcategory: "Autonomous Systems",
-    price: 8500,
+    price: 850o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -441,9 +441,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Robotics", "Autonomous Systems", "AI", "Automation", "Manufacturing"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$8,500 - $25,000/month",
+    marketPrice: "$8,50o0 - $25,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -457,7 +457,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Next-generation security platform that uses quantum mechanics to provide unbreakable encryption and secure communication.",
     category: "Cybersecurity",
     subcategory: "Quantum Security",
-    price: 25000,
+    price: 250o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -494,9 +494,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Quantum Cryptography", "Cybersecurity", "Encryption", "Security", "Government"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$25,000 - $80,000/month",
+    marketPrice: "$25,0o00 - $80,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -510,7 +510,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     description: "Innovative platform that uses artificial intelligence to address climate change through monitoring, prediction, and mitigation strategies.",
     category: "Climate Technology",
     subcategory: "AI Solutions",
-    price: 12000,
+    price: 120o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -547,9 +547,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Climate Technology", "AI", "Sustainability", "Environmental", "Monitoring"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
-    marketPrice: "$12,000 - $35,000/month",
+    marketPrice: "$12,0o00 - $35,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },

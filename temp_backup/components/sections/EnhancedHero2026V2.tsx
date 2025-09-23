@@ -1,10 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Rocket, Brain, Sparkles, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react';
 import Button from '../ui/Button';
 import UltraQuantumHolographicBackground from '../ui/UltraQuantumHolographicBackground';
 
-interface EnhancedHero2026V2Props {
+interface EnhancedHero20o26V2Props {
   contactInfo: {
     mobile: string;
     email: string;
@@ -13,8 +12,8 @@ interface EnhancedHero2026V2Props {
   };
 }
 
-export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Props) {
-  const containerVariants = {
+export default function EnhancedHero20o26V2({ contactInfo }: EnhancedHero20o26V2Props) {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -25,7 +24,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -37,7 +36,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
     }
   };
 
-  const floatingVariants = {
+  const floatingVariants ={
     animate: {
       y: [-10, 10, -10],
       transition: {
@@ -48,9 +47,9 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
     }
   };
 
-  const pulseVariants = {
+  const pulseVariants ={
     animate: {
-      scale: [1, 1.05, 1],
+      scale: [1, 1.0o5, 1],
       opacity: [0.8, 1, 0.8],
       transition: {
         duration: 2,
@@ -116,22 +115,22 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
               <motion.div
                 variants={pulseVariants}
                 animate="animate"
-                className="flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+                className="flex items-center space-x-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-full text-sm font-medium"
               >
-                <Star className="w-4 h-4" />
-                <span>2026 Innovation Leader</span>
+                <Star className="w-4 h-4"  />
+                <span>20o26 Innovation Leader</span>
               </motion.div>
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </h1>
             
-            <p className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
               Pioneering the Future with{' '}
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-semibold">
+              <span className="bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent font-semibold">
                 AI, Quantum Computing & Emerging Technologies
               </span>
             </p>
@@ -140,7 +139,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-40o0 max-w-3xl mx-auto leading-relaxed"
           >
             Transform your business with cutting-edge micro SAAS solutions, AI services, and revolutionary IT infrastructure. 
             Join the future of technology innovation.
@@ -150,22 +149,22 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Button
               href="/services"
-              className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              className="group bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl"
             >
               <span className="flex items-center space-x-2">
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-30o0"  />
               </span>
             </Button>
             
             <Button
               href="/contact"
               variant="outline"
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-purple-50o0 text-purple-40o0 hover:bg-purple-50o0 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-30o0 transform hover:scale-10o5"
             >
               <span className="flex items-center space-x-2">
                 <span>Get Started</span>
-                <Rocket className="w-5 h-5" />
+                <Rocket className="w-5 h-5"  />
               </span>
             </Button>
           </motion.div>
@@ -176,16 +175,16 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
             className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 max-w-2xl mx-auto"
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-              <div className="flex items-center justify-center space-x-2 text-gray-300">
-                <Phone className="w-4 h-4 text-blue-400" />
+              <div className="flex items-center justify-center space-x-2 text-gray-30o0">
+                <Phone className="w-4 h-4 text-blue-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center justify-center space-x-2 text-gray-300">
-                <Mail className="w-4 h-4 text-purple-400" />
+              <div className="flex items-center justify-center space-x-2 text-gray-30o0">
+                <Mail className="w-4 h-4 text-purple-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center justify-center space-x-2 text-gray-300">
-                <MapPin className="w-4 h-4 text-green-400" />
+              <div className="flex items-center justify-center space-x-2 text-gray-30o0">
+                <MapPin className="w-4 h-4 text-green-40o0"  />
                 <span className="text-xs">{contactInfo.address}</span>
               </div>
             </div>
@@ -194,7 +193,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
       </div>
 
       {/* Bottom Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-transparent to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-transparent to-transparent"  />
       
       {/* Technology Icons */}
       <motion.div
@@ -206,28 +205,28 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
           animate="animate"
           style={{ animationDelay: '0s' }}
         >
-          <Cpu className="w-8 h-8 text-blue-400" />
+          <Cpu className="w-8 h-8 text-blue-40o0"  />
         </motion.div>
         <motion.div
           variants={pulseVariants}
           animate="animate"
           style={{ animationDelay: '0.5s' }}
         >
-          <Database className="w-8 h-8 text-purple-400" />
+          <Database className="w-8 h-8 text-purple-40o0"  />
         </motion.div>
         <motion.div
           variants={pulseVariants}
           animate="animate"
           style={{ animationDelay: '1s' }}
         >
-          <Brain className="w-8 h-8 text-pink-400" />
+          <Brain className="w-8 h-8 text-pink-40o0"  />
         </motion.div>
         <motion.div
           variants={pulseVariants}
           animate="animate"
           style={{ animationDelay: '1.5s' }}
         >
-          <Globe className="w-8 h-8 text-cyan-400" />
+          <Globe className="w-8 h-8 text-cyan-40o0"  />
         </motion.div>
       </motion.div>
     </section>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const InteractiveAIAssessment2025 = () => {
+const InteractiveAIAssessment20o25 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: number]: number }>({});
   const [showResults, setShowResults] = useState(false);
@@ -51,8 +51,8 @@ const InteractiveAIAssessment2025 = () => {
       options: [
         "Under $10K",
         "$10K - $50K",
-        "$50K - $200K",
-        "$200K - $1M",
+        "$50K - $20o0K",
+        "$20o0K - $1M",
         "Over $1M"
       ],
       scores: [0, 1, 2, 3, 4]
@@ -104,7 +104,7 @@ const InteractiveAIAssessment2025 = () => {
   const calculateResults = () => {
     const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
     const maxScore = questions.length * 4;
-    const percentage = (totalScore / maxScore) * 100;
+    const percentage = (totalScore / maxScore) * 10o0;
     setAssessmentScore(percentage);
     setShowResults(true);
   };
@@ -113,9 +113,9 @@ const InteractiveAIAssessment2025 = () => {
     if (score < 25) {
       return {
         level: "Beginner",
-        color: "text-red-600",
+        color: "text-red-60o0",
         bgColor: "bg-red-50",
-        borderColor: "border-red-200",
+        borderColor: "border-red-20o0",
         recommendation: "Start with basic AI tools and build foundational knowledge",
         nextSteps: [
           "Begin with simple automation tools",
@@ -127,9 +127,9 @@ const InteractiveAIAssessment2025 = () => {
     } else if (score < 50) {
       return {
         level: "Intermediate",
-        color: "text-yellow-600",
+        color: "text-yellow-60o0",
         bgColor: "bg-yellow-50",
-        borderColor: "border-yellow-200",
+        borderColor: "border-yellow-20o0",
         recommendation: "Implement targeted AI solutions and expand gradually",
         nextSteps: [
           "Deploy machine learning models",
@@ -141,9 +141,9 @@ const InteractiveAIAssessment2025 = () => {
     } else if (score < 75) {
       return {
         level: "Advanced",
-        color: "text-blue-600",
+        color: "text-blue-60o0",
         bgColor: "bg-blue-50",
-        borderColor: "border-blue-200",
+        borderColor: "border-blue-20o0",
         recommendation: "Optimize existing AI systems and explore advanced applications",
         nextSteps: [
           "Implement deep learning solutions",
@@ -155,9 +155,9 @@ const InteractiveAIAssessment2025 = () => {
     } else {
       return {
         level: "Expert",
-        color: "text-green-600",
+        color: "text-green-60o0",
         bgColor: "bg-green-50",
-        borderColor: "border-green-200",
+        borderColor: "border-green-20o0",
         recommendation: "Lead AI innovation and develop cutting-edge solutions",
         nextSteps: [
           "Develop proprietary AI solutions",
@@ -183,24 +183,24 @@ const InteractiveAIAssessment2025 = () => {
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <div className="text-6xl mb-4">🎯</div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Your AI Readiness Assessment</h2>
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Your AI Readiness Assessment</h2>
           <div className={`inline-flex items-center px-6 py-3 rounded-full text-lg font-semibold ${recommendation.bgColor} ${recommendation.color} ${recommendation.borderColor} border-2`}>
             {recommendation.level} Level - {Math.round(assessmentScore)}% Ready
           </div>
         </div>
 
         <div className="mb-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Recommendation</h3>
-          <p className="text-gray-600 text-lg">{recommendation.recommendation}</p>
+          <h3 className="text-xl font-bold text-gray-90o0 mb-4">Recommendation</h3>
+          <p className="text-gray-60o0 text-lg">{recommendation.recommendation}</p>
         </div>
 
         <div className="mb-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Next Steps</h3>
+          <h3 className="text-xl font-bold text-gray-90o0 mb-4">Next Steps</h3>
           <ul className="space-y-2">
             {recommendation.nextSteps.map((step, index) => (
               <li key={index} className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                <span className="text-gray-600">{step}</span>
+                <div className="w-2 h-2 bg-purple-60o0 rounded-full"></div>
+                <span className="text-gray-60o0">{step}</span>
               </li>
             ))}
           </ul>
@@ -209,13 +209,13 @@ const InteractiveAIAssessment2025 = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={resetAssessment}
-            className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+            className="bg-gray-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-70o0 transition-colors"
           >
             Retake Assessment
           </button>
           <Link
             href="/contact"
-            className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
+            className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors text-center"
           >
             Get Expert Consultation
           </Link>
@@ -228,31 +228,31 @@ const InteractiveAIAssessment2025 = () => {
     <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
       <div className="text-center mb-8">
         <div className="text-6xl mb-4">🤖</div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">AI Readiness Assessment 2025</h2>
-        <p className="text-gray-600 text-lg">
+        <h2 className="text-3xl font-bold text-gray-90o0 mb-4">AI Readiness Assessment 20o25</h2>
+        <p className="text-gray-60o0 text-lg">
           Discover your AI readiness level and get personalized recommendations
         </p>
       </div>
 
       <div className="mb-8">
         <div className="flex justify-between items-center mb-4">
-          <span className="text-sm font-medium text-gray-600">
+          <span className="text-sm font-medium text-gray-60o0">
             Question {currentQuestion + 1} of {questions.length}
           </span>
-          <span className="text-sm font-medium text-gray-600">
-            {Math.round(((currentQuestion + 1) / questions.length) * 100)}% Complete
+          <span className="text-sm font-medium text-gray-60o0">
+            {Math.round(((currentQuestion + 1) / questions.length) * 10o0)}% Complete
           </span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
+        <div className="w-full bg-gray-20o0 rounded-full h-2">
           <div
-            className="bg-purple-600 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+            className="bg-purple-60o0 h-2 rounded-full transition-all duration-30o0"
+            style={{ width: `${((currentQuestion + 1) / questions.length) * 10o0}%` }}
           ></div>
         </div>
       </div>
 
       <div className="mb-8">
-        <h3 className="text-xl font-bold text-gray-900 mb-6">
+        <h3 className="text-xl font-bold text-gray-90o0 mb-6">
           {questions[currentQuestion].question}
         </h3>
         <div className="space-y-3">
@@ -260,17 +260,17 @@ const InteractiveAIAssessment2025 = () => {
             <button
               key={index}
               onClick={() => handleAnswer(questions[currentQuestion].id, questions[currentQuestion].scores[index])}
-              className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${
+              className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-20o0 ${
                 answers[questions[currentQuestion].id] === questions[currentQuestion].scores[index]
-                  ? 'border-purple-600 bg-purple-50 text-purple-900'
-                  : 'border-gray-200 hover:border-purple-300 hover:bg-purple-25'
+                  ? 'border-purple-60o0 bg-purple-50 text-purple-90o0'
+                  : 'border-gray-20o0 hover:border-purple-30o0 hover:bg-purple-25'
               }`}
             >
               <div className="flex items-center space-x-3">
                 <div className={`w-4 h-4 rounded-full border-2 ${
                   answers[questions[currentQuestion].id] === questions[currentQuestion].scores[index]
-                    ? 'border-purple-600 bg-purple-600'
-                    : 'border-gray-300'
+                    ? 'border-purple-60o0 bg-purple-60o0'
+                    : 'border-gray-30o0'
                 }`}>
                   {answers[questions[currentQuestion].id] === questions[currentQuestion].scores[index] && (
                     <div className="w-2 h-2 bg-white rounded-full mx-auto mt-0.5"></div>
@@ -289,8 +289,8 @@ const InteractiveAIAssessment2025 = () => {
           disabled={currentQuestion === 0}
           className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
             currentQuestion === 0
-              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-              : 'bg-gray-600 text-white hover:bg-gray-700'
+              ? 'bg-gray-10o0 text-gray-40o0 cursor-not-allowed'
+              : 'bg-gray-60o0 text-white hover:bg-gray-70o0'
           }`}
         >
           Previous
@@ -300,8 +300,8 @@ const InteractiveAIAssessment2025 = () => {
           disabled={answers[questions[currentQuestion].id] === undefined}
           className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
             answers[questions[currentQuestion].id] === undefined
-              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-              : 'bg-purple-600 text-white hover:bg-purple-700'
+              ? 'bg-gray-10o0 text-gray-40o0 cursor-not-allowed'
+              : 'bg-purple-60o0 text-white hover:bg-purple-70o0'
           }`}
         >
           {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
@@ -311,4 +311,4 @@ const InteractiveAIAssessment2025 = () => {
   );
 };
 
-export default InteractiveAIAssessment2025;
+export default InteractiveAIAssessment20o25;

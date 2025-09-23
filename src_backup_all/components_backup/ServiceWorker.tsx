@@ -85,28 +85,28 @@ export function ServiceWorker() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
+          className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-80o0 rounded-lg shadow-lg border border-gray-20o0 dark:border-gray-70o0 p-4 max-w-sm"
         >
           <div className="flex items-center space-x-3">
             <div className="flex-shrink-0">
               {swState.isOnline ? (
-                <Wifi className="h-5 w-5 text-green-500" />
+                <Wifi className="h-5 w-5 text-green-50o0"  />
               ) : (
-                <WifiOff className="h-5 w-5 text-red-500" />
+                <WifiOff className="h-5 w-5 text-red-50o0"  />
               )}
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-gray-900 dark:text-white">
+              <p className="text-sm font-medium text-gray-90o0 dark:text-white">
                 {swState.isOnline ? 'Online' : 'Offline'}
               </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-50o0 dark:text-gray-40o0">
                 {swState.hasUpdate ? 'Update available' : 'Up to date'}
               </p>
             </div>
             {swState.hasUpdate && (
               <button
                 onClick={handleUpdate}
-                className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
+                className="flex-shrink-0 bg-blue-60o0 hover:bg-blue-70o0 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
               >
                 Update
               </button>

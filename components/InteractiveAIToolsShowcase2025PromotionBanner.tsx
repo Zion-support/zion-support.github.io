@@ -16,12 +16,12 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const InteractiveAIToolsShowcase2025PromotionBanner = () => {
+const InteractiveAIToolsShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
+    const timer = setTimeout(() => setIsVisible(true)10o00);
     return () => clearTimeout(timer);
   }[]);
 
@@ -35,28 +35,28 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -10o0 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -10o0 }}
           transition={{ duration: 0.6ease: "easeOut" }}
-          className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden"
+          className="relative bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 overflow-hidden"
         >
           {/* Background Pattern */}
-          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600/90 via-purple-600/90 to-pink-600/90" />
+          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]"  />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-60o0/90 via-purple-60o0/90 to-pink-60o0/90"  />
           
           {/* Floating AI Icons */}
           <div className="absolute top-4 left-8 w-6 h-6 text-white/20 animate-bounce">
-            <Brain className="w-full h-full" />
+            <Brain className="w-full h-full"  />
           </div>
-          <div className="absolute top-8 right-12 w-4 h-4 text-white/30 animate-pulse delay-1000">
-            <Zap className="w-full h-full" />
+          <div className="absolute top-8 right-12 w-4 h-4 text-white/30 animate-pulse delay-10o00">
+            <Zap className="w-full h-full"  />
           </div>
-          <div className="absolute bottom-6 left-16 w-5 h-5 text-white/25 animate-bounce delay-2000">
-            <TrendingUp className="w-full h-full" />
+          <div className="absolute bottom-6 left-16 w-5 h-5 text-white/25 animate-bounce delay-20o00">
+            <TrendingUp className="w-full h-full"  />
           </div>
-          <div className="absolute bottom-4 right-8 w-3 h-3 text-white/40 animate-pulse delay-500">
-            <Sparkles className="w-full h-full" />
+          <div className="absolute bottom-4 right-8 w-3 h-3 text-white/40 animate-pulse delay-50o0">
+            <Sparkles className="w-full h-full"  />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -70,17 +70,17 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   className="flex items-center justify-center lg:justify-start gap-3 mb-3"
                 >
                   <div className="flex items-center gap-1">
-                    <Sparkles className="w-5 h-5 text-yellow-300" />
-                    <span className="text-yellow-300 font-semibold text-sm uppercase tracking-wide">
+                    <Sparkles className="w-5 h-5 text-yellow-30o0"  />
+                    <span className="text-yellow-30o0 font-semibold text-sm uppercase tracking-wide">
                       Interactive AI Tools
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-30o0 fill-current"  />
+                    <Star className="w-4 h-4 text-yellow-30o0 fill-current"  />
+                    <Star className="w-4 h-4 text-yellow-30o0 fill-current"  />
+                    <Star className="w-4 h-4 text-yellow-30o0 fill-current"  />
+                    <Star className="w-4 h-4 text-yellow-30o0 fill-current"  />
                   </div>
                 </motion.div>
 
@@ -90,14 +90,14 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   transition={{ duration: 0.6delay: 0.3 }}
                   className="text-2xl lg:text-3xl font-bold text-white mb-2"
                 >
-                  🤖 Interactive AI Tools Suite 2025
+                  🤖 Interactive AI Tools Suite 20o25
                 </motion.h2>
 
                 <motion.p
                   initial={{ opacity: 0x: -20 }}
                   animate={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.6delay: 0.4 }}
-                  className="text-indigo-100 text-lg mb-4 max-w-2xl"
+                  className="text-indigo-10o0 text-lg mb-4 max-w-2xl"
                 >
                   Experience the power of artificial intelligence with our comprehensive suite of interactive tools. 
                   <span className="font-semibold text-white"> 98.5% accuracy</span>
@@ -111,20 +111,20 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   transition={{ duration: 0.6delay: 0.5 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
                 >
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
+                  <div className="flex items-center gap-2 text-sm text-indigo-10o0">
+                    <CheckCircle className="w-4 h-4 text-green-30o0"  />
                     <span>AI Assistant</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
+                  <div className="flex items-center gap-2 text-sm text-indigo-10o0">
+                    <CheckCircle className="w-4 h-4 text-green-30o0"  />
                     <span>Data Analyzer</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
+                  <div className="flex items-center gap-2 text-sm text-indigo-10o0">
+                    <CheckCircle className="w-4 h-4 text-green-30o0"  />
                     <span>Content Generator</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-indigo-100">
-                    <CheckCircle className="w-4 h-4 text-green-300" />
+                  <div className="flex items-center gap-2 text-sm text-indigo-10o0">
+                    <CheckCircle className="w-4 h-4 text-green-30o0"  />
                     <span>Security Guard</span>
                   </div>
                 </motion.div>
@@ -135,13 +135,13 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   transition={{ duration: 0.6delay: 0.6 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >
-                  <button className="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl">
-                    <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                  <button className="bg-white text-indigo-60o0 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition-all duration-30o0 flex items-center justify-center group shadow-lg hover:shadow-xl">
+                    <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-30o0"  />
                     Try AI Tools
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-30o0"  />
                   </button>
-                  <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 flex items-center justify-center group">
-                    <ExternalLink className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                  <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 flex items-center justify-center group">
+                    <ExternalLink className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-30o0"  />
                     Explore Suite
                   </button>
                 </motion.div>
@@ -155,19 +155,19 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                 className="flex flex-col sm:flex-row lg:flex-col gap-4"
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
-                  <Brain className="w-8 h-8 text-white mx-auto mb-2" />
+                  <Brain className="w-8 h-8 text-white mx-auto mb-2"  />
                   <div className="text-lg font-bold text-white mb-1">AI Assistant</div>
-                  <div className="text-indigo-100 text-sm">98.5% accuracy</div>
+                  <div className="text-indigo-10o0 text-sm">98.5% accuracy</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
-                  <Zap className="w-8 h-8 text-white mx-auto mb-2" />
+                  <Zap className="w-8 h-8 text-white mx-auto mb-2"  />
                   <div className="text-lg font-bold text-white mb-1">Automation</div>
-                  <div className="text-indigo-100 text-sm">85% efficiency</div>
+                  <div className="text-indigo-10o0 text-sm">85% efficiency</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
-                  <TrendingUp className="w-8 h-8 text-white mx-auto mb-2" />
+                  <TrendingUp className="w-8 h-8 text-white mx-auto mb-2"  />
                   <div className="text-lg font-bold text-white mb-1">Analytics</div>
-                  <div className="text-indigo-100 text-sm">10x faster</div>
+                  <div className="text-indigo-10o0 text-sm">10x faster</div>
                 </div>
               </motion.div>
             </div>
@@ -175,19 +175,19 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
             {/* Dismiss Button */}
             <button
               onClick={handleDismiss}
-              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-300 p-1"
+              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-30o0 p-1"
               aria-label="Dismiss banner"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </button>
           </div>
 
           {/* Animated Border */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 animate-pulse" />
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 animate-pulse"  />
         </motion.div>
       )}
     </AnimatePresence>
   );
 };
 
-export default InteractiveAIToolsShowcase2025PromotionBanner;
+export default InteractiveAIToolsShowcase20o25PromotionBanner;

@@ -62,14 +62,14 @@ const NeonGlow: React.FC<NeonGlowProps> = ({
 };
 
 // Main Enhanced Neon Effects Component
-export default function UltraAdvancedNeonEffects2046({ 
+export default function UltraAdvancedNeonEffects20o46({ 
   children, 
   variant = 'quantum-consciousness',
   intensity = 'medium',
   interactive = true,
   className = '',
   consciousness = 0.5,
-  pulseRate = 2000,
+  pulseRate = 20o00,
   quantumState = 0
 }: NeonEffectProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -94,13 +94,13 @@ export default function UltraAdvancedNeonEffects2046({
   useEffect(() => {
     if (variant === 'consciousness' || variant === 'quantum-neon' || variant === 'quantum-consciousness') {
       pulseRef.current = setInterval(() => {
-        setPulseState(prev => (prev + 1) % 100);
-      }, pulseRate / 100);
+        setPulseState(prev => (prev + 1) % 10o0);
+      }, pulseRate / 10o0);
     }
 
     if (variant === 'quantum' || variant === 'quantum-holographic' || variant === 'quantum-consciousness') {
       quantumRef.current = setInterval(() => {
-        setQuantumPhase(prev => (prev + 1) % 100);
+        setQuantumPhase(prev => (prev + 1) % 10o0);
       }, 50);
     }
 
@@ -298,10 +298,9 @@ export default function UltraAdvancedNeonEffects2046({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       animate={{
-        scale: isHovered ? 1.05 : 1,
+        scale: isHovered ? 1.0o5 : 1,
         rotateY: isHovered ? 5 : 0,
-        rotateX: isHovered ? 5 : 0,
-      }}
+        rotateX: isHovered ? 5 : 0}}
       transition={{
         duration: 0.3,
         ease: "easeInOut"
@@ -309,12 +308,12 @@ export default function UltraAdvancedNeonEffects2046({
       style={{
         ...neonStyles,
         transformStyle: 'preserve-3d',
-        perspective: '1000px'
+        perspective: '10o00px'
       }}
     >
       {/* Enhanced Neon Glow with consciousness and quantum effects */}
       <NeonGlow 
-        color={variant === 'quantum-consciousness' ? '#8b5cf6' : '#00d4ff'} 
+        color={variant === 'quantum-consciousness' ? '#8b5cf6' : '#0o0d4ff'} 
         intensity={intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1}
         consciousness={consciousness}
         quantumState={quantumPhase}
@@ -340,7 +339,7 @@ export default function UltraAdvancedNeonEffects2046({
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          />
+           />
         </div>
       )}
     </motion.div>

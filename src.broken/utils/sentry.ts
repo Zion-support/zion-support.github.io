@@ -11,22 +11,3 @@ if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_
     tracesSampleRate: 0.1,
     // ...
     // Note: if you want to override the automatic release value, do so here
-<<<<<<< HEAD
-    //   release: process.env.npm_package_version,
-  });
-=======
-    //   release: process.env.npm_package_version});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-}
-
-export function captureException(error: unknown, context?: any): void { // Added context capability
-  // The @sentry/nextjs SDK handles initialization.
-  // We can directly call captureException.
-  if (context) {
-    return Sentry.captureException(error, context);
-  }
-  return Sentry.captureException(error);
-}
-
-// It's good practice to also export Sentry itself if you need to use other Sentry methods elsewhere.
-export { Sentry };

@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface AdditionalMarketService2025 {
+export interface AdditionalMarketService20o25 {
   id: string;
   name: string;
   tagline: string;
@@ -41,7 +41,7 @@ export interface AdditionalMarketService2025 {
   reviews: number;
 }
 
-export const additionalMarketServices2025: AdditionalMarketService2025[] = [
+export const additionalMarketServices20o25: AdditionalMarketService20o25[] = [
   {
     id: 'feature-flags-edge-starter',
     name: 'Feature Flags at the Edge',
@@ -58,8 +58,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: true,
     icon: '🚦',
-    color: 'from-purple-600 to-pink-600',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-pink-60o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/feature-flags-edge',
     marketPosition: 'Lean alternative to LaunchDarkly for edge-first teams.',
     targetAudience: 'Frontend/platform teams, growth engineers',
@@ -76,14 +76,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '20% YoY',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Edge KV store with signed payloads, SDK, and governance APIs.',
-    launchDate: '2025-01-15',
+    launchDate: '20o25-0o1-15',
     customers: 54,
     rating: 4.7,
     reviews: 33
@@ -104,8 +104,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: false,
     icon: '🧪',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
+    color: 'from-cyan-60o0 to-blue-70o0',
+    textColor: 'text-cyan-30o0',
     link: 'https://ziontechgroup.com/services',
     marketPosition: 'Practical alternative to Gretel/Mostly AI for SMB teams.',
     targetAudience: 'QA, ML engineers, data platform teams',
@@ -122,14 +122,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Policy engine with LLM prompts, validators, and profile-based generators.',
-    launchDate: '2025-02-01',
+    launchDate: '20o25-0o2-0o1',
     customers: 28,
     rating: 4.6,
     reviews: 19
@@ -150,8 +150,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: true,
     icon: '📚',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300',
+    color: 'from-emerald-60o0 to-teal-70o0',
+    textColor: 'text-emerald-30o0',
     link: 'https://ziontechgroup.com/ai-evals',
     marketPosition: 'Complements Promptfoo and Langfuse with enterprise guardrails.',
     targetAudience: 'ML engineers, platform teams',
@@ -168,14 +168,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '40% YoY',
     variant: 'monitoring-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'OTel spans for end-to-end RAG steps with eval runners and scoring.',
-    launchDate: '2025-01-05',
+    launchDate: '20o25-0o1-0o5',
     customers: 41,
     rating: 4.7,
     reviews: 27
@@ -196,8 +196,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: false,
     icon: '⛵',
-    color: 'from-amber-600 to-orange-700',
-    textColor: 'text-amber-300',
+    color: 'from-amber-60o0 to-orange-70o0',
+    textColor: 'text-amber-30o0',
     link: 'https://ziontechgroup.com/services',
     marketPosition: 'Complements Kubecost with preventative guardrails.',
     targetAudience: 'Platform engineering, FinOps',
@@ -214,14 +214,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '25% YoY',
     variant: 'cloud-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'OPA policies, mutating webhooks, and Grafana dashboards.',
-    launchDate: '2025-02-10',
+    launchDate: '20o25-0o2-10',
     customers: 22,
     rating: 4.5,
     reviews: 14
@@ -242,8 +242,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: true,
     icon: '🛡️',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-indigo-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/services',
     marketPosition: 'Lightweight alternative to Salt Security for SMBs.',
     targetAudience: 'Security, platform, API owners',
@@ -260,14 +260,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '35% YoY',
     variant: 'monitoring-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Traffic sampling and schema registry with diff engine and alerting.',
-    launchDate: '2025-01-20',
+    launchDate: '20o25-0o1-20',
     customers: 37,
     rating: 4.6,
     reviews: 21
@@ -288,8 +288,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: false,
     icon: '✉️',
-    color: 'from-pink-600 to-rose-700',
-    textColor: 'text-pink-300',
+    color: 'from-pink-60o0 to-rose-70o0',
+    textColor: 'text-pink-30o0',
     link: 'https://ziontechgroup.com/email-deliverability-monitor',
     marketPosition: 'Complement to ESPs; faster setup for SMBs.',
     targetAudience: 'Growth, marketing ops, founders',
@@ -306,14 +306,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '18% YoY',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'DNS wizards, warmup schedulers, inbox seed tests and dashboards.',
-    launchDate: '2025-02-12',
+    launchDate: '20o25-0o2-12',
     customers: 19,
     rating: 4.5,
     reviews: 12
@@ -334,8 +334,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: true,
     icon: '⚡',
-    color: 'from-emerald-600 to-lime-700',
-    textColor: 'text-emerald-300',
+    color: 'from-emerald-60o0 to-lime-70o0',
+    textColor: 'text-emerald-30o0',
     link: 'https://ziontechgroup.com/browser-performance-monitor',
     marketPosition: 'SMB-friendly alternative to SpeedCurve and Calibre.',
     targetAudience: 'Frontend teams, SRE',
@@ -352,14 +352,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '15% YoY',
     variant: 'monitoring-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Playwright scripts, budget checks, and CI comment bots.',
-    launchDate: '2025-01-30',
+    launchDate: '20o25-0o1-30',
     customers: 45,
     rating: 4.6,
     reviews: 23
@@ -380,8 +380,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: false,
     icon: '📜',
-    color: 'from-indigo-600 to-violet-700',
-    textColor: 'text-indigo-300',
+    color: 'from-indigo-60o0 to-violet-70o0',
+    textColor: 'text-indigo-30o0',
     link: 'https://ziontechgroup.com/data-catalog-lineage',
     marketPosition: 'Simpler path compared to full DataHub + Great Expectations.',
     targetAudience: 'Data platform, analytics engineering',
@@ -398,14 +398,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '20% YoY',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Schema registry service with CI plugins and documentation portal.',
-    launchDate: '2025-02-18',
+    launchDate: '20o25-0o2-18',
     customers: 16,
     rating: 4.5,
     reviews: 11
@@ -426,8 +426,8 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     ],
     popular: true,
     icon: '🤖',
-    color: 'from-teal-600 to-emerald-700',
-    textColor: 'text-teal-300',
+    color: 'from-teal-60o0 to-emerald-70o0',
+    textColor: 'text-teal-30o0',
     link: 'https://ziontechgroup.com/incident-copilot',
     marketPosition: 'Practical, ops-focused alternative to generic AI assistants.',
     targetAudience: 'IT operations, support, SRE',
@@ -444,14 +444,14 @@ export const additionalMarketServices2025: AdditionalMarketService2025[] = [
     growthRate: '28% YoY',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Toolformer-style agents with policy checks and human approvals.',
-    launchDate: '2025-02-05',
+    launchDate: '20o25-0o2-0o5',
     customers: 31,
     rating: 4.6,
     reviews: 18

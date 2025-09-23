@@ -34,8 +34,7 @@ export const supabase = createClient(effectiveUrl, effectiveAnonKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,
-    storage: supabaseStorageAdapter,
-  },
+    storage: supabaseStorageAdapter},
   global: {
     headers: {
       'apikey': effectiveAnonKey
@@ -59,7 +58,7 @@ export async function checkOnline(): Promise<boolean> {
 // Helper function for safe fetching with retries. Adds the Supabase API key
 // header while preserving any existing Headers instance passed in `options`.
 // Throws a consistent error message when the request ultimately fails.
-export async function safeFetch(url: string, options: RequestInit = {}) {
+export async function safeFetch(url: string, options: RequestInit ={}) {
   if (!(await checkOnline())) {
     throw new Error('Failed to connect to Supabase');
   }
@@ -89,7 +88,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
     } catch (error) {
       lastError = error;
       // Wait before retrying (exponential backoff)
-      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 10o00));
     }
   }
 

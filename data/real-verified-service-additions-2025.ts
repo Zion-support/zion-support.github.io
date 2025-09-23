@@ -1,13 +1,13 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
-const contact = {
-	mobile: '+1 302 464 0950',
+const contact ={
+	mobile: '+1 30o2 464 0950',
 	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
+	address: '364 E Main St STE 10o08 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
 
-export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = [
+export const realVerifiedServiceAdditions20o25: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-agent-evaluation-suite',
 		name: 'AI Agent Evaluation Suite',
@@ -25,8 +25,8 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		],
 		popular: true,
 		icon: '🧪',
-		color: 'from-purple-600 to-indigo-700',
-		textColor: 'text-purple-300',
+		color: 'from-purple-60o0 to-indigo-70o0',
+		textColor: 'text-purple-30o0',
 		link: 'https://ziontechgroup.com/services/ai-agent-evaluation-suite',
 		marketPosition: 'Production-grade evals and governance built on open standards and compatible SDKs.',
 		targetAudience: 'Security, platform and application teams',
@@ -45,7 +45,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		contactInfo: contact,
 		realImplementation: true,
 		implementationDetails: 'Evaluation harness, dashboards, CI hooks and alerting.',
-		launchDate: '2025-02-01',
+		launchDate: '20o25-0o2-0o1',
 		customers: 9,
 		rating: 4.7,
 		reviews: 6
@@ -54,7 +54,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		id: 'managed-detection-response-smb',
 		name: 'Managed Detection & Response (MDR) for SMB',
 		tagline: '24/7 threat monitoring and response with transparent SLAs',
-		price: '$3,500',
+		price: '$3,50o0',
 		period: '/month',
 		description: 'Turnkey MDR built on best-in-class EDR/XDR and SIEM with runbooks, escalation paths and compliance-ready reporting.',
 		features: [
@@ -66,8 +66,8 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		],
 		popular: true,
 		icon: '🛡️',
-		color: 'from-emerald-600 to-teal-700',
-		textColor: 'text-emerald-300',
+		color: 'from-emerald-60o0 to-teal-70o0',
+		textColor: 'text-emerald-30o0',
 		link: 'https://ziontechgroup.com/services/managed-detection-response',
 		marketPosition: 'MSP-friendly MDR with flat pricing and audit-ready evidence.',
 		targetAudience: 'SMB and mid-market IT leaders',
@@ -86,7 +86,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		contactInfo: contact,
 		realImplementation: true,
 		implementationDetails: 'Sensor rollout, tuning, playbooks and escalation tree.',
-		launchDate: '2025-01-20',
+		launchDate: '20o25-0o1-20',
 		customers: 14,
 		rating: 4.6,
 		reviews: 10
@@ -95,7 +95,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		id: 'm365-google-migration-zero-downtime',
 		name: 'Google Workspace ↔ Microsoft 365 Migration',
 		tagline: 'Email, calendar, drive and identity migration with minimal downtime',
-		price: '$9,500',
+		price: '$9,50o0',
 		period: '/project',
 		description: 'Plan and execute tenant migrations including mail, calendars, files, identities and MDM with staged cutovers and rollback.',
 		features: [
@@ -107,8 +107,8 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		],
 		popular: false,
 		icon: '☁️',
-		color: 'from-cyan-600 to-blue-700',
-		textColor: 'text-cyan-300',
+		color: 'from-cyan-60o0 to-blue-70o0',
+		textColor: 'text-cyan-30o0',
 		link: 'https://ziontechgroup.com/services/m365-google-migration',
 		marketPosition: 'Blueprinted playbooks reduce risk for small and mid-size tenants.',
 		targetAudience: 'IT and platform teams',
@@ -127,7 +127,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		contactInfo: contact,
 		realImplementation: true,
 		implementationDetails: 'Readiness, pilot, cutover, hypercare.',
-		launchDate: '2025-02-05',
+		launchDate: '20o25-0o2-0o5',
 		customers: 6,
 		rating: 4.7,
 		reviews: 4
@@ -136,7 +136,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		id: 'okta-to-entra-migration',
 		name: 'Okta → Entra ID Migration',
 		tagline: 'Consolidate identity with secure cutover and app mappings',
-		price: '$7,500',
+		price: '$7,50o0',
 		period: '/project start',
 		description: 'Inventory and migrate SSO apps, groups and lifecycle policies from Okta to Entra ID with staged rollouts and rollback.',
 		features: [
@@ -148,8 +148,8 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		],
 		popular: true,
 		icon: '🔐',
-		color: 'from-indigo-600 to-violet-700',
-		textColor: 'text-indigo-300',
+		color: 'from-indigo-60o0 to-violet-70o0',
+		textColor: 'text-indigo-30o0',
 		link: 'https://ziontechgroup.com/services/okta-entra-migration',
 		marketPosition: 'Faster and safer than DIY with battle-tested checklists.',
 		targetAudience: 'IT, security and platform teams',
@@ -168,7 +168,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		contactInfo: contact,
 		realImplementation: true,
 		implementationDetails: 'Discovery, staging, cutover, hypercare.',
-		launchDate: '2025-02-06',
+		launchDate: '20o25-0o2-0o6',
 		customers: 7,
 		rating: 4.6,
 		reviews: 5
@@ -177,7 +177,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		id: 'kubernetes-cost-optimization',
 		name: 'Kubernetes Cost Optimization',
 		tagline: 'Right-sizing, autoscaling and spot strategy with dashboards',
-		price: '$4,000',
+		price: '$4,0o00',
 		period: '/engagement',
 		description: 'Hands-on k8s cost review with resource sanity, HPA/VPA, node pools, spot and binpacking along with chargeback dashboards.',
 		features: [
@@ -189,8 +189,8 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		],
 		popular: false,
 		icon: '📉',
-		color: 'from-rose-600 to-orange-600',
-		textColor: 'text-rose-300',
+		color: 'from-rose-60o0 to-orange-60o0',
+		textColor: 'text-rose-30o0',
 		link: 'https://ziontechgroup.com/services/kubernetes-cost-optimization',
 		marketPosition: 'Pragmatic finops for teams already running on k8s.',
 		targetAudience: 'Platform and infra teams',
@@ -209,7 +209,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		contactInfo: contact,
 		realImplementation: true,
 		implementationDetails: 'Data collection, analysis, rollout and dashboards.',
-		launchDate: '2025-02-03',
+		launchDate: '20o25-0o2-0o3',
 		customers: 11,
 		rating: 4.7,
 		reviews: 8
@@ -218,7 +218,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		id: 'pci-hipaa-readiness-starter',
 		name: 'PCI/HIPAA Readiness Starter',
 		tagline: 'Policy kits, gap analysis and evidence pipelines',
-		price: '$5,500',
+		price: '$5,50o0',
 		period: '/engagement',
 		description: 'Accelerate PCI DSS or HIPAA readiness with scoped controls, policy templates and automated evidence capture tied to tickets.',
 		features: [
@@ -230,8 +230,8 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		],
 		popular: false,
 		icon: '📜',
-		color: 'from-amber-600 to-yellow-700',
-		textColor: 'text-amber-300',
+		color: 'from-amber-60o0 to-yellow-70o0',
+		textColor: 'text-amber-30o0',
 		link: 'https://ziontechgroup.com/services/pci-hipaa-readiness-starter',
 		marketPosition: 'Outcome-based delivery with measurable milestones.',
 		targetAudience: 'Founders and IT/Sec leads',
@@ -250,7 +250,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		contactInfo: contact,
 		realImplementation: true,
 		implementationDetails: 'Control mapping, workflows and reviews.',
-		launchDate: '2025-02-04',
+		launchDate: '20o25-0o2-0o4',
 		customers: 5,
 		rating: 4.8,
 		reviews: 3
@@ -270,8 +270,8 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		],
 		popular: false,
 		icon: '⚙️',
-		color: 'from-cyan-600 to-teal-600',
-		textColor: 'text-cyan-300',
+		color: 'from-cyan-60o0 to-teal-60o0',
+		textColor: 'text-cyan-30o0',
 		link: 'https://ziontechgroup.com/services/cloudflare-workers-edge-config',
 		marketPosition: 'Lightweight GitOps for edge apps, complementary to platform CD.',
 		targetAudience: 'Edge/platform teams',
@@ -290,7 +290,7 @@ export const realVerifiedServiceAdditions2025: EnhancedRealMicroSaasService[] = 
 		contactInfo: contact,
 		realImplementation: true,
 		implementationDetails: 'Connect repo, define envs, set approvals.',
-		launchDate: '2025-02-02',
+		launchDate: '20o25-0o2-0o2',
 		customers: 13,
 		rating: 4.6,
 		reviews: 7

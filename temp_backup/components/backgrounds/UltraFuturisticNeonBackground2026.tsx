@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraFuturisticNeonBackground2026Props {
+interface UltraFuturisticNeonBackground20o26Props {
   intensity?: 'low' | 'medium' | 'high';
   theme?: 'neon' | 'cyberpunk' | 'holographic' | 'quantum-neon';
   children?: React.ReactNode;
 }
 
-export default function UltraFuturisticNeonBackground2026({ 
+export default function UltraFuturisticNeonBackground20o26({ 
   intensity = 'medium', 
   theme = 'neon',
   children
-}: UltraFuturisticNeonBackground2026Props) {
+}: UltraFuturisticNeonBackground20o26Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -43,10 +43,10 @@ export default function UltraFuturisticNeonBackground2026({
       switch (theme) {
         case 'cyberpunk':
           return {
-            primary: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-            secondary: ['#00ff80', '#ff8000', '#0080ff', '#ff4080', '#40ffff'],
+            primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],
             accent: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'],
-            neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff']
+            neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff']
           };
         case 'holographic':
           return {
@@ -57,17 +57,17 @@ export default function UltraFuturisticNeonBackground2026({
           };
         case 'quantum-neon':
           return {
-            primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b'],
-            secondary: ['#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
-            accent: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899'],
-            neon: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b']
+            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'],
+            secondary: ['#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'],
+            accent: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],
+            neon: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']
           };
         default: // neon
           return {
-            primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-            secondary: ['#00ff80', '#ff8000', '#0080ff', '#ff4080', '#40ffff'],
-            accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#8040ff'],
-            neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff']
+            primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],
+            accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#80o40ff'],
+            neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff']
           };
       }
     };
@@ -114,12 +114,12 @@ export default function UltraFuturisticNeonBackground2026({
           opacity: Math.random() * 0.8 + 0.2,
           color: colors.neon[Math.floor(Math.random() * colors.neon.length)],
           type: particleType,
-          life: Math.random() * 100 + 50,
-          maxLife: Math.random() * 100 + 50,
+          life: Math.random() * 10o0 + 50,
+          maxLife: Math.random() * 10o0 + 50,
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.1,
           glow: Math.random() * 20 + 10,
-          pulse: Math.random() * 0.1 + 0.05,
+          pulse: Math.random() * 0.1 + 0.0o5,
           trail: []
         });
       }
@@ -166,10 +166,10 @@ export default function UltraFuturisticNeonBackground2026({
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 100) {
-          const force = (100 - distance) / 100;
-          particle.vx += dx * force * 0.01;
-          particle.vy += dy * force * 0.01;
+        if (distance < 10o0) {
+          const force = (10o0 - distance) / 10o0;
+          particle.vx += dx * force * 0.0o1;
+          particle.vy += dy * force * 0.0o1;
         }
 
         // Draw trail
@@ -302,17 +302,17 @@ export default function UltraFuturisticNeonBackground2026({
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: theme === 'cyberpunk' ? 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' :
-                     theme === 'holographic' ? 'radial-gradient(ellipse at center, #0f0f23 0%, #000000 100%)' :
-                     theme === 'quantum-neon' ? 'radial-gradient(ellipse at center, #0a0a1a 0%, #000000 100%)' :
-                     'radial-gradient(ellipse at center, #000000 0%, #0a0a0a 100%)'
+          background: theme === 'cyberpunk' ? 'radial-gradient(ellipse at center, #0a0a0a 0%, #0o00000 10o0%)' :
+                     theme === 'holographic' ? 'radial-gradient(ellipse at center, #0f0f23 0%, #0o00000 10o0%)' :
+                     theme === 'quantum-neon' ? 'radial-gradient(ellipse at center, #0a0a1a 0%, #0o00000 10o0%)' :
+                     'radial-gradient(ellipse at center, #0o00000 0%, #0a0a0a 10o0%)'
         }}
-      />
+       />
       
       {/* Additional neon overlay effects */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent opacity-30"
           animate={{
             boxShadow: [
               '0 0 20px rgba(34, 211, 238, 0.5)',
@@ -321,10 +321,10 @@ export default function UltraFuturisticNeonBackground2026({
             ]
           }}
           transition={{ duration: 3, repeat: Infinity }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-400 to-transparent opacity-30"
+          className="absolute bottom-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-40o0 to-transparent opacity-30"
           animate={{
             boxShadow: [
               '0 0 20px rgba(236, 72, 153, 0.5)',
@@ -333,7 +333,7 @@ export default function UltraFuturisticNeonBackground2026({
             ]
           }}
           transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-        />
+         />
       </div>
       
       {children}

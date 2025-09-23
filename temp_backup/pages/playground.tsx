@@ -21,16 +21,16 @@ export default function ComponentPlayground() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Component Playground | Zion Tech Group</title>
-        <meta name="description" content="Interactive playground to test and explore our UI components." />
+        <meta name="description" content="Interactive playground to test and explore our UI components."  />
       
-        <meta property="og:title" content="Component Playground" />
-        <meta property="og:description" content="Component Playground — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:title" content="Component Playground"  />
+        <meta property="og:description" content="Component Playground — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       
       <main className="container mx-auto px-6 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
             Component Playground
           </h1>
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -42,14 +42,14 @@ export default function ComponentPlayground() {
           {/* Left Column */}
           <div className="space-y-8">
             {/* Pagination Demo */}
-            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6">
+            <div className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Pagination Component</h3>
-              <div className="bg-slate-800 p-6 rounded-lg">
+              <div className="bg-slate-80o0 p-6 rounded-lg">
                 <Pagination 
                   currentPage={currentPage}
                   totalPages={10}
                   onPageChange={setCurrentPage}
-                />
+                 />
               </div>
               <p className="text-white/60 text-sm mt-2">
                 Current page: {currentPage}
@@ -57,13 +57,13 @@ export default function ComponentPlayground() {
             </div>
 
             {/* Form Demo */}
-            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6">
+            <div className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Form Component</h3>
-              <Form onSubmit={handleFormSubmit} />
+              <Form onSubmit={handleFormSubmit}  />
             </div>
 
             {/* Button Variants */}
-            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6">
+            <div className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Button Variants</h3>
               <div className="flex flex-wrap gap-4">
                 <Button variant="primary">Primary</Button>
@@ -77,7 +77,7 @@ export default function ComponentPlayground() {
           {/* Right Column */}
           <div className="space-y-8">
             {/* Modal Demo */}
-            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6">
+            <div className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Modal Component</h3>
               <Button onClick={() => setIsModalOpen(true)}>
                 Open Modal
@@ -97,28 +97,28 @@ export default function ComponentPlayground() {
             </div>
 
             {/* Card Demo */}
-            <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6">
+            <div className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Card Component</h3>
               <div className="space-y-4">
                 <Card 
                   title="Sample Card"
                   description="This is a sample card component with some content."
-                  className="bg-slate-800"
-                />
+                  className="bg-slate-80o0"
+                 />
                 <Card 
                   title="Another Card"
                   description="Cards are great for displaying structured information."
-                  className="bg-slate-800"
-                />
+                  className="bg-slate-80o0"
+                 />
               </div>
             </div>
 
             {/* Form Data Display */}
             {Object.keys(formData).length > 0 && (
-              <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6">
+              <div className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-4">Form Data</h3>
-                <div className="bg-slate-800 p-4 rounded-lg">
-                  <pre className="text-sm text-cyan-400">
+                <div className="bg-slate-80o0 p-4 rounded-lg">
+                  <pre className="text-sm text-cyan-40o0">
                     {JSON.stringify(formData, null, 2)}
                   </pre>
                 </div>

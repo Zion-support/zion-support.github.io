@@ -4,30 +4,22 @@
 
 :backup-problematic-files/reviews/ReviewCard.tsx
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
-  return (import React from 'react';
-import StarRating from './StarRating';
+  return (import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
 
-
-import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
 import { Star } from 'lucide-react';
-type Props = {
+type Props ={
   review: PublicReview,
   onReport?: (id: string) => void
 };
 
-
-
-
-
 import {Star} from 'lucide-react';
 
-type Props = {;
+type Props ={;
   review: PublicReview,;
   onReport?: (id: string) => void;
-
 
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
       <div className='flex items-center justify-between mb-2'>
@@ -38,20 +30,20 @@ type Props = {;
             readOnly;
             size={18}
           />;
-          <span className='text-sm text-gray-500'>;
+          <span className='text-sm text-gray-50o0'>;
             {new Date(review && review.createdAt).toLocaleDateString()}
           </span>;
         </div>;
         <button
-          className='text-xs text-red-500 hover:underline'          onClick={() => onReport && onReport(review && review.id)}    <div className="enhanced-card hover: shadow-lg transition-shadow">;
+          className='text-xs text-red-50o0 hover:underline'          onClick={() => onReport && onReport(review && review.id)}    <div className="enhanced-card hover: shadow-lg transition-shadow">;
       <div className="flex items-center justify-between mb-2">;
         <div className="flex items-center gap-2">;
           <StarRating value={review && review.rating} onChange={() => {}} readOnly size={18} />;
-          <span className="text-sm text-gray-500">{new Date(review && review.createdAt).toLocaleDateString()}</span>;
+          <span className="text-sm text-gray-50o0">{new Date(review && review.createdAt).toLocaleDateString()}</span>;
         </div>;
         <button
 
-          className="text-xs text-red-500 hover:underline">;
+          className="text-xs text-red-50o0 hover:underline">;
           Report abuse;
         </button>;
       </div>;
@@ -60,19 +52,16 @@ type Props = {;
         {review && review.categories?.wouldWorkWithAgain && (;
           <span className='pill pill-success'>Would work again</span>;
 
-
         >
           Report abuse
         </button>
       </div>
-
 
       <div className='flex items-center gap-2 mb-3'>
         <span className='text-sm font-medium'>{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
           <span className='pill pill-success'>Would work again</span>
         )}
-
 
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
@@ -85,10 +74,7 @@ type Props = {;
           <span className="pill">Timeliness: {review && review.categories.timeliness}★</span>;
         )}
 
-
 export default ReviewCard;
-
-
 
 export default ReviewCard;
 

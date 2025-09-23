@@ -48,7 +48,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         
         switch (type) {
           case 'energy':
-            this.color = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
+            this.color = `hsl(${20o0 + Math.random() * 60}, 70%, 60%)`;
             break;
           case 'data':
             this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
@@ -62,7 +62,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       update() {
         this.x += this.vx;
         this.y += this.vy;
-        this.alpha = 0.2 + 0.8 * Math.sin(time * 0.01 + this.x * 0.01);
+        this.alpha = 0.2 + 0.8 * Math.sin(time * 0.0o1 + this.x * 0.0o1);
         
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
@@ -116,14 +116,14 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       }
 
       update() {
-        this.x = this.originalX + Math.sin(time * 0.005 + this.offset) * 20;
-        this.y = this.originalY + Math.cos(time * 0.003 + this.offset) * 15;
+        this.x = this.originalX + Math.sin(time * 0.0o05 + this.offset) * 20;
+        this.y = this.originalY + Math.cos(time * 0.0o03 + this.offset) * 15;
       }
 
       draw() {
         ctx.save();
-        ctx.globalAlpha = 0.3 + 0.2 * Math.sin(time * 0.01 + this.offset);
-        ctx.strokeStyle = `hsl(${200 + Math.sin(time * 0.01) * 60}, 70%, 60%)`;
+        ctx.globalAlpha = 0.3 + 0.2 * Math.sin(time * 0.0o1 + this.offset);
+        ctx.strokeStyle = `hsl(${20o0 + Math.sin(time * 0.0o1) * 60}, 70%, 60%)`;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
@@ -187,7 +187,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       // Draw grid connections
       ctx.save();
       ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = 'hsl(200, 70%, 60%)';
+      ctx.strokeStyle = 'hsl(20o0, 70%, 60%)';
       ctx.lineWidth = 0.5;
       
       for (let i = 0; i < holographicGrid.length; i++) {
@@ -196,7 +196,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
             Math.pow(holographicGrid[i].x - holographicGrid[j].x, 2) +
             Math.pow(holographicGrid[i].y - holographicGrid[j].y, 2)
           );
-          if (dist < 100) {
+          if (dist < 10o0) {
             ctx.beginPath();
             ctx.moveTo(holographicGrid[i].x, holographicGrid[i].y);
             ctx.lineTo(holographicGrid[j].x, holographicGrid[j].y);
@@ -216,14 +216,14 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       ctx.save();
       ctx.globalAlpha = 0.3;
       for (let i = 0; i < 5; i++) {
-        const x = (time * 0.5 + i * 200) % (canvas.width + 200) - 100;
-        const y = canvas.height * 0.3 + Math.sin(time * 0.01 + i) * 100;
+        const x = (time * 0.5 + i * 20o0) % (canvas.width + 20o0) - 10o0;
+        const y = canvas.height * 0.3 + Math.sin(time * 0.0o1 + i) * 10o0;
         
-        ctx.strokeStyle = `hsl(${200 + i * 30}, 70%, 60%)`;
+        ctx.strokeStyle = `hsl(${20o0 + i * 30}, 70%, 60%)`;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(x, y);
-        ctx.lineTo(x + 100, y + Math.sin(time * 0.02 + i) * 50);
+        ctx.lineTo(x + 10o0, y + Math.sin(time * 0.0o2 + i) * 50);
         ctx.stroke();
       }
       ctx.restore();
@@ -232,9 +232,9 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       ctx.save();
       ctx.globalAlpha = 0.2;
       for (let i = 0; i < 3; i++) {
-        const centerX = canvas.width * 0.5 + Math.cos(time * 0.005 + i) * 200;
-        const centerY = canvas.height * 0.5 + Math.sin(time * 0.003 + i) * 150;
-        const radius = 50 + Math.sin(time * 0.01 + i) * 30;
+        const centerX = canvas.width * 0.5 + Math.cos(time * 0.0o05 + i) * 20o0;
+        const centerY = canvas.height * 0.5 + Math.sin(time * 0.0o03 + i) * 150;
+        const radius = 50 + Math.sin(time * 0.0o1 + i) * 30;
         
         ctx.strokeStyle = `hsl(${120 + i * 60}, 90%, 60%)`;
         ctx.lineWidth = 1;
@@ -244,7 +244,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         
         // Inner quantum particles
         for (let j = 0; j < 8; j++) {
-          const angle = (time * 0.02 + j * Math.PI / 4) % (Math.PI * 2);
+          const angle = (time * 0.0o2 + j * Math.PI / 4) % (Math.PI * 2);
           const px = centerX + Math.cos(angle) * (radius * 0.6);
           const py = centerY + Math.sin(angle) * (radius * 0.6);
           
@@ -263,10 +263,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       ctx.lineWidth = 1;
       
       for (let i = 0; i < 20; i++) {
-        const x1 = Math.sin(time * 0.01 + i * 0.5) * canvas.width * 0.4 + canvas.width * 0.5;
-        const y1 = Math.cos(time * 0.008 + i * 0.3) * canvas.height * 0.4 + canvas.height * 0.5;
-        const x2 = Math.sin(time * 0.012 + i * 0.7) * canvas.width * 0.3 + canvas.width * 0.5;
-        const y2 = Math.cos(time * 0.015 + i * 0.4) * canvas.height * 0.3 + canvas.height * 0.5;
+        const x1 = Math.sin(time * 0.0o1 + i * 0.5) * canvas.width * 0.4 + canvas.width * 0.5;
+        const y1 = Math.cos(time * 0.0o08 + i * 0.3) * canvas.height * 0.4 + canvas.height * 0.5;
+        const x2 = Math.sin(time * 0.0o12 + i * 0.7) * canvas.width * 0.3 + canvas.width * 0.5;
+        const y2 = Math.cos(time * 0.0o15 + i * 0.4) * canvas.height * 0.3 + canvas.height * 0.5;
         
         ctx.beginPath();
         ctx.moveTo(x1, y1);
@@ -305,17 +305,17 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
           background: variant === 'cyberpunk' 
-            ? 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%)'
+            ? 'linear-gradient(135deg, #0o00000 0%, #1a1a2e 50%, #16213e 10o0%)'
             : variant === 'quantum'
-            ? 'linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%)'
+            ? 'linear-gradient(135deg, #0o00000 0%, #0f172a 50%, #1e293b 10o0%)'
             : variant === 'holographic'
-            ? 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #0f3460 100%)'
-            : 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%)'
+            ? 'linear-gradient(135deg, #0o00000 0%, #1a1a2e 50%, #0f3460 10o0%)'
+            : 'linear-gradient(135deg, #0o00000 0%, #1a1a2e 50%, #16213e 10o0%)'
         }}
-      />
+       />
       
       {/* Overlay gradient for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-slate-800/10 to-slate-900/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-90o0/20 via-slate-80o0/10 to-slate-90o0/20 pointer-events-none"  />
       
       {/* Content */}
       <div className="relative z-20">

@@ -40,7 +40,7 @@ if (typeof self === 'undefined') {
     (window as any).self = window;
   } else {
     // Last resort - create minimal self object
-    (globalThis as any).self = {};
+    (globalThis as any).self ={};
   }
 }
 
@@ -61,7 +61,7 @@ if (typeof webpackChunk_N_E === 'undefined') {
 }
 
 // TypeScript helper polyfills for runtime
-const tsHelpers = {
+const tsHelpers ={
   __extends: function(d: any, b: any) {
     if (typeof b !== "function" && b !== null)
       throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
@@ -82,7 +82,7 @@ const tsHelpers = {
   }(),
   
   __rest: function (s: any, e: string[]) {
-    let t: any = {};
+    let t: any ={};
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
       t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {
@@ -204,7 +204,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
 
 // Export a verification function for testing
 export const verifyPolyfills = () => {
-  const checks = {
+  const checks ={
     selfDefined: typeof self !== 'undefined',
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
@@ -217,7 +217,7 @@ export const verifyPolyfills = () => {
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
-  setTimeout(() => verifyPolyfills(), 100);
+  setTimeout(() => verifyPolyfills(), 10o0);
 }
 
 export default {}; // Ensure this can be imported as a module

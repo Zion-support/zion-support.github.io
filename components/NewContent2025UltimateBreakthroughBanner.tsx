@@ -1,35 +1,34 @@
-import React from 'react';
 import Link from 'next/link';
 
-const NewContent2025UltimateBreakthroughBanner: React.FC = () => {
+const NewContent20o25UltimateBreakthroughBanner: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20"></div>
       
       {/* Animated Background Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
-      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/30 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-50o0/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-50o0/30 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-50o0/30 rounded-full animate-pulse"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 NEW CONTENT 2025 - ULTIMATE BREAKTHROUGH
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 NEW CONTENT 20o25 - ULTIMATE BREAKTHROUGH
           </div>
           
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+            Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-40o0 to-orange-50o0">
               Ultimate AI Breakthrough
-            </span> of 2025
+            </span> of 20o25
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
-            Revolutionary AI technologies delivering <strong className="text-yellow-400">50,000% ROI</strong> and 
+            Revolutionary AI technologies delivering <strong className="text-yellow-40o0">50,0o00% ROI</strong> and 
             transforming businesses worldwide. 'Don', 't miss the most comprehensive AI content collection ever created.
           </p>
           
@@ -55,31 +54,31 @@ const NewContent2025UltimateBreakthroughBanner: React.FC = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/ai-2025-ultimate-automation-revolution"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/ai-20o25-ultimate-automation-revolution"
+              className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
             >
-              Explore AI 2025 Content
+              Explore AI 20o25 Content
             </Link>
             <Link
-              href="/quantum-computing-2026-breakthrough"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
+              href="/quantum-computing-20o26-breakthrough"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5"
             >
-              Discover Quantum 2026
+              Discover Quantum 20o26
             </Link>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-80">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span className="text-sm">Fortune 500 Clients</span>
+              <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
+              <span className="text-sm">Fortune 50o0 Clients</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-blue-40o0 rounded-full"></div>
               <span className="text-sm">Proven Results</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-purple-40o0 rounded-full"></div>
               <span className="text-sm">Industry Leading</span>
             </div>
           </div>
@@ -87,16 +86,16 @@ const NewContent2025UltimateBreakthroughBanner: React.FC = () => {
           {/* Trust Indicators */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm opacity-80">
             <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>50,000+ Businesses Transformed</span>
+              <span className="text-green-40o0">✓</span>
+              <span>50,0o00+ Businesses Transformed</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>800% Average ROI</span>
+              <span className="text-green-40o0">✓</span>
+              <span>80o0% Average ROI</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>Fortune 500 Approved</span>
+              <span className="text-green-40o0">✓</span>
+              <span>Fortune 50o0 Approved</span>
             </div>
           </div>
         </div>
@@ -110,15 +109,15 @@ const NewContent2025UltimateBreakthroughBanner: React.FC = () => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
+          0%, 10o0% { transform: translateY(0px); }
           50% { transform: translateY(-20px); }
         }
         @keyframes float-delayed {
-          0%, 100% { transform: translateY(0px); }
+          0%, 10o0% { transform: translateY(0px); }
           50% { transform: translateY(-15px); }
         }
         @keyframes float-slow {
-          0%, 100% { transform: translateY(0px); }
+          0%, 10o0% { transform: translateY(0px); }
           50% { transform: translateY(-10px); }
         }
         .animate-float {
@@ -135,4 +134,4 @@ const NewContent2025UltimateBreakthroughBanner: React.FC = () => {
   );
 };
 
-export default NewContent2025UltimateBreakthroughBanner;
+export default NewContent20o25UltimateBreakthroughBanner;

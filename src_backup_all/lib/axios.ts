@@ -1,7 +1,6 @@
 
 import { safeStorage } from '@/utils/safeStorage';
 
-
 export interface AxiosResponse<T = any> {
   data: T;
   status: number;
@@ -22,7 +21,7 @@ class InterceptorManager {
   }
   eject(id: number) {
     if (this.handlers[id]) {
-      this.handlers[id] = {};
+      this.handlers[id] ={};
     }
   }
 }
@@ -61,50 +60,45 @@ interface AxiosDefaults {
   baseURL?: string;
 }
 
-const globalDefaults: AxiosDefaults = {
+const globalDefaults: AxiosDefaults ={
   headers: { common: {} },
-  baseURL: '',
-};
+  baseURL: ''};
 
-const globalInterceptors = {
+const globalInterceptors ={
   request: new InterceptorManager(),
-  response: new InterceptorManager(),
-};
+  response: new InterceptorManager()};
 
-export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
+export function create(config: { baseURL?: string; withCredentials?: boolean } ={}): AxiosInstance {
   const baseURL = config.baseURL || '';
   const defaultWithCreds = !!config.withCredentials;
 
-  const instance: AxiosInstance = {
+  const instance: AxiosInstance ={
     interceptors: { request: new InterceptorManager(), response: new InterceptorManager() },
-    async get<T = any>(url: string, init: { params?: Record<string, any> } & RequestConfig = {} as any) {
+    async get<T = any>(url: string, init: { params?: Record<string, any> } & RequestConfig ={} as any) {
       const params = (init as any).params
         ? '?' + new URLSearchParams((init as any).params).toString()
         : '';
-      const opts = { ...init } as RequestConfig;
+      const opts ={ ...init } as RequestConfig;
       delete (opts as any).params;
       return request<T>(baseURL + url + params, 'GET', opts);
     },
-    async post<T = any>(url: string, data: any = {}, init: RequestConfig = {}) {
-      const headers = {
+    async post<T = any>(url: string, data: any ={}, init: RequestConfig ={}) {
+      const headers ={
         'Content-Type': 'application/json',
-        ...(init as any).headers,
-      };
-      const opts = { ...init, body: JSON.stringify(data), headers } as RequestConfig;
+        ...(init as any).headers};
+      const opts ={ ...init, body: JSON.stringify(data), headers } as RequestConfig;
       return request<T>(baseURL + url, 'POST', opts);
     },
-    async patch<T = any>(url: string, data: any = {}, init: RequestConfig = {}) {
-      const headers = {
+    async patch<T = any>(url: string, data: any ={}, init: RequestConfig ={}) {
+      const headers ={
         'Content-Type': 'application/json',
-        ...(init as any).headers,
-      };
-      const opts = { ...init, body: JSON.stringify(data), headers } as RequestConfig;
+        ...(init as any).headers};
+      const opts ={ ...init, body: JSON.stringify(data), headers } as RequestConfig;
       return request<T>(baseURL + url, 'PATCH', opts);
     },
-    async delete<T = any>(url: string, init: RequestConfig = {} as any) {
+    async delete<T = any>(url: string, init: RequestConfig ={} as any) {
       return request<T>(baseURL + url, 'DELETE', init);
-    },
-  };
+    }};
 
   // Include global interceptors on the instance
   instance.interceptors.request.handlers.push(
@@ -115,7 +109,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   );
 
   async function request<T>(url: string, method: string, init: RequestConfig): Promise<AxiosResponse<T>> {
-    let reqInit: RequestConfig = { ...init };
+    let reqInit: RequestConfig ={ ...init };
     // Run request interceptors
     for (const h of instance.interceptors.request.handlers) {
       if (h) { // Added null check for h
@@ -143,7 +137,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       safeStorage.getItem('zion_token') ||
       safeStorage.getItem('token');
 
-    const headers: Record<string, string> = { ...globalDefaults.headers.common };
+    const headers: Record<string, string> ={ ...globalDefaults.headers.common };
     if (reqInit.headers) {
       if (reqInit.headers instanceof Headers) {
         (reqInit.headers as Headers).forEach((value, key) => headers[key] = value);
@@ -166,13 +160,12 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       ...reqInit,
       method,
       headers,
-      credentials: withCreds ? 'include' : reqInit.credentials,
-    });
+      credentials: withCreds ? 'include' : reqInit.credentials});
     let data: any = null;
     try {
       data = await response.clone().json();
     } catch {}
-    const result: AxiosResponse<T> = { data, status: response.status };
+    const result: AxiosResponse<T> ={ data, status: response.status };
     if (response.ok) {
       let res: any = result;
       for (const h of instance.interceptors.response.handlers) {
@@ -184,8 +177,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     } else {
       const err: AxiosError = Object.assign(new Error('Request failed'), {
         response: result,
-        config: { url, method },
-      });
+        config: { url, method }});
       for (const h of instance.interceptors.response.handlers) {
         if (h && h.rejected) { // Added null check for h
           await h.rejected(err);
@@ -200,14 +192,13 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
 
 const defaultInstance = create();
 
-const customAxios: CustomAxiosStatic = {
+const customAxios: CustomAxiosStatic ={
   create,
   defaults: globalDefaults,
   interceptors: globalInterceptors,
   get: defaultInstance.get,
   post: defaultInstance.post,
   patch: defaultInstance.patch,
-  delete: defaultInstance.delete,
-};
+  delete: defaultInstance.delete};
 
 export default customAxios;

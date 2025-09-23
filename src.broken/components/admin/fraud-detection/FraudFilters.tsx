@@ -1,4 +1,3 @@
-import React from 'react';
 export function FraudFilters() {
   return (
     <div>

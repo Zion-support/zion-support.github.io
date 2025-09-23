@@ -7,20 +7,9 @@ const BusinessIntelligenceChat: NextPage = () => {
     <div>
       <Head>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-        <meta name="description" content="BusinessIntelligenceChat blog post" />
+        <meta name="description" content="BusinessIntelligenceChat blog post"  />
       </Head>
       
       <main>
         <h1>BusinessIntelligenceChat</h1>
         <p>Blog content coming soon...</p>
-<<<<<<< HEAD
-        <a href="/blog">Back to Blog</a>
-=======
-        <Link href="/blog">Back to Blog</Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-      </main>
-    </div>
-  );
-};
-
-export default BusinessIntelligenceChat;

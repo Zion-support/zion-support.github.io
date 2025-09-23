@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function AiPoweredCustomerSuccessAutomationPage() {
@@ -6,13 +5,13 @@ export default function AiPoweredCustomerSuccessAutomationPage() {
     <>
       <Head>
         <title>Ai Powered Customer Success Automation - Zion Tech Group</title>
-        <meta name="description" content="ai powered customer success automation page" />
+        <meta name="description" content="ai powered customer success automation page"  />
       </Head>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Ai Powered Customer Success Automation</h1>
         <p className="text-lg mb-4">This page is under construction.</p>
         <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
+          <a href="/" className="text-blue-60o0 hover:underline">
             ← Back to Home
           </a>
         </div>

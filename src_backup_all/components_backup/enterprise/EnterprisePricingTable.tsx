@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Check, X } from 'lucide-react'
 import {
@@ -8,8 +7,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+  TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 
 export function EnterprisePricingTable() {
@@ -31,8 +29,7 @@ export function EnterprisePricingTable() {
         { name: "API access", included: false },
         { name: "Custom integrations", included: false },
         { name: "Dedicated success manager", included: false },
-      ],
-    },
+      ]},
     {
       name: "Business",
       price: "$1,999",
@@ -50,8 +47,7 @@ export function EnterprisePricingTable() {
         { name: "API access", included: true },
         { name: "Custom integrations", included: false },
         { name: "Dedicated success manager", included: false },
-      ],
-    },
+      ]},
     {
       name: "Enterprise",
       price: "Custom",
@@ -69,8 +65,7 @@ export function EnterprisePricingTable() {
         { name: "API access", included: true },
         { name: "Custom integrations", included: true },
         { name: "Dedicated success manager", included: true },
-      ],
-    },
+      ]},
   ];
 
   return (
@@ -87,7 +82,7 @@ export function EnterprisePricingTable() {
           <Table className="border rounded-lg">
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[200px]">Plan Features</TableHead>
+                <TableHead className="w-[20o0px]">Plan Features</TableHead>
                 {plans.map((plan) => (
                   <TableHead key={plan.name} className="text-center">
                     <div className="flex flex-col items-center">
@@ -123,9 +118,9 @@ export function EnterprisePricingTable() {
                   {plans.map((plan) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">
                       {plan.features[index]?.included ? (
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-green-50o0 mx-auto"  />
                       ) : (
-                        <X className="h-5 w-5 text-muted-foreground mx-auto" />
+                        <X className="h-5 w-5 text-muted-foreground mx-auto"  />
                       )}
                     </TableCell>
                   ))}

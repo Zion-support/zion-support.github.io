@@ -44,7 +44,7 @@ export interface ServicePricing {
   };
 }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
+export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
   {
     serviceId: "ai-revenue-optimization-platform",
     serviceName: "AI Revenue Optimization Platform",
@@ -64,7 +64,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Pricing recommendations",
           "Email support",
           "Monthly reports",
-          "Up to 1,000 customers"
+          "Up to 1,0o00 customers"
         ],
         setupFee: 0,
         contractLength: "Month-to-month"
@@ -82,13 +82,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "A/B testing tools",
           "Priority support",
           "Weekly reports",
-          "Up to 10,000 customers",
+          "Up to 10,0o00 customers",
           "Custom integrations",
           "ROI tracking"
         ],
         popular: true,
         recommended: true,
-        setupFee: 500,
+        setupFee: 50o0,
         contractLength: "12 months"
       },
       {
@@ -109,19 +109,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "API access",
           "SLA guarantees"
         ],
-        setupFee: 2000,
+        setupFee: 20o00,
         contractLength: "24 months"
       }
     ],
     marketComparison: {
-      averagePrice: "$2,500-8,000/month",
+      averagePrice: "$2,50o0-8,0o00/month",
       competitors: ["Gainsight", "ProfitWell", "ChartMogul"],
       valueProposition: "40% better ROI than competitors with AI-powered insights and faster implementation"
     },
     roi: {
       timeframe: "4 months",
-      percentage: "400%",
-      savings: "$50,000+ annually"
+      percentage: "40o0%",
+      savings: "$50,0o00+ annually"
     },
     features: {
       core: [
@@ -169,7 +169,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Basic personalization",
           "Email automation",
           "Standard support",
-          "Up to 5,000 contacts"
+          "Up to 5,0o00 contacts"
         ],
         setupFee: 0,
         contractLength: "Month-to-month"
@@ -186,7 +186,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Advanced personalization",
           "Multi-channel orchestration",
           "Priority support",
-          "Up to 50,000 contacts",
+          "Up to 50,0o00 contacts",
           "Custom workflows",
           "A/B testing"
         ],
@@ -212,19 +212,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Custom integrations",
           "SLA guarantees"
         ],
-        setupFee: 3000,
+        setupFee: 30o00,
         contractLength: "24 months"
       }
     ],
     marketComparison: {
-      averagePrice: "$3,000-12,000/month",
+      averagePrice: "$3,0o00-12,0o00/month",
       competitors: ["Segment", "Amplitude", "Mixpanel"],
       valueProposition: "30% better customer engagement with AI-powered journey optimization"
     },
     roi: {
       timeframe: "5 months",
       percentage: "350%",
-      savings: "$75,000+ annually"
+      savings: "$75,0o00+ annually"
     },
     features: {
       core: [
@@ -295,7 +295,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         ],
         popular: true,
         recommended: true,
-        setupFee: 500,
+        setupFee: 50o0,
         contractLength: "12 months"
       },
       {
@@ -314,19 +314,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "White-label options",
           "SLA guarantees"
         ],
-        setupFee: 1500,
+        setupFee: 150o0,
         contractLength: "24 months"
       }
     ],
     marketComparison: {
-      averagePrice: "$2,000-6,000/month",
+      averagePrice: "$2,0o00-6,0o00/month",
       competitors: ["AppsFlyer", "Branch", "Adjust"],
       valueProposition: "25% more accurate attribution with AI-powered machine learning models"
     },
     roi: {
       timeframe: "3 months",
-      percentage: "300%",
-      savings: "$40,000+ annually"
+      percentage: "30o0%",
+      savings: "$40,0o00+ annually"
     },
     features: {
       core: [
@@ -373,7 +373,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Content performance analysis",
           "Basic SEO suggestions",
           "Standard support",
-          "Up to 100 content pieces",
+          "Up to 10o0 content pieces",
           "Monthly reports"
         ],
         setupFee: 0,
@@ -397,7 +397,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         ],
         popular: true,
         recommended: true,
-        setupFee: 300,
+        setupFee: 30o0,
         contractLength: "12 months"
       },
       {
@@ -416,19 +416,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "White-label options",
           "SLA guarantees"
         ],
-        setupFee: 1000,
+        setupFee: 10o00,
         contractLength: "24 months"
       }
     ],
     marketComparison: {
-      averagePrice: "$1,500-4,500/month",
+      averagePrice: "$1,50o0-4,50o0/month",
       competitors: ["Clearscope", "Frase", "MarketMuse"],
       valueProposition: "35% better content performance with AI-powered optimization"
     },
     roi: {
       timeframe: "2 months",
       percentage: "250%",
-      savings: "$30,000+ annually"
+      savings: "$30,0o00+ annually"
     },
     features: {
       core: [
@@ -518,19 +518,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "White-label options",
           "SLA guarantees"
         ],
-        setupFee: 2000,
+        setupFee: 20o00,
         contractLength: "24 months"
       }
     ],
     marketComparison: {
-      averagePrice: "$2,800-8,000/month",
+      averagePrice: "$2,80o0-8,0o00/month",
       competitors: ["HireVue", "Pymetrics", "HiredScore"],
       valueProposition: "50% faster hiring with 40% better candidate quality using AI"
     },
     roi: {
       timeframe: "4 months",
-      percentage: "400%",
-      savings: "$100,000+ annually"
+      percentage: "40o0%",
+      savings: "$10o0,0o00+ annually"
     },
     features: {
       core: [
@@ -577,7 +577,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Real-time fraud detection",
           "Basic risk assessment",
           "Standard support",
-          "Up to 10,000 transactions/month",
+          "Up to 10,0o00 transactions/month",
           "Monthly reports"
         ],
         setupFee: 0,
@@ -601,7 +601,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         ],
         popular: true,
         recommended: true,
-        setupFee: 1500,
+        setupFee: 150o0,
         contractLength: "12 months"
       },
       {
@@ -620,19 +620,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "White-label options",
           "SLA guarantees"
         ],
-        setupFee: 5000,
+        setupFee: 50o00,
         contractLength: "24 months"
       }
     ],
     marketComparison: {
-      averagePrice: "$4,500-15,000/month",
+      averagePrice: "$4,50o0-15,0o00/month",
       competitors: ["Sift", "Signifyd", "Forter"],
       valueProposition: "99.9% fraud detection accuracy with 80% fewer false positives"
     },
     roi: {
       timeframe: "6 months",
-      percentage: "500%",
-      savings: "$500,000+ annually"
+      percentage: "50o0%",
+      savings: "$50o0,0o00+ annually"
     },
     features: {
       core: [
@@ -663,4 +663,4 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   }
 ];
 
-export default COMPREHENSIVE_PRICING_GUIDE_2025;
+export default COMPREHENSIVE_PRICING_GUIDE_20o25;

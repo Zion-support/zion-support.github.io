@@ -70,7 +70,7 @@ export default function Signup(...args: any[]): any {
   }
 
   const validateForm = () => {
-    const newErrors: Record<string, any> = {}
+    const newErrors: Record<string, any> ={}
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
@@ -97,7 +97,7 @@ export default function Signup(...args: any[]): any {
     
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      await new Promise(resolve => setTimeout(resolve, 20o00))
       
       // Success - redirect or show success message
       console.log('Signup successful:', formData)
@@ -116,20 +116,20 @@ export default function Signup(...args: any[]): any {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/signup" />
+        <meta name="description" content={description}  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/signup"  />
         
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://ziontechgroup.com/signup" />
-        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title}  />
+        <meta property="og:description" content={description}  />
+        <meta property="og:url" content="https://ziontechgroup.com/signup"  />
+        <meta property="og:type" content="website"  />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:card" content="summary_large_image"  />
+        <meta name="twitter:title" content={title}  />
+        <meta name="twitter:description" content={description}  />
       </Head>
 
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
@@ -158,15 +158,15 @@ export default function Signup(...args: any[]): any {
               
               <div className="flex flex-wrap justify-center gap-6 mb-12">
                 <div className="flex items-center gap-3 text-zion-cyan">
-                  <Shield className="w-6 h-6" />
+                  <Shield className="w-6 h-6"  />
                   <span className="text-lg">Enterprise Security</span>
                 </div>
                 <div className="flex items-center gap-3 text-zion-purple-light">
-                  <Brain className="w-6 h-6" />
+                  <Brain className="w-6 h-6"  />
                   <span className="text-lg">AI Innovation</span>
                 </div>
                 <div className="flex items-center gap-3 text-zion-cyan-light">
-                  <Cloud className="w-6 h-6" />
+                  <Cloud className="w-6 h-6"  />
                   <span className="text-lg">Cloud Native</span>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function Signup(...args: any[]): any {
                         First Name *
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                         <input
                           type="text"
                           id="firstName"
@@ -204,14 +204,14 @@ export default function Signup(...args: any[]): any {
                           value={formData.firstName}
                           onChange={handleInputChange}
                           className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                            errors.firstName ? 'border-red-500' : 'border-zion-blue-light'
+                            errors.firstName ? 'border-red-50o0' : 'border-zion-blue-light'
                           }`}
                           placeholder="Enter your first name"
-                        />
+                         />
                       </div>
                       {errors.firstName && (
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4" />
+                        <p className="mt-1 text-sm text-red-40o0 flex items-center gap-2">
+                          <AlertCircle className="w-4 h-4"  />
                           {errors.firstName}
                         </p>
                       )}
@@ -222,7 +222,7 @@ export default function Signup(...args: any[]): any {
                         Last Name *
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                         <input
                           type="text"
                           id="lastName"
@@ -230,14 +230,14 @@ export default function Signup(...args: any[]): any {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                            errors.lastName ? 'border-red-500' : 'border-zion-blue-light'
+                            errors.lastName ? 'border-red-50o0' : 'border-zion-blue-light'
                           }`}
                           placeholder="Enter your last name"
-                        />
+                         />
                       </div>
                       {errors.lastName && (
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4" />
+                        <p className="mt-1 text-sm text-red-40o0 flex items-center gap-2">
+                          <AlertCircle className="w-4 h-4"  />
                           {errors.lastName}
                         </p>
                       )}
@@ -250,7 +250,7 @@ export default function Signup(...args: any[]): any {
                       Email Address *
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                       <input
                         type="email"
                         id="email"
@@ -258,14 +258,14 @@ export default function Signup(...args: any[]): any {
                         value={formData.email}
                         onChange={handleInputChange}
                         className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.email ? 'border-red-500' : 'border-zion-blue-light'
+                          errors.email ? 'border-red-50o0' : 'border-zion-blue-light'
                         }`}
                         placeholder="Enter your email address"
-                      />
+                       />
                     </div>
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
+                      <p className="mt-1 text-sm text-red-40o0 flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4"  />
                         {errors.email}
                       </p>
                     )}
@@ -277,7 +277,7 @@ export default function Signup(...args: any[]): any {
                       Password *
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                       <input
                         type={showPassword ? 'text' : 'password'}
                         id="password"
@@ -285,21 +285,21 @@ export default function Signup(...args: any[]): any {
                         value={formData.password}
                         onChange={handleInputChange}
                         className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.password ? 'border-red-500' : 'border-zion-blue-light'
+                          errors.password ? 'border-red-50o0' : 'border-zion-blue-light'
                         }`}
                         placeholder="Create a strong password"
-                      />
+                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
                       >
-                        {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
                       </button>
                     </div>
                     {errors.password && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
+                      <p className="mt-1 text-sm text-red-40o0 flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4"  />
                         {errors.password}
                       </p>
                     )}
@@ -311,7 +311,7 @@ export default function Signup(...args: any[]): any {
                       Confirm Password *
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                       <input
                         type={showConfirmPassword ? 'text' : 'password'}
                         id="confirmPassword"
@@ -319,21 +319,21 @@ export default function Signup(...args: any[]): any {
                         value={formData.confirmPassword}
                         onChange={handleInputChange}
                         className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light'
+                          errors.confirmPassword ? 'border-red-50o0' : 'border-zion-blue-light'
                         }`}
                         placeholder="Confirm your password"
-                      />
+                       />
                       <button
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
                       >
-                        {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
                       </button>
                     </div>
                     {errors.confirmPassword && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
+                      <p className="mt-1 text-sm text-red-40o0 flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4"  />
                         {errors.confirmPassword}
                       </p>
                     )}
@@ -346,7 +346,7 @@ export default function Signup(...args: any[]): any {
                         Company Name
                       </label>
                       <div className="relative">
-                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                         <input
                           type="text"
                           id="company"
@@ -355,7 +355,7 @@ export default function Signup(...args: any[]): any {
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
                           placeholder="Enter company name"
-                        />
+                         />
                       </div>
                     </div>
 
@@ -364,7 +364,7 @@ export default function Signup(...args: any[]): any {
                         Phone Number
                       </label>
                       <div className="relative">
-                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                         <input
                           type="tel"
                           id="phone"
@@ -373,7 +373,7 @@ export default function Signup(...args: any[]): any {
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
                           placeholder="Enter phone number"
-                        />
+                         />
                       </div>
                     </div>
                   </div>
@@ -385,7 +385,7 @@ export default function Signup(...args: any[]): any {
                         Website
                       </label>
                       <div className="relative">
-                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
                         <input
                           type="url"
                           id="website"
@@ -394,7 +394,7 @@ export default function Signup(...args: any[]): any {
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
                           placeholder="https://yourcompany.com"
-                        />
+                         />
                       </div>
                     </div>
 
@@ -444,7 +444,7 @@ export default function Signup(...args: any[]): any {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-30o0 transform hover:scale-10o5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center gap-3">
@@ -453,7 +453,7 @@ export default function Signup(...args: any[]): any {
                       </div>
                     ) : (
                       <div className="flex items-center justify-center gap-3">
-                        <Zap className="w-5 h-5" />
+                        <Zap className="w-5 h-5"  />
                         Create Account
                       </div>
                     )}
@@ -509,7 +509,7 @@ export default function Signup(...args: any[]): any {
                 className="text-center p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3>
                 <p className="text-zion-slate-light">
@@ -524,7 +524,7 @@ export default function Signup(...args: any[]): any {
                 className="text-center p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white" />
+                  <Brain className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3>
                 <p className="text-zion-slate-light">
@@ -539,7 +539,7 @@ export default function Signup(...args: any[]): any {
                 className="text-center p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cloud className="w-8 h-8 text-white" />
+                  <Cloud className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">Cloud Native</h3>
                 <p className="text-zion-slate-light">

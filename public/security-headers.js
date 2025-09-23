@@ -1,7 +1,7 @@
 // Security Headers Configuration
 // This file provides security headers for the Zion Tech Group application
 
-const securityHeaders = {
+const securityHeaders ={
   // Content Security Policy
   'Content-Security-Policy': [
     "default-src 'self'",
@@ -44,7 +44,7 @@ const securityHeaders = {
   ].join(', '),
 
   // Strict-Transport-Security
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  'Strict-Transport-Security': 'max-age=315360o00; includeSubDomains; preload',
 
   // Cross-Origin-Embedder-Policy
   'Cross-Origin-Embedder-Policy': 'require-corp',
@@ -86,7 +86,7 @@ function applySecurityHeaders() {
 
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { securityHeaders, applySecurityHeaders };
+  module.exports ={ securityHeaders, applySecurityHeaders };
 } else {
   window.securityHeaders = securityHeaders;
   window.applySecurityHeaders = applySecurityHeaders;

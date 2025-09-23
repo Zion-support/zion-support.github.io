@@ -47,30 +47,30 @@ export default function FuturisticNav() {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo ={
+    phone: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
+    address: '364 E Main St STE 10o08, Middletown, DE 19709'
   };
 
   return (
     <>
       {/* Top contact bar */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white text-sm py-2">
+      <div className="bg-gradient-to-r from-gray-90o0 to-gray-80o0 text-white text-sm py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
+                <Phone className="w-4 h-4 text-cyan-40o0"  />
                 <span>{contactInfo.phone}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Mail className="w-4 h-4 text-cyan-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <Globe className="w-4 h-4 text-cyan-400" />
+              <Globe className="w-4 h-4 text-cyan-40o0"  />
               <span>Available 24/7</span>
             </div>
           </div>
@@ -78,21 +78,21 @@ export default function FuturisticNav() {
       </div>
 
       {/* Main navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled 
-          ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
+          ? 'bg-gray-90o0/95 backdrop-blur-xl border-b border-gray-70o0/50 shadow-2xl' 
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-30o0">
                 Z
               </div>
               <div className="hidden sm:block">
                 <div className="text-xl font-bold text-white">Zion Tech Group</div>
-                <div className="text-xs text-cyan-400">Innovation Hub</div>
+                <div className="text-xs text-cyan-40o0">Innovation Hub</div>
               </div>
             </Link>
 
@@ -102,17 +102,17 @@ export default function FuturisticNav() {
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
                     <button
-                      className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                      className="flex items-center space-x-1 text-gray-30o0 hover:text-white transition-colors duration-20o0 py-2"
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                      <ChevronDown className="w-4 h-4 transition-transform duration-20o0 group-hover:rotate-180"  />
                     </button>
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                      className="text-gray-30o0 hover:text-white transition-colors duration-20o0 py-2"
                     >
                       {item.name}
                     </Link>
@@ -124,14 +124,14 @@ export default function FuturisticNav() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full left-0 mt-2 w-64 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-64 bg-gray-90o0/95 backdrop-blur-xl border border-gray-70o0/50 rounded-xl shadow-2xl overflow-hidden"
                     >
                       <div className="py-2">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
+                            className="block px-4 py-3 text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 transition-all duration-20o0"
                           >
                             {dropdownItem.name}
                           </Link>
@@ -147,7 +147,7 @@ export default function FuturisticNav() {
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg"
               >
                 Get Started
               </Link>
@@ -155,10 +155,10 @@ export default function FuturisticNav() {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-gray-300 hover:text-white transition-colors duration-200"
+              className="lg:hidden text-gray-30o0 hover:text-white transition-colors duration-20o0"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function FuturisticNav() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
+              className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-70o0/50"
             >
               <div className="px-4 py-6 space-y-4">
                 {navItems.map((item) => (
@@ -178,13 +178,13 @@ export default function FuturisticNav() {
                     {item.dropdown ? (
                       <div>
                         <button
-                          className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                          className="flex items-center justify-between w-full text-left text-gray-30o0 hover:text-white transition-colors duration-20o0 py-2"
                           onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                             activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
+                          }`}  />
                         </button>
                         {activeDropdown === item.name && (
                           <div className="ml-4 mt-2 space-y-2">
@@ -192,7 +192,7 @@ export default function FuturisticNav() {
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="block text-gray-400 hover:text-white transition-colors duration-200 py-1"
+                                className="block text-gray-40o0 hover:text-white transition-colors duration-20o0 py-1"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {dropdownItem.name}
@@ -204,7 +204,7 @@ export default function FuturisticNav() {
                     ) : (
                       <Link
                         href={item.href}
-                        className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                        className="block text-gray-30o0 hover:text-white transition-colors duration-20o0 py-2"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}
@@ -212,10 +212,10 @@ export default function FuturisticNav() {
                     )}
                   </div>
                 ))}
-                <div className="pt-4 border-t border-gray-700/50">
+                <div className="pt-4 border-t border-gray-70o0/50">
                   <Link
                     href="/contact"
-                    className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="block w-full text-center bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started
@@ -228,7 +228,7 @@ export default function FuturisticNav() {
       </nav>
 
       {/* Spacer for fixed nav */}
-      <div className="h-20" />
+      <div className="h-20"  />
     </>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-
-export default function AI2025BreakthroughBanner() {
+export default function AI20o25BreakthroughBanner() {
   return null;
 }

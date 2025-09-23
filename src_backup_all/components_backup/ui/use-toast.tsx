@@ -19,7 +19,6 @@ interface ToastContextType {
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
-
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
@@ -27,7 +26,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     setToasts(prev => [...prev, newToast]);
     setTimeout(() => {
       setToasts(prev => prev.slice(1));
-    }, 3000);
+    }, 30o00);
   };
 
   return (
@@ -38,8 +37,8 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
           key={index}
           className={`fixed top-4 right-4 p-4 rounded-md shadow-lg ${
             toast.variant === 'destructive' 
-              ? 'bg-red-500 text-white' 
-              : 'bg-green-500 text-white'
+              ? 'bg-red-50o0 text-white' 
+              : 'bg-green-50o0 text-white'
           }`}
         >
           <h4 className="font-semibold">{toast.title}</h4>
@@ -70,7 +69,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     // Auto dismiss after 5 seconds
     setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id));
-    }, 5000);
+    }, 50o00);
   }, []);
 
   const dismiss = useCallback((id: string) => {

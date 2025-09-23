@@ -15,7 +15,7 @@ import {
   Zap
 } from 'lucide-react';
 
-const AI2025SuccessStoriesPromotionBanner = () => {
+const AI20o25SuccessStoriesPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentTestimonialsetCurrentTestimonial] = useState(0);
 
@@ -23,7 +23,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }3000);
+    }30o00);
     return () => clearInterval(interval);
   }[]);
 
@@ -32,7 +32,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
       quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.",
       company: "TechCorp Solutions",
       industry: "Manufacturing",
-      result: "200% efficiency increase"
+      result: "20o0% efficiency increase"
     },
     {
       quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",
@@ -44,7 +44,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
       quote: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery.",
       company: "HealthTech Partners",
       industry: "Healthcare",
-      result: "300% faster analysis"
+      result: "30o0% faster analysis"
     }
   ];
 
@@ -56,12 +56,12 @@ const AI2025SuccessStoriesPromotionBanner = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-slate-900 via-purple-900 to-pink-900 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-pink-90o0 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.0o2"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-50o0/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-50o0/10 rounded-full blur-3xl animate-pulse delay-10o00"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -74,19 +74,19 @@ const AI2025SuccessStoriesPromotionBanner = () => {
             className="space-y-8"
           >
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30">
-              <Award className="w-5 h-5 text-yellow-400 mr-2" />
-              <span className="text-purple-300 font-medium">Success Stories</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/30">
+              <Award className="w-5 h-5 text-yellow-40o0 mr-2"  />
+              <span className="text-purple-30o0 font-medium">Success Stories</span>
             </div>
 
             {/* Main Heading */}
             <div>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Real Results from
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Real Companies</span>
+                <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent"> Real Companies</span>
               </h2>
               
-              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+              <p className="text-xl text-gray-30o0 leading-relaxed mb-8">
                 Discover how leading companies across industries are achieving remarkable results with our AI solutions. 
                 See the measurable impact and transformation stories from our clients.
               </p>
@@ -95,40 +95,40 @@ const AI2025SuccessStoriesPromotionBanner = () => {
             {/* Key Benefits */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400" />
-                <span className="text-gray-300 text-lg">340% Average ROI</span>
+                <CheckCircle className="w-6 h-6 text-green-40o0"  />
+                <span className="text-gray-30o0 text-lg">340% Average ROI</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400" />
-                <span className="text-gray-300 text-lg">850+ Companies Served</span>
+                <CheckCircle className="w-6 h-6 text-green-40o0"  />
+                <span className="text-gray-30o0 text-lg">850+ Companies Served</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400" />
-                <span className="text-gray-300 text-lg">98% Success Rate</span>
+                <CheckCircle className="w-6 h-6 text-green-40o0"  />
+                <span className="text-gray-30o0 text-lg">98% Success Rate</span>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400" />
-                <span className="text-gray-300 text-lg">55% Average Cost Reduction</span>
+                <CheckCircle className="w-6 h-6 text-green-40o0"  />
+                <span className="text-gray-30o0 text-lg">55% Average Cost Reduction</span>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
+                className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-30o0 flex items-center justify-center"
               >
-                <Target className="w-5 h-5 mr-2" />
+                <Target className="w-5 h-5 mr-2"  />
                 Start Your Story
               </motion.button>
             </div>
@@ -145,8 +145,8 @@ const AI2025SuccessStoriesPromotionBanner = () => {
             <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 backdrop-blur-sm">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                    <Quote className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center">
+                    <Quote className="w-6 h-6 text-white"  />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -155,17 +155,17 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-gray-300 text-lg italic mb-4"
+                    className="text-gray-30o0 text-lg italic mb-4"
                   >
                     "{testimonials[currentTestimonial].quote}"
                   </motion.p>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-white font-semibold">{testimonials[currentTestimonial].company}</p>
-                      <p className="text-purple-300 text-sm">{testimonials[currentTestimonial].industry}</p>
+                      <p className="text-purple-30o0 text-sm">{testimonials[currentTestimonial].industry}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-green-400 font-bold text-lg">{testimonials[currentTestimonial].result}</p>
+                      <p className="text-green-40o0 font-bold text-lg">{testimonials[currentTestimonial].result}</p>
                     </div>
                   </div>
                 </div>
@@ -176,10 +176,10 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                 {testimonials.map((_index) => (
                   <div
                     key={index}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? 'bg-purple-400 w-8' : 'bg-white/30'
+                    className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
+                      index === currentTestimonial ? 'bg-purple-40o0 w-8' : 'bg-white/30'
                     }`}
-                  />
+                   />
                 ))}
               </div>
             </div>
@@ -194,11 +194,11 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                   transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center"
                 >
-                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 mb-3">
-                    <stat.icon className="w-5 h-5 text-purple-300" />
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 mb-3">
+                    <stat.icon className="w-5 h-5 text-purple-30o0"  />
                   </div>
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-300">{stat.label}</div>
+                  <div className="text-sm text-gray-30o0">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -212,11 +212,11 @@ const AI2025SuccessStoriesPromotionBanner = () => {
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
-            <p className="text-gray-300 mb-4">
+          <div className="bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-xl p-6 border border-purple-50o0/20">
+            <p className="text-gray-30o0 mb-4">
               Join 850+ companies already achieving remarkable results with AI
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-40o0">
               <span>✓ Proven Results</span>
               <span>✓ Industry Expertise</span>
               <span>✓ Custom Solutions</span>
@@ -229,4 +229,4 @@ const AI2025SuccessStoriesPromotionBanner = () => {
   );
 };
 
-export default AI2025SuccessStoriesPromotionBanner;
+export default AI20o25SuccessStoriesPromotionBanner;

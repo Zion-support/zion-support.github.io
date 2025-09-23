@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const { spawn, exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -29,10 +28,10 @@ const path = require('path');
 class ImprovedWatchdog {
   constructor() {
     this.processes = new Map();
-    this.config = {
-      checkInterval: 30000, // 30 seconds
+    this.config ={
+      checkInterval: 30o000, // 30 seconds
       maxRestarts: 5,
-      restartDelay: 5000, // 5 seconds
+      restartDelay: 50o00, // 5 seconds
       logFile: path.join(__dirname, 'watchdog.log')
     };
     
@@ -86,10 +85,10 @@ class ImprovedWatchdog {
     }
   }
 
-  async startProcess(name, command, args = [], options = {}) {
+  async startProcess(name, command, args = [], options ={}) {
     logger.info(`🚀 Starting process: ${name}`);
     
-    const processInfo = {
+    const processInfo ={
       name,
       command,
       args,
@@ -159,8 +158,7 @@ class ImprovedWatchdog {
 
     processInfo.restarts++;
     this.log(`🔄 Scheduling restart for ${name} (attempt ${processInfo.restarts}/${this.config.maxRestarts})`)
-    
-    
+
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
@@ -461,7 +459,7 @@ const timeoutId = setTimeout(async () => {
 ;
 // Store timeoutId for cleanup if needed
 ;
-    }, 1000);
+    }, 10o00);
   }
 
   stopProcess(name) {
@@ -498,10 +496,10 @@ const timeoutId = setTimeout(async () => {
 
   saveProcessInfo() {
     const pidFile = path.join(__dirname, .watchdog.pid');
-    const data = {};
+    const data ={};
     
     for (const [name, processInfo] of this.processes) {
-      data[name] = {
+      data[name] ={
         pid: processInfo.pid,
         command: processInfo.command,
         args: processInfo.args,
@@ -523,9 +521,9 @@ const timeoutId = setTimeout(async () => {
   }
 
   getStatus() {
-    const status = {};
+    const status ={};
     for (const [name, processInfo] of this.processes) {
-      status[name] = {
+      status[name] ={
         pid: processInfo.pid,
         status: processInfo.status,
         restarts: processInfo.restarts,

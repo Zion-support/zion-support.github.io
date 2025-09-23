@@ -6,11 +6,11 @@ import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 export default function RequestQuote() {
   return (
     <>
-      <Header />
+      <Header  />
       <div className="min-h-screen bg-zion-blue">
-        <QuoteRequestForm />
+        <QuoteRequestForm  />
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 }

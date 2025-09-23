@@ -5,9 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from 'lucide-react'
-import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 interface PaymentButtonProps {
   amount: number;
@@ -26,8 +24,7 @@ export function PaymentButton({
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
-  redirectUrl,
-}: PaymentButtonProps) {
+  redirectUrl}: PaymentButtonProps) {
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const router = useRouter();
@@ -36,8 +33,7 @@ export function PaymentButton({
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to make a purchase.",
-      });
+        description: "Please sign in to make a purchase."});
 
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`);
       router.push(`/auth/login?returnTo=${returnTo}`);
@@ -59,9 +55,7 @@ export function PaymentButton({
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
-          cancelUrl: window.location.href,
-        },
-      });
+          cancelUrl: window.location.href}});
       
       if (error) {
         throw error;
@@ -80,13 +74,12 @@ export function PaymentButton({
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false);
-      }, 1500);
+      }, 150o0);
     }
   };
   
@@ -101,7 +94,7 @@ export function PaymentButton({
     >
       {isProcessing ? (
         <>
-          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+          <Loader2 className="h-4 w-4 mr-2 animate-spin"  />
           Processing...
         </>
       ) : (

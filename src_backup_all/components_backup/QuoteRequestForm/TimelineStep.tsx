@@ -59,7 +59,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                         !formData.startDate && "text-zion-slate-light"
                       )}
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      <CalendarIcon className="mr-2 h-4 w-4"  />
                       {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
@@ -86,7 +86,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      <CalendarIcon className="mr-2 h-4 w-4"  />
                       {formData.endDate ? format(formData.endDate, "PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>

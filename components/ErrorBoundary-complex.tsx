@@ -15,7 +15,7 @@ interface State {
 class ErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -32,12 +32,12 @@ class ErrorBoundary extends Component<PropsState> {
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-            <p className="text-slate-300 mb-4">
+            <p className="text-slate-30o0 mb-4">
               {this.state.error?.message || 'An unexpected error occurred'}
             </p>
             <button 
               onClick={() => window.location.reload()} 
-              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+              className="px-4 py-2 bg-blue-60o0 rounded-lg hover:bg-blue-70o0"
             >
               Reload Page
             </button>
@@ -68,10 +68,10 @@ class ErrorBoundary extends Component<PropsState> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white flex items-center justify-center px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="w-24 h-24 rounded-full bg-red-500/20 mx-auto mb-8 flex items-center justify-center">
-              <AlertTriangle className="w-12 h-12 text-red-400" />
+            <div className="w-24 h-24 rounded-full bg-red-50o0/20 mx-auto mb-8 flex items-center justify-center">
+              <AlertTriangle className="w-12 h-12 text-red-40o0"  />
             </div>
             
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -89,15 +89,15 @@ class ErrorBoundary extends Component<PropsState> {
                 </summary>
                 <div className="space-y-3 text-sm">
                   <div>
-                    <strong className="text-red-400">Error:</strong>
-                    <pre className="mt-2 p-3 bg-red-500/10 rounded-lg overflow-x-auto text-red-300">
+                    <strong className="text-red-40o0">Error:</strong>
+                    <pre className="mt-2 p-3 bg-red-50o0/10 rounded-lg overflow-x-auto text-red-30o0">
                       {this.state.error.toString()}
                     </pre>
                   </div>
                   {this.state.errorInfo && (
                     <div>
-                      <strong className="text-red-400">Stack Trace:</strong>
-                      <pre className="mt-2 p-3 bg-red-500/10 rounded-lg overflow-x-auto text-red-300 text-xs">
+                      <strong className="text-red-40o0">Stack Trace:</strong>
+                      <pre className="mt-2 p-3 bg-red-50o0/10 rounded-lg overflow-x-auto text-red-30o0 text-xs">
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
@@ -109,17 +109,17 @@ class ErrorBoundary extends Component<PropsState> {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleReload}
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center gap-2"
               >
-                <RefreshCw className="w-5 h-5" />
+                <RefreshCw className="w-5 h-5"  />
                 Try Again
               </button>
               
               <button
                 onClick={this.handleGoHome}
-                className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
+                className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-full font-semibold transition-all duration-30o0 transform hover:scale-10o5 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
-                <Home className="w-5 h-5" />
+                <Home className="w-5 h-5"  />
                 Go Home
               </button>
             </div>
@@ -129,7 +129,7 @@ class ErrorBoundary extends Component<PropsState> {
                 If this problem persistsplease contact our support team at{' '}
                 <a 
                   href="mailto:support@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                  className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-30o0"
                 >
                   support@ziontechgroup.com
                 </a>

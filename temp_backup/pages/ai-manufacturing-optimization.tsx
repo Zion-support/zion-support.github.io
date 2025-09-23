@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiManufacturingOptimization() {
@@ -9,7 +8,7 @@ export default function AiManufacturingOptimization() {
 			subtitle="Optimize manufacturing with AI"
 			pricePerMonthUSD={6999}
 			implementationWeeks="8-12 weeks"
-			roiNote="Manufacturers report 500% ROI via reduced downtime and improved throughput"
+			roiNote="Manufacturers report 50o0% ROI via reduced downtime and improved throughput"
 			features={[
 				"AI predictive maintenance",
 				"Production process optimization",
@@ -20,6 +19,6 @@ export default function AiManufacturingOptimization() {
 			]}
 			industries={["Manufacturing", "Industrial", "Automotive", "Electronics"]}
 			url="https://ziontechgroup.com/ai-manufacturing-optimization"
-		/>
+		 />
 	);
 }

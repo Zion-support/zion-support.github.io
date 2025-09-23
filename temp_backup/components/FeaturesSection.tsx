@@ -9,7 +9,7 @@ const FeaturesSection: React.FC = () => {
       icon: "🤖",
       title: "AI & Machine Learning",
       description: "Advanced artificial intelligence solutions that learn, adapt, and evolve with your business needs.",
-      color: "from-cyan-500 to-blue-600",
+      color: "from-cyan-50o0 to-blue-60o0",
       glow: "glow",
       link: "/services#ai"
     },
@@ -17,7 +17,7 @@ const FeaturesSection: React.FC = () => {
       icon: "⚡",
       title: "Cloud Infrastructure",
       description: "Scalable cloud solutions designed for performance, security, and seamless integration.",
-      color: "from-purple-500 to-pink-600",
+      color: "from-purple-50o0 to-pink-60o0",
       glow: "glow-purple",
       link: "/services#cloud"
     },
@@ -25,7 +25,7 @@ const FeaturesSection: React.FC = () => {
       icon: "🔒",
       title: "Cybersecurity",
       description: "Comprehensive security frameworks protecting your digital assets and ensuring compliance.",
-      color: "from-green-500 to-emerald-600",
+      color: "from-green-50o0 to-emerald-60o0",
       glow: "glow-green",
       link: "/services#security"
     },
@@ -33,7 +33,7 @@ const FeaturesSection: React.FC = () => {
       icon: "📱",
       title: "Digital Transformation",
       description: "End-to-end digital solutions that modernize operations and enhance customer experiences.",
-      color: "from-orange-500 to-red-600",
+      color: "from-orange-50o0 to-red-60o0",
       glow: "glow-orange",
       link: "/services#digital"
     },
@@ -41,7 +41,7 @@ const FeaturesSection: React.FC = () => {
       icon: "🌐",
       title: "IoT Solutions",
       description: "Connected device ecosystems that gather data and enable smart decision-making.",
-      color: "from-indigo-500 to-purple-600",
+      color: "from-indigo-50o0 to-purple-60o0",
       glow: "glow-purple",
       link: "/services#iot"
     },
@@ -49,7 +49,7 @@ const FeaturesSection: React.FC = () => {
       icon: "📊",
       title: "Data Analytics",
       description: "Powerful insights from your data to drive strategic decisions and optimize performance.",
-      color: "from-yellow-500 to-orange-600",
+      color: "from-yellow-50o0 to-orange-60o0",
       glow: "glow-yellow",
       link: "/services#analytics"
     }
@@ -59,15 +59,15 @@ const FeaturesSection: React.FC = () => {
     <section className="relative py-24 px-6 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-blue-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/10 to-pink-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-cyan-40o0/10 to-blue-60o0/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-br from-purple-40o0/10 to-pink-60o0/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-40o0 to-purple-60o0 bg-clip-text text-transparent">
               Our Core Capabilities
             </span>
           </h2>
@@ -81,7 +81,7 @@ const FeaturesSection: React.FC = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl ${
+              className={`group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-50o0 hover:scale-10o5 hover:shadow-2xl ${
                 hoveredCard === index ? 'bg-white/10' : ''
               }`}
               onMouseEnter={() => setHoveredCard(index)}
@@ -89,16 +89,16 @@ const FeaturesSection: React.FC = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Hover Background */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-50o0`}></div>
               
               {/* Icon */}
-              <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${feature.glow}`}>
+              <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0 ${feature.glow}`}>
                 <span className="text-3xl">{feature.icon}</span>
               </div>
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-40o0 transition-colors duration-30o0">
                   {feature.title}
                 </h3>
                 <p className="text-white/70 leading-relaxed mb-6">
@@ -108,18 +108,18 @@ const FeaturesSection: React.FC = () => {
                 {/* Learn More Link */}
                 <Link
                   href={feature.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group/link transition-colors duration-300"
+                  className="inline-flex items-center text-cyan-40o0 hover:text-cyan-30o0 font-medium group/link transition-colors duration-30o0"
                 >
                   Learn More
-                  <span className="ml-2 group-hover/link:translate-x-1 transition-transform duration-300">→</span>
+                  <span className="ml-2 group-hover/link:translate-x-1 transition-transform duration-30o0">→</span>
                 </Link>
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+              <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-30o0">
                 <div className="w-8 h-8 border border-white/30 rounded-full"></div>
               </div>
-              <div className="absolute bottom-4 left-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 opacity-20 group-hover:opacity-40 transition-opacity duration-30o0">
                 <div className="w-4 h-4 bg-white/30 rounded-full"></div>
               </div>
             </div>
@@ -128,7 +128,7 @@ const FeaturesSection: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="inline-block p-8 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-xl border border-white/20">
+          <div className="inline-block p-8 rounded-3xl bg-gradient-to-r from-cyan-50o0/10 to-purple-50o0/10 backdrop-blur-xl border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -138,13 +138,13 @@ const FeaturesSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-bold rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-xl"
               >
                 Get Started Today
               </Link>
               <Link
                 href="/case-studies"
-                className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 hover:border-cyan-40o0/50 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 View Our Work
               </Link>

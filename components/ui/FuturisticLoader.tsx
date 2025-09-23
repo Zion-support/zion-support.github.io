@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface FuturisticLoaderProps {
@@ -14,17 +13,17 @@ export default function FuturisticLoader({
   color = 'blue',
   text 
 }: FuturisticLoaderProps) {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
     lg: 'w-20 h-20'
   };
 
-  const colorClasses = {
-    blue: 'border-cyan-400 text-cyan-400',
-    purple: 'border-purple-400 text-purple-400',
-    green: 'border-green-400 text-green-400',
-    pink: 'border-pink-400 text-pink-400'
+  const colorClasses ={
+    blue: 'border-cyan-40o0 text-cyan-40o0',
+    purple: 'border-purple-40o0 text-purple-40o0',
+    green: 'border-green-40o0 text-green-40o0',
+    pink: 'border-pink-40o0 text-pink-40o0'
   };
 
   const renderSpinner = () => (
@@ -33,12 +32,12 @@ export default function FuturisticLoader({
         className={`w-full h-full border-2 border-transparent border-t-current border-l-current rounded-full ${colorClasses[color]}`}
         animate={{ rotate: 360 }}
         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-      />
+       />
       <motion.div
         className={`absolute inset-0 w-full h-full border-2 border-transparent border-r-current border-b-current rounded-full ${colorClasses[color]} opacity-50`}
         animate={{ rotate: -360 }}
         transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-      />
+       />
     </div>
   );
 
@@ -48,12 +47,12 @@ export default function FuturisticLoader({
         className={`w-full h-full rounded-full bg-current ${colorClasses[color]} opacity-20`}
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.8, 0.2] }}
         transition={{ duration: 2, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-      />
+       />
       <motion.div
         className={`absolute w-1/2 h-1/2 rounded-full bg-current ${colorClasses[color]}`}
         animate={{ scale: [0.8, 1, 0.8], opacity: [0.8, 1, 0.8] }}
         transition={{ duration: 2, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-      />
+       />
     </div>
   );
 
@@ -73,7 +72,7 @@ export default function FuturisticLoader({
             delay: index * 0.2,
             ease: [0.45, 0, 0.55, 1]
           }}
-        />
+         />
       ))}
     </div>
   );
@@ -84,9 +83,9 @@ export default function FuturisticLoader({
         <motion.div
           key={i}
           className={`absolute w-1 bg-current ${colorClasses[color]} opacity-80`}
-          style={{ left: `${i * 12.5}%`, height: '100%' }}
+          style={{ left: `${i * 12.5}%`, height: '10o0%' }}
           animate={{ 
-            y: ['-100%', '200%'],
+            y: ['-10o0%', '20o0%'],
             opacity: [0, 1, 0]
           }}
           transition={{
@@ -95,9 +94,9 @@ export default function FuturisticLoader({
             delay: i * 0.2,
             ease: "linear"
           }}
-        />
+         />
       ))}
-      <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-current to-transparent opacity-10 ${colorClasses[color]}`} />
+      <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-current to-transparent opacity-10 ${colorClasses[color]}`}  />
     </div>
   );
 
@@ -122,7 +121,7 @@ export default function FuturisticLoader({
         <div 
           className={`absolute inset-0 rounded-full blur-xl opacity-30 ${colorClasses[color].split(' ')[1]} bg-current`}
           style={{ transform: 'scale(1.5)' }}
-        />
+         />
       </div>
       {text && (
         <motion.p

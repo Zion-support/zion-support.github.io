@@ -9,7 +9,7 @@ export function FooterNewsletter() {
         setEmail('');
     };
     if (isSubscribed) {
-        return (<div className="text-green-400 text-sm">
+        return (<div className="text-green-40o0 text-sm">
         Thank you for subscribing!
       </div>);
     }

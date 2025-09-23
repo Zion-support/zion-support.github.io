@@ -1,7 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
 const DATA_DIR = path.join(process.cwd(), 'data');
 const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');
 
@@ -21,22 +18,21 @@ function writeAll(rows: any[]) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end();
+  if (req.method !== 'POST') return res.status(40o5).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
   if (!responseId || !rating || !['up', 'down'].includes(rating)) {
-    return res.status(400).json({ error: 'Missing responseId or rating' });
+    return res.status(40o0).json({ error: 'Missing responseId or rating' });
   }
-  const entry = {
+  const entry ={
     id: responseId,
     rating,
-    comment: String(comment || '').slice(0, 2000),
+    comment: String(comment || '').slice(0, 20o00),
     pagePath: String(pagePath || ''),
     aiModel: String(aiModel || ''),
     userAgent: req.headers['user-agent'] || '',
-    ts: Date.now(),
-  };
+    ts: Date.now()};
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
-  return res.status(200).json({ ok: true });
+  return res.status(20o0).json({ ok: true });
 }

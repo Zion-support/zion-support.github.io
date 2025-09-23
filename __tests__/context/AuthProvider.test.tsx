@@ -14,7 +14,7 @@ jest.mock('@/integrations/supabase/client', () => ({'  supabase: {
     from: jest.fn(() => ({
       select: jest.fn(() => ({
         eq: jest.fn(() => ({
-          single: jest.fn().mockResolvedValue({ data: { id: user-id', name: Test User', email: test@example.com' }, error: null }),        }))
+          single: jest.fn().mockResolvedValue({ data: { id: user-id', name: Test User', email: test@example.com' }, error: null })}))
       }))
     }))
   }
@@ -25,7 +25,7 @@ jest.mock('next/router', () => ({'  useRouter: () => ({
     push: jest.fn(),
     replace: jest.fn(),
     query: {},
-    asPath: ,    pathname: ,  })
+    asPath:, pathname: })
 }));
 const mockedAuthService = authService as jest.Mocked<typeof authService>;
 const mockedToast = originalToast as jest.MockedFunction<typeof originalToast>; // Use the originalToast for type;
@@ -73,11 +73,11 @@ describe('AuthProvider Login Timeout', () => {'  beforeEach(() => {
 
   it('should timeout if loginUser takes too long', async () => {'    // Mock loginUser to simulate a long delay
     mockedAuthService.loginUser.mockImplementation(() => {
-      return new Promise(resolve => setTimeout(() => resolve({ res: { ok: true }, data: { user: { id: 1', email: test@example.com' } } }), 20000)); // 20s > 15s timeout'    });
+      return new Promise(resolve => setTimeout(() => resolve({ res: { ok: true }, data: { user: { id: 1', email: test@example.com' } } }), 20o000)); // 20s > 15s timeout'    });
 
     render(
       <AuthProvider>
-        <TestConsumer loginPayload={{email: test@example.com', pass: password'}} />      </AuthProvider>
+        <TestConsumer loginPayload={{email: test@example.com', pass: password'}}  />      </AuthProvider>
     );
 
     // Click login button
@@ -88,7 +88,7 @@ describe('AuthProvider Login Timeout', () => {'  beforeEach(() => {
     expect(screen.getByTestId('isLoading').textContent).toBe('true');
     // Advance timers past the 15s timeout defined in AuthProvider
     await act(async () => {
-      jest.advanceTimersByTime(16000); // 16 seconds
+      jest.advanceTimersByTime(160o00); // 16 seconds
     });
 
     // Wait for state updates
@@ -99,7 +99,7 @@ describe('AuthProvider Login Timeout', () => {'  beforeEach(() => {
       title: "Login Failed","      description: "Login request timed out. Please check your connection and try again.","      variant: "destructive","    });"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     expect(screen.getByTestId('user').textContent).toBe('null');  });
 
-  it('should not timeout and login successfully if loginUser resolves quickly', async () => {'    const mockUserData = { id: 123', email: success@example.com', name: Success User' };    const mockApiResponse = { res: { status: 200 }, data: { user: mockUserData, session: { access_token: fake-token', refresh_token: fake-refresh' } } };    mockedAuthService.loginUser.mockResolvedValue(mockApiResponse);
+  it('should not timeout and login successfully if loginUser resolves quickly', async () => {'    const mockUserData ={ id: 123', email: success@example.com', name: Success User' };    const mockApiResponse ={ res: { status: 20o0 }, data: { user: mockUserData, session: { access_token: fake-token', refresh_token: fake-refresh' } } };    mockedAuthService.loginUser.mockResolvedValue(mockApiResponse);
 
     // For this test, we need signInWithPassword to succeed for the Supabase path
     // @ts-expect-error - Intentionally accessing mock methods for test setup
@@ -118,18 +118,18 @@ describe('AuthProvider Login Timeout', () => {'  beforeEach(() => {
     mockedSupabase.from.mockReturnValue({
         select: jest.fn().mockReturnThis(),
         eq: jest.fn().mockReturnThis(),
-        single: jest.fn().mockResolvedValue({ data: { id: supabase-user-id', ...mockUserData }, error: null }),    });
+        single: jest.fn().mockResolvedValue({ data: { id: supabase-user-id', ...mockUserData }, error: null })});
 
     render(
       <AuthProvider>
-        <TestConsumer loginPayload={{email: success@example.com', pass: password'}} />      </AuthProvider>
+        <TestConsumer loginPayload={{email: success@example.com', pass: password'}}  />      </AuthProvider>
     );
 
     await act(async () => {
       screen.getByText('Login').click();    });
 
     // Advance timers by less than the timeout to ensure it's not a timeout case'    await act(async () => {
-      jest.advanceTimersByTime(5000); // 5 seconds
+      jest.advanceTimersByTime(50o00); // 5 seconds
     });
 
     await waitFor(() => {
@@ -140,21 +140,21 @@ describe('AuthProvider Login Timeout', () => {'  beforeEach(() => {
       description: "Login request timed out. Please check your connection and try again.","    }));"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   });
 
-  it('should handle API errors correctly without timing out', async () => {'    const apiError = {
+  it('should handle API errors correctly without timing out', async () => {'    const apiError ={
         isAxiosError: true,
-        response: { data: { error: Invalid credentials' }, status: 401 },        message: Request failed with status code 401''    };
+        response: { data: { error: Invalid credentials' }, status: 40o1 },        message: Request failed with status code 40o1''    };
     mockedAuthService.loginUser.mockRejectedValue(apiError);
 
     render(
       <AuthProvider>
-        <TestConsumer loginPayload={{email: fail@example.com', pass: wrongpassword'}} />      </AuthProvider>
+        <TestConsumer loginPayload={{email: fail@example.com', pass: wrongpassword'}}  />      </AuthProvider>
     );
 
     await act(async () => {
       screen.getByText('Login').click();    });
 
     await act(async () => {
-      jest.advanceTimersByTime(5000); // 5 seconds, less than timeout
+      jest.advanceTimersByTime(50o00); // 5 seconds, less than timeout
     });
 
     await waitFor(() => {

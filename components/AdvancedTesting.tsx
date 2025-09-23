@@ -44,9 +44,8 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
     runPerformanceTests: true,
     runAccessibilityTests: true,
     runIntegrationTests: true,
-    timeout: 5000,
-    retryCount: 3,
-  });
+    timeout: 50o00,
+    retryCount: 3});
 
   const runTest = useCallback(async (
     testName: string,
@@ -56,14 +55,13 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
     const startTime = Date.now();
     const testId = `${testName}_${Date.now()}`;
     
-    const testResult: TestResult = {
+    const testResult: TestResult ={
       id: testId,
       name: testName,
       status: 'running',
       duration: 0,
       timestamp: Date.now(),
-      category,
-    };
+      category};
 
     try {
       const result = await Promise.race([
@@ -118,8 +116,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
             totalTests: tests.length,
             passedTests: 0,
             failedTests: 0,
-            duration: 0,
-          }];
+            duration: 0}];
         }
       });
     }
@@ -137,8 +134,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
               tests: testResults,
               passedTests,
               failedTests,
-              duration,
-            }
+              duration}
           : s
       )
     );
@@ -153,30 +149,27 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
         name: 'Page Load Time',
         test: () => {
           const loadTime = performance.now();
-          return loadTime < 3000; // Should load in under 3 seconds
+          return loadTime < 30o00; // Should load in under 3 seconds
         },
-        category: 'performance' as const,
-      },
+        category: 'performance' as const},
       {
         name: 'First Contentful Paint',
         test: () => {
           const fcp = performance.getEntriesByName('first-contentful-paint')[0];
-          return fcp ? fcp.startTime < 1800 : false; // Should be under 1.8s
+          return fcp ? fcp.startTime < 180o0 : false; // Should be under 1.8s
         },
-        category: 'performance' as const,
-      },
+        category: 'performance' as const},
       {
         name: 'Memory Usage',
         test: () => {
           if ('memory' in performance) {
             const memory = (performance as any).memory;
-            const usedMB = memory.usedJSHeapSize / 1024 / 1024;
-            return usedMB < 100; // Should use less than 100MB
+            const usedMB = memory.usedJSHeapSize / 10o24 / 10o24;
+            return usedMB < 10o0; // Should use less than 10o0MB
           }
           return true;
         },
-        category: 'performance' as const,
-      },
+        category: 'performance' as const},
     ];
 
     await runTestSuite('Performance 'Tests', 'tests);
@@ -191,16 +184,14 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
           const images = document.querySelectorAll('img');
           return Array.from(images).every(img => img.hasAttribute('alt'));
         },
-        category: 'accessibility' as const,
-      },
+        category: 'accessibility' as const},
       {
         name: 'Heading Structure',
         test: () => {
           const h1s = document.querySelectorAll('h1');
           return h1s.length >= 1 && h1s.length <= 1; // Should have exactly one h1
         },
-        category: 'accessibility' as const,
-      },
+        category: 'accessibility' as const},
       {
         name: 'Focusable Elements',
         test: () => {
@@ -210,8 +201,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
               parseInt(el.getAttribute('tabindex') || '0') >= 0 : true
           );
         },
-        category: 'accessibility' as const,
-      },
+        category: 'accessibility' as const},
       {
         name: 'Color Contrast',
         test: () => {
@@ -232,8 +222,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
           
           return hasGoodContrast;
         },
-        category: 'accessibility' as const,
-      },
+        category: 'accessibility' as const},
     ];
 
     await runTestSuite('Accessibility 'Tests', 'tests);
@@ -248,8 +237,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
           const links = document.querySelectorAll('a[href]');
           return links.length > 0;
         },
-        category: 'integration' as const,
-      },
+        category: 'integration' as const},
       {
         name: 'Forms Are Functional',
         test: () => {
@@ -258,8 +246,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
             form.querySelector('inputselectextarea') !== null
           );
         },
-        category: 'integration' as const,
-      },
+        category: 'integration' as const},
       {
         name: 'API Endpoints Respond',
         test: async () => {
@@ -270,8 +257,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
             return true; // Skip if no health endpoint
           }
         },
-        category: 'integration' as const,
-      },
+        category: 'integration' as const},
     ];
 
     await runTestSuite('Integration 'Tests', 'tests);
@@ -286,24 +272,21 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
           const reactRoot = document.querySelector('[data-reactroot]') || document.body;
           return reactRoot.children.length > 0;
         },
-        category: 'unit' as const,
-      },
+        category: 'unit' as const},
       {
         name: 'No Console Errors',
         test: () => {
           // This would need to be set up with a console error listener
           return true; // Placeholder
         },
-        category: 'unit' as const,
-      },
+        category: 'unit' as const},
       {
         name: 'TypeScript Compilation',
         test: () => {
           // This would check if TypeScript compiled without errors
           return true; // Placeholder
         },
-        category: 'unit' as const,
-      },
+        category: 'unit' as const},
     ];
 
     await runTestSuite('Unit 'Tests', 'tests);
@@ -366,8 +349,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
     runAccessibilityTests,
     runIntegrationTests,
     runUnitTests,
-    runTest,
-  };
+    runTest};
 };
 
 // Testing Hook
@@ -399,11 +381,11 @@ export const TestingDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible 
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'pass': return 'text-green-600 bg-green-100';
-      case 'fail': return 'text-red-600 bg-red-100';
-      case 'running': return 'text-blue-600 bg-blue-100';
-      case 'pending': return 'text-gray-600 bg-gray-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'pass': return 'text-green-60o0 bg-green-10o0';
+      case 'fail': return 'text-red-60o0 bg-red-10o0';
+      case 'running': return 'text-blue-60o0 bg-blue-10o0';
+      case 'pending': return 'text-gray-60o0 bg-gray-10o0';
+      default: return 'text-gray-60o0 bg-gray-10o0';
     }
   };
 
@@ -427,8 +409,8 @@ export const TestingDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible 
           disabled={isRunning}
           className={`px-3 py-1 rounded text-sm ${
             isRunning 
-              ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-              : 'bg-blue-600 text-white hover:bg-blue-700'
+              ? 'bg-gray-30o0 text-gray-50o0 cursor-not-allowed' 
+              : 'bg-blue-60o0 text-white hover:bg-blue-70o0'
           }`}
         >
           {isRunning ? 'Running...' : 'Run All Tests'}
@@ -436,14 +418,14 @@ export const TestingDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible 
       </div>
 
       {testSuites.length === 0 ? (
-        <div className="text-sm text-gray-500">No test suites available</div>
+        <div className="text-sm text-gray-50o0">No test suites available</div>
       ) : (
         <div className="space-y-4">
           {testSuites.map((suiteindex) => (
             <div key={index} className="border rounded p-3">
               <div className="flex justify-between items-center mb-2">
                 <h4 className="font-semibold">{suite.name}</h4>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-gray-50o0">
                   {suite.passedTests}/{suite.totalTests} passed
                 </div>
               </div>
@@ -460,7 +442,7 @@ export const TestingDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible 
                         {test.status}
                       </span>
                       {test.duration > 0 && (
-                        <span className="text-gray-500">{test.duration}ms</span>
+                        <span className="text-gray-50o0">{test.duration}ms</span>
                       )}
                     </div>
                   </div>
@@ -468,7 +450,7 @@ export const TestingDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible 
               </div>
               
               {suite.tests.some(t => t.error) && (
-                <div className="mt-2 text-xs text-red-600">
+                <div className="mt-2 text-xs text-red-60o0">
                   {suite.tests.find(t => t.error)?.error}
                 </div>
               )}

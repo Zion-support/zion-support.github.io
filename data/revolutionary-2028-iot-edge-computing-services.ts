@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2028IoTEdgeComputingService {
+export interface Revolutionary20o28IoTEdgeComputingService {
   id: string;
   name: string;
   tagline: string;
@@ -39,11 +39,11 @@ export interface Revolutionary2028IoTEdgeComputingService {
   rating: number;
   reviews: number;
 }
-export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdgeComputingService[] = [
+export const revolutionary20o28IoTEdgeComputingServices: Revolutionary20o28IoTEdgeComputingService[] = [
   // AI-Powered Smart City Platform
   {
-    id: 'ai-smart-city-platform-2028',
-    name: 'AI Smart City Platform 2028',
+    id: 'ai-smart-city-platform-20o28',
+    name: 'AI Smart City Platform 20o28',
     tagline: 'Transform urban infrastructure with AI-powered IoT and edge computing',
     price: '$3,999',
     period: '/month',
@@ -62,10 +62,10 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     ],
     popular: true,
     icon: '🏙️',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-smart-city-platform-2028',
-    marketPosition: 'Competes with Cisco Smart Cities ($500,000/year), Siemens Smart Cities ($800,000/year), and IBM Smart Cities ($1,000,000/year). Our advantage: AI-powered optimization, edge computing, and competitive pricing.',
+    color: 'from-blue-60o0 to-indigo-70o0',
+    textColor: 'text-blue-40o0',
+    link: 'https://ziontechgroup.com/ai-smart-city-platform-20o28',
+    marketPosition: 'Competes with Cisco Smart Cities ($50o0,0o00/year), Siemens Smart Cities ($80o0,0o00/year), and IBM Smart Cities ($1,0o00,0o00/year). Our advantage: AI-powered optimization, edge computing, and competitive pricing.',
     targetAudience: ['City governments', 'Municipalities', 'Urban planners', 'Infrastructure companies', 'Technology companies'],
     trialDays: 90,
     setupTime: '6 months',
@@ -80,22 +80,22 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     growthRate: '320% annual growth',
     variant: 'iot-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI-powered smart city platform with IoT sensors, edge computing, and comprehensive urban optimization.',
-    launchDate: '2028-01-10',
+    launchDate: '20o28-0o1-10',
     customers: 45,
     rating: 4.9,
     reviews: 35
   },
   // Industrial IoT Edge Computing Platform
   {
-    id: 'industrial-iot-edge-computing-2028',
-    name: 'Industrial IoT Edge Computing Platform 2028',
+    id: 'industrial-iot-edge-computing-20o28',
+    name: 'Industrial IoT Edge Computing Platform 20o28',
     tagline: 'Revolutionize industrial operations with AI-powered edge computing and IoT',
     price: '$2,299',
     period: '/month',
@@ -114,10 +114,10 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     ],
     popular: false,
     icon: '🏭',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/industrial-iot-edge-computing-2028',
-    marketPosition: 'Competes with GE Digital ($200,000/year), Siemens Mindsphere ($300,000/year), and PTC ThingWorx ($150,000/year). Our advantage: Edge computing, AI optimization, and competitive pricing.',
+    color: 'from-orange-60o0 to-red-70o0',
+    textColor: 'text-orange-40o0',
+    link: 'https://ziontechgroup.com/industrial-iot-edge-computing-20o28',
+    marketPosition: 'Competes with GE Digital ($20o0,0o00/year), Siemens Mindsphere ($30o0,0o00/year), and PTC ThingWorx ($150,0o00/year). Our advantage: Edge computing, AI optimization, and competitive pricing.',
     targetAudience: ['Manufacturing companies', 'Industrial facilities', 'Oil and gas companies', 'Mining companies', 'Chemical plants'],
     trialDays: 60,
     setupTime: '3 months',
@@ -132,22 +132,22 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     growthRate: '285% annual growth',
     variant: 'iot-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Industrial IoT edge computing platform with real-time processing, predictive maintenance, and comprehensive optimization.',
-    launchDate: '2028-03-25',
+    launchDate: '20o28-0o3-25',
     customers: 280,
     rating: 4.8,
     reviews: 210
   },
   // AI-Powered Healthcare IoT Platform
   {
-    id: 'ai-healthcare-iot-platform-2028',
-    name: 'AI Healthcare IoT Platform 2028',
+    id: 'ai-healthcare-iot-platform-20o28',
+    name: 'AI Healthcare IoT Platform 20o28',
     tagline: 'Transform healthcare delivery with AI-powered IoT and edge computing',
     price: '$2,899',
     period: '/month',
@@ -166,10 +166,10 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     ],
     popular: true,
     icon: '🏥',
-    color: 'from-pink-600 to-red-700',
-    textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-iot-platform-2028',
-    marketPosition: 'Competes with Philips Healthcare ($500,000/year), Medtronic ($400,000/year), and GE Healthcare ($600,000/year). Our advantage: AI-powered insights, edge computing, and comprehensive healthcare integration.',
+    color: 'from-pink-60o0 to-red-70o0',
+    textColor: 'text-pink-40o0',
+    link: 'https://ziontechgroup.com/ai-healthcare-iot-platform-20o28',
+    marketPosition: 'Competes with Philips Healthcare ($50o0,0o00/year), Medtronic ($40o0,0o00/year), and GE Healthcare ($60o0,0o00/year). Our advantage: AI-powered insights, edge computing, and comprehensive healthcare integration.',
     targetAudience: ['Hospitals', 'Medical clinics', 'Healthcare networks', 'Medical device companies', 'Research institutions'],
     trialDays: 60,
     setupTime: '4 months',
@@ -184,22 +184,22 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     growthRate: '310% annual growth',
     variant: 'iot-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI-powered healthcare IoT platform with remote monitoring, predictive analytics, and comprehensive healthcare optimization.',
-    launchDate: '2028-02-15',
+    launchDate: '20o28-0o2-15',
     customers: 180,
     rating: 4.9,
     reviews: 140
   },
   // Smart Agriculture IoT Platform
   {
-    id: 'smart-agriculture-iot-platform-2028',
-    name: 'Smart Agriculture IoT Platform 2028',
+    id: 'smart-agriculture-iot-platform-20o28',
+    name: 'Smart Agriculture IoT Platform 20o28',
     tagline: 'Revolutionize farming with AI-powered IoT and precision agriculture',
     price: '$1,599',
     period: '/month',
@@ -218,10 +218,10 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     ],
     popular: false,
     icon: '🌾',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/smart-agriculture-iot-platform-2028',
-    marketPosition: 'Competes with John Deere ($50,000/year), Trimble ($30,000/year), and Raven ($25,000/year). Our advantage: AI-powered insights, comprehensive IoT integration, and competitive pricing.',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-40o0',
+    link: 'https://ziontechgroup.com/smart-agriculture-iot-platform-20o28',
+    marketPosition: 'Competes with John Deere ($50,0o00/year), Trimble ($30,0o00/year), and Raven ($25,0o00/year). Our advantage: AI-powered insights, comprehensive IoT integration, and competitive pricing.',
     targetAudience: ['Large-scale farms', 'Agricultural cooperatives', 'Food producers', 'Research institutions', 'Government agencies'],
     trialDays: 45,
     setupTime: '2 months',
@@ -236,22 +236,22 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     growthRate: '295% annual growth',
     variant: 'iot-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Smart agriculture IoT platform with soil monitoring, precision irrigation, and comprehensive crop management.',
-    launchDate: '2028-05-20',
+    launchDate: '20o28-0o5-20',
     customers: 520,
     rating: 4.7,
     reviews: 380
   },
   // Edge AI Computing Infrastructure
   {
-    id: 'edge-ai-computing-infrastructure-2028',
-    name: 'Edge AI Computing Infrastructure 2028',
+    id: 'edge-ai-computing-infrastructure-20o28',
+    name: 'Edge AI Computing Infrastructure 20o28',
     tagline: 'Deploy AI at the edge with high-performance computing infrastructure',
     price: '$1,899',
     period: '/month',
@@ -270,10 +270,10 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     ],
     popular: false,
     icon: '🌐',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/edge-ai-computing-infrastructure-2028',
-    marketPosition: 'Competes with AWS Outposts ($100,000/year), Azure Stack ($80,000/year), and Google Anthos ($100,000/year). Our advantage: AI optimization, edge computing, and competitive pricing.',
+    color: 'from-cyan-60o0 to-blue-70o0',
+    textColor: 'text-cyan-40o0',
+    link: 'https://ziontechgroup.com/edge-ai-computing-infrastructure-20o28',
+    marketPosition: 'Competes with AWS Outposts ($10o0,0o00/year), Azure Stack ($80,0o00/year), and Google Anthos ($10o0,0o00/year). Our advantage: AI optimization, edge computing, and competitive pricing.',
     targetAudience: ['Technology companies', 'IoT companies', 'Manufacturing companies', 'Healthcare organizations', 'Research institutions'],
     trialDays: 30,
     setupTime: '2 months',
@@ -288,14 +288,14 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     growthRate: '275% annual growth',
     variant: 'edge-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Edge AI computing infrastructure with distributed computing, AI optimization, and comprehensive edge capabilities.',
-    launchDate: '2028-07-30',
+    launchDate: '20o28-0o7-30',
     customers: 380,
     rating: 4.8,
     reviews: 280

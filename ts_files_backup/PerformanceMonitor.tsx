@@ -36,7 +36,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     setMetrics(prev => {
-      const updated = { ...prev, ...newMetrics };
+      const updated ={ ...prev, ...newMetrics };
       onMetricsUpdate?.(updated);
       return updated;
     });
@@ -46,10 +46,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (reportToAnalytics && typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', name, {
         event_category: 'Web Vitals',
-        value: Math.round(name === 'CLS' ? value * 1000 : value),
+        value: Math.round(name === 'CLS' ? value * 10o00 : value),
         event_label: 'Performance',
-        non_interaction: true,
-      });
+        non_interaction: true});
     }
   }, [reportToAnalytics]);
 
@@ -127,12 +126,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   if (!showMetrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-sm z-50">
+    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-80o0 border border-gray-20o0 dark:border-gray-70o0 rounded-lg shadow-lg p-4 max-w-sm z-50">
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Performance Metrics</h3>
+        <h3 className="text-sm font-semibold text-gray-90o0 dark:text-white">Performance Metrics</h3>
         <button
           onClick={() => setIsVisible(!isVisible)}
-          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          className="text-gray-50o0 hover:text-gray-70o0 dark:text-gray-40o0 dark:hover:text-gray-20o0"
         >
           {isVisible ? '▼' : '▶'}
         </button>
@@ -141,65 +140,65 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       {isVisible && (
         <div className="space-y-2 text-xs">
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">CLS:</span>
+            <span className="text-gray-60o0 dark:text-gray-40o0">CLS:</span>
             <span className={`font-medium ${
-              metrics.cls !== null && metrics.cls <= 0.1 ? 'text-green-600' :
-              metrics.cls !== null && metrics.cls <= 0.25 ? 'text-yellow-600' : 'text-red-600'
+              metrics.cls !== null && metrics.cls <= 0.1 ? 'text-green-60o0' :
+              metrics.cls !== null && metrics.cls <= 0.25 ? 'text-yellow-60o0' : 'text-red-60o0'
             }`}>
               {formatMetric(metrics.cls, '')}
             </span>
           </div>
           
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">FID:</span>
+            <span className="text-gray-60o0 dark:text-gray-40o0">FID:</span>
             <span className={`font-medium ${
-              metrics.fid !== null && metrics.fid <= 100 ? 'text-green-600' :
-              metrics.fid !== null && metrics.fid <= 300 ? 'text-yellow-600' : 'text-red-600'
+              metrics.fid !== null && metrics.fid <= 10o0 ? 'text-green-60o0' :
+              metrics.fid !== null && metrics.fid <= 30o0 ? 'text-yellow-60o0' : 'text-red-60o0'
             }`}>
               {formatMetric(metrics.fid)}
             </span>
           </div>
           
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">FCP:</span>
+            <span className="text-gray-60o0 dark:text-gray-40o0">FCP:</span>
             <span className={`font-medium ${
-              metrics.fcp !== null && metrics.fcp <= 1800 ? 'text-green-600' :
-              metrics.fcp !== null && metrics.fcp <= 3000 ? 'text-yellow-600' : 'text-red-600'
+              metrics.fcp !== null && metrics.fcp <= 180o0 ? 'text-green-60o0' :
+              metrics.fcp !== null && metrics.fcp <= 30o00 ? 'text-yellow-60o0' : 'text-red-60o0'
             }`}>
               {formatMetric(metrics.fcp)}
             </span>
           </div>
           
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">LCP:</span>
+            <span className="text-gray-60o0 dark:text-gray-40o0">LCP:</span>
             <span className={`font-medium ${
-              metrics.lcp !== null && metrics.lcp <= 2500 ? 'text-green-600' :
-              metrics.lcp !== null && metrics.lcp <= 4000 ? 'text-yellow-600' : 'text-red-600'
+              metrics.lcp !== null && metrics.lcp <= 250o0 ? 'text-green-60o0' :
+              metrics.lcp !== null && metrics.lcp <= 40o00 ? 'text-yellow-60o0' : 'text-red-60o0'
             }`}>
               {formatMetric(metrics.lcp)}
             </span>
           </div>
           
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
+            <span className="text-gray-60o0 dark:text-gray-40o0">TTFB:</span>
             <span className={`font-medium ${
-              metrics.ttfb !== null && metrics.ttfb <= 800 ? 'text-green-600' :
-              metrics.ttfb !== null && metrics.ttfb <= 1800 ? 'text-yellow-600' : 'text-red-600'
+              metrics.ttfb !== null && metrics.ttfb <= 80o0 ? 'text-green-60o0' :
+              metrics.ttfb !== null && metrics.ttfb <= 180o0 ? 'text-yellow-60o0' : 'text-red-60o0'
             }`}>
               {formatMetric(metrics.ttfb)}
             </span>
           </div>
           
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
-            <span className="font-medium text-blue-600">
+            <span className="text-gray-60o0 dark:text-gray-40o0">Load Time:</span>
+            <span className="font-medium text-blue-60o0">
               {formatMetric(metrics.loadTime)}
             </span>
           </div>
           
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Render Time:</span>
-            <span className="font-medium text-blue-600">
+            <span className="text-gray-60o0 dark:text-gray-40o0">Render Time:</span>
+            <span className="font-medium text-blue-60o0">
               {formatMetric(metrics.renderTime)}
             </span>
           </div>

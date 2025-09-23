@@ -2,7 +2,7 @@ import { ApiDocsSpec } from './types';
 
 const baseUrl = 'https://api.zion.os';
 
-const v1: ApiDocsSpec = {
+const v1: ApiDocsSpec ={
   product: 'Zion OS',
   versions: ['v1'],
   defaultVersion: 'v1',
@@ -26,6 +26,7 @@ const v1: ApiDocsSpec = {
           samples: [
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os","password":"***"}'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json());` },
+<<<<<<< HEAD
             { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` }
           ],
           errors: [
@@ -236,3 +237,5 @@ const v1: ApiDocsSpec = {
 };
 
 export default v1;
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

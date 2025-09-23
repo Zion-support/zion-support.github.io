@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
@@ -23,56 +22,56 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
   className = '',
   neonIntensity = 'medium'
 }) => {
-  const variants = {
+  const variants ={
     primary: {
-      border: 'border-cyan-400',
-      text: 'text-cyan-400',
-      glow: 'shadow-cyan-400/50',
-      hoverGlow: 'hover:shadow-cyan-400/80',
-      bg: 'bg-cyan-400/10',
-      hoverBg: 'hover:bg-cyan-400/20'
+      border: 'border-cyan-40o0',
+      text: 'text-cyan-40o0',
+      glow: 'shadow-cyan-40o0/50',
+      hoverGlow: 'hover:shadow-cyan-40o0/80',
+      bg: 'bg-cyan-40o0/10',
+      hoverBg: 'hover:bg-cyan-40o0/20'
     },
     secondary: {
-      border: 'border-purple-400',
-      text: 'text-purple-400',
-      glow: 'shadow-purple-400/50',
-      hoverGlow: 'hover:shadow-purple-400/80',
-      bg: 'bg-purple-400/10',
-      hoverBg: 'hover:bg-purple-400/20'
+      border: 'border-purple-40o0',
+      text: 'text-purple-40o0',
+      glow: 'shadow-purple-40o0/50',
+      hoverGlow: 'hover:shadow-purple-40o0/80',
+      bg: 'bg-purple-40o0/10',
+      hoverBg: 'hover:bg-purple-40o0/20'
     },
     success: {
-      border: 'border-emerald-400',
-      text: 'text-emerald-400',
-      glow: 'shadow-emerald-400/50',
-      hoverGlow: 'hover:shadow-emerald-400/80',
-      bg: 'bg-emerald-400/10',
-      hoverBg: 'hover:bg-emerald-400/20'
+      border: 'border-emerald-40o0',
+      text: 'text-emerald-40o0',
+      glow: 'shadow-emerald-40o0/50',
+      hoverGlow: 'hover:shadow-emerald-40o0/80',
+      bg: 'bg-emerald-40o0/10',
+      hoverBg: 'hover:bg-emerald-40o0/20'
     },
     warning: {
-      border: 'border-amber-400',
-      text: 'text-amber-400',
-      glow: 'shadow-amber-400/50',
-      hoverGlow: 'hover:shadow-amber-400/80',
-      bg: 'bg-amber-400/10',
-      hoverBg: 'hover:bg-amber-400/20'
+      border: 'border-amber-40o0',
+      text: 'text-amber-40o0',
+      glow: 'shadow-amber-40o0/50',
+      hoverGlow: 'hover:shadow-amber-40o0/80',
+      bg: 'bg-amber-40o0/10',
+      hoverBg: 'hover:bg-amber-40o0/20'
     },
     danger: {
-      border: 'border-red-400',
-      text: 'text-red-400',
-      glow: 'shadow-red-400/50',
-      hoverGlow: 'hover:shadow-red-400/80',
-      bg: 'bg-red-400/10',
-      hoverBg: 'hover:bg-red-400/20'
+      border: 'border-red-40o0',
+      text: 'text-red-40o0',
+      glow: 'shadow-red-40o0/50',
+      hoverGlow: 'hover:shadow-red-40o0/80',
+      bg: 'bg-red-40o0/10',
+      hoverBg: 'hover:bg-red-40o0/20'
     }
   };
 
-  const sizes = {
+  const sizes ={
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
   };
 
-  const neonIntensities = {
+  const neonIntensities ={
     low: 'shadow-lg',
     medium: 'shadow-xl',
     high: 'shadow-2xl'
@@ -87,7 +86,7 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
       className={`
-        relative group overflow-hidden rounded-lg font-medium transition-all duration-300
+        relative group overflow-hidden rounded-lg font-medium transition-all duration-30o0
         border-2 ${selectedVariant.border}
         ${selectedVariant.text}
         ${selectedVariant.bg}
@@ -99,7 +98,7 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
         ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
         ${className}
       `}
-      whileHover={!disabled ? { scale: 1.05 } : {}}
+      whileHover={!disabled ? { scale: 1.0o5 } : {}}
       whileTap={!disabled ? { scale: 0.95 } : {}}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -107,20 +106,20 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
     >
       {/* Neon glow effect */}
       <div className={`
-        absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
+        absolute inset-0 rounded-lg opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0
         ${selectedVariant.bg}
         blur-sm
-      `} />
+      `}  />
       
       {/* Inner glow */}
       <div className={`
-        absolute inset-0 rounded-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300
+        absolute inset-0 rounded-lg opacity-0 group-hover:opacity-30 transition-opacity duration-30o0
         ${selectedVariant.bg}
-      `} />
+      `}  />
       
       {/* Content */}
       <div className="relative flex items-center justify-center gap-2">
-        {Icon && <Icon className="w-5 h-5" />}
+        {Icon && <Icon className="w-5 h-5"  />}
         {children}
       </div>
       
@@ -139,7 +138,7 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
       
       {/* Ripple effect on click */}
       <motion.div
@@ -147,7 +146,7 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
         initial={{ scale: 0, opacity: 0 }}
         whileTap={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.2 }}
-      />
+       />
     </motion.button>
   );
 };

@@ -1,23 +1,21 @@
 'use client';
 
-import React from 'react';
-
-const StructuredData2025 = () => {
-  const organizationSchema = {
+const StructuredData20o25 = () => {
+  const organizationSchema ={
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
     "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
-    "foundingDate": "2020",
+    "foundingDate": "20o20",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
+      "telephone": "+1-555-0o123",
       "contactType": "customer service",
       "availableLanguage": "English"
     },
@@ -30,24 +28,24 @@ const StructuredData2025 = () => {
         "@type": "Offer",
         "name": "AI Innovation Solutions",
         "description": "Cutting-edge AI technologies and automation solutions",
-        "url": "https://ziontechgroup.com/ai-innovation-showcase-2025"
+        "url": "https://ziontechgroup.com/ai-innovation-showcase-20o25"
       },
       {
         "@type": "Offer",
         "name": "Interactive Tech Demos",
         "description": "Hands-on demonstrations of our latest technologies",
-        "url": "https://ziontechgroup.com/interactive-tech-demo-2025"
+        "url": "https://ziontechgroup.com/interactive-tech-demo-20o25"
       },
       {
         "@type": "Offer",
         "name": "Ultimate Content Showcase",
         "description": "Revolutionary AI content and digital transformation strategies",
-        "url": "https://ziontechgroup.com/ultimate-content-showcase-2025"
+        "url": "https://ziontechgroup.com/ultimate-content-showcase-20o25"
       }
     ]
   };
 
-  const websiteSchema = {
+  const websiteSchema ={
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -64,7 +62,7 @@ const StructuredData2025 = () => {
     }
   };
 
-  const serviceSchema = {
+  const serviceSchema ={
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "AI & Technology Solutions",
@@ -111,21 +109,21 @@ const StructuredData2025 = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(organizationSchema)
         }}
-      />
+       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema)
         }}
-      />
+       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema)
         }}
-      />
+       />
     </>
   );
 };
 
-export default StructuredData2025;
+export default StructuredData20o25;

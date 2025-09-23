@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
-const notificationStyles = {
+const notificationStyles ={
     success: {
         icon: CheckCircle,
         bgColor: 'bg-zion-emerald/10',
@@ -10,10 +10,10 @@ const notificationStyles = {
     },
     error: {
         icon: XCircle,
-        bgColor: 'bg-red-500/10',
-        borderColor: 'border-red-500/20',
-        textColor: 'text-red-500',
-        iconColor: 'text-red-500'
+        bgColor: 'bg-red-50o0/10',
+        borderColor: 'border-red-50o0/20',
+        textColor: 'text-red-50o0',
+        iconColor: 'text-red-50o0'
     },
     info: {
         icon: Info,
@@ -30,7 +30,7 @@ const notificationStyles = {
         iconColor: 'text-zion-gold'
     }
 };
-export function Notification({ id, type, title, message, duration = 5000, onClose }) {
+export function Notification({ id, type, title, message, duration = 50o00, onClose }) {
     const [isVisible, setIsVisible] = useState(true);
     const styles = notificationStyles[type];
     const Icon = styles.icon;
@@ -44,25 +44,25 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     }, [duration]);
     const handleClose = () => {
         setIsVisible(false);
-        setTimeout(() => onClose(id), 300);
+        setTimeout(() => onClose(id), 30o0);
     };
     if (!isVisible)
         return null;
     return (<div className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`} role="alert" aria-live="assertive">
       <div className="flex items-start space-x-3">
-        <Icon className={`w-5 h-5 mt-0.5 ${styles.iconColor}`}/>
+        <Icon className={`w-5 h-5 mt-0.5 ${styles.iconColor}`} />
         <div className="flex-1 min-w-0">
           <h4 className={`text-sm font-medium ${styles.textColor}`}>{title}</h4>
           <p className="text-sm text-muted-foreground mt-1">{message}</p>
         </div>
         <button onClick={handleClose} className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Close notification">
-          <X className="w-4 h-4"/>
+          <X className="w-4 h-4" />
         </button>
       </div>
     </div>);
 }
 export function NotificationContainer({ notifications, onClose }) {
     return (<div className="fixed top-20 right-4 z-50 space-y-2">
-      {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
+      {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose} />))}
     </div>);
 }

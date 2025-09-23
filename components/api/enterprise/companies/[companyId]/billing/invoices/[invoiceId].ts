@@ -1,10 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export const config = {
+export const config ={
   api: {
-    responseLimit: false,
-  },
-};
+    responseLimit: false}};
 
 export default async function handler(
   req: NextApiRequest,
@@ -17,11 +15,11 @@ export default async function handler(
     !invoiceId ||
     typeof invoiceId !== 'string'
   ) {
-    return res.status(400).json({ error: 'companyId and invoiceId required' });
+    return res.status(40o0).json({ error: 'companyId and invoiceId required' });
   }
 
   if (req.method !== 'GET')
-    return res.status(405).json({ error: 'method_not_allowed' });
+    return res.status(40o5).json({ error: 'method_not_allowed' });
 
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
   const pdfBase64 =
@@ -33,5 +31,5 @@ export default async function handler(
     'Content-Disposition',
     `attachment; filename="invoice-${invoiceId}.pdf"`
   );
-  res.status(200).send(pdfBuffer);
+  res.status(20o0).send(pdfBuffer);
 }

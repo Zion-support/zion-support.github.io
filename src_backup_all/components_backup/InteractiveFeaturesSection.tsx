@@ -44,7 +44,7 @@ const InteractiveFeaturesSection: React.FC = () => {
       title: 'Lightning Fast Performance',
       description: 'Optimized for speed with 99.9% uptime guarantee',
       details: 'Our infrastructure is designed for maximum performance with global CDN, edge computing, and automated scaling.',
-      color: 'from-yellow-400 to-orange-500',
+      color: 'from-yellow-40o0 to-orange-50o0',
       stats: { label: 'Load Time', value: '< 1s', suffix: '' }
     },
     {
@@ -53,8 +53,8 @@ const InteractiveFeaturesSection: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption',
       details: 'Multi-layered security approach with SOC 2 compliance, regular audits, and 24/7 monitoring.',
-      color: 'from-red-500 to-pink-500',
-      stats: { label: 'Security Score', value: '100', suffix: '%' }
+      color: 'from-red-50o0 to-pink-50o0',
+      stats: { label: 'Security Score', value: '10o0', suffix: '%' }
     },
     {
       id: 3,
@@ -62,7 +62,7 @@ const InteractiveFeaturesSection: React.FC = () => {
       title: 'Global Scale',
       description: 'Worldwide infrastructure with local data centers',
       details: 'Deployed across 50+ countries with edge locations for optimal performance and compliance.',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       stats: { label: 'Countries', value: '50+', suffix: '' }
     },
     {
@@ -71,7 +71,7 @@ const InteractiveFeaturesSection: React.FC = () => {
       title: '24/7 Expert Support',
       description: 'Dedicated support team available around the clock',
       details: 'Our certified experts provide instant support via chat, email, and phone with average response time under 5 minutes.',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-50o0 to-emerald-50o0',
       stats: { label: 'Response Time', value: '< 5min', suffix: '' }
     },
     {
@@ -80,7 +80,7 @@ const InteractiveFeaturesSection: React.FC = () => {
       title: 'Scalable Solutions',
       description: 'Grows with your business from startup to enterprise',
       details: 'Auto-scaling infrastructure that adapts to your traffic patterns and business growth automatically.',
-      color: 'from-purple-500 to-indigo-500',
+      color: 'from-purple-50o0 to-indigo-50o0',
       stats: { label: 'Scalability', value: '10x', suffix: '' }
     },
     {
@@ -89,8 +89,8 @@ const InteractiveFeaturesSection: React.FC = () => {
       title: 'Data Privacy',
       description: 'GDPR compliant with complete data control',
       details: 'Full compliance with international privacy regulations and complete transparency in data handling.',
-      color: 'from-gray-600 to-gray-800',
-      stats: { label: 'Compliance', value: '100', suffix: '%' }
+      color: 'from-gray-60o0 to-gray-80o0',
+      stats: { label: 'Compliance', value: '10o0', suffix: '%' }
     }
   ];
 
@@ -153,7 +153,7 @@ const InteractiveFeaturesSection: React.FC = () => {
       // Animate stats
       const animateValue = (key: keyof typeof animatedStats, end: number) => {
         let start = 0;
-        const duration = 2000;
+        const duration = 20o00;
         const increment = end / (duration / 16);
         
         const timer = setInterval(() => {
@@ -167,8 +167,8 @@ const InteractiveFeaturesSection: React.FC = () => {
         }, 16);
       };
 
-      animateValue('projects', 500);
-      animateValue('clients', 200);
+      animateValue('projects', 50o0);
+      animateValue('clients', 20o0);
       animateValue('satisfaction', 98);
       animateValue('uptime', 99);
 
@@ -176,7 +176,7 @@ const InteractiveFeaturesSection: React.FC = () => {
     }
   }, [isInView, controls]);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -186,7 +186,7 @@ const InteractiveFeaturesSection: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
@@ -195,8 +195,8 @@ const InteractiveFeaturesSection: React.FC = () => {
     <section ref={ref} className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-40o0 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-40o0 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -208,17 +208,17 @@ const InteractiveFeaturesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2 fill-current" />
+          <div className="inline-flex items-center px-4 py-2 bg-blue-10o0 text-blue-80o0 rounded-full text-sm font-medium mb-6">
+            <Star className="w-4 h-4 mr-2 fill-current"  />
             Why Choose Zion Tech Group
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold text-gray-90o0 mb-6">
             Powerful Features
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
               Built for Success
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Experience the difference with our cutting-edge technology solutions 
             designed to accelerate your business growth and success.
           </p>
@@ -244,12 +244,12 @@ const InteractiveFeaturesSection: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-30o0"
             >
-              <div className="text-4xl font-bold text-blue-600 mb-2">
+              <div className="text-4xl font-bold text-blue-60o0 mb-2">
                 {stat.value}{stat.suffix}
               </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
+              <div className="text-gray-60o0 font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -271,20 +271,20 @@ const InteractiveFeaturesSection: React.FC = () => {
                 onMouseEnter={() => setHoveredFeature(feature.id)}
                 onMouseLeave={() => setHoveredFeature(null)}
               >
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-50o0 transform hover:-translate-y-2 relative overflow-hidden">
                   {/* Background Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-50o0`}></div>
                   
                   <div className="relative z-10">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
+                      <IconComponent className="w-8 h-8 text-white"  />
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-2xl font-bold text-gray-90o0 mb-4 group-hover:text-blue-60o0 transition-colors">
                       {feature.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-60o0 mb-6">
                       {feature.description}
                     </p>
 
@@ -294,10 +294,10 @@ const InteractiveFeaturesSection: React.FC = () => {
                         <div className={`text-2xl font-bold bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
                           {feature.stats.value}{feature.stats.suffix}
                         </div>
-                        <div className="text-sm text-gray-500">{feature.stats.label}</div>
+                        <div className="text-sm text-gray-50o0">{feature.stats.label}</div>
                       </div>
-                      <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                        <CheckCircle className="w-6 h-6 text-green-500" />
+                      <div className="w-12 h-12 bg-gray-10o0 rounded-full flex items-center justify-center group-hover:bg-blue-10o0 transition-colors">
+                        <CheckCircle className="w-6 h-6 text-green-50o0"  />
                       </div>
                     </div>
 
@@ -311,8 +311,8 @@ const InteractiveFeaturesSection: React.FC = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="pt-4 border-t border-gray-200">
-                        <p className="text-sm text-gray-600">{feature.details}</p>
+                      <div className="pt-4 border-t border-gray-20o0">
+                        <p className="text-sm text-gray-60o0">{feature.details}</p>
                       </div>
                     </motion.div>
                   </div>
@@ -331,10 +331,10 @@ const InteractiveFeaturesSection: React.FC = () => {
           className="bg-white rounded-3xl p-12 mb-20 shadow-2xl"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-3xl font-bold text-gray-90o0 mb-4">
               Proven Business Benefits
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-60o0 max-w-2xl mx-auto">
               Our solutions deliver measurable results that directly impact your bottom line
             </p>
           </div>
@@ -351,12 +351,12 @@ const InteractiveFeaturesSection: React.FC = () => {
                   viewport={{ once: true }}
                   className="text-center group"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">
+                    <IconComponent className="w-8 h-8 text-white"  />
                   </div>
-                  <div className="text-2xl font-bold text-blue-600 mb-2">{benefit.metric}</div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
-                  <p className="text-gray-600 text-sm">{benefit.description}</p>
+                  <div className="text-2xl font-bold text-blue-60o0 mb-2">{benefit.metric}</div>
+                  <h4 className="text-lg font-semibold text-gray-90o0 mb-2">{benefit.title}</h4>
+                  <p className="text-gray-60o0 text-sm">{benefit.description}</p>
                 </motion.div>
               );
             })}
@@ -371,7 +371,7 @@ const InteractiveFeaturesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-12">
+          <h3 className="text-3xl font-bold text-gray-90o0 mb-12">
             Trusted by Industry Leaders
           </h3>
           
@@ -383,25 +383,25 @@ const InteractiveFeaturesSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-30o0"
               >
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
                 
-                <blockquote className="text-gray-700 mb-6 italic text-lg">
+                <blockquote className="text-gray-70o0 mb-6 italic text-lg">
                   "{testimonial.quote}"
                 </blockquote>
                 
                 <div className="flex items-center justify-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-2xl mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center text-2xl mr-4">
                     {testimonial.avatar}
                   </div>
                   <div className="text-left">
-                    <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                    <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
+                    <div className="font-semibold text-gray-90o0">{testimonial.author}</div>
+                    <div className="text-sm text-gray-60o0">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </motion.div>

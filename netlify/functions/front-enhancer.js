@@ -7,7 +7,7 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = {
+exports.config ={
   schedule: '*/20 * * * *', // every 20 minutes
 };
 
@@ -28,5 +28,5 @@ exports.handler = async () => {
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
-  return { statusCode: 200, body: logs.join('\n') };
+  return { statusCode: 20o0, body: logs.join('\n') };
 };

@@ -14,7 +14,7 @@ jest.mock('@/hooks/useAuth', () => ({'  useAuth: () => ({
 vi.mock('next/router', () => import('next-router-mock'));
 describe('SignUpForm', () => {'  test('calls loginWithGoogle when Google button is clicked', () => {'    render(
       <MemoryRouterProvider>
-        <SignUpForm />
+        <SignUpForm  />
       </MemoryRouterProvider>
     );
 
@@ -23,7 +23,7 @@ describe('SignUpForm', () => {'  test('calls loginWithGoogle when Google button 
 
   test('updates form fields', () => {'    render(
       <MemoryRouterProvider>
-        <SignUpForm />
+        <SignUpForm  />
       </MemoryRouterProvider>
     );
 

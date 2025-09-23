@@ -5,21 +5,20 @@ import { ProviderConnection, SyncLogEntry } from './types';
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
   action: string,
-  details: Record<string, unknown> = {}
+  details: Record<string, unknown> ={}
 ): Promise<{ log: SyncLogEntry; result: T }> {
-  const log: SyncLogEntry = {
+  const log: SyncLogEntry ={
     id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
     action,
-    details,
-  };
+    details};
   return { log, result: { ok: true } as T };
 }
 
 // CRM actions
-export const crm = {
+export const crm ={
   async syncContact(connection: ProviderConnection, contact: Record<string, unknown>) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
@@ -28,24 +27,14 @@ export const crm = {
   },
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, unknown>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-  },
-};
+  }};
 
 // ATS actions
-export const ats = {
+export const ats ={
   async updateStatus(connection: ProviderConnection, status: Record<string, unknown>) {
     return simulateAction(connection, 'ats.updateStatus', { status });
   },
   async createCandidate(connection: ProviderConnection, candidate: Record<string, unknown>) {
     return simulateAction(connection, 'ats.createCandidate', { candidate });
-  },
-};
-
-
-
-
-
-
-
-
+  }};
 

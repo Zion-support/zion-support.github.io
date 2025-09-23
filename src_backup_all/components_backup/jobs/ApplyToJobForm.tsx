@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useResume } from "@/hooks/useResume";
 import { useAuth } from "@/hooks/useAuth";
@@ -80,7 +79,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       {error && (
         <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
+          <AlertCircle className="h-4 w-4"  />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
@@ -105,7 +104,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
             <div className="flex items-center gap-2 mt-2">
-              <Loader2 className="h-4 w-4 animate-spin" />
+              <Loader2 className="h-4 w-4 animate-spin"  />
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
@@ -114,7 +113,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
               onValueChange={setSelectedResumeId}
             >
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Select a resume" />
+                <SelectValue placeholder="Select a resume"  />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="">No resume</SelectItem>
@@ -133,7 +132,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           ) : (
             <div className="flex items-center justify-between mt-2 p-3 border rounded-md">
               <div className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-muted-foreground" />
+                <FileText className="h-5 w-5 text-muted-foreground"  />
                 <span>No resumes found</span>
               </div>
               <Button 
@@ -174,7 +173,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <>
-              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              <Loader2 className="h-4 w-4 mr-2 animate-spin"  />
               Submitting...
             </>
           ) : (

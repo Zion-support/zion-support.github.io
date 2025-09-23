@@ -75,12 +75,12 @@ const SearchComponent: React.FC = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" /> },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4" /> },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Atom className="w-4 h-4" /> },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { id: 'space-tech', name: 'Space Technology', icon: <Rocket className="w-4 h-4" /> },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: <Globe className="w-4 h-4" /> }
+    { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"  /> },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4"  /> },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Atom className="w-4 h-4"  /> },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4"  /> },
+    { id: 'space-tech', name: 'Space Technology', icon: <Rocket className="w-4 h-4"  /> },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: <Globe className="w-4 h-4"  /> }
   ];
 
   useEffect(() => {
@@ -156,7 +156,7 @@ const SearchComponent: React.FC = () => {
       setFilteredResults(filtered);
       setIsLoading(false);
       setSelectedIndex(-1);
-    }, 300);
+    }, 30o0);
 
     return () => clearTimeout(timeout);
   }, [query, selectedCategory]);
@@ -171,15 +171,15 @@ const SearchComponent: React.FC = () => {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'service':
-        return <Brain className="w-4 h-4 text-blue-500" />;
+        return <Brain className="w-4 h-4 text-blue-50o0"  />;
       case 'solution':
-        return <Shield className="w-4 h-4 text-green-500" />;
+        return <Shield className="w-4 h-4 text-green-50o0"  />;
       case 'page':
-        return <Globe className="w-4 h-4 text-purple-500" />;
+        return <Globe className="w-4 h-4 text-purple-50o0"  />;
       case 'resource':
-        return <Rocket className="w-4 h-4 text-orange-500" />;
+        return <Rocket className="w-4 h-4 text-orange-50o0"  />;
       default:
-        return <Globe className="w-4 h-4 text-gray-500" />;
+        return <Globe className="w-4 h-4 text-gray-50o0"  />;
     }
   };
 
@@ -204,10 +204,10 @@ const SearchComponent: React.FC = () => {
       <AccessibilityEnhancer>
         <button
           onClick={handleSearch}
-          className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          className="flex items-center space-x-2 px-4 py-2 text-gray-70o0 hover:text-blue-60o0 transition-colors duration-20o0"
           aria-label="Open search"
         >
-          <Search className="w-4 h-4" />
+          <Search className="w-4 h-4"  />
           <span className="hidden sm:inline">Search</span>
         </button>
       </AccessibilityEnhancer>
@@ -229,43 +229,43 @@ const SearchComponent: React.FC = () => {
             />
 
             {/* Search Container */}
-            <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-gray-200">
+            <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-gray-20o0">
               {/* Search Header */}
-              <div className="flex items-center space-x-4 p-6 border-b border-gray-200">
+              <div className="flex items-center space-x-4 p-6 border-b border-gray-20o0">
                 <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />
                   <input
                     ref={inputRef}
                     type="text"
                     placeholder="Search for services, solutions, resources..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-20o0 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                     autoFocus
                   />
                 </div>
                 <AccessibilityEnhancer>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                    className="p-2 text-gray-40o0 hover:text-gray-60o0 transition-colors duration-20o0"
                     aria-label="Close search"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5"  />
                   </button>
                 </AccessibilityEnhancer>
               </div>
 
               {/* Category Filters */}
-              <div className="p-4 border-b border-gray-200">
+              <div className="p-4 border-b border-gray-20o0">
                 <div className="flex items-center space-x-2 overflow-x-auto pb-2">
                   {categories.map((category) => (
                     <button
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
-                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-20o0 ${
                         selectedCategory === category.id
-                          ? 'bg-blue-100 text-blue-700 border border-blue-200'
-                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                          ? 'bg-blue-10o0 text-blue-70o0 border border-blue-20o0'
+                          : 'bg-gray-10o0 text-gray-60o0 hover:bg-gray-20o0'
                       }`}
                     >
                       {category.icon}
@@ -278,8 +278,8 @@ const SearchComponent: React.FC = () => {
               {/* Search Results */}
               <div className="max-h-96 overflow-y-auto">
                 {isLoading ? (
-                  <div className="p-8 text-center text-gray-500">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
+                  <div className="p-8 text-center text-gray-50o0">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-50o0 mx-auto mb-4"></div>
                     Searching...
                   </div>
                 ) : filteredResults.length > 0 ? (
@@ -289,9 +289,9 @@ const SearchComponent: React.FC = () => {
                         key={result.id}
                         href={result.url}
                         onClick={() => setIsOpen(false)}
-                        className={`block p-4 rounded-xl transition-all duration-200 ${
+                        className={`block p-4 rounded-xl transition-all duration-20o0 ${
                           index === selectedIndex
-                            ? 'bg-blue-50 border border-blue-200'
+                            ? 'bg-blue-50 border border-blue-20o0'
                             : 'hover:bg-gray-50'
                         }`}
                       >
@@ -301,19 +301,19 @@ const SearchComponent: React.FC = () => {
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center space-x-2 mb-1">
-                              <h3 className="text-sm font-semibold text-gray-900 truncate">
+                              <h3 className="text-sm font-semibold text-gray-90o0 truncate">
                                 {result.title}
                               </h3>
-                              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-10o0 text-gray-80o0">
                                 {getTypeLabel(result.type)}
                               </span>
                             </div>
-                            <p className="text-sm text-gray-600 mb-2 line-clamp-2">
+                            <p className="text-sm text-gray-60o0 mb-2 line-clamp-2">
                               {result.description}
                             </p>
                             <div className="flex items-center justify-between">
-                              <span className="text-xs text-gray-500">{result.category}</span>
-                              <ArrowRight className="w-4 h-4 text-gray-400" />
+                              <span className="text-xs text-gray-50o0">{result.category}</span>
+                              <ArrowRight className="w-4 h-4 text-gray-40o0"  />
                             </div>
                           </div>
                         </div>
@@ -321,14 +321,14 @@ const SearchComponent: React.FC = () => {
                     ))}
                   </div>
                 ) : query.trim() ? (
-                  <div className="p-8 text-center text-gray-500">
-                    <Search className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                  <div className="p-8 text-center text-gray-50o0">
+                    <Search className="w-12 h-12 mx-auto mb-4 text-gray-30o0"  />
                     <p className="text-lg font-medium mb-2">No results found</p>
                     <p className="text-sm">Try adjusting your search terms or browse our categories</p>
                   </div>
                 ) : (
-                  <div className="p-8 text-center text-gray-500">
-                    <Search className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                  <div className="p-8 text-center text-gray-50o0">
+                    <Search className="w-12 h-12 mx-auto mb-4 text-gray-30o0"  />
                     <p className="text-lg font-medium mb-2">Start typing to search</p>
                     <p className="text-sm">Search for services, solutions, and resources</p>
                   </div>
@@ -336,8 +336,8 @@ const SearchComponent: React.FC = () => {
               </div>
 
               {/* Search Footer */}
-              <div className="p-4 border-t border-gray-200 bg-gray-50 rounded-b-2xl">
-                <div className="flex items-center justify-between text-sm text-gray-500">
+              <div className="p-4 border-t border-gray-20o0 bg-gray-50 rounded-b-2xl">
+                <div className="flex items-center justify-between text-sm text-gray-50o0">
                   <div className="flex items-center space-x-4">
                     <span>↑↓ Navigate</span>
                     <span>Enter Select</span>

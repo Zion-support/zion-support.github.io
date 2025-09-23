@@ -51,10 +51,8 @@ export default function FraudAdminPage() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        ...(adminToken ? { 'x-admin-token': adminToken } : {}),
-      },
-      body: JSON.stringify({ fraudId: id, action }),
-    });
+        ...(adminToken ? { 'x-admin-token': adminToken } : {})},
+      body: JSON.stringify({ fraudId: id, action })});
     const json = await res.json();
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
@@ -71,12 +69,12 @@ export default function FraudAdminPage() {
           value={adminToken}
           onChange={(e) => setAdminToken(e.target.value)}
         />
-        <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
-        <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
+        <button className="bg-blue-60o0 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
+        <button className="bg-gray-20o0 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
 
       {loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
+      {error && <div className="text-red-60o0">{error}</div>}
 
       <div className="overflow-x-auto">
         <table className="min-w-full border">
@@ -100,22 +98,22 @@ export default function FraudAdminPage() {
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
-                      <div key={idx} className="text-gray-700">{r}</div>
+                      <div key={idx} className="text-gray-70o0">{r}</div>
                     ))}
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
-                    <div className="text-gray-700">{it.gpt?.reason}</div>
+                    <div className="text-gray-70o0">{it.gpt?.reason}</div>
                   </div>
                 </td>
                 <td className="p-2 border">{it.status}</td>
                 <td className="p-2 border">
                   <div className="flex gap-2">
-                    <button className="px-2 py-1 text-xs bg-yellow-500 text-white rounded" onClick={() => takeAction(it.id, 'WARN')}>Warn</button>
-                    <button className="px-2 py-1 text-xs bg-red-600 text-white rounded" onClick={() => takeAction(it.id, 'SUSPEND')}>Suspend</button>
-                    <button className="px-2 py-1 text-xs bg-gray-300 rounded" onClick={() => takeAction(it.id, 'IGNORE')}>Ignore</button>
+                    <button className="px-2 py-1 text-xs bg-yellow-50o0 text-white rounded" onClick={() => takeAction(it.id, 'WARN')}>Warn</button>
+                    <button className="px-2 py-1 text-xs bg-red-60o0 text-white rounded" onClick={() => takeAction(it.id, 'SUSPEND')}>Suspend</button>
+                    <button className="px-2 py-1 text-xs bg-gray-30o0 rounded" onClick={() => takeAction(it.id, 'IGNORE')}>Ignore</button>
                   </div>
                 </td>
               </tr>

@@ -152,9 +152,9 @@ export default function AIAutonomousSystemsPage() {
         {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Autonomous Systems</span>
+            AI <span className="bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">Autonomous Systems</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
             Revolutionary AI agents that operate independently, making intelligent decisions and executing complex tasks 
             without human intervention. Transform your business operations with truly autonomous AI systems.
           </p>
@@ -165,34 +165,34 @@ export default function AIAutonomousSystemsPage() {
           <h2 className="text-4xl font-bold text-white mb-6">What are AI Autonomous Systems?</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-30o0 leading-relaxed mb-6">
                 AI Autonomous Systems are advanced artificial intelligence platforms that can operate independently 
                 without human supervision. These systems can perceive their environment, make decisions, and take 
                 actions based on their understanding of the situation and predefined objectives.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-30o0 leading-relaxed">
                 Unlike traditional AI systems that require constant human oversight, autonomous AI systems can 
                 learn, adapt, and evolve their strategies over time, making them ideal for complex, dynamic 
                 environments where human intervention would be impractical or impossible.
               </p>
             </div>
-            <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 p-6 rounded-xl border border-white/10">
+            <div className="bg-gradient-to-r from-purple-90o0/20 to-blue-90o0/20 p-6 rounded-xl border border-white/10">
               <h3 className="text-xl font-semibold text-white mb-4">Key Characteristics</h3>
               <ul className="space-y-2">
-                <li className="text-gray-300 flex items-center">
-                  <span className="text-purple-400 mr-2">✓</span>
+                <li className="text-gray-30o0 flex items-center">
+                  <span className="text-purple-40o0 mr-2">✓</span>
                   Self-learning and adaptation
                 </li>
-                <li className="text-gray-300 flex items-center">
-                  <span className="text-purple-400 mr-2">✓</span>
+                <li className="text-gray-30o0 flex items-center">
+                  <span className="text-purple-40o0 mr-2">✓</span>
                   Independent decision making
                 </li>
-                <li className="text-gray-300 flex items-center">
-                  <span className="text-purple-400 mr-2">✓</span>
+                <li className="text-gray-30o0 flex items-center">
+                  <span className="text-purple-40o0 mr-2">✓</span>
                   Continuous improvement
                 </li>
-                <li className="text-gray-300 flex items-center">
-                  <span className="text-purple-400 mr-2">✓</span>
+                <li className="text-gray-30o0 flex items-center">
+                  <span className="text-purple-40o0 mr-2">✓</span>
                   Scalable operations
                 </li>
               </ul>
@@ -205,16 +205,16 @@ export default function AIAutonomousSystemsPage() {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Our Autonomous AI Solutions</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {autonomousSystems.map((system, index) => (
-              <div key={index} className="bg-black/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-200">
+              <div key={index} className="bg-black/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-20o0">
                 <h3 className="text-2xl font-semibold text-white mb-4">{system.name}</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">{system.description}</p>
+                <p className="text-gray-30o0 mb-6 leading-relaxed">{system.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="text-purple-400 font-medium mb-3">Key Features:</h4>
+                  <h4 className="text-purple-40o0 font-medium mb-3">Key Features:</h4>
                   <ul className="space-y-2">
                     {system.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-300 text-sm flex items-center">
-                        <span className="text-purple-400 mr-2">•</span>
+                      <li key={featureIndex} className="text-gray-30o0 text-sm flex items-center">
+                        <span className="text-purple-40o0 mr-2">•</span>
                         {feature}
                       </li>
                     ))}
@@ -222,11 +222,11 @@ export default function AIAutonomousSystemsPage() {
                 </div>
                 
                 <div className="mb-6">
-                  <h4 className="text-blue-400 font-medium mb-3">Benefits:</h4>
+                  <h4 className="text-blue-40o0 font-medium mb-3">Benefits:</h4>
                   <ul className="space-y-2">
                     {system.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-gray-300 text-sm flex items-center">
-                        <span className="text-blue-400 mr-2">•</span>
+                      <li key={benefitIndex} className="text-gray-30o0 text-sm flex items-center">
+                        <span className="text-blue-40o0 mr-2">•</span>
                         {benefit}
                       </li>
                     ))}
@@ -235,7 +235,7 @@ export default function AIAutonomousSystemsPage() {
                 
                 <Link
                   href={system.href}
-                  className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105"
+                  className="inline-block bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-medium transition-all duration-20o0 transform hover:scale-10o5"
                 >
                   Learn More
                 </Link>
@@ -249,12 +249,12 @@ export default function AIAutonomousSystemsPage() {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Industry Applications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 p-6 rounded-xl border border-white/10">
+              <div key={index} className="bg-gradient-to-r from-purple-90o0/20 to-blue-90o0/20 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
-                    <li key={appIndex} className="text-gray-300 text-sm flex items-center">
-                      <span className="text-purple-400 mr-2">•</span>
+                    <li key={appIndex} className="text-gray-30o0 text-sm flex items-center">
+                      <span className="text-purple-40o0 mr-2">•</span>
                       {application}
                     </li>
                   ))}
@@ -273,8 +273,8 @@ export default function AIAutonomousSystemsPage() {
                 <h3 className="text-xl font-semibold text-white mb-4">{tech.category}</h3>
                 <ul className="space-y-2">
                   {tech.technologies.map((technology, techIndex) => (
-                    <li key={techIndex} className="text-gray-300 text-sm flex items-center">
-                      <span className="text-blue-400 mr-2">•</span>
+                    <li key={techIndex} className="text-gray-30o0 text-sm flex items-center">
+                      <span className="text-blue-40o0 mr-2">•</span>
                       {technology}
                     </li>
                   ))}
@@ -285,36 +285,36 @@ export default function AIAutonomousSystemsPage() {
         </div>
 
         {/* Implementation Process */}
-        <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 p-8 rounded-2xl border border-white/10 mb-20">
+        <div className="bg-gradient-to-r from-purple-90o0/20 to-blue-90o0/20 p-8 rounded-2xl border border-white/10 mb-20">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Implementation Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Assessment</h3>
-              <p className="text-gray-300 text-sm">Evaluate current systems and identify automation opportunities</p>
+              <p className="text-gray-30o0 text-sm">Evaluate current systems and identify automation opportunities</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
-              <p className="text-gray-300 text-sm">Design autonomous AI architecture and workflows</p>
+              <p className="text-gray-30o0 text-sm">Design autonomous AI architecture and workflows</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
-              <p className="text-gray-300 text-sm">Build and train autonomous AI systems</p>
+              <p className="text-gray-30o0 text-sm">Build and train autonomous AI systems</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>
-              <p className="text-gray-300 text-sm">Deploy and monitor autonomous systems in production</p>
+              <p className="text-gray-30o0 text-sm">Deploy and monitor autonomous systems in production</p>
             </div>
           </div>
         </div>
@@ -322,19 +322,19 @@ export default function AIAutonomousSystemsPage() {
         {/* CTA */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Automate Your Operations?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
             Discover how autonomous AI systems can transform your business operations and drive unprecedented efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-20o0 transform hover:scale-10o5"
             >
               Schedule a Demo
             </Link>
             <Link
               href="/case-studies"
-              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-200"
+              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-20o0"
             >
               View Case Studies
             </Link>

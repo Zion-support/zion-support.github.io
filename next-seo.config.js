@@ -1,4 +1,4 @@
-const config = {
+const config ={
   titleTemplate: '%s | Zion Tech Marketplace',
   defaultTitle: 'Zion Tech Marketplace',
   description: 'Discover top tech talent, AI services and equipment.',
@@ -10,7 +10,7 @@ const config = {
     images: [
       {
         url: 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc',
-        width: 1200,
+        width: 120o0,
         height: 630,
         alt: 'Zion Tech Marketplace'
       }

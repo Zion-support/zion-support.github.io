@@ -7,7 +7,7 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = { schedule: '15 */12 * * *' };
+exports.config ={ schedule: '15 */12 * * *' };
 
 exports.handler = async () => {
   const logs = [];
@@ -23,5 +23,5 @@ exports.handler = async () => {
   step('security:audit', () => runNode('automation/security-audit.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+  return { statusCode: 20o0, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };

@@ -26,34 +26,34 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
   const actions: Action[] = [
     {
       id: 'contact',
-      icon: <Phone className="w-5 h-5" />,
+      icon: <Phone className="w-5 h-5"  />,
       label: 'Contact Us',
       description: 'Get in touch with our experts',
-      color: 'from-cyan-500 to-blue-600',
+      color: 'from-cyan-50o0 to-blue-60o0',
       action: () => window.location.href = '/contact'
     },
     {
       id: 'demo',
-      icon: <Calendar className="w-5 h-5" />,
+      icon: <Calendar className="w-5 h-5"  />,
       label: 'Schedule Demo',
       description: 'Book a personalized demo',
-      color: 'from-purple-500 to-pink-600',
+      color: 'from-purple-50o0 to-pink-60o0',
       action: () => window.location.href = '/demo'
     },
     {
       id: 'quote',
-      icon: <FileText className="w-5 h-5" />,
+      icon: <FileText className="w-5 h-5"  />,
       label: 'Get Quote',
       description: 'Request a custom quote',
-      color: 'from-emerald-500 to-teal-600',
+      color: 'from-emerald-50o0 to-teal-60o0',
       action: () => window.location.href = '/quote'
     },
     {
       id: 'support',
-      icon: <MessageCircle className="w-5 h-5" />,
+      icon: <MessageCircle className="w-5 h-5"  />,
       label: 'Live Chat',
       description: 'Chat with our support team',
-      color: 'from-orange-500 to-red-600',
+      color: 'from-orange-50o0 to-red-60o0',
       action: () => window.location.href = '/support'
     }
   ];
@@ -70,7 +70,7 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
     setTimeout(() => {
       action.action();
       setActiveAction(null);
-    }, 300);
+    }, 30o0);
   };
 
   return (
@@ -78,10 +78,10 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
       {/* Main Floating Button */}
       <motion.button
         onClick={toggleMenu}
-        className={`w-16 h-16 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center ${
+        className={`w-16 h-16 rounded-full shadow-2xl transition-all duration-30o0 flex items-center justify-center ${
           isOpen 
-            ? 'bg-gradient-to-r from-red-500 to-pink-600 shadow-red-500/40' 
-            : 'bg-gradient-to-r from-cyan-500 to-blue-600 shadow-cyan-500/25 hover:shadow-cyan-500/40'
+            ? 'bg-gradient-to-r from-red-50o0 to-pink-60o0 shadow-red-50o0/40' 
+            : 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 shadow-cyan-50o0/25 hover:shadow-cyan-50o0/40'
         }`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -98,7 +98,7 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w-6 h-6 text-white" />
+              <X className="w-6 h-6 text-white"  />
             </motion.div>
           ) : (
             <motion.div
@@ -108,7 +108,7 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <Plus className="w-6 h-6 text-white" />
+              <Plus className="w-6 h-6 text-white"  />
             </motion.div>
           )}
         </AnimatePresence>
@@ -121,18 +121,18 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 300, damping: 30 }}
-            className="absolute bottom-20 right-0 w-80 bg-gray-800/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl shadow-black/50 overflow-hidden"
+            transition={{ duration: 0.3, type: "spring", stiffness: 30o0, damping: 30 }}
+            className="absolute bottom-20 right-0 w-80 bg-gray-80o0/95 backdrop-blur-md rounded-2xl border border-gray-70o0/50 shadow-2xl shadow-black/50 overflow-hidden"
           >
             {/* Header */}
-            <div className="p-6 border-b border-gray-700/50">
+            <div className="p-6 border-b border-gray-70o0/50">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                  <Zap className="w-4 h-4 text-white" />
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-lg flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white">Quick Actions</h3>
               </div>
-              <p className="text-sm text-gray-400">Get started with Zion Tech Group in seconds</p>
+              <p className="text-sm text-gray-40o0">Get started with Zion Tech Group in seconds</p>
             </div>
 
             {/* Actions List */}
@@ -141,8 +141,8 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
                 <motion.button
                   key={action.id}
                   onClick={() => handleActionClick(action)}
-                  className={`w-full p-4 rounded-xl border border-gray-700/50 hover:border-${action.color.split('-')[1]}-500/50 transition-all duration-300 group text-left ${
-                    activeAction === action.id ? 'bg-gray-700/50' : 'bg-gray-800/30 hover:bg-gray-700/30'
+                  className={`w-full p-4 rounded-xl border border-gray-70o0/50 hover:border-${action.color.split('-')[1]}-50o0/50 transition-all duration-30o0 group text-left ${
+                    activeAction === action.id ? 'bg-gray-70o0/50' : 'bg-gray-80o0/30 hover:bg-gray-70o0/30'
                   }`}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -151,19 +151,19 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0`}>
                       {action.icon}
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                      <h4 className="font-semibold text-white group-hover:text-cyan-40o0 transition-colors duration-30o0">
                         {action.label}
                       </h4>
-                      <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                      <p className="text-sm text-gray-40o0 group-hover:text-gray-30o0 transition-colors duration-30o0">
                         {action.description}
                       </p>
                     </div>
-                    <div className="text-gray-500 group-hover:text-cyan-400 transition-colors duration-300">
-                      <ArrowRight className="w-4 h-4" />
+                    <div className="text-gray-50o0 group-hover:text-cyan-40o0 transition-colors duration-30o0">
+                      <ArrowRight className="w-4 h-4"  />
                     </div>
                   </div>
                 </motion.button>
@@ -171,14 +171,14 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
             </div>
 
             {/* Footer */}
-            <div className="p-4 bg-gray-900/50 border-t border-gray-700/50">
+            <div className="p-4 bg-gray-90o0/50 border-t border-gray-70o0/50">
               <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Globe className="w-4 h-4 text-cyan-400" />
+                <div className="flex items-center gap-2 text-gray-40o0">
+                  <Globe className="w-4 h-4 text-cyan-40o0"  />
                   <span>24/7 Available</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Star className="w-4 h-4 text-yellow-400" />
+                <div className="flex items-center gap-2 text-gray-40o0">
+                  <Star className="w-4 h-4 text-yellow-40o0"  />
                   <span>98% Satisfaction</span>
                 </div>
               </div>

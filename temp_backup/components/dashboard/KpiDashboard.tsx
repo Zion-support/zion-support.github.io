@@ -9,7 +9,7 @@ import { useRealtimeMetrics } from '../../hooks/useRealtimeMetrics';
 import { exportToCsv } from '../../utils/export';
 import { exportElementPng } from '../../utils/exportImage';
 
-export type KpiDashboardProps = { admin?: boolean };
+export type KpiDashboardProps ={ admin?: boolean };
 
 function SectionHeader({ title, color }: { title: string; color: string }) {
   return (
@@ -65,11 +65,11 @@ export default function KpiDashboard({ admin = false }: KpiDashboardProps) {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-xl font-semibold">Zion Metrics Dashboard</h2>
-          <div className="text-xs text-gray-500">Real-time KPIs across marketplace, DAO, token, and multiverse</div>
+          <div className="text-xs text-gray-50o0">Real-time KPIs across marketplace, DAO, token, and multiverse</div>
         </div>
         <div className="flex items-center gap-2">
-          <button onClick={handleExportCsv} className="px-3 py-1.5 text-xs rounded border bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800">Export CSV</button>
-          <button onClick={handleExportPng} className="px-3 py-1.5 text-xs rounded border bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800">Export PNG</button>
+          <button onClick={handleExportCsv} className="px-3 py-1.5 text-xs rounded border bg-white dark:bg-gray-90o0 hover:bg-gray-50 dark:hover:bg-gray-80o0">Export CSV</button>
+          <button onClick={handleExportPng} className="px-3 py-1.5 text-xs rounded border bg-white dark:bg-gray-90o0 hover:bg-gray-50 dark:hover:bg-gray-80o0">Export PNG</button>
           <label className="flex items-center gap-2 text-xs">
             <input type="checkbox" checked={compareQuarter} onChange={(e) => setCompareQuarter(e.target.checked)} />
             Compare prev quarter
@@ -82,8 +82,8 @@ export default function KpiDashboard({ admin = false }: KpiDashboardProps) {
       </div>
 
       {/* Operator Prompt */}
-      <div className="rounded-lg border bg-gray-50 dark:bg-gray-900/40 p-4">
-        <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">Operator Summary</div>
+      <div className="rounded-lg border bg-gray-50 dark:bg-gray-90o0/40 p-4">
+        <div className="text-xs text-gray-60o0 dark:text-gray-40o0 mb-1">Operator Summary</div>
         <ul className="list-disc pl-5 text-sm">
           {operatorSummary.map((line, idx) => (
             <li key={idx}>{line}</li>
@@ -93,48 +93,48 @@ export default function KpiDashboard({ admin = false }: KpiDashboardProps) {
 
       {/* Marketplace */}
       <div>
-        <SectionHeader title="Marketplace Metrics" color="#3b82f6" />
+        <SectionHeader title="Marketplace Metrics" color="#3b82f6"  />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <MetricCard title="Jobs posted (24h)" value={metrics?.marketplace[0]?.value ?? '—'} color="blue" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.marketplace?.[0] ?? []).slice(-14)} color="#3b82f6" />} />
-          <MetricCard title="Jobs posted (7d)" value={metrics?.marketplace[1]?.value ?? '—'} color="blue" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.marketplace?.[1] ?? []).slice(-14)} color="#60a5fa" />} />
-          <MetricCard title="Jobs posted (total)" value={metrics?.marketplace[2]?.value ?? '—'} color="blue" />
-          <MetricCard title="Talent onboarded" value={metrics?.marketplace[3]?.value ?? '—'} color="blue" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.marketplace?.[3] ?? []).slice(-14)} color="#60a5fa" />} />
-          <MetricCard title="Proposal conversions" value={metrics?.marketplace[4]?.value ?? '—'} color="blue" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.marketplace?.[4] ?? []).slice(-14)} color="#3b82f6" />} />
-          <MetricCard title="Job fill rate" value={`${metrics?.marketplace[5]?.value ?? '—'}%`} color="blue" rightAdornment={<RadialChart labels={["Filled","Open","Other"]} data={[metrics?.marketplace[5]?.value ?? 0, 100 - (metrics?.marketplace[5]?.value ?? 0), 0]} colors={["#3b82f6","#dbeafe","#93c5fd"]} />} />
+          <MetricCard title="Jobs posted (24h)" value={metrics?.marketplace[0]?.value ?? '—'} color="blue" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.marketplace?.[0] ?? []).slice(-14)} color="#3b82f6"  />} />
+          <MetricCard title="Jobs posted (7d)" value={metrics?.marketplace[1]?.value ?? '—'} color="blue" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.marketplace?.[1] ?? []).slice(-14)} color="#60a5fa"  />} />
+          <MetricCard title="Jobs posted (total)" value={metrics?.marketplace[2]?.value ?? '—'} color="blue"  />
+          <MetricCard title="Talent onboarded" value={metrics?.marketplace[3]?.value ?? '—'} color="blue" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.marketplace?.[3] ?? []).slice(-14)} color="#60a5fa"  />} />
+          <MetricCard title="Proposal conversions" value={metrics?.marketplace[4]?.value ?? '—'} color="blue" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.marketplace?.[4] ?? []).slice(-14)} color="#3b82f6"  />} />
+          <MetricCard title="Job fill rate" value={`${metrics?.marketplace[5]?.value ?? '—'}%`} color="blue" rightAdornment={<RadialChart labels={["Filled","Open","Other"]} data={[metrics?.marketplace[5]?.value ?? 0, 10o0 - (metrics?.marketplace[5]?.value ?? 0), 0]} colors={["#3b82f6","#dbeafe","#93c5fd"]}  />} />
         </div>
       </div>
 
       {/* DAO */}
       <div>
-        <SectionHeader title="DAO Metrics" color="#ef4444" />
+        <SectionHeader title="DAO Metrics" color="#ef4444"  />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <MetricCard title="Proposals created" value={metrics?.dao[0]?.value ?? '—'} color="rose" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.dao?.[0] ?? []).slice(-14)} color="#f87171" />} />
-          <MetricCard title="Voter participation" value={`${metrics?.dao[1]?.value ?? '—'}%`} color="rose" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.dao?.[1] ?? []).slice(-14)} color="#ef4444" />} />
+          <MetricCard title="Proposals created" value={metrics?.dao[0]?.value ?? '—'} color="rose" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.dao?.[0] ?? []).slice(-14)} color="#f87171"  />} />
+          <MetricCard title="Voter participation" value={`${metrics?.dao[1]?.value ?? '—'}%`} color="rose" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.dao?.[1] ?? []).slice(-14)} color="#ef4444"  />} />
           <div className="sm:col-span-2">
             <Heatmap rows={7} cols={24} data={Array.from({ length: 7 * 24 }, (_, i) => ({ value: (metrics?.dao[2]?.value ?? 0) * Math.random() }))} title="Delegate activity heatmap (7d x 24h)" />
           </div>
-          <MetricCard title="Region quorum (regions above)" value={metrics?.dao[3]?.value ?? '—'} color="rose" />
+          <MetricCard title="Region quorum (regions above)" value={metrics?.dao[3]?.value ?? '—'} color="rose"  />
         </div>
       </div>
 
       {/* Token */}
       <div>
-        <SectionHeader title="Token Metrics (ZION$)" color="#10b981" />
+        <SectionHeader title="Token Metrics (ZION$)" color="#10b981"  />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <MetricCard title="Circulating supply" value={(metrics?.token[0]?.value ?? '—').toLocaleString?.() ?? metrics?.token[0]?.value ?? '—'} color="green" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.token?.[0] ?? []).slice(-14)} color="#10b981" />} />
-          <MetricCard title="Active wallets" value={(metrics?.token[1]?.value ?? '—').toLocaleString?.() ?? metrics?.token[1]?.value ?? '—'} color="green" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.token?.[1] ?? []).slice(-14)} color="#34d399" />} />
-          <MetricCard title="Tx volume (daily)" value={(metrics?.token[2]?.value ?? '—').toLocaleString?.() ?? metrics?.token[2]?.value ?? '—'} color="green" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.token?.[2] ?? []).slice(-14)} color="#34d399" />} />
-          <MetricCard title="Treasury health (USD)" value={(metrics?.token[3]?.value ?? '—').toLocaleString?.() ?? metrics?.token[3]?.value ?? '—'} color="green" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.token?.[3] ?? []).slice(-14)} color="#10b981" />} />
-          <MetricCard title="Top earners / contributors" value={metrics?.token[4]?.value ?? '—'} color="green" />
+          <MetricCard title="Circulating supply" value={(metrics?.token[0]?.value ?? '—').toLocaleString?.() ?? metrics?.token[0]?.value ?? '—'} color="green" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.token?.[0] ?? []).slice(-14)} color="#10b981"  />} />
+          <MetricCard title="Active wallets" value={(metrics?.token[1]?.value ?? '—').toLocaleString?.() ?? metrics?.token[1]?.value ?? '—'} color="green" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.token?.[1] ?? []).slice(-14)} color="#34d399"  />} />
+          <MetricCard title="Tx volume (daily)" value={(metrics?.token[2]?.value ?? '—').toLocaleString?.() ?? metrics?.token[2]?.value ?? '—'} color="green" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.token?.[2] ?? []).slice(-14)} color="#34d399"  />} />
+          <MetricCard title="Treasury health (USD)" value={(metrics?.token[3]?.value ?? '—').toLocaleString?.() ?? metrics?.token[3]?.value ?? '—'} color="green" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.token?.[3] ?? []).slice(-14)} color="#10b981"  />} />
+          <MetricCard title="Top earners / contributors" value={metrics?.token[4]?.value ?? '—'} color="green"  />
         </div>
       </div>
 
       {/* Multiverse */}
       <div>
-        <SectionHeader title="Multiverse Metrics" color="#8b5cf6" />
+        <SectionHeader title="Multiverse Metrics" color="#8b5cf6"  />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <MetricCard title="Active sub-instances" value={metrics?.multiverse[0]?.value ?? '—'} color="purple" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.multiverse?.[0] ?? []).slice(-14)} color="#8b5cf6" />} />
-          <MetricCard title="Top 5 by user growth (sum)" value={metrics?.multiverse[2]?.value ?? '—'} color="purple" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.multiverse?.[2] ?? []).slice(-14)} color="#a78bfa" />} />
+          <MetricCard title="Active sub-instances" value={metrics?.multiverse[0]?.value ?? '—'} color="purple" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.multiverse?.[0] ?? []).slice(-14)} color="#8b5cf6"  />} />
+          <MetricCard title="Top 5 by user growth (sum)" value={metrics?.multiverse[2]?.value ?? '—'} color="purple" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.multiverse?.[2] ?? []).slice(-14)} color="#a78bfa"  />} />
           <div className="lg:col-span-2">
             <MapOverlay data={[
               { region: 'NA', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.25) },
@@ -142,9 +142,9 @@ export default function KpiDashboard({ admin = false }: KpiDashboardProps) {
               { region: 'APAC', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.30) },
               { region: 'LATAM', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.13) },
               { region: 'AFR', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.10) },
-            ]} />
+            ]}  />
           </div>
-          <MetricCard title="Cross-instance token movement" value={(metrics?.multiverse[3]?.value ?? '—').toLocaleString?.() ?? metrics?.multiverse[3]?.value ?? '—'} color="purple" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.multiverse?.[3] ?? []).slice(-14)} color="#8b5cf6" />} />
+          <MetricCard title="Cross-instance token movement" value={(metrics?.multiverse[3]?.value ?? '—').toLocaleString?.() ?? metrics?.multiverse[3]?.value ?? '—'} color="purple" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.multiverse?.[3] ?? []).slice(-14)} color="#8b5cf6"  />} />
         </div>
       </div>
 
@@ -154,7 +154,7 @@ export default function KpiDashboard({ admin = false }: KpiDashboardProps) {
           <div className="font-medium mb-2">Quarter-over-Quarter</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {metrics.compare.prevQuarter.marketplace.slice(0, 3).map((m: any) => (
-              <MetricCard key={m.key} title={`Prev: ${m.label}`} value={m.value} color="gray" />
+              <MetricCard key={m.key} title={`Prev: ${m.label}`} value={m.value} color="gray"  />
             ))}
           </div>
         </div>

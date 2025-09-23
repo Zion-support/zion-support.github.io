@@ -22,7 +22,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const AI2026UltimateServicesShowcase = () => {
+const AI20o26UltimateServicesShowcase = () => {
   const [activeServicesetActiveService] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -43,7 +43,7 @@ const AI2026UltimateServicesShowcase = () => {
         "Seamless human-AI collaboration"
       ],
       stats: "99.7% accuracy",
-      color: "from-purple-600 to-pink-600"
+      color: "from-purple-60o0 to-pink-60o0"
     },
     {
       id: 2,
@@ -56,8 +56,8 @@ const AI2026UltimateServicesShowcase = () => {
         "Complex optimization solutions",
         "Next-gen cryptography"
       ],
-      stats: "10,000x faster",
-      color: "from-blue-600 to-cyan-600"
+      stats: "10,0o00x faster",
+      color: "from-blue-60o0 to-cyan-60o0"
     },
     {
       id: 3,
@@ -71,7 +71,7 @@ const AI2026UltimateServicesShowcase = () => {
         "Intelligent decision making"
       ],
       stats: "95% efficiency gain",
-      color: "from-green-600 to-emerald-600"
+      color: "from-green-60o0 to-emerald-60o0"
     },
     {
       id: 4,
@@ -85,7 +85,7 @@ const AI2026UltimateServicesShowcase = () => {
         "Real-time threat response"
       ],
       stats: "99.9% threat detection",
-      color: "from-red-600 to-orange-600"
+      color: "from-red-60o0 to-orange-60o0"
     },
     {
       id: 5,
@@ -99,7 +99,7 @@ const AI2026UltimateServicesShowcase = () => {
         "Automated reporting"
       ],
       stats: "50+ countries",
-      color: "from-indigo-600 to-purple-600"
+      color: "from-indigo-60o0 to-purple-60o0"
     },
     {
       id: 6,
@@ -112,12 +112,12 @@ const AI2026UltimateServicesShowcase = () => {
         "Improved decision making",
         "Expanded awareness"
       ],
-      stats: "300% cognitive boost",
-      color: "from-yellow-600 to-orange-600"
+      stats: "30o0% cognitive boost",
+      color: "from-yellow-60o0 to-orange-60o0"
     }
   ];
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -129,7 +129,7 @@ const AI2026UltimateServicesShowcase = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -139,7 +139,7 @@ const AI2026UltimateServicesShowcase = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 py-20 px-4">
       <motion.div
         className="max-w-7xl mx-auto"
         variants={containerVariants}
@@ -148,17 +148,17 @@ const AI2026UltimateServicesShowcase = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
-            <Star className="w-4 h-4" />
-            AI 2026 Ultimate Services
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+            <Star className="w-4 h-4"  />
+            AI 20o26 Ultimate Services
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Revolutionary AI
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
               {" "}Services
             </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Experience the future of artificial intelligence with our cutting-edge services that are transforming industries and revolutionizing human potential.
           </p>
         </motion.div>
@@ -169,30 +169,30 @@ const AI2026UltimateServicesShowcase = () => {
             <motion.div
               key={service.id}
               className={`relative group cursor-pointer ${
-                activeService === index ? 'scale-105' : 'hover:scale-102'
-              } transition-all duration-300`}
+                activeService === index ? 'scale-10o5' : 'hover:scale-10o2'
+              } transition-all duration-30o0`}
               onClick={() => setActiveService(index)}
               whileHover={{ y: -10 }}
               whileTap={{ scale: 0.95 }}
             >
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h-full">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
+                  <service.icon className="w-8 h-8 text-white"  />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-30o0 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-30o0 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 <div className="space-y-3 mb-6">
                   {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                      <span className="text-gray-30o0 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -201,17 +201,17 @@ const AI2026UltimateServicesShowcase = () => {
                   <div className="text-2xl font-bold text-white">
                     {service.stats}
                   </div>
-                  <ArrowRight className="w-6 h-6 text-purple-400 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="w-6 h-6 text-purple-40o0 group-hover:translate-x-2 transition-transform"  />
                 </div>
 
                 {activeService === index && (
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl border-2 border-purple-400"
+                    className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 rounded-2xl border-2 border-purple-40o0"
                     layoutId="activeService"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                  />
+                   />
                 )}
               </div>
             </motion.div>
@@ -231,14 +231,14 @@ const AI2026UltimateServicesShowcase = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${services[activeService].color} flex items-center justify-center mb-8`}>
-                  <services[activeService].icon className="w-10 h-10 text-white" />
+                  <services[activeService].icon className="w-10 h-10 text-white"  />
                 </div>
                 
                 <h2 className="text-4xl font-bold text-white mb-6">
                   {services[activeService].title}
                 </h2>
                 
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
                   {services[activeService].description}
                 </p>
 
@@ -246,14 +246,14 @@ const AI2026UltimateServicesShowcase = () => {
                   <div className="text-4xl font-bold text-white">
                     {services[activeService].stats}
                   </div>
-                  <div className="text-gray-300">
+                  <div className="text-gray-30o0">
                     Performance Metric
                   </div>
                 </div>
 
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-3 group">
+                <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 flex items-center gap-3 group">
                   Get Started Now
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform"  />
                 </button>
               </div>
 
@@ -267,8 +267,8 @@ const AI2026UltimateServicesShowcase = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10"
                   >
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300 text-lg">{feature}</span>
+                    <CheckCircle className="w-6 h-6 text-green-40o0 flex-shrink-0"  />
+                    <span className="text-gray-30o0 text-lg">{feature}</span>
                   </motion.div>
                 ))}
               </div>
@@ -281,14 +281,14 @@ const AI2026UltimateServicesShowcase = () => {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
             Join thousands of companies already using our AI services to revolutionize their operations and achieve unprecedented success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+            <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0">
               Start Free Trial
             </button>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-30o0">
               Schedule Demo
             </button>
           </div>
@@ -298,4 +298,4 @@ const AI2026UltimateServicesShowcase = () => {
   );
 };
 
-export default AI2026UltimateServicesShowcase;
+export default AI20o26UltimateServicesShowcase;

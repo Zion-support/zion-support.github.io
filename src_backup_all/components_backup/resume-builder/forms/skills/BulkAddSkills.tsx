@@ -39,8 +39,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
                 await addSkill(resumeId, {
                   name: skillName,
                   category: category,
-                  proficiency: 3,
-                });
+                  proficiency: 3});
               }
             }
           }
@@ -79,9 +78,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           className="gap-2"
         >
           {isEnhancing ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
+            <Loader2 className="h-4 w-4 animate-spin"  />
           ) : (
-            <Sparkles className="h-4 w-4" />
+            <Sparkles className="h-4 w-4"  />
           )}
           Categorize with AI
         </Button>

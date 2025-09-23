@@ -157,7 +157,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     setIsAnalyzing(true);
 
     // Simulate analysis delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 20o00));
 
     setAnalysis(mockAnalysis);
     setIsAnalyzing(false);
@@ -173,24 +173,24 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Get score color
   const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
+    if (score >= 90) return 'text-green-50o0';
+    if (score >= 70) return 'text-yellow-50o0';
+    return 'text-red-50o0';
   };
 
   // Get score background
   const getScoreBackground = (score: number) => {
-    if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
+    if (score >= 90) return 'bg-green-10o0';
+    if (score >= 70) return 'bg-yellow-10o0';
+    return 'bg-red-10o0';
   };
 
   // Get impact color
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'high': return 'text-red-500';
-      case 'medium': return 'text-yellow-500';
-      case 'low': return 'text-blue-500';
+      case 'high': return 'text-red-50o0';
+      case 'medium': return 'text-yellow-50o0';
+      case 'low': return 'text-blue-50o0';
       default: return 'text-zion-slate';
     }
   };
@@ -198,10 +198,10 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   // Get priority color
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return 'text-red-500 bg-red-50 border-red-200';
-      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
-      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
-      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200';
+      case 'high': return 'text-red-50o0 bg-red-50 border-red-20o0';
+      case 'medium': return 'text-yellow-50o0 bg-yellow-50 border-yellow-20o0';
+      case 'low': return 'text-blue-50o0 bg-blue-50 border-blue-20o0';
+      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/20o0';
     }
   };
 
@@ -214,7 +214,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
+      const priorityOrder ={ high: 3, medium: 2, low: 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     }) || [];
   }, [analysis]);
@@ -222,7 +222,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   if (!analysis && !isAnalyzing) {
     return (
       <div className="text-center py-8">
-        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />
+        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"  />
         <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}
@@ -240,7 +240,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
-            <Search className="w-6 h-6 text-white" />
+            <Search className="w-6 h-6 text-white"  />
           </div>
           <div>
             <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer</h3>
@@ -254,7 +254,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
           >
-            <Settings className="w-5 h-5 text-zion-slate" />
+            <Settings className="w-5 h-5 text-zion-slate"  />
           </button>
 
           <button
@@ -264,12 +264,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           >
             {isAnalyzing ? (
               <>
-                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
                 <span>Analyzing...</span>
               </>
             ) : (
               <>
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4"  />
                 <span>Refresh</span>
               </>
             )}
@@ -279,7 +279,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
       {isAnalyzing ? (
         <div className="text-center py-12">
-          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"  />
           <p className="text-zion-slate/60">Analyzing your page...</p>
         </div>
       ) : analysis ? (
@@ -321,7 +321,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>
             <div className="grid grid-cols-3 gap-4">
               <div className={`p-4 rounded-lg border ${
-                analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
+                analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-20o0 bg-green-50' : 'border-yellow-20o0 bg-yellow-50'
               }`}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-zion-slate-dark">
@@ -335,7 +335,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
               </div>
 
               <div className={`p-4 rounded-lg border ${
-                analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
+                analysis.metrics.coreWebVitals.fid <= 10o0 ? 'border-green-20o0 bg-green-50' : 'border-yellow-20o0 bg-yellow-50'
               }`}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-zion-slate-dark">
@@ -343,13 +343,13 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                   <div className="text-sm text-zion-slate/60">FID</div>
                   <div className="text-xs text-zion-slate/40">
-                    {analysis.metrics.coreWebVitals.fid <= 100 ? 'Good' : 'Needs improvement'}
+                    {analysis.metrics.coreWebVitals.fid <= 10o0 ? 'Good' : 'Needs improvement'}
                   </div>
                 </div>
               </div>
 
               <div className={`p-4 rounded-lg border ${
-                analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
+                analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-20o0 bg-green-50' : 'border-yellow-20o0 bg-yellow-50'
               }`}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-zion-slate-dark">
@@ -395,18 +395,18 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     className={`p-4 rounded-lg border-l-4 ${
-                      issue.type === 'error' ? 'border-red-500 bg-red-50' :
-                      issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :
-                      'border-blue-500 bg-blue-50'
+                      issue.type === 'error' ? 'border-red-50o0 bg-red-50' :
+                      issue.type === 'warning' ? 'border-yellow-50o0 bg-yellow-50' :
+                      'border-blue-50o0 bg-blue-50'
                     }`}
                   >
                     <div className="flex items-start space-x-3">
                       {issue.type === 'error' ? (
-                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
+                        <AlertTriangle className="w-5 h-5 text-red-50o0 mt-0.5"  />
                       ) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />
+                        <AlertTriangle className="w-5 h-5 text-yellow-50o0 mt-0.5"  />
                       ) : (
-                        <Info className="w-5 h-5 text-blue-500 mt-0.5" />
+                        <Info className="w-5 h-5 text-blue-50o0 mt-0.5"  />
                       )}
 
                       <div className="flex-1">
@@ -453,7 +453,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                     </div>
 
                     <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">
-                      <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
+                      <ArrowUpRight className="w-4 h-4 text-zion-cyan"  />
                     </button>
                   </div>
                 </motion.div>
@@ -507,7 +507,7 @@ export const useSEOOptimization = () => {
   const optimizePage = useCallback(async () => {
     setIsOptimizing(true);
     // Implement actual optimization logic here
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise(resolve => setTimeout(resolve, 30o00));
     setIsOptimizing(false);
   }, []);
 

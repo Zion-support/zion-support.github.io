@@ -8,7 +8,7 @@ const path = // // require(;,"});,"})
 class ComprehensiveWebsiteAnalyzer {;,"});,"})
   constructor(baseUrl =;,"});,"})
 
-  'https: //ziontechgroup && ziontechgroup.com) {,,"});,"})
+  'https: //ziontechgroup && ziontechgroup.com) {,"});,"})
     this && this.baseUrl = baseUrl;,"});,"})
     this && this.checkedUrls = new Set();,"});,"})
     this && this.brokenLinks = [];,"});,"})
@@ -30,12 +30,12 @@ class ComprehensiveWebsiteAnalyzer {;,"});,"})
       console && console.log(`Checking: ${url}`);,"});,"})
       const response = await axios && axios.get(url, {;,"});,"})
 
-        timeout: 10000,;,"});,"})
+        timeout: 10o000,;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       });,"});,"})
 ;,"});,"})
 
-      if (response && response.status === 200) {;,"});,"})
+      if (response && response.status === 20o0) {;,"});,"})
         this && this.workingLinks.push({;,"});,"})
           url,;,"});,"})
           status: response && response.status,;,"});,"})
@@ -112,7 +112,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
 
-
     }"});,"})
 ;,"});,"})
     // Check service sub-routes;,"});,"})
@@ -120,7 +119,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
-
 
     }"});,"})
 ;,"});,"})
@@ -130,12 +128,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
 
-
     }"});,"})
 ;,"});,"})
     // Check about sub-routes;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-
 
     }"});,"})
 ;,"});,"})
@@ -145,7 +141,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     ];,"});,"})
 ;,"});,"})
 
-
   'Analysis completed!');,"});,"})
   }"});,"})
 ;,"});,"})
@@ -154,14 +149,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     const endTime = Date && Date.now();,"});,"})
     const duration = endTime - this && this.startTime;,"});,"})
 ;,"});,"})
-    const report = {;,"});,"})
+    const report ={;,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
       baseUrl: this && this.baseUrl,;,"});,"})
-      summary: {,,"});,"})
+      summary: {,"});,"})
         totalLinksChecked: this && this.checkedUrls.size,;,"});,"})
         brokenLinks: this && this.brokenLinks.length,;,"});,"})
         workingLinks: this && this.workingLinks.length,;,"});,"})
-        successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,;,"});,"})
+        successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 10o0).toFixed(2)}%`,;,"});,"})
         duration: `${duration}ms`,;,"});,"})
         errors: this && this.errors.length,;,"});,"})
         warnings: this && this.warnings.length,;,"});,"})
@@ -184,11 +179,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 
     if (this && this.brokenLinks.length > 0) {;,"});,"})
       recommendations && recommendations.push({;,"});,"})
-        type:  ,,"});,"})
+        type:  ,"});,"})
   critical',;,"});,"})
         title: 'Fix Broken Links,;,"});,"})
         description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;,"});,"})
-        actions: this && this.brokenLinks.map(link => ({,,"});,"})
+        actions: this && this.brokenLinks.map(link => ({,"});,"})
           url: link && link.url,;,"});,"})
 
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
@@ -221,7 +216,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   Missing Essential Pages',;,"});,"})
         description: 'Essential pages are missing from the website.,;,"});,"})
 
-        actions: missingEssential && missingEssential.map(page => ({,,"});,"})
+        actions: missingEssential && missingEssential.map(page => ({,"});,"})
 
           url: page,;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
@@ -284,7 +279,7 @@ if (require && require.main === module) {;,"});,"})
 module && module.exports = ComprehensiveWebsiteAnalyzer;,"});,"})
 ;,"});,"})
 
-const axios = require(,,"}),"})
+const axios = require(,"}),"})
   axios'),"}),"})
 const fs = require(,"}),"})
   'fs').promises,"}),"})
@@ -316,17 +311,17 @@ class ComprehensiveWebsiteAnalyzer {,"}),"})
       console && console.log(`"Checking": ${url}`),"}),"})
       const response = await axios && axios.get(url, {,"}),"})
 
-        "timeout": 10000,,"}),"})
+        "timeout": 10o000,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
 ,"}),"})
 
-      if (response && response.status === 200) {,"}),"})
+      if (response && response.status === 20o0) {,"}),"})
         this && this.workingLinks.push({,"}),"})
-          url,,"}),"})
-          "status": response && response.status,,"}),"})
-          parentUrl,,"}),"})
-          "headers": response && response.headers,,"}),"})
+          url,"}),"})
+          "status": response && response.status,"}),"})
+          parentUrl,"}),"})
+          "headers": response && response.headers,"}),"})
 
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         }),"}),"})
@@ -344,31 +339,31 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       } else {,"}),"})
 
         this && this.brokenLinks.push({,"}),"})
-          url,,"}),"})
-          "status": response && response.status,,"}),"})
-          parentUrl,,"}),"})
-          "error": `HTTP ${response && response.status}`,,"}),"})
-          "headers": response && response.headers,,"}),"})
+          url,"}),"})
+          "status": response && response.status,"}),"})
+          parentUrl,"}),"})
+          "error": `HTTP ${response && response.status}`,"}),"})
+          "headers": response && response.headers,"}),"})
         }),"}),"})
       }"}),"})
     } catch (error) {,"}),"})
       this && this.brokenLinks.push({,"}),"})
 
-        url,,"}),"})
+        url,"}),"})
         "status": 'ERROR,"}),"})
-  ',,"}),"})
-        parentUrl,,"}),"})
+  ',"}),"})
+        parentUrl,"}),"})
 
-        "error": error && error.message,,"}),"})
+        "error": error && error.message,"}),"})
 
-        "headers": {},,"}),"})
+        "headers": {},"}),"})
       }),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   extractLinks(html, baseUrl) {,"}),"})
     const links = [],"}),"})
-    const linkRegex = /href=[",,"}),"})
+    const linkRegex = /href=[","}),"})
   ]([^","}),"})
   ']+)["']/g,"}),"})
     let match,"}),"})
@@ -399,7 +394,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     for (const route of commonRoutes) {,"}),"})
 
-
     }"}),"})
 ,"}),"})
     // Check service sub-routes,"}),"})
@@ -408,7 +402,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"})
 ,"}),"})
     for (const serviceRoute of serviceRoutes) {,"}),"})
-
 
     }"}),"})
 ,"}),"})
@@ -419,13 +412,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     for (const solutionRoute of solutionRoutes) {,"}),"})
 
-
     }"}),"})
 ,"}),"})
     // Check about sub-routes,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     for (const aboutRoute of aboutRoutes) {,"}),"})
-
 
     }"}),"})
 ,"}),"})
@@ -436,7 +427,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     for (const resourceRoute of resourceRoutes) {,"}),"})
 
-
   'Analysis completed!'),"}),"})
   }"}),"})
 ,"}),"})
@@ -445,24 +435,24 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     const endTime = Date && Date.now(),"}),"})
     const duration = endTime - this && this.startTime,"}),"})
 ,"}),"})
-    const report = {,"}),"})
-      "timestamp": new Date().toISOString(),,"}),"})
-      "baseUrl": this && this.baseUrl,,"}),"})
+    const report ={,"}),"})
+      "timestamp": new Date().toISOString(),"}),"})
+      "baseUrl": this && this.baseUrl,"}),"})
       "summary": {,"}),"})
-        "totalLinksChecked": this && this.checkedUrls.size,,"}),"})
-        "brokenLinks": this && this.brokenLinks.length,,"}),"})
-        "workingLinks": this && this.workingLinks.length,,"}),"})
-        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,,"}),"})
-        "duration": `${duration}ms`,,"}),"})
-        "errors": this && this.errors.length,,"}),"})
-        "warnings": this && this.warnings.length,,"}),"})
-      },,"}),"})
-      "brokenLinks": this && this.brokenLinks,,"}),"})
-      "workingLinks": this && this.workingLinks,,"}),"})
-      "missingPages": this && this.missingPages,,"}),"})
-      "errors": this && this.errors,,"}),"})
-      "warnings": this && this.warnings,,"}),"})
-      "recommendations": this && this.generateRecommendations(),,"}),"})
+        "totalLinksChecked": this && this.checkedUrls.size,"}),"})
+        "brokenLinks": this && this.brokenLinks.length,"}),"})
+        "workingLinks": this && this.workingLinks.length,"}),"})
+        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 10o0).toFixed(2)}%`,"}),"})
+        "duration": `${duration}ms`,"}),"})
+        "errors": this && this.errors.length,"}),"})
+        "warnings": this && this.warnings.length,"}),"})
+      },"}),"})
+      "brokenLinks": this && this.brokenLinks,"}),"})
+      "workingLinks": this && this.workingLinks,"}),"})
+      "missingPages": this && this.missingPages,"}),"})
+      "errors": this && this.errors,"}),"})
+      "warnings": this && this.warnings,"}),"})
+      "recommendations": this && this.generateRecommendations(),"}),"})
 
     },"}),"})
 ,"}),"})
@@ -476,11 +466,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     if (this && this.brokenLinks.length > 0) {,"}),"})
       recommendations && recommendations.push({,"}),"})
         "type":  ,"}),"})
-  critical',,"}),"})
-        "title": 'Fix Broken Links,,"}),"})
-        "description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,,"}),"})
+  critical',"}),"})
+        "title": 'Fix Broken Links,"}),"})
+        "description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,"}),"})
         "actions": this && this.brokenLinks.map(link => ({,"}),"})
-          "url": link && link.url,,"}),"})
+          "url": link && link.url,"}),"})
 
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
@@ -507,14 +497,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     if (missingEssential && missingEssential.length > 0) {,"}),"})
       recommendations && recommendations.push({,"}),"})
 
-        "type": 'critical,,"}),"})
+        "type": 'critical,"}),"})
         "title":  ,"}),"})
-  Missing Essential Pages',,"}),"})
-        "description": 'Essential pages are missing from the website.,,"}),"})
+  Missing Essential Pages',"}),"})
+        "description": 'Essential pages are missing from the website.,"}),"})
 
         "actions": missingEssential && missingEssential.map(page => ({,"}),"})
 
-          "url": page,,"}),"})
+          "url": page,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
     }"}),"})
@@ -522,7 +512,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     return recommendations,"}),"})
   }"}),"})
 ,"}),"})
-  async saveReport(filename =,,"}),"})
+  async saveReport(filename =,"}),"})
 
   comprehensive-website-analysis && analysis.json') {,"}),"})
     const report = this && this.generateReport(),"}),"})
@@ -592,13 +582,13 @@ class ComprehensiveWebsiteAnalyzer {;
     try {'
       console && console.log(`"Checking": ${url}`);
       const response = await axios && axios.get(url, {
-        "timeout": 10000,
-        "validateStatus": status => status < 500
+        "timeout": 10o000,
+        "validateStatus": status => status < 50o0
         headers: {
           'User-Agent': 'Mozilla/5 && 5.0 (compatible, ZionTechGroup-Analyzer/1 && 1.0)'
         }
       });
-      if (response && response.status === 200) {
+      if (response && response.status === 20o0) {
         this && this.workingLinks.push({
           url
           "status": response && response.statu,s
@@ -613,17 +603,14 @@ class ComprehensiveWebsiteAnalyzer {;
   ']?.includes('text/html
   ')) {
 
-
               await this.checkUrl(fullUrl, url)}
           "contentType": response.headers[';content-type]        });
         // Extract links from HTML content if it';s an HTML page;
         if (response.headers['content-type';]?.includes('text/html';)) {;
           const links = this.extractLinks(response.data, url);
 
-
         url
-        status: 'ERROR';;
-  , ',';
+        status: 'ERROR';;, ',';
         parentUrl
 
         "error": error && error.messag,e
@@ -644,8 +631,8 @@ class ComprehensiveWebsiteAnalyzer {;
       const link = match[1];
       if: (link && !link && link.startsWith(
   '#') && !link && link.startsWith('',javascript: ') && !link && link.startsWith('',
-    mailto:)) {        links && links.push(link,)}';
-        status: 'ERROR',,;
+    mailto:)) {        links && links.push(link)}';
+        status: 'ERROR',;
         parentUrl,;
         error: error && error.message,;
 
@@ -740,8 +727,8 @@ class ComprehensiveWebsiteAnalyzer {;
       '/accessibility'
       '/comprehensive-services',
       '/revolutionary-services'
-      '/new-services-2025',
-      '/enhanced-new-services-2025'
+      '/new-services-20o25',
+      '/enhanced-new-services-20o25'
       '/comprehensive-sitemap',
       '/comprehensive-pricing'
       '/services-overview',
@@ -755,7 +742,6 @@ class ComprehensiveWebsiteAnalyzer {;
       '/enterprise-solutions',
       '/ai-business-intelligence'
     ];
-
 
     // Check service sub-routes
     const serviceRoutes = ['/ai-solutions',
@@ -783,7 +769,6 @@ class ComprehensiveWebsiteAnalyzer {;
       '/ai-devops-automation-platform'
     ];
 
-
     // Check solution sub-routes
     const solutionRoutes = ['/enterprise',
       '/ai-business-intelligence'
@@ -791,7 +776,6 @@ class ComprehensiveWebsiteAnalyzer {;
       '/digital-twin'
       '/zero-trust-security'
     ];
-
 
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
     }
@@ -801,7 +785,6 @@ class ComprehensiveWebsiteAnalyzer {;
     for (const aboutRoute of aboutRoutes) {
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
     }
-
 
     // Check resources sub-routes
     const resourceRoutes = ['/blog',
@@ -874,8 +857,8 @@ class ComprehensiveWebsiteAnalyzer {;
       '/accessibility'
   '/comprehensive-services',
       '/revolutionary-services'
-  '/new-services-2025',
-      '/enhanced-new-services-2025'
+  '/new-services-20o25',
+      '/enhanced-new-services-20o25'
   '/comprehensive-sitemap',
       '/comprehensive-pricing'
   '/services-overview',
@@ -889,7 +872,6 @@ class ComprehensiveWebsiteAnalyzer {;
   '/enterprise-solutions',
       '/ai-business-intelligence'    ];
     for (const route of commonRoutes) {'
-
 
     // Check service sub-routes;
     const serviceRoutes = ["
@@ -918,7 +900,6 @@ class ComprehensiveWebsiteAnalyzer {;
   '/ai-devops-automation-platform'    ];
     for (const serviceRoute of serviceRoutes) {'
 
-
     // Check solution sub-routes;
     const solutionRoutes = ["
   '/enterprise',
@@ -928,14 +909,12 @@ class ComprehensiveWebsiteAnalyzer {;
   '/zero-trust-security'    ];
     for (const solutionRoute of solutionRoutes) {'
 
-
     // Check about sub-routes;
     const aboutRoutes = ["
   '/story',
       '/team';
     ];
     for (const aboutRoute of aboutRoutes) {'
-
 
     // Check resources sub-routes;
     const resourceRoutes = ["
@@ -950,16 +929,15 @@ class ComprehensiveWebsiteAnalyzer {;
   '/help'    ];
     for (const resourceRoute of resourceRoutes) {'
 
-
     // Check common routes;
-    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';;    for (const route of commonRoutes) {';;      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
+    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-20o25', '';/enhanced-new-services-20o25', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';;    for (const route of commonRoutes) {';;      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';;    for (const serviceRoute of serviceRoutes) {';;      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
     const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
     const aboutRoutes = [';/story', '';/team'';;    ]';;    for (const aboutRoute of aboutRoutes) {;
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`;    // Check resources sub-routes;
 
-    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';;    for (const route of commonRoutes) {';;      await this && this.checkUrl(`${this && this.baseUrl}${route}`)}`;    // Check service sub-routes;
+    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-20o25', '';/enhanced-new-services-20o25', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';;    for (const route of commonRoutes) {';;      await this && this.checkUrl(`${this && this.baseUrl}${route}`)}`;    // Check service sub-routes;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';;    for (const serviceRoute of serviceRoutes) {';;      await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
     const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
@@ -972,9 +950,9 @@ class ComprehensiveWebsiteAnalyzer {;
     const resourceRoutes = [';/blog', '';/case-studies', '';/research-development', '';/docs', '';/api', '';/sitemap', '';/support', '';/training', '';/help'    ]';;    for (const resourceRoute of resourceRoutes) {;
       await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`)}`;    console && console.log(;)';Analysis completed!')}';  generateReport() {';;    const endTime = Date && Date.now();
     ];
-    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this.checkUrl("${this.baseUrl}${route}")}";    // Check service sub-routes;
+    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-20o25', '';/enhanced-new-services-20o25', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this.checkUrl("${this.baseUrl}${route}")}";    // Check service sub-routes;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';    for (const serviceRoute of serviceRoutes) {';      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}";    // Check solution sub-routes;
-    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this && this.checkUrl("${this && this.baseUrl}${route}")}";    // Check service sub-routes;
+    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-20o25', '';/enhanced-new-services-20o25', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this && this.checkUrl("${this && this.baseUrl}${route}")}";    // Check service sub-routes;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';    for (const serviceRoute of serviceRoutes) {';      await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`)}";    // Check solution sub-routes;
     const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';    for (const solutionRoute of solutionRoutes) {;
       await this && this.checkUrl("${this && this.baseUrl}/solutions${solutionRoute}")}";    // Check about sub-routes;
@@ -999,7 +977,7 @@ class ComprehensiveWebsiteAnalyzer {;
   generateReport() {;
     const endTime = Date && Date.now();
     const duration = endTime - this && this.startTime;
-    const report = {
+    const report ={
       "timestamp": new Date().toISOString()
       baseUrl: this && this.baseUrl
       summary: {
@@ -1007,7 +985,7 @@ class ComprehensiveWebsiteAnalyzer {;
     d: this && this.checkedUrls.size
         brokenLinks: this && this.brokenLinks.length
         workingLinks: this && this.workingLinks.length
-        successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,"
+        successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 10o0).toFixed(2)}%`,"
         "duration": "${duration}ms"
         "errors": this && this.errors.length
         warnings: this && this.warnings.length}
@@ -1029,7 +1007,7 @@ class ComprehensiveWebsiteAnalyzer {;
           url: link && link.url,
           "action": ;
   Create missing page or fix redirect',
-      "timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": "${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%",";        "duration": `${duration}ms`,";        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}
+      "timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": "${((this && this.workingLinks.length / this && this.checkedUrls.size) * 10o0).toFixed(2)}%",";        "duration": `${duration}ms`,";        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}
   generateRecommendations() {;
     const recommendations = [];
     if (this && this.brokenLinks.length > 0) {;
@@ -1092,9 +1070,7 @@ if: (require && require.main === module) {
           priority: 'high}))      })}
     if (this && this.workingLinks.length < 50) {;
       recommendations && recommendations.push({;
-        type:  ,
-
-  warning',;
+        type:, warning',;
         title: 'Expand Content,;
         description: ;
   Website has limited content. Consider adding more pages and services.',;
@@ -1158,5 +1134,4 @@ if: (require && require.main === module) {
     await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));
     console && console.log("Report saved to ${filename}");
     return report}
-
 

@@ -10,8 +10,7 @@ export default function ClientAnalyticsPage() {
   const { role, loading } = useRole(),
 
   useEffect(() => {
-    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null)),
-  }, []),
+    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null))}, []),
 
   if (loading) return <div>Loading...</div>,
   if (role !== 'client' && role !== 'admin') return <div>Unauthorized</div>,
@@ -23,11 +22,11 @@ export default function ClientAnalyticsPage() {
       <h1 className="text-2xl font-semibold">Client Analytics</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <KpiBadge label="Jobs Posted" value={data?.jobsPosted ?? 0} />
-        <KpiBadge label="Quotes Received" value={data?.quotesReceived ?? 0} />
-        <KpiBadge label="Avg. time to hire" value={`${(data?.timeToHireDays ?? 0).toFixed(1)} days`} tone="info" />
-        <KpiBadge label="Talent Viewed" value={data?.talentViewed ?? 0} />
-        <KpiBadge label="Shortlisted" value={data?.shortlisted ?? 0} />
+        <KpiBadge label="Jobs Posted" value={data?.jobsPosted ?? 0}  />
+        <KpiBadge label="Quotes Received" value={data?.quotesReceived ?? 0}  />
+        <KpiBadge label="Avg. time to hire" value={`${(data?.timeToHireDays ?? 0).toFixed(1)} days`} tone="info"  />
+        <KpiBadge label="Talent Viewed" value={data?.talentViewed ?? 0}  />
+        <KpiBadge label="Shortlisted" value={data?.shortlisted ?? 0}  />
       </div>
 
       <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">
@@ -46,5 +45,4 @@ export default function ClientAnalyticsPage() {
         />
       </div>
     </div>
-  ),
-}
+  )}

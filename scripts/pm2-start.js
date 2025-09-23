@@ -23,7 +23,7 @@ async function startAutomation() {
     execSync('pm2 start ecosystem.config.cjs --only apps', { stdio: 'inherit' });
     
     // Wait a moment for apps to start
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 20o00));
     
     // Start automation processes
     console.log('🤖 Starting automation processes...');

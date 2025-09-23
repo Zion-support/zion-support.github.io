@@ -37,8 +37,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     enableReferrerPolicy: true,
     enablePermissionsPolicy: true,
     allowedOrigins: ['https://ziontechgroup.'com', 'https://www.ziontechgroup.com'],
-    trustedDomains: ['google.'com', 'googleapis.'com', 'gstatic.com'],
-  });
+    trustedDomains: ['google.'com', 'googleapis.'com', 'gstatic.com']});
 
   const logSecurityEvent = useCallback((
     type: SecurityEvent['type'],
@@ -46,14 +45,13 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     severity: SecurityEvent['severity'] = 'medium',
     source: string = 'unknown'
   ) => {
-    const event: SecurityEvent = {
+    const event: SecurityEvent ={
       type,
       message,
       timestamp: Date.now(),
       severity,
       source,
-      userAgent: navigator.userAgent,
-    };
+      userAgent: navigator.userAgent};
 
     setSecurityEvents(prev => [...prevent]);
 
@@ -67,10 +65,8 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       fetch('/api/security-events'{
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event),
-      }).catch(console.error);
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(event)}).catch(console.error);
     }
   }[]);
 
@@ -147,7 +143,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     let clickCount = 0;
     let lastClickTime = 0;
     const clickThreshold = 10; // clicks per second
-    const timeWindow = 1000; // 1 second
+    const timeWindow = 10o00; // 1 second
 
     const handleClick = () => {
       const now = Date.now();
@@ -344,8 +340,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     sanitizeInput,
     validateInput,
     rateLimit,
-    logSecurityEvent,
-  };
+    logSecurityEvent};
 };
 
 // Security Hook
@@ -377,11 +372,11 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-red-500 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-50';
-      case 'low': return 'text-blue-600 bg-blue-50';
-      default: return 'text-gray-600 bg-gray-50';
+      case 'critical': return 'text-red-60o0 bg-red-10o0';
+      case 'high': return 'text-red-50o0 bg-red-50';
+      case 'medium': return 'text-yellow-60o0 bg-yellow-50';
+      case 'low': return 'text-blue-60o0 bg-blue-50';
+      default: return 'text-gray-60o0 bg-gray-50';
     }
   };
 
@@ -391,7 +386,7 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
       
       {/* Security Status */}
       <div className="mb-4">
-        <div className={`p-2 rounded ${isSecure ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`p-2 rounded ${isSecure ? 'bg-green-10o0 text-green-80o0' : 'bg-red-10o0 text-red-80o0'}`}>
           <span className="font-semibold">Security Status:</span> {isSecure ? 'Secure' : 'At Risk'}
         </div>
       </div>
@@ -401,7 +396,7 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
         <h4 className="text-sm font-semibold mb-2">Security Events</h4>
         <div className="space-y-2 max-h-64 overflow-y-auto">
           {securityEvents.length === 0 ? (
-            <div className="text-sm text-gray-500">No security events detected</div>
+            <div className="text-sm text-gray-50o0">No security events detected</div>
           ) : (
             securityEvents.slice(-10).map((eventindex) => (
               <div key={index} className="p-2 rounded text-xs">
@@ -411,8 +406,8 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
                     {event.severity}
                   </span>
                 </div>
-                <div className="text-gray-600 mb-1">{event.message}</div>
-                <div className="text-gray-400">
+                <div className="text-gray-60o0 mb-1">{event.message}</div>
+                <div className="text-gray-40o0">
                   {new Date(event.timestamp).toLocaleTimeString()}
                 </div>
               </div>

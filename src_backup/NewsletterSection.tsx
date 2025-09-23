@@ -21,7 +21,7 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
           </p>
           <button
             onClick={() => setIsSubscribed(false)}
-            className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            className="px-6 py-3 bg-white text-blue-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors duration-30o0"
           >
             Subscribe Another Email
           </button>
@@ -31,12 +31,12 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
   }
 
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+    <section className="py-16 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Stay Updated with Zion Tech Group
         </h2>
-        <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
           Get the latest insights on AI trends, technology updates, and industry best practices delivered to your inbox.
         </p>
         
@@ -48,18 +48,18 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
               required
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-90o0 placeholder-gray-50o0 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
             />
             <button
               type="submit"
-              className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap"
+              className="px-8 py-3 bg-white text-blue-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors duration-30o0 whitespace-nowrap"
             >
               Subscribe
             </button>
           </div>
         </form>
         
-        <p className="text-sm text-blue-200 mt-4">
+        <p className="text-sm text-blue-20o0 mt-4">
           We respect your privacy. Unsubscribe at any time.
         </p>
         
@@ -67,31 +67,31 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
           <div>
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"  />
               </svg>
             </div>
             <h3 className="font-semibold mb-2">Weekly Updates</h3>
-            <p className="text-sm text-blue-200">Stay current with industry trends</p>
+            <p className="text-sm text-blue-20o0">Stay current with industry trends</p>
           </div>
           
           <div>
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"  />
               </svg>
             </div>
             <h3 className="font-semibold mb-2">Expert Insights</h3>
-            <p className="text-sm text-blue-200">Learn from our technology experts</p>
+            <p className="text-sm text-blue-20o0">Learn from our technology experts</p>
           </div>
           
           <div>
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0o118 0z"  />
               </svg>
             </div>
             <h3 className="font-semibold mb-2">Early Access</h3>
-            <p className="text-sm text-blue-200">Be first to know about new features</p>
+            <p className="text-sm text-blue-20o0">Be first to know about new features</p>
           </div>
         </div>
       </div>

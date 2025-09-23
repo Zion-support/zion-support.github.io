@@ -1,5 +1,3 @@
-import React from 'react';
-
 export export export default function PrivacyPolicy()   {
   return (
     <div>

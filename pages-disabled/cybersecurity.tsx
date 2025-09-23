@@ -32,10 +32,10 @@ const CybersecurityPage: React.FC = () => {
         "Risk assessment",
         "Compliance review"
       ],
-      pricing: "Starting at $2,500",
+      pricing: "Starting at $2,50o0",
       delivery: "1-3 weeks",
       category: "Assessment",
-      icon: <Shield className="w-8 h-8"  />
+      icon: <Shield className="w-8 h-8"   />
     },
     {
       id: 2,
@@ -48,10 +48,10 @@ const CybersecurityPage: React.FC = () => {
         "Privacy compliance",
         "Data loss prevention"
       ],
-      pricing: "Starting at $3,000",
+      pricing: "Starting at $3,0o00",
       delivery: "2-4 weeks",
       category: "Protection",
-      icon: <Lock className="w-8 h-8"  />
+      icon: <Lock className="w-8 h-8"   />
     },
     {
       id: 3,
@@ -64,10 +64,10 @@ const CybersecurityPage: React.FC = () => {
         "Security analytics",
         "Response automation"
       ],
-      pricing: "Starting at $1,500/month",
+      pricing: "Starting at $1,50o0/month",
       delivery: "Ongoing",
       category: "Monitoring",
-      icon: <Eye className="w-8 h-8"  />
+      icon: <Eye className="w-8 h-8"   />
     },
     {
       id: 4,
@@ -80,10 +80,10 @@ const CybersecurityPage: React.FC = () => {
         "Forensic investigation",
         "Post-incident review"
       ],
-      pricing: "Starting at $5,000",
+      pricing: "Starting at $5,0o00",
       delivery: "Immediate",
       category: "Response",
-      icon: <AlertTriangle className="w-8 h-8"  />
+      icon: <AlertTriangle className="w-8 h-8"   />
     },
     {
       id: 5,
@@ -96,10 +96,10 @@ const CybersecurityPage: React.FC = () => {
         "Audit support",
         "Documentation"
       ],
-      pricing: "Starting at $4,000",
+      pricing: "Starting at $4,0o00",
       delivery: "2-6 weeks",
       category: "Compliance",
-      icon: <Settings className="w-8 h-8"  />
+      icon: <Settings className="w-8 h-8"   />
     },
     {
       id: 6,
@@ -112,16 +112,16 @@ const CybersecurityPage: React.FC = () => {
         "Incident reporting",
         "Regular updates"
       ],
-      pricing: "Starting at $1,000",
+      pricing: "Starting at $1,0o00",
       delivery: "1-2 weeks",
       category: "Training",
-      icon: <Users className="w-8 h-8"  />
+      icon: <Users className="w-8 h-8"   />
     }
   ]
 
   const complianceStandards = [
     { name: "SOC 2", description: "Service Organization Control 2" },
-    { name: "ISO 27001", description: "Information Security Management" },
+    { name: "ISO 270o01", description: "Information Security Management" },
     { name: "HIPAA", description: "Health Insurance Portability" },
     { name: "PCI DSS", description: "Payment Card Industry" },
     { name: "GDPR", description: "General Data Protection Regulation" },
@@ -134,12 +134,12 @@ const CybersecurityPage: React.FC = () => {
         description="Comprehensive cybersecurity services including security assessments, data protection, monitoring, and incident response. Protect your business with our expert security solutions."
         keywords="cybersecurity, security assessment, data protection, threat monitoring, incident response, compliance"
         canonical="https://ziontechgroup.com/cybersecurity"
-       />
+        />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -147,29 +147,29 @@ const CybersecurityPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
-                  Cybersecurity <span className="text-blue-600">Services</span>
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-90o0 mb-6">
+                  Cybersecurity <span className="text-blue-60o0">Services</span>
                 </h1>
-                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">
                   Protect your business with comprehensive cybersecurity solutions including security assessments, data protection, and threat monitoring.
                 </p>
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#services"
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5"  />
+                    <ArrowRight className="w-5 h-5"   />
                     Explore Services
                   </motion.a>
                   <motion.a
                     href="/contact"
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5"  />
+                    <ArrowRight className="w-5 h-5"   />
                     Get Started
                   </motion.a>
                 </div>
@@ -186,10 +186,10 @@ const CybersecurityPage: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">
                   Our Cybersecurity Services
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                   Comprehensive security solutions to protect your business from cyber threats and ensure compliance.
                 </p>
               </motion.div>
@@ -201,49 +201,49 @@ const CybersecurityPage: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-30o0 overflow-hidden"
                   >
                     <div className="p-8">
                       <div className="flex items-center justify-between mb-4">
-                        <div className="text-blue-600">
+                        <div className="text-blue-60o0">
                           {service.icon}
                         </div>
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-medium">
                           {service.category}
                         </span>
                       </div>
                       
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      <h3 className="text-xl font-bold text-gray-90o0 mb-3">
                         {service.title}
                       </h3>
                       
-                      <p className="text-gray-600 mb-6">
+                      <p className="text-gray-60o0 mb-6">
                         {service.description}
                       </p>
                       
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                        <h4 className="font-semibold text-gray-90o0 mb-3">Key Features:</h4>
                         <ul className="space-y-2">
                           {service.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500"  />
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-60o0">
+                              <CheckCircle className="w-4 h-4 text-green-50o0"   />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
                       
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
-                        <span className="font-semibold text-green-600">{service.pricing}</span>
+                      <div className="flex items-center justify-between text-sm text-gray-50o0 mb-6">
+                        <span className="font-semibold text-green-60o0">{service.pricing}</span>
                         <span>{service.delivery}</span>
                       </div>
                       
                       <motion.button
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.0o2 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
+                        className="w-full bg-blue-60o0 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-70o0 transition-colors"
                       >
-                        <ArrowRight className="w-5 h-5"  />
+                        <ArrowRight className="w-5 h-5"   />
                         Learn More
                       </motion.button>
                     </div>
@@ -262,10 +262,10 @@ const CybersecurityPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">
                   Compliance Standards
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                   We help you meet industry standards and regulatory requirements for data security.
                 </p>
               </motion.div>
@@ -277,12 +277,12 @@ const CybersecurityPage: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-30o0 text-center"
                   >
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">
                       {standard.name}
                     </h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-60o0">
                       {standard.description}
                     </p>
                   </motion.div>
@@ -300,30 +300,30 @@ const CybersecurityPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-6">
                   Secure Your Business Today
                 </h2>
-                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">
                   Don't wait for a security breach. Protect your business with our comprehensive cybersecurity solutions.
                 </p>
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5"  />
+                    <ArrowRight className="w-5 h-5"   />
                     Get Started Today
                   </motion.a>
                   <motion.a
-                    href="tel:+13024640950"
-                    whileHover={{ scale: 1.05 }}
+                    href="tel:+130o24640950"
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5"  />
-                    Call Us: +1 302 464 0950
+                    <ArrowRight className="w-5 h-5"   />
+                    Call Us: +1 30o2 464 0950
                   </motion.a>
                 </div>
               </motion.div>

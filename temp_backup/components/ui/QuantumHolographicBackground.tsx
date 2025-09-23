@@ -36,18 +36,18 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
       type: 'quantum' | 'holographic' | 'neural';
     }> = [];
 
-    const colors = {
-      quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'],
-      holographic: ['#ff1493', '#00bfff', '#32cd32', '#ffd700', '#ff4500'],
-      cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff0000', '#8000ff'],
-      neural: ['#00ff00', '#ff00ff', '#ffff00', '#00ffff', '#ff8000'],
-      'quantum-entanglement': ['#ff1493', '#00bfff', '#32cd32', '#ffd700', '#ff4500', '#ff0080', '#00ffff', '#ffff00']
+    const colors ={
+      quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080'],
+      holographic: ['#ff1493', '#0o0bfff', '#32cd32', '#ffd70o0', '#ff450o0'],
+      cyberpunk: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o000', '#80o00ff'],
+      neural: ['#0o0ff0o0', '#ff0o0ff', '#ffff0o0', '#0o0ffff', '#ff80o00'],
+      'quantum-entanglement': ['#ff1493', '#0o0bfff', '#32cd32', '#ffd70o0', '#ff450o0', '#ff0o080', '#0o0ffff', '#ffff0o0']
     };
 
     const currentColors = colors[variant] || colors.quantum;
 
     // Create particles
-    for (let i = 0; i < (intensity === 'high' ? 200 : intensity === 'medium' ? 120 : 80); i++) {
+    for (let i = 0; i < (intensity === 'high' ? 20o0 : intensity === 'medium' ? 120 : 80); i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -86,7 +86,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
               Math.pow(particles[i].y - particles[j].y, 2)
             );
             
-            if (distance < 100) {
+            if (distance < 10o0) {
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
@@ -130,7 +130,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
         for (let i = 0; i < 20; i++) {
           const x = Math.random() * canvas.width;
           const y = Math.random() * canvas.height;
-          ctx.fillText('01', x, y);
+          ctx.fillText('0o1', x, y);
         }
       }
     };
@@ -206,14 +206,14 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
           background: variant === 'quantum-entanglement' 
-            ? 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(20,0,40,0.9) 50%, rgba(0,0,0,1) 100%)'
+            ? 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(20,0,40,0.9) 50%, rgba(0,0,0,1) 10o0%)'
             : variant === 'cyberpunk'
-            ? 'linear-gradient(135deg, #000000 0%, #1a0033 50%, #000000 100%)'
+            ? 'linear-gradient(135deg, #0o00000 0%, #1a0o033 50%, #0o00000 10o0%)'
             : variant === 'neural'
-            ? 'radial-gradient(ellipse at center, rgba(0,20,0,0.8) 0%, rgba(0,40,0,0.9) 50%, rgba(0,0,0,1) 100%)'
-            : 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,20,40,0.9) 50%, rgba(0,0,0,1) 100%)'
+            ? 'radial-gradient(ellipse at center, rgba(0,20,0,0.8) 0%, rgba(0,40,0,0.9) 50%, rgba(0,0,0,1) 10o0%)'
+            : 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,20,40,0.9) 50%, rgba(0,0,0,1) 10o0%)'
         }}
-      />
+       />
       
       {/* Floating geometric shapes */}
       <div className="fixed inset-0 pointer-events-none z-10">
@@ -222,28 +222,25 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
             key={i}
             className="absolute"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
             animate={{
               rotate: [0, 360],
               scale: [0.8, 1.2, 0.8],
-              opacity: [0.1, 0.3, 0.1],
-            }}
+              opacity: [0.1, 0.3, 0.1]}}
             transition={{
               duration: 8 + Math.random() * 4,
               repeat: Infinity,
-              ease: "linear",
-            }}
+              ease: "linear"}}
           >
             <div
               className={`w-2 h-2 ${
-                variant === 'quantum-entanglement' ? 'bg-gradient-to-r from-pink-500 to-cyan-500'
-                : variant === 'cyberpunk' ? 'bg-gradient-to-r from-green-500 to-blue-500'
-                : variant === 'neural' ? 'bg-gradient-to-r from-green-500 to-purple-500'
-                : 'bg-gradient-to-r from-cyan-500 to-blue-500'
+                variant === 'quantum-entanglement' ? 'bg-gradient-to-r from-pink-50o0 to-cyan-50o0'
+                : variant === 'cyberpunk' ? 'bg-gradient-to-r from-green-50o0 to-blue-50o0'
+                : variant === 'neural' ? 'bg-gradient-to-r from-green-50o0 to-purple-50o0'
+                : 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0'
               } rounded-full blur-sm`}
-            />
+             />
           </motion.div>
         ))}
       </div>
@@ -259,17 +256,15 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={`field-${i}`}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-20"
+              className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-50o0 to-transparent opacity-20"
               style={{ top: `${20 + i * 15}%` }}
               animate={{
-                x: ['-100%', '100%'],
-              }}
+                x: ['-10o0%', '10o0%']}}
               transition={{
                 duration: 10 + i * 2,
                 repeat: Infinity,
-                ease: "linear",
-              }}
-            />
+                ease: "linear"}}
+             />
           ))}
         </div>
       )}

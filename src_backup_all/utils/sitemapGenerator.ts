@@ -99,7 +99,7 @@ ${sitemapEntries}
   generateStructuredData(): string {
     const { baseUrl } = this.config;
     
-    const structuredData = {
+    const structuredData ={
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zion Tech Group",
@@ -124,7 +124,7 @@ ${sitemapEntries}
 }
 
 // Default sitemap configuration for Zion Tech Group
-export const defaultSitemapConfig: SitemapConfig = {
+export const defaultSitemapConfig: SitemapConfig ={
   baseUrl: 'https://ziontechgroup.com',
   urls: [
     // Main pages
@@ -140,10 +140,10 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/micro-saas', priority: 0.8, changefreq: 'weekly' },
     
     // Service showcases
-    { url: '/new-innovative-services-2025', priority: 0.8, changefreq: 'weekly' },
-    { url: '/ultimate-services-showcase-2026', priority: 0.8, changefreq: 'weekly' },
-    { url: '/comprehensive-services-showcase-2027', priority: 0.8, changefreq: 'weekly' },
-    { url: '/zion-cutting-edge-services-2029', priority: 0.8, changefreq: 'weekly' },
+    { url: '/new-innovative-services-20o25', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ultimate-services-showcase-20o26', priority: 0.8, changefreq: 'weekly' },
+    { url: '/comprehensive-services-showcase-20o27', priority: 0.8, changefreq: 'weekly' },
+    { url: '/zion-cutting-edge-services-20o29', priority: 0.8, changefreq: 'weekly' },
     
     // Individual service pages
     { url: '/services/ai-workflow-orchestrator', priority: 0.7, changefreq: 'monthly' },

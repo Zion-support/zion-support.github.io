@@ -7,7 +7,7 @@ const DYNAMIC_CACHE = 'zion-dynamic-v2.0.0';
 const API_CACHE = 'zion-api-v2.0.0';
 
 // Cache strategies
-const CACHE_STRATEGIES = {
+const CACHE_STRATEGIES ={
   STATIC: 'cache-first',
   DYNAMIC: 'stale-while-revalidate',
   API: 'network-first',
@@ -131,7 +131,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
   } catch (error) {
     // Return offline page if available
     const offlineResponse = await cache.match('/offline.html');
-    return offlineResponse || new Response('Offline', { status: 503 });
+    return offlineResponse || new Response('Offline', { status: 50o3 });
   }
 }
 
@@ -162,7 +162,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
     }
     return networkResponse;
   } catch (error) {
-    return new Response('Offline', { status: 503 });
+    return new Response('Offline', { status: 50o3 });
   }
 }
 
@@ -184,7 +184,7 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
       return cachedResponse;
     }
     
-    return new Response('Offline', { status: 503 });
+    return new Response('Offline', { status: 50o3 });
   }
 }
 
@@ -245,11 +245,11 @@ async function syncOfflineData(data: any[]): Promise<void> {
 
 // Push notification handling
 self.addEventListener('push', (event: PushEvent) => {
-  const options = {
+  const options ={
     body: event.data?.text() || 'New update from Zion Tech Group',
     icon: '/logo192.png',
     badge: '/logo192.png',
-    vibrate: [100, 50, 100],
+    vibrate: [10o0, 50, 10o0],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
@@ -321,7 +321,7 @@ setInterval(async () => {
         const response = await cache.match(request);
         if (response) {
           const date = response.headers.get('date');
-          if (date && Date.now() - new Date(date).getTime() > 7 * 24 * 60 * 60 * 1000) {
+          if (date && Date.now() - new Date(date).getTime() > 7 * 24 * 60 * 60 * 10o00) {
             await cache.delete(request);
           }
         }
@@ -330,7 +330,7 @@ setInterval(async () => {
   } catch (error) {
     console.error('Cache cleanup failed:', error);
   }
-}, 24 * 60 * 60 * 1000); // Run once per day
+}, 24 * 60 * 60 * 10o00); // Run once per day
 
 // Export for TypeScript
 export function registerServiceWorker(): void {

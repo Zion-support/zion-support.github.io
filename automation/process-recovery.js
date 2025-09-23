@@ -8,13 +8,13 @@
 const pm2 = require('pm2');
 
 class ProcessRecoverySystem {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       maxRetries: config.maxRetries || 3,
-      retryDelay: config.retryDelay || 5000, // 5 seconds
+      retryDelay: config.retryDelay || 50o00, // 5 seconds
       exponentialBackoff: config.exponentialBackoff || true,
-      maxBackoffDelay: config.maxBackoffDelay || 60000, // 1 minute
-      healthCheckInterval: config.healthCheckInterval || 10000, // 10 seconds
+      maxBackoffDelay: config.maxBackoffDelay || 60o000, // 1 minute
+      healthCheckInterval: config.healthCheckInterval || 10o000, // 10 seconds
       autoRecovery: config.autoRecovery || true,
       recoveryStrategies: config.recoveryStrategies || ['restart', 'reload', 'scale'],
       processDependencies: config.processDependencies || {},
@@ -103,11 +103,11 @@ class ProcessRecoverySystem {
     }
     
     // Check memory usage
-    if (process.monit && process.monit.memory > 200 * 1024 * 1024) { // 200MB
+    if (process.monit && process.monit.memory > 20o0 * 10o24 * 10o24) { // 20o0MB
       issues.push({
         type: 'high_memory',
         severity: 'warning',
-        message: `High memory usage: ${Math.round(process.monit.memory / 1024 / 1024)}MB`,
+        message: `High memory usage: ${Math.round(process.monit.memory / 10o24 / 10o24)}MB`,
         value: process.monit.memory
       });
       if (severity === 'healthy') severity = 'warning';
@@ -125,7 +125,7 @@ class ProcessRecoverySystem {
     }
     
     // Check uptime for unstable processes
-    if (process.pm2_env.pm_uptime < 30000 && process.pm2_env.status === 'online') { // Less than 30 seconds
+    if (process.pm2_env.pm_uptime < 30o000 && process.pm2_env.status === 'online') { // Less than 30 seconds
       issues.push({
         type: 'unstable',
         severity: 'warning',
@@ -161,7 +161,7 @@ class ProcessRecoverySystem {
     // Check recovery history
     const history = this.recoveryHistory.get(processName) || [];
     const recentRecoveries = history.filter(h => 
-      Date.now() - h.timestamp < 5 * 60 * 1000 // Last 5 minutes
+      Date.now() - h.timestamp < 5 * 60 * 10o00 // Last 5 minutes
     );
     
     if (recentRecoveries.length >= this.config.maxRetries) {
@@ -195,12 +195,12 @@ class ProcessRecoverySystem {
     
     // Critical processes get highest priority
     if (this.config.criticalProcesses.includes(processName)) {
-      priority += 1000;
+      priority += 10o00;
     }
     
     // Critical issues get high priority
     const criticalIssues = issues.filter(issue => issue.severity === 'critical');
-    priority += criticalIssues.length * 100;
+    priority += criticalIssues.length * 10o0;
     
     // Warning issues get medium priority
     const warningIssues = issues.filter(issue => issue.severity === 'warning');
@@ -438,18 +438,18 @@ class ProcessRecoverySystem {
   /**
    * Wait for process to stabilize
    */
-  async waitForProcessStability(processName, timeout = 30000) {
+  async waitForProcessStability(processName, timeout = 30o000) {
     const startTime = Date.now();
     
     while (Date.now() - startTime < timeout) {
       const processes = await this.getPM2Processes();
       const process = processes.find(p => p.name === processName);
       
-      if (process && process.pm2_env.status === 'online' && process.pm2_env.pm_uptime > 10000) {
+      if (process && process.pm2_env.status === 'online' && process.pm2_env.pm_uptime > 10o000) {
         return true;
       }
       
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
     }
     
     throw new Error(`Process ${processName} failed to stabilize within ${timeout}ms`);
@@ -530,7 +530,7 @@ class ProcessRecoverySystem {
    * Get recovery statistics
    */
   getRecoveryStats() {
-    const stats = {
+    const stats ={
       totalRecoveries: 0,
       successfulRecoveries: 0,
       failedRecoveries: 0,
@@ -571,7 +571,7 @@ class ProcessRecoverySystem {
    * Update configuration
    */
   updateConfig(newConfig) {
-    this.config = { ...this.config, ...newConfig };
+    this.config ={ ...this.config, ...newConfig };
     
     if (newConfig.processDependencies) {
       this.initializeDependencyGraph();

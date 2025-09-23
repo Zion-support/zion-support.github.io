@@ -1,17 +1,17 @@
 // Zion Tech Group Comprehensive Services Index
 // This file provides easy access to all our cutting-edge services
 
-export { zionCuttingEdgeServices2029 } from './zion-2029-cutting-edge-services';
-export { zionEmergingTechServices2029 } from './zion-2029-emerging-tech-services';
+export { zionCuttingEdgeServices20o29 } from './zion-20o29-cutting-edge-services';
+export { zionEmergingTechServices20o29 } from './zion-20o29-emerging-tech-services';
 
 // Import all service types for easy access
-import { zionCuttingEdgeServices2029 } from './zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from './zion-2029-emerging-tech-services';
+import { zionCuttingEdgeServices20o29 } from './zion-20o29-cutting-edge-services';
+import { zionEmergingTechServices20o29 } from './zion-20o29-emerging-tech-services';
 
 // Combined services array
 export const allZionServices = [
-  ...zionCuttingEdgeServices2029,
-  ...zionEmergingTechServices2029
+  ...zionCuttingEdgeServices20o29,
+  ...zionEmergingTechServices20o29
 ];
 
 // Service categories

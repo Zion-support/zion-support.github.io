@@ -1,4 +1,4 @@
-export interface RealServiceQ22025 {
+export interface RealServiceQ220o25 {
   id: string;
   name: string;
   tagline: string;
@@ -6,7 +6,7 @@ export interface RealServiceQ22025 {
   features: string[];
   category?: string;
 }
-export const realServicesQ22025: RealServiceQ22025[] = [
+export const realServicesQ220o25: RealServiceQ220o25[] = [
   {
     id: 'q2-service-1',
     name: 'Q2 Service 1',
@@ -22,6 +22,3 @@ export const realServicesQ22025: RealServiceQ22025[] = [
     price: '$499',
     features: ['Advanced features', 'Enhanced performance', 'Full integration'],
     category: 'Q2 Services'
->>>>>>> origin/clean-merge-website-fixes
-  }
-];

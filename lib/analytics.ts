@@ -24,8 +24,7 @@ export function measurePerformance(): null | {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       firstPaint: (performance.getEntriesByName('first-paint')[0] as PerformanceEntry | undefined)?.startTime || 0,
-      firstContentfulPaint: (performance.getEntriesByName('first-contentful-paint')[0] as PerformanceEntry | undefined)?.startTime || 0,
-    };
+      firstContentfulPaint: (performance.getEntriesByName('first-contentful-paint')[0] as PerformanceEntry | undefined)?.startTime || 0};
   }
   return null;
 }
@@ -43,8 +42,7 @@ export function trackWebVitals(metric: WebVitalMetric): void {
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
       event_label: metric.id,
-      non_interaction: true,
-    });
+      non_interaction: true});
   }
 }
 

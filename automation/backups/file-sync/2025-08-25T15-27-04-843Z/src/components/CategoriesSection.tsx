@@ -5,35 +5,31 @@ const categories = [
   {
     title: "AI Services",
     description: "Cutting-edge AI solutions, chatbots, and machine learning",
-    icon: <Brain className="w-10 h-10" />,
+    icon: <Brain className="w-10 h-10"  />,
     link: "/ai-services",
-    color: "from-purple-500 to-indigo-600",
-    gradient: "from-zion-purple to-zion-purple-dark",
-  },
+    color: "from-purple-50o0 to-indigo-60o0",
+    gradient: "from-zion-purple to-zion-purple-dark"},
   {
     title: "Micro SAAS",
     description: "Cloud-based software solutions for modern businesses",
-    icon: <Cloud className="w-10 h-10" />,
+    icon: <Cloud className="w-10 h-10"  />,
     link: "/micro-saas",
-    color: "from-cyan-500 to-blue-600",
-    gradient: "from-zion-cyan to-zion-blue",
-  },
+    color: "from-cyan-50o0 to-blue-60o0",
+    gradient: "from-zion-cyan to-zion-blue"},
   {
     title: "IT Services",
     description: "Infrastructure, security, and technical consulting",
-    icon: <Zap className="w-10 h-10" />,
+    icon: <Zap className="w-10 h-10"  />,
     link: "/all-services",
-    color: "from-amber-500 to-orange-600",
-    gradient: "from-zion-cyan-light to-zion-cyan",
-  },
+    color: "from-amber-50o0 to-orange-60o0",
+    gradient: "from-zion-cyan-light to-zion-cyan"},
   {
     title: "Digital Transformation",
     description: "Business modernization and digital strategy",
-    icon: <TrendingUp className="w-10 h-10" />,
+    icon: <TrendingUp className="w-10 h-10"  />,
     link: "/all-services",
-    color: "from-emerald-500 to-green-600",
-    gradient: "from-zion-purple-light to-zion-purple",
-  },
+    color: "from-emerald-50o0 to-green-60o0",
+    gradient: "from-zion-purple-light to-zion-purple"},
 ];
 const specialServices = [
   {
@@ -52,7 +48,7 @@ const specialServices = [
 interface CategoriesSectionProps {
   showTitle?: boolean;
 }
-const containerVariants = {
+const containerVariants ={
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -62,7 +58,7 @@ const containerVariants = {
     }
   }
 };
-const itemVariants = {
+const itemVariants ={
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
@@ -107,8 +103,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               href={category.link} 
               className="group block"
             >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px]">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-30o0 hover:border-zion-purple/50 hover:translate-y-[-5px]">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
                   <div className="text-white">
                     {category.icon}
                   </div>
@@ -131,14 +127,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               <motion.div
                 key={service.title}
                 href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-30o0"
               >
                 <Link 
                   to={service.link}
-                  className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2"
+                  className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2"
                 >
                   {service.title}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -157,7 +153,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             View All Categories
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-30o0"  />
           </Link>
         </motion.div>
       </div>

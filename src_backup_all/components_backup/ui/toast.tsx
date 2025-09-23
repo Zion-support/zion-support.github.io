@@ -5,7 +5,6 @@ import { X } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { logInfo } from '@/utils/productionLogger';
 
-
 const ToastProvider = ToastPrimitives.Provider
 
 const ToastViewport = React.forwardRef<
@@ -15,11 +14,11 @@ const ToastViewport = React.forwardRef<
   <ToastPrimitives.Viewport
     ref={ref}
     className={cn(
-      "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
+      "fixed top-0 z-[10o0] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
       className
     )}
     {...props}
-  />
+   />
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 
@@ -31,15 +30,11 @@ const toastVariants = cva(
         default: "border bg-background text-foreground",
         destructive:
           "destructive border-destructive bg-destructive text-destructive-foreground",
-        success: "border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100",
-        warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
-        info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100",
-      },
-    },
+        success: "border-green-50o0 bg-green-50 text-green-90o0 dark:bg-green-90o0/20 dark:text-green-10o0",
+        warning: "border-yellow-50o0 bg-yellow-50 text-yellow-90o0 dark:bg-yellow-90o0/20 dark:text-yellow-10o0",
+        info: "border-blue-50o0 bg-blue-50 text-blue-90o0 dark:bg-blue-90o0/20 dark:text-blue-10o0"}},
     defaultVariants: {
-      variant: "default",
-    },
-  }
+      variant: "default"}}
 )
 
 const Toast = React.forwardRef<
@@ -52,7 +47,7 @@ const Toast = React.forwardRef<
       ref={ref}
       className={cn(toastVariants({ variant }), className)}
       {...props}
-    />
+     />
   )
 })
 Toast.displayName = ToastPrimitives.Root.displayName
@@ -68,7 +63,7 @@ const ToastAction = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 ToastAction.displayName = ToastPrimitives.Action.displayName
 
@@ -79,13 +74,13 @@ const ToastClose = React.forwardRef<
   <ToastPrimitives.Close
     ref={ref}
     className={cn(
-      "absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600",
+      "absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-10o0 focus:outline-none focus:ring-2 group-hover:opacity-10o0 group-[.destructive]:text-red-30o0 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-40o0 group-[.destructive]:focus:ring-offset-red-60o0",
       className
     )}
     toast-close=""
     {...props}
   >
-    <X className="h-4 w-4" />
+    <X className="h-4 w-4"  />
   </ToastPrimitives.Close>
 ))
 ToastClose.displayName = ToastPrimitives.Close.displayName
@@ -98,7 +93,7 @@ const ToastTitle = React.forwardRef<
     ref={ref}
     className={cn("text-sm font-semibold", className)}
     {...props}
-  />
+   />
 ))
 ToastTitle.displayName = ToastPrimitives.Title.displayName
 
@@ -110,7 +105,7 @@ const ToastDescription = React.forwardRef<
     ref={ref}
     className={cn("text-sm opacity-90", className)}
     {...props}
-  />
+   />
 ))
 ToastDescription.displayName = ToastPrimitives.Description.displayName
 
@@ -127,8 +122,7 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
-  ToastAction,
-}
+  ToastAction}
 
 // Add useToast hook export
 // export function useToast() {

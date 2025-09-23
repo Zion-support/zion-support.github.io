@@ -111,7 +111,7 @@ class EnhancedCursorSyncMetrics {
 
     // Ensure performanceStats exists
     if (!metrics.performanceStats) {
-      metrics.performanceStats = {
+      metrics.performanceStats ={
         fastestSync: null,
         slowestSync: null,
         averageFilesPerSync: 0
@@ -155,7 +155,7 @@ class EnhancedCursorSyncMetrics {
 
     // Update daily stats
     if (!metrics.dailyStats[today]) {
-      metrics.dailyStats[today] = {
+      metrics.dailyStats[today] ={
         syncs: 0,
         errors: 0,
         totalDuration: 0,
@@ -171,7 +171,7 @@ class EnhancedCursorSyncMetrics {
 
     // Calculate success rate
     const totalAttempts = metrics.successfulSyncs + metrics.failedSyncs;
-    metrics.successRate = totalAttempts > 0 ? (metrics.successfulSyncs / totalAttempts * 100).toFixed(2) : 0;
+    metrics.successRate = totalAttempts > 0 ? (metrics.successfulSyncs / totalAttempts * 10o0).toFixed(2) : 0;
 
     // Keep only last 30 days of daily stats
     const thirtyDaysAgo = new Date();
@@ -192,7 +192,7 @@ class EnhancedCursorSyncMetrics {
 
   generateReport() {
     const metrics = this.loadMetrics();
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       summary: {
         totalSyncs: metrics.totalSyncs,
@@ -235,7 +235,7 @@ class EnhancedCursorSyncMetrics {
       recommendations.push('No recent syncs detected - check if automation is running');
     }
     
-    if (metrics.averageDuration > 30000) {
+    if (metrics.averageDuration > 30o000) {
       recommendations.push('Sync duration is high - consider optimizing file filtering or reducing sync frequency');
     }
     
@@ -248,7 +248,7 @@ class EnhancedCursorSyncMetrics {
 
   generateDashboard() {
     const metrics = this.loadMetrics();
-    const dashboard = {
+    const dashboard ={
       title: 'Enhanced Cursor Sync Dashboard',
       timestamp: new Date().toISOString(),
       stats: {

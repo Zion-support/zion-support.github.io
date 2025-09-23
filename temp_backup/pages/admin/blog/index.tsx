@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { BlogPost } from '@/utils/types/blog';
 
-const emptyPost: Partial<BlogPost> = {
+const emptyPost: Partial<BlogPost> ={
   title: '',
   slug: '',
   author: '',
@@ -10,8 +10,7 @@ const emptyPost: Partial<BlogPost> = {
   topics: [],
   seo: { metaTitle: '', metaDescription: '', ogImageUrl: '' },
   body: '',
-  status: 'draft',
-};
+  status: 'draft'};
 
 export default function AdminBlog() {
   const [token, setToken] = useState('');
@@ -30,13 +29,12 @@ export default function AdminBlog() {
   };
 
   const save = async (publish = false) => {
-    const payload = { ...editing, status: publish ? 'published' : (editing.status || 'draft') } as Partial<BlogPost>;
+    const payload ={ ...editing, status: publish ? 'published' : (editing.status || 'draft') } as Partial<BlogPost>;
     const isCreate = !payload.id;
     const res = await fetch(isCreate ? '/api/blog/posts' : `/api/blog/posts/${payload.id}`, {
       method: isCreate ? 'POST' : 'PUT',
       headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
-      body: JSON.stringify(payload),
-    });
+      body: JSON.stringify(payload)});
     if (res.ok) {
       const saved = await res.json();
       setEditing(saved);
@@ -62,7 +60,7 @@ export default function AdminBlog() {
       <div className="mb-6 flex gap-2 items-center">
         <input value={token} onChange={(e) => setToken(e.target.value)} placeholder="Admin token" className="border rounded px-3 py-2 w-72" />
         <button onClick={saveToken} className="px-3 py-2 border rounded">Save token</button>
-        <button onClick={() => startEdit()} className="ml-auto px-3 py-2 bg-indigo-600 text-white rounded">New Post</button>
+        <button onClick={() => startEdit()} className="ml-auto px-3 py-2 bg-indigo-60o0 text-white rounded">New Post</button>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -72,7 +70,7 @@ export default function AdminBlog() {
             {posts.map((p) => (
               <li key={p.id} className="flex items-center justify-between">
                 <button onClick={() => startEdit(p)} className="text-left underline">{p.title}</button>
-                <span className={`text-xs px-2 py-1 rounded ${p.status === 'published' ? 'bg-green-100' : 'bg-yellow-100'}`}>{p.status}</span>
+                <span className={`text-xs px-2 py-1 rounded ${p.status === 'published' ? 'bg-green-10o0' : 'bg-yellow-10o0'}`}>{p.status}</span>
               </li>
             ))}
           </ul>
@@ -95,7 +93,7 @@ export default function AdminBlog() {
 
           <div className="mt-3 flex gap-2">
             <button onClick={() => save(false)} className="px-4 py-2 border rounded">Save Draft</button>
-            <button onClick={() => save(true)} className="px-4 py-2 bg-green-600 text-white rounded">Publish</button>
+            <button onClick={() => save(true)} className="px-4 py-2 bg-green-60o0 text-white rounded">Publish</button>
           </div>
         </div>
       </div>

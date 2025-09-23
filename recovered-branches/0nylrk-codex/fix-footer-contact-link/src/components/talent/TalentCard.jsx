@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MapPin, Clock, CheckCircle2 } from "lucide-react";
@@ -31,12 +30,12 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
           {/* Avatar */}
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (<img loading="lazy" src={talent.profile_picture_url} alt={talent.full_name} className="w-full h-full object-cover"/>) : (<div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
+              {talent.profile_picture_url ? (<img loading="lazy" src={talent.profile_picture_url} alt={talent.full_name} className="w-full h-full object-cover" />) : (<div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
                   {talent.full_name?.charAt(0) || "T"}
                 </div>)}
             </div>
             {talent.is_verified && (<div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan"/>
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
               </div>)}
           </div>
           
@@ -44,18 +43,18 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
           <div className="flex-1">
             <div className="flex justify-between items-start">
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
-              <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1"/>
+              <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1" />
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
             
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (<div className="flex items-center text-zion-slate-light">
-                  <MapPin className="h-4 w-4 mr-1"/>
+                  <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>)}
               {talent.availability_type && (<div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1"/>
+                  <Clock className="h-4 w-4 mr-1" />
                   <span>{talent.availability_type}</span>
                 </div>)}
             </div>

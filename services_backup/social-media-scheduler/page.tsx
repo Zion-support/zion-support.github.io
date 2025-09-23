@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const metadata = {
+export const metadata ={
   title: "Social Media Scheduler | Zion Tech Group",
   description:
     "AI-powered social media management platform. Schedule, analyze, and optimize social media content across all platforms."};
@@ -9,10 +9,10 @@ export default function SocialMediaSchedulerPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
           Social Media Scheduler
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
           AI-powered social media management platform that schedules, analyzes,
           and optimizes social media content across all major platforms with
           intelligent automation.
@@ -28,7 +28,7 @@ export default function SocialMediaSchedulerPage() {
             "Bulk upload & scheduling",
             "Content library",
             "Hashtag optimization"]}
-        />
+         />
         <FeatureCard
           title="AI Optimization"
           details={[
@@ -37,7 +37,7 @@ export default function SocialMediaSchedulerPage() {
             "Audience engagement analysis",
             "Trend identification",
             "Content recommendation engine"]}
-        />
+         />
         <FeatureCard
           title="Analytics & Insights"
           details={[
@@ -46,30 +46,30 @@ export default function SocialMediaSchedulerPage() {
             "ROI measurement",
             "Competitor analysis",
             "Custom reporting"]}
-        />
+         />
       </div>
 
-      <PricingSection />
+      <PricingSection  />
 
-      <div className="mt-16 bg-gradient-to-r from-fuchsia-50 to-purple-50 border border-fuchsia-200 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="mt-16 bg-gradient-to-r from-fuchsia-50 to-purple-50 border border-fuchsia-20o0 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
           Ready to Master Social Media?
         </h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        <p className="text-gray-60o0 mb-6 max-w-2xl mx-auto">
           Streamline your social media strategy with AI-powered scheduling and
           optimization. Perfect for influencers, agencies, and businesses of all
           sizes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-fuchsia-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-fuchsia-700 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-fuchsia-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-fuchsia-70o0 transition-colors"
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-fuchsia-600 text-fuchsia-600 px-8 py-3 rounded-lg font-semibold hover:bg-fuchsia-600 hover:text-white transition-colors"
+            className="border-2 border-fuchsia-60o0 text-fuchsia-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-fuchsia-60o0 hover:text-white transition-colors"
           >
             Email Us
           </a>
@@ -81,12 +81,12 @@ export default function SocialMediaSchedulerPage() {
 
 function FeatureCard({ title, details }: { title: string; details: string[] }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
+    <div className="border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-60o0">
         {details.map((detail, index) => (
           <li key={index} className="flex items-center">
-            <span className="text-fuchsia-500 mr-2">•</span> {detail}
+            <span className="text-fuchsia-50o0 mr-2">•</span> {detail}
           </li>
         ))}
       </ul>
@@ -97,7 +97,7 @@ function FeatureCard({ title, details }: { title: string; details: string[] }) {
 function PricingSection() {
   return (
     <div className="mb-12">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+      <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-8">
         Pricing Plans
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -110,7 +110,7 @@ function PricingSection() {
             "Basic scheduling",
             "Email support",
             "Standard analytics"]}
-        />
+         />
         <PricingPlan
           name="Professional"
           price="$79/mo"
@@ -121,7 +121,7 @@ function PricingSection() {
             "Priority support",
             "Advanced analytics & insights"]}
           featured={true}
-        />
+         />
         <PricingPlan
           name="Agency"
           price="$199/mo"
@@ -131,7 +131,7 @@ function PricingSection() {
             "White-label solution",
             "Dedicated support",
             "Custom reporting & API access"]}
-        />
+         />
       </div>
     </div>
   );
@@ -151,25 +151,25 @@ function PricingPlan({
     <div
       className={`border rounded-xl p-6 ${
         featured
-          ? "border-fuchsia-500 bg-fuchsia-50 shadow-lg"
-          : "border-gray-200 bg-white shadow-sm"
+          ? "border-fuchsia-50o0 bg-fuchsia-50 shadow-lg"
+          : "border-gray-20o0 bg-white shadow-sm"
       }`}
     >
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
+      <h4 className="text-xl font-bold text-gray-90o0 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-gray-90o0 mb-4">{price}</div>
+      <ul className="space-y-2 text-gray-60o0 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <span className="text-fuchsia-500 mr-2">✓</span> {feature}
+            <span className="text-fuchsia-50o0 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel:+130o24640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
           featured
-            ? "bg-fuchsia-600 text-white hover:bg-fuchsia-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? "bg-fuchsia-60o0 text-white hover:bg-fuchsia-70o0"
+            : "bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0"
         }`}
       >
         Get Started

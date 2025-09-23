@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraAdvancedFuturisticBackground2026Props {
+interface UltraAdvancedFuturisticBackground20o26Props {
   children: React.ReactNode;
   className?: string;
 }
 
-export default function UltraAdvancedFuturisticBackground2026({ 
+export default function UltraAdvancedFuturisticBackground20o26({ 
   children, 
   className = '' 
-}: UltraAdvancedFuturisticBackground2026Props) {
+}: UltraAdvancedFuturisticBackground20o26Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
@@ -45,9 +45,9 @@ export default function UltraAdvancedFuturisticBackground2026({
           vx: (Math.random() - 0.5) * 2,
           vy: (Math.random() - 0.5) * 2,
           size: Math.random() * 3 + 1,
-          color: ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'][Math.floor(Math.random() * 5)],
-          life: Math.random() * 100,
-          maxLife: 100,
+          color: ['#0o0ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'][Math.floor(Math.random() * 5)],
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           type: ['quantum', 'holographic', 'neural', 'cyberpunk'][Math.floor(Math.random() * 4)] as any
         });
       }
@@ -136,11 +136,11 @@ export default function UltraAdvancedFuturisticBackground2026({
                   Math.pow(particle.x - otherParticle.x, 2) + 
                   Math.pow(particle.y - otherParticle.y, 2)
                 );
-                if (distance < 100) {
+                if (distance < 10o0) {
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(otherParticle.x, otherParticle.y);
-                  ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 * (1 - distance / 100)})`;
+                  ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 * (1 - distance / 10o0)})`;
                   ctx.lineWidth = 1;
                   ctx.stroke();
                 }
@@ -222,14 +222,14 @@ export default function UltraAdvancedFuturisticBackground2026({
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 100%)' }}
-      />
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 10o0%)' }}
+       />
 
       {/* Animated Overlay Elements */}
       <div className="relative z-10">
         {/* Floating Quantum Orbs */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20"
+          className="absolute top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 opacity-20"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -241,10 +241,10 @@ export default function UltraAdvancedFuturisticBackground2026({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-20"
+          className="absolute top-40 right-32 w-24 h-24 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 opacity-20"
           animate={{
             scale: [1, 1.3, 1],
             rotate: [360, 180, 0],
@@ -256,10 +256,10 @@ export default function UltraAdvancedFuturisticBackground2026({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         <motion.div
-          className="absolute bottom-32 left-1/3 w-28 h-28 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 opacity-20"
+          className="absolute bottom-32 left-1/3 w-28 h-28 rounded-full bg-gradient-to-r from-green-50o0 to-emerald-50o0 opacity-20"
           animate={{
             scale: [1, 1.4, 1],
             rotate: [0, 360, 0],
@@ -271,20 +271,20 @@ export default function UltraAdvancedFuturisticBackground2026({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         {/* Neural Network Lines */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-10">
           <motion.path
-            d="M 100 200 Q 300 100 500 200 T 900 200"
+            d="M 10o0 20o0 Q 30o0 10o0 50o0 20o0 T 90o0 20o0"
             stroke="url(#neural-gradient)"
             strokeWidth="2"
             fill="none"
             animate={{
               d: [
-                "M 100 200 Q 300 100 500 200 T 900 200",
-                "M 100 200 Q 300 300 500 200 T 900 200",
-                "M 100 200 Q 300 100 500 200 T 900 200"
+                "M 10o0 20o0 Q 30o0 10o0 50o0 20o0 T 90o0 20o0",
+                "M 10o0 20o0 Q 30o0 30o0 50o0 20o0 T 90o0 20o0",
+                "M 10o0 20o0 Q 30o0 10o0 50o0 20o0 T 90o0 20o0"
               ]
             }}
             transition={{
@@ -292,12 +292,12 @@ export default function UltraAdvancedFuturisticBackground2026({
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          />
+           />
           <defs>
-            <linearGradient id="neural-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#8b5cf6" />
-              <stop offset="50%" stopColor="#ec4899" />
-              <stop offset="100%" stopColor="#8b5cf6" />
+            <linearGradient id="neural-gradient" x1="0%" y1="0%" x2="10o0%" y2="0%">
+              <stop offset="0%" stopColor="#8b5cf6"  />
+              <stop offset="50%" stopColor="#ec4899"  />
+              <stop offset="10o0%" stopColor="#8b5cf6"  />
             </linearGradient>
           </defs>
         </svg>
@@ -310,14 +310,14 @@ export default function UltraAdvancedFuturisticBackground2026({
               linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px'
-          }} />
+          }}  />
         </div>
 
         {/* Quantum Field Waves */}
         <motion.div
           className="absolute inset-0 pointer-events-none"
           animate={{
-            backgroundPosition: ['0% 0%', '100% 100%']
+            backgroundPosition: ['0% 0%', '10o0% 10o0%']
           }}
           transition={{
             duration: 20,
@@ -331,7 +331,7 @@ export default function UltraAdvancedFuturisticBackground2026({
               radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.1) 0%, transparent 50%)
             `
           }}
-        />
+         />
 
         {/* Content */}
         <div className="relative z-20">

@@ -8,8 +8,7 @@ export async function getStaticProps() {
   if (fs.existsSync(dir)) {
     files = fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort().reverse()
   }
-  return { props: { files } },
-}
+  return { props: { files } }}
 
 export default function AnomaliesPage({ files }: { files: string[] }) {
   return (
@@ -29,5 +28,4 @@ export default function AnomaliesPage({ files }: { files: string[] }) {
         )}
       </div>
     </EnhancedLayout>
-  ),
-}
+  )}

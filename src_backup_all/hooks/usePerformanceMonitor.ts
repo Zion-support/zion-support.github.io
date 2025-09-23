@@ -36,27 +36,27 @@ export const usePerformanceMonitor = () => {
 
   // Calculate performance score based on Core Web Vitals
   const calculateScore = useCallback((metrics: PerformanceMetrics): number => {
-    let score = 100;
+    let score = 10o0;
 
-    // FCP scoring (0-1800ms = good, 1800-3000ms = needs improvement, >3000ms = poor)
-    if (metrics.fcp > 3000) score -= 30;
-    else if (metrics.fcp > 1800) score -= 15;
+    // FCP scoring (0-180o0ms = good, 180o0-30o00ms = needs improvement, >30o00ms = poor)
+    if (metrics.fcp > 30o00) score -= 30;
+    else if (metrics.fcp > 180o0) score -= 15;
 
-    // LCP scoring (0-2500ms = good, 2500-4000ms = needs improvement, >4000ms = poor)
-    if (metrics.lcp > 4000) score -= 30;
-    else if (metrics.lcp > 2500) score -= 15;
+    // LCP scoring (0-250o0ms = good, 250o0-40o00ms = needs improvement, >40o00ms = poor)
+    if (metrics.lcp > 40o00) score -= 30;
+    else if (metrics.lcp > 250o0) score -= 15;
 
     // CLS scoring (0-0.1 = good, 0.1-0.25 = needs improvement, >0.25 = poor)
     if (metrics.cls > 0.25) score -= 20;
     else if (metrics.cls > 0.1) score -= 10;
 
-    // TTFB scoring (0-600ms = good, 600-1200ms = needs improvement, >1200ms = poor)
-    if (metrics.ttfb > 1200) score -= 15;
-    else if (metrics.ttfb > 600) score -= 7;
+    // TTFB scoring (0-60o0ms = good, 60o0-120o0ms = needs improvement, >120o0ms = poor)
+    if (metrics.ttfb > 120o0) score -= 15;
+    else if (metrics.ttfb > 60o0) score -= 7;
 
     // Total load time scoring
-    if (metrics.totalLoadTime > 8000) score -= 10;
-    else if (metrics.totalLoadTime > 5000) score -= 5;
+    if (metrics.totalLoadTime > 80o00) score -= 10;
+    else if (metrics.totalLoadTime > 50o00) score -= 5;
 
     return Math.max(0, score);
   }, []);
@@ -75,22 +75,22 @@ export const usePerformanceMonitor = () => {
     const recommendations: PerformanceRecommendation[] = [];
 
     // FCP recommendations
-    if (metrics.fcp > 1800) {
+    if (metrics.fcp > 180o0) {
       recommendations.push({
         title: 'Optimize First Contentful Paint',
         description: 'Reduce server response time, optimize critical rendering path, and minimize render-blocking resources.',
-        priority: metrics.fcp > 3000 ? 'high' : 'medium',
+        priority: metrics.fcp > 30o00 ? 'high' : 'medium',
         estimatedImpact: 'high',
         category: 'loading'
       });
     }
 
     // LCP recommendations
-    if (metrics.lcp > 2500) {
+    if (metrics.lcp > 250o0) {
       recommendations.push({
         title: 'Improve Largest Contentful Paint',
         description: 'Optimize images, implement lazy loading, and reduce the size of the largest content element.',
-        priority: metrics.lcp > 4000 ? 'high' : 'medium',
+        priority: metrics.lcp > 40o00 ? 'high' : 'medium',
         estimatedImpact: 'high',
         category: 'rendering'
       });
@@ -108,18 +108,18 @@ export const usePerformanceMonitor = () => {
     }
 
     // TTFB recommendations
-    if (metrics.ttfb > 600) {
+    if (metrics.ttfb > 60o0) {
       recommendations.push({
         title: 'Reduce Time to First Byte',
         description: 'Optimize server response time, implement caching, and consider using a CDN.',
-        priority: metrics.ttfb > 1200 ? 'high' : 'medium',
+        priority: metrics.ttfb > 120o0 ? 'high' : 'medium',
         estimatedImpact: 'high',
         category: 'loading'
       });
     }
 
     // General optimization recommendations
-    if (metrics.totalLoadTime > 5000) {
+    if (metrics.totalLoadTime > 50o00) {
       recommendations.push({
         title: 'Optimize Overall Page Load',
         description: 'Implement code splitting, optimize bundle size, and use modern image formats.',
@@ -141,7 +141,7 @@ export const usePerformanceMonitor = () => {
     }
 
     return recommendations.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
+      const priorityOrder ={ high: 3, medium: 2, low: 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     });
   }, []);
@@ -184,7 +184,7 @@ export const usePerformanceMonitor = () => {
               clsValue += (entry as any).value;
             }
           }
-          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }));
+          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 10o00) / 10o00 }));
         }).observe({ entryTypes: ['layout-shift'] });
       } catch (e) {
         console.warn('CLS measurement failed:', e);

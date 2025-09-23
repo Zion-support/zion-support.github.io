@@ -6,7 +6,7 @@ export function Sonner({ position = 'bottom-right', richColors = true, closeButt
       {/* Sonner toast container */}
     </div>);
 }
-export const toast = {
+export const toast ={
     success: (message) => console.log('Success:', message),
     error: (message) => console.log('Error:', message),
     info: (message) => console.log('Info:', message),

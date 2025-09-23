@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -7,16 +6,16 @@ export default function FeaturesPage() {
     <>
       <Head>
         <title>Features — Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive suite of autonomous AI features including monitoring, auto-healing, security, and analytics." />
-        <meta property="og:title" content="Features — Zion Tech Group" />
-        <meta property="og:description" content="Explore our comprehensive suite of autonomous AI features including monitoring, auto-healing, security, and analytics." />
+        <meta name="description" content="Explore our comprehensive suite of autonomous AI features including monitoring, auto-healing, security, and analytics."  />
+        <meta property="og:title" content="Features — Zion Tech Group"  />
+        <meta property="og:description" content="Explore our comprehensive suite of autonomous AI features including monitoring, auto-healing, security, and analytics."  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
               Revolutionary Features
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -26,22 +25,22 @@ export default function FeaturesPage() {
 
           {/* Navigation */}
           <nav className="flex flex-wrap justify-center gap-4 mb-16">
-            <a href="#ai-agents" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+            <a href="#ai-agents" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50">
               AI Agents
             </a>
-            <a href="#monitoring" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+            <a href="#monitoring" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50">
               Monitoring
             </a>
-            <a href="#auto-healing" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+            <a href="#auto-healing" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-blue-40o0/50">
               Auto-healing
             </a>
-            <a href="#security" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+            <a href="#security" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50">
               Security
             </a>
-            <a href="#analytics" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
+            <a href="#analytics" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-yellow-40o0/50">
               Analytics
             </a>
-            <a href="#automation" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+            <a href="#automation" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-purple-40o0/50">
               Automation
             </a>
           </nav>
@@ -59,11 +58,11 @@ export default function FeaturesPage() {
               <div>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-xl">🤖</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-cyan-400 mb-2">Intelligent Decision Making</h3>
+                      <h3 className="text-xl font-semibold text-cyan-40o0 mb-2">Intelligent Decision Making</h3>
                       <p className="text-white/70">
                         AI agents analyze complex data patterns and make intelligent decisions to optimize performance, security, and resource utilization.
                       </p>
@@ -71,11 +70,11 @@ export default function FeaturesPage() {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-fuchsia-40o0 to-purple-50o0 rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-xl">🧠</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-fuchsia-400 mb-2">Continuous Learning</h3>
+                      <h3 className="text-xl font-semibold text-fuchsia-40o0 mb-2">Continuous Learning</h3>
                       <p className="text-white/70">
                         Agents continuously learn from system behavior, user patterns, and performance metrics to improve their decision-making over time.
                       </p>
@@ -83,11 +82,11 @@ export default function FeaturesPage() {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-40o0 to-indigo-50o0 rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-xl">⚡</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-blue-400 mb-2">Proactive Optimization</h3>
+                      <h3 className="text-xl font-semibold text-blue-40o0 mb-2">Proactive Optimization</h3>
                       <p className="text-white/70">
                         Instead of reactive responses, our AI agents proactively identify potential issues and optimize systems before problems occur.
                       </p>
@@ -110,7 +109,7 @@ export default function FeaturesPage() {
                     'Cost optimization'
                   ].map((capability, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-cyan-40o0 rounded-full"></div>
                       <span className="text-white/80">{capability}</span>
                     </div>
                   ))}
@@ -130,30 +129,30 @@ export default function FeaturesPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl">📊</span>
                 </div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Real-time Metrics</h3>
+                <h3 className="text-xl font-semibold text-cyan-40o0 mb-4">Real-time Metrics</h3>
                 <p className="text-white/70">
                   Monitor CPU, memory, disk, network, and application performance in real-time with millisecond precision.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-40o0 to-purple-50o0 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl">🔍</span>
                 </div>
-                <h3 className="text-xl font-semibold text-fuchsia-400 mb-4">Distributed Tracing</h3>
+                <h3 className="text-xl font-semibold text-fuchsia-40o0 mb-4">Distributed Tracing</h3>
                 <p className="text-white/70">
                   Track requests across microservices and identify performance bottlenecks with end-to-end visibility.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-40o0 to-indigo-50o0 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl">📈</span>
                 </div>
-                <h3 className="text-xl font-semibold text-blue-400 mb-4">Predictive Analytics</h3>
+                <h3 className="text-xl font-semibold text-blue-40o0 mb-4">Predictive Analytics</h3>
                 <p className="text-white/70">
                   ML-powered analytics that predict potential issues before they impact your users or systems.
                 </p>
@@ -202,7 +201,7 @@ export default function FeaturesPage() {
                     { step: '5', title: 'Learning', desc: 'Update AI models for future prevention' }
                   ].map((item, index) => (
                     <div key={index} className="flex items-center space-x-4">
-                      <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      <div className="w-8 h-8 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold text-sm">
                         {item.step}
                       </div>
                       <div>
@@ -217,11 +216,11 @@ export default function FeaturesPage() {
               <div>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-40o0 to-emerald-50o0 rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-xl">🔄</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-green-400 mb-2">Automatic Recovery</h3>
+                      <h3 className="text-xl font-semibold text-green-40o0 mb-2">Automatic Recovery</h3>
                       <p className="text-white/70">
                         Systems automatically restart failed services, restore from backups, and implement failover procedures.
                       </p>
@@ -229,11 +228,11 @@ export default function FeaturesPage() {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-40o0 to-orange-50o0 rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-xl">🛡️</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-yellow-400 mb-2">Rollback Protection</h3>
+                      <h3 className="text-xl font-semibold text-yellow-40o0 mb-2">Rollback Protection</h3>
                       <p className="text-white/70">
                         Safe deployment with automatic rollback capabilities if issues are detected after updates.
                       </p>
@@ -241,11 +240,11 @@ export default function FeaturesPage() {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-40o0 to-pink-50o0 rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-xl">📱</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-purple-400 mb-2">Smart Notifications</h3>
+                      <h3 className="text-xl font-semibold text-purple-40o0 mb-2">Smart Notifications</h3>
                       <p className="text-white/70">
                         Intelligent alerting that only notifies humans when intervention is actually required.
                       </p>
@@ -280,7 +279,7 @@ export default function FeaturesPage() {
                     'Audit logging & reporting'
                   ].map((feature, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
                       <span className="text-white/80">{feature}</span>
                     </div>
                   ))}
@@ -292,7 +291,7 @@ export default function FeaturesPage() {
                 <div className="space-y-4">
                   {[
                     'SOC 2 Type II',
-                    'ISO 27001',
+                    'ISO 270o01',
                     'GDPR compliance',
                     'HIPAA ready',
                     'PCI DSS',
@@ -301,7 +300,7 @@ export default function FeaturesPage() {
                     'Industry-specific standards'
                   ].map((standard, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-blue-40o0 rounded-full"></div>
                       <span className="text-white/80">{standard}</span>
                     </div>
                   ))}
@@ -321,30 +320,30 @@ export default function FeaturesPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-40o0 to-orange-50o0 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl">📊</span>
                 </div>
-                <h3 className="text-xl font-semibold text-yellow-400 mb-4">Performance Analytics</h3>
+                <h3 className="text-xl font-semibold text-yellow-40o0 mb-4">Performance Analytics</h3>
                 <p className="text-white/70">
                   Deep insights into system performance, bottlenecks, and optimization opportunities.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-40o0 to-pink-50o0 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl">💰</span>
                 </div>
-                <h3 className="text-xl font-semibold text-purple-400 mb-4">Cost Optimization</h3>
+                <h3 className="text-xl font-semibold text-purple-40o0 mb-4">Cost Optimization</h3>
                 <p className="text-white/70">
                   Identify cost-saving opportunities and optimize resource utilization across your infrastructure.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-40o0 to-emerald-50o0 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl">🎯</span>
                 </div>
-                <h3 className="text-xl font-semibold text-green-400 mb-4">Predictive Insights</h3>
+                <h3 className="text-xl font-semibold text-green-40o0 mb-4">Predictive Insights</h3>
                 <p className="text-white/70">
                   ML-powered predictions for capacity planning, scaling decisions, and risk assessment.
                 </p>
@@ -396,7 +395,7 @@ export default function FeaturesPage() {
                     'Disaster recovery'
                   ].map((area, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-cyan-40o0 rounded-full"></div>
                       <span className="text-white/80">{area}</span>
                     </div>
                   ))}
@@ -417,7 +416,7 @@ export default function FeaturesPage() {
                     'Proactive maintenance'
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-fuchsia-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-fuchsia-40o0 rounded-full"></div>
                       <span className="text-white/80">{benefit}</span>
                     </div>
                   ))}
@@ -428,7 +427,7 @@ export default function FeaturesPage() {
 
           {/* CTA Section */}
           <section className="mx-auto max-w-4xl px-6 pb-16">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 backdrop-blur-xl rounded-3xl p-12 text-center border border-white/20">
+            <div className="bg-gradient-to-r from-cyan-50o0/20 to-fuchsia-50o0/20 backdrop-blur-xl rounded-3xl p-12 text-center border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
                 Experience the Future of Infrastructure
               </h2>
@@ -436,10 +435,10 @@ export default function FeaturesPage() {
                 Ready to see these features in action? Contact us for a personalized demo and discover how Zion Tech Group can transform your infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 transform hover:scale-105">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-xl hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0 transform hover:scale-10o5">
                   Request Demo
                 </Link>
-                <Link href="/case-studies" className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <Link href="/case-studies" className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-30o0">
                   View Case Studies
                 </Link>
               </div>

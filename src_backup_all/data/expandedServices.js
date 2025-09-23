@@ -3,17 +3,17 @@ export const EXPANDED_SERVICES = [
     {
         id: "ai-automation-platform",
         title: "AI-Powered Business Process Automation",
-        description: "Intelligent automation platform that uses AI to streamline business processes, reduce manual work, and increase operational efficiency by up to 300%.",
+        description: "Intelligent automation platform that uses AI to streamline business processes, reduce manual work, and increase operational efficiency by up to 30o0%.",
         category: "AI & Machine Learning",
         subcategory: "Process Automation",
-        price: 2500,
+        price: 250o0,
         currency: "$",
         pricingModel: "subscription",
         features: [
             "No-code workflow builder",
             "AI-powered decision making",
             "Real-time analytics dashboard",
-            "Integration with 100+ business tools",
+            "Integration with 10o0+ business tools",
             "Custom AI model training",
             "24/7 automated monitoring"
         ],
@@ -41,24 +41,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech AI Solutions",
             id: "ziontech-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
+        images: ["https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
         aiScore: 96,
         rating: 4.9,
         reviewCount: 156,
         deliveryTime: "2-4 weeks",
         supportLevel: "premium",
         marketPrice: {
-            min: 1500,
-            max: 5000,
-            average: 2500
+            min: 150o0,
+            max: 50o00,
+            average: 250o0
         },
         contactInfo: {
             email: "ai-solutions@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/ai-automation"
         }
     },
@@ -68,7 +68,7 @@ export const EXPANDED_SERVICES = [
         description: "Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.",
         category: "AI & Machine Learning",
         subcategory: "Content Creation",
-        price: 1800,
+        price: 180o0,
         currency: "$",
         pricingModel: "subscription",
         features: [
@@ -103,24 +103,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Content AI",
             id: "ziontech-content",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-20T14:30:00.000Z",
+        images: ["https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o1-20T14:30:0o0.0o00Z",
         aiScore: 94,
         rating: 4.8,
         reviewCount: 89,
         deliveryTime: "1-2 weeks",
         supportLevel: "premium",
         marketPrice: {
-            min: 1200,
-            max: 3000,
-            average: 1800
+            min: 120o0,
+            max: 30o00,
+            average: 180o0
         },
         contactInfo: {
             email: "content-ai@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/ai-content"
         }
     },
@@ -130,7 +130,7 @@ export const EXPANDED_SERVICES = [
         description: "Advanced predictive analytics platform that uses machine learning to forecast business trends, customer behavior, and market opportunities.",
         category: "AI & Machine Learning",
         subcategory: "Predictive Analytics",
-        price: 3500,
+        price: 350o0,
         currency: "$",
         pricingModel: "subscription",
         features: [
@@ -165,24 +165,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Analytics",
             id: "ziontech-analytics",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-25T09:15:00.000Z",
+        images: ["https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o1-25T09:15:0o0.0o00Z",
         aiScore: 97,
         rating: 4.9,
         reviewCount: 134,
         deliveryTime: "3-5 weeks",
         supportLevel: "enterprise",
         marketPrice: {
-            min: 2500,
-            max: 6000,
-            average: 3500
+            min: 250o0,
+            max: 60o00,
+            average: 350o0
         },
         contactInfo: {
             email: "analytics@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/ai-analytics"
         }
     },
@@ -193,7 +193,7 @@ export const EXPANDED_SERVICES = [
         description: "Comprehensive zero trust security framework that provides continuous verification and strict access controls for modern enterprise environments.",
         category: "Cybersecurity",
         subcategory: "Zero Trust",
-        price: 4500,
+        price: 450o0,
         currency: "$",
         pricingModel: "project",
         features: [
@@ -228,24 +228,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Security",
             id: "ziontech-security",
-            avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-30T11:45:00.000Z",
+        images: ["https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o1-30T11:45:0o0.0o00Z",
         aiScore: 95,
         rating: 4.9,
         reviewCount: 78,
         deliveryTime: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: {
-            min: 3000,
-            max: 8000,
-            average: 4500
+            min: 30o00,
+            max: 80o00,
+            average: 450o0
         },
         contactInfo: {
             email: "security@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/zero-trust"
         }
     },
@@ -255,7 +255,7 @@ export const EXPANDED_SERVICES = [
         description: "Intelligent threat detection system that uses machine learning to identify and respond to cybersecurity threats in real-time.",
         category: "Cybersecurity",
         subcategory: "Threat Detection",
-        price: 2800,
+        price: 280o0,
         currency: "$",
         pricingModel: "subscription",
         features: [
@@ -290,24 +290,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Threat Defense",
             id: "ziontech-threat",
-            avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-05T16:20:00.000Z",
+        images: ["https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o2-0o5T16:20:0o0.0o00Z",
         aiScore: 96,
         rating: 4.8,
         reviewCount: 92,
         deliveryTime: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: {
-            min: 2000,
-            max: 4000,
-            average: 2800
+            min: 20o00,
+            max: 40o00,
+            average: 280o0
         },
         contactInfo: {
             email: "threat-detection@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/ai-threat-detection"
         }
     },
@@ -318,7 +318,7 @@ export const EXPANDED_SERVICES = [
         description: "Unified platform for managing and orchestrating workloads across multiple cloud providers with automated optimization and cost management.",
         category: "Cloud & DevOps",
         subcategory: "Multi-Cloud Management",
-        price: 3200,
+        price: 320o0,
         currency: "$",
         pricingModel: "subscription",
         features: [
@@ -353,24 +353,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Cloud",
             id: "ziontech-cloud",
-            avatarUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-10T13:10:00.000Z",
+        images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o2-10T13:10:0o0.0o00Z",
         aiScore: 93,
         rating: 4.7,
         reviewCount: 67,
         deliveryTime: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: {
-            min: 2500,
-            max: 5000,
-            average: 3200
+            min: 250o0,
+            max: 50o00,
+            average: 320o0
         },
         contactInfo: {
             email: "cloud@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/multi-cloud"
         }
     },
@@ -380,7 +380,7 @@ export const EXPANDED_SERVICES = [
         description: "Comprehensive DevOps automation platform that streamlines software development, testing, and deployment processes.",
         category: "Cloud & DevOps",
         subcategory: "DevOps Automation",
-        price: 2200,
+        price: 220o0,
         currency: "$",
         pricingModel: "subscription",
         features: [
@@ -415,24 +415,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech DevOps",
             id: "ziontech-devops",
-            avatarUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-15T10:45:00.000Z",
+        images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o2-15T10:45:0o0.0o00Z",
         aiScore: 94,
         rating: 4.8,
         reviewCount: 89,
         deliveryTime: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: {
-            min: 1500,
-            max: 3500,
-            average: 2200
+            min: 150o0,
+            max: 350o0,
+            average: 220o0
         },
         contactInfo: {
             email: "devops@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/devops-automation"
         }
     },
@@ -443,7 +443,7 @@ export const EXPANDED_SERVICES = [
         description: "High-performance platform for processing and analyzing real-time data streams with sub-millisecond latency and unlimited scalability.",
         category: "Data & Analytics",
         subcategory: "Real-Time Analytics",
-        price: 4000,
+        price: 40o00,
         currency: "$",
         pricingModel: "subscription",
         features: [
@@ -478,24 +478,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Data",
             id: "ziontech-data",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-20T14:30:00.000Z",
+        images: ["https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o2-20T14:30:0o0.0o00Z",
         aiScore: 95,
         rating: 4.9,
         reviewCount: 112,
         deliveryTime: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: {
-            min: 3000,
-            max: 7000,
-            average: 4000
+            min: 30o00,
+            max: 70o00,
+            average: 40o00
         },
         contactInfo: {
             email: "data@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/real-time-data"
         }
     },
@@ -506,7 +506,7 @@ export const EXPANDED_SERVICES = [
         description: "Advanced quantum computing simulation platform that helps businesses explore quantum algorithms and optimize complex computational problems.",
         category: "Emerging Technologies",
         subcategory: "Quantum Computing",
-        price: 5500,
+        price: 550o0,
         currency: "$",
         pricingModel: "project",
         features: [
@@ -541,24 +541,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Quantum",
             id: "ziontech-quantum",
-            avatarUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-25T09:00:00.000Z",
+        images: ["https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o2-25T09:0o0:0o0.0o00Z",
         aiScore: 98,
         rating: 4.9,
         reviewCount: 45,
         deliveryTime: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: {
-            min: 4000,
-            max: 10000,
-            average: 5500
+            min: 40o00,
+            max: 10o000,
+            average: 550o0
         },
         contactInfo: {
             email: "quantum@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/quantum-computing"
         }
     },
@@ -568,7 +568,7 @@ export const EXPANDED_SERVICES = [
         description: "Scalable blockchain platform for enterprises with smart contract automation, supply chain tracking, and decentralized applications.",
         category: "Emerging Technologies",
         subcategory: "Blockchain",
-        price: 3800,
+        price: 380o0,
         currency: "$",
         pricingModel: "project",
         features: [
@@ -603,24 +603,24 @@ export const EXPANDED_SERVICES = [
         author: {
             name: "ZionTech Blockchain",
             id: "ziontech-blockchain",
-            avatarUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=10o0&h=10o0",
             verified: true
         },
-        images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-03-01T11:15:00.000Z",
+        images: ["https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=80o0&h=50o0"],
+        createdAt: "20o24-0o3-0o1T11:15:0o0.0o00Z",
         aiScore: 94,
         rating: 4.8,
         reviewCount: 67,
         deliveryTime: "6-10 weeks",
         supportLevel: "enterprise",
         marketPrice: {
-            min: 2500,
-            max: 6000,
-            average: 3800
+            min: 250o0,
+            max: 60o00,
+            average: 380o0
         },
         contactInfo: {
             email: "blockchain@ziontechgroup.com",
-            phone: "+1 302 464 0950",
+            phone: "+1 30o2 464 0950",
             website: "https://ziontechgroup.com/blockchain-solutions"
         }
     }

@@ -183,7 +183,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
   }
 ];
 
-export default function AI2030ReadinessAssessment() {
+export default function AI20o30ReadinessAssessment() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResults, setShowResults] = useState(false);
@@ -208,7 +208,7 @@ export default function AI2030ReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const categoryScores = {
+    const categoryScores ={
       technology: 0,
       strategy: 0,
       people: 0,
@@ -301,15 +301,15 @@ export default function AI2030ReadinessAssessment() {
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 80) return 'text-green-60o0';
+    if (score >= 60) return 'text-yellow-60o0';
+    return 'text-red-60o0';
   };
 
   const getScoreBadge = (score: number) => {
-    if (score >= 80) return 'bg-green-100 text-green-800';
-    if (score >= 60) return 'bg-yellow-100 text-yellow-800';
-    return 'bg-red-100 text-red-800';
+    if (score >= 80) return 'bg-green-10o0 text-green-80o0';
+    if (score >= 60) return 'bg-yellow-10o0 text-yellow-80o0';
+    return 'bg-red-10o0 text-red-80o0';
   };
 
   const getReadinessLevel = (score: number) => {
@@ -326,10 +326,10 @@ export default function AI2030ReadinessAssessment() {
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI 2030 Readiness Assessment Results
+            <h1 className="text-4xl font-bold text-gray-90o0 mb-4">
+              AI 20o30 Readiness Assessment Results
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-60o0">
               Your organization's readiness for the AI-driven future
             </p>
           </div>
@@ -338,7 +338,7 @@ export default function AI2030ReadinessAssessment() {
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="flex items-center justify-center gap-2">
-                <Brain className="h-6 w-6 text-purple-600" />
+                <Brain className="h-6 w-6 text-purple-60o0"  />
                 Overall AI Readiness Score
               </CardTitle>
             </CardHeader>
@@ -350,8 +350,8 @@ export default function AI2030ReadinessAssessment() {
                 <Badge className={`text-lg px-4 py-2 ${getScoreBadge(result.overallScore)}`}>
                   {getReadinessLevel(result.overallScore)}
                 </Badge>
-                <p className="text-gray-600 mt-4">
-                  Based on your responses, your organization is {getReadinessLevel(result.overallScore).toLowerCase()} for AI transformation by 2030.
+                <p className="text-gray-60o0 mt-4">
+                  Based on your responses, your organization is {getReadinessLevel(result.overallScore).toLowerCase()} for AI transformation by 20o30.
                 </p>
               </div>
             </CardContent>
@@ -362,7 +362,7 @@ export default function AI2030ReadinessAssessment() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Zap className="h-5 w-5 text-blue-600" />
+                  <Zap className="h-5 w-5 text-blue-60o0"  />
                   Technology Readiness
                 </CardTitle>
               </CardHeader>
@@ -374,7 +374,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.technology}%
                     </span>
                   </div>
-                  <Progress value={result.categoryScores.technology} className="h-2" />
+                  <Progress value={result.categoryScores.technology} className="h-2"  />
                 </div>
               </CardContent>
             </Card>
@@ -382,7 +382,7 @@ export default function AI2030ReadinessAssessment() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-green-600" />
+                  <TrendingUp className="h-5 w-5 text-green-60o0"  />
                   Strategy Readiness
                 </CardTitle>
               </CardHeader>
@@ -394,7 +394,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.strategy}%
                     </span>
                   </div>
-                  <Progress value={result.categoryScores.strategy} className="h-2" />
+                  <Progress value={result.categoryScores.strategy} className="h-2"  />
                 </div>
               </CardContent>
             </Card>
@@ -402,7 +402,7 @@ export default function AI2030ReadinessAssessment() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Users className="h-5 w-5 text-purple-600" />
+                  <Users className="h-5 w-5 text-purple-60o0"  />
                   People Readiness
                 </CardTitle>
               </CardHeader>
@@ -414,7 +414,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.people}%
                     </span>
                   </div>
-                  <Progress value={result.categoryScores.people} className="h-2" />
+                  <Progress value={result.categoryScores.people} className="h-2"  />
                 </div>
               </CardContent>
             </Card>
@@ -422,7 +422,7 @@ export default function AI2030ReadinessAssessment() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-orange-600" />
+                  <Shield className="h-5 w-5 text-orange-60o0"  />
                   Process Readiness
                 </CardTitle>
               </CardHeader>
@@ -434,7 +434,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.processes}%
                     </span>
                   </div>
-                  <Progress value={result.categoryScores.processes} className="h-2" />
+                  <Progress value={result.categoryScores.processes} className="h-2"  />
                 </div>
               </CardContent>
             </Card>
@@ -452,8 +452,8 @@ export default function AI2030ReadinessAssessment() {
               <div className="space-y-4">
                 {result.recommendations.map((recommendation, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <p className="text-gray-700">{recommendation}</p>
+                    <CheckCircle className="h-5 w-5 text-green-60o0 mt-0.5 flex-shrink-0"  />
+                    <p className="text-gray-70o0">{recommendation}</p>
                   </div>
                 ))}
               </div>
@@ -472,10 +472,10 @@ export default function AI2030ReadinessAssessment() {
               <div className="space-y-4">
                 {result.nextSteps.map((step, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="bg-purple-100 text-purple-600 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                    <div className="bg-purple-10o0 text-purple-60o0 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                       {index + 1}
                     </div>
-                    <p className="text-gray-700">{step}</p>
+                    <p className="text-gray-70o0">{step}</p>
                   </div>
                 ))}
               </div>
@@ -486,14 +486,14 @@ export default function AI2030ReadinessAssessment() {
           <Card>
             <CardContent className="pt-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
                   Ready to Accelerate Your AI Transformation?
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-60o0 mb-6">
                   Let Zion Tech Group help you build the AI-powered future of your organization
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                  <Button size="lg" className="bg-purple-60o0 hover:bg-purple-70o0">
                     Schedule Consultation
                   </Button>
                   <Button size="lg" variant="outline">
@@ -529,19 +529,19 @@ export default function AI2030ReadinessAssessment() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 py-12">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI 2030 Readiness Assessment
+          <h1 className="text-4xl font-bold text-gray-90o0 mb-4">
+            AI 20o30 Readiness Assessment
           </h1>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-xl text-gray-60o0 mb-6">
             Evaluate your organization's readiness for the AI-driven future
           </p>
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-50o0">
             <span>Question {currentQuestion + 1} of {assessmentQuestions.length}</span>
-            <div className="w-32 bg-gray-200 rounded-full h-2">
+            <div className="w-32 bg-gray-20o0 rounded-full h-2">
               <div 
-                className="bg-purple-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${((currentQuestion + 1) / assessmentQuestions.length) * 100}%` }}
-              />
+                className="bg-purple-60o0 h-2 rounded-full transition-all duration-30o0"
+                style={{ width: `${((currentQuestion + 1) / assessmentQuestions.length) * 10o0}%` }}
+               />
             </div>
           </div>
         </div>
@@ -558,22 +558,22 @@ export default function AI2030ReadinessAssessment() {
               {currentQ.options.map((option) => (
                 <div
                   key={option.value}
-                  className={`p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${
+                  className={`p-4 border-2 rounded-lg cursor-pointer transition-all duration-20o0 ${
                     currentAnswer === option.value
-                      ? 'border-purple-500 bg-purple-50'
-                      : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                      ? 'border-purple-50o0 bg-purple-50'
+                      : 'border-gray-20o0 hover:border-gray-30o0 hover:bg-gray-50'
                   }`}
                   onClick={() => handleAnswer(currentQ.id, option.value)}
                 >
                   <div className="flex items-center gap-3">
                     <div className={`w-4 h-4 rounded-full border-2 ${
                       currentAnswer === option.value
-                        ? 'border-purple-500 bg-purple-500'
-                        : 'border-gray-300'
-                    }`} />
+                        ? 'border-purple-50o0 bg-purple-50o0'
+                        : 'border-gray-30o0'
+                    }`}  />
                     <div>
-                      <div className="font-semibold text-gray-900">{option.label}</div>
-                      <div className="text-sm text-gray-600">{option.description}</div>
+                      <div className="font-semibold text-gray-90o0">{option.label}</div>
+                      <div className="text-sm text-gray-60o0">{option.description}</div>
                     </div>
                   </div>
                 </div>
@@ -592,7 +592,7 @@ export default function AI2030ReadinessAssessment() {
               <Button
                 onClick={nextQuestion}
                 disabled={!currentAnswer}
-                className="bg-purple-600 hover:bg-purple-700"
+                className="bg-purple-60o0 hover:bg-purple-70o0"
               >
                 {currentQuestion === assessmentQuestions.length - 1 ? 'Get Results' : 'Next'}
               </Button>
@@ -600,8 +600,8 @@ export default function AI2030ReadinessAssessment() {
           </CardContent>
         </Card>
 
-        <div className="text-center mt-8 text-sm text-gray-500">
-          <p>This assessment will help you understand your organization's readiness for AI transformation by 2030.</p>
+        <div className="text-center mt-8 text-sm text-gray-50o0">
+          <p>This assessment will help you understand your organization's readiness for AI transformation by 20o30.</p>
         </div>
       </div>
     </div>

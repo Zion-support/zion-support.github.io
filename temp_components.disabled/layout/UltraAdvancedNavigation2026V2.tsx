@@ -15,7 +15,7 @@ import {
   MapPin
 } from 'lucide-react';
 
-const UltraAdvancedNavigation2026V2: React.FC = () => {
+const UltraAdvancedNavigation20o26V2: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -29,10 +29,10 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
@@ -69,11 +69,11 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
+      initial={{ y: -10o0 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled 
-          ? 'bg-black/80 backdrop-blur-xl border-b border-purple-500/20' 
+          ? 'bg-black/80 backdrop-blur-xl border-b border-purple-50o0/20' 
           : 'bg-transparent'
       }`}
     >
@@ -81,18 +81,18 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.0o5 }}
             className="flex items-center space-x-3"
           >
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-purple-50o0 to-cyan-50o0 rounded-xl flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white"  />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                <div className="text-xl font-bold text-white group-hover:text-purple-30o0 transition-colors">
                   Zion Tech Group
                 </div>
-                <div className="text-xs text-purple-300">Revolutionary Technology</div>
+                <div className="text-xs text-purple-30o0">Revolutionary Technology</div>
               </div>
             </Link>
           </motion.div>
@@ -105,10 +105,10 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
                   <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors py-2"
+                      className="flex items-center space-x-1 text-gray-30o0 hover:text-white transition-colors py-2"
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`}  />
                     </button>
                     
                     <AnimatePresence>
@@ -118,24 +118,24 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-4 shadow-2xl"
+                          className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-purple-50o0/20 rounded-2xl p-4 shadow-2xl"
                         >
                           <div className="grid grid-cols-1 gap-3">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-purple-500/10 transition-all duration-200 group"
+                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-purple-50o0/10 transition-all duration-20o0 group"
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                <div className="w-10 h-10 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-200">
-                                  <dropdownItem.icon className="w-5 h-5 text-purple-400" />
+                                <div className="w-10 h-10 bg-gradient-to-br from-purple-50o0/20 to-cyan-50o0/20 rounded-lg flex items-center justify-center group-hover:from-purple-50o0/30 group-hover:to-cyan-50o0/30 transition-all duration-20o0">
+                                  <dropdownItem.icon className="w-5 h-5 text-purple-40o0"  />
                                 </div>
                                 <div>
-                                  <div className="text-white font-medium group-hover:text-purple-300 transition-colors">
+                                  <div className="text-white font-medium group-hover:text-purple-30o0 transition-colors">
                                     {dropdownItem.name}
                                   </div>
-                                  <div className="text-sm text-gray-400">
+                                  <div className="text-sm text-gray-40o0">
                                     {dropdownItem.description}
                                   </div>
                                 </div>
@@ -149,10 +149,10 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors py-2 relative group"
+                    className="text-gray-30o0 hover:text-white transition-colors py-2 relative group"
                   >
                     {item.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 group-hover:w-full transition-all duration-30o0"></span>
                   </Link>
                 )}
               </div>
@@ -163,9 +163,9 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-60o0 hover:to-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4"  />
               <span>Get Started</span>
             </Link>
           </div>
@@ -174,9 +174,9 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors p-2"
+              className="text-gray-30o0 hover:text-white transition-colors p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -190,7 +190,7 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-50o0/20"
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
@@ -199,10 +199,10 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
                     <div>
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors py-3"
+                        className="flex items-center justify-between w-full text-left text-gray-30o0 hover:text-white transition-colors py-3"
                       >
                         <span>{item.name}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`}  />
                       </button>
                       
                       <AnimatePresence>
@@ -218,7 +218,7 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="block text-gray-400 hover:text-white transition-colors py-2"
+                                className="block text-gray-40o0 hover:text-white transition-colors py-2"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {dropdownItem.name}
@@ -231,7 +231,7 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-gray-300 hover:text-white transition-colors py-3"
+                      className="block text-gray-30o0 hover:text-white transition-colors py-3"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -241,29 +241,29 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
               ))}
               
               {/* Mobile CTA */}
-              <div className="pt-4 border-t border-purple-500/20">
+              <div className="pt-4 border-t border-purple-50o0/20">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center w-full space-x-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-600 hover:to-cyan-600 transition-all duration-300"
+                  className="inline-flex items-center justify-center w-full space-x-2 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-60o0 hover:to-cyan-60o0 transition-all duration-30o0"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4"  />
                   <span>Get Started</span>
                 </Link>
               </div>
 
               {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-purple-500/20 space-y-3">
-                <div className="flex items-center space-x-3 text-gray-400">
-                  <Phone className="w-4 h-4" />
+              <div className="pt-4 border-t border-purple-50o0/20 space-y-3">
+                <div className="flex items-center space-x-3 text-gray-40o0">
+                  <Phone className="w-4 h-4"  />
                   <span className="text-sm">{contactInfo.mobile}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-400">
-                  <Mail className="w-4 h-4" />
+                <div className="flex items-center space-x-3 text-gray-40o0">
+                  <Mail className="w-4 h-4"  />
                   <span className="text-sm">{contactInfo.email}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-400">
-                  <MapPin className="w-4 h-4" />
+                <div className="flex items-center space-x-3 text-gray-40o0">
+                  <MapPin className="w-4 h-4"  />
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
@@ -275,4 +275,4 @@ const UltraAdvancedNavigation2026V2: React.FC = () => {
   );
 };
 
-export default UltraAdvancedNavigation2026V2;
+export default UltraAdvancedNavigation20o26V2;

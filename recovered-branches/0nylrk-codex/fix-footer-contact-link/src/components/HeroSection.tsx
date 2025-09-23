@@ -24,31 +24,3 @@ export function HeroSection() {
 
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">
           The world's first free marketplace dedicated to high-tech and artificial intelligence. 
-<<<<<<< HEAD
-          Publish, connect, and thrive — all in one place.
-=======
-          Publishconnectand thrive — all in one place.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
-            size="lg"
-            asChild
-          >
-            <Link to="/signup">Join Zion Now</Link>
-          </Button>
-          <Button
-            variant="outline"
-            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6"
-            size="lg"
-            asChild
-          >
-            <Link to="/marketplace">Explore Marketplace</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-}

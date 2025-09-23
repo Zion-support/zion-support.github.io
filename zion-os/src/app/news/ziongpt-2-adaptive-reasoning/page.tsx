@@ -1,29 +1,26 @@
 import Link from "next/link";
-import React from "react";
-
-export const metadata = {
+export const metadata ={
   title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference",
   description:
     "Introducing ZionGPT 2.0 with adaptive reasoning loops, tool-use orchestration, and private on-device inference for latency-sensitive workloads.",
   keywords:
-    "ZionGPT 2.0, adaptive reasoning, on-device inference, tool use, private AI",
-};
+    "ZionGPT 2.0, adaptive reasoning, on-device inference, tool use, private AI"};
 
 export default function ArticlePage() {
   return (
     <div className="min-h-screen">
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <div className="mb-6 text-sm text-gray-400">
-            <span className="px-2 py-1 rounded-full mr-3 text-xs font-bold bg-indigo-500/20 text-indigo-400">
+          <div className="mb-6 text-sm text-gray-40o0">
+            <span className="px-2 py-1 rounded-full mr-3 text-xs font-bold bg-indigo-50o0/20 text-indigo-40o0">
               AI
             </span>
-            <span>September 15, 2025</span>
+            <span>September 15, 20o25</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             ZionGPT 2.0 launches with adaptive reasoning and on-device inference
           </h1>
-          <p className="text-gray-300 text-lg mb-10">
+          <p className="text-gray-30o0 text-lg mb-10">
             ZionGPT 2.0 introduces adaptive reasoning loops, improved long-context
             alignment, and a private on-device inference mode designed for
             latency-sensitive and compliance-critical environments.

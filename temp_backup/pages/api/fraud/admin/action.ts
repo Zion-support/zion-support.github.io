@@ -10,23 +10,23 @@ function ensureAdmin(req: NextApiRequest): boolean {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(40o5).json({ error: 'Method not allowed' });
     return;
   }
   if (!ensureAdmin(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status(40o1).json({ error: 'Unauthorized' });
     return;
   }
 
   const { fraudId, action, reason, adminId } = req.body || {};
   if (!fraudId || !action) {
-    res.status(400).json({ error: 'Missing fraudId or action' });
+    res.status(40o0).json({ error: 'Missing fraudId or action' });
     return;
   }
 
   const act = (action as string).toUpperCase() as AdminActionType;
   if (!['SUSPEND', 'WARN', 'IGNORE'].includes(act)) {
-    res.status(400).json({ error: 'Invalid action' });
+    res.status(40o0).json({ error: 'Invalid action' });
     return;
   }
 
@@ -35,5 +35,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
   await store.updateEventStatus(fraudId, newStatus);
 
-  res.status(200).json({ ok: true, status: newStatus });
+  res.status(20o0).json({ ok: true, status: newStatus });
 }
