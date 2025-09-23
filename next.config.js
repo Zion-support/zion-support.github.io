@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimized for modern Next.js 14 deployment
+  // Optimized for modern Next.js deployment
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,

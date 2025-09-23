@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -44,14 +41,6 @@
     process.exit(1)}
 }
 
-<<<<<<< HEAD
-main();#!/usr/bin/env node;
-#!/usr/bin/env node;
-
-main();
-
-#!/usr/bin/env node;
-=======
 main();
 
 #!/usr/bin/env node;
@@ -60,7 +49,6 @@ main();
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -91,15 +79,7 @@ console.log('======')
     "action"
       log('warn', 'Vulnerabilities "found")
 
-<<<<<<< HEAD
-      log('info', 'Security "Recommendations")
-log('info', 'Security "Recommendations")
-    process.exit(1)}
-main();
-
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

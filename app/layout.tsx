@@ -51,6 +51,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider defaultTheme="dark" storageKey="zion-theme">
+          <PerformanceMonitor />
+          {children}
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>
