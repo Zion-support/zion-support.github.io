@@ -139,7 +139,6 @@ export default function HomePage() {
                 'Business Intelligence',
               ]}
             />
->>>>>>> beb9ba4c3beb62ae70d14f97568f0482920fc042
           </div>
         </section>
 
