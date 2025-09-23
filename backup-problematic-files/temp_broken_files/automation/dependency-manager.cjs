@@ -209,10 +209,7 @@ class DependencyManager {}
         files.forEach(file => {})
           const filePath = path.join(dir, file;);
           const stat = fs.statSync(filePath;);
-<<<<<<< HEAD
-=======
           
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           if (&& !file.startsWith('.') && file !== 'node_modules') {}
             scanDirectory(filePath)} else if (stat.isFile()) {}
             const ext = path.extname(file) {}
@@ -237,11 +234,7 @@ class DependencyManager {}
     ['src', 'pages', 'components', 'scripts', 'automation'].forEach(dir => {})
       scanDirectory(dir)}
 });
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     return sourceFiles};
   async checkDuplicateDependencies() {}
     this.log('Checking for duplicate dependencies...');
@@ -364,10 +357,7 @@ if ( {})
       console.error('Dependency management "failed": ', error);
       process.exit(1)})};
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 module.exports = DependencyManager;
 =======
 module.exports = DependencyManager;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

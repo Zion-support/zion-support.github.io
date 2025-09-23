@@ -53,28 +53,3 @@ describe('AnalyticsManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AnalyticsManager from '../components/AnalyticsManager';
-
-describe('AnalyticsManager', () => {
-  test('renders without crashing', () => {
-    render(<AnalyticsManager />);
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
-  });
-  
-  test('displays correct content', () => {
-    render(<AnalyticsManager />);
-  });
-  
-  test('handles user interactions', () => {
-    render(<AnalyticsManager />);
-  });
-  
-  test('applies correct styling', () => {
-    render(<AnalyticsManager />);
-  });
-});
-});
-});

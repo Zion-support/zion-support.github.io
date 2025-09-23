@@ -1,15 +1,8 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-    log("4. Continue with your workflow", "blue"),}
-
-=======
 
 
 
     log("4. Continue with your workflow", "blue"),}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 }
 ;
 if (require.main === module) {;
@@ -24,8 +17,6 @@ if (require.main === module) {;
   main()}
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }
-<<<<<<< HEAD
-=======
 
 
 
@@ -33,7 +24,6 @@ module.exports = { resolveMergeConflict, findConflictedFiles }
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -285,10 +275,6 @@ if (require.main === module) {
 if (require.main === module) {
   main()}
 module.exports = { resolveMergeConflict, findConflictedFiles }
-<<<<<<< HEAD
-  log("\n Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"
-=======
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

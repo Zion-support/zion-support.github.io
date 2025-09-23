@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
-    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
-    this.log(`Errors: ${this.results.errors.length}`);
-=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     const recommendations = this.generateRecommendations();
     this.log('\n💡 Recommendations:');
     recommendations.forEach((rec, index) => {
@@ -29,14 +19,6 @@
 
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
-<<<<<<< HEAD
-suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
-#!/usr/bin/env node;
-suite.runComprehensiveSuite().catch(console.error);
-
-#!/usr/bin/env node;
-suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
-=======
 
 suite.runComprehensiveSuite().catch(console.error);
 
@@ -46,7 +28,6 @@ suite.runComprehensiveSuite().catch(console.error);
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -84,10 +65,7 @@ console.log('=')
     this.log('===')
     this.log('\n Recommendations:')
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

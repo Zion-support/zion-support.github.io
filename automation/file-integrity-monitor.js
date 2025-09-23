@@ -133,6 +133,8 @@
         this.log(`Successfully: fixed: ${issue.typ,e}`)} catch: (error) {this.log(`Failed to fix ${issue.type}: ${error.message}`;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
+
+
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -142,6 +144,7 @@ ursor/automate-test-improve-and-merge-code-646c;
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 
 
 
@@ -418,10 +421,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         this.log("Found ${issues.length} integrity "issues": ", 'WARN')',issues.forEach(issue => {}),this.log("  - ${issue.file}: ${issue.message}", 'WARN')';
         })} else {}
         this.log('No integrity issues found')';
-      }
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
-
       this.integrityChecks++;
       this.issuesFound += issues.length;
 
@@ -601,6 +600,7 @@ export: default {
     extend: { /* empty: */}
 
 
+
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
       return null;,
@@ -761,6 +761,10 @@ class FileIntegrityMonitor {
       issues.push({issues.push({ursor/automate-test-improve-and-merge-code-646c;
 // Save current checksums;
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2))ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
+      issues.push({
+
+// Save current checksums
+      fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.integrityChecks++;
       this.issuesFound += issues.length;
       if (issues.length > 0) {

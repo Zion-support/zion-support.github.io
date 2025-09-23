@@ -1,3 +1,9 @@
+
+<<<<<<< HEAD
+
+
+
+
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -15,152 +21,155 @@ import {ServiceIncludes} from "@/components/services/PageSections/ServiceInclude
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
 
-  const [searchParams] = useSearchParams();
+
+
+
+  const success = searchParams.get("success");
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",
+export default function ITOnsiteServicesPage() {
+  const [searchParams] = useSearchParams(),
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
 
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+
+
+  
 
   // Check for success parameter in URL
-  const success = searchParams.get("success");
-import { useState, useEffect } from "react",
-import { useSearchParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",
-import { GlobalServiceSection } from "@/components/GlobalServiceSection",
-import { QuoteFormSection } from "@/components/QuoteFormSection",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
-import { toast } from "@/hooks/use-toast",
-import { PageHero } from "@/components/services/PageSections/PageHero",
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
+  const success = searchParams.get("success"),
+
+  
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+=======
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
 import { GlobalServiceSection } from "@/components/GlobalServiceSection";
 import { QuoteFormSection } from "@/components/QuoteFormSection";
-
 import { TrustedBySection } from "@/components/TrustedBySection";
-import {}
-  CountryPricing,
-
-  onsiteServicePricing,
-} from "@/data/onsiteServicePricing";
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 import { PageHero } from "@/components/services/PageSections/PageHero";
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-  onsiteServicePricing,";
-} from "@/data/onsiteServicePricing";"
-import { toast } from "@/hooks/use-toast";"
-import { PageHero } from "@/components/services/PageSections/PageHero";"
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";"
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";"
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";"
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";"
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {};
+
+export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(
-    null,
-  );"
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-
-  // Check for success parameter in URL"
+  
+  // Check for success parameter in URL
   const success = searchParams.get("success");
-
+  
+>>>>>>> origin/auto/autonomy-17186719616
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
       toast({
-        title: "Payment Successful",
-        description:"
-          "Your IT onsite service request has been received. Our team will contact you shortly.",
-      });
+<<<<<<< HEAD
+        title: "Payment Successful"
+        description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
+
   }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
   }, [success]),
-
+  
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
-
-  // Popular countries for the featured cards;
-  const popularCountries = ["
-    "United States","
-    "United Kingdom","
-    "Canada","
-    "Germany","
-    "Japan","
-    "Singapore",
-  ];
-
+  
 
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
-    .filter((country) =>
-      country.country.toLowerCase().includes(searchQuery.toLowerCase()),
+    .filter(country =>
+=======
+        title: "Payment Successful",
+        description: "Your IT onsite service request has been received. Our team will contact you shortly.",
+      });
+    }
+  }, [success]);
+  
+  // Popular countries for the featured cards
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+  
+  // Filter countries based on search query
+  const filteredCountries = onsiteServicePricing
+    .filter(country => 
+>>>>>>> origin/auto/autonomy-17186719616
+      country.country.toLowerCase().includes(searchQuery.toLowerCase())
     )
     .sort((a, b) => {
       // First, sort by popular status
+<<<<<<< HEAD
+
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
-
       if (aIsPopular && !bIsPopular) return -1;
       if (!aIsPopular && bIsPopular) return 1;
-
-// Then sort alphabetically;
-      return a.country.localeCompare(b.country);
+      // Then sort alphabetically
+      return a.country.localeCompare(b.country)
     });
-
-  const handleCountrySelect = (country: CountryPricing) => {
+      const aIsPopular = popularCountries.includes(a.country),
+      const bIsPopular = popularCountries.includes(b.country),
+      
+      if (aIsPopular && !bIsPopular) return -1,
+      if (!aIsPopular && bIsPopular) return 1,
+      
+      // Then sort alphabetically
+      return a.country.localeCompare(b.country)
+    }),
+  
 
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
-}, 100)
-
-  },
-    }, 100)  const handleCountrySelect = (country: CountryPricing) => {
-
-  const handleCountrySelect = (country: CountryPricing) => {}
-      // Then sort alphabetically
-      return a.country.localeCompare(b.country);
-    });
-
-  const handleCountrySelect = (country: CountryPricing) => {
-    (setSelectedCountry(country),
-      // Scroll to the service details section;
-      setTimeout(() => {}
-        document"
-          .getElementById("service-details")"
-          ?.scrollIntoView({ behavior: "smooth" });
-      }, 100));
-  };
+    }, 100)
 
   }
 
   },
+  
 
-
-      }, 100));
+=======
+      const aIsPopular = popularCountries.includes(a.country);
+      const bIsPopular = popularCountries.includes(b.country);
+      
+      if (aIsPopular && !bIsPopular) return -1;
+      if (!aIsPopular && bIsPopular) return 1;
+      
+      // Then sort alphabetically
+      return a.country.localeCompare(b.country);
+    });
+  
+  const handleCountrySelect = (country: CountryPricing) => {
+    setSelectedCountry(country);
+    
+    // Scroll to the service details section
+    setTimeout(() => {
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
-
+  
+>>>>>>> origin/auto/autonomy-17186719616
   return (
-    <AppLayout>"
-      <section className="py-16 bg-zion-blue">"
+    <AppLayout>
+      <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
@@ -181,48 +190,16 @@ export default function ITOnsiteServicesPage() {;
   const [searchParams] = useSearchParams(),;
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
-// Check for success parameter in URL;
-  const success = searchParams && searchParams.get("success");
 
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
-  const [searchQuery, setSearchQuery] = useState("");
   // Check for success parameter in URL;
   const success = searchParams && searchParams.get("success");
 
-import { useState, useEffect } from "react",;
-import { useSearchParams } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",;
-import { GlobalServiceSection } from "@/components/GlobalServiceSection",;
-import { QuoteFormSection } from "@/components/QuoteFormSection",;
-import { TrustedBySection } from "@/components/TrustedBySection",;
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
-import { toast } from "@/hooks/use-toast",;
-import { PageHero } from "@/components/services/PageSections/PageHero",;
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs",;
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",;
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",;
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",;
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",;
-;
-export default function ITOnsiteServicesPage() {;
-  const [searchParams] = useSearchParams(),;
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  ;
-  // Check for success parameter in URL;
-  const success = searchParams.get("success"),;
-  ;
-  // Check for success parameter in URL;
-  const success = searchParams.get("success"),;
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
       toast({;
         title: "Payment Successful",;
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
-        title: "Payment Successful",,
-  description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
   }, [success]);
 
@@ -254,259 +231,171 @@ export default function ITOnsiteServicesPage() {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   };
+
   return (
-<AppLayout>;
+    <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          {/* Hero Section with Features */}
-          <PageHero />
 
-          {/* Country Selection Tabs */}"
-          <div className="mb-12">
-    }, 100)
-};
-    }, 100)
-};
-            <CountryTabs;
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
           {/* Hero Section with Features */}
-          <PageHero />
+
+          <PageHero />;
 
           {/* Country Selection Tabs */}
           <div className="mb-12">
+
             <CountryTabs
-    }, 100)
-};
-import { useState, useEffect } from "react";""
-import { useSearchParams } from "react-router-dom";""
-import { AppLayout } from "@/layout/AppLayout";""
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";""
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";""
-import { QuoteFormSection } from "@/components/QuoteFormSection";""
-import { TrustedBySection } from "@/components/TrustedBySection";"
-import {
-  // TODO: Implement
-}
-  CountryPricing,
-  onsiteServicePricing,"
-} from "@/data/onsiteServicePricing";""
-import { toast } from "@/hooks/use-toast";""
-import { PageHero } from "@/components/services/PageSections/PageHero";""
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";""
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";""
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";""
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";""
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";"
-export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(
+            <CountryTabs 
 
-    <AppLayout>
-"
-      <section className="py-16 bg-zion-blue">"
-</section>"
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
-</div>)
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
-
-    <AppLayout>;
-      <section className="py-16 bg-zion-blue">;"
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
-</div>
+=======
+          {/* Hero Section with Features */}
           <PageHero />
-          <div className="mb-12">"
-            <CountryTabs;
-pr-12325
+          
+          {/* Country Selection Tabs */}
+          <div className="mb-12">
+            <CountryTabs 
+>>>>>>> origin/auto/autonomy-17186719616
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
-setSearchQuery={setSearchQuery}          {/* Service Details Section */}
-          <ServiceDetailsSection
               setSearchQuery={setSearchQuery}
-            />
-          </div>
+<<<<<<< HEAD
 
-            />
-          </div>
+            />;
+          </div>;
+
 
           {/* Service Details Section */}
-          <ServiceDetailsSection;
+          <ServiceDetailsSection
+            selectedCountry={selectedCountry}
+            setSelectedCountry={setSelectedCountry}
+
+          />;
+
+          {/* How It Works Section */}
+          <ServiceProcessSteps />;
+
+          {/* What's Included Section */}
+          <ServiceIncludes />;
+
+=======
+            />
+          </div>
+          
+          {/* Service Details Section */}
+          <ServiceDetailsSection 
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
           />
-
+          
           {/* How It Works Section */}
           <ServiceProcessSteps />
-
+          
           {/* What's Included Section */}
           <ServiceIncludes />
-
-          />
-          {/* How It Works Section */}
-          <ServiceProcessSteps />'
-          {/* What's Included Section */}
-          <ServiceIncludes />
-          {/* Complete Pricing Table */}"
-          <div id="pricing-table" className="my-16">"
-            <div className="text-center mb-8">"
-              <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>"
+          
+>>>>>>> origin/auto/autonomy-17186719616
+          {/* Complete Pricing Table */}
+          <div id="pricing-table" className="my-16">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>
               <p className="text-zion-slate-light mb-6">
                 Our per-incident prices include transportation costs and the first hour of onsite service.
                 Additional hours are billed separately at standard rates.
               </p>
             </div>
+<<<<<<< HEAD
             <ITServicePricingTable />
           </div>
           <EnterpriseCallToAction />
         </div>
       </section>
+=======
+            
+            <ITServicePricingTable />
+          </div>
+          
+          <EnterpriseCallToAction />
+        </div>
+      </section>
+      
+>>>>>>> origin/auto/autonomy-17186719616
       <GlobalServiceSection />
       <TrustedBySection />
       <QuoteFormSection />
     </AppLayout>
+<<<<<<< HEAD
   )
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Full IT Onsite Services Pricing;
-              </h2>"
-              <p className="text-zion-slate-light mb-6">
-                Our per-incident prices include transportation costs and the;
-                first hour of onsite service. Additional hours are billed;
-                separately at standard rates.
-              </p>
-            </div>
 
-            <ITServicePricingTable />
-          </div>
-
-          <EnterpriseCallToAction />
-        </div>
-      </section>
-
-      <GlobalServiceSection />
-      <TrustedBySection />
-      <QuoteFormSection />
-    </AppLayout>
-  );
+}
 }
 
-import { useState, useEffect } from './react';
-import { useSearchParams } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-import { ITServicePricingTable } from '@/components / services / ITServicePricingTable';
-import { GlobalServiceSection } from '@/components / GlobalServiceSection';
-import { QuoteFormSection } from '@/components / QuoteFormSection';
-import { TrustedBySection } from '@/components / TrustedBySection';
-import { CountryPricing, onsiteServicePricing } from '@/data / onsiteServicePricing';
-import { toast } from '@/hooks / use - toast';
-import { PageHero } from '@/components / services / PageSections / PageHero';
-import { CountryTabs } from '@/components / services / PageSections / CountryTabs';
-import { ServiceDetailsSection } from '@/components / services / PageSections / ServiceDetailsSection';
-import { ServiceProcessSteps } from '@/components / services / PageSections / ServiceProcessSteps';
-import { ServiceIncludes } from '@/components / services / PageSections / ServiceIncludes';
-import { EnterpriseCallToAction } from '@/components / services / PageSections / EnterpriseCallToAction';
-export default /**
- * ITOnsiteServicesPage - Function description
- */
-function ITOnsiteServicesPage() {
-  const [search_params] = useSearchParams ();
-  const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);
-  const [search_query, setSearchQuery] = useState ("");
-;
-      toast ({"
-        title: "Payment Successful","
+
+
+      toast ({
+        title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
   }, [success]);
+
 ;
-  // Popular countries for the featured cards;"
+  // Popular countries for the featured cards;
   const popular_countries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
 ;
+
   // Filter countries based on search query;
   const filtered_countries = onsiteServicePricing;
     .filter (country =>;
-              setSearchQuery={setSearchQuery}
-            />
-
-          <ServiceDetailsSection;
-            selectedCountry={selectedCountry}
-            setSelectedCountry={setSelectedCountry}
-
-          <ServiceProcessSteps />
-
-          <ServiceIncludes />
-
-          <div id="pricing-table" className="my-16">"
-</div>"
-            <div className="text-center mb-8">"
-              <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>""
-              <p className="text-zion-slate-light mb-6">"
-</p>
-            <ITServicePricingTable />
-
-          <EnterpriseCallToAction />
-
-      </section>
-      <GlobalServiceSection />
-
-      <TrustedBySection />
-
-      <QuoteFormSection />
-
-          <ServiceProcessSteps />;
-
-          <ServiceIncludes />;
-              <h2 className="text-2xl font-bold text-white mb-4">"
-</h2>
-              </h2>"
-
-  const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);"
-  const [search_query, setSearchQuery] = useState ("");"
-;
-      toast ({"
-        title: "Payment Successful",")"
-        description: "Your IT onsite service request has been received. Our team will contact you shortly."});"
-  }, [success]);
-  // Popular countries for the featured cards;"
-  const popular_countries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];"
-  // Filter countries based on search query;
-  const filtered_countries = onsiteServicePricing;
-    .filter (country =>;)
-pr-12325
       country.country.toLowerCase ().includes (search_query.toLowerCase ()));
-    .sort ((a, b) => {}
+    .sort ((a, b) => {
       // First, sort by popular status;
       const aIsPopular = popular_countries.includes (a.country);
       const bIsPopular = popular_countries.includes (b.country);
 ;
-      // Check condition;
-if (return -1) {}
-  $2;
+      // Check condition
+if (return -1) {
+  $2
 }
-      // Check condition;
-if (return 1) {}
-  $2;
+      // Check condition
+if (return 1) {
+  $2
 }
       // Then sort alphabetically;
       return a.country.locale_compare (b.country);
     });
 ;
-  const handleCountrySelect = (country: CountryPricing) =>: any {}
+  const handleCountrySelect = (country: CountryPricing) =>: any {
     setSelectedCountry (country),
     // Scroll to the service details section;
-    set_timeout (() => {'
+    set_timeout (() => {
       document.getElementById ('service - details')?.scrollIntoView ({ behavior: 'smooth' });
     }, 100);
   }
 ;
   return (
-<AppLayout>;
-      <section className="py - 16 bg - zion-blue">;
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+    <AppLayout>;
+      <section className="py - 16 bg - zion - blue">;
+        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
           {/* Hero Section with Features */}
           <PageHero />;
           {/* Country Selection Tabs */}
-          <div className="mb-12">;
-          <div className="mb-12">;
+          <div className="mb - 12">;
             <CountryTabs;
               popular_countries={popular_countries}
               filtered_countries={filtered_countries}
@@ -521,14 +410,14 @@ if (return 1) {}
             setSelectedCountry={setSelectedCountry}
           />;
           {/* How It Works Section */}
-          <ServiceProcessSteps />;'
+          <ServiceProcessSteps />;
           {/* What's Included Section */}
           <ServiceIncludes />;
-{/* Complete Pricing Table */}
-          <div id="pricing - table" className="my-16">;
-            <div className="text - center mb-8">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Full IT Onsite Services Pricing</h2>;
-              <p className="text - zion - slate - light mb-6">;
+          {/* Complete Pricing Table */}
+          <div id="pricing - table" className="my - 16">;
+            <div className="text - center mb - 8">;
+              <h2 className="text - 2xl font - bold text - white mb - 4">Full IT Onsite Services Pricing</h2>;
+              <p className="text - zion - slate - light mb - 6">;
                 Our per - incident prices include transportation costs and the first hour of onsite service.;
                 Additional hours are billed separately at standard rates.;
               </p>;
@@ -543,108 +432,23 @@ if (return 1) {}
       <QuoteFormSection />;
     </AppLayout>);
 }
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+=======
+  );
 }
-  ),; //Show success toast if redirected from successful payment useEffect ( () => {
-  if (success === "true") {
-  toast ({
-
-}
-
-}
-
-}, [success]);
-//Popular countries for the featured cards if (!aIsPopular && bIsPopular) return 1;"
-//Then sort alphabetically return (<AppLayout> <section className="py-16 bg-zion-blue"> <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {}
-  /* Hero Section with Features */ 
-}<PageHero /> <CountryTabs popularCountries= {}
-  popularCountries;
-}filteredCountries= {}
-  filteredCountries;
-}handleCountrySelect= {}
-  handleCountrySelect;
-}searchQuery= {}
-  searchQuery;
-}setSearchQuery= {}
-  setSearchQuery;
-}/> </div> {}
-  /* Service Details Section */ 
-}<ServiceDetailsSection selectedCountry= {}
-  selectedCountry;
-}setSelectedCountry= {}
-  setSelectedCountry;
-}/> {}
-  /* How It Works Section */ 
-}<ServiceProcessSteps /> {'
-  /* What's Included Section */ "
-}<ServiceIncludes /> <div className="text-center mb-8"> <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2> <p className="text-zion-slate-light mb-6"> Our per-incident prices include transportation costs and the first hour of onsite service. Additional hours are billed separately at standard rates. </p> </div> <ITServicePricingTable /> </div> <EnterpriseCallToAction /> </div> </section> <GlobalServiceSection /> <TrustedBySection /> <QuoteFormSection /> </AppLayout>) 
-}
-}
-}
-;
-;
-
-}
-
-'"
-}
-      // Check condition;
-if (return -1) {
-  $2;
-      // Check condition;
-if (return 1) {
-      // Then sort alphabetically;
-      return a.country.locale_compare (b.country);
-    });
-  const handleCountrySelect = (country: CountryPricing) =>: any {
-  // TODO: Implement
-    setSelectedCountry (country),
-    // Scroll to the service details section;
-    set_timeout (() => {"
-      document.getElementById ('service - details')?.scrollIntoView ({ behavior: 'smooth' });
-    }, 100);
-  return (
-
-      <section className="py - 16 bg - zion - blue">;"
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <PageHero />;
-          <div className="mb - 12">;"
-              popular_countries={popular_countries}
-              filtered_countries={filtered_countries}
-              search_query={search_query}
-            />;
-
-          </div>;
-            selected_country={selected_country}
-
-          <div id="pricing - table" className="my - 16">;"
-            <div className="text - center mb - 8">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Full IT Onsite Services Pricing</h2>;""
-              <p className="text - zion - slate - light mb - 6">;"
-              </p>;
-            <ITServicePricingTable />;
-
-          <EnterpriseCallToAction />;
-
-      </section>;
-      <GlobalServiceSection />;
-
-      <TrustedBySection />;
-
-      <QuoteFormSection />;
-)
-    );"
-//Then sort alphabetically return (<AppLayout> <section className="py-16 bg-zion-blue"> <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {"
-
-}<PageHero /> <CountryTabs popularCountries= {
-
-}/> </div> {
-}<ServiceDetailsSection selectedCountry= {
-  selectedCountry;
-}setSelectedCountry= {
-  setSelectedCountry;
-}/> {
-
-}<ServiceProcessSteps /> {
-)"
-}<ServiceIncludes /> <div className="text-center mb-8"> <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2> <p className="text-zion-slate-light mb-6"> Our per-incident prices include transportation costs and the first hour of onsite service. Additional hours are billed separately at standard rates. </p> </div> <ITServicePricingTable /> </div> <EnterpriseCallToAction /> </div> </section> <GlobalServiceSection /> <TrustedBySection /> <QuoteFormSection /> )"
-pr-12325
+>>>>>>> origin/auto/autonomy-17186719616

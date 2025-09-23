@@ -1,52 +1,62 @@
-function generateSiteMap() {
+const Sitemap = () => {
+  return null
+}
+
+export const getServerSideProps = ({ res }) => {
   const baseUrl = 'https://ziontechgroup.com'
-  
-  return `<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <url>
-       <loc>${baseUrl}</loc>
-       <lastmod>${new Date().toISOString()}</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>1.0</priority>
-     </url>
-     <url>
-       <loc>${baseUrl}/about</loc>
-       <lastmod>${new Date().toISOString()}</lastmod>
-       <changefreq>monthly</changefreq>
-       <priority>0.8</priority>
-     </url>
-     <url>
-       <loc>${baseUrl}/services</loc>
-       <lastmod>${new Date().toISOString()}</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.9</priority>
-     </url>
-     <url>
-       <loc>${baseUrl}/contact</loc>
-       <lastmod>${new Date().toISOString()}</lastmod>
-       <changefreq>monthly</changefreq>
-       <priority>0.7</priority>
-     </url>
-   </urlset>
- `
-}
+  const currentDate = new Date().toISOString().split('T')[0]
 
-function SiteMap() {
-  // getServerSideProps will do the heavy lifting
-}
+  const staticPages = [
+    {
+      url: '',
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '1.0'
+    },
+    {
+      url: '/about',
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: '0.8'
+    },
+    {
+      url: '/services',
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '0.9'
+    },
+    {
+      url: '/contact',
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: '0.7'
+    }
+  ]
 
-export async function getServerSideProps({ res }) {
-  // We generate the XML sitemap with the posts data
-  const sitemap = generateSiteMap()
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${staticPages
+        .map((page) => {
+          return `
+            <url>
+              <loc>${baseUrl}${page.url}</loc>
+              <lastmod>${page.lastmod}</lastmod>
+              <changefreq>${page.changefreq}</changefreq>
+              <priority>${page.priority}</priority>
+            </url>
+          `
+        })
+        .join('')}
+    </urlset>
+  `
 
   res.setHeader('Content-Type', 'text/xml')
-  // we send the XML to the browser
   res.write(sitemap)
   res.end()
 
   return {
-    props: {},
+    props: {}
   }
 }
 
-export default SiteMap
+export default Sitemap

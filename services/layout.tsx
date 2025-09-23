@@ -1,24 +1,29 @@
-export default function ServicesLayout({
 
-  children: React.ReactNode;
-}) {
-  return <div>{children}</div>;
-}
+
+
+
+
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -29,24 +34,11 @@ export default function ServicesLayout(): any ({;
   children: React && React.ReactNode;
 }) {;
 
-export default /**
- * ServicesLayout - Function description
- */
-function ServicesLayout() {
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   return <div>{children}</div>;
 }
-}
-  // TODO: Implement
-}
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-  return <div>{children}</div>;
-pr-12325

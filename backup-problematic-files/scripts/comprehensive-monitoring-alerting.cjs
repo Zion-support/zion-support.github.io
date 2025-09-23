@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -46,20 +43,6 @@
     process.exit(1)}
 }
 
-<<<<<<< HEAD
-main();#!/usr/bin/env node;
-#!/usr/bin/env node;
-main();
-#!/usr/bin/env node;
-
-main();#!/usr/bin/env node;
-
-    process.exit(1)}
-main();
-#!/usr/bin/env node
-
-#!/usr/bin/env node;
-=======
 main();
 
 #!/usr/bin/env node;
@@ -68,7 +51,6 @@ main();
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -119,10 +101,7 @@ console.log('')
     "action"
       log('warn', 'Alerts "generated")
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
