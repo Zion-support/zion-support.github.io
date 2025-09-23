@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function MicroSaaSServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -7,19 +6,6 @@ export default function MicroSaaSServicesPage() {
     </main>
   );
 }
-=======
-import React from 'react';
-
-export default function MicroSaasPage(): React.ReactElement {
-	return (
-		<main>
-			<h1>Micro SaaS</h1>
-			<p>Lightweight SaaS solutions tailored to your needs.</p>
-		</main>
-	);
-}
-
->>>>>>> origin/main
 
 
 

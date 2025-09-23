@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function ITSolutionsServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -7,19 +6,6 @@ export default function ITSolutionsServicesPage() {
     </main>
   );
 }
-=======
-import React from 'react';
-
-export default function ItSolutionsPage(): React.ReactElement {
-	return (
-		<main>
-			<h1>IT Solutions</h1>
-			<p>Bespoke IT solution packages.</p>
-		</main>
-	);
-}
-
->>>>>>> origin/main
 
 
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function AISolutionsServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -7,19 +6,6 @@ export default function AISolutionsServicesPage() {
     </main>
   );
 }
-=======
-import React from 'react';
-
-export default function AiSolutionsPage(): React.ReactElement {
-	return (
-		<main>
-			<h1>AI Solutions</h1>
-			<p>End-to-end AI solution offerings.</p>
-		</main>
-	);
-}
-
->>>>>>> origin/main
 
 
 
