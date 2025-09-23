@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useAuth } from "../../contexts/AuthContext";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -25,7 +25,7 @@ export default function SignUpPage() {
     }
 
     try {
-      await signIn(email, password);
+      await register(name, email, password);
     } catch (error) {
       setError(error instanceof Error ? error.message : "Registration failed");
     } finally {
