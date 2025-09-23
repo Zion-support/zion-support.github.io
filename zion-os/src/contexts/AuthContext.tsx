@@ -1,18 +1,22 @@
+"use client";
+
 import React, { createContext, useContext } from "react";
 
 type AuthContextValue = {
   login: (email: string, password: string) => Promise<void>;
+  signIn: (email: string, password: string) => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const login = async () => Promise.resolve();
-  const register = async () => Promise.resolve();
+  const login = async (_email: string, _password: string) => Promise.resolve();
+  const signIn = login;
+  const register = async (_name: string, _email: string, _password: string) => Promise.resolve();
 
   return (
-    <AuthContext.Provider value={{ login, register }}>
+    <AuthContext.Provider value={{ login, signIn, register }}>
       {children}
     </AuthContext.Provider>
   );
