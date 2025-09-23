@@ -1,232 +1,48 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Public paths that don't require authentication
-const publicPaths: string[] = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/blog',
-  '/privacy',
-  '/terms',
-  '/api/health',
-  '/api/contact',
-];
-
-// Admin paths that require admin authentication
-const adminPaths: string[] = [
-  '/admin',
-  '/admin/dashboard',
-  '/admin/users',
-  '/admin/settings',
-];
-
-// Protected paths that require authentication
-const protectedPaths: string[] = [
-  '/dashboard',
-  '/profile',
-  '/settings',
-=======
 const PUBLIC_ROUTES: string[] = [
   '/', '/about', '/services', '/contact', '/ai-services', '/it-services', '/micro-saas',
   '/api', '/api-docs', '/careers', '/guides', '/case-studies', '/cookies', '/industries',
   '/blog', '/solutions', '/resources', '/talent', '/team', '/partners', '/news',
-  '/privacy', '/terms', '/sitemap', '/login', '/register', '/auth/login', '/auth/register',
-  '/auth/forgot-password', '/auth/reset-password', '/auth/verify'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
+  '/privacy', '/terms', '/login', '/signup', '/forgot-password', '/reset-password',
+  '/verify-email', '/onboarding', '/pricing', '/faq', '/testimonials', '/integrations',
+  '/developers', '/docs', '/support', '/status', '/events', '/webinars', '/whitepapers',
+  '/e-books', '/reports', '/press', '/investors', '/affiliates', '/legal', '/security',
+  '/accessibility', '/sitemap.xml', '/robots.txt', '/favicon.ico', '/logo.png',
+  '/apple-touch-icon.png', '/favicon-32x32.png', '/favicon-16x16.png', '/site.webmanifest'
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-<<<<<<< HEAD
 
-  // Allow public paths
-  if (publicPaths.some(path => pathname === path || pathname.startsWith(path + '/'))) {
+  // Allow access to public routes
+  if (PUBLIC_ROUTES.some(route => pathname.startsWith(route))) {
     return NextResponse.next();
   }
 
-  // Check for admin paths
-  if (adminPaths.some(path => pathname.startsWith(path))) {
-    // Add admin authentication logic here
-    return NextResponse.next();
+  // Redirect to login for any other route if not authenticated (example logic)
+  // This is a placeholder; actual authentication logic would be more complex
+  const isAuthenticated = request.cookies.has('auth_token'); // Example check
+
+  if (!isAuthenticated) {
+    const loginUrl = new URL('/login', request.url);
+    loginUrl.searchParams.set('redirect', pathname);
+    return NextResponse.redirect(loginUrl);
   }
 
-  // Check for protected paths
-  if (protectedPaths.some(path => pathname.startsWith(path))) {
-    // Add authentication logic here
-    return NextResponse.next();
-  }
-
-  // Default: allow the request
-=======
-
-  if (
-    PUBLIC_ROUTES.includes(pathname) ||
-    pathname.startsWith('/_next/') ||
-    pathname.startsWith('/api/') ||
-    pathname.startsWith('/static/') ||
-    pathname.includes('.')
-  ) {
-    return NextResponse.next();
-  }
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
   return NextResponse.next();
 }
 
 export const config = {
-<<<<<<< HEAD
   matcher: [
     /*
      * Match all request paths except for the ones starting with:
-     * - api (API routes)
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
+     * - any files in the public folder that are not explicitly handled above (e.g., /assets, /images)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|css|js)$).*)',
   ],
 };
-=======
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
-
-export function middleware(_request: NextRequest) {
-  return NextResponse.next()
-}
-
-export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
-=======
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
-};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
-=======
-// Public routes that don't require authentication
-const publicRoutes: string[] = [
-	'/',
-	'/about',
-	'/contact',
-	'/services',
-	'/ai-services',
-	'/it-services',
-	'/micro-saas',
-	'/api',
-	'/api-docs',
-	'/careers',
-	'/guides',
-	'/case-studies',
-	'/cookies',
-	'/industries',
-	'/blog',
-	'/solutions',
-	'/resources',
-	'/talent',
-	'/team',
-	'/partners',
-	'/news',
-	'/privacy',
-	'/terms',
-	'/sitemap',
-	'/auth/login',
-	'/auth/register',
-	'/auth/forgot-password',
-	'/auth/reset-password',
-	'/auth/verify',
-	'/api/auth',
-	'/api/health',
-	'/api/status',
-	'/_next',
-	'/favicon.ico',
-	'/robots.txt',
-	'/sitemap.xml',
-	'/manifest.json',
-];
-
-// Protected routes that require authentication
-const protectedRoutes: string[] = [
-	'/dashboard',
-	'/pricing',
-	'/accessibility',
-	'/compliance',
-	'/security',
-	'/docs',
-	'/products',
-	'/industries/education',
-	'/industries/finance',
-	'/industries/healthcare',
-	'/industries/government',
-];
-
-// Admin routes that require admin role
-const adminRoutes: string[] = [
-	'/admin',
-	'/admin/dashboard',
-	'/admin/users',
-	'/admin/settings',
-	'/admin/analytics',
-	'/admin/content',
-	'/admin/security',
-];
-
-export function middleware(request: NextRequest) {
-	const { pathname } = request.nextUrl;
-
-	// Skip middleware for static files and API routes
-	if (
-		pathname.startsWith('/_next/') ||
-		pathname.startsWith('/api/') ||
-		pathname.startsWith('/static/') ||
-		pathname.includes('.')
-	) {
-		return NextResponse.next();
-	}
-
-	// Allow public routes
-	if (publicRoutes.includes(pathname)) {
-		return NextResponse.next();
-	}
-
-	// Check for protected routes
-	const isProtected = protectedRoutes.some((route) => 
-		pathname === route || pathname.startsWith(route + '/')
-	);
-	const isAdmin = adminRoutes.some((route) => 
-		pathname === route || pathname.startsWith(route + '/')
-	);
-
-	// Auth checks
-	const token = request.cookies.get('auth-token')?.value;
-	const userRole = request.cookies.get('user-role')?.value;
-
-	if ((isProtected || isAdmin) && !token) {
-		const loginUrl = new URL('/auth/login', request.url);
-		loginUrl.searchParams.set('redirect', pathname);
-		return NextResponse.redirect(loginUrl);
-	}
-
-	if (isAdmin && userRole !== 'admin') {
-		return NextResponse.redirect(new URL('/unauthorized', request.url));
-	}
-
-	// Security headers
-	const response = NextResponse.next();
-	response.headers.set('X-Frame-Options', 'DENY');
-	response.headers.set('X-Content-Type-Options', 'nosniff');
-	response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-
-	return response;
-}
-
-export const config = {
-	matcher: [
-		// Match all except API and Next.js internal assets
-		'/((?!api|_next/static|_next/image|favicon.ico).*)',
-	],
-};
->>>>>>> cursor/check-fix-push-and-merge-to-main-8f81

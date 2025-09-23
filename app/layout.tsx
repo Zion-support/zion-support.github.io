@@ -1,37 +1,51 @@
-<<<<<<< HEAD
+import type { Metadata } from 'next'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-=======
-// global styles are optional; keeping layout minimal
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 
-export const metadata = {
-  metadataBase: new URL('https://ziontechgroup.com'),
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Expert consulting and implementation services.',
-  keywords: ['AI', 'machine learning', 'cloud computing', 'cybersecurity', 'web development', 'data solutions'],
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Zion Tech Group - AI & Technology Solutions',
+    template: '%s | Zion Tech Group'
+  },
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords: ['AI', 'technology solutions', 'cloud infrastructure', 'micro SaaS', 'consulting', 'automation', 'cybersecurity'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
     title: 'Zion Tech Group - AI & Technology Solutions',
-    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & Technology Solutions',
-      },
-    ],
+    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+    siteName: 'Zion Tech Group',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - AI & Technology Solutions',
-    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.',
-    images: ['/og-image.jpg'],
+    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+    creator: '@ziontechgroup',
   },
   robots: {
     index: true,
@@ -44,18 +58,28 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#1e293b" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#1e40af" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="antialiased">
+      <body className={`${inter.className} antialiased bg-slate-900 text-white`}>
         {children}
       </body>
     </html>
