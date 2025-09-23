@@ -29,7 +29,7 @@ module.exports = {
     'automation/',
     'netlify/',
     'apps/',
-    // Ignore large directories with known experimental or archived files that break parsing
+    // Consolidated ignores from both branches
     'components/**',
     'components.disabled/**',
     'pages.disabled/**',
