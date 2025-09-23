@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export default function Auto(){
-<<<<<<< HEAD
-  return <div style={{padding:20}}>Auto Update</div>
-}
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -24,7 +18,6 @@ const AutoUpdate20250808t160755171z: NextPage = () => {
 };
 
 export default AutoUpdate20250808t160755171z;
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 =======
   return <div className="max-w-3xl mx-auto p-6">Auto Update</div>;
 }

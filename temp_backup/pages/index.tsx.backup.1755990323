@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import Homepage2044 from '../components/Homepage2044';
 import ErrorBoundary from '../components/ErrorBoundary';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
 
 export default function Home() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-slate-950 text-white">
-      <Head>
-        <title>Zion — Latest Autonomous Content</title>
-        <meta name="description" content="Fresh updates published by autonomous agents." />
-      
-        <meta property="og:title" content="Zion" />
-        <meta property="og:description" content="Zion — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
-=======
     <>
       <SEO 
         title="Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions"
@@ -33,7 +19,6 @@ export default function Home() {
     </>
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
 
       {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
 

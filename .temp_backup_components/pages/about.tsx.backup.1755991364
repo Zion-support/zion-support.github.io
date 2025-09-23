@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AboutPage() { return null; }
-=======
 import React from "react";
 
 export default function AboutPage() {
@@ -33,7 +29,6 @@ const About: NextPage = () => {
 };
 
 export default About;
->>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
 =======
 export default function About() {
   return <div>About page</div>;

@@ -14,10 +14,7 @@ export interface Innovative2026MicroSaas {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
   {
     id: "2026-micro-saas",

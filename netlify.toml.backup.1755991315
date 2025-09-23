@@ -1,23 +1,4 @@
 [build]
-<<<<<<< HEAD
-  command = "chmod +x scripts/pre-build-check.sh && ./scripts/pre-build-check.sh && npm ci && npm run export"
-  publish = "out"
-
-[build.environment]
-  SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
-[[plugins]]
-  package = "./.scripts/netlify-rollback-monitor"
-  [plugins.inputs]
-    monitorMinutes = 20
-    intervalSeconds = 60 
-=======
   command = "npm ci && npm install react@18.3.1 react-dom@18.3.1 && npm run build"
   publish = "out"
 
@@ -28,4 +9,3 @@
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
->>>>>>> origin/cursor/build-nextjs-app-and-handle-errors-5869

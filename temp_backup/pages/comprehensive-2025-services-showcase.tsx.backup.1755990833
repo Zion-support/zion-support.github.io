@@ -10,51 +10,9 @@ import {
   Globe, Cpu, Database, Cloud, BarChart3, Zap, Lock, Palette,
   ArrowRight, ChevronDown, CheckCircle, Play, ExternalLink
 } from 'lucide-react';
-<<<<<<< HEAD
-
-// Import our new service data
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-
-// Import existing service data
-import { realMicroSaasServices } from '../data/real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-
-// Unified service interface for showcase display
-interface UnifiedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  icon?: string;
-  popular?: boolean;
-  link?: string;
-  price?: string | number;
-  pricing?: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom: string;
-  };
-  price_monthly?: number;
-  price_yearly?: number;
-  trialDays?: number;
-  setupTime?: string;
-  features?: string[];
-  benefits?: string[];
-  rating?: number;
-  reviews?: number;
-}
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
 import { innovativeMicroSAASServices } from '../data/innovative-2025-micro-saas-expanded';
 import { innovativeITServices } from '../data/innovative-2025-it-services-expanded';
 import { innovativeAIServices } from '../data/innovative-2025-ai-services-expanded';
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 const Comprehensive2025ServicesShowcase: React.FC = () => {
   const allServices = [...innovative2025MicroSaasServices, ...innovative2025ITEnterpriseBatch];
@@ -120,66 +78,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
             <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/30 to-teal-500/30 rounded-full blur-3xl animate-pulse delay-500"></div>
             
-<<<<<<< HEAD
-            {/* Contact Information */}
-            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/20 max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-4">Contact Zion Tech Group</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div className="flex items-center space-x-2">
-                  <Globe className="w-4 h-4 text-cyan-400" />
-                  <span>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline">ziontechgroup.com</a></span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-purple-400" />
-                  <span>Mobile: <a href="tel:+13024640950" className="text-purple-400 hover:underline">+1 302 464 0950</a></span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Zap className="w-4 h-4 text-pink-400" />
-                  <span>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-pink-400 hover:underline">kleber@ziontechgroup.com</a></span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Building className="w-4 h-4 text-green-400" />
-                  <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
-                </div>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="py-8 px-4 bg-black/20">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    selectedCategory === category
-                      ? 'bg-cyan-500 text-black'
-                      : 'bg-black/30 text-gray-300 hover:bg-black/50 border border-gray-600'
-                  }`}
-                >
-                  {category}
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-                </button>
-=======
             {/* Animated particles */}
             <div className="absolute inset-0">
               {[...Array(30)].map((_, i) => (
@@ -201,7 +99,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
                     top: `${Math.random() * 100}%`,
                   }}
                 />
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
               ))}
             </div>
           </div>
@@ -508,13 +405,7 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-          {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -656,9 +547,4 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Comprehensive2025ServicesShowcase;
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
 export default ComprehensiveServicesShowcase;
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84

@@ -8,11 +8,7 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-<<<<<<< HEAD
-  schedule: '0 */6 * * *',
-=======
   schedule: '17 */12 * * *', // every 12 hours, offset
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-0980
 };
 
 exports.handler = async () => {
@@ -26,13 +22,6 @@ exports.handler = async () => {
     return status;
   }
 
-<<<<<<< HEAD
-  logStep('seo:audit', () => runNode('scripts/seo-audit.js'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, body: logs.join('\n') };
-};
-=======
   // Generate SEO audit reports
   logStep('seo:audit', () => runNode('scripts/seo-audit.js'));
 
@@ -41,4 +30,3 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') };
 };
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-0980

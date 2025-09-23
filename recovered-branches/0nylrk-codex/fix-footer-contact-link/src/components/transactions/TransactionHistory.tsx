@@ -1,25 +1,14 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-=======
 import React, { useState } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
-import { ArrowLeftArrowRightRefreshCcwCheckCircle2XCircleClockAlertCircle } from "lucide-react";
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { formatDistanceToNow } from "date-fns";
 
 interface Transaction {
@@ -46,17 +35,10 @@ interface Transaction {
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
-<<<<<<< HEAD
-  const [filtersetFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
-  
-  const { data: transactionsisLoadingerrorefetch } = useQuery({
-    queryKey: ['transactions'user?.idfilter],
-=======
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
->>>>>>> origin/auto/autonomy-17186719616
     queryFn: async () => {
       if (!user) return [];
       
@@ -71,18 +53,6 @@ export function TransactionHistory() {
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
       
       if (filter === 'pending') {
-<<<<<<< HEAD
-        query = query.eq('status'pending');
-      } else if (filter === 'completed') {
-        query = query.eq('status'completed');
-      } else if (filter === 'escrow') {
-        query = query.eq('in_escrow'true);
-      }
-      
-      query = query.order('created_at'{ ascending: false });
-      
-      const { dataerror } = await query;
-=======
         query = query.eq('status', 'pending');
       } else if (filter === 'completed') {
         query = query.eq('status', 'completed');
@@ -93,19 +63,10 @@ export function TransactionHistory() {
       query = query.order('created_at', { ascending: false });
       
       const { data, error } = await query;
->>>>>>> origin/auto/autonomy-17186719616
       
       if (error) throw error;
       return data as Transaction[];
     },
-<<<<<<< HEAD
-    enabled: !!user});
-
-  const handleManageTransaction = async (transactionId: stringaction: 'release' | 'refund' | 'cancel') => {
-    try {
-      const { dataerror } = await supabase.functions.invoke('manage-transaction'{
-        body: { transactionIdaction }
-=======
     enabled: !!user,
   });
 
@@ -113,28 +74,12 @@ export function TransactionHistory() {
     try {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
         body: { transactionId, action }
->>>>>>> origin/auto/autonomy-17186719616
       });
       
       if (error) throw error;
       
       toast({
         title: "Success",
-<<<<<<< HEAD
-        description: data.message || "Transaction updated successfully"});
-      
-      refetch();
-    } catch (error) {
-      console.error("Error managing transaction:"error);
-      toast({
-        title: "Error",
-        description: error.message || "Failed to update transaction",
-        variant: "destructive"});
-    }
-  };
-  
-  const getStatusBadge = (status: stringinEscrow: boolean) => {
-=======
         description: data.message || "Transaction updated successfully",
       });
       
@@ -150,7 +95,6 @@ export function TransactionHistory() {
   };
   
   const getStatusBadge = (status: string, inEscrow: boolean) => {
->>>>>>> origin/auto/autonomy-17186719616
     switch(status) {
       case 'pending':
         return inEscrow ? (
@@ -189,13 +133,8 @@ export function TransactionHistory() {
     }
   };
   
-<<<<<<< HEAD
-  const formatCurrency = (amount: numbercurrency: string) => {
-    return new Intl.NumberFormat('en-US'{
-=======
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
->>>>>>> origin/auto/autonomy-17186719616
       style: 'currency',
       currency: currency.toUpperCase()
     }).format(amount);
@@ -260,11 +199,7 @@ export function TransactionHistory() {
         </div>
         
         {isLoading ? (
-<<<<<<< HEAD
-          Array(3).fill(0).map((_i) => (
-=======
           Array(3).fill(0).map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
             <div key={i} className="mb-4">
               <Card className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader className="pb-2">
@@ -315,22 +250,14 @@ export function TransactionHistory() {
                         </CardDescription>
                       </div>
                       
-<<<<<<< HEAD
-                      {getStatusBadge(transaction.statustransaction.in_escrow)}
-=======
                       {getStatusBadge(transaction.status, transaction.in_escrow)}
->>>>>>> origin/auto/autonomy-17186719616
                     </div>
                   </CardHeader>
                   <CardContent className="pb-3">
                     <div className="flex justify-between items-center mb-1">
                       <span className="text-zion-slate-light">Amount:</span>
                       <span className="text-white font-medium text-lg">
-<<<<<<< HEAD
-                        {formatCurrency(transaction.amountransaction.currency)}
-=======
                         {formatCurrency(transaction.amount, transaction.currency)}
->>>>>>> origin/auto/autonomy-17186719616
                       </span>
                     </div>
                     
@@ -338,11 +265,7 @@ export function TransactionHistory() {
                       <span className="text-zion-slate-light">Date:</span>
                       <span className="text-zion-slate-light">
                         {new Date(transaction.created_at).toLocaleDateString()} 
-<<<<<<< HEAD
-                        ({formatDistanceToNow(new Date(transaction.created_at){ addSuffix: true })})
-=======
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
->>>>>>> origin/auto/autonomy-17186719616
                       </span>
                     </div>
                     
@@ -365,11 +288,7 @@ export function TransactionHistory() {
                   <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">
                     {canRelease && (
                       <Button 
-<<<<<<< HEAD
-                        onClick={() => handleManageTransaction(transaction.id'release')}
-=======
                         onClick={() => handleManageTransaction(transaction.id, 'release')}
->>>>>>> origin/auto/autonomy-17186719616
                         size="sm"
                         className="bg-green-600 hover:bg-green-700 text-white"
                       >
@@ -379,11 +298,7 @@ export function TransactionHistory() {
                     
                     {canRefund && (
                       <Button 
-<<<<<<< HEAD
-                        onClick={() => handleManageTransaction(transaction.id'refund')}
-=======
                         onClick={() => handleManageTransaction(transaction.id, 'refund')}
->>>>>>> origin/auto/autonomy-17186719616
                         size="sm"
                         variant="outline"
                         className="text-zion-slate-light border-zion-blue-light"
@@ -394,11 +309,7 @@ export function TransactionHistory() {
                     
                     {canCancel && (
                       <Button 
-<<<<<<< HEAD
-                        onClick={() => handleManageTransaction(transaction.id'cancel')}
-=======
                         onClick={() => handleManageTransaction(transaction.id, 'cancel')}
->>>>>>> origin/auto/autonomy-17186719616
                         size="sm"
                         variant="outline"
                         className="text-red-400 border-red-400/30 hover:bg-red-400/10"
@@ -421,11 +332,7 @@ export function TransactionHistory() {
             <p className="text-zion-slate-light max-w-md mx-auto">
               {filter !== 'all' 
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`
-<<<<<<< HEAD
-                : "You haven't made any transactions yet. Once you make a payment or receive oneit will appear here."}
-=======
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
         )}

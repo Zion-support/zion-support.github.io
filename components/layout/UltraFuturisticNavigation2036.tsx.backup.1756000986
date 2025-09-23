@@ -11,13 +11,9 @@ import {
   Code, Database, Network, Server, Monitor, Smartphone,
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,
   Building, MessageCircle, Sparkles as SparklesIcon, Zap as ZapIcon,
-<<<<<<< HEAD
-  Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon
-=======
   Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon,
   Home, Info, Users as UsersIcon, FileText as FileTextIcon, 
   Briefcase, GraduationCap, Handshake, Globe as GlobeIcon2, Calendar
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -75,17 +71,10 @@ const navigationItems: NavigationItem[] = [
     featured: true,
     children: [
       { 
-<<<<<<< HEAD
-        name: 'All Services', 
-        href: '/services', 
-        description: 'Complete services overview',
-        icon: <Grid className="w-4 h-4" />,
-=======
         name: 'AI & Machine Learning', 
         href: '/ai-services', 
         description: 'Advanced AI and ML solutions',
         icon: <BrainIcon className="w-4 h-4" />,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
         featured: true
       },
       { 
@@ -97,11 +86,7 @@ const navigationItems: NavigationItem[] = [
       { 
         name: 'Quantum Technology', 
         href: '/quantum-services', 
-<<<<<<< HEAD
-        description: 'Quantum computing solutions',
-=======
         description: 'Quantum computing and security',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
         icon: <AtomIcon className="w-4 h-4" />
       },
       { 
@@ -117,12 +102,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Cpu className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
-        name: 'Specialized Solutions', 
-        href: '/solutions', 
-        description: 'Industry-specific solutions',
-        icon: <TargetIcon className="w-4 h-4" />
-=======
         name: 'Cybersecurity', 
         href: '/security', 
         description: 'Advanced security solutions',
@@ -139,39 +118,10 @@ const navigationItems: NavigationItem[] = [
         href: '/services', 
         description: 'Complete service catalog',
         icon: <Grid className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       }
     ]
   },
   {
-<<<<<<< HEAD
-    name: 'Showcase & Pricing',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Star className="w-5 h-5" />,
-    description: 'Services portfolio & pricing',
-    badge: 'Showcase',
-    category: 'showcase',
-    featured: true,
-    children: [
-      { 
-        name: 'Services Showcase 2036', 
-        href: '/comprehensive-services-showcase-2036', 
-        description: 'Complete 2036 services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Pricing Plans', 
-        href: '/pricing', 
-        description: 'Service pricing information',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Market Pricing', 
-        href: '/market-pricing', 
-        description: 'Market price references',
-        icon: <BarChart3 className="w-4 h-4" />
-=======
     name: 'Solutions',
     href: '/solutions',
     icon: <Target className="w-5 h-5" />,
@@ -214,24 +164,10 @@ const navigationItems: NavigationItem[] = [
         href: '/retail-technology-solutions', 
         description: 'Retail technology solutions',
         icon: <ShoppingCart className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       }
     ]
   },
   {
-<<<<<<< HEAD
-    name: 'Company',
-    href: '/about',
-    icon: <Building className="w-5 h-5" />,
-    description: 'About Zion Tech Group',
-    category: 'company',
-    children: [
-      { 
-        name: 'About Us', 
-        href: '/about', 
-        description: 'Company information',
-        icon: <Building className="w-4 h-4" />
-=======
     name: 'Showcase & Pricing',
     href: '/pricing',
     icon: <Star className="w-5 h-5" />,
@@ -252,7 +188,6 @@ const navigationItems: NavigationItem[] = [
         href: '/market-pricing', 
         description: 'Market price analysis',
         icon: <BarChart3 className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       },
       { 
         name: '2026 Services Showcase', 
@@ -261,18 +196,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Rocket className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
-        name: 'Partners', 
-        href: '/partners', 
-        description: 'Partnership opportunities',
-        icon: <Users className="w-4 h-4" />
-      },
-      { 
-        name: 'Investors', 
-        href: '/investors', 
-        description: 'Investment information',
-        icon: <DollarSign className="w-4 h-4" />
-=======
         name: 'Micro SAAS Showcase', 
         href: '/ultimate-2025-micro-saas-showcase', 
         description: 'Micro SAAS solutions',
@@ -283,7 +206,6 @@ const navigationItems: NavigationItem[] = [
         href: '/ultimate-2035-futuristic-services-showcase', 
         description: 'Future technology services',
         icon: <SparklesIcon className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       }
     ]
   },
@@ -291,48 +213,25 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
-<<<<<<< HEAD
-    description: 'Knowledge & support',
-=======
     description: 'Educational resources and tools',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     category: 'resources',
     children: [
       { 
         name: 'Documentation', 
         href: '/docs', 
         description: 'Technical documentation',
-<<<<<<< HEAD
-        icon: <FileText className="w-4 h-4" />
-=======
         icon: <FileTextIcon className="w-4 h-4" />,
         featured: true
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       },
       { 
         name: 'Blog', 
         href: '/blog', 
-<<<<<<< HEAD
-        description: 'Latest insights',
-        icon: <BookOpen className="w-4 h-4" />
-=======
         description: 'Latest insights and news',
         icon: <FileText className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       },
       { 
         name: 'Case Studies', 
         href: '/case-studies', 
-<<<<<<< HEAD
-        description: 'Success stories',
-        icon: <Award className="w-4 h-4" />
-      },
-      { 
-        name: 'Support', 
-        href: '/support', 
-        description: 'Technical support',
-        icon: <HelpCircle className="w-4 h-4" />
-=======
         description: 'Success stories and examples',
         icon: <BookOpenCheck className="w-4 h-4" />
       },
@@ -439,7 +338,6 @@ const navigationItems: NavigationItem[] = [
         href: '/api-docs', 
         description: 'Developer resources',
         icon: <Code className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       }
     ]
   }

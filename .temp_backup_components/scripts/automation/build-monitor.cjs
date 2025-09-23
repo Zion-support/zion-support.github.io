@@ -49,10 +49,7 @@ setupSignalHandlers() {}
     const timestamp = new Date().toISOString();
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -258,8 +255,4 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
   console.error('Failed to start Build "Monitor": ', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

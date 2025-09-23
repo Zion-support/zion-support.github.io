@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React{ createContextuseContextuseEffectuseStateReactNode } from 'react';
-=======
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Cookies from 'js-cookie';
 
 export type ConsentState = {
@@ -17,22 +13,14 @@ interface ConsentContextValue {
   updateConsent: (state: ConsentState) => void;
 }
 
-<<<<<<< HEAD
-const defaultState: ConsentState = { analytics: falseads: false };
-=======
 const defaultState: ConsentState = { analytics: false, ads: false };
->>>>>>> origin/auto/autonomy-17186719616
 
 const ConsentContext = createContext<ConsentContextValue>({
   consent: defaultState,
   acceptAll: () => {},
   rejectNonEssential: () => {},
-<<<<<<< HEAD
-  updateConsent: () => {}});
-=======
   updateConsent: () => {},
 });
->>>>>>> origin/auto/autonomy-17186719616
 
 function loadAnalytics() {
   if (document.getElementById('ga-script')) return;
@@ -56,37 +44,18 @@ function loadAds() {
 }
 
 export function ConsentProvider({ children }: { children: ReactNode }) {
-<<<<<<< HEAD
-  const [consentsetConsent] = useState<ConsentState>(() => {
-=======
   const [consent, setConsent] = useState<ConsentState>(() => {
->>>>>>> origin/auto/autonomy-17186719616
     const stored = Cookies.get('consent_preferences');
     return stored ? (JSON.parse(stored) as ConsentState) : defaultState;
   });
 
   useEffect(() => {
-<<<<<<< HEAD
-    Cookies.set('consent_preferences'JSON.stringify(consent){ expires: 365 });
-  }[consent]);
-=======
     Cookies.set('consent_preferences', JSON.stringify(consent), { expires: 365 });
   }, [consent]);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (consent.analytics) loadAnalytics();
     if (consent.ads) loadAds();
-<<<<<<< HEAD
-  }[consent]);
-
-  const acceptAll = () => setConsent({ analytics: trueads: true });
-  const rejectNonEssential = () => setConsent({ analytics: falseads: false });
-  const updateConsent = (state: ConsentState) => setConsent(state);
-
-  return (
-    <ConsentContext.Provider value={{ consentacceptAllrejectNonEssentialupdateConsent }}>
-=======
   }, [consent]);
 
   const acceptAll = () => setConsent({ analytics: true, ads: true });
@@ -95,7 +64,6 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
 
   return (
     <ConsentContext.Provider value={{ consent, acceptAll, rejectNonEssential, updateConsent }}>
->>>>>>> origin/auto/autonomy-17186719616
       {children}
     </ConsentContext.Provider>
   );

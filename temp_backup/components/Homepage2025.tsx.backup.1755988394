@@ -1,26 +1,15 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useEffect, useState } from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3, Star, Zap, X, Search, MessageCircle, Phone, Mail, Atom } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
 
 const Homepage2025: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const [activeSection, setActiveSection] = useState(0);
-=======
   const [activeFeature, setActiveFeature] = useState(0);
   const [showNewsletter, setShowNewsletter] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showFloatingActions, setShowFloatingActions] = useState(false);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
 
   useEffect(() => {
     // Simulate loading time for better UX
@@ -28,9 +17,6 @@ const Homepage2025: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-<<<<<<< HEAD
-  // Intersection Observer for scroll animations
-=======
   // Auto-rotate features for better engagement
   useEffect(() => {
     if (!isLoading) {
@@ -42,7 +28,6 @@ const Homepage2025: React.FC = () => {
   }, [isLoading]);
 
   // Show floating actions after scroll
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -68,8 +53,6 @@ const Homepage2025: React.FC = () => {
     { icon: Cpu, title: "Quantum Computing", description: "Next-generation computational power for complex problems", color: "from-indigo-500 to-purple-500" },
     { icon: Database, title: "Data Intelligence", description: "Transform raw data into actionable business insights", color: "from-yellow-500 to-orange-500" }
   ];
-
-
 
   const testimonials = [
     {
@@ -104,10 +87,6 @@ const Homepage2025: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center"
           >
-<<<<<<< HEAD
-            <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-xl text-gray-300">Loading Zion Tech Group...</p>
-=======
             <div className="w-20 h-20 mx-auto mb-6">
               <motion.div
                 className="w-full h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
@@ -117,7 +96,6 @@ const Homepage2025: React.FC = () => {
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
             <p className="text-gray-400">Preparing the future...</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
           </motion.div>
         </div>
       </Layout>
@@ -427,8 +405,6 @@ const Homepage2025: React.FC = () => {
               <MessageCircle className="w-8 h-8" />
             </Link>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           {/* Quick Stats */}
           <motion.div
@@ -875,7 +851,6 @@ const Homepage2025: React.FC = () => {
               </a>
             </motion.div>
           </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
         )}
       </AnimatePresence>
 

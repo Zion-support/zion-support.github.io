@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function AnalyticsContext() {
-=======
-<<<<<<< HEAD
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { useRouter } from 'next/router';
@@ -124,7 +120,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 =======
 import React from 'react';
 export function AnalyticsContext() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

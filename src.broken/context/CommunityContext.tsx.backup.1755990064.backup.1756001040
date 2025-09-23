@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function CommunityContext() {
-=======
-<<<<<<< HEAD
 import React, { createContext, useContext, ReactNode } from 'react';
 import { ForumPost } from '@/types/community';
 
@@ -115,7 +111,6 @@ export function CommunityProvider({ children }: { children: ReactNode }) {
 =======
 import React from 'react';
 export function CommunityContext() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

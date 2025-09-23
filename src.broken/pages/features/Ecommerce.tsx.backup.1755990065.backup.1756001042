@@ -2,8 +2,6 @@ import React from 'react';
 export function Ecommerce() {
   return (
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <>
       <SEO
         title="E-commerce Platform"
@@ -50,14 +48,10 @@ export function Ecommerce() {
       </main>
     </>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

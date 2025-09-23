@@ -10,11 +10,7 @@ type QuoteRequestsListProps = {
   isArchived: boolean;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded: (id: string) => void;
-<<<<<<< HEAD
-  onToggleArchive: (id: stringisArchived: boolean) => void;
-=======
   onToggleArchive: (id: string, isArchived: boolean) => void;
->>>>>>> origin/auto/autonomy-17186719616
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({

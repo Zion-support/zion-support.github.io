@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",
-
-interface SuggestedJobsProps {
-  talentId?: string,
-}
-
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-  const { 
-    isLoading,
-=======
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'
 import { Badge } from "@/components/ui/badge";
@@ -33,46 +15,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const currentTalentId = talentId || user?.id;
   const { 
     isLoading, 
->>>>>>> origin/auto/autonomy-17186719616
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
       viewedMatches, 
       appliedMatches 
     } 
-<<<<<<< HEAD
-  } = useJobSuggestions(currentTalentId),
-
-
-
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined'),
-  },
-
-  if (isLoading) {
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-
-
-    updateJobMatchStatus, ;
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-      <div className="flex items-center justify-center p-6">
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />
-      </div>
-    ),
-  }
-
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />,
-=======
   } = useJobSuggestions(currentTalentId);
 
   const handleApply = (matchId: string, jobId: string) => {
@@ -94,7 +42,6 @@ import { NoJobsCard } from "./NoJobsCard";
 
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />;
->>>>>>> origin/auto/autonomy-17186719616
   }
   
   return (
@@ -163,9 +110,5 @@ import { NoJobsCard } from "./NoJobsCard";
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

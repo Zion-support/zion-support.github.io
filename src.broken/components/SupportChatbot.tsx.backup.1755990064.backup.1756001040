@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -59,16 +57,12 @@ export function SupportChatbot() {
         <ChatInput onSend={sendMessage} />
       </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function SupportChatbot() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

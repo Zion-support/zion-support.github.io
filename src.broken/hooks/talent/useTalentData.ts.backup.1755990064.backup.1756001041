@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { useQuery } from '@tanstack/react-query';
 import { TALENT_PROFILES } from '@/data/talentData';
@@ -30,13 +28,9 @@ export function useTalentData() {
   };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useTalentData;
 export const useUseTalentData: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

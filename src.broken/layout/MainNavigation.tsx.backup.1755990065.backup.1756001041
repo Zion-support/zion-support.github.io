@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -12,10 +10,6 @@ import { useTranslation } from "react-i18next";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useCart } from "@/context/CartContext";
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react';
-
-
-
-
 
 import { LanguageSelector } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
@@ -170,7 +164,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </ul>
     </nav>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function MainNavigation() {
   return (
@@ -178,9 +171,6 @@ export function MainNavigation() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

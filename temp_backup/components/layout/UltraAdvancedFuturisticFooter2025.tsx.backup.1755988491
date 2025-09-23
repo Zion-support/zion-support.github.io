@@ -68,20 +68,12 @@ const footerSections: FooterSection[] = [
 ];
 
 const socialLinks = [
-<<<<<<< HEAD
-  { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true, color: 'hover:text-blue-400' },
-  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true, color: 'hover:text-sky-400' },
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true, color: 'hover:text-gray-300' },
-  { icon: <Youtube className="w-5 h-5" />, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube', external: true, color: 'hover:text-red-400' },
-  { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/ziontechgroup', label: 'Facebook', external: true, color: 'hover:text-blue-500' }
-=======
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" />, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" />, color: 'hover:text-sky-400' },
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" />, color: 'hover:text-blue-600' },
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" />, color: 'hover:text-pink-500' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" />, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" />, color: 'hover:text-gray-400' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 ];
 
 const contactInfo = {
@@ -471,13 +463,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                   Cookie Policy
                 </Link>
-<<<<<<< HEAD
-                <Link href="/accessibility" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                  Accessibility
-=======
                 <Link href="/sitemap" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                   Sitemap
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
                 </Link>
               </motion.div>
             </div>

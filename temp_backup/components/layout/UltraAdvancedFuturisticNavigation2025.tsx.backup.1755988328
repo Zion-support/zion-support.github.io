@@ -71,18 +71,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Cloud computing and infrastructure'
       },
       {
-<<<<<<< HEAD
-        label: 'Data & Analytics',
-        href: '/services?category=data-analytics',
-        icon: <BarChart3 className="w-4 h-4" />,
-        description: 'Data insights and analytics'
-      },
-      {
-        label: 'Blockchain & Web3',
-        href: '/services?category=blockchain',
-        icon: <LinkIcon className="w-4 h-4" />,
-        description: 'Decentralized technology solutions'
-=======
         label: 'Advertising & Marketing',
         href: '/services?category=advertising-marketing',
         icon: <Target className="w-4 h-4" />,
@@ -117,7 +105,6 @@ const navigationItems: NavigationItem[] = [
         href: '/services?category=human-augmentation',
         icon: <Users className="w-4 h-4" />,
         description: 'Brain-computer interfaces'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-33fe
       }
     ]
   },

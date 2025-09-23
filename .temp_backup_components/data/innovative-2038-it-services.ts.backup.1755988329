@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-export type Innovative2038ITService = {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  pricing: {
-    starter: string;
-    pro: string;
-    enterprise: string;
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketPrice: string;
-  link: string;
-  launchDate: string;
-  rating: number;
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  marketSize: string;
-  growthRate: string;
-  competitors: string[];
-  roi: string;
-  targetAudience: string;
-  setupTime: string;
-  trialDays: number;
-  customers: number;
-  reviews: number;
-=======
 export const innovative2038ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform',
@@ -448,7 +416,6 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ac
 };
 
 export const innovative2038ITServices: Innovative2038ITService[] = [

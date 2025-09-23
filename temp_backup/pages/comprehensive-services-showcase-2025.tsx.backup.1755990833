@@ -7,10 +7,6 @@ import {
   Database, Lock, Cloud, Settings, Eye, BookOpen, CheckCircle
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const ComprehensiveServicesShowcase: React.FC = () => {
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-=======
 // Import all service data
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
 import { realITServices2025 } from '../data/real-it-services-2025';
@@ -44,7 +40,6 @@ interface Service {
 }
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   const serviceCategories = [
     {
       title: "AI & Consciousness",

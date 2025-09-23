@@ -16,15 +16,9 @@ interface ResumeStepContentProps {
 }
 
 export const ResumeStepContent = ({ 
-<<<<<<< HEAD
-  activeTab
-  resume
-  onNextStep
-=======
   activeTab, 
   resume, 
   onNextStep, 
->>>>>>> origin/auto/autonomy-17186719616
   onPrevStep 
 }: ResumeStepContentProps) => {
   return (
@@ -35,11 +29,7 @@ export const ResumeStepContent = ({
           initialData={resume?.basic_info}
           onSave={(data) => {
             // Here you would typically save the data to your backend
-<<<<<<< HEAD
-            console.log("Saving basic info:"data);
-=======
             console.log("Saving basic info:", data);
->>>>>>> origin/auto/autonomy-17186719616
           }}
           onComplete={onNextStep} 
         />

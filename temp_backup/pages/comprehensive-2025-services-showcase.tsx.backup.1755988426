@@ -173,8 +173,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
     }
   };
 
-
-
   return (
     <Layout>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -305,48 +303,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                       {service.tagline}
                     </p>
-<<<<<<< HEAD
-
-                    {/* Price */}
-                    <div className="mb-4">
-                      <div className="text-2xl font-bold text-white">
-                        ${service.price.monthly}
-                        <span className="text-sm text-gray-400 font-normal">/month</span>
-                      </div>
-                      <div className="text-sm text-gray-400">
-                        ${service.price.yearly}/year • {service.price.trialDays} days free trial
-                      </div>
-                    </div>
-
-                    {/* Key Features */}
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className="text-xs text-gray-400 flex items-center gap-2">
-                            <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Stats */}
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400" />
-                        {service.rating} ({service.reviews})
-                      </div>
-                      <div>{service.customers.toLocaleString()} customers</div>
-                    </div>
-
-                    {/* CTA Button */}
-                    <Link href={service.link}>
-                      <button className="w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                        Learn More
-                      </button>
-                    </Link>
-=======
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -477,7 +433,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
                         </div>
                       </motion.div>
                     ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
                   </div>
                 </motion.div>
               ))}

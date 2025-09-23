@@ -102,9 +102,6 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
-<<<<<<< HEAD
-    label: 'Solutions',
-=======
     name: 'AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
@@ -400,7 +397,6 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'Solutions',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6271
     href: '/solutions',
     icon: <Target className="w-4 h-4" />,
     description: 'Industry-specific technology solutions',

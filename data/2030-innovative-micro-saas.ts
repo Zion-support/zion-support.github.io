@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface InnovativeMicroSaas2030 {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface InnovativeMicroSaas2030 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
   // AI Business Intelligence 2030
   {

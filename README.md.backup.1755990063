@@ -6,9 +6,6 @@
 
 We've expanded our portfolio with **36+ innovative micro SAAS, IT, and AI services** designed to transform businesses across all industries.
 
-<<<<<<< HEAD
-### **New Service Categories Added:**
-=======
 - **Frontend Application (Next.js):** Located primarily in `src/` (for application code like components, hooks, pages using App Router) and `pages/` (for API routes and potentially older Pages Router content). This is the main user-facing application.
 - **Backend API (Django):** Located in `backend/`. This Python-based backend serves core business logic and data management, likely interacting with a PostgreSQL database.
 - **Node.js Backend Services:**
@@ -21,19 +18,11 @@ We've expanded our portfolio with **36+ innovative micro SAAS, IT, and AI servic
 - **Documentation:** General documentation is in `docs/`, with specific component documentation potentially within their respective directories.
 - **Testing:** Extensive test suites using Vitest and Cypress are in `tests/` and `cypress/`. See **[docs/QA_TESTING_CHECKLIST.md](docs/QA_TESTING_CHECKLIST.md)** for common QA steps.
 - **Connect Portal:** Access the portal at `/portal` for account management and settings. The previous `/app` path is deprecated.
->>>>>>> origin/automation-error-fixes
 
 - **🚀 Innovative Services Expansion** - AI BI, Cybersecurity, DevOps, Customer Experience
 - **⚛️ Emerging Technology Services** - Quantum Computing, Blockchain, Space Tech, IoT, AR/VR
 - **🏭 Specialized Industry Services** - Manufacturing, Healthcare, FinTech, Retail, Education
 
-<<<<<<< HEAD
-### **Key Highlights:**
-- **Real Implementation**: Production-ready services with proven ROI
-- **Competitive Pricing**: Starting from $199/month with free trials
-- **Market Leadership**: Competing with industry leaders (Tableau, HubSpot, Salesforce)
-- **AI-First Approach**: Cutting-edge technology across all services
-=======
 - **Frontend:** Next.js, React, TypeScript, Redux Toolkit, Chakra UI, Radix UI, Tailwind CSS
 - **Backend (Django):** Python, Django, Django REST Framework, PostgreSQL
 - **Backend (Node.js):** Node.js, Express.js, TypeScript, MongoDB (for `server/`), Next.js API Routes
@@ -42,7 +31,6 @@ We've expanded our portfolio with **36+ innovative micro SAAS, IT, and AI servic
 - **Monitoring:** Custom Node.js service, Sentry, Datadog
 - **CI/CD:** GitHub Actions, Netlify (including Lighthouse CI)
 - **Other:** IPFS, OrbitDB, Ethers.js, Elasticsearch
->>>>>>> origin/automation-error-fixes
 
 ## Environment Configuration
 
@@ -398,13 +386,9 @@ To watch tests during development:
 npm run test:watch
 ```
 
-<<<<<<< HEAD
-### End-to-End Tests
-=======
 ### Self-Maintenance Automation
 
 The project includes several automations that help it heal itself and stay up to date:
->>>>>>> origin/automation-error-fixes
 
 Open Cypress for interactive debugging:
 
@@ -412,18 +396,6 @@ Open Cypress for interactive debugging:
 npm run cypress:open
 ```
 
-<<<<<<< HEAD
-Run the Cypress suite headlessly:
-
-```sh
-npm run cypress:run
-```
-
-### Coverage Report
-
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
-=======
 ## 🚀 Advanced Self-Healing System
 
 The Zion App includes a comprehensive **Advanced Self-Healing System** that automatically detects, fixes, and improves the application continuously.
@@ -627,4 +599,3 @@ Add a workflow step:
 - name: Auto-fix accessibility
   run: ./scripts/auto-fix-accessibility.sh
 ```
->>>>>>> origin/automation-error-fixes

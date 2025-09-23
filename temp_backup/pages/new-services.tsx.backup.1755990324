@@ -1,9 +1,5 @@
 import NewServicesPage from '@/pages/NewServicesPage';
 
-<<<<<<< HEAD
-export default NewServicesPage;
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
 const items = [
 	{ name: 'AI Customer Journey Analytics', href: '/ai-customer-journey-analytics', blurb: 'Funnels, cohorts, LTV and churn prediction.' },
 	{ name: 'AI UGC Moderation', href: '/ai-ugc-moderation', blurb: 'Policy-driven moderation across text, image, and video.' },
@@ -46,4 +42,3 @@ export default function NewServices() {
 		</UltraFuturisticBackground>
 	);
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d

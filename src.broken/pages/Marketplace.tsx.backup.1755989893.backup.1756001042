@@ -33,10 +33,6 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 
-
-
-
-
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
@@ -52,7 +48,6 @@ import { fetchProducts } from '@/services/marketplace';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import apiClient from '@/lib/apiClient';
-
 
 /**
  * Marketplace component props
@@ -305,8 +300,6 @@ export default function Marketplace() {
     }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     // Navigate to admin products page
     router.push('/admin/products');
   }, [isAuthenticated, user, router, toast]);
@@ -445,16 +438,12 @@ export default function Marketplace() {
           <p className="text-muted-foreground text-lg">
             {t('marketplace.hero_subtitle')}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
           <h1 className="text-3xl font-bold text-white mb-4">{t('marketplace.title')}</h1>
           <p className="text-zion-slate-light">
             {t('marketplace.description')}
-<<<<<<< HEAD
-=======
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           </p>
         </div>

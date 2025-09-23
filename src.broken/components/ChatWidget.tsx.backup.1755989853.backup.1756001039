@@ -18,11 +18,8 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [text, setText] = useState('');
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const socketRef = useRef<any>();
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const socketRef = useRef<any>(null);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
 
@@ -38,9 +35,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       logWarn('ChatWidget: failed to load history', { data:  { data: err } });
     }
   }, [isOpen, roomId]);
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   useEffect(() => {
@@ -48,14 +42,11 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
 
     async function setup() {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const { io } = await import('socket.io-client');
       socketRef.current = io({ path: '/api/socket', transports: ['websocket'] });
       socketRef.current.emit('join-room', roomId);
       socketRef.current.on('receive-message', (msg: ChatMessage) => {
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const mod = await import('socket.io-client');
       const io = mod.default as typeof import('socket.io-client').default;
       if (!isMounted) return;
@@ -63,9 +54,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       socketRef.current = socket;
       socket.emit('join-room', roomId);
       socket.on('receive-message', (msg: Message) => {
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         setMessages(prev => [...prev, msg]);
         triggerNotification('New message', msg.content);
@@ -88,9 +76,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
 
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   // Persist messages whenever they change while open
   useEffect(() => {
     if (!isOpen) return;
@@ -107,9 +92,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
     }
   };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const handleSend = () => {
     if (!socketRef.current || !text.trim() || !user) return;

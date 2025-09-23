@@ -2,9 +2,6 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
 import { 
   FileText, Shield, CheckCircle, AlertTriangle, 
   ArrowRight, Users, Globe, Database, 
@@ -33,8 +30,6 @@ const Terms: React.FC = () => {
       title: 'Intellectual Property',
       description: 'Our technology and content remain our exclusive property',
       icon: <Shield className="w-6 h-6" />
-<<<<<<< HEAD
-=======
 =======
 import { FileText, Shield, Users, Globe, Clock, CheckCircle, AlertTriangle, Scale } from 'lucide-react';
 
@@ -59,7 +54,6 @@ const TermsPage: React.FC = () => {
       icon: Scale,
       title: 'Legal Framework',
       description: 'All services are governed by applicable laws and our service agreements.'
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
     }
   ];
@@ -67,9 +61,6 @@ const TermsPage: React.FC = () => {
   const serviceTerms = [
     {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
       service: 'AI Consciousness Platform',
       description: 'Advanced AI systems with consciousness capabilities',
       restrictions: [
@@ -244,8 +235,6 @@ const TermsPage: React.FC = () => {
                 These Terms of Service govern your use of Zion Tech Group's AI consciousness, 
                 quantum computing, and technology services. Please read them carefully.
               </p>
-<<<<<<< HEAD
-=======
 =======
       title: 'AI Consciousness Services',
       terms: [
@@ -322,7 +311,6 @@ const TermsPage: React.FC = () => {
                 <Clock className="w-5 h-5" />
                 <span>Last updated: January 15, 2025</span>
               </div>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
             </motion.div>
           </div>
@@ -332,22 +320,14 @@ const TermsPage: React.FC = () => {
         {/* Last Updated */}
         <section className="py-8">
 =======
-<<<<<<< HEAD
-        {/* Last Updated */}
-        <section className="py-8">
-=======
         {/* Key Terms Section */}
         <section className="py-20">
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
@@ -366,19 +346,13 @@ const TermsPage: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Key Terms Overview
               </h2>
@@ -387,8 +361,6 @@ const TermsPage: React.FC = () => {
               </p>
             </motion.div>
             
-<<<<<<< HEAD
-=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
@@ -398,16 +370,12 @@ const TermsPage: React.FC = () => {
               </p>
             </motion.div>
 
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {keyTerms.map((term, index) => (
                 <motion.div
                   key={term.title}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -419,8 +387,6 @@ const TermsPage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{term.title}</h3>
                   <p className="text-gray-300 text-sm">{term.description}</p>
-<<<<<<< HEAD
-=======
 =======
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -433,7 +399,6 @@ const TermsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{term.title}</h3>
                   <p className="text-gray-400">{term.description}</p>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
                 </motion.div>
               ))}
@@ -442,23 +407,17 @@ const TermsPage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         {/* Service Terms */}
         <section className="py-20 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-=======
 =======
         {/* Service-Specific Terms Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -466,9 +425,6 @@ const TermsPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Service-Specific Terms
               </h2>
@@ -503,8 +459,6 @@ const TermsPage: React.FC = () => {
                   <div>
                     <div className="text-gray-400 text-sm mb-1">Intended Usage:</div>
                     <p className="text-blue-400 text-sm font-semibold">{service.usage}</p>
-<<<<<<< HEAD
-=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Service-Specific Terms
@@ -532,7 +486,6 @@ const TermsPage: React.FC = () => {
                         <span className="text-gray-300">{term}</span>
                       </div>
                     ))}
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
                   </div>
                 </motion.div>
@@ -542,23 +495,17 @@ const TermsPage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         {/* User Obligations */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-=======
 =======
         {/* Prohibited Activities Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -566,9 +513,6 @@ const TermsPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 User Obligations
               </h2>
@@ -602,8 +546,6 @@ const TermsPage: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -732,74 +674,23 @@ const TermsPage: React.FC = () => {
                   </div>
                 </div>
               </div>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
-        {/* Payment Terms */}
-        <section className="py-20 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Payment & Billing Terms
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Understanding our payment structure and billing policies
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {paymentTerms.map((term, index) => (
-                <motion.div
-                  key={term.term}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white mb-3">{term.term}</h3>
-                  <p className="text-gray-300 mb-4">{term.description}</p>
-                  <ul className="space-y-2">
-                    {term.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start space-x-2 text-sm">
-                        <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-gray-300">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         {/* Liability Limitations */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-=======
 =======
         {/* Intellectual Property Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -807,9 +698,6 @@ const TermsPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Liability & Limitations
               </h2>
@@ -833,8 +721,6 @@ const TermsPage: React.FC = () => {
                   <div className="text-orange-400 text-sm">{limitation.details}</div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Intellectual Property
@@ -892,30 +778,23 @@ const TermsPage: React.FC = () => {
                   </li>
                 </ul>
               </motion.div>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         {/* Contact Information */}
         <section className="py-20 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-=======
 =======
         {/* Limitation of Liability Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -923,9 +802,6 @@ const TermsPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Questions About Terms?
               </h2>
@@ -983,8 +859,6 @@ const TermsPage: React.FC = () => {
                   Middletown, DE 19709
                 </p>
               </motion.div>
-<<<<<<< HEAD
-=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Limitation of Liability
@@ -1026,39 +900,29 @@ const TermsPage: React.FC = () => {
                   </ul>
                 </div>
               </div>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         {/* CTA Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
-=======
 =======
         {/* Contact Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
@@ -1078,8 +942,6 @@ const TermsPage: React.FC = () => {
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500/30 text-purple-400 font-semibold rounded-2xl hover:border-purple-500/50 hover:text-purple-300 transition-all duration-300"
                 >
                   Legal Questions
-<<<<<<< HEAD
-=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Questions About These Terms?
@@ -1100,7 +962,6 @@ const TermsPage: React.FC = () => {
                   className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >
                   General Contact
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
                 </a>
               </div>
@@ -1115,9 +976,5 @@ const TermsPage: React.FC = () => {
 <<<<<<< HEAD
 export default Terms;
 =======
-<<<<<<< HEAD
-export default Terms;
-=======
 export default TermsPage;
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961

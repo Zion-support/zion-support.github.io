@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 {
   "general": {
     "app_name": "Zion AI Marketplace",
@@ -23,11 +20,6 @@
     "home": "Home",
     "marketplace": "Marketplace",
     "categories": "Categories",
-<<<<<<< HEAD
-    "services": "Services",
-    "micro-saas": "Micro SAAS",
-=======
->>>>>>> origin/auto/autonomy-17186719616
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",
@@ -112,8 +104,4 @@
     "saved": "Saved",
     "changes_saved": "Translation changes have been saved"
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/auto/autonomy-17186719616

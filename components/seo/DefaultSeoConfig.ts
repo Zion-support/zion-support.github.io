@@ -8,16 +8,6 @@ const config: DefaultSeoProps = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ziontechgroup.netlify.app',
-<<<<<<< HEAD
-    siteName: 'Zion Tech Solutions'},
-  twitter: {
-    handle: '@ziontech',
-    site: '@ziontech',
-    cardType: 'summary_large_image'},
-  additionalMetaTags: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'theme-color', content: '#111827' }]};
-=======
     siteName: 'Zion Tech Solutions',
   },
   twitter: {
@@ -30,6 +20,5 @@ const config: DefaultSeoProps = {
     { name: 'theme-color', content: '#111827' },
   ],
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 export default config;

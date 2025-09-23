@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-
-interface UltraFuturisticBackgroundProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ 
-  children, 
-  className = '' 
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
-
-  useEffect(() => {
-=======
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -40,7 +23,6 @@ export default function UltraFuturisticBackground({
   useEffect(() => {
     if (!isClient) return;
     
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -48,14 +30,11 @@ export default function UltraFuturisticBackground({
     if (!ctx) return;
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles: Array<{
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     let animationFrameId: number;
     let particles: Particle[] = [];
     let holographicGrid: GridPoint[] = [];
@@ -71,35 +50,25 @@ export default function UltraFuturisticBackground({
         canvas.width = rect.width;
         canvas.height = rect.height;
       }
-<<<<<<< HEAD
-=======
 =======
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     };
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-<<<<<<< HEAD
-    // Particle system
-    const particles: Array<{
-=======
     // Enhanced Particle class
     class Particle {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
-<<<<<<< HEAD
-=======
       color: string;
 <<<<<<< HEAD
       type: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'space';
@@ -141,7 +110,6 @@ export default function UltraFuturisticBackground({
         ctx.lineWidth = 1;
         ctx.stroke();
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       type: 'energy' | 'data' | 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
       rotation: number;
       rotationSpeed: number;
@@ -190,31 +158,9 @@ export default function UltraFuturisticBackground({
             this.color = `hsl(${320 + Math.random() * 60}, 80%, 70%)`;
             break;
         }
-<<<<<<< HEAD
       }
     };
 
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
-      }
-    };
-
-<<<<<<< HEAD
-    // Holographic grid effect
-    const drawHolographicGrid = () => {
-      const gridSize = 50;
-      const offset = Date.now() * 0.001;
-      
-      ctx.strokeStyle = `rgba(6, 182, 212, ${0.1})`;
-      ctx.lineWidth = 0.5;
-      
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x + offset, 0);
-        ctx.lineTo(x + offset, canvas.height);
-        ctx.stroke();
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -254,9 +200,6 @@ export default function UltraFuturisticBackground({
         if (this.type === 'neural' && Math.random() < 0.01) {
           this.neuralConnection = Math.random() * 8;
         }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       }
       
@@ -268,8 +211,6 @@ export default function UltraFuturisticBackground({
       }
     };
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
     // Neural network effect
     const drawNeuralConnections = () => {
@@ -309,7 +250,6 @@ export default function UltraFuturisticBackground({
         ctx.arc(x, y, 100, 0, Math.PI * 2);
         ctx.fill();
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       draw() {
         if (ctx) {
           const alpha = this.life / this.maxLife;
@@ -744,148 +684,12 @@ export default function UltraFuturisticBackground({
         for (let i = 0; i < 8; i++) {
           quantumEntanglements.push(new QuantumEntanglement());
         }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       }
     };
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
-      opacity: number;
-      color: string;
-      type: 'quantum' | 'neural' | 'cyber';
-    }> = [];
-
-    // Initialize particles
-    const initParticles = () => {
-      particles.length = 0;
-      for (let i = 0; i < 150; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
-          color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff'][Math.floor(Math.random() * 6)],
-          type: ['quantum', 'neural', 'cyber'][Math.floor(Math.random() * 3)] as 'quantum' | 'neural' | 'cyber'
-        });
-      }
-    };
-
-    // Neural network connections
-    const connections: Array<{ from: number; to: number; opacity: number }> = [];
-    const initConnections = () => {
-      connections.length = 0;
-      for (let i = 0; i < 50; i++) {
-        connections.push({
-          from: Math.floor(Math.random() * particles.length),
-          to: Math.floor(Math.random() * particles.length),
-          opacity: Math.random() * 0.3 + 0.1
-        });
-      }
-    };
-
-    // Quantum wave function
-    let waveOffset = 0;
-    const drawQuantumWaves = () => {
-      ctx.save();
-      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-      ctx.lineWidth = 2;
-      
-      for (let i = 0; i < 3; i++) {
-        ctx.beginPath();
-        for (let x = 0; x < canvas.width; x += 2) {
-          const y = canvas.height / 2 + 
-            Math.sin((x + waveOffset + i * 100) * 0.01) * 100 +
-            Math.sin((x + waveOffset + i * 50) * 0.02) * 50;
-          if (x === 0) {
-            ctx.moveTo(x, y);
-          } else {
-            ctx.lineTo(x, y);
-          }
-        }
-        ctx.stroke();
-      }
-      ctx.restore();
-      waveOffset += 0.5;
-    };
-
-    // Holographic grid
-    const drawHolographicGrid = () => {
-      ctx.save();
-      ctx.strokeStyle = 'rgba(0, 255, 255, 0.05)';
-      ctx.lineWidth = 1;
-      
-      const gridSize = 50;
-      const offset = Date.now() * 0.001;
-      
-      // Vertical lines
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x + Math.sin(offset + x * 0.01) * 5, 0);
-        ctx.lineTo(x + Math.sin(offset + x * 0.01) * 5, canvas.height);
-        ctx.stroke();
-      }
-      
-      // Horizontal lines
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y + Math.cos(offset + y * 0.01) * 5);
-        ctx.lineTo(canvas.width, y + Math.cos(offset + y * 0.01) * 5);
-        ctx.stroke();
-      }
-      ctx.restore();
-    };
-
-    // Energy fields
-    const drawEnergyFields = () => {
-      const time = Date.now() * 0.001;
-      const centers = [
-        { x: canvas.width * 0.2, y: canvas.height * 0.3 },
-        { x: canvas.width * 0.8, y: canvas.height * 0.7 },
-        { x: canvas.width * 0.5, y: canvas.height * 0.8 }
-      ];
-
-      centers.forEach((center, index) => {
-        const radius = 100 + Math.sin(time + index) * 30;
-        const gradient = ctx.createRadialGradient(center.x, center.y, 0, center.x, center.y, radius);
-        gradient.addColorStop(0, `rgba(0, 255, 255, ${0.1 + Math.sin(time + index) * 0.05})`);
-        gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
-        
-        ctx.save();
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(center.x, center.y, radius, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      });
-    };
-
-    // Main animation loop
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw background layers
-      drawHolographicGrid();
-      drawQuantumWaves();
-      drawEnergyFields();
-      
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-        
-        // Wrap around
-=======
 <<<<<<< HEAD
 
       // Draw background effects based on variant
@@ -908,13 +712,10 @@ export default function UltraFuturisticBackground({
         if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
 
         // Wrap around edges
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-<<<<<<< HEAD
-=======
 
         // Draw particle
         ctx.beginPath();
@@ -945,7 +746,6 @@ export default function UltraFuturisticBackground({
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       
       // Update and draw particles
               particles = particles.filter(particle => {
@@ -1016,16 +816,11 @@ export default function UltraFuturisticBackground({
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     };
 
     window.addEventListener('resize', handleResize);
 
-<<<<<<< HEAD
-=======
         
         // Draw particle
         ctx.save();
@@ -1113,27 +908,10 @@ export default function UltraFuturisticBackground({
     animate();
 
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-<<<<<<< HEAD
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
-
-  return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: getBackgroundGradient(variant),
-        }}
-      />
-      
-=======
       window.removeEventListener('resize', handleResize);
     };
   }, [variant, intensity, isClient]);
@@ -1247,7 +1025,6 @@ export default function UltraFuturisticBackground({
         ))}
       </div>
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     <div ref={containerRef} className={`relative w-full h-full ${className}`}>
       <canvas
         ref={canvasRef}
@@ -1255,11 +1032,6 @@ export default function UltraFuturisticBackground({
         style={{ zIndex: -1 }}
       />
       {children}
-<<<<<<< HEAD
-    </div>
-  );
-}
-=======
       
       {/* CSS animations */}
       <style jsx>{`
@@ -1330,7 +1102,6 @@ const getOverlayGradient = (variant: string) => {
 
 export default UltraFuturisticBackground;
 =======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
     </div>
   );
 }

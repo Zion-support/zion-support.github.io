@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function Page() { return <main className="p-8">Emerging technology trends coming soon.</main>; }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -21,4 +18,3 @@ const EmergingTechnologyTrends: NextPage = () => {
 };
 
 export default EmergingTechnologyTrends;
->>>>>>> origin/cursor/build-ai-pricing-suggestion-engine-ea4e

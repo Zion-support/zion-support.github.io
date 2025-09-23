@@ -78,7 +78,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   );
 
   return instance;
-};
+}
 
 // Export the function instead of calling it immediately to avoid temporal dead zone issues
 export default createAxiosInstance;

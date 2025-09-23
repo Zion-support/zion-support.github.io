@@ -266,16 +266,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
       icon: BookOpen,
       color: 'from-yellow-500 to-orange-500',
       items: [
-<<<<<<< HEAD
-        { label: 'Documentation', href: '/docs', badge: 'Guides' },
-        { label: 'API Reference', href: '/api-docs', badge: 'Developer' },
-        { label: 'Blog & Insights', href: '/blog', badge: 'Latest' },
-        { label: 'Webinars', href: '/webinars', badge: 'Learning' },
-        { label: 'Case Studies', href: '/case-studies', badge: 'Success Stories' },
-        { label: 'Training Programs', href: '/training', badge: 'Skill Development' },
-        { label: 'Support Center', href: '/support', badge: 'Help' },
-        { label: 'Status Page', href: '/status', badge: 'System Health' }
-=======
         { label: 'Space Resource Intelligence', href: '/space-resource-intelligence', badge: 'Future', featured: true },
         { label: 'Satellite Technology', href: '/satellite-technology' },
         { label: 'Space Data Analytics', href: '/space-data-analytics' },
@@ -302,7 +292,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
         { label: 'Training', href: '/training' },
         { label: 'Documentation', href: '/docs' },
         { label: 'API Reference', href: '/api-docs' }
->>>>>>> origin/cursor/website-audit-and-enhancement-fdbf
       ]
     }
   ];

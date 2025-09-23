@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
@@ -17,10 +13,6 @@ import {
   Calculator,
   Play,
   Brain,
-<<<<<<< HEAD
-  Atom,
-  Cpu,
-=======
   Shield,
   Rocket,
   Globe,
@@ -30,7 +22,6 @@ import {
   Lock,
   BarChart3,
   Zap,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
   Target
 } from 'lucide-react';
 import Link from 'next/link';
@@ -78,51 +69,30 @@ const navigationItems: NavigationItem[] = [
         name: 'AI & Machine Learning', 
         href: '/ai-services', 
         description: 'Advanced AI solutions',
-<<<<<<< HEAD
-        icon: <BrainIcon className="w-4 h-4" />
-=======
         icon: <Brain className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
       },
       { 
         name: 'Quantum Technology', 
         href: '/quantum-services', 
         description: 'Quantum computing solutions',
-<<<<<<< HEAD
-        icon: <AtomIcon className="w-4 h-4" />
-=======
         icon: <Cpu className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
       },
       { 
         name: 'Space Technology', 
         href: '/space-technology', 
         description: 'Space exploration solutions',
-<<<<<<< HEAD
-        icon: <Target className="w-4 h-4" />
-=======
         icon: <Globe className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
       },
       { 
         name: 'IT Solutions', 
         href: '/it-services', 
         description: 'Enterprise IT infrastructure',
-<<<<<<< HEAD
-        icon: <Cpu className="w-4 h-4" />
-      },
-      { 
-        name: 'Micro SAAS', 
-        href: '/micro-saas', 
-        description: 'Business automation solutions',
-=======
         icon: <Database className="w-4 h-4" />
       },
       { 
         name: 'Specialized Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
         icon: <Target className="w-4 h-4" />
       }
     ]

@@ -16,11 +16,7 @@ const STATIC_FILES = [
   '/js/main.js'
 ];
 
-<<<<<<< HEAD
-// Install event - cache resources
-=======
 // Install event - cache static files
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -50,8 +46,6 @@ self.addEventListener('fetch', (event) => {
         return fetch(event.request);
       }
     )
-<<<<<<< HEAD
-=======
   );
 });
 
@@ -73,7 +67,6 @@ self.addEventListener('activate', (event) => {
         console.log('Service worker activated');
         return self.clients.claim();
       })
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   );
 });
 
@@ -108,8 +101,6 @@ self.addEventListener('fetch', (event) => {
   }
 });
 
-<<<<<<< HEAD
-=======
 // Handle page requests with offline fallback
 async function handlePageRequest(request) {
   try {
@@ -198,7 +189,6 @@ async function handleOtherRequest(request) {
   }
 }
 
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
@@ -208,10 +198,6 @@ self.addEventListener('sync', (event) => {
 
 async function doBackgroundSync() {
   try {
-<<<<<<< HEAD
-    // Handle offline actions when connection is restored
-    console.log('Background sync completed');
-=======
     // Get stored offline actions
     const offlineActions = await getOfflineActions();
     
@@ -223,7 +209,6 @@ async function doBackgroundSync() {
         console.error('Failed to process offline action:', error);
       }
     }
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   } catch (error) {
     console.error('Background sync failed:', error);
   }
@@ -276,11 +261,7 @@ self.addEventListener('push', (event) => {
     };
 
     event.waitUntil(
-<<<<<<< HEAD
-      self.registration.showNotification(data.title || 'Zion Tech Group', options)
-=======
       self.registration.showNotification(data.title, options)
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     );
   }
 });
@@ -293,10 +274,6 @@ self.addEventListener('notificationclick', (event) => {
     event.waitUntil(
       self.clients.openWindow(event.notification.data.url)
     );
-<<<<<<< HEAD
-  }
-});
-=======
   }
 });
 
@@ -319,4 +296,3 @@ self.addEventListener('error', (event) => {
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service worker unhandled rejection:', event.reason);
 });
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5

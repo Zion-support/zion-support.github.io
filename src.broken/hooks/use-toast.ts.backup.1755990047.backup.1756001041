@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { useSnackbar, VariantType, OptionsObject } from 'notistack';
 
@@ -33,7 +31,6 @@ export const toast = {
   success: (msg: string) => globalEnqueue?.(msg, { variant: 'success' }),
 };
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
 export type ToastOptions = HotToastOptions & {
@@ -61,7 +58,4 @@ toast.error = (error: string) => hotToast.error(error);
 toast.success = (message: string) => hotToast.success(message);
 
 export { toast };
-<<<<<<< HEAD
-=======
->>>>>>> origin/a1b34d-codex/add-test-for-failed-login-toast
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

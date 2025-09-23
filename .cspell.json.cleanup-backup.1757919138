@@ -20,15 +20,6 @@
     "NextAuth",
     "monorepo"
   ],
-<<<<<<< HEAD
-  "dictionaries": [
-    "softwareTerms",
-    "typescript",
-    "node",
-    "npm"
-  ],
-=======
   "dictionaries": ["softwareTerms", "typescript", "node", "npm"],
->>>>>>> origin/auto/autonomy-17186719616
   "dictionaryDefinitions": []
 }

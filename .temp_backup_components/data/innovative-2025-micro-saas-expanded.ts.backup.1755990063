@@ -48,36 +48,6 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
-export const innovativeMicroSaasServicesExpanded: InnovativeMicroSaasService[] = [
-  // AI-Powered Content Factory
-  {
-    id: 'ai-content-factory',
-    name: 'AI Content Factory',
-    tagline: 'Generate, optimize, and distribute content at scale with AI',
-    price: '$199',
-    period: '/month',
-    description: 'Complete AI-powered content creation platform that generates high-quality articles, social media posts, marketing copy, and visual content in seconds. Includes SEO optimization, plagiarism checking, and multi-platform distribution.',
-    features: [
-      'AI-powered content generation for 50+ content types',
-      'SEO optimization with real-time keyword analysis',
-      'Plagiarism detection and originality scoring',
-      'Multi-language content creation (25+ languages)',
-      'Brand voice consistency across all content',
-      'Content calendar and scheduling automation',
-      'Social media content optimization',
-      'Performance analytics and ROI tracking',
-      'Team collaboration and approval workflows',
-      'API access for custom integrations'
-    ],
-    popular: true,
-    icon: '✍️🤖',
-    color: 'from-blue-600 to-purple-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/services/ai-content-factory',
-    marketPosition: 'Competitive with Jasper ($39/month), Copy.ai ($49/month), and Writesonic ($19/month). Our advantage: Comprehensive content factory with distribution, analytics, and team collaboration.',
-    targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses, SaaS companies, Bloggers',
-=======
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   // AI-Powered Content Calendar Optimizer
   {
@@ -106,7 +76,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/ai-content-calendar-optimizer',
     marketPosition: 'Competitive with Buffer ($15/month), Hootsuite ($49/month), and Later ($25/month). Our advantage: AI optimization, predictive analytics, and automated scheduling.',
     targetAudience: 'Marketing teams, Social media managers, Content creators, Small businesses, Digital agencies',
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
     trialDays: 14,
     setupTime: '1 hour',
     category: 'AI & Content Marketing',
@@ -121,24 +90,14 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Full-stack AI content platform with advanced NLP models, content optimization algorithms, and comprehensive distribution tools.',
-    launchDate: '2024-11-15',
-    customers: 156,
-=======
     implementationDetails: 'Complete AI-powered content optimization platform with machine learning algorithms for timing optimization and engagement prediction.',
     launchDate: '2025-01-15',
     customers: 127,
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
     rating: 4.7,
     reviews: 89
   },
 
-<<<<<<< HEAD
-  // Smart CRM Intelligence Suite
-=======
   // Smart Invoice & Expense Tracker
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
   {
     id: 'smart-invoice-expense-tracker',
     name: 'Smart Invoice & Expense Tracker',

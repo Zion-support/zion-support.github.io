@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
-<<<<<<< HEAD
-Sitemap: /sitemap.xml
-=======
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -27,4 +24,3 @@ Allow: /webinars/
 # Crawl delay for better server performance
 Crawl-delay: 1
 
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

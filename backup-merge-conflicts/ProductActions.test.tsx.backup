@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 interface ProductActions.testProps {
@@ -14,4 +12,3 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
     </div>
   );
 }
->>>>>>> main

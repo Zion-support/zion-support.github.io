@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { CheckCircleSmartphoneUsersStarMail } from "lucide-react";
-=======
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -48,11 +44,7 @@ export const MobileFeatureShowcase: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
-          {features.map((featureindex) => (
-=======
           {features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
             <div 
               key={index} 
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"

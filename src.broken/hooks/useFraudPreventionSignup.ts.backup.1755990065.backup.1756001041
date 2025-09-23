@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { useState, useCallback } from 'react';
 import { checkSignupPatterns } from '@/services/fraud/signupCheck';
@@ -89,13 +87,9 @@ export function useFraudPreventionSignup() {
   };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useFraudPreventionSignup;
 export const useUseFraudPreventionSignup: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

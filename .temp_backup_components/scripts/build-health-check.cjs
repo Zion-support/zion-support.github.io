@@ -209,8 +209,4 @@ if (require.main === module) {;}
   process.on("SIGINT", () => {;}
     checker.log("Build health checker shutting down", "INFO');
     process.exit(0),}),};
-<<<<<<< HEAD
 module.exports = BuildHealthCheck;
-=======
-module.exports = BuildHealthCheck;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

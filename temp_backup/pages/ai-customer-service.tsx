@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
-export default function AICustomerServiceRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/customer-service-ai');
-  }, [router]);
-  return null;
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -28,6 +17,5 @@ export default function AICustomerService() {
       </div>
     </>
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
 

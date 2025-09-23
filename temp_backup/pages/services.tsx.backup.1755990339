@@ -10,9 +10,6 @@ import {
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building
 } from 'lucide-react';
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
 
 // Import our new 2025 service data
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
@@ -54,7 +51,6 @@ import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-servic
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
 import { advancedITInfrastructureServices2025 } from '../data/advanced-it-infrastructure-services-2025';
-
 
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
@@ -315,7 +311,6 @@ const categories = [
     description: 'Learning and research platforms'
   }
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
 
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' },
@@ -326,8 +321,6 @@ const sortOptions = [
   { value: 'rating', label: 'Highest Rated' }
 ];
 
-<<<<<<< HEAD
-=======
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -382,7 +375,6 @@ export default function Services() {
     }
   });
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
   // Pagination helpers
   const totalPages = Math.max(1, Math.ceil(sortedServices.length / pageSize));
   const currentPageClamped = Math.min(currentPage, totalPages);

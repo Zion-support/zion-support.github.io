@@ -2,13 +2,9 @@ import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
-import { ModerationLog } from '@/types/moderation';
-=======
-<<<<<<< HEAD
 import type { ModerationLog } from '@/types/moderation';
 =======
 import { ModerationLog } from '@/types/moderation';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface Props {

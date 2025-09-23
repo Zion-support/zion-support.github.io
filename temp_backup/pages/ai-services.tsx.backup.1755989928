@@ -1,12 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Rocket, Star } from 'lucide-react';
-import Link from 'next/link';
-
-const AIServices: React.FC = () => {
-=======
 import { 
   Brain, Atom, Shield, Cloud, BarChart, Code, Rocket, Zap, Target, Users, 
   Heart, DollarSign, Cog, FileText, Calendar, Lightbulb, HelpCircle, Monitor,
@@ -15,7 +9,6 @@ import {
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   const aiServices = [
     {
       category: 'AI Consciousness & Evolution',
@@ -52,8 +45,6 @@ const AIServicesPage: React.FC = () => {
         { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'Creative AI assistance' },
         { name: 'AI Video Editing', href: '/ai-video-editing', description: 'Automated video editing' }
       ]
-<<<<<<< HEAD
-=======
     },
     {
       category: 'AI Infrastructure & Operations',
@@ -110,19 +101,10 @@ const AIServicesPage: React.FC = () => {
       description: 'Customer personalization, inventory management, and demand forecasting',
       icon: <ShoppingBag className="w-8 h-8" />,
       color: 'from-purple-500 to-indigo-600'
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     }
   ];
 
   return (
-<<<<<<< HEAD
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative z-10 max-w-7xl mx-auto text-center">
-=======
     <Layout 
       title="AI Services - Zion Tech Group"
       description="Revolutionary AI services including consciousness evolution, autonomous business intelligence, and next-generation AI solutions"
@@ -132,7 +114,6 @@ const AIServicesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -145,13 +126,6 @@ const AIServicesPage: React.FC = () => {
                   AI Services
                 </h1>
               </div>
-<<<<<<< HEAD
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Revolutionary AI solutions that transform businesses through consciousness evolution, 
-                autonomous operations, and intelligent decision-making.
-              </p>
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             </motion.div>
           </div>
         </section>
@@ -231,25 +205,6 @@ const AIServicesPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business with AI?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our AI services can revolutionize your operations and drive growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact">
-                  <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Get Started
-                  </button>
-                </Link>
-                <Link href="/services">
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
-                    View All Services
-                  </button>
-                </Link>
-=======
               <h2 className="text-4xl font-bold text-white mb-4">
                 Industries We Serve
               </h2>
@@ -314,7 +269,6 @@ const AIServicesPage: React.FC = () => {
                 >
                   Explore Solutions
                 </a>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </div>
             </motion.div>
           </div>
@@ -324,8 +278,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AIServices;
-=======
 export default AIServicesPage;
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

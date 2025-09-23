@@ -105,19 +105,10 @@ const navigationItems: NavigationItem[] = [
     icon: <Target className="w-5 h-5" />,
     description: 'Industry-specific solutions',
     children: [
-<<<<<<< HEAD
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4" /> },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <Heart className="w-4 h-4" /> },
-      { name: 'Financial Solutions', href: '/solutions/financial', icon: <DollarSign className="w-4 h-4" /> },
-      { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: <Cog className="w-4 h-4" /> },
-      { name: 'Retail Solutions', href: '/retail-technology-solutions', icon: <ShoppingCart className="w-4 h-4" /> },
-      { name: 'Government Solutions', href: '/government-technology-solutions', icon: <ShieldCheck className="w-4 h-4" /> }
-=======
       { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
       { label: 'Startup Solutions', href: '/startup-solutions' },
       { label: 'Government Solutions', href: '/government-technology-solutions' },
       { label: 'Healthcare Solutions', href: '/healthcare-solutions' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-9f08
     ]
   },
   {

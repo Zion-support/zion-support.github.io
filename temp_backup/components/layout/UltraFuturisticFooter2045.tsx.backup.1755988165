@@ -1,11 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Phone, Mail, MapPin, Globe, Shield, Rocket, Brain, Atom, 
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
-  Users, Lock, Cloud, Code, Database, Network, Settings, Target, Play
-=======
   Zap, 
   Phone, 
   Mail, 
@@ -26,7 +21,6 @@ import {
   Target,
   CheckCircle,
   ExternalLink
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
 } from 'lucide-react';
 
 // Footer sections data
@@ -77,311 +71,54 @@ const footerSections = [
   }
 ];
 
-<<<<<<< HEAD
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
   const footerSections = [
     {
       title: 'Revolutionary Services 2045',
       links: [
-<<<<<<< HEAD
-        { name: 'AI Consciousness Evolution 2045', href: '/ai-consciousness-evolution-2045', icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum Neural Networks 2045', href: '/quantum-neural-network-platform-2045', icon: <Atom className="w-4 h-4" /> },
-        { name: 'AI Autonomous Business Intelligence 2045', href: '/ai-autonomous-business-intelligence-2045', icon: <Cpu className="w-4 h-4" /> },
-        { name: 'Quantum Cybersecurity 2045', href: '/quantum-cybersecurity-platform-2045', icon: <Shield className="w-4 h-4" /> },
-        { name: 'Space Resource Intelligence 2045', href: '/space-resource-intelligence-2045', icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Autonomous Customer Success 2045', href: '/autonomous-customer-success-2045', icon: <Users className="w-4 h-4" /> }
-=======
         { label: 'AI & Consciousness', href: '/services?category=ai-consciousness' },
         { label: 'Quantum Technology', href: '/services?category=quantum' },
         { label: 'Space Technology', href: '/services?category=space-tech' },
         { label: 'Cybersecurity', href: '/services?category=cybersecurity' },
         { label: 'Cloud Infrastructure', href: '/services?category=cloud' },
         { label: 'Business Intelligence', href: '/services?category=business-intelligence' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
       ]
     },
     {
       title: 'Real Enterprise Services 2025',
       links: [
-<<<<<<< HEAD
-        { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation-2025' },
-        { name: 'Intelligent Vendor Risk Management', href: '/intelligent-vendor-risk-management-2025' },
-        { name: 'Automated SOC2 Compliance Platform', href: '/automated-soc2-compliance-platform-2025' },
-        { name: 'Intelligent Infrastructure Drift Detection', href: '/intelligent-infrastructure-drift-detection-2025' },
-        { name: 'Advanced Kubernetes RBAC Auditor', href: '/advanced-kubernetes-rbac-auditor-2025' },
-        { name: 'Real Enterprise Services Showcase', href: '/2025-real-services-showcase' }
-      ]
-    },
-    {
-      title: 'Technology Solutions',
-      links: [
-        { name: 'Quantum Cloud Infrastructure 2045', href: '/quantum-cloud-infrastructure-2045', icon: <Cloud className="w-4 h-4" /> },
-        { name: 'Autonomous DevOps Platform 2045', href: '/autonomous-devops-platform-2045', icon: <Code className="w-4 h-4" /> },
-        { name: 'Quantum Data Center Management 2045', href: '/quantum-data-center-management-2045', icon: <Server className="w-4 h-4" /> },
-        { name: 'Autonomous Network Management 2045', href: '/autonomous-network-management-2045', icon: <Network className="w-4 h-4" /> },
-        { name: 'Autonomous IT Service Management 2045', href: '/autonomous-it-service-management-2045', icon: <Settings className="w-4 h-4" /> },
-        { name: 'Autonomous Security Operations Center 2045', href: '/autonomous-security-operations-center-2045', icon: <Lock className="w-4 h-4" /> }
-=======
         { label: 'Healthcare & Biotech', href: '/healthcare-ai-solutions' },
         { label: 'Financial Services', href: '/financial-solutions' },
         { label: 'Manufacturing', href: '/manufacturing-ai-solutions' },
         { label: 'Retail & E-commerce', href: '/retail-technology-solutions' },
         { label: 'Education', href: '/education-technology-solutions' },
         { label: 'Government', href: '/government-technology-solutions' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
       ]
     },
     {
       title: 'AI & Consciousness',
       links: [
-<<<<<<< HEAD
-        { name: 'AI Consciousness Evolution 2045', href: '/ai-consciousness-evolution-2045', icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum AI Cognitive 2045', href: '/quantum-ai-cognitive-2045', icon: <Atom className="w-4 h-4" /> },
-        { name: 'Autonomous AI Research 2045', href: '/autonomous-ai-research-2045', icon: <Zap className="w-4 h-4" /> },
-        { name: 'Emotional AI Intelligence 2045', href: '/emotional-ai-intelligence-2045', icon: <Heart className="w-4 h-4" /> },
-        { name: 'Quantum AI Metaverse 2045', href: '/quantum-ai-metaverse-2045', icon: <Star className="w-4 h-4" /> },
-        { name: 'AI Autonomous Business Intelligence 2045', href: '/ai-autonomous-business-intelligence-2045', icon: <Target className="w-4 h-4" /> }
-=======
         { label: 'Documentation', href: '/docs' },
         { label: 'API Reference', href: '/api-docs' },
         { label: 'Video Tutorials', href: '/video-tutorials' },
         { label: 'Blog', href: '/blog' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'White Papers', href: '/white-papers' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
       ]
     },
     {
       title: 'Company',
       links: [
-<<<<<<< HEAD
-        { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-        { name: 'Our Mission', href: '/mission', icon: <Target className="w-4 h-4" /> },
-        { name: 'Leadership Team', href: '/team', icon: <Users className="w-4 h-4" /> },
-        { name: 'Careers', href: '/careers', icon: <Zap className="w-4 h-4" /> },
-        { name: 'News & Updates', href: '/news', icon: <Globe className="w-4 h-4" /> },
-        { name: 'Press Kit', href: '/press', icon: <Play className="w-4 h-4" /> }
-      ]
-    },
-    {
-      title: 'Contact Information',
-      links: [
-        { name: 'Phone: +1 302 464 0950', href: 'tel:+1 302 464 0950' },
-        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-        { name: 'Website: ziontechgroup.com', href: 'https://ziontechgroup.com' },
-        { name: 'Address: 364 E Main St STE 1008 Middletown DE 19709', href: '#' }
-=======
         { label: 'About Us', href: '/about' },
         { label: 'Careers', href: '/careers' },
         { label: 'Partners', href: '/partners' },
         { label: 'Contact', href: '/contact' },
         { label: 'News', href: '/news' },
         { label: 'Investors', href: '/investors' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
       ]
     }
   ];
 
   const socialLinks = [
-<<<<<<< HEAD
-    { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-500 to-blue-600' },
-    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-400 to-blue-500' },
-    { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-600 to-blue-700' },
-    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-500 to-pink-500' },
-    { name: 'YouTube', icon: <Youtube className="w-5 h-5" />, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-500 to-red-600' },
-    { name: 'GitHub', icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', color: 'from-gray-600 to-gray-700' }
-  ];
-
-// Quick stats
-const quickStats = [
-  { number: '500+', label: 'Global Clients', icon: Globe, color: 'text-cyan-400' },
-  { number: '99.9%', label: 'Uptime', icon: CheckCircle, color: 'text-green-400' },
-  { number: '24/7', label: 'Support', icon: Clock, color: 'text-blue-400' },
-  { number: '2045', label: 'Technology', icon: Sparkles, color: 'text-purple-400' }
-];
-
-// Newsletter signup component
-const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    setIsLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubscribed(true);
-    setEmail('');
-    setIsLoading(false);
-  }, [email]);
-
-  if (isSubscribed) {
-    return (
-      <motion.div
-        className="text-center p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-3" />
-        <h3 className="text-lg font-semibold text-white mb-2">Thank you for subscribing!</h3>
-        <p className="text-green-300">You'll receive our latest insights and updates.</p>
-      </motion.div>
-    );
-  }
-
-  return (
-    <div className="p-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl">
-      <div className="text-center mb-6">
-        <h3 className="text-xl font-bold text-white mb-2">Stay Ahead of the Curve</h3>
-        <p className="text-cyan-300">Get the latest insights on AI, quantum computing, and emerging technologies.</p>
-      </div>
-      
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="relative">
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300/50 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-200"
-            required
-            aria-label="Email address for newsletter"
-          />
-        </div>
-        
-        <motion.button
-          type="submit"
-          disabled={isLoading}
-          className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          aria-label="Subscribe to newsletter"
-        >
-          {isLoading ? (
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-              Subscribing...
-            </div>
-          ) : (
-            <span className="flex items-center justify-center gap-2">
-              Subscribe Now
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          )}
-        </motion.button>
-      </form>
-      
-      <p className="text-xs text-cyan-300/70 text-center mt-3">
-        By subscribing, you agree to our privacy policy and terms of service.
-      </p>
-    </div>
-  );
-};
-
-const UltraFuturisticFooter2045: React.FC = () => {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
-
-  const toggleSection = useCallback((title: string) => {
-    setExpandedSection(expandedSection === title ? null : title);
-  }, [expandedSection]);
-
-  // Memoize footer sections to prevent unnecessary re-renders
-  const memoizedFooterSections = useMemo(() => footerSections, []);
-
-  return (
-    <footer className="bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative z-10">
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 py-16 lg:py-20">
-          {/* Top Section with Newsletter */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Company Info */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <Brain className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </h2>
-                  <p className="text-cyan-400/70 text-sm">Revolutionary Technology Solutions</p>
-                </div>
-                <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Zion Tech
-                </span>
-              </div>
-              
-              <p className="text-gray-300 leading-relaxed max-w-md">
-                Pioneering the future of technology with revolutionary AI consciousness, 
-                quantum computing, and autonomous solutions that transform businesses worldwide.
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm">{contactInfo.phone}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-400">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{contactInfo.address}</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <motion.div key={section.title} variants={fadeInUp} className="lg:col-span-1">
-                <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
-                  <span className="w-1 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></span>
-                  <span>{section.title}</span>
-                </h4>
-                <ul className="space-y-3">
-                  {section.links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-gray-400 hover:text-cyan-400 transition-all duration-200 group hover:translate-x-1"
-                      >
-                        <span className="text-sm group-hover:text-cyan-400 transition-colors duration-200">
-                          {link.name}
-                        </span>
-=======
     { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
@@ -513,46 +250,12 @@ const UltraFuturisticFooter2045: React.FC = () => {
                       >
                         <span>{link.label}</span>
                         <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
                       </Link>
                     </motion.div>
                   ))}
                 </div>
               </motion.div>
             ))}
-<<<<<<< HEAD
-          </motion.div>
-
-          {/* Newsletter Section */}
-          <motion.div
-            variants={fadeInUp}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="mt-16 pt-12 border-t border-cyan-500/20"
-          >
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Stay Ahead with Innovation
-              </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Get the latest insights on AI, quantum computing, and cutting-edge technology solutions delivered to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-=======
           </div>
         </div>
 
@@ -621,7 +324,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
           </div>
         </motion.div>
 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
         {/* Bottom Footer */}
         <div className="border-t border-cyan-500/20 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -797,25 +499,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
 
         {/* Quick Links */}
         <motion.div
-<<<<<<< HEAD
-          className="mt-12 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex flex-wrap justify-center gap-6">
-            {quickLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200 group"
-              >
-                {link.icon}
-                <span className="text-sm group-hover:text-cyan-400">{link.name}</span>
-              </Link>
-            ))}
-=======
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -845,7 +528,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
                 Accessibility
               </Link>
             </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
           </div>
 
           {/* Made with Love */}
@@ -855,37 +537,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-
-      {/* Enhanced Floating Elements */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <motion.div
-          className="absolute top-20 right-20 w-2 h-2 bg-cyan-400/40 rounded-full"
-          animate={{
-            scale: [1, 2, 1],
-            opacity: [0.4, 0.8, 0.4],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-20 w-3 h-3 bg-purple-400/40 rounded-full"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.7, 0.3],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
     </footer>
   );
 };

@@ -10,21 +10,9 @@ import { useEffect, useState } from "react";
 import apiClient from "@/services/apiClient";
 import retry from "@/utils/retry";
 <<<<<<< HEAD
-import { toast } from "@/hooks/use-toast";
-=======
-<<<<<<< HEAD
 =======
 import { toast } from "@/hooks/use-toast";
->>>>>>> origin/7ieis8-codex/add-error-handling-and-fallback-data
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
-
-
-
-
-
-
-
 
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
 import type { ProductListing } from '@/types/listings';
@@ -167,15 +155,12 @@ export default function ServicesPage() {
   useEffect(() => {
     async function load() {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const res = await retry(() => apiClient.get('/services'), {
         retries: 3,
         minTimeout: 500,
       });
       setListings(res.data as ProductListing[]);
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       try {
         // apiClient prepends '/api', so this requests '/api/services'
         const res = await retry(() => apiClient.get('/services'), {
@@ -188,9 +173,6 @@ export default function ServicesPage() {
         toast.error('Failed to load services. Showing sample data.');
         setListings(SERVICES);
       }
-<<<<<<< HEAD
-=======
->>>>>>> origin/7ieis8-codex/add-error-handling-and-fallback-data
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     }
     load();

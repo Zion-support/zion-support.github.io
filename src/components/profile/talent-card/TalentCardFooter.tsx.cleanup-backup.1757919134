@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { ExternalLink } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import type { UserProfile } from "@/types/auth",
-import { useRouter } from 'next/router',
-
-interface TalentCardFooterProps {
-  profile: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void
-}
-
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
-  const { userDetails } = useAuthStatus(),
-  const router = useRouter(),
-=======
 import React, { useState } from "react";
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button";
@@ -40,7 +18,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const router = useRouter();
->>>>>>> origin/auto/autonomy-17186719616
 
   // Create a compatible UserProfile from UserDetails
   const userProfile: UserProfile = {
@@ -55,35 +32,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     displayName: userDetails?.name || '',
     points: 0,
     avatarUrl: userDetails?.avatar || ''
-<<<<<<< HEAD
-  },
-
-  // Handle request to hire
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation(),
-    
-    if (onRequestHire) {
-      onRequestHire(profile)
-    } else {
-      // Open hire modal directly if no handler provided
-      setIsHireModalOpen(true),
-    }
-  },
-
-  // Handle view profile
-  const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation(),
-    
-    // Navigate to the talent profile page
-    router.push(`/talent/${profile.id || ''}`),
-    
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(profile.id || ''),
-    }
-  },
-
-=======
   };
 
   // Handle request to hire
@@ -110,7 +58,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onViewProfile(profile.id || '');
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -132,13 +79,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         
         {/* Action Buttons */}
         <div className="flex gap-2">
-<<<<<<< HEAD
-          <Button
-            variant="default"
-            size="sm"
-            onClick = {handleRequestHire,}
-=======
->>>>>>> origin/auto/autonomy-17186719616
           <Button 
             variant="default" 
             size="sm" 
@@ -159,18 +99,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-      {/* Hire Request Modal */}
-      <HireRequestModal
-        talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {() => setIsHireModalOpen(false),}
-        userDetails = {userProfile,}
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       
       {/* Hire Request Modal */}
       <HireRequestModal
@@ -180,9 +108,5 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         userDetails={userProfile}
       />
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

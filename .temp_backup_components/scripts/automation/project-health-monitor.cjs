@@ -283,8 +283,4 @@ if ( {})
      {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ProjectHealthMonitor;
-=======
-module.exports = ProjectHealthMonitor;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

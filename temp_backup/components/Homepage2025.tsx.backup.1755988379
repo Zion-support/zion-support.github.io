@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-=======
 import React, { useEffect, useState, useCallback, memo } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2, ChevronDown, Sparkles, Globe, Zap } from 'lucide-react';
@@ -374,119 +370,6 @@ const Homepage2025: React.FC = () => {
             <div className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
           </motion.div>
 
-<<<<<<< HEAD
-          <AnimatePresence>
-            {isVisible && (
-              <motion.div 
-                className="text-center max-w-6xl mx-auto"
-                initial="initial"
-                animate="animate"
-                variants={staggerContainer}
-                exit={{ opacity: 0, y: -50 }}
-              >
-                <motion.div variants={fadeInUp}>
-                  <div className="relative mb-6">
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                      className="absolute inset-0 w-24 h-24 border border-cyan-400/30 rounded-full mx-auto"
-                    />
-                    <Sparkles className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-                  </div>
-                  <h1 
-                    id="hero-heading"
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight"
-                  >
-                    Zion Tech Group
-                  </h1>
-                </motion.div>
-                
-                <motion.div variants={fadeInUp}>
-                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                    Pioneering the future of technology with innovative solutions that drive business transformation and unlock human potential
-                  </p>
-                </motion.div>
-
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12"
-                  variants={fadeInUp}
-                >
-                  <button 
-                    className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 focus:ring-offset-2 focus:ring-offset-gray-900"
-                    aria-label="Get started with Zion Tech Group services"
-                    onClick={() => scrollToSection('services')}
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  
-                  <button 
-                    className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 focus:ring-offset-2 focus:ring-offset-gray-900"
-                    aria-label="Learn more about Zion Tech Group"
-                    onClick={() => scrollToSection('about')}
-                  >
-                    <Play className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Learn More
-                  </button>
-                </motion.div>
-
-                {/* Enhanced Social Proof with better mobile layout and animations */}
-                <motion.div 
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 text-gray-400"
-                  variants={fadeInUp}
-                >
-                  <motion.div 
-                    className="flex flex-col items-center gap-3 p-4 sm:p-6 rounded-lg bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-gray-800/50 group"
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Users className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-400 group-hover:scale-110 transition-transform" />
-                    <span className="text-base sm:text-lg font-semibold">500+ Clients</span>
-                    <span className="text-xs sm:text-sm text-gray-500">Worldwide</span>
-                  </motion.div>
-                  <motion.div 
-                    className="flex flex-col items-center gap-3 p-4 sm:p-6 rounded-lg bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:bg-gray-800/50 group"
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Award className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 group-hover:scale-110 transition-transform" />
-                    <span className="text-base sm:text-lg font-semibold">Industry Leader</span>
-                    <span className="text-xs sm:text-sm text-gray-500">2024</span>
-                  </motion.div>
-                  <motion.div 
-                    className="flex flex-col items-center gap-3 p-4 sm:p-6 rounded-lg bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300 hover:bg-gray-800/50 sm:col-span-2 lg:col-span-1 group"
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-purple-400 group-hover:scale-110 transition-transform" />
-                    <span className="text-base sm:text-lg font-semibold">99.9% Uptime</span>
-                    <span className="text-xs sm:text-sm text-gray-500">Guaranteed</span>
-                  </motion.div>
-                </motion.div>
-
-                {/* Enhanced Scroll indicator with better UX */}
-                <motion.div 
-                  className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2, duration: 0.6 }}
-                >
-                  <motion.div
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="text-cyan-400 cursor-pointer"
-                    onClick={() => scrollToSection('statistics')}
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Scroll to next section"
-                    onKeyDown={(e) => e.key === 'Enter' && scrollToSection('statistics')}
-                  >
-                    <ChevronDown className="w-6 h-6" />
-                  </motion.div>
-                  <p className="text-xs text-gray-500 mt-2">Scroll to explore</p>
-                </motion.div>
-              </motion.div>
-=======
           {/* Hero Content */}
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.h1
@@ -584,7 +467,6 @@ const Homepage2025: React.FC = () => {
                 <FeatureCard key={index} feature={feature} index={index} />
               ))}
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
           </div>
         </section>
 
@@ -608,39 +490,6 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
-              Why Choose Zion Tech Group?
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {[
-                { icon: Brain, title: "500+ Services", description: "Comprehensive technology solutions", color: "cyan", metric: "500+" },
-                { icon: Shield, title: "98% Satisfaction", description: "Client success rate", color: "blue", metric: "98%" },
-                { icon: Rocket, title: "24/7 Support", description: "Round-the-clock assistance", color: "purple", metric: "24/7" },
-                { icon: Star, title: "50+ Industries", description: "Cross-sector expertise", color: "emerald", metric: "50+" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.title}
-                  className="text-center p-4 sm:p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 group cursor-pointer"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -10, scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                  tabIndex={0}
-                  role="article"
-                  aria-labelledby={`stat-${index}`}
-                  onClick={() => scrollToSection('services')}
-                  onKeyDown={(e) => e.key === 'Enter' && scrollToSection('services')}
-                >
-                  {React.createElement(stat.icon, { 
-                    className: `w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 ${getColorClasses(stat.color)} group-hover:scale-110 transition-transform` 
-                  })}
-                  <h3 id={`stat-${index}`} className="text-xl sm:text-2xl font-bold text-white mb-2">{stat.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-400 mb-3">{stat.description}</p>
-                  <div className={`text-2xl font-bold ${getColorClasses(stat.color)}`}>{stat.metric}</div>
-                </motion.div>
-=======
               <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Revolutionary Services
               </h2>
@@ -652,7 +501,6 @@ const Homepage2025: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <ServiceCard key={index} service={service} index={index} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
               ))}
             </div>
           </div>
@@ -841,55 +689,13 @@ const Homepage2025: React.FC = () => {
                   From AI and quantum computing to space technology and cybersecurity, we're at the forefront of the digital revolution, helping organizations navigate the complexities of tomorrow's technology landscape.
                 </p>
                 <button 
-<<<<<<< HEAD
-                  className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-                  onClick={() => window.location.href = '/about'}
-                  aria-label="Learn more about Zion Tech Group"
-=======
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50"
                   onClick={() => window.location.href = '/get-started'}
                   aria-label="Start your journey with Zion Tech Group"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
                 >
                   <Users className="w-5 h-5" />
                   Learn More About Us
                 </button>
-<<<<<<< HEAD
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { icon: Brain, label: "AI Innovation", color: "cyan" },
-                    { icon: Shield, label: "Security First", color: "blue" },
-                    { icon: Rocket, label: "Space Tech", color: "purple" },
-                    { icon: Zap, label: "Quantum Power", color: "emerald" }
-                  ].map((item, index) => (
-                    <motion.div
-                      key={item.label}
-                      className="p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 text-center group hover:border-cyan-400/50 transition-all duration-300"
-                      whileHover={{ y: -5, scale: 1.02 }}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                    >
-                      {React.createElement(item.icon, { 
-                        className: `w-8 h-8 mx-auto mb-3 ${getColorClasses(item.color)} group-hover:scale-110 transition-transform` 
-                      })}
-                      <p className="text-white font-semibold">{item.label}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-=======
                 <button 
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-opacity-50"
                   onClick={() => window.location.href = '/demo'}
@@ -899,7 +705,6 @@ const Homepage2025: React.FC = () => {
                 </button>
               </div>
             </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
           </div>
         </section>
       </main>

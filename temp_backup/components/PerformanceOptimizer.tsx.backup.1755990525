@@ -195,14 +195,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               </span>
             </div>
           </div>
-<<<<<<< HEAD
-          {isOptimizing && (
-            <div className="text-cyan-400 text-xs mt-2">Optimizing resources...</div>
-          )}
-        </motion.div>
-      )}
-    </>
-=======
         )}
 
         {optimizations.length > 0 && (
@@ -220,7 +212,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         )}
       </motion.div>
     </div>
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   );
 };
 

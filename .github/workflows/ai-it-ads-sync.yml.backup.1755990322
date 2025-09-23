@@ -14,11 +14,8 @@ jobs:
     name: Main Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
-<<<<<<< HEAD
-=======
     permissions:
       contents: read
->>>>>>> origin/cursor/fix-github-actions-errors-987b
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

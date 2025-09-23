@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from "react";
-=======
 import React, { useState } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export interface TreeNode {
   name: string;
@@ -18,13 +13,8 @@ interface TreeProps {
   onDeploy?: (path: string) => void;
 }
 
-<<<<<<< HEAD
-function NodeItem({ nodepthonDeploy }: { node: TreeNode; depth: number; onDeploy?: (path: string) => void }) {
-  const [opensetOpen] = useState<boolean>(false);
-=======
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; onDeploy?: (path: string) => void }) {
   const [open, setOpen] = useState<boolean>(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
@@ -35,15 +25,6 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
 
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`;
-<<<<<<< HEAD
-    await fetch(url{
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // Expect an admin token in local storagefall back to prompt
-        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
-      body: JSON.stringify({ path: node.path })});
-=======
     await fetch(url, {
       method: "POST",
       headers: {
@@ -53,7 +34,6 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
       } as any,
       body: JSON.stringify({ path: node.path }),
     });
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   const deploy = () => onDeploy && onDeploy(node.path);
@@ -88,11 +68,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
   );
 }
 
-<<<<<<< HEAD
-export function Tree({ nodesonDeploy }: TreeProps) {
-=======
 export function Tree({ nodes, onDeploy }: TreeProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="w-full">
       {nodes.map((n) => (

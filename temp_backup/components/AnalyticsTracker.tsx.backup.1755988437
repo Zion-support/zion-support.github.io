@@ -1,17 +1,9 @@
 import React, { useEffect, useCallback } from 'react';
 
-<<<<<<< HEAD
-interface AnalyticsTrackerProps {
-  enablePerformanceMonitoring?: boolean;
-  enableUserEngagement?: boolean;
-  enableConversionTracking?: boolean;
-}
-=======
 // Browser API types are declared globally in PerformanceOptimizer.tsx
 
 const AnalyticsTracker: React.FC = () => {
   const router = useRouter();
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5b24
 
 // Performance entry types for Core Web Vitals
 interface PerformanceEventTiming extends PerformanceEntry {
@@ -376,15 +368,6 @@ interface LayoutShiftSource {
   previousRect?: any;
 }
 
-<<<<<<< HEAD
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-=======
 // gtag is declared globally in PerformanceOptimizer.tsx
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5b24
 
 export default AnalyticsTracker;

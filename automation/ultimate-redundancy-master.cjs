@@ -9,33 +9,19 @@ const crypto = require("crypto");
 class UltimateRedundancyMaster {
   constructor() {
     this.config = {
-<<<<<<< HEAD
-      // PM2 Redundancy Configuration
-      pm2: {
-        ecosystemFiles: [
-          "ecosystem.pm2.cjs",
-          "ecosystem.redundancy.cjs",
-          "ecosystem.comprehensive-redundancy.cjs",
-          "ecosystem-redundancy.pm2.cjs"
-=======
       pm2: {
         ecosystemFiles: [
           "ecosystem.pm2.cjs",
           "ecosystem.redundancy.cjs", 
           "ecosystem.comprehensive-redundancy.cjs",
           "ecosystem.redundancy.pm2.cjs"
->>>>>>> origin/auto/autonomy-17186719616
         ],
         processes: [
           "zion-auto-sync",
           "zion-auto-sync-cron",
           "redundancy-automation-system",
           "redundancy-health-monitor",
-<<<<<<< HEAD
-          "redundancy-git-sync",
-=======
           "redundancy-git-sync", 
->>>>>>> origin/auto/autonomy-17186719616
           "redundancy-build-monitor",
           "master-redundancy-orchestrator",
           "enhanced-pm2-redundancy",
@@ -53,25 +39,12 @@ class UltimateRedundancyMaster {
         processMonitoring: true,
         logRotation: true
       },
-<<<<<<< HEAD
-      
-      // GitHub Actions Redundancy Configuration
-      github: {
-        workflows: [
-          "marketing-sync",
-          "sync-health"
-        ],
-        backupWorkflows: [
-          "marketing-sync-backup",
-          "sync-health-backup"
-=======
       githubActions: {
         workflows: [
           ".github/workflows/marketing-sync.yml",
           ".github/workflows/sync-health.yml",
           ".github/workflows/marketing-sync-backup.yml",
           ".github/workflows/sync-health-backup.yml"
->>>>>>> origin/auto/autonomy-17186719616
         ],
         healthCheckInterval: 30000,
         maxFailureThreshold: 5,
@@ -80,14 +53,7 @@ class UltimateRedundancyMaster {
         workflowValidation: true,
         apiHealthCheck: true
       },
-<<<<<<< HEAD
-      
-      // Netlify Functions Redundancy Configuration
-      netlify: {
-        functionsDir: "netlify/functions",
-=======
       netlifyFunctions: {
->>>>>>> origin/auto/autonomy-17186719616
         manifestFile: "netlify/functions/functions-manifest.json",
         healthCheckInterval: 60000,
         maxFailureThreshold: 3,
@@ -243,11 +209,6 @@ class UltimateRedundancyMaster {
               continue;
             }
           }
-<<<<<<< HEAD
-        } else {
-          this.log(`Workflow ${workflow} is present and healthy`);
-=======
->>>>>>> origin/auto/autonomy-17186719616
         }
       }
     }
@@ -459,11 +420,7 @@ class UltimateRedundancyMaster {
 if (require.main === module) {
   const master = new UltimateRedundancyMaster();
   
-<<<<<<< HEAD
-  const redundancyMaster = new UltimateRedundancyMaster();
-=======
   const command = process.argv[2];
->>>>>>> origin/auto/autonomy-17186719616
   
   switch (command) {
     case 'start':
@@ -485,12 +442,4 @@ if (require.main === module) {
   }
 }
 
-<<<<<<< HEAD
-// Run if called directly
-if (require.main === module) {
-  main();
-}
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 module.exports = UltimateRedundancyMaster;

@@ -33,10 +33,6 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 
-
-
-
-
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
@@ -52,7 +48,6 @@ import { fetchProducts } from '@/services/marketplace';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import apiClient from '@/lib/apiClient';
-
 
 /**
  * Marketplace component props
@@ -305,8 +300,6 @@ export default function Marketplace() {
     }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
@@ -314,7 +307,6 @@ export default function Marketplace() {
           <p className="text-zion-slate-light">
             {t('marketplace.description')}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     // Navigate to admin products page
     router.push('/admin/products');
   }, [isAuthenticated, user, router, toast]);
@@ -452,9 +444,6 @@ export default function Marketplace() {
           </h1>
           <p className="text-muted-foreground text-lg">
             {t('marketplace.hero_subtitle')}
-<<<<<<< HEAD
-=======
->>>>>>> origin/5smo5s-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           </p>
         </div>

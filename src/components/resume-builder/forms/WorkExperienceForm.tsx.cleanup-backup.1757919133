@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Textarea } from '@/components/ui/textarea',
-import { Input } from '@/components/ui/input',
-import { Checkbox } from '@/components/ui/checkbox',
-import { format } from 'date-fns',
-=======
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -18,22 +7,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { format } from 'date-fns';
->>>>>>> origin/auto/autonomy-17186719616
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage} from '@/components/ui/form',
-import { WorkExperience } from '@/types/resume',
-import { Loader2, Edit, Trash2 } from 'lucide-react'
-import { useResume } from '@/hooks/useResume',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { Card, CardContent } from '@/components/ui/card',
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',
-=======
   FormMessage,
 } from '@/components/ui/form';
 import { WorkExperience } from '@/types/resume';
@@ -42,7 +21,6 @@ import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
->>>>>>> origin/auto/autonomy-17186719616
 
 // Define schema for form validation
 const workExperienceSchema = z.object({
@@ -52,30 +30,6 @@ const workExperienceSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-<<<<<<< HEAD
-  location: z.string().optional()}),
-
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,
-
-interface WorkExperienceFormProps {
-  resumeId: string,
-  workExperiences: WorkExperience[],
-  onComplete: () => void,
-  onBack: () => void
-}
-
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),
-  const [editingId, setEditingId] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-
-  // Helper function to format dates to string
-  const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '',
-    if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue, 'yyyy-MM-dd'),
-  },
-=======
   location: z.string().optional(),
 });
 
@@ -99,7 +53,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (typeof dateValue === 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd');
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const form = useForm<WorkExperienceFormValues>({
     resolver: zodResolver(workExperienceSchema),
@@ -109,14 +62,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-<<<<<<< HEAD
-      location: ''}}),
-
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
-    try {
-      setError(null),
-      let success,
-=======
       location: '',
     },
   });
@@ -125,7 +70,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     try {
       setError(null);
       let success;
->>>>>>> origin/auto/autonomy-17186719616
 
       const experienceData: WorkExperience = {
         company_name: data.company_name, // Required field
@@ -134,14 +78,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         end_date: data.is_current ? undefined : (data.end_date || undefined),
         is_current: data.is_current,
         description: data.description,
-<<<<<<< HEAD
-        location: data.location},
-
-      if (editingId) {
-        success = await updateWorkExperience(editingId, experienceData),
-      } else {
-        success = await addWorkExperience(resumeId, experienceData),
-=======
         location: data.location,
       };
 
@@ -149,7 +85,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         success = await updateWorkExperience(editingId, experienceData);
       } else {
         success = await addWorkExperience(resumeId, experienceData);
->>>>>>> origin/auto/autonomy-17186719616
       }
 
       if (success) {
@@ -159,33 +94,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           start_date: format(new Date(), 'yyyy-MM-dd'),
           is_current: false,
           description: '',
-<<<<<<< HEAD
-          location: ''}),
-        setEditingId(null),
-      }
-    } catch (err: any) {
-      setError(err.message || 'An error occurred')
-    }
-  },
-
-  const handleEdit = (work: WorkExperience) => {
-    setEditingId(work.id!),
-    form.reset({
-      ...work,
-      start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined}),
-  },
-
-  const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this work experience?')) {
-      await deleteWorkExperience(id)
-    }
-  },
-
-  const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent),
-  },
-=======
           location: '',
         });
         setEditingId(null);
@@ -213,7 +121,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -420,52 +327,29 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-<<<<<<< HEAD
-                    setEditingId(null),
-=======
                     setEditingId(null);
->>>>>>> origin/auto/autonomy-17186719616
                     form.reset({
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-<<<<<<< HEAD
-                      location: ''}),
-                  } else {
-                    onBack(),
-=======
                       location: '',
                     });
                   } else {
                     onBack();
->>>>>>> origin/auto/autonomy-17186719616
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
-
               </Button>
-              <div className='flex gap-2'>
-                <Button type='submit' disabled={isLoading}>
-                  {isLoading && (
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-                  )}
-=======
-              </Button>
->>>>>>> origin/auto/autonomy-17186719616
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
                 {!editingId && workExperiences.length > 0 && (
                   <Button type="button" onClick={onComplete}>
                     Next
@@ -477,9 +361,5 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         </Form>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

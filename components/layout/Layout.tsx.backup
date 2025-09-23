@@ -1,13 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface LayoutProps {
-  children: React.ReactNode;
-}
-    </div>
-  );
-}interface LayoutProps {
-=======
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -19,16 +11,12 @@ export default function Layout({ children }: LayoutProps) {
 =======
 
 interface LayoutProps {
->>>>>>> pr-11914
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
 }
 
-<<<<<<< HEAD
-export default function Layout({ children }: LayoutProps) {  return (
-=======
 export default function Layout({ 
   children, 
   title = "Zion Tech Group", 
@@ -36,7 +24,6 @@ export default function Layout({
   keywords = "technology, AI, cloud, micro SaaS"
 }: LayoutProps) {
   return (
->>>>>>> pr-11914
     <div className="min-h-screen bg-gray-50">
       {children}
     </div>

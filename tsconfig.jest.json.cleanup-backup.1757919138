@@ -3,29 +3,11 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-<<<<<<< HEAD
-    "module": "esnext", // For import.meta and top-level await
-=======
     "module": "commonjs", // Changed for Jest
->>>>>>> origin/auto/autonomy-17186719616
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-<<<<<<< HEAD
-      "@/pages/*": ["./src/pages/*"],
-      "axios": ["./src/lib/axios.ts"],
-      "next": ["./types/next"],
-      "next/*": ["./types/next/*"]
-    },
-    // Modified for Jest: removed vite/client, vitest/globals; added jest, @testing-library/jest-dom
-    "types": ["jest", "@testing-library/jest-dom", "react"],
-
-    /* Bundler mode related */
-    "moduleResolution": "bundler", // Preferred for ES modules
-    "allowImportingTsExtensions": true,
-    "esModuleInterop": true, // Important for interop
-=======
       "@/pages/*": ["./src/pages/*", "./pages/*"],
       "axios": ["./src/lib/axios.ts"],
       "next-cloudinary": ["./types/next-cloudinary.d.ts"]
@@ -37,7 +19,6 @@
     "moduleResolution": "node", // Changed from bundler to node for CommonJS context
     "allowImportingTsExtensions": true, // May or may not be needed with CJS, but harmless
     "esModuleInterop": true, // Important for CJS interop
->>>>>>> origin/auto/autonomy-17186719616
     "resolveJsonModule": true,
     "isolatedModules": false, // Changed for better type checking with ts-jest
     "allowJs": true, // Allow JS files to be processed
@@ -51,12 +32,8 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-<<<<<<< HEAD
-  "include": [ // Broad include for tests, can be refined by Jest's testMatch
-=======
   "include": [
     // Broad include for tests, can be refined by Jest's testMatch
->>>>>>> origin/auto/autonomy-17186719616
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.js",

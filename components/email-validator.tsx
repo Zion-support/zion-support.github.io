@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-MailCheckCircleXCircleAlertTriangleArrowRightCopyRefreshCwShieldZapBarChart3
-
-export default function EmailValidatorPage() {
-  const [emailsetEmails] = useState('');
-  const [validationResultsetValidationResults] = useState<any[]>([]);
-  const [isValidatingsetIsValidating] = useState(false);
-  const [bulkModesetBulkMode] = useState(false);
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -23,7 +9,6 @@ export default function EmailValidatorPage() {
   const [validationResults, setValidationResults] = useState<any[]>([]);
   const [isValidating, setIsValidating] = useState(false);
   const [bulkMode, setBulkMode] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   const validateEmails = async () => {
     if (!emails.trim()) return;
@@ -36,11 +21,7 @@ export default function EmailValidatorPage() {
     
     // Simulate email validation with realistic results
     for (let i = 0; i < emailList.length; i++) {
-<<<<<<< HEAD
-      await new Promise(resolve => setTimeout(resolve200));
-=======
       await new Promise(resolve => setTimeout(resolve, 200));
->>>>>>> origin/auto/autonomy-17186719616
       
       const email = emailList[i].trim();
       const result = validateSingleEmail(email);
@@ -57,37 +38,21 @@ export default function EmailValidatorPage() {
     
     // Check for common disposable email domains
     const disposableDomains = [
-<<<<<<< HEAD
-      'tempmail.'org', 'guerrillamail.'com', 'mailinator.com'10minutemail.com',
-      'throwaway.'email', 'temp-mail.'org', 'sharklasers.'com', 'getairmail.com'
-=======
       'tempmail.org', 'guerrillamail.com', 'mailinator.com', '10minutemail.com',
       'throwaway.email', 'temp-mail.org', 'sharklasers.com', 'getairmail.com'
->>>>>>> origin/auto/autonomy-17186719616
     ];
     
     // Check for common typos
     const commonTypos = {
-<<<<<<< HEAD
-      'gmail.com': ['gmial.'com', 'gamil.'com', 'gmai.com'],
-      'yahoo.com': ['yaho.'com', 'yahooo.'com', 'yhaoo.com'],
-      'hotmail.com': ['hotmai.'com', 'hotmial.'com', 'hotmeil.com'],
-      'outlook.com': ['outlok.'com', 'outloook.'com', 'outlok.com']
-=======
       'gmail.com': ['gmial.com', 'gamil.com', 'gmai.com'],
       'yahoo.com': ['yaho.com', 'yahooo.com', 'yhaoo.com'],
       'hotmail.com': ['hotmai.com', 'hotmial.com', 'hotmeil.com'],
       'outlook.com': ['outlok.com', 'outloook.com', 'outlok.com']
->>>>>>> origin/auto/autonomy-17186719616
     };
     
     const domain = email.split('@')[1];
     const isDisposable = disposableDomains.includes(domain);
-<<<<<<< HEAD
-    const hasTypo = Object.entries(commonTypos).some(([correctypos]) => 
-=======
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) => 
->>>>>>> origin/auto/autonomy-17186719616
       typos.includes(domain)
     );
     
@@ -180,11 +145,7 @@ export default function EmailValidatorPage() {
 
   const clearResults = () => {
     setValidationResults([]);
-<<<<<<< HEAD
-    setEmails(', ');
-=======
     setEmails('');
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   const getStats = () => {
@@ -197,11 +158,7 @@ export default function EmailValidatorPage() {
     const disposable = validationResults.filter(r => r.status === 'disposable').length;
     const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
     
-<<<<<<< HEAD
-    return { totalvalidinvalidsuspiciousdisposableavgScore };
-=======
     return { total, valid, invalid, suspicious, disposable, avgScore };
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   const stats = getStats();
@@ -210,11 +167,7 @@ export default function EmailValidatorPage() {
     <>
       <Head>
         <title>Email Validator - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Validate email addresses with our advanced email validation service. Check for typosdisposable domainsand ensure deliverability." />
-=======
         <meta name="description" content="Validate email addresses with our advanced email validation service. Check for typos, disposable domains, and ensure deliverability." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Email Validator - Zion Tech Group" />
         <meta property="og:description" content="Advanced email validation service to ensure deliverability and prevent typos." />
       </Head>
@@ -232,11 +185,7 @@ export default function EmailValidatorPage() {
             Email Validator
           </h1>
           <p className="text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            Validate email addresses with our advanced validation service. Check for typosdisposable domains
-=======
             Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
->>>>>>> origin/auto/autonomy-17186719616
             and ensure maximum deliverability for your email campaigns and user registrations.
           </p>
         </div>
@@ -388,11 +337,7 @@ export default function EmailValidatorPage() {
 
               {validationResults.length > 0 ? (
                 <div className="space-y-3 max-h-96 overflow-y-auto">
-<<<<<<< HEAD
-                  {validationResults.map((resultindex) => (
-=======
                   {validationResults.map((result, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
@@ -423,11 +368,7 @@ export default function EmailValidatorPage() {
                         <div className="text-sm">
                           <span className="text-gray-400">Issues:</span>
                           <ul className="mt-1 space-y-1">
-<<<<<<< HEAD
-                            {result.issues.map((issue: stringissueIndex: number) => (
-=======
                             {result.issues.map((issue: string, issueIndex: number) => (
->>>>>>> origin/auto/autonomy-17186719616
                               <li key={issueIndex} className="text-red-300 flex items-center">
                                 <XCircle className="w-3 h-3 mr-2 flex-shrink-0" />
                                 {issue}
@@ -481,11 +422,7 @@ export default function EmailValidatorPage() {
               <div className="text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-bold text-white mb-4">Syntax Validation</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
-                Checks email formatlengthand RFC compliance standards for maximum accuracy.
-=======
                 Checks email format, length, and RFC compliance standards for maximum accuracy.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
 
@@ -540,11 +477,7 @@ export default function EmailValidatorPage() {
               Perfect For Every Use Case
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              From user registration to email marketingour validation service ensures quality and deliverability.
-=======
               From user registration to email marketing, our validation service ensures quality and deliverability.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
 
@@ -553,11 +486,7 @@ export default function EmailValidatorPage() {
               <div className="text-4xl mb-4">👥</div>
               <h3 className="text-2xl font-bold text-white mb-4">User Registration</h3>
               <p className="text-gray-400 mb-6">
-<<<<<<< HEAD
-                Ensure only valid email addresses are used during user signupreducing bounce rates and improving user experience.
-=======
                 Ensure only valid email addresses are used during user signup, reducing bounce rates and improving user experience.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Prevent fake accounts and spam</li>

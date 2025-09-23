@@ -9,12 +9,8 @@ export const NavigationButtons = ({
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
-<<<<<<< HEAD
-  isLoading = false}: NavigationButtonsProps) => {
-=======
   isLoading = false,
 }: NavigationButtonsProps) => {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="flex justify-between">
       {onBack && (

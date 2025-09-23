@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React from 'react';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -10,7 +5,6 @@ import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas
 import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 import { 
   Search, Grid, List,
   ArrowRight, Check,
@@ -119,8 +113,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
         return '⚡';
     }
   };
-
-
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
-import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraFuturisticBackground2045 from '../backgrounds/UltraFuturisticBackground2045';
-=======
 import React, { useState } from 'react';
 import UltraAdvancedFuturisticNavigation2025 from './UltraAdvancedFuturisticNavigation2025';
 import UltraAdvancedFuturisticFooter2025 from './UltraAdvancedFuturisticFooter2025';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraAdvancedFuturisticBackground2025 from '../backgrounds/UltraAdvancedFuturisticBackground2025';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
@@ -24,70 +16,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-<<<<<<< HEAD
-  const [isOnline, setIsOnline] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
-
-  useEffect(() => {
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-
-
-    // Simulate loading time for better UX
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-
-    // Check online status
-    const updateOnlineStatus = () => {
-      setIsOnline(navigator.onLine);
-    };
-
-    if (sidebarOpen) {
-      document.addEventListener('keydown', handleEscape);
-      // Prevent body scroll when sidebar is open
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('online', updateOnlineStatus);
-      window.removeEventListener('offline', updateOnlineStatus);
-    };
-  }, [sidebarOpen]);
-
-  // Handle focus management for accessibility
-  useEffect(() => {
-    if (sidebarOpen) {
-      // Focus the first focusable element in the sidebar
-      const firstFocusable = document.querySelector('.sidebar-focusable') as HTMLElement;
-      if (firstFocusable) {
-        firstFocusable.focus();
-      }
-    }
-  }, [sidebarOpen]);
-
-  useEffect(() => {
-    // Apply theme to document
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const handleThemeToggle = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  };
-
-  if (isLoading) {
-    return <LoadingSpinner />;
-  }
-=======
   const [showEnhancements, setShowEnhancements] = useState(false);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
@@ -95,24 +24,15 @@ export default function Layout({ children }: LayoutProps) {
       <a href="#main" className="skip-link">Skip to main content</a>
       
       {/* Futuristic Background */}
-<<<<<<< HEAD
-      <UltraFuturisticBackground2045 theme="consciousness" intensity="high" />
-=======
       <UltraAdvancedFuturisticBackground2025 theme="quantum-neon" intensity="medium" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd
       
       {/* Layout Structure */}
       <div className="relative z-10">
         {/* Top Contact Bar */}
         <TopContactBar />
         
-<<<<<<< HEAD
-        {/* Futuristic Background */}
-        <UltraFuturisticBackground2046 />
-=======
         {/* Navigation */}
         <UltraAdvancedFuturisticNavigation2025 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd
         
         {/* Layout Structure */}
         <div className="relative z-10">
@@ -134,13 +54,10 @@ export default function Layout({ children }: LayoutProps) {
           {/* Footer */}
           <UltraFuturisticFooter2025 />
         </div>
-<<<<<<< HEAD
-=======
         
         {/* Footer */}
         <UltraAdvancedFuturisticFooter2025 />
       </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd
 
       {/* Enhancement Toggle */}
       <button

@@ -2,18 +2,10 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Globe, Phone, Mail, MapPin, 
-  Brain, Atom, Shield, Rocket, Target, 
-  Star, 
-  Twitter, Linkedin, Youtube, Github, 
-  ArrowUp, ArrowRight, ExternalLink, Heart, Zap
-=======
   Brain, Atom, Shield, Rocket, Cpu, Target, Sparkles, 
   Heart, DollarSign, GraduationCap, Building, Truck, Zap,
   Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube,
   ArrowRight, Star, CheckCircle, TrendingUp, Award, Clock
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 } from 'lucide-react';
 
@@ -57,23 +49,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-<<<<<<< HEAD
-        <div className="py-16">
-          {/* Newsletter Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-400/20 rounded-2xl p-8 backdrop-blur-sm">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Stay Ahead of the Future
-              </h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Get the latest insights on AI consciousness, quantum computing, and autonomous systems delivered to your inbox.
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Company Info */}
@@ -86,7 +61,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
                   <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
                   <p className="text-sm text-cyan-400">Future Technology Solutions</p>
                 </div>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
               </div>
               
               <p className="text-white/70 mb-6 leading-relaxed">
@@ -273,9 +247,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </motion.div>
-=======
         </div>
 
         {/* Bottom Bar */}
@@ -300,7 +271,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
                 </Link>
               </div>
             </div>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
           </div>
         </div>
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198

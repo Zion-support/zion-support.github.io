@@ -4,8 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  // Disable SWC minifier to avoid WebpackError from version mismatch
-  swcMinify: false,
+  // Next 15 removes swcMinify; rely on optimization.minimize in webpack hook
   
   // Enhanced build settings
   eslint: { ignoreDuringBuilds: true },

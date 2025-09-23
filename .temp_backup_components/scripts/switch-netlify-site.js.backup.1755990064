@@ -22,29 +22,6 @@ const domains = await res.json();
   return domains.some((d) => d.name === domain);
 }
 
-<<<<<<< HEAD
-export async function switchNetlifySite() {
-  const greenActive = await siteHasDomain(greenId);
-  const newSite = greenActive ? blueId : greenId;
-  const oldSite = greenActive ? greenId : blueId;
-
-  console.log(`Switching ${domain} from ${oldSite} to ${newSite}`);
-
-  let res = await fetch(`https://api.netlify.com/api/v1/sites/${newSite}/domains`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ domain }),
-  });
-  if (!res.ok && res.status !== 422) throw new Error(`Assign domain failed: ${res.statusText}`);
-
-  res = await fetch(`https://api.netlify.com/api/v1/sites/${oldSite}/domains/${domain}`, {
-    method: 'DELETE',
-    headers,
-  });
-  if (!res.ok) throw new Error(`Remove domain failed: ${res.statusText}`);
-
-  console.log('DNS switch complete');
-=======
 async function assignDomain(siteId) {
   const res = await fetch(`https://api.netlify.com/api/v1/sites/${siteId}/domains`, {
     method: 'POST',    headers,
@@ -87,7 +64,6 @@ const oldSite = greenActive ? greenId : blueId;
     }
     throw err;
   }
->>>>>>> origin/automation-error-fixes
 }
 
 if (import.meta.url === `file://${_process.argv[1]}`) {

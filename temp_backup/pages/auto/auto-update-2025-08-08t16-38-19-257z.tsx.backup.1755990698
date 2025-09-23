@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function Page(){return <div className="py-12">auto-update-2025-08-08t16-38-19-257z</div>}
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -21,4 +18,3 @@ const AutoUpdate20250808t163819257z: NextPage = () => {
 };
 
 export default AutoUpdate20250808t163819257z;
->>>>>>> origin/cursor/automate-netlify-build-fixes-and-monitoring-43ee

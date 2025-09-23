@@ -1,14 +1,9 @@
 [
-<<<<<<< HEAD
-  "accessibility",
-  "ai-consciousness-evolution",
-=======
   "ai-autonomous-business-process-automation-2045",
   "ai-autonomous-vehicle",
   "ai-consciousness-evolution",
   "ai-consciousness-evolution-2045",
   "ai-content-factory-pro",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
   "ai-content-marketing-automation",
   "ai-creativity-orchestrator",
   "ai-customer-intelligence-platform",
@@ -16,9 +11,6 @@
   "ai-dream-interpreter-platform",
   "ai-ethics-governance",
   "ai-financial-fraud-detection",
-<<<<<<< HEAD
-  "ai-powered-enterprise-security",
-=======
   "ai-healthcare-diagnostics-pro",
   "ai-logistics-platform",
   "ai-powered-enterprise-security",
@@ -29,19 +21,12 @@
   "autonomous-business-intelligence",
   "autonomous-business-operations",
   "autonomous-customer-success",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
   "autonomous-devops-platform",
   "autonomous-it-operations",
   "autonomous-it-service-management",
   "autonomous-network-management",
   "autonomous-vehicle-ai",
   "blockchain-enterprise-platform",
-<<<<<<< HEAD
-  "compliance",
-  "metaverse-digital-reality-platform",
-  "quantum-compliance-automation",
-  "quantum-creativity-studio",
-=======
   "blockchain-infrastructure",
   "brain-computer-interface",
   "compliance-automation",
@@ -68,7 +53,6 @@
   "quantum-creativity-studio",
   "quantum-crm-suite",
   "quantum-cybersecurity-platform-2045",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
   "quantum-data-center",
   "quantum-encryption-gateway",
   "quantum-identity-verification",
@@ -78,14 +62,11 @@
   "quantum-materials-discovery",
   "quantum-network-security",
   "quantum-networking",
-<<<<<<< HEAD
-=======
   "quantum-neural-ecosystem",
   "quantum-neural-ecosystem-2045",
   "quantum-risk-financial-manager",
   "quantum-storage-solutions",
   "quantum-supply-chain-optimizer",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
   "quantum-threat-detection",
   "services/ai-consciousness",
   "services/business-solutions",
@@ -94,10 +75,6 @@
   "services/it-infrastructure",
   "services/quantum-technology",
   "services/serverless-lakehouse-starter",
-<<<<<<< HEAD
-  "services/space-technology",
-  "space-mining-automation-platform"
-=======
   "space-colonization-services",
   "space-cybersecurity",
   "space-data-analytics",
@@ -109,5 +86,4 @@
   "space-resource-intelligence-platform",
   "synthetic-monitor-recorder-pro",
   "zero-trust-security"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
 ]

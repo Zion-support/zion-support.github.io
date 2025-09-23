@@ -164,40 +164,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Company Info */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
-                  <Brain className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
-                  <p className="text-sm text-cyan-400">Future Technology Solutions</p>
-                </div>
-              </div>
-              
-              <p className="text-white/70 mb-6 leading-relaxed">
-                Pioneering the future with cutting-edge AI, quantum technology, and innovative solutions that transform businesses and industries.
-              </p>
-              <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  aria-label="Email address for newsletter"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Information */}
           <div className="lg:col-span-2">
@@ -296,7 +262,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
           >
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
             <p className="mt-1">Pioneering the future of technology.</p>
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
           </motion.div>
 
           {/* Social Links */}

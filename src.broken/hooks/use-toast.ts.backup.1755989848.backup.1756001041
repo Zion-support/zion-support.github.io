@@ -1,7 +1,5 @@
 import React from 'react';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { toast as sonnerToast } from 'sonner';
 import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
 
@@ -106,7 +104,6 @@ toastAdapter.error = (message: string, options?: { id?: string; duration?: numbe
 toastAdapter.info = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
   return showToast.info(message, options);
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useSnackbar, VariantType, OptionsObject } from 'notistack';
 
 export type ToastOptions = OptionsObject & { variant?: VariantType };
@@ -136,9 +133,6 @@ export function ToastInitializer() {
 export const toast = {
   error: (msg: string) => globalEnqueue?.(msg, { variant: 'error' }),
   success: (msg: string) => globalEnqueue?.(msg, { variant: 'success' }),
-<<<<<<< HEAD
-=======
->>>>>>> origin/3ycx6d-codex/implement-global-error-boundary-with-toasts
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 };
 

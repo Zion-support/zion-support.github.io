@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 {
   "general": {
     "app_name": "Zion AI Marketplace",
@@ -24,28 +21,6 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-<<<<<<< HEAD
-    "services": "Services",
-    "talent": "Talent",
-    "equipment": "Equipment",
-    "community": "Community",
-    "company": "Company",
-    "blog": "Blog",
-    "dashboard": "Dashboard",
-    "messages": "Messages",
-    "post_job": "Post Job",
-    "analytics": "Analytics",
-    "about": "About Us",
-    "careers": "Careers",
-    "partners": "Partners",
-    "contact": "Contact",
-    "products": "Products",
-    "green-it": "Green IT",
-    "help": "Help Center",
-    "developers": "Developer Portal",
-    "api-docs": "API Documentation",
-    "sitemap": "Sitemap"
-=======
     "categories": "Categories",
     "talent": "Talent",
     "equipment": "Equipment",
@@ -54,7 +29,6 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics"
->>>>>>> origin/auto/autonomy-17186719616
   },
   "auth": {
     "login": "Login",
@@ -109,8 +83,6 @@
     "subtotal": "Subtotal",
     "pay": "Pay with Stripe (test)"
   },
-<<<<<<< HEAD
-=======
   "jobs": {
     "post_job_title": "Post a Job",
     "post_job_description": "Fill out the form below to post your job and find the perfect talent",
@@ -126,7 +98,6 @@
     "submitting": "Submitting...",
     "post_job_button": "Post Job"
   },
->>>>>>> origin/auto/autonomy-17186719616
   "language": {
     "en": "English",
     "es": "Español",

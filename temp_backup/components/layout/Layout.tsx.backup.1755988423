@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import UltraFuturisticNavigation2036 from './UltraFuturisticNavigation2036';
-import UltraFuturisticFooter2036 from './UltraFuturisticFooter2036';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraAdvancedFuturisticBackground2036 from '../backgrounds/UltraAdvancedFuturisticBackground2036';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import UltraFuturisticNavigation2037 from './UltraFuturisticNavigation2037';
 import UltraFuturisticFooter2037 from './UltraFuturisticFooter2037';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2037 from '../backgrounds/UltraFuturisticBackground2037';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-379c
 import TopContactBar from './TopContactBar';
 
 interface LayoutProps {
@@ -83,15 +74,6 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Skip to content link for accessibility */}
-<<<<<<< HEAD
-      <a href="#main" className="skip-link">Skip to main content</a>
-      
-      {/* Enhanced Futuristic Background */}
-      <UltraAdvancedFuturisticBackground2036 
-        intensity="medium" 
-        theme="quantum"
-      />
-=======
       <a 
         href="#main" 
         className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300"
@@ -117,7 +99,6 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Futuristic Background */}
       <UltraFuturisticBackground2037 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-379c
       
       {/* Layout Structure */}
       <div className="relative z-10">
@@ -125,14 +106,10 @@ export default function Layout({ children }: LayoutProps) {
         <TopContactBar />
         
         {/* Navigation */}
-<<<<<<< HEAD
-        <UltraFuturisticNavigation2036 />
-=======
         <UltraFuturisticNavigation2037 
           onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
           aria-expanded={sidebarOpen}
         />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-379c
         
         {/* Sidebar and Main Content */}
         <div className="flex">

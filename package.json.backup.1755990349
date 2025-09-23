@@ -2,8 +2,6 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
-=======
   "version": "0.0.0",
   "type": "module",
   "bin": {
@@ -264,7 +262,6 @@
     "doc": "docs",
     "test": "tests"
   },
->>>>>>> origin/auto/autonomy-17186719616
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"
@@ -283,10 +280,7 @@
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 200",
-<<<<<<< HEAD
-=======
     "sitemap": "node scripts/generate-sitemap.js",
->>>>>>> origin/auto/autonomy-17186719616
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
     "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
@@ -299,29 +293,17 @@
     "front:advertise": "node automation/front-index-advertiser.cjs",
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "sitemap": "node scripts/generate-sitemap.js",
-=======
->>>>>>> origin/auto/autonomy-17186719616
     "netlify:manifest": "node scripts/generate-netlify-functions-manifest.cjs",
     "netlify:trigger": "node scripts/trigger-netlify-automations.cjs",
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-<<<<<<< HEAD
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
-    "prebuild": "npm run build:health-check && npm run netlify:manifest",
-    "export": "rm -rf .next out tsconfig.tsbuildinfo && mkdir -p .temp && mv pages/reports .temp/ 2>/dev/null || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build --no-lint && mv .temp/reports pages/ 2>/dev/null || true && rm -rf .temp",
-=======
     "sitemap": "node scripts/generate-sitemap.mjs",
     "homepage:update": "node automation/homepage-intelligent-updater.cjs",
     "homepage:update:ci": "node automation/homepage-intelligent-updater.cjs && git diff --quiet || (git config user.name \"github-actions\" && git config user.email \"actions@users.noreply.github.com\" && git add pages/index.tsx && git commit -m \"chore(homepage): autonomous highlight refresh\" && git push)",
     "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
->>>>>>> origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-2c4d
 =======
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
@@ -392,8 +374,6 @@
     "cursor:memory:status": "node -e \"const fs = require('fs'); const path = './cursor-memory/memory-summary.json'; try { const data = JSON.parse(fs.readFileSync(path, 'utf8')); console.log('Memory Status:'); console.log('- Total entries:', data.totalEntries); console.log('- Categories:', Object.keys(data.categories).length); console.log('- High confidence:', data.confidenceDistribution.high); } catch(e) { console.log('No memory data found'); }\"",
     "automation:factory": "node automation/automation-factory.cjs generate",
     "automation:factory:dev": "nodemon automation/ultimate-automation-factory-system.js",
-<<<<<<< HEAD
-=======
     "service:factory": "node automation/service-factory/service-factory-orchestrator.cjs",
     "service:factory:full": "node automation/service-factory/service-factory-orchestrator.cjs full",
     "service:factory:create": "node automation/service-factory/service-factory-orchestrator.cjs create",
@@ -419,7 +399,6 @@
     "catalog:update": "node automation/service-factory/service-catalog-manager.cjs update",
     "catalog:scan": "node automation/service-factory/service-catalog-manager.cjs scan",
     "catalog:reports": "node automation/service-factory/service-catalog-manager.cjs reports",
->>>>>>> origin/auto/autonomy-17186719616
     "automation:orchestrator": "node automation/intelligent-orchestrator.cjs continuous",
     "automation:dashboard": "node automation/automation-dashboard.cjs start",
     "ai:research": "node automation/ai-trends-researcher.cjs",
@@ -439,20 +418,6 @@
     "git:cleanup": "node automation/enhanced-git-sync-orchestrator.cjs cleanup-locks",
     "git:status": "node automation/enhanced-git-sync-orchestrator.cjs status",
     "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report",
-<<<<<<< HEAD
-    "navigation:ai": "node automation/ai-navigation-optimizer.cjs",
-    "navigation:ml": "node automation/ml-navigation-predictor.cjs",
-    "navigation:neural": "node automation/neural-navigation-network.cjs",
-    "navigation:ai:all": "npm run navigation:ai && npm run navigation:ml && npm run navigation:neural",
-    "navigation:autonomous": "node automation/autonomous-navigation-launcher.cjs",
-    "navigation:cron": "bash automation/navigation-cron-system.sh",
-    "navigation:cron:start": "bash automation/navigation-cron-system.sh start",
-    "navigation:cron:stop": "bash automation/navigation-cron-system.sh stop",
-    "navigation:cron:restart": "bash automation/navigation-cron-system.sh restart",
-    "navigation:cron:status": "bash automation/navigation-cron-system.sh status",
-    "navigation:launch": "npm run navigation:autonomous & npm run navigation:cron:start",
-=======
->>>>>>> origin/auto/autonomy-17186719616
     "automation:improvement": "node automation/continuous-automation-improvement-system.js",
     "automation:guardian": "node automation/automation-guardian-10min.cjs",
     "automation:cloud": "node automation/cloud-autonomous-orchestrator.cjs",
@@ -592,11 +557,6 @@
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
-<<<<<<< HEAD
-    "performance:audit": "node automation/performance-audit.cjs",
-    "automation:trends": "node scripts/curate-trends.mjs",
-    "automation:health": "node scripts/health-check.mjs"
-=======
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
     "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
     "ui-evolution:analyze": "node automation/ui-evolution-launcher.js analyze",
@@ -727,7 +687,6 @@
     "redundancy:ultimate:system:status": "node automation/ultimate-redundancy-automation-system.cjs status",
     "redundancy:ultimate:system:health": "node automation/ultimate-redundancy-automation-system.cjs health",
     "redundancy:ultimate:system:test": "node automation/ultimate-redundancy-automation-system.cjs test"
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-1358
 >>>>>>> origin/auto/autonomy-17186719616
   },
   "dependencies": {
@@ -739,11 +698,7 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@supabase/ssr": "^0.6.1",
-<<<<<<< HEAD
-    "@supabase/supabase-js": "^2.56.0",
-=======
     "@supabase/supabase-js": "^2.39.0",
->>>>>>> origin/auto/autonomy-17186719616
     "@tailwindcss/postcss": "^4.1.12",
     "@types/react-datepicker": "^6.2.0",
     "axios": "^1.11.0",
@@ -752,14 +707,9 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "clsx": "^2.1.1",
-<<<<<<< HEAD
-    "cron-parser": "^5.3.0",
-    "cssnano": "^7.1.1",
-=======
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
     "dotenv": "^17.2.1",
->>>>>>> origin/auto/autonomy-17186719616
     "events": "^3.3.0",
     "framer-motion": "^12.23.12",
     "fs": "^0.0.1-security",
@@ -767,29 +717,17 @@
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
-<<<<<<< HEAD
-    "js-yaml": "^4.1.0",
-    "jsdom": "^26.1.0",
-    "lucide-react": "^0.541.0",
-    "next": "^15.5.0",
-=======
     "jsdom": "^24.1.0",
     "lucide-react": "^0.536.0",
     "next": "^14.2.5",
->>>>>>> origin/auto/autonomy-17186719616
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
     "react": "^19.1.1",
     "react-datepicker": "^8.4.0",
-<<<<<<< HEAD
-    "react-dom": "^17.0.2",
-    "resend": "^4.0.0",
-=======
     "react-dom": "^19.1.1",
     "tailwind-merge": "^3.3.1",
->>>>>>> origin/auto/autonomy-17186719616
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -804,11 +742,6 @@
     "@types/react-dom": "^19.1.7",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
-<<<<<<< HEAD
-    "autoprefixer": "^10.4.21",
-    "dotenv": "^17.2.1",
-=======
->>>>>>> origin/auto/autonomy-17186719616
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.0.0",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -819,11 +752,7 @@
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.12",
     "ts-node": "^10.9.2",
-<<<<<<< HEAD
-    "typescript": "^5.9.2"
-=======
     "typescript": "^5.0.0"
->>>>>>> origin/auto/autonomy-17186719616
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

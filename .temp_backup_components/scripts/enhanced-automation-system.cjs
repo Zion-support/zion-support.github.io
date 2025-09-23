@@ -40,8 +40,4 @@ console.log(' Enhanced Automation System Starting...')
         "command"
         execSync(check.command, { "stdio"})
             this.log(`System "error"`)
-<<<<<<< HEAD
     console.error('Automation system "failed")
-=======
-    console.error('Automation system "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

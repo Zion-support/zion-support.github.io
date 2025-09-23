@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-CodeCheckCircleAlertTriangleZapBarChart3ArrowRightPlayShieldClockTrendingUp
-
-export default function CodeQualityCheckerPage() {
-  const [isAnalyzingsetIsAnalyzing] = useState(false);
-  const [analysisResultsetAnalysisResults] = useState(null);
-  const [codeInputsetCodeInput] = useState('');
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -21,23 +8,11 @@ export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Multi-Language Support',
-<<<<<<< HEAD
-      description: 'Support for JavaScriptTypeScriptPythonJavaC++Goand many more programming languages.',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      gradient: 'from-teal-400 to-cyan-500'},
-    {
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
-      title: 'Code Quality Metrics',
-      description: 'Comprehensive analysis including complexitymaintainabilitytest coverageand security vulnerabilities.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-=======
       description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500',
@@ -49,29 +24,11 @@ export default function CodeQualityCheckerPage() {
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Real-Time Analysis',
       description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-<<<<<<< HEAD
-      gradient: 'from-orange-400 to-red-500'},
-    {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Security Scanning',
-      description: 'Automated detection of security vulnerabilitiesdependency issuesand best practice violations.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}];
-
-  const supportedLanguages = [
-    { name: 'JavaScript/'TypeScript', 'icon: '⚡'features: ['ESLint 'rules', 'TypeScript 'checks', 'React best practices'] },
-    { name: ''Python', 'icon: '🐍'features: ['PEP 8 'compliance', 'Type 'hints', 'Security scanning'] },
-    { name: ''Java', 'icon: '☕'features: ['PMD 'rules', 'Checkstyle'SonarQube integration'] },
-    { name: 'C++'icon: '⚙️'features: ['Clang-'tidy', 'Static 'analysis', 'Memory leak detection'] },
-    { name: ''Go', 'icon: '🟢'features: ['Golangci-'lint', 'Go 'vet', 'Performance analysis'] },
-    { name: ''PHP', 'icon: '🐘'features: [', 'PHPStan', 'PHP CS 'Fixer', 'Security analysis'] }
-=======
       gradient: 'from-orange-400 to-red-500',
     },
     {
@@ -90,7 +47,6 @@ export default function CodeQualityCheckerPage() {
     { name: 'C++', icon: '⚙️', features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'] },
     { name: 'Go', icon: '🟢', features: ['Golangci-lint', 'Go vet', 'Performance analysis'] },
     { name: 'PHP', icon: '🐘', features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'] }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const pricing = [
@@ -155,15 +111,9 @@ export default function CodeQualityCheckerPage() {
         language: 'JavaScript',
         qualityScore: 85,
         issues: [
-<<<<<<< HEAD
-          { type: ''warning', 'message: 'Consider using const instead of let for variables that are not 'reassigned', 'line: 5severity: 'medium' },
-          { type: ''info', 'message: 'Function is quite long (25 lines). Consider breaking it into smaller 'functions', 'line: 12severity: 'low' },
-          { type: ''error', 'message: 'Missing semicolon at end of 'statement', 'line: 18severity: 'high' }
-=======
           { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' },
           { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' },
           { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
->>>>>>> origin/auto/autonomy-17186719616
         ],
         metrics: {
           complexity: 'Medium',
@@ -171,37 +121,22 @@ export default function CodeQualityCheckerPage() {
           testCoverage: '85%',
           securityScore: '92%'
         },
-<<<<<<< HEAD
-
-        recommendations: [
-          'Use const for immutable variables to improve code clarity',
-          'Break down large functions into smallermore focused functions',
-=======
         recommendations: [
           'Use const for immutable variables to improve code clarity',
           'Break down large functions into smaller, more focused functions',
->>>>>>> origin/auto/autonomy-17186719616
           'Add proper error handling for better robustness',
           'Consider adding JSDoc comments for better documentation'
         ]
       });
       setIsAnalyzing(false);
-<<<<<<< HEAD
-    }3000);
-=======
     }, 3000);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
     <>
       <Head>
         <title>Code Quality Checker - Zion Tech Group | Professional Code Analysis & Improvement Tool</title>
-<<<<<<< HEAD
-        <meta name="description" content="Analyze and improve your code quality with our comprehensive checker. Support for multiple languagesecurity scanningand detailed improvement recommendations." />
-=======
         <meta name="description" content="Analyze and improve your code quality with our comprehensive checker. Support for multiple languages, security scanning, and detailed improvement recommendations." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Code Quality Checker - Zion Tech Group" />
         <meta property="og:description" content="Professional code quality analysis tool with multi-language support and security scanning." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -222,23 +157,14 @@ export default function CodeQualityCheckerPage() {
             Code Quality Checker
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-<<<<<<< HEAD
-            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages
-            security scanningand detailed improvement recommendations. Write bettersaferand more maintainable code.
-=======
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, 
             security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
           
           {/* Code Input Form */}
           <div className="max-w-4xl mx-auto mb-8">
             <textarea
-<<<<<<< HEAD
-              placeholder="Paste your code here for analysis... (Supports JavaScriptTypeScriptPythonJavaC++GoPHPand more)"
-=======
               placeholder="Paste your code here for analysis... (Supports JavaScript, TypeScript, Python, Java, C++, Go, PHP, and more)"
->>>>>>> origin/auto/autonomy-17186719616
               value={codeInput}
               onChange={(e) => setCodeInput(e.target.value)}
               className="w-full h-32 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent font-mono text-sm"
@@ -263,12 +189,6 @@ export default function CodeQualityCheckerPage() {
             </Button>
           </div>
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               href="#pricing"
@@ -303,11 +223,7 @@ export default function CodeQualityCheckerPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {features.map((featureindex) => (
-=======
             {features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover group border-gradient-teal"
@@ -335,18 +251,6 @@ export default function CodeQualityCheckerPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Supported Languages Section */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
@@ -360,11 +264,7 @@ export default function CodeQualityCheckerPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-            {supportedLanguages.map((languageindex) => (
-=======
             {supportedLanguages.map((language, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-teal"
@@ -375,11 +275,7 @@ export default function CodeQualityCheckerPage() {
                   <h3 className="text-xl font-bold text-white mb-3">{language.name}</h3>
                 </div>
                 <ul className="space-y-2">
-<<<<<<< HEAD
-                  {language.features.map((featureIndex) => (
-=======
                   {language.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -401,11 +297,7 @@ export default function CodeQualityCheckerPage() {
                 Code Quality Analysis Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                'Here', 's a sample code quality analysis. Get comprehensive insights for your own code.
-=======
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </div>
             
@@ -421,11 +313,7 @@ export default function CodeQualityCheckerPage() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-<<<<<<< HEAD
-                      strokeDasharray={`${(analysisResults.qualityScore / 100) * 100}100`}
-=======
                       strokeDasharray={`${(analysisResults.qualityScore / 100) * 100}, 100`}
->>>>>>> origin/auto/autonomy-17186719616
                       className="text-teal-500"
                     />
                   </svg>
@@ -437,11 +325,7 @@ export default function CodeQualityCheckerPage() {
               <Card className="border-gradient-teal">
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
                 <div className="space-y-3">
-<<<<<<< HEAD
-                  {analysisResults.issues.map((issueindex) => (
-=======
                   {analysisResults.issues.map((issue, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <div key={index} className="flex items-start space-x-3">
                       {issue.type === 'error' ? (
                         <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
@@ -486,18 +370,10 @@ export default function CodeQualityCheckerPage() {
             </div>
 
             {/* Recommendations */}
-<<<<<<< HEAD
-
-            <Card className="border-gradient-teal">
-              <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {analysisResults.recommendations.map((recindex) => (
-=======
             <Card className="border-gradient-teal">
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {analysisResults.recommendations.map((rec, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
@@ -522,11 +398,7 @@ export default function CodeQualityCheckerPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {pricing.map((planindex) => (
-=======
             {pricing.map((plan, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className={`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
@@ -550,11 +422,7 @@ export default function CodeQualityCheckerPage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-                  {plan.features.map((featureIndex) => (
-=======
                   {plan.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -584,11 +452,7 @@ export default function CodeQualityCheckerPage() {
             Ready to Improve Your Code Quality?
           </h2>
           <p className="text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            Join thousands of developers using our code quality checker to write bettersaferand more maintainable code.
-=======
             Join thousands of developers using our code quality checker to write better, safer, and more maintainable code.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button

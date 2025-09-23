@@ -2,39 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Menu, 
-  X, 
-  Search, 
-  ChevronDown, 
-  Phone, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube,
-  Home,
-  Briefcase,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Cloud,
-  Target,
-  Building,
-  Users,
-  BookOpen,
-  FileText,
-  Video,
-  Code,
-  Star
-} from 'lucide-react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import ThemeToggle from '../ThemeToggle';
-
-// Define Node type for DOM event handling
-type Node = HTMLElement | null;
-=======
   Menu, ChevronDown, X, Phone, Mail, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
   BarChart3, Star, 
@@ -45,7 +12,6 @@ type Node = HTMLElement | null;
   BookOpen, FileText, Handshake, Sun, Moon
 } from 'lucide-react';
 import EnhancedSearch from '../EnhancedSearch';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
 
 interface NavigationItem {
   label: string;
@@ -202,12 +168,7 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-=======
   const [isDarkMode, setIsDarkMode] = useState(true);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
 
   useEffect(() => {
     const handleScroll = () => {
@@ -218,70 +179,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
-  // Enhanced mobile menu handling
-  const handleMobileMenuToggle = useCallback(() => {
-    setIsOpen(!isOpen);
-    // Close any open dropdowns when mobile menu is toggled
-    setActiveDropdown(null);
-  }, [isOpen]);
-
-  // Enhanced dropdown handling for mobile
-  const handleDropdownToggle = useCallback((label: string) => {
-    if (window.innerWidth < 1024) {
-      // On mobile, toggle dropdown
-      setActiveDropdown(activeDropdown === label ? null : label);
-    }
-  }, [activeDropdown]);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    const handleRouteChange = () => {
-      setIsOpen(false);
-      setActiveDropdown(null);
-    };
-
-    router.events.on('routeChangeStart', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeStart', handleRouteChange);
-    };
-  }, [router]);
-
-  // Enhanced touch handling for mobile
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    // Add touch feedback
-    const target = e.currentTarget as HTMLElement;
-    target.style.transform = 'scale(0.95)';
-  }, []);
-
-  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
-    // Remove touch feedback
-    const target = e.currentTarget as HTMLElement;
-    target.style.transform = 'scale(1)';
-  }, []);
-
-  // Enhanced search functionality
-  const handleSearchSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-      setIsSearchOpen(false);
-      setSearchQuery('');
-    }
-  }, [searchQuery, router]);
-
-  // Enhanced keyboard navigation
-  const handleKeyDown = useCallback((e: React.KeyboardEvent, action: () => void) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      action();
-    }
-  }, []);
-
-  // Enhanced accessibility
-  const getAriaExpanded = (label: string) => {
-    return activeDropdown === label ? 'true' : 'false';
-=======
   // Dark mode effect
   useEffect(() => {
     const savedMode = localStorage.getItem('dark-mode');
@@ -301,7 +198,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
 
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
   };
 
   const getAriaHasPopup = (item: NavigationItem) => {
@@ -417,76 +313,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
-          {/* Enhanced Right Section */}
-          <div className="flex items-center space-x-4">
-            {/* Enhanced Search */}
-            <div className="relative">
-              <button
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 text-gray-300 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded-lg"
-                aria-label="Toggle search"
-                onTouchStart={handleTouchStart}
-                onTouchEnd={handleTouchEnd}
-              >
-                <Search className="w-5 h-5" />
-              </button>
-              
-              <AnimatePresence>
-                {isSearchOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute top-full right-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] p-4"
-                  >
-                    <form onSubmit={handleSearchSubmit} className="space-y-4">
-                      <div className="relative">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                        <input
-                          ref={searchRef}
-                          type="text"
-                          value={searchQuery}
-                          onChange={(e) => setSearchQuery(e.target.value)}
-                          placeholder="Search services, solutions..."
-                          className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent"
-                          aria-label="Search query"
-                        />
-                      </div>
-                      <button
-                        type="submit"
-                        className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
-                        aria-label="Submit search"
-                      >
-                        Search
-                      </button>
-                    </form>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Enhanced Social Links */}
-            <div className="hidden md:flex items-center space-x-2">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded-lg"
-                  aria-label={`Visit our ${social.label} page`}
-                  onTouchStart={handleTouchStart}
-                  onTouchEnd={handleTouchEnd}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-
-            {/* Enhanced Contact Button */}
-=======
           {/* Search and Dark Mode */}
           <div className="hidden lg:flex items-center space-x-4">
             <EnhancedSearch />
@@ -503,7 +329,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
             <Link
               href="/contact"
               className="hidden md:block px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"

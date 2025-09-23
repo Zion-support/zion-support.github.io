@@ -29,12 +29,8 @@ export default function EnhancedNavigation() {
           <Link href="/automation/site-validator"><a>Validator</a></Link>
           <Link href="/automation/knowledge-graph"><a>Graph</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-<<<<<<< HEAD
-          <Link href="/trust"><a>Trust</a></Link>
-=======
           <Link href="/vendors"><a>Vendors</a></Link>
           <Link href="/agency-dashboard"><a>Agency Dashboard</a></Link>
->>>>>>> origin/cursor/enable-vendor-agency-marketplace-operations-5a51
         </div>
       </nav>
 

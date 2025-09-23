@@ -13,14 +13,7 @@ interface PerformanceEventTiming extends PerformanceEntry {
 interface AnalyticsTrackerProps {
   pageTitle?: string;
   pagePath?: string;
-<<<<<<< HEAD
-  customEvents?: Array<{
-    name: string;
-    parameters?: Record<string, unknown>;
-  }>;
-=======
   customEvents?: Array<{ action: string; parameters: Record<string, unknown> }>;
->>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
@@ -28,8 +21,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   enableTracking = true
 }) => {
   const router = useRouter();
-<<<<<<< HEAD
-=======
   const trackingId = Math.random().toString(36).substr(2, 9);
   const enableTracking = true;
 
@@ -55,7 +46,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     const target = event.target as HTMLElement;
     trackMetric('UserInteraction', 1);
   }, [trackMetric]);
->>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
 
   // Track page view
   const trackPageView = useCallback(() => {
@@ -352,12 +342,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   useEffect(() => {
     if (!enableTracking) return;
 
-<<<<<<< HEAD
-    trackPageView();
-=======
     // Initialize tracking
     trackPageView(pageTitle || document.title, pagePath || window.location.pathname);
->>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
 
     // Track route changes
     const handleRouteChange = () => {

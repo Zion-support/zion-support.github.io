@@ -1,69 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Shield, Lock, Eye, Zap, Brain, Cpu, Globe, Users, Target, Award } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-export default function Cybersecurity() {
-  const services = [
-    {
-      icon: Shield,
-      title: 'Zero Trust Security Platform',
-      description: 'Comprehensive zero trust architecture for modern enterprises',
-      features: ['Identity verification', 'Continuous monitoring', 'Micro-segmentation', 'Threat prevention'],
-      href: '/zero-trust-security-platform'
-    },
-    {
-      icon: Lock,
-      title: 'Zero Trust Network Architecture',
-      description: 'Advanced network security with zero trust principles',
-      features: ['Network segmentation', 'Access control', 'Traffic monitoring', 'Security policies'],
-      href: '/zero-trust-network-architecture'
-    },
-    {
-      icon: Eye,
-      title: 'Vulnerability Assessment & Penetration Testing',
-      description: 'Comprehensive security testing and assessment services',
-      features: ['Security audits', 'Penetration testing', 'Vulnerability scanning', 'Risk assessment'],
-      href: '/vulnerability-assessment-penetration-testing'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Threat Detection',
-      description: 'Intelligent security monitoring and threat response',
-      features: ['Machine learning', 'Behavioral analysis', 'Real-time alerts', 'Automated response'],
-      href: '/ai-powered-threat-detection'
-    },
-    {
-      icon: Cpu,
-      title: 'Quantum Cybersecurity Platform',
-      description: 'Future-proof security solutions for the quantum era',
-      features: ['Post-quantum cryptography', 'Quantum key distribution', 'Threat detection', 'Secure communications'],
-      href: '/quantum-cybersecurity-platform'
-    },
-    {
-      icon: Zap,
-      title: 'Incident Response & Automation',
-      description: 'Rapid incident response with automated security operations',
-      features: ['24/7 monitoring', 'Automated response', 'Incident management', 'Recovery planning'],
-      href: '/incident-automation-suite'
-    }
-  ];
-
-  const stats = [
-    { number: '99.9%', label: 'Threat Detection', icon: Shield },
-    { number: '24/7', label: 'Security Monitoring', icon: Eye },
-    { number: '100+', label: 'Security Solutions', icon: Lock },
-    { number: '500+', label: 'Protected Clients', icon: Users }
-  ];
-
-  return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-=======
 import { 
   Shield, 
   Lock, 
@@ -189,7 +125,6 @@ const CybersecurityPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -203,8 +138,6 @@ const CybersecurityPage: React.FC = () => {
                 Advanced cybersecurity solutions that protect your digital assets and ensure business continuity. 
                 From zero trust architecture to quantum-resistant security.
               </p>
-<<<<<<< HEAD
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -220,20 +153,10 @@ const CybersecurityPage: React.FC = () => {
                   Explore Quantum Security
                 </a>
               </div>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <section className="py-16 px-4 bg-black/30">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-=======
         {/* Security Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -257,7 +180,6 @@ const CybersecurityPage: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -330,14 +252,6 @@ const CybersecurityPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Secure Your Digital Future
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let our cybersecurity experts help you build a robust security foundation
-=======
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -392,7 +306,6 @@ const CybersecurityPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Don't wait for a security breach. Get comprehensive protection 
                 with our advanced cybersecurity solutions.
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -405,11 +318,7 @@ const CybersecurityPage: React.FC = () => {
                   href="/services"
                   className="px-8 py-4 border border-red-500 text-red-400 font-semibold rounded-xl hover:bg-red-500/10 transition-all duration-300"
                 >
-<<<<<<< HEAD
-                  View All Services
-=======
                   View Security Cases
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 </a>
               </div>
             </motion.div>

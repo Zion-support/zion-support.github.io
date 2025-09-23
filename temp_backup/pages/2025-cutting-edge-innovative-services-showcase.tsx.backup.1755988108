@@ -101,10 +101,6 @@ const CuttingEdgeInnovativeServicesShowcase = () => {
                 Contact Us
               </motion.button>
             </div>
-<<<<<<< HEAD
-          </motion.div>
-        </div>
-=======
           </div>
         </section>
 
@@ -244,7 +240,6 @@ const CuttingEdgeInnovativeServicesShowcase = () => {
             </motion.div>
           </div>
         </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-de78
       </div>
 
       {/* Search and Filter Section */}

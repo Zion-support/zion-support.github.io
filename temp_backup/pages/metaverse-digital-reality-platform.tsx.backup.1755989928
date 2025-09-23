@@ -1,9 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import { Globe, Eye, Users, Cpu, Sparkles, Zap, CheckCircle, ArrowRight, Monitor } from 'lucide-react';
@@ -270,9 +267,6 @@ export default function MetaverseDigitalRealityPlatformPage() {
       </div>
     </UltraFuturisticBackground>
   );
-<<<<<<< HEAD
-}
-=======
 }
 =======
 import { Globe, Users, Zap, Shield, Eye, Cpu, Palette, Rocket } from 'lucide-react';
@@ -636,5 +630,4 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {
 };
 
 export default MetaverseDigitalRealityPlatformPage;
->>>>>>> origin/HEAD
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

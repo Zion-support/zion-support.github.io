@@ -1,14 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Grid, Heart, Database,
-  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,
-  Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2,
-  Search, User, Bell
-=======
   Menu, 
   X, 
   Search, 
@@ -56,7 +48,6 @@ import {
   DollarSign,
   GraduationCap,
   Activity
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -94,17 +85,6 @@ const navigationItems: NavigationItem[] = [
     neonColor: 'shadow-blue-400/50',
     category: 'main',
     children: [
-<<<<<<< HEAD
-      {
-        label: 'AI & Machine Learning',
-        href: '/services?category=ai-ml',
-        icon: <Brain className="w-4 h-4" />,
-        description: 'Advanced AI solutions for enterprise',
-        featured: true,
-        neonColor: 'shadow-purple-400/50',
-        category: 'ai'
-      },
-=======
       {
         label: 'AI & Machine Learning',
         href: '/services?category=ai-ml',
@@ -184,7 +164,6 @@ const navigationItems: NavigationItem[] = [
     neonColor: 'shadow-emerald-400/50',
     category: 'main',
     children: [
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
       {
         label: 'Quantum Computing',
         href: '/services?category=quantum',
@@ -202,14 +181,6 @@ const navigationItems: NavigationItem[] = [
         neonColor: 'shadow-red-400/50',
         category: 'security'
       },
-<<<<<<< HEAD
-      { 
-        name: 'Autonomous Customer Success 2045', 
-        href: '/autonomous-customer-success-2045', 
-        description: 'AI-powered customer success',
-        icon: <Heart className="w-4 h-4" />,
-        color: 'from-pink-500 to-purple-500'
-=======
       {
         label: 'Financial Solutions',
         href: '/solutions/financial',
@@ -225,7 +196,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Smart manufacturing and Industry 4.0',
         neonColor: 'shadow-orange-400/50',
         category: 'manufacturing'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
       }
     ]
   },
@@ -333,19 +303,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Technical documentation',
         icon: <Code className="w-4 h-4" />
       },
-<<<<<<< HEAD
-      { 
-        name: 'Blog', 
-        href: '/blog', 
-        description: 'Latest insights and updates',
-        icon: <Eye className="w-4 h-4" />
-      },
-      { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
-        description: 'Success stories and examples',
-        icon: <BarChart3 className="w-4 h-4" />
-=======
       {
         label: 'White Papers',
         href: '/white-papers',
@@ -469,7 +426,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Training and certification',
         neonColor: 'shadow-purple-400/50',
         category: 'training'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
       }
     ]
   }

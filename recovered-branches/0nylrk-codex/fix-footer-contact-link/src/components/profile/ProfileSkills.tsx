@@ -12,11 +12,7 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
       <h3 className="text-xl font-bold text-white mb-4">Skills</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-        {skills.map((skillindex) => (
-=======
         {skills.map((skill, index) => (
->>>>>>> origin/auto/autonomy-17186719616
           <div key={index} className="flex flex-col">
             <div className="flex justify-between items-center mb-1">
               <span className="text-zion-slate-light">{skill.name}</span>

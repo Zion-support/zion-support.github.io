@@ -1,50 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "Zion Tech Group - Revolutionary Technology Solutions",
-  "short_name": "Zion Tech",
-  "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#06b6d4",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en-US",
-  "categories": ["business", "productivity", "technology", "utilities"],
-  "icons": [
-    {
-      "src": "/icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-192x192.png",
-=======
   "name": "Zion Tech Group - Revolutionary AI & Quantum Technology",
   "short_name": "Zion Tech",
   "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions.",
@@ -59,24 +13,11 @@
   "icons": [
     {
       "src": "/images/zion-tech-group-logo-192x192.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-<<<<<<< HEAD
-      "src": "/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-=======
       "src": "/images/zion-tech-group-logo-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
@@ -117,26 +58,17 @@
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "any"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
     }
   ],
   "shortcuts": [
     {
       "name": "Services",
       "short_name": "Services",
-<<<<<<< HEAD
-      "description": "Explore our revolutionary technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-=======
       "description": "Explore our revolutionary services",
       "url": "/services",
       "icons": [
         {
           "src": "/images/services-icon-96x96.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
           "sizes": "96x96"
         }
       ]
@@ -148,11 +80,7 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/icons/icon-96x96.png",
-=======
           "src": "/images/contact-icon-96x96.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
           "sizes": "96x96"
         }
       ]
@@ -164,11 +92,7 @@
       "url": "/about",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/icons/icon-96x96.png",
-=======
           "src": "/images/about-icon-96x96.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
           "sizes": "96x96"
         }
       ]
@@ -176,27 +100,6 @@
   ],
   "screenshots": [
     {
-<<<<<<< HEAD
-      "src": "/screenshots/desktop-home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage on desktop"
-    },
-    {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Homepage on mobile"
-    },
-    {
-      "src": "/screenshots/desktop-services.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Services page on desktop"
-=======
       "src": "/images/screenshot-desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
@@ -209,7 +112,6 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile Experience"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
     }
   ],
   "related_applications": [
@@ -237,12 +139,7 @@
       "action": "/file-handler",
       "accept": {
         "text/*": [".txt", ".md", ".json"],
-<<<<<<< HEAD
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-=======
         "application/json": [".json"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
       }
     }
   ],
@@ -253,42 +150,20 @@
     "params": {
       "title": "title",
       "text": "text",
-<<<<<<< HEAD
-      "url": "url",
-      "files": [
-        {
-          "name": "files",
-          "accept": ["image/*", "text/*", "application/pdf"]
-        }
-      ]
-=======
       "url": "url"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
     }
   },
   "permissions": [
     "notifications",
-<<<<<<< HEAD
-    "geolocation",
-    "camera",
-    "microphone"
-=======
     "background-sync",
     "persistent-storage"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
   ],
   "features": [
     "Cross Platform",
     "fast",
     "simple",
-<<<<<<< HEAD
-    "responsive",
-    "offline-capable",
-    "push-notifications"
-=======
     "secure",
     "responsive"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3513
   ],
   "developer": {
     "name": "Zion Tech Group",

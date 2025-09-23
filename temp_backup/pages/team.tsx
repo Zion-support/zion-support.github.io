@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-
-const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false });
-
-export default function TeamPage() {
-  return <OrgChartPage />;
-=======
 import SEO from '../components/SEO';
 
 export default function TeamPage() {
@@ -19,5 +11,4 @@ export default function TeamPage() {
 			</div>
 		</>
 	);
->>>>>>> origin/auto/autonomy-17186719616
 }

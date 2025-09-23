@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface RealMarketService {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface RealMarketService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const realMarketServices: RealMarketService[] = [
   // AI-Powered Business Intelligence
   {
@@ -100,10 +94,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 950
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Customer Success Automation Platform
   {
     id: 'customer-success-automation',
@@ -156,10 +147,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 680
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // API Security & Monitoring Suite
   {
     id: 'api-security-monitoring-suite',
@@ -212,10 +200,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6,
     reviews: 520
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // E-commerce Automation Platform
   {
     id: 'ecommerce-automation-platform',
@@ -268,10 +253,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1100
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // HR Automation Suite
   {
     id: 'hr-automation-suite',
@@ -324,10 +306,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 890
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Financial Analytics Platform
   {
     id: 'financial-analytics-platform',
@@ -380,10 +359,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 780
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Project Management AI Platform
   {
     id: 'project-management-ai-platform',
@@ -436,10 +412,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 1050
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Marketing Automation Suite
   {
     id: 'marketing-automation-suite',
@@ -492,10 +465,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1250
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Legal Document Automation
   {
     id: 'legal-document-automation',

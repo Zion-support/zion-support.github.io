@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useCallback } from 'react';
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-import { motion } from 'framer-motion';
-=======
 import React, { useEffect, useRef } from 'react';
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 const UltraFuturisticBackground2036: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -50,66 +44,8 @@ const UltraFuturisticBackground2036: React.FC = () => {
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-<<<<<<< HEAD
-      switch (particle.type) {
-        case 'quantum':
-          // Quantum particles with geometric shapes
-          ctx.fillStyle = particle.color;
-          ctx.beginPath();
-          if (Math.random() < 0.5) {
-            // Diamond shape
-            ctx.moveTo(0, -particle.size);
-            ctx.lineTo(particle.size, 0);
-            ctx.lineTo(0, particle.size);
-            ctx.lineTo(-particle.size, 0);
-          } else {
-            // Triangle
-            ctx.moveTo(0, -particle.size);
-            ctx.lineTo(particle.size, particle.size);
-            ctx.lineTo(-particle.size, particle.size);
-          }
-          ctx.closePath();
-          ctx.fill();
-          break;
-
-        case 'wave':
-          // Wave particles with sine wave effect
-          ctx.strokeStyle = particle.color;
-          ctx.lineWidth = 2;
-          ctx.beginPath();
-          for (let i = 0; i < 10; i++) {
-            const x = (i - 5) * particle.size * 0.5;
-            const y = Math.sin(time * 2 + i * 0.5) * particle.size * 0.3;
-            if (i === 0) {
-              ctx.moveTo(x, y);
-            } else {
-              ctx.lineTo(x, y);
-            }
-          }
-          ctx.stroke();
-          break;
-
-        case 'neon':
-          // Neon particles with glow effect
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = particle.size * 2;
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-          ctx.fillStyle = particle.color;
-          ctx.beginPath();
-          ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-          break;
-
-        default:
-          // Regular particles
-          ctx.fillStyle = particle.color;
-          ctx.beginPath();
-          ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-=======
         this.opacity += (Math.random() - 0.5) * 0.02;
         this.opacity = Math.max(0.1, Math.min(0.8, this.opacity));
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       }
 
       draw() {
@@ -123,26 +59,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
       }
     }
 
-<<<<<<< HEAD
-    // Draw connecting lines between nearby particles
-    ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
-    ctx.lineWidth = 1;
-    
-    for (let i = 0; i < particlesRef.current.length; i++) {
-      for (let j = i + 1; j < particlesRef.current.length; j++) {
-        const p1 = particlesRef.current[i];
-        const p2 = particlesRef.current[j];
-        const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
-        
-        if (distance < 100) {
-          const opacity = (100 - distance) / 100 * 0.1;
-          ctx.strokeStyle = `rgba(6, 182, 212, ${opacity})`;
-          ctx.beginPath();
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-          ctx.moveTo(p1.x, p1.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.stroke();
-=======
     class Connection {
       particle1: Particle;
       particle2: Particle;
@@ -170,22 +86,10 @@ const UltraFuturisticBackground2036: React.FC = () => {
           ctx!.lineTo(this.particle2.x, this.particle2.y);
           ctx!.stroke();
           ctx!.restore();
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
         }
       }
     }
 
-<<<<<<< HEAD
-    // Continue animation
-    animationFrameRef.current = requestAnimationFrame(() => animate(canvas, ctx));
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-  }, [getThemeColors]);
-
-  // Enhanced initialization and cleanup
-  useEffect(() => {
-    initParticles();
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
     // Initialize particles and connections
     for (let i = 0; i < 100; i++) {
       particles.push(new Particle());
@@ -215,7 +119,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
       animationFrameId = requestAnimationFrame(animate);
     };
 
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     animate();
 
     const handleResize = () => {
@@ -232,13 +135,8 @@ const UltraFuturisticBackground2036: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
     <>
       {/* Enhanced Canvas Background */}
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
@@ -346,38 +244,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
           ease: "linear"
         }}
       />
-<<<<<<< HEAD
-      
-      {/* Additional visual elements */}
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-      <div className="absolute inset-0">
-        <svg className="w-full h-full" style={{ opacity: 0.1 }}>
-          <defs>
-            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.5" />
-              <stop offset="50%" stopColor="#ff00ff" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#ffff00" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
-          {Array.from({ length: 20 }).map((_, i) => (
-            <line
-              key={i}
-              x1={Math.random() * 100}
-              y1={Math.random() * 100}
-              x2={Math.random() * 100}
-              y2={Math.random() * 100}
-              stroke="url(#quantumGradient)"
-              strokeWidth="0.5"
-              opacity="0.3"
-            />
-          ))}
-        </svg>
-      </div>
-      
-      {children}
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-    </div>
-=======
 
       {/* Corner Accents */}
       <div className="fixed top-0 left-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
@@ -426,7 +292,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
         ))}
       </div>
     </>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   );
 };
 
