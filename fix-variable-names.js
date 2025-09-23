@@ -1,10 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-
 function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
-      const numberWords = {
+      const numberWords ={
         '5': 'Five',
         '4': 'Four',
         '3': 'Three',
@@ -17,7 +16,6 @@ function toCamelCase(str) {
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
     .replace(/^(.)/, (match) => match.toUpperCase());
 }
-
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -46,8 +44,8 @@ function fixFile(filePath) {
     );
     
     newContent = newContent.replace(
-      /<meta name="description" content=".*?" \/>/g,
-      `<meta name="description" content="${title} blog post" />`
+      /<meta name="description" content=".*?" \ />/g,
+      `<meta name="description" content="${title} blog post"  />`
     );
     
     // Update h1 content
@@ -68,7 +66,6 @@ function fixFile(filePath) {
     return false;
   }
 }
-
 function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -88,7 +85,6 @@ function findAndFixFiles(dir) {
   
   return fixedCount;
 }
-
 // Start fixing files
 console.log('Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles('./pages');

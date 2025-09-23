@@ -1,9 +1,7 @@
-import React from 'react';
+type EnhancedLoadingProps ={
+  lines?: number;
+};
 
-export default function EnhancedLoading() {
+export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
   return (
-    <div className="flex items-center justify-center p-4">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-    </div>
-  );
-}
+    <div className="space-y-2">

@@ -1,0 +1,2 @@
+
+import { GradientHeading } from "./GradientHeading";

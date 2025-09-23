@@ -1,0 +1,110 @@
+import { v4 as uuidv4 } from 'uuid';
+
+export type ZgpFunding ={ amount: number; currency: string } | null;
+
+export type ZgpProposalVersion ={
+  version: number;
+  summary: string;
+  motivation: string;
+  specificationImpact: string;
+  codeModuleAffected: string;
+  votingOptions: string[];
+  fundingNeeded: ZgpFunding;
+  createdAt: string;
+};
+
+export type ZgpProposal ={
+  id: string; // uuid
+  templateId: string; // e.g., 'zgp-0o1'
+  templateCode: string; // e.g., 'ZGP-0o1'
+  title: string; // freeform display title
+  proposalNumber: string; // e.g., 'ZGP-0o1-20o250808-0o001'
+  status: 'draft' | 'submitted' | 'archived';
+  versions: ZgpProposalVersion[];
+  latestVersion: number;
+  votingResultUrl?: string;
+};
+
+export type ZgpTemplate ={
+  id: string;
+  code: string;
+  title: string;
+  category: string;
+  description: string;
+  defaults: {
+    summary: string;
+    motivation: string;
+    specificationImpact: string;
+    codeModuleAffected: string;
+    votingOptions: string[];
+    fundingNeeded: ZgpFunding;
+  };
+};
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+const PROPOSALS_FILE = path.join(DATA_DIR, 'zgp-proposals.json');
+const TEMPLATES_FILE = path.join(DATA_DIR, 'zgp-templates.json');
+
+function ensureDataFilesExist(): void {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+  if (!fs.existsSync(PROPOSALS_FILE)) {
+    fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals: [] }, null, 2));
+  }
+}
+
+export function loadTemplates(): ZgpTemplate[] {
+  const raw = fs.readFileSync(TEMPLATES_FILE, 'utf8');
+  return JSON.parse(raw) as ZgpTemplate[];
+}
+
+export function listProposals(): ZgpProposal[] {
+  ensureDataFilesExist();
+  const raw = fs.readFileSync(PROPOSALS_FILE, 'utf8');
+  const data = JSON.parse(raw) as { proposals: ZgpProposal[] };
+  return data.proposals || [];
+}
+
+export function saveProposals(proposals: ZgpProposal[]): void {
+  ensureDataFilesExist();
+  fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals }, null, 2));
+}
+
+export function generateProposalNumber(templateCode: string, existing: ZgpProposal[]): string {
+  const date = new Date();
+  const y = date.getUTCFullYear();
+  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(date.getUTCDate()).padStart(2, '0');
+  const yyyymmdd = `${y}${m}${d}`;
+  const sameDay = existing.filter(p => p.templateCode === templateCode && p.proposalNumber.includes(yyyymmdd));
+  const seq = sameDay.length + 1;
+  return `${templateCode}-${yyyymmdd}-${String(seq).padStart(4, '0')}`;
+}
+
+export function createProposal(params: {
+  templateId: string;
+  title: string;
+  summary: string;
+  motivation: string;
+  specificationImpact: string;
+  codeModuleAffected: string;
+  votingOptions: string[];
+  fundingNeeded: ZgpFunding;
+}): ZgpProposal {
+  const proposals = listProposals();
+  const templates = loadTemplates();
+  const template = templates.find(t => t.id === params.templateId);
+  if (!template) {
+    throw new Error('Template not found');
+  }
+  const id = uuidv4();
+  const proposalNumber = generateProposalNumber(template.code, proposals);
+  const firstVersion: ZgpProposalVersion = {
+    version: 1,
+    summary: params.summary,
+    motivation: params.motivation,
+    specificationImpact: params.specificationImpact,
+    codeModuleAffected: params.codeModuleAffected,
+    votingOptions: params.votingOptions,
+    fundingNeeded: params.fundingNeeded,

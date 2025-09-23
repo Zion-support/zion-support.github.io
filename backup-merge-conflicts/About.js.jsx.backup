@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() { return; }; return null}""
+<<<<<<< HEAD:backup-merge-conflicts/About.js.jsx.backup
+=======
+import _React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() {}; return null}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/src/pages.disabled/About.js.jsx
+import _React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() {}; return null}
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+<<<<<<< HEAD
+import React from \"react\"; ); import { Header } from \"@/components/Header\";\";\" import { Footer } from \"@/components/Footer\";\";\" import SEO from \"@/components/SEO\";\";\" import { GradientHeading } from \"@/components/GradientHeading\";\";\" export default function About() {}; return null}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> main
+=======
+import _React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() {}; return null}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/pages.disabled/About.js.jsx
+<<<<<<< HEAD
+=======
+import _React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() {}; return null}
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11914:backup-merge-conflicts/About.js.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+=======
+import _React from "react"; ); import { Header } from "@/components/Header";";" import { Footer } from "@/components/Footer";";" import SEO from "@/components/SEO";";" import { GradientHeading } from "@/components/GradientHeading";";" export default function About() {}; return null}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/pages.disabled/About.js.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
