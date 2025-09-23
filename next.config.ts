@@ -21,6 +21,7 @@ const nextConfig: NextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
+  // Experimental and performance settings
   experimental: {
     appDir: false,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
@@ -32,12 +33,6 @@ const nextConfig: NextConfig = {
         },
       },
     },
-=======
-  // Modern experimental features for Next.js 15
-  turbopack: {},
-  experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion']
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125:next.config.js
   },
 
   async redirects() {
