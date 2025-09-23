@@ -12,9 +12,11 @@
   base = "."
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18.20.8"
   NPM_FLAGS = "--legacy-peer-deps"
   NODE_OPTIONS = "--max-old-space-size=4096"
+  # Allow Yarn Berry on Netlify to update the lockfile instead of failing with YN0028
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
