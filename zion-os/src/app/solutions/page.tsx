@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+
+export default function SolutionsPage() {return (;
+export default function SolutionsPage() {;
+  return (;
+    <div className="min-h-screen bg-white">;
+
+export default /**
+ * SolutionsPage - Function description
+ */
+function SolutionsPage() {
+  return (
+    <div className="min - h-screen bg - white">;
+
+export default function SolutionsPage() {;
+  return (;
+=======
 
 
+=======
 export default function SolutionsPage() {;
   return (;
 
@@ -311,6 +329,7 @@ export default function SolutionsPage() {;
       </section>;
     </div>);
 }
+=======
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -642,3 +661,4 @@ export default function SolutionsPage() {
     </div>
   );
 }
+>>>>>>> origin/auto/autonomy-17186719616

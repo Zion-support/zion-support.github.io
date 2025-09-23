@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+
+export default function CookiesPage() {return (;
+export default function CookiesPage() {;
+  return (;
+    <div className="min-h-screen py-20">;
+
+export default /**
+ * CookiesPage - Function description
+ */
+function CookiesPage() {
+  return (
+    <div className="min - h-screen py - 20">;
+
+export default function CookiesPage() {;
+  return (;
+=======
 
 
+=======
 export default function CookiesPage() {;
   return (;
 
@@ -217,6 +235,7 @@ export default function CookiesPage() {;
       </section>;
     </div>);
 }
+=======
 export default function CookiesPage() {
   return (
     <div className="min-h-screen py-20">
@@ -448,3 +467,4 @@ export default function CookiesPage() {
     </div>
   );
 }
+>>>>>>> origin/auto/autonomy-17186719616

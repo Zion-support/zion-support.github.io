@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+
+export default function APIPage() {return (;
+export default function APIPage() {;
+  return (;
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-6xl mx-auto">;
+
+export default /**
+ * APIPage - Function description
+ */
+function APIPage() {
+  return (
+    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
+      <div className="max - w-6xl mx - auto">;
+
+export default function APIPage() {;
+  return (;
+=======
 
 
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
@@ -212,6 +231,7 @@ const client = new ZionOS('YOUR_API_KEY');
 const economy = await client.economies.create({name: 'My Digital Economy';
   description: 'A sovereign digital economy';
   features: ['marketplacegovernancetokens'];
+=======
 
 {`const { ZionOS } = require('@zion-os/sdk'),;
 const client = new ZionOS('YOUR_API_KEY'),;
@@ -287,6 +307,7 @@ print (f"Economy deployed at: {deployment.url}")`}
       </div>;
     </div>);
 }
+=======
 export default function APIPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -594,3 +615,4 @@ print(f"Economy deployed at: {deployment.url}")`}
     </div>
   );
 }
+>>>>>>> origin/auto/autonomy-17186719616
