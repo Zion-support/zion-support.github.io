@@ -5,6 +5,7 @@ export default function ResearchPage() {
       <p className="text-gray-600">Latest R&D and papers.</p>
     </main>
   );
+<<<<<<< HEAD
 }
 
 
@@ -25,3 +26,6 @@ export default function ResearchPage() {
 
 
 
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

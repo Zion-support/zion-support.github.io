@@ -17,4 +17,8 @@ export interface SuggestedMilestoneItem {
 
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

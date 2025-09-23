@@ -96,4 +96,8 @@ export async function generateMilestones(input: MilestoneSuggestionInput): Promi
   const ai = await callOpenAI(input);
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
   return { milestones };
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

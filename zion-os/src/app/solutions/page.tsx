@@ -5,7 +5,11 @@ export default function SolutionsPage() {
       <p className="text-gray-600">Explore our end-to-end solutions.</p>
     </main>
   );
+<<<<<<< HEAD
 }
 
 
 
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
