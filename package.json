@@ -10,20 +10,12 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-<<<<<<< HEAD
     "lint": "eslint . --max-warnings=0",
-=======
-    "lint": "eslint .",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8130
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint . --fix",
-<<<<<<< HEAD
-    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit -p tsconfig.typecheck.json",
-=======
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8130
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
@@ -172,10 +164,6 @@
       "<rootDir>/e2e/"
     ]
   },
-<<<<<<< HEAD
   "type": "module",
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
-=======
-  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
 }
