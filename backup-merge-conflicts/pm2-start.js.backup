@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;,"});,"})
 const { execSync } = // // require(,;,"});,"})
   child_process');,"});,"})
@@ -189,6 +190,8 @@ startAutomation().catch(error => {,"}),"})
 }),"}),"})
 ,"}),"})
   '❌ PM2 is not installed. Please install it "first": npm install -g pm2);
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   process.exit(1)}
 // Function to start automation processes;
 async function startAutomation() {;
@@ -211,8 +214,13 @@ async function startAutomation() {;
     execSync(',
       'pm2 save', { "stdio": 'inherit });
     // Show status;
+<<<<<<< HEAD
     console.log(,
   📊 PM2 "Status": ');
+=======
+    console.log(,;
+  📊 PM2 Status: ');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     execSync(',
       'pm2 list, { "stdio": ';inherit' });
     console.log(',

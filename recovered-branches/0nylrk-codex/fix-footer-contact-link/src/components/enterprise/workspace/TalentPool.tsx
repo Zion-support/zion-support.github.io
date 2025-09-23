@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -11,7 +15,11 @@ export function TalentPool() {
       id: "talent-1",
       name: "Jessica Lee",
       role: "UI/UX Designer",
+<<<<<<< HEAD
       skills: ["Figma", "Sketch", "User Testing"],
+=======
+      skills: ["Figma"Sketch"User Testing"],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       status: "available",
       match: 95
     },
@@ -19,7 +27,11 @@ export function TalentPool() {
       id: "talent-2",
       name: "Marcus Wright",
       role: "Full Stack Developer",
+<<<<<<< HEAD
       skills: ["React", "Node.js", "MongoDB"],
+=======
+      skills: ["React"Node.js"MongoDB"],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       status: "interviewing",
       match: 92
     },
@@ -27,7 +39,11 @@ export function TalentPool() {
       id: "talent-3",
       name: "Aisha Patel",
       role: "Product Manager",
+<<<<<<< HEAD
       skills: ["Agile", "Roadmapping", "User Research"],
+=======
+      skills: ["Agile"Roadmapping"User Research"],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       status: "available",
       match: 88
     }
@@ -74,7 +90,11 @@ export function TalentPool() {
                 </div>
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
+<<<<<<< HEAD
                 {talent.skills.map((skill, index) => (
+=======
+                {talent.skills.map((skillindex) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>

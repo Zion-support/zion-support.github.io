@@ -9,7 +9,11 @@ interface ProjectDetailsStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
+<<<<<<< HEAD
 export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsStepProps) {
+=======
+export function ProjectDetailsStep({ formDataupdateFormData }: ProjectDetailsStepProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="space-y-6">
       <div>
@@ -51,7 +55,11 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your name"
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({ 
+<<<<<<< HEAD
                 contactInfo: { ...formData.contactInfo, name: e.target.value } 
+=======
+                contactInfo: { ...formData.contactInfoname: e.target.value } 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -64,7 +72,11 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your company name"
               value={formData.contactInfo.company}
               onChange={(e) => updateFormData({ 
+<<<<<<< HEAD
                 contactInfo: { ...formData.contactInfo, company: e.target.value } 
+=======
+                contactInfo: { ...formData.contactInfocompany: e.target.value } 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -78,7 +90,11 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your email address"
               value={formData.contactInfo.email}
               onChange={(e) => updateFormData({ 
+<<<<<<< HEAD
                 contactInfo: { ...formData.contactInfo, email: e.target.value } 
+=======
+                contactInfo: { ...formData.contactInfoemail: e.target.value } 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -91,7 +107,11 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
               onChange={(e) => updateFormData({ 
+<<<<<<< HEAD
                 contactInfo: { ...formData.contactInfo, phone: e.target.value } 
+=======
+                contactInfo: { ...formData.contactInfophone: e.target.value } 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />

@@ -40,4 +40,8 @@ const ResizableHandle = ({
   </ResizablePrimitive.PanelResizeHandle>
 )
 
+<<<<<<< HEAD
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+=======
+export { ResizablePanelGroupResizablePanelResizableHandle }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

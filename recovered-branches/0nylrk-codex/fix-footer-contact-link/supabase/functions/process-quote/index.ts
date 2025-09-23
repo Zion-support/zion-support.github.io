@@ -11,8 +11,12 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
+<<<<<<< HEAD
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
+=======
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface Service {
   id: string;
@@ -69,8 +73,12 @@ serve(async (req) => {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`,
+<<<<<<< HEAD
             'Content-Type': 'application/json',
           },
+=======
+            'Content-Type': 'application/json'},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           body: JSON.stringify({
             model: 'gpt-4o-mini',
             messages: [
@@ -132,13 +140,21 @@ serve(async (req) => {
     if (error) throw error;
     
     return new Response(JSON.stringify({ success: true, data }), {
+<<<<<<< HEAD
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
+=======
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   } catch (error) {
     console.error('Error in process-quote function:', error);
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500,
+<<<<<<< HEAD
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
+=======
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 });

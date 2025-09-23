@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIEmotionalIntelligenceTraining() {
@@ -23,4 +24,26 @@ export default function AIEmotionalIntelligenceTraining() {
 			canonical="https://ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
 	);
+=======
+import Head from 'next/head';
+
+export default function AiEmotionalIntelligenceTrainingPage() {
+  return (
+    <>
+      <Head>
+        <title>Ai Emotional Intelligence Training - Zion Tech Group</title>
+        <meta name="description" content="ai emotional intelligence training page" />
+      </Head>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Ai Emotional Intelligence Training</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home
+          </a>
+        </div>
+      </div>
+    </>
+  );
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

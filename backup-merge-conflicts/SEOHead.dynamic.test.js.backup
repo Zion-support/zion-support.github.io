@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/SEOHead.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:__tests__/SEOHead.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/SEOHead.dynamic.test.js
 import React from 'react';
@@ -22,7 +26,11 @@ describe('SEOHeaddynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe("SEOHeaddynamic",() => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling",() => { render(<SEOHeaddynamic />)})});''"
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:__tests__/SEOHead.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOHeaddynamic from '../components/SEOHead.dynamic'; describe('SEOHeaddynamic',() => { test('renders without crashing',() => { render(<SEOHeaddynamic />); expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOHeaddynamic />)}); test('handles user interactions',() => { render(<SEOHeaddynamic />)}); test('applies correct styling',() => { render(<SEOHeaddynamic />)})});
 >>>>>>> main
 =======

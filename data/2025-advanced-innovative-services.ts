@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface AdvancedInnovativeService {
   id: string;
   name: string;
@@ -40,14 +43,20 @@ export interface AdvancedInnovativeService {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   {
     id: 'metaverse-development-platform',

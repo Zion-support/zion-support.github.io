@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface EnterpriseITService2030 {
   id: string;
   name: string;
@@ -40,7 +43,10 @@ export interface EnterpriseITService2030 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const enterpriseITServices2030: EnterpriseITService2030[] = [
   // Autonomous DevOps Platform 2030
   {

@@ -10,6 +10,10 @@ export function useJobSuggestions(talentId?: string) {
   
   useEffect(() => {
     const fetchSuggestedJobs = async () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       if (!talentId) return;
       
       try {
@@ -33,8 +37,12 @@ export function useJobSuggestions(talentId?: string) {
         toast({
           title: "Error",
           description: "Failed to load job suggestions",
+<<<<<<< HEAD
           variant: "destructive",
         });
+=======
+          variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } finally {
         setIsLoading(false);
       }
@@ -83,8 +91,12 @@ export function useJobSuggestions(talentId?: string) {
       toast({
         title: "Error",
         description: "Failed to update job status",
+<<<<<<< HEAD
         variant: "destructive",
       });
+=======
+        variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 

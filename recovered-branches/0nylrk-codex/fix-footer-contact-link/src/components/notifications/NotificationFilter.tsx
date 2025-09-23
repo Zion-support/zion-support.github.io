@@ -1,6 +1,10 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+=======
+import { TabsListTabsTrigger } from '@/components/ui/tabs';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 

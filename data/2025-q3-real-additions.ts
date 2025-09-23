@@ -24,7 +24,10 @@ export interface RealAdditionService2025Q3 {
 	rating?: number;
 	reviews?: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 	{
 		id: 'ai-email-copilot',

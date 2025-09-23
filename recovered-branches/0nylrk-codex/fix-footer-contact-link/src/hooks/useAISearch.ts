@@ -31,8 +31,12 @@ export function useAISearch() {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+<<<<<<< HEAD
           body: JSON.stringify({ query }),
         }
+=======
+          body: JSON.stringify({ query })}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       );
       const data = await response.json();
       const filters: SearchFilters = data.filters || {};

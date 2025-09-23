@@ -3,7 +3,11 @@ import type { CSSProperties } from "react"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
+<<<<<<< HEAD
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
+=======
+import type { SidebarContext as SidebarContextTypeSidebarState } from "../sidebar.types"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -43,6 +47,7 @@ export const SidebarProvider = React.forwardRef<
     ref
   ) => {
     const isMobile = useIsMobile()
+<<<<<<< HEAD
     const [openMobile, setOpenMobile] = React.useState(false)
 
     // This is the internal state of the sidebar.
@@ -50,6 +55,16 @@ export const SidebarProvider = React.forwardRef<
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
     const setOpen = React.useCallback(
+=======
+    const [openMobilesetOpenMobile] = React.useState(false)
+
+    // This is the internal state of the sidebar.
+    // We use openProp and setOpenProp for control from outside the component.
+    const [_open_setOpen] = React.useState(defaultOpen)
+    const open = openProp ?? _open
+    const setOpen = React.useCallback(
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       (value: boolean | ((value: boolean) => boolean)) => {
         const openState = typeof value === "function" ? value(open) : value
         if (setOpenProp) {
@@ -61,7 +76,11 @@ export const SidebarProvider = React.forwardRef<
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       },
+<<<<<<< HEAD
       [setOpenProp, open]
+=======
+      [setOpenPropen]
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     )
 
     // Helper to toggle the sidebar.
@@ -69,7 +88,11 @@ export const SidebarProvider = React.forwardRef<
       return isMobile
         ? setOpenMobile((open) => !open)
         : setOpen((open) => !open)
+<<<<<<< HEAD
     }, [isMobile, setOpen, setOpenMobile])
+=======
+    }[isMobilesetOpenMobile])
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // Adds a keyboard shortcut to toggle the sidebar.
     React.useEffect(() => {
@@ -83,9 +106,15 @@ export const SidebarProvider = React.forwardRef<
         }
       }
 
+<<<<<<< HEAD
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
+=======
+      window.addEventListener("keydown"handleKeyDown)
+      return () => window.removeEventListener("keydown"handleKeyDown)
+    }[toggleSidebar])
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // We add a state so that we can do data-state="expanded" or "collapsed".
     // This makes it easier to style the sidebar with Tailwind classes.
@@ -99,9 +128,14 @@ export const SidebarProvider = React.forwardRef<
         isMobile,
         openMobile,
         setOpenMobile,
+<<<<<<< HEAD
         toggleSidebar,
       }),
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
+=======
+        toggleSidebar}),
+      [stateopensetOpenisMobileopenMobilesetOpenMobiletoggleSidebar]
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     )
 
     return (
@@ -112,8 +146,12 @@ export const SidebarProvider = React.forwardRef<
               {
                 "--sidebar-width": "16rem",
                 "--sidebar-width-icon": "3rem",
+<<<<<<< HEAD
                 ...style,
               } as CSSProperties
+=======
+                ...style} as CSSProperties
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               }
             className={cn(
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",

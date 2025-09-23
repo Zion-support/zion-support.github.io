@@ -1,21 +1,34 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:src/types/ref-types.ts
+<<<<<<< HEAD:backup-merge-conflicts/ref-types.ts.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/types/ref-types.ts
 export type SafeRef<T> = { "current": 'unknownT' } | (("value": "T) => void) | null;"
 export type SafeRef<T> = { &quot;current&quot;: &apos;unknownT&apos; } | ((&quot;value&quot;: T) => void) | null;
 module.exports = type SafeRef<T> = { current: "unknownT" } | ((value: T) => void) | null;'"'"
+<<<<<<< HEAD
 export type SafeRef<T> = { "current": 'unknownT' } | (("value": T) => void) | null;"
 </T>"
 <<<<<<< HEAD:backup-merge-conflicts/ref-types.ts.backup
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main:src_backup_temp/types/ref-types.ts
 >>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/types/ref-types.ts
 =======
+<<<<<<< HEAD
 export type SafeRef<T> = { "current": 'unknownT' } | (("value": T) => void) | null;"
 </T>"
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11913:src_backup_temp/types/ref-types.ts
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 export type SafeRef<T> = { "current": 'unknownT' } | (("value": T) => void) | null;"

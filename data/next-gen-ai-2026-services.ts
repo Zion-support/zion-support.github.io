@@ -14,7 +14,10 @@ export interface NextGenAi2026Service {
     address: string;
   };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
     id: "2026-next-gen-ai",

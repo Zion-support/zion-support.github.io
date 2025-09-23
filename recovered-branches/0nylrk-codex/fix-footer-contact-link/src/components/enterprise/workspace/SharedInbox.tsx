@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Badge } from "@/components/ui/badge";
 
 export function SharedInbox() {
@@ -29,6 +33,10 @@ export function SharedInbox() {
       preview: "The contract with freelancer Michael Chen has been approved and signed.",
       timestamp: "2d ago",
       unread: false
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ];
 

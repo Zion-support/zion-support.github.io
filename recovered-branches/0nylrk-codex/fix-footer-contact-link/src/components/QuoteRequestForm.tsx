@@ -3,7 +3,11 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
+=======
+import { CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { GradientHeading } from "@/components/GradientHeading";
 import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
 import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
@@ -19,10 +23,17 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 export function QuoteRequestForm() {
   const navigate = useNavigate();
   const { toast } = useToast();
+<<<<<<< HEAD
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const [formData, setFormData] = useState<QuoteFormData>({
+=======
+  const [currentStepsetCurrentStep] = useState<QuoteRequestSteps>("service");
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  
+  const [formDatasetFormData] = useState<QuoteFormData>({
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     serviceType: "",
     serviceCategory: "",
     specificItem: null,
@@ -92,6 +103,7 @@ export function QuoteRequestForm() {
     setIsSubmitting(true);
     
     try {
+<<<<<<< HEAD
       // In a real application, you would send the data to your backend
       console.log("Submitting form data:", formData);
       
@@ -102,6 +114,17 @@ export function QuoteRequestForm() {
         title: "Quote Request Submitted",
         description: "We've received your request and will get back to you soon.",
       });
+=======
+      // In a real applicationyou would send the data to your backend
+      console.log("Submitting form data:"formData);
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve1500));
+      
+      toast({
+        title: "Quote Request Submitted",
+        description: "We've received your request and will get back to you soon."});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       // Redirect to confirmation page or homepage
       navigate("/");
@@ -109,8 +132,12 @@ export function QuoteRequestForm() {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
+<<<<<<< HEAD
         variant: "destructive",
       });
+=======
+        variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsSubmitting(false);
     }

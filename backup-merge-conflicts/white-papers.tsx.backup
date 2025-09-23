@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
@@ -160,6 +161,83 @@ import {
   Tag, 
   ExternalLink 
 } from 'lucide-react';
+=======
+
+const whitePapers = [;
+  {}
+    id: 1,
+    title: "The Future of AI in Enterprise: A Comprehensive Guide","
+    description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.","
+    author: "Dr. Sarah Chen","
+    date: "2024-01-15","
+    category: "Artificial Intelligence","
+    readTime: "45 min read","
+    downloadCount: "2,341","
+    featured: true,
+    pdfUrl: "/whitepapers/ai-enterprise-guide.pdf""
+  },
+  {}
+    id: 2,
+    title: "Cloud Security Best Practices for Modern Businesses","
+    description: "A detailed analysis of cloud security challenges and proven strategies to protect your organization's data and infrastructure.","
+    author: "Michael Rodriguez","
+    date: "2024-01-10","
+    category: "Cybersecurity","
+    readTime: "30 min read","
+    downloadCount: "1,876","
+    featured: false,
+    pdfUrl: "/whitepapers/cloud-security-best-practices.pdf""
+  },
+  {}
+    id: 3,
+    title: "Quantum Computing: The Next Frontier in Technology","
+    description: "Understanding quantum computing's potential impact on various industries and how to prepare for the quantum revolution.","
+    author: "Dr. Alex Thompson","
+    date: "2024-01-05","
+    category: "Quantum Computing","
+    readTime: "60 min read","
+    downloadCount: "1,234","
+    featured: false,
+    pdfUrl: "/whitepapers/quantum-computing-frontier.pdf""
+  },
+  {}
+    id: 4,
+    title: "Digital Transformation Strategies for Healthcare","
+    description: "How healthcare organizations can leverage technology to improve patient outcomes and operational efficiency.","
+    author: "Jennifer Lee","
+    date: "2023-12-28","
+    category: "Healthcare Technology","
+    readTime: "40 min read","
+    downloadCount: "987","
+    featured: false,
+    pdfUrl: "/whitepapers/healthcare-digital-transformation.pdf""
+  },
+  {}
+    id: 5,
+    title: "The Economics of Micro SaaS: Building Profitable Solutions","
+    description: "A comprehensive guide to building, launching, and scaling micro SaaS applications for sustainable business growth.","
+    author: "David Kim","
+    date: "2023-12-20","
+    category: "SaaS","
+    readTime: "35 min read","
+    downloadCount: "1,567","
+    featured: false,
+    pdfUrl: "/whitepapers/micro-saas-economics.pdf""
+  },
+  {}
+    id: 6,
+    title: "Data Privacy in the Age of AI: Compliance and Best Practices","
+    description: "Navigating the complex landscape of data privacy regulations while implementing AI solutions effectively.","
+    author: "Emma Wilson","
+    date: "2023-12-15","
+    category: "Data Privacy","
+    readTime: "50 min read","
+    downloadCount: "1,123","
+    featured: false,
+    pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf""
+import { FileText, Download, Calendar, Eye } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const whitePapers = [
   {
@@ -181,6 +259,7 @@ const whitePapers = [
     downloadCount: 980
   },
   {
+<<<<<<< HEAD
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
     author: "Emily Johnson",
@@ -198,11 +277,23 @@ const whitePapers = [
     description: "Discover how to leverage data analytics to drive business decisions and growth.",
     downloadCount: 750
   }
+=======
+    title: 'Cybersecurity Best Practices 2024',
+    description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
+    category: 'Cybersecurity',
+    downloadCount: 1500,
+    publishDate: '2024-01-05',
+    downloadLink: '/downloads/cybersecurity-best-practices.pdf'
+  }
+;];
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 ];
 
 export default function WhitePapersPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Layout
       title="White Papers - Zion Tech Group"
@@ -244,12 +335,15 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
               </p>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -315,6 +409,8 @@ export default function WhitePapersPage() {
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
                   </button>
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </motion.div>
               ))}
             </div>
@@ -322,6 +418,7 @@ export default function WhitePapersPage() {
         </section>
 
         {/* Categories */}
+<<<<<<< HEAD
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -346,6 +443,29 @@ export default function WhitePapersPage() {
                 >
                   <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                   <span className="text-sm font-medium">{category}</span>
+=======
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
+              <p className="text-lg text-gray-600">Browse white papers by topic</p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {whitePaperCategories.map((category, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-2 ${category.color}`}>
+                    {category.name}
+                  </div>
+                  <div className="text-2xl font-bold text-gray-900">{category.count}</div>
+                  <div className="text-sm text-gray-500">papers</div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
                 </motion.div>
               ))}
@@ -353,6 +473,7 @@ export default function WhitePapersPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured White Papers */}
         <section className="py-20 bg-white">
@@ -565,11 +686,17 @@ export default function WhitePapersPage() {
                   View All Research
                 </Link>
               </div>
+=======
+              </Link>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
   );
 }

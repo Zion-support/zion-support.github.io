@@ -7,7 +7,11 @@ type Props = {
   onReport?: (id: string) => void;
 };
 
+<<<<<<< HEAD
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
+=======
+const ReviewCard: React.FC<Props> = ({ reviewonReport }) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="enhanced-card hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-2">

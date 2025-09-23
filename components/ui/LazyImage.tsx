@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
+=======
+"use client";
+import React{ useEffectuseRefuseState } from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { motion } from 'framer-motion';
 
 interface LazyImageProps {
@@ -14,14 +19,23 @@ interface LazyImageProps {
 export const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
+<<<<<<< HEAD
   className = '',
+=======
+  className = ', ',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
   height
 }) => {
+<<<<<<< HEAD
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
+=======
+  const [isLoadedsetIsLoaded] = useState(false);
+  const [isInViewsetIsInView] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -40,7 +54,11 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     }
 
     return () => observer.disconnect();
+<<<<<<< HEAD
   }, [threshold]);
+=======
+  }[threshold]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -55,7 +73,11 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
+<<<<<<< HEAD
         style={{ width, height }}
+=======
+        style={{ widtheight }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       />
       
       {/* Actual Image */}
@@ -65,12 +87,21 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           src={src}
           alt={alt}
           onLoad={handleLoad}
+<<<<<<< HEAD
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
           className="w-full h-full object-cover"
           loading="lazy"
           style={{ width, height }}
+=======
+          initial={{ opacity: 0scale: 1.1 }}
+          animate={{ opacity: isLoaded ? 1 : 0scale: isLoaded ? 1 : 1.1 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-full object-cover"
+          loading="lazy"
+          style={{ widtheight }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         />
       )}
     </div>

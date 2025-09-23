@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
@@ -7,6 +8,16 @@ type Props = { vendor: Vendor | null };
 export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+=======
+"use client";
+import type { GetServerSideProps } from 'next';
+import { FormEventuseState } from 'react';
+import type { Vendor } from '../../utils/vendor-types';
+
+export default function VendorProfilePage({ vendor }: Props) {
+  const [messagesetMessage] = useState<string | null>(null);
+  const [loadingsetLoading] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
 
@@ -18,11 +29,18 @@ export default function VendorProfilePage({ vendor }: Props) {
     setLoading(true);
     setMessage(null);
     try {
+<<<<<<< HEAD
       const res = await fetch('/api/vendors/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ vendorId: vendor.id, title }),
       });
+=======
+      const res = await fetch('/api/vendors/lead'{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ vendorId: vendor.idtitle })});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       if (!res.ok) throw new Error('Failed to submit');
       setMessage('Thanks! We will contact you soon.');
       form.reset();
@@ -47,7 +65,11 @@ export default function VendorProfilePage({ vendor }: Props) {
             {vendor.name}
             {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
           </div>
+<<<<<<< HEAD
           <div className="text-sm text-gray-500">{vendor.servicesOffered?.join(', ')}</div>
+=======
+          <div className="text-sm text-gray-500">{vendor.servicesOffered?.join(')}</div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </div>
 
@@ -110,7 +132,11 @@ export default function VendorProfilePage({ vendor }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
+<<<<<<< HEAD
   const slug = String(ctx.params?.slug || '');
+=======
+  const slug = String(ctx.params?.slug || ', ');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };

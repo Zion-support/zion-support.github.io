@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
+=======
+import React{ useStateuseEffect } from "react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export const AppStoreBanner: React.FC = () => {
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
+=======
+  const [isVisiblesetIsVisible] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const isMobile = useIsMobile();
   
   useEffect(() => {
@@ -13,6 +21,7 @@ export const AppStoreBanner: React.FC = () => {
       // Delay showing the banner by 2 seconds
       const timer = setTimeout(() => {
         setIsVisible(true);
+<<<<<<< HEAD
       }, 2000);
       
       return () => clearTimeout(timer);
@@ -22,6 +31,17 @@ export const AppStoreBanner: React.FC = () => {
   const dismissBanner = () => {
     setIsVisible(false);
     localStorage.setItem("appBannerDismissed", "true");
+=======
+      }2000);
+      
+      return () => clearTimeout(timer);
+    }
+  }[isMobile]);
+  
+  const dismissBanner = () => {
+    setIsVisible(false);
+    localStorage.setItem("appBannerDismissed"true");
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
   
   // Only render on mobile devices

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+export const quantumSpaceTechServices2026 = [] as any[];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface QuantumSpaceTechService2026 {
   id: string;
   name: string;
@@ -14,7 +18,10 @@ export interface QuantumSpaceTechService2026 {
     address: string;
   };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
     id: "2026-quantum-space-tech",

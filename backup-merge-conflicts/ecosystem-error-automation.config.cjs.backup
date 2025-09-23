@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 module.exports = {
   "apps": [// 🚨 Comprehensive Error Fixer - Main error fixing automation
     {

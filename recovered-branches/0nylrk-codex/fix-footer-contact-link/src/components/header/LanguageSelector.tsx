@@ -2,11 +2,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import { Globe } from 'lucide-react';
+=======
+Globe
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
@@ -14,6 +19,14 @@ import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 export function LanguageSelector() {
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+=======
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import { useLanguageSupportedLanguage } from '@/context/LanguageContext';
+
+export function LanguageSelector() {
+  const { t } = useTranslation();
+  const { currentLanguagechangeLanguagesupportedLanguages } = useLanguage();
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <DropdownMenu>

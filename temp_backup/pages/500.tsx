@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -60,4 +61,8 @@ export default function Custom500() {
       </div>
     </>
   );
+=======
+export default function FiveHundred(){
+  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

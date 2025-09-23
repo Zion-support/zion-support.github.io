@@ -1,0 +1,12 @@
+import { defineConfig } from cypress';
+// fs and path are no longer needed as getPort() is removed.
+;
+default defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:3000',
+    supportFile: 'cypress/support/e2e.ts',
+  },
+  reporter: junit',  reporterOptions: {
+    mochaFile: cypress/results/junit-[hash].xml',    toConsole: true
+  }
+});

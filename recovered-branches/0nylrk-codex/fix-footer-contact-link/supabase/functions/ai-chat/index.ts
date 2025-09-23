@@ -6,8 +6,12 @@ const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
+<<<<<<< HEAD
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
+=======
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface Message {
   role: string;
@@ -40,15 +44,23 @@ serve(async (req) => {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${openAIApiKey}`,
+<<<<<<< HEAD
         'Content-Type': 'application/json',
       },
+=======
+        'Content-Type': 'application/json'},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       body: JSON.stringify({
         model: 'gpt-4o-mini',
         messages: combinedMessages,
         temperature: 0.7,
+<<<<<<< HEAD
         max_tokens: 500,
       }),
     });
+=======
+        max_tokens: 500})});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const data = await response.json();
     
@@ -63,13 +75,21 @@ serve(async (req) => {
     console.log('AI chat interaction logged');
 
     return new Response(JSON.stringify({ message: assistantMessage }), {
+<<<<<<< HEAD
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
+=======
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   } catch (error) {
     console.error('Error in ai-chat function:', error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
+<<<<<<< HEAD
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
+=======
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 });

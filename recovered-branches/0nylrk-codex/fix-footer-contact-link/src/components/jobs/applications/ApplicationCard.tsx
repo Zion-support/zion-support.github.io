@@ -3,8 +3,13 @@ import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { JobApplication } from "@/types/jobs";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react";
+=======
+import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { FileTextMessageSquareHelpCircleCalendarExternalLinkDownload } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Link } from "react-router-dom";
 import { StatusBadge } from "./StatusBadge";
 import { ApplicationProgress } from "./ApplicationProgress";
@@ -15,7 +20,11 @@ interface ApplicationCardProps {
 }
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
+<<<<<<< HEAD
   const [expanded, setExpanded] = useState(false);
+=======
+  const [expandedsetExpanded] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
@@ -60,7 +69,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <div>
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
+<<<<<<< HEAD
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+=======
+              Applied {formatDistanceToNow(new Date(application.created_at){ addSuffix: true })}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
           <StatusBadge status={application.status} />

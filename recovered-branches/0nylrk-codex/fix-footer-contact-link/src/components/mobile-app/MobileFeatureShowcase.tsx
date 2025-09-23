@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react";
+=======
+import { CheckCircleSmartphoneUsersStarMail } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -44,7 +48,11 @@ export const MobileFeatureShowcase: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
           {features.map((feature, index) => (
+=======
+          {features.map((featureindex) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div 
               key={index} 
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"

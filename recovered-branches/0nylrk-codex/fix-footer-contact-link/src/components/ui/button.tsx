@@ -1,6 +1,10 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
+<<<<<<< HEAD
 import { cva, type VariantProps } from "class-variance-authority"
+=======
+import { cvatype VariantProps } from "class-variance-authority"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 import { cn } from "@/lib/utils"
 
@@ -17,12 +21,17 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
+<<<<<<< HEAD
         link: "text-primary underline-offset-4 hover:underline",
       },
+=======
+        link: "text-primary underline-offset-4 hover:underline"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+<<<<<<< HEAD
         icon: "h-10 w-10",
       },
     },
@@ -31,6 +40,12 @@ const buttonVariants = cva(
       size: "default",
     },
   }
+=======
+        icon: "h-10 w-10"}},
+    defaultVariants: {
+      variant: "default",
+      size: "default"}}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 )
 
 export interface ButtonProps
@@ -39,12 +54,21 @@ export interface ButtonProps
   asChild?: boolean
 }
 
+<<<<<<< HEAD
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
+=======
+const Button = React.forwardRef<HTMLButtonElementButtonProps>(
+  ({ classNamevariantsizeasChild = false...props }ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variantsizeclassName }))}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ref={ref}
         {...props}
       />
@@ -53,4 +77,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
+<<<<<<< HEAD
 export { Button, buttonVariants }
+=======
+export { ButtonbuttonVariants }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -6,19 +6,30 @@ import { z } from "zod";
 import { WorkExperience } from "@/types/resume";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
+<<<<<<< HEAD
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+=======
+import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { Switch } from "@/components/ui/switch";
 import { format } from "date-fns";
+<<<<<<< HEAD
 import { CalendarIcon, Loader2 } from "lucide-react";
+=======
+import { CalendarIconLoader2 } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 
 // Define form schema
 const formSchema = z.object({
+<<<<<<< HEAD
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
@@ -29,6 +40,16 @@ const formSchema = z.object({
   description: z.string().optional(),
   location: z.string().optional(),
 });
+=======
+  company_name: z.string().min(1"Company name is required"),
+  role_title: z.string().min(1"Role title is required"),
+  start_date: z.date({
+    required_error: "Start date is required"}),
+  end_date: z.date().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional()});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -41,9 +62,14 @@ interface WorkExperienceItemFormProps {
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
+<<<<<<< HEAD
   onCancel,
 }: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+=======
+  onCancel}: WorkExperienceItemFormProps) {
+  const [isEnhancementDialogOpensetIsEnhancementDialogOpen] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Set up form
   const form = useForm<FormValues>({
@@ -55,9 +81,13 @@ export function WorkExperienceItemForm({
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
       description: initialData?.description || "",
+<<<<<<< HEAD
       location: initialData?.location || "",
     },
   });
+=======
+      location: initialData?.location || ""}});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const { isSubmitting } = form.formState;
   const watchIsCurrent = form.watch("is_current");
@@ -68,6 +98,7 @@ export function WorkExperienceItemForm({
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
       id: initialData?.id,
+<<<<<<< HEAD
       company_name: values.company_name,  // Required
       role_title: values.role_title,      // Required
       start_date: values.start_date,      // Required
@@ -75,13 +106,26 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
+=======
+      company_name: values.company_name // Required
+      role_title: values.role_title     // Required
+      start_date: values.start_date     // Required
+      end_date: values.end_date         // Optional
+      is_current: values.is_current     // Required
+      description: values.description   // Optional
+      location: values.location         // Optional
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     };
     
     await onSubmit(workExperience);
   };
 
   const handleAIEnhancement = (content: string) => {
+<<<<<<< HEAD
     form.setValue("description", content, { shouldDirty: true });
+=======
+    form.setValue("description"content{ shouldDirty: true });
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setIsEnhancementDialogOpen(false);
   };
 
@@ -127,7 +171,11 @@ export function WorkExperienceItemForm({
                 <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
+=======
+                    <Input placeholder="e.g. New YorkNY (Remote)" {...field} />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -174,7 +222,11 @@ export function WorkExperienceItemForm({
                           )}
                         >
                           {field.value ? (
+<<<<<<< HEAD
                             format(field.value, "MMM yyyy")
+=======
+                            format(field.value"MMM yyyy")
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           ) : (
                             <span>Select date</span>
                           )}
@@ -217,7 +269,11 @@ export function WorkExperienceItemForm({
                             )}
                           >
                             {field.value ? (
+<<<<<<< HEAD
                               format(field.value, "MMM yyyy")
+=======
+                              format(field.value"MMM yyyy")
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             ) : (
                               <span>Select date</span>
                             )}
@@ -259,7 +315,11 @@ export function WorkExperienceItemForm({
                         content: field.value || "",
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
+<<<<<<< HEAD
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
+=======
+                      onEnhanced={(content) => form.setValue("description"content{ shouldDirty: true })}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       buttonText="Enhance with AI"
                     />
                     <Button
@@ -275,7 +335,11 @@ export function WorkExperienceItemForm({
                 </div>
                 <FormControl>
                   <Textarea
+<<<<<<< HEAD
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
+=======
+                    placeholder="Describe your responsibilitiesachievementsand skills used in this role..."
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     className="min-h-[150px]"
                     {...field}
                   />
@@ -311,8 +375,12 @@ export function WorkExperienceItemForm({
         defaultOptions={{
           enhancementType: "work-description",
           content: form.getValues("description") || "",
+<<<<<<< HEAD
           context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
+=======
+          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         initialContent={form.getValues("description") || ""}
       />
     </>

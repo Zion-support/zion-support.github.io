@@ -5,8 +5,12 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -53,13 +57,18 @@ serve(async (req) => {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`,
+<<<<<<< HEAD
         "Content-Type": "application/json",
       },
+=======
+        "Content-Type": "application/json"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
           {
             role: "system",
+<<<<<<< HEAD
             content: systemPrompt,
           },
           {
@@ -70,6 +79,13 @@ serve(async (req) => {
         temperature: 0.7,
       }),
     });
+=======
+            content: systemPrompt},
+          {
+            role: "user",
+            content: userPrompt}],
+        temperature: 0.7})});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     if (!response.ok) {
       const errorData = await response.json();
@@ -81,22 +97,35 @@ serve(async (req) => {
 
     return new Response(
       JSON.stringify({
+<<<<<<< HEAD
         enhancedContent,
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       }
+=======
+        enhancedContent}),
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   } catch (error) {
     console.error("Error in resume-enhancer function:", error);
     return new Response(
       JSON.stringify({
+<<<<<<< HEAD
         error: error.message,
       }),
       {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       }
+=======
+        error: error.message}),
+      {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   }
 });

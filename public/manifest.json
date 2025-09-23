@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
   "description": "Leading-edge technology solutions and autonomous innovation platform",
@@ -27,10 +28,36 @@
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+=======
+  "name": "Zion Tech Group - AI-Powered Business Solutions",
+  "short_name": "Zion Tech",
+  "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["business", "productivity", "technology", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
       "name": "Launch Economy",
       "short_name": "Launch",
       "description": "Quick access to launch your digital economy",
@@ -41,10 +68,17 @@
           "sizes": "192x192"
         }
       ]
+=======
+      "name": "AI Solutions",
+      "short_name": "AI",
+      "description": "Explore our AI-powered business solutions",
+      "url": "/ai-solutions"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     {
       "name": "Services",
       "short_name": "Services",
+<<<<<<< HEAD
       "description": "View our technology services",
       "url": "/services",
       "icons": [
@@ -53,10 +87,15 @@
           "sizes": "192x192"
         }
       ]
+=======
+      "description": "View our comprehensive service offerings",
+      "url": "/services"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     {
       "name": "Contact",
       "short_name": "Contact",
+<<<<<<< HEAD
       "description": "Get in touch with us",
       "url": "/contact",
       "icons": [
@@ -81,4 +120,80 @@
       "form_factor": "narrow"
     }
   ]
+=======
+      "description": "Get in touch with our team",
+      "url": "/contact"
+    },
+    {
+      "name": "Request Quote",
+      "short_name": "Quote",
+      "description": "Request a custom quote for your project",
+      "url": "/request-quote"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://ziontechgroup.com"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "capture_links": "new-client",
+  "file_handlers": [
+    {
+      "action": "/upload",
+      "accept": {
+        "text/*": [".txt", ".md", ".json"],
+        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?url=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*", "text/*", "application/pdf"]
+        }
+      ]
+    }
+  },
+  "permissions": [
+    "notifications",
+    "background-sync",
+    "storage"
+  ],
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple",
+    "AI-Powered",
+    "Quantum Computing",
+    "Business Solutions"
+  ],
+  "developer": {
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com"
+  }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

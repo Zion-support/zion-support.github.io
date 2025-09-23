@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 {
   "manifest_version": 3,
   "name": "Zion Assistant",
@@ -15,7 +18,14 @@
   "background": {
     "service_worker": "background.js"
   },
+<<<<<<< HEAD
   "permissions": ["storage", "notifications"],
+=======
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

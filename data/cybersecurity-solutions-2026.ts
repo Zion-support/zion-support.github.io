@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface CybersecuritySolutions2026 {
   id: string;
   name: string;
@@ -40,7 +43,10 @@ export interface CybersecuritySolutions2026 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
   // Advanced Threat Intelligence Platform
   {
@@ -94,7 +100,10 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     rating: 4.9,
     reviews: 178
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum-Resistant Cryptography Suite
   {
     id: 'quantum-resistant-cryptography-suite',
@@ -147,7 +156,10 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     rating: 4.9,
     reviews: 89
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Security Operations Center
   {
     id: 'ai-powered-security-operations-center',
@@ -200,7 +212,10 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     rating: 4.8,
     reviews: 78
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Zero-Day Vulnerability Detection System
   {
     id: 'zero-day-vulnerability-detection-system',
@@ -253,7 +268,10 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     rating: 4.9,
     reviews: 198
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Blockchain-Based Identity Management
   {
     id: 'blockchain-based-identity-management',

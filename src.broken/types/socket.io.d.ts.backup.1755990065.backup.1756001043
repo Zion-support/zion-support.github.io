@@ -1,0 +1,5 @@
+// Type definitions for socket.io.d;
+export interface socket.io.d {;
+  // TODO: Add proper type definitions;
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3

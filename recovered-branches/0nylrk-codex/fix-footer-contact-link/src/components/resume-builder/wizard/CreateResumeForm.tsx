@@ -1,6 +1,10 @@
 
 import { useState } from "react";
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
+=======
+import { CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { CreateResumeFormProps } from "./types";
@@ -10,7 +14,11 @@ export const CreateResumeForm = ({
   onCancel,
   isLoading 
 }: CreateResumeFormProps) => {
+<<<<<<< HEAD
   const [newResumeTitle, setNewResumeTitle] = useState('');
+=======
+  const [newResumeTitlesetNewResumeTitle] = useState('');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;

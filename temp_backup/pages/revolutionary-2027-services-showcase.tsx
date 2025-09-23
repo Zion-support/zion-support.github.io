@@ -3,7 +3,12 @@ import Head from 'next/head';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+import { Button } from '../components/ui/Button';
+import Card from '../components/ui/Card';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
@@ -118,7 +123,11 @@ export default function Revolutionary2027ServicesShowcase() {
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <Head>
+<<<<<<< HEAD
         <title>Revolutionary 2027 Services Showcase - Zion Tech Group | Next-Generation AI, Quantum & Technology Solutions</title>
+=======
+        <title>Revolutionary 2027 Services Showcase - Zion Tech Group | ArrowRight-Generation AI, Quantum & Technology Solutions</title>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <meta name="description" content="Discover the most revolutionary AI, Quantum, and Technology services of 2027. Cutting-edge solutions with proven ROI and real-world implementation." />
         <meta property="og:title" content="Revolutionary 2027 Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Explore the future of technology with our revolutionary 2027 services showcase." />
@@ -142,27 +151,46 @@ export default function Revolutionary2027ServicesShowcase() {
               Services Showcase
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
               Experience the future of technology with our revolutionary AI, Quantum Computing, and Next-Generation IT services. 
+=======
+              Experience the future of technology with our revolutionary AI, Quantum Computing, and ArrowRight-Generation IT services. 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               Each solution delivers measurable ROI and transforms industries.
             </p>
             
             {/* Contact Information */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-center mb-8">
+<<<<<<< HEAD
               <motion.div className="flex items-center gap-2 text-cyan-400"
+=======
+              <motion.div 
+                className="flex items-center gap-2 text-cyan-400"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Phone className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.mobile}</span>
               </motion.div>
+<<<<<<< HEAD
               <motion.div className="flex items-center gap-2 text-purple-400"
+=======
+              <motion.div 
+                className="flex items-center gap-2 text-purple-400"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Mail className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.email}</span>
               </motion.div>
+<<<<<<< HEAD
               <motion.div className="flex items-center gap-2 text-green-400"
+=======
+              <motion.div 
+                className="flex items-center gap-2 text-green-400"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -173,6 +201,7 @@ export default function Revolutionary2027ServicesShowcase() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-4">
+<<<<<<< HEAD
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
                 Get Started Today
@@ -181,6 +210,16 @@ export default function Revolutionary2027ServicesShowcase() {
                 <Globe className="w-5 h-5 mr-2" />
                 View All Services
               </a>
+=======
+              <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
+                <Rocket className="w-5 h-5 mr-2" />
+                Get Started Today
+              </Button>
+              <Link href="/services" variant="outline" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
+                <Globe className="w-5 h-5 mr-2" />
+                View All Services
+              </Button>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </motion.div>
         </div>
@@ -197,7 +236,12 @@ export default function Revolutionary2027ServicesShowcase() {
                 type="text"
                 placeholder="Search revolutionary services..."
                 value={searchTerm}
+<<<<<<< HEAD
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+=======
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               />
             </div>
 
@@ -208,7 +252,13 @@ export default function Revolutionary2027ServicesShowcase() {
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                 <select
                   value={selectedCategory}
+<<<<<<< HEAD
                   onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+=======
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                >
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
@@ -222,7 +272,13 @@ export default function Revolutionary2027ServicesShowcase() {
                 <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
                 <select
                   value={selectedPriceRange}
+<<<<<<< HEAD
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+=======
+                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                >
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
                       {range.name}
@@ -236,7 +292,13 @@ export default function Revolutionary2027ServicesShowcase() {
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
                 <select
                   value={sortBy}
+<<<<<<< HEAD
                   onChange={(e) => setSortBy(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+=======
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                >
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   {sortOptions.map((option) => (
                     <option key={option.id} value={option.id}>
                       {option.name}
@@ -273,8 +335,15 @@ export default function Revolutionary2027ServicesShowcase() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
                     whileHover={{ y: -10, scale: 1.02 }} className="group">
                     <div className="h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
+=======
+                    whileHover={{ y: -10, scale: 1.02 }}
+                    className="group"
+                  >
+                    <Card className="h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden">
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       {/* Service Header */}
                       <div className="p-6">
                         <div className="flex items-start justify-between mb-4">
@@ -342,6 +411,7 @@ export default function Revolutionary2027ServicesShowcase() {
 
                         {/* Action Buttons */}
                         <div className="flex gap-2">
+<<<<<<< HEAD
                           <a 
                             href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                             <ArrowRight className="w-4 h-4 mr-1" />
@@ -354,24 +424,61 @@ export default function Revolutionary2027ServicesShowcase() {
                         </div>
                       </div>
                     </div>
+=======
+                          <Button 
+                            href={service.link} 
+                            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300"
+                          >
+                            <ArrowRight className="w-4 h-4 mr-1" />
+                            Learn More
+                          </Button>
+                          <Button 
+                            href="/contact"
+                            variant="outline"
+                            className="px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300"
+                          >
+                            <MessageSquare className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    </Card>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </motion.div>
                 ))}
               </div>
             ) : (
               <motion.div
                 initial={{ opacity: 0 }}
+<<<<<<< HEAD
                 animate={{ opacity: 1 }} className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
                 <button 
+=======
+                animate={{ opacity: 1 }}
+                className="text-center py-16"
+              >
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
+                <Button 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
+<<<<<<< HEAD
                   }} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
                   Clear Filters
                 </button>
+=======
+                  }}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white"
+                >
+                  Clear Filters
+                </Button>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </motion.div>
             )}
           </AnimatePresence>
@@ -385,7 +492,13 @@ export default function Revolutionary2027ServicesShowcase() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30">
+=======
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30"
+          >
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -410,6 +523,7 @@ export default function Revolutionary2027ServicesShowcase() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
+<<<<<<< HEAD
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Your Transformation
@@ -418,6 +532,16 @@ export default function Revolutionary2027ServicesShowcase() {
                 <Globe className="w-5 h-5 mr-2" />
                 Explore All Services
               </a>
+=======
+              <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
+                <Rocket className="w-5 h-5 mr-2" />
+                Start Your Transformation
+              </Button>
+              <Link href="/services" variant="outline" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
+                <Globe className="w-5 h-5 mr-2" />
+                Explore All Services
+              </Button>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </motion.div>
         </div>

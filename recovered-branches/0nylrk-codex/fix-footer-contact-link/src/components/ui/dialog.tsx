@@ -15,7 +15,11 @@ const DialogClose = DialogPrimitive.Close
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
+=======
+>(({ className...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
@@ -30,7 +34,11 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
+<<<<<<< HEAD
 >(({ className, children, ...props }, ref) => (
+=======
+>(({ classNamechildren...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DialogPortal>
     <DialogOverlay />
     <DialogPrimitive.Content
@@ -82,7 +90,11 @@ DialogFooter.displayName = "DialogFooter"
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
+=======
+>(({ className...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
@@ -97,10 +109,17 @@ DialogTitle.displayName = DialogPrimitive.Title.displayName
 const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
+=======
+>(({ className...props }ref) => (
+  <DialogPrimitive.Description
+    ref={ref}
+    className={cn("text-sm text-muted-foreground"className)}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 ))
@@ -116,5 +135,9 @@ export {
   DialogHeader,
   DialogFooter,
   DialogTitle,
+<<<<<<< HEAD
   DialogDescription,
 }
+=======
+  DialogDescription}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

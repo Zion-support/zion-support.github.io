@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { ExperienceFilterProps } from "@/types/filters";
@@ -6,6 +7,15 @@ import { ExperienceFilterProps } from "@/types/filters";
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);
+=======
+import { ChevronDownChevronUp } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters";
+
+export function ExperienceFilter({ experienceRangesetExperienceRangexpandedtoggleSectionisMobileFilterOpen }: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setExperienceRange([values[0]values[1]]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (
@@ -29,7 +39,11 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[1]} years</span>
           </div>
           <Slider 
+<<<<<<< HEAD
             value={[experienceRange[0], experienceRange[1]]}
+=======
+            value={[experienceRange[0]experienceRange[1]]}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             min={0}
             max={15}
             step={1}

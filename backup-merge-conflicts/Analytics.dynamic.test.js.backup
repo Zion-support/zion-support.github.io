@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/Analytics.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:__tests__/Analytics.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/Analytics.dynamic.test.js
 import React from 'react';
@@ -22,7 +26,11 @@ describe('Analyticsdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Analyticsdynamic from "./components/Analytics.dynamic"; describe("Analyticsdynamic",() => { test("renders without crashing",() => { render(<Analyticsdynamic />); expect(screen.getByTestId("analytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Analyticsdynamic />)}); test("handles user interactions",() => { render(<Analyticsdynamic />)}); test("applies correct styling",() => { render(<Analyticsdynamic />)})});''"
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:__tests__/Analytics.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
 >>>>>>> main
 =======

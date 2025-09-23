@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-merge-conflicts/cuttingEdgeITInfrastructureServices2030.ts.backup
 <<<<<<< HEAD
@@ -6,6 +7,16 @@ import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/lis
 ""
 =======
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
+=======
+<<<<<<< HEAD:src.disabled/src/data/specializedHealthcareBiotechServices2025.ts
+import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
+";";"
+const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
+import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
+""";,
+";";"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ";";"
 =======
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
@@ -14,6 +25,7 @@ import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listi
 """;,
 ";";"
 =======
+<<<<<<< HEAD
 =======
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
 ";";"
@@ -21,6 +33,15 @@ const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listin
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+<<<<<<< HEAD:backup-merge-conflicts/cuttingEdgeITInfrastructureServices2030.ts.backup
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> pr-11914:backup-merge-conflicts/cuttingEdgeITInfrastructureServices2030.ts.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

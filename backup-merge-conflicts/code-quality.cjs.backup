@@ -1,4 +1,29 @@
+<<<<<<< HEAD
     }},
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+
+
+// Code quality checks
+const qualityChecks = [{
+    "name": 'TypeScript Type Checking',
+    "action": () => {
+      
+      try {
+        execSync('npx tsc --noEmit', { "stdio": 'pipe' });
+        
+      } catch (error) {
+        
+      }
+<<<<<<< HEAD
+    },
+  },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
@@ -9,7 +34,12 @@
       } catch (error) {
         
       }
+<<<<<<< HEAD
     }},
+=======
+    },
+  },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     "name": 'Prettier Code Formatting',
     "action": () => {
@@ -20,7 +50,12 @@
       } catch (error) {
         
       }
+<<<<<<< HEAD
     }},
+=======
+    },
+  },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     "name": 'Code Complexity Analysis',
     "action": () => {
@@ -34,7 +69,11 @@
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
+<<<<<<< HEAD
             .readdirSync(dir, { "recursive": true })
+=======
+            .readdirSync(dir, { recursive: true })
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
           files.forEach(file => {
@@ -49,9 +88,16 @@
 
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
+<<<<<<< HEAD
       
       
     }},
+=======
+      console.log(`Average lines per file: ${avgLinesPerFile}`);
+      console.log(`Total files analyzed: ${totalFiles}`);
+    },
+  },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     "name": 'Import/Export Analysis',
     "action": () => {
@@ -70,10 +116,18 @@
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 
+<<<<<<< HEAD
         
         
       }
     }},
+=======
+        console.log(`Total imports: ${importCount}`);
+        console.log(`Total exports: ${exportCount}`);
+      }
+    },
+  },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     "name": 'Dead Code Detection',
     "action": () => {
@@ -106,9 +160,16 @@
           });
         });
 
+<<<<<<< HEAD
         
       }
     }},
+=======
+        console.log(`Potential unused imports: ${unusedImports}`);
+      }
+    },
+  },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ];
 
 // Run quality checks
@@ -131,11 +192,22 @@ const report = {
   "timestamp": new Date().toISOString(),
   "checks": qualityChecks.map(check => ({
     name: check.name,
+<<<<<<< HEAD
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+=======
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
@@ -144,6 +216,7 @@ if (!fs.existsSync(reportsDir)) {
 
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -166,4 +239,7 @@ console.log(' Code Quality Checker Starting...\n')
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
 >>>>>>> main
+=======
+console.log(`📄 Quality report saved to: ${reportFile}`);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

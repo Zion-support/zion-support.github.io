@@ -1,11 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-<<<<<<< HEAD:app/ai-2026-revolution/page.tsx
 // import ErrorBoundary from '../../components/ErrorBoundary';
-=======
-import ErrorBoundary from '../../components/ErrorBoundary';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/ai-2026-revolution/page.tsx.disabled
 
 export const metadata = {
   title: 'AI 2026 Revolutionary Breakthrough - Zion Tech Group',

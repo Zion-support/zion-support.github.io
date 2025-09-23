@@ -91,7 +91,6 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 
 // Import additional content promotion banners
 
-<<<<<<< HEAD
 // Import new content revolution components
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
 import ContentRevolutionShowcase2025 from '../components/ContentRevolutionShowcase2025';
@@ -111,8 +110,6 @@ import InteractiveAIDemo2025 from '../components/InteractiveAIDemo2025';
 import InteractiveAIDemo2025PromotionBanner from '../components/InteractiveAIDemo2025PromotionBanner';
 import StructuredData2025 from '../components/StructuredData2025';
 
-=======
->>>>>>> origin/backup-main-20250913-185456
 // Import new 2026-2030 content components
 import AI2026_2030UltimatePredictionsShowcase from '../components/AI2026_2030UltimatePredictionsShowcase';
 import AI2026_2030UltimatePredictionsPromotionBanner from '../components/AI2026_2030UltimatePredictionsPromotionBanner';
@@ -244,79 +241,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* NEW 2025 BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025BreakthroughBanner />
-=======
-        {/* NEW 2026 PROMOTIONAL BANNERS */}
-        <UltimateContentShowcase2026PromotionBanner />
-        <AITrendsPredictions2026PromotionBanner />
-        <QuantumComputingSolutions2026PromotionBanner />
-        
-        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
-        <UltimateContentPromotionBanner2025 />
-        
-        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
-        <NewContent2025UltimateBreakthroughBanner />
-        
-        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE */}
-        <NewContent2025UltimateShowcase />
-        
-        {/* NEW 2026 CONTENT SECTIONS */}
-        <UltimateContentShowcase2026 />
-        <AITrendsPredictions2026 />
-        <QuantumComputingSolutions2026 />
-        
-        {/* REVOLUTIONARY TECH BANNER 2026 */}
-        <RevolutionaryTechBanner2026 />
-        
-        {/* AI 2030 FUTURE VISION PROMOTION BANNER */}
-        <AI2030FutureVisionPromotionBanner />
-        
-        {/* INTERACTIVE TECH DEMO 2025 */}
-        <InteractiveTechDemo2025 />
-        
-        {/* ULTIMATE CONTENT CAROUSEL 2025 */}
-        <UltimateContentCarousel2025 />
-        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
-        <RevolutionaryContentShowcase2025Banner />
-        
-        {/* REVOLUTIONARY TECH SHOWCASE 2026 BANNER */}
-        <RevolutionaryTechShowcase2026Banner />
-        
-        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
-        <UltimateContentShowcase2026 />
-        
-        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
-        <InteractiveContentDiscovery2026 />
-        
-        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
-        <UltimateContentDiscoveryWidget2025 />
-        
-        {/* EDGE AI REVOLUTION PROMOTION BANNER */}
-        <EdgeAIRevolutionPromotionBanner />
-        
-        {/* NEW CONTENT SHOWCASE BANNER 2025 */}
-        <NewContentShowcaseBanner2025 />
-        
-        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
-        <NewContent2025UltimatePromotionBanner />
-        
-        {/* CONTENT REVOLUTION SHOWCASE 2025 */}
-        <ContentRevolutionShowcase2025 />
-        
-        {/* AI 2026-2030 ULTIMATE PREDICTIONS PROMOTION BANNER - FEATURED */}
-        <AI2026_2030UltimatePredictionsPromotionBanner />
-        
-        {/* NEW CONTENT PROMOTION BANNER 2026 */}
-        <NewContentPromotionBanner2026 />
-        
-        {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
-        <NewContent2025RevolutionaryShowcaseBanner />
-        
-        {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
-        <AI2025UltimateBreakthroughAnnouncementBanner />
->>>>>>> origin/backup-main-20250913-185456
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
@@ -352,18 +278,6 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
         
-<<<<<<< HEAD
-=======
-        {/* REVOLUTIONARY CONTENT SHOWCASE 2026 - FEATURED */}
-        <RevolutionaryContentShowcase2026 />
-        
-        {/* AI 2026-2030 ULTIMATE PREDICTIONS SHOWCASE - FEATURED */}
-        <AI2026_2030UltimatePredictionsShowcase />
-        
-        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
-        <UltimateContentDiscoveryWidget2026 />
-        
->>>>>>> origin/backup-main-20250913-185456
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
         

@@ -17,8 +17,12 @@ export const useAdminQuotes = () => {
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotes', 'admin'],
     queryFn: () => quoteRequestService.getAll(),
+<<<<<<< HEAD
     enabled: true,
   });
+=======
+    enabled: true});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes.filter((quote) => {
@@ -145,6 +149,10 @@ export const useAdminQuotes = () => {
       updateStatusMutation.mutate({ id, status }),
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation.mutate({ id, isArchived }),
+<<<<<<< HEAD
     deleteQuote: (id: string) => deleteMutation.mutate(id),
   };
+=======
+    deleteQuote: (id: string) => deleteMutation.mutate(id)};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };

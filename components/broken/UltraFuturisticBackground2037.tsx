@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
+=======
+"use client";
+import React{ useEffectuseRef } from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2037Props {
@@ -8,7 +13,11 @@ interface UltraFuturisticBackground2037Props {
 }
 
 export default function UltraFuturisticBackground2037({ 
+<<<<<<< HEAD
   intensity = 'medium', 
+=======
+  intensity = 'medium'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   theme = 'quantum-neon',
   children
 }: UltraFuturisticBackground2037Props) {
@@ -36,6 +45,7 @@ export default function UltraFuturisticBackground2037({
       switch (theme) {
         case 'neon':
           return {
+<<<<<<< HEAD
             primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
             secondary: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'],
             accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff'],
@@ -68,6 +78,40 @@ export default function UltraFuturisticBackground2037({
             secondary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
             accent: ['#f59e0b', '#ef4444', '#8000ff', '#00ff80'],
             glow: ['#7c3aed', '#0891b2', '#ff0066', '#00ffff']
+=======
+            primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'],
+            secondary: ['#8000ff'#00ff80'#ff8000'#0080ff'],
+            accent: ['#ff4080'#40ffff'#ffff40'#ff40ff'],
+            glow: ['#ff0066'#00ffff'#ffff00'#ff00ff']
+          };
+        case 'holographic':
+          return {
+            primary: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'],
+            secondary: ['#feca57'#ff9ff3'#54a0ff'#5f27cd'],
+            accent: ['#ff9ff3'#54a0ff'#5f27cd'#ff6b6b'],
+            glow: ['#ff5252'#26d0ce'#42a5f5'#66bb6a']
+          };
+        case 'cyberpunk':
+          return {
+            primary: ['#ff0055'#00ffff'#ffff00'#ff00ff'],
+            secondary: ['#8000ff'#00ff80'#ff8000'#0080ff'],
+            accent: ['#ff4080'#40ffff'#ffff40'#ff40ff'],
+            glow: ['#ff0033'#00ffff'#ffff00'#ff00ff']
+          };
+        case 'quantum':
+          return {
+            primary: ['#8b5cf6'#06b6d4'#ec4899'#10b981'],
+            secondary: ['#f59e0b'#ef4444'#8b5cf6'#06b6d4'],
+            accent: ['#ec4899'#10b981'#f59e0b'#ef4444'],
+            glow: ['#7c3aed'#0891b2'#db2777'#059669']
+          };
+        default: // quantum-neon
+          return {
+            primary: ['#8b5cf6'#06b6d4'#ec4899'#10b981'],
+            secondary: ['#ff0080'#00ffff'#ffff00'#ff00ff'],
+            accent: ['#f59e0b'#ef4444'#8000ff'#00ff80'],
+            glow: ['#7c3aed'#0891b2'#ff0066'#00ffff']
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           };
       }
     };
@@ -132,6 +176,7 @@ export default function UltraFuturisticBackground2037({
 
     // Enhanced rendering functions
     const drawQuantumNeonParticle = (particle: any) => {
+<<<<<<< HEAD
       const { x, y, size, color, quantumState, neonIntensity, rotation } = particle;
       
       // Quantum state visualization
@@ -148,6 +193,24 @@ export default function UltraFuturisticBackground2037({
       ctx.fillStyle = gradient;
       ctx.beginPath();
       ctx.arc(0, 0, size * 3, 0, Math.PI * 2);
+=======
+      const { xysizecolorquantumStateneonIntensityrotation } = particle;
+      
+      // Quantum state visualization
+      ctx.save();
+      ctx.translate(xy);
+      ctx.rotate(rotation);
+      
+      // Quantum probability cloud
+      const gradient = ctx.createRadialGradient(000size * 3);
+      gradient.addColorStop(0`${color}${Math.floor(neonIntensity * 255).toString(16).padStart(2'0')}`);
+      gradient.addColorStop(0.5`${color}${Math.floor(neonIntensity * 128).toString(16).padStart(2'0')}`);
+      gradient.addColorStop(1'transparent');
+      
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(0size * 30Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.fill();
       
       // Neon glow effect
@@ -156,7 +219,11 @@ export default function UltraFuturisticBackground2037({
       ctx.strokeStyle = color;
       ctx.lineWidth = 2;
       ctx.beginPath();
+<<<<<<< HEAD
       ctx.arc(0, 0, size, 0, Math.PI * 2);
+=======
+      ctx.arc(0size0Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.stroke();
       
       // Quantum interference pattern
@@ -164,52 +231,88 @@ export default function UltraFuturisticBackground2037({
         const angle = quantumState + (i * Math.PI * 2) / 3;
         const radius = size * (1.5 + Math.sin(quantumState * 3) * 0.5);
         ctx.beginPath();
+<<<<<<< HEAD
         ctx.arc(Math.cos(angle) * radius, Math.sin(angle) * radius, size * 0.3, 0, Math.PI * 2);
         ctx.fillStyle = `${color}${Math.floor(neonIntensity * 200).toString(16).padStart(2, '0')}`;
+=======
+        ctx.arc(Math.cos(angle) * radiusMath.sin(angle) * radiusize * 0.30Math.PI * 2);
+        ctx.fillStyle = `${color}${Math.floor(neonIntensity * 200).toString(16).padStart(2'0')}`;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.fill();
       }
     }
 
     const drawHologramParticle = (particle: any) => {
+<<<<<<< HEAD
       const { x, y, size, color, hologramOpacity, rotation } = particle;
       
       ctx.save();
       ctx.translate(x, y);
+=======
+      const { xysizecolorhologramOpacityrotation } = particle;
+      
+      ctx.save();
+      ctx.translate(xy);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.rotate(rotation);
       
       // Holographic grid effect
       const gridSize = size * 2;
+<<<<<<< HEAD
       ctx.strokeStyle = `${color}${Math.floor(hologramOpacity * 255).toString(16).padStart(2, '0')}`;
+=======
+      ctx.strokeStyle = `${color}${Math.floor(hologramOpacity * 255).toString(16).padStart(2'0')}`;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.lineWidth = 1;
       ctx.globalAlpha = hologramOpacity;
       
       // Vertical lines
       for (let i = -2; i <= 2; i++) {
         ctx.beginPath();
+<<<<<<< HEAD
         ctx.moveTo(i * gridSize / 2, -gridSize);
         ctx.lineTo(i * gridSize / 2, gridSize);
+=======
+        ctx.moveTo(i * gridSize / 2-gridSize);
+        ctx.lineTo(i * gridSize / 2gridSize);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.stroke();
       }
       
       // Horizontal lines
       for (let i = -2; i <= 2; i++) {
         ctx.beginPath();
+<<<<<<< HEAD
         ctx.moveTo(-gridSize, i * gridSize / 2);
         ctx.lineTo(gridSize, i * gridSize / 2);
+=======
+        ctx.moveTo(-gridSizei * gridSize / 2);
+        ctx.lineTo(gridSizei * gridSize / 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.stroke();
       }
       
       // Holographic center
+<<<<<<< HEAD
       ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padStart(2, '0')}`;
       ctx.beginPath();
       ctx.arc(0, 0, size * 0.5, 0, Math.PI * 2);
+=======
+      ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padStart(2'0')}`;
+      ctx.beginPath();
+      ctx.arc(0size * 0.50Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.fill();
       
       ctx.restore();
     };
 
     const drawWaveParticle = (particle: any) => {
+<<<<<<< HEAD
       const { x, y, size, color, waveFrequency, waveAmplitude, opacity } = particle;
+=======
+      const { xysizecolorwaveFrequencywaveAmplitudeopacity } = particle;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       ctx.save();
       ctx.strokeStyle = color;
@@ -223,9 +326,15 @@ export default function UltraFuturisticBackground2037({
         const waveY = y + Math.sin(i * waveFrequency + Date.now() * 0.01) * waveAmplitude;
         
         if (i === 0) {
+<<<<<<< HEAD
           ctx.moveTo(waveX, waveY);
         } else {
           ctx.lineTo(waveX, waveY);
+=======
+          ctx.moveTo(waveXwaveY);
+        } else {
+          ctx.lineTo(waveXwaveY);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
       }
       ctx.stroke();
@@ -234,7 +343,11 @@ export default function UltraFuturisticBackground2037({
     };
 
     const drawNeonParticle = (particle: any) => {
+<<<<<<< HEAD
       const { x, y, size, color, neonIntensity } = particle;
+=======
+      const { xysizecolorneonIntensity } = particle;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       ctx.save();
       
@@ -246,14 +359,22 @@ export default function UltraFuturisticBackground2037({
       
       // Main particle
       ctx.beginPath();
+<<<<<<< HEAD
       ctx.arc(x, y, size, 0, Math.PI * 2);
+=======
+      ctx.arc(xysize0Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.fill();
       
       // Neon rings
       for (let i = 1; i <= 3; i++) {
         ctx.globalAlpha = neonIntensity * (1 - i * 0.3);
         ctx.beginPath();
+<<<<<<< HEAD
         ctx.arc(x, y, size * (1 + i * 0.5), 0, Math.PI * 2);
+=======
+        ctx.arc(xysize * (1 + i * 0.5)0Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.strokeStyle = color;
         ctx.lineWidth = 1;
         ctx.stroke();
@@ -263,16 +384,24 @@ export default function UltraFuturisticBackground2037({
     };
 
     const drawQuantumParticle = (particle: any) => {
+<<<<<<< HEAD
       const { x, y, size, color, quantumState } = particle;
       
       ctx.save();
       ctx.translate(x, y);
+=======
+      const { xysizecolorquantumState } = particle;
+      
+      ctx.save();
+      ctx.translate(xy);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       // Quantum uncertainty visualization
       const uncertainty = Math.sin(quantumState) * 0.5 + 0.5;
       const radius = size * (1 + uncertainty);
       
       // Probability distribution
+<<<<<<< HEAD
       const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, radius * 2);
       gradient.addColorStop(0, `${color}80`);
       gradient.addColorStop(0.5, `${color}40`);
@@ -281,20 +410,39 @@ export default function UltraFuturisticBackground2037({
       ctx.fillStyle = gradient;
       ctx.beginPath();
       ctx.arc(0, 0, radius * 2, 0, Math.PI * 2);
+=======
+      const gradient = ctx.createRadialGradient(000radius * 2);
+      gradient.addColorStop(0`${color}80`);
+      gradient.addColorStop(0.5`${color}40`);
+      gradient.addColorStop(1'transparent');
+      
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(0radius * 20Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.fill();
       
       // Quantum state indicator
       ctx.strokeStyle = color;
       ctx.lineWidth = 2;
       ctx.beginPath();
+<<<<<<< HEAD
       ctx.arc(0, 0, size, 0, Math.PI * 2);
+=======
+      ctx.arc(0size0Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.stroke();
       
       // Quantum spin
       const spinAngle = quantumState * 3;
       ctx.beginPath();
+<<<<<<< HEAD
       ctx.moveTo(Math.cos(spinAngle) * size, Math.sin(spinAngle) * size);
       ctx.lineTo(Math.cos(spinAngle + Math.PI) * size, Math.sin(spinAngle + Math.PI) * size);
+=======
+      ctx.moveTo(Math.cos(spinAngle) * sizeMath.sin(spinAngle) * size);
+      ctx.lineTo(Math.cos(spinAngle + Math.PI) * sizeMath.sin(spinAngle + Math.PI) * size);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.stroke();
       
       ctx.restore();
@@ -304,10 +452,17 @@ export default function UltraFuturisticBackground2037({
     const animate = () => {
       if (prefersReducedMotion) return;
       
+<<<<<<< HEAD
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Update and draw particles
       particles.forEach((particle, index) => {
+=======
+      ctx.clearRect(0canvas.widthcanvas.height);
+      
+      // Update and draw particles
+      particles.forEach((particleindex) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Update particle properties
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -355,26 +510,43 @@ export default function UltraFuturisticBackground2037({
             ctx.fillStyle = particle.color;
             ctx.globalAlpha = particle.opacity;
             ctx.beginPath();
+<<<<<<< HEAD
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+=======
+            ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             ctx.fill();
         }
       });
       
       // Add quantum entanglement effects
       if (theme === 'quantum-neon' || theme === 'quantum') {
+<<<<<<< HEAD
         particles.forEach((particle1, i) => {
           particles.slice(i + 1).forEach((particle2) => {
             const distance = Math.sqrt(
               Math.pow(particle1.x - particle2.x, 2) + 
               Math.pow(particle1.y - particle2.y, 2)
+=======
+        particles.forEach((particle1i) => {
+          particles.slice(i + 1).forEach((particle2) => {
+            const distance = Math.sqrt(
+              Math.pow(particle1.x - particle2.x2) + 
+              Math.pow(particle1.y - particle2.y2)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             );
             
             if (distance < 100 && particle1.type === particle2.type) {
               ctx.strokeStyle = `${particle1.color}20`;
               ctx.lineWidth = 1;
               ctx.beginPath();
+<<<<<<< HEAD
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
+=======
+              ctx.moveTo(particle1.xparticle1.y);
+              ctx.lineTo(particle2.xparticle2.y);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               ctx.stroke();
             }
           });
@@ -394,16 +566,28 @@ export default function UltraFuturisticBackground2037({
     };
 
     if (typeof window !== 'undefined') {
+<<<<<<< HEAD
       window.addEventListener('resize', handleResize);
+=======
+      window.addEventListener(', 'resize', 'handleResize);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
 
     return () => {
       if (typeof window !== 'undefined') {
+<<<<<<< HEAD
         window.removeEventListener('resize', handleResize);
       }
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
+=======
+        window.removeEventListener(', 'resize', 'handleResize);
+      }
+      cancelAnimationFrame(animationFrameId);
+    };
+  }[]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div ref={containerRef} className="fixed inset-0 w-full h-full pointer-events-none">

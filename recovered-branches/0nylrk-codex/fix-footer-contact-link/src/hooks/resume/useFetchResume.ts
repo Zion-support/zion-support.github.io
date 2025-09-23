@@ -103,6 +103,10 @@ export function useFetchResume() {
       console.error('Error fetching resume:', e);
       setError(e.message);
       return null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsLoading(false);
     }
@@ -112,6 +116,10 @@ export function useFetchResume() {
     isLoading,
     error,
     resume,
+<<<<<<< HEAD
     fetchResume,
   };
+=======
+    fetchResume};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

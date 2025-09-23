@@ -2,7 +2,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import { ArrowLeft } from 'lucide-react';
+=======
+ArrowLeft
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface ProjectHeaderProps {
   title: string;

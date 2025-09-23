@@ -39,7 +39,10 @@ export interface SpaceMetaverseService2029 {
     address: string;
   };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
   {
     id: 'space-mining-automation-platform',

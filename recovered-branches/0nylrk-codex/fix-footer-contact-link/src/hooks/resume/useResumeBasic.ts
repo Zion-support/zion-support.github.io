@@ -16,6 +16,12 @@ export function useResumeBasic() {
     // From useResumeActions
     createResume: resumeActions.createResume,
     updateBasicInfo: resumeActions.updateBasicInfo,
+<<<<<<< HEAD
     setActiveResume: resumeActions.setActiveResume,
   };
 }
+=======
+    setActiveResume: resumeActions.setActiveResume};
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

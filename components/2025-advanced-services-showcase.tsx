@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
   Brain, Atom, Shield, Building, Globe,
   Users, TrendingUp, Award, Phone, Mail, MapPin
@@ -11,6 +16,17 @@ import {
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+=======
+  SearchListStarCheckCircleArrowRightCheck,
+  BrainShieldBuildingGlobe,
+  UsersTrendingUpAwardPhoneMailMapPin
+} from 'lucide-react';
+
+// Import our new service data
+// import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansionServices } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructure2025 } from '../data/2025-cutting-edge-it-infrastructure';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -20,16 +36,26 @@ const contactInfo = {
 };
 
 const allServices = [
+<<<<<<< HEAD
   ...advancedEnterpriseServices2025,
       ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices
+=======
+  // ...advancedEnterpriseServices2025,
+      ...innovativeMicroSaasExpansionServices,
+      ...cuttingEdgeITInfrastructure2025
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ];
 
 const categories = [
   {
     id: 'all',
     name: 'All Services',
+<<<<<<< HEAD
     icon: <Grid className="w-6 h-6" />,
+=======
+    icon: <List className="w-6 h-6" />,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     color: 'from-gray-500 to-slate-500',
     description: 'Complete portfolio of advanced services'
   },
@@ -64,7 +90,11 @@ const categories = [
   {
     id: 'quantum',
     name: 'Quantum Computing',
+<<<<<<< HEAD
     icon: <Atom className="w-6 h-6" />,
+=======
+    icon: <Brain className="w-6 h-6" />,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
@@ -89,10 +119,17 @@ const getServiceFeatures = (service: any) => {
 };
 
 export default function AdvancedServicesShowcase() {
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
+=======
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [searchTermsetSearchTerm] = useState('');
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [filteredServicesetFilteredServices] = useState(allServices);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     let filtered = allServices;
@@ -121,7 +158,11 @@ export default function AdvancedServicesShowcase() {
     }
 
     setFilteredServices(filtered);
+<<<<<<< HEAD
   }, [selectedCategory, searchTerm]);
+=======
+  }[selectedCategorysearchTerm]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -187,7 +228,11 @@ export default function AdvancedServicesShowcase() {
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
+<<<<<<< HEAD
             {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
+=======
+            {getServiceFeatures(service).slice(03).map((feature: stringindex: number) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div key={index} className="flex items-center gap-2">
                 <Check className="w-3 h-3 text-green-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -237,8 +282,13 @@ export default function AdvancedServicesShowcase() {
 
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
+<<<<<<< HEAD
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
+=======
+      initial={{ opacity: 0x: -20 }}
+      animate={{ opacity: 1x: 0 }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       transition={{ duration: 0.5 }}
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
@@ -301,7 +351,11 @@ export default function AdvancedServicesShowcase() {
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
+<<<<<<< HEAD
                   {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
+=======
+                  {getServiceFeatures(service).slice(04).map((feature: stringindex: number) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div key={index} className="flex items-center gap-2">
                       <Check className="w-3 h-3 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -349,8 +403,13 @@ export default function AdvancedServicesShowcase() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
+<<<<<<< HEAD
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
         keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
+=======
+        description="Discover our comprehensive portfolio of advanced AI servicesmicro SAAS solutionsand cutting-edge IT infrastructure. Realinnovativeand market-ready solutions for modern businesses."
+        keywords="AI servicesmicro SAASIT infrastructurequantum computingenterprise solutionsZion Tech Group"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       />
       
       {/* Hero Section */}
@@ -369,16 +428,27 @@ export default function AdvancedServicesShowcase() {
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
+=======
+              transition={{ duration: 0.8delay: 0.2 }}
+              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
+            >
+              Discover our comprehensive portfolio of realinnovativeand market-ready solutions. 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.4 }}
+=======
+              transition={{ duration: 0.8delay: 0.4 }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="flex items-center gap-2 text-white">
@@ -465,7 +535,11 @@ export default function AdvancedServicesShowcase() {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
+<<<<<<< HEAD
                   <Grid className="w-5 h-5" />
+=======
+                  <List className="w-5 h-5" />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -533,6 +607,17 @@ export default function AdvancedServicesShowcase() {
         {/* Services Grid/List */}
         <div className="space-y-6">
           {filteredServices.length === 0 ? (
+<<<<<<< HEAD
+=======
+            <div className='text-center py-12'>
+              <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>
+                🔍
+              </div>
+              <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
+                No services found
+              </h3>
+              <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.          {filteredServices.length === 0 ? (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="text-center py-12">
               <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">

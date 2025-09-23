@@ -4,6 +4,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext';
@@ -17,6 +18,19 @@ const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
 
 export function CurrencySelector() {
   const { currency, setCurrency } = useCurrency();
+=======
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import { useCurrencySupportedCurrency } from '@/context/CurrencyContext';
+DollarSign
+
+const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
+  { code: 'USD'symbol: '$' },
+  { code: 'EUR'symbol: '€' },
+  { code: 'GBP'symbol: '£' }];
+
+export function CurrencySelector() {
+  const { currencysetCurrency } = useCurrency();
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <DropdownMenu>

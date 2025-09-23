@@ -1,0 +1,20 @@
+export default function About() {
+  return <div className="p-6">About Zion</div>;
+}
+=======
+              </section>
+
+              <footer className="border-t border-white/20 pt-8 text-center">
+                <p className="text-white/60">
+                  Zion Tech Group — Pioneering autonomous innovation since 2025
+                </p>
+              </footer>
+            </article>
+          </div>
+>>>>>>> 0ae946bee62d031392f0f6f25b15cd207de60919
+        </main>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/build-failed-due-to-missing-dotenv-module-c691

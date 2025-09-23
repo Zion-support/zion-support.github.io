@@ -19,6 +19,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     profileImageUrl: 'https://i.pravatar.cc/300?img=1',
     portfolio: [
       { title: 'RAG Platform Template', url: 'https://example.com/rag' },
+<<<<<<< HEAD
       { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' },
     ],
     verified: true,
@@ -26,6 +27,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
     reviewsCount: 28,
     createdAt: new Date().toISOString(),
   },
+=======
+      { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],
+    verified: true,
+    rating: 4.9,
+    reviewsCount: 28,
+    createdAt: new Date().toISOString()},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'marco-silva',
     name: 'Marco Silva',
@@ -42,6 +50,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     availability: 'Part-time',
     profileImageUrl: 'https://i.pravatar.cc/300?img=2',
     portfolio: [
+<<<<<<< HEAD
       { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' },
     ],
     verified: true,
@@ -49,6 +58,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
     reviewsCount: 19,
     createdAt: new Date().toISOString(),
   },
+=======
+      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' }],
+    verified: true,
+    rating: 4.8,
+    reviewsCount: 19,
+    createdAt: new Date().toISOString()},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'nina-patel',
     name: 'Nina Patel',
@@ -68,8 +84,12 @@ export const TALENT_PROFILES: TalentProfile[] = [
     verified: false,
     rating: 4.7,
     reviewsCount: 12,
+<<<<<<< HEAD
     createdAt: new Date().toISOString(),
   },
+=======
+    createdAt: new Date().toISOString()},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'kenji-yamada',
     name: 'Kenji Yamada',
@@ -89,8 +109,12 @@ export const TALENT_PROFILES: TalentProfile[] = [
     verified: true,
     rating: 4.6,
     reviewsCount: 34,
+<<<<<<< HEAD
     createdAt: new Date().toISOString(),
   },
+=======
+    createdAt: new Date().toISOString()},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'lena-mueller',
     name: 'Lena Müller',
@@ -110,6 +134,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
     verified: false,
     rating: 4.5,
     reviewsCount: 9,
+<<<<<<< HEAD
     createdAt: new Date().toISOString(),
   },
 ];
+=======
+    createdAt: new Date().toISOString()}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

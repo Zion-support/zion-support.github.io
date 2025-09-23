@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 describe('sanity', () => {
   it('runs a basic assertion', () => {
     expect(1 + 1).toBe(2)
   })
 })
+=======
+describe("sanity",() => { it("runs a basic assertion",() => { expect(1 + 1).toBe(2) }) })''"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,12 +1,50 @@
+<<<<<<< HEAD
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run start',
       cwd: './',
+=======
+module.exports = {
+  apps: [
+    {
+<<<<<<< HEAD
+      name: 'auto-fix',
+      script: 'scripts/pm2/auto-fix.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: 'logs/pm2/auto-fix.log',
+      error_file: 'logs/pm2/auto-fix-error.log',
+      out_file: 'logs/pm2/auto-fix-out.log',
+    },
+    {
+      name: 'healthcheck',
+      script: 'scripts/pm2/healthcheck.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: 'logs/pm2/health.log',
+      error_file: 'logs/pm2/health-error.log',
+      out_file: 'logs/pm2/health-out.log',
+    },
+    {
+      name: 'code-quality-monitor',
+      script: 'scripts/pm2/code-quality-monitor.js',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -42,12 +80,27 @@
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.cjs',
+=======
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'code-quality-monitor',
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
+      },
+      log_file: 'logs/pm2/code-quality-monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out.log',
+    },
+    {
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -60,12 +113,26 @@
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
+=======
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+      },
+      log_file: 'logs/pm2/auto-commit-fixes.log',
+      error_file: 'logs/pm2/auto-commit-fixes-error.log',
+      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+    },
+    {
+      name: 'dependency-monitor',
+      script: 'scripts/pm2/dependency-monitor.js',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
@@ -84,11 +151,16 @@
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         PM2_PROCESS_NAME: 'dependency-monitor',
         AUTO_UPDATE_DEV: 'true',
         SECURITY_ALERTS: 'true',
       },
+<<<<<<< HEAD
       cron_restart: '0 0 * * 0', // Restart weekly on Sunday
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       log_file: 'logs/pm2/dependency-monitor.log',
       error_file: 'logs/pm2/dependency-monitor-error.log',
       out_file: 'logs/pm2/dependency-monitor-out.log',
@@ -106,6 +178,7 @@
         PERFORMANCE_THRESHOLD: '3000',
         BUNDLE_SIZE_LIMIT: '2MB',
       },
+<<<<<<< HEAD
       cron_restart: '0 */8 * * *', // Restart every 8 hours
       log_file: 'logs/pm2/performance-monitor.log',
       error_file: 'logs/pm2/performance-monitor-error.log',
@@ -449,4 +522,12 @@ module.exports = {}
   ];
 };
 >>>>>>> main
+=======
+      log_file: 'logs/pm2/performance-monitor.log',
+      error_file: 'logs/pm2/performance-monitor-error.log',
+      out_file: 'logs/pm2/performance-monitor-out.log',
+    }
+  ],
+};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

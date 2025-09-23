@@ -14,7 +14,10 @@ export interface Revolutionary2027MicroSaas {
     address: string;
   };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = [
   {
     id: "2027-revolutionary-micro-saas",

@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
+=======
+Loader2
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export interface LoadingOverlayProps {
   visible?: boolean;

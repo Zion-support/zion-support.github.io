@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface Innovative2026AIService {
   id: string;
   name: string;
@@ -40,7 +43,10 @@ export interface Innovative2026AIService {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
@@ -94,7 +100,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 950
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -147,7 +156,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 1100
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Cybersecurity Suite
   {
     id: 'ai-cybersecurity-suite',
@@ -200,7 +212,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 800
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation-suite',
@@ -253,7 +268,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.7,
     reviews: 1400
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Sales Intelligence
   {
     id: 'ai-sales-intelligence-platform',
@@ -307,3 +325,20 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950
   }
 ];
+<<<<<<< HEAD
+=======
+export const getPopularAIServices = () => {
+  return innovative2026AIServices.filter(service => service.popular);
+};
+export const getAIServicesByCategory = (category: string) => {
+  return innovative2026AIServices.filter(service => 
+    service.category.toLowerCase().includes(category.toLowerCase())
+  );
+};
+export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return innovative2026AIServices.filter(service => {
+    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice;
+  });
+};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

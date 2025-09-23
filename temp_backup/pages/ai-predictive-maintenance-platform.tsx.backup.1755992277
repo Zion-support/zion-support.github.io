@@ -1,0 +1,77 @@
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { 
+  Settings, Brain, Zap, Target, Award, Clock, TrendingUp, Eye,
+  Shield, Star, CheckCircle, Database, AlertTriangle, BarChart3
+} from 'lucide-react';
+
+const AIPredictiveMaintenancePlatform: React.FC = () => {
+  const platformFeatures = [
+    {
+      title: "Predictive Analytics",
+      icon: <Brain className="w-8 h-8 text-purple-400" />,
+      description: "Advanced AI algorithms that predict equipment failures before they occur",
+      features: [
+        "Machine learning failure prediction",
+        "Real-time sensor data analysis",
+        "Historical pattern recognition",
+        "Anomaly detection algorithms"
+      ]
+    },
+    {
+      title: "Maintenance Optimization",
+      icon: <Settings className="w-8 h-8 text-blue-400" />,
+      description: "Intelligent scheduling and resource allocation for maintenance operations",
+      features: [
+        "Optimal maintenance scheduling",
+        "Resource allocation optimization",
+        "Cost-benefit analysis",
+        "Preventive maintenance planning"
+      ]
+    },
+    {
+      title: "Real-time Monitoring",
+      icon: <Eye className="w-8 h-8 text-green-400" />,
+      description: "Continuous monitoring of equipment health and performance metrics",
+      features: [
+        "24/7 equipment monitoring",
+        "Performance metrics tracking",
+        "Alert and notification systems",
+        "Dashboard visualization"
+      ]
+    },
+    {
+      title: "Data Integration",
+      icon: <Database className="w-8 h-8 text-yellow-400" />,
+      description: "Seamless integration with existing systems and data sources",
+      features: [
+        "IoT sensor integration",
+        "ERP system connectivity",
+        "Cloud data storage",
+        "API integrations"
+      ]
+    }
+  ];
+
+export default function AiPredictiveMaintenancePlatformPage() {
+  return (
+    <>
+      <Head>
+        <title>Ai Predictive Maintenance Platform - Zion Tech Group</title>
+        <meta name="description" content="ai predictive maintenance platform page" />
+      </Head>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Ai Predictive Maintenance Platform</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home
+          </a>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AIPredictiveMaintenancePlatform;

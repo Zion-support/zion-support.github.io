@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+"use client";
+import React{ useState } from "react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export interface TreeNode {
   name: string;
@@ -13,8 +18,13 @@ interface TreeProps {
   onDeploy?: (path: string) => void;
 }
 
+<<<<<<< HEAD
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; onDeploy?: (path: string) => void }) {
   const [open, setOpen] = useState<boolean>(false);
+=======
+function NodeItem({ nodepthonDeploy }: { node: TreeNode; depth: number; onDeploy?: (path: string) => void }) {
+  const [opensetOpen] = useState<boolean>(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
@@ -25,6 +35,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
 
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`;
+<<<<<<< HEAD
     await fetch(url, {
       method: "POST",
       headers: {
@@ -34,6 +45,15 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
       } as any,
       body: JSON.stringify({ path: node.path }),
     });
+=======
+    await fetch(url{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // Expect an admin token in local storagefall back to prompt
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
+      body: JSON.stringify({ path: node.path })});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const deploy = () => onDeploy && onDeploy(node.path);
@@ -68,7 +88,11 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
   );
 }
 
+<<<<<<< HEAD
 export function Tree({ nodes, onDeploy }: TreeProps) {
+=======
+export function Tree({ nodesonDeploy }: TreeProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="w-full">
       {nodes.map((n) => (

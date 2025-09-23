@@ -91,7 +91,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -145,8 +144,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
             Discover cutting-edge AI insights, proven strategies, and actionable frameworks 
             that are transforming businesses worldwide in 2025.
 =======
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
-=======
 =======
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -163,7 +160,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
           </p>
         </motion.div>
 
-<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Main Content Slider */}
         <div className="relative mb-16">
@@ -325,9 +321,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resources
-=======
-=======
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {/* Blog Posts */}
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
@@ -537,11 +530,8 @@ const RevolutionaryContent2025Banner: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-510b
 >>>>>>> cursor/create-and-deploy-new-content-60fa
-=======
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
             </div>
           </div>
         </motion.div>

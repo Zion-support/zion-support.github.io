@@ -4,7 +4,11 @@
  * Coordinates all git sync automation scripts and provides a unified interface
  */
 
+<<<<<<< HEAD
 const { spawn } = require('child_process');
+=======
+const { execSync, spawn } = require('child_process');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const fs = require('fs');
 const path = require('path');
 
@@ -28,7 +32,11 @@ class EnhancedGitSyncOrchestrator {
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] ${message}`;
             console.log(logMessage);
+<<<<<<< HEAD
             try { fs.appendFileSync(this.logFile, logMessage + '\n'); } catch {}
+=======
+            fs.appendFileSync(this.logFile, logMessage + '\n');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         };
     }
 
@@ -72,6 +80,10 @@ class EnhancedGitSyncOrchestrator {
 
     async checkGitHealth() {
         this.log('🔍 Running git health check...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         try {
             const healthScript = path.join(this.scriptsDir, 'git-health-checker-simple.sh');
             if (fs.existsSync(healthScript)) {
@@ -91,6 +103,10 @@ class EnhancedGitSyncOrchestrator {
 
     async resolveConflicts() {
         this.log('🔄 Checking for conflicts...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         try {
             const conflictScript = path.join(this.scriptsDir, 'auto-conflict-resolver.sh');
             if (fs.existsSync(conflictScript)) {
@@ -99,11 +115,22 @@ class EnhancedGitSyncOrchestrator {
                 return true;
             } else {
                 this.log('⚠️  Conflict resolver script not found, checking manually...');
+<<<<<<< HEAD
                 const hasConflicts = await this.runCommand('grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.txt" 2>/dev/null || true', { logOutput: false });
+=======
+                
+                // Check for conflict markers
+                const hasConflicts = await this.runCommand('grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.txt" 2>/dev/null || true', { logOutput: false });
+                
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 if (hasConflicts.stdout.trim()) {
                     this.log('❌ Conflicts detected, manual resolution required');
                     return false;
                 }
+<<<<<<< HEAD
+=======
+                
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 this.log('✅ No conflicts detected');
                 return true;
             }
@@ -115,6 +142,10 @@ class EnhancedGitSyncOrchestrator {
 
     async performGitSync() {
         this.log('🚀 Starting enhanced git sync process...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         try {
             const syncScript = path.join(this.scriptsDir, 'enhanced-git-sync.sh');
             if (fs.existsSync(syncScript)) {
@@ -134,21 +165,47 @@ class EnhancedGitSyncOrchestrator {
 
     async basicGitSync() {
         this.log('🔄 Running basic git sync...');
+<<<<<<< HEAD
         try {
             const branchResult = await this.runCommand('git branch --show-current', { logOutput: false });
             const currentBranch = branchResult.stdout.trim();
             this.log(`📍 Current branch: ${currentBranch}`);
+=======
+        
+        try {
+            // Check current branch
+            const branchResult = await this.runCommand('git branch --show-current', { logOutput: false });
+            const currentBranch = branchResult.stdout.trim();
+            
+            this.log(`📍 Current branch: ${currentBranch}`);
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             if (currentBranch !== 'main') {
                 this.log('🔄 Switching to main branch...');
                 await this.runCommand('git checkout main');
             }
+<<<<<<< HEAD
             this.log('📥 Pulling latest changes...');
             await this.runCommand('git pull origin main');
             const hasConflicts = await this.runCommand('git status --porcelain | grep -E "^UU|^AA|^DD" || true', { logOutput: false });
+=======
+            
+            // Pull latest changes
+            this.log('📥 Pulling latest changes...');
+            await this.runCommand('git pull origin main');
+            
+            // Check for conflicts
+            const hasConflicts = await this.runCommand('git status --porcelain | grep -E "^UU|^AA|^DD" || true', { logOutput: false });
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             if (hasConflicts.stdout.trim()) {
                 this.log('❌ Conflicts detected after pull');
                 return false;
             }
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             this.log('✅ Basic git sync completed');
             return true;
         } catch (error) {
@@ -159,6 +216,10 @@ class EnhancedGitSyncOrchestrator {
 
     async cleanupGitLocks() {
         this.log('🧹 Cleaning up git locks...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         try {
             const locks = [
                 '.git/index.lock',
@@ -167,6 +228,10 @@ class EnhancedGitSyncOrchestrator {
                 '.git/merge-HEAD',
                 '.git/CHERRY_PICK_HEAD'
             ];
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             for (const lock of locks) {
                 if (fs.existsSync(lock)) {
                     if (fs.lstatSync(lock).isDirectory()) {
@@ -177,6 +242,10 @@ class EnhancedGitSyncOrchestrator {
                     this.log(`🗑️  Removed: ${lock}`);
                 }
             }
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             this.log('✅ Git locks cleaned up');
             return true;
         } catch (error) {
@@ -185,12 +254,38 @@ class EnhancedGitSyncOrchestrator {
         }
     }
 
+<<<<<<< HEAD
     async getSyncStatus() {
         this.log('📊 Getting sync status...');
+=======
+    async createBackupBranch() {
+        this.log('💾 Creating backup branch...');
+        
+        try {
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+            const backupBranch = `sync-backup-${timestamp}`;
+            
+            await this.runCommand(`git branch "${backupBranch}"`);
+            this.log(`✅ Backup branch created: ${backupBranch}`);
+            return backupBranch;
+        } catch (error) {
+            this.log(`❌ Failed to create backup branch: ${error.message}`);
+            return null;
+        }
+    }
+
+    async getSyncStatus() {
+        this.log('📊 Getting sync status...');
+        
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         try {
             const status = await this.runCommand('git status --porcelain', { logOutput: false });
             const branch = await this.runCommand('git branch --show-current', { logOutput: false });
             const remote = await this.runCommand('git remote -v', { logOutput: false });
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             const result = {
                 workingTreeClean: !status.stdout.trim(),
                 currentBranch: branch.stdout.trim(),
@@ -198,6 +293,10 @@ class EnhancedGitSyncOrchestrator {
                 modifiedFiles: status.stdout.split('\n').filter(line => line.trim()).length,
                 timestamp: new Date().toISOString()
             };
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             this.log(`📋 Sync status: ${JSON.stringify(result, null, 2)}`);
             return result;
         } catch (error) {
@@ -208,6 +307,10 @@ class EnhancedGitSyncOrchestrator {
 
     async runFullSync() {
         this.log('🚀 Starting full git sync orchestration...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         const startTime = Date.now();
         const results = {
             healthCheck: false,
@@ -216,6 +319,7 @@ class EnhancedGitSyncOrchestrator {
             totalTime: 0,
             errors: []
         };
+<<<<<<< HEAD
         try {
             this.log('📋 Step 1/4: Git Health Check');
             results.healthCheck = await this.checkGitHealth();
@@ -226,6 +330,28 @@ class EnhancedGitSyncOrchestrator {
             this.log('📋 Step 4/4: Git Sync');
             results.gitSync = await this.performGitSync();
             results.totalTime = Date.now() - startTime;
+=======
+        
+        try {
+            // Step 1: Health Check
+            this.log('📋 Step 1/4: Git Health Check');
+            results.healthCheck = await this.checkGitHealth();
+            
+            // Step 2: Clean up locks
+            this.log('📋 Step 2/4: Cleanup Git Locks');
+            await this.cleanupGitLocks();
+            
+            // Step 3: Conflict Resolution
+            this.log('📋 Step 3/4: Conflict Resolution');
+            results.conflictResolution = await this.resolveConflicts();
+            
+            // Step 4: Git Sync
+            this.log('📋 Step 4/4: Git Sync');
+            results.gitSync = await this.performGitSync();
+            
+            results.totalTime = Date.now() - startTime;
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             if (results.healthCheck && results.conflictResolution && results.gitSync) {
                 this.log('🎉 Full git sync orchestration completed successfully!');
                 this.log(`⏱️  Total time: ${results.totalTime}ms`);
@@ -233,18 +359,35 @@ class EnhancedGitSyncOrchestrator {
                 this.log('⚠️  Some steps failed during orchestration');
                 this.log(`📊 Results: ${JSON.stringify(results, null, 2)}`);
             }
+<<<<<<< HEAD
             return results;
         } catch (error) {
             results.errors.push(error.message);
             results.totalTime = Date.now() - startTime;
             this.log(`❌ Full sync orchestration failed: ${error.message}`);
             this.log(`📊 Results: ${JSON.stringify(results, null, 2)}`);
+=======
+            
+            return results;
+            
+        } catch (error) {
+            results.errors.push(error.message);
+            results.totalTime = Date.now() - startTime;
+            
+            this.log(`❌ Full sync orchestration failed: ${error.message}`);
+            this.log(`📊 Results: ${JSON.stringify(results, null, 2)}`);
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             return results;
         }
     }
 
     async generateReport() {
         this.log('📊 Generating sync report...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         try {
             const status = await this.getSyncStatus();
             const report = {
@@ -257,10 +400,20 @@ class EnhancedGitSyncOrchestrator {
                     message: status && status.workingTreeClean ? 'Repository is synced and clean' : 'Repository needs attention'
                 }
             };
+<<<<<<< HEAD
             const reportFile = path.join(this.logsDir, `sync-report-${Date.now()}.json`);
             fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
             this.log(`📄 Report saved to: ${reportFile}`);
             return report;
+=======
+            
+            const reportFile = path.join(this.logsDir, `sync-report-${Date.now()}.json`);
+            fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+            
+            this.log(`📄 Report saved to: ${reportFile}`);
+            return report;
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         } catch (error) {
             this.log(`❌ Failed to generate report: ${error.message}`);
             return null;
@@ -268,14 +421,24 @@ class EnhancedGitSyncOrchestrator {
     }
 }
 
+<<<<<<< HEAD
 async function main() {
     const orchestrator = new EnhancedGitSyncOrchestrator();
     const command = process.argv[2] || 'full-sync';
+=======
+// CLI interface
+async function main() {
+    const orchestrator = new EnhancedGitSyncOrchestrator();
+    
+    const command = process.argv[2] || 'full-sync';
+    
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     try {
         switch (command) {
             case 'health-check':
                 await orchestrator.checkGitHealth();
                 break;
+<<<<<<< HEAD
             case 'resolve-conflicts':
                 await orchestrator.resolveConflicts();
                 break;
@@ -294,6 +457,33 @@ async function main() {
             case 'report':
                 await orchestrator.generateReport();
                 break;
+=======
+                
+            case 'resolve-conflicts':
+                await orchestrator.resolveConflicts();
+                break;
+                
+            case 'cleanup-locks':
+                await orchestrator.cleanupGitLocks();
+                break;
+                
+            case 'basic-sync':
+                await orchestrator.basicGitSync();
+                break;
+                
+            case 'full-sync':
+                await orchestrator.runFullSync();
+                break;
+                
+            case 'status':
+                await orchestrator.getSyncStatus();
+                break;
+                
+            case 'report':
+                await orchestrator.generateReport();
+                break;
+                
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             default:
                 console.log('Available commands:');
                 console.log('  health-check     - Run git health check');
@@ -311,9 +501,16 @@ async function main() {
     }
 }
 
+<<<<<<< HEAD
+=======
+// Run if called directly
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 if (require.main === module) {
     main();
 }
 
 module.exports = EnhancedGitSyncOrchestrator;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

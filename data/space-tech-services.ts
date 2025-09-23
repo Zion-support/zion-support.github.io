@@ -38,7 +38,10 @@ export interface SpaceTechService {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const spaceTechServices: SpaceTechService[] = [
   {
     id: 'space-mission-management-platform',

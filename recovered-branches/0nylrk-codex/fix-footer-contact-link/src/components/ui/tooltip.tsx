@@ -12,7 +12,11 @@ const TooltipTrigger = TooltipPrimitive.Trigger
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
+<<<<<<< HEAD
 >(({ className, sideOffset = 4, ...props }, ref) => (
+=======
+>(({ classNamesideOffset = 4...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <TooltipPrimitive.Content
     ref={ref}
     sideOffset={sideOffset}
@@ -25,4 +29,8 @@ const TooltipContent = React.forwardRef<
 ))
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 
+<<<<<<< HEAD
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+=======
+export { TooltipTriggerTooltipContentTooltipProvider }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

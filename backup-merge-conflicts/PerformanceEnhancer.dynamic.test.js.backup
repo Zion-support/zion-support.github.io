@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/PerformanceEnhancer.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:__tests__/PerformanceEnhancer.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/PerformanceEnhancer.dynamic.test.js
 import React from 'react';
@@ -24,7 +28,11 @@ describe('PerformanceEnhancerdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceEnhancerdynamic from "./components/PerformanceEnhancer.dynamic"; describe("PerformanceEnhancerdynamic",() => { test("renders without crashing",() => { render(<PerformanceEnhancerdynamic />); expect( screen.getByTestId("performanceenhancer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceEnhancerdynamic />)}); test("handles user interactions",() => { render(<PerformanceEnhancerdynamic />)}); test("applies correct styling",() => { render(<PerformanceEnhancerdynamic />)})});''"
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:__tests__/PerformanceEnhancer.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import PerformanceEnhancerdynamic from '../components/PerformanceEnhancer.dynamic'; describe('PerformanceEnhancerdynamic',() => { test('renders without crashing',() => { render(<PerformanceEnhancerdynamic />); expect( screen.getByTestId('performanceenhancer.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<PerformanceEnhancerdynamic />)}); test('handles user interactions',() => { render(<PerformanceEnhancerdynamic />)}); test('applies correct styling',() => { render(<PerformanceEnhancerdynamic />)})});
 >>>>>>> main
 =======
