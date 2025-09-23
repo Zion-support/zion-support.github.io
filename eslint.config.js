@@ -84,6 +84,7 @@ export default [
       'zion-os.disabled/**',
       'zion-website/.next/**',
       'zion-os/.next/**',
+      // Exclude non-root apps and alt projects
       'zion.app/**',
       'zion_academy/**',
       // Additional ignores to avoid linting backups/alt projects
@@ -92,8 +93,17 @@ export default [
       'src-corrupted/**',
       'src.corrupted/**',
       'src.disabled/**',
-      // Broad excludes for noisy or legacy dirs not part of active root app
-      'src/**',
+      // Backup and disabled pages
+      'pages.broken/**',
+      'pages.corrupted*/**',
+      'pages_backup_before_cleanup/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'pages.disabled*/**',
+      'pages.old/**',
+      'pages.bak/**',
+      // Legacy or experimental directories not part of active build
       'pages_backup/**',
       'tests/**',
       'test/**',
@@ -106,10 +116,18 @@ export default [
       'test_build/**',
       '**/__tests__/**',
       'src.pages.disabled/**',
+      // Type definition and utilities can be noisy; opt-out of lint by default
       'types/**',
       'types.disabled/**',
       'utils/**',
       'utils.disabled/**',
+      // Exclude backend server and functions from frontend lint scope
+      'server/**',
+      'supabase/**',
+      // Exclude standalone services and solution content outside app scope
+      'services/**',
+      'solutions.disabled/**',
+      'solutions/**',
       'zion-os/**',
       'zion-website/**',
       'zion-ai-assistant/**',
@@ -119,7 +137,6 @@ export default [
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
       'apps.backup/**',
-      'pages.disabled*/**',
       'temp_*/**',
       'temp-*/**',
       'temp/**',
