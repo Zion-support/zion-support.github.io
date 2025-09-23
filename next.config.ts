@@ -94,7 +94,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-<<<<<<<< HEAD:next.config.cjs.bak
-========
-
->>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5518:next.config.ts

@@ -1,39 +1,17 @@
-<<<<<<< HEAD
-"use client";
+'use client';
 
 import React from 'react';
 
-<<<<<<< HEAD
-type StructuredDataProps = {
-	type: string;
-	data: Record<string, unknown>;
-=======
 interface StructuredDataProps {
-  type: string;
-  data: Record<string, unknown>;
+	type: string;
+	data: unknown;
 }
-
-const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data,
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
-};
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": type,
-		...data,
+		...(data as Record<string, unknown>),
 	};
 	return (
 		<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -78,28 +56,3 @@ export const serviceSchema = {
   description: 'Comprehensive AI solutions, cloud computing, and digital transformation services to transform your business.',
   serviceType: 'Technology Services'
 };
-=======
-'use client';
-
-import React from 'react';
-
-interface StructuredDataProps {
-	type: string;
-	data: unknown;
-}
-
-export default function StructuredData({ type, data }: StructuredDataProps) {
-	const structuredData = {
-		'@context': 'https://schema.org',
-		'@type': type,
-		...data,
-	};
-
-	return (
-		<script
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-		/>
-	);
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
