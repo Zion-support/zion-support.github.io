@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
-  },
-  outputFileTracingRoot: __dirname
-}
+	eslint: {
+		ignoreDuringBuilds: true,
+		dirs: ['app', 'lib'],
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	outputFileTracingRoot: process.cwd(),
+};
 
-module.exports = nextConfig
+export default nextConfig;
