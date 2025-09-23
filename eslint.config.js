@@ -86,13 +86,7 @@ export default [
       'zion-os/.next/**',
       'zion.app/**',
       'zion_academy/**',
-      // Additional ignores to avoid linting backups/alt projects
-      'ts_files_backup/**',
-      'src.broken/**',
-      'src-corrupted/**',
-      'src.corrupted/**',
-      'src.disabled/**',
-      // Broken/corrupted/archived page directories
+      // Additional ignores to avoid linting backups/alt projects and broken/corrupted/archived directories
       'pages.broken/**',
       'pages.bak/**',
       'pages._quarantine/**',
@@ -106,9 +100,17 @@ export default [
       'pages.disabled/**',
       'pages_disabled/**',
       'pages_api.disabled/**',
+      'pages.disabled_auto/**',
+      'pages.disabled_full/**',
+      'pages_backup/**',
+      'solutions.disabled/**',
+      'ts_files_backup/**',
+      'src.broken/**',
+      'src-corrupted/**',
+      'src.corrupted/**',
+      'src.disabled/**',
       // Broad excludes for noisy or legacy dirs not part of active root app
       'src/**',
-      'pages_backup/**',
       'tests/**',
       'test/**',
       'test*/**',
@@ -147,6 +149,9 @@ export default [
       // Generic backup/archival files
       '**/*backup*.*',
       '**/*.backup.*',
+      '**/*.cleanup-backup.*',
+      '**/*.disabled.*',
+      '**/*.corrupted*',
       'temp_*/**',
       'temp-*/**',
       'temp/**',
