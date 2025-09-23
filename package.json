@@ -58,7 +58,10 @@
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@next/bundle-analyzer": "^14.2.0",
+<<<<<<< HEAD
+=======
     "@next/swc-linux-x64-gnu": "^15.5.3",
+>>>>>>> cursor/check-fix-push-and-merge-to-main-7e10
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
