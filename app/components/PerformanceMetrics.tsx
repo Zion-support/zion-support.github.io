@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 
 interface Metric {
   label: string;
@@ -9,7 +9,7 @@ interface Metric {
   trend: 'up' | 'down' | 'stable';
 }
 
-export default function PerformanceMetrics() {
+const PerformanceMetrics = memo(function PerformanceMetrics() {
   const [metrics] = useState<Metric[]>([
     { label: 'Response Time', value: '45ms', change: -12, trend: 'up' },
     { label: 'Uptime', value: '99.9%', change: 0.1, trend: 'up' },
@@ -104,4 +104,6 @@ export default function PerformanceMetrics() {
       </div>
     </div>
   );
-}
+});
+
+export default PerformanceMetrics;

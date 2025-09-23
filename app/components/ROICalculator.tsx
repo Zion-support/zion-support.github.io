@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo, useCallback } from 'react';
 
 interface ROIData {
   investment: number;
@@ -8,7 +8,7 @@ interface ROIData {
   timeframe: number;
 }
 
-export default function ROICalculator() {
+const ROICalculator = memo(function ROICalculator() {
   const [data, setData] = useState<ROIData>({
     investment: 50000,
     monthlySavings: 15000,
@@ -35,11 +35,11 @@ export default function ROICalculator() {
     return null;
   };
 
-  const handleInputChange = (field: keyof ROIData, value: number) => {
+  const handleInputChange = useCallback((field: keyof ROIData, value: number) => {
     const error = validateInput(field, value);
     setErrors(prev => ({ ...prev, [field]: error || '' }));
     setData(prev => ({ ...prev, [field]: value }));
-  };
+  }, []);
 
   return (
     <div className={`space-y-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -182,4 +182,6 @@ export default function ROICalculator() {
       </div>
     </div>
   );
-}
+});
+
+export default ROICalculator;
