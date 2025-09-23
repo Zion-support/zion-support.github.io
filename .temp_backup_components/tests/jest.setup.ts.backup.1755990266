@@ -1,0 +1,4 @@
+// Polyfill fetch and enable fetch mocks;
+import whatwg-fetch';import fetchMock from jest-fetch-mock';fetchMock.enableMocks();
+
+>>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
