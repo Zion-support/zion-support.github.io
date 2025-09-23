@@ -11,7 +11,7 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next build --no-lint",
     "start": "next start",
-    "lint": "eslint \"app/**/*.{js,jsx,ts,tsx}\" \"components/**/*.{js,jsx,ts,tsx}\" \"src/**/*.{js,jsx,ts,tsx}\" \"providers/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint .",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
@@ -84,8 +84,7 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-    "typescript": "5.9.2",
-    "typescript-eslint": "^8.44.1"
+    "typescript": "^5.9.2"
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
@@ -95,52 +94,6 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1"
     },
-    "modulePathIgnorePatterns": [
-      "<rootDir>/automation/",
-      "<rootDir>/automation/backups/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/backup/",
-      "<rootDir>/backups/",
-      "<rootDir>/src.broken/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/server/",
-      "<rootDir>/src.disabled/",
-      "<rootDir>/components.disabled/",
-      "<rootDir>/pages.disabled/",
-      "<rootDir>/ts_files_backup/",
-      "<rootDir>/__tests__/",
-      "<rootDir>/tests/",
-      "<rootDir>/test/",
-      "<rootDir>/zion-os/",
-      "<rootDir>/zion-os.disabled/",
-      "<rootDir>/zion-ai-assistant/"
-    ],
-    "watchPathIgnorePatterns": [
-      "<rootDir>/automation/",
-      "<rootDir>/automation/backups/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/backup/",
-      "<rootDir>/backups/",
-      "<rootDir>/src.broken/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/server/",
-      "<rootDir>/src.disabled/",
-      "<rootDir>/components.disabled/",
-      "<rootDir>/pages.disabled/",
-      "<rootDir>/ts_files_backup/",
-      "<rootDir>/__tests__/",
-      "<rootDir>/tests/",
-      "<rootDir>/test/",
-      "<rootDir>/zion-os/",
-      "<rootDir>/zion-os.disabled/",
-      "<rootDir>/zion-ai-assistant/"
-    ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
         "babel-jest",
@@ -151,36 +104,7 @@
         }
       ]
     },
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/.next/",
-      "<rootDir>/automation/",
-      "<rootDir>/automation/backups/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/backup/",
-      "<rootDir>/backups/",
-      "<rootDir>/src.broken/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/server/",
-      "<rootDir>/src.disabled/",
-      "<rootDir>/components.disabled/",
-      "<rootDir>/pages.disabled/",
-      "<rootDir>/ts_files_backup/",
-      "<rootDir>/__tests__/",
-      "<rootDir>/tests/",
-      "<rootDir>/test/",
-      "<rootDir>/temp_backup/",
-      "<rootDir>/pages.bak/",
-      "<rootDir>/tests.disabled/",
-      "<rootDir>/e2e/",
-      ".*",
-      "<rootDir>/zion-os/",
-      "<rootDir>/zion-os.disabled/",
-      "<rootDir>/zion-ai-assistant/"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "/.next/"]
   },
   "packageManager": "npm@11.6.0"
 }
