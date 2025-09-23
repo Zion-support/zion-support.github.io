@@ -214,8 +214,6 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -678,7 +676,6 @@ export default function HomePage() {
       ]
       gradient: &quot;bg-gradient-to-r from-indigo-600 to-blue-600&quot;
 =======
->>>>>>> 10dff0b6745e (feat(content): add new blog posts and homepage blog section; resolve homepage conflicts)
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
