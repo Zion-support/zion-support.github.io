@@ -9,7 +9,19 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
+  },
+  experimental: {
+    optimizePackageImports: ['@heroicons/react', 'lucide-react'],
+  },
+  images: {
+    formats: ['image/webp', 'image/avif'],
+  },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  httpAgentOptions: {
+    keepAlive: true,
   },
 };
 
