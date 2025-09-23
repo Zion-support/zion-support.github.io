@@ -192,6 +192,13 @@ export default function Navigation() {
               </div>
             ))}
             <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded p-2"
+                aria-label="Open search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
               <ThemeToggle />
               <Link 
                 href="/contact" 
@@ -291,6 +298,39 @@ export default function Navigation() {
           </div>
         )}
       </div>
+
+      {/* Search Overlay */}
+      {isSearchOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-32">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 w-full max-w-2xl mx-4">
+            <form onSubmit={handleSearch} className="relative">
+              <div className="flex items-center gap-4">
+                <Search className="w-6 h-6 text-gray-400" />
+                <input
+                  ref={searchRef}
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services, solutions, or topics..."
+                  className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+                  aria-label="Search input"
+                />
+                <button
+                  type="button"
+                  onClick={() => setIsSearchOpen(false)}
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Close search"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+            </form>
+            <div className="mt-4 text-sm text-gray-400">
+              Try searching for "AI", "Cloud", "Security", or "Analytics"
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
