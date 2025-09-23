@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-export default function PricingPage() {
-	return (
-		<div className="min-h-screen py-20 px-4">
-			<div className="max-w-5xl mx-auto">
-				<h1 className="text-3xl font-bold mb-4">Pricing</h1>
-				<p className="text-zinc-500">Contact us for a tailored quote.</p>
-			</div>
-		</div>
-	);
-}
-=======
 "use client";
 
 import { useState } from "react";
@@ -39,38 +27,69 @@ const servicePricing: ServicePricing[] = [
     serviceName: "Zion OS Platform",
     category: "Core Platform",
     description: "Unified deployment protocol for sovereign AI-powered digital economies",
-    features: ["Instance deployment", "Feature toggles", "Multi-vertical support", "Governance systems", "API management", "Multi-region support"],
-    benefits: ["Reduce deployment time from months to minutes", "Built-in compliance and governance", "Scalable architecture"],
+    features: [
+      "Instance deployment",
+      "Feature toggles",
+      "Multi-vertical support",
+      "Governance systems",
+      "API management",
+      "Multi-region support",
+    ],
+    benefits: [
+      "Reduce deployment time from months to minutes",
+      "Built-in compliance and governance",
+      "Scalable architecture",
+    ],
     tiers: [
       {
         name: "Starter",
         price: "$99",
         period: "/month",
         description: "Perfect for small businesses and startups",
-        features: ["Up to 3 instances", "Basic feature set", "Community support", "Standard deployment", "Basic analytics"],
+        features: [
+          "Up to 3 instances",
+          "Basic feature set",
+          "Community support",
+          "Standard deployment",
+          "Basic analytics",
+        ],
         cta: "Start Free Trial",
-        ctaLink: "/multiverse/launch"
+        ctaLink: "/multiverse/launch",
       },
       {
         name: "Professional",
         price: "$299",
         period: "/month",
         description: "Ideal for growing businesses",
-        features: ["Up to 10 instances", "Advanced features", "Priority support", "Custom domains", "Advanced analytics", "API access"],
+        features: [
+          "Up to 10 instances",
+          "Advanced features",
+          "Priority support",
+          "Custom domains",
+          "Advanced analytics",
+          "API access",
+        ],
         popular: true,
         cta: "Get Started",
-        ctaLink: "/multiverse/launch"
+        ctaLink: "/multiverse/launch",
       },
       {
         name: "Enterprise",
         price: "$999",
         period: "/month",
         description: "For large organizations with complex needs",
-        features: ["Unlimited instances", "All features", "24/7 support", "Custom integrations", "White-label options", "Dedicated account manager"],
+        features: [
+          "Unlimited instances",
+          "All features",
+          "24/7 support",
+          "Custom integrations",
+          "White-label options",
+          "Dedicated account manager",
+        ],
         cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
-      }
-    ]
+        ctaLink: "mailto:kleber@ziontechgroup.com",
+      },
+    ],
   },
   {
     serviceName: "ZionGPT Core",
@@ -254,14 +273,21 @@ const servicePricing: ServicePricing[] = [
   }
 ];
 
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
+const categories = [
+  "All",
+  "Core Platform",
+  "AI Services",
+  "IT Services",
+  "E-commerce & Services",
+];
 
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredServices = selectedCategory === "All" 
-    ? servicePricing 
-    : servicePricing.filter(service => service.category === selectedCategory);
+  const filteredServices =
+    selectedCategory === "All"
+      ? servicePricing
+      : servicePricing.filter((service) => service.category === selectedCategory);
 
   return (
     <div className="space-y-8">
@@ -275,14 +301,14 @@ export default function PricingPage() {
       {/* Category Filter */}
       <div className="flex justify-center">
         <div className="flex flex-wrap gap-2 bg-zinc-800 rounded-lg p-1">
-          {categories.map(category => (
+          {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-blue-600 text-white'
-                  : 'text-gray-300 hover:text-white hover:bg-zinc-700'
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-300 hover:text-white hover:bg-zinc-700"
               }`}
             >
               {category}
@@ -332,9 +358,7 @@ export default function PricingPage() {
                 <div
                   key={tierIndex}
                   className={`relative border rounded-lg p-6 ${
-                    tier.popular
-                      ? 'border-blue-500 bg-blue-500/10'
-                      : 'border-white/10'
+                    tier.popular ? "border-blue-500 bg-blue-500/10" : "border-white/10"
                   }`}
                 >
                   {tier.popular && (
@@ -368,8 +392,8 @@ export default function PricingPage() {
                       href={tier.ctaLink}
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${
                         tier.popular
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                          : 'bg-zinc-700 hover:bg-zinc-600 text-white'
+                          ? "bg-blue-600 hover:bg-blue-700 text-white"
+                          : "bg-zinc-700 hover:bg-zinc-600 text-white"
                       }`}
                     >
                       {tier.cta}
@@ -415,9 +439,7 @@ export default function PricingPage() {
       {/* Contact Information */}
       <div className="text-center space-y-4">
         <h2 className="text-2xl font-bold">Questions About Pricing?</h2>
-        <p className="opacity-80">
-          Our team is here to help you choose the right plan for your business.
-        </p>
+        <p className="opacity-80">Our team is here to help you choose the right plan for your business.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h3 className="font-semibold">Phone</h3>
@@ -436,4 +458,3 @@ export default function PricingPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
