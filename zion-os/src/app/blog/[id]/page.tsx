@@ -12,7 +12,6 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-
   'enterprise-agent-safety-2025': {
     id: 'enterprise-agent-safety-2025',
     title: 'Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale',
@@ -23,7 +22,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     date: '2025-09-15',
     readTime: '9 min read',
     content: [
-
       'Enterprises are moving beyond pilots to production-scale autonomous agents. Safety must progress from guidelines to executable controls.',
       'This playbook introduces an agent safety stack: identity and permissions, intent verification, bounded tools, rate limits, escalation paths, and forensic logging.',
       'We outline a phased rollout with measurable KPIs and show how to blend policy-as-code with exception workflows to preserve velocity without sacrificing safety.'
@@ -35,22 +33,13 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     excerpt:
       'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
     category: 'AI Governance',
-=======
-  'agent-safety-guardrails-2025': {
-    id: 'agent-safety-guardrails-2025',
-    title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
-    excerpt:
-      'Practical blueprints for policy engines, intervention strategies, and auditable controls that keep autonomous agents safe and aligned.',
-    category: 'AI Solutions',
->>>>>>> cursor/create-and-deploy-new-content-4789
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
     readTime: '8 min read',
     content: [
-
-      'As autonomous agents take on higher-stakes actions, safety guardrails must be first-class citizens in system design. Organizations need layered defenses that combine policy engines, runtime monitors, and human-in-the-loop approvals for sensitive operations.',
-      'We present a reference architecture: (1) capability declarations and allowlists, (2) contextual policy checks with verifiable logs, (3) graded interventions from soft prompts to hard blocks, and (4) incident review loops to improve future behavior.',
-      'This article includes example policies, red-team scenarios, and rollout guidance to incrementally raise autonomy while preserving control and accountability.'
+      'Organizations need governance that scales with autonomy. We propose a dual-layer model: guardrails enforced by policy engines and human oversight for exceptions.',
+      'We share practical templates for policy-as-code, escalation workflows, and telemetry-driven audits that keep systems compliant without blocking delivery.',
+      'Case studies illustrate measurable outcomes: reduced incident rates, faster approvals, and improved stakeholder confidence.'
     ]
   },
   'edge-ai-agents-2025': {
@@ -66,129 +55,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
       'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
       'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
-=======
-  'ai-foundation-models-2025': {
-    id: 'ai-foundation-models-2025',
-    title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
-    excerpt:
-      'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
-    category: 'AI Solutions',
-    author: 'Dr. David Kim',
-    date: '2025-09-15',
-    readTime: '9 min read',
-    content: [
-      'Foundation models are moving from experimentation to production impact. The winners standardize adaptation recipes, evaluation harnesses, and policy guardrails across teams.',
-      'This guide covers reference patterns: retrieval-augmented generation for knowledge workflows, constrained generation for operations, and tool-use orchestration for complex tasks.',
-      'We include governance checklists: model cards, test sets, bias audits, safety red-teaming, and continuous telemetry to ensure reliable performance at scale.'
     ]
-  },
-  'enterprise-agent-guardrails': {
-    id: 'enterprise-agent-guardrails',
-    title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
-    excerpt:
-      'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
-    category: 'Cybersecurity',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-14',
-    readTime: '8 min read',
-    content: [
-      'As AI agents gain autonomy, enterprises must enforce identity, authorization, and policy to avoid costly incidents.',
-      'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
-      'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
->>>>>>> origin/chore/add-blog-content-and-promote
-    ]
-  },
-  'sovereign-ai-commerce-2025': {
-    id: 'sovereign-ai-commerce-2025',
-    title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
-    excerpt:
-      'A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.',
-    category: 'AI Solutions',
-    author: 'Dr. Kleber Santos',
-    date: '2025-09-15',
-    readTime: '9 min read',
-    content: [
-      'Sovereign AI commerce represents the convergence of autonomous decision systems, verifiable identity, and programmable markets. With Zion OS, organizations can deploy marketplaces that self-orchestrate supply, demand, and policy without central bottlenecks.',
-      'In this guide, we outline a phased approach: start with identity and governance, introduce autonomous listing and matching, then activate treasury and incentive policies. Each phase is measurable and reversible, ensuring safe rollout.',
-      'Key building blocks include: DID-backed identity, reputation scoring, policy engines, event-driven orchestration, and human-in-the-loop controls for sensitive actions.',
-      'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
-    ],
-  },
-  'quantum-risk-modeling-2025': {
-    id: 'quantum-risk-modeling-2025',
-    title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
-    excerpt:
-      'How near-term quantum techniques are improving portfolio optimization, risk calculations, and stress testing today.',
-    category: 'Quantum Computing',
-    author: 'Dr. Sarah Chen',
-    date: '2025-09-10',
-    readTime: '10 min read',
-    content: [
-      'Quantum-inspired and hybrid quantum-classical methods are already delivering measurable improvements in risk simulations and portfolio construction. While fully fault-tolerant systems are years away, financial institutions can adopt pragmatic techniques now.',
-      'In this article, we cover how to prioritize use cases, evaluate vendors, and set up pilot programs with clear KPIs. We also discuss governance, model validation, and compliance considerations for regulated environments.',
-      'Key takeaways include: selecting high-leverage problems (e.g., optimization under constraints), building hybrid pipelines, and establishing an experimentation framework that preserves auditability.'
-    ]
-  },
-  'autonomous-it-operations': {
-    id: 'autonomous-it-operations',
-    title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
-    excerpt:
-      'A blueprint for deploying AI-driven observability, incident response, and remediation to cut MTTR and improve reliability.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-05',
-    readTime: '7 min read',
-    content: [
-      'Autonomous IT Operations combines event-driven automation, policy engines, and AI-assisted diagnostics to identify and remediate incidents before customers are impacted.',
-      'We outline a maturity path: instrument, detect, diagnose, act. Each phase increases automation confidence while keeping humans in control for high-risk actions.',
-      'Early adopters report reductions in MTTR of 40–60% and fewer out-of-hours escalations, freeing engineers to focus on proactive improvements.'
-    ]
-  },
-  'secure-agent-marketplaces': {
-    id: 'secure-agent-marketplaces',
-    title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
-    excerpt:
-      'Design principles for trustworthy multi-agent ecosystems, covering identity verification, reputation scoring, and safety policies.',
-    category: 'Cybersecurity',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-02',
-    readTime: '8 min read',
-    content: [
-      'As AI agents transact and collaborate, marketplaces must enforce identity, reputation, and policy to mitigate fraud and abuse.',
-      'This guide covers DID-backed identity, attestations, dispute resolution, and graded trust. We include reference architectures and rollout strategies for enterprise environments.',
-      'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
-    ]
-  },
-  'agentic-supply-chains-2025': {
-    id: 'agentic-supply-chains-2025',
-    title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
-    excerpt:
-      'How autonomous agents coordinate forecasting, procurement, and fulfillment across complex supply networks with measurable SLAs.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-15',
-    readTime: '9 min read',
-    content: [
-      'Agentic supply chains use autonomous services to continuously sense, decide, and act across planning, sourcing, and delivery.',
-      'This article outlines a reference architecture with policy-guarded agents for demand sensing, supplier negotiation, and dynamic routing.',
-      'We discuss safety rails, exception paths, and how to phase adoption starting with constrained pilots and expanding by maturity.'
-    ]
-  },
-  'genai-productivity-benchmarks-2025': {
-    id: 'genai-productivity-benchmarks-2025',
-    title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
-    excerpt:
-      'A practical benchmarking framework to quantify time savings, quality lift, and ROI from GenAI-assisted workflows.',
-    category: 'Research & Development',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-13',
-    readTime: '8 min read',
-    content: [
-      'Organizations need consistent methods to measure the impact of GenAI on knowledge and operational work.',
-      'We propose task archetypes, gold standards, evaluation rubrics, and cost models to compare tools apples-to-apples.',
-      'The framework enables portfolio-level governance and investment decisions grounded in observable outcomes.'
-    ]
-  },
+  }
 };
 
 export function generateStaticParams() {

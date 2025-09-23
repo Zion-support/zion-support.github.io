@@ -22,10 +22,6 @@ export default function SignUpPage() {
       setIsLoading(false);
       return;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
     try {
       await register(name, email, password);
     } catch (error) {
@@ -150,8 +146,4 @@ export default function SignUpPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
