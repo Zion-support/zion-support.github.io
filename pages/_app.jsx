@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import '../styles/globals.css'
+import PerformanceMonitor from '../components/PerformanceMonitor'
+import AccessibilityHelper from '../components/AccessibilityHelper'
 
 function MyApp({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false)
