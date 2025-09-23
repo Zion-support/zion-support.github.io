@@ -1,11 +1,12 @@
+import React, { lazy, Suspense } from 'react'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import AnimatedCounter from './components/AnimatedCounter'
 import ScrollReveal from './components/ScrollReveal'
+import LoadingSpinner from './components/LoadingSpinner'
 
 // Import new advanced AI components
 import AdvancedAIAssistant from './components/AdvancedAIAssistant';
@@ -37,11 +38,17 @@ import NewContentPromotionBanner from './components/NewContentPromotionBanner';
 import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
 import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
 import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
+// Fallback to components in /components when not present in /app/components
+import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
+import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
+import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
+import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
+import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
 import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
-import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
+// import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
 import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
@@ -52,9 +59,10 @@ import NewContent2025PromotionBanner from './components/NewContent2025PromotionB
 import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
 
 // Import new AI 2026 promotional components
-import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
-import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
+// Local component variants (may not exist in app/components)
+// import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
+// import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
+// import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
 
@@ -65,8 +73,7 @@ import WhatsNewStrip from './components/WhatsNewStrip';
 // Import new 2025 quantum AI promotional components
 
 // Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
+// import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
