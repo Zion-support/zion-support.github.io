@@ -1,9 +1,74 @@
-export default function Page() {
+export default function HomePage() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">Home</h1>
-      <p className="text-gray-600">Content coming soon.</p>
+    <main style={{ padding: "2rem" }}>
+      <h1>Zion OS</h1>
+      <p>Modern operating system for enterprise applications.</p>
     </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

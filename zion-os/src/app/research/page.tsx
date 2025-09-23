@@ -1,9 +1,27 @@
-export default function Page() {
+export default function ResearchPage() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">research</h1>
-      <p className="text-gray-600">Content coming soon.</p>
+    <main style={{ padding: "2rem" }}>
+      <h1>Research</h1>
+      <p>Latest research and innovation at Zion.</p>
     </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
