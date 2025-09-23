@@ -115,7 +115,6 @@ function getPriceValue(price: Service['price']): string {
 }
 
 function getAllServices(): Service[] {
-<<<<<<< HEAD
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -150,81 +149,6 @@ function getAllServices(): Service[] {
 		.concat(realMarketServices as unknown as Service[])
 		.concat(real2029Q2Additions as unknown as Service[])
 		.concat(real2029Q3Additions as unknown as Service[])
-=======
-		.concat(real2029Q4Additions as unknown as Service[])
-		.concat(real2030Q1Additions as unknown as Service[])
-		.concat(real2030Q2Additions as unknown as Service[])
-		.concat(real2031MicroSaasAdditions as unknown as Service[])
-		.concat(real2031ITServicesAdditions as unknown as Service[])
-		.concat(real2031AIServicesAdditions as unknown as Service[])
-		.concat(real2027Q3Additions as unknown as Service[])
-		// 2029 showcase/pricing arrays to ensure matching /services/* pages are generated
-		.concat(aiAutonomousEcosystemServices2029 as unknown as Service[])
-		.concat(emergingTechBreakthroughServices2029 as unknown as Service[])
-		.concat(practicalBusinessSolutionServices2029 as unknown as Service[])
-		.concat(professionalServices as unknown as Service[])
-		.concat(real2032ServiceExpansions as unknown as Service[])
-		.concat(real2035Q1Additions as unknown as Service[])
-		.concat(real2035Q2AdditionsExtra as unknown as Service[])
-		.concat(real2026Q4ExpansionsV3 as unknown as Service[])
-		.concat(real2036ServiceExpansions as unknown as Service[]);
-=======
-	const allServices: Service[] = [];
-	
-	// Add all service arrays to the main array
-	allServices.push(...enhancedRealMicroSaasServices);
-	allServices.push(...(extraServices as Service[]));
-	allServices.push(...(additionalEnhancedServices as Service[]));
-	allServices.push(...(newlyAddedServices as unknown as Service[]));
-	allServices.push(...(curatedMarketServices as Service[]));
-	allServices.push(...(new2025Services as unknown as Service[]));
-	allServices.push(...(marketValidatedServices as unknown as Service[]));
-	allServices.push(...(moreRealServices2025 as unknown as Service[]));
-	allServices.push(...(verified2025Additions as unknown as Service[]));
-	allServices.push(...(realServicesQ12025 as unknown as Service[]));
-	allServices.push(...(realEnterpriseServices2025 as unknown as Service[]));
-	allServices.push(...(verifiedRealServices2025Batch2 as unknown as Service[]));
-	allServices.push(...(realMarketAugmentations2025 as unknown as Service[]));
-	allServices.push(...(additionalLiveServices2025 as unknown as Service[]));
-	allServices.push(...(real2025Q2Additions as unknown as Service[]));
-	allServices.push(...(augmentedServicesBatch3 as unknown as Service[]));
-	allServices.push(...(realServicesQ22025 as unknown as Service[]));
-	allServices.push(...(realServicesQ32025 as unknown as Service[]));
-	allServices.push(...(realQ4Services2025 as unknown as Service[]));
-	allServices.push(...(real2025Q4Additions as unknown as Service[]));
-	allServices.push(...(realMarketServicesExtended as unknown as Service[]));
-	allServices.push(...(real2026Q1Additions as unknown as Service[]));
-	allServices.push(...(real2026Additions as unknown as Service[]));
-	allServices.push(...(added2026Q2Services as unknown as Service[]));
-	allServices.push(...(real2026Q3Additions as unknown as Service[]));
-	allServices.push(...(real2026Q4Additions as unknown as Service[]));
-	allServices.push(...(real2026Q4NewServices as unknown as Service[]));
-	allServices.push(...(real2027Q1Additions as unknown as Service[]));
-	allServices.push(...(real2027Q2Additions as unknown as Service[]));
-	allServices.push(...(real2028ServiceExpansions as unknown as Service[]));
-	allServices.push(...(real2029Q1Additions as unknown as Service[]));
-	allServices.push(...(realMarketServices as unknown as Service[]));
-	allServices.push(...(real2029Q2Additions as unknown as Service[]));
-	allServices.push(...(real2029Q3Additions as unknown as Service[]));
-	allServices.push(...(real2030Q1Additions as unknown as Service[]));
-	allServices.push(...(real2030Q2Additions as unknown as Service[]));
-	allServices.push(...(real2031MicroSaasAdditions as unknown as Service[]));
-	allServices.push(...(real2031ITServicesAdditions as unknown as Service[]));
-	allServices.push(...(real2031AIServicesAdditions as unknown as Service[]));
-	allServices.push(...(real2027Q3Additions as unknown as Service[]));
-	// 2029 showcase/pricing arrays to ensure matching /services/* pages are generated
-	allServices.push(...(aiAutonomousEcosystemServices2029 as unknown as Service[]));
-	allServices.push(...(emergingTechBreakthroughServices2029 as unknown as Service[]));
-	allServices.push(...(practicalBusinessSolutionServices2029 as unknown as Service[]));
-	allServices.push(...(professionalServices as unknown as Service[]));
-	allServices.push(...(real2032ServiceExpansions as unknown as Service[]));
-	allServices.push(...(real2035Q1Additions as unknown as Service[]));
-	allServices.push(...(real2035Q2AdditionsExtra as unknown as Service[]));
-	allServices.push(...(real2026Q4ExpansionsV3 as unknown as Service[]));
-	allServices.push(...(real2036ServiceExpansions as unknown as Service[]));
-	
-	return allServices;
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 }
 
 function toSlug(value: string): string {

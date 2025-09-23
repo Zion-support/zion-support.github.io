@@ -44,11 +44,7 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     competitors: ['Basic legal research tools', 'Traditional legal databases', 'Simple search platforms'],
     marketSize: 'AI legal technology market $25B+, growing 180% annually',
     growthRate: '850% YoY',
-<<<<<<< HEAD
     variant: 'ai-legal',
-=======
-    variant: 'legal-futuristic',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Advanced platform with AI-powered legal research, predictive analytics, and comprehensive legal insights.',
@@ -137,17 +133,10 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     integrations: ['Trading platforms', 'Market data feeds', 'Risk management systems', 'Compliance platforms'],
     useCases: ['Portfolio optimization', 'Risk assessment', 'Financial modeling', 'Compliance monitoring', 'Market analysis'],
     roi: 'Improve portfolio returns by 25-40% and reduce risk through quantum-powered optimization.',
-<<<<<<< HEAD
     competitors: ['Basic risk management tools', 'Traditional financial software', 'Simple analytics platforms'],
     marketSize: 'Quantum finance market $18B+, growing 300% annually',
     growthRate: '1200% YoY',
     variant: 'quantum-finance',
-=======
-    competitors: ['Traditional risk management', 'Basic financial software', 'Simple portfolio tools'],
-    marketSize: 'Quantum finance market $18B+, growing 300% annually',
-    growthRate: '1200% YoY',
-    variant: 'quantum-ai-finance',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Advanced platform with quantum-powered financial risk management, portfolio optimization, and advanced analytics.',
@@ -157,7 +146,6 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     reviews: 98
   },
 
-<<<<<<< HEAD
   // AI-Powered Supply Chain Intelligence
   {
     id: 'ai-supply-chain-intelligence',
@@ -173,23 +161,6 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
       'Inventory management',
       'Logistics optimization',
       'Supplier relationship management',
-=======
-  // Autonomous Supply Chain Intelligence
-  {
-    id: 'autonomous-supply-chain-intelligence',
-    name: 'Autonomous Supply Chain Intelligence Platform',
-    tagline: 'AI-powered supply chain optimization with autonomous decision-making and predictive logistics',
-    price: '$799',
-    period: '/month',
-    description: 'Revolutionary supply chain platform that uses AI to optimize logistics, predict disruptions, and autonomously manage supply chain operations for manufacturing and retail companies.',
-    features: [
-      'AI-powered logistics optimization',
-      'Predictive disruption analysis',
-      'Autonomous supply chain management',
-      'Real-time inventory tracking',
-      'Route optimization',
-      'Supplier management',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
       'Integration with ERP systems',
       'Comprehensive supply chain analytics'
     ],
@@ -197,7 +168,6 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     icon: '🚚🤖📦',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/ai-supply-chain-intelligence',
     marketPosition: 'Leading AI-powered supply chain intelligence platform with predictive analytics and optimization.',
     targetAudience: 'Manufacturing companies, retail chains, logistics providers, distributors, supply chain managers',
@@ -216,88 +186,17 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Advanced platform with AI-powered supply chain intelligence, predictive analytics, and optimization.',
-=======
-    link: 'https://ziontechgroup.com/services/autonomous-supply-chain-intelligence',
-    marketPosition: 'Leading autonomous supply chain intelligence platform with AI-powered optimization and predictive logistics.',
-    targetAudience: 'Manufacturing companies, retail chains, logistics providers, e-commerce businesses, supply chain managers',
-    trialDays: 30,
-    setupTime: '3 weeks',
-    category: 'Supply Chain & Logistics',
-    realService: true,
-    technology: ['AI/ML', 'Supply chain analytics', 'Predictive logistics', 'Machine learning', 'Python', 'IoT sensors'],
-    integrations: ['ERP systems', 'Warehouse management', 'Transportation systems', 'Supplier platforms'],
-    useCases: ['Logistics optimization', 'Inventory management', 'Supplier coordination', 'Route planning', 'Disruption prevention'],
-    roi: 'Reduce supply chain costs by 30-50% and improve delivery efficiency through AI-powered optimization.',
-    competitors: ['Basic supply chain software', 'Simple logistics tools', 'Traditional inventory management'],
-    marketSize: 'AI supply chain market $32B+, growing 170% annually',
-    growthRate: '750% YoY',
-    variant: 'supply-chain-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced platform with autonomous supply chain intelligence, AI-powered optimization, and predictive logistics.',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
     launchDate: '2027-08-01',
     customers: 312,
     rating: 4.7,
     reviews: 234
   },
 
-<<<<<<< HEAD
   // Autonomous Energy Management Platform
-=======
-  // Neural Network Security Platform
-  {
-    id: 'neural-network-security-platform',
-    name: 'Neural Network Security Platform',
-    tagline: 'AI-powered cybersecurity platform with neural network threat detection and autonomous defense',
-    price: '$1,599',
-    period: '/month',
-    description: 'Revolutionary cybersecurity platform that uses neural networks to detect threats, predict attacks, and autonomously defend against cyber threats for enterprises and organizations.',
-    features: [
-      'Neural network threat detection',
-      'Predictive attack analysis',
-      'Autonomous threat response',
-      'Real-time security monitoring',
-      'Behavioral analysis',
-      'Incident response automation',
-      'Integration with security tools',
-      'Comprehensive security analytics'
-    ],
-    popular: true,
-    icon: '🛡️🧠🔒',
-    color: 'from-red-600 to-pink-700',
-    textColor: 'text-red-300',
-    link: 'https://ziontechgroup.com/services/neural-network-security-platform',
-    marketPosition: 'Leading neural network security platform with AI-powered threat detection and autonomous defense.',
-    targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, security teams',
-    trialDays: 30,
-    setupTime: '3 weeks',
-    category: 'Cybersecurity',
-    realService: true,
-    technology: ['Neural networks', 'AI/ML', 'Cybersecurity', 'Threat detection', 'Python', 'Deep learning'],
-    integrations: ['SIEM systems', 'Firewalls', 'Endpoint protection', 'Security information platforms'],
-    useCases: ['Threat detection', 'Incident response', 'Security monitoring', 'Behavioral analysis', 'Attack prevention'],
-    roi: 'Reduce security incidents by 60-80% and improve threat response time through AI-powered detection.',
-    competitors: ['Traditional security tools', 'Basic threat detection', 'Simple security software'],
-    marketSize: 'AI cybersecurity market $38B+, growing 220% annually',
-    growthRate: '1100% YoY',
-    variant: 'security-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced platform with neural network security, AI-powered threat detection, and autonomous defense.',
-    launchDate: '2027-09-01',
-    customers: 198,
-    rating: 4.8,
-    reviews: 167
-  },
-
-  // Autonomous Energy Management
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
   {
     id: 'autonomous-energy-management',
     name: 'Autonomous Energy Management Platform',
     tagline: 'AI-powered energy optimization with autonomous grid management and renewable integration',
-<<<<<<< HEAD
     price: '$1,599',
     period: '/month',
     description: 'Revolutionary energy platform that uses AI to optimize energy consumption, manage smart grids, and integrate renewable energy sources for utilities and energy companies.',
@@ -308,18 +207,6 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
       'Demand response optimization',
       'Energy storage management',
       'Predictive maintenance',
-=======
-    price: '$1,199',
-    period: '/month',
-    description: 'Revolutionary energy platform that uses AI to optimize energy consumption, manage power grids, and integrate renewable energy sources for utilities and energy companies.',
-    features: [
-      'AI-powered energy optimization',
-      'Autonomous grid management',
-      'Renewable energy integration',
-      'Real-time consumption monitoring',
-      'Predictive energy analytics',
-      'Demand response automation',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
       'Integration with energy systems',
       'Comprehensive energy analytics'
     ],
@@ -328,18 +215,12 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-300',
     link: 'https://ziontechgroup.com/services/autonomous-energy-management',
-<<<<<<< HEAD
     marketPosition: 'Leading autonomous energy management platform with AI-powered optimization and smart grid management.',
     targetAudience: 'Utility companies, energy providers, smart grid operators, renewable energy companies, energy managers',
-=======
-    marketPosition: 'Leading autonomous energy management platform with AI-powered optimization and renewable integration.',
-    targetAudience: 'Utility companies, energy providers, renewable energy companies, smart cities, energy managers',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'Energy Technology',
     realService: true,
-<<<<<<< HEAD
     technology: ['AI/ML', 'Energy analytics', 'Smart grid technology', 'Machine learning', 'Python', 'Energy systems'],
     integrations: ['Smart meters', 'Energy storage systems', 'Renewable energy sources', 'Grid management systems'],
     useCases: ['Energy optimization', 'Smart grid management', 'Renewable integration', 'Demand response', 'Predictive maintenance'],
@@ -411,84 +292,10 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     price: '$1,199',
     period: '/month',
     description: 'Advanced manufacturing platform that uses AI to optimize production processes, ensure quality control, and provide predictive maintenance for manufacturing companies and industrial facilities.',
-=======
-    technology: ['AI/ML', 'Energy analytics', 'Grid management', 'IoT sensors', 'Python', 'Machine learning'],
-    integrations: ['Smart meters', 'Grid systems', 'Renewable energy sources', 'Energy storage systems'],
-    useCases: ['Energy optimization', 'Grid management', 'Renewable integration', 'Demand response', 'Consumption monitoring'],
-    roi: 'Reduce energy costs by 25-40% and improve grid efficiency through AI-powered optimization.',
-    competitors: ['Basic energy management', 'Simple monitoring tools', 'Traditional grid systems'],
-    marketSize: 'AI energy market $28B+, growing 190% annually',
-    growthRate: '900% YoY',
-    variant: 'energy-sustainability',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced platform with autonomous energy management, AI-powered optimization, and renewable integration.',
-    launchDate: '2027-10-01',
-    customers: 234,
-    rating: 4.7,
-    reviews: 189
-  },
-
-  // Quantum Materials Discovery
-  {
-    id: 'quantum-materials-discovery-platform',
-    name: 'Quantum Materials Discovery Platform',
-    tagline: 'Quantum-powered materials science platform for advanced material discovery and optimization',
-    price: '$3,999',
-    period: '/month',
-    description: 'Revolutionary materials science platform that uses quantum computing to discover new materials, optimize properties, and accelerate research for manufacturing and research institutions.',
-    features: [
-      'Quantum material simulation',
-      'Property optimization',
-      'Discovery algorithms',
-      'Real-time analysis',
-      'Predictive modeling',
-      'Research automation',
-      'Integration with lab systems',
-      'Comprehensive materials analytics'
-    ],
-    popular: true,
-    icon: '🔬⚛️🧪',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-300',
-    link: 'https://ziontechgroup.com/services/quantum-materials-discovery-platform',
-    marketPosition: 'Leading quantum materials discovery platform with advanced simulation and property optimization.',
-    targetAudience: 'Research institutions, manufacturing companies, materials science labs, universities, R&D departments',
-    trialDays: 30,
-    setupTime: '6 weeks',
-    category: 'Quantum Materials',
-    realService: true,
-    technology: ['Quantum computing', 'Materials science', 'Molecular simulation', 'Quantum algorithms', 'Python', 'Scientific computing'],
-    integrations: ['Lab equipment', 'Research databases', 'Simulation software', 'Analytical instruments'],
-    useCases: ['Material discovery', 'Property optimization', 'Research acceleration', 'Simulation modeling', 'Development optimization'],
-    roi: 'Accelerate materials research by 10-100x and reduce development costs through quantum-powered simulation.',
-    competitors: ['Traditional simulation tools', 'Basic materials software', 'Simple research platforms'],
-    marketSize: 'Quantum materials market $15B+, growing 400% annually',
-    growthRate: '1500% YoY',
-    variant: 'quantum-reality-fusion',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced platform with quantum materials discovery, advanced simulation, and property optimization.',
-    launchDate: '2027-11-01',
-    customers: 89,
-    rating: 4.9,
-    reviews: 67
-  },
-
-  // Autonomous Manufacturing Intelligence
-  {
-    id: 'autonomous-manufacturing-intelligence',
-    name: 'Autonomous Manufacturing Intelligence Platform',
-    tagline: 'AI-powered manufacturing optimization with autonomous quality control and predictive maintenance',
-    price: '$1,899',
-    period: '/month',
-    description: 'Revolutionary manufacturing platform that uses AI to optimize production processes, ensure quality control, and predict maintenance needs for manufacturing companies.',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
     features: [
       'AI-powered production optimization',
       'Autonomous quality control',
       'Predictive maintenance',
-<<<<<<< HEAD
       'Process automation',
       'Real-time monitoring',
       'Performance analytics',
@@ -567,39 +374,5 @@ export const revolutionary2043AdvancedServices: RealMarketService[] = [
     customers: 345,
     rating: 4.8,
     reviews: 267
-=======
-      'Real-time monitoring',
-      'Process automation',
-      'Quality assurance',
-      'Integration with manufacturing systems',
-      'Comprehensive production analytics'
-    ],
-    popular: true,
-    icon: '🏭🤖🔧',
-    color: 'from-gray-600 to-slate-700',
-    textColor: 'text-gray-300',
-    link: 'https://ziontechgroup.com/services/autonomous-manufacturing-intelligence',
-    marketPosition: 'Leading autonomous manufacturing intelligence platform with AI-powered optimization and quality control.',
-    targetAudience: 'Manufacturing companies, industrial facilities, production plants, quality managers, operations teams',
-    trialDays: 30,
-    setupTime: '4 weeks',
-    category: 'Manufacturing Technology',
-    realService: true,
-    technology: ['AI/ML', 'Manufacturing analytics', 'Quality control', 'IoT sensors', 'Python', 'Machine learning'],
-    integrations: ['Production systems', 'Quality control equipment', 'ERP systems', 'Maintenance platforms'],
-    useCases: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Process automation', 'Performance monitoring'],
-    roi: 'Improve production efficiency by 30-50% and reduce defects through AI-powered optimization.',
-    competitors: ['Basic manufacturing software', 'Simple quality tools', 'Traditional production systems'],
-    marketSize: 'AI manufacturing market $42B+, growing 180% annually',
-    growthRate: '850% YoY',
-    variant: 'enterprise-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced platform with autonomous manufacturing intelligence, AI-powered optimization, and quality control.',
-    launchDate: '2027-12-01',
-    customers: 345,
-    rating: 4.8,
-    reviews: 278
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
   }
 ];

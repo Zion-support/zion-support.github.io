@@ -1,21 +1,6 @@
 import axios from 'axios';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-const apiClient = axios.create({
-  baseURL: '/api',
-  withCredentials: true,
-});
-
-apiClient.interceptors.response.use(
-  (response) => response,
-  async (error) => {
-    if (error.response?.status === 401) {
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import axiosRetry from 'axios-retry';
 import { logErrorToProduction, logDebug } from '@/utils/productionLogger';
 import type { AxiosResponse } from 'axios';
@@ -150,22 +135,12 @@ apiClient.interceptors.response.use(
     const status = typeof error === 'object' && error && 'response' in error && error.response && 'status' in error.response ? (error.response as { status?: number }).status : undefined;
 
     if (status === 401) {
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       try {
         if (!supabase) throw new Error('Supabase client not initialized');
         await supabase.auth.signOut({ scope: 'global' });
       } catch (e) {
-<<<<<<< HEAD
         logErrorToProduction('Failed to logout after 401', { data: e });
-=======
-<<<<<<< HEAD
-        console.error('Failed to logout after 401', e);
-=======
-        logErrorToProduction('Failed to logout after 401', { data: e });
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       }
       if (typeof window !== 'undefined') {

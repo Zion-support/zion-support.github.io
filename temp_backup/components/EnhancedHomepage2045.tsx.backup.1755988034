@@ -41,7 +41,6 @@ const EnhancedHomepage2045: React.FC = () => {
     ...revolutionary2044AIServices,
     ...realPracticalMicroSaasServices2025,
     ...advancedAIITSpecializedServices2025,
-<<<<<<< HEAD
     ...innovative2025ITInfrastructureServices
   ], []);
 
@@ -61,12 +60,6 @@ const EnhancedHomepage2045: React.FC = () => {
     
     return filtered.slice(0, 6); // Show only first 6 for performance
   }, [allRevolutionaryServices, selectedCategory, searchQuery]);
-=======
-    ...innovativeMicroSaasExpansionV3,
-    ...innovativeITInfrastructureExpansionV3,
-    ...innovativeAIServicesExpansionV3
-  ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7156
 
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allRevolutionaryServices.length },
@@ -154,22 +147,14 @@ const EnhancedHomepage2045: React.FC = () => {
   return (
     <SEOOptimizer data={seoData}>
       <div className="min-h-screen bg-black text-white overflow-hidden">
-<<<<<<< HEAD
         {/* Enhanced Animated Background */}
-=======
-        {/* Simple Background */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7156
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
-<<<<<<< HEAD
           
           {/* Enhanced Floating Particles */}
-=======
-        </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7156
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(50)].map((_, i) => (
               <motion.div
@@ -594,7 +579,6 @@ const EnhancedHomepage2045: React.FC = () => {
         </section>
 
         {/* Enhanced Footer */}
-<<<<<<< HEAD
         <footer className="relative z-10 bg-black/90 backdrop-blur-xl border-t border-cyan-500/20 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -727,9 +711,6 @@ const EnhancedHomepage2045: React.FC = () => {
           </div>
         </section>
       </div>
-=======
-        <UltraFuturisticFooter2046 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7156
     </>
   );
 };

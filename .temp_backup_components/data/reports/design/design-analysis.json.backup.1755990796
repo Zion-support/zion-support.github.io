@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-08-08T17:08:44.405Z",
   "filesAnalyzed": 108,
-=======
-  "timestamp": "2025-08-08T16:28:14.448Z",
-  "filesAnalyzed": 102,
->>>>>>> origin/cursor/automate-terminal-content-generation-and-deploy-5f97
   "items": [
     {
       "file": "/workspace/pages/404.tsx",
@@ -355,7 +350,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "file": "/workspace/pages/auto/auto-update-2025-08-08t16-30-00-086z.tsx",
       "issues": [
         "missing_enhanced_layout"
@@ -468,8 +462,6 @@
       }
     },
     {
-=======
->>>>>>> origin/cursor/automate-terminal-content-generation-and-deploy-5f97
       "file": "/workspace/pages/automation/index.tsx",
       "issues": [
         "missing_head_import",

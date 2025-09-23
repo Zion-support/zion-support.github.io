@@ -3,14 +3,8 @@ import dynamic from 'next/dynamic';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, MessageCircle, ArrowUp
-=======
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Rocket, 
-  ChevronDown, Search, Grid, Sparkles, 
-  Accessibility, Eye
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 } from 'lucide-react';
 
 // Import our new innovative services
@@ -201,7 +195,6 @@ const Homepage2045: React.FC = () => {
       const sections = document.querySelectorAll('section[id]');
       sections.forEach((section) => observer.observe(section));
 
-<<<<<<< HEAD
   // Combine all revolutionary services
   const allRevolutionaryServices = useMemo(() => [
     ...revolutionary2045AdvancedRealMicroSaas,
@@ -269,10 +262,6 @@ const Homepage2045: React.FC = () => {
 
   const handleGetStarted = useCallback(() => {
     window.location.href = '/contact';
-=======
-      return () => observer.disconnect();
-    }
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   }, []);
 
   // Enhanced animation variants with accessibility support

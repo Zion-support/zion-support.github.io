@@ -3,11 +3,7 @@ import { motion } from 'framer-motion';
 import UltraFuturisticNavigation2036 from './UltraFuturisticNavigation2036';
 import UltraFuturisticFooter2038 from './UltraFuturisticFooter2038';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
-<<<<<<< HEAD
 import UltraAdvancedFuturisticBackground2036 from '../backgrounds/UltraAdvancedFuturisticBackground2036';
-=======
-import UltraFuturisticBackground2038 from '../backgrounds/UltraFuturisticBackground2038';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-50a7
 import TopContactBar from './TopContactBar';
 
 interface LayoutProps {
@@ -80,16 +76,11 @@ export default function Layout({ children }: LayoutProps) {
       {/* Skip to content link for accessibility */}
       <a href="#main" className="skip-link">Skip to main content</a>
       
-<<<<<<< HEAD
       {/* Enhanced Futuristic Background */}
       <UltraAdvancedFuturisticBackground2036 
         intensity="medium" 
         theme="quantum"
       />
-=======
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2038 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-50a7
       
       {/* Layout Structure */}
       <div className="relative z-10">

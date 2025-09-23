@@ -6,7 +6,6 @@ import {
   CheckCircle, Clock, Target, Rocket, Shield, Brain
 } from 'lucide-react';
 
-<<<<<<< HEAD
 interface PerformanceMetrics {
   bundleSize: number;
   imageCount: number;
@@ -16,13 +15,6 @@ interface PerformanceMetrics {
   cpuUsage: number;
   networkRequests: number;
   cacheHitRate: number;
-=======
-// Add browser API types
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-3bf4
 }
 
 interface OptimizationSuggestion {

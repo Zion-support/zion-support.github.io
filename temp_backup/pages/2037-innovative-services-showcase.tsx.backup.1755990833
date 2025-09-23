@@ -4,15 +4,10 @@ import Layout from '../components/layout/Layout';
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Brain, Atom, Rocket, Shield, Zap, Target, Star,
   ArrowRight, Check, TrendingUp, Users, Globe, Cpu,
   Database, Cloud, Lock, Settings, Eye, Award, Clock
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-  Brain, Atom, Rocket, Zap, Star,
-  Check, Cpu
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 } from 'lucide-react';
 
 // Import our new service data
@@ -27,12 +22,8 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 const ServiceCard = ({ service, index }: { service: any; index: number }) => (
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-const ServiceCard = ({ service, index }: { service: Innovative2037MicroSaasService | Innovative2037ITService | Innovative2037AIService; index: number }) => (
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -57,7 +48,6 @@ const ServiceCard = ({ service, index }: { service: Innovative2037MicroSaasServi
             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
             <span className="text-gray-300 text-sm">{feature}</span>
           </div>
-<<<<<<< HEAD
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
         </motion.div>
 
@@ -90,66 +80,6 @@ const ServiceCard = ({ service, index }: { service: Innovative2037MicroSaasServi
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-center"
-=======
-        ))}
-      </div>
-      
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <span className="text-3xl font-bold text-white">{service.pricing.starter}</span>
-          <span className="text-gray-400 text-sm">/month</span>
-        </div>
-        <div className="text-right">
-          <div className="flex items-center space-x-1 text-yellow-400">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating || 0) ? 'fill-current' : ''}`} />
-            ))}
-          </div>
-          <span className="text-gray-400 text-xs">{service.rating}/5</span>
-        </div>
-        
-        <div className="space-y-3 mb-6 text-xs text-gray-400">
-          <div className="flex justify-between">
-            <span>Setup Time:</span>
-            <span>{service.setupTime || '24 hours'}</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Trial:</span>
-            <span>{service.trialDays || 14} days</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Customers:</span>
-            <span>{(service.customers || 1000).toLocaleString()}</span>
-          </div>
-        </div>
-        
-        <a 
-          href={service.link || `/services/${service.id}`} 
-          className="block w-full text-center py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-        >
-          Learn More
-        </a>
-      </div>
-      
-      <div className="space-y-3 mb-6 text-xs text-gray-400">
-        <div className="flex justify-between">
-          <span>Category:</span>
-          <span>{service.category}</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Launch:</span>
-          <span>{service.launchDate}</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Market Price:</span>
-          <span>{service.marketPrice}</span>
-        </div>
-      </div>
-      
-      <a 
-        href={service.link || '#'} 
-        className="block w-full text-center py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       >
         <a
           href={`mailto:${contact.email}?subject=2037 Services Consultation`}

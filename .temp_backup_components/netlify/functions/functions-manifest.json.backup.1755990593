@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "generatedAt": "2025-08-11T23:44:35.502Z",
-=======
-  "generatedAt": "2025-08-11T23:42:37.175Z",
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c9de
   "functions": [
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
@@ -21,12 +17,8 @@
     "canonical-auditor",
     "cloud-swarm-committer",
     "cloud_orchestrator",
-<<<<<<< HEAD
     "code-hotspots-radar",
     "component-api-docs-runner",
-=======
-    "complexity-report",
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c9de
     "component-size-report",
     "continuous-front-runner",
     "continuous-orchestrator",
@@ -46,11 +38,7 @@
     "features-capabilities-benefits-advertiser",
     "front-ads-promoter",
     "front-enhancer",
-<<<<<<< HEAD
     "front-index-directory-builder",
-=======
-    "front-index-auto-advertiser-runner",
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c9de
     "front-index-futurizer",
     "front-index-orchestrator",
     "front-index-scheduler",
@@ -95,12 +83,7 @@
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-<<<<<<< HEAD
     "roadmap-generator-runner",
-=======
-    "revenue-ideas-runner",
-    "roadmap-synthesizer",
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c9de
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",

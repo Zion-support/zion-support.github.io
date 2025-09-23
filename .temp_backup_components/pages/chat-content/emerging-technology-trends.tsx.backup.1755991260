@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function EmergingTechnologyTrendsPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -7,6 +6,3 @@ export default function EmergingTechnologyTrendsPage() {
     </div>
   );
 }
-=======
-export default function ChatContent8() { return <div className="py-10 text-white">Content coming soon.</div>; }
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf

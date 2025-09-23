@@ -4,13 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
-<<<<<<< HEAD
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon,
   Sparkles, Layers, Grid, Hexagon, Octagon, Pentagon, Triangle, Square, Circle
-=======
-  Users, Building, Cloud, Code, Palette, Lightbulb, Award, Clock, CheckCircle, ArrowUpRight, ChevronDown, Menu, X,
-  Truck, Server
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
 } from 'lucide-react';
 import Head from 'next/head';
 
@@ -19,23 +14,10 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
 
-<<<<<<< HEAD
 // Import enhanced components
 const EnhancedPerformanceMonitor = lazy(() => import('./EnhancedPerformanceMonitor'));
 const EnhancedAccessibilityEnhancer = lazy(() => import('./EnhancedAccessibilityEnhancer'));
 const EnhancedSEO = lazy(() => import('./EnhancedSEO'));
-=======
-// Import our new innovative services expansion
-import { innovativeAIAutonomousServices2025Expansion } from '../data/2025-innovative-ai-autonomous-services-expansion';
-import { innovativeITInfrastructureServices2025Expansion } from '../data/2025-innovative-it-infrastructure-services-expansion';
-import { innovativeMicroSaasServices2025Expansion } from '../data/2025-innovative-micro-saas-expansion';
-
-// Lazy load new components for better performance
-const ServiceCard = lazy(() => import('./ServiceCard'));
-const PerformanceMetrics = lazy(() => import('./PerformanceMetrics'));
-const InteractiveDemo = lazy(() => import('./InteractiveDemo'));
-const PerformanceOptimizer = lazy(() => import('./PerformanceOptimizer'));
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
 
 const Homepage2045: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,7 +45,6 @@ const Homepage2045: React.FC = () => {
 
   // Filter services by category
   const getFilteredServices = () => {
-<<<<<<< HEAD
     if (selectedCategory === 'all') {
       return allRevolutionaryServices;
     }
@@ -88,26 +69,6 @@ const Homepage2045: React.FC = () => {
   };
 
   const categories = [
-=======
-    if (selectedCategory === 'all') return allRevolutionaryServices;
-    
-    const category = categoryData.find(cat => cat.id === selectedCategory);
-    if (!category) return allRevolutionaryServices;
-    
-    return allRevolutionaryServices.filter(service => {
-      const serviceCategory = service.category?.toLowerCase() || '';
-      const serviceType = service.type?.toLowerCase() || '';
-      const categoryName = category.name.toLowerCase();
-      
-      return serviceCategory.includes(categoryName) || 
-             serviceType.includes(categoryName) ||
-             serviceCategory.includes(selectedCategory.toLowerCase()) ||
-             serviceType.includes(selectedCategory.toLowerCase());
-    });
-  };
-
-  const categoryData = [
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allRevolutionaryServices.length },
     { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allRevolutionaryServices.filter(s => s.category.includes('AI') || s.category.includes('Autonomous')).length },
     { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: allRevolutionaryServices.filter(s => s.category.includes('Quantum')).length },
@@ -544,7 +505,6 @@ const Homepage2045: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary <span className="text-gradient">Services</span>
               </h2>
@@ -563,36 +523,13 @@ const Homepage2045: React.FC = () => {
                     selectedCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-=======
-              {categoryData.map((category) => (
-                <motion.button
-                  key={category.id}
-                  onClick={() => handleCategoryChange(category.id)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`group px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25 border-2 border-cyan-400'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50 hover:border-cyan-500/50'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
                   }`}
                   aria-label={`Filter services by ${category.name}`}
                 >
-<<<<<<< HEAD
                   <category.icon className="w-5 h-5" />
                   <span className="font-medium">{category.name}</span>
                   <span className="text-sm opacity-75">({category.count})</span>
                 </button>
-=======
-                  <span className="flex items-center space-x-2">
-                    <category.icon className="w-5 h-5" />
-                    <span>{category.name}</span>
-                    <span className="bg-gray-700/50 px-2 py-1 rounded-full text-xs font-bold">
-                      {category.count}
-                    </span>
-                  </span>
-                </motion.button>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
               ))}
             </div>
 

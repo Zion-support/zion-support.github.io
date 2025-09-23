@@ -1,9 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-4e03
 import { Check, ExternalLink } from 'lucide-react';
 
 export default function ApiPerformanceTestingPage() {
@@ -19,7 +16,6 @@ export default function ApiPerformanceTestingPage() {
 
 	return (
 		<>
-<<<<<<< HEAD
 			<SEO data={{
 			pageTitle: title,
 			pageDescription: description,
@@ -42,14 +38,6 @@ export default function ApiPerformanceTestingPage() {
 				<section className="max-w-5xl mx-auto">
 					<h2 className="text-2xl font-semibold text-white">What you get</h2>
 					<div className="mt-6 grid sm:grid-cols-2 gap-6">
-=======
-			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
-			<main id="main" className="container mx-auto px-4 py-24">
-				<section className="max-w-5xl mx-auto">
-					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>
-					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-4e03
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />

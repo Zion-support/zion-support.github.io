@@ -183,12 +183,7 @@ const EnhancedNavigation: React.FC = () => {
           <Link href="/blog"><a>Blog</a></Link>
           <Link href="/talent"><a>Talent</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-<<<<<<< HEAD
           <Link href="/request-quote"><a className="px-3 py-1 rounded-md bg-indigo-600 text-white">Request a Quote</a></Link>
-=======
-          <Link href="/community"><a>Community</a></Link>
-          <DarkModeToggle />
->>>>>>> origin/cursor/build-community-forum-for-zion-ai-marketplace-7967
         </div>
       </nav>
 

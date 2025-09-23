@@ -5,11 +5,7 @@
     "failedChecks": 1,
     "criticalFailures": 0,
     "canBuild": true,
-<<<<<<< HEAD
     "timestamp": "2025-08-20T00:11:32.623Z"
-=======
-    "timestamp": "2025-08-20T02:36:54.179Z"
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   },
   "results": [
     {

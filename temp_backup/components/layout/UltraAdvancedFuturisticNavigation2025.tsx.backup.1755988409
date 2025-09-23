@@ -69,7 +69,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Enterprise-grade security solutions'
       },
       {
-<<<<<<< HEAD
         label: 'IT Solutions',
         href: '/it-services',
         icon: <Cpu className="w-4 h-4" />,
@@ -80,12 +79,6 @@ const navigationItems: NavigationItem[] = [
         href: '/cloud-platform',
         icon: <Globe className="w-4 h-4" />,
         description: 'Scalable cloud infrastructure solutions'
-=======
-        label: 'Cloud Platform',
-        href: '/cloud-platform',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Scalable cloud infrastructure'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-1912
       }
     ]
   },
@@ -216,7 +209,6 @@ const navigationItems: NavigationItem[] = [
     description: 'Whitepapers, case studies, and insights',
     children: [
       {
-<<<<<<< HEAD
         label: 'Case Studies',
         href: '/case-studies',
         icon: <BookOpen className="w-4 h-4" />,
@@ -239,44 +231,6 @@ const navigationItems: NavigationItem[] = [
         href: '/training',
         icon: <BookOpen className="w-4 h-4" />,
         description: 'Professional development and training programs'
-=======
-        label: 'Blog',
-        href: '/blog',
-        icon: <BookOpen className="w-4 h-4" />,
-        description: 'Latest insights and updates'
-      },
-      {
-        label: 'Case Studies',
-        href: '/case-studies',
-        icon: <Briefcase className="w-4 h-4" />,
-        description: 'Success stories and results'
-      },
-      {
-        label: 'White Papers',
-        href: '/white-papers',
-        icon: <BookOpen className="w-4 h-4" />,
-        description: 'In-depth research and analysis'
-      }
-    ]
-  },
-  {
-    label: 'Company',
-    href: '#',
-    icon: <Users className="w-4 h-4" />,
-    description: 'Company information and opportunities',
-    children: [
-      {
-        label: 'Careers',
-        href: '/careers',
-        icon: <Briefcase className="w-4 h-4" />,
-        description: 'Join our team'
-      },
-      {
-        label: 'News',
-        href: '/news',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Company updates and announcements'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-1912
       }
     ]
   },

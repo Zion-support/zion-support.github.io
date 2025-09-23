@@ -234,18 +234,8 @@
   schedule = "17 */6 * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
   name = "monetization-orchestrator"
   schedule = "*/30 * * * *" # every 30 minutes
-=======
-  name = "deps-auto-upgrade-runner"
-  schedule = "0 3 * * *"
-
-# New autonomous cloud scanners
-[[scheduled.functions]]
-  name = "unused-media-scanner"
-  schedule = "*/10 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-8a44
 
 [[scheduled.functions]]
   name = "ui-evolution-beautify"
@@ -256,56 +246,5 @@
   schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
   name = "autonomous-invention-orchestrator"
   schedule = "*/30 * * * *"
-=======
-  name = "license-compliance-auditor"
-  schedule = "0 2 * * 1"
-
-[[scheduled.functions]]
-  name = "pagespeed-insights-runner"
-  schedule = "11 */6 * * *" # every 6 hours, offset
-
-[[scheduled.functions]]
-  name = "knowledge-pack-runner"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "adaptive-orchestrator"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "site-404-map-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "component-coupling-graph-runner"
-  schedule = "29 */6 * * *"
-
-[[scheduled.functions]]
-  name = "content-freshness-score-runner"
-  schedule = "7 */12 * * *"
-
-# Newly added intelligent automations
-[[scheduled.functions]]
-  name = "anchor-links-auto-fixer"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "internal-link-graph-runner"
-  schedule = "*/5 * * * *"
-
-# Autonomous additions
-[[scheduled.functions]]
-  name = "smart-redirects-manager"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "qa-knowledge-runner"
-  schedule = "0 */6 * * *"
-
-[[scheduled.functions]]
-  name = "seo-schema-runner"
-  schedule = "*/15 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-8a44

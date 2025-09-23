@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -48,10 +47,6 @@ export default function OrdersPage() {
     }
   };
 
-=======
-import React from 'react';
-export function Orders() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

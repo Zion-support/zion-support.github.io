@@ -7,11 +7,6 @@ import {
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
   Users, Globe, Cpu, Database, Network, Target
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
 
 const SolutionsPage: React.FC = () => {
   const industrySolutions = [
@@ -186,11 +181,7 @@ const SolutionsPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground>
-=======
-    <UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
       <div className="min-h-screen">
         <Head>
           <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
@@ -386,7 +377,6 @@ const SolutionsPage: React.FC = () => {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -424,11 +414,6 @@ const SolutionsPage: React.FC = () => {
         </div>
       </section>
     </Layout>
-=======
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
   );
 };
 

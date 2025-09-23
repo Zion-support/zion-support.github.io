@@ -12,62 +12,18 @@
   "categories": ["business", "productivity", "technology", "utilities"],
   "icons": [
     {
-<<<<<<< HEAD
       "src": "/favicon.ico",
       "sizes": "16x16 32x32",
       "type": "image/x-icon"
     },
     {
       "src": "/icon-192x192.png",
-=======
-      "src": "/icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-192x192.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-<<<<<<< HEAD
       "src": "/icon-512x512.png",
-=======
-      "src": "/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -77,21 +33,12 @@
     {
       "name": "Services",
       "short_name": "Services",
-<<<<<<< HEAD
       "description": "Explore our revolutionary services",
       "url": "/services",
       "icons": [
         {
           "src": "/icon-192x192.png",
           "sizes": "192x192"
-=======
-      "description": "Explore our revolutionary technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
         }
       ]
     },
@@ -102,13 +49,8 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
           "src": "/icon-192x192.png",
           "sizes": "192x192"
-=======
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
         }
       ]
     },
@@ -127,7 +69,6 @@
   ],
   "screenshots": [
     {
-<<<<<<< HEAD
       "src": "/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
@@ -143,35 +84,6 @@
     }
   ],
   "related_applications": [],
-=======
-      "src": "/screenshots/desktop-home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage on desktop"
-    },
-    {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Homepage on mobile"
-    },
-    {
-      "src": "/screenshots/desktop-services.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Services page on desktop"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "webapp",
-      "url": "https://ziontechgroup.com"
-    }
-  ],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -191,11 +103,7 @@
       "action": "/file-handler",
       "accept": {
         "text/*": [".txt", ".md", ".json"],
-<<<<<<< HEAD
         "application/json": [".json"],
-=======
-        "application/pdf": [".pdf"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
         "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
       }
     }
@@ -211,11 +119,7 @@
       "files": [
         {
           "name": "files",
-<<<<<<< HEAD
           "accept": ["image/*", "text/*", "application/*"]
-=======
-          "accept": ["image/*", "text/*", "application/pdf"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
         }
       ]
     }
@@ -230,19 +134,8 @@
     "Cross Platform",
     "fast",
     "simple",
-<<<<<<< HEAD
     "Offline Support",
     "Push Notifications",
     "Background Sync"
   ]
-=======
-    "responsive",
-    "offline-capable",
-    "push-notifications"
-  ],
-  "developer": {
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com"
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-aba1
 }

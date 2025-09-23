@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, ArrowRight, Star, CheckCircle } from 'lucide-react';
@@ -6,12 +5,6 @@ import Layout from '../../components/layout/Layout';
 import SEO from '../../components/SEO';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import UltraFuturisticServiceCard2026 from '../../components/ui/UltraFuturisticServiceCard2026';
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../../components/ui/Card';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -24,21 +17,13 @@ import { marketValidatedServices } from '../../data/market-validated-services';
 import { moreRealServices2025 } from '../../data/more-real-services-2025';
 import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
-<<<<<<< HEAD
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-=======
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-<<<<<<< HEAD
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
@@ -51,9 +36,6 @@ import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
 import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { cursorAddedServices } from '../../data/cursor-added-services';
-=======
-import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 
 // Define a common service interface
 interface Service {
@@ -144,10 +126,7 @@ export default function ServicesIndexPage() {
       newlyAddedServices as unknown[],
       curatedMarketServices as unknown[],
       realMarketServices as unknown[],
-<<<<<<< HEAD
       realMarketServicesExtended as unknown[],
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
       new2025Services as unknown[],
       marketValidatedServices as unknown[],
       moreRealServices2025 as unknown[],
@@ -155,7 +134,6 @@ export default function ServicesIndexPage() {
       verified2025Additions as unknown[],
       realServicesQ12025 as unknown[],
       realEnterpriseServices2025 as unknown[],
-<<<<<<< HEAD
       innovative2037CuttingEdgeServices as unknown[],
       innovative2037EnterpriseSolutions as unknown[],
       realMarketAugmentations2025 as unknown[],
@@ -163,15 +141,10 @@ export default function ServicesIndexPage() {
       real2037CuttingEdgeServices as unknown[],
       real2037ITServices as unknown[],
       real2037AIServices as unknown[],
-=======
-      realMarketAugmentations2025 as unknown[],
-      verifiedRealServices2025Batch2 as unknown[],
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
       additionalLiveServices2025 as unknown[],
       real2025Q2Additions as unknown[],
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
-<<<<<<< HEAD
       realServicesQ32025 as unknown[],
       realQ4Services2025 as unknown[],
       real2025Q4Additions as unknown[],
@@ -183,9 +156,6 @@ export default function ServicesIndexPage() {
       real2027Q1Additions as unknown[],
       real2027Q2Additions as unknown[],
       cursorAddedServices as unknown[]
-=======
-      real2025Q3Additions as unknown[]
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     );
     return acc;
   }, {} as Record<string, Service[]>);
@@ -195,7 +165,6 @@ export default function ServicesIndexPage() {
 
 
   return (
-<<<<<<< HEAD
     <Layout>
       <SEO 
         title="Services - Zion Tech Group"
@@ -256,26 +225,6 @@ export default function ServicesIndexPage() {
                   </button>
                 ))}
               </div>
-=======
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>Zion AI Marketplace - Services</title>
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
-      </Head>
-      <div className="relative">
-        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
-          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
-          <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map((service) => (
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-              ))}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
             </div>
           </div>
         </section>
@@ -615,20 +564,6 @@ export default function ServicesIndexPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
-=======
-    </UltraAdvancedFuturisticBackground>
-  );
-}
-
-      <QuoteRequestModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selected}
-        onSubmit={handleSubmit}
-      />
-    </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   );
 }

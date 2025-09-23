@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import { useAuth } from '@/hooks/useAuth';
@@ -86,14 +85,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
           Send
         </Button>
       </div>
-=======
-import React from 'react';
-export function ChatWidget() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
->>>>>>> origin/automation-error-fixes
     </div>
   );
 }

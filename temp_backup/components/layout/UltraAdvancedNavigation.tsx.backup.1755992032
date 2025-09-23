@@ -110,25 +110,11 @@ const companyLinks = [
   { name: 'Resources', href: '/resources' }
 ];
 
-<<<<<<< HEAD
 export default function UltraAdvancedNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-=======
-	const navigationItems: Array<{ name: string; href: string; icon?: React.ComponentType<any>; description?: string }>
-		= [
-			{ name: 'Home', href: '/' },
-			{ name: 'AI', href: '/ai-services', icon: Brain, description: 'AI & ML services' },
-			{ name: 'Quantum', href: '/quantum-cloud-infrastructure', icon: Atom, description: 'Quantum & space' },
-			{ name: 'Enterprise IT', href: '/it-services', icon: Building2, description: 'Cloud, DevOps, Security' },
-			{ name: 'Services', href: '/services', icon: Monitor, description: 'Directory of services' },
-			{ name: 'Advertising', href: '/services-advertising', description: 'Features, benefits and offers' },
-			{ name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Vendor references' },
-			{ name: 'Contact', href: '/contact' }
-		];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-04c6
 
   useEffect(() => {
     const handleScroll = () => {

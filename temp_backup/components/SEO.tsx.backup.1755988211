@@ -9,7 +9,6 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -65,27 +64,6 @@ const SEO: React.FC<SEOProps> = ({
 
   // Structured Data for Organization
   const organizationSchema = {
-=======
-  structuredData?: object;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-}
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Pioneering the Future of Technology',
-  description = 'Leading-edge AI, Quantum Computing, Space Technology, and Enterprise Solutions. Transform your business with innovative technology solutions that drive growth and unlock new possibilities.',
-  keywords = 'AI, Artificial Intelligence, Quantum Computing, Space Technology, Enterprise Solutions, Cybersecurity, Cloud Computing, Automation, Digital Transformation',
-  image = '/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  structuredData,
-  canonical,
-  noindex = false,
-  nofollow = false
-}) => {
-  const defaultStructuredData = {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -107,7 +85,6 @@ const SEO: React.FC<SEOProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-<<<<<<< HEAD
       "https://www.linkedin.com/company/zion-tech-group",
       "https://github.com/Zion-Holdings",
       "https://twitter.com/ziontechgroup"
@@ -157,31 +134,10 @@ const SEO: React.FC<SEOProps> = ({
       }] : [])
     ]
   };
-=======
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-200",
-    "industry": "Technology",
-    "serviceType": [
-      "AI & Machine Learning",
-      "Quantum Computing",
-      "Space Technology",
-      "Cybersecurity",
-      "Cloud Solutions",
-      "Enterprise Software"
-    ]
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
 
   return (
     <Head>
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="keywords" content={seo.keywords} />
@@ -197,40 +153,19 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={seo.image} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:type" content={seo.type} />
-=======
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={noindex ? 'noindex' : nofollow ? 'nofollow' : 'index,follow'} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
-=======
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<<<<<<< HEAD
       <meta name="theme-color" content="#06b6d4" />
       <meta name="msapplication-TileColor" content="#06b6d4" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -246,19 +181,6 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-=======
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Favicon and Icons */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -270,16 +192,9 @@ const SEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       
-<<<<<<< HEAD
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-=======
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
       
       {/* Structured Data */}
       <script
@@ -303,14 +218,8 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
-<<<<<<< HEAD
       <meta name="msapplication-config" content="/browserconfig.xml" />
       <meta name="format-detection" content="telephone=no" />
-=======
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
       
       {/* Security Headers */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -318,7 +227,6 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-<<<<<<< HEAD
       
       {/* Custom Meta Tags for Zion Tech Group */}
       <meta name="company" content="Zion Tech Group" />
@@ -327,9 +235,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="location" content="Middletown, Delaware, United States" />
       <meta name="contact" content="+1 302 464 0950" />
       <meta name="email" content="kleber@ziontechgroup.com" />
-=======
-      <link rel="modulepreload" href="/_next/static/chunks/main.js" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
     </Head>
   );
 };

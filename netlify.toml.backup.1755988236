@@ -16,7 +16,6 @@
   package = "netlify-plugin-cloudinary"
 
 [[plugins]]
-<<<<<<< HEAD
   package = "./netlify/plugins/run-functions-and-rerun"
   [plugins.inputs]
     # Optional: comma-separated includes/excludes
@@ -257,17 +256,3 @@
 [[scheduled.functions]]
   name = "ultra-innovation-accelerator"
   schedule = "*/3 * * * *"
-=======
-  package = "netlify-plugin-cloudinary"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "0"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://plausible.io; connect-src 'self' https://plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-d413

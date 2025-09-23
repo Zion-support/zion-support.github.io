@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default {
   preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'jsdom',
@@ -24,16 +23,6 @@ export default {
     '^@sentry/browser$': '<rootDir>/src/stubs/sentry.ts',
   },
   roots: ['<rootDir>/__tests__', '<rootDir>/tests'],
-=======
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  roots: ['<rootDir>/tests'],
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress
   coverageThreshold: {
     global: {
       lines: 80,

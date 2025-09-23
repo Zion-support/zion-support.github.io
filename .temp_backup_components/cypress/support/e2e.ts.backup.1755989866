@@ -1,5 +1,4 @@
 import './commands';
-<<<<<<< HEAD
 import './stripe_mock.js';
 
 Cypress.on('uncaught:exception', (err, runnable) => {
@@ -26,6 +25,3 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // Let other unhandled exceptions fail the test
   return true;
 });
-=======
-
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress

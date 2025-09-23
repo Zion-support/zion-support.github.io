@@ -1,15 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 import Homepage2044 from '../components/Homepage2044';
-=======
-import EnhancedHomepage2025 from '../components/EnhancedHomepage2025';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e363
 import ErrorBoundary from '../components/ErrorBoundary';
 
 export default function Home() {
   return (
-<<<<<<< HEAD
     <>
       <SEO 
         title="Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions"
@@ -22,11 +17,6 @@ export default function Home() {
         <Homepage2044 />
       </ErrorBoundary>
     </>
-=======
-    <ErrorBoundary>
-      <EnhancedHomepage2025 />
-    </ErrorBoundary>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e363
   );
 };
 

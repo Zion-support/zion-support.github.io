@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextPage } from 'next';
 import Layout from '../components/layout/Layout';
 import { 
@@ -200,155 +199,10 @@ const ComprehensiveServicesShowcase2025: NextPage = () => {
               <option value="category">Sort by Category</option>
             </select>
           </div>
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Search, Filter, Star, Check, ArrowRight, Phone, Mail, MapPin, 
-  Brain, Target, Shield, BarChart3, Rocket, Atom, Globe, Zap,
-  TrendingUp, Award, Users, Clock, DollarSign
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const categories = [
-  { id: 'all', name: 'All Services', icon: Globe, color: 'from-gray-500 to-gray-600' },
-  { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-violet-500 to-purple-600' },
-  { id: 'quantum', name: 'Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600' },
-  { id: 'enterprise', name: 'Enterprise IT', icon: Shield, color: 'from-blue-500 to-cyan-600' },
-  { id: 'micro-saas', name: 'Micro SAAS', icon: Rocket, color: 'from-teal-500 to-emerald-600' }
-];
-
-export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-
-  const filteredServices = innovativeRealMicroSaasServices2025
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.technology.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || 
-                             service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-      
-      return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
-        case 'category':
-          return a.category.localeCompare(b.category);
-        case 'name':
-        default:
-          return a.name.localeCompare(b.name);
-      }
-    });
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => 
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.icon : Globe;
-  };
-
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat => 
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
-  };
-
-  return (
-    <Layout>
-      <Head>
-        <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
-        <meta name="description" content="Explore our complete portfolio of 500+ innovative technology services including AI, quantum computing, cybersecurity, and enterprise solutions." />
-        <meta name="keywords" content="AI services, quantum computing, cybersecurity, enterprise IT, micro SAAS, technology solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
-      </Head>
-
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Comprehensive
-              </span>
-              <br />
-              <span className="text-white">Services Portfolio</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Discover our complete collection of 500+ innovative technology services designed to transform your business
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 w-80"
-                />
-              </div>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500"
-              >
-                <option value="name">Sort by Name</option>
-                <option value="price">Sort by Price</option>
-                <option value="category">Sort by Category</option>
-              </select>
-            </div>
-
-            {/* Category Filters */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
-                    selectedCategory === category.id
-                      ? `bg-gradient-to-r ${category.color} text-white`
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                  }`}
-                >
-                  <category.icon className="w-5 h-5" />
-                  {category.name}
-                </button>
-              ))}
-            </div>
-
-            <div className="text-center text-gray-400">
-              <p>Showing {filteredServices.length} of {innovativeRealMicroSaasServices2025.length} services</p>
-            </div>
-          </motion.div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5060
         </div>
       </section>
 
       {/* Services Grid */}
-<<<<<<< HEAD
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
@@ -464,11 +318,6 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
 
           {sortedServices.length === 0 && (
-=======
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          {filteredServices.length === 0 ? (
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5060
             <div className="text-center py-20">
               <h3 className="text-2xl font-semibold text-white mb-4">No services found</h3>
               <p className="text-gray-400 mb-8">Try adjusting your search criteria or category filter</p>
@@ -601,7 +450,6 @@ export default function ComprehensiveServicesShowcase2025() {
               </Link>
             </div>
 
-<<<<<<< HEAD
             <Link href="/contact">
               <button className="group px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full text-lg transition-all duration-300 hover:from-cyan-600 hover:to-blue-700 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
                 <span className="flex items-center gap-2">
@@ -617,35 +465,6 @@ export default function ComprehensiveServicesShowcase2025() {
               View Pricing
             </Link>
           </div>
-=======
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 mb-3">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Call Us</h3>
-                <p className="text-cyan-400">{contactInfo.mobile}</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 mb-3">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Email Us</h3>
-                <p className="text-purple-400">{contactInfo.email}</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500/20 text-green-400 mb-3">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Visit Us</h3>
-                <p className="text-green-400 text-sm">{contactInfo.address}</p>
-              </div>
-            </div>
-          </motion.div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5060
         </div>
 
         {/* Contact Information Banner */}

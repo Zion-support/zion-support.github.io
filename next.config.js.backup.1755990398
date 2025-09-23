@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
@@ -155,18 +154,6 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: false,
   skipTrailingSlashRedirect: true,
-=======
-	reactStrictMode: true,
-	swcMinify: true,
-	// Optimize images
-	images: {
-		unoptimized: true,
-	},
-	// Optimize bundle
-	compiler: {
-		removeConsole: process.env.NODE_ENV === 'production',
-	},
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
 };
 
 module.exports = nextConfig;

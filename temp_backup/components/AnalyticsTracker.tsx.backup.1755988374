@@ -10,11 +10,7 @@ interface AnalyticsTrackerProps {
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
-<<<<<<< HEAD
   target?: any;
-=======
-  target?: any | null;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({

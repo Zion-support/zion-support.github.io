@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-08-08T17:08:45.131Z",
   "filesAnalyzed": 108,
   "issuesFound": 102,
-=======
-  "timestamp": "2025-08-09T17:41:56.775Z",
-  "filesAnalyzed": 122,
-  "issuesFound": 122,
->>>>>>> origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352
   "items": [
     {
       "filePath": "/workspace/pages/404.tsx",
@@ -34,16 +28,6 @@
     {
       "filePath": "/workspace/pages/about.tsx",
       "issues": [
-<<<<<<< HEAD
-=======
-        "missing_viewport",
-        "no_tailwind_responsive_classes"
-      ]
-    },
-    {
-      "filePath": "/workspace/pages/admin/automation-status.tsx",
-      "issues": [
->>>>>>> origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352
         "missing_viewport",
         "no_tailwind_responsive_classes"
       ]
@@ -574,12 +558,7 @@
     {
       "filePath": "/workspace/pages/index.tsx",
       "issues": [
-<<<<<<< HEAD
         "missing_viewport"
-=======
-        "missing_viewport",
-        "no_tailwind_responsive_classes"
->>>>>>> origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352
       ]
     },
     {

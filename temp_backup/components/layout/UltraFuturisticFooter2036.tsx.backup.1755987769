@@ -4,7 +4,6 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-<<<<<<< HEAD
   Send, 
   Star, 
   Facebook,
@@ -18,28 +17,6 @@ import {
   Clock,
   ArrowRight,
   MessageCircle
-=======
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Instagram,
-  Youtube,
-  Facebook,
-  ArrowRight,
-  Heart,
-  Shield,
-  Zap,
-  Brain,
-  Rocket,
-  Star,
-  Users,
-  Award,
-  Clock,
-  Target,
-  Building,
-  BookOpen
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -95,7 +72,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -110,8 +86,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     { name: 'Accessibility', href: '/accessibility-scanner' }
   ];
 
-=======
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
@@ -121,7 +95,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> }
   ];
 
-<<<<<<< HEAD
   const stats = [
     { icon: <Rocket className="w-6 h-6" />, value: '500+', label: 'Services' },
     { icon: <Globe className="w-6 h-6" />, value: '50+', label: 'Countries' },
@@ -141,13 +114,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-=======
-  const contactInfo = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
   };
 
   const achievements = [
@@ -160,7 +126,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white relative overflow-hidden">
       {/* Background Elements */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl"></div>
@@ -195,21 +160,11 @@ const UltraFuturisticFooter2036: React.FC = () => {
           </motion.div>
         </div>
 
-=======
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative z-10">
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Top Section with Logo and Description */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Company Info */}
-<<<<<<< HEAD
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -267,128 +222,26 @@ const UltraFuturisticFooter2036: React.FC = () => {
                       {social.icon}
                     </a>
                   ))}
-=======
-            <div className="space-y-6">
-              <motion.div 
-                className="flex items-center space-x-3"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center">
-                  <Rocket className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </h3>
-                  <p className="text-sm text-gray-400">Future Technology Solutions</p>
-                </div>
-              </motion.div>
-
-              <motion.p 
-                className="text-gray-300 leading-relaxed max-w-md"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                Pioneering the future of technology with innovative solutions that drive business transformation. 
-                We combine cutting-edge AI, quantum computing, and space technology to deliver exceptional results.
-              </motion.p>
-
-              {/* Contact Info */}
-              <motion.div 
-                className="space-y-3"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Mail className="w-4 h-4" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:underline">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Phone className="w-4 h-4" />
-                  <a href={`tel:${contactInfo.phone}`} className="hover:underline">
-                    {contactInfo.phone}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <MapPin className="w-4 h-4" />
-                  <span>{contactInfo.address}</span>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
                 </div>
               </motion.div>
             </div>
 
-<<<<<<< HEAD
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
-=======
-            {/* Achievements Grid */}
-            <motion.div 
-              className="grid grid-cols-2 gap-6"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              {achievements.map((achievement, index) => (
-                <div key={index} className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="flex justify-center mb-3 text-cyan-400">
-                    {achievement.icon}
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">
-                    {achievement.number}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    {achievement.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {footerSections.map((section, sectionIndex) => (
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
               <motion.div
                 key={section.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <h3 className="text-lg font-semibold text-white mb-6">{section.title}</h3>
-=======
-                transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
-                  {section.title === 'Services' && <Brain className="w-5 h-5 text-cyan-400 mr-2" />}
-                  {section.title === 'Solutions' && <Target className="w-5 h-5 text-blue-400 mr-2" />}
-                  {section.title === 'Company' && <Building className="w-5 h-5 text-purple-400 mr-2" />}
-                  {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-green-400 mr-2" />}
-                  {section.title}
-                </h4>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
                 <ul className="space-y-3">
                   {section.links.map((link) => (
                     <li key={link.name}>
                       <Link
                         href={link.href}
-<<<<<<< HEAD
                         className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
-=======
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
                       >
                         <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-1" />
                         {link.name}
@@ -400,7 +253,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
         {/* Newsletter Section */}
         <div className="py-12 border-t border-white/10">
           <motion.div
@@ -450,39 +302,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
                 <span>Successfully subscribed!</span>
               </motion.div>
             )}
-=======
-          {/* Newsletter Section */}
-          <motion.div 
-            className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/20 rounded-2xl p-8 mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Stay Updated with Latest Tech Trends
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Get insights on AI, quantum computing, space technology, and more delivered to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-                />
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2"
-                >
-                  <Zap className="w-4 h-4" />
-                  Subscribe
-                </motion.button>
-              </div>
-            </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
           </motion.div>
 
           {/* Social Links and Bottom Section */}
@@ -569,7 +388,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Floating Contact Button */}
       <motion.div
@@ -586,8 +404,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
           <MessageCircle className="w-7 h-7" />
         </Link>
       </motion.div>
-=======
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
     </footer>
   );
 };

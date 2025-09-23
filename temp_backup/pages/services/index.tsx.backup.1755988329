@@ -56,7 +56,6 @@ import { real2036ITServicesAdditions } from '../../data/real-2036-it-services-ad
 import { real2036AIServicesAdditions } from '../../data/real-2036-ai-services-additions';
 import { innovative2025MicroSaasBatch } from '../../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch } from '../../data/innovative-2025-it-enterprise-batch';
-<<<<<<< HEAD
 import { innovativeMicroSaasServices as innovative2025MicroSaasExpansions } from '../../data/innovative-2025-micro-saas-expansions';
 import { innovativeITServices as innovative2025ITServicesExpansions } from '../../data/innovative-2025-it-services-expansions';
 import { innovativeAIServices as innovative2025AIServicesExpansions } from '../../data/innovative-2025-ai-services-expansions';
@@ -87,11 +86,6 @@ interface Service {
   icon?: string;
   [key: string]: unknown;
 }
-=======
-import { innovative2025AIServices } from '../../data/innovative-2025-ai-services-batch';
-import { innovative2025ITInfrastructureServices } from '../../data/innovative-2025-it-infrastructure-batch';
-import { innovative2025MicroSaasBatch2 } from '../../data/innovative-2025-micro-saas-batch-2';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1603
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

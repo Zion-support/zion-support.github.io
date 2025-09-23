@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { WifiOff, RefreshCw, Home, Signal } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
@@ -200,11 +199,4 @@ const OfflinePage: React.FC = () => {
         </motion.div>
       </div>
     </>
-=======
-import Head from 'next/head';
-  return (
-    <>
-      <Head><title>offline - Zion App</title><meta name="description" content="offline page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">offline</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
   );

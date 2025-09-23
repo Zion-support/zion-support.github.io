@@ -788,19 +788,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Cloud & FinOps',
     realService: true,
-<<<<<<< HEAD
     technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node.js, Next.js'],
     integrations: ['Slack, Email, PagerDuty, Jira'],
     useCases: ['Budget overrun prevention, Tag hygiene, Commitment utilization'],
     roi: '5–20% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'],
-=======
-    technology: ['AWS Cost Explorer', 'GCP Billing', 'Azure Cost', 'Node.js', 'Next.js'],
-    integrations: ['Slack', 'Email', 'PagerDuty', 'Jira'],
-    useCases: ['Budget overrun prevention', 'Tag hygiene', 'Commitment utilization'],
-    roi: '5–20% monthly savings within 60 days',
-    competitors: ['Anodot', 'CloudZero', 'Vantage'],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
     marketSize: '$10B cloud cost optimization',
     growthRate: '20% CAGR',
     variant: 'quantum-matrix',
@@ -838,19 +830,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '3 days',
     category: 'Security & Compliance',
     realService: true,
-<<<<<<< HEAD
     technology: ['Next.js, Node.js, PostgreSQL, S3'],
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'],
     useCases: ['DSAR handling, Regulatory audits, Customer trust'],
     roi: 'Reduce DSAR processing time by 70–90%',
     competitors: ['Transcend, OneTrust, DataGrail'],
-=======
-    technology: ['Next.js', 'Node.js', 'PostgreSQL', 'S3'],
-    integrations: ['Salesforce', 'HubSpot', 'G Suite', 'Zendesk'],
-    useCases: ['DSAR handling', 'Regulatory audits', 'Customer trust'],
-    roi: 'Reduce DSAR processing time by 70–90%',
-    competitors: ['Transcend', 'OneTrust', 'DataGrail'],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
     marketSize: '$12B privacy ops',
     growthRate: '22% CAGR',
     variant: 'ai-futuristic',
@@ -888,19 +872,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Reliability & SRE',
     realService: true,
-<<<<<<< HEAD
     technology: ['Node.js, OpenAI, Postgres, Kafka'],
     integrations: ['PagerDuty, Statuspage, Slack, Opsgenie'],
     useCases: ['On-call assist, Comms automation, RCA support'],
     roi: 'Cut MTTR by 20–40%',
     competitors: ['FireHydrant, Rootly'],
-=======
-    technology: ['Node.js', 'OpenAI', 'Postgres', 'Kafka'],
-    integrations: ['PagerDuty', 'Statuspage', 'Slack', 'Opsgenie'],
-    useCases: ['On-call assist', 'Comms automation', 'RCA support'],
-    roi: 'Cut MTTR by 20–40%',
-    competitors: ['FireHydrant', 'Rootly'],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
     marketSize: '$5B incident mgmt',
     growthRate: '18% CAGR',
     variant: 'quantum',
@@ -938,19 +914,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'Go-To-Market',
     realService: true,
-<<<<<<< HEAD
     technology: ['Next.js, OpenAI, PostgreSQL'],
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'],
     useCases: ['Outbound campaigns, Lead activation, Pipeline acceleration'],
     roi: '2–5x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist'],
-=======
-    technology: ['Next.js', 'OpenAI', 'PostgreSQL'],
-    integrations: ['HubSpot', 'Salesforce', 'SendGrid', 'LinkedIn'],
-    useCases: ['Outbound campaigns', 'Lead activation', 'Pipeline acceleration'],
-    roi: '2–5x reply rates vs. generic templates',
-    competitors: ['Apollo', 'Smartlead', 'Lemlist'],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
     marketSize: '$20B sales tech',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
@@ -988,19 +956,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '2 days',
     category: 'Data & Analytics',
     realService: true,
-<<<<<<< HEAD
     technology: ['dbt, OpenLineage, PostgreSQL, Next.js'],
     integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira'],
     useCases: ['Breaking change prevention, Data SLAs, Ownership clarity'],
     roi: 'Reduce data incidents by 30–50%',
     competitors: ['Monte Carlo, Bigeye, Soda'],
-=======
-    technology: ['dbt', 'OpenLineage', 'PostgreSQL', 'Next.js'],
-    integrations: ['Snowflake', 'BigQuery', 'Databricks', 'Airflow', 'Jira'],
-    useCases: ['Breaking change prevention', 'Data SLAs', 'Ownership clarity'],
-    roi: 'Reduce data incidents by 30–50%',
-    competitors: ['Monte Carlo', 'Bigeye', 'Soda'],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
     marketSize: '$6B data observability',
     growthRate: '23% CAGR',
     variant: 'quantum',
@@ -1011,7 +971,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 6,
     rating: 4.6,
     reviews: 3
-<<<<<<< HEAD
   },
   {
     id: 'ai-powered-email-responder',
@@ -2549,8 +2508,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 11,
     rating: 4.6,
     reviews: 6
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
   }
 ];
 

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> origin/cursor/automate-ai-and-it-service-creation-6b2f
 import Head from 'next/head';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -67,36 +62,6 @@ export default function HomePage() {
       </main>
     </div>
   );
-=======
-interface Service {
-  id: string;
-  name: string;
-  type: string;
-  description: string;
-  category: string;
-  technology: string;
-  status: 'active' | 'beta' | 'development';
-  features: string[];
-  pricing: {
-    model: string;
-    startingPrice: string;
-    details: string;
-  };
-  links: {
-    demo: string;
-    documentation: string;
-    github: string;
-    deployment: string;
-  };
-  metrics: {
-    uptime: string;
-    responseTime: string;
-    users: string;
-  };
-  lastUpdated: string;
-  path?: string;
-  files?: string[];
->>>>>>> origin/cursor/automate-ai-and-it-service-creation-6b2f
 }
 
 interface ServiceCategory {

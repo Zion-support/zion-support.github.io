@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -96,85 +95,10 @@ const AboutPage: React.FC = () => {
       role: 'Cybersecurity',
       description: 'Protecting digital assets with advanced security',
       icon: <Shield className="w-6 h-6" />
-=======
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Atom, 
-  Shield, 
-  Rocket, 
-  Users, 
-  Award, 
-  Globe, 
-  Target,
-  Zap,
-  Star,
-  CheckCircle,
-  TrendingUp
-} from 'lucide-react';
-
-export default function AboutPage() {
-  const stats = [
-    { label: 'Years of Innovation', value: '10+', icon: <Award className="w-6 h-6" /> },
-    { label: 'Global Clients', value: '500+', icon: <Globe className="w-6 h-6" /> },
-    { label: 'AI Solutions', value: '50+', icon: <Brain className="w-6 h-6" /> },
-    { label: 'Success Rate', value: '99%', icon: <CheckCircle className="w-6 h-6" /> }
-  ];
-
-  const values = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible with cutting-edge AI and quantum technologies.'
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Trust & Security',
-      description: 'Enterprise-grade security and compliance built into every solution we deliver.'
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Client Success',
-      description: 'Your success is our mission. We partner with you to achieve transformative results.'
-    },
-    {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'Future-Ready',
-      description: 'We build solutions that scale and evolve with your business needs.'
-    }
-  ];
-
-  const timeline = [
-    {
-      year: '2015',
-      title: 'Foundation',
-      description: 'Zion Tech Group founded with a vision to democratize advanced technology.'
-    },
-    {
-      year: '2018',
-      title: 'AI Breakthrough',
-      description: 'Launched first AI-powered business solutions platform.'
-    },
-    {
-      year: '2020',
-      title: 'Quantum Leap',
-      description: 'Pioneered quantum computing applications for enterprise use.'
-    },
-    {
-      year: '2023',
-      title: 'Global Expansion',
-      description: 'Expanded operations to serve clients across 25+ countries.'
-    },
-    {
-      year: '2025',
-      title: 'Future Vision',
-      description: 'Leading the charge in AI consciousness and space technology.'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-ecc3
     }
   ];
 
   return (
-<<<<<<< HEAD
     <Layout 
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, values, and commitment to revolutionizing technology"
@@ -308,40 +232,6 @@ export default function AboutPage() {
                   <p className="text-gray-300 text-sm">
                     {value.description}
                   </p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-blue-500/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Pioneering the future of technology through AI consciousness, quantum computing, 
-              and space innovation. We transform businesses with cutting-edge solutions.
-            </p>
-            <div className="flex flex-wrap justify-center gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="flex items-center justify-center mb-2 text-cyan-400">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-white">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-ecc3
                 </motion.div>
               ))}
             </div>
@@ -349,7 +239,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Milestones Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -481,49 +370,6 @@ export default function AboutPage() {
                 >
                   Get in Touch
                 </a>
-=======
-      {/* Mission & Vision */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Our Mission
-              </h2>
-              <p className="text-lg text-gray-300 mb-6">
-                To accelerate human progress through revolutionary technology solutions that 
-                solve the world's most complex challenges. We believe in making advanced 
-                AI and quantum technologies accessible to every business.
-              </p>
-              <p className="text-lg text-gray-300">
-                From autonomous business operations to space resource mining, we're building 
-                the infrastructure for humanity's next great leap forward.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 p-8 rounded-2xl border border-cyan-500/30">
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Vision 2030</h3>
-                <p className="text-gray-300 mb-4">
-                  A world where AI consciousness enhances human capabilities, quantum 
-                  computing solves previously impossible problems, and space technology 
-                  opens new frontiers for humanity.
-                </p>
-                <div className="flex items-center text-cyan-400">
-                  <Target className="w-5 h-5 mr-2" />
-                  <span className="font-semibold">Building Tomorrow, Today</span>
-                </div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-ecc3
               </div>
             </motion.div>
           </div>

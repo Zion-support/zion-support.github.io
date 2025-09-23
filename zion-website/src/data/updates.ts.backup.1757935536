@@ -32,7 +32,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
     title: 'Guide: Enterprise Agent Observability (2026)',
     summary:
       'Traces, evals, and safety telemetry to operate autonomous agents in production.',
@@ -57,8 +56,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Security'
   },
   {
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-32f6
     title: 'Guide: Agent Platform Operations (2026)',
     summary:
       'Reference operating model: SLOs, incident response, and eval-gated change management.',

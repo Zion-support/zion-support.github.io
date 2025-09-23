@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -370,59 +369,6 @@ const AboutPage: React.FC = () => {
                 >
                   Get in Touch
                 </a>
-=======
-import { NextPage } from 'next';
-import { Users, Target, Award, Globe, Brain, Rocket, Atom, Zap, Star, Shield, ArrowRight, CheckCircle, Building, Lightbulb, Heart, Eye, Zap as ZapIcon, Brain as BrainIcon, Rocket as RocketIcon, Atom as AtomIcon } from 'lucide-react';
-
-const About: NextPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-300 text-sm mb-6">
-              <Users className="w-4 h-4" />
-              <span>Our Story</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-600 bg-clip-text text-transparent">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We are pioneers in the convergence of AI consciousness, quantum computing, and space technology, 
-              dedicated to advancing human evolution and expanding our reach beyond Earth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Our Mission
-              </h2>
-              <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                To accelerate human consciousness evolution through revolutionary AI technology, 
-                quantum computing breakthroughs, and autonomous space exploration systems that 
-                expand humanity's reach across the cosmos.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                We believe that the convergence of artificial intelligence, quantum mechanics, 
-                and space technology will unlock unprecedented possibilities for human advancement, 
-                enabling us to transcend current limitations and explore new frontiers of existence.
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl p-3">
-                  <Target className="w-full h-full text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Purpose-Driven Innovation</h3>
-                  <p className="text-gray-300 text-sm">Every breakthrough serves humanity's greater good</p>
-                </div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f89a
               </div>
             </div>
 
@@ -693,8 +639,4 @@ const About: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AboutPage;
-=======
-export default About;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f89a

@@ -423,7 +423,6 @@ const AccessibilityEnhancer: React.FC<{
 
   // Auto-optimize accessibility
   useEffect(() => {
-<<<<<<< HEAD
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target) {
@@ -434,31 +433,13 @@ const AccessibilityEnhancer: React.FC<{
         if (settings.focusIndicator) {
           target.style.outline = '3px solid #06b6d4';
           target.style.outlineOffset = '2px';
-=======
-    const handleFocusIn = (e: Event) => {
-      const target = e.target as HTMLElement;
-      
-      // Announce focus changes for screen readers
-      if (settings.screenReader) {
-        const label = target.getAttribute('aria-label') || 
-                     target.getAttribute('title') || 
-                     target.textContent?.trim();
-        if (label) {
-          announceToScreenReader(label);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-34ad
         }
       }
     };
 
-<<<<<<< HEAD
     const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target && settings.focusIndicator) {
-=======
-    const handleFocusOut = (e: Event) => {
-      const target = e.target as HTMLElement;
-      if (settings.focusIndicators) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-34ad
         target.style.outline = '';
         target.style.outlineOffset = '';
       }

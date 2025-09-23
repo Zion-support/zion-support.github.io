@@ -11,98 +11,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-<<<<<<< HEAD:pages/services.tsx
 const Services: React.FC = () => {
-=======
-<<<<<<< HEAD
-const ServicesPage: React.FC = () => {
-  const mainServices = [
-    {
-      title: "AI Consciousness Evolution",
-      description: "Revolutionary AI systems that develop self-awareness, emotional intelligence, and autonomous learning capabilities.",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600",
-      features: [
-        "Emotional intelligence development",
-        "Self-aware learning systems",
-        "Consciousness evolution algorithms",
-        "Human-AI collaboration frameworks"
-      ],
-      benefits: [
-        "Enhanced decision-making capabilities",
-        "Improved human-AI interaction",
-        "Autonomous problem-solving",
-        "Continuous self-improvement"
-      ]
-    },
-    {
-      title: "Quantum Computing Solutions",
-      description: "Next-generation quantum computing platforms that solve previously impossible computational problems.",
-      icon: <Atom className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-600",
-      features: [
-        "Quantum algorithm optimization",
-        "Hybrid quantum-classical systems",
-        "Cryptography and security",
-        "Complex problem solving"
-      ],
-      benefits: [
-        "1000x faster computation",
-        "Breakthrough research capabilities",
-        "Unbreakable encryption",
-        "Optimization solutions"
-      ]
-    },
-    {
-      title: "Advanced Cybersecurity",
-      description: "AI-powered security systems that provide real-time threat detection and autonomous response capabilities.",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-600",
-      features: [
-        "AI threat intelligence",
-        "Zero-trust architecture",
-        "Automated incident response",
-        "Behavioral analysis"
-      ],
-      benefits: [
-        "99.9% threat detection rate",
-        "Real-time protection",
-        "Reduced false positives",
-        "Compliance assurance"
-      ]
-    },
-    {
-      title: "Space Technology",
-      description: "Autonomous space exploration systems and resource intelligence platforms for the final frontier.",
-      icon: <Rocket className="w-8 h-8" />,
-      color: "from-orange-500 to-red-600",
-      features: [
-        "Autonomous exploration systems",
-        "Space resource intelligence",
-        "Satellite network management",
-        "Mission planning and execution"
-      ],
-      benefits: [
-        "Reduced mission costs",
-        "Enhanced safety protocols",
-        "Real-time decision making",
-        "Resource optimization"
-      ]
-=======
-// Import our new 2025 service data
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
-
-// Import our new practical and specialized services
-import { realPracticalMicroSaasServices2025 } from '../data/2025-real-practical-micro-saas-services';
-import { advancedAIITSpecializedServices2025 } from '../data/2025-advanced-ai-it-specialized-services';
-
-// Import our new 2025 enterprise services
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
 // Import our new innovative 2025 services
 import { realInnovativeMicroSaasServices2025 } from '../data/2025-real-innovative-micro-saas-expansion';
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services-expansion';
@@ -117,14 +26,6 @@ import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansi
 import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
 import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
 
-<<<<<<< HEAD:pages/services.tsx
-=======
-// Import our new innovative 2025 services
-import { innovativeAIAutonomousEcosystemServices2025 } from '../data/2025-innovative-ai-autonomous-ecosystem';
-import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
-import { innovativeMicroSaasBreakthroughs2025 } from '../data/2025-innovative-micro-saas-breakthroughs';
-
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
 // Import our new service data
 import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
@@ -157,14 +58,6 @@ import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-servic
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
 
-<<<<<<< HEAD:pages/services.tsx
-=======
-// Import our new 2025 ultimate innovative services
-import { ultimateInnovativeServices2025 } from '../data/2025-ultimate-innovative-services-expansion';
-import { cuttingEdgeEnterpriseSolutions2025 } from '../data/2025-cutting-edge-enterprise-solutions';
-import { innovativeMicroSaasSolutionsV2 } from '../data/2025-innovative-micro-saas-solutions-v2';
-
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
 
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
@@ -183,7 +76,6 @@ import { cuttingEdgeInnovativeServices2025 } from '../data/2025-cutting-edge-inn
 import { advancedITInfrastructureSolutions2025 } from '../data/2025-advanced-it-infrastructure-solutions';
 import { advancedAIAutomationSolutions2025 } from '../data/2025-advanced-ai-automation-solutions';
 
-<<<<<<< HEAD:pages/services.tsx
 // Import our new revolutionary 2046 services
 import { revolutionary2046AdvancedMicroSaasServices } from '../data/revolutionary-2046-advanced-micro-saas-services';
 import { revolutionary2046AdvancedITServices } from '../data/revolutionary-2046-advanced-it-services';
@@ -194,8 +86,6 @@ import { innovative2025MicroSaasExpanded } from '../data/innovative-2025-micro-s
 import { innovative2025ITSolutionsExpanded } from '../data/innovative-2025-it-solutions-expanded';
 import { innovative2025AISolutionsExpanded } from '../data/innovative-2025-ai-solutions-expanded';
 
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -242,13 +132,6 @@ const allServices = [
   ...realInnovativeMicroSaasServices2025,
   ...innovativeITInfrastructureServices2025,
   ...innovativeAIServices2025,
-<<<<<<< HEAD:pages/services.tsx
-=======
-  ...innovativeMicroSaasSolutions2025,
-  ...cuttingEdgeAIServices2025,
-  ...realEnterpriseMicroSaas2025,
-  ...innovative2025AIAutonomousServices,
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
   
   // Our new 2025 advanced services
   ...advancedBusinessIntelligenceServices2025,
@@ -259,15 +142,6 @@ const allServices = [
   ...realITServices2025Expansion,
   ...realAIServices2025Expansion,
   
-<<<<<<< HEAD:pages/services.tsx
-=======
-  // Our new innovative 2025 services
-  ...innovativeAIAutonomousEcosystemServices2025,
-  ...cuttingEdgeITInfrastructureInnovations2025,
-  ...innovativeMicroSaasBreakthroughs2025,
-  
-  // Existing services
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
@@ -327,7 +201,6 @@ const allServices = [
   // Our new 2025 cutting-edge innovative services expansion
   ...cuttingEdgeInnovativeServices2025,
   ...advancedITInfrastructureSolutions2025,
-<<<<<<< HEAD:pages/services.tsx
   ...advancedAIAutomationSolutions2025,
   
   // Our new revolutionary 2046 services
@@ -339,24 +212,6 @@ const allServices = [
   ...innovative2025MicroSaasExpanded,
   ...innovative2025ITSolutionsExpanded,
   ...innovative2025AISolutionsExpanded
-=======
-  
-  // Our new 2025 ultimate innovative services
-  ...ultimateInnovativeServices2025,
-  ...cuttingEdgeEnterpriseSolutions2025,
-  ...innovativeMicroSaasSolutionsV2,
-  
-  // Our new 2025 service data
-  ...advancedAIAutomationServices2025,
-  ...innovativeMicroSaasSolutions2025,
-  ...cuttingEdgeAIServices2025,
-  ...innovative2025AIAutonomousServices,
-  ...realPracticalMicroSaasServices2025,
-  ...advancedAIITSpecializedServices2025,
-  ...realEnterpriseMicroSaas2025,
-  
-  ...advancedAIAutomationSolutions2025
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
 ];
 
 const categories = [
@@ -417,7 +272,6 @@ const categories = [
     description: 'Revolutionary AI consciousness and emotional intelligence'
   },
   {
-<<<<<<< HEAD:pages/services.tsx
     id: 'revolutionary-2046',
     name: 'Revolutionary 2046',
     icon: <Rocket className="w-6 h-6" />,
@@ -426,8 +280,6 @@ const categories = [
     badge: 'New'
   },
   {
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84:pages/services.tsx.backup.1755990090
     id: 'quantum-emerging',
     name: 'Quantum & Emerging Tech',
     icon: <Atom className="w-6 h-6" />,
@@ -480,60 +332,6 @@ const sortOptions = [
   { value: 'rating', label: 'Highest Rated' }
 ];
 
-<<<<<<< HEAD:pages/services.tsx
-=======
-export default function Services() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const pageSize = 18;
-
-  // Simulate loading state for better UX
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Filter services based on search and category
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         getServiceDescription(service).toLowerCase().includes(searchQuery.toLowerCase());
-    
-    if (selectedCategory === 'all') return matchesSearch;
-    
-    const serviceCategory = getServiceCategory(service).toLowerCase();
-    const categoryName = categories.find(cat => cat.id === selectedCategory)?.name.toLowerCase();
-    
-    return matchesSearch && serviceCategory.includes(categoryName || '');
-  });
-
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'name':
-        return a.name.localeCompare(b.name);
-      case 'price-low':
-        return (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0) - 
-               (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0);
-      case 'price-high':
-        return (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0) - 
-               (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0);
-      case 'newest':
-        return new Date((b as any).launchDate || '2020-01-01').getTime() - 
-               new Date((a as any).launchDate || '2020-01-01').getTime();
-      case 'rating':
-        return (((b as any).rating || 0) as number) - (((a as any).rating || 0) as number);
-      default:
-        return 0;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9191
     }
   });
 

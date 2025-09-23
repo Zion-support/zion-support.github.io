@@ -372,7 +372,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto">
@@ -423,10 +422,6 @@ const Homepage2025: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-=======
-        {/* Enhanced CTA Section */}
-        <section className="py-20 px-4" aria-labelledby="cta-heading">
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

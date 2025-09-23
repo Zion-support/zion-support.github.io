@@ -4,7 +4,6 @@
     <loc>https://ziontechgroup.com/</loc>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <lastmod>2025-08-16T02:29:22.342Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -4513,8 +4512,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     <loc>https://ziontechgroup.com/quantum-energy/</loc>
     <lastmod>2025-08-16T02:29:22.346Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -5141,13 +5138,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/automation</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 =======
     <loc>https://ziontechgroup.com/services/5g-private-network-solutions/</loc>
     <changefreq>weekly</changefreq>
@@ -6688,13 +6682,8 @@
   <url>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/services/github-compliance-bot/</loc>
     <lastmod>2025-08-16T02:29:22.350Z</lastmod>
-=======
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 =======
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
@@ -6712,13 +6701,8 @@
   <url>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/services/incident-postmortem-generator/</loc>
     <lastmod>2025-08-16T02:29:22.350Z</lastmod>
-=======
-    <loc>https://ziontechgroup.com/explore</loc>
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 =======
     <loc>https://ziontechgroup.com/explore</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>

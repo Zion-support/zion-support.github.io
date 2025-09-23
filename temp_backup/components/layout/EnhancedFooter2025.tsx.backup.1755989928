@@ -321,7 +321,6 @@ const EnhancedFooter2025: React.FC = () => {
                 <span className="text-sm">Back to top</span>
                 <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-200" />
               </button>
-<<<<<<< HEAD
             </form>
           </div>
         </motion.div>
@@ -391,11 +390,6 @@ const EnhancedFooter2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
-=======
-            </div>
-          </div>
-        </motion.div>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       </div>
     </footer>
   );

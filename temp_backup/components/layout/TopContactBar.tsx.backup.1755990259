@@ -15,7 +15,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
-<<<<<<< HEAD
   rating: '4.9/5 (500+ Reviews)'
 };
 
@@ -24,27 +23,6 @@ const quickActions = [
   { name: 'Book Demo', href: '/contact', icon: '🎯' },
   { name: 'Live Chat', href: '/support', icon: '💻' },
   { name: 'Support', href: '/support', icon: '🆘' }
-=======
-  rating: '4.9/5 (500+ Reviews)',
-  founded: '2020',
-  employees: '50+',
-  countries: '25+',
-  customers: '1000+'
-};
-
-const quickActions = [
-  { name: 'Get Quote', href: '/contact', icon: <MessageCircle className="w-4 h-4" />, color: 'from-cyan-500 to-blue-600' },
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" />, color: 'from-purple-500 to-pink-600' },
-  { name: 'Live Chat', href: '/support', icon: <MessageCircle className="w-4 h-4" />, color: 'from-green-500 to-emerald-600' },
-  { name: 'Technical Support', href: '/support', icon: <MessageCircle className="w-4 h-4" />, color: 'from-orange-500 to-red-600' }
-];
-
-const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦', color: 'hover:text-blue-400' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: '💼', color: 'hover:text-blue-600' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺', color: 'hover:text-red-500' },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻', color: 'hover:text-gray-400' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-21a7
 ];
 
 export default function TopContactBar() {
@@ -53,11 +31,7 @@ export default function TopContactBar() {
   return (
     <div className="relative z-40">
       {/* Main Contact Bar */}
-<<<<<<< HEAD
       <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b-2 border-cyan-500/50 shadow-lg shadow-cyan-500/20">
-=======
-      <div className="bg-gradient-to-r from-gray-900/90 via-black/90 to-gray-900/90 border-b border-cyan-500/30">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-21a7
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             {/* Left Side - Contact Info */}

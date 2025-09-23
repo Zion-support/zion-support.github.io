@@ -110,7 +110,6 @@ export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
 }
 
-<<<<<<< HEAD:src/services/apiClient.ts
 axiosRetry(apiClient, {
   retries: 3,
   retryCondition: (error) => {
@@ -121,8 +120,6 @@ axiosRetry(apiClient, {
   },
 });
 
-=======
->>>>>>> origin/backup-main-final-20250913-063409:src.broken/services/apiClient.ts
 apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,
   async (error: unknown) => {

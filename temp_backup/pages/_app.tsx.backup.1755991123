@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app';
-<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import '../styles/globals.css';
 import '../styles/enhanced-design-system.css';
@@ -11,12 +10,4 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </EnhancedLayout>
   );
-=======
-import '../styles/enhanced-design-system.css';
-import '../styles/modern-design-system.css';
-import '../styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
->>>>>>> origin/cursor/build-investor-matchmaking-tool-37fa
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen,
@@ -13,26 +12,6 @@ import {
   Building, MessageCircle, Sparkles as SparklesIcon, Zap as ZapIcon,
   Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon,
   Sun, Moon
-=======
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Clock,
-  MessageCircle,
-  Calculator,
-  Play,
-  Users,
-  Brain,
-  Atom,
-  Rocket,
-  Zap
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4bbd
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -177,17 +156,12 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'Showcase & Pricing',
-<<<<<<< HEAD
     href: '/pricing',
-=======
-    href: '/comprehensive-2025-services-showcase',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4bbd
     icon: <Star className="w-5 h-5" />,
     description: 'Service showcases and pricing',
     badge: 'Showcase',
     children: [
       { 
-<<<<<<< HEAD
         name: '2025 Services Showcase', 
         href: '/comprehensive-services-showcase-2025', 
         description: 'Complete 2025 services overview',
@@ -199,12 +173,6 @@ const navigationItems: NavigationItem[] = [
         href: '/innovative-2036-services-showcase', 
         description: 'Latest innovations showcase',
         icon: <Star className="w-4 h-4" />,
-=======
-        name: 'Services Showcase', 
-        href: '/comprehensive-2025-services-showcase', 
-        description: 'Complete services overview',
-        icon: <Calculator className="w-4 h-4" />,
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4bbd
         featured: true
       },
       { 
@@ -315,7 +283,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Play className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Webinars', 
         href: '/webinars', 
         description: 'Educational sessions',
@@ -325,17 +292,6 @@ const navigationItems: NavigationItem[] = [
         name: 'White Papers', 
         href: '/white-papers', 
         description: 'In-depth research',
-=======
-        name: 'Events & Webinars', 
-        href: '/events', 
-        description: 'Upcoming events and webinars',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Community', 
-        href: '/community', 
-        description: 'Join our community',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4bbd
         icon: <Play className="w-4 h-4" />
       }
     ]

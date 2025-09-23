@@ -55,25 +55,9 @@ const Homepage2046: React.FC = () => {
 
   // Combine all revolutionary 2046 services
   const allRevolutionaryServices = [
-<<<<<<< HEAD
     ...revolutionary2046AdvancedMicroSaasServices,
     ...revolutionary2046AdvancedITServices,
     ...revolutionary2046AdvancedAIServices
-=======
-    ...revolutionary2045AdvancedRealMicroSaas,
-    ...revolutionary2045AdvancedITServices,
-    ...revolutionary2045AdvancedAIServices,
-    ...innovativeAIAutonomousEcosystemServices2025,
-    ...cuttingEdgeITInfrastructureInnovations2025,
-    ...innovativeMicroSaasBreakthroughs2025,
-    ...innovativeAIAutonomousEcosystemServices2025V2,
-    ...innovativeITInfrastructureBreakthroughServices2025,
-    ...innovativeMicroSaasBreakthroughServices2025V2,
-    ...innovativeAIAutonomousEcosystemServices2025V3,
-    ...innovativeITInfrastructureBreakthroughServices2025V3,
-    ...innovativeMicroSaasBreakthroughServices2025V3,
-    ...innovativeAIServicesEnhanced2025V3
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bde9
   ];
 
   // Get featured services for rotation

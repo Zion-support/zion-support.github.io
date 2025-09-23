@@ -13,7 +13,6 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
   const [focusTrap, setFocusTrap] = useState(false);
 
   useEffect(() => {
@@ -37,16 +36,6 @@ export default function Layout({ children }: LayoutProps) {
   }, [sidebarOpen]);
 
   // Handle escape key
-=======
-
-  useEffect(() => {
-    // Simulate initial loading
-    const timer = setTimeout(() => setIsLoading(false), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Handle escape key to close sidebar
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2157
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && sidebarOpen) {
@@ -56,10 +45,6 @@ export default function Layout({ children }: LayoutProps) {
 
     if (sidebarOpen) {
       document.addEventListener('keydown', handleEscape);
-<<<<<<< HEAD
-=======
-      // Prevent body scroll when sidebar is open
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2157
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -70,7 +55,6 @@ export default function Layout({ children }: LayoutProps) {
       document.body.style.overflow = 'unset';
     };
   }, [sidebarOpen]);
-<<<<<<< HEAD
 
   if (isLoading) {
     return (
@@ -86,8 +70,6 @@ export default function Layout({ children }: LayoutProps) {
       </div>
     );
   }
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2157
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
@@ -120,5 +119,3 @@ self.addEventListener('notificationclick', (event) => {
     );
   }
 });
-=======
->>>>>>> origin/backup-main-final-20250913-063409

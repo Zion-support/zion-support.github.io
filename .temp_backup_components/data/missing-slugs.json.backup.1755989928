@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
   "accessibility",
   "ai-consciousness-evolution",
   "ai-content-marketing-automation",
@@ -34,8 +33,4 @@
   "services/serverless-lakehouse-starter",
   "services/space-technology",
   "space-mining-automation-platform"
-=======
-  "services/data-contracts-hub",
-  "services/serverless-lakehouse-starter"
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 ]

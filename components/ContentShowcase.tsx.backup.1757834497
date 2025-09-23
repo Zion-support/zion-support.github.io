@@ -332,7 +332,6 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* View All Button */}
         {showViewAll && (
           <div className="text-center">

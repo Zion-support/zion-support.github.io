@@ -5,17 +5,12 @@ on:
   schedule:
     - cron: '0 */2 * * *'
 permissions:
-<<<<<<< HEAD
   contents: write
   actions: read
   pull-requests: write
 concurrency:
   group: workflow-${{ github.ref }}
   cancel-in-progress: false
-=======
-  contents: read
-
->>>>>>> origin/cursor/fix-github-actions-errors-987b
 jobs:
   attempt-fix:
     name: Attempt Fix

@@ -164,21 +164,6 @@ const navigationItems: NavigationItem[] = [
         href: '/contact', 
         description: 'Get in touch',
         icon: <MessageCircle className="w-4 h-4" />
-<<<<<<< HEAD
-=======
-      },
-      { 
-        name: 'Partners', 
-        href: '/partners', 
-        description: 'Partnership opportunities',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Careers', 
-        href: '/careers', 
-        description: 'Join our team',
-        icon: <Play className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-095e
       }
     ]
   },
@@ -202,17 +187,10 @@ const navigationItems: NavigationItem[] = [
         icon: <Target className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Documentation', 
         href: '/docs', 
         description: 'Technical guides',
         icon: <Target className="w-4 h-4" />
-=======
-        name: 'Support', 
-        href: '/support', 
-        description: 'Technical support',
-        icon: <Play className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-095e
       }
     ]
   },

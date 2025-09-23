@@ -90,7 +90,6 @@ export default function ContactPage() {
     }, 3000);
   };
 
-<<<<<<< HEAD
       {/* Contact Information Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
         <div className="absolute inset-0 cyber-grid opacity-10" />
@@ -178,104 +177,6 @@ export default function ContactPage() {
                 <DollarSign className="ml-2 h-5 w-5" />
               </Button>
             </div>
-=======
-  const contactMethods = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Phone Support',
-      value: '+1 302 464 0950',
-      description: 'Available 24/7 for urgent matters',
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'from-blue-500/10 to-blue-600/10'
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Email Support',
-      value: 'kleber@ziontechgroup.com',
-      description: 'Response within 2 hours during business hours',
-      color: 'from-green-500 to-green-600',
-      bgColor: 'from-green-500/10 to-green-600/10'
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: 'Office Address',
-      value: '364 E Main St STE 1008',
-      description: 'Middletown DE 19709, United States',
-      color: 'from-purple-500 to-purple-600',
-      bgColor: 'from-purple-500/10 to-purple-600/10'
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Business Hours',
-      value: 'Monday - Friday',
-      description: '9:00 AM - 6:00 PM EST',
-      color: 'from-orange-500 to-orange-600',
-      bgColor: 'from-orange-500/10 to-orange-600/10'
-    }
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: <Star className="w-5 h-5" />,
-      title: 'Expert Team',
-      description: 'Certified professionals with 10+ years of experience in cutting-edge technologies'
-    },
-    {
-      icon: <Zap className="w-5 h-5" />,
-      title: 'Fast Response',
-      description: 'Average response time under 2 hours with 24/7 availability'
-    },
-    {
-      icon: <Shield className="w-5 h-5" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.99% uptime guarantee'
-    },
-    {
-      icon: <Users className="w-5 h-5" />,
-      title: '500+ Services',
-      description: 'Access to revolutionary micro SaaS services with up to 5000% ROI'
-    },
-    {
-      icon: <Users className="w-5 h-5" />,
-      title: 'Dedicated Support',
-      description: 'Personal account manager for enterprise clients'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <Head>
-        <title>Contact Us | Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. Contact our team for sales inquiries, technical support, or partnership opportunities. Available 24/7." />
-        <meta name="keywords" content="contact, support, sales, Zion Tech Group, micro SaaS, business solutions" />
-        <meta name="author" content="Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Contact Us | Zion Tech Group" />
-        <meta property="og:description" content="Get in touch with Zion Tech Group. Contact our team for sales inquiries, technical support, or partnership opportunities." />
-        <meta property="og:url" content="https://ziontechgroup.com/contact" />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us | Zion Tech Group" />
-        <meta name="twitter:description" content="Get in touch with Zion Tech Group. Contact our team for sales inquiries, technical support, or partnership opportunities." />
-      </Head>
-
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="absolute inset-0">
-          <div className="particles-bg opacity-30" />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 backdrop-blur-sm mb-6">
-            <MessageSquare className="w-4 h-4 text-blue-300 mr-2" />
-            <span className="text-sm font-medium text-blue-300">
-              Get In Touch
-            </span>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
           </div>
         </div>
       </section>

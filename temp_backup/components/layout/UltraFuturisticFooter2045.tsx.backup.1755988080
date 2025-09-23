@@ -2,50 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
   Users, Lock, Cloud, Code, Server, Database, Network, Settings, Target, Play
-=======
-  Phone, 
-  Mail, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube,
-  Zap,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Cloud,
-  Target,
-  Building,
-  Users,
-  BookOpen,
-  FileText,
-  Video,
-  Code,
-  Star,
-  Sparkles,
-  Globe,
-  Cpu,
-  Database,
-  ArrowRight,
-  CheckCircle,
-  Server,
-  TrendingUp,
-  Newspaper,
-  GraduationCap,
-  Briefcase,
-  Heart
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1b9
 } from 'lucide-react';
 
 const UltraFuturisticFooter2045: React.FC = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
   
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -86,43 +49,10 @@ const UltraFuturisticFooter2045: React.FC = () => {
         { name: 'Emotional AI Intelligence 2045', href: '/emotional-ai-intelligence-2045', icon: Heart },
         { name: 'Quantum AI Metaverse 2045', href: '/quantum-ai-metaverse-2045', icon: Globe },
         { name: 'AI Autonomous Business Intelligence 2045', href: '/ai-autonomous-business-intelligence-2045', icon: Target }
-=======
-
-  const footerSections = [
-    {
-      title: 'Services',
-      items: [
-        { label: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className="w-4 h-4" /> },
-        { label: 'IT Infrastructure', href: '/services?category=it-infrastructure', icon: <Server className="w-4 h-4" /> },
-        { label: 'Micro SAAS', href: '/services?category=micro-saas', icon: <Target className="w-4 h-4" /> },
-        { label: 'Quantum Technology', href: '/services?category=quantum', icon: <Atom className="w-4 h-4" /> },
-        { label: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className="w-4 h-4" /> }
-      ]
-    },
-    {
-      title: 'Solutions',
-      items: [
-        { label: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4" /> },
-        { label: 'Startup Solutions', href: '/solutions/startup', icon: <Rocket className="w-4 h-4" /> },
-        { label: 'Government Solutions', href: '/solutions/government', icon: <Shield className="w-4 h-4" /> },
-        { label: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <Heart className="w-4 h-4" /> },
-        { label: 'Financial Solutions', href: '/solutions/financial', icon: <TrendingUp className="w-4 h-4" /> }
-      ]
-    },
-    {
-      title: 'Resources',
-      items: [
-        { label: 'Blog', href: '/blog', icon: <Newspaper className="w-4 h-4" /> },
-        { label: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },
-        { label: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4" /> },
-        { label: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4" /> },
-        { label: 'Training', href: '/training', icon: <GraduationCap className="w-4 h-4" /> }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1b9
       ]
     },
     {
       title: 'Company',
-<<<<<<< HEAD
       links: [
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Mission', href: '/mission', icon: Star },
@@ -130,20 +60,11 @@ const UltraFuturisticFooter2045: React.FC = () => {
         { name: 'Careers', href: '/careers', icon: Target },
         { name: 'News & Updates', href: '/news', icon: Play },
         { name: 'Press Kit', href: '/press', icon: Database }
-=======
-      items: [
-        { label: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-        { label: 'Our Team', href: '/team', icon: <Users className="w-4 h-4" /> },
-        { label: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4" /> },
-        { label: 'News & Blog', href: '/blog', icon: <Newspaper className="w-4 h-4" /> },
-        { label: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1b9
       ]
     }
   ];
 
   const socialLinks = [
-<<<<<<< HEAD
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
@@ -178,14 +99,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-=======
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { label: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> },
-    { label: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
-  ];
-
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1b9
   return (
     <footer className="relative bg-black border-t border-gray-800/50 overflow-hidden">
       {/* Futuristic Background Elements */}
@@ -209,7 +122,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             variants={staggerContainer}
@@ -278,17 +190,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25"
-              >
-                <Zap className="w-7 h-7 text-white" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1b9
               </motion.div>
               <div>
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -391,7 +292,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
         </div>
 
         {/* Bottom Footer */}
-<<<<<<< HEAD
         <div className="border-t border-cyan-500/20 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
@@ -428,27 +328,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
                   Accessibility
                 </Link>
               </div>
-=======
-        <div className="border-t border-gray-800/50 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                Terms of Service
-              </Link>
-              <Link href="/security" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                Security
-              </Link>
-              <Link href="/support" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                Support
-              </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1b9
             </div>
           </motion.div>
 

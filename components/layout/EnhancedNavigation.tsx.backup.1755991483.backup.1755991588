@@ -18,40 +18,17 @@ export default function EnhancedNavigation() {
           <a className="font-semibold">Zion</a>
         </Link>
         <div className="flex items-center gap-4 text-sm">
-<<<<<<< HEAD
           <Link href="/download"><a>Download</a></Link>
           <Link href="/services"><a>Services</a></Link>
           <Link href="/features"><a>Features</a></Link>
           <Link href="/capabilities"><a>Capabilities</a></Link>
-=======
-<<<<<<< HEAD
-          <Link href="/grants"><a>Grants</a></Link>
-          <Link href="/incubator"><a>Incubator</a></Link>
-          <Link href="/about"><a>About</a></Link>
-          <Link href="/blog"><a>Blog</a></Link>
-          <Link href="/automation"><a>Automations</a></Link>
-          <Link href="/automation/innovation"><a>Innovation</a></Link>
-          <Link href="/automation/tech-radar"><a>Tech Radar</a></Link>
-          <Link href="/automation/security"><a>Security</a></Link>
-          <Link href="/automation/site-validator"><a>Validator</a></Link>
-          <Link href="/automation/knowledge-graph"><a>Graph</a></Link>
-          <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/vendors"><a>Vendors</a></Link>
-          <Link href="/agency-dashboard"><a>Agency Dashboard</a></Link>
-=======
-          <Link href="/services"><a>Marketplace</a></Link>
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
           <Link href="/about"><a>About</a></Link>
           <Link href="/blog"><a>Blog</a></Link>
           <Link href="/salary-insights"><a>Salary Insights</a></Link>
           <Link href="/admin"><a>Admin</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
 <<<<<<< HEAD
-<<<<<<< HEAD
           <Link href="/academy/founder-course"><a className="font-medium">Founder Course</a></Link>
-=======
-          <Link href="/admin/zion-brain"><a>Admin</a></Link>
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
 =======
           <Link href="/notifications">
             <a className="relative inline-flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 p-2 hover:bg-gray-50 dark:hover:bg-gray-800">

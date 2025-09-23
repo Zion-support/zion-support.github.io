@@ -20,7 +20,6 @@ declare namespace React {
   export interface KeyboardEvent<T = Element> extends SyntheticEvent<T> { key: string; shiftKey: boolean }
   export interface MouseEvent<T = Element> extends SyntheticEvent<T> {}
   export interface FormEvent<T = Element> extends SyntheticEvent<T> {}
-<<<<<<< HEAD
   export type LegacyRef<T> = any;
   export type Ref<T> = any;
   export type ElementRef<T> = any;
@@ -30,21 +29,6 @@ declare namespace React {
   export function useRef<T = any>(initial: T): { current: T };
   const react: any;
   export default react;
-=======
-
-  export type LegacyRef<T> = any
-  export type Ref<T> = any
-  export type ElementRef<T> = any
-  export type ComponentPropsWithoutRef<T> = any
-
-  export function useState<S>(initialState: S | (() => S)): [S, (value: S) => void]
-  export function useRef<T>(initialValue: T | null): { current: T | null }
-  export function useEffect(effect: () => void | (() => void), deps?: any[]): void
-
-  export const Fragment: any
-  const React: { createElement: any }
-  export default React
->>>>>>> origin/4cssl2-codex/fix-typescript-errors-in-components
 }
 
 declare module 'react' {
@@ -58,7 +42,6 @@ declare module 'react/jsx-runtime' {
   export const Fragment: any
 }
 
-<<<<<<< HEAD
 declare module 'react-dom' {
   export function render(...args: any[]): any;
   const reactDom: any;
@@ -74,11 +57,6 @@ declare module 'react-router-dom' {
   export const Navigate: any;
   const rr: any;
   export default rr;
-=======
-// react-router-dom hooks
-declare module 'react-router-dom' {
-  export function useParams<Params extends Record<string, string | undefined> = {}>(): Partial<Params>
->>>>>>> origin/4cssl2-codex/fix-typescript-errors-in-components
 }
 
 // react-hook-form
@@ -86,7 +64,6 @@ declare module 'react-hook-form' {
   export function useForm<T extends Record<string, any>>(options?: any): any
 }
 
-<<<<<<< HEAD
 declare module '@hookform/resolvers/zod' {
   export function zodResolver(...args: any[]): any;
 }
@@ -98,9 +75,6 @@ declare module '@tanstack/react-query' {
   export default rq;
 }
 
-=======
-// zod utility
->>>>>>> origin/4cssl2-codex/fix-typescript-errors-in-components
 declare module 'zod' {
   const z: any
   namespace z {

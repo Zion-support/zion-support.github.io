@@ -16,8 +16,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: .github/labeler.yml
-<<<<<<< HEAD
           sync-labels: true
-=======
-          sync-labels: true
->>>>>>> origin/cursor/automate-project-enhancement-and-merge-cac0

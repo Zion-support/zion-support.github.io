@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Knowledge Graph Builder
 
 on:
@@ -12,14 +11,6 @@ on:
 
 permissions:
   contents: write
-=======
-name: Knowledge Graph
-
-on:
-  schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
 
 jobs:
   graph:
@@ -31,7 +22,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-<<<<<<< HEAD
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Build knowledge graph
@@ -42,17 +32,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ -n "$(git status --porcelain)" ]]; then
             git add -A
-=======
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run knowledge:graph
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/automation/knowledge-graph.json automation_logs/knowledge-graph.log || true
-          if ! git diff --cached --quiet; then
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
             git commit -m "chore(automation): update knowledge graph [skip ci]"
             git push
           else

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/hooks/useWhitelabelTenant.ts
 import { useState, useEffect } from 'react';
 
 interface Tenant {
@@ -36,10 +35,3 @@ export const useTenantAdminStatus = (tenantId?: string) => {
 
   return { isTenantAdmin, isLoading };
 };
-=======
-// Hook for useWhitelabelTenant;
-export const useUseWhitelabelTenant: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/backup-main-final-20250913-063409:src.broken/hooks/useWhitelabelTenant.ts

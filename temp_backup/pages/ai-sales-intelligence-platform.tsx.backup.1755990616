@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -78,74 +77,10 @@ export default function AISalesIntelligencePlatform() {
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-red-900/20 to-purple-900/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { 
-  TrendingUp, Brain, Zap, Target, Award, Clock, Users, Eye,
-  Shield, Star, CheckCircle, Database, MessageSquare, DollarSign
-} from 'lucide-react';
-
-const AISalesIntelligencePlatform: React.FC = () => {
-  const platformFeatures = [
-    {
-      title: "Intelligent Lead Scoring",
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-      description: "AI-powered lead scoring that identifies the most promising sales opportunities",
-      features: [
-        "Behavioral pattern analysis",
-        "Predictive lead scoring",
-        "Conversion probability",
-        "Priority ranking algorithms"
-      ]
-    },
-    {
-      title: "Sales Process Optimization",
-      icon: <Target className="w-8 h-8 text-blue-400" />,
-      description: "Optimize every step of the sales process with AI-driven insights and automation",
-      features: [
-        "Pipeline optimization",
-        "Sales cycle analysis",
-        "Process automation",
-        "Performance tracking"
-      ]
-    },
-    {
-      title: "Customer Intelligence",
-      icon: <Users className="w-8 h-8 text-green-400" />,
-      description: "Deep insights into customer behavior, preferences, and buying patterns",
-      features: [
-        "Customer segmentation",
-        "Behavioral analysis",
-        "Preference prediction",
-        "Engagement optimization"
-      ]
-    },
-    {
-      title: "Revenue Forecasting",
-      icon: <TrendingUp className="w-8 h-8 text-yellow-400" />,
-      description: "Accurate revenue predictions and sales forecasting with AI-powered analytics",
-      features: [
-        "Predictive modeling",
-        "Trend analysis",
-        "Risk assessment",
-        "Scenario planning"
-      ]
-    }
-  ];
-
-  return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-green-900/20 to-emerald-900/20">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center"
             >
               <div className="flex items-center justify-center mb-6">
@@ -175,42 +110,14 @@ const AISalesIntelligencePlatform: React.FC = () => {
                 >
                   Watch Demo
                 </motion.button>
-=======
-            >
-              <div className="flex justify-center mb-6">
-                <div className="p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full">
-                  <TrendingUp className="w-12 h-12 text-green-400" />
-                </div>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-green-400 bg-clip-text text-transparent mb-6">
-                AI Sales Intelligence Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-8">
-                Revolutionary AI-powered platform that transforms sales operations, 
-                maximizes revenue, and drives intelligent decision-making across your sales team.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">
-                  Explore Platform
-                </button>
-                <button className="px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300">
-                  Request Demo
-                </button>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
               </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-        {/* Platform Features */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +125,6 @@ const AISalesIntelligencePlatform: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Powerful Sales Intelligence Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -229,23 +135,10 @@ const AISalesIntelligencePlatform: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-=======
-                Advanced Platform Features
-              </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                Our sales intelligence platform combines cutting-edge AI with comprehensive analytics 
-                to revolutionize how you manage and optimize your sales operations.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {platformFeatures.map((feature, index) => (
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300 group"
                 >
@@ -256,25 +149,6 @@ const AISalesIntelligencePlatform: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-=======
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-green-400/30 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-6">
-                    {feature.icon}
-                    <h3 className="text-2xl font-bold text-white ml-3">{feature.title}</h3>
-                  </div>
-                  <p className="text-white/70 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.features.map((feat, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-white/80">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feat}
-                      </li>
-                    ))}
-                  </ul>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
                 </motion.div>
               ))}
             </div>
@@ -282,7 +156,6 @@ const AISalesIntelligencePlatform: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -350,55 +223,6 @@ const AISalesIntelligencePlatform: React.FC = () => {
                     <Globe className="w-6 h-6 text-orange-400" />
                   </div>
                   <span className="text-white font-medium text-sm">{integration}</span>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transformative Benefits
-              </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                Experience unprecedented improvements in sales performance, 
-                revenue growth, and team productivity with AI-powered sales intelligence.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <DollarSign className="w-8 h-8 text-green-400" />,
-                  title: "Increased Revenue",
-                  description: "Boost sales performance and revenue growth through intelligent lead prioritization and process optimization."
-                },
-                {
-                  icon: <Zap className="w-8 h-8 text-yellow-400" />,
-                  title: "Improved Efficiency",
-                  description: "Maximize sales team productivity with automated processes and intelligent insights."
-                },
-                {
-                  icon: <Target className="w-8 h-8 text-blue-400" />,
-                  title: "Better Conversion Rates",
-                  description: "Improve conversion rates through targeted approaches and predictive analytics."
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center p-6"
-                >
-                  <div className="flex justify-center mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-white/70">{benefit.description}</p>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
                 </motion.div>
               ))}
             </div>
@@ -406,13 +230,8 @@ const AISalesIntelligencePlatform: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-orange-900/20 via-red-900/20 to-purple-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -421,7 +240,6 @@ const AISalesIntelligencePlatform: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Sales?
               </h2>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of sales teams that have already transformed their performance 
                 with AI-powered intelligence. Start your free trial today.
@@ -441,19 +259,6 @@ const AISalesIntelligencePlatform: React.FC = () => {
                 >
                   Contact Sales
                 </motion.button>
-=======
-              <p className="text-xl text-white/70 mb-8">
-                Join us in the future of sales intelligence. Maximize revenue, 
-                boost efficiency, and drive growth with AI-powered sales optimization.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">
-                  Get Started Today
-                </button>
-                <button className="px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300">
-                  Schedule Consultation
-                </button>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a0fc
               </div>
             </motion.div>
           </div>

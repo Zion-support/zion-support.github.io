@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, 
   X, 
   Search, 
@@ -19,13 +18,6 @@ import {
   Briefcase,
   BookOpen,
   Phone
-=======
-  Menu, X, Search, ChevronDown, ChevronRight, 
-  Home, Briefcase, Users, BookOpen, Phone, 
-  Zap, Shield, Brain, Rocket, Globe, Cloud, 
-  Building, GraduationCap, Heart, Factory, 
-  ShoppingCart, Building2, Code, FileText
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-786c
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -84,7 +76,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Enterprise-grade security solutions'
       },
       {
-<<<<<<< HEAD
         label: 'Enterprise IT',
         href: '/services?category=enterprise-it',
         icon: <Building className="w-4 h-4" />,
@@ -107,33 +98,16 @@ const navigationItems: NavigationItem[] = [
         href: '/services?category=cloud',
         icon: <Cloud className="w-4 h-4" />,
         description: 'Cloud computing and infrastructure'
-=======
-        label: 'Cloud Platform',
-        href: '/cloud-platform',
-        icon: <Cloud className="w-4 h-4" />,
-        description: 'Scalable cloud infrastructure'
-      },
-      {
-        label: 'Enterprise IT',
-        href: '/enterprise-it',
-        icon: <Building className="w-4 h-4" />,
-        description: 'Enterprise technology solutions'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-786c
       }
     ]
   },
   {
-<<<<<<< HEAD
     label: 'Solutions',
-=======
-    label: 'Industries',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-786c
     href: '/solutions',
     icon: <Globe className="w-4 h-4" />,
     description: 'Industry-specific technology solutions',
     children: [
       {
-<<<<<<< HEAD
         label: 'Healthcare & Biotech',
         href: '/solutions/healthcare',
         icon: <Users className="w-4 h-4" />,
@@ -156,42 +130,6 @@ const navigationItems: NavigationItem[] = [
         href: '/solutions/retail',
         icon: <Globe className="w-4 h-4" />,
         description: 'Digital commerce solutions'
-=======
-        label: 'Healthcare',
-        href: '/healthcare-solutions',
-        icon: <Heart className="w-4 h-4" />,
-        description: 'Medical technology solutions'
-      },
-      {
-        label: 'Financial Services',
-        href: '/financial-solutions',
-        icon: <Zap className="w-4 h-4" />,
-        description: 'Fintech and banking solutions'
-      },
-      {
-        label: 'Manufacturing',
-        href: '/manufacturing-ai-solutions',
-        icon: <Factory className="w-4 h-4" />,
-        description: 'Industry 4.0 and AI manufacturing'
-      },
-      {
-        label: 'Retail',
-        href: '/retail-technology-solutions',
-        icon: <ShoppingCart className="w-4 h-4" />,
-        description: 'E-commerce and retail technology'
-      },
-      {
-        label: 'Government',
-        href: '/government-technology-solutions',
-        icon: <Building2 className="w-4 h-4" />,
-        description: 'Public sector technology'
-      },
-      {
-        label: 'Education',
-        href: '/education-technology-solutions',
-        icon: <GraduationCap className="w-4 h-4" />,
-        description: 'EdTech and learning platforms'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-786c
       }
     ]
   },

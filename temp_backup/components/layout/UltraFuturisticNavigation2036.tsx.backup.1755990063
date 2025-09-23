@@ -110,7 +110,6 @@ const navigationItems: NavigationItem[] = [
     description: 'Service showcases and pricing',
     badge: 'Featured',
     category: 'showcase',
-<<<<<<< HEAD
     featured: true,
     children: [
       { 
@@ -174,27 +173,6 @@ const navigationItems: NavigationItem[] = [
         href: '/webinars', 
         description: 'Educational sessions',
         icon: <Video className="w-4 h-4" />
-=======
-    children: [
-      {
-        name: '2025 Services',
-        href: '/comprehensive-services-showcase-2025',
-        description: 'Latest service offerings',
-        icon: <Star className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'Pricing Plans',
-        href: '/pricing',
-        description: 'Flexible pricing options',
-        icon: <Calculator className="w-4 h-4" />
-      },
-      {
-        name: 'Enterprise Solutions',
-        href: '/enterprise-solutions-showcase',
-        description: 'Large-scale deployments',
-        icon: <Globe className="w-4 h-4" />
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
       }
     ]
   },

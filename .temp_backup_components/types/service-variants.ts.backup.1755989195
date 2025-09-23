@@ -93,7 +93,6 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
-<<<<<<< HEAD
   | 'digital-marketing'
   | 'seo'
   | 'metaverse'
@@ -133,8 +132,3 @@ export type ServiceVariant =
   | 'it-infrastructure'
   | 'micro-saas'
   | 'ai-services';
-=======
-  | 'infrastructure-futuristic'
-  | 'support-futuristic'
-  | 'transformation-futuristic';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-03b6

@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-08-08T17:08:41.611Z",
-=======
-  "timestamp": "2025-08-08T22:52:19.494Z",
->>>>>>> origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352
   "startUrl": "https://ziontechgroup.com/",
   "totalVisited": 6,
   "pages": [
@@ -38,21 +34,6 @@
     {
       "url": "https://ziontechgroup.com/services/landing-page-generator",
       "status": 200
-<<<<<<< HEAD
-=======
-    },
-    {
-      "url": "https://ziontechgroup.com/services/price-intelligence-service",
-      "status": 200
-    },
-    {
-      "url": "https://ziontechgroup.com/partner/tools",
-      "status": 200
-    },
-    {
-      "url": "https://ziontechgroup.com/admin/whitelabel",
-      "status": 200
->>>>>>> origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352
     }
   ],
   "broken": [

@@ -633,11 +633,6 @@ const Terms: React.FC = () => {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 };
 
 export default Terms;
-=======
-}
-Terms.displayName = "Terms";
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors

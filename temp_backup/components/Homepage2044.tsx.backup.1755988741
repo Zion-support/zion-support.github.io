@@ -162,7 +162,6 @@ const Homepage2044: React.FC = () => {
     }, 300);
   }, []);
 
-<<<<<<< HEAD
   if (error) {
     return (
       <Layout>
@@ -175,15 +174,6 @@ const Homepage2044: React.FC = () => {
       </Layout>
     );
   }
-=======
-  // Loading component
-  const LoadingSpinner = () => (
-    <div className="flex items-center justify-center p-8">
-      <Loader2 className="w-8 h-8 text-cyan-400 animate-spin" />
-      <span className="ml-3 text-cyan-400">Loading revolutionary services...</span>
-    </div>
-  );
->>>>>>> da0b5f20a41ce7c5a9eecbf3cf2a76d75978280f
 
   return (
     <Layout>

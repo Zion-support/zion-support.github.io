@@ -255,7 +255,6 @@
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-<<<<<<< HEAD
   name = "internal-link-optimizer"
   schedule = "*/7 * * * *" # every 7 minutes
 
@@ -320,7 +319,3 @@ schedule = "7 */12 * * *"
 [[scheduled.functions]]
   name = "website-search-index-runner"
   schedule = "59 */6 * * *"
-=======
-  name = "ux-heuristics-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c74c

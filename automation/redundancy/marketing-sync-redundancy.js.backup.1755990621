@@ -10,11 +10,7 @@ function nowIso() {
 }
 
 function log(message) {
-<<<<<<< HEAD
   const line = `[${nowIso()}] [REDUNDANCY-MARKETING-SYNC] ${message}`;
-=======
-  const line = `[${nowIso()}] [REDUNDANCY] ${message}`;
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-8421
   console.log(line);
 }
 
@@ -126,11 +122,7 @@ async function postInstagramUpdate() {
       body: new URLSearchParams({ creation_id: createJson.id })
     });
     const publishJson = await publishRes.json();
-<<<<<<< HEAD
     if (!publishRes.ok) {
-=======
-    if (!publishRes.ok || !publishJson.id) {
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-8421
       log(`Instagram publish failed (${publishRes.status}): ${JSON.stringify(publishJson)}`);
       return { ok: false, platform: "instagram", status: publishRes.status };
     }
@@ -142,7 +134,6 @@ async function postInstagramUpdate() {
   }
 }
 
-<<<<<<< HEAD
 function generateReport(results) {
   const report = {
     timestamp: nowIso(),
@@ -241,88 +232,10 @@ async function main() {
     
   } catch (error) {
     log(`Fatal error: ${String(error)}`);
-=======
-async function generateMarketingReport() {
-  const report = {
-    generatedAt: nowIso(),
-    platforms: {
-      linkedin: { status: "pending" },
-      instagram: { status: "pending" }
-    },
-    summary: "Marketing sync redundancy report"
-  };
-
-  try {
-    // Run LinkedIn post
-    const linkedinResult = await postLinkedInUpdate();
-    report.platforms.linkedin = linkedinResult;
-
-    // Run Instagram post
-    const instagramResult = await postInstagramUpdate();
-    report.platforms.instagram = instagramResult;
-
-    // Generate success summary
-    const successful = Object.values(report.platforms).filter(p => p.ok).length;
-    const total = Object.keys(report.platforms).length;
-    report.summary = `Marketing sync completed: ${successful}/${total} platforms successful`;
-
-    // Write report
-    const reportPath = path.join(process.cwd(), "marketing-sync-redundancy-report.md");
-    const reportContent = `# Marketing Sync Redundancy Report
-
-Generated: ${report.generatedAt}
-
-## Summary
-${report.summary}
-
-## Platform Results
-- LinkedIn: ${report.platforms.linkedin.ok ? "✅ Success" : "❌ Failed"}
-- Instagram: ${report.platforms.instagram.ok ? "✅ Success" : "❌ Failed"}
-
-## Details
-\`\`\`json
-${JSON.stringify(report, null, 2)}
-\`\`\`
-`;
-
-    fs.writeFileSync(reportPath, reportContent);
-    log(`Marketing report written to ${reportPath}`);
-
-    // Commit and push if there are changes
-    const gitStatus = runGit(["status", "--porcelain"]);
-    if (gitStatus.stdout.trim()) {
-      runGit(["add", reportPath]);
-      runGit(["commit", "-m", "chore(marketing): update marketing-sync redundancy report"]);
-      runGit(["push", "origin", "main"]);
-      log("Changes committed and pushed to main branch");
-    } else {
-      log("No changes to commit");
-    }
-
-    return report;
-  } catch (error) {
-    log(`Error in marketing sync: ${String(error)}`);
-    report.error = String(error);
-    return report;
-  }
-}
-
-// Main execution
-async function main() {
-  log("Starting marketing sync redundancy process");
-  
-  try {
-    const report = await generateMarketingReport();
-    log(`Marketing sync redundancy completed: ${report.summary}`);
-    process.exit(0);
-  } catch (error) {
-    log(`Marketing sync redundancy failed: ${String(error)}`);
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-8421
     process.exit(1);
   }
 }
 
-<<<<<<< HEAD
 // Run if called directly
 if (require.main === module) {
   main().catch(error => {
@@ -332,10 +245,3 @@ if (require.main === module) {
 }
 
 module.exports = { main, postLinkedInUpdate, postInstagramUpdate, generateReport };
-=======
-if (require.main === module) {
-  main();
-}
-
-module.exports = { generateMarketingReport, postLinkedInUpdate, postInstagramUpdate };
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-8421

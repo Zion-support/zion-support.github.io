@@ -1,88 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
   return (
     <>
       <Head><title>team - Zion App</title><meta name="description" content="team page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">team</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
             ← Back to Home</a></div></div></>;
-=======
-import { motion } from 'framer-motion';
-import { 
-  Users, Target, Award, Globe, 
-  ArrowRight, Star, Shield, CheckCircle, TrendingUp,
-  Infinity, Eye, Sparkles, Clock, Zap, Brain, Atom, Rocket
-} from 'lucide-react';
-
-const TeamPage: React.FC = () => {
-  const leadership = [
-    {
-      name: "Kleber",
-      role: "Founder & CEO",
-      description: "Visionary leader driving innovation and strategic growth with over 15 years of experience in cutting-edge technology",
-      expertise: ["AI & Consciousness", "Quantum Technology", "Strategic Leadership"],
-      color: "from-blue-500 to-cyan-500",
-      image: "/images/team/kleber.jpg"
-    },
-    {
-      name: "AI Consciousness Users",
-      role: "AI & Consciousness Division",
-      description: "Experts in next-generation artificial intelligence and consciousness systems, pioneering emotional AI and self-aware systems",
-      expertise: ["Emotional AI", "Consciousness Systems", "Ethical AI Governance"],
-      color: "from-purple-500 to-pink-500",
-      image: "/images/team/ai-team.jpg"
-    },
-    {
-      name: "Quantum Technology Users",
-      role: "Quantum Computing Division",
-      description: "Pioneers in quantum computing and quantum-resistant solutions, developing the next generation of computational power",
-      expertise: ["Quantum Computing", "Quantum Security", "Quantum Neural Networks"],
-      color: "from-indigo-500 to-purple-500",
-      image: "/images/team/quantum-team.jpg"
-    },
-    {
-      name: "Space Technology Users",
-      role: "Space Technology Division",
-      description: "Innovators in space exploration and resource intelligence, developing AI-powered space solutions",
-      expertise: ["Space Exploration", "Resource Intelligence", "AI Space Systems"],
-      color: "from-cyan-500 to-blue-500",
-      image: "/images/team/space-team.jpg"
-    }
-  ];
-
-  const values = [
-    {
-      icon: Target,
-      title: "Innovation First",
-      description: "Pioneering cutting-edge technology solutions that transform industries",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Shield,
-      title: "Excellence",
-      description: "Delivering world-class quality and reliability in everything we do",
-      color: "from-emerald-500 to-teal-500"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Working together with clients to achieve extraordinary results",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Globe,
-      title: "Global Impact",
-      description: "Creating positive change across industries and communities worldwide",
-      color: "from-indigo-500 to-purple-500"
-    }
-  ];
-
-  const stats = [
-    { number: "50+", label: "Expert Users Members", icon: Users },
-    { number: "2000+", label: "Revolutionary Services", icon: Zap },
-    { number: "99.99%", label: "Client Satisfaction", icon: Star },
-    { number: "24/7", label: "Support Available", icon: Clock }
-  ];
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 
 export default function Team() {
   return (

@@ -4,11 +4,7 @@
 
 ## 🚀 2025 Comprehensive Services Portfolio
 
-<<<<<<< HEAD
 We've expanded our portfolio with **36+ innovative micro SAAS, IT, and AI services** designed to transform businesses across all industries.
-=======
-Home: https://github.com/Zion-Holdings/zion#readme
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 
 - **Frontend Application (Next.js):** Located primarily in `src/` (for application code like components, hooks, pages using App Router) and `pages/` (for API routes and potentially older Pages Router content). This is the main user-facing application.
 - **Backend API (Django):** Located in `backend/`. This Python-based backend serves core business logic and data management, likely interacting with a PostgreSQL database.
@@ -42,20 +38,10 @@ Home: https://github.com/Zion-Holdings/zion#readme
 - **Website**: https://ziontechgroup.com
 - **Address**: 364 E Main St STE 1008 Middletown DE 19709
 
-<<<<<<< HEAD
 ---
-=======
-⚠️ **IMPORTANT**: This project uses **Supabase for authentication** and **Netlify for environment variable management**. Proper configuration is essential for the application to function correctly.
-
-### Authentication Setup
-
----
-This README is auto-generated. Do not edit manually.
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 
 ## 🌟 Featured Services
 
-<<<<<<< HEAD
 The application uses Supabase for all authentication functionality:
 
 - User registration and login
@@ -399,8 +385,6 @@ This README is auto-generated. Do not edit manually.
 
 ## New Cloud Cron Automations
 
-=======
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 - Intelligent Orchestrator (1m): /.netlify/functions/intelligent-orchestrator
 - Anomaly Watchdog (10m): /.netlify/functions/anomaly-watchdog
 - Pulse Sync (1m): /.netlify/functions/pulse-sync

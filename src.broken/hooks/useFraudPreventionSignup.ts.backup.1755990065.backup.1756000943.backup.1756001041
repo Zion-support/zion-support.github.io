@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useCallback } from 'react';
 import { checkSignupPatterns } from '@/services/fraud/signupCheck';
@@ -86,10 +85,3 @@ export function useFraudPreventionSignup() {
     checkFraudBeforeSignup,
   };
 }
-=======
-// Hook for useFraudPreventionSignup;
-export const useUseFraudPreventionSignup: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

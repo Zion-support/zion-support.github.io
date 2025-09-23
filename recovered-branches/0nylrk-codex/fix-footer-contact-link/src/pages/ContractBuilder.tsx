@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import React from 'react';
 import { SEO  } from '@/components/SEO';
@@ -42,20 +41,10 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
 
 
 
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
-
->>>>>>> origin/auto/autonomy-17186719616
 function ContractBuilderPage() {
   return (
     <ProtectedRoute>
       <>
-<<<<<<< HEAD
 
         <SEO
           title="Smart Contract Builder | Zion AI Marketplace"
@@ -92,30 +81,12 @@ function ContractBuilderPage() {;
         <Footer />;
       </>;
     </ProtectedRoute>;
-=======
-        <SEO 
-          title="Smart Contract Builder | Zion AI Marketplace" 
-          description="Create and deploy blockchain-backed smart contracts for your projects"
-        />
-        <AppHeader />
-        
-        <main className="container mx-auto py-10 px-4">
-          <ContractBuilderContent />
-        </main>
-        
-        <Footer />
-      </>
-    </ProtectedRoute>
->>>>>>> origin/auto/autonomy-17186719616
   );
 }
 
 export default ContractBuilderPage;
-<<<<<<< HEAD
 
 ;
 export default ContractBuilderPage;
 
 
-=======
->>>>>>> origin/auto/autonomy-17186719616

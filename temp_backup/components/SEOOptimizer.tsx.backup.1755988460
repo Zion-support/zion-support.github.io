@@ -4,7 +4,6 @@ import Head from 'next/head';
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
   keywords?: string;
   image?: string;
   url?: string;
@@ -54,78 +53,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "@type": "OfferCatalog",
       "name": "Technology Services",
       "itemListElement": [
-=======
-  keywords?: string[];
-  type?: 'website' | 'article' | 'product' | 'service';
-  image?: string;
-  currentUrl?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Future of Technology | AI, Quantum Security, Micro SAAS',
-  description = 'Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses. 98+ innovative services for the modern enterprise.',
-  keywords = ['AI services', 'quantum cybersecurity', 'micro SAAS', 'automation', 'IT solutions', 'emerging technologies', 'Zion Tech Group', 'Delaware technology company'],
-  type = 'website',
-
-  currentUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com',
-  ogImage = '/og-image.jpg',
-  ogUrl = 'https://ziontechgroup.com',
-  canonicalUrl = 'https://ziontechgroup.com',
-  structuredData = {}
-}) => {
-  useEffect(() => {
-    // Add structured data to page
-    if (structuredData && Object.keys(structuredData).length > 0) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-
-      return () => {
-        document.head.removeChild(script);
-      };
-    }
-  }, [structuredData]);
-
-  // Default structured data for Zion Tech Group
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': type === 'article' ? 'Article' : 'Organization',
-    name: 'Zion Tech Group',
-    description: description,
-    url: currentUrl,
-    logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
-      'https://ziontechgroup.com',
-      'https://linkedin.com/company/ziontechgroup'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US'
-    },
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-    serviceType: 'AI, Quantum Computing, Space Technology, IT Services',
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Technology Services',
-      itemListElement: [
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-c75d
         {
           "@type": "Offer",
           "itemOffered": {
@@ -172,10 +99,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       
       {/* Open Graph Meta Tags */}
-<<<<<<< HEAD
-=======
-      <meta property="og:type" content={type} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-c75d
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />

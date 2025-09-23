@@ -160,7 +160,6 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Occupancy tracking',
       'Performance metrics'
     ],
-<<<<<<< HEAD
     marketAdvantage: 'First AI-powered blockchain orchestration platform'
   },
   // New Innovative Services
@@ -1018,27 +1017,5 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Performance analytics'
     ],
     marketAdvantage: 'Only quantum-powered manufacturing optimization platform available'
-=======
-    pricing: {
-      monthly: '$79',
-      yearly: '$790'
-    },
-    features: [
-      'Space analytics',
-      'Scheduling tools',
-      'Occupancy tracking',
-      'Reporting dashboard'
-    ],
-    roi: '250% average ROI within 4 months',
-    marketSize: '$8B',
-    growthRate: '20% YoY',
-    link: '#',
-    contactInfo: {
-      email: 'workplace@ziontechgroup.com',
-      mobile: '+1 (555) 123-4569',
-      address: '789 Workplace Blvd, Office City, OC 11111',
-      website: 'https://workplace.ziontechgroup.com'
-    }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-28d9
   }
 ];

@@ -392,7 +392,6 @@
     "meta:factory": "node automation/autonomous-meta-factory.cjs",
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
-<<<<<<< HEAD
     "venture:start": "node automation/venture-orchestrator.cjs continuous",
     "venture:once": "node automation/venture-orchestrator.cjs once",
     "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
@@ -404,12 +403,6 @@
           "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
       "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh"
     },
-=======
-    "marketplace:research": "node automation/market-research-trends.cjs",
-    "marketplace:factory": "node automation/intelligent-solutions-factory.cjs",
-    "marketplace:orchestrator": "node automation/marketplace-orchestrator.cjs"
-  },
->>>>>>> origin/cursor/automated-agent-creation-and-market-research-9320
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",

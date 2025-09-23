@@ -51,25 +51,9 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
 import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
-<<<<<<< HEAD
 import { revolutionary2026ITServices } from '../data/revolutionary-2026-it-services';
 import { revolutionary2026EmergingTechServices } from '../data/revolutionary-2026-emerging-tech';
 import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas';
-=======
-import { revolutionary2027Services } from '../data/revolutionary-2027-services';
-import { emergingTech2027Services } from '../data/emerging-tech-2027-services';
-import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
-import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
-import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services';
-import { quantumSpace2029Services } from '../data/2029-quantum-space-services';
-import { biotechEmerging2029Services } from '../data/2029-biotech-emerging-services';
-import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ae8
 
 const heroStats = [
   { label: 'Revolutionary Services', value: '600+', icon: <Star className="w-5 h-5" /> },
@@ -118,23 +102,9 @@ const heroStats = [
     ...revolutionary2026Innovations,
     ...nextGenAI2026Services,
     ...revolutionary2026AIServices,
-<<<<<<< HEAD
     ...revolutionary2026ITServices,
     ...revolutionary2026EmergingTechServices,
     ...revolutionary2026MicroSaasServices
-=======
-    ...revolutionary2027Services,
-    ...emergingTech2027Services,
-    ...revolutionary2027AIServices,
-    ...revolutionary2027ITServices,
-    ...revolutionary2027MicroSaasServices,
-    ...cuttingEdge2028MicroSaas,
-    ...practicalBusinessSolutions2028,
-    ...futuristic2029AIServices,
-    ...quantumSpace2029Services,
-    ...biotechEmerging2029Services,
-    ...enterpriseIT2029Services
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ae8
   ];
 
   // Get new 2029 services for enhanced showcase

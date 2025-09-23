@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function EnhancedHomePage() {
   return (
     <div className="space-y-4">
@@ -7,14 +6,3 @@ export default function EnhancedHomePage() {
     </div>
   );
 }
-=======
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-
-export default function EnhancedHome() {
-  return (
-    <EnhancedLayout>
-      <div className="py-10">Welcome to Zion</div>
-    </EnhancedLayout>
-  );
-}
->>>>>>> origin/cursor/build-investor-matchmaking-tool-37fa

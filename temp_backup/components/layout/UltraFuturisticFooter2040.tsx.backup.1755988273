@@ -73,7 +73,6 @@ const footerSections = [
     color: 'from-orange-500 to-red-500',
     badge: 'New',
     links: [
-<<<<<<< HEAD
       { name: 'About Us', href: '/about', description: 'Our story and mission' },
       { name: 'Careers', href: '/careers', description: 'Join our revolutionary team' },
       { name: 'News & Updates', href: '/news', description: 'Latest insights and updates' },
@@ -82,20 +81,6 @@ const footerSections = [
       { name: 'Resources', href: '/resources', description: 'Helpful tools and guides' },
       { name: 'Support', href: '/support', description: '24/7 technical support' },
       { name: 'Contact', href: '/contact', description: 'Get in touch with us' }
-=======
-      { name: 'About Us', href: '/about' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'News', href: '/news' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Support', href: '/support' },
-      { name: 'Training', href: '/training' },
-      { name: 'Resources', href: '/resources' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     ]
   }
 ];

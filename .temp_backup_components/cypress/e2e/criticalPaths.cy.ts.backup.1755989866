@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Requires TEST_USER_NAME, EXISTING_USER_EMAIL, EXISTING_USER_PASSWORD and STRIPE_TEST_CARD in cypress.env.json
 // Example cypress.env.json:
 // {
@@ -21,16 +20,10 @@ describe('Critical user journeys', () => {
       cy.log('Required environment variables are missing, skipping test suite');
       this.skip();
     }
-=======
-describe('Critical user journeys', () => {
-  beforeEach(() => {
-    cy.visit('/');
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress
   });
 
   it('Registers a new user successfully', () => {
     cy.intercept('POST', '/api/auth/register').as('register');
-<<<<<<< HEAD
     cy.get('[data-testid="signup-nav-link"]').click();
 
     cy.get('[data-testid="name-input"]').type(Cypress.env('TEST_USER_NAME'));
@@ -75,33 +68,10 @@ describe('Critical user journeys', () => {
     // and then check for the message.
     // cy.url().should('include', '/checkout/success'); // Example check
     cy.get('[data-testid="payment-success-message"]', { timeout: 10000 }).should('be.visible');
-=======
-    cy.get('nav').contains('Sign up').click();
-    cy.get('input[name="name"]').type('Test User');
-    cy.get('input[name="email"]').type(`testuser${Date.now()}@example.com`);
-    cy.get('input[name="password"]').type('StrongP@ssw0rd');
-    cy.get('input[name="confirmPassword"]').type('StrongP@ssw0rd');
-    cy.get('input[type="checkbox"]').check();
-    cy.contains('Create Account').click();
-    cy.wait('@register').its('response.statusCode').should('eq', 201);
-    cy.url().should('include', '/dashboard');
-  });
-
-  it('Logs in and completes Stripe test checkout', () => {
-    cy.loginByApi('existing@test.com', 'password123');
-    cy.visit('/marketplace');
-    cy.contains('Buy Now').first().click();
-    cy.url().should('include', '/checkout');
-    cy.get('iframe[name^="__privateStripeFrame"]').then(($iframe) => {
-      // fill Stripe test card 4242 4242 4242 4242
-    });
-    cy.contains('Payment successful').should('be.visible');
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress
   });
 
   it('Loads equipment detail page', () => {
     cy.visit('/equipment');
-<<<<<<< HEAD
     // Click the first available equipment link that contains 'Rack Mount' or is the first link if none contain 'Rack Mount'
     // This handles cases where 'Rack Mount' might not be present or items change order
     cy.get('[data-testid="equipment-link"]').contains('Rack Mount', { matchCase: false }).first().click({ force: true });
@@ -128,20 +98,3 @@ describe('Critical user journeys', () => {
     cy.contains('Your post has been published successfully', { timeout: 10000 }).should('be.visible');
   });
 });
-=======
-    cy.contains('Rack Mount').click();
-    cy.contains('Specs').should('be.visible');
-  });
-
-  it('Creates a community post', () => {
-    cy.loginByApi('existing@test.com', 'password123');
-    cy.visit('/community');
-    cy.contains('Create New Post').click();
-    cy.get('input[name="title"]').type('Automated test post');
-    cy.get('textarea[name="content"]').type('This post was created by Cypress.');
-    cy.contains('Publish').click();
-    cy.contains('Post published successfully').should('be.visible');
-  });
-});
-
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress

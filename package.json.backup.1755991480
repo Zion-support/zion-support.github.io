@@ -640,14 +640,7 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-<<<<<<< HEAD
     "talent:optimize": "node automation/talent-profile-optimizer.cjs"
-=======
-    "deploy:ipfs": "ts-node scripts/deploy-zion-ipfs.ts"
-  },
-  "bin": {
-    "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.cjs"
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -657,14 +650,9 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-<<<<<<< HEAD
     "@semaphore-protocol/contracts": "^4.13.0-beta.1",
     "@semaphore-protocol/identity": "^4.13.0-beta.1",
     "@semaphore-protocol/proof": "^4.13.0-beta.1",
-=======
-    "@pinata/sdk": "^2.1.0",
-    "@spruceid/didkit-wasm-node": "^0.2.1",
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
@@ -675,11 +663,7 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
     "ethers": "^6.14.0",
-=======
-    "ethers": "^6.13.4",
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
     "events": "^3.3.0",
     "formidable": "^3.5.4",
     "framer-motion": "^6.5.1",
@@ -693,25 +677,15 @@
     "mime-types": "^3.0.1",
     "next": "^11.1.4",
     "node-cron": "^4.2.1",
-<<<<<<< HEAD
     "openai": "^5.12.2",
-=======
-    "openai": "^5.11.0",
-    "orbit-db": "^0.28.0",
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
     "path": "^0.12.7",
     "pdfkit": "^0.13.0",
     "postcss": "^8.4.32",
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD
     "react-json-view": "^1.21.3",
     "uuid": "^11.1.0"
-=======
-    "uuid": "^11.1.0",
-    "web3.storage": "^4.6.0"
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -757,29 +731,4 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-<<<<<<< HEAD
-=======
-  "name": "zion-sdk-monorepo",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Monorepo for Zion OS SDKs and CLI scaffolder",
-  "workspaces": [
-    "packages/*"
-  ],
-  "engines": {
-    "node": ">=18.18.0"
-  },
-  "scripts": {
-    "build": "npm -w @zion/sdk run build && npm -w create-zion-instance run build",
-    "lint": "npm -w @zion/sdk run lint || true",
-    "test": "npm -w @zion/sdk run test || true",
-    "clean": "rimraf node_modules packages/*/node_modules packages/*/dist"
-  },
-  "devDependencies": {
-    "rimraf": "^6.0.1"
-  }
-=======
-  },
-  "type": "module"
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 }

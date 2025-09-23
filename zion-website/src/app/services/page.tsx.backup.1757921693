@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { 
   UserGroupIcon, 
   LightBulbIcon, 
@@ -9,9 +8,6 @@ import {
   AcademicCapIcon,
   GlobeAltIcon
 } from '@heroicons/react/24/outline'
-=======
-import { UserGroupIcon, LightBulbIcon, CogIcon, ShieldCheckIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
->>>>>>> origin/cursor/create-and-deploy-new-content-5766
 
 const professionalServices = [
   { name: 'AI Strategy & Consulting', description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.', icon: LightBulbIcon, features: ['Technology Assessment','ROI Analysis','Implementation Roadmap','Change Management Planning'], duration: '4-8 weeks' },
@@ -143,7 +139,4 @@ export default function ServicesPage() {
     </div>
   )
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5766

@@ -5,13 +5,9 @@ import {
   ArrowRight, TrendingUp, Brain, Shield, Globe, Cpu, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Zap, Phone, Mail, MapPin
 } from 'lucide-react';
-<<<<<<< HEAD
 import EnhancedSEO from './EnhancedSEO';
 import PerformanceOptimizer from './PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './EnhancedAccessibilityEnhancer';
-=======
-import Head from 'next/head';
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 // Import our new revolutionary services
 import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
@@ -23,7 +19,6 @@ import { innovativeAIAutonomousServices2025 } from '../data/2025-innovative-ai-a
 import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services';
 import { revolutionary2045AdvancedITServices } from '../data/revolutionary-2045-advanced-it-services';
 
-<<<<<<< HEAD
 // Lazy load components for better performance
 const ServiceCard = lazy(() => import('./ServiceCard'));
 const PerformanceMetrics = lazy(() => import('./PerformanceMetrics'));
@@ -39,23 +34,15 @@ const EnhancedLoadingSpinner = () => (
     <span className="ml-3 text-lg font-medium text-gray-700">Loading revolutionary technology...</span>
   </div>
  );
-=======
-// Import the new futuristic background
-import UltraFuturisticAnimatedBackground from './backgrounds/UltraFuturisticAnimatedBackground';
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 const EnhancedHomepage2045: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoading, setIsLoading] = useState(false);
   const [userInteraction, setUserInteraction] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-=======
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   
   useEffect(() => {
     setIsClient(true);
@@ -140,7 +127,6 @@ const EnhancedHomepage2045: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
     <Layout>
       <EnhancedSEO />
       <EnhancedAccessibilityEnhancer />
@@ -160,30 +146,6 @@ const EnhancedHomepage2045: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-=======
-    <>
-      <Head>
-        <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation." />
-        <meta name="keywords" content="AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology" />
-        <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />
-        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
-
-      {/* Futuristic Animated Background */}
-      <UltraFuturisticAnimatedBackground />
-
-      <div className="relative min-h-screen text-white overflow-hidden">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="relative max-w-7xl mx-auto text-center z-10">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
@@ -283,7 +245,6 @@ const EnhancedHomepage2045: React.FC = () => {
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
                   }`}
                 >
-<<<<<<< HEAD
                   <category.icon className="w-5 h-5" />
                   <span>{category.name}</span>
                 </motion.button>
@@ -739,20 +700,6 @@ const EnhancedHomepage2045: React.FC = () => {
             </div>
           </footer>
         </div>
-=======
-                  <div className="flex items-center space-x-2">
-                    <category.icon className="w-5 h-5" />
-                    <span>{category.name}</span>
-                    <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                      {category.count}
-                    </span>
-                  </div>
-                </button>
-              ))}
-            </motion.div>
-          </div>
-        </section>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
         {/* Services Grid */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">

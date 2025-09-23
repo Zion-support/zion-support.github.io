@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function AuthPage() {
@@ -12,6 +11,3 @@ export default function AuthPage() {
     </>
   );
 }
-=======
-export default function AuthIndex() { return <div className="p-6">Auth</div>; }
->>>>>>> origin/cursor/build-community-forum-for-zion-ai-marketplace-7967

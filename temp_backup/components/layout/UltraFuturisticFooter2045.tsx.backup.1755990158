@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-<<<<<<< HEAD
   Phone, 
   Mail, 
   MapPin, 
@@ -35,12 +34,6 @@ import {
   GraduationCap,
   Briefcase,
   Heart
-=======
-  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
-  Users, Lock, Cloud, Code, Server, Database, Network, Settings, Target, Play,
-  Truck, Lightbulb, CheckCircle, HelpCircle, MessageCircle, Activity, GraduationCap, BookOpen
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
 } from 'lucide-react';
 
 const UltraFuturisticFooter2045: React.FC = () => {
@@ -85,22 +78,7 @@ const UltraFuturisticFooter2045: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Company & Resources',
-=======
-      title: 'Micro SAAS Solutions',
-      links: [
-        { name: 'AI Customer Experience Platform', href: '/ai-customer-experience-platform', icon: <Users className="w-5 h-5" /> },
-        { name: 'Quantum-Secure Data Encryption', href: '/quantum-secure-encryption-service', icon: <Shield className="w-5 h-5" /> },
-        { name: 'AI Supply Chain Intelligence', href: '/ai-autonomous-supply-chain-intelligence', icon: <Truck className="w-5 h-5" /> },
-        { name: 'AI Marketing Intelligence', href: '/ai-autonomous-marketing-intelligence', icon: <Target className="w-5 h-5" /> },
-        { name: 'AI Product Intelligence', href: '/ai-autonomous-product-intelligence', icon: <Lightbulb className="w-5 h-5" /> },
-        { name: 'AI Compliance Intelligence', href: '/ai-autonomous-compliance-intelligence', icon: <CheckCircle className="w-5 h-5" /> }
-      ]
-    },
-    {
-      title: 'Company',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
       links: [
         { name: 'About Us', href: '/about', icon: <Users className="w-5 h-5" /> },
         { name: 'Our Mission', href: '/mission', icon: <Target className="w-5 h-5" /> },
@@ -124,28 +102,10 @@ const UltraFuturisticFooter2045: React.FC = () => {
   ];
 
   const socialLinks = [
-<<<<<<< HEAD
     { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { label: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> },
     { label: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
-=======
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-500 to-blue-600' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-400 to-blue-500' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-600 to-blue-700' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-500 to-pink-500' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-500 to-red-600' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'from-gray-600 to-gray-700' }
-  ];
-
-  const quickLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Security', href: '/security' },
-    { name: 'Accessibility', href: '/accessibility' },
-    { name: 'Sitemap', href: '/sitemap.xml' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
   ];
 
   return (
@@ -282,47 +242,10 @@ const UltraFuturisticFooter2045: React.FC = () => {
         </div>
 
         {/* Bottom Footer */}
-<<<<<<< HEAD
         <div className="border-t border-gray-800/50 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-=======
-        <div className="border-t border-cyan-500/20 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-              {/* Copyright */}
-              <div className="text-gray-400 text-sm">
-                <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
-                <p className="mt-1">Pioneering the future of technology since 2025</p>
-              </div>
-
-              {/* Social Links */}
-              <div className="flex items-center space-x-4">
-                {socialLinks.map((social) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <Link
-                      key={social.name}
-                      href={social.href}
-                      className={`p-2 rounded-lg bg-gray-900/50 border border-cyan-500/20 text-gray-400 ${social.color} transition-all duration-200 hover:scale-110 hover:border-cyan-500/50`}
-                      aria-label={social.name}
-                    >
-                      <IconComponent className="w-5 h-5" />
-                    </Link>
-                  );
-                })}
-              </div>
-
-              {/* Additional Links */}
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                {quickLinks.map((link) => (
-                  <Link key={link.name} href={link.href} className="hover:text-cyan-400 transition-colors duration-200">
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
             </div>
             
             <div className="flex items-center space-x-6 text-sm">

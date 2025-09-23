@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 "use strict";
 
 const { spawnSync } = require("child_process");
@@ -490,5 +489,3 @@ if (require.main === module) {
 }
 
 module.exports = GitHubActionsRedundancy;
-=======
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-0b6a

@@ -26,7 +26,6 @@ export default function FuturisticFooter() {
 
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const footerSections = [
     {
       title: 'Services',
@@ -72,17 +71,6 @@ export default function FuturisticFooter() {
         { name: 'Support Center', href: '/support' }
       ]
     }
-=======
-  const serviceCategories = [
-    { name: 'AI & Machine Learning', href: '/services#ai', count: 25 },
-    { name: 'Quantum Computing', href: '/services#quantum', count: 12 },
-    { name: 'Cybersecurity', href: '/services#security', count: 18 },
-    { name: 'Cloud & Infrastructure', href: '/services#cloud', count: 15 },
-    { name: 'Data Analytics & BI', href: '/services#analytics', count: 12 },
-    { name: 'Blockchain & Web3', href: '/services#blockchain', count: 8 },
-    { name: 'AR/VR & Metaverse', href: '/services#metaverse', count: 6 },
-    { name: 'Edge Computing & 5G', href: '/services#edge', count: 4 }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
   ];
 
   const socialLinks = [
@@ -190,79 +178,6 @@ export default function FuturisticFooter() {
                   </ul>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-              <ArrowRight className="w-5 h-5 text-blue-400 mr-2" />
-              Service Categories
-            </h3>
-            <ul className="space-y-3">
-              {serviceCategories.map((category) => (
-                <li key={category.name}>
-                  <Link
-                    href={category.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block group"
-                  >
-                    <span className="flex items-center justify-between">
-                      <span>{category.name}</span>
-                      <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full group-hover:bg-blue-500/30 transition-colors">
-                        {category.count}+
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Information */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-              <ArrowRight className="w-5 h-5 text-green-400 mr-2" />
-              Contact Information
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <div>
-                  <div className="text-sm text-gray-400">Mobile</div>
-                  <div className="text-white font-medium">{contactInfo.mobile}</div>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                <div>
-                  <div className="text-sm text-gray-400">Email</div>
-                  <div className="text-white font-medium">{contactInfo.email}</div>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-                <div>
-                  <div className="text-sm text-gray-400">Address</div>
-                  <div className="text-white font-medium text-sm">{contactInfo.address}</div>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Globe className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                <div>
-                  <div className="text-sm text-gray-400">Website</div>
-                  <a 
-                    href={contactInfo.website} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-white font-medium hover:text-cyan-400 transition-colors"
-                  >
-                    {contactInfo.website.replace('https://', '')}
-                  </a>
-                </div>
-              </div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
             </div>
           </div>
         </div>

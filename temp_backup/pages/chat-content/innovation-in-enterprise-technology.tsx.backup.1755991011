@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,6 +18,3 @@ const InnovationInEnterpriseTechnology: NextPage = () => {
 };
 
 export default InnovationInEnterpriseTechnology;
-=======
-export default function Page() { return <div className="py-10">Innovation in enterprise technology</div> }
->>>>>>> origin/cursor/build-ai-resume-and-portfolio-tool-4f12

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const Homepage2025: React.FC = () => {
@@ -50,103 +49,6 @@ const Homepage2025: React.FC = () => {
       </Layout>
     );
   }
-=======
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Star, 
-  Brain, Atom, Shield, TrendingUp, Globe,
-  Play, Pause, ChevronLeft, ChevronRight, CheckCircle,
-  Clock, Target, Rocket
-} from 'lucide-react';
-
-const Homepage2025: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      company: "TechCorp",
-      content: "Zion Tech Group transformed our AI infrastructure, reducing costs by 40% while improving performance by 300%.",
-      avatar: "/images/testimonials/sarah.jpg",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "VP Engineering",
-      company: "InnovateLab",
-      content: "Their quantum computing solutions helped us solve complex problems that were previously impossible to tackle.",
-      avatar: "/images/testimonials/michael.jpg",
-      rating: 5
-    },
-    {
-      name: "Dr. Emily Rodriguez",
-      role: "Research Director",
-      company: "SpaceTech Institute",
-      content: "Zion's space technology platform accelerated our research by 5x, enabling breakthrough discoveries.",
-      avatar: "/images/testimonials/emily.jpg",
-      rating: 5
-    }
-  ];
-
-  const stats = [
-    { number: "50+", label: "AI Services", description: "Cutting-edge solutions", icon: Brain, color: "text-cyan-400" },
-    { number: "100+", label: "Quantum Solutions", description: "Next-gen computing", icon: Atom, color: "text-blue-400" },
-    { number: "24/7", label: "Autonomous Operations", description: "Always available", icon: Clock, color: "text-purple-400" },
-    { number: "∞", label: "Future Possibilities", description: "Unlimited potential", icon: Target, color: "text-green-400" }
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Solutions",
-      description: "Advanced machine learning and artificial intelligence solutions tailored to your business needs.",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Atom,
-      title: "Quantum Computing",
-      description: "Next-generation quantum computing services for complex problem-solving and optimization.",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Rocket,
-      title: "Space Technology",
-      description: "Innovative space technology solutions for research, exploration, and commercial applications.",
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Comprehensive cybersecurity and compliance solutions for enterprise-level protection.",
-      color: "from-green-500 to-emerald-500"
-    }
-  ];
-
-  useEffect(() => {
-    if (isPlaying) {
-      const interval = setInterval(() => {
-        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-64bc
 
   return (
     <Layout>
@@ -211,7 +113,6 @@ const Homepage2025: React.FC = () => {
                     Learn More
                   </button>
                 </Link>
-<<<<<<< HEAD
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                     2025 Services Showcase
@@ -225,14 +126,6 @@ const Homepage2025: React.FC = () => {
                 <Link href="/2037-innovative-pricing-showcase">
                   <button className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                     2037 Pricing Showcase
-=======
-                <Link href="/demo">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    <span className="flex items-center gap-2">
-                      <Play className="w-4 h-4" />
-                      Watch Demo
-                    </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-64bc
                   </button>
                 </Link>
               </div>
@@ -272,7 +165,6 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
             >
-<<<<<<< HEAD
               <button 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
                 aria-label="Get started with our services"
@@ -287,27 +179,6 @@ const Homepage2025: React.FC = () => {
               >
                 Learn More
               </button>
-=======
-              {stats.map((stat, index) => (
-                <motion.div 
-                  key={stat.label}
-                  className="p-6 group hover:bg-white/5 rounded-xl transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className={`text-4xl font-bold ${stat.color} mb-2 group-hover:scale-110 transition-transform`}>
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-300">{stat.label}</div>
-                  <div className="text-xs text-cyan-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {stat.description}
-                  </div>
-                </motion.div>
-              ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-64bc
             </motion.div>
           </motion.div>
           
@@ -707,7 +578,6 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 rounded-2xl p-12"
             >
-<<<<<<< HEAD
               About Zion Tech Group
             </motion.h2>
             <motion.p 
@@ -746,29 +616,6 @@ const Homepage2025: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Partnership</h3>
                 <p className="text-gray-400">Building long-term relationships with our clients</p>
-=======
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join hundreds of companies already leveraging Zion Tech Group's innovative solutions
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact">
-                  <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                    <span className="flex items-center gap-2">
-                      Start Your Journey
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </button>
-                </Link>
-                <Link href="/demo">
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Schedule Demo
-                  </button>
-                </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-64bc
               </div>
               
               <div className="mt-8 flex items-center justify-center space-x-6 text-sm text-gray-400">

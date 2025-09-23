@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -58,6 +57,3 @@ const TalentDetail: NextPage = () => {
 };
 
 export default TalentDetail;
-=======
-export default function TalentSlug() { return null; }
->>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81

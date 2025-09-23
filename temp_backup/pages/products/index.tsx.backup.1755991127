@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 import { products as allProducts, Product } from '../../data/it-equipment';
@@ -210,8 +209,3 @@ export default function ProductsPage() {
     </>
   );
 }
-=======
-export default function Products() {
-  return <div>Products</div>;
-}
->>>>>>> origin/cursor/build-it-service-provider-directory-page-d0d3

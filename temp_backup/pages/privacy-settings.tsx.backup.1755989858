@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 export { default } from '@/pages/privacy-settings';
-=======
-export { default } from '../src/pages/PrivacySettings';
->>>>>>> origin/51ryr1-codex/implement-eprivacy-directive-consent-banner

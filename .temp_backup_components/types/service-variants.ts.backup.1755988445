@@ -94,7 +94,6 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
-<<<<<<< HEAD
   | 'digital-marketing'
   | 'seo'
   | 'metaverse'
@@ -174,13 +173,3 @@ export type ServiceVariant =
   | 'quantum-security-intel'
   | 'ai-research'
   | 'quantum-sustainability';
-=======
-  | 'ai-business-intelligence'
-  | 'cybersecurity-compliance'
-  | 'cloud-devops'
-  | 'healthcare-biotech'
-  | 'financial-technology'
-  | 'retail-ecommerce'
-  | 'manufacturing-industrial'
-  | 'transportation-logistics';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-c4de

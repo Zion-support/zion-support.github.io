@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface PriceTier {
   tier: string;
   price: number;
@@ -19,10 +18,4 @@ export interface ProductDetailsData {
   reviewCount: number;
   specifications?: string[] | null;
   priceTiers?: PriceTier[] | null;
-=======
-export interface Product {
-  id: string;
-  name: string;
-  description?: string | null;
->>>>>>> origin/7dxqey-codex/fix-missing-product-export-from-@prisma/client
 }

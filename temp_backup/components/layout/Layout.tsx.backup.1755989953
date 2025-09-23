@@ -239,17 +239,6 @@ export default function Layout({
           </div>
         )}
       </div>
-<<<<<<< HEAD
     </>
-=======
-
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-    </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-a975
   );
 }

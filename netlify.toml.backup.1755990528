@@ -235,11 +235,7 @@
 
 [[scheduled.functions]]
   name = "deps-auto-upgrade-runner"
-<<<<<<< HEAD
   schedule = "0 3 * * *"
-=======
-  schedule = "7 */12 * * *" # every 12 hours
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c0c9
 
 # New autonomous cloud scanners
 [[scheduled.functions]]
@@ -291,7 +287,6 @@
   name = "internal-link-graph-runner"
   schedule = "*/5 * * * *"
 
-<<<<<<< HEAD
 # Autonomous additions
 [[scheduled.functions]]
   name = "smart-redirects-manager"
@@ -304,21 +299,3 @@
 [[scheduled.functions]]
   name = "seo-schema-runner"
   schedule = "*/15 * * * *"
-=======
-# New: Invented automations
-[[scheduled.functions]]
-  name = "llm-content-curator-runner"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "link-sentinel-aggregator-runner"
-  schedule = "*/20 * * * *"
-
-[[scheduled.functions]]
-  name = "site-promo-orchestrator"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "auto-discovery-orchestrator"
-  schedule = "*/30 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c0c9

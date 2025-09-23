@@ -58,15 +58,10 @@ const sidebarSections = [
       { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', badge: 'New' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' },
-<<<<<<< HEAD
       { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab/', badge: 'New' },
       { name: 'API Performance Testing', href: '/api-performance-testing/' },
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
       { name: 'AI Education Platform', href: '/ai-education-platform' },
-=======
-      { name: 'AI Creativity Studio', href: '/intelligent-content-automation-platform' },
-      { name: 'AI Education Platform', href: '/education-technology-solutions' },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95
       { name: 'AI Healthcare Diagnostics', href: '/healthcare-solutions' },
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
@@ -120,7 +115,6 @@ const sidebarSections = [
     title: 'Business Solutions',
     icon: <Rocket className="w-5 h-5" />,
     items: [
-<<<<<<< HEAD
       { name: 'AI Content Generator', href: '/ai-content-generator', icon: <FileText className="w-4 h-4" /> },
       { name: 'AI Code Review', href: '/ai-code-review', icon: <Code className="w-4 h-4" /> },
       { name: 'AI HR Analytics', href: '/intelligent-hr-analytics-platform', icon: <Users className="w-4 h-4" /> },
@@ -129,23 +123,6 @@ const sidebarSections = [
       { name: 'Content Automation', href: '/intelligent-content-automation-platform', icon: <FileText className="w-4 h-4" /> },
       { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', icon: <TrendingUp className="w-4 h-4" /> },
       { name: 'AI Customer Success', href: '/ai-customer-success-platform', icon: <Users className="w-4 h-4" /> }
-=======
-      { name: 'AI Customer Success', href: '/ai-customer-success-platform', badge: 'New' },
-      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', badge: 'New' },
-      { name: 'Financial Planning AI', href: '/ai-financial-planning-platform', badge: 'New' },
-      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform', badge: 'New' },
-      { name: 'Sales Intelligence AI', href: '/ai-sales-intelligence-platform', badge: 'New' },
-      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
-      { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
-      { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite' },
-      { name: 'Financial Analytics', href: '/financial-solutions' },
-      { name: 'Project Management', href: '/enterprise-it' },
-      { name: 'Business Intelligence', href: '/ai-business-intelligence-suite' },
-      { name: 'Marketing Automation', href: '/ai-autonomous-marketing-platform' },
-      { name: 'Customer Service AI', href: '/ai-customer-service' },
-      { name: 'HR & Recruitment', href: '/ai-hr-recruitment' },
-      { name: 'Legal Contract Analysis', href: '/ai-legal-contract-analyzer' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95
     ]
   },
   {
@@ -159,15 +136,9 @@ const sidebarSections = [
       { name: 'Education Technology', href: '/education-technology-solutions' },
       { name: 'Government Solutions', href: '/government-technology-solutions' },
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
-<<<<<<< HEAD
       { name: 'Transportation & Logistics', href: '/intelligent-supply-chain-optimization' },
       { name: 'Real Estate Technology', href: '/innovative-business-solutions' },
       { name: 'Entertainment & Media', href: '/innovative-business-solutions' },
-=======
-      { name: 'Transportation & Logistics', href: '/retail-technology-solutions' },
-      { name: 'Real Estate Technology', href: '/enterprise-it' },
-      { name: 'Entertainment & Media', href: '/resources' },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95
       { name: 'Space Technology', href: '/space-technology' },
       { name: 'Biotech & Healthcare', href: '/biotech-ai-research-platform' }
     ]
@@ -182,11 +153,7 @@ const sidebarSections = [
       { name: 'Blog & News', href: '/blog' },
       { name: 'Support Center', href: '/support' },
       { name: 'Training & Certification', href: '/training' },
-<<<<<<< HEAD
       { name: 'Community Forum', href: '/resources' },
-=======
-      { name: 'Community Forum', href: '/community' },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95
       { name: 'Developer Resources', href: '/developer' },
       { name: 'Research & Development', href: '/research-development' },
       { name: 'White Papers', href: '/white-papers' },
@@ -199,7 +166,6 @@ const sidebarSections = [
     title: 'Company & Resources',
     icon: <Building className="w-5 h-5" />,
     items: [
-<<<<<<< HEAD
       { name: 'Partners', href: '/partners', icon: <Users className="w-4 h-4" /> },
       { name: 'Investors', href: '/investors', icon: <DollarSign className="w-4 h-4" /> },
       { name: 'Careers', href: '/careers', icon: <User className="w-4 h-4" /> },
@@ -208,20 +174,6 @@ const sidebarSections = [
       { name: 'Case Studies', href: '/case-studies', icon: <Award className="w-4 h-4" /> },
       { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
       { name: 'Training', href: '/training', icon: <BookOpenCheck className="w-4 h-4" /> }
-=======
-      { name: 'About Us', href: '/about' },
-      { name: 'Leadership Team', href: '/about' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'News & Press', href: '/news' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Investors', href: '/investors' },
-      { name: 'Contact Us', href: '/contact' },
-      { name: 'Locations', href: '/locations' },
-      { name: 'Sustainability', href: '/sustainability' },
-      { name: 'Diversity & Inclusion', href: '/diversity-inclusion' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Privacy Policy', href: '/privacy' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95
     ]
   }
 ];

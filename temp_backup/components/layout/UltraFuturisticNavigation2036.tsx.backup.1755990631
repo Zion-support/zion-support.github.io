@@ -106,27 +106,6 @@ const navigationItems: NavigationItem[] = [
         name: 'Quantum Technology', 
         href: '/services?category=quantum', 
         description: 'Quantum computing solutions',
-<<<<<<< HEAD
-=======
-        icon: <AtomIcon className="w-4 h-4" />
-      },
-      { 
-        name: 'Space Technology', 
-        href: '/space-technology', 
-        description: 'Space exploration solutions',
-        icon: <Rocket className="w-4 h-4" />
-      },
-      { 
-        name: 'IT Solutions', 
-        href: '/it-services', 
-        description: 'Enterprise IT infrastructure',
-        icon: <Cpu className="w-4 h-4" />
-      },
-      { 
-        name: 'Industry Solutions', 
-        href: '/solutions', 
-        description: 'Industry-specific solutions',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
         icon: <TargetIcon className="w-4 h-4" />
       },
       { 
@@ -351,7 +330,6 @@ const navigationItems: NavigationItem[] = [
       { 
         name: 'Manufacturing', 
         href: '/manufacturing-ai-solutions', 
-<<<<<<< HEAD
         description: 'Manufacturing automation',
         icon: <Play className="w-4 h-4" />
       },
@@ -366,22 +344,6 @@ const navigationItems: NavigationItem[] = [
         href: '/government-technology-solutions', 
         description: 'Government technology solutions',
         icon: <Play className="w-4 h-4" />
-=======
-        description: 'Manufacturing AI',
-        icon: <Settings className="w-4 h-4" />
-      },
-      { 
-        name: 'Education', 
-        href: '/education-technology-solutions', 
-        description: 'Education technology',
-        icon: <BookOpen className="w-4 h-4" />
-      },
-      { 
-        name: 'Energy', 
-        href: '/energy-technology-solutions', 
-        description: 'Energy technology',
-        icon: <Zap className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
       }
     ]
   }

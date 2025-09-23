@@ -59,7 +59,6 @@ export default function AIFinancialPlanningPlatform() {
     'Education Funding', 'Real Estate Planning', 'Business Financial Planning'
   ];
 
-<<<<<<< HEAD
 	return (
 		<>
 			<SEO data={{
@@ -82,20 +81,6 @@ export default function AIFinancialPlanningPlatform() {
 					</div>
 				</div>
 			</section>
-=======
-  return (
-    <>
-      <Head>
-        <title>AI Financial Planning Platform | Zion Tech Group</title>
-        <meta name="description" content="Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management." />
-        <meta name="keywords" content="AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor" />
-        <meta property="og:title" content="AI Financial Planning Platform | Zion Tech Group" />
-        <meta property="og:description" content="Intelligent financial planning and wealth management with AI." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-planning-platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-financial-planning-platform" />
-      </Head>
->>>>>>> origin/cursor/website-audit-and-enhancement-fe5e
 
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}

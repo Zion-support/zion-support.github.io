@@ -1,15 +1,10 @@
 {
-<<<<<<< HEAD
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
-=======
-  "name": "project",
->>>>>>> origin/automation-error-fixes
   "version": "0.0.0",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
     "dev": "vite",
     "build": "NODE_ENV=production tsc && NODE_ENV=production vite build && node scripts/prerender.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -127,25 +122,6 @@
     "automation:test-cursor": "node automation/tests/test-cursor-connection.js",
     "automation:test-monitoring": "node automation/tests/test-performance-monitoring.js",
     "optimize:bundle": "node scripts/optimize-bundle.cjs"
-=======
-    "dev": "node scripts/simple-dev-server.cjs",
-    "build": "next build --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint --no-lint",
-    "start": "node simple-server.js",
-    "dev:next": "next dev --port 3001",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit",
-    "format": "prettier --write .",
-    "test": "jest --passWithNoTests",
-    "test:coverage": "jest --coverage --passWithNoTests",
-    "maintain": "node scripts/zion-app-maintainer.cjs",
-    "automate": "node scripts/complete-zion-automation.cjs",
-    "improve": "node automation/continuous-improvement.js",
-    "health": "curl -s http://localhost:3006/api/health",
-    "status": "node scripts/zion-app-maintainer.cjs",
-    "prepare": "husky",
-    "analyze": "ANALYZE=true npm run build",
-    "build:optimized": "NEXT_DISABLE_CSS_INLINE=true SKIP_TYPE_CHECK=true npm run build"
->>>>>>> origin/automation-error-fixes
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
@@ -156,7 +132,6 @@
     "@emotion/styled": "^11.14.1",
     "@opentelemetry/context-async-hooks": "^2.0.1",
     "@opentelemetry/core": "^2.0.1",
-<<<<<<< HEAD
     "@orbitdb/core": "^3.0.2",
     "@prisma/client": "^6.11.1",
     "@radix-ui/react-accordion": "^1.2.11",
@@ -285,72 +260,5 @@
   "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
   "resolutions": {
     "postcss": "8.5.6"
-=======
-    "@opentelemetry/instrumentation": "^0.203.0",
-    "@opentelemetry/sdk-trace-base": "^2.0.1",
-    "@sentry/nextjs": "^9.40.0",
-    "@slack/bolt": "^4.4.0",
-    "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.52.0",
-    "@swc/helpers": "^0.5.17",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@types/socket.io": "^3.0.1",
-    "@types/socket.io-client": "^1.4.36",
-    "async": "^3.2.5",
-    "cors": "^2.8.5",
-    "ethers": "^6.15.0",
-    "express": "^5.1.0",
-    "framer-motion": "^12.23.6",
-    "i18next": "^25.3.2",
-    "lucide-react": "^0.525.0",
-    "next": "^15.4.1",
-    "next-auth": "^4.24.11",
-    "node-cron": "^4.2.1",
-    "node-fetch": "^3.3.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-i18next": "^15.6.0",
-    "socket.io": "^4.8.1",
-    "socket.io-client": "^4.8.1",
-    "styled-jsx": "^5.1.7",
-    "winston": "^3.17.0",
-    "ws": "^8.18.3",
-    "zod": "^4.0.5"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@types/jest": "^30.0.0",
-    "@types/node": "20.19.8",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@typescript-eslint/eslint-plugin": "^8.37.0",
-    "@typescript-eslint/parser": "^8.37.0",
-    "@vitest/ui": "^3.2.4",
-    "chokidar": "^4.0.3",
-    "eslint": "^9.31.0",
-    "eslint-config-next": "^15.4.3",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "husky": "^9.1.7",
-    "jest": "^30.0.4",
-    "jest-environment-jsdom": "^30.0.4",
-    "jsdom": "^26.1.0",
-    "lint-staged": "^16.1.2",
-    "minimatch": "^10.0.3",
-    "pm2": "^6.0.8",
-    "prettier": "^3.6.2",
-    "typescript": "5.8.3",
-    "vitest": "^3.2.4"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
->>>>>>> origin/automation-error-fixes
   }
 }

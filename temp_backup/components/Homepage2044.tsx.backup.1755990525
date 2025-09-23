@@ -143,7 +143,6 @@ const Homepage2044: React.FC = () => {
   );
 
   return (
-<<<<<<< HEAD
     <Layout>
       <main className="relative">
         {/* Hero Section */}
@@ -241,61 +240,6 @@ const Homepage2044: React.FC = () => {
                 </span>
               </motion.div>
             )}
-=======
-    <>
-      <Head>
-        <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI, Quantum Computing, Space Tech</title>
-        <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." />
-        <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/" />
-        <meta property="og:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
-        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://ziontechgroup.com/" />
-        <meta property="twitter:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
-        <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
-        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "availableLanguage": "English"
-              }
-            })
-          }}
-        />
-        
-        {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-      </Head>
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 
       <Layout>
         {/* Main Content */}

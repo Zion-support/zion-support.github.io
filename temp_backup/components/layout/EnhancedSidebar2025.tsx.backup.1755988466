@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   X, ChevronDown, ChevronRight, Search, Settings, User, 
   Brain, Atom, Rocket, Shield, Cpu, Database, Cloud, 
   BarChart3, Code, Smartphone, Server, Users, Award, 
@@ -11,15 +10,6 @@ import {
   Zap, Globe, Lock, Phone, Mail, MapPin, Star, MessageCircle,
   ExternalLink, Home, Briefcase, Info, HelpCircle, Shield as ShieldIcon, Play, Building,
   Heart, Palette, Target, Sparkles, Download
-=======
-  ChevronRight, Home, Star, Users, 
-  HelpCircle, Mail, Phone, MapPin,
-  Brain, Atom, Shield, Rocket, DollarSign,
-  Zap,
-  TrendingUp, Award, CheckCircle, Clock,
-  Search, X as CloseIcon,
-  Target, BookOpen, Calendar, Video, FileText, Building
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e3a6
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -86,7 +76,6 @@ const sidebarItems: SidebarItem[] = [
     icon: <Target className="w-5 h-5" />,
     color: 'text-orange-400',
     items: [
-<<<<<<< HEAD
       { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
       { name: 'Financial Solutions', href: '/financial-solutions' },
       { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
@@ -114,52 +103,6 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Training', href: '/training' },
       { name: 'Webinars', href: '/webinars' },
       { name: 'White Papers', href: '/white-papers' }
-=======
-      { name: 'Healthcare Solutions', href: '/healthcare-solutions', badge: 'New' },
-      { name: 'Financial Solutions', href: '/financial-solutions', badge: 'New' },
-      { name: 'Government Solutions', href: '/government-technology-solutions', badge: 'New' },
-      { name: 'Retail Solutions', href: '/retail-technology-solutions', badge: 'New' },
-      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', badge: 'New' },
-      { name: 'Education Technology', href: '/education-technology-solutions' },
-      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
-      { name: 'Entertainment & Media', href: '/entertainment-media-solutions' },
-      { name: 'Real Estate Technology', href: '/real-estate-technology-solutions' },
-      { name: 'Biotech AI Research', href: '/biotech-ai-research-platform' }
-    ]
-  },
-  {
-    title: 'Resources & Support',
-    icon: <BookOpen className="w-5 h-5" />,
-    color: 'text-purple-400',
-    items: [
-      { name: 'Documentation', href: '/docs', badge: 'New' },
-      { name: 'Blog & Insights', href: '/blog', badge: 'New' },
-      { name: 'Case Studies', href: '/case-studies', badge: 'New' },
-      { name: 'Support Center', href: '/support', badge: 'New' },
-      { name: 'Training Resources', href: '/training' },
-      { name: 'Performance Reports', href: '/reports' },
-      { name: 'API Documentation', href: '/api-docs' },
-      { name: 'Developer Resources', href: '/developer-resources' },
-      { name: 'Community Forum', href: '/community' },
-      { name: 'Events & Webinars', href: '/events' }
-    ]
-  },
-  {
-    title: 'Company & Contact',
-    icon: <Building className="w-5 h-5" />,
-    color: 'text-gray-400',
-    items: [
-      { name: 'About Us', href: '/about', badge: 'New' },
-      { name: 'Contact Information', href: '/contact', badge: 'New' },
-      { name: 'Partnerships', href: '/partners', badge: 'New' },
-      { name: 'Investment Info', href: '/investors', badge: 'New' },
-      { name: 'Career Opportunities', href: '/careers', badge: 'New' },
-      { name: 'News & Updates', href: '/news' },
-      { name: 'Company Status', href: '/status' },
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e3a6
     ]
   }
 ];

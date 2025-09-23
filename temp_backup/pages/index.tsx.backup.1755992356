@@ -3,21 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Cpu, Target, Microscope, TestTube } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
-=======
-import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d80
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 import UltraAdvancedNavigation2026V2 from '../components/layout/UltraAdvancedNavigation2026V2';
 import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
 import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
-<<<<<<< HEAD
 import Enhanced2026ServicesShowcaseV2 from '../components/sections/Enhanced2026ServicesShowcaseV2';
-=======
-import Enhanced2026ServicesShowcaseV4 from '../components/sections/Enhanced2026ServicesShowcaseV4';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d80
 import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
 import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
 import EnhancedHero2026V2 from '../components/sections/EnhancedHero2026V2';
@@ -62,7 +54,6 @@ import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
 import { ultimate2026Services } from '../data/ultimate-2026-services';
-<<<<<<< HEAD
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas-services';
@@ -87,12 +78,6 @@ import { emergingTechServices2029V2 } from '../data/2029-emerging-tech-services-
 import { enterpriseITServices2029V2 } from '../data/2029-enterprise-it-services-v2';
 import { spaceMetaverseServices2029V2 } from '../data/2029-space-metaverse-services-v2';
 import { researchDevelopmentServices2029V2 } from '../data/2029-research-development-services-v2';
-=======
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d80
 
 export default function HomePage() {
   const contactInfo = {
@@ -143,7 +128,6 @@ export default function HomePage() {
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3,
     ...ultimate2026Services,
-<<<<<<< HEAD
     ...cuttingEdge2027Innovations,
     ...practicalMicroSaas2027,
     ...revolutionary2026MicroSaasServices,
@@ -168,12 +152,6 @@ export default function HomePage() {
     ...enterpriseITServices2029V2,
     ...spaceMetaverseServices2029V2,
     ...researchDevelopmentServices2029V2
-=======
-    ...innovative2026MicroSaasServicesV4,
-    ...emergingTech2026ServicesV4,
-    ...enterpriseIT2026ServicesV4,
-    ...innovative2026AIServicesV4
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d80
   ];
 
   // Get unique services by ID to avoid duplicates
@@ -296,7 +274,6 @@ const itemVariants = {
 
 export default function Home() {
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground2029>
       <Head>
         <title>Zion Tech Group - 2029 Future Technology Solutions | AI, Quantum Computing, Enterprise IT</title>
@@ -314,22 +291,6 @@ export default function Home() {
         <meta name="twitter:description" content="Leading provider of cutting-edge 2029 technology solutions including AI, quantum computing, and space technology." />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
-=======
-    <UltraFuturisticBackground2026>
-      <div className="min-h-screen">
-        <Head>
-          <title>Zion Tech Group - Revolutionary AI, Quantum & IT Services | 1000+ Solutions</title>
-          <meta name="description" content="Zion Tech Group offers 1000+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with our cutting-edge solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, blockchain, metaverse, IoT, edge computing, consciousness simulation, quantum brain interface" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
-          <meta property="og:title" content="Zion Tech Group - Revolutionary AI, Quantum & IT Services" />
-          <meta property="og:description" content="1000+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com" />
-        </Head>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d80
 
       {/* Enhanced Navigation */}
       <UltraFuturisticNavigation2029 />
@@ -379,64 +340,11 @@ export default function Home() {
               </Link>
             </div>
 
-<<<<<<< HEAD
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span>{contactInfo.mobile}</span>
-=======
-        {/* New 2026 Services Showcase V4 */}
-        <Enhanced2026ServicesShowcaseV4
-          services={[
-            ...innovative2026MicroSaasServicesV4,
-            ...emergingTech2026ServicesV4,
-            ...enterpriseIT2026ServicesV4,
-            ...innovative2026AIServicesV4
-          ]}
-          title="Revolutionary 2026 Services V4"
-          subtitle="Experience the latest innovations in AI, quantum computing, and emerging technologies"
-        />
-
-        {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Ready to Transform Your Business?
-                </span>
-              </h2>
-              <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses already leveraging our revolutionary AI, quantum, and IT services to achieve unprecedented growth and innovation.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <motion.a
-                  href={`tel:${contactInfo.mobile}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call {contactInfo.mobile}</span>
-                </motion.a>
-                
-                <motion.a
-                  href={`mailto:${contactInfo.email}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Email Us</span>
-                </motion.a>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d80
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-cyan-400" />
@@ -511,7 +419,6 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -650,11 +557,6 @@ export default function Home() {
       {/* Footer */}
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-=======
-        </section>
-      </div>
-    </UltraFuturisticBackground2026>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d80
   );
 =======
 import Layout from '../components/layout/Layout';

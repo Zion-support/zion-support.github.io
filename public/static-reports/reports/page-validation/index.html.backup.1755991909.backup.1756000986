@@ -14,7 +14,6 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 .build-failure{background:rgba(239,68,68,.2);border:2px solid #ef4444}
 </style>
 <h1>Next.js Page Structure Validation Report</h1>
-<<<<<<< HEAD:public/static-reports/reports/page-validation/index.html.backup.1755991909
 <p>Generated 8/20/2025, 7:01:37 PM</p>
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
@@ -44,12 +43,6 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h3><code>pages/api/url-shortener.ts</code></h3>
 <h4>Warnings:</h4>
 <div class="pill warning">INCOMPLETE_HTML: Incomplete HTML tags detected (line 31)</div>
-=======
-<<<<<<< HEAD
-<p>Generated 8/21/2025, 2:36:32 AM</p>
-=======
-<p>Generated 8/21/2025, 2:48:17 AM</p>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a497
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
 <h2>Summary</h2>

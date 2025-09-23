@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Temporarily disabled due to TypeScript compilation issues
 /*
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
@@ -7,15 +6,6 @@ import {
   Eye, EyeOff, Volume2, VolumeX, FileText, 
   Settings, X, Sun, Moon,
   RotateCcw
-=======
-import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Eye, EyeOff, Volume2, VolumeX, Type, 
-  Contrast, ZoomIn, ZoomOut, RotateCcw,
-  Settings, X, Accessibility, Sun, Moon,
-  Highlighter, TextCursor, AlignJustify
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -26,12 +16,9 @@ interface AccessibilitySettings {
   fontSize: number;
   lineSpacing: number;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-<<<<<<< HEAD
   keyboardNavigation: boolean;
   screenReader: boolean;
   focusIndicators: boolean;
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 }
 
 interface AccessibilityEnhancerProps {
@@ -48,7 +35,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     highlighter: false,
     fontSize: 16,
     lineSpacing: 1.5,
-<<<<<<< HEAD
     colorBlindMode: 'none',
     keyboardNavigation: false,
     screenReader: false,
@@ -75,23 +61,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     // High contrast
     if (newSettings.highContrast) {
-=======
-    colorBlindMode: 'none'
-  });
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
-  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
-  
-  const focusRef = useRef<HTMLDivElement>(null);
-  const announcementRef = useRef<HTMLDivElement>(null);
-
-  // Apply accessibility settings to the document
-  useEffect(() => {
-    const root = document.documentElement;
-    
-    // High contrast
-    if (settings.highContrast) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       root.style.setProperty('--text-color', '#ffffff');
       root.style.setProperty('--bg-color', '#000000');
       root.style.setProperty('--accent-color', '#ffff00');
@@ -102,29 +71,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
 
     // Large text
-<<<<<<< HEAD
     if (newSettings.largeText) {
-=======
-    if (settings.largeText) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       root.style.fontSize = '18px';
     } else {
       root.style.fontSize = '16px';
     }
 
     // Reduced motion
-<<<<<<< HEAD
     if (newSettings.reducedMotion) {
-=======
-    if (settings.reducedMotion) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       root.style.setProperty('--reduced-motion', 'reduce');
     } else {
       root.style.removeProperty('--reduced-motion');
     }
 
     // Font size
-<<<<<<< HEAD
     root.style.setProperty('--font-size', `${newSettings.fontSize}px`);
     
     // Line spacing
@@ -132,21 +92,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Color blind modes
     if (newSettings.colorBlindMode !== 'none') {
-=======
-    root.style.setProperty('--font-size', `${settings.fontSize}px`);
-    
-    // Line spacing
-    root.style.setProperty('--line-spacing', settings.lineSpacing.toString());
-
-    // Color blind modes
-    if (settings.colorBlindMode !== 'none') {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       const filters = {
         protanopia: 'url(#protanopia)',
         deuteranopia: 'url(#deuteranopia)',
         tritanopia: 'url(#tritanopia)'
       };
-<<<<<<< HEAD
       root.style.filter = filters[newSettings.colorBlindMode];
     } else {
       root.style.filter = 'none';
@@ -157,22 +107,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     applySettings(settings);
   }, [settings, applySettings]);
-=======
-      root.style.filter = filters[settings.colorBlindMode];
-    } else {
-      root.style.filter = 'none';
-    }
-  }, [settings]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
   // Handle click outside to close settings
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-<<<<<<< HEAD
       if (focusRef.current && !focusRef.current.contains(event.target as Node)) {
-=======
-      if (settingsRef.current && !settingsRef.current.contains(event.target as Node)) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
         setIsOpen(false);
       }
     };
@@ -188,11 +127,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       window.speechSynthesis.cancel();
       
       const utterance = new SpeechSynthesisUtterance(text);
-<<<<<<< HEAD
       utterance.rate = settings.speechRate;
-=======
-      utterance.rate = speechRate;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       utterance.onstart = () => setIsReading(true);
       utterance.onend = () => setIsReading(false);
       utterance.onerror = () => setIsReading(false);
@@ -220,11 +155,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         speakText(text.substring(0, 500) + '...'); // Limit text length
       }
     }
-<<<<<<< HEAD
   };
-=======
-  }, [applySettings]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
   // Focus management
   const handleFocusChange = useCallback((e: FocusEvent<Element>) => {
@@ -242,11 +173,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Announce to screen reader
   const announceToScreenReader = useCallback((message: string) => {
-<<<<<<< HEAD
-=======
-    // setAnnouncements(prev => [...prev, message]); // This line was removed
-    
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     // Create live region for screen readers
     if (!announcementRef.current) {
       const liveRegion = document.createElement('div');
@@ -263,16 +189,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     // Remove announcement after a delay
     setTimeout(() => {
-<<<<<<< HEAD
       // Cleanup
-=======
-      // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     }, 5000);
   }, []);
 
   // Auto-optimize accessibility
-<<<<<<< HEAD
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     // Apply settings logic here
     console.log('Applying accessibility settings:', newSettings);
@@ -281,11 +202,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     // applySettings(settings); // This line was removed
   }, [settings]);
-=======
-  useEffect(() => {
-    applySettings(settings);
-  }, [settings, applySettings]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
   // Keyboard navigation enhancement
   useEffect(() => {
@@ -308,7 +224,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             const currentIndex = focusableElements.indexOf(target);
             const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
             focusableElements[prevIndex]?.focus();
-<<<<<<< HEAD
           } else {
             // Tab: navigate forwards
             const focusableElements = getFocusableElements();
@@ -317,34 +232,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             focusableElements[nextIndex]?.focus();
           }
           break;
-=======
-            e.preventDefault();
-          }
-          break;
-          
-        case 'Enter':
-        case ' ':
-          // Enter/Space: activate buttons and links
-          if (target.tagName === 'BUTTON' || target.tagName === 'A' || target.getAttribute('role') === 'button') {
-            target.click();
-            e.preventDefault();
-          }
-          break;
-          
-        case 'Escape': {
-          // Escape: close modals and dropdowns
-          const modals = document.querySelectorAll('[role="dialog"], [data-modal]');
-          modals.forEach(modal => {
-            if (modal.getAttribute('aria-hidden') === 'false') {
-              const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
-              if (closeButton instanceof HTMLElement) {
-                closeButton.click();
-              }
-            }
-          });
-          break;
-        }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       }
     };
 
@@ -352,133 +239,48 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation]);
 
-<<<<<<< HEAD
   // Get focusable elements
   const getFocusableElements = () => {
     const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
-=======
-  // Focus management
-  useEffect(() => {
-    const handleFocusIn = (e: Event) => {
-      const target = e.target as HTMLElement;
-      
-      // Announce focus changes for screen readers
-      if (settings.screenReader) {
-        const label = target.getAttribute('aria-label') || 
-                     target.getAttribute('title') || 
-                     target.textContent?.trim();
-        if (label) {
-          announceToScreenReader(label);
-        }
-      }
-      
-      // Enhanced focus indicators
-      if (settings.focusIndicators) {
-        target.style.outline = '3px solid #3b82f6';
-        target.style.outlineOffset = '2px';
-      }
-    };
-
-    const handleFocusOut = (e: Event) => {
-      const target = e.target as HTMLElement;
-      if (settings.focusIndicators) {
-        target.style.outline = '';
-        target.style.outlineOffset = '';
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-    
-    return () => {
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, [settings.screenReader, settings.focusIndicators]);
-
-  // Get all focusable elements
-  const getFocusableElements = (): HTMLElement[] => {
-    const focusableSelectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])',
-      '[role="button"]',
-      '[role="tab"]',
-      '[role="menuitem"]'
-    ];
-    
-    return Array.from(document.querySelectorAll(focusableSelectors.join(','))) as HTMLElement[];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   };
 
   // Highlighter mode
   const toggleHighlighter = () => {
-<<<<<<< HEAD
     setSettings({ ...settings, highlighter: !settings.highlighter });
-=======
-    setSettings(prev => ({ ...prev, highlighter: !prev.highlighter }));
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   };
 
   // Font size controls
   const increaseFontSize = () => {
-<<<<<<< HEAD
     setSettings({ ...settings, fontSize: Math.min(settings.fontSize + 2, 24) });
   };
 
   const decreaseFontSize = () => {
     setSettings({ ...settings, fontSize: Math.max(settings.fontSize - 2, 12) });
-=======
-    setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) }));
-  };
-
-  const decreaseFontSize = () => {
-    setSettings(prev => ({ ...prev, fontSize: Math.max(prev.fontSize - 2, 12) }));
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   };
 
   // Line spacing controls
   const increaseLineSpacing = () => {
-<<<<<<< HEAD
     setSettings({ ...settings, lineSpacing: Math.min(settings.lineSpacing + 0.1, 2.5) });
   };
 
   const decreaseLineSpacing = () => {
     setSettings({ ...settings, lineSpacing: Math.max(settings.lineSpacing - 0.1, 1.0) });
-=======
-    setSettings(prev => ({ ...prev, lineSpacing: Math.min(prev.lineSpacing + 0.1, 2.5) }));
-  };
-
-  const decreaseLineSpacing = () => {
-    setSettings(prev => ({ ...prev, lineSpacing: Math.max(prev.lineSpacing - 0.1, 1.0) }));
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   };
 
   // Reset all settings
   const resetSettings = () => {
-<<<<<<< HEAD
     updateSettings(() => ({
-=======
-    setSettings({
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       highContrast: false,
       largeText: false,
       reducedMotion: false,
       highlighter: false,
       fontSize: 16,
       lineSpacing: 1.5,
-<<<<<<< HEAD
       colorBlindMode: 'none',
       keyboardNavigation: false,
       screenReader: false,
       focusIndicators: false
-=======
-      colorBlindMode: 'none'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     });
   };
 
@@ -493,11 +295,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         aria-label="Accessibility options"
         aria-expanded={isVisible}
       >
-<<<<<<< HEAD
                     <Settings className="w-6 h-6" />
-=======
-        <Accessibility className="w-6 h-6" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -513,11 +311,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
               <div className="flex items-center space-x-2">
-<<<<<<< HEAD
                 <Settings className="w-5 h-5 text-purple-400" />
-=======
-                <Accessibility className="w-5 h-5 text-purple-400" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                 <span className="text-white font-semibold">Accessibility</span>
               </div>
               <div className="flex items-center space-x-2">
@@ -537,7 +331,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -548,30 +341,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               </button>
               <button
                 onClick={() => setSettings({ ...settings, highContrast: !settings.highContrast })}
-=======
-
-            {/* Quick Actions */}
-            <div className="p-4 space-y-3">
-              {/* Screen Reader */}
-              <button
-                onClick={toggleScreenReader}
-                className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
-                  isReading 
-                    ? 'bg-red-500/20 border border-red-500/50 text-red-400' 
-                    : 'bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50'
-                }`}
-                aria-label={isReading ? 'Stop reading' : 'Start reading'}
-              >
-                <span className="flex items-center space-x-2">
-                  {isReading ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                  <span>{isReading ? 'Stop Reading' : 'Screen Reader'}</span>
-                </span>
-              </button>
-
-              {/* High Contrast Toggle */}
-              <button
-                onClick={() => setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
                   settings.highContrast 
                     ? 'bg-yellow-500/20 border border-yellow-500/50 text-yellow-400' 
@@ -580,11 +349,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 aria-label="Toggle high contrast"
               >
                 <span className="flex items-center space-x-2">
-<<<<<<< HEAD
                   <Settings className="w-4 h-4" />
-=======
-                  <Contrast className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                   <span>High Contrast</span>
                 </span>
                 <div className={`w-4 h-4 rounded border-2 ${
@@ -594,11 +359,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
               {/* Large Text Toggle */}
               <button
-<<<<<<< HEAD
                 onClick={() => setSettings({ ...settings, largeText: !settings.largeText })}
-=======
-                onClick={() => setSettings(prev => ({ ...prev, largeText: !prev.largeText }))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
                   settings.largeText 
                     ? 'bg-blue-500/20 border border-blue-500/50 text-blue-400' 
@@ -607,11 +368,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 aria-label="Toggle large text"
               >
                 <span className="flex items-center space-x-2">
-<<<<<<< HEAD
                   <FileText className="w-4 h-4" />
-=======
-                  <Type className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                   <span>Large Text</span>
                 </span>
                 <div className={`w-4 h-4 rounded border-2 ${
@@ -621,11 +378,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
               {/* Reduced Motion Toggle */}
               <button
-<<<<<<< HEAD
                 onClick={() => setSettings({ ...settings, reducedMotion: !settings.reducedMotion })}
-=======
-                onClick={() => setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
                   settings.reducedMotion 
                     ? 'bg-green-500/20 border border-green-500/50 text-green-400' 
@@ -642,10 +395,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 }`} />
               </button>
             </div>
-<<<<<<< HEAD
           </div>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
             {/* Settings Panel */}
             <AnimatePresence>
@@ -667,11 +417,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Decrease font size"
                         >
-<<<<<<< HEAD
                           <RotateCcw className="w-4 h-4" />
-=======
-                          <ZoomOut className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                         </button>
                         <span className="text-white min-w-[3rem] text-center">{settings.fontSize}px</span>
                         <button
@@ -679,11 +425,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Increase font size"
                         >
-<<<<<<< HEAD
                           <RotateCcw className="w-4 h-4" />
-=======
-                          <ZoomIn className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                         </button>
                       </div>
                     </div>
@@ -697,11 +439,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Decrease line spacing"
                         >
-<<<<<<< HEAD
                           <Settings className="w-4 h-4" />
-=======
-                          <AlignJustify className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                         </button>
                         <span className="text-white min-w-[3rem] text-center">{settings.lineSpacing.toFixed(1)}</span>
                         <button
@@ -709,11 +447,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                           className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                           aria-label="Increase line spacing"
                         >
-<<<<<<< HEAD
                           <Settings className="w-4 h-4 rotate-90" />
-=======
-                          <AlignJustify className="w-4 h-4 rotate-90" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                         </button>
                       </div>
                     </div>
@@ -723,11 +457,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                       <h4 className="text-sm font-semibold text-white">Color Blind Mode</h4>
                       <select
                         value={settings.colorBlindMode}
-<<<<<<< HEAD
                         onChange={(e) => setSettings({ ...settings, colorBlindMode: e.target.value as 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia' })}
-=======
-                        onChange={(e) => setSettings(prev => ({ ...prev, colorBlindMode: e.target.value as any }))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
                         className="w-full p-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                       >
                         <option value="none">None</option>
@@ -737,7 +467,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                       </select>
                     </div>
 
-<<<<<<< HEAD
             {/* Reduced Motion Toggle */}
             <button
               onClick={() => updateSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
@@ -858,41 +587,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           )}
         </motion.div>
       )}
-=======
-                    {/* Speech Rate */}
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-white">Speech Rate</h4>
-                      <input
-                        type="range"
-                        min="0.5"
-                        max="2"
-                        step="0.1"
-                        value={speechRate}
-                        onChange={(e) => setSpeechRate(parseFloat(e.target.value))}
-                        className="w-full"
-                        aria-label="Speech rate"
-                      />
-                      <div className="text-xs text-gray-400 text-center">
-                        {speechRate.toFixed(1)}x
-                      </div>
-                    </div>
-
-                    {/* Reset Button */}
-                    <button
-                      onClick={resetSettings}
-                      className="w-full p-3 bg-red-500/20 border border-red-500/50 text-red-400 rounded-lg hover:bg-red-500/30 transition-colors duration-200 flex items-center justify-center space-x-2"
-                    >
-                      <RotateCcw className="w-4 h-4" />
-                      <span>Reset All Settings</span>
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        )}
-      </AnimatePresence>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
       {/* Render children with accessibility enhancements */}
       {children}
@@ -900,7 +594,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   );
 };
 
-<<<<<<< HEAD
 export default AccessibilityEnhancer;
 */
 
@@ -909,22 +602,3 @@ import React from 'react';
 
 // Export the main component as default
 export default AccessibilityEnhancer;
-=======
-// Skip Link Component
-export const SkipLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
-  <a
-    href={href}
-    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 bg-cyan-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
-  >
-    {children}
-  </a>
-);
-
-// Screen Reader Only Text
-export const SrOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="sr-only">{children}</span>
-);
-
-// Export the main provider component as default
-export default AccessibilityProvider;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6

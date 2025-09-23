@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
@@ -10,10 +9,6 @@ import {
   Target, BarChart, PieChart, Activity, Eye, Lock
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-=======
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, BarChart3, Brain, Database, Users, Target, BarChart, PieChart, Activity, Eye, Lock } from 'lucide-react';
-import Button from '../components/ui/Button';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 

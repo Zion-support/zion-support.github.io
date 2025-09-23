@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Mail, MessageCircle, Kanban, Headphones, Brain, Code, Server, Shield as ShieldIcon, Zap as ZapIcon2, Globe as GlobeIcon, Users as UsersIcon, Bot, Database as DatabaseIcon, Network, Key, Eye, Fingerprint, Lock as LockIcon, Globe as GlobeIcon2, Zap as ZapIcon3, Shield as ShieldIcon2, Users as UsersIcon2, Rocket as RocketIcon, Target as TargetIcon, TrendingUp as TrendingUpIcon, Clock as ClockIcon, Award as AwardIcon, DollarSign as DollarSignIcon, ChartBar as ChartBarIcon, Lock as LockIcon2, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon4, Mail as MailIcon, MessageCircle as MessageCircleIcon, Kanban as KanbanIcon, Headphones as HeadphonesIcon, Brain as BrainIcon, Code as CodeIcon, Server as ServerIcon, Shield as ShieldIcon3, Zap as ZapIcon5, Globe as GlobeIcon3, Users as UsersIcon3 } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import ParticleBackground from '../components/ui/ParticleBackground';
-=======
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import ServiceCard from '../components/ui/ServiceCard';
-import { allEnhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a2d0
 
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -110,7 +103,6 @@ export default function MicroSaasPage() {
     }
   });
 
-<<<<<<< HEAD
   const categories = ['All', 'Content & Marketing', 'Development & DevOps', 'Sales & CRM', 'Legal & Compliance', 'Human Resources', 'Analytics & Data', 'Productivity & Collaboration', 'Customer Service', 'Finance & Accounting', 'Design & UX', 'Finance & Investment', 'Operations & Logistics', 'Security & Compliance', 'Healthcare & Life Sciences', 'Education & Training', 'Real Estate & Property', 'Manufacturing & Industry', 'Energy & Utilities'];
 
   return (
@@ -212,148 +204,10 @@ export default function MicroSaasPage() {
               <div className="text-gray-400 text-sm">Expert Support</div>
             </div>
           </div>
-=======
-  const revolutionaryServices = allEnhancedRealMicroSaasServices.filter(service => 
-    service.realImplementation && service.popular
-  );
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const featuredCategories = [
-    {
-      name: 'Quantum Computing & AI',
-      icon: <Atom className="w-8 h-8" />,
-      color: 'from-purple-600 to-indigo-700',
-      description: 'Revolutionary quantum solutions for complex problems',
-      serviceCount: allEnhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI').length
-    },
-    {
-      name: 'Autonomous Manufacturing',
-      icon: <Brain className="w-8 h-8" />,
-      color: 'from-orange-600 to-red-700',
-      description: 'Self-optimizing AI that runs 24/7',
-      serviceCount: allEnhancedRealMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing').length
-    },
-    {
-      name: 'Space Technology',
-      icon: <Rocket className="w-8 h-8" />,
-      color: 'from-blue-600 to-indigo-700',
-      description: 'Next-generation space exploration and management',
-      serviceCount: allEnhancedRealMicroSaasServices.filter(s => s.category === 'Space Technology').length
-    },
-    {
-      name: 'Metaverse & VR/AR',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-purple-600 to-pink-700',
-      description: 'Immersive digital experiences and virtual worlds',
-      serviceCount: allEnhancedRealMicroSaasServices.filter(s => s.category === 'Metaverse & VR/AR').length
-    }
-  ];
-
-  return (
-    <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced">
-      <Head>
-        <title>Micro SAAS Services - Zion Tech Group | Revolutionary AI & Technology Solutions</title>
-        <meta name="description" content="Explore 150+ revolutionary micro SAAS services powered by AI, quantum computing, and cutting-edge technology. Transform your business with Zion Tech Group's innovative solutions." />
-        <meta name="keywords" content="micro SAAS, AI services, quantum computing, autonomous manufacturing, space technology, metaverse development, biomedical AI, quantum finance" />
-        <meta property="og:title" content="Micro SAAS Services - Zion Tech Group" />
-        <meta property="og:description" content="150+ cutting-edge micro SAAS services powered by AI and quantum technology" />
-        <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
-      </Head>
-
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="mb-12"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Revolutionary Micro SAAS Services
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover 150+ cutting-edge services powered by AI, quantum computing, and futuristic technology
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-              <span className="px-4 py-2 bg-black/20 backdrop-blur-sm border border-gray-800 rounded-full">
-                🚀 500%+ Average ROI
-              </span>
-              <span className="px-4 py-2 bg-black/20 backdrop-blur-sm border border-gray-800 rounded-full">
-                ⚡ 30+ Day Free Trials
-              </span>
-              <span className="px-4 py-2 bg-black/20 backdrop-blur-sm border border-gray-800 rounded-full">
-                🔒 Enterprise Security
-              </span>
-              <span className="px-4 py-2 bg-black/20 backdrop-blur-sm border border-gray-800 rounded-full">
-                🌐 24/7 AI Support
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Search and Filter Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="max-w-4xl mx-auto mb-12"
-          >
-            <div className="bg-black/20 backdrop-blur-sm border border-gray-800 rounded-2xl p-6">
-              <div className="flex flex-col lg:flex-row gap-4 items-center">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search services, features, or technologies..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-black/30 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-all duration-300"
-                  />
-                </div>
-                <div className="flex gap-2">
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-black/30 border border-gray-700 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-all duration-300"
-                  >
-                    {serviceCategories.map((category) => (
-                      <option key={category} value={category}>{category}</option>
-                    ))}
-                  </select>
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)}
-                    className="px-4 py-3 bg-black/30 border border-gray-700 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-all duration-300"
-                  >
-                    <option value="innovation">Sort by Innovation</option>
-                    <option value="rating">Sort by Rating</option>
-                    <option value="price">Sort by Price</option>
-                    <option value="name">Sort by Name</option>
-                  </select>
-                  <button
-                    onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')}
-                    className="px-4 py-3 bg-black/30 border border-gray-700 rounded-xl text-white hover:border-cyan-400 transition-all duration-300"
-                  >
-                    {viewMode === 'grid' ? <List className="w-5 h-5" /> : <Grid className="w-5 h-5" />}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a2d0
         </div>
       </section>
 
       {/* Competitive Advantages */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -502,47 +356,12 @@ export default function MicroSaasPage() {
                     </Button>
                   </div>
                 </Card>
-=======
-      <section className="py-16 relative">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Experience the future of business technology with our revolutionary micro SAAS services
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {competitiveAdvantages.map((advantage, index) => (
-              <motion.div
-                key={advantage.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className={`bg-gradient-to-br ${advantage.bgColor} border border-gray-800 rounded-2xl p-8 h-full transform transition-all duration-500 group-hover:scale-105 group-hover:border-cyan-400`}>
-                  <div className="text-4xl mb-4">{advantage.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-4">{advantage.title}</h3>
-                  <p className="text-gray-300">{advantage.description}</p>
-                </div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a2d0
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Information Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -602,41 +421,6 @@ export default function MicroSaasPage() {
               Contact Us Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-=======
-      {/* Featured Revolutionary Services */}
-      <section className="py-16 relative">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Featured Revolutionary Services
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our most innovative and popular services that are transforming industries
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {revolutionaryServices.slice(0, 6).map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <ServiceCard
-                  service={service}
-                  showContactInfo={true}
-                />
-              </motion.div>
-            ))}
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a2d0
           </div>
 
           <div className="text-center">

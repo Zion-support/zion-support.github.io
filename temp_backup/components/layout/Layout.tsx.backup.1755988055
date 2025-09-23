@@ -8,14 +8,10 @@ import UltraFuturisticBackground2047 from '../backgrounds/UltraFuturisticBackgro
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
 import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 import ThemeToggle from '../ThemeToggle';
 import LoadingSpinner from '../LoadingSpinner';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
-=======
-import PerformanceOptimizer from '../PerformanceOptimizer';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ddd2
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -85,7 +81,6 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   return (
-<<<<<<< HEAD
     <>
       <Head>
         <title>{title}</title>
@@ -186,20 +181,10 @@ export default function Layout({ children }: LayoutProps) {
         
         {/* Futuristic Background */}
         <UltraFuturisticBackground2047 />
-=======
-    <PerformanceOptimizer>
-      <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-        {/* Skip to content link for accessibility */}
-        <a href="#main" className="skip-link">Skip to main content</a>
-        
-        {/* Futuristic Background */}
-        <UltraFuturisticBackground2036 />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ddd2
         
         {/* Layout Structure */}
         <div className="relative z-10">
           {/* Navigation */}
-<<<<<<< HEAD
           <UltraFuturisticNavigation2045 />
           
           {/* Navigation */}
@@ -262,33 +247,5 @@ export default function Layout({ children }: LayoutProps) {
         <ServiceWorkerRegistration />
       </div>
     </>
-=======
-          <UltraFuturisticNavigation2025 />
-          
-          {/* Sidebar and Main Content */}
-          <div className="flex">
-            <EnhancedSidebar2025 
-              isOpen={sidebarOpen} 
-              onClose={() => setSidebarOpen(false)} 
-            />
-            
-            <main id="main" role="main" className="flex-1 pt-32 lg:pt-36">
-              {children}
-            </main>
-          </div>
-          
-          {/* Footer */}
-          <UltraFuturisticFooter2025 />
-        </div>
-
-        {/* Accessibility and Performance Tools */}
-        <AccessibilityEnhancer />
-        <PerformanceMonitor />
-        
-        {/* Cookie Consent Banner */}
-        <CookieConsentBanner />
-      </div>
-    </PerformanceOptimizer>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ddd2
   );
 }

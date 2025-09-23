@@ -201,35 +201,23 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'Showcase & Pricing',
-<<<<<<< HEAD
     href: '/2036-innovative-services-showcase',
-=======
-    href: '/pricing',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
     icon: <Star className="w-5 h-5" />,
     description: 'Service showcases and pricing',
     badge: 'Featured',
     category: 'showcase',
     children: [
       { 
-<<<<<<< HEAD
         name: '2036 Innovation Showcase', 
         href: '/2036-innovative-services-showcase', 
         description: 'Cutting-edge 2036 services',
         icon: <Sparkles className="w-4 h-4" />,
-=======
-        name: 'Pricing Plans', 
-        href: '/pricing', 
-        description: 'Service pricing information',
-        icon: <DollarSign className="w-4 h-4" />,
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
         featured: true
       },
       { 
         name: 'Services Showcase', 
         href: '/comprehensive-services-showcase-2025', 
         description: 'Complete services overview',
-<<<<<<< HEAD
         icon: <Grid className="w-4 h-4" />,
       },
       {
@@ -249,9 +237,6 @@ const navigationItems: NavigationItem[] = [
         href: '/pricing',
         description: 'Transparent pricing structure',
         icon: <DollarSign className="w-4 h-4" />
-=======
-        icon: <Grid className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
       },
       { 
         name: 'Market Pricing', 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -976,12 +975,6 @@ export default function HomePage() {
     </UltraFuturisticMatrixBackground>
   );
 }
-=======
-import React, { useState, useEffect } from 'react';
-import Homepage2025 from '../components/Homepage2025';
-=======
-import Homepage2037 from '../components/Homepage2037';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -1004,7 +997,6 @@ const HomePage: React.FC = () => {
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
-<<<<<<< HEAD
       <PerformanceMonitor showMetrics={true} enableRealTime={true} />
       
       <PageLoader 
@@ -1016,9 +1008,6 @@ const HomePage: React.FC = () => {
       />
       
       {!isLoading && <Homepage2025 />}
-=======
-      <Homepage2037 />
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-8c77
     </ErrorBoundary>
   );
 };

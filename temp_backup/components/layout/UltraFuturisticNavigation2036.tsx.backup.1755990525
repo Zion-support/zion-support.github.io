@@ -110,7 +110,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Play className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Healthcare Solutions', 
         href: '/healthcare-solutions', 
         description: 'Healthcare technology solutions',
@@ -126,23 +125,6 @@ const navigationItems: NavigationItem[] = [
         name: 'Government Solutions', 
         href: '/government-technology-solutions', 
         description: 'Government technology solutions',
-=======
-        name: 'AI Consciousness', 
-        href: '/ai-consciousness-evolution', 
-        description: 'Revolutionary AI consciousness',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Quantum Security', 
-        href: '/quantum-internet-security', 
-        description: 'Quantum-secured communications',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Brain-Computer Interface', 
-        href: '/brain-computer-interface', 
-        description: 'Neural interface technology',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5614
         icon: <Play className="w-4 h-4" />
       }
     ]

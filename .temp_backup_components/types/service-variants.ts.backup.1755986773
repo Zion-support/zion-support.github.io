@@ -93,20 +93,6 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
-<<<<<<< HEAD
   | 'infrastructure-futuristic'
   | 'support-futuristic'
   | 'transformation-futuristic';
-=======
-  | 'manufacturing-futuristic'
-  | 'retail-futuristic'
-  | 'fintech-futuristic'
-  | 'customer-futuristic'
-  | 'ecommerce-futuristic'
-  | 'real-estate-futuristic'
-  | 'logistics-futuristic'
-  | 'quantum-security-futuristic'
-  | 'energy-futuristic'
-  | 'transportation-futuristic'
-  | 'education-futuristic';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-192f

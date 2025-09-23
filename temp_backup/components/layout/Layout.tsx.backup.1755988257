@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
@@ -8,15 +7,6 @@ import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import EnhancedAccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
-=======
-import React, { useState } from 'react';
-import UltraAdvancedFuturisticNavigation2040 from './UltraAdvancedFuturisticNavigation2040';
-import UltraAdvancedFuturisticFooter2040 from './UltraAdvancedFuturisticFooter2040';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
-import PerformanceMonitor from '../PerformanceMonitor';
-import AccessibilityEnhancer from '../AccessibilityEnhancer';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
 import CookieConsentBanner from '../CookieConsentBanner';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 
@@ -30,7 +20,6 @@ export default function Layout({ children }: LayoutProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-<<<<<<< HEAD
 
   useEffect(() => {
     // Check for saved theme preference
@@ -88,8 +77,6 @@ export default function Layout({ children }: LayoutProps) {
     return <LoadingSpinner />;
   }
 
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
   return (
     <PerformanceOptimizer>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
@@ -101,13 +88,8 @@ export default function Layout({ children }: LayoutProps) {
         
         {/* Layout Structure */}
         <div className="relative z-10">
-<<<<<<< HEAD
           {/* Navigation */}
           <UltraFuturisticNavigation2025 />
-=======
-          {/* Enhanced Navigation with Top Contact Bar */}
-          <UltraAdvancedFuturisticNavigation2040 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
           
           {/* Sidebar and Main Content */}
           <div className="flex">
@@ -116,7 +98,6 @@ export default function Layout({ children }: LayoutProps) {
               onClose={() => setSidebarOpen(false)} 
             />
             
-<<<<<<< HEAD
             <main id="main" role="main" className="flex-1 pt-32 lg:pt-36">
               {children}
             </main>
@@ -124,17 +105,6 @@ export default function Layout({ children }: LayoutProps) {
           
           {/* Footer */}
           <UltraFuturisticFooter2025 />
-=======
-            <main id="main" role="main" className="flex-1">
-              <MobileOptimizer>
-                {children}
-              </MobileOptimizer>
-            </main>
-          </div>
-          
-          {/* Enhanced Footer */}
-          <UltraAdvancedFuturisticFooter2040 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
         </div>
 
         {/* Accessibility and Performance Tools */}
@@ -143,12 +113,6 @@ export default function Layout({ children }: LayoutProps) {
         
         {/* Cookie Consent Banner */}
         <CookieConsentBanner />
-<<<<<<< HEAD
-=======
-        
-        {/* Analytics Dashboard */}
-        <Analytics showUI={true} autoRefresh={true} refreshInterval={60000} />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
       </div>
     </PerformanceOptimizer>
   );

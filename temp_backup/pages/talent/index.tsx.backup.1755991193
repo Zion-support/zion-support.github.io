@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 export default function Talent() {
@@ -8,8 +7,3 @@ export default function Talent() {
     </EnhancedLayout>
   );
 }
-=======
-export default function Talent() {
-  return <div>Talent</div>;
-}
->>>>>>> origin/cursor/build-it-service-provider-directory-page-d0d3

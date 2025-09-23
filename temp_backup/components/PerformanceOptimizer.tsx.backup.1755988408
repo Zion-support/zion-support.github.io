@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, TrendingUp, AlertTriangle, CheckCircle, X, Settings, RefreshCw } from 'lucide-react';
 
-<<<<<<< HEAD
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -12,9 +11,6 @@ interface PerformanceMetrics {
   score: string;
   grade: 'A' | 'B' | 'C' | 'D' | 'F';
 }
-=======
-// gtag is already declared in AnalyticsTracker.tsx
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0eac
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;

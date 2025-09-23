@@ -45,7 +45,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
 
   const footerSections = [
     {
-<<<<<<< HEAD
       title: 'Services',
       items: [
         { label: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className="w-4 h-4" /> },
@@ -83,49 +82,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
         { label: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4" /> },
         { label: 'News & Blog', href: '/blog', icon: <Newspaper className="w-4 h-4" /> },
         { label: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> }
-=======
-      title: 'AI & Autonomous Services',
-      links: [
-        { name: 'AI Autonomous Business Intelligence', href: '/ai-autonomous-business-intelligence', icon: <Brain className="w-5 h-5" /> },
-        { name: 'Quantum AI Neural Training', href: '/quantum-ai-neural-training', icon: <Atom className="w-5 h-5" /> },
-        { name: 'Autonomous Cybersecurity Response', href: '/autonomous-cybersecurity-response', icon: <Shield className="w-5 h-5" /> },
-        { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', icon: <Users className="w-5 h-5" /> },
-        { name: 'Autonomous Supply Chain Optimization', href: '/autonomous-supply-chain-optimization', icon: <Target className="w-5 h-5" /> },
-        { name: 'AI Content Creation Studio', href: '/ai-content-creation-studio', icon: <Code className="w-5 h-5" /> }
-      ]
-    },
-    {
-      title: 'IT Infrastructure & Cloud',
-      links: [
-        { name: 'Quantum-Enhanced Cloud Infrastructure', href: '/quantum-enhanced-cloud-infrastructure', icon: <Cloud className="w-5 h-5" /> },
-        { name: 'Autonomous DevOps Orchestration', href: '/autonomous-devops-orchestration', icon: <Code className="w-5 h-5" /> },
-        { name: 'Edge Computing Intelligence', href: '/edge-computing-intelligence', icon: <Server className="w-5 h-5" /> },
-        { name: 'Zero-Trust Network Architecture', href: '/zero-trust-network-architecture', icon: <Network className="w-5 h-5" /> },
-        { name: 'Autonomous Data Center Management', href: '/autonomous-data-center-management', icon: <Settings className="w-5 h-5" /> },
-        { name: 'Quantum Cybersecurity Platform', href: '/quantum-cybersecurity-platform-2045', icon: <Lock className="w-5 h-5" /> }
-      ]
-    },
-    {
-      title: 'Micro SAAS Solutions',
-      links: [
-        { name: 'Autonomous Social Media Management', href: '/autonomous-social-media-management', icon: <Globe className="w-5 h-5" /> },
-        { name: 'AI Email Marketing Intelligence', href: '/ai-email-marketing-intelligence', icon: <Mail className="w-5 h-5" /> },
-        { name: 'Autonomous Customer Support', href: '/autonomous-customer-support-intelligence', icon: <Users className="w-5 h-5" /> },
-        { name: 'AI Business Intelligence Dashboard', href: '/ai-business-intelligence-dashboard', icon: <Target className="w-5 h-5" /> },
-        { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-2045', icon: <Rocket className="w-5 h-5" /> },
-        { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform-2045', icon: <Atom className="w-5 h-5" /> }
-      ]
-    },
-    {
-      title: 'Company & Resources',
-      links: [
-        { name: 'About Us', href: '/about', icon: <Users className="w-5 h-5" /> },
-        { name: 'Our Mission', href: '/mission', icon: <Target className="w-5 h-5" /> },
-        { name: 'Leadership Team', href: '/team', icon: <Star className="w-5 h-5" /> },
-        { name: 'Careers', href: '/careers', icon: <Zap className="w-5 h-5" /> },
-        { name: 'News & Updates', href: '/news', icon: <Globe className="w-5 h-5" /> },
-        { name: 'Press Kit', href: '/press', icon: <Play className="w-5 h-5" /> }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
       ]
     }
   ];

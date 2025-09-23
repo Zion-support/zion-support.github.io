@@ -6,17 +6,8 @@ on:
     - cron: '*/10 * * * *'
 
 permissions:
-<<<<<<< HEAD
   contents: write
   actions: read
-=======
-  contents: read
-  actions: write
-
-concurrency:
-  group: auto-heal-${{ github.ref }}
-  cancel-in-progress: true
->>>>>>> origin/cursor/fix-github-actions-errors-987b
 
 jobs:
   main:

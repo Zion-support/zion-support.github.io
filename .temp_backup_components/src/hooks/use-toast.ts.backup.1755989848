@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { toast as sonnerToast } from 'sonner';
 import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
 
@@ -103,37 +102,6 @@ toastAdapter.error = (message: string, options?: { id?: string; duration?: numbe
 
 toastAdapter.info = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
   return showToast.info(message, options);
-=======
-import { useSnackbar, VariantType, OptionsObject } from 'notistack';
-
-export type ToastOptions = OptionsObject & { variant?: VariantType };
-
-export function useToast() {
-  const { enqueueSnackbar } = useSnackbar();
-  const toast = React.useCallback((message: string, options?: ToastOptions) => {
-    enqueueSnackbar(message, options);
-  }, [enqueueSnackbar]);
-
-  toast.error = (msg: string) => enqueueSnackbar(msg, { variant: 'error' });
-  toast.success = (msg: string) => enqueueSnackbar(msg, { variant: 'success' });
-
-  return { toast } as { toast: typeof toast };
-}
-
-let globalEnqueue: (msg: string, opts?: OptionsObject) => void;
-
-export function ToastInitializer() {
-  const { enqueueSnackbar } = useSnackbar();
-  React.useEffect(() => {
-    globalEnqueue = enqueueSnackbar;
-  }, [enqueueSnackbar]);
-  return null;
-}
-
-export const toast = {
-  error: (msg: string) => globalEnqueue?.(msg, { variant: 'error' }),
-  success: (msg: string) => globalEnqueue?.(msg, { variant: 'success' }),
->>>>>>> origin/3ycx6d-codex/implement-global-error-boundary-with-toasts
 };
 
 toastAdapter.warning = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {

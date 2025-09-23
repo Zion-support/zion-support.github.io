@@ -245,7 +245,6 @@ const navigationItems: NavigationItem[] = [
         icon: <BarChart3 className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Revolutionary 2026', 
         href: '/revolutionary-2026-services', 
         description: '2026 services showcase',
@@ -256,18 +255,6 @@ const navigationItems: NavigationItem[] = [
         href: '/ultimate-2035-futuristic-services-showcase', 
         description: 'Future services preview',
         icon: <Zap className="w-4 h-4" />
-=======
-        name: 'Revolutionary Pricing 2025', 
-        href: '/revolutionary-2025-pricing', 
-        description: '2025 pricing innovations',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      { 
-        name: 'Revolutionary Pricing 2026', 
-        href: '/revolutionary-2026-pricing', 
-        description: '2026 pricing innovations',
-        icon: <TrendingUp className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-3da7
       }
     ]
   },
@@ -315,21 +302,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Users className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
-=======
-        name: 'Investors', 
-        href: '/investors', 
-        description: 'Investment information',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Careers', 
-        href: '/careers', 
-        description: 'Join our team',
-        icon: <User className="w-4 h-4" />
-      },
-      { 
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-3da7
         name: 'News', 
         href: '/news', 
         description: 'Company updates',
@@ -435,23 +407,10 @@ const navigationItems: NavigationItem[] = [
         icon: <BookOpenCheck className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'API Docs', 
         href: '/api-docs', 
         description: 'Developer resources',
         icon: <Code className="w-4 h-4" />
-=======
-        name: 'Webinars', 
-        href: '/webinars', 
-        description: 'Educational sessions',
-        icon: <Video className="w-4 h-4" />
-      },
-      { 
-        name: 'White Papers', 
-        href: '/white-papers', 
-        description: 'In-depth research',
-        icon: <FileText className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-3da7
       }
     ]
   },
@@ -464,16 +423,11 @@ const navigationItems: NavigationItem[] = [
     children: [
       { 
         name: 'Healthcare', 
-<<<<<<< HEAD
         href: '/healthcare-solutions', 
-=======
-        href: '/healthcare-ai-solutions', 
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-3da7
         description: 'Healthcare technology',
         icon: <Heart className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Financial', 
         href: '/financial-solutions', 
         description: 'Financial technology',
@@ -484,18 +438,6 @@ const navigationItems: NavigationItem[] = [
         href: '/government-technology-solutions', 
         description: 'Government solutions',
         icon: <Shield className="w-4 h-4" />
-=======
-        name: 'Financial Services', 
-        href: '/financial-solutions', 
-        description: 'Fintech solutions',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Manufacturing', 
-        href: '/manufacturing-ai-solutions', 
-        description: 'Industrial automation',
-        icon: <Settings className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-3da7
       },
       { 
         name: 'Retail', 
@@ -504,26 +446,15 @@ const navigationItems: NavigationItem[] = [
         icon: <ShoppingCart className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Manufacturing', 
         href: '/manufacturing-ai-solutions', 
         description: 'Manufacturing AI',
         icon: <Settings className="w-4 h-4" />
-=======
-        name: 'Government', 
-        href: '/government-technology-solutions', 
-        description: 'Public sector solutions',
-        icon: <Building className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-3da7
       },
       { 
         name: 'Education', 
         href: '/education-technology-solutions', 
-<<<<<<< HEAD
         description: 'Education technology',
-=======
-        description: 'EdTech solutions',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-3da7
         icon: <BookOpen className="w-4 h-4" />
       }
     ]

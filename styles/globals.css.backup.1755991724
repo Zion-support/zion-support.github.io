@@ -194,7 +194,6 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-<<<<<<< HEAD
   background-image: 
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.2) 0%, transparent 50%),
@@ -227,155 +226,9 @@ h3 {
 
 /* Quantum Matrix Background */
 body::after {
-=======
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-  animation: float 20s ease-in-out infinite;
-}
-
-/* Enhanced cyber grid */
-.cyber-grid {
-  background-image: 
-    linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: cyber-pulse 4s ease-in-out infinite;
-}
-
-/* Scanning lines effect */
-.scanning-lines::before {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4782
   content: '';
   position: fixed;
   top: 0;
-<<<<<<< HEAD
-=======
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.8), transparent);
-  animation: hologram-scan 3s linear infinite;
-}
-
-.scanning-lines::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.8), transparent);
-  animation: hologram-scan 3s linear infinite reverse;
-}
-
-/* Data stream background */
-.data-stream-bg {
-  background-image: 
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 20px,
-      rgba(0, 212, 255, 0.1) 20px,
-      rgba(0, 212, 255, 0.1) 40px
-    );
-  animation: data-stream 8s linear infinite;
-}
-
-/* Glassmorphism effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius);
-}
-
-.glass-dark {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  border-radius: var(--radius);
-}
-
-/* Enhanced neon text effects */
-.neon-text-blue {
-  color: var(--neon-blue);
-  text-shadow: 
-    0 0 5px var(--neon-blue),
-    0 0 10px var(--neon-blue),
-    0 0 15px var(--neon-blue),
-    0 0 20px var(--neon-blue);
-  animation: neon-flicker 2s infinite alternate;
-}
-
-.neon-text-purple {
-  color: var(--neon-purple);
-  text-shadow: 
-    0 0 5px var(--neon-purple),
-    0 0 10px var(--neon-purple),
-    0 0 15px var(--neon-purple),
-    0 0 20px var(--neon-purple);
-  animation: neon-flicker 2.5s infinite alternate;
-}
-
-.neon-text-cyan {
-  color: var(--neon-cyan);
-  text-shadow: 
-    0 0 5px var(--neon-cyan),
-    0 0 10px var(--neon-cyan),
-    0 0 15px var(--neon-cyan),
-    0 0 20px var(--neon-cyan);
-  animation: neon-flicker 1.8s infinite alternate;
-}
-
-.neon-text-green {
-  color: var(--neon-green);
-  text-shadow: 
-    0 0 5px var(--neon-green),
-    0 0 10px var(--neon-green),
-    0 0 15px var(--neon-green),
-    0 0 20px var(--neon-green);
-  animation: neon-flicker 2.2s infinite alternate;
-}
-
-.neon-text-pink {
-  color: var(--neon-pink);
-  text-shadow: 
-    0 0 5px var(--neon-pink),
-    0 0 10px var(--neon-pink),
-    0 0 15px var(--neon-pink),
-    0 0 20px var(--neon-pink);
-  animation: neon-flicker 1.9s infinite alternate;
-}
-
-/* Button animations */
-.btn-futuristic {
-  position: relative;
-  overflow: hidden;
-  background: var(--gradient-primary);
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-futuristic::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--gradient-secondary);
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.btn-futuristic:hover::before {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4782
   left: 0;
   width: 100%;
   height: 100%;

@@ -10,11 +10,7 @@ import {
   TrendingUp, Award, CheckCircle, Clock,
   Search, X as CloseIcon,
   Target, BookOpen, Calendar, Video, FileText,
-<<<<<<< HEAD
   Layers, Server
-=======
-  Building
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 } from 'lucide-react';
 
 const contactInfo = {

@@ -1583,7 +1583,6 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2 days',
     category: 'Growth & Monetization',
     realService: true,
-<<<<<<< HEAD
     technology: ['Node.js, Risk scoring, Device fingerprint'],
     integrations: ['Stripe, PayPal, PartnerStack'],
     useCases: ['Reduce fraudulent payouts, Improve CAC/LTV'],
@@ -1592,16 +1591,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$5B affiliate platforms',
     growthRate: '12% YoY',
     variant: 'marketing-futuristic',
-=======
-    technology: ['Python', 'Bayesian modeling', 'dbt'],
-    integrations: ['GA4', 'Facebook Ads', 'Google Ads', 'Shopify'],
-    useCases: ['Budget optimization', 'Channel ROI', 'Experiment planning'],
-    roi: 'Improve CAC/LTV ratio 10–30%',
-    competitors: ['Recast', 'Google Attribution', 'Rockerbox'],
-    marketSize: '$12B+ martech analytics',
-    growthRate: '20% YoY',
-    variant: 'ai-futuristic',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Data connectors, identity resolution, MMM fitting, and optimizer UI.',

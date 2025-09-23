@@ -1,34 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
-=======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  innovative2035MicroSaasServices 
-} from '../data/innovative-2035-micro-saas-services';
-import { 
-  innovative2035AIServices 
-} from '../data/innovative-2035-ai-services';
-import { 
-  innovative2035ITServices 
-} from '../data/innovative-2035-it-services';
-import { 
-  innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
-import { 
-  innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
-import { 
-  innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
-import { 
-  emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -92,17 +63,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   ];
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
       <>
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
-=======
-    <UltraFuturisticBackground2035>
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" aria-label="Primary">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <motion.div
@@ -559,7 +524,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </a>
             </motion.div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Enhanced CTA Section */}
@@ -741,12 +705,5 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 });
 
 Homepage2025.displayName = 'Homepage2025';
-=======
-        </div>
-      </footer>
-    </UltraFuturisticBackground2035>
-  );
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
 
 export default Homepage2025;

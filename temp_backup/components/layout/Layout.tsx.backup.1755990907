@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import UltraFuturisticNavigation2037 from './UltraFuturisticNavigation2037';
@@ -122,24 +121,3 @@ export default function Layout({ children, seo }: LayoutProps) {
     </div>
   );
 };
-=======
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow pt-16">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-}
->>>>>>> origin/cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade

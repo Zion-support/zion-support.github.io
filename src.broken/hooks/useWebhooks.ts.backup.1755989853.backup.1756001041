@@ -58,14 +58,6 @@ export function useWebhooks() {
         return;
       }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const response = await api.get(`${getWebhookUrl()}/webhooks`, {
-        headers: {
-          Authorization: `Bearer ${session.access_token}`,
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -74,9 +66,6 @@ export function useWebhooks() {
         method: 'GET',
         headers: {
           ...(authHeader ? { 'Authorization': authHeader } : {}),
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           'Content-Type': 'application/json'
         } as HeadersInit,
@@ -115,21 +104,6 @@ export function useWebhooks() {
         return;
       }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const response = await api.post(
-        `${getWebhookUrl()}/create`,
-        { name, url, eventTypes, secret },
-        {
-          headers: {
-            Authorization: `Bearer ${session.access_token}`,
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -147,9 +121,6 @@ export function useWebhooks() {
           secret
         })
       });
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {
@@ -195,21 +166,6 @@ export function useWebhooks() {
         return;
       }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const response = await api.post(
-        `${getWebhookUrl()}/toggle`,
-        { webhookId, isActive },
-        {
-          headers: {
-            Authorization: `Bearer ${session.access_token}`,
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -222,9 +178,6 @@ export function useWebhooks() {
         },
         body: JSON.stringify({ webhookId, isActive })
       });
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {
@@ -272,21 +225,6 @@ export function useWebhooks() {
         return;
       }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const response = await api.post(
-        `${getWebhookUrl()}/delete`,
-        { webhookId },
-        {
-          headers: {
-            Authorization: `Bearer ${session.access_token}`,
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -299,9 +237,6 @@ export function useWebhooks() {
         },
         body: JSON.stringify({ webhookId })
       });
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {
@@ -348,21 +283,6 @@ export function useWebhooks() {
         return;
       }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const response = await api.post(
-        `${getWebhookUrl()}/test`,
-        { webhookId, eventType },
-        {
-          headers: {
-            Authorization: `Bearer ${session.access_token}`,
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -375,9 +295,6 @@ export function useWebhooks() {
         },
         body: JSON.stringify({ webhookId, eventType })
       });
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {

@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
 const isIpfs = process.env.NEXT_PUBLIC_ASSET_PREFIX?.includes('/ipfs/');
 
 module.exports = {
-=======
-const nextConfig = {
-  assetPrefix,
-  poweredByHeader: false,
-  trailingSlash: false,
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
 
@@ -750,7 +743,6 @@ const nextConfig = {
 
     return config;
   },
-<<<<<<< HEAD
   async rewrites() {
     return [
       { source: '/main', destination: '/', permanent: true },
@@ -827,8 +819,6 @@ const nextConfig = {
     config.resolve.alias['@'] = path.resolve(__dirname);
     return config;
   },
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 };
 
 module.exports = withSentryConfig(baseConfig);

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
 export type ToastOptions = HotToastOptions & {
@@ -26,10 +25,3 @@ toast.error = (error: string) => hotToast.error(error);
 toast.success = (message: string) => hotToast.success(message);
 
 export { toast };
-=======
-// Hook for use-toast;
-export const useUse-toast = () => {;
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

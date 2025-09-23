@@ -4,14 +4,9 @@ import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Palette, Factory, Database
-=======
-  ArrowRight, Star,
-  Brain, Atom, Shield, Zap
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-225e
 } from 'lucide-react';
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 
@@ -275,33 +270,6 @@ const Homepage2025: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/comprehensive-2036-services-showcase">
-                  <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                    <Star className="w-5 h-5" />
-                    2036 Services Showcase
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                </Link>
-                <Link href="/services">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                    View All Services
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                </Link>
-              </div>
-            </motion.div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-225e
           </div>
         </section>
 

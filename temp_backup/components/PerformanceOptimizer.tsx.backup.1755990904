@@ -175,7 +175,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (!enableLazyLoading || typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
-<<<<<<< HEAD
     // Run optimizations in sequence
     await new Promise(resolve => setTimeout(resolve, 500));
     optimizeImages();
@@ -212,63 +211,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [metrics]);
 
   const performanceGrade = getPerformanceGrade();
-=======
-    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-    
-    const imageObserver = new (window as any).IntersectionObserver((entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as any;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-          }
-        }
-      });
-    });
-
-    lazyImages.forEach((img) => imageObserver.observe(img));
-
-    return () => imageObserver.disconnect();
-  }, [enableLazyLoading]);
-
-  // Preload critical resources
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Preload critical fonts
-    const fontLink = document.createElement('link');
-    fontLink.rel = 'preload';
-    fontLink.href = '/fonts/inter-var.woff2';
-    fontLink.as = 'font';
-    fontLink.type = 'font/woff2';
-    fontLink.crossOrigin = 'anonymous';
-    document.head.appendChild(fontLink);
-
-    // Preload critical CSS
-    const cssLink = document.createElement('link');
-    cssLink.rel = 'preload';
-    cssLink.href = '/styles/globals.css';
-    cssLink.as = 'style';
-    document.head.appendChild(cssLink);
-
-    // Prefetch non-critical resources
-    const prefetchLinks = [
-      '/api/analytics',
-      '/api/error-reporting'
-    ];
-
-    prefetchLinks.forEach((href) => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = href;
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  if (!showMetrics) return null;
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 
   return (
     <>

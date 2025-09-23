@@ -34,7 +34,6 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
@@ -49,9 +48,6 @@
       "@context/*": ["src/context/*"],
       "@constants/*": ["src/constants/*"],
       "@/components/*": ["src/components/*"]
-=======
-      "@/*": ["./*"]
->>>>>>> origin/cursor/create-and-deploy-new-content-ddfc
     },
     "types": ["vite/client", "node"],
     "plugins": [

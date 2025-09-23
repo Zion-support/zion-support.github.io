@@ -586,7 +586,6 @@
     "cloud:continuous": "node scripts/continuous-cloud-agents.cjs",
     "gh:trigger": "node scripts/trigger-workflows.cjs",
     "gh:auto-heal": "node scripts/workflows-auto-healer.cjs && git add .github/workflows && git commit -m 'ci(auto-heal): normalize workflows [skip ci]' || true && git push origin HEAD",
-<<<<<<< HEAD
     "redundancy:master": "node automation/redundancy/master-redundancy-orchestrator.cjs",
     "redundancy:report": "node automation/redundancy/master-redundancy-orchestrator.cjs report",
     "redundancy:comprehensive:start": "bash automation/start-comprehensive-redundancy.sh start",
@@ -666,20 +665,6 @@
     "perf:budget": "node scripts/performance-budget-checker.js",
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:report": "npm run perf:analyze && npm run perf:lighthouse"
-=======
-    "turbo:start": "pm2 start ecosystem-turbo.config.js",
-    "turbo:stop": "pm2 stop ecosystem-turbo.config.js",
-    "turbo:restart": "pm2 restart ecosystem-turbo.config.js",
-    "turbo:status": "pm2 status",
-    "turbo:generate": "node automation/service-factory/turbo-service-generator.cjs turbo",
-    "turbo:optimize": "node automation/service-factory/turbo-performance-optimizer.cjs turbo",
-    "turbo:pipeline": "node automation/service-factory/ultimate-service-factory-turbo.cjs turbo",
-    "turbo:benchmark": "node automation/service-factory/turbo-benchmark.cjs",
-    "turbo:stress-test": "node automation/service-factory/turbo-stress-test.cjs",
-    "turbo:monitor": "pm2 monit",
-    "turbo:logs": "pm2 logs",
-    "turbo:cleanup": "pm2 delete all && pm2 save"
->>>>>>> origin/cursor/automate-ai-and-it-service-creation-6b2f
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -709,17 +694,11 @@
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
-<<<<<<< HEAD
     "js-yaml": "^4.1.0",
     "jsdom": "^26.1.0",
     "lightningcss": "1.27.0",
     "lucide-react": "^0.540.0",
     "next": "^15.5.0",
-=======
-    "jsdom": "^24.1.0",
-    "lucide-react": "^0.536.0",
-    "next": "^14.2.5",
->>>>>>> origin/cursor/automate-ai-and-it-service-creation-6b2f
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",

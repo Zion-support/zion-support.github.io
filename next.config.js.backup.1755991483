@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
 const isIpfs = process.env.NEXT_PUBLIC_ASSET_PREFIX?.includes('/ipfs/');
 
 module.exports = {
-=======
-const nextConfig = {
-  assetPrefix,
-  poweredByHeader: false,
-  trailingSlash: false,
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
 
@@ -65,7 +58,6 @@ const nextConfig = {
     // Bundle analysis optimizations moved to root level
     // Disable profiling for faster builds
     swcTraceProfiling: false,
-<<<<<<< HEAD
     // Removed esmExternals to prevent external module dynamic import issues
     esmExternals: undefined,
     // Enable React 19 streaming features
@@ -73,9 +65,6 @@ const nextConfig = {
     // Enable React Compiler for automatic memoization optimizations (experimental)
     reactCompiler: true,
     // Partial Prerendering currently requires canary – disabled for now
-=======
-    
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   },
 
   images: {
@@ -760,7 +749,6 @@ const nextConfig = {
 
     return config;
   },
-<<<<<<< HEAD
   async rewrites() {
     return [
       { source: '/main', destination: '/', permanent: true },
@@ -837,8 +825,6 @@ const nextConfig = {
     config.resolve.alias['@'] = path.resolve(__dirname);
     return config;
   },
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 };
 
 module.exports = withSentryConfig(baseConfig);

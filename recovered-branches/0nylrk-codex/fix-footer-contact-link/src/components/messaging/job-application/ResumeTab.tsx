@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
@@ -18,26 +17,10 @@ export function ResumeTab({
   onApply
   isSubmitting = false
 }: ResumeTabProps) {
-=======
-import React from 'react';
-import { ResumeSelector, ResumeOption } from "../resume-selector";
-import { Button } from "@/components/ui/button";
-
-export interface ResumeTabProps {
-  selectedResumeId?: string | null;
-  onSelectResume?: (resumeId: string) => void;
-  onResumeSelected?: (resume: ResumeOption) => void;
-  onApply?: () => Promise<void>;
-  isSubmitting?: boolean;
-}
-
-export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {
->>>>>>> origin/auto/autonomy-17186719616
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
       onResumeSelected(resume);
     }
-<<<<<<< HEAD
     if (onSelectResume) {
       onSelectResume(resume.id);
     }
@@ -114,29 +97,17 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
       onSelectResume(resume.id);
     }
   },
-=======
-    
-    if (onSelectResume) {
-      onSelectResume(resume.id);
-    }
-  };
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
-<<<<<<< HEAD
 
 
-=======
-      
->>>>>>> origin/auto/autonomy-17186719616
       {onApply && (
         <div className="mt-6">
           <Button 
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
-<<<<<<< HEAD
 
 
             className="w-full"
@@ -159,18 +130,10 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-            className="w-full"
-          >
-            {isSubmitting ? 'Submitting...' : 'Submit Application'}
-          </Button>
-          
->>>>>>> origin/auto/autonomy-17186719616
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
-<<<<<<< HEAD
 
     <div className="space-y-4">;
       <ResumeSelector onResumeSelected={handleResumeSelected} />;
@@ -239,11 +202,3 @@ if ( {) {
     </div>);
 
 }
-=======
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616

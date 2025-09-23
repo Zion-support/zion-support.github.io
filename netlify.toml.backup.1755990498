@@ -212,7 +212,6 @@
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
 
-<<<<<<< HEAD
 [[scheduled.functions]]
   name = "a11y-alt-text-runner"
   schedule = "*/10 * * * *" # every 10 minutes
@@ -322,21 +321,3 @@ name = "duplicate-media-finder-runner"
 [[scheduled.functions]]
   name = "pulse-sync"
   schedule = "*/1 * * * *" # every minute
-=======
-# New innovative automations
-[[scheduled.functions]]
-  name = "internal-link-graph-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "robots-enhancer-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "alt-text-indexer-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "content-registry-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b44b

@@ -112,7 +112,6 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [applySettings]);
 
-<<<<<<< HEAD
   // Toggle setting
   const toggleSetting = useCallback((key: keyof AccessibilitySettings) => {
     const newSettings = { ...settings, [key]: !settings[key] };
@@ -120,47 +119,6 @@ const AccessibilityEnhancer: React.FC = () => {
   }, [settings, saveSettings]);
 
   // Enhanced keyboard navigation
-=======
-  // Focus management
-  const handleFocusChange = useCallback((e: FocusEvent) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      setCurrentFocus(target);
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-    }
-  }, []);
-
-  // Keyboard navigation enhancements
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    // Tab navigation detected
-  }, []);
-
-  // Announce to screen reader
-  const announceToScreenReader = useCallback((message: string) => {
-    // setAnnouncements(prev => [...prev, message]); // This line was removed
-    
-    // Create live region for screen readers
-    if (!announcementRef.current) {
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      document.body.appendChild(liveRegion);
-      announcementRef.current = liveRegion;
-    }
-    
-    if (announcementRef.current) {
-      announcementRef.current.textContent = message;
-    }
-    
-    // Remove announcement after a delay
-    setTimeout(() => {
-      // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
-    }, 5000);
-  }, []);
-
-  // Auto-optimize accessibility
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1ca5
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 

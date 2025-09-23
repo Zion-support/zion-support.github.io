@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -33,14 +32,6 @@ export default function ProductPage() {
       <Button onClick={handleAdd} disabled={adding}>
         {adding ? 'Adding...' : 'Add to Cart'}
       </Button>
-=======
-import React from 'react';
-export function ProductPage() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
->>>>>>> origin/automation-error-fixes
     </div>
   );
 }

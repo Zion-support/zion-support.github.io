@@ -116,48 +116,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setIsOptimizing(false);
   };
 
-<<<<<<< HEAD
   if (!showMetrics) {
     return null;
   }
-=======
-    // Run optimizations in sequence
-    await new Promise(resolve => setTimeout(resolve, 500));
-    optimizeImages();
-    
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    optimizeFonts();
-    
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    optimizeCSS();
-    
-    await new Promise(resolve => setTimeout(resolve, 500));
-    setOptimizationStatus('Optimization complete!');
-    
-    setTimeout(() => {
-      setIsOptimizing(false);
-      setOptimizationStatus('');
-    }, 2000);
-  }, [optimizeImages, optimizeFonts, optimizeCSS]);
-
-  // Get performance grade
-  const getPerformanceGrade = useCallback(() => {
-    let score = 100;
-    
-    if (metrics.fcp && metrics.fcp > 1800) score -= 20;
-    if (metrics.lcp && metrics.lcp > 2500) score -= 20;
-    if (metrics.fid && metrics.fid > 100) score -= 20;
-    if (metrics.cls && metrics.cls > 0.1) score -= 20;
-    if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
-
-    if (score >= 90) return { grade: 'A', color: 'text-green-400' };
-    if (score >= 80) return { grade: 'B', color: 'text-yellow-400' };
-    if (score >= 70) return { grade: 'C', color: 'text-orange-400' };
-    return { grade: 'D', color: 'text-red-400' };
-  }, [metrics]);
-
-  const performanceGrade = getPerformanceGrade();
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 
   return (
@@ -202,7 +163,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               </span>
             </div>
           </div>
-<<<<<<< HEAD
         )}
 
         {optimizations.length > 0 && (
@@ -220,14 +180,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         )}
       </motion.div>
     </div>
-=======
-          {isOptimizing && (
-            <div className="text-cyan-400 text-xs mt-2">Optimizing resources...</div>
-          )}
-        </motion.div>
-      )}
-    </>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
   );
 };

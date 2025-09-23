@@ -9,10 +9,6 @@ import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
-<<<<<<< HEAD
-=======
-import SEOHead from '../SEOHead';
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -49,7 +45,6 @@ export default function Layout({ children, seo }: LayoutProps) {
     };
   }, []);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Apply theme to document
     document.documentElement.setAttribute('data-theme', theme);
@@ -102,8 +97,6 @@ export default function Layout({ children, seo }: LayoutProps) {
   const darkMode = theme === 'dark';
   const toggleDarkMode = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
 
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   return (
     <>
       <Head>

@@ -75,7 +75,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-<<<<<<< HEAD
   const allServices = [
     ...innovativeAIServices,
     ...quantumSpaceServices,
@@ -121,40 +120,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
     return matchesCategory && matchesSearch;
   });
-=======
-  // Get unique categories
-  const categories = ['All', ...Array.from(new Set(services.map(s => {
-    if (typeof s.category === 'string') {
-      return s.category.split('&')[0].trim();
-    }
-    return 'Other';
-  })))];
-  
-  // Filter and sort services
-  const filteredServices = services
-    .filter(service => {
-      if (selectedCategory === 'All') return true;
-      if (typeof service.category === 'string') {
-        return service.category.includes(selectedCategory);
-      }
-      return false;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'popular':
-          return b.popular ? 1 : -1;
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default:
-          return 0;
-      }
-    })
-    .slice(0, maxServices);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-574a
 
   const containerVariants = {
     hidden: { opacity: 0 },

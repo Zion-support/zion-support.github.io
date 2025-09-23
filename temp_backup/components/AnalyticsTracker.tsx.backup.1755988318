@@ -1,41 +1,16 @@
-<<<<<<< HEAD
 import React, { useEffect, useCallback } from 'react';
 
 interface AnalyticsTrackerProps {
   enablePerformanceMonitoring?: boolean;
   enableUserEngagement?: boolean;
   enableConversionTracking?: boolean;
-=======
-
-import React, { useEffect, useCallback } from 'react';
-
-interface AnalyticsTrackerProps {
-  pageTitle?: string;
-  pagePath?: string;
-  customEvents?: Array<{
-    name: string;
-    parameters?: Record<string, unknown>;
-  }>;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 }
 
 // Performance entry types for Core Web Vitals
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
-<<<<<<< HEAD
   target?: any;
-=======
-  target?: unknown;
-}
-
-// Global type declarations for browser APIs
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-    dataLayer?: unknown[];
-  }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
@@ -56,7 +31,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       }
     };
 
-<<<<<<< HEAD
     // Viewport tracking
     const trackViewport = () => {
       trackMetric('ViewportWidth', window.innerWidth);
@@ -70,15 +44,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         window.gtag('event', 'custom_metric', {
           metric_name: name,
           metric_value: value,
-=======
-      // Google Tag Manager
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'page_view',
-          page_title: title,
-          page_location: window.location.href,
-          page_path: path,
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
           timestamp: Date.now()
         });
       }
@@ -103,26 +68,16 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       }
     };
 
-<<<<<<< HEAD
     // Helper function to track events
     const trackEvent = (action: string, parameters: Record<string, unknown>) => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', action, {
-=======
-  // Track custom events
-  const trackCustomEvent = useCallback((eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics 4
-      if (window.gtag) {
-        window.gtag('event', eventName, {
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
           ...parameters,
           timestamp: Date.now(),
           page_url: window.location.href
         });
       }
 
-<<<<<<< HEAD
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {
         fetch('/api/analytics/events', {
@@ -139,49 +94,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           })
         }).catch(() => {
           // Silently handle fetch errors
-=======
-      // Google Tag Manager
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: eventName,
-          ...parameters,
-          timestamp: Date.now(),
-          page_location: window.location.href
-        });
-      }
-
-      // Custom analytics
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Custom Event:', { eventName, parameters });
-      }
-    }
-  }, []);
-
-  // Track user engagement
-  const trackUserEngagement = useCallback(() => {
-    let startTime = Date.now();
-    let isEngaged = false;
-
-    const trackEngagement = () => {
-      const currentTime = Date.now();
-      const timeOnPage = currentTime - startTime;
-
-      // Track engagement after 10 seconds
-      if (timeOnPage > 10000 && !isEngaged) {
-        isEngaged = true;
-        trackCustomEvent('user_engagement', {
-          engagement_time_msec: timeOnPage,
-          engagement_type: 'time_on_page'
-        });
-      }
-
-      // Track scroll depth
-      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-      if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-        trackCustomEvent('scroll_depth', {
-          scroll_percentage: scrollDepth,
-          page_location: window.location.href
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
         });
       }
     };

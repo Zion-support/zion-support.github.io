@@ -1,15 +1,5 @@
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { apiClient } from './apiClient';
-=======
-<<<<<<< HEAD
-import { safeStorage } from './safeStorage';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-=======
-import { format } from 'date-fns';
-import { apiClient } from './apiClient';
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 /**
@@ -63,16 +53,6 @@ export async function trackReferral(userId: string, email: string) {
     if (!refCode) return false;
     
     // Call API to record the referral
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const response = await api.post('/api/track-referral', {
-      refCode,
-      userId,
-      email,
-      ipAddress: '', // This will be captured by the server
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     const response = await apiClient('/api/track-referral', {
       method: 'POST',
       headers: {
@@ -84,9 +64,6 @@ export async function trackReferral(userId: string, email: string) {
         email,
         ipAddress: '', // This will be captured by the server
       }),
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     });
 

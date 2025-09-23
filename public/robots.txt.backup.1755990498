@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-<<<<<<< HEAD
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -24,6 +23,3 @@ Allow: /blog/
 # Crawl delay for better server performance
 Crawl-delay: 1
 
-=======
-Sitemap: /sitemap.xml
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b44b

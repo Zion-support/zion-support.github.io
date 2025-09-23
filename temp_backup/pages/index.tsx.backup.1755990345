@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import Homepage2044 from '../components/Homepage2044';
@@ -10,34 +9,9 @@ export default function Home() {
     <EnhancedErrorBoundary>
       <Homepage2044 />
     </EnhancedErrorBoundary>
-=======
-import React from 'react';
-<<<<<<< HEAD
-import Homepage2045 from '../components/Homepage2045';
-import SEOOptimizer from '../components/SEOOptimizer';
-import Analytics from '../components/Analytics';
-import ErrorBoundary from '../components/ErrorBoundary';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import MobileOptimizer from '../components/MobileOptimizer';
-=======
-import Layout from '../components/layout/Layout';
-import Homepage2040 from '../components/Homepage2040';
-
-const HomePage: React.FC = () => {
-  const seoConfig = {
-    title: "Zion Tech Group - Revolutionary AI, Quantum & Space Technology Solutions 2040",
-    description: "Pioneering the future of technology with innovative AI consciousness, quantum computing, autonomous systems, and space technology solutions that transform businesses worldwide. Leading-edge 2040 technology with 100+ innovative services.",
-    keywords: "AI, artificial intelligence, quantum computing, autonomous systems, space technology, holographic communication, brain-computer interface, synthetic biology, technology solutions, business transformation, Zion Tech Group, 2040 technology, consciousness AI, quantum cybersecurity, space mining",
-    image: "/og-image.svg",
-    url: "https://ziontechgroup.com",
-    type: "website"
-  };
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
 
 export default function Home() {
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -45,11 +19,6 @@ export default function Home() {
       <PerformanceMonitor />
       <AccessibilityEnhancer />
     </ErrorBoundary>
-=======
-    <Layout seo={seoConfig}>
-      <Homepage2040 />
-    </Layout>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
 >>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   );
 };
@@ -101,41 +70,6 @@ export default function Home() {
 {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
     </div>
   );
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-interface Service {
-  id: string;
-  name: string;
-  type: string;
-  description: string;
-  category: string;
-  technology: string;
-  status: 'active' | 'beta' | 'development';
-  features: string[];
-  pricing: {
-    model: string;
-    startingPrice: string;
-    details: string;
-  };
-  links: {
-    demo: string;
-    documentation: string;
-    github: string;
-    deployment: string;
-  };
-  metrics: {
-    uptime: string;
-    responseTime: string;
-    users: string;
-  };
-  lastUpdated: string;
-  path?: string;
-  files?: string[];
->>>>>>> origin/cursor/automate-ai-and-it-service-creation-6b2f
 }
 
 interface ServiceCategory {

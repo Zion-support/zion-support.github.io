@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import Homepage2047 from '../components/Homepage2047';
-=======
-import Homepage2045 from '../components/Homepage2045';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1eea
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEOHead from '../components/SEOHead';
 
@@ -121,18 +117,12 @@ const testimonials = [
 
 export default function Home() {
   return (
-<<<<<<< HEAD
     <>
       <SEOHead />
       <ErrorBoundary>
         <EnhancedHomepage2025 />
       </ErrorBoundary>
     </>
-=======
-    <ErrorBoundary>
-      <Homepage2045 />
-    </ErrorBoundary>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1eea
   );
 };
 

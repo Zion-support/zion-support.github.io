@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
-<<<<<<< HEAD
 import UltraFuturisticBackground2045 from '../backgrounds/UltraFuturisticBackground2045';
-=======
-import UltraFuturisticBackground2040 from '../backgrounds/UltraFuturisticBackground2040';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
@@ -87,11 +83,7 @@ export default function Layout({ children }: LayoutProps) {
       <a href="#main" className="skip-link">Skip to main content</a>
       
       {/* Futuristic Background */}
-<<<<<<< HEAD
       <UltraFuturisticBackground2045 theme="consciousness" intensity="high" />
-=======
-      <UltraFuturisticBackground2040 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       
       {/* Layout Structure */}
       <div className="relative z-10">

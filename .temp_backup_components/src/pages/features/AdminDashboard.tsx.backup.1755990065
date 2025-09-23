@@ -1,7 +1,6 @@
 import React from 'react';
 export function AdminDashboard() {
   return (
-<<<<<<< HEAD
     <>
       <SEO
         title="Admin Dashboard"
@@ -47,11 +46,5 @@ export function AdminDashboard() {
         </div>
       </main>
     </>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

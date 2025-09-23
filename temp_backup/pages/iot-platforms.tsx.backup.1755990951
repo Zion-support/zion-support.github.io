@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,6 +18,3 @@ const IotPlatforms: NextPage = () => {
 };
 
 export default IotPlatforms;
-=======
-export default function IoTPlatforms() { return <div className="py-10">IoT Platforms</div> }
->>>>>>> origin/cursor/build-ai-resume-and-portfolio-tool-4f12

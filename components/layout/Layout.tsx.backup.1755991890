@@ -16,7 +16,6 @@ export default function Layout({ children, seo }: LayoutProps) {
   const [showEnhancements, setShowEnhancements] = useState(false);
 
   return (
-<<<<<<< HEAD
     <div 
       className="min-h-screen bg-black text-white relative overflow-x-hidden"
       onKeyDown={handleKeyDown}
@@ -51,16 +50,6 @@ export default function Layout({ children, seo }: LayoutProps) {
           <UltraFuturisticFooter2035 />
         </div>
       </UltraFuturisticBackground2035>
-=======
-    <div className="min-h-screen bg-black text-white">
-      <EnhancedFuturisticBackground variant="quantum" intensity="high">
-        <NeoFuturisticNavigation />
-        <main className="pt-24 lg:pt-28">
-          {children}
-        </main>
-        <NeoFuturisticFooter />
-      </EnhancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9431
     </div>
   );
 };

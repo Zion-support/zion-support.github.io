@@ -13,16 +13,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'currencies',
     'authentication',
     'backend.products',
-=======
-    'rest_framework',
-    'drf_yasg',
-    'authentication',
-    'public_api',
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 ]
 
 MIDDLEWARE = [

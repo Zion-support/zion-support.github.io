@@ -97,7 +97,6 @@ export const innovative2025MicroSaasExpansion: RealMarketService[] = [
     launchDate: '2025-01-20',
     customers: 189,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 134
   },
 
@@ -421,8 +420,5 @@ export const innovative2025MicroSaasExpansion: RealMarketService[] = [
     customers: 223,
     rating: 4.8,
     reviews: 167
-=======
-    reviews: 123
->>>>>>> 0f8f34f79a240b91d4992261cb0e4f4ff09ab0f5
   }
 ];

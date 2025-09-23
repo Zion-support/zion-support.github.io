@@ -1,9 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
@@ -41,12 +38,6 @@ import { real2028ServiceExpansions } from '../../data/real-2028-service-expansio
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
 import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
 import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { real2029Q4Additions } from '../../data/real-2029-q4-additions';
-=======
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
 import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
 import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
 import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
@@ -83,9 +74,6 @@ import { innovative2025AISolutionsExpansion } from '../../data/2025-innovative-a
 import { innovativeMicroSaasExpansionV32025 } from '../../data/2025-innovative-micro-saas-expansion-v3';
 import { innovativeITServicesExpansion2025V3 } from '../../data/2025-innovative-it-services-expansion-v3';
 import { innovativeAIServicesExpansion2025V3 } from '../../data/2025-innovative-ai-services-expansion-v3';
-<<<<<<< HEAD
-=======
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
 
 function toSlug(value: string) {
@@ -204,12 +192,6 @@ export default function ServicesIndexPage() {
       real2029Q1Additions as unknown[],
       real2029Q2Additions as unknown[],
       real2029Q3Additions as unknown[],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      real2029Q4Additions as unknown[]
-=======
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
       real2030Q1Additions as unknown[],
       real2031MicroSaasAdditions as unknown[],
       real2031ITServicesAdditions as unknown[],
@@ -304,9 +286,6 @@ export default function ServicesIndexPage() {
   const servicesByCategory = categories.reduce((acc, category) => {
     acc[category] = validServices.filter((service: ServiceItem) => 
       service.category && service.category.toLowerCase().includes(category.toLowerCase().replace(/\s+/g, ''))
-<<<<<<< HEAD
-=======
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
     );
     return acc;
@@ -623,15 +602,7 @@ export default function ServicesIndexPage() {
       </div>
     </UltraFuturisticBackground>
   );
-<<<<<<< HEAD
 }
-=======
-  return (
-    <>
-      <Head><title>services/index - Zion App</title><meta name="description" content="services/index page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">services/index</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
-  );
->>>>>>> origin/automation-error-fixes
 =======
 }
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

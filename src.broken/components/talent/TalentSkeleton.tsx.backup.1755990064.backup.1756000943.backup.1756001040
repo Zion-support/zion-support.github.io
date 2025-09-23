@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Skeleton } from '@/components/ui/skeleton';
 
 export function TalentSkeleton() {
@@ -20,13 +19,6 @@ export function TalentSkeleton() {
           <Skeleton className="h-24 w-full bg-zion-blue-light/20" />
         </div>
       ))}
-=======
-export function TalentSkeleton() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
->>>>>>> origin/automation-error-fixes
     </div>
   );
 }

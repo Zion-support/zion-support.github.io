@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // CRITICAL: Import immediate process polyfill FIRST to prevent process.env errors
 import '../src/utils/immediate-process-polyfill';
 
@@ -189,25 +188,6 @@ const ErrorBoundary: React.FC<{ children: React.ReactNode; name: string }> = ({ 
         >
           Reload Page
         </button>
-=======
-import type { AppProps } from 'next/app';
-import '../styles/globals.css';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-import FuturisticLayout from '../components/FuturisticLayout';
-import DefaultSEO from '../components/DefaultSEO';
-
-export default function ZionApp({ Component, pageProps }: AppProps) {
-  return (
-    <FuturisticLayout>
-      <div className="min-h-screen flex flex-col">
-        <DefaultSEO />
-        <SmartHeader />
-        <main className="flex-1">
-          <Component {...pageProps} />
-        </main>
-        <SmartFooter />
->>>>>>> origin/cursor/analyze-website-for-navigation-automation-1ae1
       </div>
     );
   }

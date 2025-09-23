@@ -41,7 +41,6 @@
   name = "front-index-orchestrator"
   schedule = "*/5 * * * *" # every 5 minutes
 
-<<<<<<< HEAD
 [[scheduled.functions]]
   name = "frontpage-enhancer"
   schedule = "*/20 * * * *" # every 20 minutes
@@ -57,32 +56,6 @@
 [[scheduled.functions]]
   name = "sitemap_runner"
   schedule = "0 */12 * * *" # twice per day
-=======
-[[redirects]]
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
-  status = 301
-
-[[redirects]]
-  from = "/ai-consciousness-evolution"
-  to = "/ai-consciousness-evolution-2029"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-materials-discovery"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ba
 
 [[redirects]]
   from = "/autonomous-vehicle-ai"

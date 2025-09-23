@@ -19,10 +19,6 @@ export default function AIConsciousnessEvolution2025() {
 				"Benchmarks and best-practice playbooks]}
 			]}
 			industries={["SaaS", "Healthcare", "Education", "Financial Services"]}
-<<<<<<< HEAD
-=======
-			url="https://ziontechgroup.com/ai-consciousness-evolution-2025"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
 		/>
 	);
 }

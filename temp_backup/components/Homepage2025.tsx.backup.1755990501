@@ -133,7 +133,6 @@ const Homepage2025: React.FC = () => {
                   >
                     Search
                   </button>
-<<<<<<< HEAD
                 </div>
               </form>
             </motion.div>
@@ -178,24 +177,6 @@ const Homepage2025: React.FC = () => {
               <div className="flex items-center space-x-2">
                 <TrendingUp className="w-4 h-4 text-purple-400" />
                 <span>Proven Results</span>
-=======
-                </Link>
-                <Link href="/services">
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Learn More
-                  </button>
-                </Link>
-                <Link href="/comprehensive-2025-services-showcase">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    2025 Services Showcase
-                  </button>
-                </Link>
-                <Link href="/ultimate-2038-futuristic-services-showcase">
-                  <button className="px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    2038 Futuristic Services
-                  </button>
-                </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a942
               </div>
             </motion.div>
           </div>

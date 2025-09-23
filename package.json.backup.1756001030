@@ -2,18 +2,14 @@
   "name": "zion-tech-group",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
   "engines": {
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
   },
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
     "postbuild": "node automation/footer-injector.cjs || true",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
@@ -427,27 +423,5 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.0.0"
-=======
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
-  },
-  "dependencies": {
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.263.1",
-    "next": "^13.4.19",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.4.5",
-    "@types/react": "^18.2.17",
-    "@types/react-dom": "^18.2.7",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "^13.4.19",
-    "postcss": "^8.4.26",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
   }
 }

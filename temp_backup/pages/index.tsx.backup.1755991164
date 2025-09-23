@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Zap, Cloud, Shield, Activity, Workflow, Webhook, Code2, TrendingUp, Bot, GitPullRequest } from 'lucide-react';
 
@@ -205,19 +204,3 @@ function QuickLinks() {
     </div>
   );
 }
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const HomePage: NextPage = () => {
-  return (
-    <div>
-      <Head><title>Zion OS</title></Head>
-      <h1 className="text-2xl font-semibold">Welcome to Zion OS</h1>
-      <p className="text-gray-600 dark:text-gray-400 mt-2">Explore services, or create a digital nation.</p>
-    </div>
-  );
-};
-
-export default HomePage;
->>>>>>> origin/cursor/build-digital-nation-creation-module-4d41

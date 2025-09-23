@@ -36,17 +36,12 @@ export default function Layout({
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-<<<<<<< HEAD
   useEffect(() => {
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
     if (savedTheme) {
       setTheme(savedTheme);
     }
-=======
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);

@@ -13,7 +13,6 @@ export default function Home() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-<<<<<<< HEAD
           {/* Hero Section */}
           <section className="text-center mb-20">
             <h1 className="text-6xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
@@ -37,37 +36,6 @@ export default function Home() {
               </Link>
             </div>
 
-=======
-          {/* Enhanced Hero Section */}
-          <section className="text-center mb-20">
-            <h1 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-2xl text-white/80 max-w-4xl mx-auto mb-8">
-              Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems that transform businesses.
-            </p>
-            
-            {/* Key Statistics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold text-cyan-400">227+</div>
-                <div className="text-sm text-white/70">Active Automations</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold text-fuchsia-400">2,960+</div>
-                <div className="text-sm text-white/70">Pages Generated</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold text-green-400">99.9%</div>
-                <div className="text-sm text-white/70">Uptime</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold text-blue-400">24/7</div>
-                <div className="text-sm text-white/70">Monitoring</div>
-              </div>
-            </div>
-            
->>>>>>> origin/cursor/add-more-project-content-decc
             {/* Navigation Links */}
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
@@ -112,7 +80,6 @@ export default function Home() {
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Hero Features Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-12">Why Choose Zion Tech Group?</h2>
@@ -232,33 +199,6 @@ export default function Home() {
                 <p className="text-white/80 italic">
                   "Their AI content generation has helped us scale our marketing efforts 
                   without hiring additional writers. The quality is outstanding."
-=======
-          {/* What We Do Section */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-12">What We Do</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold mb-4 text-cyan-400">AI-Powered Automation</h3>
-                <p className="text-white/70">
-                  We build intelligent systems that work autonomously, learning and adapting to optimize your business processes.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold mb-4 text-fuchsia-400">Digital Transformation</h3>
-                <p className="text-white/70">
-                  Complete digital transformation solutions that modernize your infrastructure and unlock new capabilities.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-green-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-bold mb-4 text-green-400">Data Intelligence</h3>
-                <p className="text-white/70">
-                  Turn your data into actionable insights with advanced analytics and machine learning solutions.
->>>>>>> origin/cursor/add-more-project-content-decc
                 </p>
               </div>
             </div>
@@ -482,7 +422,6 @@ export default function Home() {
             </div>
           </section>
           
-<<<<<<< HEAD
           {/* Testimonials Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14 mb-16">
             <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-12">What Our Clients Say</h2>
@@ -579,10 +518,6 @@ export default function Home() {
 
           {/* Additional Content Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14 mb-16">
-=======
-          {/* Explore Our Platform Section */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
->>>>>>> origin/cursor/add-more-project-content-decc
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Explore Our Platform</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link href="/about" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center">
@@ -619,7 +554,6 @@ export default function Home() {
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Statistics Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-12">Our Impact in Numbers</h2>
@@ -656,20 +590,6 @@ export default function Home() {
                   Get Started Today
                 </Link>
                 <Link href="/case-studies" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105">
-=======
-          {/* Call to Action Section */}
-          <section className="mx-auto max-w-4xl px-6 pb-16 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 backdrop-blur-xl rounded-3xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-              <p className="text-xl text-white/80 mb-8">
-                Join the future of autonomous technology. Let's discuss how our AI solutions can revolutionize your operations.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 transform hover:scale-105">
-                  Get Started Today
-                </Link>
-                <Link href="/case-studies" className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
->>>>>>> origin/cursor/add-more-project-content-decc
                   View Case Studies
                 </Link>
               </div>

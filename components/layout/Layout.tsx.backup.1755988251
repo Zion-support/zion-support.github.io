@@ -1,58 +1,15 @@
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
 import UltraAdvancedFuturisticFooter2025 from './UltraAdvancedFuturisticFooter2025';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
-=======
-import React, { useState, useEffect } from 'react';
-import UltraFuturisticNavigation2036 from './UltraFuturisticNavigation2036';
-import UltraFuturisticFooter2036 from './UltraFuturisticFooter2036';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
-import TopContactBar from './TopContactBar';
-import PerformanceMonitor from '../PerformanceMonitor';
-import AccessibilityEnhancer from '../AccessibilityEnhancer';
-import CookieConsentBanner from '../CookieConsentBanner';
-import { Moon, Sun } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-ff45
 
 interface LayoutProps {
 	children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-=======
-export default function Layout({ children }: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    // Check for saved theme preference or default to dark mode
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setDarkMode(savedTheme === 'dark');
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    localStorage.setItem('theme', newMode ? 'dark' : 'light');
-    
-    // Update document class for global theme
-    if (newMode) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-    }
-  };
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-ff45
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'} relative overflow-x-hidden transition-colors duration-300`}>
       {/* Skip to content link for accessibility */}

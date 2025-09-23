@@ -42,7 +42,6 @@ const footerSections = [
     description: 'Cutting-edge future technology services',
     icon: <Lightbulb className="w-5 h-5 text-yellow-400" />,
     links: [
-<<<<<<< HEAD
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', featured: true },
       { name: 'Quantum Secure Communication', href: '/quantum-secure-communication-hub', featured: true },
       { name: 'Autonomous DevOps Orchestrator', href: '/autonomous-devops-orchestrator', featured: true },
@@ -53,17 +52,6 @@ const footerSections = [
       { name: 'Metaverse Development Studio', href: '/metaverse-development-studio-pro' },
       { name: 'AI Ethics Governance', href: '/ai-ethics-governance-framework' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' }
-=======
-      { name: 'Innovative 2036 Services', href: '/innovative-2036-services-showcase', featured: true },
-      { name: 'AI Autonomous Code Generation', href: '/ai-autonomous-code-generation', featured: true },
-      { name: 'Quantum AI Brain-Computer Interface', href: '/quantum-ai-brain-computer-interface', featured: true },
-      { name: 'Space Resource Mining Platform', href: '/space-resource-mining-platform', featured: true },
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', featured: true },
-      { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', featured: true },
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', featured: true },
-      { name: 'Intelligent Supply Chain Optimization', href: '/intelligent-supply-chain-optimization' },
-      { name: 'Metaverse AI Development Platform', href: '/metaverse-ai-development-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4035
     ]
   },
   {

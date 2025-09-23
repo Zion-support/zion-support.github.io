@@ -4,14 +4,7 @@ import { MessageSquare } from 'lucide-react';
 
 import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
-<<<<<<< HEAD
 import { apiClient } from "@/utils/apiClient";
-=======
-<<<<<<< HEAD
-import api from '@/lib/api';
-=======
-import { apiClient } from "@/utils/apiClient";
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export function ChatAssistantTrigger() {
@@ -21,19 +14,6 @@ export function ChatAssistantTrigger() {
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const response = await api.post(
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
-        {
-          messages: [{ role: "user", content: message }]
-        }
-      );
-
-      if (response.status < 200 || response.status >= 300) {
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
@@ -45,9 +25,6 @@ export function ChatAssistantTrigger() {
       });
       
       if (!response.ok) {
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         throw new Error("Failed to get response from AI assistant");
       }

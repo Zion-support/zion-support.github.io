@@ -1,10 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
 export interface InnovativeITService {
-=======
-export interface InnovativeITService2025 {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   id: string;
   name: string;
   tagline: string;
@@ -227,7 +223,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     ],
     popular: true,
     icon: '⛓️',
-<<<<<<< HEAD
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/blockchain-enterprise-platform',
@@ -235,15 +230,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Technology companies',
     trialDays: 21,
     setupTime: '1-2 weeks',
-=======
-    color: 'from-indigo-600 to-purple-600',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/blockchain-infrastructure-platform',
-    marketPosition: 'Leading enterprise blockchain platform. Our advantage: Multi-blockchain support and enterprise-grade security.',
-    targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Technology companies',
-    trialDays: 30,
-    setupTime: '3-4 weeks',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     category: 'Blockchain & Web3',
     realService: true,
     technology: ['Ethereum, Hyperledger, Solidity, Python, React, Node.js, PostgreSQL'],
@@ -617,7 +603,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2-3 weeks',
     category: 'Cloud & Development',
     realService: true,
-<<<<<<< HEAD
     technology: ['Kubernetes, Docker, Istio, Prometheus, Grafana, GitOps'],
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jenkins, ArgoCD'],
     useCases: ['Microservices development, Container orchestration, CI/CD automation, Multi-cloud deployment, Application scaling'],
@@ -626,16 +611,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     marketSize: '$25.8B cloud-native market',
     growthRate: '35% annual growth',
     variant: 'cloud-native-enterprise',
-=======
-    technology: ['Python, AI/ML, Cloud APIs, Cost analysis, Optimization algorithms'],
-    integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Cloud management tools'],
-    useCases: ['Cost optimization, Resource management, Budget planning, Performance optimization, Waste reduction'],
-    roi: 'Organizations report 40% reduction in cloud costs and 200% improvement in resource efficiency.',
-    competitors: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'],
-    marketSize: '$22.5B cloud management market',
-    growthRate: '28% annual growth',
-    variant: 'cloud-cost-enterprise',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1283,7 +1258,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-09-01',
     customers: 123,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 89
   },
 
@@ -1656,8 +1630,5 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 5,
     rating: 5.0,
     reviews: 3
-=======
-    reviews: 52
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   }
 ];

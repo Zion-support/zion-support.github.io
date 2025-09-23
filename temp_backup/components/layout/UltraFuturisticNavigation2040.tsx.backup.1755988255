@@ -49,16 +49,9 @@ const navigationItems: NavigationItem[] = [
         featured: true,
         neonColor: 'shadow-purple-400/50'
       },
-<<<<<<< HEAD
       {
         label: 'Quantum Computing',
         href: '/services?category=quantum',
-=======
-      { 
-        name: 'Quantum AI Neural Network 2043', 
-        href: '/quantum-ai-neural-2043', 
-        description: 'Quantum-powered AI neural networks',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e681
         icon: <Atom className="w-4 h-4" />,
         description: 'Next-generation quantum solutions',
         featured: true,
@@ -204,7 +197,6 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Company',
     href: '/about',
-<<<<<<< HEAD
     icon: <Building className="w-5 h-5" />,
     description: 'About Zion Tech Group',
     category: 'company',
@@ -230,20 +222,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Globe className="w-4 h-4" />
       }
     ]
-=======
-    icon: <Target className="w-5 h-5" />,
-    description: 'Learn about Zion Tech Group',
-    category: 'about',
-    color: 'from-blue-500 to-indigo-500'
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: <Mail className="w-5 h-5" />,
-    description: 'Get in touch with our team',
-    category: 'contact',
-    color: 'from-pink-500 to-purple-500'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e681
   }
 ];
 

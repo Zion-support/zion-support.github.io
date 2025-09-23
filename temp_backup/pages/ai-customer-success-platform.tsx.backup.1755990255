@@ -1,9 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { Layout } from '../components/layout/Layout';
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-fe5e
 import { motion } from 'framer-motion';
 import { 
   Users, Zap, Target, Shield, TrendingUp, Globe, 

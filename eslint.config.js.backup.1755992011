@@ -5,7 +5,6 @@ import typescriptParser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -116,8 +115,6 @@ export default [
     }
   },
   {
-=======
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
     ignores: [
       'node_modules/',
       '.next/',
@@ -131,14 +128,7 @@ export default [
       'public/reports/**',
       'netlify/',
       'ecosystem*.cjs',
-<<<<<<< HEAD
       '**/*.cjs'
-=======
-      '**/*.cjs',
-      'components/**',
-      'pages/**',
-      'services/**'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
     ]
   }
 ];

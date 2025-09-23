@@ -77,12 +77,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
         ok: true,
         status: 200,
         json: async () => ([]),
-<<<<<<< HEAD
         text: async () => '[]'} as Response;
-=======
-        text: async () => '[]',
-      } as Response;
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Use real fetch for other cases
@@ -93,12 +88,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
       ok: false,
       status: 500, // Or a more appropriate error code like 0 for network error
       json: async () => ({ error: 'Fetch failed due to network or other issue' }),
-<<<<<<< HEAD
       text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' })} as Response;
-=======
-      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' }),
-    } as Response;
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 

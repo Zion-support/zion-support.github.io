@@ -5,13 +5,7 @@ import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 
 export default function MicroSaasPage() {
-<<<<<<< HEAD
   const detailedServices = [
-=======
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  
-  const microSaasServices = [
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
     {
       name: 'AI Content Generator Pro',
       tagline: 'Professional AI-powered content creation',
@@ -87,7 +81,6 @@ export default function MicroSaasPage() {
       link: 'https://monitor.ziontechgroup.com',
       marketPosition: 'Competitive with Sentry ($26-80), LogRocket ($99-199), and New Relic ($0-99)',
       targetAudience: 'Developers, DevOps teams, and product managers',
-<<<<<<< HEAD
       marketSize: '$4.1B application performance monitoring market',
       growthRate: '18.7% CAGR expected through 2030'
     },
@@ -556,11 +549,6 @@ export default function MicroSaasPage() {
       title: 'Market Validation',
       description: 'All services are based on validated market needs with proven demand and competitive positioning.',
       stats: '12 validated solutions'
-=======
-      trialDays: 14,
-      setupTime: '10 minutes',
-      category: 'Development & DevOps'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
     }
   ];
 
@@ -624,7 +612,6 @@ export default function MicroSaasPage() {
               Specialized Tools for
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"> Every Business Need</span>
             </h1>
-<<<<<<< HEAD
             <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12">
               20 specialized micro SaaS solutions covering content creation, design systems, performance monitoring, 
               SEO automation, chatbots, business intelligence, email marketing, social media management, 
@@ -634,50 +621,11 @@ export default function MicroSaasPage() {
               of enterprise platforms. Start with a free trial and scale as you grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
-            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Discover our comprehensive suite of AI-powered micro SaaS solutions, all hosted on <strong className="text-green-400">ziontechgroup.com</strong>. 
-              From content creation to compliance monitoring, we provide specialized tools that integrate seamlessly with your existing workflows. 
-              One domain, one billing, unlimited possibilities.
-            </p>
-            
-            {/* Domain Information */}
-            <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 mb-12 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center mb-4">
-                <Globe className="w-6 h-6 text-green-400 mr-3" />
-                <h3 className="text-lg font-semibold text-white">All Services Available on Zion Tech Group Domain</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Every micro SaaS service is accessible through our main domain <strong className="text-green-400">ziontechgroup.com</strong>, 
-                ensuring consistent branding, unified billing, and seamless integration across all tools. No more juggling multiple accounts or domains.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm mb-4">
-                <div className="flex items-center text-green-400">
-                  <Check className="w-4 h-4 mr-2" />
-                  <span>Single sign-on access</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <Check className="w-4 h-4 mr-2" />
-                  <span>Unified dashboard</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <Check className="w-4 h-4 mr-2" />
-                  <span>Integrated billing</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
               <Button
                 href="#services"
                 variant="secondary"
                 size="lg"
-<<<<<<< HEAD
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
-=======
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl"
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -692,7 +640,6 @@ export default function MicroSaasPage() {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -862,27 +809,6 @@ export default function MicroSaasPage() {
                         <p className="text-gray-400">{service.tagline}</p>
                       </div>
                     </div>
-=======
-        </section>
-
-        {/* Services Section */}
-        <section id="services" className="py-24 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Professional Micro SaaS Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Each service is designed to solve specific business problems with enterprise-grade quality and competitive pricing.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.map((service, index) => (
-                <div key={index} className="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/10">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl">{service.icon}</span>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
                     {service.popular && (
                       <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full border border-green-500/30">
                         Popular
@@ -916,16 +842,7 @@ export default function MicroSaasPage() {
                     <div className="text-sm text-gray-300 mb-2">
                       <strong>Market Position:</strong> {service.marketPosition}
                     </div>
-<<<<<<< HEAD
                     <p className="text-sm text-gray-500">14-day free trial included</p>
-=======
-                    <div className="text-sm text-gray-300 mb-2">
-                      <strong>Target Audience:</strong> {service.targetAudience}
-                    </div>
-                    <div className="text-sm text-gray-300">
-                      <strong>Setup Time:</strong> {service.setupTime}
-                    </div>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
                   </div>
                   
                   <div className="flex flex-col gap-3">
@@ -937,7 +854,6 @@ export default function MicroSaasPage() {
                     >
                       Start Free Trial ({service.trialDays} days)
                       <ExternalLink className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
                     </Button>
                     
                     <div className="grid grid-cols-2 gap-4 text-center">
@@ -960,17 +876,6 @@ export default function MicroSaasPage() {
                       <p className="text-xs text-gray-500 mb-2">Target Audience</p>
                       <p className="text-sm text-gray-400">{service.targetAudience}</p>
                     </div>
-=======
-                    </a>
-                    <a
-                      href={service.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-400 text-sm text-center hover:text-green-300 transition-colors"
-                    >
-                      Visit {service.link.replace('https://', '')}
-                    </a>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
                   </div>
                 </div>
               ))}
@@ -978,7 +883,6 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Market Analysis & Competitive Intelligence */}
         <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1134,8 +1038,6 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
-=======
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -1148,29 +1050,6 @@ export default function MicroSaasPage() {
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
               and add more as your business grows.
             </p>
-<<<<<<< HEAD
-=======
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                href="/contact"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
-              >
-                Contact Sales
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button
-                href="/pricing"
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-              >
-                View All Pricing
-              </Button>
-            </div>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-f6bb
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -77,7 +77,6 @@ const categoryColors: { [key: string]: string } = {
   'Data Center': 'from-gray-500 to-slate-600'
 };
 
-<<<<<<< HEAD
 const categoryIcons: { [key: string]: any } = {
   'AI': Brain,
   'Quantum': Zap,
@@ -106,13 +105,6 @@ export default function EnhancedServiceShowcase({
   title = "Revolutionary AI, Quantum & IT Services",
   subtitle = "Discover 1000+ cutting-edge solutions that will transform your business",
   maxServices = 20
-=======
-export default function EnhancedServiceShowcase({ 
-  services, 
-  title = "Revolutionary AI, Quantum & IT Services", 
-  subtitle = "Discover 1000+ cutting-edge solutions that deliver 1000% ROI through breakthrough technology",
-  maxServices = 12 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0444
 }: EnhancedServiceShowcaseProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<string>('featured');

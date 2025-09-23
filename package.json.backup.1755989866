@@ -8,7 +8,6 @@
     "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.js"
   },
   "scripts": {
-<<<<<<< HEAD
     "dev": "node scripts/pre-dev-check.cjs && npm run env:dev && next dev",
     "dev:quiet": "npm run env:dev && NEXT_PRIVATE_SKIP_SIZE_WARN=1 next dev",
     "dev:verbose": "npm run env:dev && DEBUG=* next dev",
@@ -187,17 +186,6 @@
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
-=======
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --browser chrome",
-    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress
   },
   "dependencies": {
     "@chainsafe/libp2p-gossipsub": "^14.1.1",
@@ -278,17 +266,7 @@
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.1.2",
-<<<<<<< HEAD
     "@types/jest": "^29.5.3",
-=======
-    "@testing-library/cypress": "^8.0.2",
-    "@types/jest": "^29.5.3",
-    "cypress": "^13.7.3",
-    "cypress-real-events": "^1.12.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "ts-jest": "^29.1.1",
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress
     "@types/node": "^20.11.17",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",

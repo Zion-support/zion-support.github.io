@@ -7,11 +7,7 @@ import {
 } from 'lucide-react';
 
 // Import our new 2025 services
-<<<<<<< HEAD
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-=======
-import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4385
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
 
@@ -56,11 +52,7 @@ const categories = [
 
 // Combine all services
 const allServices = [
-<<<<<<< HEAD
   ...advancedAIAutomationServices2025,
-=======
-  ...realEnterpriseAIServices2025,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4385
   ...innovativeITInfrastructureServices2025,
   ...innovativeMicroSaasSolutions2025
 ];
@@ -72,7 +64,6 @@ export default function InnovativeServicesShowcase2025() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
 
-<<<<<<< HEAD
   // Combine all services
   const allServices = [
     ...innovativeAIAutonomousServices2025,
@@ -130,22 +121,6 @@ export default function InnovativeServicesShowcase2025() {
     if (service.tagline) return service.tagline;
     return 'No description available';
   };
-=======
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || 
-                           (selectedCategory === 'ai-automation' && service.category.toLowerCase().includes('ai')) ||
-                           (selectedCategory === 'it-infrastructure' && service.category.toLowerCase().includes('infrastructure')) ||
-                           (selectedCategory === 'micro-saas' && service.category.toLowerCase().includes('micro'));
-    
-    return matchesSearch && matchesCategory;
-  });
-
-
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4385
 
   return (
     <>
@@ -304,7 +279,6 @@ export default function InnovativeServicesShowcase2025() {
               transition={{ duration: 0.6 }}
               className="mb-8"
             >
-<<<<<<< HEAD
               <h2 className="text-2xl font-bold text-center mb-2">
                 {filteredServices.length} Innovative Services Found
               </h2>
@@ -503,60 +477,6 @@ export default function InnovativeServicesShowcase2025() {
               >
                 Call Us Now
               </a>
-=======
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 ${
-                    viewMode === 'list' ? 'flex' : ''
-                  }`}
-                >
-                  {/* Service Header */}
-                  <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">🚀</div>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-                    
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-2xl font-bold text-purple-400">
-                          {service.pricing?.starter || 'Contact for pricing'}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="mb-4">
-                      <span className="inline-block px-3 py-1 bg-white/20 text-white text-xs rounded-full border border-white/30">
-                        {service.category}
-                      </span>
-                    </div>
-
-                    <div className="space-y-2 mb-6">
-                      <div className="text-xs text-gray-400">
-                        <span className="text-gray-500">Type:</span> {service.type}
-                      </div>
-                      <div className="text-xs text-gray-400">
-                        <span className="text-gray-500">Market Size:</span> {service.marketSize}
-                      </div>
-                    </div>
-
-                    <a
-                      href={service.slug || `/services/${service.id}`}
-                      className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 group"
-                    >
-                      View Details
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4385
             </motion.div>
           </div>
         </section>

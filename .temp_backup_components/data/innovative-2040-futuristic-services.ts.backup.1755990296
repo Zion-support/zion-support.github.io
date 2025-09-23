@@ -92,15 +92,7 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     launchDate: 'Q1 2040',
     customers: '5 enterprise clients, 15 research institutions',
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 32
-=======
-    reviews: 127,
-    color: 'from-purple-500 to-pink-500',
-    icon: '🧠',
-    period: '/month',
-    popular: true
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f4d0
   },
 
   // Quantum Computing Services
@@ -141,7 +133,6 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     launchDate: 'Q2 2040',
     customers: '12 enterprise clients, 8 design studios',
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 56
   },
 
@@ -189,13 +180,6 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     customers: 156,
     rating: 4.7,
     reviews: 89
-=======
-    reviews: 89,
-    color: 'from-blue-500 to-cyan-500',
-    icon: '🖥️',
-    period: '/month',
-    popular: true
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f4d0
   },
 
   // Neural Interface Services
@@ -306,15 +290,7 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     launchDate: 'Q1 2041',
     customers: '6 pharmaceutical companies, 4 research labs',
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 45
-=======
-    reviews: 78,
-    color: 'from-green-500 to-blue-500',
-    icon: '🧬',
-    period: '/month',
-    popular: false
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f4d0
   },
 
   // Autonomous Systems Services
@@ -387,15 +363,7 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     launchDate: 'Q3 2041',
     customers: '4 government agencies, 12 research institutions',
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 67
-=======
-    reviews: 92,
-    color: 'from-teal-500 to-green-500',
-    icon: '🌍',
-    period: '/month',
-    popular: false
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f4d0
   },
 
   // Quantum Security Services
@@ -468,7 +436,6 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     launchDate: 'Q1 2042',
     customers: '3 space agencies, 7 satellite companies',
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 112
   },
 
@@ -608,12 +575,5 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     customers: 198,
     rating: 4.8,
     reviews: 123
-=======
-    reviews: 89,
-    color: 'from-purple-500 to-blue-500',
-    icon: '🚀',
-    period: '/month',
-    popular: false
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f4d0
   }
 ];

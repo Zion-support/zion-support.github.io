@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-
->>>>>>> origin/enhance-app-with-new-services-and-advertising
 const fs = require('fs');
 const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    const content = fs.readFileSync(filePath, 'utf8');
-    
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
       content.includes('<<<<<<< HEAD') ||

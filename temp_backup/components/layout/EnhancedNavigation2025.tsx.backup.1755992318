@@ -4,18 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, X, ChevronDown, Search, Globe, Brain, Atom, Shield, Rocket,
   Phone, Mail, MapPin, Star, Award, Users, TrendingUp, Zap
-=======
-  Menu, ChevronDown,
-  Brain, Rocket, Shield, 
-  Zap,
-  Target, Atom,
-  BookOpen,
-  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb, Microscope
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5eec
 } from 'lucide-react';
 
 const navigationItems = [
@@ -105,7 +95,6 @@ const navigationItems = [
     description: 'Advanced enterprise infrastructure and security solutions',
     badge: 'Enterprise',
     children: [
-<<<<<<< HEAD
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-healing IT infrastructure' },
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-platform', description: 'Edge processing optimization' },
@@ -125,20 +114,6 @@ const navigationItems = [
       { name: 'Blockchain Infrastructure Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
       { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform', description: 'Autonomous DevOps operations' },
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'AI-powered zero trust security' }
-=======
-      { name: 'Zero Trust Security', href: '/zero-trust-network-security', description: 'Continuous verification security' },
-      { name: 'AI DevOps Automation', href: '/ai-devops-automation-platform', description: 'Intelligent DevOps pipeline' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge management' },
-      { name: 'AI Data Governance', href: '/ai-data-governance-platform', description: 'Intelligent data management' },
-      { name: 'AI API Management', href: '/ai-api-management-platform', description: 'Smart API optimization' },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-managing IT infrastructure' },
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-ready cloud platform' },
-      { name: 'Advanced Cybersecurity', href: '/quantum-cybersecurity-services', description: 'Next-generation security' },
-      { name: 'Infrastructure Automation', href: '/infrastructure-drift-detector', description: 'Automated infrastructure management' },
-      { name: 'Performance Monitoring', href: '/browser-performance-monitor', description: 'Real-time performance tracking' },
-      { name: 'Incident Management', href: '/incident-automation-suite', description: 'Automated incident response' },
-      { name: 'Compliance Automation', href: '/soc2-evidence-automation', description: 'Automated compliance management' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5eec
     ]
   },
   {
@@ -148,7 +123,6 @@ const navigationItems = [
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     children: [
-<<<<<<< HEAD
       { name: 'AI Customer Success', href: '/ai-customer-success-platform', description: 'Churn prediction and retention' },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', description: 'AI-powered logistics' },
       { name: 'Financial Planning AI', href: '/ai-financial-planning-platform', description: 'Intelligent financial analysis' },
@@ -174,21 +148,6 @@ const navigationItems = [
       { name: 'AI Financial Planning Platform', href: '/ai-financial-planning-platform', description: 'Personalized investment strategies' },
       { name: 'Intelligent HR Analytics Platform', href: '/intelligent-hr-analytics-platform', description: 'Predictive workforce insights' },
       { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform', description: 'Predictive lead scoring' }
-=======
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'AI-powered data insights' },
-      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', description: 'Hyper-personalized experiences' },
-      { name: 'AI Customer Success', href: '/ai-customer-success-platform', description: 'Proactive customer retention' },
-      { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', description: 'Intelligent wealth management' },
-      { name: 'AI Healthcare Analytics', href: '/ai-healthcare-analytics-platform', description: 'Healthcare data insights' },
-      { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain-optimization', description: 'Intelligent supply chain management' },
-      { name: 'AI Legal Document Analysis', href: '/ai-legal-document-analysis', description: 'Automated legal insights' },
-      { name: 'AI Real Estate Analytics', href: '/ai-real-estate-analytics', description: 'Data-driven real estate decisions' },
-      { name: 'AI Education Personalization', href: '/ai-education-personalization', description: 'Adaptive learning platform' },
-      { name: 'AI Manufacturing Quality Control', href: '/ai-manufacturing-quality-control', description: 'Intelligent quality assurance' },
-      { name: 'Content Generation', href: '/ai-content-generator', description: 'AI-powered content creation' },
-      { name: 'CRM Intelligence', href: '/ai-sales-automation', description: 'Smart customer relationship management' },
-      { name: 'Decision Engine', href: '/ai-autonomous-decision-engine', description: 'Autonomous decision making' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5eec
     ]
   },
   {
@@ -209,7 +168,6 @@ const navigationItems = [
     ]
   },
   {
-<<<<<<< HEAD
     name: 'Solutions',
     href: '/solutions',
     icon: Zap,
@@ -273,79 +231,6 @@ const navigationItems = [
         href: '/resources/docs',
         description: 'Technical documentation and guides'
       }
-=======
-    name: 'Advanced IT Infrastructure',
-    href: '/advanced-it-infrastructure-services',
-    icon: <Cloud className="w-5 h-5" />,
-    description: 'Next-generation infrastructure with quantum computing and edge computing',
-    badge: 'Next-Gen',
-    children: [
-      { name: 'Quantum Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Quantum-ready cloud platform' },
-      { name: 'Edge Computing', href: '/edge-computing-orchestration', description: 'Distributed edge management' },
-      { name: 'Zero Trust Security', href: '/zero-trust-network-security', description: 'Continuous verification security' },
-      { name: 'Quantum Database', href: '/quantum-ready-database-platform', description: 'Future-proof data storage' },
-      { name: 'AI Infrastructure', href: '/ai-infrastructure-platform', description: 'AI-optimized infrastructure' },
-      { name: 'Hybrid Cloud', href: '/hybrid-cloud-platform', description: 'Multi-cloud orchestration' },
-      { name: 'Container Orchestration', href: '/container-orchestration', description: 'Advanced container management' },
-      { name: 'Serverless Platform', href: '/serverless-platform', description: 'Next-gen serverless computing' }
-    ]
-  },
-  {
-    name: 'Innovative Business Solutions',
-    href: '/innovative-business-solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'AI-powered business intelligence, marketing, sales, and HR solutions',
-    badge: 'Business',
-    children: [
-      { name: 'Business Intelligence', href: '/ai-business-intelligence-suite', description: 'AI-powered insights' },
-      { name: 'Marketing Automation', href: '/ai-marketing-automation', description: 'Intelligent marketing' },
-      { name: 'Sales Intelligence', href: '/ai-sales-automation', description: 'Smart sales automation' },
-      { name: 'HR Automation', href: '/ai-hr-recruitment', description: 'Intelligent HR management' },
-      { name: 'Customer Success', href: '/ai-customer-success-platform', description: 'Proactive retention' },
-      { name: 'Financial Planning', href: '/ai-financial-planning-platform', description: 'AI wealth management' },
-      { name: 'Legal Automation', href: '/ai-legal-contract-analyzer', description: 'Smart legal analysis' },
-      { name: 'Real Estate Analytics', href: '/ai-real-estate-analytics', description: 'Data-driven decisions' },
-      { name: 'Healthcare Analytics', href: '/ai-healthcare-analytics-platform', description: 'Medical insights' },
-      { name: 'Supply Chain Optimization', href: '/ai-supply-chain-optimization', description: 'Intelligent logistics' },
-      { name: 'Education Technology', href: '/ai-education-platform', description: 'Adaptive learning' },
-      { name: 'Manufacturing Intelligence', href: '/ai-manufacturing-quality-control', description: 'Smart manufacturing' }
-    ]
-  },
-  {
-    name: 'Industry Solutions',
-    href: '/industry-solutions',
-    icon: <BarChart3 className="w-5 h-5" />,
-    description: 'Specialized solutions for specific industries',
-    badge: 'Industry',
-    children: [
-      { name: 'Healthcare Technology', href: '/healthcare-technology', description: 'Medical AI solutions' },
-      { name: 'Financial Technology', href: '/fintech-solutions', description: 'AI-powered finance' },
-      { name: 'Manufacturing Technology', href: '/manufacturing-technology', description: 'Smart manufacturing' },
-      { name: 'Retail Technology', href: '/retail-technology', description: 'Digital retail solutions' },
-      { name: 'Education Technology', href: '/education-technology', description: 'Learning innovation' },
-      { name: 'Legal Technology', href: '/legal-technology', description: 'Legal AI solutions' },
-      { name: 'Real Estate Technology', href: '/real-estate-technology', description: 'Property tech' },
-      { name: 'Transportation Technology', href: '/transportation-technology', description: 'Smart mobility' },
-      { name: 'Energy Technology', href: '/energy-technology', description: 'Sustainable energy' },
-      { name: 'Space Technology', href: '/space-technology', description: 'Space innovation' }
-    ]
-  },
-  {
-    name: 'Research & Development',
-    href: '/research-development',
-    icon: <Microscope className="w-5 h-5" />,
-    description: 'Cutting-edge research and development services',
-    badge: 'R&D',
-    children: [
-      { name: 'AI Research', href: '/ai-research-services', description: 'Advanced AI research' },
-      { name: 'Quantum Research', href: '/quantum-research', description: 'Quantum computing research' },
-      { name: 'Biotechnology', href: '/biotech-research', description: 'Biological innovation' },
-      { name: 'Materials Science', href: '/materials-research', description: 'Advanced materials' },
-      { name: 'Space Research', href: '/space-research', description: 'Space exploration' },
-      { name: 'Climate Technology', href: '/climate-technology', description: 'Environmental solutions' },
-      { name: 'Robotics Research', href: '/robotics-research', description: 'Advanced robotics' },
-      { name: 'Neuroscience', href: '/neuroscience-research', description: 'Brain research' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5eec
     ]
   }
 ];

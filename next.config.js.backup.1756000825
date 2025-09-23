@@ -12,18 +12,14 @@ const baseConfig = {
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
-<<<<<<< HEAD
 
   // Optimized for fast builds (hanging issue SOLVED)
   // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
   productionBrowserSourceMaps: false, // Disable for faster builds
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-28d9
   
   // Environment configuration
   env: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-<<<<<<< HEAD
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || '',
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '',
   },
@@ -43,8 +39,6 @@ const baseConfig = {
       '@radix-ui/react-icons',
       'framer-motion'
     ],
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-28d9
   },
 
   images: {
@@ -56,7 +50,6 @@ const baseConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-<<<<<<< HEAD
   transpilePackages: [
     'react-markdown',
     'date-fns',
@@ -249,20 +242,6 @@ const baseConfig = {
       url: false,
     };
 
-=======
-  webpack: (config, { dev, isServer }) => {
-    // Simple webpack configuration
-    if (!isServer) {
-      // Client-side optimizations
-      config.resolve.fallback = {
-        fs: false,
-        net: false,
-        tls: false,
-        crypto: false,
-      };
-    }
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-28d9
     return config;
   },
 };

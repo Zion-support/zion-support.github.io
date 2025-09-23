@@ -106,7 +106,6 @@ const Homepage2025: React.FC = () => {
               </Link>
             </div>
               
-<<<<<<< HEAD
             {/* Trust Indicators */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -125,33 +124,6 @@ const Homepage2025: React.FC = () => {
               <div className="flex items-center space-x-2">
                 <TrendingUp className="w-4 h-4 text-purple-400" />
                 <span>Proven Results</span>
-=======
-              {/* Enhanced CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link href="/get-started">
-                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                    <span className="flex items-center gap-2">
-                      Get Started
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </button>
-                </Link>
-                <Link href="/services">
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Learn More
-                  </button>
-                </Link>
-                <Link href="/comprehensive-2025-services-showcase">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    2025 Services Showcase
-                  </button>
-                </Link>
-                <Link href="/comprehensive-2025-enterprise-services-showcase">
-                  <button className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Enterprise Services
-                  </button>
-                </Link>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-95bb
               </div>
             </motion.div>
           </div>

@@ -241,7 +241,6 @@ const navigationItems: NavigationItem[] = [
 const UltraFuturisticNavigation2046: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-<<<<<<< HEAD
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
   const navRef = useRef<HTMLDivElement>(null);
@@ -254,15 +253,11 @@ const UltraFuturisticNavigation2046: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-=======
-  const router = useRouter();
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-69f0
 
   const handleDropdownToggle = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
-<<<<<<< HEAD
   const closeDropdowns = () => {
     setActiveDropdown(null);
     setIsOpen(false);
@@ -272,9 +267,6 @@ const UltraFuturisticNavigation2046: React.FC = () => {
     closeDropdowns();
     router.push(href);
   };
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-69f0
 
   return (
     <nav 
@@ -368,27 +360,11 @@ const UltraFuturisticNavigation2046: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Contact Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
               className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg shadow-cyan-500/25"
-=======
-          {/* Right side actions */}
-          <div className="flex items-center space-x-4">
-            {/* Dark Mode Toggle */}
-            <DarkModeToggle />
-            
-            {/* Enhanced Search */}
-            <EnhancedSearch />
-
-            {/* CTA Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-69f0
             >
               Get Started
             </Link>

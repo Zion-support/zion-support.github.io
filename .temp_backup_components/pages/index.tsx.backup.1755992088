@@ -53,7 +53,6 @@ import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-
 import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
-<<<<<<< HEAD
 import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
@@ -73,12 +72,6 @@ import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-servi
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-=======
-import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
-import { emergingTech2026Innovations } from '../data/emerging-tech-2026-innovations';
-import { enterpriseIT2026Comprehensive } from '../data/enterprise-it-2026-comprehensive';
-import { comprehensiveMicroSaas2026 } from '../data/comprehensive-micro-saas-2026';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1c57
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -213,7 +206,6 @@ export default function HomePage() {
     ...enterpriseIT2026ServicesV2,
     ...revolutionary2026Innovations,
     ...nextGenAI2026Services,
-<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3,
@@ -230,12 +222,6 @@ export default function HomePage() {
     ...revolutionary2027MicroSaasServices,
     ...futuristic2028Services,
     ...emergingTech2028Services
-=======
-    ...revolutionary2026AIServices,
-    ...emergingTech2026Innovations,
-    ...enterpriseIT2026Comprehensive,
-    ...comprehensiveMicroSaas2026
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1c57
   ];
 
   // Get unique services by ID to avoid duplicates

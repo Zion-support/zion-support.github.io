@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "extends": [
     "next/core-web-vitals"
   ],
@@ -26,7 +25,3 @@
     "automation/"
   ]
 }
-=======
-  "extends": ["next/core-web-vitals", "next/typescript"]
-}
->>>>>>> origin/automation-error-fixes

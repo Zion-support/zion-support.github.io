@@ -1,14 +1,9 @@
 import React, { ReactNode } from 'react';
-<<<<<<< HEAD
 import UltraAdvancedFuturisticNavigation2025 from './UltraAdvancedFuturisticNavigation2025';
 import UltraAdvancedFuturisticFooter2025 from './UltraAdvancedFuturisticFooter2025';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import PerformanceMonitor from '../PerformanceMonitor';
 import FloatingActionMenu from '../FloatingActionMenu';
-=======
-import EnhancedNavigation2025 from './EnhancedNavigation2025';
-import EnhancedFooter2025 from './EnhancedFooter2025';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -16,7 +11,6 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <UltraAdvancedFuturisticNavigation2025 />
       <main className="relative z-10">
@@ -161,22 +155,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           aria-hidden="true"
         />
       )}
-=======
-    <div className="min-h-screen bg-black text-white">
-      {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-black text-white px-4 py-2 rounded z-50">
-        Skip to main content
-      </a>
-      
-      <EnhancedNavigation2025 />
-      <main id="main" role="main" className="pt-0">
-        {children}
-      </main>
-      <EnhancedFooter2025 />
-    </div>
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
 
       {/* Back to top button */}
       <motion.button

@@ -1,7 +1,6 @@
 name: Release Drafter
 
 on:
-<<<<<<< HEAD
   workflow_dispatch: {}
   schedule:
     - cron: '*/10 * * * *'
@@ -34,23 +33,3 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-=======
-  push:
-    branches: [ main ]
-  pull_request:
-    types: [closed]
-
-permissions:
-  contents: write
-
-jobs:
-  update_release_draft:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: release-drafter/release-drafter@v6
-        with:
-          config-name: release-drafter.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> origin/cursor/automate-continuous-development-processes-4d04

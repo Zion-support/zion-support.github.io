@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -46,14 +45,5 @@ const AuthRoutes = () => {
         } 
       />
     </Routes>
-=======
-import React from 'react';
-export function AuthRoutes() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

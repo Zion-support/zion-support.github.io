@@ -428,7 +428,6 @@ const navigationItems: NavigationItem[] = [
         icon: <BookOpen className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Energy & Utilities', 
         href: '/energy-utilities-solutions', 
         description: 'Energy solutions',
@@ -473,12 +472,6 @@ const navigationItems: NavigationItem[] = [
         href: '/contact', 
         description: 'Talk to our team',
         icon: <MessageCircle className="w-4 h-4" />
-=======
-        name: 'Energy', 
-        href: '/energy-technology-solutions', 
-        description: 'Energy technology',
-        icon: <Zap className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
       }
     ]
   }

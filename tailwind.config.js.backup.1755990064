@@ -104,7 +104,6 @@ module.exports = {
           800: "hsl(var(--primary) / 0.8)",
           900: "hsl(var(--primary) / 0.9)",
         },
-<<<<<<< HEAD
         // Extended color palette
         gray: {
           50: '#f9fafb',
@@ -235,19 +234,6 @@ module.exports = {
           700: '#a21caf',
           800: '#86198f',
           900: '#701a75',
-=======
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",

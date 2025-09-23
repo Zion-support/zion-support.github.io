@@ -92,7 +92,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Medical technology solutions'
       },
       {
-<<<<<<< HEAD
         label: 'Finance',
         href: '/financial-solutions',
         icon: <BarChart3 className="w-4 h-4" />,
@@ -109,27 +108,6 @@ const navigationItems: NavigationItem[] = [
         href: '/retail-technology-solutions',
         icon: <Building className="w-4 h-4" />,
         description: 'E-commerce technology'
-=======
-        name: 'AI Emotional Intelligence 2040',
-        href: '/ai-emotional-intelligence-2040',
-        description: 'Advanced emotional AI with consciousness',
-        icon: <HeartIcon className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'AI Autonomous Research 2041',
-        href: '/ai-autonomous-research-2041',
-        description: 'Fully autonomous AI research',
-        icon: <CodeIcon className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'AI Content Personalization 2041',
-        href: '/ai-content-personalization-2041',
-        description: 'Consciousness-based content AI',
-        icon: <PaletteIcon className="w-4 h-4" />,
-        featured: true
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-aabb
       },
       {
         label: 'Government',
@@ -268,33 +246,12 @@ const navigationItems: NavigationItem[] = [
         description: 'Future-proof quantum security',
         icon: <Shield className="w-4 h-4" />
       },
-<<<<<<< HEAD
       { 
         name: 'Quantum Computing', 
         href: '/quantum-computing-platform', 
         description: 'Advanced quantum computing',
         icon: <Cpu className="w-4 h-4" />,
         color: 'from-indigo-500 to-purple-500'
-=======
-      {
-        name: 'Quantum Internet Security 2041',
-        href: '/quantum-internet-security-2041',
-        description: 'Quantum internet protection',
-        icon: <Network className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'Quantum Cloud Infrastructure 2041',
-        href: '/quantum-cloud-infrastructure-2041',
-        description: 'Quantum cloud computing',
-        icon: <Cloud className="w-4 h-4" />
-      },
-      {
-        name: 'Quantum Bio-Computing 2041',
-        href: '/quantum-bio-computing-2041',
-        description: 'Quantum biological computing',
-        icon: <Atom className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-aabb
       }
     ]
   },

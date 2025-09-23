@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Fragment } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
@@ -56,14 +55,3 @@ const ContentRoutes = () => {
 };
 
 export default ContentRoutes;
-=======
-import React from 'react';
-export function ContentRoutes() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
->>>>>>> origin/automation-error-fixes

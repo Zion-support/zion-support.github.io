@@ -379,7 +379,6 @@
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
-<<<<<<< HEAD
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
     "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
     "ui-evolution:analyze": "node automation/ui-evolution-launcher.js analyze",
@@ -422,12 +421,6 @@
     "content:blog:cron:stop": "bash automation/blog-automation-cron.sh stop",
     "content:blog:cron:status": "bash automation/blog-automation-cron.sh status"
    },
-=======
-    "performance:audit": "node automation/performance-audit.cjs",
-    "automation:trends": "node scripts/curate-trends.mjs",
-    "automation:health": "node scripts/health-check.mjs"
-  },
->>>>>>> origin/cursor/autonomous-cloud-automations
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",

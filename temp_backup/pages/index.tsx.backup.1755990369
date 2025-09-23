@@ -22,7 +22,6 @@ const HomePage: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <>
       <SEO 
         title="Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions"
@@ -35,11 +34,6 @@ const HomePage: React.FC = () => {
         <Homepage2044 />
       </ErrorBoundary>
     </>
-=======
-    <EnhancedErrorBoundary>
-      <Homepage2044 />
-    </EnhancedErrorBoundary>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a647
   );
 };
 

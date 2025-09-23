@@ -223,7 +223,6 @@ export type {
   NetworkStatus
 } from './blockchainService';
 
-<<<<<<< HEAD
 // Export new 2025 services
 export { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
 export { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
@@ -252,97 +251,3 @@ export type { IoTSmartCityService } from '../data/2025-advanced-iot-smart-city-s
 export type { AdvancedFintechBlockchainService } from '../data/2025-advanced-fintech-blockchain-services-expanded';
 export type { HealthcareBiotechService } from '../data/2025-advanced-healthcare-biotech-services';
 export type { SpaceAerospaceService } from '../data/2025-advanced-space-aerospace-services';
-=======
-// Advanced AI & IT Service types
-export type {
-  SecurityThreat,
-  VulnerabilityAssessment,
-  SecurityIncident,
-  SecurityEvent,
-  SecurityPolicy,
-  SecurityRule,
-  ComplianceReport as SecurityComplianceReport,
-  ComplianceRequirement
-} from './aiCybersecurityService';
-
-export type {
-  PipelineConfig,
-  PipelineStage,
-  PipelineTrigger,
-  PerformanceThresholds,
-  InfrastructureConfig,
-  DeploymentMetrics,
-  CodeQualityReport,
-  SecurityScanResult,
-  Vulnerability,
-  ComplianceCheck,
-  MonitoringAlert
-} from './aiDevOpsService';
-
-export type {
-  DataPipeline,
-  DataSource,
-  DataDestination,
-  DataTransformation,
-  PipelineSchedule,
-  PipelineMetrics,
-  DataQualityMetrics,
-  DataQualityIssue,
-  CostMetrics,
-  ConnectionConfig,
-  DataSchema,
-  SchemaField,
-  SchemaIndex,
-  SchemaConstraint,
-  PartitioningStrategy,
-  ValidationRule,
-  DataCatalog,
-  Dataset,
-  DataLineage,
-  DatasetUsage,
-  QueryStats
-} from './aiDataEngineeringService';
-
-export type {
-  FinancialInstrument,
-  Portfolio,
-  PortfolioPosition,
-  RiskMetrics,
-  PerformancePoint,
-  RebalancingSchedule,
-  TradingSignal,
-  MarketAnalysis,
-  TechnicalIndicator,
-  FundamentalFactor,
-  AIInsight,
-  RiskAssessment,
-  RiskFactor as FintechRiskFactor,
-  StressTestResult,
-  ComplianceReport,
-  ComplianceViolation
-} from './aiFintechService';
-
-export type {
-  Patient,
-  MedicalRecord,
-  Medication,
-  VitalSigns,
-  RiskFactor,
-  InsuranceInfo,
-  EmergencyContact,
-  Diagnosis,
-  AIAnalysis,
-  DifferentialDiagnosis,
-  TreatmentPlan,
-  FollowUpSchedule,
-  FollowUpAppointment,
-  HealthAnalytics,
-  RiskAssessment as HealthRiskAssessment,
-  TrendAnalysis,
-  VitalSignsTrend,
-  MedicationTrend,
-  SymptomTrend,
-  HealthTrend,
-  PredictiveInsight
-} from './aiHealthcareService';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-887a

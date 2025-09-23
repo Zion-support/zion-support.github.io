@@ -22,7 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-<<<<<<< HEAD
 
       - name: Install
         run: npm ci
@@ -48,10 +47,3 @@ jobs:
 
 >>>>>>> origin/automation/git-sync/2025-08-13T22-22-32-390Z
 
-=======
-          cache: npm
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2

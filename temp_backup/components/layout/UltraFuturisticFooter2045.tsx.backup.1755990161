@@ -16,7 +16,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
 
   const footerSections = [
     {
-<<<<<<< HEAD
       title: 'AI & Autonomous Services',
       links: [
         { name: 'AI Autonomous Business Intelligence', href: '/ai-autonomous-business-intelligence', icon: <Brain className="w-5 h-5" /> },
@@ -25,21 +24,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
         { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', icon: <Users className="w-5 h-5" /> },
         { name: 'Autonomous Supply Chain Optimization', href: '/autonomous-supply-chain-optimization', icon: <Target className="w-5 h-5" /> },
         { name: 'AI Content Creation Studio', href: '/ai-content-creation-studio', icon: <Code className="w-5 h-5" /> }
-=======
-      title: 'Revolutionary Services',
-      links: [
-        { name: 'AI Autonomous Ecosystems', href: '/ai-autonomous-content-creation-2025', icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum Computing as a Service', href: '/quantum-computing-as-a-service-2025', icon: <Atom className="w-4 h-4" /> },
-        { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-2025', icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Metaverse Development Studio', href: '/metaverse-development-studio-pro-2025', icon: <Globe className="w-4 h-4" /> },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform-2025', icon: <Shield className="w-4 h-4" /> },
-        { name: 'Business Process Automation', href: '/ai-business-process-automation-suite-2025', icon: <Settings className="w-4 h-4" /> },
-        { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization-2025', icon: <Database className="w-4 h-4" /> },
-        { name: 'Financial Planning & Analysis', href: '/ai-financial-planning-analysis-2025', icon: <BarChart3 className="w-4 h-4" /> },
-        { name: 'HR Analytics & Talent Management', href: '/intelligent-hr-analytics-talent-management-2025', icon: <Users className="w-4 h-4" /> },
-        { name: 'Customer Experience Optimization', href: '/ai-customer-experience-optimization-2025', icon: <Target className="w-4 h-4" /> },
-        { name: 'View All Services', href: '/services', icon: <ArrowRight className="w-4 h-4" /> }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1eea
       ]
     },
     {

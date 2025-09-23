@@ -1,20 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import { Cloud, Cpu, Server, Database, Settings, Shield, Phone, Mail, MapPin, Check } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import ServiceAds from '../components/sections/ServiceAds';
-=======
-import Layout from '../components/layout/Layout';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Server, Cloud, Database, Network, Lock, 
-  Zap, Users, BarChart3, ArrowRight, Star, CheckCircle,
-  Globe, Cpu, HardDrive, Wifi
-} from 'lucide-react';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -223,7 +212,6 @@ const ITServicesPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
         <div className="max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
             <div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><span>{contactInfo.mobile}</span></div>
@@ -233,39 +221,6 @@ const ITServicesPage: React.FC = () => {
           <div className="text-center">
             <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Discuss Your Roadmap</Button>
           </div>
-=======
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Modernize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our IT solutions can optimize your operations and enhance security.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
-              >
-                Start Your IT Transformation
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                href="/solutions"
-                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
-              >
-                View Solutions
-              </Link>
-            </div>
-          </motion.div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
         </div>
       </section>
     </Layout>

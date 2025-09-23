@@ -103,7 +103,6 @@ axios.interceptors.response.use(
 
 const API_BASE = axios.defaults.baseURL;
 const apiClient = axios.create({
-<<<<<<< HEAD
   baseURL: `${API_BASE}/api/v1/services`,
 });
 
@@ -128,10 +127,6 @@ axiosRetry(apiClient, {
       axiosRetry.isIdempotentRequestError(error)
     );
   },
-=======
-  baseURL: import.meta.env.VITE_API_URL || '/api',
-  withCredentials: true,
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 });
 
 apiClient.interceptors.response.use(

@@ -2,17 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, X, ChevronDown, Search, 
   Brain, Rocket, Dna, DollarSign, 
   Lock, Globe, Wifi, Truck, 
   Gamepad2, Bot, Factory, Car
-=======
-  Menu, X, ChevronDown, ChevronUp, 
-  Home, Rocket, Brain, Cpu, Shield, 
-  DollarSign, Phone, Mail, MapPin,
-  ExternalLink, Star, Zap, Globe, Book
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -75,21 +68,6 @@ const navigationItems: NavigationItem[] = [
     description: 'Transparent pricing plans'
   },
   {
-<<<<<<< HEAD
-=======
-    name: 'Market Pricing',
-    href: '/market-pricing',
-    icon: <DollarSign className="w-4 h-4" />,
-    description: 'Vendor references and price benchmarks'
-  },
-  {
-    name: 'Docs',
-    href: '/docs',
-    icon: <Book className="w-4 h-4" />,
-    description: 'Product documentation and APIs'
-  },
-  {
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
     name: 'Resources',
     href: '/resources',
     icon: <Globe className="w-4 h-4" />,

@@ -8,12 +8,8 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   url?: string;
-<<<<<<< HEAD
   type?: string;
   author?: string;
-=======
-  type?: 'website' | 'article' | 'product';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
@@ -24,7 +20,6 @@ interface SEOProps {
   canonical?: string;
 }
 
-<<<<<<< HEAD
 const defaultSEO = {
   title: 'Zion Tech Group - Pioneering Future Technology Solutions',
   description: 'Leading technology company specializing in AI, Quantum Computing, Space Technology, and innovative business solutions. Transform your business with cutting-edge technology.',
@@ -45,15 +40,6 @@ const SEO: React.FC<SEOProps> = ({
   url,
   type,
   author,
-=======
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI Consciousness & Quantum Computing Solutions',
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
-  keywords = 'AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, cloud infrastructure, Zion Tech Group',
-  image = '/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
   publishedTime,
   modifiedTime,
   author = 'Zion Tech Group',
@@ -61,7 +47,6 @@ const SEO: React.FC<SEOProps> = ({
   tags,
   noindex = false,
   nofollow = false,
-<<<<<<< HEAD
   canonical
 }) => {
   const router = useRouter();
@@ -94,28 +79,6 @@ const SEO: React.FC<SEOProps> = ({
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-=======
-  canonical,
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = canonical || `${url}${typeof window !== 'undefined' ? window.location.pathname : ''}`;
-  
-  // Structured data for better SEO
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions.',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
     },
     contactPoint: {
       '@type': 'ContactPoint',
@@ -123,7 +86,6 @@ const SEO: React.FC<SEOProps> = ({
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
-<<<<<<< HEAD
     "sameAs": [
       "https://www.linkedin.com/company/zion-tech-group",
       "https://github.com/Zion-Holdings",
@@ -183,60 +145,16 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={seo.keywords} />
       <meta name="author" content={seo.author} />
       <meta name="robots" content={noindex ? 'noindex' : nofollow ? 'nofollow' : 'index, follow'} />
-=======
-    sameAs: [
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup',
-      'https://youtube.com/ziontechgroup'
-    ],
-    founder: {
-      '@type': 'Person',
-      name: 'Kleber',
-      email: 'kleber@ziontechgroup.com'
-    },
-    foundingDate: '2024',
-    industry: 'Technology',
-    serviceType: [
-      'AI & Machine Learning',
-      'Quantum Computing',
-      'Space Technology',
-      'Cybersecurity',
-      'Cloud Infrastructure'
-    ]
-  };
-
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      
-      {/* Robots Meta */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
       
       {/* Canonical URL */}
       <link rel="canonical" href={currentUrl} />
       
       {/* Open Graph Meta Tags */}
-<<<<<<< HEAD
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:type" content={seo.type} />
-=======
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={image} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
@@ -247,12 +165,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-<<<<<<< HEAD
-=======
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
       
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -261,7 +173,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
-<<<<<<< HEAD
       {/* Article Meta Tags (if applicable) */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -269,26 +180,6 @@ const SEO: React.FC<SEOProps> = ({
       {tags && tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
-=======
-      {/* Article Specific Meta Tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
       
       {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -303,19 +194,13 @@ const SEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       
-<<<<<<< HEAD
       {/* DNS Prefetch */}
-=======
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
-<<<<<<< HEAD
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(organizationSchema)
         }}
@@ -352,10 +237,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="location" content="Middletown, Delaware, United States" />
       <meta name="contact" content="+1 302 464 0950" />
       <meta name="email" content="kleber@ziontechgroup.com" />
-=======
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
     </Head>
   );
 };

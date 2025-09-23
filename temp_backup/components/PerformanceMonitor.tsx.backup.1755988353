@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -7,14 +6,8 @@ import {
   Wifi, WifiOff, Battery, BatteryCharging, Monitor,
   Smartphone, Tablet, Laptop, HardDrive, Memory
 } from 'lucide-react';
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { Activity, Zap, Clock, TrendingUp, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -46,21 +39,6 @@ interface DeviceInfo {
   connection: string;
   memory?: number;
   cores?: number;
-=======
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  domLoad: number | null;
-  windowLoad: number | null;
-}
-
-interface PerformanceMonitorProps {
-  className?: string;
-  enabled?: boolean;
-  showMetrics?: boolean;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
 }
 
 interface PerformanceAlert {
@@ -73,7 +51,6 @@ interface PerformanceAlert {
   timestamp: Date;
 }
 
-<<<<<<< HEAD
 const PerformanceMonitor: React.FC<{ showUI?: boolean }> = ({ showUI = false }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -97,21 +74,6 @@ const PerformanceMonitor: React.FC<{ showUI?: boolean }> = ({ showUI = false }) 
     si: 0,
     tti: 0,
     tbt: 0
-=======
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  className = '', 
-  enabled = true, 
-  showMetrics = false 
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    domLoad: null,
-    windowLoad: null
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
   });
   
   const [deviceInfo, setDeviceInfo] = useState<DeviceInfo>({
@@ -124,7 +86,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-<<<<<<< HEAD
   const [autoOptimize, setAutoOptimize] = useState(false);
   const [optimizationHistory, setOptimizationHistory] = useState<string[]>([]);
 
@@ -258,60 +219,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       measureSpeedIndex();
     } else {
       window.addEventListener('load', measureSpeedIndex);
-=======
-  const [optimizationTips, setOptimizationTips] = useState<string[]>([]);
-
-  // Performance monitoring
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
-
-    // First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-      if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
-    });
-
-    // Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lcpEntry = entries[entries.length - 1];
-      if (lcpEntry) {
-        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-      }
-    });
-
-    // First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const fidEntry = entries[0] as PerformanceEventTiming;
-      if (fidEntry && 'processingStart' in fidEntry) {
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-      }
-    });
-
-    // Cumulative Layout Shift
-    const clsObserver = new PerformanceObserver((list) => {
-      let clsValue = 0;
-      for (const entry of list.getEntries()) {
-        const layoutShiftEntry = entry as LayoutShiftEntry;
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
-        }
-      }
-      setMetrics(prev => ({ ...prev, cls: clsValue }));
-    });
-
-    try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
     }
 
     // Time to First Byte
@@ -334,7 +241,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observer.disconnect();
       window.removeEventListener('load', measureSpeedIndex);
     };
-<<<<<<< HEAD
   }, [showUI]);
 
   // Generate performance alerts
@@ -390,36 +296,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setOptimizationHistory(prev => [...prev, ...suggestions]);
     }
   }, [metrics, thresholds, autoOptimize]);
-=======
-  }, [enabled]);
-
-  // Generate optimization tips based on metrics
-  useEffect(() => {
-    const tips: string[] = [];
-    
-    if (metrics.fcp && metrics.fcp > 1800) {
-      tips.push('First Contentful Paint is slow. Consider optimizing critical rendering path.');
-    }
-    
-    if (metrics.lcp && metrics.lcp > 2500) {
-      tips.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.');
-    }
-    
-    if (metrics.fid && metrics.fid > 100) {
-      tips.push('First Input Delay is high. Consider code splitting and reducing JavaScript execution time.');
-    }
-    
-    if (metrics.cls && metrics.cls > 0.1) {
-      tips.push('Cumulative Layout Shift is high. Ensure stable layouts and avoid content jumping.');
-    }
-    
-    if (metrics.ttfb && metrics.ttfb > 600) {
-      tips.push('Time to First Byte is slow. Optimize server response time and reduce blocking requests.');
-    }
-
-    setOptimizationTips(tips);
-  }, [metrics]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
 
   // Performance optimization functions
   const optimizeImages = useCallback(() => {
@@ -432,7 +308,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         img.decoding = 'async';
       }
     });
-<<<<<<< HEAD
     setOptimizationHistory(prev => [...prev, 'Images optimized with lazy loading']);
   }, []);
 
@@ -443,96 +318,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     });
     setOptimizationHistory(prev => [...prev, 'Fonts optimized with proper crossorigin']);
   }, []);
-=======
-  }, []);
-
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/css/critical.css'
-    ];
-    
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  const enableResourceHints = useCallback(() => {
-    // DNS prefetch for external domains
-    const externalDomains = [
-      'fonts.googleapis.com',
-      'fonts.gstatic.com',
-      'cdn.jsdelivr.net'
-    ];
-    
-    externalDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = `//${domain}`;
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  // Apply optimizations on mount
-  useEffect(() => {
-    if (enabled) {
-      optimizeImages();
-      preloadCriticalResources();
-      enableResourceHints();
-    }
-  }, [enabled, optimizeImages, preloadCriticalResources, enableResourceHints]);
-
-  // Memory usage monitoring
-  useEffect(() => {
-    if (!enabled || !('memory' in performance)) return;
-
-    const checkMemoryUsage = () => {
-      const memory = (performance as any).memory;
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        console.warn('High memory usage detected. Consider optimizing memory usage.');
-      }
-    };
-
-    const interval = setInterval(checkMemoryUsage, 10000);
-    return () => clearInterval(interval);
-  }, [enabled]);
-
-  // Network monitoring
-  useEffect(() => {
-    if (!enabled || !('connection' in navigator)) return;
-
-    const connection = (navigator as any).connection;
-    if (connection) {
-      const updateNetworkInfo = () => {
-        const effectiveType = connection.effectiveType;
-        const downlink = connection.downlink;
-        
-        if (effectiveType === 'slow-2g' || effectiveType === '2g') {
-          console.warn('Slow network detected. Consider enabling low-bandwidth mode.');
-        }
-        
-        if (downlink < 1) {
-          console.warn('Very slow connection detected. Optimizing for low bandwidth.');
-        }
-      };
-
-      connection.addEventListener('change', updateNetworkInfo);
-      updateNetworkInfo();
-
-      return () => connection.removeEventListener('change', updateNetworkInfo);
-    }
-  }, [enabled]);
-
-  // Calculate performance scores
-  const getPerformanceScore = (metric: keyof PerformanceMetrics): number => {
-    const value = metrics[metric];
-    if (value === null) return 0;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
 
   const clearOptimizationHistory = useCallback(() => {
     setOptimizationHistory([]);
@@ -561,47 +346,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return 'text-red-400';
   }, []);
 
-<<<<<<< HEAD
   if (!showUI) return null;
-=======
-  const getPerformanceIcon = (score: number) => {
-    if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-    if (score >= 70) return <TrendingUp className="w-5 h-5 text-yellow-400" />;
-    return <CheckCircle className="w-5 h-5 text-red-400" />;
-  };
-
-  const getStatusIcon = (status: 'good' | 'needs-improvement' | 'poor') => {
-    switch (status) {
-      case 'good': return <CheckCircle className="w-4 h-4" />;
-      case 'needs-improvement': return <TrendingUp className="w-4 h-4" />;
-      case 'poor': return <CheckCircle className="w-4 h-4" />;
-      default: return <Clock className="w-4 h-4" />;
-    }
-  };
-
-  const formatMetric = (value: number | null, unit: string = 'ms') => {
-    if (value === null) return 'N/A';
-    if (unit === 'ms') return `${Math.round(value)}ms`;
-    return `${value.toFixed(3)}`;
-  };
-
-  const overallScore = getOverallScore();
-  const overallStatus = getPerformanceStatus(overallScore);
-
-  if (!enabled || !showMetrics) {
-    return (
-      <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className={`fixed bottom-4 right-4 bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black ${className}`}
-        onClick={() => setIsVisible(true)}
-        aria-label="Open performance monitor"
-      >
-        <Activity className="w-6 h-6" />
-      </motion.button>
-    );
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
 
   return (
     <>
@@ -660,7 +405,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Content */}
               <div className="p-4 space-y-4 max-h-[60vh] overflow-y-auto">
                 {/* Overall Score */}
@@ -804,50 +548,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         )}
       </AnimatePresence>
     </>
-=======
-      {/* Quick Actions */}
-      <div className="mt-4 flex gap-2">
-        <button
-          onClick={() => window.location.reload()}
-          className="flex-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors"
-          aria-label="Refresh page to measure performance"
-        >
-          <Zap className="w-4 h-4 inline mr-1" />
-          Refresh
-        </button>
-        <button
-          onClick={() => {
-            setMetrics({
-              fcp: null,
-              lcp: null,
-              fid: null,
-              cls: null,
-              ttfb: null,
-              domLoad: null,
-              windowLoad: null
-            });
-          }}
-          className="flex-1 px-3 py-2 bg-gray-600 hover:bg-gray-500 text-white text-sm rounded-lg transition-colors"
-          aria-label="Reset performance metrics"
-        >
-          <Clock className="w-4 h-4 inline mr-1" />
-          Reset
-        </button>
-      </div>
-
-      {/* Optimization Tips */}
-      {optimizationTips.length > 0 && (
-        <div className="mt-4 p-3 bg-gray-800/50 rounded-lg">
-          <div className="text-sm font-medium mb-2">Optimization Tips:</div>
-          <ul className="space-y-1 text-xs text-gray-300">
-            {optimizationTips.slice(0, 2).map((tip, index) => (
-              <li key={index}>• {tip}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
   );
 };
 

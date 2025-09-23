@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
@@ -56,14 +55,3 @@ const CommunityRoutes = () => {
 };
 
 export default CommunityRoutes;
-=======
-import React from 'react';
-export function CommunityRoutes() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
->>>>>>> origin/automation-error-fixes

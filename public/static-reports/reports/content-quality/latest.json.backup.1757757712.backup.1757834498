@@ -104,11 +104,7 @@
   ],
   "metrics": {
     "diversityScore": 100,
-<<<<<<< HEAD
     "avgLen": 2100,
-=======
-    "avgLen": 2104,
->>>>>>> origin/backup/sync-2025-08-17T21-30-07-269Z
     "duplicateCount": 0,
     "seoScore": 5
   },

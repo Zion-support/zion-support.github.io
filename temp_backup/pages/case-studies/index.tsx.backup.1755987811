@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -18,6 +17,3 @@ export default function CaseStudiesIndex() {
 		</UltraFuturisticBackground>
 	);
 }
-=======
-export { default } from '@/pages/CaseStudies';
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315

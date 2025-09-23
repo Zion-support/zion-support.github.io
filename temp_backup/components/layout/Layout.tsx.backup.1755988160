@@ -7,11 +7,7 @@ import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackgro
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import EnhancedAccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
 import PerformanceOptimizer from '../PerformanceOptimizer';
-=======
-import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -110,7 +106,6 @@ export default function Layout({ children }: LayoutProps) {
           <UltraFuturisticFooter2025 />
         </div>
 
-<<<<<<< HEAD
         {/* Accessibility and Performance Tools */}
         <AccessibilityEnhancer />
         <PerformanceMonitor />
@@ -119,17 +114,5 @@ export default function Layout({ children }: LayoutProps) {
         <CookieConsentBanner />
       </div>
     </PerformanceOptimizer>
-=======
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-      
-      {/* Service Worker Registration */}
-      <ServiceWorkerRegistration />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   );
 }

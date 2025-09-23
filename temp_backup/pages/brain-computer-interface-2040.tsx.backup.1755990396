@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -247,29 +246,6 @@ const BrainComputerInterface2040: React.FC = () => {
                 </button>
               </div>
             </motion.div>
-=======
-import { NextPage } from 'next';
-import { Brain, Zap, Target, Star, ArrowRight, CheckCircle, Users, TrendingUp, Cpu, Network, Eye, Heart } from 'lucide-react';
-
-const BrainComputerInterface2040: NextPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-pink-900/20 to-black text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-full text-pink-300 text-sm mb-6">
-              <Brain className="w-4 h-4" />
-              <span>Revolutionary 2040 Technology</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-600 bg-clip-text text-transparent">
-              Brain-Computer Interface 2040
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of human-computer interaction with our revolutionary brain-computer interface platform that 
-              enables direct neural communication with technology, unlocking unprecedented possibilities for human enhancement.
-            </p>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f89a
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

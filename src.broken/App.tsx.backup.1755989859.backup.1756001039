@@ -6,16 +6,8 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { ConsentProvider } from "./context/ConsentContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-<<<<<<< HEAD
 import PwaInstallButton from "./components/PwaInstallButton";
 import { CookieBanner } from "./components/CookieBanner";
-=======
-<<<<<<< HEAD
-import InstallPrompt from "./components/InstallPrompt";
-=======
-import PwaInstallButton from "./components/PwaInstallButton";
-import { CookieBanner } from "./components/CookieBanner";
->>>>>>> origin/51ryr1-codex/implement-eprivacy-directive-consent-banner
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import {
   AuthRoutes,
@@ -56,18 +48,10 @@ import OpenAppRedirect from './pages/OpenAppRedirect';
 import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import WishlistPage from './pages/Wishlist';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
 import PrivacySettings from './pages/PrivacySettings';
-<<<<<<< HEAD
-=======
->>>>>>> origin/51ryr1-codex/implement-eprivacy-directive-consent-banner
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const baseRoutes = [
@@ -89,11 +73,6 @@ const baseRoutes = [
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   { path: '/partners', element: <PartnersPage /> },
   { path: '/sitemap', element: <Sitemap /> },
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
@@ -105,29 +84,16 @@ const baseRoutes = [
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
   { path: '/privacy-settings', element: <PrivacySettings /> },
-<<<<<<< HEAD
-=======
->>>>>>> origin/51ryr1-codex/implement-eprivacy-directive-consent-banner
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 ];
 
 const App = () => {
   return (
     <WhitelabelProvider>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <ThemeProvider>
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       <ConsentProvider>
         <ThemeProvider defaultTheme="dark">
           <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <ErrorBoundary>
-<<<<<<< HEAD
-=======
->>>>>>> origin/51ryr1-codex/implement-eprivacy-directive-consent-banner
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <Routes>
             {baseRoutes.map(({ path, element }) => (
@@ -149,20 +115,10 @@ const App = () => {
         </Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <InstallPrompt />
-      </ThemeProvider>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <CookieBanner />
           <PwaInstallButton />
         </ThemeProvider>
       </ConsentProvider>
-<<<<<<< HEAD
-=======
->>>>>>> origin/51ryr1-codex/implement-eprivacy-directive-consent-banner
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </WhitelabelProvider>
   );

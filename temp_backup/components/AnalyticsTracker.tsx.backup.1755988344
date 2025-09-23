@@ -364,33 +364,9 @@ interface LayoutShiftEntry extends PerformanceEntry {
 }
 
 interface LayoutShiftSource {
-<<<<<<< HEAD
   node?: any;
   currentRect?: any;
   previousRect?: any;
-=======
-  node?: Node;
-  currentRect?: DOMRectReadOnly;
-  previousRect?: DOMRectReadOnly;
-}
-
-// DOM type definitions
-declare global {
-  interface EventListener {
-    (event: Event): void;
-  }
-  
-  interface EventTarget {
-    addEventListener(type: string, listener: EventListener): void;
-    removeEventListener(type: string, listener: EventListener): void;
-    dispatchEvent(event: Event): boolean;
-  }
-  
-  var EventTarget: {
-    prototype: EventTarget;
-    new(): EventTarget;
-  };
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
 }
 
 // Extend Window interface for gtag

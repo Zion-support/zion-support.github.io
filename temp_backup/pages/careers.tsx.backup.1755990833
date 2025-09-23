@@ -333,8 +333,4 @@ export default function Careers() {
   );
 };
 
-<<<<<<< HEAD
 export default Careers;
-=======
-export default CareersPage;
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84

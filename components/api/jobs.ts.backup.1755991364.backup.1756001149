@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { authenticateRequest, isRateLimited, logApiRequest, respondWithError, getUserIdFromRequest } from '../../utils/devportal/auth';
@@ -42,23 +41,4 @@ function postHandler(req: NextApiRequest, res: NextApiResponse) {
   saveJobs(jobs);
   logApiRequest(req, 201, true, auth.key);
   return res.status(201).json({ data: newJob });
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-
-const JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json");
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method Not Allowed" });
-  }
-  try {
-    const jobs = (await fs.pathExists(JOBS_FILE)) ? await fs.readJSON(JOBS_FILE) : [];
-    return res.status(200).json({ jobs });
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to load jobs" });
-  }
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
 }

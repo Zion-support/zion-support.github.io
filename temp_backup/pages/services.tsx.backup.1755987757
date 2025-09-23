@@ -23,7 +23,6 @@ import { real2036ServiceExpansions } from '../data/real-2036-service-expansions'
 import { innovative2036MicroSaasServices } from '../data/innovative-2036-micro-saas-services';
 import { innovative2036ITServices } from '../data/innovative-2036-it-services';
 
-<<<<<<< HEAD
 // Import our new 2025 advanced services
 import { advanced2025MicroSaasExpansion } from '../data/2025-advanced-micro-saas-expansion';
 import { advanced2025ITSolutionsExpansion } from '../data/2025-advanced-it-solutions-expansion';
@@ -44,15 +43,6 @@ import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-i
 import { cuttingEdgeMicroSaasServices } from '../data/2025-cutting-edge-micro-saas-expansion';
 import { innovativeITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-expansion';
 
-=======
-// Import our new innovative services
-import { innovative2037Services } from '../data/innovative-2037-services';
-import { advanced2038Services } from '../data/advanced-2038-services';
-import { revolutionary2039Services } from '../data/revolutionary-2039-services';
-import { innovative2038AdvancedServices } from '../data/innovative-2038-advanced-services';
-import { revolutionary2040FuturisticServices } from '../data/revolutionary-2040-futuristic-services';
-import { practicalBusinessITServices2038 } from '../data/practical-business-it-services-2038';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-4074
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -154,7 +144,6 @@ const allServices = [
   ...innovative2037Services,
   ...advanced2038Services,
   ...revolutionary2039Services,
-<<<<<<< HEAD
   
   // Our new innovative 2040 services
   ...innovative2040FuturisticServices,
@@ -173,12 +162,6 @@ const allServices = [
   ...advancedEnterpriseServices,
   ...innovative2025MicroSaasExpansion,
   ...cuttingEdgeITInfrastructureServices
-=======
-  // Our latest innovative services
-  ...innovative2038AdvancedServices,
-  ...revolutionary2040FuturisticServices,
-  ...practicalBusinessITServices2038
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-4074
 ];
 
 const categories = [

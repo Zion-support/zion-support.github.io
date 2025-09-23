@@ -1,18 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   // Performance optimizations
-=======
-  // Enable React strict mode for better development experience
-  reactStrictMode: true,
-  
-  // Disable TypeScript checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
-  // Enable experimental features for better performance
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-cb9f
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     optimizeCss: true,

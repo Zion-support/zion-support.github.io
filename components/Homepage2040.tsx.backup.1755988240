@@ -1,16 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, CheckCircle
-} from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
 import Link from 'next/link';
 import { 
   ArrowRight, Star, Users, Award, Brain, Atom, Rocket, 
@@ -32,7 +21,6 @@ interface HeroSlide {
   bgImage?: string;
 }
 
-<<<<<<< HEAD
 interface FeaturedService {
   name: string;
   description: string;
@@ -49,37 +37,6 @@ interface Stat {
   icon: React.ReactNode;
   description: string;
 }
-=======
-// Lazy load heavy components
-const ServiceCard = lazy(() => import('./ServiceCard'));
-const StatsSection = lazy(() => import('./StatsSection'));
-
-// Enhanced loading fallback component with skeleton
-const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className="text-center"
-    >
-      <div className="relative">
-        <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
-      </div>
-      <p className="text-xl text-gray-300 mb-2">Loading Zion Tech Group 2040...</p>
-      <p className="text-sm text-gray-500">Preparing your futuristic digital transformation journey</p>
-      
-      {/* Skeleton loading animation */}
-      <div className="mt-8 space-y-4">
-        <div className="h-4 bg-gray-700 rounded animate-pulse w-64 mx-auto"></div>
-        <div className="h-4 bg-gray-700 rounded animate-pulse w-48 mx-auto"></div>
-        <div className="h-4 bg-gray-700 rounded animate-pulse w-56 mx-auto"></div>
-      </div>
-    </motion.div>
-  </div>
-);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
 
 // Skeleton component for service cards
 const ServiceCardSkeleton = () => (
@@ -95,7 +52,6 @@ const ServiceCardSkeleton = () => (
 
 const Homepage2040: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -138,47 +94,6 @@ const Homepage2040: React.FC = () => {
       link: "/space-resource-intelligence-2040"
     }
   ], []);
-=======
-  const [activeSection, setActiveSection] = useState('hero');
-  const [isIntersectionObserverSupported, setIsIntersectionObserverSupported] = useState(false);
-
-  useEffect(() => {
-    // Check if Intersection Observer is supported
-    setIsIntersectionObserverSupported('IntersectionObserver' in window);
-    
-    // Simulate content loading with better timing
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Enhanced Intersection Observer for better performance
-  useEffect(() => {
-    if (isIntersectionObserverSupported) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
-            }
-          });
-        },
-        { 
-          threshold: 0.3, 
-          rootMargin: '-100px'
-        }
-      );
-
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach((section) => observer.observe(section));
-
-      return () => observer.disconnect();
-    }
-  }, [isIntersectionObserverSupported]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
 
   const featuredServices: FeaturedService[] = useMemo(() => [
     {
@@ -396,7 +311,6 @@ const Homepage2040: React.FC = () => {
                 className="p-2 rounded-lg bg-black/30 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 transition-all duration-200"
                 aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
               >
-<<<<<<< HEAD
                 {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
 
@@ -445,37 +359,6 @@ const Homepage2040: React.FC = () => {
                     className="w-full px-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-200"
                   />
                   <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-=======
-                {/* Floating orbs with reduced motion support */}
-                <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-                
-                {/* Animated particles with reduced motion support */}
-                <div className="absolute inset-0">
-                  {[...Array(12)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-                      animate={{
-                        x: [0, 100, 0],
-                        y: [0, -100, 0],
-                        opacity: [0, 0.8, 0],
-                        scale: [0, 1, 0],
-                      }}
-                      transition={{
-                        duration: 6 + i * 0.5,
-                        repeat: Infinity,
-                        delay: i * 0.3,
-                        ease: "easeInOut"
-                      }}
-                      style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                      }}
-                    />
-                  ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
                 </div>
               </div>
             </motion.div>
@@ -554,36 +437,8 @@ const Homepage2040: React.FC = () => {
                   animate="animate"
                   className="space-y-8"
                 >
-<<<<<<< HEAD
                   <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 p-3 sm:p-4">
                     <Brain className="w-full h-full text-white" />
-=======
-                  {/* Main Heading */}
-                  <div className="space-y-6">
-                    <motion.h1 
-                      id="hero-heading"
-                      className="text-5xl md:text-7xl font-bold"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                      <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                        Zion Tech Group
-                      </span>
-                      <br />
-                      <span className="text-white">2040</span>
-                    </motion.h1>
-                    
-                    <motion.p 
-                      className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                    >
-                      Pioneering the future of technology with innovative AI, quantum computing, 
-                      and cutting-edge micro SaaS solutions that transform businesses and unlock human potential.
-                    </motion.p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
                   </div>
                   <h4 className="text-lg sm:text-xl font-semibold text-white mb-2">
                     {featuredServices[currentServiceIndex]?.name}
@@ -616,37 +471,11 @@ const Homepage2040: React.FC = () => {
 
                   {/* Contact Information */}
                   <motion.div 
-<<<<<<< HEAD
                     className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400"
-=======
-                    className="flex flex-col sm:flex-row items-center justify-center gap-6"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                  >
-                    <div className="flex items-center space-x-3 text-cyan-400">
-                      <Phone className="w-5 h-5" aria-hidden="true" />
-                      <span>+1 302 464 0950</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-blue-400">
-                      <Mail className="w-5 h-5" aria-hidden="true" />
-                      <span>kleber@ziontechgroup.com</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-purple-400">
-                      <MapPin className="w-5 h-5" aria-hidden="true" />
-                      <span>364 E Main St STE 1008 Middletown DE 19709</span>
-                    </div>
-                  </motion.div>
-
-                  {/* CTA Buttons */}
-                  <motion.div 
-                    className="flex flex-col sm:flex-row items-center justify-center gap-6"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
                   >
-<<<<<<< HEAD
                     <div className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-cyan-400" />
                       <span>+1 302 464 0950</span>
@@ -659,25 +488,6 @@ const Homepage2040: React.FC = () => {
                       <MapPin className="w-4 h-4 text-cyan-400" />
                       <span>Middletown, DE</span>
                     </div>
-=======
-                    <button 
-                      className="px-10 py-5 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-2xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg shadow-2xl hover:shadow-cyan-400/25"
-                      onClick={() => window.location.href = '/innovative-2040-futuristic-services-showcase'}
-                      aria-label="Explore our innovative 2040 services"
-                    >
-                      Explore 2040 Services
-                      <ArrowRight className="w-6 h-6 ml-3 inline" aria-hidden="true" />
-                    </button>
-                    
-                    <button 
-                      className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg"
-                      onClick={() => window.location.href = '/services'}
-                      aria-label="Explore our revolutionary services"
-                    >
-                      Explore Services
-                      <Play className="w-6 h-6 ml-3 inline" aria-hidden="true" />
-                    </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
                   </motion.div>
                 </motion.div>
               </div>
@@ -835,7 +645,6 @@ const Homepage2040: React.FC = () => {
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-all duration-200 hover:scale-110"
                 aria-label="Previous slide"
               >
-<<<<<<< HEAD
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
@@ -849,18 +658,6 @@ const Homepage2040: React.FC = () => {
           </motion.div>
         </div>
       </section>
-=======
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="text-cyan-400"
-                  aria-label="Scroll down to explore more content"
-                >
-                  <ChevronDown className="w-8 h-8" />
-                </motion.div>
-              </motion.div>
-            </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
 
       {/* Enhanced Stats Section */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
@@ -923,7 +720,6 @@ const Homepage2040: React.FC = () => {
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                   {innovative2040FuturisticServices.slice(0, 6).map((service, index) => (
-<<<<<<< HEAD
                     <motion.div
                       key={service.id}
                       variants={fadeInUp}
@@ -963,12 +759,6 @@ const Homepage2040: React.FC = () => {
                       <Link 
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
-=======
-                    <Suspense key={service.id} fallback={<ServiceCardSkeleton />}>
-                      <motion.div
-                        variants={fadeInUp}
-                        className="group relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/25"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
                       >
                         {/* Service Icon */}
                         <div className={`w-16 h-16 bg-gradient-to-r ${getColorClasses(index)} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -1125,7 +915,6 @@ const Homepage2040: React.FC = () => {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
                 
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   {service.icon}
@@ -1229,16 +1018,6 @@ const Homepage2040: React.FC = () => {
         </button>
       </motion.div>
     </div>
-=======
-              </section>
-            }>
-              <StatsSection />
-            </Suspense>
-          </main>
-        )}
-      </AnimatePresence>
-    </Layout>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
   );
 };
 

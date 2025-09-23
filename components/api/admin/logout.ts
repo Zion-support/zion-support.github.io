@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   clearSessionCookie(res);
@@ -31,11 +30,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
-import { clearSessionCookie } from '../../../utils/adminAuth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  clearSessionCookie(res);
-  res.status(200).json({ ok: true });
-}
->>>>>>> origin/auto/autonomy-17186719616

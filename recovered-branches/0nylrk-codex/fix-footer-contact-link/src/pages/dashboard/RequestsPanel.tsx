@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -50,28 +49,6 @@ export default function RequestsPanel() {
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
-=======
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { 
-  RequestsHeader, 
-  QuoteRequestsList 
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-
-export default function RequestsPanel() {
-  const { user } = useAuth();
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   const {
     quotes,
@@ -84,7 +61,6 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
-<<<<<<< HEAD
 
   } = useTalentQuotes();
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -112,23 +88,6 @@ export default function RequestsPanel() {
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
 
-=======
-  } = useTalentQuotes();
-
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true);
-    
-    // If status is new, mark as viewed
-    if (quote.status === 'new') {
-      markAsViewed(quote.id);
-    }
-  };
-
-  // Filter quotes by archive status
-  const activeQuotes = quotes.filter(q => !q.is_archived);
-  const archivedQuotes = quotes.filter(q => q.is_archived);
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <ProtectedRoute>
@@ -137,7 +96,6 @@ export default function RequestsPanel() {
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
-<<<<<<< HEAD
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -206,14 +164,11 @@ export default function RequestsPanel() {;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-<<<<<<< HEAD
 
             />;
 
@@ -226,18 +181,6 @@ export default function RequestsPanel() {;
 
               <TabsContent value="active">;
 
-=======
-            />
-            
-            {/* Main Content */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Requests</TabsTrigger>
-                <TabsTrigger value="archived">Archived</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="active">
->>>>>>> origin/auto/autonomy-17186719616
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -245,19 +188,12 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-<<<<<<< HEAD
 
                 />;
               </TabsContent>;
 
               <TabsContent value="archived">;
 
-=======
-                />
-              </TabsContent>
-              
-              <TabsContent value="archived">
->>>>>>> origin/auto/autonomy-17186719616
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -265,7 +201,6 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-<<<<<<< HEAD
 
                 />;
               </TabsContent>;
@@ -274,19 +209,10 @@ export default function RequestsPanel() {;
         </div>;
 
 
-=======
-                />
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-        
->>>>>>> origin/auto/autonomy-17186719616
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-<<<<<<< HEAD
 
           onClose={() => {
             setShowDetails(false);
@@ -401,16 +327,3 @@ if ( {) {
     </ProtectedRoute>);
 }
 
-=======
-          onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
-          }}
-        />
-        
-        <Footer />
-      </div>
-    </ProtectedRoute>
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616

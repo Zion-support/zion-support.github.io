@@ -19,32 +19,15 @@ export interface InnovativeITService2025 {
   techStack: string[];
   realImplementation: boolean;
   implementationDetails: string;
-<<<<<<< HEAD
-=======
-=======
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
 }
 
-<<<<<<< HEAD
 export const innovativeITServices2025V2: InnovativeITService2025V2[] = [
   // Quantum-Safe Cybersecurity Platform
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-export const innovativeITServices2025: InnovativeITService2025[] = [
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   {
     id: 'quantum-secure-cloud-infrastructure',
     name: 'Quantum-Secure Cloud Infrastructure',
@@ -232,7 +215,6 @@ export const innovativeITServices2025: InnovativeITService2025[] = [
     icon: '🌐',
     color: 'from-green-500 to-emerald-600',
     popular: false,
-<<<<<<< HEAD
     icon: 'server',
     color: 'from-gray-500 to-slate-500',
     textColor: 'text-white',
@@ -501,8 +483,6 @@ export const innovativeITServices2025: InnovativeITService2025[] = [
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 =======
     launchDate: '2024-10-01',
     customers: 420,

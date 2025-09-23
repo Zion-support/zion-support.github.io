@@ -213,7 +213,6 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mt-12 space-y-4"
             >
-<<<<<<< HEAD
               <Link href="/comprehensive-2025-innovative-services-showcase">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25">
                   <span className="flex items-center gap-2">
@@ -222,22 +221,6 @@ const Homepage2025: React.FC = () => {
                   </span>
                 </button>
               </Link>
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/innovative-2036-services-showcase">
-                  <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg shadow-purple-500/25">
-                    <Star className="w-5 h-5" />
-                    Innovative 2036 Services
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                </Link>
-                <Link href="/services">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    View All Services
-                  </button>
-                </Link>
-              </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4035
             </motion.div>
           </div>
         </section>

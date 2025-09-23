@@ -8,7 +8,6 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
-<<<<<<< HEAD
   
   // Turbopack configuration
   turbopack: {
@@ -20,11 +19,6 @@ const nextConfig = {
     },
   },
   
-=======
-
-
-
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-78c3
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],

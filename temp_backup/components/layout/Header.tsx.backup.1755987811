@@ -37,7 +37,6 @@ const Header = () => {
   }, [isProductDropdownOpen]);
 
   const navigation = [
-<<<<<<< HEAD
     {
       name: 'Services',
       href: '/services',
@@ -117,13 +116,6 @@ const Header = () => {
     },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
-=======
-    { name: 'Product', href: '#', hasDropdown: true },
-    { name: 'Solutions', href: '/services' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Company', href: '/about' },
-    { name: 'Pricing', href: '/pricing' },
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
   ];
 
   const productDropdown = [

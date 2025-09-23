@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import type { TalentProfile } from '@/utils/types/talent';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
@@ -147,6 +146,3 @@ export default function TalentProfilePage() {
     </div>
   );
 }
-=======
-export default function TalentProfile(){const { query } = useRouter(); return <div className="prose dark:prose-invert"><h1>Talent Profile</h1><p>Profile: {String(query.slug||'')}</p></div>}
->>>>>>> origin/cursor/build-zion-global-expo-platform-712b

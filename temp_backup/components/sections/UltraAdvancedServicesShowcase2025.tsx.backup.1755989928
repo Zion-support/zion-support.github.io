@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -142,12 +141,8 @@ const featuredServices = [
     successRate: '99.9%'
   }
 ];
-=======
-import React from 'react';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
 const UltraAdvancedServicesShowcase2025: React.FC = () => {
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [isVisible, setIsVisible] = useState(false);
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -220,8 +215,6 @@ const UltraAdvancedServicesShowcase2025: React.FC = () => {
     }
   };
 
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   return (
     <section 
       ref={sectionRef}

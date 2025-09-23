@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-=======
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 import { 
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building
 } from 'lucide-react';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 
 // Import our new service data
 import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
@@ -34,50 +25,11 @@ import { innovative2025MicroSaasExpansion } from '../data/innovative-2025-micro-
 import { innovative2025ITSolutionsExpansion } from '../data/innovative-2025-it-solutions-expansion';
 import { innovative2025AIServicesExpansion } from '../data/innovative-2025-ai-services-expansion';
 
-<<<<<<< HEAD
 // Import our new Q4 2025 innovative services
 import { innovative2025Q4MicroSaasExpansion } from '../data/innovative-2025-q4-micro-saas-expansion';
 import { innovative2025Q4ITServicesExpansion } from '../data/innovative-2025-q4-it-services-expansion';
 import { innovative2025Q4AIServicesExpansion } from '../data/innovative-2025-q4-ai-services-expansion';
 import { innovative2025Q4EmergingTechExpansion } from '../data/innovative-2025-q4-emerging-tech-expansion';
-=======
-// Import our new 2025 Q4 innovative services
-import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
-import { comprehensiveServicesAdvertising2025 } from '../data/comprehensive-services-advertising-2025';
-
-// Import our new innovative 2040 services
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-
-// Import our new 2025 advanced enterprise services
-import { advancedEnterpriseServices } from '../data/2025-advanced-enterprise-services-expansion';
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
-
-// Import our new 2025 cutting-edge futuristic services
-import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuristic-services';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { advancedITInfrastructureServices } from '../data/2025-advanced-it-infrastructure-services';
-
-// Import our new 2025 advanced real micro SAAS expansion
-import { advancedRealMicroSaasExpansion2025 } from '../data/2025-advanced-real-micro-saas-expansion';
-
-// Import our new 2025 advanced IT infrastructure expansion
-import { advancedITInfrastructureExpansion2025 } from '../data/2025-advanced-it-infrastructure-expansion';
-
-// Import our new 2025 advanced AI services expansion
-import { advancedAIServicesExpansion2025 } from '../data/2025-advanced-ai-services-expansion';
-
-// Import our new 2025 emerging tech innovations expansion
-import { emergingTechInnovationsExpansion2025 } from '../data/2025-emerging-tech-innovations-expansion';
-
-// Import our new 2025 innovative business solutions expansion
-import { innovativeBusinessSolutionsExpansion2025 } from '../data/2025-innovative-business-solutions-expansion';
-
-// Import our new 2025 innovative services
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -151,12 +103,6 @@ const allServices = [
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices,
-<<<<<<< HEAD
-=======
-  ...cuttingEdgeFuturisticServices,
-  ...advancedAIAutomationServices2025,
-  ...advancedITInfrastructureServices,
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
   ...emergingTechServices,
   ...cuttingEdgeMicroSaasServices,
   ...innovativeITInfrastructureServices,
@@ -165,12 +111,6 @@ const allServices = [
   ...realOperationalServices,
   ...marketReadyServices,
   ...marketValidatedServices,
-<<<<<<< HEAD
-=======
-  // Our new 2025 Q4 innovative services
-  ...innovative2025Q4NewServices,
-  ...advancedITInfrastructureServices,
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
   ...industryRealServices,
   ...real2025Q4AugmentedBatch,
   ...real2029Q3Additions,
@@ -203,7 +143,6 @@ const allServices = [
   // Our latest innovative services
   ...advanced2041EnterpriseServices,
   ...revolutionary2042MicroSaasServices,
-<<<<<<< HEAD
   // Our new 2025 innovative services expansion
   ...innovative2025MicroSaasExpansion,
   ...innovative2025ITSolutionsExpansion,
@@ -213,36 +152,6 @@ const allServices = [
   ...innovative2025Q4ITServicesExpansion,
   ...innovative2025Q4AIServicesExpansion,
   ...innovative2025Q4EmergingTechExpansion
-=======
-  // Our new 2025 ultimate services expansion
-  
-  // Our new 2025 innovative services
-  ...advancedAIAutomationServices2025,
-  ...innovativeITInfrastructureServices2025,
-  ...innovativeMicroSaasSolutions2025,
-  ...cuttingEdgeAIServices2025,
-  ...ultimate2025MicroSaasExpansion,
-  ...ultimate2025ITServicesExpansion,
-  ...ultimate2025AIServicesExpansion,
-  // Our new 2025 advanced enterprise services
-  ...advancedEnterpriseServices,
-  ...cuttingEdgeITInfrastructureServices,
-  
-  // Our new 2025 advanced real micro SAAS expansion
-  ...advancedRealMicroSaasExpansion2025,
-  
-  // Our new 2025 advanced IT infrastructure expansion
-  ...advancedITInfrastructureExpansion2025,
-  
-  // Our new 2025 advanced AI services expansion
-  ...advancedAIServicesExpansion2025,
-  
-  // Our new 2025 emerging tech innovations expansion
-  ...emergingTechInnovationsExpansion2025,
-  
-  // Our new 2025 innovative business solutions expansion
-  ...innovativeBusinessSolutionsExpansion2025
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 ];
 
 const categories = [
@@ -463,7 +372,6 @@ export default function Services() {
     (currentPageClamped - 1) * pageSize,
     currentPageClamped * pageSize
   );
-<<<<<<< HEAD
 
   // Reset to first page when filters/sort change
   React.useEffect(() => {
@@ -513,8 +421,6 @@ export default function Services() {
         return <Shield className="w-6 h-6 text-gray-400" />;
     }
   ];
-=======
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 
   // Reset to first page when filters/sort change
   React.useEffect(() => {
@@ -565,7 +471,6 @@ export default function Services() {
       <SEO title="Services | Zion Tech Group - Enterprise IT, AI, Micro SAAS Solutions" description="Discover our comprehensive portfolio of enterprise IT solutions, AI services, and innovative micro SAAS platforms. Transform your business with cutting-edge technology." canonical="https://ziontechgroup.com/services/" />
 
       <div className="min-h-screen bg-black text-white pt-24">
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
@@ -573,23 +478,6 @@ export default function Services() {
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-red-500/5 to-blue-500/5 rounded-full blur-3xl" />
           </div>
         </section>
-=======
-        {/* Loading State */}
-        <AnimatePresence>
-          {isLoading && (
-            <motion.div
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 bg-black flex items-center justify-center"
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-cyan-400 text-lg font-medium">Loading Services...</p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 
         {/* Hero Section */}
         <AnimatePresence>
@@ -650,7 +538,6 @@ export default function Services() {
             </motion.div>
 
             {/* Search and Filters */}
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -939,8 +826,6 @@ export default function Services() {
         {/* Specialized Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-=======
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

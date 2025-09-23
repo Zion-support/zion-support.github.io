@@ -906,7 +906,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* New: Autonomous Automations */}
         <section className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">New Autonomous Automations</h2>
@@ -1005,8 +1004,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-=======
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-8155
         {/* AUTO-GENERATED: HOME_UPDATER_START */
  <section className="mx-auto max-w-7xl px-6 pb-16">
    <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>

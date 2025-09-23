@@ -10,7 +10,6 @@ import {
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const serviceCategories = [
     {
       title: 'AI & Analytics',
@@ -79,40 +78,6 @@ export default function EnhancedFooter() {
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '4.9/5', label: 'Customer Rating', icon: Star }
-=======
-  const services = [
-    { name: 'AI & Machine Learning', href: '/micro-saas' },
-    { name: 'Quantum Computing', href: '/micro-saas' },
-    { name: 'Cybersecurity', href: '/micro-saas' },
-    { name: 'Cloud Infrastructure', href: '/micro-saas' },
-    { name: 'Data Analytics', href: '/micro-saas' },
-    { name: 'Digital Transformation', href: '/micro-saas' }
-  ];
-
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const resources = [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Services', href: '/micro-saas' },
-    { name: 'Pricing', href: '/market-pricing' }
-  ];
-
-  const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' }
-  ];
-
-  const socialLinks = [
-    { name: 'Twitter', href: 'https://twitter.com', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
->>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
   ];
 
   return (

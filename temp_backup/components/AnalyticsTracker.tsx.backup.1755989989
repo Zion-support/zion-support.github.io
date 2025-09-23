@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3 } from 'lucide-react';
 
-<<<<<<< HEAD
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
@@ -13,8 +12,6 @@ interface AnalyticsData {
   trafficSources: Array<{ source: string; percentage: number }>;
 }
 
-=======
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 // Extend Window interface for Google Analytics
 declare global {
   interface Window {

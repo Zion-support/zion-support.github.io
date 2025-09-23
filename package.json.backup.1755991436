@@ -183,7 +183,6 @@
     "meta:factory": "node automation/autonomous-meta-factory.cjs",
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
-<<<<<<< HEAD
     "venture:start": "node automation/venture-orchestrator.cjs continuous",
     "venture:once": "node automation/venture-orchestrator.cjs once",
     "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
@@ -218,15 +217,6 @@
     "detect:economy": "ts-node scripts/economy-anomaly-detector.ts",
     "governance:brief": "ts-node scripts/economy-governance-brief.ts",
     "postbuild": "mkdir -p public/reports/economy && cp -r data/reports/economy/* public/reports/economy/ || true && mkdir -p public/reports/economy/optimizer && cp -r data/reports/economy/optimizer/* public/reports/economy/optimizer/ || true && mkdir -p public/reports/economy/anomalies && cp -r data/reports/economy/anomalies/* public/reports/economy/anomalies/ || true && mkdir -p public/docs/governance && cp -r docs/governance/* public/docs/governance/ || true"
-=======
-    "admin:dashboard": "node automation/admin-dashboard-updater.cjs",
-    "admin:dashboard:watch": "node automation/admin-dashboard-updater.cjs --watch",
-    "admin:insights": "node automation/admin-insights-researcher.cjs",
-    "admin:insights:watch": "node automation/admin-insights-researcher.cjs --watch",
-    "admin:cron:start": "bash automation/admin-dashboard-cron.sh start",
-    "admin:cron:stop": "bash automation/admin-dashboard-cron.sh stop",
-    "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"
->>>>>>> origin/cursor/develop-self-managing-ai-admin-section-f647
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

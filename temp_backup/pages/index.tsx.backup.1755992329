@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon, Palette, BookOpen, Truck } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
@@ -36,16 +35,6 @@ import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-servi
 import { revolutionary2026ITInfrastructureServices } from '../data/revolutionary-2026-it-infrastructure';
 import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas';
 import { revolutionary2026SpaceTechServices } from '../data/revolutionary-2026-space-tech';
-=======
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-import { advancedBlockchainWeb3Services2025 } from '../data/2025-advanced-blockchain-web3-services';
-import { advancedHealthcareBiotechServices2025 } from '../data/2025-advanced-healthcare-biotech-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62dc
 
 export default function HomePage() {
   const heroStats = [
@@ -58,17 +47,10 @@ export default function HomePage() {
   ];
 
 const heroStats = [
-<<<<<<< HEAD
   { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6" /> },
   { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6" /> },
   { label: 'Enterprise IT', value: '30+', icon: <Shield className="w-6 h-6" /> },
   { label: 'Micro SAAS', value: '40+', icon: <Rocket className="w-6 h-6" /> }
-=======
-  { label: 'Services Delivered', value: '800+', icon: <Star className="w-5 h-5" /> },
-  { label: 'Happy Clients', value: '1500+', icon: <Users className="w-5 h-5" /> },
-  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> },
-  { label: 'ROI Average', value: '350%', icon: <TrendingUp className="w-5 h-5" /> }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62dc
 ];
 =======
     ...enhancedRealMicroSaasServices.slice(0, 8),
@@ -82,17 +64,10 @@ const heroStats = [
   ];
 
 const stats = [
-<<<<<<< HEAD
   { label: 'Services Delivered', value: '500+', icon: <CheckCircle className="w-5 h-5" /> },
   { label: 'Happy Clients', value: '200+', icon: <Users className="w-5 h-5" /> },
   { label: 'Years Experience', value: '15+', icon: <Clock className="w-5 h-5" /> },
   { label: 'Awards Won', value: '25+', icon: <Award className="w-5 h-5" /> }
-=======
-  { number: '80+', label: 'Services', icon: Star, color: 'text-cyan-400' },
-  { number: '1500+', label: 'Companies Served', icon: Users, color: 'text-purple-400' },
-  { number: '99.9%', label: 'Uptime', icon: Shield, color: 'text-green-400' },
-  { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62dc
 ];
 
 const serviceCategories = [
@@ -200,7 +175,6 @@ const heroFeatures = [
     href: '/ai-consciousness-evolution-2025'
   },
   {
-<<<<<<< HEAD
     title: 'Quantum Internet Security',
     description: 'Unbreakable encryption using quantum computing principles',
     icon: <Lock className="w-6 h-6" />,
@@ -217,51 +191,6 @@ const heroFeatures = [
     description: 'Neural interface technology for human-computer interaction',
     icon: <Cpu className="w-6 h-6" />,
     href: '/brain-computer-interface-platform'
-=======
-    title: 'AI Code Generation & Review Platform',
-    description: 'Advanced AI platform for automated code generation, review, and optimization across multiple languages.',
-    price: '$199/month',
-    category: 'AI Automation',
-    icon: '💻',
-    color: 'from-emerald-500 to-teal-600',
-    href: '/ai-code-generation-review'
-  },
-  {
-    title: 'Zero Trust Security Platform',
-    description: 'Comprehensive zero trust security with continuous verification and adaptive access controls.',
-    price: '$599/month',
-    category: 'Cybersecurity',
-    icon: '🔒',
-    color: 'from-red-500 to-pink-600',
-    href: '/zero-trust-security-platform'
-  },
-  {
-    title: 'DeFi Yield Optimization Platform',
-    description: 'Intelligent DeFi yield farming optimization across multiple protocols and chains.',
-    price: '$99/month',
-    category: 'Blockchain & Web3',
-    icon: '🌾',
-    color: 'from-green-500 to-emerald-600',
-    href: '/defi-yield-optimization'
-  },
-  {
-    title: 'AI Drug Discovery Platform',
-    description: 'AI-powered drug discovery through molecular modeling and predictive analytics.',
-    price: '$2,999/month',
-    category: 'Healthcare & Biotech',
-    icon: '🧬',
-    color: 'from-green-500 to-emerald-600',
-    href: '/ai-drug-discovery-platform'
-  },
-  {
-    title: 'Space Mining Platform',
-    description: 'Revolutionary asteroid mining and space resource extraction platform with advanced robotics.',
-    price: '$500,000/month',
-    category: 'Space Technology',
-    icon: '🚀',
-    color: 'from-purple-500 to-indigo-600',
-    href: '/space-mining-platform'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62dc
   }
 ];
 

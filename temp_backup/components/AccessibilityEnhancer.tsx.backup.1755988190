@@ -103,22 +103,11 @@ const AccessibilityEnhancer: React.FC = () => {
     applySettings(newSettings);
   }, [applySettings]);
 
-<<<<<<< HEAD
   // Toggle setting
   const toggleSetting = useCallback((key: keyof AccessibilitySettings) => {
     const newSettings = { ...settings, [key]: !settings[key] };
     saveSettings(newSettings);
   }, [settings, saveSettings]);
-=======
-  // Focus management
-  const handleFocusChange = useCallback((e: globalThis.FocusEvent) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      setCurrentFocus(target);
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-    }
-  }, []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
 
   // Update numeric setting
   const updateNumericSetting = useCallback((key: 'fontSize' | 'zoomLevel', value: number) => {

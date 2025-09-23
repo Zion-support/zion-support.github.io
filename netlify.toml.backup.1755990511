@@ -220,7 +220,6 @@
 [[scheduled.functions]]
   name = "metadata-optimizer-runner"
   schedule = "*/15 * * * *" # every 15 minutes
-<<<<<<< HEAD
 
 # New intelligent cloud automations (added)
 [[scheduled.functions]]
@@ -230,20 +229,6 @@
 [[scheduled.functions]]
   name = "seo-audit-runner"
   schedule = "17 */6 * * *" # every 6 hours
-=======
-
-[[scheduled.functions]]
-  name = "seo-audit-runner"
-  schedule = "0 */2 * * *"
-
-[[scheduled.functions]]
-  name = "ai-trends-radar-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "stale-content-auditor-runner"
-  schedule = "17 */6 * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-40f6
 
 [[scheduled.functions]]
   name = "monetization-orchestrator"
@@ -254,7 +239,6 @@
   schedule = "0 */12 * * *" # every 12 hours
 
 [[scheduled.functions]]
-<<<<<<< HEAD
   name = "design-evolution"
   schedule = "*/6 * * * *" # every 6 minutes
 
@@ -273,11 +257,3 @@
 [[scheduled.functions]]
   name = "innovation-sprint"
   schedule = "*/3 * * * *" # every 3 minutes
-=======
-  name = "component-size-report"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "autonomous-invention-orchestrator"
-  schedule = "*/30 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-40f6

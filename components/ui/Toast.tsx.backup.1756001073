@@ -249,22 +249,15 @@ export const toast = {
 export const withToast = <P extends object>(
   Component: React.ComponentType<P & { toast?: ToastContextType }>
 ) => {
-<<<<<<< HEAD
   const WrappedComponent = (props: P) => (
-=======
-  return (props: P) => (
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     <ToastContext.Consumer>
       {(toastContext) => (
         <Component {...props} toast={toastContext} />
       )}
     </ToastContext.Consumer>
   );
-<<<<<<< HEAD
   
   WrappedComponent.displayName = `withToast(${Component.displayName || Component.name || 'Component'})`;
   
   return WrappedComponent;
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 };

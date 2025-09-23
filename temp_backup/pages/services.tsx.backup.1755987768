@@ -138,7 +138,6 @@ const allServices = [
   ...validatedServices2025Q4,
   ...real2035Q2Additions,
   ...real2036ServiceExpansions,
-<<<<<<< HEAD
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
   // Our new innovative services
@@ -153,12 +152,6 @@ const allServices = [
   ...cuttingEdgeInnovativeServices,
   ...enterpriseAISolutions,
   ...innovativeMicroSaasSolutions
-=======
-  // Add our new innovative services
-  ...innovative2035MicroSaasExpansion,
-  ...advancedAIEnterpriseServices,
-  ...specializedIndustrySolutions
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-86e9
 ];
 
 const categories = [
@@ -233,7 +226,6 @@ const categories = [
     description: 'Learning and research platforms'
   },
   {
-<<<<<<< HEAD
     id: 'healthcare-biotech',
     name: 'Healthcare & Biotech',
     icon: <Heart className="w-6 h-6" />,
@@ -281,27 +273,6 @@ const categories = [
     icon: <Users className="w-6 h-6" />,
     color: 'from-blue-500 to-cyan-500',
     description: 'Human resources and talent management solutions'
-=======
-    id: 'innovative-ai',
-    name: 'Innovative AI Solutions',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-purple-500 to-indigo-500',
-    description: 'Cutting-edge AI and machine learning services'
-  },
-  {
-    id: 'enterprise-ai',
-    name: 'Enterprise AI',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-blue-500 to-cyan-500',
-    description: 'AI-powered enterprise solutions and automation'
-  },
-  {
-    id: 'industry-solutions',
-    name: 'Industry Solutions',
-    icon: <Cpu className="w-6 h-6" />,
-    color: 'from-emerald-500 to-teal-500',
-    description: 'Specialized solutions for specific industries'
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-86e9
   }
 ];
 

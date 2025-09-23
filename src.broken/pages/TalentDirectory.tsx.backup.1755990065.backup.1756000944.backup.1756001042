@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
@@ -308,10 +307,6 @@ export default function TalentDirectory() {
     );
   }
 
-=======
-import React from 'react';
-export function TalentDirectory() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

@@ -8,7 +8,6 @@ import {
   Star, ChevronRight, ChevronDown, Menu, X
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
@@ -22,16 +21,9 @@ import Revolutionary2027ServicesShowcase from '../components/sections/Revolution
 import Revolutionary2027Hero from '../components/sections/Revolutionary2027Hero';
 import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
 import UltraFuturisticHero2029 from '../components/sections/UltraFuturisticHero2029';
-=======
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
-import ServiceAds from '../components/sections/ServiceAds';
-import Card from '../components/ui/Card';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-15d4
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-<<<<<<< HEAD
 import { emergingTechServices } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -81,10 +73,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
 import { emergingTech2029Services } from '../data/2029-emerging-tech-services';
 import { microSaas2029Services } from '../data/2029-micro-saas-innovations';
-=======
-import { nextGenInnovativeServices } from '../data/next-gen-innovative-services';
-import { advancedAIServices } from '../data/advanced-ai-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-15d4
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -116,7 +104,6 @@ export default function HomePage() {
       pricing: 'Free tier, Pro from $29/month'
     },
     {
-<<<<<<< HEAD
       icon: <Lock className="w-8 h-8 text-white" />,
       title: 'API Rate Limiter',
       description: 'Intelligent rate limiting with configurable policies, real-time analytics, and Express.js middleware support.',
@@ -171,70 +158,6 @@ export default function HomePage() {
       color: 'bg-gradient-to-br from-amber-500 to-orange-600',
       gradient: 'from-amber-400 to-orange-500',
       pricing: 'Free tier, Pro from $35/month'
-=======
-      title: '🧬 Biotech AI Platform',
-      description: 'AI-powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%.',
-      price: 'Starting at $3,999/month',
-      features: ['AI drug discovery algorithms', 'Genetic sequence analysis', 'Protein folding prediction', 'Drug interaction modeling', 'Clinical trial optimization', 'Regulatory compliance tools', 'Research collaboration platform', 'Advanced analytics dashboard', 'API for research integration', 'Multi-omics data analysis'],
-      link: 'https://ziontechgroup.com/biotech-ai',
-      color: 'from-emerald-600 to-teal-700',
-      marketData: '$150B AI in healthcare, 250% annual growth',
-      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
-      savings: 'Accessible pricing and comprehensive platform',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 19709'
-      }
-    },
-    {
-      title: '💰 Quantum Financial Trading Platform',
-      description: 'Quantum AI-powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy.',
-      price: 'Starting at $7,999/month',
-      features: ['Quantum AI trading algorithms', 'Nanosecond execution speed', 'Real-time market analysis', 'Risk management tools', 'Portfolio optimization', 'Multi-asset trading', 'Advanced backtesting', 'Regulatory compliance', 'Performance analytics', 'API for integration'],
-      link: 'https://ziontechgroup.com/quantum-financial-trading',
-      color: 'from-yellow-600 to-orange-700',
-      marketData: '$15T algorithmic trading, 150% annual growth',
-      competitors: 'Renaissance Technologies ($100B+ AUM), Two Sigma ($60B+ AUM)',
-      savings: 'Accessible quantum AI technology for smaller firms',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '🚗 Autonomous Vehicle AI Platform',
-      description: 'Next-generation AI for self-driving vehicles and robotics. Achieve Level 5 autonomy through advanced computer vision and decision-making.',
-      price: 'Starting at $4,999/month',
-      features: ['Advanced computer vision', 'Sensor fusion algorithms', 'Real-time decision making', 'Path planning optimization', 'Obstacle detection', 'Traffic prediction', 'Safety monitoring', 'Performance analytics', 'Regulatory compliance', 'API for integration'],
-      link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
-      color: 'from-blue-600 to-indigo-700',
-      marketData: '$2.5T autonomous vehicle market, 200% annual growth',
-      competitors: 'Waymo, Tesla, Cruise, Argo AI',
-      savings: '70% cost reduction vs. competitors',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '🔒 Quantum Cybersecurity Platform',
-      description: 'Future-proof cybersecurity with quantum-resistant encryption and AI-powered threat detection. Protect against quantum attacks.',
-      price: 'Starting at $3,999/month',
-      features: ['Quantum-resistant encryption', 'Advanced threat detection', 'Real-time monitoring', 'Automated response', 'Zero-trust architecture', 'Compliance tools', 'Security analytics', 'Incident management', 'API for integration', '24/7 security monitoring'],
-      link: 'https://ziontechgroup.com/quantum-cybersecurity',
-      color: 'from-red-600 to-pink-700',
-      marketData: '$200B cybersecurity market, 180% annual growth',
-      competitors: 'CrowdStrike, Palo Alto Networks, Fortinet',
-      savings: '80% cost advantage over custom solutions',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-15d4
     }
   ];
 
@@ -330,7 +253,6 @@ export default function HomePage() {
   };
 
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
       colorScheme="quantum-fusion"
@@ -339,9 +261,6 @@ export default function HomePage() {
       enableHolographic={true}
       enableQuantumEffects={true}
     >
-=======
-    <UltraAdvancedQuantumBackground intensity={1.5} variant="quantum">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-15d4
       <div className="min-h-screen">
         <Head>
           <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions | 1000+ Services</title>
@@ -569,15 +488,10 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         
         {/* Footer */}
         <UltraFuturisticFooter2029 />
               </UltraFuturisticBackground2029>
     </>
-=======
-      </div>
-    </UltraAdvancedQuantumBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-15d4
   );
 }

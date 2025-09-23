@@ -1,10 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import { Users, Sparkles, Zap, Target, Award, Clock, CheckCircle, Brain, TrendingUp, Heart } from 'lucide-react';
-=======
-import { Brain, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, Heart, MessageSquare, TrendingUp, Headphones, Star, Shield } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d72c
 
 export default function AICustomerSuccess2041() {
   return (
@@ -27,21 +23,12 @@ export default function AICustomerSuccess2041() {
                 <span className="text-white">2041</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-<<<<<<< HEAD
                 Experience the future of customer success with AI systems that predict, prevent, and 
                 proactively solve customer issues before they arise.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
                   Transform Success
-=======
-                Experience the future of customer success with revolutionary AI that provides proactive support, 
-                personalized experiences, and autonomous problem resolution to ensure customer satisfaction and retention.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
-                  Transform Customer Success
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d72c
                 </button>
                 <button className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-black transition-all duration-300">
                   Learn More
@@ -56,19 +43,11 @@ export default function AICustomerSuccess2041() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Revolutionary Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Discover the cutting-edge capabilities that make AI Customer Success 2041 the most 
                 advanced customer success platform ever created.
-=======
-                Revolutionary AI Customer Success Features
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI customer success platform represents the pinnacle of intelligent customer support, 
-                combining advanced AI with deep understanding of customer needs and proactive problem resolution.
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d72c
               </p>
             </div>
 
@@ -76,7 +55,6 @@ export default function AICustomerSuccess2041() {
               {[
                 {
                   icon: <Brain className="w-8 h-8" />,
-<<<<<<< HEAD
                   title: "Predictive Analytics",
                   description: "AI-powered insights that predict customer behavior and identify potential issues before they impact satisfaction.",
                   color: "from-green-500 to-emerald-500"
@@ -118,65 +96,17 @@ export default function AICustomerSuccess2041() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-=======
-                  title: "Proactive Support",
-                  description: "AI that anticipates customer needs and provides support before issues arise.",
-                  color: "from-green-500 to-emerald-500"
-                },
-                {
-                  icon: <Heart className="w-8 h-8" />,
-                  title: "Emotional Intelligence",
-                  description: "Understanding customer emotions and providing empathetic, personalized responses.",
-                  color: "from-blue-500 to-cyan-500"
-                },
-                {
-                  icon: <MessageSquare className="w-8 h-8" />,
-                  title: "Multi-Channel Support",
-                  description: "Seamless support across all communication channels with consistent experience.",
-                  color: "from-purple-500 to-pink-500"
-                },
-                {
-                  icon: <Headphones className="w-8 h-8" />,
-                  title: "Voice & Video Support",
-                  description: "Advanced voice and video AI support with natural language understanding.",
-                  color: "from-orange-500 to-red-500"
-                },
-                {
-                  icon: <Star className="w-8 h-8" />,
-                  title: "Customer Satisfaction",
-                  description: "Continuous monitoring and improvement of customer satisfaction metrics.",
-                  color: "from-yellow-500 to-orange-500"
-                },
-                {
-                  icon: <Shield className="w-8 h-8" />,
-                  title: "Data Security",
-                  description: "Advanced security measures ensuring customer data protection and privacy.",
-                  color: "from-indigo-500 to-purple-500"
-                }
-              ].map((feature, index) => (
-                <div key={index} className="group p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d72c
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Success Metrics */}
-=======
-        {/* Benefits Section */}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d72c
         <section className="py-20 px-4 bg-gradient-to-r from-green-500/5 to-emerald-500/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Measurable Success
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -305,42 +235,6 @@ export default function AICustomerSuccess2041() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
-=======
-                Why Choose AI Customer Success?
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Transform your customer success operations with AI that provides proactive, personalized, and efficient support.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <CheckCircle className="w-8 h-8" />,
-                  title: "Improved Retention",
-                  description: "Higher customer retention rates through proactive support and personalized experiences.",
-                  color: "from-green-500 to-emerald-500"
-                },
-                {
-                  icon: <TrendingUp className="w-8 h-8" />,
-                  title: "Increased Satisfaction",
-                  description: "Enhanced customer satisfaction through faster resolution and better support quality.",
-                  color: "from-blue-500 to-cyan-500"
-                },
-                {
-                  icon: <Award className="w-8 h-8" />,
-                  title: "Cost Efficiency",
-                  description: "Reduced support costs through automation and AI-driven problem resolution.",
-                  color: "from-purple-500 to-pink-500"
-                }
-              ].map((benefit, index) => (
-                <div key={index} className="text-center p-6">
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${benefit.color} p-5 mx-auto mb-6`}>
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                  <p className="text-gray-400">{benefit.description}</p>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d72c
                 </div>
               ))}
             </div>
@@ -354,20 +248,12 @@ export default function AICustomerSuccess2041() {
               Ready to Transform Customer Success?
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-<<<<<<< HEAD
               Join the future of customer success with AI-powered solutions that deliver 
               measurable results and exceptional customer experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
-=======
-              Join the future of AI-powered customer success and create exceptional customer experiences.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
-                Start Customer Success AI Today
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d72c
               </button>
               <button className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-black transition-all duration-300">
                 Schedule Demo

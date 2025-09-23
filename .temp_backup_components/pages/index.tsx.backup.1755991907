@@ -2,12 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Hero from '../components/sections/Hero';
 import Features from '../components/sections/Features';
-<<<<<<< HEAD
 import FuturisticCard, { ServiceCard, FeatureCard } from '../components/ui/FuturisticCard';
-=======
-import FeaturedServices from '../components/sections/FeaturedServices';
-import Card from '../components/ui/Card';
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-602f
 import Button from '../components/ui/Button';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Globe, Brain, Rocket } from 'lucide-react';
 
@@ -815,7 +810,6 @@ export default function HomePage() {
         columns={3}
       />
 
-<<<<<<< HEAD
       {/* New Micro SaaS Services */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -917,12 +911,6 @@ export default function HomePage() {
       </section>
 
       {/* Technology Stack */}
-=======
-      {/* Featured Services */}
-      <FeaturedServices />
-
-      {/* Specialized Solutions Showcase */}
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-602f
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">

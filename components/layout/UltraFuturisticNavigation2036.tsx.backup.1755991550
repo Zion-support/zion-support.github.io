@@ -61,7 +61,6 @@ const navigationItems: NavigationItem[] = [
         featured: true
       },
       { 
-<<<<<<< HEAD
         name: '2036 Innovative Services', 
         href: '/2036-innovative-services-showcase', 
         description: 'Cutting-edge 2036 services showcase',
@@ -77,16 +76,6 @@ const navigationItems: NavigationItem[] = [
       { 
         name: 'Quantum Technology', 
         href: '/services?category=quantum', 
-=======
-        name: 'AI & Machine Learning', 
-        href: '/ai-services', 
-        description: 'Advanced AI solutions',
-        icon: <BrainIcon className="w-4 h-4" />
-      },
-      { 
-        name: 'Quantum Technology', 
-        href: '/quantum-services', 
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
         description: 'Quantum computing solutions',
         icon: <AtomIcon className="w-4 h-4" />
       },
@@ -103,7 +92,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Cpu className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'Industry Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
@@ -114,12 +102,6 @@ const navigationItems: NavigationItem[] = [
         href: '/micro-saas', 
         description: 'Business automation tools',
         icon: <Zap className="w-4 h-4" />
-=======
-        name: 'Specialized Solutions', 
-        href: '/solutions', 
-        description: 'Industry-specific solutions',
-        icon: <TargetIcon className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
       }
     ]
   },
@@ -127,17 +109,11 @@ const navigationItems: NavigationItem[] = [
     name: 'Showcase & Pricing',
     href: '/pricing',
     icon: <Star className="w-5 h-5" />,
-<<<<<<< HEAD
     description: 'Service showcases and pricing',
     badge: 'Featured',
-=======
-    description: 'Services portfolio & pricing',
-    badge: 'Showcase',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
     category: 'showcase',
     children: [
       { 
-<<<<<<< HEAD
         name: 'Pricing Plans', 
         href: '/pricing', 
         description: 'Service pricing information',
@@ -149,26 +125,12 @@ const navigationItems: NavigationItem[] = [
         href: '/comprehensive-services-showcase-2025', 
         description: 'Complete services overview',
         icon: <Grid className="w-4 h-4" />
-=======
-        name: 'Services Showcase', 
-        href: '/comprehensive-services-showcase-2025', 
-        description: 'Complete services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Pricing Plans', 
-        href: '/pricing', 
-        description: 'Service pricing information',
-        icon: <DollarSign className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
       },
       { 
         name: 'Market Pricing', 
         href: '/market-pricing', 
         description: 'Market price references',
         icon: <BarChart3 className="w-4 h-4" />
-<<<<<<< HEAD
       },
       { 
         name: '2026 Services', 
@@ -181,15 +143,12 @@ const navigationItems: NavigationItem[] = [
         href: '/revolutionary-2027-services-showcase', 
         description: 'Future service roadmap',
         icon: <Sparkles className="w-4 h-4" />
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
       }
     ]
   },
   {
     name: 'Company',
     href: '/about',
-<<<<<<< HEAD
     icon: <Star className="w-5 h-5" />,
     description: 'About Zion Tech Group',
     category: 'company',
@@ -326,68 +285,6 @@ const navigationItems: NavigationItem[] = [
         href: '/education-technology-solutions', 
         description: 'EdTech solutions',
         icon: <BookOpen className="w-4 h-4" />
-=======
-    icon: <Building className="w-5 h-5" />,
-    description: 'About Zion Tech Group',
-    category: 'company',
-    children: [
-      { 
-        name: 'About Us', 
-        href: '/about', 
-        description: 'Company information',
-        icon: <Building className="w-4 h-4" />
-      },
-      { 
-        name: 'Contact', 
-        href: '/contact', 
-        description: 'Get in touch',
-        icon: <MessageCircle className="w-4 h-4" />
-      },
-      { 
-        name: 'Partners', 
-        href: '/partners', 
-        description: 'Partnership opportunities',
-        icon: <Users className="w-4 h-4" />
-      },
-      { 
-        name: 'Investors', 
-        href: '/investors', 
-        description: 'Investment information',
-        icon: <DollarSign className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Knowledge & support',
-    category: 'resources',
-    children: [
-      { 
-        name: 'Documentation', 
-        href: '/docs', 
-        description: 'Technical documentation',
-        icon: <FileText className="w-4 h-4" />
-      },
-      { 
-        name: 'Blog', 
-        href: '/blog', 
-        description: 'Latest insights',
-        icon: <BookOpen className="w-4 h-4" />
-      },
-      { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
-        description: 'Success stories',
-        icon: <Award className="w-4 h-4" />
-      },
-      { 
-        name: 'Support', 
-        href: '/support', 
-        description: 'Technical support',
-        icon: <HelpCircle className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
       }
     ]
   }

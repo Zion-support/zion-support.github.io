@@ -189,7 +189,6 @@ interface LayoutShiftSource {
   previousRect?: DOMRectReadOnly;
 }
 
-<<<<<<< HEAD
 // DOM type definitions
 declare global {
   interface EventListener {
@@ -218,8 +217,5 @@ declare global {
     ) => void;
   }
 }
-=======
-// gtag is already declared in PerformanceOptimizer.tsx
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4035
 
 export default AnalyticsTracker;

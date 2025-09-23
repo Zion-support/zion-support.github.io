@@ -210,7 +210,6 @@ export function ProductSubmissionForm() {
         }
       }
 
-<<<<<<< HEAD
       // Upload model if provided
       if (values.model) {
         const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
@@ -236,8 +235,6 @@ export function ProductSubmissionForm() {
         }
       }
 
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
       // Send listing to moderation service
       try {
         await supabase.functions.invoke('moderate-listing', {
@@ -250,11 +247,7 @@ export function ProductSubmissionForm() {
           }
         });
       } catch (err) {
-<<<<<<< HEAD
         logErrorToProduction('Error invoking moderation:', { data: err });
-=======
-        console.error('Error invoking moderation:', err);
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
       }
       
       // Show success message

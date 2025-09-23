@@ -59,7 +59,6 @@ const footerSections = [
     description: 'Advanced AI platforms and solutions',
     icon: <Brain className="w-5 h-5 text-cyan-400" />,
     links: [
-<<<<<<< HEAD
       { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite' },
       { name: 'AI Assistant Platform', href: '/ai-assistant' },
       { name: 'Sales Copilot AI', href: '/sales-copilot' },
@@ -70,19 +69,6 @@ const footerSections = [
       { name: 'LLM Gateway Platform', href: '/llm-gateway' },
       { name: 'MLOps Starter Platform', href: '/mlops-starter' },
       { name: 'AI Business Solutions', href: '/innovative-business-solutions' }
-=======
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
-      { name: 'AI Consciousness Evolution 2029', href: '/ai-consciousness-evolution-2029' },
-      { name: 'AI Emotional Intelligence Training', href: '/ai-emotional-intelligence-training' },
-      { name: 'AI Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
-      { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
-      { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform' },
-      { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine' },
-      { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager' },
-      { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework' },
-      { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform' },
-      { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5614
     ]
   },
   {
@@ -90,7 +76,6 @@ const footerSections = [
     description: 'Breakthrough quantum and space technologies',
     icon: <Atom className="w-5 h-5 text-blue-400" />,
     links: [
-<<<<<<< HEAD
       { name: 'Quantum AI Cognitive Platform', href: '/quantum-ai-cognitive' },
       { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' },
       { name: 'Space Technology AI Platform', href: '/space-technology-ai-platform' },
@@ -101,20 +86,6 @@ const footerSections = [
       { name: 'Quantum AI Services 2025', href: '/quantum-ai-services-2025' },
       { name: 'Quantum Space Services', href: '/quantum-space-services' },
       { name: 'Quantum Computing Solutions', href: '/quantum-computing' }
-=======
-      { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform' },
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading' },
-      { name: 'Quantum Materials Discovery Platform', href: '/quantum-materials-discovery-platform' },
-      { name: 'Quantum Bio-Computing Platform', href: '/quantum-bio-computing-platform' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security' },
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
-      { name: 'Quantum Cloud Infrastructure Platform', href: '/quantum-cloud-infrastructure-platform' },
-      { name: 'Space Resource Mining Platform', href: '/space-resource-mining-platform' },
-      { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology' },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform' },
-      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5614
     ]
   },
   {

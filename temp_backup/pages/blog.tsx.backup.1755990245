@@ -524,7 +524,6 @@ const BlogPage: React.FC = () => {
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                   Subscribe
                 </button>
-<<<<<<< HEAD
               </div>
               
               <p className="text-sm text-gray-400 mt-4">
@@ -544,13 +543,6 @@ const BlogPage: React.FC = () => {
                   Become a Contributor <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </div>
-=======
-              </div>
-              
-              <p className="text-sm text-gray-400 mt-4">
-                No spam, unsubscribe at any time. We respect your privacy.
-              </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-72e9
             </motion.div>
           </div>
         </section>

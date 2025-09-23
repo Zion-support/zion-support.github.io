@@ -1185,38 +1185,3 @@ pre code {
     animation: hologram 5s ease-in-out infinite;
   }
 }
-<<<<<<< HEAD
-=======
-
-/* Responsive typography clamps */
-.h1, h1 { font-size: clamp(2rem, 4vw + 1rem, 3.75rem); }
-.h2, h2 { font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem); }
-.h3, h3 { font-size: clamp(1.25rem, 2vw + 0.5rem, 2rem); }
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Responsive container padding adjustments */
-@media (max-width: 640px) {
-  .container { padding-left: 1rem; padding-right: 1rem; }
-}
-@media (min-width: 641px) and (max-width: 1024px) {
-  .container { padding-left: 1.25rem; padding-right: 1.25rem; }
-}
-
-/* Helper utilities */
-/* Keep prior neon shadow-glow classes and add subtle versions */
-.shadow-glow-soft { box-shadow: 0 0 20px rgba(0, 212, 255, 0.15); }
-.shadow-glow-soft-lg { box-shadow: 0 0 30px rgba(0, 212, 255, 0.25); }
-
-/* Improve link contrast on dark bg */
-.prose a { color: #67e8f9; }
-.prose a:hover { color: #a5f3fc; }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ec95

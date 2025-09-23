@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-=======
-import React, { useState } from 'react';
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
-import UltraFuturisticFooter2040 from './UltraFuturisticFooter2040';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-988e
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2046 from '../backgrounds/UltraFuturisticBackground2046';
 import TopContactBar from './TopContactBar';
@@ -95,11 +89,7 @@ export default function Layout({ children }: LayoutProps) {
         {/* Layout Structure */}
         <div className="relative z-10">
           {/* Navigation */}
-<<<<<<< HEAD
           <UltraFuturisticNavigation2025 />
-=======
-          <UltraFuturisticNavigation2045 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-988e
           
           {/* Sidebar and Main Content */}
           <div className="flex">

@@ -4,7 +4,6 @@ The checkout flow uses Stripe. To ensure payments are processed in test mode for
 
 ## Environment Variables for Test Mode
 
-<<<<<<< HEAD
 The primary way to ensure Stripe operates in test mode is by setting the following environment variables:
 
 -   **`STRIPE_TEST_MODE=true`**:
@@ -56,16 +55,12 @@ Here are a few examples:
 -   **No Real Charges:** Test cards will not result in actual bank charges.
 -   **Stripe Dashboard:** You can view these test transactions in your Stripe Dashboard. Make sure you have "View test data" enabled in the dashboard (usually a toggle on the left sidebar or top right).
 -   **Order Status:** The application should reflect the outcome of the payment (e.g., order confirmation page for success, error message for decline). Orders created in test mode are flagged with `sandbox: true` in the `data/orders.json` file.
-=======
-Set them in `.env` or your hosting provider's environment configuration.
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 
 ## Example Checkout Flow
 
 To redirect customers to Stripe Checkout in test mode:
 
 ```ts
-<<<<<<< HEAD
 import { getStripe } from '@/utils/getStripe'; // Ensure this uses NEXT_PUBLIC_STRIPE_TEST_MODE
 
 // getStripe disables Stripe's advanced fraud signals which can
@@ -108,16 +103,3 @@ This executes the Prisma seeding script (`prisma/seed.ts`) so you can fully walk
 ## Sandbox Sample SKUs
 
 If your environment has no products available, the application falls back to a set of demo listings defined in `src/data/marketplaceData.ts`. These sample items let QA walk through the Add‑to‑Cart and payment screens without needing a live catalog. The fallback is automatic whenever the marketplace API returns an error or an empty array.
-=======
-import { loadStripe } from '@stripe/stripe-js';
-
-// Use the publishable test key so no live charges occur
-const stripe = await loadStripe(import.meta.env.NEXT_PUBLIC_STRIPE_TEST_KEY);
-
-// Request a Checkout Session from your backend
-const session = await axios.post('/payments/create-session', { priceId });
-
-// Redirect the browser to the hosted Checkout page
-await stripe?.redirectToCheckout({ sessionId: session.data.id });
-```
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies

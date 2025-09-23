@@ -48,7 +48,6 @@ import { innovativeAIAutonomousEcosystemServices2025 } from '../data/2025-innova
 import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
 import { innovativeMicroSaasBreakthroughs2025 } from '../data/2025-innovative-micro-saas-breakthroughs';
 
-<<<<<<< HEAD
 // Import our new service data
 import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
@@ -115,14 +114,6 @@ import { innovativeITInfrastructureServices2025V2 } from '../data/2025-innovativ
 import { innovativeAIServices2025V2 } from '../data/2025-innovative-ai-services-v2';
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
-=======
-
-
-// Import our new 2025 advanced services
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
-import { quantumEmergingTechServices2025 } from '../data/2025-quantum-emerging-tech-services';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9481
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -183,7 +174,6 @@ const allServices = [
   ...innovative2025AIAutonomousServices,
   
   // Our new 2025 advanced services
-<<<<<<< HEAD
   ...advancedBusinessIntelligenceServices2025,
   ...advancedITInfrastructureServices2025,
   
@@ -206,22 +196,11 @@ const allServices = [
   ...enterpriseITServices,
   ...cuttingEdgeFuturisticServices,
   ...advancedAIAutomationServices,
-=======
-  ...advancedITInfrastructureServices2025,
-  ...advancedEnterpriseServices2025,
-  ...quantumEmergingTechServices2025,
-  
-  // Existing services
-  ...realMicroSaasServices,
-  ...innovativeAIServices,
-  ...enterpriseITServices,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9481
   ...emergingTechServices,
   ...newRealServices,
   ...realOperationalServices,
   ...marketReadyServices,
   ...marketValidatedServices,
-<<<<<<< HEAD
   // Our new 2025 Q4 innovative services
   ...innovative2025Q4NewServices,
   ...advancedITInfrastructureServices2025,
@@ -276,9 +255,6 @@ const allServices = [
   ...innovativeAIServices2025V2,
   ...industrySpecificSolutions2025V2,
   ...emergingTechBreakthroughs2025V2
-=======
-  ...industryRealServices
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9481
 ];
 
 const categories = [

@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import UltraAdvancedNavigation2035 from './UltraAdvancedNavigation2035';
-import UltraAdvancedFooter2035 from './UltraAdvancedFooter2035';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraAdvancedFuturisticBackground2035 from './UltraAdvancedFuturisticBackground2035';
-import TopContactBar from './TopContactBar';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1805
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -144,7 +134,6 @@ export default function Layout({ children, seo }: LayoutProps) {
   const [showEnhancements, setShowEnhancements] = useState(false);
 
   return (
-<<<<<<< HEAD
     <div 
       className="min-h-screen bg-black text-white relative overflow-x-hidden"
       onKeyDown={handleKeyDown}
@@ -179,27 +168,17 @@ export default function Layout({ children, seo }: LayoutProps) {
       </AnimatePresence>
 
 
-=======
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Futuristic Background */}
-      <UltraAdvancedFuturisticBackground2035 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1805
       
       {/* Layout Structure */}
       <div className="relative z-10">
         {/* Top Contact Bar */}
         <TopContactBar />
         
-<<<<<<< HEAD
         {/* Enhanced Navigation */}
         <UltraFuturisticNavigation2037 
           onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
           aria-expanded={sidebarOpen}
         />
-=======
-        {/* Navigation */}
-        <UltraAdvancedNavigation2035 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1805
         
         {/* Sidebar and Main Content */}
         <div className="flex">
@@ -230,11 +209,7 @@ export default function Layout({ children, seo }: LayoutProps) {
         </div>
         
         {/* Footer */}
-<<<<<<< HEAD
         <UltraFuturisticFooter2037 />
-=======
-        <UltraAdvancedFooter2035 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1805
       </div>
 
       {/* Back to top button */}

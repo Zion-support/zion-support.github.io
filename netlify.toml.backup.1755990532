@@ -278,7 +278,6 @@
   name = "content-freshness-score-runner"
   schedule = "7 */12 * * *"
 
-<<<<<<< HEAD
 # Newly added intelligent automations
 [[scheduled.functions]]
   name = "anchor-links-auto-fixer"
@@ -304,16 +303,3 @@
 [[scheduled.functions]]
   name = "auto-discovery-orchestrator"
   schedule = "*/30 * * * *"
-=======
-[[scheduled.functions]]
-  name = "tech-debt-heatmap-runner"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "revenue-ideas-runner"
-  schedule = "17 */4 * * *"
-
-[[scheduled.functions]]
-  name = "code-ownership-map-runner"
-  schedule = "23 3 * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-0b41

@@ -2,29 +2,11 @@ import React, { useMemo } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
   Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube,
   ArrowRight, ExternalLink, Star, TrendingUp, Award, Clock, CheckCircle,
   Users, Briefcase, FileText, Video, Code, BookOpen, Zap, Heart,
   GraduationCap, Building, Palette, BarChart3, Cloud, Lock
-=======
-  ArrowRight, 
-  Rocket, 
-  BookOpen, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Target,
-  Linkedin,
-  Twitter,
-  Github,
-  Youtube
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
 } from 'lucide-react';
 
 // Memoized footer data for better performance
@@ -41,11 +23,7 @@ const footerData = {
     { label: 'Mission', href: '/mission' },
     { label: 'Services', href: '/services' },
     { label: 'Solutions', href: '/solutions' },
-<<<<<<< HEAD
     { label: 'Case Studies', href: '/case-studies' },
-=======
-    { label: 'Partners', href: '/partners' },
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
     { label: 'Careers', href: '/careers' }
   ],
   services: [
@@ -70,11 +48,7 @@ const footerData = {
     { label: 'Support', href: '/support' }
   ],
   social: [
-<<<<<<< HEAD
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5" /> },
-=======
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { label: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> },
     { label: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
@@ -214,70 +188,12 @@ const footerData = {
     <footer className="bg-black/90 backdrop-blur-xl border-t border-white/10 relative z-10">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-<<<<<<< HEAD
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
                 <Brain className="w-7 h-7 text-white" />
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-          
-          {/* Company Information */}
-          <div className="lg:col-span-1">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Link href="/" className="inline-block mb-6" aria-label="Zion Tech Group Home">
-                <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                    <Star className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </span>
-                </div>
-              </Link>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {footerData.company.description}
-              </p>
-              
-              {/* Contact Information */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                  <Phone className="w-4 h-4 flex-shrink-0" />
-                  <a 
-                    href={`tel:${footerData.company.phone}`}
-                    className="hover:underline focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded"
-                    aria-label={`Call us at ${footerData.company.phone}`}
-                  >
-                    {footerData.company.phone}
-                  </a>
-                </div>
-                
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                  <Mail className="w-4 h-4 flex-shrink-0" />
-                  <a 
-                    href={`mailto:${footerData.company.email}`}
-                    className="hover:underline focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded"
-                    aria-label={`Email us at ${footerData.company.email}`}
-                  >
-                    {footerData.company.email}
-                  </a>
-                </div>
-                
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                  <address className="not-italic">
-                    {footerData.company.address}
-                  </address>
-                </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
@@ -357,39 +273,7 @@ const footerData = {
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Quick Links */}
-=======
-          {/* Solutions */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-            >
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <Target className="w-4 h-4 mr-2 text-green-400" />
-                Solutions
-              </h3>
-              <ul className="space-y-3">
-                {footerData.solutions.map((solution) => (
-                  <li key={solution.label}>
-                    <Link
-                      href={solution.href}
-                      className="text-gray-300 hover:text-green-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-green-400/50 rounded"
-                      aria-label={`Explore ${solution.label} solutions`}
-                    >
-                      {solution.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-
-          {/* Resources */}
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
           <div>
             <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
               <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />

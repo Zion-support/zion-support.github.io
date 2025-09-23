@@ -30,7 +30,6 @@ const EnhancedNavigation: React.FC = () => {
     {
       name: 'Services',
       href: '/services',
-<<<<<<< HEAD
       icon: Briefcase,
       dropdown: [
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'AI-powered solutions' },
@@ -49,70 +48,28 @@ const EnhancedNavigation: React.FC = () => {
         { name: 'Startups', href: '/solutions/startups', icon: Rocket, description: 'Growth solutions' },
         { name: 'Government', href: '/solutions/government', icon: Shield, description: 'Public sector' },
         { name: 'Healthcare', href: '/solutions/healthcare', icon: Brain, description: 'Medical solutions' }
-=======
-      children: [
-        { label: 'AI & Automation', href: '/ai-automation-services' },
-        { label: 'Quantum Computing', href: '/quantum-services' },
-        { label: 'IT Infrastructure', href: '/it-services' },
-        { label: 'Cloud Solutions', href: '/cloud-platform' },
-        { label: 'Cybersecurity', href: '/security' },
-        { label: 'Micro SAAS', href: '/micro-saas' }
-      ]
-    },
-    {
-      label: 'Showcase',
-      href: '/showcase',
-      children: [
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Success Stories', href: '/success-stories' },
-        { label: 'Innovation Lab', href: '/innovation-lab' },
-        { label: '2025 Services', href: '/comprehensive-2025-services-showcase' },
-        { label: '2026 Services', href: '/ultimate-2026-services-showcase' },
-        { label: '2037 Services', href: '/2037-innovative-services-showcase' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
       ]
     },
     {
       name: 'Resources',
       href: '/resources',
-<<<<<<< HEAD
       icon: BookOpen,
       dropdown: [
         { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical guides' },
         { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
         { name: 'Case Studies', href: '/case-studies', icon: Star, description: 'Success stories' },
         { name: 'API Reference', href: '/api', icon: Cpu, description: 'Developer tools' }
-=======
-      children: [
-        { label: 'Documentation', href: '/docs' },
-        { label: 'Blog', href: '/blog' },
-        { label: 'Research', href: '/research-development' },
-        { label: 'Training', href: '/training' },
-        { label: 'Reports', href: '/reports' },
-        { label: 'Events', href: '/events' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
       ]
     },
     {
       name: 'About',
       href: '/about',
-<<<<<<< HEAD
       icon: Users
     },
     {
       name: 'Contact',
       href: '/contact',
       icon: Phone
-=======
-      children: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Contact', href: '/contact' },
-        { label: 'Partners', href: '/partners' },
-        { label: 'Investors', href: '/investors' },
-        { label: 'Locations', href: '/locations' }
-      ]
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
     }
   ];
 
@@ -135,11 +92,7 @@ const EnhancedNavigation: React.FC = () => {
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-<<<<<<< HEAD
               const target = event.target as any;
-=======
-      const target = event.target as any;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
       if (!target.closest('.navigation-dropdown')) {
         closeDropdown();
       }

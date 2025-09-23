@@ -9,7 +9,6 @@ import {
   GraduationCap, Building, Palette, BarChart3, Cloud, Lock
 } from 'lucide-react';
 
-<<<<<<< HEAD
 // Memoized footer data for better performance
 const footerData = {
   company: {
@@ -18,26 +17,6 @@ const footerData = {
     address: '364 E Main St STE 1008, Middletown DE 19709',
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com'
-=======
-const footerSections = [
-  {
-    title: 'Featured Revolutionary Services 2046',
-    description: 'Our most innovative and cutting-edge 2046 solutions',
-    icon: <Star className="w-5 h-5 text-yellow-400" />,
-    color: 'from-yellow-500 to-orange-500',
-    links: [
-      { name: '2046 Services Showcase', href: '/services-2046-showcase', featured: true },
-      { name: 'Quantum AI Brain-Computer Interface 2046', href: '/quantum-ai-brain-computer-interface-platform-2046', featured: true },
-      { name: 'Space Resource Intelligence 2046', href: '/space-resource-intelligence-platform-2046', featured: true },
-      { name: 'Quantum Financial Trading Intelligence 2046', href: '/quantum-financial-trading-intelligence-2046', featured: true },
-      { name: 'Quantum Cybersecurity Future 2046', href: '/quantum-cybersecurity-future-platform-2046', featured: true },
-      { name: 'AI Healthcare Diagnostics 2046', href: '/ai-powered-healthcare-diagnostics-platform-2046', featured: true },
-      { name: 'Quantum Energy Optimization 2046', href: '/quantum-energy-optimization-platform-2046' },
-      { name: 'Quantum Supply Chain Intelligence 2046', href: '/quantum-supply-chain-intelligence-2046' },
-      { name: 'Quantum Manufacturing Intelligence 2046', href: '/quantum-manufacturing-intelligence-2046' },
-      { name: 'Quantum Education Intelligence 2046', href: '/quantum-education-intelligence-platform-2046' }
-    ]
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f6bf
   },
   quickLinks: [
     { label: 'About Us', href: '/about' },

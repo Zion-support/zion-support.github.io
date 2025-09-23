@@ -5,11 +5,7 @@ import {
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-<<<<<<< HEAD
   Building
-=======
-  Building, Cpu, DollarSign
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b960
 } from 'lucide-react';
 
 // Import our new innovative 2025 services
@@ -94,7 +90,6 @@ import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuris
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 import { advancedITInfrastructureServices } from '../data/2025-advanced-it-infrastructure-services';
 
-<<<<<<< HEAD
 // Import our new 2025 advanced real micro SAAS expansion
 import { advancedRealMicroSaasExpansion2025 } from '../data/2025-advanced-real-micro-saas-expansion';
 
@@ -125,13 +120,6 @@ import { industrySpecializedSolutions2025 } from '../data/2025-industry-speciali
 import { advancedMicroSaasServices2025V2 } from '../data/2025-advanced-micro-saas-expansion-v2';
 import { specializedEnterpriseServices2025 } from '../data/2025-specialized-enterprise-services';
 import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services';
-=======
-// Import our new 2025 advanced specialized services
-import { advancedFinancialTechServices2025 } from '../data/2025-advanced-financial-tech-services';
-import { advancedHealthcareTechServices2025 } from '../data/2025-advanced-healthcare-tech-services';
-import { advancedLogisticsSupplyChainServices2025 } from '../data/2025-advanced-logistics-supply-chain-services';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-b960
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';

@@ -7,15 +7,6 @@ on:
 
 permissions:
   contents: write
-<<<<<<< HEAD
-=======
-  pull-requests: write
-  actions: read
-
-concurrency:
-  group: "security-scan"
-  cancel-in-progress: true
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
 
 jobs:
   security:

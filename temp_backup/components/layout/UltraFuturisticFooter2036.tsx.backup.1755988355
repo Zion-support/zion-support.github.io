@@ -79,7 +79,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
@@ -87,18 +86,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
     { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> }
-=======
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
-    { name: 'Financial Solutions', href: '/financial-solutions' },
-    { name: 'Government Solutions', href: '/government-technology-solutions' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Support', href: '/support' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-0fc2
   ];
 
   const contactInfo = {

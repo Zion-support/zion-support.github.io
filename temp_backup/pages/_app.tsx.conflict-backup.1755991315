@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 
-<<<<<<< HEAD
 export default function ZionApp({ Component, pageProps }: AppProps) {
   return (
     <FuturisticLayout>
@@ -111,10 +110,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </ProviderWrapper>
   );
 }
-=======
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-
-export default MyApp;
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

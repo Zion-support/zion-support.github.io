@@ -8,28 +8,6 @@ import {
   Building
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-// Import our new innovative 2025 services
-import { realInnovativeMicroSaasServices2025 } from '../data/2025-real-innovative-micro-saas-expansion';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services-expansion';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services-expansion';
-
-// Import our new comprehensive 2025 services expansion
-import { comprehensiveRealServicesExpansion2025 } from '../data/2025-comprehensive-real-services-expansion';
-import { advancedITAISpecializedServices2025 } from '../data/2025-advanced-it-ai-specialized-services';
-import { emergingTechInnovativeServices2025 } from '../data/2025-emerging-tech-innovative-services';
-
-// Import our new 2025 advanced services
-import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-
-// Import our new real services
-import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansion';
-import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
-import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ad46
 // Import our new service data
 import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
@@ -54,7 +32,6 @@ import { revolutionary2041AdvancedServices } from '../data/revolutionary-2041-ad
 import { advanced2041EnterpriseServices } from '../data/advanced-2041-enterprise-services';
 import { revolutionary2042MicroSaasServices } from '../data/revolutionary-2042-micro-saas-services';
 
-<<<<<<< HEAD:pages/services.tsx.backup.1755988043
 // Import our new 2025 ultimate services expansion
 import { ultimate2025MicroSaasExpansion } from '../data/2025-ultimate-micro-saas-expansion';
 import { ultimate2025ITServicesExpansion } from '../data/2025-ultimate-it-services-expansion';
@@ -102,12 +79,6 @@ import { innovativeMicroSaasBreakthroughs2025 } from '../data/2025-innovative-mi
 import { innovativeITInfrastructureBreakthroughs2025 } from '../data/2025-innovative-it-infrastructure-breakthroughs';
 import { innovativeAIBreakthroughs2025 } from '../data/2025-innovative-ai-breakthroughs';
 import { industrySpecializedSolutions2025 } from '../data/2025-industry-specialized-solutions';
-=======
-// Import our new practical services
-import { realPracticalMicroSaas2025 } from '../data/real-practical-micro-saas-2025';
-import { advancedITEnterpriseServices2025 } from '../data/advanced-it-enterprise-services-2025';
-import { specializedAIServices2025 } from '../data/specialized-ai-services-2025';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd:pages/services.tsx
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -161,29 +132,10 @@ const allServices = [
   ...realInnovativeMicroSaasServices2025,
   ...innovativeITInfrastructureServices2025,
   ...innovativeAIServices2025,
-<<<<<<< HEAD
   ...innovativeITServices2025,
   ...emergingTechServices2025,
   ...additionalRealServices2025,
   ...newInnovativeAIServices
-=======
-=======
-  
-  // Our new comprehensive 2025 services expansion
-  ...comprehensiveRealServicesExpansion2025,
-  ...advancedITAISpecializedServices2025,
-  ...emergingTechInnovativeServices2025,
-  
-  // Our new 2025 advanced services
-  ...advancedBusinessIntelligenceServices2025,
-  ...advancedITInfrastructureServices2025,
-  
-  // Our new real services 2025
-  ...realMicroSaas2025Expansion,
-  ...realITServices2025Expansion,
-  ...realAIServices2025Expansion,
-  
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ad46
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
@@ -209,17 +161,10 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-<<<<<<< HEAD:pages/services.tsx.backup.1755988043
   // Our new 2025 advanced services
   ...ultimate2025MicroSaasExpansion,
   ...ultimate2025ITServicesExpansion,
   ...ultimate2025AIServicesExpansion,
-=======
-  // Add our new practical services
-  ...realPracticalMicroSaas2025,
-  ...advancedITEnterpriseServices2025,
-  ...specializedAIServices2025,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd:pages/services.tsx
   // Our new innovative services
   ...innovative2037MicroSaasServices,
   ...innovative2037ITServices,
@@ -239,7 +184,6 @@ const allServices = [
   ...revolutionary2041AdvancedServices,
   // Our latest innovative services
   ...advanced2041EnterpriseServices,
-<<<<<<< HEAD:pages/services.tsx.backup.1755988043
   ...revolutionary2042MicroSaasServices,
   // Our new 2025 ultimate services expansion
   
@@ -269,9 +213,6 @@ const allServices = [
   
   // Our new 2025 innovative business solutions expansion
   ...innovativeBusinessSolutionsExpansion2025
-=======
-  ...revolutionary2042MicroSaasServices
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20fd:pages/services.tsx
 ];
 
 const categories = [

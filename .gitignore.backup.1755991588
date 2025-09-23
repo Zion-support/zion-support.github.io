@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Node
 node_modules/
 *.log
@@ -54,11 +53,3 @@ automation/logs/autonomous-system.log .next/
 !/.vscode
 !/.vscode/extensions.json
 !/.vscode/settings.json
-=======
-node_modules
-.DS_Store
-.env
-server/.env
-npm-debug.log*
-yarn-error.log
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-<<<<<<< HEAD
 interface AnalyticsEvent {
   event: string;
   category: string;
@@ -155,52 +154,6 @@ const AnalyticsTracker: React.FC = () => {
       const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
       if (scrollPercent > maxScroll) {
         maxScroll = scrollPercent;
-=======
-// Extend Window interface for Google Analytics
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
-
-interface AnalyticsTrackerProps {
-  trackingId?: string;
-  enableDebug?: boolean;
-}
-
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ 
-  trackingId = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX',
-  enableDebug = false 
-}) => {
-  const router = useRouter();
-
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
-      // Google Analytics 4
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-
-      // Track page views on route changes
-      const handleRouteChange = (url: string) => {
-        gtag('config', trackingId, {
-          page_title: document.title,
-          page_location: url,
-        });
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         
         // Track scroll milestones
         if (scrollPercent >= 25 && maxScroll < 50) {

@@ -82,7 +82,6 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-<<<<<<< HEAD
   background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
   border-radius: 6px;
   border: 2px solid rgba(0, 0, 0, 0.3);
@@ -91,33 +90,17 @@ body::before {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink), var(--neon-cyan));
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-=======
-  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
 }
 
 /* Selection Styles */
 ::selection {
-<<<<<<< HEAD
   background: rgba(0, 212, 255, 0.4);
-=======
-  background: rgba(168, 85, 247, 0.3);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
   color: #ffffff;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
 }
 
 ::-moz-selection {
-<<<<<<< HEAD
   background: rgba(0, 212, 255, 0.4);
-=======
-  background: rgba(168, 85, 247, 0.3);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
   color: #ffffff;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
 }
@@ -145,7 +128,6 @@ body::before {
   background-clip: text;
 }
 
-<<<<<<< HEAD
 .text-gradient-gold {
   background: linear-gradient(135deg, var(--neon-gold), var(--neon-orange));
   -webkit-background-clip: text;
@@ -166,42 +148,6 @@ body::before {
 }
 
 /* Futuristic Button Styles */
-=======
-/* Line Clamp Utilities */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Skip Link for Accessibility */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--neon-purple);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  border-radius: 4px;
-  z-index: 1000;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
-/* Enhanced Button Styles */
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
 .btn-futuristic {
   position: relative;
   background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
@@ -212,21 +158,11 @@ body::before {
   padding: 16px 32px;
   cursor: pointer;
   overflow: hidden;
-<<<<<<< HEAD
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
     0 8px 25px rgba(0, 212, 255, 0.3),
     0 0 0 1px rgba(0, 212, 255, 0.1);
   backdrop-filter: blur(10px);
-=======
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
-}
-
-.btn-futuristic:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
 }
 
 .btn-futuristic::before {
@@ -244,7 +180,6 @@ body::before {
   left: 100%;
 }
 
-<<<<<<< HEAD
 .btn-futuristic:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 
@@ -537,44 +472,6 @@ body::before {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-=======
-/* Glassmorphism Effects */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.glass-dark {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-}
-
-/* Enhanced Card Styles */
-.card-futuristic {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
-  border: 1px solid rgba(168, 85, 247, 0.2);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.card-futuristic:hover {
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.2);
-  transform: translateY(-4px);
-}
-
-/* Loading Animations */
-@keyframes shimmer {
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
 }
 
 .shimmer {
@@ -588,7 +485,6 @@ body::before {
   animation: float 6s ease-in-out infinite;
 }
 
-<<<<<<< HEAD
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -597,16 +493,6 @@ body::before {
 /* Pulse Animation */
 .pulse-neon {
   animation: pulseNeon 2s ease-in-out infinite;
-=======
-/* Pulse Glow */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
 }
 
 @keyframes pulseNeon {
@@ -620,21 +506,10 @@ body::before {
   }
 }
 
-<<<<<<< HEAD
 /* Rotate Animation */
 @keyframes rotate-slow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-=======
-/* Gradient Text Animation */
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
 }
 
 .gradient-animate {
@@ -642,7 +517,6 @@ body::before {
   animation: gradient-shift 3s ease infinite;
 }
 
-<<<<<<< HEAD
 /* Fade In Animation */
 @keyframes fade-in {
   from { 
@@ -921,10 +795,6 @@ body::before {
 }
 
 .input-futuristic:focus {
-=======
-/* Enhanced Focus States */
-.focus-ring:focus {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
   outline: none;
   ring: 2px;
   ring-color: var(--neon-purple);
@@ -971,7 +841,6 @@ body::before {
   }
 }
 
-<<<<<<< HEAD
 /* Utility Classes */
 .sr-only {
   position: absolute;
@@ -1052,29 +921,10 @@ body::before {
 /* Accessibility Enhancements */
 @media (prefers-reduced-motion: reduce) {
   * {
-=======
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .card-futuristic {
-    border-width: 2px;
-  }
-  
-  .btn-futuristic {
-    border: 2px solid currentColor;
-  }
-}
-
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-<<<<<<< HEAD
 }
 
 /* High Contrast Mode */
@@ -1100,19 +950,11 @@ body::before {
   
   .card-futuristic {
     background: rgba(255, 255, 255, 0.05);
-=======
-  
-  .float,
-  .pulse-glow,
-  .gradient-animate {
-    animation: none;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
   }
 }
 
 /* Print Styles */
 @media print {
-<<<<<<< HEAD
   .btn-futuristic,
   .card-futuristic,
   .neon-glow-cyan,
@@ -1126,14 +968,5 @@ body::before {
   .text-gradient {
     color: #000 !important;
     background: none !important;
-=======
-  .no-print {
-    display: none !important;
-  }
-  
-  body {
-    background: white !important;
-    color: black !important;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-806c
   }
 }

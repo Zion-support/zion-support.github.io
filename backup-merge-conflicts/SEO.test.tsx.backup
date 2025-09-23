@@ -1,9 +1,4 @@
-<<<<<<< HEAD:backup-merge-conflicts/SEO.test.tsx.backup
 <<<<<<< HEAD:__tests__/SEO.test.tsx
-=======
-<<<<<<< HEAD:backup-merge-conflicts/SEO.test.tsx.backup
-<<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/SEO.test.tsx.backup
 =======
 >>>>>>> pr-11913:__tests__/SEO.test.tsx
 import React from 'react';
@@ -22,13 +17,8 @@ describe('SEO', () => {
 });
 import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe("SEO",() => { test("renders without crashing",() => { render(<SEO />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});''"
-<<<<<<< HEAD:backup-merge-conflicts/SEO.test.tsx.backup
 <<<<<<< HEAD:__tests__/SEO.test.tsx
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-=======
-=======
-import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 =======

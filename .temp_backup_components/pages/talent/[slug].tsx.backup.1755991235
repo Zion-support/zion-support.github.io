@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -221,10 +220,3 @@ export default function TalentProfilePage() {
     </div>
   );
 }
-=======
-import { useRouter } from 'next/router';
-export default function TalentDetail(){
-  const { query } = useRouter();
-  return <div className="max-w-3xl mx-auto p-6">Talent: {String(query.slug || '')}</div>;
-}
->>>>>>> origin/cursor/build-white-labeled-zion-hire-ai-saas-21f7

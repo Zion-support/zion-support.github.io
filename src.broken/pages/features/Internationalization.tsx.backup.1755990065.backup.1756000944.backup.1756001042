@@ -1,7 +1,6 @@
 import React from 'react';
 export function Internationalization() {
   return (
-<<<<<<< HEAD
     <>
       <SEO
         title="Internationalization"
@@ -47,11 +46,5 @@ export function Internationalization() {
         </div>
       </main>
     </>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

@@ -352,7 +352,6 @@
     "redundancy:ultimate:master:stop": "node automation/ultimate-redundancy-master.cjs stop",
     "redundancy:ultimate:master:restart": "node automation/ultimate-redundancy-master.cjs restart",
     "redundancy:ultimate:master:status": "node automation/ultimate-redundancy-master.cjs status",
-<<<<<<< HEAD
     "redundancy:ultimate:master:health": "node automation/ultimate-redundancy-master.cjs health",
     "redundancy:ultimate:v2:start": "bash automation/start-ultimate-redundancy-v2.sh start",
     "redundancy:ultimate:v2:stop": "bash automation/start-ultimate-redundancy-v2.sh stop",
@@ -400,28 +399,6 @@
     "redundancy:ultimate:v2:pm2:scale": "pm2 scale ecosystem.ultimate-redundancy-v2.cjs",
     "redundancy:ultimate:v2:pm2:monit": "pm2 monit",
     "redundancy:ultimate:v2:pm2:dashboard": "pm2 plus"
-=======
-    "redundancy:ultimate:master:report": "node automation/ultimate-redundancy-master.cjs report",
-    "redundancy:ultimate:master:monitor": "node automation/ultimate-redundancy-master.cjs monitor",
-    "redundancy:v2:start": "bash automation/start-comprehensive-redundancy-v2.sh start",
-    "redundancy:v2:stop": "bash automation/start-comprehensive-redundancy-v2.sh stop",
-    "redundancy:v2:restart": "bash automation/start-comprehensive-redundancy-v2.sh restart",
-    "redundancy:v2:status": "bash automation/start-comprehensive-redundancy-v2.sh status",
-    "redundancy:v2:health": "bash automation/start-comprehensive-redundancy-v2.sh health",
-    "redundancy:v2:logs": "bash automation/start-comprehensive-redundancy-v2.sh logs",
-    "redundancy:v2:test": "bash automation/start-comprehensive-redundancy-v2.sh test",
-    "automation:comprehensive:start": "node automation/comprehensive-automation-orchestrator.cjs start",
-    "automation:comprehensive:stop": "node automation/comprehensive-automation-orchestrator.cjs stop",
-    "automation:comprehensive:status": "node automation/comprehensive-automation-orchestrator.cjs status",
-    "automation:comprehensive:health": "node automation/comprehensive-automation-orchestrator.cjs health",
-    "automation:comprehensive:monitor": "node automation/comprehensive-automation-orchestrator.cjs monitor",
-    "redundancy:all:start": "bash automation/start-all-redundancy-systems.sh start",
-    "redundancy:all:stop": "bash automation/start-all-redundancy-systems.sh stop",
-    "redundancy:all:restart": "bash automation/start-all-redundancy-systems.sh restart",
-    "redundancy:all:status": "bash automation/start-all-redundancy-systems.sh status",
-    "redundancy:all:health": "bash automation/start-all-redundancy-systems.sh health",
-    "redundancy:all:test": "bash automation/start-all-redundancy-systems.sh test"
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-c69f
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -183,10 +182,4 @@ export const useEmailAuth = (
   };
 
   return { login, signup, resetPassword };
-=======
-// Hook for useEmailAuth;
-export const useUseEmailAuth: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
->>>>>>> origin/automation-error-fixes
 };

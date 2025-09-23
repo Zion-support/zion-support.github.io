@@ -6,11 +6,7 @@ import {
   Brain, Rocket, Target, Atom, Shield,
   DollarSign, BarChart3, Globe, Grid, Heart, Database,
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,
-<<<<<<< HEAD
   Zap, Eye, Infinity, Sparkles, Users, FileText, Briefcase
-=======
-  Zap, Eye, Infinity, Sparkles, Search, User, Bell
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a2aa
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -204,7 +200,6 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
-<<<<<<< HEAD
     name: 'Company',
     href: '/about',
     icon: <Building className="w-5 h-5" />,
@@ -263,34 +258,6 @@ const navigationItems: NavigationItem[] = [
     description: 'Get in touch with us',
     category: 'contact',
     color: 'from-green-500 to-emerald-500'
-=======
-    name: 'Resources',
-    href: '/resources',
-    icon: <Database className="w-5 h-5" />,
-    description: 'Knowledge and resources',
-    category: 'resources',
-    color: 'from-yellow-500 to-orange-500',
-    children: [
-      { 
-        name: 'Blog', 
-        href: '/blog', 
-        description: 'Latest insights and updates',
-        icon: <Eye className="w-4 h-4" />
-      },
-      { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
-        description: 'Success stories and implementations',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      { 
-        name: 'Documentation', 
-        href: '/docs', 
-        description: 'Technical documentation and guides',
-        icon: <Settings className="w-4 h-4" />
-      }
-    ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a2aa
   }
 ];
 

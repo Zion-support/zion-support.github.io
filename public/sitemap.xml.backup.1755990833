@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/quantum-energy/</loc>
     <lastmod>2025-08-16T02:29:22.346Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -395,16 +394,6 @@
   <url>
     <loc>https://ziontechgroup.com/quantum-space-mining-platform/</loc>
     <changefreq>monthly</changefreq>
-=======
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/404</loc>
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-    <changefreq>weekly</changefreq>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     <priority>0.6</priority>
   </url>
   <url>
@@ -639,7 +628,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/services/5g-private-network-solutions/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2178,18 +2166,6 @@
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/explore</loc>
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-=======
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     <loc>https://ziontechgroup.com/explore</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -20,14 +19,4 @@ export default function OnboardingPage() {
       </div>
     </>
   );
-=======
-import OnboardingWizard from '../components/onboarding/OnboardingWizard'
-
-export default function OnboardingPage() {
-  return (
-    <div>
-      <OnboardingWizard />
-    </div>
-  )
->>>>>>> origin/auto/autonomy-17186719616
 }

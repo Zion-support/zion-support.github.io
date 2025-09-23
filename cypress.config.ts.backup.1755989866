@@ -4,7 +4,6 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
-<<<<<<< HEAD
     baseUrl: `http://localhost:3000`, // Standard Next.js port
     supportFile: 'cypress/support/e2e.ts',
     experimentalModifyObstructiveThirdPartyCode: true,
@@ -32,9 +31,5 @@ export default defineConfig({
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
     toConsole: true,
-=======
-    baseUrl: 'http://localhost:3000',
-    supportFile: 'cypress/support/e2e.ts',
->>>>>>> origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress
   },
 });

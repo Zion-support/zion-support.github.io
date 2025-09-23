@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-<<<<<<< HEAD
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen,
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, 
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb,
@@ -14,10 +13,6 @@ import {
   Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon,
   Cpu as Quantum, Brain as AI, Code as MicroSaas, Server as ITServices, 
   Globe as Metaverse, Shield as Cybersecurity, Leaf, Mountain, Plane
-=======
-  Rocket, BookOpen, DollarSign, BarChart3, Globe, Star, 
-  Cpu, Grid, Building, MessageCircle, Brain, Atom, Target, Users, Search
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4109
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -339,7 +334,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Partnership opportunities',
         icon: <Play className="w-4 h-4" />
       },
-<<<<<<< HEAD
       {
         name: 'Predictive Analytics',
         href: '/predictive-analytics',
@@ -404,8 +398,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Grid className="w-4 h-4" />,
         featured: true
       },
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4109
       { 
         name: 'Careers', 
         href: '/careers', 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useCallback } from 'react';
 
 interface AnalyticsTrackerProps {
@@ -250,114 +249,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     initAnalytics();
 
     // Cleanup function
-=======
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-
-interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  timestamp: number;
-  page: string;
-  userAgent: string;
-  referrer: string;
-}
-
-interface ConversionGoal {
-  id: string;
-  name: string;
-  type: 'page_view' | 'click' | 'form_submit' | 'scroll' | 'time_on_page';
-  target: string;
-  value: number;
-  achieved: boolean;
-}
-
-const AnalyticsTracker: React.FC = () => {
-  const router = useRouter();
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
-  const [conversionGoals, setConversionGoals] = useState<ConversionGoal[]>([
-    {
-      id: 'homepage_visit',
-      name: 'Homepage Visit',
-      type: 'page_view',
-      target: '/',
-      value: 1,
-      achieved: false
-    },
-    {
-      id: 'services_view',
-      name: 'Services Page View',
-      type: 'page_view',
-      target: '/services',
-      value: 5,
-      achieved: false
-    },
-    {
-      id: 'contact_click',
-      name: 'Contact Button Click',
-      type: 'click',
-      target: 'contact-button',
-      value: 10,
-      achieved: false
-    },
-    {
-      id: 'form_submit',
-      name: 'Contact Form Submit',
-      type: 'form_submit',
-      target: 'contact-form',
-      value: 25,
-      achieved: false
-    },
-    {
-      id: 'scroll_depth',
-      name: 'Scroll Depth 75%',
-      type: 'scroll',
-      target: '75%',
-      value: 15,
-      achieved: false
-    },
-    {
-      id: 'time_on_page',
-      name: 'Time on Page 2min',
-      type: 'time_on_page',
-      target: '120',
-      value: 20,
-      achieved: false
-    }
-  ]);
-  const [sessionStart, setSessionStart] = useState<number>(Date.now());
-  const [pageViews, setPageViews] = useState<number>(0);
-  const [uniquePages, setUniquePages] = useState<Set<string>>(new Set());
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  useEffect(() => {
-    // Initialize analytics
-    initializeAnalytics();
-    
-    // Track page views
-    trackPageView();
-    
-    // Track user engagement
-    trackUserEngagement();
-    
-    // Track conversions
-    trackConversions();
-    
-    // Track performance
-    trackPerformance();
-    
-    // Track errors
-    trackErrors();
-    
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-64bc
     return () => {
       // Cleanup
       cleanupAnalytics();
     };
-<<<<<<< HEAD
   }, []);
 
   // Track page views on route changes
@@ -387,8 +282,6 @@ const AnalyticsTracker: React.FC = () => {
           trackMetric('DOMReadyTime', navigation.domContentLoadedEventEnd - startTime);
         }
       }
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-64bc
   }, [router.asPath]);
 
   const initializeAnalytics = () => {
@@ -743,7 +636,6 @@ const AnalyticsTracker: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 // Type definitions for performance entries
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
@@ -769,6 +661,4 @@ declare global {
   }
 }
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-64bc
 export default AnalyticsTracker;

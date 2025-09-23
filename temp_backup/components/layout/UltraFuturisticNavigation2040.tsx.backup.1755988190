@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, 
   X, 
   Search, 
@@ -34,18 +33,6 @@ import ThemeToggle from '../ThemeToggle';
 
 // Define Node type for DOM event handling
 type Node = HTMLElement | null;
-=======
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  BarChart3, Star, 
-  Grid, TrendingUp, 
-  GraduationCap,
-  Cpu, Cloud, Monitor, Network, Heart, ShoppingCart, MessageCircle, HelpCircle, Building,
-  Zap, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
-  BookOpen, FileText, Handshake, Sun, Moon
-} from 'lucide-react';
-import EnhancedSearch from '../EnhancedSearch';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
 
 interface NavigationItem {
   label: string;
@@ -202,12 +189,8 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-=======
-  const [isDarkMode, setIsDarkMode] = useState(true);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
 
   useEffect(() => {
     const handleScroll = () => {
@@ -218,7 +201,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   // Enhanced mobile menu handling
   const handleMobileMenuToggle = useCallback(() => {
     setIsOpen(!isOpen);
@@ -281,27 +263,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   // Enhanced accessibility
   const getAriaExpanded = (label: string) => {
     return activeDropdown === label ? 'true' : 'false';
-=======
-  // Dark mode effect
-  useEffect(() => {
-    const savedMode = localStorage.getItem('dark-mode');
-    if (savedMode !== null) {
-      setIsDarkMode(savedMode === 'true');
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('dark-mode', isDarkMode.toString());
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
-
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
   };
 
   const getAriaHasPopup = (item: NavigationItem) => {
@@ -417,7 +378,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Enhanced Right Section */}
           <div className="flex items-center space-x-4">
             {/* Enhanced Search */}
@@ -486,24 +446,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             </div>
 
             {/* Enhanced Contact Button */}
-=======
-          {/* Search and Dark Mode */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <EnhancedSearch />
-            
-            {/* Dark Mode Toggle */}
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 rounded-xl hover:bg-white/5"
-              aria-label="Toggle dark mode"
-            >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
             <Link
               href="/contact"
               className="hidden md:block px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"

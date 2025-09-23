@@ -4,16 +4,12 @@ on:
   push:
     branches: [ main ]
   pull_request:
-<<<<<<< HEAD
   schedule:
     - cron: "0 3 * * *"
 
 permissions:
   contents: write
   pull-requests: write
-=======
-    branches: [ main ]
->>>>>>> origin/cursor/automated-agent-creation-and-market-research-9320
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -24,7 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-<<<<<<< HEAD
         with:
           fetch-depth: 0
       - name: Use Node.js 20.x
@@ -62,14 +57,3 @@ jobs:
             git commit -m "chore(eslint): auto-fix lint issues"
             git push
           fi
-=======
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm ci
-      - name: Pre-generate marketplace data
-        run: node automation/marketplace-orchestrator.cjs once || true
-      - run: npm run build
->>>>>>> origin/cursor/automated-agent-creation-and-market-research-9320

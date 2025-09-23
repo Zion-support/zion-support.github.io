@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   X, ChevronDown, ChevronRight, Search, Settings, User, 
   Brain, Atom, Rocket, Shield, Cpu, Database, Cloud, 
   BarChart3, Code, Smartphone, Server, Users, Award, 
@@ -12,16 +11,6 @@ import {
   ExternalLink, Home, Briefcase, Info, HelpCircle, Shield as ShieldIcon, Play,
   Sparkles, Target, Palette, Camera, Mic, Speaker, Wifi, Bluetooth, Satellite,
   Telescope, Plane, Moon, Sun, Heart, Handshake, Car, Building, Music, Trees, Leaf, DollarSign, Factory, Battery, Newspaper
-=======
-  ChevronRight, Home, Star, Users, 
-  HelpCircle, Mail, Phone, MapPin,
-  Brain, Atom, Rocket, DollarSign,
-  Zap,
-  TrendingUp, Award, CheckCircle, Clock,
-  Search, X as CloseIcon,
-  Target, BookOpen, Calendar, Video, FileText,
-  Layers, Server
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-02e3
 } from 'lucide-react';
 
 const contactInfo = {
@@ -33,7 +22,6 @@ const contactInfo = {
 
 const sidebarSections = [
   {
-<<<<<<< HEAD
     title: 'Featured Services',
     icon: <Star className="w-5 h-5" />,
     color: 'text-yellow-400',
@@ -50,11 +38,6 @@ const sidebarSections = [
     title: 'AI & Consciousness',
     icon: <Brain className="w-5 h-5" />,
     color: 'text-violet-400',
-=======
-    title: 'Featured Revolutionary Services',
-    icon: <Star className="w-5 h-5" />,
-    color: 'from-yellow-500 to-orange-500',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-02e3
     items: [
       { name: 'AI Consciousness Evolution 2040', href: '/ai-consciousness-evolution-2040', badge: 'Breakthrough' },
       { name: 'Quantum Neural Ecosystem 2040', href: '/quantum-neural-ecosystem-2040', badge: 'New' },
@@ -313,7 +296,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     setExpandedItems(newExpandedItems);
   }, [router.pathname]);
 
-<<<<<<< HEAD
   const sidebarSections = [
     {
       id: 'revolutionary-2045',
@@ -641,14 +623,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       item.label.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-=======
-  // Search functionality can be implemented here if needed
-  // const filteredServices = sidebarSections.flatMap(section =>
-  //   section.items.filter(item =>
-  //     item.name.toLowerCase().includes(searchQuery.toLowerCase())
-  //   )
-  // );
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-02e3
 
   return (
     <AnimatePresence>
@@ -674,7 +648,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             {/* Header */}
             <div className="sticky top-0 bg-gradient-to-r from-gray-900 to-black border-b border-cyan-400/20 p-4">
               <div className="flex items-center justify-between mb-4">
-<<<<<<< HEAD
                 <Link href="/" className="flex items-center space-x-2" onClick={onClose}>
                   <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                     <Star className="w-5 h-5 text-white" />
@@ -683,22 +656,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                     Zion Tech
                   </span>
                 </Link>
-=======
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
-                      <Zap className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50" />
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                      Zion Tech Group
-                    </div>
-                    <div className="text-xs text-cyan-400">2045 Future Technology</div>
-                  </div>
-                </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-02e3
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
@@ -729,64 +686,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                     onClick={() => toggleSection(section.id)}
                     className="w-full flex items-center justify-between p-3 text-left text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
                   >
-<<<<<<< HEAD
                     <div className="flex items-center space-x-3">
                       <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${section.color} flex items-center justify-center`}>
                         <section.icon className="w-4 h-4 text-white" />
-=======
-                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-xs text-gray-400">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <Star className="w-5 h-5 text-cyan-400" />
-                <span>Quick Links</span>
-              </h3>
-              <div className="space-y-2">
-                {quickLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href.endsWith('/') ? link.href : `${link.href}/`}
-                    onClick={onClose}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                  >
-                    <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                      {link.icon}
-                    </div>
-                    <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
-                      {link.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Service Categories */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <Rocket className="w-5 h-5 text-cyan-400" />
-                <span>Service Categories</span>
-              </h3>
-              <div className="space-y-2">
-                {sidebarSections.map((section) => (
-                  <div key={section.title}>
-                    <button
-                      onClick={() => toggleCategory(section.title)}
-                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>
-                          {section.icon}
-                        </div>
-                        <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
-                          {section.title}
-                        </span>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-02e3
                       </div>
                       <div>
                         <span className="font-medium">{section.title}</span>
@@ -824,19 +726,10 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                             <div className="flex items-center justify-between">
                               <span className="truncate">{item.label}</span>
                               {item.badge && (
-<<<<<<< HEAD
                                 <span className={`ml-2 px-2 py-1 text-xs rounded-full border transition-colors duration-200 ${
                                   item.featured 
                                     ? 'bg-purple-500/20 text-purple-300 border-purple-500/30 group-hover/item:bg-purple-500/30' 
                                     : 'bg-gray-500/20 text-gray-300 border-gray-500/30 group-hover/item:bg-gray-500/30'
-=======
-                                <span className={`px-2 py-1 text-xs font-medium rounded-full text-white ${
-                                  item.badge === 'Breakthrough' ? 'bg-gradient-to-r from-red-500 to-pink-600' :
-                                  item.badge === 'New' ? 'bg-gradient-to-r from-green-500 to-emerald-600' :
-                                  item.badge === 'Hot' ? 'bg-gradient-to-r from-orange-500 to-red-600' :
-                                  item.badge === 'Featured' ? 'bg-gradient-to-r from-cyan-500 to-blue-600' :
-                                  'bg-gradient-to-r from-purple-500 to-indigo-600'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-02e3
                                 }`}>
                                   {item.badge}
                                 </span>
@@ -851,7 +744,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               ))}
             </div>
 
-<<<<<<< HEAD
             {/* Footer */}
             <div className="sticky bottom-0 bg-gradient-to-t from-gray-900 to-transparent border-t border-cyan-400/20 p-4">
               <div className="text-center">
@@ -866,66 +758,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                     Support
                   </Link>
                 </div>
-=======
-            {/* Company Links */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <Users className="w-5 h-5 text-cyan-400" />
-                <span>Company</span>
-              </h3>
-              <div className="space-y-2">
-                {companyLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={onClose}
-                    className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                  >
-                    <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                      {link.name}
-                    </div>
-                    <div className="text-xs text-gray-500">{link.description}</div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Support Links */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <HelpCircle className="w-5 h-5 text-cyan-400" />
-                <span>Support</span>
-              </h3>
-              <div className="space-y-2">
-                {supportLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={onClose}
-                    className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                  >
-                    <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                      {link.name}
-                    </div>
-                    <div className="text-xs text-gray-500">{link.description}</div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="p-6">
-              <div className="p-4 bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-xl">
-                <h4 className="text-lg font-semibold text-white mb-3">Ready to Get Started?</h4>
-                <p className="text-gray-400 text-sm mb-4">
-                  Transform your business with cutting-edge technology solutions.
-                </p>
-                <Link href="/contact" onClick={onClose}>
-                  <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300">
-                    Contact Us Today
-                  </button>
-                </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-02e3
               </div>
             </div>
           </motion.div>

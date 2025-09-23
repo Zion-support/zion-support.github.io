@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import type { UserDetails } from "@/types/auth";
 import { mutate } from 'swr';
@@ -393,10 +392,3 @@ export function useAuthOperations(
     loginWithWeb3,
   };
 }
-=======
-// Hook for useAuthOperations;
-export const useUseAuthOperations: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

@@ -882,7 +882,6 @@ const HomePage: React.FC = () => {
                { title: 'Security Audit Runner', desc: 'Runs security checks and commits actionable findings.', href: '/.netlify/functions/security-audit-runner' },
                { title: 'Docs Index Runner', desc: 'Refreshes docs indexes and README for better discovery.', href: '/.netlify/functions/docs-index-runner' },
                { title: 'Repo Knowledge Graph', desc: 'Regenerates the repository knowledge graph and radar metrics.', href: '/.netlify/functions/repo-knowledge-graph-runner' },
-<<<<<<< HEAD
                { title: 'Intelligent Orchestrator (1m)', desc: 'Runs prioritized homepage/front tasks and ensures rapid git syncs.', href: '/.netlify/functions/intelligent-orchestrator' },
                { title: 'Anomaly Watchdog (10m)', desc: 'Audits security, code smell, dead code, and repo radar; commits fixes.', href: '/.netlify/functions/anomaly-watchdog' },
                { title: 'Pulse Sync (1m)', desc: 'Ultra-fast content refresh and push to main every minute.', href: '/.netlify/functions/pulse-sync' },
@@ -917,25 +916,6 @@ const HomePage: React.FC = () => {
               { title: 'Orchestrator Swarm (3m)', desc: 'Triggers a curated set of front/marketing runners, then syncs.', href: '/.netlify/functions/orchestrator-swarm' },
               { title: 'Cloud Swarm Committer (2m)', desc: 'Commits homepage/front updates back to GitHub automatically.', href: '/.netlify/functions/cloud-swarm-committer' }
             ].map((tool) => (
-=======
-               { title: 'Image Optimizer', desc: 'Optimizes media assets for performance and quality.', href: '/.netlify/functions/image-optimizer-runner' },
-               { title: 'AI Changelog Runner', desc: 'Generates human-friendly release notes automatically.', href: '/.netlify/functions/ai-changelog-runner' },
-               { title: 'Newsroom Runner', desc: 'Publishes autonomous product updates to the newsroom.', href: '/.netlify/functions/newsroom-runner' },
-               { title: 'TODO Scanner', desc: 'Generates a consolidated TODO report and dashboard.', href: '/.netlify/functions/todo-scanner-runner' },
-               { title: 'Broken Image Scanner', desc: 'Detects broken images and proposes or applies fixes.', href: '/.netlify/functions/broken-image-scanner-runner' },
-               { title: 'External Link Check', desc: 'Crawls external links and opens fixes for rot and redirects.', href: '/.netlify/functions/external-link-check-runner' },
-               { title: 'OG Image Update', desc: 'Regenerates Open Graph images for rich social sharing.', href: '/.netlify/functions/og-image-update-runner' },
-               { title: 'Docs Search Index', desc: 'Refreshes the site search index for instant discovery.', href: '/.netlify/functions/docs-search-index-runner' },
-               { title: 'Netlify Auto‑Healer', desc: 'Monitors and self-heals Netlify deploy issues.', href: '/.netlify/functions/netlify-auto-healer-runner' },
-               { title: 'Innovation Lab (10m)', desc: 'Invents, curates, and promotes fresh ideas across the site.', href: '/.netlify/functions/innovation-lab' },
-               { title: 'Auto Scheduler (15m)', desc: 'Smart time-based runner that chooses and executes the best tasks.', href: '/.netlify/functions/auto-scheduler' },
-               { title: 'Broken Image Scanner (6h)', desc: 'Finds broken images, optimizes assets, and syncs fixes.', href: '/.netlify/functions/broken-image-scanner' },
-               { title: 'Internal Link Graph', desc: 'Builds a live graph of internal links across pages.', href: '/.netlify/functions/internal-link-graph-runner' },
-               { title: 'Robots.txt Enhancer', desc: 'Ensures robots.txt is present and references the sitemap.', href: '/.netlify/functions/robots-enhancer-runner' },
-               { title: 'Alt Text Indexer', desc: 'Generates humanized alt text suggestions for all public images.', href: '/.netlify/functions/alt-text-indexer-runner' },
-               { title: 'Content Registry Builder', desc: 'Continuously indexes pages and reports for discovery.', href: '/.netlify/functions/content-registry-runner' },
-             ].map((tool) => (
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b44b
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{tool.title}</h3>

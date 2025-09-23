@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -205,5 +204,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-=======
->>>>>>> origin/backup-main-final-20250913-063409

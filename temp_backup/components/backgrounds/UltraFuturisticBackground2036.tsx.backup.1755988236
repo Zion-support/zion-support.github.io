@@ -5,29 +5,9 @@ const UltraFuturisticBackground2036: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isClient, setIsClient] = useState(false);
 
-<<<<<<< HEAD
   useEffect(() => {
     setIsClient(true);
   }, []);
-=======
-  // Enhanced particle system with more variety
-  const particles = useRef<Array<{
-    x: number;
-    y: number;
-    vx: number;
-    vy: number;
-    size: number;
-    opacity: number;
-    color: string;
-    life: number;
-    maxLife: number;
-    type: 'particle' | 'wave' | 'quantum' | 'neon' | 'holographic' | 'energy' | 'data' | 'neural' | 'cyberpunk' | 'ultra';
-    rotation: number;
-    rotationSpeed: number;
-    pulse: number;
-    pulseSpeed: number;
-  }>>([]);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
 
   // Enhanced theme-based color schemes with more vibrant colors
   const getThemeColors = useCallback(() => {
@@ -62,12 +42,8 @@ const UltraFuturisticBackground2036: React.FC = () => {
           quantum: ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
           ultra: ['#ff1493', '#00bfff', '#32cd32', '#ffd700', '#ff4500', '#8a2be2'],
           holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'],
-<<<<<<< HEAD
           cyberpunk: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80'],
           space: ['#1e3a8a', '#7c3aed', '#be185d', '#059669', '#d97706', '#dc2626']
-=======
-          cyberpunk: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80']
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
         };
       default: // quantum
         return {
@@ -88,42 +64,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
     const isSmallScreen = window.innerWidth < 768;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
-<<<<<<< HEAD
-=======
-    // Enhanced particle count for better performance
-    const baseCount = prefersReducedMotion ? 20 : (isSmallScreen ? 80 : 150);
-    const particleCount = Math.floor(baseCount * (intensity === 'low' ? 0.6 : intensity === 'medium' ? 1 : 1.8));
-
-    particles.current = [];
-    
-    for (let i = 0; i < particleCount; i++) {
-      const particleTypes = ['particle', 'wave', 'quantum', 'neon', 'holographic', 'energy', 'data', 'neural', 'cyberpunk', 'ultra'] as const;
-      const particleType = particleTypes[Math.floor(Math.random() * particleTypes.length)];
-      
-      particles.current.push({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        vx: (Math.random() - 0.5) * 0.8,
-        vy: (Math.random() - 0.5) * 0.8,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.8 + 0.2,
-        color: colors[particleType] ? colors[particleType][Math.floor(Math.random() * colors[particleType].length)] : colors.primary[0],
-        life: Math.random() * 100 + 50,
-        maxLife: Math.random() * 100 + 50,
-        type: particleType,
-        rotation: Math.random() * Math.PI * 2,
-        rotationSpeed: (Math.random() - 0.5) * 0.02,
-        pulse: Math.random() * Math.PI * 2,
-        pulseSpeed: Math.random() * 0.05 + 0.02
-      });
-    }
-  }, [intensity, getThemeColors]);
-
-  // Enhanced animation loop with more effects
-  const animate = useCallback(() => {
-    if (!canvasRef.current) return;
-
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -168,235 +108,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
       }
     };
 
-<<<<<<< HEAD
-=======
-      // Draw particle based on type
-      ctx.save();
-      ctx.translate(particle.x, particle.y);
-      ctx.rotate(particle.rotation);
-      
-      const pulseOpacity = particle.opacity * (0.5 + 0.5 * Math.sin(particle.pulse));
-      
-      switch (particle.type) {
-        case 'neon':
-          // Neon glow effect
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 20;
-          ctx.fillStyle = particle.color;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.beginPath();
-          ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-          
-          // Inner glow
-          ctx.shadowBlur = 10;
-          ctx.fillStyle = '#ffffff';
-          ctx.globalAlpha = pulseOpacity * 0.5;
-          ctx.beginPath();
-          ctx.arc(0, 0, particle.size * 0.3, 0, Math.PI * 2);
-          ctx.fill();
-          break;
-          
-        case 'quantum':
-          // Quantum wave effect
-          ctx.strokeStyle = particle.color;
-          ctx.lineWidth = 2;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.beginPath();
-          for (let i = 0; i < 8; i++) {
-            const angle = (i / 8) * Math.PI * 2;
-            const radius = particle.size * (1 + 0.5 * Math.sin(particle.pulse + i));
-            const x = Math.cos(angle) * radius;
-            const y = Math.sin(angle) * radius;
-            if (i === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-          }
-          ctx.closePath();
-          ctx.stroke();
-          break;
-          
-        case 'holographic':
-          // Holographic effect
-          ctx.strokeStyle = particle.color;
-          ctx.lineWidth = 1;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.beginPath();
-          ctx.moveTo(-particle.size, 0);
-          ctx.lineTo(particle.size, 0);
-          ctx.moveTo(0, -particle.size);
-          ctx.lineTo(0, particle.size);
-          ctx.stroke();
-          
-          // Cross pattern
-          ctx.beginPath();
-          ctx.moveTo(-particle.size * 0.7, -particle.size * 0.7);
-          ctx.lineTo(particle.size * 0.7, particle.size * 0.7);
-          ctx.moveTo(particle.size * 0.7, -particle.size * 0.7);
-          ctx.lineTo(-particle.size * 0.7, particle.size * 0.7);
-          ctx.stroke();
-          break;
-          
-        case 'energy':
-          // Energy bolt effect
-          ctx.strokeStyle = particle.color;
-          ctx.lineWidth = 3;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 15;
-          ctx.beginPath();
-          ctx.moveTo(-particle.size, 0);
-          ctx.lineTo(particle.size, 0);
-          ctx.stroke();
-          
-          // Energy particles
-          for (let i = 0; i < 5; i++) {
-            const offset = (i - 2) * particle.size * 0.3;
-            ctx.beginPath();
-            ctx.arc(offset, 0, 2, 0, Math.PI * 2);
-            ctx.fillStyle = '#ffffff';
-            ctx.fill();
-          }
-          break;
-          
-        case 'data':
-          // Data stream effect
-          ctx.fillStyle = particle.color;
-          ctx.globalAlpha = pulseOpacity;
-          for (let i = 0; i < 3; i++) {
-            const offset = (i - 1) * particle.size * 0.4;
-            ctx.fillRect(-2, offset, 4, 8);
-          }
-          break;
-          
-        case 'neural':
-          // Neural network effect
-          ctx.strokeStyle = particle.color;
-          ctx.lineWidth = 1;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.beginPath();
-          ctx.moveTo(-particle.size, -particle.size);
-          ctx.lineTo(particle.size, particle.size);
-          ctx.moveTo(particle.size, -particle.size);
-          ctx.lineTo(-particle.size, particle.size);
-          ctx.stroke();
-          
-          // Connection points
-          ctx.fillStyle = particle.color;
-          ctx.beginPath();
-          ctx.arc(-particle.size, -particle.size, 2, 0, Math.PI * 2);
-          ctx.arc(particle.size, particle.size, 2, 0, Math.PI * 2);
-          ctx.arc(particle.size, -particle.size, 2, 0, Math.PI * 2);
-          ctx.arc(-particle.size, particle.size, 2, 0, Math.PI * 2);
-          ctx.fill();
-          break;
-          
-        case 'cyberpunk':
-          // Cyberpunk effect
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 15;
-          ctx.fillStyle = particle.color;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.beginPath();
-          ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-          break;
-
-        case 'ultra':
-          // Ultra effect
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 20;
-          ctx.fillStyle = particle.color;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.beginPath();
-          ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-          break;
-          
-        default:
-          // Standard particle
-          ctx.fillStyle = particle.color;
-          ctx.globalAlpha = pulseOpacity;
-          ctx.beginPath();
-          ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-      }
-      
-      ctx.restore();
-    });
-
-    // Draw connecting lines between nearby particles
-    ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
-    ctx.lineWidth = 1;
-    
-    for (let i = 0; i < particles.current.length; i++) {
-      for (let j = i + 1; j < particles.current.length; j++) {
-        const dx = particles.current[i].x - particles.current[j].x;
-        const dy = particles.current[i].y - particles.current[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        
-        if (distance < 100) {
-          ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-          ctx.beginPath();
-          ctx.moveTo(particles.current[i].x, particles.current[i].y);
-          ctx.lineTo(particles.current[j].x, particles.current[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    // Add floating geometric shapes
-    const time = Date.now() * 0.001;
-    const shapes = [
-      { x: canvas.width * 0.1, y: canvas.height * 0.2, size: 40, rotation: time * 0.5 },
-      { x: canvas.width * 0.9, y: canvas.height * 0.8, size: 60, rotation: -time * 0.3 },
-      { x: canvas.width * 0.8, y: canvas.height * 0.1, size: 30, rotation: time * 0.7 }
-    ];
-
-    shapes.forEach((shape, index) => {
-      ctx.save();
-      ctx.translate(shape.x, shape.y);
-      ctx.rotate(shape.rotation);
-      
-      const color = colors.neon ? colors.neon[index % colors.neon.length] : colors.primary[index % colors.primary.length];
-      ctx.strokeStyle = color;
-      ctx.lineWidth = 2;
-      ctx.globalAlpha = 0.1;
-      
-      // Draw different shapes
-      if (index === 0) {
-        // Triangle
-        ctx.beginPath();
-        ctx.moveTo(0, -shape.size);
-        ctx.lineTo(shape.size * 0.866, shape.size * 0.5);
-        ctx.lineTo(-shape.size * 0.866, shape.size * 0.5);
-        ctx.closePath();
-        ctx.stroke();
-      } else if (index === 1) {
-        // Square
-        ctx.strokeRect(-shape.size / 2, -shape.size / 2, shape.size, shape.size);
-      } else {
-        // Hexagon
-        ctx.beginPath();
-        for (let i = 0; i < 6; i++) {
-          const angle = (i / 6) * Math.PI * 2;
-          const x = Math.cos(angle) * shape.size;
-          const y = Math.sin(angle) * shape.size;
-          if (i === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        ctx.closePath();
-        ctx.stroke();
-      }
-      
-      ctx.restore();
-    });
-
-    animationFrameRef.current = requestAnimationFrame(animate);
-  }, [getThemeColors]);
-
-  // Initialize and start animation
-  useEffect(() => {
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
     initParticles();
 
     // Animation loop

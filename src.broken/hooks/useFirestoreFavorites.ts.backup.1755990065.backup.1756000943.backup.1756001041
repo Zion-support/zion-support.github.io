@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { doc, getDoc, setDoc, deleteDoc, serverTimestamp, collection, getDocs } from 'firebase/firestore';
 import { db } from '@/integrations/firebase/client';
@@ -45,10 +44,3 @@ export function useFirestoreFavorites() {
 
   return { favorites, loading, toggleFavorite };
 }
-=======
-// Hook for useFirestoreFavorites;
-export const useUseFirestoreFavorites: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

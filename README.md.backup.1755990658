@@ -380,7 +380,6 @@ Home: https://github.com/Zion-Holdings/zion#readme
 - `npm run sitemap` – Regenerate sitemap
 - `npm run readme:generate` – Refresh this README
 
-<<<<<<< HEAD
 7.  **Running the application:**
     - **Next.js frontend**: `npm run dev` _(automatically validates your development environment)_
     - **Django backend**: `python backend/manage.py runserver`
@@ -576,13 +575,3 @@ npm run improvement:status
 
 After running `npm run test`, open `coverage/lcov-report/index.html` in your
 browser to view detailed coverage information.
-=======
----
-This README is auto-generated. Do not edit manually.
-
-## New Cloud Cron Automations
-
-- Intelligent Orchestrator (1m): /.netlify/functions/intelligent-orchestrator
-- Anomaly Watchdog (10m): /.netlify/functions/anomaly-watchdog
-- Pulse Sync (1m): /.netlify/functions/pulse-sync
->>>>>>> origin/cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5

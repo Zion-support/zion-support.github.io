@@ -2,7 +2,6 @@
   "name": "zion-tech-group",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"
@@ -11,14 +10,11 @@
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
   },
   "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-79f3
   "engines": {
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
@@ -450,28 +446,5 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-=======
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.56.0",
-    "next": "^13.5.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^9.34.0",
-    "lucide-react": "^0.541.0",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
->>>>>>> origin/cursor/website-audit-and-enhancement-79f3
   }
 }

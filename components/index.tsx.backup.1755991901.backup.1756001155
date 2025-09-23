@@ -4,12 +4,8 @@ import Hero from '../components/sections/Hero';
 import Features from '../components/sections/Features';
 import FuturisticCard, { ServiceCard, FeatureCard } from '../components/ui/FuturisticCard';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Rocket, Globe, Cpu, Database, Lock, TrendingUp, Users, Award } from 'lucide-react';
-=======
-import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Globe, Brain, Rocket } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-3ee6
 
 export default function HomePage() {
   const heroStats = [
@@ -815,7 +811,6 @@ export default function HomePage() {
         columns={3}
       />
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1995,9 +1990,6 @@ export default function HomePage() {
       </section>
 
       {/* Technology Stack */}
-=======
-      {/* SaaS Tools Showcase */}
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-3ee6
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">

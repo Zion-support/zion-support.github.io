@@ -24,7 +24,6 @@ interface FooterSection {
 }
 
 const footerSections: FooterSection[] = [
-<<<<<<< HEAD
   {
     title: 'Services',
     links: [
@@ -48,20 +47,6 @@ const footerSections: FooterSection[] = [
       { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
     ]
   },
-=======
-        {
-        title: 'Services',
-        links: [
-          { label: 'AI & Machine Learning', href: '/ai-services', description: 'Advanced AI solutions' },
-          { label: 'Cybersecurity', href: '/cybersecurity', description: 'Enterprise security' },
-          { label: 'Cloud Platform', href: '/cloud-platform', description: 'Scalable cloud infrastructure' },
-          { label: 'Quantum Computing', href: '/quantum-computing', description: 'Next-gen quantum tech' },
-          { label: 'Space Technology', href: '/space-tech', description: 'Innovative space solutions' },
-          { label: 'Innovative 2040 Services', href: '/innovative-2040-futuristic-services-showcase', description: 'Cutting-edge futuristic solutions' },
-          { label: 'View All Services', href: '/services', description: 'Complete service portfolio' }
-        ]
-      },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-78c3
   {
     title: 'Company',
     links: [

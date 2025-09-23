@@ -161,7 +161,6 @@ export default function Layout({ children }: LayoutProps) {
         />
       </Head>
 
-<<<<<<< HEAD
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-black text-white' : 'bg-gray-50 text-gray-900'} relative overflow-hidden transition-colors duration-300`}>
         {/* Skip to content link for accessibility */}
         <a href="#main" className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded">
@@ -219,14 +218,5 @@ export default function Layout({ children }: LayoutProps) {
         <ServiceWorkerRegistration />
       </div>
     </>
-=======
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-    </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e1f5
   );
 }

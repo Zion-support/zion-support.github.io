@@ -172,7 +172,6 @@ export default function ContactPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground variant="neural" intensity={1}>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -193,18 +192,6 @@ export default function ContactPage() {
         <meta name="twitter:description" content="Get in touch with Zion Tech Group. Contact our team of experts for support, sales inquiries, or technical assistance." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
-=======
-    <QuantumHolographicBackground variant="quantum">
-      <div className="min-h-screen">
-        <Head>
-          <title>Contact Us - Zion Tech Group | Get Started with Revolutionary Technology Solutions</title>
-          <meta name="description" content="Contact Zion Tech Group today for a free consultation on our revolutionary AI, quantum computing, and emerging technology solutions. Transform your business with guaranteed ROI." />
-          <meta name="keywords" content="contact Zion Tech Group, AI consultation, quantum computing services, technology solutions, business transformation" />
-          <meta property="og:title" content="Contact Us - Zion Tech Group" />
-          <meta property="og:description" content="Get started with revolutionary technology solutions. Free consultation available." />
-          <meta property="og:url" content="https://ziontechgroup.com/contact" />
-        </Head>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
 
 const Contact: NextPage = () => (
   <div className="py-10">

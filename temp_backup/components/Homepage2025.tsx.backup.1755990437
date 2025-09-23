@@ -1,18 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3,
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, CheckCircle,
   DollarSign, Clock, Award, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Phone
-=======
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Brain, Atom, Shield, Zap, Search, MessageCircle, Phone, Mail, Check, Star, TrendingUp, Globe, MapPin
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ac
 } from 'lucide-react';
 import Link from 'next/link';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
@@ -25,7 +17,6 @@ import { advancedITEnterpriseServices2025 } from '../data/advanced-it-enterprise
 import { specializedAIServices2025 } from '../data/specialized-ai-services-2025';
 
 const Homepage2025: React.FC = () => {
-<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   
@@ -92,10 +83,6 @@ const Homepage2025: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
-=======
-  const [showFloatingActions, setShowFloatingActions] = React.useState(true);
-  
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ac
   return (
     <Layout>
       {/* Main Content */}
@@ -286,7 +273,6 @@ const Homepage2025: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
@@ -311,133 +297,6 @@ const Homepage2025: React.FC = () => {
                   </Link>
                 </motion.div>
               ))}
-=======
-              <UltraFuturisticServiceCard2026
-                service={{
-                  id: 'ai-ml',
-                  name: 'AI & Machine Learning',
-                  tagline: 'Advanced artificial intelligence solutions',
-                  description: 'Advanced artificial intelligence solutions for modern businesses',
-                  price: '$999',
-                  period: 'month',
-                  features: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision'],
-                  popular: true,
-                  category: 'AI',
-                  icon: '🧠'
-                }}
-                variant="ai"
-              />
-              <UltraFuturisticServiceCard2026
-                service={{
-                  id: 'quantum-computing',
-                  name: 'Quantum Computing',
-                  tagline: 'Next-generation computing solutions',
-                  description: 'Next-generation computing solutions for complex problems',
-                  price: '$1999',
-                  period: 'month',
-                  features: ['Quantum Algorithms', 'Quantum Security', 'Quantum Simulation'],
-                  popular: false,
-                  category: 'Quantum',
-                  icon: '⚛️'
-                }}
-                variant="quantum"
-              />
-              <UltraFuturisticServiceCard2026
-                service={{
-                  id: 'process-automation',
-                  name: 'Process Automation',
-                  tagline: 'Intelligent automation solutions',
-                  description: 'Intelligent automation to streamline your operations',
-                  price: '$799',
-                  period: 'month',
-                  features: ['Workflow Automation', 'RPA', 'AI Integration', 'Analytics'],
-                  popular: true,
-                  category: 'Automation',
-                  icon: '⚡'
-                }}
-                variant="automation"
-              />
-              <UltraFuturisticServiceCard2026
-                service={{
-                  id: 'ai-holographic-meetings',
-                  name: 'AI Holographic Meetings',
-                  tagline: 'Next-generation holographic collaboration',
-                  description: 'Revolutionary platform for lifelike holographic meetings with AI assistance',
-                  price: '$299',
-                  period: 'month',
-                  features: ['3D Holographic Projections', 'AI Translation', 'Gesture Control', 'Immersive Collaboration'],
-                  popular: true,
-                  category: 'AI & Holographic',
-                  icon: '🌟'
-                }}
-                variant="ai"
-              />
-              <UltraFuturisticServiceCard2026
-                service={{
-                  id: 'quantum-drug-discovery',
-                  name: 'Quantum Drug Discovery',
-                  tagline: 'Accelerate pharmaceutical research',
-                  description: 'Quantum-powered AI platform for accelerated drug discovery and molecular modeling',
-                  price: '$1999',
-                  period: 'month',
-                  features: ['Quantum Molecular Modeling', 'AI Drug Screening', 'Predictive Analytics', 'Clinical Optimization'],
-                  popular: false,
-                  category: 'Quantum Healthcare',
-                  icon: '💊'
-                }}
-                variant="quantum"
-              />
-              <UltraFuturisticServiceCard2026
-                service={{
-                  id: 'autonomous-legal-ai',
-                  name: 'Autonomous Legal AI',
-                  tagline: 'AI-powered legal assistance',
-                  description: 'Intelligent legal assistant for research, analysis, and case preparation',
-                  price: '$199',
-                  period: 'month',
-                  features: ['Autonomous Research', 'Document Analysis', 'Case Law Synthesis', 'Risk Assessment'],
-                  popular: true,
-                  category: 'AI Legal Tech',
-                  icon: '⚖️'
-                }}
-                variant="automation"
-              />
-            </div>
-          </motion.div>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-          >
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              href="/demo"
-              className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
-            >
-              Request Demo
-            </Link>
-          </motion.div>
-
-          {/* Quick Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-gray-400 text-sm">Projects Delivered</div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ac
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">50+</div>

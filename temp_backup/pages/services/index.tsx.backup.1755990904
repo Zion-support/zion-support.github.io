@@ -57,7 +57,6 @@ import { innovativeServices2036 } from '../../data/real-2036-innovative-services
 import { itInfrastructureServices2036 } from '../../data/real-2036-it-infrastructure-services';
 import { specializedSolutions2036 } from '../../data/real-2036-specialized-solutions';
 
-<<<<<<< HEAD
 export default function ServicesPage() {
   const { navigation, isLoading, error } = useNavigation();
 
@@ -275,18 +274,6 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-=======
-// Define a common service interface
-interface Service {
-  id?: string;
-  name: string;
-  description?: string;
-  price?: string;
-  category?: string;
-  popular?: boolean;
-  launchDate?: string;
-  [key: string]: unknown; // Allow additional properties
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 }
 
 // Define a unified service interface

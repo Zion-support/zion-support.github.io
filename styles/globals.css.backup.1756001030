@@ -2,15 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
 /* CSS Variables for modern theming */
-=======
-/* Enhanced Futuristic Design System with Superior Contrast */
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
 :root {
   --background: #000000;
   --foreground: #ffffff;
@@ -73,168 +69,9 @@
   box-shadow: var(--holographic-glow);
 }
 
-<<<<<<< HEAD
 /* Enhanced Selection */
 ::selection {
   background: rgba(0, 255, 255, 0.4);
-=======
-.text-high-contrast-accent {
-  color: var(--text-accent);
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}
-
-.text-high-contrast-success {
-  color: var(--text-success);
-  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
-}
-
-.text-high-contrast-warning {
-  color: var(--text-warning);
-  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
-}
-
-.text-high-contrast-error {
-  color: var(--text-error);
-  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
-}
-
-.text-high-contrast-info {
-  color: var(--text-info);
-  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-}
-
-/* Enhanced High Contrast Background Utilities */
-.bg-high-contrast-primary {
-  background-color: var(--bg-primary);
-}
-
-.bg-high-contrast-secondary {
-  background-color: var(--bg-secondary);
-}
-
-.bg-high-contrast-tertiary {
-  background-color: var(--bg-tertiary);
-}
-
-.bg-high-contrast-card {
-  background-color: var(--bg-card);
-}
-
-.bg-high-contrast-card-hover {
-  background-color: var(--bg-card-hover);
-}
-
-.bg-high-contrast-overlay {
-  background-color: var(--bg-overlay);
-}
-
-/* Enhanced High Contrast Border Utilities */
-.border-high-contrast-primary {
-  border-color: var(--border-primary);
-}
-
-.border-high-contrast-secondary {
-  border-color: var(--border-secondary);
-}
-
-.border-high-contrast-accent {
-  border-color: var(--border-accent);
-}
-
-.border-high-contrast-success {
-  border-color: var(--border-success);
-}
-
-.border-high-contrast-warning {
-  border-color: var(--border-warning);
-}
-
-.border-high-contrast-error {
-  border-color: var(--border-error);
-}
-
-/* Enhanced Focus Utilities */
-.focus-high-contrast {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
-}
-
-.focus-high-contrast-success {
-  outline: 2px solid var(--focus-ring-success);
-  outline-offset: 2px;
-}
-
-.focus-high-contrast-warning {
-  outline: 2px solid var(--focus-ring-warning);
-  outline-offset: 2px;
-}
-
-.focus-high-contrast-error {
-  outline: 2px solid var(--focus-ring-error);
-  outline-offset: 2px;
-}
-
-/* Enhanced Shadow Utilities */
-.shadow-high-contrast-sm {
-  box-shadow: var(--shadow-sm);
-}
-
-.shadow-high-contrast-md {
-  box-shadow: var(--shadow-md);
-}
-
-.shadow-high-contrast-lg {
-  box-shadow: var(--shadow-lg);
-}
-
-.shadow-high-contrast-xl {
-  box-shadow: var(--shadow-xl);
-}
-
-.shadow-neon {
-  box-shadow: var(--shadow-neon);
-}
-
-.shadow-glow {
-  box-shadow: var(--shadow-glow);
-}
-
-/* Mobile-First Responsive Text Colors */
-.text-gray-300 {
-  color: #d1d5db;
-}
-
-.text-gray-400 {
-  color: #9ca3af;
-}
-
-.text-gray-500 {
-  color: #6b7280;
-}
-
-.text-gray-600 {
-  color: #4b5563;
-}
-
-.text-gray-700 {
-  color: #374151;
-}
-
-.text-gray-800 {
-  color: #1f2937;
-}
-
-.text-gray-900 {
-  color: #111827;
-}
-
-/* Mobile-First Form Elements */
-input, textarea, select {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
   color: white;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }

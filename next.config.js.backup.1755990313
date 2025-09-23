@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   // Enhanced performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
@@ -15,38 +14,16 @@ const nextConfig = {
   },
   
   // Enhanced image optimization
-=======
-  // Performance optimizations
-  experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-    optimizeCss: true,
-  },
-  
-  // Image optimization
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-<<<<<<< HEAD
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
-=======
-    minimumCacheTTL: 60,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-<<<<<<< HEAD
   // Enhanced webpack configuration
-=======
-  // Compression and optimization
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
-
-  // Bundle analyzer
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle splitting
     if (!dev && !isServer) {
@@ -79,43 +56,24 @@ const nextConfig = {
     return config;
   },
 
-<<<<<<< HEAD
   // Enhanced headers for security and performance
-=======
-  // Headers for performance
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-<<<<<<< HEAD
           {
             key: 'X-Frame-Options',
             value: 'DENY',
           },
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
           {
-<<<<<<< HEAD
-=======
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
-<<<<<<< HEAD
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
@@ -133,12 +91,6 @@ const nextConfig = {
       },
       {
         source: '/_next/static/(.*)',
-=======
-        ],
-      },
-      {
-        source: '/static/(.*)',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
         headers: [
           {
             key: 'Cache-Control',
@@ -149,11 +101,7 @@ const nextConfig = {
     ];
   },
 
-<<<<<<< HEAD
   // Enhanced redirects
-=======
-  // Redirects for better UX
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
   async redirects() {
     return [
       {
@@ -163,7 +111,6 @@ const nextConfig = {
       },
       {
         source: '/services/ai',
-<<<<<<< HEAD
         destination: '/services?category=ai-ml',
         permanent: false,
       },
@@ -181,15 +128,6 @@ const nextConfig = {
       {
         source: '/api/health',
         destination: '/api/health-check',
-=======
-        destination: '/ai-services',
-        permanent: true,
-      },
-      {
-        source: '/services/quantum',
-        destination: '/quantum-services',
-        permanent: true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
       },
     ];
   },
@@ -200,7 +138,6 @@ const nextConfig = {
     styledComponents: true,
   },
 
-<<<<<<< HEAD
   // Enhanced output configuration
   output: 'standalone',
   
@@ -218,23 +155,6 @@ const nextConfig = {
 
   // Enhanced generateEtags
   generateEtags: true,
-=======
-  // TypeScript
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-
-  // ESLint
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-
-  // Output configuration
-  output: 'standalone',
-  trailingSlash: false,
-  skipTrailingSlashRedirect: true,
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
 
   // Enhanced compress
   compress: true,

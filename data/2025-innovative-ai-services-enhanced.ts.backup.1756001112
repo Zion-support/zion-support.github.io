@@ -1,10 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
 export interface InnovativeAIService {
-=======
-export interface InnovativeAIService2025 {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   id: string;
   name: string;
   tagline: string;
@@ -45,13 +41,8 @@ export interface InnovativeAIService2025 {
   reviews: number;
 }
 
-<<<<<<< HEAD
 export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
   // AI Consciousness Evolution Platform
-=======
-export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
-  // AI Consciousness & Emotional Intelligence
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   {
     id: 'ai-consciousness-evolution',
     name: 'AI Consciousness Evolution Platform',
@@ -309,7 +300,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'AI-powered education platform with personalized learning algorithms, adaptive content, and comprehensive analytics.',
     launchDate: '2024-08-20',
     customers: 234,
@@ -1407,12 +1397,5 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     customers: 95,
     rating: 4.7,
     reviews: 58
-=======
-    implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
-    launchDate: '2024-03-25',
-    customers: 156,
-    rating: 4.8,
-    reviews: 89
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   }
 ];

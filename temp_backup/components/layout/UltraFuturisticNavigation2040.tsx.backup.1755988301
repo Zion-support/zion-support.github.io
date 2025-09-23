@@ -81,31 +81,9 @@ const navigationItems: NavigationItem[] = [
     badge: 'New',
     neonColor: 'shadow-blue-400/50',
     children: [
-<<<<<<< HEAD
       {
         label: 'AI & Machine Learning',
         href: '/ai-services',
-=======
-      { 
-        name: 'All Services', 
-        href: '/services', 
-        description: 'Complete revolutionary services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: '2025 Innovative Services Showcase', 
-        href: '/comprehensive-2025-innovative-services-showcase', 
-        description: 'Comprehensive showcase of our latest innovations',
-        icon: <Star className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500',
-        featured: true
-      },
-      { 
-        name: 'AI Consciousness Evolution', 
-        href: '/ai-consciousness-evolution-2040', 
-        description: 'Next-generation AI consciousness',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8640
         icon: <Brain className="w-4 h-4" />,
         description: 'Advanced AI solutions for enterprise'
       },

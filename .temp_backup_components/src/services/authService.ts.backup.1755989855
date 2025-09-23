@@ -7,7 +7,6 @@ import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 export async function loginUser(email: string, password: string) {
-<<<<<<< HEAD
   const endpoint = `${API_URL}/api/auth/login`;
   const res = await axios.post(endpoint, { email, password }, { withCredentials: true });
   const token = res.data?.accessToken;
@@ -29,20 +28,5 @@ export async function registerUser(name: string, email: string, password: string
   } catch (err) {
     logErrorToProduction('Register API error', err as Error, { endpoint, email });
     throw err;
-=======
-  try {
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
-    const data = await res.json().catch(() => ({}));
-    return { res, data };
-  } catch (error) {
-    console.error('Login request failed', error);
-    throw error;
->>>>>>> origin/4o9pcp-codex/add-test-for-failed-login-toast
   }
 }

@@ -322,7 +322,6 @@ const Homepage2025: React.FC = () => {
                     <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                     Learn More
                   </button>
-<<<<<<< HEAD
                 </motion.div>
 
                 {/* Enhanced Social Proof with better mobile layout and animations */}
@@ -464,22 +463,6 @@ const Homepage2025: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* AI & Machine Learning Service */}
-=======
-                </Link>
-                <Link href="/comprehensive-2025-services-showcase">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    2025 Services Showcase
-                  </button>
-                </Link>
-                <Link href="/ultimate-2038-futuristic-services-showcase">
-                  <button className="px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    2038 Futuristic Services
-                  </button>
-                </Link>
-              </div>
-              
-              {/* Trust Indicators */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a942
               <motion.div
                 className="p-4 sm:p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer relative overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}

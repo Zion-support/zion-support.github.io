@@ -13,7 +13,6 @@ import Enhanced2026ServicesShowcaseV2 from '../components/sections/Enhanced2026S
 import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
 import EnhancedHero2026V2 from '../components/sections/EnhancedHero2026V2';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
@@ -47,18 +46,6 @@ import { emergingTech2026Services as emergingTech2026ServicesNew } from '../data
 import { enterpriseIT2026Services as enterpriseIT2026ServicesNew } from '../data/enterprise-it-2026-services';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026V2Services } from '../data/emerging-tech-2026-v2-services';
-=======
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5ee0
 
 export default function HomePage() {
   const heroStats = [
@@ -207,65 +194,7 @@ const serviceCategories = [
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
     href: '/micro-saas',
-<<<<<<< HEAD
     services: ['AI Project Management', 'AI HR Recruitment', 'AI Sales Automation']
-=======
-    features: ['Content Automation', 'CRM Intelligence', 'Decision Engine']
-  },
-  {
-    title: 'Advanced AI Automation',
-    description: 'Revolutionary AI automation for development, testing, DevOps, and security',
-    services: advancedAIAutomationServices2025.slice(0, 3),
-    icon: Brain,
-    color: 'from-emerald-500 to-teal-600',
-    href: '/advanced-ai-automation-services',
-    features: ['Code Review AI', 'Testing Automation', 'DevOps Intelligence']
-  },
-  {
-    title: 'Advanced IT Infrastructure',
-    description: 'Next-generation infrastructure with quantum computing and edge computing',
-    services: advancedITInfrastructureServices2025.slice(0, 3),
-    icon: Cloud,
-    color: 'from-indigo-500 to-purple-600',
-    href: '/advanced-it-infrastructure-services',
-    features: ['Quantum Cloud', 'Edge Computing', 'Zero Trust Security']
-  },
-  {
-    title: 'Innovative Business Solutions',
-    description: 'AI-powered business intelligence, marketing, sales, and HR solutions',
-    services: innovativeBusinessSolutions2025.slice(0, 3),
-    icon: Target,
-    color: 'from-green-500 to-emerald-600',
-    href: '/innovative-business-solutions',
-    features: ['Business Intelligence', 'Marketing Automation', 'Sales Intelligence']
-  },
-  {
-    title: 'Cutting-Edge AI Services',
-    description: 'Revolutionary AI solutions for quantum trading, healthcare, manufacturing, and cybersecurity',
-    services: cuttingEdgeAIServices2025.slice(0, 3),
-    icon: Brain,
-    color: 'from-purple-500 to-pink-600',
-    href: '/2025-cutting-edge-ai-services',
-    features: ['Quantum Financial Trading', 'AI Healthcare Diagnostics', 'Autonomous Manufacturing']
-  },
-  {
-    title: 'Innovative IT Infrastructure',
-    description: 'Next-generation IT infrastructure with quantum security and edge computing',
-    services: innovativeITInfrastructureServices2025.slice(0, 3),
-    icon: Shield,
-    color: 'from-indigo-500 to-blue-600',
-    href: '/2025-innovative-it-infrastructure-services',
-    features: ['Quantum-Secure Cloud', 'Edge Computing', 'Blockchain Infrastructure']
-  },
-  {
-    title: 'Innovative Micro SAAS',
-    description: 'Transformative business solutions for customer success, supply chain, and analytics',
-    services: innovativeMicroSaasSolutions2025.slice(0, 3),
-    icon: Rocket,
-    color: 'from-teal-500 to-emerald-600',
-    href: '/2025-innovative-micro-saas-solutions',
-    features: ['AI Customer Success', 'Supply Chain Optimization', 'Financial Planning']
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5ee0
   }
 ];
 

@@ -67,7 +67,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
       'Cross-platform synchronization',
       'Predictive performance modeling'
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '🤖📈',
     color: 'from-blue-600 to-purple-700',
@@ -132,26 +131,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
     growthRate: '160% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
-=======
-    benefits: [
-      'Increase advertising ROI by 300%',
-      'Reduce ad spend waste by 60%',
-      'Automate campaign management',
-      'Improve targeting accuracy',
-      'Save 20+ hours per week'
-    ],
-    targetAudience: [
-      'Marketing agencies',
-      'E-commerce businesses',
-      'B2B companies',
-      'Retail brands',
-      'SaaS companies',
-      'Enterprise marketers'
-    ],
-    marketPosition: 'Leading AI advertising platform. Competes with Google Ads ($0.01-50.00/click) and Facebook Ads ($0.50-2.00/click) but offers superior AI automation and optimization.',
-    competitors: ['Google Ads, Facebook Ads, Microsoft Advertising, Amazon Ads, TikTok Ads'],
-    techStack: ['OpenAI GPT-4, Claude 3, React, Node.js, PostgreSQL, Redis, AWS, Google Analytics API'],
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     realImplementation: true,
     implementationDetails: 'AI-powered digital advertising platform with automated optimization, multi-platform management, and comprehensive analytics.',
     roi: 'Average customer sees 300% ROI within 6 months through improved ad performance and reduced waste.',
@@ -184,7 +163,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
 
   // Social Media Marketing Automation Suite
   {
-<<<<<<< HEAD
     id: 'metaverse-advertising-platform',
     name: 'Metaverse Advertising Platform',
     tagline: 'Complete advertising solution for the metaverse economy',
@@ -235,20 +213,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
     price: '$149',
     period: '/month',
     description: 'Advanced content creation platform that uses AI to generate high-quality, engaging content for websites, social media, email campaigns, and advertising, saving 90% of content creation time.',
-=======
-    id: 'social-media-marketing-automation-suite',
-    name: 'Social Media Marketing Automation Suite',
-    tagline: 'Complete social media automation for all major platforms',
-    description: 'Comprehensive social media marketing platform that automates content creation, scheduling, engagement, and analytics across all major social media platforms.',
-    category: 'Social Media Marketing',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '1 week'
-    },
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     features: [
       'AI content generation',
       'Multi-platform scheduling',
@@ -261,7 +225,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
       'Social commerce integration',
       'Competitor analysis'
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '✍️🤖',
     color: 'from-orange-600 to-red-700',
@@ -326,26 +289,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
     growthRate: '180% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
-=======
-    benefits: [
-      'Increase social media engagement by 250%',
-      'Save 15+ hours per week on social tasks',
-      'Improve brand consistency',
-      'Generate more leads and sales',
-      'Optimize content performance'
-    ],
-    targetAudience: [
-      'Marketing agencies',
-      'Small businesses',
-      'E-commerce brands',
-      'Influencers',
-      'Content creators',
-      'Enterprise brands'
-    ],
-    marketPosition: 'Leading social media automation platform. Competes with Hootsuite ($29-599/month) and Buffer ($15-99/month) but offers superior AI automation and analytics.',
-    competitors: ['Hootsuite, Buffer, Sprout Social, Later, Planoly, Agorapulse'],
-    techStack: ['OpenAI GPT-4, Claude 3, React, Node.js, PostgreSQL, Redis, Social media APIs'],
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     realImplementation: true,
     implementationDetails: 'Social media automation platform with AI content generation, multi-platform management, and comprehensive analytics.',
     roi: 'Average customer sees 250% ROI within 4 months through increased engagement and lead generation.',
@@ -364,7 +307,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
     icon: '📱',
     color: 'purple',
     popular: true,
-<<<<<<< HEAD
     icon: '📧⚛️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
@@ -390,18 +332,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
     customers: 678,
     rating: 4.8,
     reviews: 456
-=======
-    launchDate: '2024-01-20',
-    customers: 1250,
-    rating: 4.7,
-    reviews: 345,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008, Middletown, DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   },
 
   // Content Marketing Automation Platform
@@ -677,7 +607,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
       'Marketing attribution',
       'Customer journey analysis',
       'ROI optimization',
-<<<<<<< HEAD
       'Brand safety monitoring',
       'Influencer analytics',
       'Campaign automation',
@@ -722,9 +651,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
       'Customer behavior analysis',
       'Market trend prediction',
       'ROI forecasting',
-=======
-      'Channel performance',
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       'Campaign optimization',
       'Data-driven decisions'
     ],
@@ -735,7 +661,6 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
     icon: '📊',
     color: 'cyan',
     popular: true,
-<<<<<<< HEAD
     icon: '📊⚛️',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-300',
@@ -849,17 +774,5 @@ export const comprehensiveAdvertisingMarketingServices: ComprehensiveAdvertising
     customers: 345,
     rating: 4.9,
     reviews: 234
-=======
-    launchDate: '2024-02-10',
-    customers: 320,
-    rating: 4.9,
-    reviews: 89,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008, Middletown, DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   }
 ];

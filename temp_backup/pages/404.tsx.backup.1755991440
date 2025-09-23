@@ -1,5 +1,4 @@
 export default function NotFound() {
-<<<<<<< HEAD
   return (
     <div className="py-24 text-center">
       <h1 className="text-3xl font-bold">404 — Page Not Found</h1>
@@ -7,7 +6,3 @@ export default function NotFound() {
     </div>
   );
 }
-=======
-  return <div>Page not found</div>;
-}
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

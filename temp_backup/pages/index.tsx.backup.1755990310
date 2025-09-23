@@ -12,7 +12,6 @@ export default function Home() {
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
-<<<<<<< HEAD
       <PerformanceOptimizer>
         <MobileOptimizer showDebugInfo={false}>
           <AccessibilityEnhancer>
@@ -21,11 +20,6 @@ export default function Home() {
           </AccessibilityEnhancer>
         </MobileOptimizer>
       </PerformanceOptimizer>
-=======
-      <Homepage2045 />
-      <PerformanceMonitor />
-      <AccessibilityEnhancer />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9ffa
     </ErrorBoundary>
   );
 };

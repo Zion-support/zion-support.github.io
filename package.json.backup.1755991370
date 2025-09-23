@@ -719,7 +719,6 @@
     "git:cron:start": "bash automation/git-sync-cron.sh start",
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
     "git:cron:status": "bash automation/git-sync-cron.sh status",
-<<<<<<< HEAD
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -807,24 +806,6 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report"
-=======
-    "sync-health:run": "node automation/sync-health-check.cjs --fix",
-    "sync-health:cron:start": "bash automation/sync-health-cron.sh start",
-    "sync-health:cron:stop": "bash automation/sync-health-cron.sh stop",
-    "sync-health:cron:status": "bash automation/sync-health-cron.sh status",
-    "sync:all:start": "npm run git:cron:start && npm run sync-health:cron:start",
-    "git:health": "node automation/git-health.cjs --fast",
-    "git:health:fix": "node automation/git-health.cjs --fast --fix",
-    "git:health:deep": "node automation/git-health.cjs --deep",
-    "git:health:cron": "bash automation/git-health-cron.sh",
-    "conflicts:check": "bash scripts/check-merge-conflicts.sh",
-    "conflicts:watch": "watch -n 30 bash scripts/check-merge-conflicts.sh || true",
-    "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
-    "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
-    "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-    "cloud:auto": "node scripts/cloud-autonomous-run.mjs",
-    "cloud:auto:cron": "node -e \"setInterval(()=>{require('./scripts/cloud-autonomous-run.mjs')}, 1000*60*30)\""
->>>>>>> origin/cursor/build-real-time-salary-benchmarking-tool-dea9
   },
 =======
           "postautomation": "npm run automation:git-sync",

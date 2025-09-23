@@ -10976,42 +10976,9 @@ const Index: NextPage = () => {
 
   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-<<<<<<< HEAD
             {homepageData.explore.map((item) => (
               <Link key={item.href} href={item.href}><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">{item.text}</span></a></Link>
             ))}
-=======
-            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Hub — live agents & reports</span></a></Link>
-  
-
-            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
-  
-
-            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
-  
-
-            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-quick-fixes.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Quick Fixes — run / view</span></a>
-  
-
-            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-deep-maintenance.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Deep Maintenance — run / view</span></a>
-  
-
-            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-marketing-seo.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Marketing Seo — run / view</span></a>
-  
-
-            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-content-curation.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Content Curation — run / view</span></a>
-  
-
-            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-deps-upgrade.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Deps Upgrade — run / view</span></a>
-  
-
-            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-cloud.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Cloud — run / view</span></a>
-  
-
-            <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-auto-discovery.yml" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Auto Discovery — run / view</span></a>
-  
-
->>>>>>> origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a
   </div>
 
   <div className="mt-6 flex flex-wrap gap-2">

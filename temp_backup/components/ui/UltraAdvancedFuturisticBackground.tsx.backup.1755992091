@@ -3,16 +3,11 @@ import UltraAdvancedFuturisticBackgroundV2 from './UltraAdvancedFuturisticBackgr
 
 interface UltraAdvancedFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
-<<<<<<< HEAD
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-rainbow' | 'neural-network' | 'quantum-entanglement' | 'space-quantum' | 'ai-consciousness';
-=======
-  colorScheme?: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'hybrid';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1ea1
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
-<<<<<<< HEAD
   enableNeuralNetwork?: boolean;
   enableSpaceEffects?: boolean;
   children: React.ReactNode;
@@ -377,11 +372,3 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 };
 
 export default UltraAdvancedFuturisticBackground;
-=======
-  children: React.ReactNode;
-}
-
-export default function UltraAdvancedFuturisticBackground(props: UltraAdvancedFuturisticBackgroundProps) {
-  return <UltraAdvancedFuturisticBackgroundV2 {...props} />;
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1ea1

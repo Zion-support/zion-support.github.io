@@ -8,12 +8,9 @@ import TopContactBar from './TopContactBar';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
 import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 import ThemeToggle from '../ThemeToggle';
 import LoadingSpinner from '../LoadingSpinner';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
 
 interface LayoutProps {
@@ -77,7 +74,6 @@ export default function Layout({
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#06b6d4" />
 
-<<<<<<< HEAD
         {/* PWA Icons */}
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
@@ -143,17 +139,5 @@ export default function Layout({
         <CookieConsentBanner />
       </div>
     </>
-=======
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-      
-      {/* Service Worker Registration */}
-      <ServiceWorkerRegistration />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   );
 };

@@ -276,33 +276,6 @@ interface AnalyticsTrackerProps {
   return null;
 };
 
-<<<<<<< HEAD
 // Note: gtag and dataLayer are declared globally in PerformanceOptimizer.tsx
-=======
-// Performance entry types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: any;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  sources?: LayoutShiftSource[];
-}
-
-interface LayoutShiftSource {
-  node?: any;
-  currentRect?: any;
-  previousRect?: any;
-}
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-cdb7
 
 export default AnalyticsTracker;

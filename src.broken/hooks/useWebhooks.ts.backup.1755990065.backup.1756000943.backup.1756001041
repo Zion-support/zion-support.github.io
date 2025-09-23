@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -323,10 +322,3 @@ export function useWebhooks() {
     clearTestResult: () => setTestResult(null)
   };
 }
-=======
-// Hook for useWebhooks;
-export const useUseWebhooks: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

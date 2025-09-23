@@ -5,7 +5,6 @@ import Features from '../components/sections/Features';
 import FeaturedServices from '../components/sections/FeaturedServices';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Globe, Brain, Rocket } from 'lucide-react';
 
 export default function HomePage() {
@@ -16,16 +15,6 @@ export default function HomePage() {
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
     { value: '$200M+', label: 'Market Value', color: 'text-yellow-400' },
     { value: '1000%+', label: 'Average ROI', color: 'text-purple-400' },
-=======
-import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Code, Lock, Link, QrCode, FileText, Database } from 'lucide-react';
-
-export default function HomePage() {
-  const heroStats = [
-    { value: '8+', label: 'Micro SaaS Services', color: 'text-cyan-400' },
-    { value: '100%', label: 'Production Ready', color: 'text-fuchsia-400' },
-    { value: 'Free', label: 'Tier Available', color: 'text-blue-400' },
-    { value: '24/7', label: 'Support', color: 'text-green-400' },
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
   ];
 
   const heroStats = marketStats;
@@ -40,7 +29,6 @@ export default function HomePage() {
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
     {
-<<<<<<< HEAD
         <title>Zion Tech Group | Revolutionary Micro SaaS, IT & AI Solutions | 250+ Services</title>
         <meta name="description" content="Discover 250+ revolutionary micro SaaS, IT services and AI solutions delivering 1000%+ ROI. Quantum AI, autonomous systems, space technology, and more. Free trials available." />
         <meta name="keywords" content="micro SaaS, AI services, IT services, quantum computing, autonomous systems, space technology, biotechnology, cybersecurity, metaverse, IoT" />
@@ -502,113 +490,6 @@ export default function HomePage() {
         </div>
       </footer>
     </UltraFuturisticBackground>
-=======
-      icon: <Cloud className="w-8 h-8 text-white" />,
-      title: 'Real Micro SaaS Services',
-      description: '48+ fully functional micro SaaS tools with real implementations, not just mockups.',
-      color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
-      gradient: 'from-cyan-400 to-blue-500',
-      price: 'Starting at $49/month',
-      marketSize: '$45B+ global market',
-      competitors: 'Salesforce, HubSpot, Adobe'
-    },
-    {
-      icon: <Bot className="w-8 h-8 text-white" />,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI content generation, quantum AI training, biomedical research, legal contract analysis, and quantum computing platforms. Market-leading technology with 1000%+ average ROI.',
-      color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
-      gradient: 'from-fuchsia-400 to-purple-500',
-      price: 'Starting at $199/month',
-      marketSize: '$200B+ global market',
-      competitors: 'OpenAI, Google AI, Microsoft AI'
-    },
-    {
-      icon: <RefreshCw className="w-8 h-8 text-white" />,
-      title: 'Enterprise Reliability',
-      description: '99.9% uptime guarantee, automated scaling, and intelligent resource management. Trusted by Fortune 500 companies worldwide.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-      price: 'Starting at $299/month',
-      marketSize: '$100B+ global market',
-      competitors: 'AWS, Azure, Google Cloud'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: 'Lightning Fast Setup',
-      description: 'Get started in minutes with our intuitive interfaces and automated onboarding. No technical expertise required.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-      price: 'Starting at $99/month',
-      marketSize: '$25B+ global market',
-      competitors: 'Shopify, Wix, Squarespace'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Bank-Level Security',
-      description: 'SOC 2 compliance, quantum-resistant encryption, and automated security monitoring. Future-proof protection against quantum threats.',
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500',
-      price: 'Starting at $399/month',
-      marketSize: '$150B+ global market',
-      competitors: 'CrowdStrike, Palo Alto, Fortinet'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Transparent Pricing',
-      description: 'No hidden fees, simple monthly pricing that scales with your business needs. Competitive rates starting at $49/month.',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      gradient: 'from-teal-400 to-cyan-500',
-      price: 'Starting at $49/month',
-      marketSize: '$50B+ global market',
-      competitors: 'Stripe, PayPal, Square'
-=======
-      icon: <Code className="w-8 h-8 text-white" />,
-      title: 'Code Review Assistant',
-      description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
-      color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
-      gradient: 'from-fuchsia-400 to-purple-500',
-      pricing: 'Free tier, Pro from $29/month'
-    },
-    {
-      icon: <Lock className="w-8 h-8 text-white" />,
-      title: 'API Rate Limiter',
-      description: 'Intelligent rate limiting with configurable policies, real-time analytics, and Express.js middleware support.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-      pricing: 'Free tier, Enterprise from $99/month'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-white" />,
-      title: 'Email Validator',
-      description: 'Comprehensive email validation with security risk assessment, disposable email detection, and MX record validation.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-      pricing: 'Free tier, Pro from $19/month'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Password Strength Checker',
-      description: 'Advanced password analysis with security recommendations, policy enforcement, and strong password generation.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-      pricing: 'Free tier, Pro from $15/month'
-    },
-    {
-      icon: <Link className="w-8 h-8 text-white" />,
-      title: 'URL Shortener',
-      description: 'Professional URL shortening with analytics, custom aliases, password protection, and expiration dates.',
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500',
-      pricing: 'Free tier, Pro from $25/month'
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-white" />,
-      title: 'JSON Formatter',
-      description: 'Advanced JSON processing with validation, transformation, schema generation, and performance optimization.',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      gradient: 'from-teal-400 to-cyan-500',
-      pricing: 'Free tier, Pro from $20/month'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
     },
     {
       icon: <QrCode className="w-8 h-8 text-white" />,
@@ -629,7 +510,6 @@ export default function HomePage() {
   ];
 
   const technologyStack = [
-<<<<<<< HEAD
     { name: 'Next.js 14', category: 'Framework', icon: '⚡', description: 'Latest React framework with App Router' },
     { name: 'React 18', category: 'Library', icon: '⚛️', description: 'Concurrent features and Suspense' },
     { name: 'TypeScript 5', category: 'Language', icon: '📘', description: 'Type-safe development' },
@@ -825,51 +705,10 @@ export default function HomePage() {
       services: ['Quantum Internet Infrastructure', 'Quantum Cybersecurity', 'AI Intelligence Systems'],
       description: 'Secure national infrastructure with quantum-resistant technology and AI intelligence.',
       color: 'from-gray-500 to-slate-600'
-=======
-    { name: 'Next.js', category: 'Framework', icon: '⚡' },
-    { name: 'React', category: 'Library', icon: '⚛️' },
-    { name: 'TypeScript', category: 'Language', icon: '📘' },
-    { name: 'Tailwind CSS', category: 'Styling', icon: '🎨' },
-    { name: 'Node.js', category: 'Runtime', icon: '🟢' },
-    { name: 'PostgreSQL', category: 'Database', icon: '🐘' },
-    { name: 'Redis', category: 'Cache', icon: '🔴' },
-    { name: 'Docker', category: 'Containerization', icon: '🐳' },
-    { name: 'AWS', category: 'Cloud', icon: '☁️' },
-    { name: 'TensorFlow', category: 'AI/ML', icon: '🧠' },
-    { name: 'PyTorch', category: 'AI/ML', icon: '🔥' },
-    { name: 'Express.js', category: 'Backend', icon: '🚀' }
-  ];
-
-  const useCases = [
-    {
-      title: 'Development Teams',
-      description: 'Improve code quality, security, and team collaboration with our development tools.',
-      icon: '👥',
-      services: ['Code Review', 'Git Management', 'JSON Processing']
-    },
-    {
-      title: 'Security & Compliance',
-      description: 'Enhance your security posture with validation, threat detection, and compliance tools.',
-      icon: '🔒',
-      services: ['Email Validation', 'Password Security', 'File Analysis']
-    },
-    {
-      title: 'Marketing & Analytics',
-      description: 'Track campaigns, generate QR codes, and analyze performance with our utility services.',
-      icon: '📊',
-      services: ['URL Shortening', 'QR Generation', 'Analytics']
-    },
-    {
-      title: 'API Protection',
-      description: 'Secure your APIs with intelligent rate limiting and threat prevention.',
-      icon: '🛡️',
-      services: ['Rate Limiting', 'Security Scanning', 'Monitoring']
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
     }
   ];
 
   return (
-<<<<<<< HEAD
     <AdvancedFuturisticBackground variant="quantum-holographic" intensity="high">
       <div className="min-h-screen bg-gray-900 text-white">
         <Head>
@@ -891,37 +730,18 @@ export default function HomePage() {
           <meta name="twitter:title" content="Zion Tech Group - Revolutionary Technology Solutions" />
           <meta name="twitter:description" content="300+ Real Micro SaaS Services, AI Solutions, Quantum Computing" />
         </Head>
-=======
-    <>
-      <Head>
-        <title>Zion Tech Group — Professional Micro SaaS Services for Developers & Businesses</title>
-        <meta name="description" content="Discover our suite of production-ready micro SaaS services including code review, rate limiting, email validation, password security, URL shortening, JSON processing, QR codes, and file analysis. Start with free tiers." />
-        <meta property="og:title" content="Zion Tech Group — Professional Micro SaaS Services for Developers & Businesses" />
-        <meta property="og:description" content="Production-ready micro SaaS services with free tiers. Code review, security tools, utilities, and more for developers and businesses." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
 
       {/* Hero Section */}
       <Hero
         title="Zion Tech Group"
         subtitle="Professional micro SaaS services built for developers and businesses. Start with free tiers and scale as you grow."
         primaryAction={{
-<<<<<<< HEAD
           text: "Explore Micro SaaS",
           href: "/micro-saas"
         }}
         secondaryAction={{
           text: "View All Services",
           href: "/services"
-=======
-          text: "Explore Services",
-          href: "/services"
-        }}
-        secondaryAction={{
-          text: "View Pricing",
-          href: "/pricing"
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
         }}
         stats={heroStats}
       />
@@ -948,7 +768,6 @@ export default function HomePage() {
         columns={2}
       />
 
-<<<<<<< HEAD
       {/* Featured Services */}
       <FeaturedServices />
 
@@ -1017,41 +836,6 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Card>
-=======
-      {/* Use Cases */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Who Uses Our Services?
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Our micro SaaS services are designed for various use cases and industries.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <Card
-                key={index}
-                className="text-center group border border-gray-800 hover:border-blue-500/30 p-8"
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-              >
-                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {useCase.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{useCase.description}</p>
-                <div className="space-y-2">
-                  {useCase.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="text-sm text-blue-400">
-                      • {service}
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            ))}
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
           </div>
         </div>
       </section>
@@ -1059,7 +843,6 @@ export default function HomePage() {
       {/* Technology Stack */}
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
@@ -1135,9 +918,6 @@ export default function HomePage() {
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">
-=======
-          <div className="text-center mb-20">
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
               Built with Modern Technology
@@ -1167,7 +947,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Micro SaaS Services Section */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
@@ -1225,68 +1004,6 @@ export default function HomePage() {
               Explore Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-=======
-      {/* Why Choose Us */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Why Choose Our Services?
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              We focus on delivering real value through practical, production-ready solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center p-8 border border-gray-800 hover:border-blue-500/30">
-              <div className="text-4xl mb-6">🚀</div>
-              <h3 className="text-xl font-bold text-white mb-4">Production Ready</h3>
-              <p className="text-gray-400">
-                Every service is built with production environments in mind, including error handling, logging, and monitoring.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 border border-gray-800 hover:border-blue-500/30">
-              <div className="text-4xl mb-6">🔒</div>
-              <h3 className="text-xl font-bold text-white mb-4">Security First</h3>
-              <p className="text-gray-400">
-                Security is built into every service, with comprehensive validation, sanitization, and threat detection.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 border border-gray-800 hover:border-blue-500/30">
-              <div className="text-4xl mb-6">📊</div>
-              <h3 className="text-xl font-bold text-white mb-4">Analytics & Insights</h3>
-              <p className="text-gray-400">
-                Detailed analytics and insights help you understand usage patterns and optimize performance.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 border border-gray-800 hover:border-blue-500/30">
-              <div className="text-4xl mb-6">⚡</div>
-              <h3 className="text-xl font-bold text-white mb-4">High Performance</h3>
-              <p className="text-gray-400">
-                Optimized for speed and efficiency, with caching strategies and performance monitoring built-in.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 border border-gray-800 hover:border-blue-500/30">
-              <div className="text-4xl mb-6">🔄</div>
-              <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
-              <p className="text-gray-400">
-                Simple APIs and comprehensive documentation make integration straightforward and quick.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 border border-gray-800 hover:border-blue-500/30">
-              <div className="text-4xl mb-6">🎯</div>
-              <h3 className="text-xl font-bold text-white mb-4">Real Use Cases</h3>
-              <p className="text-gray-400">
-                Each service solves real problems faced by developers and businesses every day.
-              </p>
-            </Card>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
           </div>
         </div>
       </section>

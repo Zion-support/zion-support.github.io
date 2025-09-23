@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-=======
-import Head from 'next/head';
-import UltraFuturisticNavigation2046 from './UltraFuturisticNavigation2046';
-import UltraFuturisticFooter2046 from './UltraFuturisticFooter2046';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9f53
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2037 from '../backgrounds/UltraFuturisticBackground2037';
 import TopContactBar from './TopContactBar';
@@ -19,18 +13,7 @@ interface LayoutProps {
 	children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function Layout({ children }: LayoutProps) {
-=======
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group - Revolutionary 2046 Technology",
-  description = "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.",
-  keywords = "AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2046 technology",
-  ogImage = "/og-image.jpg",
-  canonicalUrl
-}: LayoutProps) {
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9f53
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -105,11 +88,7 @@ export default function Layout({
         {/* Layout Structure */}
         <div className="relative z-10">
           {/* Navigation */}
-<<<<<<< HEAD
           <UltraFuturisticNavigation2025 />
-=======
-          <UltraFuturisticNavigation2046 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9f53
           
           {/* Sidebar and Main Content */}
           <div className="flex">
@@ -124,11 +103,7 @@ export default function Layout({
           </div>
           
           {/* Footer */}
-<<<<<<< HEAD
           <UltraFuturisticFooter2025 />
-=======
-          <UltraFuturisticFooter2046 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9f53
         </div>
 
         {/* Accessibility and Performance Tools */}

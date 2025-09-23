@@ -58,11 +58,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const settingsRef = useRef<HTMLDivElement>(null);
 
   // Apply accessibility settings to the document
-<<<<<<< HEAD
   const applySettings = (newSettings: AccessibilitySettings) => {
-=======
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e21f
     const root = document.documentElement;
     
     // High contrast
@@ -107,20 +103,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.style.filter = 'none';
     }
-<<<<<<< HEAD
   };
 
   useEffect(() => {
     applySettings(settings);
   }, [settings]);
-=======
-  }, []);
-
-  // Apply accessibility settings to the document
-  useEffect(() => {
-    applySettings(settings);
-  }, [settings, applySettings]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e21f
 
   // Handle click outside to close settings
   useEffect(() => {
@@ -207,14 +194,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }, 5000);
   }, []);
 
-<<<<<<< HEAD
 
-=======
-  // Auto-optimize accessibility
-  useEffect(() => {
-    // applySettings(settings); // This line was removed
-  }, [settings]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e21f
 
   // Keyboard navigation enhancement
   useEffect(() => {
@@ -534,7 +514,6 @@ export default AccessibilityEnhancer;
 // Simple placeholder component
 import React from 'react';
 
-<<<<<<< HEAD
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -543,7 +522,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   return <>{children}</>;
 };
 
-=======
-// Export the main provider component as default
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e21f
 export default AccessibilityEnhancer;

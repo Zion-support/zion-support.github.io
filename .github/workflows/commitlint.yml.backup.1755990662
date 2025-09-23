@@ -1,7 +1,6 @@
 name: Commitlint
 
 on:
-<<<<<<< HEAD
   workflow_dispatch: {}
   schedule:
     - cron: '*/10 * * * *'
@@ -34,18 +33,3 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-=======
-  pull_request:
-    types: [opened, synchronize, reopened, edited]
-
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v6
-        with:
-          configFile: commitlint.config.cjs
->>>>>>> origin/cursor/automate-continuous-development-processes-4d04

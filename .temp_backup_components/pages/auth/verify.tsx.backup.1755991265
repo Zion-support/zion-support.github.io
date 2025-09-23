@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function VerifyEmailPage() {
@@ -9,6 +8,3 @@ export default function VerifyEmailPage() {
     </div>
   );
 }
-=======
-export default function Page(){return <div className="py-8 text-slate-300">verify</div>}
->>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
@@ -136,14 +135,3 @@ export function ChatAssistant({
     </div>
   );
 }
-=======
-import React from 'react';
-export function ErrorBoundary() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder - needs implementation</p>;
-    </div>
-  );
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

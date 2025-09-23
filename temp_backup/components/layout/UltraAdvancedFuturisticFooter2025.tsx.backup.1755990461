@@ -7,66 +7,6 @@ import {
   Shield, Users, BookOpen, Briefcase, Atom
 } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-import { AnimatePresence } from 'framer-motion';
-
-interface FooterLink {
-  label: string;
-  href: string;
-  description?: string;
-  external?: boolean;
-}
-
-interface FooterSection {
-  title: string;
-  links: FooterLink[];
-}
-
-const footerSections: FooterSection[] = [
-  {
-    title: 'Services',
-    links: [
-      { label: 'AI & Machine Learning', href: '/services?category=ai-ml', description: 'Advanced AI solutions' },
-      { label: 'Quantum Computing', href: '/services?category=quantum', description: 'Next-gen quantum tech' },
-      { label: 'Space Technology', href: '/services?category=space-tech', description: 'Innovative space solutions' },
-      { label: 'Cybersecurity', href: '/services?category=cybersecurity', description: 'Enterprise security' },
-      { label: 'Enterprise IT', href: '/services?category=enterprise-it', description: 'Enterprise infrastructure' },
-      { label: 'Micro SAAS', href: '/services?category=micro-saas', description: 'Business solutions' },
-      { label: 'View All Services', href: '/services', description: 'Complete service portfolio' }
-    ]
-  },
-  {
-    title: 'Solutions',
-    links: [
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' },
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' },
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' },
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' },
-      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
-    ]
-  },
-  {
-    title: 'Company',
-    links: [
-      { label: 'About Us', href: '/about', description: 'Our mission and values' },
-      { label: 'Partners', href: '/partners', description: 'Strategic partnerships' },
-      { label: 'Careers', href: '/careers', description: 'Join our team' },
-      { label: 'Contact', href: '/contact', description: 'Get in touch' }
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { label: 'Documentation', href: '/docs', description: 'Technical guides' },
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-      { label: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { label: 'Support', href: '/support', description: 'Help & assistance' }
-    ]
-  }
-];
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
 
 const socialLinks = [
   { name: 'Twitter', href: '#', icon: <Twitter className="w-5 h-5" /> },

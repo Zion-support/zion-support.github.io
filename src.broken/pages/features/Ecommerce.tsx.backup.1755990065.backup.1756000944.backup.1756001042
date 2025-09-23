@@ -1,7 +1,6 @@
 import React from 'react';
 export function Ecommerce() {
   return (
-<<<<<<< HEAD
     <>
       <SEO
         title="E-commerce Platform"
@@ -47,11 +46,5 @@ export function Ecommerce() {
         </div>
       </main>
     </>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

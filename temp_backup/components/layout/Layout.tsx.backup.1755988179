@@ -106,7 +106,6 @@ export default function Layout({ children }: LayoutProps) {
           <UltraFuturisticFooter2025 />
         </div>
 
-<<<<<<< HEAD
         {/* Accessibility and Performance Tools */}
         <AccessibilityEnhancer />
         <PerformanceMonitor />
@@ -115,14 +114,5 @@ export default function Layout({ children }: LayoutProps) {
         <CookieConsentBanner />
       </div>
     </PerformanceOptimizer>
-=======
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer enabled={true} showControls={process.env.NODE_ENV === 'development'} />
-      <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
   );
 }

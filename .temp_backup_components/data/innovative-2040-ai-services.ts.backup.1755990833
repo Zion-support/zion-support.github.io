@@ -16,7 +16,6 @@ export const innovative2040AIServices = [
       'Multi-dimensional Learning',
       'Consciousness Metrics Dashboard'
     ],
-<<<<<<< HEAD
     popular: true,
 <<<<<<< HEAD
     icon: '🧠💝🤖',
@@ -65,10 +64,6 @@ export const innovative2040AIServices = [
     popular: true,
     icon: '🎨🤖✨',
     color: 'from-purple-500 to-pink-600',
-=======
-    icon: '🧠✨',
-    color: 'from-purple-600 to-pink-700',
->>>>>>> origin/main
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-consciousness-evolution-platform',
     marketPosition: 'First-to-market AI consciousness platform enabling the next evolution of artificial intelligence.',
@@ -77,7 +72,6 @@ export const innovative2040AIServices = [
     setupTime: '1 month',
     category: 'AI & Consciousness',
     realService: true,
-<<<<<<< HEAD
     technology: ['Generative AI', 'Computer Vision', 'Audio processing', 'Machine Learning', 'Python', 'React', 'Creative AI'],
     integrations: ['Design software', 'Music production tools', 'Video editing platforms', 'Creative suites', 'Marketing tools'],
     useCases: ['Content creation', 'Art and design', 'Music production', 'Video creation', 'Creative inspiration'],
@@ -86,16 +80,6 @@ export const innovative2040AIServices = [
     marketSize: 'Creative AI market $15B+, growing 35% annually',
     growthRate: '600% YoY',
     variant: 'ai-futuristic',
-=======
-    technology: ['Python', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['AI frameworks', 'Robotics platforms', 'Research tools', 'Ethics frameworks'],
-    useCases: ['AI consciousness research', 'Robotics development', 'Human-AI collaboration', 'Ethical AI development'],
-    roi: 'Accelerate AI consciousness research by 10x and enable breakthrough applications.',
-    competitors: ['Basic AI platforms', 'Traditional robotics', 'Manual consciousness research'],
-    marketSize: 'AI consciousness market $2.1B+, growing 35% annually',
-    growthRate: '400% YoY',
-    variant: 'ai-consciousness',
->>>>>>> origin/main
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Advanced AI platform with consciousness development algorithms and comprehensive research tools.',
@@ -151,7 +135,6 @@ export const innovative2040AIServices = [
       'Quantum Performance Analytics'
     ],
     category: 'Quantum & AI',
-<<<<<<< HEAD
     realService: true,
 <<<<<<< HEAD
     technology: ['Quantum computing', 'Quantum AI algorithms', 'Machine Learning', 'Python', 'React', 'Node.js', 'Quantum APIs'],
@@ -211,21 +194,6 @@ export const innovative2040AIServices = [
     implementationDetails: 'Advanced AI platform with machine learning, IoT integration, and comprehensive predictive maintenance.',
     launchDate: '2025-01-20',
     customers: 123,
-=======
-    technology: ['Qiskit', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Quantum computers', 'AI frameworks', 'Research platforms', 'High-performance computing'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Climate research', 'Advanced simulations'],
-    roi: 'Solve problems 1000x faster and enable breakthrough discoveries in multiple fields.',
-    competitors: ['Traditional computing', 'Basic quantum platforms', 'Standard AI tools'],
-    marketSize: 'Quantum computing market $8.6B+, growing 30% annually',
-    growthRate: '350% YoY',
-    variant: 'quantum-ai-revolutionary',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Enterprise quantum-AI platform with hybrid algorithms and comprehensive computing capabilities.',
-    launchDate: '2025-01-15',
-    customers: 15,
->>>>>>> origin/main
     rating: 4.8,
     reviews: 12
 =======
@@ -278,7 +246,6 @@ export const innovative2040AIServices = [
     type: 'AI Services',
     icon: '🏭',
     popular: true,
-<<<<<<< HEAD
     icon: '🔬🤖',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-300',
@@ -297,15 +264,6 @@ export const innovative2040AIServices = [
     competitors: ['Basic research tools', 'Manual research processes', 'Simple data analysis'],
     marketSize: 'AI research market $5B+, growing 40% annually',
     growthRate: '500% YoY',
-=======
-    technology: ['Python', 'TensorFlow', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Research databases', 'Laboratory equipment', 'Publication platforms', 'Collaboration tools'],
-    useCases: ['Scientific research', 'Drug discovery', 'Academic research', 'Industrial R&D'],
-    roi: 'Accelerate research by 5x and reduce research costs by 60%.',
-    competitors: ['Basic research tools', 'Manual research processes', 'Generic AI platforms'],
-    marketSize: 'Research software market $12.4B+, growing 18% annually',
-    growthRate: '280% YoY',
->>>>>>> origin/main
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
@@ -361,7 +319,6 @@ export const innovative2040AIServices = [
     type: 'AI Services',
     icon: '🧠💻',
     popular: true,
-<<<<<<< HEAD
     icon: '💝🤖',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-300',
@@ -381,16 +338,6 @@ export const innovative2040AIServices = [
     marketSize: 'AI in education market $20B+, growing 30% annually',
     growthRate: '450% YoY',
     variant: 'ai-futuristic',
-=======
-    technology: ['Python', 'TensorFlow', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['HRIS systems', 'Learning platforms', 'Communication tools', 'Assessment platforms'],
-    useCases: ['Leadership development', 'Team building', 'Personal growth', 'Mental health support'],
-    roi: 'Improve team collaboration by 40% and reduce workplace conflicts by 50%.',
-    competitors: ['Traditional coaching', 'Basic EQ assessments', 'Generic training platforms'],
-    marketSize: 'Corporate training market $370B+, growing 8.5% annually',
-    growthRate: '200% YoY',
-    variant: 'ai-emotional',
->>>>>>> origin/main
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'AI-powered platform with comprehensive emotional intelligence training and development tools.',
@@ -445,7 +392,6 @@ export const innovative2040AIServices = [
     type: 'AI Services',
     icon: '📈⚛️',
     popular: true,
-<<<<<<< HEAD
     icon: '🎨✨',
     color: 'from-purple-500 to-indigo-600',
     textColor: 'text-purple-300',
@@ -465,16 +411,6 @@ export const innovative2040AIServices = [
     marketSize: 'AI drug discovery market $4B+, growing 50% annually',
     growthRate: '700% YoY',
     variant: 'ai-futuristic',
-=======
-    technology: ['Python', 'DALL-E', 'Stable Diffusion', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Design tools', 'Marketing platforms', 'Content management systems', 'Social media platforms'],
-    useCases: ['Content creation', 'Design generation', 'Marketing materials', 'Creative innovation'],
-    roi: 'Increase creative output by 300% and reduce production time by 80%.',
-    competitors: ['Basic design tools', 'Manual creative processes', 'Generic AI generators'],
-    marketSize: 'Creative software market $12.8B+, growing 15% annually',
-    growthRate: '250% YoY',
-    variant: 'ai-creative',
->>>>>>> origin/main
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'AI-powered platform with autonomous creativity and comprehensive creative tools.',
@@ -529,7 +465,6 @@ export const innovative2040AIServices = [
     type: 'AI Services',
     icon: '❤️🤖',
     popular: true,
-<<<<<<< HEAD
     icon: '📊🤖',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-300',
@@ -549,16 +484,6 @@ export const innovative2040AIServices = [
     marketSize: 'Autonomous vehicle AI market $15B+, growing 35% annually',
     growthRate: '600% YoY',
     variant: 'ai-autonomous',
-=======
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Machine Learning'],
-    integrations: ['ERP systems', 'CRM platforms', 'Data warehouses', 'Business applications'],
-    useCases: ['Strategic planning', 'Market analysis', 'Performance optimization', 'Risk assessment'],
-    roi: 'Improve decision-making accuracy by 60% and identify opportunities 3x faster.',
-    competitors: ['Traditional BI tools', 'Basic analytics platforms', 'Manual analysis processes'],
-    marketSize: 'Business intelligence market $29.5B+, growing 20% annually',
-    growthRate: '220% YoY',
-    variant: 'business-intelligence-futuristic',
->>>>>>> origin/main
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'AI-powered platform with comprehensive business intelligence and predictive analytics.',
@@ -603,7 +528,6 @@ export const innovative2040AIServices = [
       'Education Technology',
       'Human Resources'
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '🏥🤖',
     color: 'from-red-500 to-pink-600',
@@ -680,11 +604,6 @@ export const innovative2040AIServices = [
     id: 'ai-powered-climate-intelligence-platform',
     name: 'AI-Powered Climate Intelligence Platform',
     tagline: 'Intelligent climate analysis and prediction platform for environmental decision making',
-=======
-    id: 'ai-autonomous-financial-advisor',
-    name: 'AI Autonomous Financial Advisor',
-    tagline: 'Self-managing financial advisory platform with intelligent investment strategies',
->>>>>>> origin/main
     price: '$299',
     period: '/month',
     description: 'Revolutionary financial advisory platform that autonomously manages portfolios, develops investment strategies, and optimizes financial performance.',
@@ -709,7 +628,6 @@ export const innovative2040AIServices = [
     setupTime: '2 weeks',
     category: 'AI & Finance',
     realService: true,
-<<<<<<< HEAD
     technology: ['Machine Learning', 'Climate modeling', 'Environmental data analysis', 'Python', 'React', 'Node.js', 'Climate AI'],
     integrations: ['Climate data sources', 'Environmental monitoring systems', 'Sustainability platforms', 'Research databases', 'Government systems'],
     useCases: ['Climate analysis', 'Environmental planning', 'Sustainability optimization', 'Risk assessment', 'Policy development'],
@@ -718,16 +636,6 @@ export const innovative2040AIServices = [
     marketSize: 'Climate tech market $10B+, growing 40% annually',
     growthRate: '450% YoY',
     variant: 'ai-futuristic',
-=======
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Machine Learning'],
-    integrations: ['Trading platforms', 'Portfolio management systems', 'Risk management tools', 'Compliance platforms'],
-    useCases: ['Portfolio management', 'Investment strategy', 'Risk management', 'Financial planning'],
-    roi: 'Improve investment returns by 25% and reduce management fees by 40%.',
-    competitors: ['Traditional financial advisors', 'Basic robo-advisors', 'Manual investment management'],
-    marketSize: 'Robo-advisory market $25.6B+, growing 25% annually',
-    growthRate: '240% YoY',
-    variant: 'finance-futuristic',
->>>>>>> origin/main
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'AI-powered platform with autonomous financial management and comprehensive advisory tools.',

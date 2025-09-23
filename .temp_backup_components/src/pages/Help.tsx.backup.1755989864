@@ -1,19 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
-<<<<<<< HEAD
-=======
-import { Footer } from '@/components/Footer';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 import { GradientHeading } from '@/components/GradientHeading';
 import { Input } from '@/components/ui/input';
 import { Markdown } from '@/components/ui/markdown';
 import { SEO } from '@/components/SEO';
 import { SupportChatbot } from '@/components/SupportChatbot';
-<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 
 interface Article { slug: string; title: string; content: string; }
 
@@ -21,7 +14,6 @@ export default function Help() {
   const [query, setQuery] = useState('');
   const [articles, setArticles] = useState<Article[]>([]);
   const [selected, setSelected] = useState<Article | null>(null);
-<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -54,14 +46,6 @@ export default function Help() {
     return () => {
       active = false;
     };
-=======
-
-  useEffect(() => {
-    fetch(`/api/help/articles?q=${encodeURIComponent(query)}`)
-      .then(r => r.json())
-      .then(setArticles)
-      .catch(() => setArticles([]));
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
   }, [query]);
 
   return (
@@ -82,7 +66,6 @@ export default function Help() {
               className="bg-zion-blue-light text-white"
             />
           </div>
-<<<<<<< HEAD
           {loading && (
             <p className="text-center text-white my-4">Loading...</p>
           )}
@@ -94,8 +77,6 @@ export default function Help() {
               </button>
             </div>
           )}
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
           <div className="grid gap-4 max-w-3xl mx-auto">
             {articles.map(a => (
               <button key={a.slug} onClick={() => setSelected(a)} className="text-left p-4 border border-zion-blue-light rounded text-white bg-zion-blue-dark hover:bg-zion-blue-light">
@@ -112,10 +93,6 @@ export default function Help() {
         </div>
       </main>
       <SupportChatbot />
-<<<<<<< HEAD
-=======
-      <Footer />
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
     </>
   );
 }

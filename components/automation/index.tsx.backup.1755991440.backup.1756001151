@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 const automations = [
@@ -204,8 +203,3 @@ export default function AutomationsHub() {
     </div>
   );
 }
-=======
-export default function Automation() {
-  return <div>Automation</div>;
-}
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

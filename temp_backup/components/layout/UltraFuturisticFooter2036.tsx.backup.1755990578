@@ -229,7 +229,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
   ];
 
   const quickLinks = [
-<<<<<<< HEAD
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
@@ -238,14 +237,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Documentation', href: '/docs' },
-=======
-            { name: 'About Us', href: '/about' },
-        { name: 'Leadership Team', href: '/leadership' },
-          { name: 'Services', href: '/services' },
-      { name: 'Services Showcase', href: '/showcase' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Blog', href: '/blog' },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-feb9
     { name: 'Careers', href: '/careers' },
     { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' }

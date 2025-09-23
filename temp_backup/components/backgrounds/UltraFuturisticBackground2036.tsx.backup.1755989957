@@ -1,21 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
 const UltraFuturisticBackground2036: React.FC = () => {
-=======
-interface UltraFuturisticBackground2036Props {
-  intensity?: 'low' | 'medium' | 'high';
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
-  children?: React.ReactNode;
-}
-
-export default function UltraFuturisticBackground2036({ 
-  intensity = 'medium', 
-  theme = 'quantum-neon',
-  children
-}: UltraFuturisticBackground2036Props) {
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | null>(null);
@@ -230,7 +216,6 @@ export default function UltraFuturisticBackground2036({
     animationFrameRef.current = requestAnimationFrame(() => animate(canvas, ctx));
   }, [getThemeColors]);
 
-<<<<<<< HEAD
   // Setup and cleanup
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -257,22 +242,6 @@ export default function UltraFuturisticBackground2036({
     // Initialize and start animation
     initParticles(canvas, ctx);
     animate(canvas, ctx);
-=======
-  // Enhanced initialization and cleanup
-  useEffect(() => {
-    initParticles();
-    animate();
-
-    const handleResize = () => {
-      if (canvasRef.current) {
-        canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight;
-      }
-      initParticles();
-    };
-
-    window.addEventListener('resize', handleResize);
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -283,11 +252,7 @@ export default function UltraFuturisticBackground2036({
   }, [initParticles, animate]);
 
   return (
-<<<<<<< HEAD
     <div ref={containerRef} className="fixed inset-0 pointer-events-none overflow-hidden">
-=======
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0">
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       <canvas
         ref={canvasRef}
         className="w-full h-full"
@@ -298,7 +263,6 @@ export default function UltraFuturisticBackground2036({
       
       {/* Additional visual elements */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
         {/* Gradient overlays */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5" />
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-purple-500/3 via-transparent to-pink-500/3" />
@@ -345,29 +309,6 @@ export default function UltraFuturisticBackground2036({
             ease: "linear"
           }}
         />
-=======
-        <svg className="w-full h-full" style={{ opacity: 0.1 }}>
-          <defs>
-            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.5" />
-              <stop offset="50%" stopColor="#ff00ff" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#ffff00" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
-          {Array.from({ length: 20 }).map((_, i) => (
-            <line
-              key={i}
-              x1={Math.random() * 100}
-              y1={Math.random() * 100}
-              x2={Math.random() * 100}
-              y2={Math.random() * 100}
-              stroke="url(#quantumGradient)"
-              strokeWidth="0.5"
-              opacity="0.3"
-            />
-          ))}
-        </svg>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       </div>
       
       {children}

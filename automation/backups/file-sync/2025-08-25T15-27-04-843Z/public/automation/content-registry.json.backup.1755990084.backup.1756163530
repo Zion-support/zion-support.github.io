@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "pages": [
     {
       "file": "pages/site-health.tsx",
@@ -10661,8 +10660,6 @@
     }
   ],
   "generatedAt": "2025-08-14T11:38:34.864Z",
-=======
->>>>>>> origin/automation/git-sync/2025-08-14T11-43-12-454Z
   "items": [
     {
       "title": "Reference Architecture — Autonomous Content Mesh",

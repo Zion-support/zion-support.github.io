@@ -1,16 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Check, ExternalLink, Users, BarChart3, Smile } from 'lucide-react';
-=======
-import { motion } from 'framer-motion';
-import { 
-  Users, BarChart3, TrendingUp, Shield, Zap, Target, 
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
-  Award, MessageCircle, Briefcase
-} from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-fe5e
 
 export default function AIHRAnalyticsPlatform() {
   const features = [
@@ -64,7 +55,6 @@ export default function AIHRAnalyticsPlatform() {
     'Training & Development', 'Compensation Analysis', 'Diversity & Inclusion'
   ];
 
-<<<<<<< HEAD
 	return (
 		<>
 			<Head>
@@ -86,20 +76,6 @@ export default function AIHRAnalyticsPlatform() {
 					</div>
 				</div>
 			</section>
-=======
-  return (
-    <>
-      <Head>
-        <title>AI HR Analytics Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform HR with data-driven insights. AI-powered analytics for performance, retention, and strategic workforce planning." />
-        <meta name="keywords" content="AI HR analytics, HR analytics, workforce analytics, employee analytics, talent analytics, HR insights" />
-        <meta property="og:title" content="AI HR Analytics Platform | Zion Tech Group" />
-        <meta property="og:description" content="Transform HR with data-driven insights." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-hr-analytics-platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-hr-analytics-platform" />
-      </Head>
->>>>>>> origin/cursor/website-audit-and-enhancement-fe5e
 
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}

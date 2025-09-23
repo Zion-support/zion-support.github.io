@@ -8,7 +8,6 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-<<<<<<< HEAD
   schedule: '29 */6 * * *', // every 6 hours
 };
 
@@ -30,9 +29,6 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
-=======
-  schedule: '*/30 * * * *', // every 30 minutes
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 };
 
 exports.handler = async () => {

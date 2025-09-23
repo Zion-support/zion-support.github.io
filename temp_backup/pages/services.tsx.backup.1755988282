@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
   
   // Our new comprehensive 2025 services expansion
   ...comprehensiveRealServicesExpansion2025,
@@ -520,34 +519,11 @@ export default function Services() {
       default:
         return <Shield className="w-6 h-6 text-gray-400" />;
     }
-=======
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Shield, Rocket, Star } from 'lucide-react';
-import Link from 'next/link';
-import { formatServicePrice } from '../utils/servicePriceUtils';
-
-// Disable static generation for this page
-export const getServerSideProps = async () => {
-  return {
-    props: {}
-  };
-};
-
-const ServicesPage: React.FC = () => {
-  return (
-    <>
-=======
-
-export default function Services() {
-  return (
-    <div className="min-h-screen bg-black text-white pt-24">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-de9b
       <SEO 
         title="Services | Zion Tech Group - Enterprise IT, AI, Micro SAAS Solutions" 
         description="Discover our comprehensive portfolio of enterprise IT solutions, AI services, and innovative micro SAAS platforms. Transform your business with cutting-edge technology." 
         canonical="https://ziontechgroup.com/services/" 
       />
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-black text-white pt-24">
         {/* Hero Section */}
@@ -742,20 +718,6 @@ export default function Services() {
             </motion.div>
           </div>
         </section>
-=======
-      <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center">Services Page Temporarily Disabled</h1>
-        <p className="text-center text-gray-400 mt-4">This page is being updated to fix build issues.</p>
-        <p className="text-center text-gray-400 mt-2">Please visit individual service pages or contact us directly.</p>
-        <div className="mt-8 text-center">
-          <a 
-            href="/contact" 
-            className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-          >
-            Contact Us
-          </a>
-        </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-de9b
       </div>
     </div>
   );

@@ -13,12 +13,7 @@ export function formatDate(date: Date | string | undefined): string {
     return new Intl.DateTimeFormat('en-US', {
       month: 'short',
       day: 'numeric',
-<<<<<<< HEAD
       year: 'numeric'}).format(d);
-=======
-      year: 'numeric',
-    }).format(d);
->>>>>>> origin/auto/autonomy-17186719616
   } catch (e) {
     logErrorToProduction('Error formatting date:', { data:  e });
     return '-';
@@ -59,23 +54,13 @@ export async function trackReferral(userId: string, email: string) {
     const response = await apiClient('/api/track-referral', {
       method: 'POST',
       headers: {
-<<<<<<< HEAD
         'Content-Type': 'application/json'},
-=======
-        'Content-Type': 'application/json',
-      },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         refCode,
         userId,
         email,
         ipAddress: '', // This will be captured by the server
-<<<<<<< HEAD
       })});
-=======
-      }),
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (response.status >= 200 && response.status < 300) {
       // Clear the stored referral code

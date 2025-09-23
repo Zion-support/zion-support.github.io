@@ -1,10 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import SimpleServiceCard from '../components/ui/SimpleServiceCard';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4856
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -271,7 +265,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     whileHover={{ y: -10 }}
                     transition={{ duration: 0.3 }}
                   >
-<<<<<<< HEAD
                     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
                       {/* Service Icon and Header */}
                       <div className="p-8">
@@ -344,11 +337,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-=======
-                    <SimpleServiceCard
-                      service={service}
-                    />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4856
                   </motion.div>
                 ))}
               </div>

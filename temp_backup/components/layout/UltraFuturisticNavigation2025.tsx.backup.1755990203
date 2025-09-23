@@ -26,12 +26,7 @@ import {
   Sparkles,
   Lightbulb,
   Award,
-<<<<<<< HEAD
   DollarSign
-=======
-  Handshake,
-  Newspaper
->>>>>>> origin/cursor/website-audit-and-enhancement-fdbf
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

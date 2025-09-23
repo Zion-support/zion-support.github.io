@@ -100,7 +100,6 @@ const serviceCategories = [
   },
   {
     title: 'Micro SAAS',
-<<<<<<< HEAD
     icon: <Rocket className="w-5 h-5 text-purple-400" />,
     color: 'from-purple-500/20 to-pink-600/20',
     services: [
@@ -114,84 +113,6 @@ const serviceCategories = [
       { name: 'AI Sustainability Platform Pro', href: '/ai-sustainability-platform-pro', popular: false },
       { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', popular: false },
       { name: 'AI Legal Contract Analyzer Pro', href: '/ai-legal-contract-analyzer-pro', popular: false }
-=======
-    icon: <Rocket className="w-5 h-5" />,
-    color: 'text-emerald-400',
-    items: [
-      { name: 'AI Customer Success', href: '/ai-customer-success-platform', badge: 'New' },
-      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', badge: 'New' },
-      { name: 'Financial Planning AI', href: '/ai-financial-planning-platform', badge: 'New' },
-      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform', badge: 'New' },
-      { name: 'Sales Intelligence AI', href: '/ai-sales-intelligence-platform', badge: 'New' },
-      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
-      { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
-      { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite' },
-      { name: 'Financial Analytics', href: '/automated-financial-analytics-platform' },
-      { name: 'Project Management', href: '/intelligent-project-management-suite' },
-      { name: 'Business Intelligence', href: '/ai-business-intelligence-suite' },
-      { name: 'Marketing Automation', href: '/ai-autonomous-marketing-platform' },
-      { name: 'Customer Service AI', href: '/ai-customer-service' },
-      { name: 'HR & Recruitment', href: '/ai-hr-recruitment' },
-      { name: 'Legal Contract Analysis', href: '/ai-legal-contract-analyzer' }
-    ]
-  },
-  {
-    title: 'Solutions',
-    icon: <Target className="w-5 h-5" />,
-    color: 'text-orange-400',
-    items: [
-      { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
-      { name: 'Financial Services', href: '/financial-solutions' },
-      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
-      { name: 'Retail Technology', href: '/retail-technology-solutions' },
-      { name: 'Education Technology', href: '/education-technology-solutions' },
-      { name: 'Government Solutions', href: '/government-technology-solutions' },
-      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
-      { name: 'Transportation & Logistics', href: '/intelligent-supply-chain-optimization' },
-      { name: 'Real Estate Technology', href: '/innovative-business-solutions' },
-      { name: 'Entertainment & Media', href: '/innovative-business-solutions' },
-      { name: 'Space Technology', href: '/space-technology' },
-      { name: 'Biotech & Healthcare', href: '/biotech-ai-research-platform' }
-    ]
-  },
-  {
-    title: 'Resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    color: 'text-cyan-400',
-    items: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api-documentation' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Blog & News', href: '/blog' },
-      { name: 'Support Center', href: '/support' },
-      { name: 'Training & Certification', href: '/training' },
-      { name: 'Community Forum', href: '/community' },
-      { name: 'Developer Resources', href: '/developer-resources' },
-      { name: 'Research & Development', href: '/research-development' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Performance Reports', href: '/reports' },
-      { name: 'Market Analysis', href: '/market-pricing' },
-      { name: 'Services Advertising', href: '/services-advertising' }
-    ]
-  },
-  {
-    title: 'Company',
-    icon: <Users className="w-5 h-5" />,
-    color: 'text-pink-400',
-    items: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Leadership Team', href: '/leadership' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'News & Press', href: '/news' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Investors', href: '/investors' },
-      { name: 'Contact Us', href: '/contact' },
-      { name: 'Locations', href: '/locations' },
-      { name: 'Sustainability', href: '/sustainability' },
-      { name: 'Diversity & Inclusion', href: '/diversity-inclusion' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Privacy Policy', href: '/privacy' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-28aa
     ]
   }
 ];

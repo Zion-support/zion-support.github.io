@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import { Search } from 'lucide-react';
 
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-<<<<<<< HEAD
 import { captureException } from "@/utils/sentry";
 import Skeleton from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
@@ -22,9 +21,6 @@ const listingSchema = z.object({
 });
 
 const listingsSchema = z.array(listingSchema);
-=======
-import api from '@/lib/api';
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -49,7 +45,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
     const fetchServices = async () => {
       setLoading(true);
-<<<<<<< HEAD
       setError(null);
       const url = `/api/public/services?category=${encodeURIComponent(
         formData.serviceType
@@ -85,20 +80,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         } finally {
           if (isMounted.current) setLoading(false);
         }
-=======
-      try {
-        const response = await api.get(
-          `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
-        );
-        if (response.status < 200 || response.status >= 300) throw new Error('Failed to fetch');
-        const data = response.data;
-        setListings(data as ListingItem[]);
-      } catch (err) {
-        // Fallback to sample data on error
-        setListings(SAMPLE_LISTINGS.filter(item => item.category.toLowerCase() === formData.serviceType.toLowerCase()));
-      } finally {
-        setLoading(false);
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
       }
     };
 

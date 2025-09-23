@@ -3,20 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
   Phone, ArrowRight, Star, Users,
   Brain, Shield, BookOpen, Target, HelpCircle
-=======
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Star, Sparkles, 
-  Grid, List, TrendingUp, 
-  Calendar, Calculator, GraduationCap,
-  Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
-  Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
-  BookOpen, FileText, Handshake, Users, Lock, Database, Server, Key, Search, Zap as ZapIcon
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -388,7 +377,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Network className="w-4 h-4" />
       },
       {
-<<<<<<< HEAD
         name: 'Manufacturing & Industry 4.0',
         href: '/services#manufacturing-industry-40',
         description: 'Smart manufacturing solutions',
@@ -519,43 +507,6 @@ const navigationItems: NavigationItem[] = [
         href: '/services#edge-computing-5g',
         description: 'Edge computing solutions',
         icon: <Cpu className="w-4 h-4" />
-=======
-        name: 'AI Ethics & Governance 2041',
-        href: '/ai-ethics-governance-2041',
-        description: 'Comprehensive AI ethics framework',
-        icon: <Shield className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Research Assistant',
-        href: '/ai-autonomous-research-assistant',
-        description: 'Fully autonomous research and analysis',
-        icon: <Search className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'AI Autonomous Content Factory',
-        href: '/ai-autonomous-content-factory',
-        description: 'End-to-end autonomous content creation',
-        icon: <Palette className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Customer Success',
-        href: '/ai-autonomous-customer-success',
-        description: 'Intelligent customer success automation',
-        icon: <Users className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Sales Intelligence',
-        href: '/ai-autonomous-sales-intelligence',
-        description: 'Intelligent sales automation',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Product Management',
-        href: '/ai-autonomous-product-management',
-        description: 'Intelligent product lifecycle management',
-        icon: <Settings className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       }
     ]
   },
@@ -606,37 +557,11 @@ const navigationItems: NavigationItem[] = [
         featured: true
       },
       {
-<<<<<<< HEAD
         label: 'IT Infrastructure',
         href: '/it-services',
         icon: <Server className="w-4 h-4" />,
         description: 'Complete IT infrastructure solutions'
       },
-=======
-        name: 'Quantum Bio-Computing 2041',
-        href: '/quantum-bio-computing-2041',
-        description: 'Quantum biological computing',
-        icon: <Atom className="w-4 h-4" />
-      },
-      {
-        name: 'Quantum-Ready Cloud Infrastructure',
-        href: '/quantum-ready-cloud-infrastructure',
-        description: 'Future-proof cloud infrastructure',
-        icon: <Server className="w-4 h-4" />,
-        featured: true
-      }
-    ]
-  },
-  {
-    name: 'Enterprise Solutions',
-    href: '/it-services',
-    icon: <Cpu className="w-5 h-5" />,
-    description: 'Advanced enterprise infrastructure',
-    badge: 'Enterprise',
-    category: 'it',
-    color: 'from-orange-500 to-red-500',
-    children: [
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       {
         label: 'Data Analytics',
         href: '/data-analytics',
@@ -644,7 +569,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Advanced analytics and insights'
       },
       {
-<<<<<<< HEAD
         label: 'DevOps & Automation',
         href: '/devops-automation',
         icon: <Command className="w-4 h-4" />,
@@ -688,36 +612,10 @@ const navigationItems: NavigationItem[] = [
         href: '/manufacturing-ai-solutions',
         icon: <Cpu className="w-4 h-4" />,
         description: 'Smart manufacturing solutions'
-=======
-        name: 'AI-Powered DevOps Automation',
-        href: '/ai-powered-devops-automation',
-        description: 'Intelligent DevOps automation',
-        icon: <ZapIcon className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'Zero-Trust Network Architecture',
-        href: '/zero-trust-network-architecture',
-        description: 'Comprehensive zero-trust security',
-        icon: <Lock className="w-4 h-4" />
-      },
-      {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-        description: 'Intelligent edge computing management',
-        icon: <Network className="w-4 h-4" />
-      },
-      {
-        name: 'Blockchain Infrastructure Platform',
-        href: '/blockchain-infrastructure-platform',
-        description: 'Enterprise-grade blockchain infrastructure',
-        icon: <Database className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       }
     ]
   },
   {
-<<<<<<< HEAD
     name: 'Contact & Support',
     href: '/contact',
     icon: <MessageCircle className="w-5 h-5" />,
@@ -750,86 +648,6 @@ const navigationItems: NavigationItem[] = [
         href: '/quote',
         description: 'Get a custom quote',
         icon: <Calculator className="w-4 h-4" />
-=======
-    name: 'Micro SAAS Solutions',
-    href: '/micro-saas',
-    icon: <Code className="w-5 h-5" />,
-    description: 'Innovative micro SAAS platforms',
-    badge: 'Micro SAAS',
-    category: 'micro-saas',
-    color: 'from-green-500 to-emerald-500',
-    children: [
-      {
-        name: 'AI-Powered Email Automation',
-        href: '/ai-powered-email-automation',
-        description: 'Intelligent email marketing automation',
-        icon: <Mail className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'Smart Invoice Automation',
-        href: '/smart-invoice-automation',
-        description: 'Intelligent invoice processing',
-        icon: <FileText className="w-4 h-4" />
-      },
-      {
-        name: 'AI-Powered Customer Support',
-        href: '/ai-powered-customer-support',
-        description: 'Intelligent customer support automation',
-        icon: <MessageCircle className="w-4 h-4" />
-      },
-      {
-        name: 'Smart Project Management',
-        href: '/smart-project-management',
-        description: 'AI-powered project management',
-        icon: <Target className="w-4 h-4" />
-      },
-      {
-        name: 'AI-Powered SEO Optimization',
-        href: '/ai-powered-seo-optimization',
-        description: 'Intelligent SEO automation',
-        icon: <Search className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Resources & Support',
-    href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Knowledge and support resources',
-    category: 'resources',
-    color: 'from-indigo-500 to-purple-500',
-    children: [
-      {
-        name: 'Documentation',
-        href: '/docs',
-        description: 'Comprehensive service documentation',
-        icon: <FileText className="w-4 h-4" />
-      },
-      {
-        name: 'API Reference',
-        href: '/api',
-        description: 'Developer API documentation',
-        icon: <Code className="w-4 h-4" />
-      },
-      {
-        name: 'Support Center',
-        href: '/support',
-        description: '24/7 technical support',
-        icon: <HelpCircle className="w-4 h-4" />
-      },
-      {
-        name: 'Training & Certification',
-        href: '/training',
-        description: 'Professional training programs',
-        icon: <GraduationCap className="w-4 h-4" />
-      },
-      {
-        name: 'Community Forum',
-        href: '/community',
-        description: 'User community and discussions',
-        icon: <Users className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       }
     ]
   }

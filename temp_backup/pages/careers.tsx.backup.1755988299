@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -270,21 +269,6 @@ const CareersPage: React.FC = () => {
                   </p>
                 </motion.div>
               ))}
-=======
-import { NextPage } from 'next';
-import { Users, Target, Star, ArrowRight, CheckCircle, Globe, Award, Heart, Zap, Building, Rocket, Brain } from 'lucide-react';
-
-const Careers: NextPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
-              <Users className="w-4 h-4" />
-              <span>Join Our Team</span>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f89a
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Join the Revolution
@@ -297,7 +281,6 @@ const Careers: NextPage = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Benefits */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -390,21 +373,8 @@ const Careers: NextPage = () => {
                 </motion.div>
               ))}
             </div>
-=======
-      {/* Why Work With Us */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Why Work With Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover what makes us the most exciting place to work in technology.
-            </p>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f89a
           </div>
 
-<<<<<<< HEAD
         {/* Open Positions */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -517,53 +487,6 @@ const Careers: NextPage = () => {
                 <button className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Contact Recruiting
                 </button>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Rocket className="w-8 h-8" />,
-                title: "Revolutionary Technology",
-                description: "Work on cutting-edge AI consciousness, quantum computing, and space technology that's never been done before.",
-                color: "from-blue-500 to-cyan-500"
-              },
-              {
-                icon: <Brain className="w-8 h-8" />,
-                title: "AI-Powered Innovation",
-                description: "Collaborate with autonomous AI systems and contribute to the development of conscious artificial intelligence.",
-                color: "from-purple-500 to-pink-500"
-              },
-              {
-                icon: <Globe className="w-8 h-8" />,
-                title: "Global Impact",
-                description: "Your work will directly impact humanity's future and contribute to solving the world's greatest challenges.",
-                color: "from-green-500 to-emerald-500"
-              },
-              {
-                icon: <Star className="w-8 h-8" />,
-                title: "Continuous Learning",
-                description: "Access to the latest technologies and opportunities to learn from world-class experts in every field.",
-                color: "from-yellow-500 to-orange-500"
-              },
-              {
-                icon: <Heart className="w-8 h-8" />,
-                title: "Inclusive Culture",
-                description: "Join a diverse, inclusive team where every voice matters and innovation thrives.",
-                color: "from-red-500 to-pink-500"
-              },
-              {
-                icon: <Award className="w-8 h-8" />,
-                title: "Career Growth",
-                description: "Unlimited opportunities for advancement in the fastest-growing technology company in the world.",
-                color: "from-indigo-500 to-purple-500"
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${benefit.color} p-4 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f89a
               </div>
             ))}
           </div>
@@ -710,8 +633,4 @@ const Careers: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default CareersPage;
-=======
-export default Careers;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f89a

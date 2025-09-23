@@ -15,28 +15,13 @@ cd zion.app
 npm install
 ```
 
-<<<<<<< HEAD
 ### Development Environment
-=======
-### Development Setup
->>>>>>> origin/cursor/add-more-project-content-715e
 ```bash
 # Start development server
 npm run dev
 
-<<<<<<< HEAD
 # Run with enhanced memory allocation
 NODE_OPTIONS="--max-old-space-size=4096" npm run dev
-=======
-# Run linting
-npm run lint
-
-# Type checking
-npm run type-check
-
-# Build the project
-npm run build
->>>>>>> origin/cursor/add-more-project-content-715e
 ```
 
 ## Project Structure
@@ -49,21 +34,13 @@ npm run build
 - `styles/` - CSS and styling files
 
 ### Key Files
-<<<<<<< HEAD
 - `ecosystem.pm2.cjs` - PM2 process management
 - `next.config.js` - Next.js configuration
 - `tsconfig.json` - TypeScript configuration
-=======
-- `package.json` - Dependencies and scripts
-- `tsconfig.json` - TypeScript configuration
-- `next.config.js` - Next.js configuration
-- `ecosystem.pm2.cjs` - PM2 process management
->>>>>>> origin/cursor/add-more-project-content-715e
 
 ## Development Workflow
 
 ### Code Quality
-<<<<<<< HEAD
 ```bash
 # Lint and fix code
 npm run lint
@@ -119,28 +96,10 @@ npm run mcp:status
 # View logs
 npm run pm2:logs
 ```
-=======
-- ESLint for code linting
-- Prettier for code formatting
-- Husky for git hooks
-- TypeScript for type safety
-
-### Testing
-- Playwright for end-to-end testing
-- Jest for unit testing
-- Automated testing in CI/CD pipeline
-
-### Automation
-- GitHub Actions for CI/CD
-- PM2 for process management
-- Automated dependency updates
-- Content generation automation
->>>>>>> origin/cursor/add-more-project-content-715e
 
 ## Contributing
 
 ### Code Standards
-<<<<<<< HEAD
 - Follow ESLint configuration
 - Use TypeScript for new files
 - Follow existing naming conventions
@@ -160,53 +119,11 @@ type(scope): description
 feat(automation): add new monitoring script
 fix(ui): resolve button alignment issue
 docs(readme): update installation steps
-=======
-1. Follow TypeScript best practices
-2. Use functional components with hooks
-3. Implement proper error handling
-4. Add comprehensive documentation
-5. Write meaningful commit messages
-
-### Pull Request Process
-1. Create a feature branch
-2. Make your changes
-3. Run tests and linting
-4. Submit a pull request
-5. Ensure CI checks pass
-
-## Deployment
-
-### Local Development
-```bash
-npm run dev
-```
-
-### Production Build
-```bash
-npm run build
-npm start
-```
-
-### PM2 Management
-```bash
-# Start all processes
-npm run pm2:start
-
-# Check status
-npm run pm2:status
-
-# View logs
-npm run pm2:logs
-
-# Restart processes
-npm run pm2:restart
->>>>>>> origin/cursor/add-more-project-content-715e
 ```
 
 ## Troubleshooting
 
 ### Common Issues
-<<<<<<< HEAD
 
 #### Build Failures
 ```bash
@@ -315,23 +232,11 @@ npm run autonomous:status
 - Google Docs automation
 - LinkedIn marketing automation
 - GitHub Actions workflows
-=======
-- **Build failures**: Run `npm run build:heal`
-- **Dependency issues**: Run `npm run deps:maintain`
-- **Process crashes**: Check PM2 logs with `npm run pm2:logs`
-
-### Performance Optimization
-- Use Next.js Image component for images
-- Implement proper caching strategies
-- Monitor bundle sizes
-- Use dynamic imports for code splitting
->>>>>>> origin/cursor/add-more-project-content-715e
 
 ## Resources
 
 ### Documentation
 - [Next.js Documentation](https://nextjs.org/docs)
-<<<<<<< HEAD
 - [PM2 Documentation](https://pm2.keymetrics.io/docs/)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 
@@ -343,20 +248,3 @@ npm run autonomous:status
 ---
 
 *This guide is maintained by the development team. For questions or improvements, please open an issue or submit a PR.*
-=======
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [PM2 Documentation](https://pm2.keymetrics.io/docs/)
-
-### Community
-- GitHub Issues for bug reports
-- GitHub Discussions for questions
-- Pull Requests for contributions
-
-## Support
-
-For additional support or questions:
-- Check existing documentation
-- Review GitHub Issues
-- Contact the development team
-- Join community discussions
->>>>>>> origin/cursor/add-more-project-content-715e

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -21,6 +20,3 @@ export default function DownloadPage() {
     </>
   );
 }
-=======
-export { default } from './mobile-launch';
->>>>>>> origin/auto/autonomy-17186719616

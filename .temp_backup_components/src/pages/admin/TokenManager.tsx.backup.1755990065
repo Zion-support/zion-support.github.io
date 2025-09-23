@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { Header } from '@/components/Header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -62,10 +61,6 @@ export default function TokenManager() {
     }
   };
 
-=======
-import React from 'react';
-export function TokenManager() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

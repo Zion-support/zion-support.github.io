@@ -13,31 +13,12 @@ function readJson(filePath) {
 }
 
 function listWorkflows() {
-<<<<<<< HEAD
   const workflowsDir = path.join(process.cwd(), '.github', 'workflows');
   if (!fs.existsSync(workflowsDir)) return [];
   return fs
     .readdirSync(workflowsDir)
     .filter((f) => f.endsWith('.yml') || f.endsWith('.yaml'))
     .sort();
-=======
-  const root = process.cwd();
-  const dirs = [path.join(root, '.github', 'workflows'), path.join(root, '.github')];
-  const files = [];
-  for (const dir of dirs) {
-    if (!fs.existsSync(dir)) continue;
-    for (const f of fs.readdirSync(dir)) {
-      if (!f.match(/\.(ya?ml)$/)) continue;
-      // Skip dependabot to focus on autonomous repo workflows
-      if (f.toLowerCase().includes('dependabot')) continue;
-      const key = `${dir}/${f}`;
-      if (!files.includes(key)) files.push(key);
-    }
-  }
-  return files
-    .map((full) => ({ full, name: path.basename(full) }))
-    .sort((a, b) => a.name.localeCompare(b.name));
->>>>>>> origin/cursor/invent-and-deploy-autonomous-github-actions-fa8c
 }
 
 function collectPagesSummary() {
@@ -65,7 +46,6 @@ function collectComponentsSummary() {
   return { total: files.length };
 }
 
-<<<<<<< HEAD
 function toTitle(basename) {
   return basename
     .replace(/\.(yml|yaml)$/i, '')
@@ -89,22 +69,6 @@ function collectAutomations(pkg) {
     const url = `https://github.com/${repo.owner}/${repo.repo}/actions/workflows/${f}`;
     const badge = `${url}/badge.svg`;
     return `- [${title}](${url}) ![status](${badge})`;
-=======
-function getRepoSlug() {
-  const pkg = readJson(path.join(process.cwd(), 'package.json')) || {};
-  const url = (pkg.repository && pkg.repository.url) || '';
-  const m = url.match(/github.com[:/]+([^/]+)\/([^/]+?)(?:\.git)?$/i);
-  if (m) return `${m[1]}/${m[2]}`;
-  return '';
-}
-
-function collectAutomations() {
-  const repoSlug = getRepoSlug();
-  const items = listWorkflows();
-  return items.map(({ name }) => {
-    const href = repoSlug ? `https://github.com/${repoSlug}/actions/workflows/${name}` : '#';
-    return `- [${name}](${href})`;
->>>>>>> origin/cursor/invent-and-deploy-autonomous-github-actions-fa8c
   });
 }
 

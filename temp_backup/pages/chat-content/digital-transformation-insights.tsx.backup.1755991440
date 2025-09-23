@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function DigitalTransformationInsights() {
   return (
     <div className="space-y-2">
@@ -7,6 +6,3 @@ export default function DigitalTransformationInsights() {
     </div>
   );
 }
-=======
-export default function DigitalTransformationInsights() { return <div>Digital Transformation Insights</div>; }
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

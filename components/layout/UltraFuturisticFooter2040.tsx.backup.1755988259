@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
-=======
-import React, { useCallback, useMemo } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-52f1
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -13,7 +9,6 @@ import {
   ArrowUp, ArrowRight, ExternalLink, ChevronDown, ChevronUp
 } from 'lucide-react';
 
-<<<<<<< HEAD
 // Memoized footer data for better performance
 const footerData = {
   company: {
@@ -81,172 +76,6 @@ const footerData = {
       color: 'hover:text-red-400' 
     }
   ];
-=======
-const UltraFuturisticFooter2040: React.FC = () => {
-  // Performance optimization: Memoized footer sections
-  const footerSections = useMemo(() => [
-    {
-      title: 'Revolutionary Services',
-      items: [
-        {
-          label: 'AI & Consciousness',
-          href: '/ai-services',
-          icon: Brain,
-          description: 'Advanced AI solutions'
-        },
-        {
-          label: 'Quantum Computing',
-          href: '/quantum-computing',
-          icon: Atom,
-          description: 'Next-gen quantum solutions'
-        },
-        {
-          label: 'Space Technology',
-          href: '/space-tech',
-          icon: Globe,
-          description: 'Innovative space solutions'
-        },
-        {
-          label: 'Autonomous Systems',
-          href: '/autonomous-systems',
-          icon: Cpu,
-          description: 'Self-operating platforms'
-        }
-      ]
-    },
-    {
-      title: 'Enterprise Solutions',
-      items: [
-        {
-          label: 'IT Infrastructure',
-          href: '/it-services',
-          icon: Server,
-          description: 'Enterprise IT solutions'
-        },
-        {
-          label: 'Cloud Platform',
-          href: '/cloud-platform',
-          icon: Cloud,
-          description: 'Scalable cloud solutions'
-        },
-        {
-          label: 'Cybersecurity',
-          href: '/cybersecurity',
-          icon: Shield,
-          description: 'Advanced security solutions'
-        },
-        {
-          label: 'Data Analytics',
-          href: '/data-analytics',
-          icon: BarChart3,
-          description: 'Business intelligence'
-        }
-      ]
-    },
-    {
-      title: 'Innovation & Research',
-      items: [
-        {
-          label: 'Micro SAAS',
-          href: '/micro-saas',
-          icon: Rocket,
-          description: 'Innovative micro services'
-        },
-        {
-          label: 'DevOps Automation',
-          href: '/devops-automation',
-          icon: Code,
-          description: 'Development automation'
-        },
-        {
-          label: 'Mobile & Web',
-          href: '/mobile-web-solutions',
-          icon: Smartphone,
-          description: 'Digital experience solutions'
-        },
-        {
-          label: 'AI Research',
-          href: '/ai-research',
-          icon: Brain,
-          description: 'Cutting-edge AI research'
-        }
-      ]
-    },
-    {
-      title: 'Company & Resources',
-      items: [
-        {
-          label: 'About Us',
-          href: '/about',
-          icon: Users,
-          description: 'Our story and mission'
-        },
-        {
-          label: 'Blog & Insights',
-          href: '/blog',
-          icon: BookOpen,
-          description: 'Latest technology insights'
-        },
-        {
-          label: 'Case Studies',
-          href: '/case-studies',
-          icon: FileText,
-          description: 'Success stories'
-        },
-        {
-          label: 'Documentation',
-          href: '/docs',
-          icon: FileText,
-          description: 'Technical resources'
-        }
-      ]
-    }
-  ], []);
-
-  const additionalLinks = useMemo(() => [
-    {
-      title: 'Support & Training',
-      items: [
-        { label: 'Help Center', href: '/help' },
-        { label: 'Training Programs', href: '/training' },
-        { label: 'API Documentation', href: '/api-docs' },
-        { label: 'Developer Resources', href: '/developer' }
-      ]
-    },
-    {
-      title: 'Legal & Compliance',
-      items: [
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms of Service', href: '/terms' },
-        { label: 'Security', href: '/security' },
-        { label: 'Compliance', href: '/compliance' }
-      ]
-    },
-    {
-      title: 'Partnerships',
-      items: [
-        { label: 'Partner Program', href: '/partners' },
-        { label: 'Reseller Program', href: '/resellers' },
-        { label: 'Technology Partners', href: '/tech-partners' },
-        { label: 'Become a Partner', href: '/become-partner' }
-      ]
-    }
-  ], []);
-
-  const contactInfo = useMemo(() => ({
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  }), []);
-
-  const socialLinks = useMemo(() => [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: '💼' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: '💻' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' }
-  ], []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-52f1
 
 const UltraFuturisticFooter2040: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());

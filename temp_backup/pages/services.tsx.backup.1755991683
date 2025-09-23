@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useState, useMemo } from 'react';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-90c4
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, Filter as FilterIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -35,7 +31,6 @@ export default function ServicesPage() {
     { value: 'category', label: 'Category' }
   ];
 
-<<<<<<< HEAD
   // Filter and sort services
   let filteredServices = realMicroSaasServices;
 
@@ -103,143 +98,14 @@ export default function ServicesPage() {
           return a.name.localeCompare(b.name);
       }
     });
-=======
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const filteredServices = useMemo(() => {
-    let filtered = [...enhancedRealMicroSaasServices];
-
-    if (selectedCategory) {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
-    if (searchTerm) {
-      const q = searchTerm.toLowerCase();
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(q) ||
-        service.description.toLowerCase().includes(q) ||
-        service.category.toLowerCase().includes(q)
-      );
-    }
-
-    switch (sortBy) {
-      case 'price':
-        filtered.sort((a, b) => parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', '')));
-        break;
-      case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
-      case 'category':
-        filtered.sort((a, b) => a.category.localeCompare(b.category));
-        break;
-      default:
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-    }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-90c4
 
     return filtered;
   }, [searchTerm, selectedCategory, sortBy]);
 
-<<<<<<< HEAD
   // Get popular services
   const getPopularServices = () => {
     return enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
   };
-=======
-import { motion } from 'framer-motion';
-import { 
-  Star, 
-  Check, 
-  ExternalLink, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  TrendingUp, 
-  Users, 
-  Award,
-  Zap,
-  Shield,
-  Brain,
-  Rocket,
-  DollarSign,
-  Clock,
-  Target,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-import { realMicroSaasServices } from '../data/real-micro-saas-services-enhanced';
-import { useState } from 'react';
-
-export default function ServicesPage() {
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const categories = ['All', 'AI & Machine Learning', 'Cybersecurity', 'Industrial AI', 'Healthcare AI', 'Financial Technology', 'Space Technology', 'Energy Technology', 'Transportation AI', 'Marketing AI', 'Data Analytics'];
-
-  // Enhanced service categories with better descriptions
-  const enhancedCategories = [
-    {
-      name: 'AI & Machine Learning',
-      description: 'Revolutionary AI solutions with unprecedented computing power',
-      icon: <Brain className="w-6 h-6" />,
-      count: realMicroSaasServices.filter(s => s.category === 'AI & Machine Learning' || s.category.includes('AI')).length,
-      color: 'from-purple-500 to-indigo-600'
-    },
-    {
-      name: 'Business Intelligence',
-      description: 'Transform data into actionable business insights',
-      icon: <BarChart3 className="w-6 h-6" />,
-      count: realMicroSaasServices.filter(s => s.category === 'Business Intelligence' || s.category.includes('Data')).length,
-      color: 'from-cyan-500 to-blue-600'
-    },
-    {
-      name: 'Creative & Media',
-      description: 'AI-powered creative tools and media automation',
-      icon: <Palette className="w-6 h-6" />,
-      count: realMicroSaasServices.filter(s => s.category === 'Creative & Media').length,
-      color: 'from-pink-500 to-rose-600'
-    },
-    {
-      name: 'Development & DevOps',
-      description: 'Streamline development workflows with AI automation',
-      icon: <Code className="w-6 h-6" />,
-      count: realMicroSaasServices.filter(s => s.category === 'Development & DevOps').length,
-      color: 'from-slate-500 to-gray-600'
-    },
-    {
-      name: 'Legal Technology',
-      description: 'AI-powered legal document automation and compliance',
-      icon: <Shield className="w-6 h-6" />,
-      count: realMicroSaasServices.filter(s => s.category === 'Legal Technology').length,
-      color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      name: 'Customer Service',
-      description: 'Intelligent customer support and automation',
-      icon: <Users className="w-6 h-6" />,
-      count: realMicroSaasServices.filter(s => s.category === 'Customer Service & Support').length,
-      color: 'from-green-500 to-emerald-600'
-    }
-=======
-  const heroStats = [
-    { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
-    { value: '30+', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-6 h-6" /> },
-    { value: '800%+', label: 'Average ROI', color: 'text-green-400', icon: <TrendingUp className="w-6 h-6" /> },
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-90c4
   ];
 
   return (

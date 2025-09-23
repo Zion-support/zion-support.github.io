@@ -6,17 +6,9 @@ on:
     - cron: '*/10 * * * *'
 
 permissions:
-<<<<<<< HEAD
   contents: write
   pull-requests: write
   actions: read
-=======
-  contents: read
-
-concurrency:
-  group: security-auto-heal-${{ github.ref }}
-  cancel-in-progress: true
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
 jobs:
   main:

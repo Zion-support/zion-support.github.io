@@ -17,7 +17,6 @@ const footerSections = [
     color: 'from-yellow-500 to-orange-500',
     badge: 'Featured',
     links: [
-<<<<<<< HEAD
       { name: 'AI Consciousness Evolution 2043', href: '/ai-consciousness-evolution-2043', featured: true, description: 'Next-generation AI consciousness' },
       { name: 'Quantum AI Neural Network 2043', href: '/quantum-ai-neural-2043', featured: true, description: 'Quantum-powered AI networks' },
       { name: 'AI Business Intelligence 2043', href: '/ai-business-intelligence-2043', featured: true, description: 'AI-powered business insights' },
@@ -28,18 +27,6 @@ const footerSections = [
       { name: 'AI Healthcare Platform 2043', href: '/ai-healthcare-platform-2043', description: 'AI-powered healthcare solutions' },
       { name: 'Quantum Financial Trading 2043', href: '/quantum-financial-trading-2043', description: 'Quantum-powered trading' },
       { name: 'Autonomous Supply Chain 2043', href: '/autonomous-supply-chain-2043', description: 'AI-powered supply chain' }
-=======
-      { name: '2025 Innovative Services Showcase', href: '/comprehensive-2025-innovative-services-showcase', featured: true },
-      { name: 'AI Autonomous Content Factory Pro', href: '/ai-autonomous-content-factory-pro', featured: true },
-      { name: 'AI Emotional Intelligence Platform 2040', href: '/ai-emotional-intelligence-platform-2040', featured: true },
-      { name: 'Quantum-Secure Cloud Infrastructure 2040', href: '/quantum-secure-cloud-infrastructure-2040', featured: true },
-      { name: 'Autonomous DevOps Platform 2040', href: '/autonomous-devops-platform-2040', featured: true },
-      { name: 'AI Autonomous HR Platform', href: '/ai-autonomous-hr-platform', featured: true },
-      { name: 'AI Autonomous Marketing Platform', href: '/ai-autonomous-marketing-platform', featured: true },
-      { name: 'AI Consciousness Evolution 2040', href: '/ai-consciousness-evolution-2040' },
-      { name: 'Quantum Neural Ecosystem 2040', href: '/quantum-neural-ecosystem-2040' },
-      { name: 'Space Resource Intelligence 2040', href: '/space-resource-intelligence-2040' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8640
     ]
   },
   {

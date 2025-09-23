@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "generatedAt": "2025-08-17T21:31:11.747Z",
   "functions": [
     "a11y-alt-text-runner",
@@ -148,8 +147,4 @@
     "unused-media-scanner"
 >>>>>>> origin/content/blog-sept12
   ]
-=======
-  "generatedAt": "2025-08-19T18:22:42.684Z",
-  "functions": []
->>>>>>> origin/backup-main-final-20250913-063409
 }

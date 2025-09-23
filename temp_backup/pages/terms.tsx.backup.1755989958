@@ -1,19 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { FileText, Shield, Users, Globe, Clock, CheckCircle, AlertTriangle, Scale } from 'lucide-react';
-=======
-import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
-  ArrowRight, Users, Globe, Database, 
-  Calendar, Phone, Mail, MapPin
-} from 'lucide-react';
-import Link from 'next/link';
-=======
-=======
-import { FileText, Shield, Users, Globe, Clock, CheckCircle, AlertTriangle, Scale } from 'lucide-react';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
 const TermsPage: React.FC = () => {
   const keyTerms = [
@@ -41,69 +29,12 @@ const TermsPage: React.FC = () => {
 
   const serviceTerms = [
     {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       title: 'AI Consciousness Services',
       terms: [
         'Services are provided on an "as-is" basis with no warranties',
         'Users must not attempt to reverse engineer our AI systems',
         'Data processing follows our privacy policy and data protection standards',
         'Service availability is subject to maintenance and updates'
-<<<<<<< HEAD
-=======
-      service: 'AI Consciousness Platform',
-      description: 'Advanced AI systems with consciousness capabilities',
-      restrictions: [
-        'No unauthorized access or reverse engineering',
-        'Compliance with AI safety guidelines',
-        'Proper data handling and privacy protection'
-      ],
-      usage: 'Commercial and research applications'
-    },
-    {
-      service: 'Quantum Computing Solutions',
-      description: 'Quantum computing infrastructure and algorithms',
-      restrictions: [
-        'No quantum algorithm theft or copying',
-        'Respect for quantum security protocols',
-        'Proper quantum error handling'
-      ],
-      usage: 'Scientific research and enterprise applications'
-    },
-    {
-      service: 'Cybersecurity Services',
-      description: 'Advanced security and threat protection',
-      restrictions: [
-        'No testing against unauthorized systems',
-        'Compliance with security regulations',
-        'Proper incident reporting procedures'
-      ],
-      usage: 'Enterprise security and compliance'
-    },
-    {
-      service: 'Cloud Infrastructure',
-      description: 'Scalable cloud computing resources',
-      restrictions: [
-        'No resource abuse or unauthorized access',
-        'Compliance with cloud security policies',
-        'Proper cost management and optimization'
-      ],
-      usage: 'Business applications and development'
-    }
-  ];
-
-  const userObligations = [
-    {
-      obligation: 'Legal Compliance',
-      description: 'Use services in accordance with all applicable laws and regulations',
-      examples: [
-        'Data protection and privacy laws',
-        'Export control regulations',
-        'Industry-specific compliance requirements'
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       ]
     },
     {
@@ -188,17 +119,8 @@ const TermsPage: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
-=======
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Key Terms Overview
-=======
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Terms & Conditions
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 These terms govern your use of our services and establish our mutual rights and obligations.
@@ -209,14 +131,7 @@ const TermsPage: React.FC = () => {
               {keyTerms.map((term, index) => (
                 <motion.div
                   key={term.title}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
-=======
-                  initial={{ opacity: 0, y: 30 }}
-=======
-=======
-                  initial={{ opacity: 0, y: 20 }}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -233,17 +148,8 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Service-Specific Terms Section */}
         <section className="py-20">
-=======
-        {/* Service Terms */}
-        <section className="py-20 bg-black/50">
-=======
-=======
-        {/* Service-Specific Terms Section */}
-        <section className="py-20">
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -252,14 +158,7 @@ const TermsPage: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 Service-Specific Terms
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -292,14 +191,7 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Prohibited Activities Section */}
-=======
-        {/* User Obligations */}
-=======
-=======
-        {/* Prohibited Activities Section */}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -309,54 +201,6 @@ const TermsPage: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
-=======
-            </div>
-          </div>
-        </section>
-
-        {/* Payment Terms */}
-        <section className="py-20 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Payment & Billing Terms
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Understanding our payment structure and billing policies
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {paymentTerms.map((term, index) => (
-                <motion.div
-                  key={term.term}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white mb-3">{term.term}</h3>
-                  <p className="text-gray-300 mb-4">{term.description}</p>
-                  <ul className="space-y-2">
-                    {term.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start space-x-2 text-sm">
-                        <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-gray-300">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Prohibited Activities
               </h2>
@@ -396,11 +240,6 @@ const TermsPage: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
-=======
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 User Obligations
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -449,14 +288,7 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Intellectual Property Section */}
-=======
-        {/* Liability Limitations */}
-=======
-=======
-        {/* Intellectual Property Section */}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -466,17 +298,8 @@ const TermsPage: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Intellectual Property
-=======
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Liability & Limitations
-=======
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Intellectual Property
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Understanding our intellectual property rights and your usage permissions.
@@ -535,17 +358,8 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Limitation of Liability Section */}
         <section className="py-20">
-=======
-        {/* Contact Information */}
-        <section className="py-20 bg-black/50">
-=======
-=======
-        {/* Limitation of Liability Section */}
-        <section className="py-20">
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -554,17 +368,8 @@ const TermsPage: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Limitation of Liability
-=======
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Questions About Terms?
-=======
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Limitation of Liability
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Understanding the scope of our liability and your rights as a user.
@@ -607,14 +412,7 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact Section */}
-=======
-        {/* CTA Section */}
-=======
-=======
-        {/* Contact Section */}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
@@ -623,17 +421,8 @@ const TermsPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Questions About These Terms?
-=======
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
-=======
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Questions About These Terms?
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </h2>
               <p className="text-xl text-gray-400 mb-8">
                 We're here to clarify any questions about our terms of service and help ensure compliance.
@@ -659,11 +448,5 @@ const TermsPage: React.FC = () => {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
 Terms.displayName = "Terms";
-=======
-};
-
-export default TermsPage;
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

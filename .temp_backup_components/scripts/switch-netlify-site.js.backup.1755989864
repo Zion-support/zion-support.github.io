@@ -25,7 +25,6 @@ async function siteHasDomain(siteId) {
   return domains.some((d) => d.name === domain);
 }
 
-<<<<<<< HEAD
 async function assignDomain(siteId) {
   const res = await fetch(`https://api.netlify.com/api/v1/sites/${siteId}/domains`, {
     method: 'POST',
@@ -50,8 +49,6 @@ async function removeDomain(siteId) {
   return res.status === 200;
 }
 
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 export async function switchNetlifySite() {
   const greenActive = await siteHasDomain(greenId);
   const newSite = greenActive ? blueId : greenId;
@@ -59,7 +56,6 @@ export async function switchNetlifySite() {
 
   console.log(`Switching ${domain} from ${oldSite} to ${newSite}`);
 
-<<<<<<< HEAD
   let assigned = false;
   try {
     assigned = await assignDomain(newSite);
@@ -76,22 +72,6 @@ export async function switchNetlifySite() {
     }
     throw err;
   }
-=======
-  let res = await fetch(`https://api.netlify.com/api/v1/sites/${newSite}/domains`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ domain }),
-  });
-  if (!res.ok && res.status !== 422) throw new Error(`Assign domain failed: ${res.statusText}`);
-
-  res = await fetch(`https://api.netlify.com/api/v1/sites/${oldSite}/domains/${domain}`, {
-    method: 'DELETE',
-    headers,
-  });
-  if (!res.ok) throw new Error(`Remove domain failed: ${res.statusText}`);
-
-  console.log('DNS switch complete');
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

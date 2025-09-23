@@ -38,7 +38,6 @@ import { realMarketServices } from '../data/real-market-services';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
 import { realOperationalServices } from '../data/real-operational-services';
-<<<<<<< HEAD
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { revolutionary2025Services } from '../data/revolutionary-2025-services';
@@ -90,9 +89,6 @@ import { aiAutonomousEcosystem2029V2 } from '../data/2029-ai-autonomous-ecosyste
 import { innovativeMicroSaas2029V3 } from '../data/2029-innovative-micro-saas-v3';
 import { innovativeITServices2029V3 } from '../data/2029-innovative-it-services-v3';
 import { innovativeAIServices2029V3 } from '../data/2029-innovative-ai-services-v3';
-=======
-import { realVerifiedServices } from '../data/real-verified-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32ac
 
 const heroStats = [
   { label: 'Revolutionary Services', value: '600+', icon: <Star className="w-5 h-5" /> },
@@ -119,7 +115,6 @@ const heroStats = [
     ...realMarketServices,
     ...serviceExpansions2025,
     ...realOperationalServices,
-<<<<<<< HEAD
     ...newOperationalServices2025,
     ...verifiedRealServices2025Batch2,
     ...innovative2025Services,
@@ -179,9 +174,6 @@ const heroStats = [
     ...innovativeMicroSaas2029V3,
     ...innovativeITServices2029V3,
     ...innovativeAIServices2029V3
-=======
-    ...realVerifiedServices
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32ac
   ];
 
   // Get new 2029 services for enhanced showcase

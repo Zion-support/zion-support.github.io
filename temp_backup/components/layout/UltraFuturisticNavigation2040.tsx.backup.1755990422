@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
   DollarSign, BarChart3, Globe, Star, Sparkles, 
@@ -12,15 +11,6 @@ import {
   Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
   Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
   BookOpen, FileText, Handshake, Users, Lock, Database, Server, Key, Search, Zap as ZapIcon
-=======
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight,
-  Brain, Rocket, Atom, Shield,
-  BarChart3, Globe, 
-  Grid, TrendingUp, 
-  Cpu, Cloud, Monitor, Network, Heart, HelpCircle, Building,
-  Zap, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
-  Users, BookOpen, FileText, Video
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -503,7 +493,6 @@ const navigationItems: NavigationItem[] = [
     category: 'it',
     color: 'from-orange-500 to-red-500',
     children: [
-<<<<<<< HEAD
       {
         label: 'Data Analytics',
         href: '/data-analytics',
@@ -534,44 +523,6 @@ const navigationItems: NavigationItem[] = [
         href: '/blockchain-infrastructure-platform',
         description: 'Enterprise-grade blockchain infrastructure',
         icon: <Database className="w-4 h-4" />
-=======
-      { 
-        name: 'All IT Services', 
-        href: '/it-services', 
-        description: 'Complete enterprise solutions overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Autonomous Business Intelligence 2040', 
-        href: '/autonomous-business-intelligence-2040', 
-        description: 'Consciousness-driven BI',
-        icon: <BarChart3 className="w-4 h-4" />
-      },
-      { 
-        name: 'AI Customer Success 2041', 
-        href: '/ai-customer-success-2041', 
-        description: 'Autonomous customer management',
-        icon: <Heart className="w-4 h-4" />
-      },
-      { 
-        name: 'AI Sales Intelligence 2041', 
-        href: '/ai-sales-intelligence-2041', 
-        description: 'Consciousness-based sales AI',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      { 
-        name: 'AI Autonomous Ecosystem 2041', 
-        href: '/ai-autonomous-ecosystem-2041', 
-        description: 'Multi-AI coordination',
-        icon: <Network className="w-4 h-4" />
-      },
-      { 
-        name: 'AI Predictive Maintenance 2041', 
-        href: '/ai-predictive-maintenance-2041', 
-        description: 'Consciousness-based maintenance',
-        icon: <Monitor className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
       }
     ]
   },

@@ -54,7 +54,6 @@ import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
 import { innovative2026MicroSaasServicesV3 } from '../data/innovative-2026-micro-saas-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-<<<<<<< HEAD
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
@@ -75,11 +74,6 @@ import { spaceColonization2029Services } from '../data/2029-space-colonization-s
 import { advancedAI2029Services } from '../data/2029-advanced-ai-services';
 import { cybersecurityBlockchain2029Services } from '../data/2029-cybersecurity-blockchain-services';
 import { iotEdgeComputing2029Services } from '../data/2029-iot-edge-computing-services';
-=======
-import { cuttingEdgeInnovationServices } from '../data/2026-cutting-edge-innovations';
-import { enterpriseSolutions2026 } from '../data/2026-enterprise-solutions';
-import { specializedSolutions2026 } from '../data/2026-specialized-solutions';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0fd4
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -209,13 +203,7 @@ export default function HomePage() {
     ...innovative2026MicroSaasServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3,
-<<<<<<< HEAD
     ...nextGenAI2026ServicesV3
-=======
-    ...cuttingEdgeInnovationServices,
-    ...enterpriseSolutions2026,
-    ...specializedSolutions2026
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0fd4
   ];
 
   // Get unique services by ID to avoid duplicates

@@ -124,7 +124,6 @@ const QuantumCybersecurity: React.FC = () => {
                     <p className="text-gray-300">{solution.description}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>
               <Button href="/contact" variant="primary" size="lg" className="w-full">Request Security Assessment<ArrowRight className="w-5 h-5 ml-2" /></Button>
@@ -134,21 +133,6 @@ const QuantumCybersecurity: React.FC = () => {
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
               </div>
             </div>
-=======
-                <div>
-                  <h4 className="font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05dc
           </div>
         </div>
       </section>

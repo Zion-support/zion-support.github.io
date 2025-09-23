@@ -16,7 +16,6 @@ import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 
-<<<<<<< HEAD
 // Union type for all service types
 type Service = 
   | typeof innovative2040FuturisticServices[0]
@@ -24,45 +23,6 @@ type Service =
   | typeof realMicroSaasServices[0]
   | typeof innovativeAIServices[0]
   | typeof enterpriseITServices[0];
-=======
-interface Service {
-  id: string;
-  name: string;
-  tagline?: string;
-  price: string | { monthly: number; yearly: number; currency: string; trialDays: number; setupTime: string };
-  period?: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link: string;
-  category: string;
-  realService?: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketSize?: string;
-  growthRate?: string;
-  contactInfo?: {
-    mobile?: string;
-    email?: string;
-    address?: string;
-    website?: string;
-    phone?: string;
-  };
-  realImplementation?: boolean | string;
-  implementationDetails?: string;
-  launchDate?: string;
-  customers: number | string;
-  rating: number;
-  reviews: number;
-  benefits?: string[];
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6d41
 
 const Innovative2040FuturisticServicesShowcase: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

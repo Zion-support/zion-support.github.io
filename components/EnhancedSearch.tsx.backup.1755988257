@@ -46,7 +46,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     'Space Technology',
     'Autonomous Systems'
   ]);
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -55,97 +54,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
-=======
-
-  // Mock search results - in real app, this would come from API
-  const mockSearchResults: SearchResult[] = [
-    {
-      id: '1',
-      name: 'AI Consciousness Evolution Platform 2045',
-      description: 'Next-generation AI consciousness with emotional intelligence and self-awareness capabilities.',
-      category: 'AI & Machine Learning',
-      type: 'Platform',
-      slug: '/ai-consciousness-evolution-platform-2045',
-      relevance: 95,
-      features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution'],
-      pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
-    },
-    {
-      id: '2',
-      name: 'Quantum AI Hybrid Computing',
-      description: 'Quantum-powered AI with consciousness integration and quantum supremacy.',
-      category: 'Quantum Computing',
-      type: 'Platform',
-      slug: '/quantum-ai-hybrid-computing',
-      relevance: 92,
-      features: ['Quantum Supremacy', 'AI Integration', 'Hybrid Computing'],
-      pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
-    },
-    {
-      id: '3',
-      name: 'Quantum Cybersecurity Intelligence',
-      description: 'Quantum-resistant security with AI consciousness and threat prediction.',
-      category: 'Cybersecurity',
-      type: 'Platform',
-      slug: '/quantum-cybersecurity-intelligence',
-      relevance: 88,
-      features: ['Quantum Resistance', 'Threat Prediction', 'AI Security'],
-      pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
-    }
-  ];
-
-  const categories = [
-    { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
-    { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
-  ];
-
-  // Debounced search function
-  const debouncedSearch = useCallback(
-    useMemo(
-      () => debounce((searchQuery: string) => {
-        if (searchQuery.trim().length < 2) {
-          setResults([]);
-          setShowResults(false);
-          return;
-        }
-
-        setIsSearching(true);
-        
-        // Simulate API call delay
-        setTimeout(() => {
-          const filteredResults = mockSearchResults.filter(result => {
-            const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                               result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                               result.category.toLowerCase().includes(searchQuery.toLowerCase());
-            
-            const matchesFilters = selectedFilters.length === 0 || 
-                                 selectedFilters.some(filter => 
-                                   result.category.toLowerCase().includes(filter.toLowerCase()) ||
-                                   result.type.toLowerCase().includes(filter.toLowerCase())
-                                 );
-            
-            return matchesQuery && matchesFilters;
-          });
-
-          // Sort by relevance
-          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
-          
-          setResults(sortedResults);
-          setShowResults(true);
-          setIsSearching(false);
-        }, 300);
-      }, 300),
-      [selectedFilters]
-    ),
-    [selectedFilters]
-  );
-
-  useEffect(() => {
-    debouncedSearch(query);
-  }, [query, debouncedSearch]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
 
   // Handle search input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 
@@ -30,22 +29,3 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 };
 
 export default TalentSlugPage;
-=======
-import type { GetServerSideProps, NextPage } from 'next';
-
-type Props = { slug: string };
-
-const TalentProfile: NextPage<Props> = ({ slug }) => (
-  <div className="container mx-auto px-4 py-8">
-    <h1 className="text-2xl font-bold">Talent Profile</h1>
-    <p>Profile for: {slug}</p>
-  </div>
-);
-
-export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
-  const slug = String(context.params?.slug || 'unknown');
-  return { props: { slug } };
-};
-
-export default TalentProfile;
->>>>>>> origin/cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330

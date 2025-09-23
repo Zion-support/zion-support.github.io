@@ -56,21 +56,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                     <ErrorBoundary>
                       <App />
                       <LanguageDetectionPopup />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    </ErrorBoundary>
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
                     </LanguageProvider>
                   </AnalyticsProvider>
                 </NotificationProvider>
@@ -113,8 +98,5 @@ document.addEventListener(
     }
   },
   true,
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 );

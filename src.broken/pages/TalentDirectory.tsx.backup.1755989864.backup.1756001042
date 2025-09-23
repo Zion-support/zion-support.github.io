@@ -11,14 +11,6 @@ import { useTalentDirectory } from '@/hooks/useTalentDirectory';
 import { SORT_OPTIONS } from '@/data/sortOptions';
 import { X } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import type { TalentProfile } from '@/types/talent';
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FilterSidebar } from "@/components/talent/FilterSidebar";
@@ -30,9 +22,6 @@ import { SORT_OPTIONS } from "@/data/sortOptions";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import {
   Pagination,
@@ -175,11 +164,6 @@ export default function TalentDirectory() {
     // Navigate to the talent profile page
     router.push(`/talent/${id}`); // Changed to router.push
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   if (isLoading) {
     return (
@@ -265,9 +249,6 @@ export default function TalentDirectory() {
                 clearFilters,
               }}
             />
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   // Add key prop to force re-render when route changes

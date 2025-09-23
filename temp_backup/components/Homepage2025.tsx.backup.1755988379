@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
-=======
-import React, { useEffect, useState, useCallback, memo } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2, ChevronDown, Sparkles, Globe, Zap } from 'lucide-react';
@@ -374,7 +370,6 @@ const Homepage2025: React.FC = () => {
             <div className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
           </motion.div>
 
-<<<<<<< HEAD
           <AnimatePresence>
             {isVisible && (
               <motion.div 
@@ -486,105 +481,6 @@ const Homepage2025: React.FC = () => {
                   <p className="text-xs text-gray-500 mt-2">Scroll to explore</p>
                 </motion.div>
               </motion.div>
-=======
-          {/* Hero Content */}
-          <div className="text-center max-w-5xl mx-auto relative z-10">
-            <motion.h1
-              id="hero-heading"
-              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </motion.h1>
-            
-            <motion.p
-              className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            >
-              Pioneering the future of technology with cutting-edge AI, quantum computing, and autonomous solutions that transform businesses worldwide.
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            >
-              <button 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50"
-                onClick={handleGetStarted}
-                aria-label="Get started with Zion Tech Group services"
-              >
-                Get Started Today
-              </button>
-              <button 
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-opacity-50"
-                onClick={handleWatchDemo}
-                aria-label="Watch a demo of our services"
-              >
-                Watch Demo
-                <Play className="w-5 h-5 ml-2 inline" />
-              </button>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Enhanced Social Proof Section */}
-        <section className="py-20 px-4" aria-labelledby="stats-heading">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <h2 id="stats-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Join hundreds of companies already transforming their business with our solutions
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <StatsCard key={index} stat={stat} index={index} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Enhanced Features Section */}
-        <section className="py-20 px-4" aria-labelledby="features-heading">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our comprehensive suite of cutting-edge technologies and services sets us apart in the industry
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <FeatureCard key={index} feature={feature} index={index} />
-              ))}
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
           </div>
         </section>
 
@@ -608,7 +504,6 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
               Why Choose Zion Tech Group?
             </motion.h2>
             
@@ -640,19 +535,6 @@ const Homepage2025: React.FC = () => {
                   <p className="text-sm sm:text-base text-gray-400 mb-3">{stat.description}</p>
                   <div className={`text-2xl font-bold ${getColorClasses(stat.color)}`}>{stat.metric}</div>
                 </motion.div>
-=======
-              <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Revolutionary Services
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From AI-powered automation to quantum computing solutions, we're building the future today
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <ServiceCard key={index} service={service} index={index} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
               ))}
             </div>
           </div>
@@ -841,20 +723,13 @@ const Homepage2025: React.FC = () => {
                   From AI and quantum computing to space technology and cybersecurity, we're at the forefront of the digital revolution, helping organizations navigate the complexities of tomorrow's technology landscape.
                 </p>
                 <button 
-<<<<<<< HEAD
                   className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
                   onClick={() => window.location.href = '/about'}
                   aria-label="Learn more about Zion Tech Group"
-=======
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50"
-                  onClick={() => window.location.href = '/get-started'}
-                  aria-label="Start your journey with Zion Tech Group"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
                 >
                   <Users className="w-5 h-5" />
                   Learn More About Us
                 </button>
-<<<<<<< HEAD
               </motion.div>
               
               <motion.div
@@ -889,17 +764,6 @@ const Homepage2025: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-=======
-                <button 
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-opacity-50"
-                  onClick={() => window.location.href = '/demo'}
-                  aria-label="Schedule a demo of our services"
-                >
-                  Schedule a Demo
-                </button>
-              </div>
-            </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
           </div>
         </section>
       </main>

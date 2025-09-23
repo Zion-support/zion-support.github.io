@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from "react";
 import { TALENT_PROFILES } from "@/data/talentData";
@@ -70,10 +69,3 @@ export function useAISearch() {
 
   return { results, loading, search };
 }
-=======
-// Hook for useAISearch;
-export const useUseAISearch: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

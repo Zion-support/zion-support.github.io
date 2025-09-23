@@ -3,16 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Search, ChevronDown, ChevronRight, 
   Home, Briefcase, Users, BookOpen, Phone, 
-<<<<<<< HEAD
   Zap, Shield, Brain, Rocket, Globe, Cloud, 
   Building, GraduationCap, Heart, Factory, 
   ShoppingCart, Building2, Code, FileText
-=======
-  Globe, Zap, Shield, Brain, Rocket, Building,
-  Target, Heart, Cpu, Cloud, Award, Newspaper,
-  CheckCircle, HelpCircle, FileText, GraduationCap,
-  BarChart3, Link as LinkIcon
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -74,7 +67,6 @@ const navigationItems: NavigationItem[] = [
         label: 'Cloud Platform',
         href: '/cloud-platform',
         icon: <Cloud className="w-4 h-4" />,
-<<<<<<< HEAD
         description: 'Scalable cloud infrastructure'
       },
       {
@@ -82,21 +74,6 @@ const navigationItems: NavigationItem[] = [
         href: '/enterprise-it',
         icon: <Building className="w-4 h-4" />,
         description: 'Enterprise technology solutions'
-=======
-        description: 'Cloud computing and infrastructure'
-      },
-      {
-        label: 'Data & Analytics',
-        href: '/services?category=data-analytics',
-        icon: <BarChart3 className="w-4 h-4" />,
-        description: 'Data insights and analytics'
-      },
-      {
-        label: 'Blockchain & Web3',
-        href: '/services?category=blockchain',
-        icon: <LinkIcon className="w-4 h-4" />,
-        description: 'Decentralized technology solutions'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
       }
     ]
   },
@@ -107,11 +84,7 @@ const navigationItems: NavigationItem[] = [
     description: 'Industry-specific technology solutions',
     children: [
       {
-<<<<<<< HEAD
         label: 'Healthcare',
-=======
-        label: 'Healthcare & Biotech',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
         href: '/healthcare-solutions',
         icon: <Heart className="w-4 h-4" />,
         description: 'Medical technology solutions'
@@ -125,7 +98,6 @@ const navigationItems: NavigationItem[] = [
       {
         label: 'Manufacturing',
         href: '/manufacturing-ai-solutions',
-<<<<<<< HEAD
         icon: <Factory className="w-4 h-4" />,
         description: 'Industry 4.0 and AI manufacturing'
       },
@@ -134,43 +106,18 @@ const navigationItems: NavigationItem[] = [
         href: '/retail-technology-solutions',
         icon: <ShoppingCart className="w-4 h-4" />,
         description: 'E-commerce and retail technology'
-=======
-        icon: <Cpu className="w-4 h-4" />,
-        description: 'Smart manufacturing solutions'
-      },
-      {
-        label: 'Retail & E-commerce',
-        href: '/retail-technology-solutions',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Digital commerce solutions'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
       },
       {
         label: 'Government',
         href: '/government-technology-solutions',
-<<<<<<< HEAD
         icon: <Building2 className="w-4 h-4" />,
         description: 'Public sector technology'
-=======
-        icon: <Building className="w-4 h-4" />,
-        description: 'Public sector solutions'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
       },
       {
         label: 'Education',
         href: '/education-technology-solutions',
         icon: <GraduationCap className="w-4 h-4" />,
-<<<<<<< HEAD
         description: 'EdTech and learning platforms'
-=======
-        description: 'EdTech solutions'
-      },
-      {
-        label: 'Energy & Utilities',
-        href: '/energy-utilities-solutions',
-        icon: <Zap className="w-4 h-4" />,
-        description: 'Energy sector solutions'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
       }
     ]
   },
@@ -178,37 +125,7 @@ const navigationItems: NavigationItem[] = [
     label: 'Company',
     href: '/about',
     icon: <Users className="w-4 h-4" />,
-<<<<<<< HEAD
     description: 'Learn about our company and mission'
-=======
-    description: 'Learn about our mission and team',
-    children: [
-      {
-        label: 'About Us',
-        href: '/about',
-        icon: <Users className="w-4 h-4" />,
-        description: 'Our mission and values'
-      },
-      {
-        label: 'Careers',
-        href: '/careers',
-        icon: <Award className="w-4 h-4" />,
-        description: 'Join our team'
-      },
-      {
-        label: 'News & Updates',
-        href: '/news',
-        icon: <Newspaper className="w-4 h-4" />,
-        description: 'Latest company news'
-      },
-      {
-        label: 'Case Studies',
-        href: '/case-studies',
-        icon: <CheckCircle className="w-4 h-4" />,
-        description: 'Success stories'
-      }
-    ]
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
   },
   {
     label: 'Resources',
@@ -219,7 +136,6 @@ const navigationItems: NavigationItem[] = [
       {
         label: 'Blog',
         href: '/blog',
-<<<<<<< HEAD
         icon: <FileText className="w-4 h-4" />,
         description: 'Industry insights and updates'
       },
@@ -234,15 +150,10 @@ const navigationItems: NavigationItem[] = [
         href: '/webinars',
         icon: <BookOpen className="w-4 h-4" />,
         description: 'Educational webinars and sessions'
-=======
-        icon: <BookOpen className="w-4 h-4" />,
-        description: 'Industry insights and updates'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
       },
       {
         label: 'Documentation',
         href: '/docs',
-<<<<<<< HEAD
         icon: <Code className="w-4 h-4" />,
         description: 'Technical guides and API docs'
       },
@@ -257,22 +168,6 @@ const navigationItems: NavigationItem[] = [
         href: '/support',
         icon: <BookOpen className="w-4 h-4" />,
         description: 'Help and technical support'
-=======
-        icon: <FileText className="w-4 h-4" />,
-        description: 'Technical guides and API docs'
-      },
-      {
-        label: 'Support',
-        href: '/support',
-        icon: <HelpCircle className="w-4 h-4" />,
-        description: 'Help and assistance'
-      },
-      {
-        label: 'Training',
-        href: '/training',
-        icon: <GraduationCap className="w-4 h-4" />,
-        description: 'Learn our platforms'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-a91c
       }
     ]
   },

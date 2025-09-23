@@ -6,24 +6,18 @@
       "title": "/_app"
     },
     {
-<<<<<<< HEAD
       "file": "pages/search.tsx",
       "route": "/search"
     },
     {
       "file": "pages/newsroom.tsx",
       "route": "/newsroom"
-=======
-      "route": "/automation",
-      "title": "Automation Hub"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b44b
     },
     {
       "route": "/front",
       "title": "/front"
     },
     {
-<<<<<<< HEAD
       "file": "pages/contact.tsx",
       "route": "/contact"
     },
@@ -10614,35 +10608,10 @@
     {
       "file": "pages/reports/updates/update-2025-08-12-1417.tsx",
       "route": "/reports/updates/update-2025-08-12-1417"
-=======
-      "route": "/index",
-      "title": "Zion — Autonomous Cloud Automations"
-    },
-    {
-      "route": "/main/front",
-      "title": "Zion — Front Systems Hub | Autonomous Cloud Automations"
-    },
-    {
-      "route": "/newsroom",
-      "title": "Newsroom — Curated Tech Headlines"
-    },
-    {
-      "route": "/reports/ai-trends",
-      "title": "/reports/ai-trends"
-    },
-    {
-      "route": "/reports/seo",
-      "title": "/reports/seo"
-    },
-    {
-      "route": "/site-health",
-      "title": "Site Health — Broken Images"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b44b
     }
   ],
   "reports": [
     {
-<<<<<<< HEAD
       "file": "docs/topics-map.md",
       "route": "/docs/topics-map.md"
     },
@@ -10661,14 +10630,6 @@
     {
       "file": "docs/MEDIA_RELEASE.md",
       "route": "/docs/MEDIA_RELEASE.md"
-=======
-      "path": "/reports/ai-trends/2025-08-08.json",
-      "title": "2025-08-08.json"
-    },
-    {
-      "path": "/reports/ai-trends/index.html",
-      "title": "index.html"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b44b
     },
     {
       "path": "/reports/ai-trends/latest.json",
@@ -10682,7 +10643,6 @@
       "path": "/reports/seo/latest.json",
       "title": "latest.json"
     }
-<<<<<<< HEAD
   ],
   "generatedAt": "2025-08-14T11:28:15.594Z",
   "items": [
@@ -10707,7 +10667,5 @@
       "createdAt": "2025-08-14T11:28:16.591Z",
       "source": "cloud-deep-research-factory"
     }
-=======
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b44b
   ]
 }

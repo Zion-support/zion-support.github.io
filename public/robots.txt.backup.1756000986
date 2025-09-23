@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -24,11 +23,4 @@ Allow: /docs
 Allow: /community
 
 # Crawl delay
-=======
-# Sitemaps
-Sitemap: https://zion.app/sitemap.xml
-Sitemap: https://zion.app/sitemap.txt
-
-# Crawl-delay
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 Crawl-delay: 1

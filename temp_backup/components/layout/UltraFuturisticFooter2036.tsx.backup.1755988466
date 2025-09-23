@@ -1,20 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, MessageCircle, Clock,
   Shield, Award, Users, Rocket, Brain, Atom
-=======
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
-  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
-  Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones,
-  Sparkles as SparklesIcon, Zap as ZapIcon, Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e3a6
 } from 'lucide-react';
 
 const contactInfo = {
@@ -132,7 +122,6 @@ const footerSections = [
 const UltraFuturisticFooter2036: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const footerSections = [
     {
       title: 'Services',
@@ -186,13 +175,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
         { name: 'Contact', href: '/contact' }
       ]
     }
-=======
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Accessibility', href: '/accessibility-scanner' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e3a6
   ];
 
   const socialLinks = [
@@ -264,7 +246,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 {/* Social Links */}
                 <div className="flex gap-4">
                   {socialLinks.map((social) => (
@@ -279,45 +260,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
-=======
-              <motion.p 
-                className="text-gray-300 mb-6 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                Empowering businesses with cutting-edge AI, quantum computing, and innovative technology solutions that drive transformation and accelerate growth in the digital age.
-              </motion.p>
-
-              {/* Contact Info */}
-              <motion.div 
-                className="space-y-3"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-white transition-colors">
-                    {contactInfo.mobile}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                  <span>{contactInfo.address}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Clock className="w-4 h-4 text-cyan-400" />
-                  <span>Mon-Fri: 9:00 AM - 6:00 PM EST</span>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e3a6
                 </div>
               </motion.div>
             </div>

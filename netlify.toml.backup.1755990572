@@ -316,7 +316,6 @@
   schedule = "23 */6 * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
   name = "image-optimizer-runner"
   schedule = "29 */6 * * *"
 
@@ -442,20 +441,3 @@
 [[scheduled.functions]]
   name = "ultra-innovation-accelerator"
   schedule = "*/3 * * * *"
-=======
-  name = "duplicate-media-finder-runner"
-  schedule = "0 2 * * *"
-
-# Cron Hub — intelligent cloud schedulers
-[[scheduled.functions]]
-  name = "cron-hub"
-  schedule = "*/1 * * * *"
-
-[[scheduled.functions]]
-  name = "cron-supervisor"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "cron-heartbeat"
-  schedule = "*/1 * * * *"
->>>>>>> origin/cursor/automate-cloud-cron-jobs-and-sync-repository-16dc

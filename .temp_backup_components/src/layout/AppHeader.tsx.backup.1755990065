@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -71,14 +70,5 @@ export function AppHeader() {
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
-=======
-import React from 'react';
-export function AppHeader() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

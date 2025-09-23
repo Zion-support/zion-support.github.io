@@ -244,27 +244,14 @@
   name = "ai-trends-radar-runner"
   schedule = "*/30 * * * *"
 
-<<<<<<< HEAD
 # Newly added autonomous cloud scanners and curators
-=======
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-1f85
 [[scheduled.functions]]
   name = "stale-content-auditor-runner"
   schedule = "17 */6 * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
 name = "deps-auto-upgrade-runner"
 schedule = "7 */12 * * *"
-=======
-  name = "deps-auto-upgrade-runner"
-  schedule = "0 3 * * *"
-
-# New autonomous cloud scanners
-[[scheduled.functions]]
-  name = "unused-media-scanner"
-  schedule = "*/10 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-1f85
 
 [[scheduled.functions]]
 name = "unused-media-scanner"
@@ -279,7 +266,6 @@ schedule = "*/15 * * * *"
   schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
   name = "design-tokens-curator"
   schedule = "*/20 * * * *"
 
@@ -290,15 +276,3 @@ schedule = "*/15 * * * *"
 [[scheduled.functions]]
   name = "innovation-lab-curator"
   schedule = "*/10 * * * *"
-=======
-  name = "robots-and-headers-optimizer"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "readme-badges-updater"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "navigation-directory-builder"
-  schedule = "*/15 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-1f85

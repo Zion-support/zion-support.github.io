@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
 import { SEO } from '@/components/SEO';
@@ -70,15 +69,5 @@ export default function TalentProfilePage() {
         </div>
       </main>
     </>
-=======
-import React from 'react'
-;
-export export export default function [id]()      {;
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

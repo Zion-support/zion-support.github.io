@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
   "ai-autonomous-business-process-automation",
   "ai-autonomous-content-factory",
   "ai-autonomous-ecosystem",
@@ -26,21 +25,10 @@
   "ai-predictive-maintenance",
   "ai-sales-intelligence",
   "ai-threat-detection",
-=======
-<<<<<<< HEAD
-  "ai-creativity-orchestrator",
-  "ai-customer-intelligence-platform",
-  "ai-customer-success-automation",
-  "ai-dream-interpreter-platform",
-  "ai-ethics-governance",
-  "ai-financial-fraud-detection",
-  "ai-powered-enterprise-security",
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
   "autonomous-devops-platform",
   "autonomous-it-operations",
   "autonomous-vehicle-ai",
   "blockchain-enterprise-platform",
-<<<<<<< HEAD
   "blockchain-infrastructure",
   "brain-computer-interface",
   "compliance-automation",
@@ -68,11 +56,6 @@
   "quantum-encryption-gateway",
   "quantum-energy-optimization",
   "quantum-financial-intelligence",
-=======
-  "quantum-creativity-studio",
-  "quantum-data-center",
-  "quantum-encryption-gateway",
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
   "quantum-identity-verification",
   "quantum-internet-security",
   "quantum-internet-security-gateway",
@@ -80,7 +63,6 @@
   "quantum-materials-discovery",
   "quantum-network-security",
   "quantum-networking",
-<<<<<<< HEAD
   "quantum-neural-ecosystem",
   "quantum-risk-financial-manager",
   "quantum-storage-solutions",
@@ -90,21 +72,6 @@
   "satellite-technology",
   "services/data-contracts-hub",
   "services/serverless-lakehouse-starter"
-=======
-  "quantum-threat-detection",
-  "services/ai-sales-sequence-personalizer",
-  "services/ai-synthetic-data-studio",
-  "services/data-contracts-hub",
-  "services/edge-personalization-kit",
-  "services/etl-reliability-copilot",
-  "services/kubernetes-cost-anomaly-guard",
-  "services/postgres-performance-tuner",
-  "services/serverless-lakehouse-starter",
-  "services/zero-trust-sso-mesh"
-=======
-  "services/data-contracts-hub",
-  "services/serverless-lakehouse-starter"
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> origin/main
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 ]

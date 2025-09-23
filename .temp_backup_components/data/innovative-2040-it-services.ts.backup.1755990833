@@ -1,7 +1,6 @@
 export const innovative2040ITServices = [
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
     id: 'autonomous-devops-orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline: 'Self-healing DevOps platform that automatically resolves issues and optimizes performance',
@@ -93,11 +92,6 @@ export const innovative2040ITServices = [
     id: 'ai-powered-network-security-monitor',
     name: 'AI-Powered Network Security Monitor',
     tagline: 'Intelligent network security that detects and prevents threats in real-time using AI',
-=======
-    id: 'quantum-enhanced-cybersecurity-orchestrator',
-    name: 'Quantum-Enhanced Cybersecurity Orchestrator',
-    tagline: 'Next-generation security platform using quantum computing for threat detection and response',
->>>>>>> origin/main
     price: '$399',
     period: '/month',
     description: 'Revolutionary cybersecurity platform that leverages quantum computing to provide unprecedented threat detection, real-time response, and predictive security analytics.',
@@ -123,7 +117,6 @@ export const innovative2040ITServices = [
     type: 'IT Services',
     icon: '☁️🔒',
     popular: true,
-<<<<<<< HEAD
     icon: '🛡️⚛️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-300',
@@ -176,12 +169,9 @@ export const innovative2040ITServices = [
     marketPosition: 'Leading edge computing orchestration platform with AI-powered optimization and automation.',
     targetAudience: 'IoT companies, edge computing providers, telecommunications, manufacturing, smart cities',
     trialDays: 21,
-=======
->>>>>>> origin/main
     setupTime: '2 weeks',
     category: 'Quantum & Cybersecurity',
     realService: true,
-<<<<<<< HEAD
     technology: ['Edge computing', 'IoT management', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Distributed systems'],
     integrations: ['IoT platforms', 'Cloud providers', 'Telecommunications systems', 'Manufacturing platforms'],
     useCases: ['IoT management', 'Edge computing optimization', 'Distributed systems', 'Smart city infrastructure', 'Industrial IoT'],
@@ -232,14 +222,6 @@ export const innovative2040ITServices = [
     roi: 'Improve database performance by 300% and reduce database costs by 50%.',
     competitors: ['Basic database tools', 'Manual optimization', 'Simple monitoring platforms'],
     marketSize: 'Database management market $80B+, growing 12% annually',
-=======
-    technology: ['Qiskit', 'Python', 'Quantum algorithms', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Identity providers', 'Compliance tools'],
-    useCases: ['Threat detection', 'Incident response', 'Security automation', 'Compliance monitoring'],
-    roi: 'Reduce security incidents by 80% and improve response time by 90%.',
-    competitors: ['Traditional security tools', 'Basic SIEM platforms', 'Manual security processes'],
-    marketSize: 'Cybersecurity market $248B+, growing 13% annually',
->>>>>>> origin/main
     growthRate: '300% YoY',
     variant: 'quantum-security',
     contactInfo: contact,
@@ -494,7 +476,6 @@ export const innovative2040ITServices = [
       'Cloud Operations',
       'Managed Services'
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '🎫🤖',
     color: 'from-teal-500 to-cyan-600',
@@ -522,12 +503,5 @@ export const innovative2040ITServices = [
     rating: 4.5,
     reviews: 198
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   }
 ];

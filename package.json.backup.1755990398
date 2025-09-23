@@ -323,7 +323,6 @@
     "cloud:continuous": "node scripts/continuous-cloud-agents.cjs",
     "gh:trigger": "node scripts/trigger-workflows.cjs",
     "gh:auto-heal": "node scripts/workflows-auto-healer.cjs && git add .github/workflows && git commit -m 'ci(auto-heal): normalize workflows [skip ci]' || true && git push origin HEAD",
-<<<<<<< HEAD
     "redundancy:check": "node automation/redundancy-automation-system.cjs check",
     "redundancy:monitor": "node automation/redundancy-automation-system.cjs monitor",
     "redundancy:github": "node automation/github-actions-redundancy.cjs check",
@@ -415,35 +414,6 @@
     "dashboard:v2:start": "node automation/comprehensive-automation-dashboard-v2.cjs start",
     "dashboard:v2:status": "node automation/comprehensive-automation-dashboard-v2.cjs status",
     "automation:master:v2": "npm run dashboard:v2:start & npm run orchestrator:v2:start & npm run redundancy:v2:start"
-=======
-    "redundancy:github": "node automation/redundancy/github-actions-redundancy-manager.cjs",
-    "redundancy:netlify": "node automation/redundancy/netlify-functions-redundancy-manager.cjs",
-    "redundancy:master": "node automation/redundancy/master-redundancy-orchestrator.cjs",
-    "redundancy:report": "node automation/redundancy/master-redundancy-orchestrator.cjs report",
-    "redundancy:comprehensive:start": "bash automation/start-comprehensive-redundancy.sh start",
-    "redundancy:comprehensive:stop": "bash automation/start-comprehensive-redundancy.sh stop",
-    "redundancy:comprehensive:restart": "bash automation/start-comprehensive-redundancy.sh restart",
-    "redundancy:comprehensive:status": "bash automation/start-comprehensive-redundancy.sh status",
-    "redundancy:comprehensive:logs": "bash automation/start-comprehensive-redundancy.sh logs",
-    "redundancy:comprehensive:report": "bash automation/start-comprehensive-redundancy.sh report",
-    "redundancy:comprehensive:test": "bash automation/start-comprehensive-redundancy.sh test",
-    "redundancy:comprehensive:orchestrator": "node automation/comprehensive-redundancy-orchestrator.cjs",
-    "redundancy:comprehensive:orchestrator:start": "node automation/comprehensive-redundancy-orchestrator.cjs start",
-    "redundancy:comprehensive:orchestrator:stop": "node automation/comprehensive-redundancy-orchestrator.cjs stop",
-    "redundancy:comprehensive:orchestrator:status": "node automation/comprehensive-redundancy-orchestrator.cjs status",
-    "redundancy:comprehensive:orchestrator:report": "node automation/comprehensive-redundancy-orchestrator.cjs report",
-    "redundancy:comprehensive:orchestrator:once": "node automation/comprehensive-redundancy-orchestrator.cjs once",
-    "redundancy:ultimate:start": "bash automation/start-ultimate-redundancy.sh start",
-    "redundancy:ultimate:stop": "bash automation/start-ultimate-redundancy.sh stop",
-    "redundancy:ultimate:restart": "bash automation/start-ultimate-redundancy.sh restart",
-    "redundancy:ultimate:status": "bash automation/start-ultimate-redundancy.sh status",
-    "redundancy:ultimate:logs": "bash automation/start-ultimate-redundancy.sh logs",
-    "redundancy:ultimate:test": "bash automation/start-ultimate-redundancy.sh test",
-    "redundancy:ultimate:master": "node automation/ultimate-redundancy-master.cjs",
-    "redundancy:ultimate:pm2": "node automation/pm2-ultimate-redundancy.cjs",
-    "redundancy:ultimate:github": "node automation/github-actions-ultimate-redundancy.cjs",
-    "redundancy:ultimate:netlify": "node automation/netlify-functions-ultimate-redundancy.cjs"
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

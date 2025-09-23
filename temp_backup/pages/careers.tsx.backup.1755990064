@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Globe, Shield, Zap, Target, Award } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -429,11 +428,3 @@ const Careers: React.FC = () => {
 };
 
 export default Careers;
-=======
-import Head from 'next/head';
-  return (
-    <>
-      <Head><title>careers - Zion App</title><meta name="description" content="careers page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">careers</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
-  );
->>>>>>> origin/automation-error-fixes

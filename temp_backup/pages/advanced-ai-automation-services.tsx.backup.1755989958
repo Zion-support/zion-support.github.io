@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
@@ -13,15 +12,6 @@ import {
 } from 'lucide-react';
 import { Layout } from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-=======
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
-  Brain, Sparkles, Users, 
-  BarChart3, Settings, 
-  Award, Code, TestTube, Server, Database, Shield as Shield, Mail
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
 const contactInfo = {
   mobile: '+1 302 464 0950',

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
 
 interface EnhancedFuturisticCardProps {
   children: React.ReactNode;
@@ -25,11 +20,6 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
   interactive = true,
   onClick
 }) => {
-<<<<<<< HEAD
-=======
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -138,10 +128,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       maxLife: number;
     }> = [];
 
-<<<<<<< HEAD
     // Create particles
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
     const createParticles = () => {
       const count = intensity === 'high' ? 20 : intensity === 'medium' ? 12 : 6;
       for (let i = 0; i < count; i++) {
@@ -157,26 +144,6 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       }
     };
 
-<<<<<<< HEAD
-=======
-    const getParticleColor = (variant: string): string => {
-      switch (variant) {
-        case 'quantum':
-          return `hsl(${280 + Math.sin(Date.now() * 0.001) * 80}, 80%, 70%)`;
-        case 'holographic':
-          return `hsl(${160 + Math.sin(Date.now() * 0.001) * 100}, 90%, 65%)`;
-        case 'cyberpunk':
-          return `hsl(${0 + Math.sin(Date.now() * 0.001) * 60}, 100%, 60%)`;
-        case 'neural':
-          return `hsl(${200 + Math.sin(Date.now() * 0.001) * 60}, 70%, 60%)`;
-        case 'space':
-          return `hsl(${220 + Math.sin(Date.now() * 0.001) * 80}, 90%, 75%)`;
-        default:
-          return `hsl(${200 + Math.sin(Date.now() * 0.001) * 60}, 70%, 60%)`;
-      }
-    };
-
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
     const animate = () => {
       time += 1;
       
@@ -211,85 +178,6 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       animationRef.current = requestAnimationFrame(animate);
     };
 
-<<<<<<< HEAD
-=======
-    const drawHolographicGrid = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
-      ctx.strokeStyle = `hsla(${160 + Math.sin(time * 0.015) * 100}, 90%, 65%, 0.3)`;
-      ctx.lineWidth = 0.5;
-      
-      for (let x = 0; x < canvas.width; x += 30) {
-        for (let y = 0; y < canvas.height; y += 30) {
-          const opacity = Math.sin(time + x * 0.01 + y * 0.01) * 0.2 + 0.1;
-          ctx.globalAlpha = opacity;
-          ctx.strokeRect(x, y, 30, 30);
-        }
-      }
-      ctx.globalAlpha = 1;
-    };
-
-    const drawQuantumEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
-      for (let i = 0; i < 5; i++) {
-        const x = (i / 5) * canvas.width;
-        const y = Math.sin(time + i * 0.5) * 20 + canvas.height / 2;
-        ctx.fillStyle = `rgba(0, 255, 255, ${0.3 + Math.sin(time + i) * 0.2})`;
-        ctx.beginPath();
-        ctx.arc(x, y, 2, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    };
-
-    const drawCyberpunkEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
-      for (let i = 0; i < 3; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const height = Math.random() * 50 + 30;
-        ctx.fillStyle = `rgba(0, 255, 0, ${0.4 + Math.sin(time + i) * 0.2})`;
-        ctx.fillRect(x, y, 2, height);
-      }
-    };
-
-    const drawNeuralConnections = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 80) {
-            const opacity = (80 - distance) / 80 * 0.3;
-            ctx.strokeStyle = `rgba(0, 255, 128, ${opacity})`;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-    };
-
-    const drawSpaceEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
-      for (let i = 0; i < 3; i++) {
-        const x = canvas.width / 2 + Math.cos(time + i) * 100;
-        const y = canvas.height / 2 + Math.sin(time + i) * 100;
-        const radius = Math.sin(time + i) * 20 + 40;
-        
-        const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-        gradient.addColorStop(0, `rgba(255, 255, 255, 0.2)`);
-        gradient.addColorStop(0.5, `rgba(0, 255, 255, 0.1)`);
-        gradient.addColorStop(1, `rgba(0, 0, 0, 0)`);
-        
-        ctx.fillStyle = gradient;
-        ctx.fillRect(x - radius, y - radius, radius * 2, radius * 2);
-      }
-    };
-
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
     createParticles();
     animate();
 

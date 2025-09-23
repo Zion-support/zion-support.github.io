@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Layout from '../components/layout/Layout';
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -226,7 +222,6 @@ const CybersecurityPage: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
-<<<<<<< HEAD
                   <a href={service.href} className="block">
                     <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 h-full hover:bg-gray-700/50 transition-all duration-300 hover:scale-105">
                       <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -243,31 +238,6 @@ const CybersecurityPage: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-=======
-                  <div className="flex items-center mb-4">
-                    {service.icon}
-                    <h3 className="text-xl font-semibold text-white ml-3">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-400">
-                        <Star className="w-4 h-4 text-red-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={service.href}
-                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors duration-300"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
                   </a>
                 </motion.div>
               ))}

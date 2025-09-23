@@ -13,16 +13,9 @@ export interface Innovative2040FuturisticService {
   textColor?: string;
   popular?: boolean;
   link: string;
-<<<<<<< HEAD
   icon?: string;
   color?: string;
   popular?: boolean;
-=======
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor?: string;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
   contactInfo: {
     mobile: string;
     email: string;
@@ -65,16 +58,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Breakthrough in accessibility technology'
     ],
     link: 'https://ziontechgroup.com/quantum-ai-neural-interface',
-<<<<<<< HEAD
     icon: '🧠',
     color: 'from-purple-500 to-pink-500',
     popular: true,
-=======
-    popular: true,
-    icon: '🧠',
-    color: 'from-purple-500 to-pink-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -115,16 +101,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Future-proof technology platform'
     ],
     link: 'https://ziontechgroup.com/holographic-quantum-workspace',
-<<<<<<< HEAD
     icon: '🖥️',
     color: 'from-blue-500 to-cyan-500',
     popular: true,
-=======
-    popular: true,
-    icon: '🌟',
-    color: 'from-blue-500 to-cyan-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -163,16 +142,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Operational efficiency optimization'
     ],
     link: 'https://ziontechgroup.com/ai-time-series-prediction',
-<<<<<<< HEAD
     icon: '⏰',
     color: 'from-green-500 to-emerald-500',
     popular: false,
-=======
-    popular: true,
-    icon: '🔮',
-    color: 'from-green-500 to-emerald-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -207,16 +179,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Enhanced trust and credibility'
     ],
     link: 'https://ziontechgroup.com/quantum-blockchain-security',
-<<<<<<< HEAD
     icon: '🔒',
     color: 'from-red-500 to-orange-500',
     popular: true,
-=======
-    popular: true,
-    icon: '🔒',
-    color: 'from-red-500 to-orange-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -251,16 +216,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Medical breakthrough potential'
     ],
     link: 'https://ziontechgroup.com/ai-synthetic-biology',
-<<<<<<< HEAD
     icon: '🧬',
     color: 'from-pink-500 to-rose-500',
     popular: false,
-=======
-    popular: true,
-    icon: '🧬',
-    color: 'from-emerald-500 to-teal-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -295,16 +253,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Global security standards'
     ],
     link: 'https://ziontechgroup.com/quantum-internet-security',
-<<<<<<< HEAD
     icon: '🌐',
     color: 'from-blue-500 to-indigo-500',
     popular: true,
-=======
-    popular: true,
-    icon: '🌐',
-    color: 'from-indigo-500 to-purple-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -339,16 +290,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Sustainable development support'
     ],
     link: 'https://ziontechgroup.com/ai-climate-modeling',
-<<<<<<< HEAD
     icon: '🌍',
     color: 'from-green-500 to-teal-500',
     popular: false,
-=======
-    popular: true,
-    icon: '🌍',
-    color: 'from-green-500 to-blue-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -383,16 +327,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Competitive advantage'
     ],
     link: 'https://ziontechgroup.com/quantum-financial-trading',
-<<<<<<< HEAD
     icon: '💰',
     color: 'from-yellow-500 to-orange-500',
     popular: true,
-=======
-    popular: true,
-    icon: '💰',
-    color: 'from-yellow-500 to-orange-500',
-    textColor: 'text-black',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -427,16 +364,9 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
       'Sustainable space exploration'
     ],
     link: 'https://ziontechgroup.com/ai-space-resource-management',
-<<<<<<< HEAD
     icon: '🚀',
     color: 'from-purple-500 to-indigo-500',
     popular: false,
-=======
-    popular: true,
-    icon: '🚀',
-    color: 'from-purple-500 to-blue-500',
-    textColor: 'text-white',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

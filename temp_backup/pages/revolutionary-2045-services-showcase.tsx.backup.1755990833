@@ -18,7 +18,6 @@ const Revolutionary2045ServicesShowcase: React.FC = () => {
 
   // Combine all services
   const allServices = [
-<<<<<<< HEAD
     // AI & Machine Learning Services
     {
       name: "AI Consciousness Evolution 2045",
@@ -198,11 +197,6 @@ const Revolutionary2045ServicesShowcase: React.FC = () => {
       reviews: 89
     }
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-    ...revolutionary2045AdvancedMicroSaas,
-    ...revolutionary2045ITServices,
-    ...revolutionary2045AIServices
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   ];
 
   // Filter and sort services

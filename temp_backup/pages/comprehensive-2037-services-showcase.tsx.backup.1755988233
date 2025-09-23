@@ -150,7 +150,6 @@ const Comprehensive2037ServicesShowcase: React.FC = () => {
 
   return (
     <Layout>
-<<<<<<< HEAD
       <SEO 
         data={{
           pageTitle: "Revolutionary 2037 Services Showcase | Zion Tech Group",
@@ -160,9 +159,6 @@ const Comprehensive2037ServicesShowcase: React.FC = () => {
       />
       
       <main className="relative z-10 pt-8">
-=======
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-dff5
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">

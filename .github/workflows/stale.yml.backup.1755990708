@@ -1,7 +1,6 @@
 name: Stale
 
 on:
-<<<<<<< HEAD
   workflow_dispatch: {}
   schedule:
     - cron: '*/10 * * * *'
@@ -34,30 +33,3 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-=======
-  schedule:
-    - cron: '30 2 * * *'
-  workflow_dispatch:
-
-permissions:
-  issues: write
-  pull-requests: write
-
-jobs:
-  stale:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/stale@v9
-        with:
-          days-before-stale: 30
-          days-before-close: 7
-          stale-issue-label: stale
-          stale-pr-label: stale
-          exempt-issue-labels: pinned,security,critical,good first issue
-          exempt-pr-labels: pinned,security,critical,auto-merge
-          stale-issue-message: 'This issue has been marked as stale due to inactivity.'
-          stale-pr-message: 'This pull request has been marked as stale due to inactivity.'
-          close-issue-message: 'Closing stale issue. Reopen if needed.'
-          close-pr-message: 'Closing stale pull request. Reopen if needed.'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> origin/cursor/automate-project-enhancement-and-merge-cac0

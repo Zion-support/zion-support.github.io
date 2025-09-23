@@ -24,7 +24,6 @@ Home: https://github.com/Zion-Holdings/zion#readme
 
 ### Authentication Setup
 
-<<<<<<< HEAD
 The application uses Supabase for all authentication functionality:
 - User registration and login
 - Email verification and password reset
@@ -281,13 +280,3 @@ npm run cypress:run
 
 After running `npm run test`, open `coverage/lcov-report/index.html` in your
 browser to view detailed coverage information.
-=======
----
-This README is auto-generated. Do not edit manually.
-
-## New Cloud Cron Automations
-
-- Intelligent Orchestrator (1m): /.netlify/functions/intelligent-orchestrator
-- Anomaly Watchdog (10m): /.netlify/functions/anomaly-watchdog
-- Pulse Sync (1m): /.netlify/functions/pulse-sync
->>>>>>> origin/cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5

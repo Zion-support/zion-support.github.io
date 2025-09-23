@@ -7,13 +7,10 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-<<<<<<< HEAD
 exports.config = {
   schedule: '7 */12 * * *',
 };
 
-=======
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b505
 exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
@@ -25,28 +22,8 @@ exports.handler = async () => {
     return status;
   }
 
-<<<<<<< HEAD
   logStep('deps:auto-upgrade', () => runNode('automation/deps-auto-upgrade.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
 };
-=======
-  // Ensure repo info
-  process.env.GIT_BRANCH = process.env.GIT_BRANCH || 'main';
-
-  // Run deps auto-upgrade
-  logStep('deps:auto-upgrade', () => runNode('automation/deps-auto-upgrade.cjs'));
-
-  // Sync key files back to GitHub
-  const filesToSync = [
-    'package.json',
-    'package-lock.json',
-    'automation/logs/deps-auto-upgrade.json'
-  ];
-
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs', filesToSync));
-
-  return { statusCode: 200, body: logs.join('\n') };
-};
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b505

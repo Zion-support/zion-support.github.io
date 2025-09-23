@@ -17,15 +17,9 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = "Zion Tech Group - Pioneering the Future of Technology",
-<<<<<<< HEAD
   description = "Zion Tech Group delivers cutting-edge technology solutions including AI, quantum computing, space technology, and cybersecurity. Transform your business with innovative solutions that drive growth and unlock human potential.",
   keywords = "Zion Tech Group, AI solutions, quantum computing, space technology, cybersecurity, technology consulting, digital transformation, enterprise solutions, machine learning, cloud computing",
   image = "https://ziontechgroup.com/og-image.jpg",
-=======
-  description = "Leading technology company specializing in AI, quantum computing, autonomous systems, and cutting-edge solutions that transform businesses worldwide. From concept to deployment, we're building tomorrow's solutions today.",
-  keywords = ["AI", "quantum computing", "autonomous systems", "technology solutions", "enterprise software", "cybersecurity", "cloud infrastructure", "data analytics", "machine learning", "innovation"],
-  image = "/og-image.jpg",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
   url = "https://ziontechgroup.com",
   type = "website",
   publishedTime,
@@ -40,12 +34,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-<<<<<<< HEAD
     "description": "Pioneering the future of technology with innovative solutions that drive business transformation and unlock human potential.",
-=======
-    "description": description,
-    "foundingDate": "2020",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -58,11 +47,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-<<<<<<< HEAD
       "email": "contact@ziontechgroup.com"
-=======
-      "email": "kleber@ziontechgroup.com"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
@@ -82,33 +67,22 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-<<<<<<< HEAD
             "name": "AI Consciousness Evolution",
             "description": "Revolutionary platform for developing AI systems with advanced consciousness capabilities"
-=======
-            "name": "AI & Machine Learning Solutions",
-            "description": "Advanced AI solutions for enterprise automation and decision-making"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-<<<<<<< HEAD
             "name": "Quantum Cybersecurity",
             "description": "Advanced cybersecurity with quantum-resistant encryption and AI threat detection"
-=======
-            "name": "Quantum Computing Services",
-            "description": "Next-generation computational power for complex problem solving"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-<<<<<<< HEAD
             "name": "Space Technology Applications",
             "description": "Innovative space tech solutions for terrestrial and extraterrestrial applications"
           }
@@ -122,18 +96,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           }
         }
       ]
-=======
-            "name": "Cybersecurity Solutions",
-            "description": "Military-grade protection for digital assets and infrastructure"
-          }
-        }
-      ]
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "500"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
     }
   };
 
@@ -142,17 +104,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-=======
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
@@ -160,11 +114,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
-<<<<<<< HEAD
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
@@ -174,20 +125,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
-<<<<<<< HEAD
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <meta name="theme-color" content="#0891b2" />
       <meta name="msapplication-TileColor" content="#0891b2" />
-=======
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#06b6d6" />
-      <meta name="msapplication-TileColor" content="#06b6d6" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
@@ -195,12 +138,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel="canonical" href={url} />
       
       {/* Favicon and Icons */}
-<<<<<<< HEAD
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-=======
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -223,7 +161,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
-<<<<<<< HEAD
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
@@ -243,43 +180,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="geo.placename" content="Middletown, Delaware" />
       <meta name="geo.position" content="39.4496;-75.7163" />
       <meta name="ICBM" content="39.4496, -75.7163" />
-=======
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      <meta name="format-detection" content="telephone=no" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-      
-      {/* Performance Optimizations */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
-      
-      {/* Social Media Meta Tags */}
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Zion Tech Group - Technology Solutions" />
-      
-      {/* Business Information */}
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
-      <meta name="geo.position" content="39.4496;-75.7163" />
-      <meta name="ICBM" content="39.4496, -75.7163" />
-      
-      {/* Industry and Business Type */}
-      <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
-      <meta name="business:contact_data:locality" content="Middletown" />
-      <meta name="business:contact_data:region" content="DE" />
-      <meta name="business:contact_data:postal_code" content="19709" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-302-464-0950" />
-      <meta name="business:contact_data:email" content="kleber@ziontechgroup.com" />
-      
-      {/* Service Areas */}
-      <meta name="service_area:business_type" content="Technology Services" />
-      <meta name="service_area:services" content="AI, Quantum Computing, Cybersecurity, Cloud Infrastructure, Data Analytics" />
-      <meta name="service_area:industries" content="Technology, Healthcare, Finance, Manufacturing, Government" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-2ffe
     </Head>
   );
 };

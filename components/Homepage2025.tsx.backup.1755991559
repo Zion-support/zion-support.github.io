@@ -1,34 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Layout from './layout/Layout';
-=======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  innovative2035MicroSaasServices 
-} from '../data/innovative-2035-micro-saas-services';
-import { 
-  innovative2035AIServices 
-} from '../data/innovative-2035-ai-services';
-import { 
-  innovative2035ITServices 
-} from '../data/innovative-2035-it-services';
-import { 
-  innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
-import { 
-  innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
-import { 
-  innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
-import { 
-  emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { motion } from 'framer-motion';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
@@ -36,7 +7,6 @@ import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
 
 const Homepage2025: React.FC = () => {
-<<<<<<< HEAD
   const featuredServices = [
     ...real2036InnovativeServices.filter(s => s.popular).slice(0, 3),
     ...real2036ITServices.filter(s => s.popular).slice(0, 2),
@@ -62,68 +32,6 @@ const Homepage2025: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-=======
-  const [activeSection, setActiveSection] = useState('hero');
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
-      setIsMobileMenuOpen(false);
-    }
-  };
-
-  const allServices = [
-    // New 2035 services (featured first)
-    ...innovative2035MicroSaasServices,
-    ...innovative2035AIServices,
-    ...innovative2035ITServices,
-    
-    // Existing services
-    ...innovativeRealMicroSaasServices2025,
-    ...innovativeAIServicesEnhanced2025,
-    ...innovativeITServicesEnhanced2025,
-    ...emergingTechServicesEnhanced2025,
-    ...advancedAIAutomationServices,
-    ...quantumCybersecurityServices
-  ];
-
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
-
-  const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
-    { id: 'contact', label: 'Contact', icon: '📞' }
-  ];
-
-  return (
-    <UltraFuturisticBackground2035>
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" aria-label="Primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-2"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
             >
               Zion Tech Group
             </motion.h1>
@@ -378,7 +286,6 @@ const Homepage2025: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Final CTA */}
@@ -412,12 +319,5 @@ const Homepage2025: React.FC = () => {
 });
 
 Homepage2025.displayName = 'Homepage2025';
-=======
-        </div>
-      </footer>
-    </UltraFuturisticBackground2035>
-  );
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
 
 export default Homepage2025;

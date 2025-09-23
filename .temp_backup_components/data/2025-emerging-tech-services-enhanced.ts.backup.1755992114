@@ -468,7 +468,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
 
   // Quantum Metaverse Platform
   {
-<<<<<<< HEAD
     id: 'space-resource-mining-platform',
     name: 'Space Resource Mining Platform',
     tagline: 'Asteroid mining and space resource extraction',
@@ -612,45 +611,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$25B+ potential market',
     growthRate: '600%+ annual growth',
     variant: 'quantum-materials',
-=======
-    id: 'quantum-metaverse-platform',
-    name: 'Quantum Metaverse Platform',
-    tagline: 'Experience the metaverse with quantum-enhanced capabilities',
-    price: '$999',
-    period: '/month',
-    description: 'Revolutionary quantum metaverse platform that provides quantum-enhanced virtual experiences, improved graphics, and advanced AI interactions.',
-    features: [
-      'Quantum-enhanced graphics',
-      'AI-powered interactions',
-      'Real-time quantum processing',
-      'Advanced physics simulation',
-      'Multi-user experiences',
-      'VR/AR integration',
-      'Performance optimization',
-      'Custom world creation',
-      'API for developers',
-      '24/7 quantum metaverse access'
-    ],
-    popular: true,
-    icon: '🌌',
-    color: 'from-violet-600 to-purple-600',
-    textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-metaverse-platform',
-    marketPosition: 'First quantum metaverse platform. Our advantage: Quantum computing provides 1000x better graphics and AI interactions.',
-    targetAudience: 'Metaverse companies, Gaming companies, VR/AR developers, Educational institutions, Entertainment companies',
-    trialDays: 21,
-    setupTime: '2-3 weeks',
-    category: 'Quantum Computing & Metaverse',
-    realService: true,
-    technology: ['Python, Quantum algorithms, VR/AR, AI/ML, 3D graphics'],
-    integrations: ['VR headsets, AR devices, Gaming platforms, Social platforms'],
-    useCases: ['Virtual experiences, Gaming, Education, Social interaction, Entertainment'],
-    roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
-    competitors: ['No direct competitors - first quantum metaverse platform'],
-    marketSize: '$35.5B quantum metaverse market',
-    growthRate: '85% annual growth',
-    variant: 'quantum-metaverse-enterprise',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2630
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -658,7 +618,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced quantum materials discovery platform with quantum computing integration, AI-powered prediction, and comprehensive research tools.',
     launchDate: '2025-02-20',
     customers: 8,
@@ -876,12 +835,5 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     customers: 42,
     rating: 4.7,
     reviews: 28
-=======
-    implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
-    launchDate: '2024-04-30',
-    customers: 18,
-    rating: 4.8,
-    reviews: 11
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2630
   }
 ];

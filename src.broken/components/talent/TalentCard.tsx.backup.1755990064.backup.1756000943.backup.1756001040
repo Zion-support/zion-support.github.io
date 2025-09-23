@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -202,13 +201,5 @@ const TalentCardComponent = ({
         </div>
       </div>
     </Card>
-=======
-export function TalentCard() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

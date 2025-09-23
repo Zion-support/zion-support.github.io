@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 export default function AuthIndex() {
   return (
@@ -8,6 +7,3 @@ export default function AuthIndex() {
     </div>
   );
 }
-=======
-export default function AuthIndex() { return null }
->>>>>>> origin/cursor/build-decentralized-governance-system-for-zion-2328

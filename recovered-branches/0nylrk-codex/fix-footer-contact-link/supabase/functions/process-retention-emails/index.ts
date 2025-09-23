@@ -9,12 +9,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -58,15 +53,8 @@ serve(async (req) => {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-<<<<<<< HEAD
                 "Authorization": `Bearer ${supabaseServiceKey}`},
               body: JSON.stringify(job)}
-=======
-                "Authorization": `Bearer ${supabaseServiceKey}`,
-              },
-              body: JSON.stringify(job),
-            }
->>>>>>> origin/auto/autonomy-17186719616
           );
 
           if (!reminderResponse.ok) {
@@ -77,12 +65,7 @@ serve(async (req) => {
             await supabase
               .from("scheduled_jobs")
               .update({
-<<<<<<< HEAD
                 status: "failed"})
-=======
-                status: "failed",
-              })
->>>>>>> origin/auto/autonomy-17186719616
               .eq("id", job.id);
           } else {
             processedJobs.push(job.id);
@@ -94,12 +77,7 @@ serve(async (req) => {
           await supabase
             .from("scheduled_jobs")
             .update({
-<<<<<<< HEAD
               status: "failed"})
-=======
-              status: "failed",
-            })
->>>>>>> origin/auto/autonomy-17186719616
             .eq("id", job.id);
         }
       }
@@ -110,19 +88,10 @@ serve(async (req) => {
         message: "Retention emails processed successfully",
         emails_scheduled: scheduledCount,
         emails_processed: processedJobs.length,
-<<<<<<< HEAD
         job_ids: processedJobs}),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-=======
-        job_ids: processedJobs,
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   } catch (error) {
     console.error("Error in process-retention-emails function:", error);
@@ -134,12 +103,7 @@ serve(async (req) => {
       }),
       {
         status: 500,
-<<<<<<< HEAD
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-=======
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

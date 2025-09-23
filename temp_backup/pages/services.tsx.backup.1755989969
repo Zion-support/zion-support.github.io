@@ -7,11 +7,7 @@ import {
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-<<<<<<< HEAD
   Building, Cpu, Database, Cloud, Lock, Sparkles
-=======
-  Building, Cpu, Database, Cloud, Lock, ShoppingCart, Lightbulb
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-f199
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -139,7 +135,6 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-<<<<<<< HEAD
   // Our new innovative services
   ...innovative2037Services,
   ...advanced2038Services,
@@ -149,17 +144,6 @@ const allServices = [
   ...innovative2040FuturisticServices,
   ...advanced2041EnterpriseServices,
   ...revolutionary2042MicroSaasServices
-=======
-  ...innovative2037MicroSaasServices,
-  ...innovative2037ITServices,
-  ...innovative2037AIServices,
-  // 2038 innovative services
-  ...innovative2038AIServices,
-  ...innovative2038ITServices,
-  ...innovative2038MicroSaasServices,
-  ...innovative2038IndustryServices,
-  ...innovative2038ConsultingServices
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-f199
 ];
 
 const categories = [
@@ -234,7 +218,6 @@ const categories = [
     description: 'Learning and research platforms'
   },
   {
-<<<<<<< HEAD
     id: 'ai-emotional',
     name: 'AI & Emotional Intelligence',
     icon: <Brain className="w-6 h-6" />,
@@ -296,27 +279,6 @@ const categories = [
     icon: <Heart className="w-6 h-6" />,
     color: 'from-emerald-600 to-green-700',
     description: 'AI-powered biotechnology and research acceleration'
-=======
-    id: 'manufacturing-industry',
-    name: 'Manufacturing & Industry',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Industrial automation and smart manufacturing'
-  },
-  {
-    id: 'retail-ecommerce',
-    name: 'Retail & E-commerce',
-    icon: <ShoppingCart className="w-6 h-6" />,
-    color: 'from-pink-500 to-rose-500',
-    description: 'Retail technology and e-commerce solutions'
-  },
-  {
-    id: 'consulting-strategy',
-    name: 'Consulting & Strategy',
-    icon: <Lightbulb className="w-6 h-6" />,
-    color: 'from-indigo-500 to-purple-500',
-    description: 'Strategic consulting and advisory services'
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-f199
   }
 ];
 

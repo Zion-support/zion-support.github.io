@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -237,10 +236,6 @@ export default function TranslationManager() {
       });
   };
   
-=======
-import React from 'react';
-export function TranslationManager() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

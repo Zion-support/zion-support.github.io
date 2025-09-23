@@ -10,27 +10,12 @@ const STATIC_FILES = [
   '/',
   '/offline.html',
   '/manifest.json',
-<<<<<<< HEAD
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
   '/css/main.css',
   '/js/main.js'
 ];
 
-=======
-  '/favicon.ico',
-  '/images/logo.png',
-  '/fonts/inter-var.woff2'
-];
-
-// API endpoints to cache
-const API_CACHE = [
-  '/api/services',
-  '/api/health',
-  '/api/analytics'
-];
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
 // Install event - cache static files
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
@@ -68,11 +53,7 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
-<<<<<<< HEAD
         console.log('Service Worker activated');
-=======
-        console.log('Service worker activated');
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
         return self.clients.claim();
       })
   );
@@ -95,7 +76,6 @@ self.addEventListener('fetch', (event) => {
   
   // Handle different types of requests
   if (request.destination === 'document') {
-<<<<<<< HEAD
     // HTML pages - try network first, fallback to cache
     event.respondWith(
       fetch(request)
@@ -122,40 +102,10 @@ self.addEventListener('fetch', (event) => {
               }
               
               // If no cached version, return offline page
-=======
-    // HTML pages - try cache first, then network
-    event.respondWith(
-      caches.match(request)
-        .then((response) => {
-          if (response) {
-            // Return cached version and update in background
-            fetch(request).then((freshResponse) => {
-              if (freshResponse.status === 200) {
-                caches.open(DYNAMIC_CACHE).then((cache) => {
-                  cache.put(request, freshResponse);
-                });
-              }
-            });
-            return response;
-          }
-          return fetch(request)
-            .then((response) => {
-              if (response.status === 200) {
-                const responseClone = response.clone();
-                caches.open(DYNAMIC_CACHE).then((cache) => {
-                  cache.put(request, responseClone);
-                });
-              }
-              return response;
-            })
-            .catch(() => {
-              // Return offline page if network fails
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
               return caches.match('/offline.html');
             });
         })
     );
-<<<<<<< HEAD
   } else if (request.destination === 'image') {
     // Images - cache first, then network
     event.respondWith(
@@ -165,36 +115,19 @@ self.addEventListener('fetch', (event) => {
             return cachedResponse;
           }
           
-=======
-  } else if (request.destination === 'image' || request.destination === 'font') {
-    // Images and fonts - cache first strategy
-    event.respondWith(
-      caches.match(request)
-        .then((response) => {
-          if (response) {
-            return response;
-          }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
           return fetch(request)
             .then((response) => {
               if (response.status === 200) {
                 const responseClone = response.clone();
-<<<<<<< HEAD
                 caches.open(DYNAMIC_CACHE)
                   .then((cache) => {
                     cache.put(request, responseClone);
                   });
-=======
-                caches.open(DYNAMIC_CACHE).then((cache) => {
-                  cache.put(request, responseClone);
-                });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
               }
               return response;
             });
         })
     );
-<<<<<<< HEAD
   } else if (request.destination === 'style' || request.destination === 'script') {
     // CSS and JS - cache first, then network
     event.respondWith(
@@ -219,55 +152,21 @@ self.addEventListener('fetch', (event) => {
     );
   } else {
     // Other resources - network first, fallback to cache
-=======
-  } else if (url.pathname.startsWith('/api/')) {
-    // API requests - network first, then cache
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
     event.respondWith(
       fetch(request)
         .then((response) => {
           if (response.status === 200) {
             const responseClone = response.clone();
-<<<<<<< HEAD
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
                 cache.put(request, responseClone);
               });
-=======
-            caches.open(DYNAMIC_CACHE).then((cache) => {
-              cache.put(request, responseClone);
-            });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
           }
           return response;
         })
         .catch(() => {
-<<<<<<< HEAD
           return caches.match(request);
         })
-=======
-          // Return cached version if network fails
-          return caches.match(request);
-        })
-    );
-  } else {
-    // Other resources - try cache first, then network
-    event.respondWith(
-      caches.match(request)
-        .then((response) => {
-          return response || fetch(request);
-        })
-    );
-  }
-});
-
-// Background sync for offline actions
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(
-      // Perform background sync tasks
-      console.log('Background sync triggered')
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
     );
   }
 });
@@ -306,15 +205,9 @@ self.addEventListener('push', (event) => {
   console.log('Push notification received');
   
   const options = {
-<<<<<<< HEAD
     body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
     icon: '/icons/icon-192x192.png',
     badge: '/icons/icon-192x192.png',
-=======
-    body: event.data ? event.data.text() : 'New update available',
-    icon: '/images/logo.png',
-    badge: '/images/badge.png',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -324,20 +217,12 @@ self.addEventListener('push', (event) => {
       {
         action: 'explore',
         title: 'Explore',
-<<<<<<< HEAD
         icon: '/icons/icon-192x192.png'
-=======
-        icon: '/images/explore.png'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
       },
       {
         action: 'close',
         title: 'Close',
-<<<<<<< HEAD
         icon: '/icons/icon-192x192.png'
-=======
-        icon: '/images/close.png'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
       }
     ]
   };
@@ -356,7 +241,6 @@ self.addEventListener('notificationclick', (event) => {
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
-<<<<<<< HEAD
     );
   } else if (event.action === 'close') {
     // Just close the notification
@@ -364,8 +248,6 @@ self.addEventListener('notificationclick', (event) => {
     // Default action - open the app
     event.waitUntil(
       clients.openWindow('/')
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
     );
   }
 });
@@ -422,7 +304,6 @@ self.addEventListener('message', (event) => {
 
 // Error handling
 self.addEventListener('error', (event) => {
-<<<<<<< HEAD
   console.error('Service Worker error:', event.error);
 });
 
@@ -431,12 +312,3 @@ self.addEventListener('unhandledrejection', (event) => {
 });
 
 console.log('Service Worker loaded successfully');
-=======
-  console.error('Service worker error:', event.error);
-});
-
-// Unhandled rejection handling
-self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service worker unhandled rejection:', event.reason);
-});
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373

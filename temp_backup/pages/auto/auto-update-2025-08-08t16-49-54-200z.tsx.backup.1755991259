@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function AutoUpdate_164954200Z() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -7,6 +6,3 @@ export default function AutoUpdate_164954200Z() {
     </div>
   );
 }
-=======
-export default function AutoUpdate_6() { return <div className="py-10 text-white">Auto Update Snapshot</div>; }
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf

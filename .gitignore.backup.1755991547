@@ -34,25 +34,3 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
-<<<<<<< HEAD
-=======
-*.swp
-*.swo
-*~
-
-# OS files
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Large log files
-logs/enhanced-sync-manager.log
-logs/enhanced-sync-manager.log.backup
-automation/logs/autonomous-system.log .next/
-
-# Allow committing workspace VSCode config
-!/.vscode
-!/.vscode/extensions.json
-!/.vscode/settings.json
->>>>>>> origin/cursor/enhance-and-automate-with-cursor-extensions-bb30

@@ -445,7 +445,6 @@ const MarketPricing: React.FC = () => {
                   </ul>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -501,8 +500,6 @@ const MarketPricing: React.FC = () => {
                 <li>OpenTelemetry docs: <a className="text-cyan-400 underline" href={`https://opentelemetry.io/`} target="_blank" rel="noopener noreferrer">opentelemetry.io</a></li>
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$2,000/month depending on data volume, SLAs, and alerting needs.</div>
-=======
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
             </div>
           </div>
         </section>

@@ -145,24 +145,7 @@ export default function ServicesIndexPage() {
     // Our new 2025 advanced services
     .concat(advanced2025MicroSaasExpansion as unknown[])
     .concat(advanced2025ITSolutionsExpansion as unknown[])
-<<<<<<< HEAD
     .concat(advanced2025AIServicesExpansion as unknown[]);
-=======
-    .concat(advancedAIServicesExpansion2025 as unknown[])
-    // Our new 2025 innovative services
-    .concat(innovativeMicroSaasExpansion2025 as unknown[])
-    .concat(innovative2025ITSolutionsExpansion as unknown[])
-    .concat(innovative2025AISolutionsExpansion as unknown[])
-    // Our new 2025 advanced services V2
-    // .concat(advancedMicroSaasExpansion2025V2 as unknown[])
-    // .concat(advancedITInfrastructureExpansion2025V2 as unknown[])
-    // .concat(advancedAIServicesExpansion2025V2 as unknown[])
-    // Our new 2025 innovative services V3
-    .concat(innovativeMicroSaasExpansionV32025 as unknown[])
-    .concat(innovativeITServicesExpansion2025V3 as unknown[])
-    .concat(innovativeAIServicesExpansion2025V3 as unknown[])
-    ;
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 
   // Filter out services without required properties
   const validServices = all.filter(service => 

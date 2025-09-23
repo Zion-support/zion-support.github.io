@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 // Zion Tech Group Service Worker
 // Enhanced caching and offline capabilities
-=======
-/* eslint-env serviceworker */
-/* global self, caches, Response */
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
@@ -40,24 +35,6 @@ self.addEventListener('install', (event) => {
       .catch((error) => {
         console.error('Failed to cache static files:', error);
       })
-<<<<<<< HEAD
-=======
-  );
-});
-
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   );
 });
 
@@ -159,26 +136,12 @@ async function networkFirst(request, cacheName) {
       return cachedResponse;
     }
     
-<<<<<<< HEAD
     // Return offline page for navigation requests
     if (request.mode === 'navigate') {
       return caches.match('/offline');
     }
     
     return new Response('Network error', { status: 503 });
-=======
-    // Return offline page for HTML requests
-    if (request.headers.get('accept')?.includes('text/html')) {
-      return caches.match('/offline');
-    }
-    
-    // Check if Response is available (it should be in service worker context)
-    if (typeof Response !== 'undefined') {
-      return new Response('Network error', { status: 503, statusText: 'Service Unavailable' });
-    }
-    // Fallback for older browsers
-    return { status: 503, statusText: 'Service Unavailable' };
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   }
 }
 
@@ -189,10 +152,7 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-<<<<<<< HEAD
 // Background sync function
-=======
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
@@ -207,34 +167,6 @@ async function doBackgroundSync() {
     console.log('Background sync completed');
   } catch (error) {
     console.error('Background sync failed:', error);
-<<<<<<< HEAD
-=======
-  }
-}
-
-// Get stored analytics data
-async function getStoredAnalytics() {
-  // This would typically get data from IndexedDB
-  return [];
-}
-
-// Sync analytics data
-async function syncAnalytics(data) {
-  try {
-    const response = await fetch('/api/analytics', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    });
-    
-    if (response.ok) {
-      console.log('Analytics synced successfully');
-    }
-  } catch (error) {
-    console.error('Failed to sync analytics:', error);
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   }
 }
 
@@ -274,21 +206,12 @@ self.addEventListener('push', (event) => {
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-<<<<<<< HEAD
   
   if (event.notification.data?.url) {
     event.waitUntil(
       clients.openWindow('/')
     );
   }
-=======
-
-      if (event.action === 'explore') {
-      event.waitUntil(
-        self.clients.openWindow('/')
-      );
-    }
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 });
 
 // Message handling from main thread
@@ -309,8 +232,4 @@ self.addEventListener('error', (event) => {
 
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service worker unhandled rejection:', event.reason);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a

@@ -72,7 +72,6 @@ export default function PricingPage() {
 
   const microSaasServices = [
     {
-<<<<<<< HEAD
       name: 'AI Content Generator Pro',
       price: 49,
       period: '/month',
@@ -359,38 +358,6 @@ export default function PricingPage() {
       category: 'Business Intelligence',
       realService: true,
       savings: 'Save 20% with yearly billing'
-=======
-      name: 'Custom AI Model Development',
-      description: 'Tailored AI solutions for your specific business needs with 1500%+ ROI guarantee',
-      price: 'From $2,500',
-      period: '/project',
-      icon: '🧠',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'Quantum Computing Solutions',
-      description: 'Revolutionary quantum computing services for complex problem solving',
-      price: 'From $5,000',
-      period: '/month',
-      icon: '⚛️',
-      color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      name: 'Fusion Energy Implementation',
-      description: 'AI-powered fusion energy control systems for sustainable power generation',
-      price: 'From $15,000',
-      period: '/month',
-      icon: '☢️',
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      name: 'Genetic Engineering Platform',
-      description: 'Advanced CRISPR technology and genetic research platforms',
-      price: 'From $8,000',
-      period: '/month',
-      icon: '🧬',
-      color: 'from-emerald-500 to-teal-600'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
     }
   ];
 

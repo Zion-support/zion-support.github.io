@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module.exports = {
   apps: [
     {
@@ -78,6 +77,3 @@ module.exports = {
     }
   ]
 };
-=======
-module.exports = { apps: [] };
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-405f

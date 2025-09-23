@@ -5,7 +5,6 @@ const nextConfig = {
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
-<<<<<<< HEAD
   swcMinify: true,
   
   // Disable TypeScript and ESLint during build to avoid parsing errors
@@ -57,11 +56,6 @@ const nextConfig = {
     
   },
 
-=======
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
->>>>>>> origin/cursor/website-audit-and-enhancement-ffd4
   images: {
     domains: ["localhost"],
     unoptimized: true,

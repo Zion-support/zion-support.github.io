@@ -17,7 +17,6 @@ import { innovativeAIServices } from '../data/innovative-ai-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 import { RealMarketService } from '../data/real-market-services';
 
-<<<<<<< HEAD
 // Use any for now to get the build working - we can refine types later
 type Service = any;
 
@@ -35,10 +34,6 @@ const getPriceDisplay = (service: any) => {
     };
   }
 };
-=======
-// Use the unified service type
-type Service = UnifiedService;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
 
 const Innovative2040FuturisticServicesShowcase: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

@@ -7,34 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect, useMemo } from "react";
-import { useTranslation } from 'react-i18next';
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { FilterSidebar } from "@/components/search/FilterSidebar";
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { ProductListing } from "@/types/listings";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
-import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
-import { SearchSuggestion } from "@/types/search";
-import styles from './Marketplace.module.css';
-import { useViewMode } from '@/context/ViewModeContext';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 
 
 
@@ -267,7 +239,6 @@ const FilterControls: React.FC<{
  * Includes intelligent filtering, sorting, and recommendation features
  */
 export default function Marketplace() {
-<<<<<<< HEAD
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -275,20 +246,6 @@ export default function Marketplace() {
   const firstRenderRef = useRef(true);
   const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-=======
-  const navigate = useNavigate();
-  const { t } = useTranslation();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-  const [isLoading, setIsLoading] = useState(false);
-  const { viewMode, setViewMode } = useViewMode();
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 
   const [sortBy, setSortBy] = useState('newest');
   const [filterCategory, setFilterCategory] = useState('');
@@ -317,7 +274,6 @@ export default function Marketplace() {
       return;
     }
 
-<<<<<<< HEAD
     // Navigate to admin products page
     router.push('/admin/products');
   }, [isAuthenticated, user, router, toast]);
@@ -461,160 +417,6 @@ export default function Marketplace() {
           {Array.from({ length: 12 }).map((_, i) => (
             <SkeletonCard key={i} />
           ))}
-=======
-  return (
-    <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto mb-8">
-          <h1 className="text-3xl font-bold text-white mb-4">{t('marketplace.title')}</h1>
-          <p className="text-zion-slate-light">
-            {t('marketplace.description')}
-          </p>
-        </div>
-        
-        {/* Search and filter bar */}
-        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="relative flex-1">
-              <EnhancedSearchInput
-                value={searchQuery}
-                onChange={setSearchQuery}
-                onSelectSuggestion={setSearchQuery}
-                placeholder={t('marketplace.search_placeholder')}
-                searchSuggestions={searchSuggestions}
-              />
-            </div>
-            <div className="flex gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setViewMode('grid')}
-                aria-label="Grid view"
-                aria-pressed={viewMode === 'grid'}
-                className="text-zion-slate-light"
-              >
-                <Grid3X3 className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setViewMode('list')}
-                aria-label="List view"
-                aria-pressed={viewMode === 'list'}
-                className="text-zion-slate-light"
-              >
-                <ListFilter className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* Sidebar Filters */}
-          <div className="lg:col-span-1">
-            <FilterSidebar
-              filters={{
-                selectedProductTypes,
-                selectedLocations,
-                selectedAvailability,
-                selectedRating
-              }}
-              filterOptions={filterOptions}
-              onFilterChange={handleFilterChange}
-              onRatingChange={setSelectedRating}
-              onClearFilters={clearAllFilters}
-            />
-          </div>
-          
-          {/* Main content */}
-          <div className="lg:col-span-3">
-            {/* Active filters display */}
-            <ActiveFiltersBar 
-              selectedProductTypes={selectedProductTypes}
-              selectedLocations={selectedLocations}
-              selectedAvailability={selectedAvailability}
-              selectedRating={selectedRating}
-              searchQuery={searchQuery}
-              onRemoveFilter={handleFilterChange}
-              onRemoveRating={() => setSelectedRating(null)}
-              onClearSearch={() => setSearchQuery("")}
-            />
-
-            {/* Results count */}
-            <div className="mb-6">
-              <p className="text-zion-slate-light">
-                Showing {filteredListings.length} results
-                {searchQuery && ` for "${searchQuery}"`}
-              </p>
-            </div>
-            
-            {/* Display actual marketplace listings */}
-            {isLoading ? (
-              <div className="flex justify-center py-20">
-                <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
-              </div>
-            ) : filteredListings.length > 0 ? (
-              viewMode === 'grid' ? (
-                <ProductGrid listings={paginatedListings} onRequestQuote={handleRequestQuote} />
-              ) : (
-                <ProductList listings={paginatedListings} onRequestQuote={handleRequestQuote} />
-              )
-            ) : (
-              <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
-                <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
-                <p className="text-zion-slate-light max-w-md mx-auto mb-8">
-                  We couldn't find any listings matching your filters. Try adjusting your search criteria.
-                </p>
-                <Button
-                  onClick={clearAllFilters}
-                  className="bg-zion-purple hover:bg-zion-purple-dark"
-                >
-                  Clear Filters
-                </Button>
-              </div>
-            )}
-            {totalPages > 1 && (
-              <div className="mt-6">
-                <Pagination className="justify-center">
-                  <PaginationContent>
-                    <PaginationItem>
-                      <PaginationPrevious
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.max(1, currentPage - 1));
-                        }}
-                      />
-                    </PaginationItem>
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <PaginationItem key={page}>
-                        <PaginationLink
-                          href="#"
-                          isActive={page === currentPage}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setCurrentPage(page);
-                          }}
-                        >
-                          {page}
-                        </PaginationLink>
-                      </PaginationItem>
-                    ))}
-                    <PaginationItem>
-                      <PaginationNext
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.min(totalPages, currentPage + 1));
-                        }}
-                      />
-                    </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
-              </div>
-            )}
-          </div>
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
         </div>
       </main>
     );

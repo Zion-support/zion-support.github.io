@@ -16,7 +16,6 @@ interface EmptyStateProps {
   secondaryAction?: {
     text: string;
     href?: string;
-<<<<<<< HEAD
 
     onClick?: () => void
   }
@@ -35,8 +34,6 @@ interface EmptyStateProps {
 
 
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
     onClick?: () => void;
   };
   className?: string;
@@ -48,13 +45,8 @@ export function EmptyState({
   description,
   action,
   secondaryAction,
-<<<<<<< HEAD
   className}: EmptyStateProps) {
 
-=======
-  className,
-}: EmptyStateProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div
       className={cn(

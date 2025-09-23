@@ -278,16 +278,12 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-<<<<<<< HEAD
           'Inter',
           'system-ui',
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
           'Roboto',
-<<<<<<< HEAD
           'Helvetica Neue',
           'Arial',
           'Noto Sans',
@@ -333,27 +329,6 @@ module.exports = {
         '88': '22rem',
         '128': '32rem',
         '144': '36rem',
-=======
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Fira Sans',
-          'Droid Sans',
-          'Helvetica Neue',
-          'sans-serif',
-        ],
-        mono: [
-          'SF Mono',
-          'Monaco',
-          'Inconsolata',
-          'Roboto Mono',
-          'Source Code Pro',
-          'Menlo',
-          'Consolas',
-          'DejaVu Sans Mono',
-          'monospace',
-        ],
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

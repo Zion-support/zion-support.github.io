@@ -1,11 +1,6 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
-=======
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
->>>>>>> origin/backup-main-final-20250913-063409
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
@@ -170,20 +165,9 @@ export default [
       '**/performance-*.txt'
     ],
     languageOptions: {
-<<<<<<< HEAD
       ecmaVersion: 2021,
       sourceType: 'module',
       parser: tsParser,
-=======
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
->>>>>>> origin/backup-main-final-20250913-063409
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -227,35 +211,18 @@ export default [
       }
     },
     plugins: {
-<<<<<<< HEAD
       '@typescript-eslint': tseslint,
       react,
       'react-hooks': reactHooks
-=======
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': next
->>>>>>> origin/backup-main-final-20250913-063409
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-<<<<<<< HEAD
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
-=======
-      ...next.configs.recommended.rules,
-      'no-unused-vars': 'warnno-console': 'warnprefer-const': 'errorno-var': 'errorreact/prop-types': 'offreact/react-in-jsx-scope': 'off@typescript-eslint/no-unused-vars': 'warn@typescript-eslint/no-explicit-any': 'warn'
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
->>>>>>> origin/backup-main-final-20250913-063409
     }
   },
   {

@@ -1,18 +1,11 @@
 import React, { useEffect, useState, useCallback, useMemo, Suspense, lazy } from 'react';
 import Layout from './layout/Layout';
-<<<<<<< HEAD
 import SEOHead from './SEOHead';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
   Loader2
-=======
-import SEOEnhancer from './SEOEnhancer';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Star
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
 } from 'lucide-react';
 import PerformanceDashboard from './PerformanceDashboard';
 import EnhancedSEO from './EnhancedSEO';
@@ -27,7 +20,6 @@ import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-a
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
 import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
 
-<<<<<<< HEAD
 // Loading skeleton component
 const LoadingSkeleton = () => (
   <div className="animate-pulse">
@@ -36,24 +28,10 @@ const LoadingSkeleton = () => (
     <div className="h-4 bg-gray-700 rounded w-3/4"></div>
   </div>
 );
-=======
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  type: string;
-  category: string;
-  pricing: {
-    starter: string;
-  };
-  slug: string;
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
 
 const Homepage2044: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoading, setIsLoading] = useState(true);
@@ -61,30 +39,6 @@ const Homepage2044: React.FC = () => {
   
   // Memoized data for better performance
   const allRevolutionaryServices = useMemo(() => [
-=======
-  const [isLoading, setIsLoading] = useState(true);
-  
-  useEffect(() => {
-    // Simulate loading state for better UX
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 500);
-    
-    // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
-    
-    return () => {
-      clearTimeout(timer);
-      clearInterval(interval);
-    };
-  }, []);
-
-  // Combine all revolutionary services
-  const allRevolutionaryServices: Service[] = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
     ...revolutionary2044AdvancedMicroSaas,
     ...revolutionary2044ITServices,
     ...revolutionary2044AIServices
@@ -94,7 +48,6 @@ const Homepage2044: React.FC = () => {
     allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]
   );
 
-<<<<<<< HEAD
   const categories = useMemo(() => [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
     { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-500 to-blue-500' },
@@ -105,9 +58,6 @@ const Homepage2044: React.FC = () => {
   ], []);
 
   const features = useMemo(() => [
-=======
-  const features = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
     { icon: Brain, title: "AI Consciousness Evolution 2044", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-2044", color: "from-purple-500 to-pink-500" },
     { icon: Atom, title: "Quantum Neural Networks 2044", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-2044", color: "from-blue-500 to-cyan-500" },
     { icon: Shield, title: "Quantum Cybersecurity 2044", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-2044", color: "from-red-500 to-orange-500" },
@@ -168,7 +118,6 @@ const Homepage2044: React.FC = () => {
     }, 500);
   }, []);
 
-<<<<<<< HEAD
   const handleServiceClick = useCallback((service: { slug: string }) => {
     window.location.href = service.slug;
   }, []);
@@ -188,22 +137,6 @@ const Homepage2044: React.FC = () => {
             >
               Try Again
             </button>
-=======
-  const handleServiceClick = useCallback((service: Service) => {
-    window.location.href = service.slug;
-  }, []);
-
-  // Loading state
-  if (isLoading) {
-    return (
-      <Layout>
-        <SEOEnhancer />
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500 mx-auto mb-8"></div>
-            <h2 className="text-2xl font-bold text-white mb-4">Loading Zion Tech Group</h2>
-            <p className="text-gray-400">Preparing the future of technology...</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
           </div>
         </div>
       </Layout>
@@ -212,30 +145,6 @@ const Homepage2044: React.FC = () => {
 
   return (
     <Layout>
-<<<<<<< HEAD
-=======
-      {/* SEO Enhancement */}
-      <SEOEnhancer 
-        title="Zion Tech Group - Revolutionary 2044 Technology Solutions"
-        description="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide."
-        keywords={[
-          'AI consciousness',
-          'quantum computing',
-          'autonomous solutions',
-          'technology consulting',
-          'AI services',
-          'quantum technology',
-          'space technology',
-          'cybersecurity',
-          'business intelligence',
-          'cloud infrastructure'
-        ]}
-        type="website"
-        url="https://ziontechgroup.com"
-      />
-      
-      {/* Main Content */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
       <main className="relative z-10" role="main" aria-label="Zion Tech Group Homepage">
         {/* Hero Section */}
         <section 
@@ -263,11 +172,7 @@ const Homepage2044: React.FC = () => {
                   }}
                   transition={{
                     duration: 8 + i * 0.3,
-<<<<<<< HEAD
                     repeat: Infinity as never,
-=======
-                    repeat: Infinity as const,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
                     delay: i * 0.2,
                     ease: "easeInOut"
                   }}
@@ -280,17 +185,7 @@ const Homepage2044: React.FC = () => {
               ))}
             </div>
 
-<<<<<<< HEAD
   const filteredServices = getFilteredServices();
-=======
-            {/* Grid pattern with neon glow */}
-            <div className="absolute inset-0 opacity-20" aria-hidden="true">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
-                backgroundSize: '60px 60px'
-              }}></div>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
 
   return (
     <>
@@ -526,21 +421,8 @@ const Homepage2044: React.FC = () => {
                     key={service.id}
                     className="group cursor-pointer"
                     onClick={() => handleServiceClick(service)}
-<<<<<<< HEAD
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-=======
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        handleServiceClick(service);
-                      }
-                    }}
-                    aria-label={`Learn more about ${service.name}`}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7309
                   >
                     <div className="relative p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-xl hover:border-cyan-500/50 transition-all duration-300">
                       <div className="flex items-center justify-between mb-4">

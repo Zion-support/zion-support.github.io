@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
-=======
-
-import React, { useEffect, useState } from 'react';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, TrendingUp, AlertTriangle, CheckCircle, X, Settings, RefreshCw } from 'lucide-react';
 
@@ -21,7 +16,6 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [showMetrics, setShowMetrics] = useState(false);
@@ -32,41 +26,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   const [performanceIssues, setPerformanceIssues] = useState<string[]>([]);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [serviceWorkerStatus, setServiceWorkerStatus] = useState<'installing' | 'installed' | 'error' | 'not-supported'>('not-supported');
-=======
-// Performance entry types for Core Web Vitals
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: unknown;
-}
-
-// Global type declarations for browser APIs
-declare global {
-  interface Performance {
-    memory?: {
-      usedJSHeapSize: number;
-    };
-  }
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  children, 
-  fallback 
-}) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [performanceMetrics, setPerformanceMetrics] = useState<{
-    loadTime: number;
-    memoryUsage?: number;
-    networkRequests: number;
-  }>({
-    loadTime: 0,
-    networkRequests: 0
-  });
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 
   // Register service worker for PWA capabilities
   useEffect(() => {
-<<<<<<< HEAD
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/sw.js')
@@ -84,59 +46,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           });
         })
         .catch(() => setServiceWorkerStatus('error'));
-=======
-    const startTime = performance.now();
-    
-    // Simulate performance monitoring
-    const timer = setTimeout(() => {
-      const loadTime = performance.now() - startTime;
-      
-      // Get performance metrics
-      if ('memory' in performance) {
-        const memory = performance.memory;
-        setPerformanceMetrics({
-          loadTime: Math.round(loadTime),
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024), // MB
-          networkRequests: 0 // This would be tracked in a real implementation
-        });
-      } else {
-        setPerformanceMetrics({
-          loadTime: Math.round(loadTime),
-          networkRequests: 0
-        });
-      }
-      
-      setIsLoading(false);
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            const firstInputEntry = entry as PerformanceEventTiming;
-            console.log('FID:', firstInputEntry.processingStart - firstInputEntry.startTime);
-          }
-        }
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch {
-        // Fallback for older browsers
-        console.log('Performance monitoring not supported');
-      }
-
-      return () => observer.disconnect();
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
     }
   }, []);
 

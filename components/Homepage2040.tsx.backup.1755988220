@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-=======
-import React, { useEffect, useState, useCallback, useMemo, Suspense } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -44,7 +40,6 @@ const LazyFeaturesGrid = React.lazy(() => import('./FeaturesGrid'));
 
 const Homepage2040: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -84,11 +79,6 @@ const Homepage2040: React.FC = () => {
   }, []);
 
   // Optimized scroll handling
-=======
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -115,7 +105,6 @@ const Homepage2040: React.FC = () => {
     };
   }, []);
 
-<<<<<<< HEAD
   // Combine all revolutionary services with error handling
   const allRevolutionaryServices = React.useMemo(() => {
     try {
@@ -124,54 +113,6 @@ const Homepage2040: React.FC = () => {
       setError('Failed to load services');
       return [];
     }
-=======
-  // Use intersection observer for better performance
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    const heroSection = document.querySelector('#hero-section');
-    if (heroSection) {
-      observer.observe(heroSection);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Memoize expensive computations
-  const allRevolutionaryServices = useMemo(() => 
-    [...revolutionary2040FuturisticServices, ...revolutionary2041AdvancedServices], 
-    []
-  );
-
-  const featuredServices = useMemo(() => 
-    allRevolutionaryServices.slice(0, 6), 
-    [allRevolutionaryServices]
-  );
-
-  const features = useMemo(() => [
-    { icon: Brain, title: "AI Consciousness Evolution", description: "Next-generation AI consciousness and emotional intelligence", href: "/ai-consciousness-evolution-2040", color: "from-purple-500 to-pink-500" },
-    { icon: Atom, title: "Quantum Computing", description: "Revolutionary quantum computing with consciousness integration", href: "/quantum-neural-ecosystem-2040", color: "from-blue-500 to-cyan-500" },
-    { icon: Shield, title: "Future Cybersecurity", description: "Quantum-resistant security with consciousness-based protection", href: "/quantum-cybersecurity-future-2040", color: "from-red-500 to-orange-500" },
-    { icon: Rocket, title: "Space Technology", description: "AI-powered space resource intelligence and management", href: "/space-resource-intelligence-2040", color: "from-indigo-500 to-purple-500" },
-    { icon: Cpu, title: "Autonomous Systems", description: "Fully autonomous AI systems with consciousness", href: "/ai-autonomous-research-2041", color: "from-emerald-500 to-teal-500" },
-    { icon: Database, title: "Business Intelligence", description: "Autonomous business intelligence with consciousness insights", href: "/autonomous-business-intelligence-2040", color: "from-yellow-500 to-orange-500" }
-  ], []);
-
-  const stats = useMemo(() => [
-    { number: "1000+", label: "Revolutionary Services", icon: Star },
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
-    { number: "24/7", label: "AI Support Available", icon: Brain },
-    { number: "100+", label: "Countries Served", icon: Globe }
-  ], []);
-
-  const handleGetStarted = useCallback(() => {
-    window.location.href = '/revolutionary-2040-2041-pricing-showcase';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
   }, []);
 
   if (isLoading) {
@@ -227,7 +168,6 @@ const Homepage2040: React.FC = () => {
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
           {/* Enhanced Animated Background with reduced complexity for better performance */}
           <div className="absolute inset-0 -z-10">
             {/* Floating orbs with reduced animation complexity */}
@@ -238,18 +178,6 @@ const Homepage2040: React.FC = () => {
             {/* Reduced particle count for better performance */}
             <div className="absolute inset-0">
               {[...Array(6)].map((_, i) => (
-=======
-          {/* Enhanced Animated Background with better performance */}
-          <div className="absolute inset-0 -z-10">
-            {/* Floating orbs with reduced motion support */}
-            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse motion-reduce:animate-none"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000 motion-reduce:animate-none"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500 motion-reduce:animate-none"></div>
-            
-            {/* Animated particles with reduced motion support */}
-            <div className="absolute inset-0 motion-reduce:hidden">
-              {[...Array(8)].map((_, i) => (
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
                 <motion.div
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
@@ -290,7 +218,6 @@ const Homepage2040: React.FC = () => {
               role="banner"
               aria-label="Company recognition"
             >
-<<<<<<< HEAD
               {/* Enhanced Animated Background */}
               <motion.div 
                 className="absolute inset-0 -z-10"
@@ -335,78 +262,12 @@ const Homepage2040: React.FC = () => {
 
               {/* Hero Content */}
               <div className="relative z-10 max-w-7xl mx-auto text-center">
-=======
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6">
-                🚀 Revolutionary 2040-2041 Technology
-              </span>
-            </motion.div>
-
-            <motion.h1
-              id="hero-heading"
-              className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </motion.h1>
-            
-            <motion.p
-              className="text-lg sm:text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed px-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            >
-              Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 px-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            >
-              <button 
-                className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-base sm:text-lg"
-                onClick={handleGetStarted}
-                aria-label="Get started with Zion Tech Group revolutionary services"
-              >
-                Experience the Future
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 inline" />
-              </button>
-              <button 
-                className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-base sm:text-lg"
-                onClick={handleWatchDemo}
-                aria-label="Explore our revolutionary services"
-              >
-                Explore Services
-                <Play className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 inline" />
-              </button>
-            </motion.div>
-
-            {/* Featured Service Showcase */}
-            <motion.div
-              className="max-w-4xl mx-auto px-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
-              <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Featured Revolutionary Service</h3>
-                  <p className="text-gray-400 text-sm sm:text-base">Experience the cutting edge of technology</p>
-                </div>
-                
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
                 <motion.div
                   variants={fadeInUp}
                   initial="initial"
                   animate="animate"
                   className="space-y-8"
                 >
-<<<<<<< HEAD
                   {/* Main Heading */}
                   <div className="space-y-6">
                     <motion.div
@@ -451,21 +312,6 @@ const Homepage2040: React.FC = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-=======
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 p-3 sm:p-4">
-                    <Brain className="w-full h-full text-white" />
-                  </div>
-                  <h4 className="text-lg sm:text-xl font-semibold text-white mb-2">
-                    {featuredServices[currentServiceIndex]?.name}
-                  </h4>
-                  <p className="text-gray-300 mb-4 text-sm sm:text-base">
-                    {featuredServices[currentServiceIndex]?.tagline}
-                  </p>
-                  <button 
-                    className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-sm"
-                    onClick={() => window.location.href = `/services`}
-                    aria-label={`Learn more about ${featuredServices[currentServiceIndex]?.name}`}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
                   >
                     <Link 
                       href="/innovative-2040-futuristic-services-showcase"
@@ -520,7 +366,6 @@ const Homepage2040: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
               {/* Scroll Indicator */}
               <motion.div
                 className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
@@ -847,29 +692,6 @@ const Homepage2040: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4" aria-labelledby="features-heading">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInUp}
-            >
-              <h2 id="features-heading" className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Revolutionary Technology Solutions
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Experience the future of technology with our cutting-edge solutions designed for the next decade.
-              </p>
-            </motion.div>
-
-            <Suspense fallback={<div className="text-center text-gray-400">Loading features...</div>}>
-              <LazyFeaturesGrid features={features} />
-            </Suspense>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
           </div>
         </section>
 
@@ -888,7 +710,6 @@ const Homepage2040: React.FC = () => {
               </h2>
             </motion.div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { icon: Brain, title: "AI & Consciousness", description: "Revolutionary AI consciousness and emotional intelligence", gradient: "from-purple-500 to-pink-500", href: "/ai-consciousness-evolution-2040", count: "15+ Services" },
@@ -944,11 +765,6 @@ const Homepage2040: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-=======
-            <Suspense fallback={<div className="text-center text-gray-400">Loading statistics...</div>}>
-              <LazyStatsSection stats={stats} />
-            </Suspense>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
           </div>
         </section>
 
@@ -969,7 +785,6 @@ const Homepage2040: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
-<<<<<<< HEAD
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-lg"
                   onClick={() => {
                     try {
@@ -979,17 +794,11 @@ const Homepage2040: React.FC = () => {
                     }
                   }}
                   aria-label="Start your journey with Zion Tech Group"
-=======
-                  className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-lg"
-                  onClick={handleGetStarted}
-                  aria-label="Get started with Zion Tech Group"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
                 >
                   Start Your Journey
                   <ArrowRight className="w-6 h-6 ml-3 inline" />
                 </button>
                 <button 
-<<<<<<< HEAD
                   className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg"
                   onClick={() => {
                     try {
@@ -999,11 +808,6 @@ const Homepage2040: React.FC = () => {
                     }
                   }}
                   aria-label="Explore our revolutionary services"
-=======
-                  className="px-10 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg"
-                  onClick={handleWatchDemo}
-                  aria-label="Schedule a consultation"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
                 >
                   Schedule Consultation
                 </button>

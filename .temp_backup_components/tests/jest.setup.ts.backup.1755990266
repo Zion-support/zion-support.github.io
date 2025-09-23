@@ -1,7 +1,6 @@
 // Polyfill fetch and enable fetch mocks;
 import whatwg-fetch';import fetchMock from jest-fetch-mock';fetchMock.enableMocks();
 
-<<<<<<< HEAD
 // Reset fetch mocks before each test to ensure isolation
 beforeEach(() => {
   fetchMock.resetMocks();
@@ -493,6 +492,4 @@ jest.mock('@supabase/supabase-js', () => {'  const authStub = {
     createClient: jest.fn(() => ({ auth: authStub }))
   };
 });
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

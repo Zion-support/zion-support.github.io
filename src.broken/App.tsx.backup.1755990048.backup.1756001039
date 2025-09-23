@@ -88,19 +88,8 @@ const baseRoutes = [
 const App = () => {
   return (
     <WhitelabelProvider>
-<<<<<<< HEAD
       <ThemeProvider>
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-=======
-<<<<<<< HEAD
-      <ConsentProvider>
-        <ThemeProvider defaultTheme="dark">
-          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-          <ErrorBoundary>
-=======
-      <ThemeProvider>
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
->>>>>>> origin/a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <Routes>
             {baseRoutes.map(({ path, element }) => (

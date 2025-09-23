@@ -126,7 +126,6 @@ export default function Layout({ children }: LayoutProps) {
         <UltraFuturisticFooter2036 />
       </div>
 
-<<<<<<< HEAD
       {/* Back to Top Button */}
       <BackToTopButton />
 
@@ -137,14 +136,6 @@ export default function Layout({ children }: LayoutProps) {
         aria-live="polite" 
         aria-atomic="true"
       />
-=======
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-a975
     </div>
   );
 }

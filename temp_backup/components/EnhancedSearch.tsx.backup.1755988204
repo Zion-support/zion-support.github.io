@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
 import { Search as SearchIcon, X, TrendingUp, Clock, Star, ArrowRight } from 'lucide-react';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, X, Filter, TrendingUp, Clock, 
@@ -14,7 +11,6 @@ interface SearchResult {
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
   url: string;
   category: string;
   tags: string[];
@@ -116,112 +112,9 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       } catch (error) {
         console.warn('Failed to parse recent searches:', error);
       }
-=======
-  category: string;
-  url: string;
-  relevance: number;
-  lastUpdated: string;
-  tags: string[];
-  type: 'service' | 'page' | 'blog' | 'case-study';
-}
-
-interface SearchFilters {
-  category: string[];
-  type: string[];
-  dateRange: 'all' | 'week' | 'month' | 'year';
-  relevance: 'all' | 'high' | 'medium' | 'low';
-}
-
-interface EnhancedSearchProps {
-  placeholder?: string;
-  showFilters?: boolean;
-  onSearch?: (query: string, filters: SearchFilters) => void;
-  onResultClick?: (result: SearchResult) => void;
-}
-
-const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
-  placeholder = "Search for AI, Quantum, Space Tech solutions...",
-  showFilters = true,
-  onSearch,
-  onResultClick
-}) => {
-  const [query, setQuery] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [filters, setFilters] = useState<SearchFilters>({
-    category: [],
-    type: [],
-    dateRange: 'all',
-    relevance: 'all'
-  });
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [popularSearches, setPopularSearches] = useState<string[]>([]);
-  
-  const searchInputRef = useRef<HTMLInputElement>(null);
-  const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Mock search results - in real app, this would come from API
-  const mockSearchResults: SearchResult[] = [
-    {
-      id: '1',
-      title: 'Quantum AI Brain-Computer Interface',
-      description: 'Revolutionary neural interface powered by quantum AI for unprecedented human-computer symbiosis',
-      category: 'AI & Neuroscience',
-      url: '/quantum-ai-brain-computer-interface',
-      relevance: 0.95,
-      lastUpdated: '2024-08-23',
-      tags: ['AI', 'Quantum', 'Neuroscience', 'Brain-Computer Interface'],
-      type: 'service'
-    },
-    {
-      id: '2',
-      title: 'Holographic Quantum Workspace 2045',
-      description: 'Immersive 3D workspace powered by quantum computing for unprecedented productivity',
-      category: 'Quantum & Emerging Tech',
-      url: '/holographic-quantum-workspace-2045',
-      relevance: 0.92,
-      lastUpdated: '2024-08-22',
-      tags: ['Quantum', 'Holographic', '3D', 'Productivity'],
-      type: 'service'
-    },
-    {
-      id: '3',
-      title: 'AI Autonomous Business Operations',
-      description: 'Fully autonomous business process automation powered by advanced AI',
-      category: 'AI & Automation',
-      url: '/ai-autonomous-business-operations',
-      relevance: 0.89,
-      lastUpdated: '2024-08-21',
-      tags: ['AI', 'Automation', 'Business', 'Operations'],
-      type: 'service'
-    },
-    {
-      id: '4',
-      title: 'Space Resource Intelligence Platform',
-      description: 'Advanced AI platform for space resource discovery and optimization',
-      category: 'Space Technology',
-      url: '/space-resource-intelligence-2040',
-      relevance: 0.87,
-      lastUpdated: '2024-08-20',
-      tags: ['Space', 'AI', 'Resources', 'Intelligence'],
-      type: 'service'
-    },
-    {
-      id: '5',
-      title: 'Quantum Cybersecurity Platform',
-      description: 'Next-generation cybersecurity powered by quantum computing',
-      category: 'Cybersecurity',
-      url: '/quantum-cybersecurity-platform',
-      relevance: 0.85,
-      lastUpdated: '2024-08-19',
-      tags: ['Quantum', 'Cybersecurity', 'Security', 'Platform'],
-      type: 'service'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
     }
   ];
 
-<<<<<<< HEAD
     const savedHistory = localStorage.getItem('search-history');
     if (savedHistory) {
       try {
@@ -247,68 +140,6 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
         setFocusedIndex(-1);
       }
     };
-=======
-  // Popular searches
-  const popularSearchesData = [
-    'AI automation', 'Quantum computing', 'Space technology', 
-    'Cybersecurity', 'Machine learning', 'Neural networks',
-    'Autonomous systems', 'Digital transformation', 'Cloud solutions'
-  ];
-
-  // Categories
-  const categories = [
-    { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4" /> },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-4 h-4" /> },
-    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-4 h-4" /> },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { id: 'cloud', name: 'Cloud Solutions', icon: <Cloud className="w-4 h-4" /> },
-    { id: 'automation', name: 'Automation', icon: <Cpu className="w-4 h-4" /> },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-4 h-4" /> },
-    { id: 'blockchain', name: 'Blockchain', icon: <Globe className="w-4 h-4" /> }
-  ];
-
-  // Types
-  const types = [
-    { id: 'service', name: 'Services', icon: <Star className="w-4 h-4" /> },
-    { id: 'page', name: 'Pages', icon: <Globe className="w-4 h-4" /> },
-    { id: 'blog', name: 'Blog Posts', icon: <Clock className="w-4 h-4" /> },
-    { id: 'case-study', name: 'Case Studies', icon: <TrendingUp className="w-4 h-4" /> }
-  ];
-
-  // Load recent searches from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem('recent-searches');
-    if (saved) {
-      try {
-        setRecentSearches(JSON.parse(saved));
-      } catch (error) {
-        // Failed to load recent searches
-      }
-    }
-    
-    setPopularSearches(popularSearchesData);
-  }, []);
-
-  // Handle search input changes
-  const handleSearchChange = useCallback((value: string) => {
-    setQuery(value);
-    
-    // Clear previous timeout
-    if (searchTimeoutRef.current) {
-      clearTimeout(searchTimeoutRef.current);
-    }
-    
-    // Debounce search
-    if (value.trim()) {
-      searchTimeoutRef.current = setTimeout(() => {
-        performSearch(value);
-      }, 300);
-    } else {
-      setResults([]);
-      setIsOpen(false);
-    }
-  }, []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
 
   // Perform search
   const performSearch = useCallback(async (searchQuery: string) => {
@@ -429,7 +260,6 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-<<<<<<< HEAD
   // Handle keyboard navigation
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (!showResults) return;
@@ -590,39 +420,15 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
           aria-expanded={showResults}
           aria-controls="search-results"
           aria-activedescendant={focusedIndex >= 0 ? `result-${focusedIndex}` : undefined}
-=======
-  return (
-    <div className="relative w-full max-w-2xl mx-auto">
-      {/* Search Input */}
-      <div className="relative">
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-gray-400" />
-        </div>
-        
-        <input
-          ref={searchInputRef}
-          type="text"
-          value={query}
-          onChange={(e) => handleSearchChange(e.target.value)}
-          onFocus={() => query.trim() && setIsOpen(true)}
-          placeholder={placeholder}
-          className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-2xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
         />
         
         {query && (
           <button
             onClick={clearSearch}
-<<<<<<< HEAD
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
             aria-label="Clear search"
           >
             <X className="w-5 h-5" />
-=======
-            className="absolute inset-y-0 right-0 pr-3 flex items-center"
-          >
-            <X className="h-5 w-5 text-gray-400 hover:text-gray-600 transition-colors" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
           </button>
         )}
       </div>
@@ -631,15 +437,11 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       <AnimatePresence>
         {showResults && (
           <motion.div
-<<<<<<< HEAD
             id="search-results"
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-<<<<<<< HEAD
             className="absolute z-50 w-full mt-2 bg-black/95 backdrop-blur-sm border border-white/20 rounded-2xl max-h-96 overflow-y-auto shadow-2xl"
           >
             {/* Search Results */}
@@ -704,21 +506,6 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
                       className="w-full text-left p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors text-sm"
                     >
                       {search}
-=======
-            className="absolute z-50 w-full mt-2 bg-white rounded-2xl shadow-2xl border border-gray-200 max-h-96 overflow-hidden"
-          >
-            {/* Search Results */}
-            {results.length > 0 ? (
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-sm font-medium text-gray-900">
-                    {results.length} result{results.length !== 1 ? 's' : ''} found
-                  </h3>
-                  {showFilters && (
-                    <button className="text-sm text-cyan-600 hover:text-cyan-700 flex items-center space-x-1">
-                      <Filter className="w-4 h-4" />
-                      <span>Filters</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
                     </button>
                   )}
                 </div>
@@ -816,7 +603,6 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
                 </div>
               </div>
             )}
-<<<<<<< HEAD
 
             {/* Popular Searches */}
             {!query && (
@@ -884,106 +670,6 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-=======
-            
-            {/* Loading State */}
-            {isSearching && (
-              <div className="p-4 text-center">
-                <div className="inline-flex items-center space-x-2">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-500"></div>
-                  <span className="text-sm text-gray-500">Searching...</span>
-                </div>
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Filters Panel */}
-      {showFilters && (
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute z-40 w-full mt-2 bg-white rounded-2xl shadow-lg border border-gray-200 p-4"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Categories */}
-                <div>
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Categories</h4>
-                  <div className="space-y-2">
-                    {categories.map((category) => (
-                      <label key={category.id} className="flex items-center space-x-2">
-                        <input
-                          type="checkbox"
-                          checked={filters.category.includes(category.id)}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              handleFilterChange('category', [...filters.category, category.id]);
-                            } else {
-                              handleFilterChange('category', filters.category.filter(c => c !== category.id));
-                            }
-                          }}
-                          className="rounded border-gray-300 text-cyan-600 focus:ring-cyan-500"
-                        />
-                        <span className="text-sm text-gray-700 flex items-center space-x-1">
-                          {category.icon}
-                          <span>{category.name}</span>
-                        </span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Types */}
-                <div>
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Types</h4>
-                  <div className="space-y-2">
-                    {types.map((type) => (
-                      <label key={type.id} className="flex items-center space-x-2">
-                        <input
-                          type="checkbox"
-                          checked={filters.type.includes(type.id)}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              handleFilterChange('type', [...filters.type, type.id]);
-                            } else {
-                              handleFilterChange('type', filters.type.filter(t => t !== type.id));
-                            }
-                          }}
-                          className="rounded border-gray-300 text-cyan-600 focus:ring-cyan-500"
-                        />
-                        <span className="text-sm text-gray-700 flex items-center space-x-1">
-                          {type.icon}
-                          <span>{type.name}</span>
-                        </span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Date Range */}
-                <div>
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Date Range</h4>
-                  <select
-                    value={filters.dateRange}
-                    onChange={(e) => handleFilterChange('dateRange', e.target.value)}
-                    className="w-full rounded-md border-gray-300 text-sm focus:ring-cyan-500 focus:border-cyan-500"
-                  >
-                    <option value="all">All Time</option>
-                    <option value="week">Past Week</option>
-                    <option value="month">Past Month</option>
-                    <option value="year">Past Year</option>
-                  </select>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2b2
     </div>
   );
 };

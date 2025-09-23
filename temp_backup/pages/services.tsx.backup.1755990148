@@ -142,23 +142,12 @@ const allServices = [
   ...realEnterpriseMicroSaas2025,
   ...innovative2025AIAutonomousServices,
   
-<<<<<<< HEAD
   // Our new 2025 advanced services
   ...advancedITInfrastructureServices2025,
   ...advancedEnterpriseServices2025,
   ...quantumEmergingTechServices2025,
   
   // Existing services
-=======
-  // Our new innovative services expansion
-  ...innovativeAIAutonomousServices2025Expansion,
-  ...innovativeITInfrastructureServices2025Expansion,
-  ...innovativeMicroSaasServices2025Expansion,
-  
-  ...enterpriseITSolutions,
-  ...innovativeMicroSaasSolutions,
-  ...cuttingEdgeAIServices,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices,

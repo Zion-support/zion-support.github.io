@@ -172,7 +172,6 @@ export default function ServicesPage() {
       color: 'from-emerald-500 to-teal-600',
       marketPosition: 'Leading biotech AI platform. Competes with Insitro ($1000+/month), Atomwise ($800+/month), and BenevolentAI ($1200+/month).',
       marketData: '$8.5B biotech AI market, 420% annual growth',
-<<<<<<< HEAD
       savings: 'Save 40% vs. competitors'
     },
     {
@@ -207,10 +206,6 @@ export default function ServicesPage() {
       marketPosition: 'Competitive with Zendesk ($49/user/month), Intercom ($74/user/month), and Freshdesk ($29/user/month). Our advantage: AI-powered automation and higher accuracy.',
       marketData: '$3.2B customer service software market, 220% annual growth',
       savings: 'Save 60% vs. competitors'
-=======
-      savings: 'Save 40% vs. competitors',
-      contactInfo: 'Contact: +1 302 464 0950 | kleber@ziontechgroup.com'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
     }
   ];
 
@@ -632,16 +627,10 @@ export default function ServicesPage() {
                 </Button>
               )}
             </div>
-<<<<<<< HEAD
 
             {/* Services Grid */}
             <div className={`grid gap-8 ${
               viewMode === 'grid' 
-=======
-          ) : (
-                        <div className={`grid gap-8 ${
-                viewMode === 'grid' 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
                 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}>
@@ -655,7 +644,6 @@ export default function ServicesPage() {
                   className="h-full cursor-pointer"
                   onClick={() => window.open(service.link, '_blank')}
                 >
-<<<<<<< HEAD
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-3xl">{service.icon}</div>
                     {service.popular && (
@@ -769,23 +757,6 @@ export default function ServicesPage() {
                     </Button>
                   </div>
                 </QuantumCard>
-=======
-                  <UltraAdvancedFuturisticCard
-                    title={service.name}
-                    description={service.description}
-                    price={`${service.price}${service.period}`}
-                    features={service.features}
-                    link={service.link}
-                    color={service.color}
-                    marketData={`${service.marketSize}, ${service.growthRate}`}
-                    competitors={service.competitors.join(', ')}
-                    savings={`Save ${service.roi.match(/(\d+)%/)?.[1] || '50'}% vs. competitors`}
-                    contactInfo={`Contact: ${service.contactInfo.mobile} | ${service.contactInfo.email}`}
-                    icon={service.icon}
-                    variant={service.variant as any}
-                  />
-                </motion.div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
               ))}
             </div>
           </section>
@@ -836,7 +807,6 @@ export default function ServicesPage() {
                   className="h-full cursor-pointer"
                   onClick={() => window.open(service.link, '_blank')}
                 >
-<<<<<<< HEAD
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-3xl">{service.icon}</div>
                     <div className="flex items-center text-yellow-400">
@@ -869,23 +839,6 @@ export default function ServicesPage() {
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </QuantumCard>
-=======
-                  <UltraAdvancedFuturisticCard
-                    title={service.name}
-                    description={service.description}
-                    price={`${service.price}${service.period}`}
-                    features={service.features}
-                    link={service.link}
-                    color={service.color}
-                    marketData={`${service.marketSize}, ${service.growthRate}`}
-                    competitors={service.competitors.join(', ')}
-                    savings={`Save ${service.roi.match(/(\d+)%/)?.[1] || '50'}% vs. competitors`}
-                    contactInfo={`Contact: ${service.contactInfo.mobile} | ${service.contactInfo.email}`}
-                    icon={service.icon}
-                    variant={service.variant as any}
-                  />
-                </motion.div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
               ))}
             </div>
           </div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const winston = require('winston');
 
@@ -171,12 +170,3 @@ if (require.main === module) {
 }
 
 module.exports = Script;
-=======
-#!/usr/bin/env node
-(async () => {
-  try {
-    await import('ts-node/register/transpile-only');
-  } catch {}
-  await import('./deploy-zion-ipfs.ts');
-})();
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee

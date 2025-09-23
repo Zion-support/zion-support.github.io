@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
   "ai-autonomous-marketing-platform",
   "automated-financial-analytics-platform",
   "entertainment-media-solutions",
@@ -29,8 +28,4 @@
   "quantum-threat-detection",
   "real-estate-technology-solutions",
   "transportation-logistics-solutions"
-=======
-  "services/data-contracts-hub",
-  "services/serverless-lakehouse-starter"
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 ]

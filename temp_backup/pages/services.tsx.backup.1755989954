@@ -111,7 +111,6 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-<<<<<<< HEAD
   // Our new 2025 advanced services
   ...advanced2025MicroSaasExpansion,
   ...advanced2025ITSolutionsExpansion,
@@ -145,12 +144,6 @@ const allServices = [
   ...innovative2025Q4ITServicesExpansion,
   ...innovative2025Q4AIServicesExpansion,
   ...innovative2025Q4EmergingTechExpansion
-=======
-  // 2025 Advanced Services
-  ...real2025AdvancedAIServices,
-  ...real2025ITInfrastructureServices,
-  ...real2025InnovativeMicroSaas
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-b17c
 ];
 
 const categories = [

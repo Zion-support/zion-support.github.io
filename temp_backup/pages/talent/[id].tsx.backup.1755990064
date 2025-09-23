@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { NextSeo } from '@/components/NextSeo';
 import { useRouter } from 'next/router';
 // Loader2 removed as TalentProfileSkeleton will be used
@@ -55,9 +54,6 @@ const TalentPage: React.FC = () => {
   }
 
   // If we reach here, talent data is available
-=======
-import Head from 'next/head';
->>>>>>> origin/automation-error-fixes
   return (
     <>
       <Head><title>talent/[id] - Zion App</title><meta name="description" content="talent/[id] page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">talent/[id]</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;

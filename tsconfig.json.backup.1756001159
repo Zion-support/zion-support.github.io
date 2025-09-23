@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2017",
     "useDefineForClassFields": true,
     "lib": [
@@ -56,20 +55,8 @@
       ]
     },
     /* Bundler mode */
-=======
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
     "moduleResolution": "node",
     "resolveJsonModule": true,
-<<<<<<< HEAD
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -101,16 +88,4 @@
     "apps/**",
     "src/**"
   ]
-=======
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
 }

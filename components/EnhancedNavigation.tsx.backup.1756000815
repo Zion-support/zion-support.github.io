@@ -5,12 +5,7 @@ import {
   Menu, X, ChevronDown, ChevronUp, 
   Home, Rocket, Brain, Cpu, Shield, 
   DollarSign, Phone, Mail, MapPin,
-<<<<<<< HEAD
   ExternalLink, Star, Zap, Globe, Book
-=======
-  ExternalLink, Star, Zap, Globe, Book,
-  Dna, Lock, Wifi, Truck, Gamepad2, Bot, Factory, Car
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -19,21 +14,10 @@ interface NavigationItem {
   icon?: React.ReactNode;
   description?: string;
   children?: NavigationItem[];
-<<<<<<< HEAD
-=======
-  dropdown?: DropdownItem[];
-}
-
-interface DropdownItem {
-  name: string;
-  href: string;
-  icon: React.ReactNode;
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
 }
 
 const navigationItems: NavigationItem[] = [
   {
-<<<<<<< HEAD
     name: 'Home',
     href: '/',
     icon: <Home className="w-4 h-4" />
@@ -124,30 +108,6 @@ const navigationItems: NavigationItem[] = [
     icon: <Phone className="w-4 h-4" />,
     description: 'Get in touch with us'
   }
-=======
-    name: 'Services',
-    href: '/services',
-    icon: <Brain className="w-4 h-4" />,
-    dropdown: [
-      { name: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className="w-4 h-4" /> },
-      { name: 'Quantum Computing', href: '/services?category=quantum', icon: <Rocket className="w-4 h-4" /> },
-      { name: 'Space Technology', href: '/services?category=space', icon: <Globe className="w-4 h-4" /> },
-      { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <Dna className="w-4 h-4" /> },
-      { name: 'Financial Services', href: '/services?category=finance', icon: <DollarSign className="w-4 h-4" /> },
-      { name: 'Cybersecurity', href: '/services?category=security', icon: <Lock className="w-4 h-4" /> },
-      { name: 'IoT & Smart Devices', href: '/services?category=iot', icon: <Wifi className="w-4 h-4" /> },
-      { name: 'Logistics & Supply Chain', href: '/services?category=logistics', icon: <Truck className="w-4 h-4" /> },
-      { name: 'Metaverse & Gaming', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },
-      { name: 'Robotics & Automation', href: '/services?category=robotics', icon: <Bot className="w-4 h-4" /> },
-      { name: 'Manufacturing', href: '/services?category=manufacturing', icon: <Factory className="w-4 h-4" /> },
-      { name: 'Autonomous Vehicles', href: '/services?category=vehicles', icon: <Car className="w-4 h-4" /> }
-    ]
-  },
-  { name: 'Solutions', href: '/solutions', icon: <Rocket className="w-4 h-4" /> },
-  { name: 'About', href: '/about', icon: <Globe className="w-4 h-4" /> },
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },
-  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> }
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
 ];
 
 const contactInfo = {
@@ -171,7 +131,6 @@ export default function EnhancedNavigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   const navigationItems = [
     {
       name: 'Services',
@@ -198,8 +157,6 @@ export default function EnhancedNavigation() {
     { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> }
   ];
 
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
@@ -407,10 +364,6 @@ export default function EnhancedNavigation() {
       </AnimatePresence>
     </nav>
   );
-<<<<<<< HEAD
 };
 
 export default EnhancedNavigation;
-=======
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc

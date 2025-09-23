@@ -10,11 +10,7 @@ function nowIso() {
 }
 
 function log(message) {
-<<<<<<< HEAD
   const line = `[${nowIso()}] [REDUNDANCY] ${message}`;
-=======
-  const line = `[${nowIso()}] [REDUNDANCY-MARKETING-SYNC] ${message}`;
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
   console.log(line);
 }
 
@@ -58,11 +54,7 @@ async function postLinkedInUpdate() {
     specificContent: {
       "com.linkedin.ugc.ShareContent": {
         shareCommentary: {
-<<<<<<< HEAD
           text: `🚀 Sync update: New improvements shipped to our app. Explore what changed → ${canonicalUrl}`
-=======
-          text: `🚀 Redundancy Sync: Marketing automation running locally. Explore updates → ${canonicalUrl}`
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
         },
         shareMediaCategory: "ARTICLE",
         media: [
@@ -93,11 +85,7 @@ async function postLinkedInUpdate() {
       log(`LinkedIn post failed (${res.status}): ${text}`);
       return { ok: false, platform: "linkedin", status: res.status };
     }
-<<<<<<< HEAD
     log("LinkedIn post published.");
-=======
-    log("LinkedIn post published via redundancy.");
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
     return { ok: true, platform: "linkedin" };
   } catch (err) {
     log(`LinkedIn post error: ${String(err)}`);
@@ -115,11 +103,7 @@ async function postInstagramUpdate() {
     return { ok: false, skipped: true, platform: "instagram" };
   }
 
-<<<<<<< HEAD
   const caption = `🚀 Sync update: new improvements shipped. Explore: ${canonicalUrl}`;
-=======
-  const caption = `🚀 Redundancy Sync: Marketing automation running locally. Explore: ${canonicalUrl}`;
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
   try {
     const createRes = await fetch(`https://graph.facebook.com/v19.0/${encodeURIComponent(igUserId)}/media?access_token=${encodeURIComponent(igAccessToken)}`, {
       method: "POST",
@@ -138,19 +122,11 @@ async function postInstagramUpdate() {
       body: new URLSearchParams({ creation_id: createJson.id })
     });
     const publishJson = await publishRes.json();
-<<<<<<< HEAD
     if (!publishRes.ok || !publishJson.id) {
       log(`Instagram publish failed (${publishRes.status}): ${JSON.stringify(publishJson)}`);
       return { ok: false, platform: "instagram", status: publishRes.status };
     }
     log("Instagram post published.");
-=======
-    if (!publishRes.ok) {
-      log(`Instagram publish failed (${publishRes.status}): ${JSON.stringify(publishJson)}`);
-      return { ok: false, platform: "instagram", status: publishRes.status };
-    }
-    log("Instagram post published via redundancy.");
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
     return { ok: true, platform: "instagram" };
   } catch (err) {
     log(`Instagram post error: ${String(err)}`);
@@ -159,7 +135,6 @@ async function postInstagramUpdate() {
 }
 
 async function generateMarketingReport() {
-<<<<<<< HEAD
   const report = {
     generatedAt: nowIso(),
     platforms: {
@@ -195,28 +170,6 @@ ${report.summary}
 ## Platform Results
 - LinkedIn: ${report.platforms.linkedin.ok ? "✅ Success" : "❌ Failed"}
 - Instagram: ${report.platforms.instagram.ok ? "✅ Success" : "❌ Failed"}
-=======
-  const timestamp = nowIso();
-  const report = {
-    timestamp,
-    redundancy: true,
-    source: "pm2-redundancy",
-    marketing: {
-      linkedin: await postLinkedInUpdate(),
-      instagram: await postInstagramUpdate()
-    }
-  };
-
-  const reportPath = path.join(process.cwd(), "marketing-sync-redundancy-report.md");
-  const reportContent = `# Marketing Sync Redundancy Report
-
-Generated: ${timestamp}
-Source: PM2 Redundancy System
-
-## Results
-- LinkedIn: ${report.marketing.linkedin.ok ? "✅ Success" : "❌ Failed"}
-- Instagram: ${report.marketing.instagram.ok ? "✅ Success" : "❌ Failed"}
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
 
 ## Details
 \`\`\`json
@@ -224,7 +177,6 @@ ${JSON.stringify(report, null, 2)}
 \`\`\`
 `;
 
-<<<<<<< HEAD
     fs.writeFileSync(reportPath, reportContent);
     log(`Marketing report written to ${reportPath}`);
 
@@ -257,56 +209,6 @@ async function main() {
     process.exit(0);
   } catch (error) {
     log(`Marketing sync redundancy failed: ${String(error)}`);
-=======
-  fs.writeFileSync(reportPath, reportContent);
-  log(`Marketing report generated: ${reportPath}`);
-  return report;
-}
-
-async function commitAndPush() {
-  try {
-    // Configure git user
-    runGit(["config", "user.name", "pm2-redundancy[bot]"]);
-    runGit(["config", "user.email", "redundancy@ziontechgroup.com"]);
-
-    // Check if there are changes
-    const status = runGit(["status", "--porcelain"]);
-    if (!status.stdout.trim()) {
-      log("No changes to commit.");
-      return;
-    }
-
-    // Add and commit
-    runGit(["add", "-A"]);
-    runGit(["commit", "-m", `chore(redundancy): marketing sync via PM2 redundancy`]);
-
-    // Push to main
-    const pushResult = runGit(["push", "origin", "main"]);
-    if (pushResult.status === 0) {
-      log("Changes pushed successfully via redundancy.");
-    } else {
-      log(`Push failed: ${pushResult.stderr}`);
-    }
-  } catch (err) {
-    log(`Commit/push error: ${String(err)}`);
-  }
-}
-
-async function main() {
-  try {
-    log("Starting marketing sync redundancy process...");
-    
-    // Generate marketing report
-    const report = await generateMarketingReport();
-    
-    // Commit and push if needed
-    await commitAndPush();
-    
-    log("Marketing sync redundancy completed successfully.");
-    process.exit(0);
-  } catch (err) {
-    log(`Marketing sync redundancy failed: ${String(err)}`);
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
     process.exit(1);
   }
 }
@@ -315,8 +217,4 @@ if (require.main === module) {
   main();
 }
 
-<<<<<<< HEAD
 module.exports = { generateMarketingReport, postLinkedInUpdate, postInstagramUpdate };
-=======
-module.exports = { main, postLinkedInUpdate, postInstagramUpdate, generateMarketingReport };
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7

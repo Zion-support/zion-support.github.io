@@ -13,11 +13,7 @@ function nowIso() {
 }
 
 function log(message) {
-<<<<<<< HEAD
   const line = `[${nowIso()}] [REDUNDANCY] ${message}`;
-=======
-  const line = `[${nowIso()}] [REDUNDANCY-SYNC-HEALTH] ${message}`;
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
   console.log(line);
 }
 
@@ -70,11 +66,7 @@ function repairIndexIfNeeded() {
 }
 
 function stashAll() {
-<<<<<<< HEAD
   const message = `sync-health-redundancy stash ${nowIso()}`;
-=======
-  const message = `redundancy-sync-health stash ${nowIso()}`;
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
   const res = runGit(["stash", "push", "-u", "-m", message]);
   if (res.status !== 0) {
     log(`Stash skipped or failed (status ${res.status}): ${res.stderr}`);
@@ -101,7 +93,6 @@ function getDivergence() {
   return parseDivergence(res.stdout);
 }
 
-<<<<<<< HEAD
 function backupUntracked(backupRoot) {
   try {
     const list = runGit(["ls-files", "--others", "--exclude-standard", "-z"]);
@@ -137,11 +128,6 @@ function safeSync() {
   try {
     ensureRepoRoot();
     repairIndexIfNeeded();
-=======
-function safeSync() {
-  try {
-    log("Running safe sync (redundancy mode)...");
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
     
     // Stash any local changes
     stashAll();
@@ -150,7 +136,6 @@ function safeSync() {
     fetchOrigin();
     
     // Check divergence
-<<<<<<< HEAD
     const divergence = getDivergence();
     log(`Divergence: ${divergence.ahead} ahead, ${divergence.behind} behind`);
     
@@ -208,42 +193,10 @@ function pushIfAhead() {
   } catch (error) {
     log(`Push check failed: ${String(error)}`);
     return { success: false, error: String(error) };
-=======
-    const { ahead, behind } = getDivergence();
-    log(`Divergence: ${ahead} ahead, ${behind} behind`);
-    
-    if (behind > 0) {
-      // We're behind, pull latest changes
-      log("Local is behind, pulling latest changes...");
-      const pullResult = runGit(["pull", "--rebase", GIT_REMOTE, GIT_BRANCH], { verbose: true });
-      if (pullResult.status !== 0) {
-        log(`Pull failed: ${pullResult.stderr}`);
-        return false;
-      }
-      log("Successfully pulled latest changes.");
-    } else if (ahead > 0) {
-      // We're ahead, push our changes
-      log("Local is ahead, pushing changes...");
-      const pushResult = runGit(["push", GIT_REMOTE, GIT_BRANCH], { verbose: true });
-      if (pushResult.status !== 0) {
-        log(`Push failed: ${pushResult.stderr}`);
-        return false;
-      }
-      log("Successfully pushed local changes.");
-    } else {
-      log("Repository is in sync.");
-    }
-    
-    return true;
-  } catch (err) {
-    log(`Safe sync failed: ${String(err)}`);
-    return false;
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
   }
 }
 
 function generateHealthReport() {
-<<<<<<< HEAD
   const report = {
     generatedAt: nowIso(),
     syncResult: null,
@@ -284,31 +237,6 @@ ${report.summary}
 ## Push Result
 - Success: ${report.pushResult.success ? "✅ Yes" : "❌ No"}
 - Pushed: ${report.pushResult.pushed ? "✅ Yes" : "❌ No"}
-=======
-  const timestamp = nowIso();
-  const report = {
-    timestamp,
-    redundancy: true,
-    source: "pm2-redundancy",
-    syncHealth: {
-      status: "completed",
-      timestamp,
-      gitRemote: GIT_REMOTE,
-      gitBranch: GIT_BRANCH
-    }
-  };
-
-  const reportPath = path.join(process.cwd(), "sync-health-redundancy-report.md");
-  const reportContent = `# Sync Health Redundancy Report
-
-Generated: ${timestamp}
-Source: PM2 Redundancy System
-
-## Git Status
-- Remote: ${GIT_REMOTE}
-- Branch: ${GIT_BRANCH}
-- Status: ✅ Healthy
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
 
 ## Details
 \`\`\`json
@@ -316,7 +244,6 @@ ${JSON.stringify(report, null, 2)}
 \`\`\`
 `;
 
-<<<<<<< HEAD
     fs.writeFileSync(reportPath, reportContent);
     log(`Health report written to ${reportPath}`);
     
@@ -338,67 +265,6 @@ function main() {
     process.exit(0);
   } catch (error) {
     log(`Sync health redundancy failed: ${String(error)}`);
-=======
-  fs.writeFileSync(reportPath, reportContent);
-  log(`Health report generated: ${reportPath}`);
-  return report;
-}
-
-async function commitAndPush() {
-  try {
-    // Configure git user
-    runGit(["config", "user.name", "pm2-redundancy[bot]"]);
-    runGit(["config", "user.email", "redundancy@ziontechgroup.com"]);
-
-    // Check if there are changes
-    const status = runGit(["status", "--porcelain"]);
-    if (!status.stdout.trim()) {
-      log("No changes to commit.");
-      return;
-    }
-
-    // Add and commit
-    runGit(["add", "-A"]);
-    runGit(["commit", "-m", `chore(redundancy): sync health check via PM2 redundancy`]);
-
-    // Push to main
-    const pushResult = runGit(["push", "origin", "main"]);
-    if (pushResult.status === 0) {
-      log("Changes pushed successfully via redundancy.");
-    } else {
-      log(`Push failed: ${pushResult.stderr}`);
-    }
-  } catch (err) {
-    log(`Commit/push error: ${String(err)}`);
-  }
-}
-
-async function main() {
-  try {
-    log("Starting sync health redundancy process...");
-    
-    // Ensure we're in a git repository
-    ensureRepoRoot();
-    
-    // Run safe sync
-    const syncSuccess = safeSync();
-    
-    // Generate health report
-    const report = generateHealthReport();
-    
-    // Commit and push if needed
-    await commitAndPush();
-    
-    if (syncSuccess) {
-      log("Sync health redundancy completed successfully.");
-      process.exit(0);
-    } else {
-      log("Sync health redundancy completed with warnings.");
-      process.exit(0);
-    }
-  } catch (err) {
-    log(`Sync health redundancy failed: ${String(err)}`);
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
     process.exit(1);
   }
 }
@@ -407,8 +273,4 @@ if (require.main === module) {
   main();
 }
 
-<<<<<<< HEAD
 module.exports = { safeSync, pushIfAhead, generateHealthReport };
-=======
-module.exports = { main, safeSync, generateHealthReport };
->>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-ece7

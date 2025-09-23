@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -352,8 +351,3 @@ export default function HomePage() {
     </div>
   );
 }
-=======
-export default function Home() {
-  return <div>Welcome to Zion</div>;
-}
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, ChevronDown, X, Phone, Mail, ArrowRight,
   Brain, Rocket, Atom, Shield,
   BarChart3, Globe, 
@@ -11,16 +10,6 @@ import {
   Cpu, Cloud, Monitor, Network, Heart, HelpCircle, Building,
   Zap, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
   Users, BookOpen, FileText, Video
-=======
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Star, Sparkles, 
-  Grid, List, TrendingUp, 
-  Calendar, Calculator, GraduationCap,
-  Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
-  Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
-  BookOpen, User
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -205,7 +194,6 @@ const navigationItems: NavigationItem[] = [
         color: 'from-red-500 to-orange-500'
       },
       { 
-<<<<<<< HEAD
         name: 'Quantum Cloud Infrastructure 2041', 
         href: '/quantum-cloud-infrastructure-2041', 
         description: 'Quantum cloud infrastructure',
@@ -239,20 +227,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Quantum financial intelligence',
         icon: <DollarSign className="w-4 h-4" />,
         color: 'from-yellow-500 to-orange-500'
-=======
-        name: 'Brain-Computer Interface', 
-        href: '/brain-computer-interface-2040', 
-        description: 'Direct neural integration',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
-      },
-      { 
-        name: 'AI Emotional Intelligence', 
-        href: '/ai-emotional-intelligence-2040', 
-        description: 'Consciousness-based empathy',
-        icon: <Heart className="w-4 h-4" />,
-        color: 'from-red-500 to-pink-500'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
       }
     ]
   },

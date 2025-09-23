@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import { TalentProfile as TalentProfileType } from "@/types/talent";
@@ -78,10 +77,3 @@ export function useTalentProfile(id: string | undefined) {
 
   return { profile, isLoading, error };
 }
-=======
-// Hook for useTalentProfile;
-export const useUseTalentProfile: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

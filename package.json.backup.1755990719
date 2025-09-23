@@ -201,7 +201,6 @@
     "intelligence:start": "node automation/app-intelligence-enhancer.cjs",
     "intelligence:watch": "node automation/app-intelligence-enhancer.cjs continuous",
     "automation:git-sync": "node automation/git-sync.cjs",
-<<<<<<< HEAD
     "git:sync": "node automation/advanced-git-sync.cjs",
     "git:sync:enhanced": "node automation/enhanced-git-sync-orchestrator.cjs",
     "git:health": "node automation/enhanced-git-sync-orchestrator.cjs health-check",
@@ -243,12 +242,6 @@
     "autonomous:docker-stop": "docker-compose -f docker-compose.autonomous.yml down",
     "autonomous:docker-logs": "docker-compose -f docker-compose.autonomous.yml logs -f",
     "autonomous:full": "npm run autonomous:start && npm run autonomous:deploy && npm run autonomous:docker",
-=======
-    "automation:scheduler:start": "bash automation/scheduler-daemon.sh start",
-    "automation:scheduler:stop": "bash automation/scheduler-daemon.sh stop",
-    "automation:scheduler:status": "bash automation/scheduler-daemon.sh status",
-    "automation:bootstrap": "node automation/cursor-rules-generator.cjs && npm run cursor:memory",
->>>>>>> origin/cursor/automate-script-management-and-repository-integration-0e77
     "automation:improvement": "node automation/continuous-automation-improvement-system.js",
     "automation:guardian": "node automation/automation-guardian-10min.cjs",
     "automation:cloud": "node automation/cloud-autonomous-orchestrator.cjs",

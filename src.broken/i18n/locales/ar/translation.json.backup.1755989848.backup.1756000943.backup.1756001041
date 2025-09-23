@@ -127,7 +127,6 @@
     "language_changed": "تم تغيير اللغة إلى {{language}}",
     "switch_to_detected": "التبديل إلى {{language}}؟"
   },
-<<<<<<< HEAD
   "features": {
     "ai_talent_matching": "مطابقة مواهب الذكاء الاصطناعي",
     "ai_talent_matching_desc": "خوارزمية تربطك بالمواهب أو الوظائف المثالية",
@@ -222,10 +221,5 @@
     },
     "sending": "جارٍ الإرسال...",
     "submit": "احصل على عرضك التجاري المجاني"
-=======
-  "error_boundary": {
-    "message": "حدث خطأ ما.",
-    "retry": "إعادة المحاولة"
->>>>>>> origin/3ycx6d-codex/implement-global-error-boundary-with-toasts
   }
 }

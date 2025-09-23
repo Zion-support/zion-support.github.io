@@ -17,7 +17,6 @@
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-<<<<<<< HEAD
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
@@ -246,10 +245,3 @@
 [[scheduled.functions]]
   name = "function-health-monitor"
   schedule = "*/5 * * * *"
-=======
-[[plugins]]
-  package = "./.scripts/netlify-rollback-monitor"
-  [plugins.inputs]
-    monitorMinutes = 20
-    intervalSeconds = 60 
->>>>>>> origin/cursor/build-developer-api-and-webhook-integration-62ab

@@ -55,7 +55,6 @@ const CuttingEdgeInnovativeServicesShowcase = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="2025 Cutting-Edge Innovative Services Showcase | Zion Tech Group"
@@ -91,26 +90,6 @@ const CuttingEdgeInnovativeServicesShowcase = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-=======
-    <Layout>
-      <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="space-y-8"
-            >
-              {/* Badge */}
-              <motion.div
-                variants={itemVariants}
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/50 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm"
-                style={{
-                  boxShadow: '0 0 20px rgba(6, 182, 212, 0.5)',
-                }}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eedb
               >
                 Explore Services
               </motion.button>

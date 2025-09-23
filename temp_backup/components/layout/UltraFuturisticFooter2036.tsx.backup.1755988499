@@ -23,7 +23,6 @@ const footerSections = [
     description: 'Our flagship technology solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
     links: [
-<<<<<<< HEAD
       { name: 'AI & Machine Learning', href: '/ai-services', featured: true },
       { name: 'Quantum Technology', href: '/quantum-services', featured: true },
       { name: 'Space Technology', href: '/space-technology', featured: true },
@@ -32,18 +31,6 @@ const footerSections = [
       { name: 'Cloud Solutions', href: '/cloud-platform' },
       { name: 'Edge Computing', href: '/edge-computing-orchestration-platform' },
       { name: 'Blockchain Solutions', href: '/blockchain-infrastructure-platform' }
-=======
-      { name: 'AI Services', href: '/ai-services', featured: true },
-      { name: 'Quantum Services', href: '/quantum-services', featured: true },
-      { name: 'Space Technology', href: '/space-technology', featured: true },
-      { name: 'IT Services', href: '/it-services', featured: true },
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
-      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
-      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
-      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
     ]
   },
   {

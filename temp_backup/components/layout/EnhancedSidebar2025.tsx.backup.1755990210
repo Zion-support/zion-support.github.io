@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, X, ChevronDown, ChevronRight, Home, Rocket, Target, Building, BookOpen, MessageCircle,
   Brain, Atom, Shield, Cloud, BarChart, Code, Rocket as RocketIcon, Users, Info, Briefcase,
   Heart, DollarSign, Cog, FileText, Calendar, Lightbulb, HelpCircle, Monitor, Zap, Star,
@@ -177,23 +176,6 @@ interface EnhancedSidebar2025Props {
 const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-=======
-  X, ChevronDown, ChevronRight, Search, Settings, User, 
-  Brain, Atom, Rocket, Shield, Cpu, Database, Cloud, 
-  BarChart3, Code, Smartphone, Server, Users, Award, 
-  TrendingUp, BookOpen, FileText, GraduationCap, Headphones,
-  Zap, Globe, Lock, Phone, Mail, MapPin, Star, MessageCircle,
-  ExternalLink, Home, Briefcase, Info, HelpCircle, Shield as ShieldIcon, Play,
-  Sparkles, Target, Palette, Camera, Mic, Speaker, Wifi, Bluetooth, Satellite,
-  Telescope, Plane, Moon, Sun, Heart, Handshake, Car, Building, Music, Trees, Leaf, DollarSign, Factory, Battery, Newspaper
-} from 'lucide-react';
-
-const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
-  isOpen, 
-  onClose 
-}) => {
-  const [expandedSections, setExpandedSections] = useState<string[]>(['revolutionary-2045', 'ai-services']);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
   const [searchQuery, setSearchQuery] = useState('');
 
   // Auto-expand current section
@@ -456,7 +438,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
       icon: Code,
       color: 'from-teal-500 to-blue-500',
       items: [
-<<<<<<< HEAD
         { label: 'About Us', href: '/about' },
         { label: 'Leadership', href: '/leadership' },
         { label: 'Careers', href: '/careers' },
@@ -492,94 +473,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
     router.push(href);
     onClose();
   };
-=======
-        { label: 'Analytics', href: '/analytics' },
-        { label: 'Automation', href: '/automation' },
-        { label: 'API Documentation', href: '/api-documentation' },
-        { label: 'API Documentation Generator', href: '/api-documentation-generator' },
-        { label: 'API Latency SLO Tracker', href: '/api-latency-slo-tracker' },
-        { label: 'API Mock Contract Testing', href: '/api-mock-contract-testing' },
-        { label: 'API Observability', href: '/api-observability' },
-        { label: 'API Observability Starter', href: '/api-observability-starter' },
-        { label: 'API Performance Testing', href: '/api-performance-testing' },
-        { label: 'API Security Scanner', href: '/api-security-scanner' },
-        { label: 'Audit Log Vault', href: '/audit-log-vault' },
-        { label: 'Agentic RAG', href: '/agentic-rag' },
-        { label: 'Agentic Sales Outreach', href: '/agentic-sales-outreach' },
-        { label: 'Browser Automation Cloud', href: '/browser-automation-cloud' },
-        { label: 'Browser Performance Monitor', href: '/browser-performance-monitor' },
-        { label: 'CI CD Security Hardening', href: '/ci-cd-security-hardening' },
-        { label: 'Cloud Backup Compliance', href: '/cloud-backup-compliance' },
-        { label: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-        { label: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
-        { label: 'Cloudflare Workers Edge Config', href: '/cloudflare-workers-edge-config' },
-        { label: 'Cron Job Scheduler', href: '/cron-job-scheduler' },
-        { label: 'Data Catalog Lineage', href: '/data-catalog-lineage' },
-        { label: 'Data Contracts Governance', href: '/data-contracts-governance' },
-        { label: 'Data Pipeline Health', href: '/data-pipeline-health' },
-        { label: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
-        { label: 'Data Quality Monitor', href: '/data-quality-monitor' },
-        { label: 'Database Performance Monitor', href: '/database-performance-monitor' },
-        { label: 'Domain DNS Monitor', href: '/domain-dns-monitor' },
-        { label: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-        { label: 'Edge Computing Orchestration Platform', href: '/edge-computing-orchestration-platform' },
-        { label: 'Email Deliverability Monitor', href: '/email-deliverability-monitor' },
-        { label: 'Email DMARC Analyzer', href: '/email-dmarc-analyzer' },
-        { label: 'Feature Flags Edge', href: '/feature-flags-edge' },
-        { label: 'GitHub Compliance Bot', href: '/github-compliance-bot' },
-        { label: 'Image Optimizer CDN', href: '/image-optimizer-cdn' },
-        { label: 'Incident Automation Suite', href: '/incident-automation-suite' },
-        { label: 'Incident Copilot', href: '/incident-copilot' },
-        { label: 'Incident Postmortem Generator', href: '/incident-postmortem-generator' },
-        { label: 'Incident Response Retainer', href: '/incident-response-retainer' },
-        { label: 'Infrastructure Drift Detector', href: '/infrastructure-drift-detector' },
-        { label: 'Intelligent Content Automation Platform', href: '/intelligent-content-automation-platform' },
-        { label: 'Intelligent HR Analytics Platform', href: '/intelligent-hr-analytics-platform' },
-        { label: 'Intelligent Supply Chain Optimization', href: '/intelligent-supply-chain-optimization' },
-        { label: 'Kubernetes RBAC Auditor', href: '/kubernetes-rbac-auditor' },
-        { label: 'LLM Gateway', href: '/llm-gateway' },
-        { label: 'Managed Postgres HA', href: '/managed-postgres-ha' },
-        { label: 'MLOps Starter', href: '/mlops-starter' },
-        { label: 'Mobile Device Management', href: '/mobile-device-management' },
-        { label: 'Multi Cloud Disaster Recovery', href: '/multi-cloud-disaster-recovery' },
-        { label: 'PDF Render API', href: '/pdf-render-api' },
-        { label: 'PII Detection Redaction', href: '/pii-detection-redaction' },
-        { label: 'Prompt Policy Registry', href: '/prompt-policy-registry' },
-        { label: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' },
-        { label: 'Sales Copilot', href: '/sales-copilot' },
-        { label: 'Secrets Rotation Automation', href: '/secrets-rotation-automation' },
-        { label: 'SEO Automation', href: '/seo-automation' },
-        { label: 'SEO Automation Suite', href: '/seo-automation-suite' },
-        { label: 'Serverless Cron Manager', href: '/serverless-cron-manager' },
-        { label: 'Smart CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' },
-        { label: 'SOC2 Compliance Automation', href: '/soc2-compliance-automation' },
-        { label: 'SOC2 Evidence Automation', href: '/soc2-evidence-automation' },
-        { label: 'SSO in a Box', href: '/sso-in-a-box' },
-        { label: 'SSO User Lifecycle Automation', href: '/sso-user-lifecycle-automation' },
-        { label: 'Status Pages SLO', href: '/status-pages-slo' },
-        { label: 'Synthetic Monitor Recorder', href: '/synthetic-monitor-recorder' },
-        { label: 'Synthetic Monitor Recorder Pro', href: '/synthetic-monitor-recorder-pro' },
-        { label: 'TLS Certificate Monitor', href: '/tls-certificate-monitor' },
-        { label: 'Uptime SLO Monitor', href: '/uptime-slo-monitor' },
-        { label: 'Vector Search Starter', href: '/vector-search-starter' },
-        { label: 'Vendor Risk Automation', href: '/vendor-risk-automation' },
-        { label: 'Warehouse Accelerator', href: '/warehouse-accelerator' },
-        { label: 'Webhook Relay Replay', href: '/webhook-relay-replay' },
-        { label: 'Zero Downtime Migration', href: '/zero-downtime-migration' },
-        { label: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture' },
-        { label: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' }
-      ]
-    }
-  ];
-
-  // Filter sections based on search query
-  const filteredSections = sidebarSections.filter(section =>
-    section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    section.items.some(item => 
-      item.label.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
 
   return (
     <AnimatePresence>
@@ -600,7 +493,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-white/10 z-50 overflow-y-auto"
           >
             {/* Header */}
@@ -617,25 +509,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
-=======
-            className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-gray-900 border-r border-cyan-400/20 shadow-2xl z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-gray-900 to-black border-b border-cyan-400/20 p-4">
-              <div className="flex items-center justify-between mb-4">
-                <Link href="/" className="flex items-center space-x-2" onClick={onClose}>
-                  <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                    <Star className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Zion Tech
-                  </span>
-                </Link>
-                <button
-                  onClick={onClose}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
-                  aria-label="Close sidebar"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -648,16 +521,11 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                   placeholder="Search navigation..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
                   className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
-=======
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Navigation Items */}
             <div className="p-4 space-y-2">
               {filteredItems.map((item) => (
@@ -739,77 +607,11 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                       )}
                     </button>
                   )}
-=======
-            {/* Navigation Sections */}
-            <div className="p-4 space-y-2">
-              {filteredSections.map((section) => (
-                <div key={section.id} className="space-y-1">
-                  {/* Section Header */}
-                  <button
-                    onClick={() => toggleSection(section.id)}
-                    className="w-full flex items-center justify-between p-3 text-left text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${section.color} flex items-center justify-center`}>
-                        <section.icon className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <span className="font-medium">{section.title}</span>
-                        {section.badge && (
-                          <span className="ml-2 px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded-full border border-cyan-500/30">
-                            {section.badge}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    <ChevronDown 
-                      className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                        expandedSections.includes(section.id) ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-
-                  {/* Section Items */}
-                  <AnimatePresence>
-                    {expandedSections.includes(section.id) && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="ml-11 space-y-1 overflow-hidden"
-                      >
-                        {section.items.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={onClose}
-                            className="block p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800/30 rounded-md transition-all duration-200 group/item"
-                          >
-                            <div className="flex items-center justify-between">
-                              <span className="truncate">{item.label}</span>
-                              {item.badge && (
-                                <span className={`ml-2 px-2 py-1 text-xs rounded-full border transition-colors duration-200 ${
-                                  item.featured 
-                                    ? 'bg-purple-500/20 text-purple-300 border-purple-500/30 group-hover/item:bg-purple-500/30' 
-                                    : 'bg-gray-500/20 text-gray-300 border-gray-500/30 group-hover/item:bg-gray-500/30'
-                                }`}>
-                                  {item.badge}
-                                </span>
-                              )}
-                            </div>
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 </div>
               ))}
             </div>
 
             {/* Footer */}
-<<<<<<< HEAD
             <div className="sticky bottom-0 bg-black/80 backdrop-blur-md border-t border-cyan-500/20 p-4 mt-8">
               <div className="space-y-3">
                 <div className="text-xs text-gray-500 text-center">
@@ -834,20 +636,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                   >
                     Privacy
                   </Link>
-=======
-            <div className="sticky bottom-0 bg-gradient-to-t from-gray-900 to-transparent border-t border-cyan-400/20 p-4">
-              <div className="text-center">
-                <p className="text-xs text-gray-400 mb-2">
-                  Revolutionary 2045 Technology
-                </p>
-                <div className="flex items-center justify-center space-x-4">
-                  <Link href="/contact" onClick={onClose} className="text-cyan-400 hover:text-cyan-300 text-sm">
-                    Contact
-                  </Link>
-                  <Link href="/support" onClick={onClose} className="text-cyan-400 hover:text-cyan-300 text-sm">
-                    Support
-                  </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 </div>
               </div>
             </div>

@@ -675,7 +675,6 @@ h3 {
 
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
-<<<<<<< HEAD
   .card-futuristic:hover {
     transform: translateY(-4px);
   }
@@ -844,26 +843,6 @@ h3 {
   .card-futuristic {
     box-shadow: none;
     border: 1px solid #ccc;
-=======
-  .quantum-grid {
-    background-size: 25px 25px;
-    opacity: 0.35;
-  }
-  
-  .holographic-matrix {
-    background-size: 50px 50px;
-    opacity: 0.30;
-  }
-  
-  .neural-network {
-    background-size: 75px 75px;
-    opacity: 0.28;
-  }
-  
-  .cyberpunk-elements {
-    background-size: 100px 100px;
-    opacity: 0.26;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32ac
   }
 }
 

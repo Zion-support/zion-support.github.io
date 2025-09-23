@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8f44
 import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
 import UltraFuturisticFooter2040 from './UltraFuturisticFooter2040';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
@@ -11,7 +7,6 @@ import UltraFuturisticBackground2045 from '../backgrounds/UltraFuturisticBackgro
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
 import TopContactBar from './TopContactBar';
@@ -21,11 +16,6 @@ import CookieConsentBanner from '../CookieConsentBanner';
 import SEOHead from '../SEOHead';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
 import PerformanceOptimizer from '../PerformanceOptimizer';
-=======
-import ThemeToggle from '../ThemeToggle';
-import LoadingSkeleton from '../LoadingSkeleton';
-import ErrorBoundary from '../ErrorBoundary';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8f44
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -45,42 +35,9 @@ export default function Layout({
   canonicalUrl
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-<<<<<<< HEAD
   const [isPerformanceMonitoringEnabled, setIsPerformanceMonitoringEnabled] = useState(false);
   const [isAccessibilityEnabled, setIsAccessibilityEnabled] = useState(true);
   const [isCookieConsentEnabled, setIsCookieConsentEnabled] = useState(true);
-=======
-  const [isLoading, setIsLoading] = useState(true);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
-  useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('light', savedTheme === 'light');
-    }
-
-    // Simulate loading time for better UX
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleThemeChange = (newTheme: 'dark' | 'light') => {
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('light', newTheme === 'light');
-  };
-
-  // Map theme to background theme
-  const getBackgroundTheme = (theme: 'dark' | 'light') => {
-    return theme === 'dark' ? 'quantum-neon' : 'holographic';
-  };
-
-  if (isLoading) {
-    return <LoadingSkeleton />;
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8f44
 
   // Structured data for better SEO
   const structuredData = {
@@ -103,14 +60,10 @@ export default function Layout({
   return (
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-black text-white' : 'bg-gray-50 text-gray-900'} relative overflow-x-hidden transition-colors duration-300`}>
       {/* Skip to content link for accessibility */}
-<<<<<<< HEAD
       <a 
         href="#main" 
         className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-cyan-500 text-black px-4 py-2 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black"
       >
-=======
-      <a href="#main" className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded focus:outline-none">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8f44
         Skip to main content
       </a>
       
@@ -135,7 +88,6 @@ export default function Layout({
             onClose={handleSidebarClose} 
           />
           
-<<<<<<< HEAD
           <main 
             id="main" 
             role="main" 
@@ -143,12 +95,6 @@ export default function Layout({
             aria-label="Main content"
           >
             {children}
-=======
-          <main id="main" role="main" className="flex-1 pt-24 lg:pt-28">
-            <ErrorBoundary>
-              {children}
-            </ErrorBoundary>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8f44
           </main>
         </div>
         

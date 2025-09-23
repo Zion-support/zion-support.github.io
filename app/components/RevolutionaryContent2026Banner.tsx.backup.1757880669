@@ -72,7 +72,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
     }, 4000);
 
-<<<<<<< HEAD
     return () => clearInterval(timer);
   }, [contentItems.length]);
 
@@ -104,12 +103,7 @@ const RevolutionaryContent2026Banner: React.FC = () => {
 
   if (!isVisible) return null;
 
-=======
-<<<<<<< HEAD
-const RevolutionaryContent2026Banner: React.FC = () => {
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-12 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -247,121 +241,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4 text-center border border-white border-opacity-20">
             <div className="text-2xl font-bold text-purple-400 mb-1">500+</div>
             <div className="text-xs opacity-90">Success Stories</div>
-=======
-    <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🔥 REVOLUTIONARY 2026</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Revolutionary AI Content 2026
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of AI with our groundbreaking 2026 content series. 
-            Transform your business with cutting-edge insights and proven strategies.
-          </p>
-        </div>
-
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-          {/* Left Column - Content Preview */}
-          <div>
-            <h3 className="text-3xl font-bold mb-6">What's Inside Our 2026 Collection</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">1</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-2">Enterprise AI Transformation</h4>
-                  <p className="text-gray-200">Complete guide to implementing AI 2026 in your organization with real-world case studies and proven methodologies.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">2</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-2">Quantum AI Revolution</h4>
-                  <p className="text-gray-200">Explore how quantum computing is revolutionizing AI and creating unprecedented business opportunities.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">3</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-2">Implementation Master Guide</h4>
-                  <p className="text-gray-200">Step-by-step blueprint for AI 2026 implementation with detailed checklists and best practices.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Visual Elements */}
-          <div className="relative">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
-              <div className="text-center mb-6">
-                <div className="text-6xl mb-4">🚀</div>
-                <h4 className="text-2xl font-bold mb-2">AI 2026 Impact</h4>
-                <p className="text-gray-200">Transform your business with next-generation AI</p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">450%</div>
-                  <div className="text-xs text-gray-300">ROI Increase</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">67%</div>
-                  <div className="text-xs text-gray-300">Cost Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400">234%</div>
-                  <div className="text-xs text-gray-300">Efficiency Gain</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-400">189%</div>
-                  <div className="text-xs text-gray-300">Revenue Growth</div>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <Link
-                  href="/blog"
-                  className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Explore Content
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
-            <div className="text-4xl mb-4">🏢</div>
-            <h4 className="text-xl font-bold mb-3">Enterprise Guide</h4>
-            <p className="text-gray-200 mb-4 text-sm">
-              Complete enterprise transformation roadmap with proven strategies and real-world implementations.
-            </p>
-            <Link 
-              href="/blog/ai-2026-enterprise-transformation-ultimate-guide"
-              className="text-blue-300 hover:text-blue-100 font-semibold text-sm"
-            >
-              Read Full Guide →
-            </Link>
-          </div>
-
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
             <div className="text-4xl mb-4">⚛️</div>
             <h4 className="text-xl font-bold mb-3">Quantum AI</h4>
             <p className="text-gray-200 mb-4 text-sm">

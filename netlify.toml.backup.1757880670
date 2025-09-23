@@ -1,11 +1,4 @@
 [build]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  # Build command
-  command = "npm run build:netlify"
-=======
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
   # Pre-build command to handle dependencies
   command = "bash scripts/netlify-pre-build.sh && npm run build"
   

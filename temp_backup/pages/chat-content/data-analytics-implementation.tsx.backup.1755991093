@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function DataAnalyticsImplementationPage() {
@@ -9,6 +8,3 @@ export default function DataAnalyticsImplementationPage() {
     </>
   );
 }
-=======
-export default function ChatDataAnalytics() { return <div className="p-6">Data Analytics Implementation</div>; }
->>>>>>> origin/cursor/build-community-forum-for-zion-ai-marketplace-7967

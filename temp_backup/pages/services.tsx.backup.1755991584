@@ -95,7 +95,6 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
-<<<<<<< HEAD
   const advertisingContent = {
     headline: "500+ Revolutionary Micro SaaS Services",
     subheadline: "Transform Your Business with Cutting-Edge AI, Quantum Computing & Autonomous Systems",
@@ -106,98 +105,6 @@ export default function ServicesPage() {
       "💰 Competitive Pricing",
       "⚡ Lightning-Fast Setup",
       "🛡️ Enterprise Security"
-=======
-  const popularServices = getPopularServices();
-
-  // Enhanced service categories with better descriptions
-  const enhancedCategories = [
-    {
-      name: 'Quantum Computing & AI',
-      description: 'Revolutionary quantum AI solutions with unprecedented computing power',
-      icon: <Brain className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI' || s.category === 'AI & Machine Learning' || s.category === 'Healthcare & Biotechnology').length,
-      marketSize: '$12.5B',
-      growthRate: '300%',
-      featuredServices: ['Quantum AI Drug Discovery', 'Quantum Financial Optimizer', 'Quantum Healthcare Diagnostics']
-    },
-    {
-      name: 'Autonomous Systems & Robotics',
-      description: 'Next-generation autonomous manufacturing and robotics platforms',
-      icon: <Factory className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length,
-      marketSize: '$180B',
-      growthRate: '200%',
-      featuredServices: ['Autonomous Factory Orchestrator', 'AI Robotics Platform', 'Smart Manufacturing Suite']
-    },
-    {
-      name: 'Healthcare & Biotechnology',
-      description: 'AI-powered biomedical research and drug discovery platforms',
-      icon: <FlaskConical className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
-      marketSize: '$75B',
-      growthRate: '280%',
-      featuredServices: ['Quantum AI Drug Discovery', 'Quantum Healthcare Diagnostics', 'AI Medical Imaging']
-    },
-    {
-      name: 'Space Technology',
-      description: 'AI-powered space mission planning and satellite optimization',
-      icon: <Rocket className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Space Technology').length,
-      marketSize: '$8B',
-      growthRate: '400%',
-      featuredServices: ['Space Exploration AI Platform', 'Satellite Optimization Suite', 'Mission Planning AI']
-    },
-    {
-      name: 'Cybersecurity & Defense',
-      description: 'Quantum-resistant encryption and AI-powered threat detection',
-      icon: <Shield className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Cybersecurity').length,
-      marketSize: '$180B',
-      growthRate: '200%',
-      featuredServices: ['Quantum Cybersecurity Shield', 'AI Threat Intelligence', 'Zero Trust Security']
-    },
-    {
-      name: 'Environmental Technology',
-      description: 'AI-powered climate prediction and sustainability optimization',
-      icon: <Leaf className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Environmental Technology').length,
-      marketSize: '$12B',
-      growthRate: '250%',
-      featuredServices: ['AI Climate Prediction Platform', 'Sustainability Analytics', 'Green Energy Optimization']
-    },
-    {
-      name: 'Financial Technology',
-      description: 'Quantum-powered financial optimization and trading platforms',
-      icon: <DollarSign className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Financial Technology').length,
-      marketSize: '$25B',
-      growthRate: '300%',
-      featuredServices: ['Quantum Financial Optimizer', 'AI Trading Platform', 'Risk Management Suite']
-    },
-    {
-      name: 'Education Technology',
-      description: 'AI-powered personalized learning and educational platforms',
-      icon: <GraduationCap className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Education Technology').length,
-      marketSize: '$20B',
-      growthRate: '180%',
-      featuredServices: ['AI Education Personalizer', 'Learning Analytics Platform', 'Adaptive Content System']
-    }
-  ];
-
-  // Enhanced hero section with better advertising
-  const heroSection = {
-    title: "500+ Revolutionary Micro SaaS Services",
-    subtitle: "Real, Innovative, AI-Powered Solutions That Actually Work",
-    description: "Transform your business with cutting-edge micro SaaS services. From Quantum AI to Autonomous Factories, we deliver real results with proven ROI. No mock services, no empty promises - just innovative technology that drives growth.",
-    highlights: [
-      "🚀 First-to-Market Quantum AI Solutions",
-      "🏭 Industry 4.0 Autonomous Manufacturing", 
-      "🛡️ Quantum-Resistant Cybersecurity",
-      "🧬 AI-Powered Drug Discovery",
-      "💰 Quantum Financial Optimization",
-      "🚀 Space Exploration AI Platform"
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
     ],
     marketPosition: "Zion Tech Group leads the global micro SaaS revolution with patent-pending quantum AI and autonomous systems.",
     pricing: "Services range from $49/month to $5,999/month with 30-day free trials and comprehensive support.",
@@ -222,11 +129,7 @@ export default function ServicesPage() {
   };
 
   return (
-<<<<<<< HEAD
     <div>
-=======
-    <UltraFuturisticBackground variant="holographic">
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
       <Head>
         <title>Micro SaaS Services - Zion Tech Group | AI, Quantum Computing & Emerging Tech</title>
         <meta name="description" content="Explore 500+ revolutionary micro SaaS services from Zion Tech Group. AI, quantum computing, autonomous systems, blockchain, and emerging technology solutions." />
@@ -366,7 +269,6 @@ export default function ServicesPage() {
                 </p>
               </div>
 
-<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {getPopularServices().map((service, index) => (
                   <motion.div
@@ -396,86 +298,6 @@ export default function ServicesPage() {
                           <Star className="w-4 h-4 inline mr-1" />
                           Popular
                         </div>
-=======
-          {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
-                <UltraFuturisticCard
-                  key={service.id}
-                  variant={service.variant as any}
-                  className="h-full"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="text-3xl mr-3">{service.icon}</div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                      <p className="text-sm text-gray-400">{service.category}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <div className="text-2xl font-bold text-white mb-2">{service.price}{service.period}</div>
-                    <div className="flex items-center text-sm text-gray-400 mb-2">
-                      <TrendingUp className="w-4 h-4 mr-2" />
-                      {service.growthRate}
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      <BarChart3 className="w-4 h-4 inline mr-2" />
-                      {service.marketSize}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-center">
-                          <Check className="w-3 h-3 text-green-400 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                      <span className="text-white font-semibold">{service.rating}</span>
-                      <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {service.trialDays} day trial
-                    </div>
-                  </div>
-
-                  <Button
-                    href={service.link}
-                    variant="primary"
-                    className="w-full"
-                  >
-                    Learn More
-                    <ExternalLink className="ml-2 w-4 h-4" />
-                  </Button>
-                </UltraFuturisticCard>
-              ))}
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {filteredServices.map((service, index) => (
-                <UltraFuturisticCard
-                  key={service.id}
-                  variant={service.variant as any}
-                  className="p-6"
-                >
-                  <div className="flex flex-col lg:flex-row gap-6">
-                    <div className="flex items-center lg:w-1/4">
-                      <div className="text-4xl mr-4">{service.icon}</div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                        <p className="text-sm text-gray-400">{service.category}</p>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
                       </div>
 
                       <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>

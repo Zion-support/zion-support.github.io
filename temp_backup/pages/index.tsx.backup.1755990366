@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedHomepage2045 from '../components/EnhancedHomepage2045';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-=======
-import SEO from '../components/SEO';
-import Homepage2044 from '../components/Homepage2044';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
 import ErrorBoundary from '../components/ErrorBoundary';
 
 const HomePage: React.FC = () => {
@@ -28,7 +23,6 @@ const HomePage: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <PerformanceOptimizer onMetricsUpdate={handlePerformanceMetrics}>
         <AccessibilityEnhancer>
@@ -36,20 +30,6 @@ const HomePage: React.FC = () => {
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
     </ErrorBoundary>
-=======
-    <>
-      <SEO 
-        title="Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions"
-        description="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions."
-        keywords="AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics"
-        type="website"
-        url="https://ziontechgroup.com"
-      />
-      <ErrorBoundary>
-        <Homepage2044 />
-      </ErrorBoundary>
-    </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
   );
 };
 

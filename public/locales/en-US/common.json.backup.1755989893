@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
 {
   "general": {
     "app_name": "Zion AI Marketplace",
@@ -19,27 +15,19 @@
     "menu": "Menu",
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
-<<<<<<< HEAD
     "toggle_mobile_menu": "Toggle mobile menu",
     "greeting_user": "Hello, {{name}}!",
     "status_page": "Status Page",
     "check_status_page": "You can try refreshing the page or visit our"
-=======
-    "toggle_mobile_menu": "Toggle mobile menu"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-<<<<<<< HEAD
     "marketplace_overview": "Overview",
-=======
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
     "categories": "Categories",
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
-<<<<<<< HEAD
     "community_overview": "Overview",
     "blog": "Blog",
     "partners": "Partners",
@@ -56,12 +44,6 @@
     "login": "Login",
     "signup": "Sign Up",
     "help": "Get Help"
-=======
-    "dashboard": "Dashboard",
-    "messages": "Messages",
-    "post_job": "Post Job",
-    "analytics": "Analytics"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "auth": {
     "login": "Login",
@@ -72,7 +54,6 @@
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
-<<<<<<< HEAD
     "logout_success": "Logged out successfully",
     "sign_in_to_account": "Sign in to your account",
     "create_new_account": "create a new account",
@@ -104,14 +85,10 @@
     "subtotal": "Subtotal",
     "processing": "Processing...",
     "checkout": "Checkout"
-=======
-    "logout_success": "Logged out successfully"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
     "hero_subtitle": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
-<<<<<<< HEAD
     "hero_headline_alt1": "Find AI Talent at Lightning Speed",
     "hero_headline_alt2": "Trusted Tech Marketplace for Rapid Growth",
     "hero_headline_alt3": "Build AI Solutions with a Thriving Community",
@@ -119,8 +96,6 @@
     "hero_subheadline_alt2": "Experience secure transactions and transparent reviews for worry-free collaboration.",
     "hero_subheadline_alt3": "Meet innovators worldwide, share ideas, and grow together in our vibrant network.",
     "video_script": "Welcome to Zion, the marketplace where tech innovation meets opportunity. In sixty seconds you'll see how quickly Zion connects you with the right talent and resources. Our intelligent matcher analyzes requirements to recommend verified experts in moments. Showcase your skills in the talent directory and get hired by companies that value speed and trust. Browse services and equipment, then work directly with the community. Share ideas, collaborate, and build lasting partnerships in our vibrant forums. Whether you're a startup or an enterprise, Zion streamlines every step so you can focus on creating. Join us and experience the future of tech marketplaces today.",
-=======
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
     "browse_marketplace": "Browse Marketplace",
     "create_profile": "Create Profile",
     "explore_tools": "Explore Our Tools",
@@ -139,7 +114,6 @@
     "tool_analytics": "Analytics",
     "tool_analytics_desc": "Insights and trends in the AI and tech industry",
     "tool_chat": "Chat Support",
-<<<<<<< HEAD
     "tool_chat_desc": "Get instant assistance from our AI-powered chat",
     "header_tagline": "Your gateway to AI & tech solutions",
     "quick_access_title": "Quick Access",
@@ -164,22 +138,11 @@
   "marketplace": {
     "hero_title": "AI Marketplace",
     "hero_subtitle": "Discover cutting-edge AI and IT solutions"
-=======
-    "tool_chat_desc": "Get instant assistance from our AI-powered chat"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "marketplace": {
     "title": "AI & Tech Marketplace",
     "description": "Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers.",
-<<<<<<< HEAD
     "search_placeholder": "Search the marketplace..."
-=======
-    "search_placeholder": "Search the marketplace...",
-    "results_count": "Showing {{count}} results",
-    "no_results_title": "No Results Found",
-    "no_results_description": "We couldn't find any listings matching your filters. Try adjusting your search criteria.",
-    "clear_filters": "Clear Filters"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "checkout": {
     "title": "Checkout",
@@ -209,10 +172,7 @@
   "language": {
     "en": "English",
     "es": "Español",
-<<<<<<< HEAD
     "fr": "Français",
-=======
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
     "pt": "Português",
     "ar": "العربية",
     "language_changed": "Language changed to {{language}}",

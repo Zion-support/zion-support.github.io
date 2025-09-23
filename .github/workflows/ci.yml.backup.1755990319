@@ -25,10 +25,6 @@ concurrency:
   cancel-in-progress: true
 
 env:
-<<<<<<< HEAD
-=======
-  NODE_OPTIONS: "--max-old-space-size=4096"
->>>>>>> origin/cursor/fix-failing-github-actions-e413
   NEXT_TELEMETRY_DISABLED: '1'
   CI: 'true'
 

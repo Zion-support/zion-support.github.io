@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -14,20 +13,12 @@ import { Button } from "@/components/ui/button",
 
 
 
-=======
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
       <Link to="/request-quote">
-<<<<<<< HEAD
         <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-=======
-        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
->>>>>>> origin/auto/autonomy-17186719616
           Get Custom Enterprise Quote
         </Button>
       </Link>
@@ -35,7 +26,6 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
-<<<<<<< HEAD
 
   );
 }
@@ -73,7 +63,3 @@ export function EnterpriseCallToAction() {;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616

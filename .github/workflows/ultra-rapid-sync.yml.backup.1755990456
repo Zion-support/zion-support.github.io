@@ -29,18 +29,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
-<<<<<<< HEAD
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-=======
-      - name: Update front and content
-        run: |
-          node automation/front-index-advertiser.cjs || true
-          node automation/front-actions-advertiser.cjs || true
-          node automation/continuous-front-runner.cjs || true
-          node automation/homepage-updater.cjs || true
-          node scripts/generate-sitemap.js || true
-          node scripts/generate-readme.js
->>>>>>> origin/cursor/invent-and-deploy-autonomous-github-actions-fbf6
 

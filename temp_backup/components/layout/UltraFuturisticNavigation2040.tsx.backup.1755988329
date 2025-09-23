@@ -2,21 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
   Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
   Brain, Rocket, Shield, Cpu, Database, Cloud, Target,
   BookOpen, FileText, Video, Code, Building, GraduationCap,
   Heart, Briefcase, Newspaper, BarChart3
-=======
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Star, Sparkles, 
-  Grid, List, TrendingUp, 
-  Calendar, Calculator, GraduationCap,
-  Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
-  Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon, Search
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1603
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -48,27 +38,12 @@ const navigationItems: NavigationItem[] = [
     badge: 'New',
     neonColor: 'shadow-blue-400/50',
     children: [
-<<<<<<< HEAD
       {
         label: 'AI & Machine Learning',
         href: '/ai-services',
-=======
-      { 
-        name: 'All Services', 
-        href: '/services', 
-        description: 'Complete revolutionary services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'AI & Machine Learning', 
-        href: '/services?category=ai-data', 
-        description: 'Advanced AI and ML solutions',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1603
         icon: <Brain className="w-4 h-4" />,
         description: 'Advanced AI solutions for enterprise'
       },
-<<<<<<< HEAD
       {
         label: 'Quantum Computing',
         href: '/quantum-computing',
@@ -104,41 +79,10 @@ const navigationItems: NavigationItem[] = [
         href: '/services',
         icon: <ArrowRight className="w-4 h-4" />,
         description: 'Complete service portfolio'
-=======
-      { 
-        name: 'IT Infrastructure', 
-        href: '/services?category=cloud-finops', 
-        description: 'Enterprise infrastructure solutions',
-        icon: <Cpu className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500',
-        featured: true
-      },
-      { 
-        name: 'Micro SAAS Solutions', 
-        href: '/services?category=developer-tools', 
-        description: 'Innovative micro SAAS platforms',
-        icon: <Code className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-500'
-      },
-      { 
-        name: 'Cybersecurity', 
-        href: '/services?category=cybersecurity', 
-        description: 'Advanced security solutions',
-        icon: <Shield className="w-4 h-4" />,
-        color: 'from-red-500 to-orange-500'
-      },
-      { 
-        name: 'Observability', 
-        href: '/services?category=observability', 
-        description: 'Monitoring and analytics',
-        icon: <Eye className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1603
       }
     ]
   },
   {
-<<<<<<< HEAD
     label: 'Industries',
     children: [
       {
@@ -308,51 +252,10 @@ const navigationItems: NavigationItem[] = [
         description: 'Advanced quantum computing',
         icon: <Cpu className="w-4 h-4" />,
         color: 'from-indigo-500 to-purple-500'
-=======
-    name: 'AI & Machine Learning',
-    href: '/services?category=ai-data',
-    icon: <Brain className="w-5 h-5" />,
-    description: 'Advanced AI and ML solutions',
-    badge: 'Featured',
-    category: 'ai',
-    color: 'from-purple-500 to-pink-500',
-    children: [
-      {
-        name: 'AI Content Intelligence',
-        href: '/services/ai-content-intelligence-platform',
-        description: 'AI-powered content optimization',
-        icon: <Brain className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'AI Customer Success',
-        href: '/services/ai-customer-success-automation',
-        description: 'Intelligent customer success automation',
-        icon: <HeartIcon className="w-4 h-4" />
-      },
-      {
-        name: 'AI Sales Intelligence',
-        href: '/services/ai-sales-intelligence-suite',
-        description: 'AI-powered sales optimization',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      {
-        name: 'AI Product Analytics',
-        href: '/services/ai-product-analytics-platform',
-        description: 'AI-driven product insights',
-        icon: <BarChart3 className="w-4 h-4" />
-      },
-      {
-        name: 'AI Cybersecurity',
-        href: '/services/ai-cybersecurity-threat-intelligence',
-        description: 'AI-powered threat detection',
-        icon: <Shield className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1603
       }
     ]
   },
   {
-<<<<<<< HEAD
     name: 'Enterprise IT',
     href: '/it-services',
     icon: <Cpu className="w-5 h-5" />,
@@ -365,25 +268,10 @@ const navigationItems: NavigationItem[] = [
         name: 'Quantum-Secure Cloud Infrastructure',
         href: '/quantum-secure-cloud-infrastructure',
         description: 'Future-proof cloud infrastructure',
-=======
-    name: 'IT Infrastructure',
-    href: '/services?category=cloud-finops',
-    icon: <Cpu className="w-5 h-5" />,
-    description: 'Enterprise infrastructure solutions',
-    badge: 'Enterprise',
-    category: 'infrastructure',
-    color: 'from-blue-500 to-cyan-500',
-    children: [
-      {
-        name: 'Cloud Cost Optimization',
-        href: '/services/cloud-cost-optimization-platform',
-        description: 'AI-powered cloud cost management',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1603
         icon: <Cloud className="w-4 h-4" />,
         featured: true
       },
       {
-<<<<<<< HEAD
         name: 'AI-Powered DevOps Platform',
         href: '/ai-powered-devops-platform',
         description: 'Intelligent DevOps automation',
@@ -432,72 +320,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Consciousness-driven BI',
         icon: <BarChart3 className="w-4 h-4" />,
         featured: true
-=======
-        name: 'DevOps Automation',
-        href: '/services/devops-automation-platform',
-        description: 'Intelligent DevOps automation',
-        icon: <Settings className="w-4 h-4" />
-      },
-      {
-        name: 'Kubernetes Management',
-        href: '/services/kubernetes-management-platform',
-        description: 'Enterprise K8s management',
-        icon: <Layers className="w-4 h-4" />
-      },
-      {
-        name: 'Observability Platform',
-        href: '/services/observability-platform',
-        description: 'Unified monitoring and analytics',
-        icon: <Eye className="w-4 h-4" />
-      },
-      {
-        name: 'API Gateway Management',
-        href: '/services/api-gateway-management',
-        description: 'Centralized API management',
-        icon: <Network className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Micro SAAS Solutions',
-    href: '/services?category=developer-tools',
-    icon: <Code className="w-5 h-5" />,
-    description: 'Innovative micro SAAS platforms',
-    badge: 'Innovative',
-    category: 'micro-saas',
-    color: 'from-orange-500 to-red-500',
-    children: [
-      {
-        name: 'No-Code Automation',
-        href: '/services/no-code-automation-platform',
-        description: 'Visual workflow automation',
-        icon: <Code className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'AI Email Marketing',
-        href: '/services/ai-powered-email-marketing',
-        description: 'Intelligent email optimization',
-        icon: <Mail className="w-4 h-4" />
-      },
-      {
-        name: 'Social Media Automation',
-        href: '/services/social-media-automation-suite',
-        description: 'Multi-platform social management',
-        icon: <MessageCircle className="w-4 h-4" />
-      },
-      {
-        name: 'AI Customer Support',
-        href: '/services/ai-powered-customer-support',
-        description: 'Intelligent support automation',
-        icon: <HelpCircle className="w-4 h-4" />
-      },
-      {
-        name: 'AI SEO Optimization',
-        href: '/services/ai-powered-seo-optimization',
-        description: 'AI-driven SEO insights',
-        icon: <Search className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1603
       }
     ]
   },

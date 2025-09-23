@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, ChevronDown, X, Phone, Mail, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
   DollarSign, BarChart3, Globe, Grid, Heart, Database,
@@ -487,15 +486,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
 
-=======
-  Menu, X, ChevronDown, ChevronRight, Search, User, ShoppingCart, 
-  Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
-  Home, Briefcase, Users, FileText, Phone, Mail, MapPin, Globe,
-  Zap, Star, TrendingUp, Award, Clock, CheckCircle, ExternalLink,
-  GraduationCap, Building, Truck, Zap as ZapIcon, Heart, DollarSign
-} from 'lucide-react';
-
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -514,7 +504,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   const handleDropdownToggle = useCallback((dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   }, [activeDropdown]);
@@ -522,19 +511,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const closeMobileMenu = useCallback(() => {
     setIsOpen(false);
     setActiveDropdown(null);
-=======
-  // Enhanced accessibility: Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
-        setIsSearchOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
   }, []);
 
   const navigationItems = [

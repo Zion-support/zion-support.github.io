@@ -1,20 +1,12 @@
 {
   "ok": true,
   "errors": [],
-<<<<<<< HEAD
   "warnings": [],
-=======
-  "warnings": [
-    "No upstream configured for current branch.",
-    "Set upstream to origin/cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330."
-  ],
->>>>>>> origin/cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330
   "checks": {
     "user": {
       "name": "Cursor Agent",
       "email": "cursoragent@cursor.com"
     },
-<<<<<<< HEAD
     "origin": "origin\thttps://x-access-token:ghs_qFEzV0KlyTPAxZZL4JeP2RJ7P6y7H03t1mAX@github.com/Zion-Holdings/zion.app (fetch)\norigin\thttps://x-access-token:ghs_qFEzV0KlyTPAxZZL4JeP2RJ7P6y7H03t1mAX@github.com/Zion-Holdings/zion.app (push)",
     "fsck": {
       "status": 0,
@@ -23,12 +15,6 @@
     "divergence": {
       "behind": 0,
       "ahead": 0
-=======
-    "origin": "origin\thttps://x-access-token:ghs_6BllxZH8uDKDNSxTCd1X7Te6kiLdMv25gI6t@github.com/Zion-Holdings/zion.app (fetch)\norigin\thttps://x-access-token:ghs_6BllxZH8uDKDNSxTCd1X7Te6kiLdMv25gI6t@github.com/Zion-Holdings/zion.app (push)",
-    "fsck": {
-      "status": 0,
-      "output": "dangling tree 9e71027b7b742f35647902679f88941aee5e1416\n"
->>>>>>> origin/cursor/bc-37c9148a-8898-4045-b95f-8ca2f79cfa5c-9330
     },
     "working": "clean"
   }

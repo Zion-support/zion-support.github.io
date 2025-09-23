@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -161,10 +160,3 @@ export function useTranslationService() {
     getTranslation
   };
 }
-=======
-// Hook for useTranslationService;
-export const useUseTranslationService: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

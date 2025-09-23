@@ -394,7 +394,6 @@
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
-<<<<<<< HEAD
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
     "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
     "ui-evolution:analyze": "node automation/ui-evolution-launcher.js analyze",
@@ -445,15 +444,6 @@
     "redundancy:comprehensive:status": "cd automation/redundancy && ./start-comprehensive-redundancy.sh status",
     "redundancy:comprehensive:restart": "cd automation/redundancy && ./start-comprehensive-redundancy.sh restart",
     "redundancy:comprehensive:manager": "node automation/redundancy/comprehensive-redundancy-manager.cjs"
-=======
-    "performance:audit": "node automation/performance-audit.cjs",
-    "auto-ops:scan": "node automation/auto-ops/detector.cjs",
-    "auto-ops:factory": "node automation/auto-ops/factory.cjs",
-    "auto-ops:orchestrator": "node automation/auto-ops/orchestrator.cjs",
-    "auto-ops:cron:start": "bash automation/auto-ops/cron.sh start",
-    "auto-ops:cron:stop": "bash automation/auto-ops/cron.sh stop",
-    "auto-ops:cron:status": "bash automation/auto-ops/cron.sh status"
->>>>>>> origin/cursor/automated-error-fixing-agent-creation-51d4
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

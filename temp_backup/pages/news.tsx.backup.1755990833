@@ -1,16 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Newspaper, Calendar, User, Tag, ArrowRight, 
   Star, Zap, Brain, Atom, Rocket, Globe,
   Clock, TrendingUp
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-=======
-  Newspaper, Calendar, User, Tag, ArrowRight, 
-  Star, Zap, Brain, Atom, Rocket, Globe,
-  Clock, TrendingUp
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -268,7 +262,6 @@ export default function News() {
   ];
 
   const categories = [
-<<<<<<< HEAD
     { name: 'All News', count: newsArticles.length, active: true },
     { name: 'AI Innovation', count: 2, active: false },
     { name: 'Quantum Computing', count: 1, active: false },
@@ -296,8 +289,6 @@ export default function News() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
               className="text-center"
             >
               <div className="flex items-center justify-center mb-6">
@@ -1274,7 +1265,6 @@ export default function News() {
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -1307,34 +1297,6 @@ export default function News() {
                 </motion.button>
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
               ))}
-=======
-      {/* Newsletter Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/20"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get the latest news, insights, and updates delivered directly to your inbox.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                Subscribe
-              </button>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
             </div>
             
             <p className="text-sm text-gray-400 mt-4">
@@ -1344,15 +1306,11 @@ export default function News() {
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* News Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
-          <div className="max-w-7xl mx-auto">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1646,37 +1604,4 @@ export default function News() {
   );
 }
 =======
-<<<<<<< HEAD
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-      {/* Call to Action */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Have questions about our news or want to learn more about our latest developments? Contact our team.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
-                <span>Contact Us</span>
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                About Zion Tech Group
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84

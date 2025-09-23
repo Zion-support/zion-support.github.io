@@ -42,7 +42,6 @@ const footerData = {
     { label: 'Mission', href: '/mission' },
     { label: 'Services', href: '/services' },
     { label: 'Solutions', href: '/solutions' },
-<<<<<<< HEAD
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
@@ -55,30 +54,16 @@ const footerData = {
     { label: 'Metaverse Development Studio Pro 2045', href: '/metaverse-development-studio-pro-2045', badge: 'Metaverse' },
     { label: 'Quantum Cybersecurity Platform 2045', href: '/quantum-cybersecurity-platform-2045', badge: 'Security' },
     { label: 'Revolutionary 2045 Services Showcase', href: '/revolutionary-2045-futuristic-services-showcase', badge: 'Showcase' }
-=======
-    { label: 'Partners', href: '/partners' },
-    { label: 'Careers', href: '/careers' }
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
   ],
   services: [
     { label: 'AI & Machine Learning', href: '/services?category=ai-ml' },
     { label: 'Quantum Computing', href: '/services?category=quantum' },
     { label: 'Space Technology', href: '/services?category=space-tech' },
     { label: 'Cybersecurity', href: '/services?category=cybersecurity' },
-<<<<<<< HEAD
     { label: 'Cloud Infrastructure', href: '/services?category=cloud' },
     { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { label: 'Micro SAAS Platforms', href: '/services?category=micro-saas' },
     { label: 'IT Services', href: '/services?category=it-services' }
-=======
-    { label: 'Cloud Infrastructure', href: '/services?category=cloud' }
-  ],
-  solutions: [
-    { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { label: 'Startup Solutions', href: '/solutions/startup' },
-    { label: 'Government Solutions', href: '/solutions/government' },
-    { label: 'Case Studies', href: '/case-studies' }
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
   ],
   resources: [
     { label: 'Documentation', href: '/docs' },
@@ -295,11 +280,7 @@ const UltraFuturisticFooter2040: React.FC = () => {
     <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-cyan-400/20" role="contentinfo">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
           
           {/* Company Information */}
           <div className="lg:col-span-2">
@@ -463,93 +444,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
               </ul>
             </motion.div>
           </div>
-<<<<<<< HEAD
-=======
-
-          {/* Services */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <Rocket className="w-4 h-4 mr-2 text-purple-400" />
-                Services
-              </h3>
-              <ul className="space-y-3">
-                {footerData.services.map((service) => (
-                  <li key={service.label}>
-                    <Link
-                      href={service.href}
-                      className="text-gray-300 hover:text-purple-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-purple-400/50 rounded"
-                      aria-label={`Explore ${service.label} services`}
-                    >
-                      {service.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-            >
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <Target className="w-4 h-4 mr-2 text-green-400" />
-                Solutions
-              </h3>
-              <ul className="space-y-3">
-                {footerData.solutions.map((solution) => (
-                  <li key={solution.label}>
-                    <Link
-                      href={solution.href}
-                      className="text-gray-300 hover:text-green-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-green-400/50 rounded"
-                      aria-label={`Explore ${solution.label} solutions`}
-                    >
-                      {solution.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <BookOpen className="w-4 h-4 mr-2 text-green-400" />
-                Resources
-              </h3>
-              <ul className="space-y-3">
-                {footerData.resources.map((resource) => (
-                  <li key={resource.label}>
-                    <Link
-                      href={resource.href}
-                      className="text-gray-300 hover:text-green-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-green-400/50 rounded"
-                      aria-label={`Access ${resource.label}`}
-                    >
-                      {resource.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-e046
         </div>
 
         {/* Social Media & Newsletter */}

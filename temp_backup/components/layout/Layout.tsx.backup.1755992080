@@ -212,33 +212,11 @@ export default function Layout({ children, seo }: LayoutProps) {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen bg-black text-white">
-<<<<<<< HEAD
 			<UltraAdvancedFuturisticBackground variant="quantum-holographic">
 				<EnhancedNavigation />
 				<main className="pt-20 lg:pt-24">
 					{children}
 				</main>
-=======
-			<a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-black/80 focus:text-white focus:border focus:border-cyan-500 focus:rounded px-3 py-2 z-[100]">Skip to content</a>
-			<UltraAdvancedFuturisticBackground 
-				intensity="extreme" 
-				colorScheme="ai-consciousness"
-				particleCount={500}
-				animationSpeed={2.0}
-				enableHolographic={true}
-				enableQuantumEffects={true}
-				enableNeuralNetwork={true}
-				enableSpaceEffects={true}
-			>
-				<TopContactBar />
-				<EnhancedNavigation2025 onMenuClick={() => setSidebarOpen(true)} />
-				<div className="flex">
-					<EnhancedSidebar2025 isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-					<main id="main" className="flex-1 pt-24 lg:pt-28">
-						{children}
-					</main>
-				</div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-196b
 				<EnhancedFooter />
 			</UltraAdvancedFuturisticBackground>
 		</div>

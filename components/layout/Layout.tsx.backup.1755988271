@@ -6,13 +6,9 @@ import UltraFuturisticBackground2045 from '../backgrounds/UltraFuturisticBackgro
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
 import ThemeToggle from '../ThemeToggle';
 import LoadingSkeleton from '../LoadingSkeleton';
 import ErrorBoundary from '../ErrorBoundary';
-=======
-import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -125,7 +121,6 @@ export default function Layout({
       <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
       
       {/* Cookie Consent Banner */}
-<<<<<<< HEAD
       <CookieConsentBanner 
         enabled={isCookieConsentEnabled}
         showUI={isCookieConsentEnabled}
@@ -160,12 +155,6 @@ export default function Layout({
           ♿
         </button>
       )}
-=======
-      <CookieConsentBanner />
-      
-      {/* Service Worker Registration */}
-      <ServiceWorkerRegistration />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
     </div>
 =======
       "telephone": "+1-302-464-0950",

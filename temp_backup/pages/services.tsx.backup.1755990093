@@ -236,7 +236,6 @@ const allServices = [
   // Our new 2025 cutting-edge innovative services expansion
   ...cuttingEdgeInnovativeServices2025,
   ...advancedITInfrastructureSolutions2025,
-<<<<<<< HEAD
   
   // Our new 2025 ultimate innovative services
   ...ultimateInnovativeServices2025,
@@ -253,14 +252,6 @@ const allServices = [
   ...realEnterpriseMicroSaas2025,
   
   ...advancedAIAutomationSolutions2025
-=======
-  ...advancedAIAutomationSolutions2025,
-  
-  // Our new innovative services expansion v3
-  ...innovativeMicroSaasExpansionV3,
-  ...innovativeITInfrastructureExpansionV3,
-  ...innovativeAIServicesExpansionV3
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7156
 ];
 
 const categories = [

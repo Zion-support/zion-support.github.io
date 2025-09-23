@@ -11,7 +11,6 @@ import {
   CheckCircle, Target, BarChart3, TrendingUp, Lock
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const APIPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -407,37 +406,6 @@ const APIPage: React.FC = () => {
       </div>
     </Layout>
   );
-=======
-export const metadata: Metadata = {
-  title: 'API Services | Zion Tech Group',
-  description: 'Comprehensive API development and management services for modern digital applications.',
-  keywords: 'API services, API development, API management, REST API, GraphQL, API integration',
-  openGraph: {
-    title: 'API Services | Zion Tech Group',
-    description: 'Comprehensive API development and management services for modern digital applications.',
-    url: 'https://ziontechgroup.com/api',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: 'https://ziontechgroup.com/og-image-api.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'API Services',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'API Services | Zion Tech Group',
-    description: 'Comprehensive API development and management services for modern digital applications.',
-    images: ['https://ziontechgroup.com/og-image-api.jpg'],
-  },
-  alternates: {
-    canonical: 'https://ziontechgroup.com/api',
-  },
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 };
 
 const contactInfo = {

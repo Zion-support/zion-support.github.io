@@ -1,6 +1,5 @@
 import React from 'react';
 export function TalentOnboardingForm() {
-<<<<<<< HEAD
   const { user } = useAuth();
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
@@ -96,12 +95,4 @@ export function TalentOnboardingForm() {
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
   return <div>Talent onboarding form coming soon.</div>
-=======
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
->>>>>>> origin/automation-error-fixes
 }

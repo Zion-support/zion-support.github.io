@@ -25,7 +25,6 @@ interface AccessibilityIssue {
 }
 
 const EnhancedAccessibilityEnhancer: React.FC = () => {
-<<<<<<< HEAD
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -71,51 +70,11 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       highContrastQuery.removeEventListener('change', handleContrastChange);
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
-=======
-  const [features, setFeatures] = useState<AccessibilityFeatures>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    keyboardNavigation: false,
-    focusIndicators: true
-  });
-  
-  const [showPanel, setShowPanel] = useState(false);
-  const [accessibilityIssues, setAccessibilityIssues] = useState<AccessibilityIssue[]>([]);
-  const [isScanning, setIsScanning] = useState(false);
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-
-  // Enhanced focus management
-  useEffect(() => {
-    const handleFocusChange = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      setCurrentFocus(target);
-      
-      // Enhanced focus indicators
-      if (features.focusIndicators) {
-        target.classList.add('ring-4', 'ring-cyan-500', 'ring-offset-2', 'ring-offset-black');
-      }
-    };
-
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      target.classList.remove('ring-4', 'ring-cyan-500', 'ring-offset-2', 'ring-offset-black');
-    };
-
-    document.addEventListener('focusin', handleFocusChange);
-    document.addEventListener('focusout', handleFocusOut);
-
-    return () => {
-      document.removeEventListener('focusin', handleFocusChange);
-      document.removeEventListener('focusout', handleFocusOut);
->>>>>>> da0b5f20a41ce7c5a9eecbf3cf2a76d75978280f
     };
   }, [features.focusIndicators]);
 
   // High contrast mode
   useEffect(() => {
-<<<<<<< HEAD
     applyAccessibilityFeatures();
   }, [isHighContrast, isReducedMotion, fontSize]);
 
@@ -335,189 +294,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
           font-weight: bold;
           text-decoration: none;
         }
-=======
-    if (features.highContrast) {
-      document.documentElement.classList.add('high-contrast');
-      document.documentElement.style.setProperty('--text-primary', '#ffffff');
-      document.documentElement.style.setProperty('--text-secondary', '#e5e7eb');
-      document.documentElement.style.setProperty('--bg-primary', '#000000');
-      document.documentElement.style.setProperty('--bg-secondary', '#1f2937');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-      document.documentElement.style.removeProperty('--text-primary');
-      document.documentElement.style.removeProperty('--text-secondary');
-      document.documentElement.style.removeProperty('--bg-primary');
-      document.documentElement.style.removeProperty('--bg-secondary');
-    }
-  }, [features.highContrast]);
-
-  // Large text mode
-  useEffect(() => {
-    if (features.largeText) {
-      document.documentElement.classList.add('large-text');
-      document.documentElement.style.fontSize = '120%';
-    } else {
-      document.documentElement.classList.remove('large-text');
-      document.documentElement.style.fontSize = '100%';
-    }
-  }, [features.largeText]);
-
-  // Reduced motion
-  useEffect(() => {
-    if (features.reducedMotion) {
-      document.documentElement.classList.add('reduced-motion');
-      document.documentElement.style.setProperty('--animation-duration', '0.1s');
-    } else {
-      document.documentElement.classList.remove('reduced-motion');
-      document.documentElement.style.removeProperty('--animation-duration');
-    }
-  }, [features.reducedMotion]);
-
-  // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, []);
-
-  // Accessibility scanner
-  const scanAccessibility = useCallback(async () => {
-    setIsScanning(true);
-    const issues: AccessibilityIssue[] = [];
-
-    // Check for missing alt text
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.alt && !img.getAttribute('aria-label')) {
-        issues.push({
-          type: 'error',
-          message: 'Image missing alt text or aria-label',
-          element: `img`,
-          severity: 'high'
-        });
-      }
-    });
-
-    // Check for proper heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let previousLevel = 0;
-    headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));
-      if (level - previousLevel > 1) {
-        issues.push({
-          type: 'warning',
-          message: `Heading level skipped from h${previousLevel} to h${level}`,
-          element: heading.tagName.toLowerCase(),
-          severity: 'medium'
-        });
-      }
-      previousLevel = level;
-    });
-
-    // Check for proper form labels
-    const formControls = document.querySelectorAll('input, select, textarea');
-    formControls.forEach((control) => {
-      const id = control.getAttribute('id');
-      const label = document.querySelector(`label[for="${id}"]`);
-      const ariaLabel = control.getAttribute('aria-label');
-      
-      if (!label && !ariaLabel && !control.getAttribute('aria-labelledby')) {
-        issues.push({
-          type: 'error',
-          message: 'Form control missing label or aria-label',
-          element: control.tagName.toLowerCase(),
-          severity: 'high'
-        });
-      }
-    });
-
-    // Check for proper ARIA attributes
-    const ariaElements = document.querySelectorAll('[aria-*]');
-    ariaElements.forEach((element) => {
-      const ariaExpanded = element.getAttribute('aria-expanded');
-      const ariaControls = element.getAttribute('aria-controls');
-      
-      if (ariaExpanded && !ariaControls) {
-        issues.push({
-          type: 'warning',
-          message: 'Element with aria-expanded should have aria-controls',
-          element: element.tagName.toLowerCase(),
-          severity: 'medium'
-        });
-      }
-    });
-
-    // Check for color contrast (simplified)
-    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
-    textElements.forEach((element) => {
-      const style = window.getComputedStyle(element);
-      const color = style.color;
-      const backgroundColor = style.backgroundColor;
-      
-      if (color === backgroundColor) {
-        issues.push({
-          type: 'error',
-          message: 'Text and background colors are the same',
-          element: element.tagName.toLowerCase(),
-          severity: 'high'
-        });
-      }
-    });
-
-    setAccessibilityIssues(issues);
-    setIsScanning(false);
-
-    if (features.screenReader) {
-      announceToScreenReader(`Accessibility scan complete. Found ${issues.length} issues.`);
-    }
-  }, [features.screenReader, announceToScreenReader]);
-
-  // Toggle feature
-  const toggleFeature = (feature: keyof AccessibilityFeatures) => {
-    setFeatures(prev => ({
-      ...prev,
-      [feature]: !prev[feature]
-    }));
-
-    if (features.screenReader) {
-      announceToScreenReader(`${feature} ${!features[feature] ? 'enabled' : 'disabled'}`);
-    }
-  };
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Alt + A to toggle accessibility panel
-      if (event.altKey && event.key === 'a') {
-        event.preventDefault();
-        setShowPanel(prev => !prev);
-      }
-      
-      // Alt + H to toggle high contrast
-      if (event.altKey && event.key === 'h') {
-        event.preventDefault();
-        toggleFeature('highContrast');
-      }
-      
-      // Alt + L to toggle large text
-      if (event.altKey && event.key === 'l') {
-        event.preventDefault();
-        toggleFeature('largeText');
-      }
-      
-      // Alt + M to toggle reduced motion
-      if (event.altKey && event.key === 'm') {
-        event.preventDefault();
-        toggleFeature('reducedMotion');
->>>>>>> da0b5f20a41ce7c5a9eecbf3cf2a76d75978280f
       }
     };
 

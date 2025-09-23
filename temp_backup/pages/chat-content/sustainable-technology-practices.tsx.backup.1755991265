@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function SustainableTechnologyPracticesPage() {
@@ -9,6 +8,3 @@ export default function SustainableTechnologyPracticesPage() {
     </div>
   );
 }
-=======
-export default function Page(){return <div className="py-8 text-slate-300">sustainable technology practices</div>}
->>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

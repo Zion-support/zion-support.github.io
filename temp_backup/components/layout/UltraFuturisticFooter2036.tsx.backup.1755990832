@@ -17,7 +17,6 @@ import {
   Facebook,
   Instagram,
   Youtube,
-<<<<<<< HEAD
   ArrowUp,
   Star,
   Brain,
@@ -29,9 +28,6 @@ import {
   Heart,
   Globe
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-  Github
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 } from 'lucide-react';
 
 
@@ -43,7 +39,6 @@ const footerSections = [
     description: 'Our latest revolutionary solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
     links: [
-<<<<<<< HEAD
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', featured: true },
       { name: 'Quantum Cybersecurity Sentinel', href: '/quantum-cybersecurity-sentinel', featured: true },
       { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory', featured: true },
@@ -55,18 +50,6 @@ const footerSections = [
       { name: 'Quantum Edge Computing Platform', href: '/quantum-edge-computing-platform' },
       { name: 'AI-Powered Enterprise Architecture', href: '/ai-powered-enterprise-architecture' }
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-      { name: 'AI Services', href: '/ai-services', featured: true },
-      { name: 'Quantum Services', href: '/quantum-services', featured: true },
-      { name: 'Space Technology', href: '/space-technology', featured: true },
-      { name: 'IT Solutions', href: '/it-services', featured: true },
-      { name: 'Healthcare Solutions', href: '/healthcare-solutions', featured: true },
-      { name: 'Financial Solutions', href: '/financial-solutions', featured: true },
-      { name: 'Government Solutions', href: '/government-technology-solutions', featured: true },
-      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
-      { name: 'Retail Technology', href: '/retail-technology-solutions' },
-      { name: 'Education Technology', href: '/education-technology-solutions' }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     ]
   },
   {
@@ -115,16 +98,10 @@ const footerSections = [
     ]
   },
   {
-<<<<<<< HEAD
     title: 'Micro SAAS Solutions',
     description: 'Innovative business solutions for modern enterprises',
     icon: <Rocket className="w-5 h-5 text-emerald-400" />,
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-    title: 'Industry Solutions',
-    description: 'Tailored solutions for specific industries',
-    icon: <Target className="w-5 h-5 text-emerald-400" />,
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     links: [
       { name: 'Solutions Overview', href: '/solutions' },
       { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
@@ -550,7 +527,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
               </a>
             </div>
 
-<<<<<<< HEAD
             {/* Quick Links */}
             <div className="lg:col-span-1">
               <h4 className="text-lg font-semibold text-white mb-6">Quick Links</h4>
@@ -651,8 +627,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
               </div>
             </div>
 
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
             {/* Back to Top Button */}
             <motion.button
               onClick={scrollToTop}
@@ -677,7 +651,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Newsletter Signup Overlay */}
       <div className="absolute bottom-4 right-4">
@@ -691,8 +664,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
         </motion.button>
       </div>
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     </footer>
   );
 };

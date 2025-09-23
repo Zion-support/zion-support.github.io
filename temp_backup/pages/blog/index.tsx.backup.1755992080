@@ -1,15 +1,11 @@
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { BlogPost } from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts, listAllAuthors, listAllTags, listAllTopics } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 import { useMemo, useState } from 'react';
-=======
-import Layout from '../../components/layout/Layout';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-196b
 
 type Props = { posts: BlogPost[]; authors: string[]; topics: string[]; tags: string[] };
 
@@ -29,11 +25,7 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
   const rest = filtered.slice(1);
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum" intensity={1}>
-=======
-    <Layout>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-196b
       <Head>
         <title>Blog - Zion AI Marketplace</title>
         <meta name="description" content="Insights on AI, DevOps, and digital transformation." />
@@ -59,7 +51,6 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
           />
         </div>
 
-<<<<<<< HEAD
         <div className="flex flex-wrap gap-3 mb-8">
           <select className="border rounded px-3 py-2" value={filters.topic || ''} onChange={(e) => setFilters((f) => ({ ...f, topic: e.target.value || undefined }))}>
             <option value="">All topics</option>
@@ -101,19 +92,6 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
         </div>
       </div>
     </div>
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((p) => (
-            <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg">
-              <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
-              <p className="text-gray-400 mb-4">{p.excerpt}</p>
-              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-            </div>
-          ))}
-        </div>
-      </div>
-    </Layout>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-196b
   );
 };
 

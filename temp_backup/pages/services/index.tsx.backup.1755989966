@@ -56,7 +56,6 @@ import { real2036ITServicesAdditions } from '../../data/real-2036-it-services-ad
 import { real2036AIServicesAdditions } from '../../data/real-2036-ai-services-additions';
 import { innovative2025MicroSaasBatch } from '../../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch } from '../../data/innovative-2025-it-enterprise-batch';
-<<<<<<< HEAD
 import { innovativeMicroSaasServices } from '../../data/innovative-2025-micro-saas-expansions';
 import { innovativeITServices } from '../../data/innovative-2025-it-services-expansions';
 import { innovativeAIServices } from '../../data/innovative-2025-ai-services-expansions';
@@ -78,11 +77,6 @@ import { innovative2025AISolutionsExpansion } from '../../data/2025-innovative-a
 import { innovativeMicroSaasExpansionV32025 } from '../../data/2025-innovative-micro-saas-expansion-v3';
 import { innovativeITServicesExpansion2025V3 } from '../../data/2025-innovative-it-services-expansion-v3';
 import { innovativeAIServicesExpansion2025V3 } from '../../data/2025-innovative-ai-services-expansion-v3';
-=======
-import { innovative2025Q4Services } from '../../data/innovative-2025-q4-services';
-import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
-import { specializedBusiness2025Services } from '../../data/specialized-business-2025-services';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-ec85
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -173,7 +167,6 @@ export default function ServicesIndexPage() {
     )
     .concat(innovative2025MicroSaasBatch as unknown[])
     .concat(innovative2025ITEnterpriseBatch as unknown[])
-<<<<<<< HEAD
     .concat(innovativeMicroSaasServices as unknown[])
     .concat(innovativeITServices as unknown[])
     .concat(innovativeAIServices as unknown[])
@@ -194,11 +187,6 @@ export default function ServicesIndexPage() {
     .concat(innovativeITServicesExpansion2025V3 as unknown[])
     .concat(innovativeAIServicesExpansion2025V3 as unknown[])
     ;
-=======
-    .concat(innovative2025Q4Services as unknown[])
-    .concat(emergingTech2025Services as unknown[])
-    .concat(specializedBusiness2025Services as unknown[]);
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-ec85
 
   // Filter out services without required properties
   const validServices = all.filter(service => 

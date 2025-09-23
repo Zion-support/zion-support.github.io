@@ -11,11 +11,8 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string;
   type: IntegrationType;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export interface SyncLog {

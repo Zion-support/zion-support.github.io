@@ -135,7 +135,6 @@ const navigationItems = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-<<<<<<< HEAD
     icon: <Shield className="w-5 h-5" />,
     description: 'Advanced enterprise infrastructure and security solutions',
     badge: 'Enterprise',
@@ -149,40 +148,6 @@ const navigationItems = [
       { name: 'IoT Security Management', href: '/iot-security-management-platform', description: 'Connected device security' },
       { name: 'Data Privacy Management', href: '/data-privacy-management-platform', description: 'Compliance and privacy' },
       { name: 'Cloud Cost Optimization', href: '/cloud-cost-optimization-platform', description: 'AI-powered cost reduction' }
-=======
-    icon: <Cpu className="w-5 h-5" />,
-    description: 'Enterprise solutions and infrastructure',
-    children: [
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform', description: 'Quantum-enhanced cloud computing' },
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' },
-      { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-managing IT systems' },
-      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Next-gen data centers' },
-      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Seamless cloud transitions' },
-      { name: 'IT Asset Management', href: '/it-asset-management', description: 'Comprehensive asset tracking' },
-      { name: 'Infrastructure Monitoring', href: '/infrastructure-monitoring', description: 'Real-time system monitoring' }
-    ]
-  },
-  {
-    name: 'Blockchain & Web3',
-    href: '/blockchain-web3-services',
-    icon: <Globe className="w-5 h-5" />,
-    description: 'Advanced blockchain and Web3 solutions',
-    badge: 'New',
-    children: [
-      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Intelligent yield farming' },
-      { name: 'NFT Marketplace', href: '/nft-marketplace-management', description: 'Custom NFT platforms' },
-      { name: 'DAO Governance', href: '/dao-governance-management', description: 'Decentralized governance' },
-      { name: 'Cross-Chain Bridge', href: '/cross-chain-bridge-interoperability', description: 'Multi-chain interoperability' },
-      { name: 'Web3 Identity', href: '/web3-identity-authentication', description: 'Decentralized identity' },
-      { name: 'Smart Contract Development', href: '/smart-contract-development', description: 'Advanced contract creation' },
-      { name: 'DeFi Protocol Development', href: '/defi-protocol-development', description: 'Custom DeFi protocols' },
-      { name: 'Web3 Analytics', href: '/web3-analytics', description: 'Blockchain insights' },
-      { name: 'Token Economics', href: '/token-economics', description: 'Token design and modeling' },
-      { name: 'Regulatory Compliance', href: '/web3-compliance', description: 'Compliance automation' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62dc
     ]
   },
   {
@@ -205,36 +170,10 @@ const navigationItems = [
     ]
   },
   {
-<<<<<<< HEAD
     name: 'Creative & Design',
     href: '/creative-services',
     icon: <Palette className="w-5 h-5" />,
     description: 'AI-powered creative and design solutions',
-=======
-    name: 'Healthcare & Biotech',
-    href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
-    description: 'AI-powered healthcare and biotechnology',
-    badge: 'New',
-    children: [
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'AI-powered drug development' },
-      { name: 'Precision Medicine', href: '/precision-medicine-genomics', description: 'Personalized healthcare' },
-      { name: 'Medical Imaging AI', href: '/ai-medical-imaging-analysis', description: 'AI image analysis' },
-      { name: 'Digital Health Platform', href: '/digital-health-telemedicine', description: 'Telemedicine solutions' },
-      { name: 'Clinical Trial Management', href: '/clinical-trial-management-optimization', description: 'Trial optimization' },
-      { name: 'Healthcare Analytics', href: '/healthcare-analytics', description: 'Health data insights' },
-      { name: 'Patient Engagement', href: '/patient-engagement-platform', description: 'Patient communication' },
-      { name: 'Medical Device AI', href: '/medical-device-ai', description: 'Smart medical devices' },
-      { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
-      { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'Industry-specific solutions',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62dc
     children: [
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
       { name: 'Metaverse Development', href: '/metaverse-development-studio', description: '3D world creation' },

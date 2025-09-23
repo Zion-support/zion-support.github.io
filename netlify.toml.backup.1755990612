@@ -229,7 +229,6 @@
   schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
 name = "a11y-alt-text-runner"
 schedule = "*/10 * * * *" # every 10 minutes
 
@@ -247,27 +246,6 @@ schedule = "*/30 * * * *"
 [[scheduled.functions]]
 name = "stale-content-auditor-runner"
 schedule = "17 */6 * * *"
-=======
-  name = "a11y-alt-text-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "metadata-optimizer-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "seo-audit-runner"
-  schedule = "0 */2 * * *"
-
-[[scheduled.functions]]
-  name = "ai-trends-radar-runner"
-  schedule = "*/30 * * * *"
-
-# Newly added autonomous cloud scanners and curators
-[[scheduled.functions]]
-  name = "stale-content-auditor-runner"
-  schedule = "17 */6 * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-6869
 
 [[scheduled.functions]]
 name = "deps-auto-upgrade-runner"
@@ -282,26 +260,9 @@ name = "orphan-pages-detector"
 schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
 name = "component-size-report"
 schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
 name = "internal-links-runner"
 schedule = "11 */6 * * *" # every 6 hours
-=======
-  name = "component-size-report"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "design-tokens-curator"
-  schedule = "*/20 * * * *"
-
-[[scheduled.functions]]
-  name = "seo-title-meta-curator"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "innovation-lab-curator"
-  schedule = "*/10 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-6869

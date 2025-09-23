@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 added 258 packages, changed 1 package, and audited 1709 packages in 17s
 
 345 packages are looking for funding
@@ -17,6 +16,3 @@ Some issues need review, and may require choosing
 a different dependency.
 
 Run `npm audit` for details.
-=======
-added 292 packages, and removed 10 packages in 8s
->>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f

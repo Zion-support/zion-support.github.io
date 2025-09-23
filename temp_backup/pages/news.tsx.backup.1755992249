@@ -1,29 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
   const featuredNews = [
-=======
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  ExternalLink,
-  TrendingUp,
-  Award,
-  Rocket,
-  Globe,
-  Brain,
-  Atom,
-  Zap
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-
-const NewsPage: React.FC = () => {
-  const newsArticles = [
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
     {
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
       excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
@@ -78,11 +54,7 @@ const NewsPage: React.FC = () => {
 import Link from 'next/link';
 =======
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground>
-=======
-    <UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
       <div className="min-h-screen">
         <Head>
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
@@ -1403,47 +1375,7 @@ export default function News() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
-=======
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Stay Informed?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Explore our latest research, industry insights, and technology breakthroughs 
-              that are shaping the future of AI and quantum computing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/blog"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Our Blog
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                href="/contact"
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
-              >
-                Contact Our Team
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
-    </UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
   );
 }
 =======

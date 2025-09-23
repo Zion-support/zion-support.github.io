@@ -278,7 +278,6 @@
   name = "content-freshness-score-runner"
   schedule = "7 */12 * * *"
 
-<<<<<<< HEAD
 [[scheduled.functions]]
   name = "docs-toc-builder"
   schedule = "17 */6 * * *"
@@ -294,13 +293,3 @@
 [[scheduled.functions]]
   name = "contributing-refresher"
   schedule = "0 4 1 * *"
-=======
-# Newly added intelligent automations
-[[scheduled.functions]]
-  name = "internal-link-graph-runner"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "asset-inventory-runner"
-  schedule = "*/30 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-03e2

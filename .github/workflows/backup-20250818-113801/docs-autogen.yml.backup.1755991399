@@ -7,14 +7,7 @@ on:
 permissions:
   contents: write
   actions: read
-<<<<<<< HEAD:.github/workflows/backup-20250818-113801/docs-autogen.yml
   pull-requests: write
-=======
-concurrency:
-  group: "docs-autogen-${{ github.ref }}"
-  cancel-in-progress: true
-
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2:.github/workflows/broken_workflows_backup_1755470975/docs-autogen.yml
 jobs:
   main:
     name: Main Job

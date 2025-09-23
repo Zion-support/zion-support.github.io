@@ -20,7 +20,6 @@ import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-<<<<<<< HEAD
 import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 import { realMarketServicesExtended } from '../../data/real-market-services-extended';
@@ -55,8 +54,6 @@ import { real2032ServiceExpansions } from '../../data/real-2032-service-expansio
 import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
 import { real2035Q2Additions } from '../../data/real-2035-q2-additions';
 import { newRealServices2026 } from '../../data/2025-2026-new-real-services';
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2a54
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -94,7 +91,6 @@ function getAllServices(): Service[] {
 		.concat(real2025Q2Additions as unknown as Service[])
 		.concat(augmentedServicesBatch3 as unknown as Service[])
 		.concat(realServicesQ22025 as unknown as Service[])
-<<<<<<< HEAD
 		.concat(realServicesQ32025 as unknown as Service[])
 		.concat(realQ4Services2025 as unknown as Service[])
 		.concat(real2025Q4Additions as unknown as Service[])
@@ -125,15 +121,6 @@ function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[]);
-=======
-		.concat(professionalServices as unknown as Service[])
-		.concat(real2032ServiceExpansions as unknown as Service[])
-		.concat(real2035Q1Additions as unknown as Service[])
-		.concat(real2035Q2Additions as unknown as Service[])
-		.concat(newRealServices2026 as unknown as Service[]);
-=======
-		.concat(realServicesQ32025 as unknown as Service[]);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2a54
 }
 
 function toSlug(value: string): string {

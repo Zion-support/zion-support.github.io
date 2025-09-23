@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 import SmartHeader from '../components/SmartHeader';
@@ -20,11 +19,3 @@ export default function ZionApp({ Component, pageProps }: AppProps) {
     </FuturisticLayout>
   );
 }
-=======
-import type { AppProps } from 'next/app'
-import '../styles/globals.css'
-
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d

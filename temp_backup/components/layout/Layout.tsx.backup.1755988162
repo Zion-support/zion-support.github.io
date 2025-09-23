@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-=======
-import React, { useState } from 'react';
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
-import UltraFuturisticFooter2045 from './UltraFuturisticFooter2045';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9e3c
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
@@ -83,7 +77,6 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   return (
-<<<<<<< HEAD
     <PerformanceOptimizer>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         {/* Skip to content link for accessibility */}
@@ -91,26 +84,12 @@ export default function Layout({ children }: LayoutProps) {
         
         {/* Futuristic Background */}
         <UltraFuturisticBackground2036 />
-=======
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link">Skip to main content</a>
-      
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2036 />
-      
-      {/* Layout Structure */}
-      <div className="relative z-10">
-        {/* Navigation */}
-        <UltraFuturisticNavigation2045 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9e3c
         
         {/* Layout Structure */}
         <div className="relative z-10">
           {/* Navigation */}
           <UltraFuturisticNavigation2025 />
           
-<<<<<<< HEAD
           {/* Sidebar and Main Content */}
           <div className="flex">
             <EnhancedSidebar2025 
@@ -126,16 +105,6 @@ export default function Layout({ children }: LayoutProps) {
           {/* Footer */}
           <UltraFuturisticFooter2025 />
         </div>
-=======
-          <main id="main" role="main" className="flex-1 pt-32 lg:pt-36">
-            {children}
-          </main>
-        </div>
-        
-        {/* Footer */}
-        <UltraFuturisticFooter2045 />
-      </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9e3c
 
         {/* Accessibility and Performance Tools */}
         <AccessibilityEnhancer />

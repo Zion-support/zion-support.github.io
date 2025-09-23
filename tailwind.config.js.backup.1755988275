@@ -4,7 +4,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-<<<<<<< HEAD
     './automation/**/*.{js,ts,jsx,tsx,mdx}',
     './scripts/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -47,10 +46,6 @@ module.exports = {
     'focus:ring-slate-500/50',
     'focus:ring-gray-500',
     'focus:ring-gray-500/50'
-=======
-    './utils/**/*.{js,ts,jsx,tsx}',
-    './styles/**/*.{css,scss}',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
   ],
   theme: {
     extend: {

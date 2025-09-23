@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white p-8">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-purple-400">Zion OS Instance Deployment</h1>
@@ -190,9 +189,4 @@ import Head from 'next/head';
         <p>&copy; {new Date().getFullYear()} Zion Project. All rights reserved.</p>
       </footer>
     </div>
-=======
-    <>
-      <Head><title>deploy/genesis - Zion App</title><meta name="description" content="deploy/genesis page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">deploy/genesis</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
->>>>>>> origin/automation-error-fixes
   );

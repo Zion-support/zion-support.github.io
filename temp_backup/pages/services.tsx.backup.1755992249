@@ -6,16 +6,11 @@ import {
   Package, Bot, Car, Building2, Monitor, Cpu, 
   Zap, Atom, Database, Cloud, Lock, Code
 } from 'lucide-react';
-<<<<<<< HEAD
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
-=======
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
-<<<<<<< HEAD
 import { newRealServices } from '../data/new-real-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
@@ -31,26 +26,6 @@ import { new2025Services } from '../data/new-2025-services';
 import { newRealInnovations } from '../data/new-real-innovations';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { realVerifiedServices } from '../data/real-verified-services';
-=======
-import { newOperationalServices2025 } from '../data/new-operational-services-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
-import { extraServices } from '../data/extra-services';
-import { newlyAddedServices } from '../data/newly-added-services';
-import { moreRealServices2025 } from '../data/more-real-services-2025';
-import { verified2025Additions } from '../data/verified-2025-additions';
-import { realServicesQ12025 } from '../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { allInnovative2026Services } from '../data/comprehensive-2026-services-index';
-=======
-import { advancedAIServices } from '../data/advanced-ai-services';
-import { advancedITServices } from '../data/advanced-it-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -60,45 +35,10 @@ export default function ServicesPage() {
   // Combine all services
   const allServices = [
     ...enhancedRealMicroSaasServices,
-<<<<<<< HEAD
     ...innovativeAIServices2029,
     ...quantumSpaceInnovations2029,
     ...enterpriseITInnovations2029,
     ...innovativeMicroSaas2029
-=======
-    ...additionalEnhancedServices,
-    ...newRealServices,
-    ...industryRealServices,
-    ...professionalServices,
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-    ...marketValidatedServices,
-    ...emergingTechnologyServices,
-    ...comprehensiveITSolutions,
-    ...curatedMarketServices,
-    ...realMarketServices,
-    ...new2025Services,
-    ...newRealInnovations,
-    ...serviceExpansions2025,
-    ...newOperationalServices2025,
-    ...realServicesQ12025,
-    ...realEnterpriseServices2025,
-    ...verifiedRealServices2025Batch2,
-    ...innovative2025Services,
-    ...emergingTech2025Services,
-    ...realMarketAugmentations2025,
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
-    ...allInnovative2026Services
-=======
-    ...innovativeMicroSaasServices,
-    ...extraServices,
-    ...additionalEnhancedServices,
-    ...advancedAIServices,
-    ...advancedITServices
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
   ];
 
   // Get unique services by ID
@@ -146,7 +86,6 @@ export default function ServicesPage() {
   };
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground2029>
       <Head>
         <title>Revolutionary 2029 Technology Services | Zion Tech Group</title>
@@ -175,25 +114,6 @@ export default function ServicesPage() {
           {/* Main Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             {/* Enhanced Header */}
-=======
-    <UltraAdvancedFuturisticBackground>
-      <EnhancedNavigation />
-      <div className="min-h-screen">
-        <Head>
-          <title>Services - Zion Tech Group | Revolutionary Micro SaaS Solutions</title>
-          <meta name="description" content="Explore 400+ revolutionary micro SaaS services including quantum AI, space technology, biotech, cybersecurity, edge computing, and more. Transform your business today." />
-          <meta name="keywords" content="micro SaaS services, AI solutions, quantum computing, space technology, biotech AI, cybersecurity, autonomous systems" />
-          <meta property="og:title" content="Services - Zion Tech Group" />
-          <meta property="og:description" content="400+ revolutionary micro SaaS services and solutions" />
-          <meta property="og:url" content="https://ziontechgroup.com/services" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/services" />
-        </Head>
-
-        {/* Header Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -214,23 +134,13 @@ export default function ServicesPage() {
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
                   Our Services
-=======
-                  400+ Revolutionary
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
                 </span>
               </h1>
               
-<<<<<<< HEAD
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
                 and micro SAAS services designed to transform your business and drive innovation.
-=======
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover cutting-edge solutions in quantum AI, space technology, biotech, cybersecurity, 
-                edge computing, quantum networking, and autonomous systems. Transform your business with unprecedented capabilities.
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
               </p>
               
               <motion.div
@@ -687,14 +597,9 @@ export default function ServicesPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-=======
-      </div>
-    </UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
   );
 }

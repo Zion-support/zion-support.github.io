@@ -18,7 +18,6 @@ export default function Layout({ children, seo }: LayoutProps) {
   const [showEnhancements, setShowEnhancements] = useState(false);
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Skip to content link for accessibility */}
       <a href="#main" className="skip-link">Skip to main content</a>
@@ -54,17 +53,5 @@ export default function Layout({ children, seo }: LayoutProps) {
       <AccessibilityEnhancer />
       <PerformanceOptimizer showMetrics={true} autoOptimize={true} />
     </div>
-=======
-    <AccessibilityEnhancer>
-      <div className="min-h-screen bg-gray-900 text-white">
-        <UltraAdvancedFuturisticNavigation2025 />
-        <main className="relative z-10">
-          {children}
-        </main>
-        <UltraAdvancedFuturisticFooter2025 />
-        <PerformanceOptimizer showMetrics={true} autoOptimize={true} />
-      </div>
-    </AccessibilityEnhancer>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
   );
 };

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import {
@@ -26,16 +25,11 @@ import {useNavigate} from "react-router-dom";
 
 import React, { useState } from 'react',
 import {
-=======
-import React, { useState } from 'react';
-import {
->>>>>>> origin/auto/autonomy-17186719616
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription,
-<<<<<<< HEAD
 
 
   DialogFooter} from "@/components/ui/dialog",
@@ -163,66 +157,15 @@ function MessageTalentModal() {
         image_url: talent.profile_picture_url |""
       }
       setIsSubmitting(true),
-=======
-  DialogFooter,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Textarea } from "@/components/ui/textarea";
-import { useMessaging } from "@/context/MessagingContext";
-import { TalentProfile } from "@/types/talent";
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
-
-export interface MessageTalentModalProps {
-  talent: TalentProfile;
-  isOpen: boolean;
-  onClose: () => void;
-  jobTitle?: string;
-}
-
-export function MessageTalentModal({
-  talent,
-  isOpen,
-  onClose,
-  jobTitle
-}: MessageTalentModalProps) {
-  const { createConversation } = useMessaging();
-  const navigate = useNavigate();
-  const [message, setMessage] = useState(
-    jobTitle 
-      ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
-      : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
-  );
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  const handleSendMessage = async () => {
-    if (!message.trim()) {
-      toast({
-        title: "Message required",
-        description: "Please enter a message before sending.",
-        variant: "destructive"
-      });
-      return;
-    }
-    
-    try {
-      setIsSubmitting(true);
->>>>>>> origin/auto/autonomy-17186719616
       
       // Create context data for the conversation
       const contextData = {
         title: jobTitle || `Discussion with ${talent.full_name}`,
         description: talent.bio || talent.professional_title || "",
         image_url: talent.profile_picture_url || ""
-<<<<<<< HEAD
       },
       
 
-=======
-      };
-      
->>>>>>> origin/auto/autonomy-17186719616
       // Create conversation with this talent
       await createConversation(
         talent.user_id,
@@ -230,7 +173,6 @@ export function MessageTalentModal({
         jobTitle ? 'job' : 'talent',
         talent.id,
         contextData
-<<<<<<< HEAD
 
       );
       toast({
@@ -262,30 +204,6 @@ export function MessageTalentModal({
   }
   },
 
-=======
-      );
-      
-      toast({
-        title: "Message sent",
-        description: `Your message has been sent to ${talent.full_name}.`,
-      });
-      
-      onClose();
-      
-      // Navigate to messages inbox
-      navigate("/messages");
-    } catch (error) {
-      console.error("Failed to send message:", error);
-      toast({
-        title: "Message not sent",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -295,7 +213,6 @@ export function MessageTalentModal({
             <Avatar className="h-8 w-8 border border-zion-purple/20">
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
               <AvatarFallback className="bg-zion-blue-dark text-white">
-<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import {;
@@ -399,8 +316,6 @@ export function MessageTalentModal({;
 
 
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -411,7 +326,6 @@ export function MessageTalentModal({;
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
             )}
-<<<<<<< HEAD
 
           </DialogDescription>;
         </DialogHeader>;
@@ -425,26 +339,12 @@ export function MessageTalentModal({;
             <Textarea
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
-=======
-          </DialogDescription>
-        </DialogHeader>
-        
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-zion-slate mb-1">
-              Message
-            </label>
-            <Textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
->>>>>>> origin/auto/autonomy-17186719616
               rows={5}
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple"
               placeholder="Write your message here..."
             />
           </div>
         </div>
-<<<<<<< HEAD
         <DialogFooter className="gap-2 sm:gap-0">
               placeholder="Write your message here...";
             />;
@@ -452,15 +352,10 @@ export function MessageTalentModal({;
         </div>;
 
         <DialogFooter className="gap-2 sm:gap-0">;
-=======
-        
-        <DialogFooter className="gap-2 sm:gap-0">
->>>>>>> origin/auto/autonomy-17186719616
           <Button
             type="button"
             variant="outline"
             onClick={onClose}
-<<<<<<< HEAD
             className="border-zion-purple/30 text-white">;
             Cancel;
           </Button>;
@@ -471,24 +366,10 @@ export function MessageTalentModal({;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
             {isSubmitting ? 'Sending...' : 'Send Message'}
 
-=======
-            className="border-zion-purple/30 text-white"
-          >
-            Cancel
-          </Button>
-          <Button
-            type="button" 
-            onClick={handleSendMessage}
-            disabled={isSubmitting}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
->>>>>>> origin/auto/autonomy-17186719616
           </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
-<<<<<<< HEAD
   )
 }
           </Button>;
@@ -500,7 +381,3 @@ export function MessageTalentModal({;
 
 
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
 {
   "general": {
     "app_name": "Mercado de IA de Zion",
@@ -16,27 +12,19 @@
     "success": "Éxito",
     "error": "Error",
     "open_main_menu": "Abrir menú principal",
-<<<<<<< HEAD
     "toggle_mobile_menu": "Alternar menú móvil",
     "greeting_user": "¡Hola, {{name}}!",
     "status_page": "Página de estado",
     "check_status_page": "Puedes intentar refrescar la página o visitar nuestra"
-=======
-    "toggle_mobile_menu": "Alternar menú móvil"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "nav": {
     "home": "Inicio",
     "marketplace": "Mercado",
-<<<<<<< HEAD
     "marketplace_overview": "Descripción General",
-=======
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
     "categories": "Categorías",
     "talent": "Talento",
     "equipment": "Equipamiento",
     "community": "Comunidad",
-<<<<<<< HEAD
     "community_overview": "Descripción General",
     "blog": "Blog",
     "partners": "Socios",
@@ -53,12 +41,6 @@
     "login": "Iniciar Sesión",
     "signup": "Registrarse",
     "help": "Ayuda"
-=======
-    "dashboard": "Panel",
-    "messages": "Mensajes",
-    "post_job": "Publicar Trabajo",
-    "analytics": "Analíticas"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "auth": {
     "login": "Iniciar Sesión",
@@ -69,7 +51,6 @@
     "forgot_password": "¿Olvidó su contraseña?",
     "remember_me": "Recordarme",
     "login_success": "Sesión iniciada correctamente",
-<<<<<<< HEAD
     "logout_success": "Sesión cerrada correctamente",
     "sign_in_to_account": "Inicia sesión en tu cuenta",
     "create_new_account": "crear una nueva cuenta",
@@ -101,9 +82,6 @@
     "subtotal": "Subtotal",
     "processing": "Procesando...",
     "checkout": "Pagar"
-=======
-    "logout_success": "Sesión cerrada correctamente"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "home": {
     "hero_title": "El Futuro del Mercado de Tecnología e IA",
@@ -111,7 +89,6 @@
     "browse_marketplace": "Explorar Mercado",
     "create_profile": "Crear Perfil",
     "explore_tools": "Explorar Nuestras Herramientas",
-<<<<<<< HEAD
     "tools_description": "Todo lo que necesitas para conectarte con el ecosistema de IA y tecnología",
     "header_tagline": "Tu puerta de entrada a soluciones de IA y tecnología",
     "quick_access_title": "Acceso Rápido",
@@ -138,22 +115,11 @@
   "marketplace": {
     "hero_title": "Mercado de IA",
     "hero_subtitle": "Descubre soluciones de IA y tecnología de vanguardia"
-=======
-    "tools_description": "Todo lo que necesitas para conectarte con el ecosistema de IA y tecnología"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "marketplace": {
     "title": "Mercado de IA y Tecnología",
     "description": "Descubra servicios profesionales y productos para sus proyectos de IA y tecnología. Explore nuestra colección de soluciones verificadas.",
-<<<<<<< HEAD
     "search_placeholder": "Buscar en el mercado..."
-=======
-    "search_placeholder": "Buscar en el mercado...",
-    "results_count": "Mostrando {{count}} resultados",
-    "no_results_title": "No se encontraron resultados",
-    "no_results_description": "No pudimos encontrar listados que coincidan con tus filtros. Intenta ajustar tu búsqueda.",
-    "clear_filters": "Borrar filtros"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "checkout": {
     "title": "Pagar",
@@ -173,24 +139,17 @@
     "skills_required": "Habilidades Requeridas",
     "budget": "Presupuesto",
     "deadline": "Fecha Límite",
-<<<<<<< HEAD
     "job_posted": "Trabajo publicado correctamente",
     "title_placeholder": "Enter job title",
     "description_placeholder": "Describe the job in detail",
     "requirements_placeholder": "List required skills and qualifications",
     "submitting": "Submitting...",
     "post_job_button": "Post Job"
-=======
-    "job_posted": "Trabajo publicado correctamente"
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
   },
   "language": {
     "en": "English",
     "es": "Español",
-<<<<<<< HEAD
     "fr": "Français",
-=======
->>>>>>> origin/8ztzgg-codex/add-i18n-support-with-next-i18next
     "pt": "Português",
     "ar": "العربية",
     "language_changed": "Idioma cambiado a {{language}}",

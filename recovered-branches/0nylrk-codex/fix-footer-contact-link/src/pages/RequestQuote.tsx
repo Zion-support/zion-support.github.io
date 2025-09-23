@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -13,11 +12,6 @@
 
 
 
-=======
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function RequestQuote() {
   return (
@@ -28,7 +22,6 @@ export default function RequestQuote() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   )
 
 }
@@ -74,7 +67,3 @@ function RequestQuote() {
 
 
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616

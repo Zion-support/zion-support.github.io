@@ -168,43 +168,9 @@ const AccessibilityEnhancer: React.FC = () => {
     ));
   }, []);
 
-<<<<<<< HEAD
   // Run accessibility tests
   const runTests = useCallback(async () => {
     setIsRunningTests(true);
-=======
-  // Load saved settings
-  useEffect(() => {
-    const saved = localStorage.getItem('accessibility-settings');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        setSettings(parsed);
-        applySettings(parsed);
-      } catch (e) {
-        // console.log('Failed to parse saved accessibility settings');
-      }
-    }
-  }, [applySettings]);
-
-  // Focus management
-  const handleFocusChange = useCallback((e: Event) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      setCurrentFocus(target);
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-    }
-  }, []);
-
-  // Keyboard navigation enhancements
-  const handleKeyDown = useCallback((e: Event) => {
-    // Tab navigation detected
-  }, []);
-
-  // Announce to screen reader
-  const announceToScreenReader = useCallback((message: string) => {
-    // setAnnouncements(prev => [...prev, message]); // This line was removed
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-2b91
     
     for (let i = 0; i < tests.length; i++) {
       const test = tests[i];

@@ -1,6 +1,5 @@
 import NewServicesPage from '@/pages/NewServicesPage';
 
-<<<<<<< HEAD
 const items = [
 	{ name: 'AI Customer Journey Analytics', href: '/ai-customer-journey-analytics', blurb: 'Funnels, cohorts, LTV and churn prediction.' },
 	{ name: 'AI UGC Moderation', href: '/ai-ugc-moderation', blurb: 'Policy-driven moderation across text, image, and video.' },
@@ -43,6 +42,3 @@ export default function NewServices() {
 		</UltraFuturisticBackground>
 	);
 }
-=======
-export default NewServicesPage;
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5

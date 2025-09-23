@@ -583,7 +583,6 @@ const Homepage2025: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className="text-center mt-12"
             >
               <Link href="/innovative-2036-services-showcase">
@@ -591,16 +590,6 @@ const Homepage2025: React.FC = () => {
                   Explore All Innovations
                   <ArrowRight className="w-5 h-5" />
                 </button>
-=======
-              className="text-center mt-16 space-y-4"
-            >
-              <Link
-                href="/comprehensive-2026-services-showcase"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
-                View 2026 Services Showcase
-                <ArrowRight className="ml-2 w-5 h-5" />
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-ea8f
               </Link>
               <div>
                 <Link

@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-=======
-import Head from 'next/head';
-import TopContactBar from './TopContactBar';
-import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
-import UltraFuturisticFooter2040 from './UltraFuturisticFooter2040';
->>>>>>> origin/cursor/website-audit-and-enhancement-fc05
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2037 from '../backgrounds/UltraFuturisticBackground2037';
 import TopContactBar from './TopContactBar';

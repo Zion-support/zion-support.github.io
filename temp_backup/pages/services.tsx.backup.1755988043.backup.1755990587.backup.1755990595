@@ -142,7 +142,6 @@ const allServices = [
   ...validatedServices2025Q4,
   ...real2035Q2Additions,
   ...real2036ServiceExpansions,
-<<<<<<< HEAD:pages/services.tsx.backup.1755988043
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
 <<<<<<< HEAD:pages/services.tsx.backup.1755988043.backup.1755990587
@@ -152,10 +151,6 @@ const allServices = [
   ...innovative2038MicroSaasServices,
   ...innovative2038ITServices,
   ...innovative2038AIServices
-=======
-  ...innovativeMicroSaasServices2036,
-  ...innovative2036ITServices
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4035:pages/services.tsx
 =======
   // New expanded 2036 services
   ...innovative2036AIServicesExpanded,

@@ -12,7 +12,6 @@ const baseConfig = {
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
-<<<<<<< HEAD
   bundlePagesRouterDependencies: true,
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
@@ -27,12 +26,6 @@ const baseConfig = {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || 'placeholder',
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder',
-=======
-  
-  // Environment configuration
-  env: {
-    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
   },
 
   modularizeImports: {
@@ -40,12 +33,9 @@ const baseConfig = {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
       skipDefaultConversion: true,
     },
-<<<<<<< HEAD
     '@radix-ui/react-icons': {
       transform: '@radix-ui/react-icons/dist/{{member}}',
     },
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
   },
 
   experimental: {
@@ -54,7 +44,6 @@ const baseConfig = {
       '@radix-ui/react-icons',
       'framer-motion'
     ],
-<<<<<<< HEAD
     // ESM configuration for problematic packages
     esmExternals: 'loose', // Allow loose ESM handling
     
@@ -67,8 +56,6 @@ const baseConfig = {
     // Bundle analysis optimizations moved to root level
     // Disable profiling for faster builds
     swcTraceProfiling: false,
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
   },
 
   images: {
@@ -80,7 +67,6 @@ const baseConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-<<<<<<< HEAD
   transpilePackages: [
     'react-markdown',
     'date-fns',
@@ -254,20 +240,6 @@ const baseConfig = {
       process.setMaxListeners(20);
     }
 
-=======
-  webpack: (config, { dev, isServer }) => {
-    // Exclude contracts directory from build
-    config.watchOptions = {
-      ignored: [
-        /node_modules/,
-        /contracts/,
-        /\.git/,
-        /\.next/
-      ]
-    };
-
-    // Handle ESM modules properly
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
     config.module.rules.push({
       test: /\.m?js$/,
       type: 'javascript/auto',
@@ -276,10 +248,6 @@ const baseConfig = {
       },
     });
 
-<<<<<<< HEAD
-=======
-    // Add polyfills for Node.js APIs
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
@@ -299,7 +267,6 @@ const baseConfig = {
       util: false,
       zlib: false,
       url: false,
-<<<<<<< HEAD
       'dd-trace': false,
     };
 
@@ -329,10 +296,6 @@ const baseConfig = {
       };
     }
 
-=======
-    };
-
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
     return config;
   },
 };

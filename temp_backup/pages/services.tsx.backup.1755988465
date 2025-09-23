@@ -12,7 +12,6 @@ import { innovative2025ITServicesExpansionV2 } from '../data/innovative-2025-it-
 import { innovative2025AIServicesExpansionV2 } from '../data/innovative-2025-ai-services-expansion-v2';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 interface Service {
   id: string;
   name: string;
@@ -112,20 +111,6 @@ import { innovative2027IndustrySolutions } from '../data/innovative-2027-industr
 import { real2026AdvancedServices } from '../data/real-2026-advanced-services';
 import { real2026InnovativeSolutions } from '../data/real-2026-innovative-solutions';
 import { real2026SpecializedServices } from '../data/real-2026-specialized-services';
-=======
-// Import our new service data
-import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
-import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
-import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
-import { real2029Q3Additions } from '../data/real-2029-q3-additions';
-import { validatedServices2025Q4 } from '../data/real-validated-2025-q4-additions';
-import { real2035Q2Additions } from '../data/real-2035-q2-additions';
-import { real2036ServiceExpansions } from '../data/real-2036-service-expansions';
-import { innovative2036MicroSaasServices } from '../data/innovative-2036-micro-saas-services';
-import { innovative2036ITServices } from '../data/innovative-2036-it-services';
-import { innovative2025Services } from '../data/innovative-2025-2026-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -207,14 +192,10 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-<<<<<<< HEAD
   // Add our new 2026 advanced services
   ...real2026AdvancedServices,
   ...real2026InnovativeSolutions,
   ...real2026SpecializedServices
-=======
-  ...innovative2025Services
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
 ];
 
 const categories = [

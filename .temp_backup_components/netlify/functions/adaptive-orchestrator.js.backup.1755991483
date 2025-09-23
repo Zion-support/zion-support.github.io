@@ -7,7 +7,6 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-<<<<<<< HEAD
 function now() {
   const d = new Date();
   return { hour: d.getUTCHours(), dow: d.getUTCDay(), minutes: d.getUTCMinutes() };
@@ -23,13 +22,6 @@ exports.handler = async () => {
   logs.push(`UTC time h=${hour} dow=${dow} m=${minutes}`);
 
   function step(name, rel, args = []) {
-=======
-exports.config = { schedule: '*/5 * * * *' };
-
-exports.handler = async () => {
-  const logs = [];
-  const logStep = (name, fn) => {
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = runNode(rel, args);
     if (stdout) logs.push(stdout);
@@ -38,7 +30,6 @@ exports.handler = async () => {
     return status;
   };
 
-<<<<<<< HEAD
   // Always keep front/home fresh on each tick
   step('front:auto-advertiser', 'automation/front-index-auto-advertiser.cjs');
   step('homepage:updater', 'automation/homepage-updater.cjs');
@@ -67,10 +58,6 @@ exports.handler = async () => {
     try { step('code-smell', 'automation/code-smell-audit.cjs'); } catch { logs.push('code-smell failed'); }
     try { step('topics:clusters', 'automation/topic-cluster-builder.cjs'); } catch { logs.push('topics:clusters failed'); }
   }
-=======
-  logStep('adaptive:orchestrator', () => runNode('automation/adaptive-orchestrator.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 
   step('git:sync', 'automation/advanced-git-sync.cjs');
 

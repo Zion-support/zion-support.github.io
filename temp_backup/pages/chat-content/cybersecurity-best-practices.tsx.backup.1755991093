@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function CybersecurityBestPracticesPage() {
@@ -9,6 +8,3 @@ export default function CybersecurityBestPracticesPage() {
     </>
   );
 }
-=======
-export default function ChatCybersecurity() { return <div className="p-6">Cybersecurity Best Practices</div>; }
->>>>>>> origin/cursor/build-community-forum-for-zion-ai-marketplace-7967

@@ -138,14 +138,10 @@
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
-<<<<<<< HEAD
     "autonomous:pages:once": "node automation/new-autonomous-frontpage-orchestrator.cjs",
     "autonomous:pages:cron": "bash automation/new-autonomous-pages-cron.sh start",
     "autonomous:pages:generate": "node automation/new-autonomous-pages-factory.cjs",
     "autonomous:frontpage:refresh": "node automation/site-map-generator.cjs" ,
-=======
-    "homepage:update": "node automation/homepage-updater.cjs",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
@@ -154,10 +150,6 @@
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "type-check": "tsc --noEmit",
     "prepare": "husky install",
-<<<<<<< HEAD
-=======
-    "homepage:update": "node automation/homepage-autonomous-updater.cjs",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "fix:all": "npm run lint -- --fix || true && node fix_typescript_syntax_errors.cjs || true && node fix_all_typescript_errors.cjs || true && node final_fix.cjs || true",
     "netlify:check": "node automation/netlify-monitor.cjs check",
     "netlify:fix": "node automation/netlify-monitor.cjs fix-if-failing",
@@ -406,15 +398,10 @@
     "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
     "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
     "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
-<<<<<<< HEAD
-=======
-    "git:sync": "node automation/advanced-git-sync.cjs",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "git:pull": "node automation/git-pull-rebase.cjs",
     "git:cron:start": "bash automation/git-sync-cron.sh start",
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
     "git:cron:status": "bash automation/git-sync-cron.sh status",
-<<<<<<< HEAD
 <<<<<<< HEAD
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
@@ -463,27 +450,6 @@
     "redundancy:ultimate:report": "node automation/ultimate-redundancy-master.cjs report",
     "redundancy:ultimate:recover": "node automation/ultimate-redundancy-master.cjs recover"
   },
-=======
-    "sync-health:run": "node automation/sync-health-check.cjs --fix",
-    "sync-health:cron:start": "bash automation/sync-health-cron.sh start",
-    "sync-health:cron:stop": "bash automation/sync-health-cron.sh stop",
-    "sync-health:cron:status": "bash automation/sync-health-cron.sh status",
-    "sync:all:start": "npm run git:cron:start && npm run sync-health:cron:start",
-    "git:health": "node automation/git-health.cjs --fast",
-    "git:health:fix": "node automation/git-health.cjs --fast --fix",
-    "git:health:deep": "node automation/git-health.cjs --deep",
-    "git:health:cron": "bash automation/git-health-cron.sh",
-    "conflicts:check": "bash scripts/check-merge-conflicts.sh",
-    "conflicts:watch": "watch -n 30 bash scripts/check-merge-conflicts.sh || true",
-    "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
-    "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
-        "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-    "content:blog:once": "node automation/blog-automation-orchestrator.cjs",
-    "content:blog:cron:start": "bash automation/blog-automation-cron.sh start",
-    "content:blog:cron:stop": "bash automation/blog-automation-cron.sh stop",
-    "content:blog:cron:status": "bash automation/blog-automation-cron.sh status"
-   },
->>>>>>> origin/cursor/automate-zion-s-content-creation-with-gpt-4-5aba
 =======
     "home:update": "node automation/homepage-updater.cjs"
 =======

@@ -3,11 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Search, ChevronDown, ChevronRight, 
   Home, Briefcase, Users, BookOpen, Phone, 
-<<<<<<< HEAD
   Globe, Zap, Shield, Brain, Rocket, Bell, User
-=======
-  Globe, Zap, Shield, Brain, Rocket, Sparkles, DollarSign
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bd79
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

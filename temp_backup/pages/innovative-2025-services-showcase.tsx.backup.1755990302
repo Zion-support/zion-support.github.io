@@ -490,7 +490,4 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 };
 
 export default Innovative2025ServicesShowcase;
-<<<<<<< HEAD
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-=======
->>>>>>> 3c69eec6124bf95995ad8db99e4fcc1addda60da

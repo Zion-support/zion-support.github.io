@@ -19,19 +19,6 @@ export interface InnovativeAIService2025 {
   techStack: string[];
   realImplementation: boolean;
   implementationDetails: string;
-<<<<<<< HEAD
-=======
-=======
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   launchDate: string;
   customers: number;
   rating: number;
@@ -40,7 +27,6 @@ export interface InnovativeAIService2025 {
 
 export const innovativeAIServices2025: InnovativeAIService2025[] = [
   {
-<<<<<<< HEAD
     id: 'ai-powered-predictive-analytics-platform',
     name: 'AI-Powered Predictive Analytics Platform',
     tagline: 'Transform data into actionable predictions with advanced AI',
@@ -52,19 +38,6 @@ export const innovativeAIServices2025: InnovativeAIService2025[] = [
       enterprise: '$1,499/month',
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
       custom: 'Contact for pricing'
-=======
-    id: 'ai-powered-predictive-maintenance-platform',
-    name: 'AI-Powered Predictive Maintenance Platform',
-    tagline: 'Predict equipment failures before they happen with AI-powered analytics',
-    description: 'Advanced predictive maintenance platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime. Features real-time monitoring, predictive analytics, and automated maintenance recommendations.',
-    category: 'Industrial AI & IoT',
-    price: {
-      monthly: 799,
-      yearly: 7990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2-3 weeks'
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     },
     features: [
       'AI-powered failure prediction',
@@ -176,7 +149,6 @@ export const innovativeAIServices2025: InnovativeAIService2025[] = [
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
     popular: true,
-<<<<<<< HEAD
     icon: 'atom',
     color: 'from-indigo-500 to-purple-500',
     textColor: 'text-white',
@@ -377,8 +349,6 @@ export const innovativeAIServices2025: InnovativeAIService2025[] = [
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 =======
     launchDate: '2024-11-15',
     customers: 1200,

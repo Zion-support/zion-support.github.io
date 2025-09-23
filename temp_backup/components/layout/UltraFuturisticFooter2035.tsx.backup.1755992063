@@ -22,7 +22,6 @@ const footerSections = [
     description: 'Our most popular and innovative solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
     links: [
-<<<<<<< HEAD
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', featured: true },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', featured: true },
       { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', featured: true },
@@ -40,16 +39,6 @@ const footerSections = [
       { name: 'Browser Automation Cloud', href: '/services/browser-automation-cloud' },
       { name: 'Secrets Rotation Automation', href: '/services/secrets-rotation-automation' },
       { name: 'API Performance Testing', href: '/services/api-performance-testing' }
-=======
-      { name: 'AI Customer Success Platform', href: '/services/ai-customer-support-suite', featured: true },
-      { name: 'Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' , featured: true },
-      { name: 'AI Financial Planning', href: '/services/ai-financial-planning-platform', featured: true },
-      { name: 'AI Sales Intelligence', href: '/services/ai-sales-automation' , featured: true },
-      { name: 'HR Analytics Platform', href: '/services/intelligent-hr-analytics' },
-      { name: 'AI Decision Engine', href: '/services/ai-autonomous-decision-engine' },
-      { name: 'Content Automation', href: '/services/intelligent-content-automation' },
-      { name: 'CRM Intelligence Suite', href: '/services/crm-intelligence-suite' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1503
     ]
   },
   {
@@ -136,16 +125,10 @@ const footerSections = [
     description: 'Documentation, support, and learning',
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
     links: [
-<<<<<<< HEAD
       { name: 'Blog', href: '/blog' },
       { name: 'Resources Hub', href: '/resources' },
-=======
-      { name: 'Documentation', href: '/resources' },
-      { name: 'API Reference', href: '/docs' },
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1503
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Support Center', href: '/support' },
-<<<<<<< HEAD
       { name: 'Training & Certification', href: '/training' },
       { name: 'Market Pricing', href: '/market-pricing' },
       { name: 'Services Advertising', href: '/services-advertising' },
@@ -173,11 +156,6 @@ const footerSections = [
       { name: 'Privacy Policy', href: '/privacy', description: 'Privacy information' },
       { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },
       { name: 'Cookie Policy', href: '/cookies', description: 'Cookie information' }
-=======
-      { name: 'Developer Portal', href: '/docs' },
-      { name: 'Training & Certification', href: '/resources' },
-      { name: 'Community Forum', href: '/resources' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1503
     ]
   }
 ];

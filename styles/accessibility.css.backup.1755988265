@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Accessibility Enhancements */
 
 /* High Contrast Mode */
@@ -54,18 +53,6 @@
 }
 
 /* Skip Links */
-=======
-/* Accessibility Styles for Zion Tech Group */
-
-/* Skip Links */
-.skip-links {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  z-index: 1000;
-}
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
 .skip-link {
   position: absolute;
   top: -40px;
@@ -75,18 +62,13 @@
   padding: 8px;
   text-decoration: none;
   border-radius: 4px;
-<<<<<<< HEAD
   z-index: 1000;
-=======
-  transition: top 0.3s;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
 }
 
 .skip-link:focus {
   top: 6px;
 }
 
-<<<<<<< HEAD
 /* Touch Target Sizes */
 .mobile-optimized button,
 .mobile-optimized a,
@@ -94,57 +76,6 @@
 .mobile-optimized select {
   min-height: 44px;
   min-width: 44px;
-=======
-/* High Contrast Mode */
-.high-contrast {
-  --bg-primary: #000000;
-  --bg-secondary: #1a1a1a;
-  --text-primary: #ffffff;
-  --border-color: #ffffff;
-  --accent-color: #ffff00;
-}
-
-.high-contrast * {
-  background-color: var(--bg-secondary) !important;
-  color: var(--text-primary) !important;
-  border-color: var(--border-color) !important;
-}
-
-/* Focus Indicators */
-*:focus {
-  outline: 3px solid #06b6d4 !important;
-  outline-offset: 2px !important;
-}
-
-.focus-visible {
-  outline: 3px solid #06b6d4 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3) !important;
-}
-
-/* Keyboard Navigation */
-.keyboard-navigation *:focus {
-  outline: 3px solid #06b6d4 !important;
-  outline-offset: 2px !important;
-}
-
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Large Text Support */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    font-size: 18px;
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
 }
 
 /* Screen Reader Only */
@@ -162,7 +93,6 @@
 
 /* High Contrast Focus */
 .high-contrast *:focus {
-<<<<<<< HEAD
   outline: 3px solid var(--accent-primary) !important;
   outline-offset: 2px !important;
 }
@@ -225,23 +155,10 @@
 
 /* Keyboard Navigation */
 .keyboard-navigation *:focus {
-=======
-  outline: 3px solid var(--accent-color) !important;
-  outline-offset: 2px !important;
-}
-
-/* Button and Link Focus */
-button:focus,
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
   outline: 3px solid #06b6d4 !important;
   outline-offset: 2px !important;
 }
 
-<<<<<<< HEAD
 /* High Contrast Override */
 .high-contrast-override {
   filter: contrast(200%) brightness(150%);
@@ -285,42 +202,4 @@ textarea:focus {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
   }
-=======
-/* Form Element Focus */
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #06b6d4 !important;
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2) !important;
-}
-
-/* Interactive Element Hover */
-button:hover,
-a:hover {
-  transform: translateY(-1px);
-  transition: transform 0.2s ease;
-}
-
-/* Loading States */
-[aria-busy="true"] {
-  cursor: wait;
-}
-
-[aria-busy="true"]::before {
-  content: "Loading...";
-  position: absolute;
-  left: -9999px;
-}
-
-/* Error States */
-[aria-invalid="true"] {
-  border-color: #ef4444 !important;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
-}
-
-/* Success States */
-[aria-invalid="false"] {
-  border-color: #10b981 !important;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2) !important;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
 }

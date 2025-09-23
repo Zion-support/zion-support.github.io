@@ -365,7 +365,6 @@ export default function Services() {
     <>
       <SEO title="Services | Zion Tech Group - Enterprise IT, AI, Micro SAAS Solutions" description="Discover our comprehensive portfolio of enterprise IT solutions, AI services, and innovative micro SAAS platforms. Transform your business with cutting-edge technology." canonical="https://ziontechgroup.com/services/" />
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-black text-white pt-24">
         {/* Loading State */}
         <AnimatePresence>
@@ -378,26 +377,6 @@ export default function Services() {
               <div className="text-center">
                 <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                 <p className="text-cyan-400 text-lg font-medium">Loading Services...</p>
-=======
-          <section className="mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI Development</h3>
-                <p className="text-white/70 mb-6">
-                  Custom AI solutions including machine learning models, natural language processing, and computer vision systems.
-                </p>
-                <ul className="space-y-2 text-sm text-white/60 mb-6">
-                  <li>• Machine Learning Models</li>
-                  <li>• Natural Language Processing</li>
-                  <li>• Computer Vision</li>
-                  <li>• Predictive Analytics</li>
-                </ul>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $15K</div>
-                  <div className="text-white/60 text-sm">Project-based pricing</div>
-                </div>
->>>>>>> origin/cursor/add-more-project-content-5fae
               </div>
             </motion.div>
           )}
@@ -416,7 +395,6 @@ export default function Services() {
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-red-500/5 to-blue-500/5 rounded-full blur-3xl" />
           </div>
 
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -427,24 +405,6 @@ export default function Services() {
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4 mr-2 text-blue-400" />
                 Complete Service Portfolio
-=======
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Automation Systems</h3>
-                <p className="text-white/70 mb-6">
-                  End-to-end automation solutions that streamline operations and improve efficiency across your organization.
-                </p>
-                <ul className="space-y-2 text-sm text-white/60 mb-6">
-                  <li>• Process Automation</li>
-                  <li>• Workflow Optimization</li>
-                  <li>• Robotic Process Automation</li>
-                  <li>• Smart Workflows</li>
-                </ul>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-fuchsia-400 mb-2">Starting at $12K</div>
-                  <div className="text-white/60 text-sm">Monthly subscription available</div>
-                </div>
->>>>>>> origin/cursor/add-more-project-content-5fae
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -899,7 +859,6 @@ export default function Services() {
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Pricing Tiers Section */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
               <h2 className="text-3xl font-bold mb-8 text-yellow-400">Service Tiers</h2>
@@ -949,51 +908,6 @@ export default function Services() {
                   <button className="bg-gradient-to-r from-purple-400 to-pink-400 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300">
                     Contact Sales
                   </button>
-=======
-            {/* Enhanced Service Delivery Process */}
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-blue-400">Service Delivery Process</h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">1</div>
-                  <h3 className="text-lg font-semibold mb-2">Discovery</h3>
-                  <p className="text-sm text-white/70 mb-3">Understanding your needs and objectives</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Requirements Analysis</li>
-                    <li>• Stakeholder Interviews</li>
-                    <li>• Technical Assessment</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">2</div>
-                  <h3 className="text-lg font-semibold mb-2">Planning</h3>
-                  <p className="text-sm text-white/70 mb-3">Creating detailed roadmap and strategy</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Architecture Design</li>
-                    <li>• Timeline Planning</li>
-                    <li>• Resource Allocation</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">3</div>
-                  <h3 className="text-lg font-semibold mb-2">Implementation</h3>
-                  <p className="text-sm text-white/70 mb-3">Building and deploying solutions</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Agile Development</li>
-                    <li>• Continuous Testing</li>
-                    <li>• Staged Deployment</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">4</div>
-                  <h3 className="text-lg font-semibold mb-2">Optimization</h3>
-                  <p className="text-sm text-white/70 mb-3">Continuous improvement and support</p>
-                  <ul className="text-xs text-white/60 space-y-1">
-                    <li>• Performance Monitoring</li>
-                    <li>• Regular Updates</li>
-                    <li>• 24/7 Support</li>
-                  </ul>
->>>>>>> origin/cursor/add-more-project-content-5fae
                 </div>
               </div>
             </div>

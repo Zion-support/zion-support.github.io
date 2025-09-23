@@ -2,18 +2,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Globe, Phone, Mail, MapPin, 
   Brain, Atom, Target, 
   Star, Rocket, Shield,
   Twitter, Linkedin, Youtube, Github, 
   ArrowUp, ArrowRight, ExternalLink
-=======
-  Brain, Atom, Shield, Rocket, Cpu, Target, Sparkles, 
-  Heart, DollarSign, GraduationCap, Building, Truck, Zap,
-  Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube,
-  ArrowRight, Star, CheckCircle, TrendingUp, Award, Clock
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 } from 'lucide-react';
 
 const UltraFuturisticFooter2040: React.FC = () => {

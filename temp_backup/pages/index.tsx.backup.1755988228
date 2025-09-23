@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import Homepage2045 from '../components/Homepage2045';
 import SEOOptimizer from '../components/SEOOptimizer';
-=======
-import Homepage2043 from '../components/Homepage2043';
-import EnhancedSEO from '../components/EnhancedSEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
 import Analytics from '../components/Analytics';
 import ErrorBoundary from '../components/ErrorBoundary';
 import EnhancedAccessibility from '../components/EnhancedAccessibility';
@@ -23,23 +18,11 @@ const HomePage: React.FC = () => {
         type="website"
       />
       <Analytics />
-<<<<<<< HEAD
       <Homepage2045 />
       <PerformanceMonitor showUI={true} />
       <AccessibilityEnhancer>
         <div></div>
       </AccessibilityEnhancer>
-=======
-      <EnhancedAccessibility />
-      <MobileOptimizer showDebugInfo={false}>
-        <Homepage2043 />
-        <PerformanceMonitor showUI={true} />
-      </MobileOptimizer>
-      
-      {/* Enhancement Components */}
-      <PerformanceOptimizer />
-      <EnhancedMobileExperience />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
     </ErrorBoundary>
   );
 };

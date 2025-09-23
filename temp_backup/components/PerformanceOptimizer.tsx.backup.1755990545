@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
 interface PerformanceOptimizerProps {
   enableMonitoring?: boolean;
   showMetrics?: boolean;
@@ -23,9 +22,6 @@ declare global {
     };
   }
 }
-=======
-// gtag is already declared in AnalyticsTracker.tsx
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0eac
 
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;

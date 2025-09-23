@@ -29,7 +29,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Netlify status check
-<<<<<<< HEAD
         id: netlify_check
         continue-on-error: true
         env:
@@ -46,12 +45,6 @@ jobs:
         id: cpr
         if: steps.netlify_check.outcome == 'failure'
         uses: peter-evans/create-pull-request@v6
-=======
-        run: node scripts/netlify-monitor.js
-      - name: Create issue on failure
-        if: failure()
-        uses: actions/github-script@v7
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "fix(netlify): automated attempt to remediate Netlify build issues"

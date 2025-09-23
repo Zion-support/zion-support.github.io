@@ -1,15 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 export default function AuthCallbackPage() {
   return <div>Auth Callback</div>;
 }
-=======
-export default function Callback(){
-  return <div style={{padding:20}}>Callback</div>
-}
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
 =======
 export default function AuthCallback() {
   return <div className="py-10">Auth Callback</div>;

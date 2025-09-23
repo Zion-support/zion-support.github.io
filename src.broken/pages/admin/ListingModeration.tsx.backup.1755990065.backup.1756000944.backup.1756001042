@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
@@ -44,10 +43,6 @@ export default function ListingModeration() {
     }
   };
 
-=======
-import React from 'react';
-export function ListingModeration() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

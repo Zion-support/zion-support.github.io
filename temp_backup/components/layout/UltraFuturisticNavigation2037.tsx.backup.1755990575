@@ -174,7 +174,6 @@ const navigationItems: NavigationItem[] = [
     featured: true,
     children: [
       { 
-<<<<<<< HEAD
         name: 'Enhanced Market Pricing 2037', 
         href: '/enhanced-market-pricing-2037', 
         description: 'Comprehensive pricing analysis',
@@ -197,76 +196,6 @@ const navigationItems: NavigationItem[] = [
         name: 'ROI Calculator', 
         href: '/pricing', 
         description: 'Calculate your return on investment',
-=======
-        name: 'AI Consciousness Evolution', 
-        href: '/ai-consciousness-evolution-2037', 
-        description: 'Next evolution of AI consciousness',
-        icon: <Brain className="w-4 h-4" />,
-        featured: true,
-        color: 'from-purple-500 to-pink-500'
-      },
-      { 
-        name: 'Quantum AI Hybrid Platform', 
-        href: '/quantum-ai-hybrid-platform', 
-        description: 'Quantum computing meets AI',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
-      },
-      { 
-        name: 'AI Autonomous Business Manager', 
-        href: '/ai-autonomous-business-manager', 
-        description: 'Autonomous business operations',
-        icon: <Rocket className="w-4 h-4" />,
-        color: 'from-green-500 to-emerald-500'
-      },
-      { 
-        name: 'AI Emotional Intelligence Coach', 
-        href: '/ai-emotional-intelligence-coach', 
-        description: 'AI-powered EI training',
-        icon: <Heart className="w-4 h-4" />,
-        color: 'from-pink-500 to-rose-500'
-      }
-    ]
-  },
-  {
-    name: 'IT Solutions',
-    href: '/it-services',
-    icon: <Cpu className="w-5 h-5" />,
-    description: 'Enterprise infrastructure',
-    badge: 'Enterprise',
-    category: 'it',
-    color: 'from-orange-500 to-red-500',
-    children: [
-      {
-        name: 'Quantum-Secure Cloud',
-        href: '/quantum-secure-cloud-infrastructure',
-        description: 'Future-proof cloud security',
-        icon: <Cloud className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'Autonomous IT Operations',
-        href: '/autonomous-it-operations-center',
-        description: 'Self-managing infrastructure',
-        icon: <Settings className="w-4 h-4" />
-      },
-      {
-        name: 'Edge Computing Platform',
-        href: '/edge-computing-orchestration-platform',
-        description: 'Distributed edge management',
-        icon: <Network className="w-4 h-4" />
-      },
-      {
-        name: 'Blockchain Infrastructure',
-        href: '/blockchain-infrastructure-platform',
-        description: 'Enterprise blockchain solutions',
-        icon: <Layers className="w-4 h-4" />
-      },
-      {
-        name: 'AI-Powered DevOps',
-        href: '/ai-powered-devops-platform',
-        description: 'Intelligent development operations',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ced2
         icon: <Code className="w-4 h-4" />
       }
     ]

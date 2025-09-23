@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -167,14 +166,5 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         </li>
       </ul>
     </nav>
-=======
-import React from 'react';
-export function MainNavigation() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

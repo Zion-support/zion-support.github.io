@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import FuturisticLayout from '../components/FuturisticLayout';
 import fs from 'fs';
 import path from 'path';
@@ -146,9 +145,6 @@ export default function AutomationHealthPage({ health, controlPlane, scheduleHin
     if (!dateString) return 'Never';
     return new Date(dateString).toLocaleString();
   };
-=======
-import Link from 'next/link';
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 export default function AutomationHealthPage() {
   return (
@@ -454,7 +450,6 @@ export default function AutomationHealthPage() {
     </>
   );
 }
-<<<<<<< HEAD
 
 export const getStaticProps: GetStaticProps = async () => {
   const readJson = async (relPath: string, fallback: any) => {
@@ -563,5 +558,3 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   }
 };
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

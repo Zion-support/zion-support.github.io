@@ -1,26 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 const { i18n } = require('./next-i18next.config');
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  productionBrowserSourceMaps: false,
-  images: { unoptimized: true },
-  // Note: redirects() removed as it's incompatible with output: 'export'
-  // Use Netlify _redirects file instead for redirects
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-};
->>>>>>> origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
 
 module.exports = {
   i18n,
 =======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
@@ -176,18 +161,6 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: false,
   skipTrailingSlashRedirect: true,
-=======
-	reactStrictMode: true,
-	swcMinify: true,
-	// Optimize images
-	images: {
-		unoptimized: true,
-	},
-	// Optimize bundle
-	compiler: {
-		removeConsole: process.env.NODE_ENV === 'production',
-	},
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
 };
 
   // Enhanced compress

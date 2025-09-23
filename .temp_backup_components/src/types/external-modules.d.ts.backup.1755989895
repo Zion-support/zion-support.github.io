@@ -80,7 +80,6 @@ declare module 'zod';
 declare module 'react-i18next';
 declare module 'react-day-picker';
 declare module 'recharts';
-<<<<<<< HEAD
 declare module 'lucide-react';
 declare module 'react-helmet-async';
 declare module 'sonner';
@@ -101,23 +100,5 @@ declare global {
     interface IntrinsicElements {
       [elem: string]: any;
     }
-=======
-declare module 'next' {
-  export type GetStaticPaths = any;
-  export type GetStaticProps<P = any, Q = any> = any;
-  export type GetServerSideProps<P = any, Q = any> = any;
-}
-declare module 'next/link' {
-  const Link: React.ComponentType<any>
-  export default Link
-}
-declare module 'next/router' {
-  interface NextRouter {
-    pathname: string
-    92kxb3-codex/populate-forum-category-with-posts
-    query: Record<string, string | string[]>
-      main
-    isFallback?: boolean
->>>>>>> origin/92kxb3-codex/populate-forum-category-with-posts
   }
 }

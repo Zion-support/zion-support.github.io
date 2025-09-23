@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-=======
-import React, { useEffect, useState, useCallback, memo } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
 import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -474,14 +470,8 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <button 
-<<<<<<< HEAD
                 className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-lg"
                 onClick={() => window.location.href = '/contact'}
-=======
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50"
-                onClick={handleGetStarted}
-                aria-label="Get started with Zion Tech Group services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
               >
                 <Lightbulb className="w-6 h-6 group-hover:animate-pulse" />
                 Start Your Journey
@@ -691,46 +681,11 @@ const Homepage2025: React.FC = () => {
                 Start Your Journey
               </button>
               <button 
-<<<<<<< HEAD
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
                 aria-label="Schedule a demo of our solutions"
-=======
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-opacity-50"
-                onClick={handleWatchDemo}
-                aria-label="Watch a demo of our services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
               >
                 Schedule a Demo
               </button>
-<<<<<<< HEAD
-=======
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Enhanced Social Proof Section */}
-        <section className="py-20 px-4" aria-labelledby="stats-heading">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <h2 id="stats-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Join hundreds of companies already transforming their business with our solutions
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <StatsCard key={index} stat={stat} index={index} />
-              ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
             </div>
             
             {/* View All Services CTA */}
@@ -741,7 +696,6 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mt-16"
             >
-<<<<<<< HEAD
               <Link href="/services" aria-label="View all our services">
                 <button className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 mx-auto">
                   View All Services
@@ -807,78 +761,6 @@ const Homepage2025: React.FC = () => {
                   onClick={() => setShowNewsletter(false)}
                   className="text-white/80 hover:text-white transition-colors"
                   aria-label="Close newsletter signup"
-=======
-              <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our comprehensive suite of cutting-edge technologies and services sets us apart in the industry
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <FeatureCard key={index} feature={feature} index={index} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Enhanced Services Preview */}
-        <section className="py-20 px-4" aria-labelledby="services-heading">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Revolutionary Services
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From AI-powered automation to quantum computing solutions, we're building the future today
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <ServiceCard key={index} service={service} index={index} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Enhanced CTA Section */}
-        <section className="py-20 px-4" aria-labelledby="cta-heading">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-400/20"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join hundreds of companies already leveraging our cutting-edge technology solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50"
-                  onClick={() => window.location.href = '/get-started'}
-                  aria-label="Start your journey with Zion Tech Group"
-                >
-                  Start Your Journey
-                </button>
-                <button 
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-opacity-50"
-                  onClick={() => window.location.href = '/demo'}
-                  aria-label="Schedule a demo of our services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-e4a1
                 >
                   <X className="w-5 h-5" />
                 </button>

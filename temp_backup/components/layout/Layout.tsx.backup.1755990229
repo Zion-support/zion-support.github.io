@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
 import UltraFuturisticFooter2040 from './UltraFuturisticFooter2040';
-=======
-import React, { useState } from 'react';
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
-import UltraFuturisticFooter2045 from './UltraFuturisticFooter2045';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9e3c
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2045 from '../backgrounds/UltraFuturisticBackground2045';
 import TopContactBar from './TopContactBar';
@@ -63,7 +57,6 @@ export default function Layout({
   }, []);
 
   return (
-<<<<<<< HEAD
     <>
       <Head>
         {/* PWA Meta Tags */}
@@ -77,35 +70,6 @@ export default function Layout({
         <meta name="msapplication-TileColor" content="#06b6d4" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#06b6d4" />
-=======
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link">Skip to main content</a>
-      
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2036 />
-      
-      {/* Layout Structure */}
-      <div className="relative z-10">
-        {/* Navigation */}
-        <UltraFuturisticNavigation2045 />
-        
-        {/* Sidebar and Main Content */}
-        <div className="flex">
-          <EnhancedSidebar2025 
-            isOpen={sidebarOpen} 
-            onClose={() => setSidebarOpen(false)} 
-          />
-          
-          <main id="main" role="main" className="flex-1 pt-32 lg:pt-36">
-            {children}
-          </main>
-        </div>
-        
-        {/* Footer */}
-        <UltraFuturisticFooter2045 />
-      </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9e3c
 
       {/* Accessibility and Performance Tools */}
       <AccessibilityEnhancer />

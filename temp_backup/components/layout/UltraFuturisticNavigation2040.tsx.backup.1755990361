@@ -4,12 +4,7 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
-<<<<<<< HEAD
   Phone, Mail, MapPin, ArrowRight, Star, Users, Award, Building, Cpu, Rocket, Shield, Heart
-=======
-  Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
-  Brain, Atom, Shield, Cloud, Server, Database
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -35,7 +30,6 @@ const navigationItems: NavigationItem[] = [
       {
         label: 'AI & Machine Learning',
         href: '/ai-services',
-<<<<<<< HEAD
         icon: <Star className="w-4 h-4" />,
         description: 'Advanced AI solutions for enterprise',
         badge: 'New'
@@ -61,17 +55,6 @@ const navigationItems: NavigationItem[] = [
         color: 'from-blue-500 to-cyan-500',
         featured: true
       },
-=======
-        icon: <Brain className="w-4 h-4" />,
-        description: 'Advanced AI solutions for enterprise'
-      },
-      {
-        label: 'Quantum Computing',
-        href: '/quantum-computing',
-        icon: <Atom className="w-4 h-4" />,
-        description: 'Next-generation quantum solutions'
-      },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
       {
         label: 'Cybersecurity',
         href: '/cybersecurity',
@@ -85,7 +68,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Scalable cloud infrastructure'
       },
       {
-<<<<<<< HEAD
         label: 'Micro SAAS Solutions',
         href: '/micro-saas',
         icon: <Building className="w-4 h-4" />,
@@ -96,12 +78,6 @@ const navigationItems: NavigationItem[] = [
         href: '/it-services',
         icon: <Cpu className="w-4 h-4" />,
         description: 'Enterprise IT solutions'
-=======
-        label: 'Space Technology',
-        href: '/space-tech',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Innovative space solutions'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
       },
       {
         label: 'View All Services',
@@ -721,7 +697,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             {navigationItems.map((item) => (
               <div key={item.label} className="relative">
                 {item.children ? (
-<<<<<<< HEAD
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.label)}
@@ -766,63 +741,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                                       </span>
                                     )}
                                   </div>
-=======
-                  <button
-                    onClick={() => toggleDropdown(item.label)}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(item.href || '') 
-                        ? 'text-cyan-400 bg-cyan-500/10' 
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                    }`}
-                  >
-                    {item.icon}
-                    <span className="font-medium">{item.label}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                      activeDropdown === item.label ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href || '#'}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(item.href || '') 
-                        ? 'text-cyan-400 bg-cyan-500/10' 
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                    }`}
-                  >
-                    {item.icon}
-                    <span className="font-medium">{item.label}</span>
-                  </Link>
-                )}
-
-                {/* Dropdown Menu */}
-                {item.children && (
-                  <AnimatePresence>
-                    {activeDropdown === item.label && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden z-50"
-                      >
-                        <div className="p-4">
-                          <div className="grid grid-cols-1 gap-2">
-                            {item.children.map((child, childIndex) => (
-                              <Link
-                                key={child.label}
-                                href={child.href || '#'}
-                                className="flex items-start space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-300 group"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                <div className="w-8 h-8 bg-gray-800/50 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors duration-300">
-                                  {child.icon}
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
-                                    {child.label}
-                                  </h4>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
                                   {child.description && (
                                     <p className="text-sm text-gray-400 mt-1">
                                       {child.description}
@@ -832,7 +750,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                               </Link>
                             ))}
                           </div>
-<<<<<<< HEAD
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -844,18 +761,11 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                   >
                     {item.label}
                   </Link>
-=======
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
                 )}
               </div>
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Right side actions */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             {/* Search */}
@@ -905,72 +815,11 @@ const UltraFuturisticNavigation2040: React.FC = () => {
               aria-label="Toggle mobile menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Search */}
-            <div className="relative" ref={searchRef}>
-              <button
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-300"
-              >
-                <Search className="w-5 h-5" />
-              </button>
-              
-              <AnimatePresence>
-                {isSearchOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute right-0 top-full mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl p-4"
-                  >
-                    <form onSubmit={handleSearch} className="space-y-4">
-                      <div>
-                        <input
-                          ref={searchInputRef}
-                          type="text"
-                          placeholder="Search services..."
-                          value={searchQuery}
-                          onChange={(e) => setSearchQuery(e.target.value)}
-                          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-all duration-300"
-                        />
-                      </div>
-                      <button
-                        type="submit"
-                        className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                      >
-                        Search
-                      </button>
-                    </form>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* CTA Button */}
-            <Link
-              href="/contact"
-              className="hidden sm:inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
-            >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMobileMenu}
-              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-300"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
             </button>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Search Overlay */}
       <AnimatePresence>
         {showSearch && (
@@ -1004,16 +853,12 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       </AnimatePresence>
 
       {/* Mobile Navigation */}
-=======
-      {/* Mobile Menu */}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50"
           >
             <div className="px-4 py-6 space-y-4">
@@ -1072,67 +917,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
               <div className="pt-4 border-t border-gray-700/50">
                 <Link href="/get-started" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                   Get Started
-=======
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50"
-            ref={mobileMenuRef}
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.label}>
-                  {item.children ? (
-                    <div>
-                      <button
-                        onClick={() => toggleDropdown(item.label)}
-                        className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-300"
-                      >
-                        <div className="flex items-center space-x-3">
-                          {item.icon}
-                          <span className="font-medium">{item.label}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                          activeDropdown === item.label ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      
-                      {activeDropdown === item.label && (
-                        <div className="ml-8 mt-2 space-y-2">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.label}
-                              href={child.href || '#'}
-                              className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-300"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href || '#'}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-300"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.icon}
-                      <span className="font-medium">{item.label}</span>
-                    </Link>
-                  )}
-                </div>
-              ))}
-              
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-800">
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2 inline" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
                 </Link>
               </div>
             </div>

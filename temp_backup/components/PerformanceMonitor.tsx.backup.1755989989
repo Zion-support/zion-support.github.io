@@ -6,7 +6,6 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
@@ -19,26 +18,6 @@ interface PerformanceScore {
   score: number;
   grade: 'A' | 'B' | 'C' | 'D' | 'F';
   color: string;
-=======
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  fcp: number;
-  fmp: number;
-  tti: number;
-}
-
-interface PerformanceMonitorProps {
-  showUI?: boolean;
-  autoHide?: boolean;
-  threshold?: {
-    lcp: number;
-    fid: number;
-    cls: number;
-    ttfb: number;
-  };
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 }
 
 // Type definitions for PerformanceObserver entries

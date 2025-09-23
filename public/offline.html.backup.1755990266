@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,13 +25,6 @@
         </p>
     </body>
 </html>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline - Zion Tech Group</title>
-    <meta name="description" content="You're currently offline. Zion Tech Group services are temporarily unavailable.">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
     <style>
         * {
             margin: 0;

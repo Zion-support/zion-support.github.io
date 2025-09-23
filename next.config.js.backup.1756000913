@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 const path = require('path');
 const os = require('os');
-=======
-const os = require('os');
-const path = require('path');
->>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
 
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
@@ -12,7 +7,6 @@ const nextConfig = {
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
-<<<<<<< HEAD
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -20,8 +14,6 @@ const nextConfig = {
   // Optimized for fast builds (hanging issue SOLVED)
   // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
   productionBrowserSourceMaps: false, // Disable for faster builds
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
   
   // Environment configuration
   env: {
@@ -30,26 +22,11 @@ const nextConfig = {
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
   },
 
-<<<<<<< HEAD
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
   // Experimental features for better performance
-=======
-  serverExternalPackages: ['@prisma/client'],
-  
-  modularizeImports: {
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-      skipDefaultConversion: true,
-    },
-    '@radix-ui/react-icons': {
-      transform: '@radix-ui/react-icons/dist/{{member}}',
-    },
-  },
-
->>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
   experimental: {
     optimizeCss: true,
     optimizePackageImports: [
@@ -59,7 +36,6 @@ const nextConfig = {
       'react-window',
       'fuse.js'
     ],
-<<<<<<< HEAD
     // ESM configuration for problematic packages
     esmExternals: 'loose', // Allow loose ESM handling
     
@@ -150,53 +126,6 @@ const nextConfig = {
     }
 
     // Add polyfills for Node.js APIs
-=======
-    esmExternals: 'loose',
-    optimizeCss: process.env.NODE_ENV === 'production',
-    largePageDataBytes: 128 * 1000,
-    workerThreads: false,
-    cpus: Math.min(2, os.cpus().length),
-    swcTraceProfiling: false,
-  },
-
-  images: {
-    domains: ["localhost"],
-    unoptimized: true,
-  },
-
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
-  },
-
-  transpilePackages: [
-    'react-markdown',
-    'date-fns',
-    'react-day-picker',
-    'bail',
-    'is-plain-obj',
-    'mdast-util-from-markdown',
-    'mdast-util-to-hast',
-    'mdast-util-to-string',
-    'unified',
-    'remark-parse',
-    'remark-rehype',
-    'formik',
-    'lodash',
-    'lodash-es',
-    'helia',
-    '@helia/json',
-    'multiformats',
-    'libp2p',
-    '@libp2p/identify',
-    'ajv',
-    'ajv-keywords',
-    '@ungap/structured-clone',
-    'axios-retry',
-  ],
-
-  webpack: (config, { dev, isServer }) => {
-    // Handle problematic packages
->>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
@@ -216,7 +145,6 @@ const nextConfig = {
       util: false,
       zlib: false,
       url: false,
-<<<<<<< HEAD
     };
 
     // Optimize bundle size
@@ -231,25 +159,6 @@ const nextConfig = {
     }
 
     // PERFORMANCE: Add bundle optimization
-=======
-      'dd-trace': false,
-      'node:http': false,
-      'node:https': false,
-      'node:fs': false,
-      'node:path': false,
-      'node:stream': false,
-      'node:util': false,
-      'node:crypto': false,
-      'node:os': false,
-      'node:url': false,
-      'node:worker_threads': false,
-      'node:async_hooks': false,
-      'node:child_process': false,
-      'node:diagnostics_channel': false,
-    };
-
-    // Optimize bundle size for production
->>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
     if (!dev) {
       config.optimization = {
         ...config.optimization,

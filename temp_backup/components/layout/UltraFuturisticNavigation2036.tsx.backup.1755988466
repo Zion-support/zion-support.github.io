@@ -220,31 +220,11 @@ const navigationItems: NavigationItem[] = [
         description: 'Transparent pricing structure',
         icon: <DollarSign className="w-4 h-4" />
       },
-<<<<<<< HEAD
       {
         name: 'Market Pricing',
         href: '/market-pricing',
         description: 'Competitive market analysis',
         icon: <BarChart3 className="w-4 h-4" />
-=======
-      { 
-        name: 'Market Pricing', 
-        href: '/market-pricing', 
-        description: 'Market price references',
-        icon: <BarChart3 className="w-4 h-4" />
-      },
-      { 
-        name: 'Revolutionary 2026', 
-        href: '/revolutionary-2026-services', 
-        description: 'Latest innovations showcase',
-        icon: <SparklesIcon className="w-4 h-4" />
-      },
-      { 
-        name: 'Ultimate 2035', 
-        href: '/ultimate-2035-futuristic-services-showcase', 
-        description: 'Future technology preview',
-        icon: <ZapIcon className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e3a6
       }
     ]
   },
@@ -378,7 +358,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Comprehensive help resources',
         icon: <HelpCircle className="w-4 h-4" />
       },
-<<<<<<< HEAD
       {
         name: 'Contact Us',
         href: '/contact',
@@ -396,110 +375,6 @@ const navigationItems: NavigationItem[] = [
         href: '/api-status',
         description: 'API performance metrics',
         icon: <DatabaseIcon className="w-4 h-4" />
-=======
-      { 
-        name: 'Training', 
-        href: '/training', 
-        description: 'Learning resources',
-        icon: <BookOpenCheck className="w-4 h-4" />
-      },
-      { 
-        name: 'Reports', 
-        href: '/reports', 
-        description: 'Performance reports',
-        icon: <BarChart3 className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'Industry solutions',
-    category: 'solutions',
-    children: [
-      { 
-        name: 'Healthcare', 
-        href: '/healthcare-solutions', 
-        description: 'Healthcare technology',
-        icon: <Heart className="w-4 h-4" />
-      },
-      { 
-        name: 'Financial', 
-        href: '/financial-solutions', 
-        description: 'Financial technology',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Government', 
-        href: '/government-technology-solutions', 
-        description: 'Government solutions',
-        icon: <Shield className="w-4 h-4" />
-      },
-      { 
-        name: 'Retail', 
-        href: '/retail-technology-solutions', 
-        description: 'Retail technology',
-        icon: <ShoppingCart className="w-4 h-4" />
-      },
-      { 
-        name: 'Manufacturing', 
-        href: '/manufacturing-ai-solutions', 
-        description: 'Manufacturing AI',
-        icon: <Settings className="w-4 h-4" />
-      },
-      { 
-        name: 'Education', 
-        href: '/education-technology-solutions', 
-        description: 'Education technology',
-        icon: <BookOpen className="w-4 h-4" />
-      },
-      { 
-        name: 'Energy & Utilities', 
-        href: '/energy-utilities-solutions', 
-        description: 'Energy solutions',
-        icon: <Zap className="w-4 h-4" />
-      },
-      { 
-        name: 'Entertainment & Media', 
-        href: '/entertainment-media-solutions', 
-        description: 'Media solutions',
-        icon: <Film className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Get Started',
-    href: '/get-started',
-    icon: <ArrowRight className="w-5 h-5" />,
-    description: 'Start your journey',
-    category: 'get-started',
-    children: [
-      { 
-        name: 'Get Started Guide', 
-        href: '/get-started', 
-        description: 'Begin your journey',
-        icon: <ArrowRight className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Request Quote', 
-        href: '/quote', 
-        description: 'Get a custom quote',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Schedule Demo', 
-        href: '/demo', 
-        description: 'See our solutions',
-        icon: <Video className="w-4 h-4" />
-      },
-      { 
-        name: 'Contact Sales', 
-        href: '/contact', 
-        description: 'Talk to our team',
-        icon: <MessageCircle className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e3a6
       }
     ]
   }

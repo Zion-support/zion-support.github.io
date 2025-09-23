@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Codeql
 
 on:
@@ -9,21 +8,6 @@ on:
 permissions:
   contents: write
   actions: read
-=======
-name: "CodeQL"
-
-on:
-  push:
-    branches: ["main", "develop", "cursor/**"]
-  pull_request:
-    branches: ["main", "develop", "cursor/**"]
-  schedule:
-    - cron: "33 1 * * 1"
-
-permissions:
-  contents: read
-  security-events: write
->>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
 
 jobs:
   main:
@@ -42,7 +26,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-<<<<<<< HEAD
         with:
           fetch-depth: 0
 
@@ -58,20 +41,4 @@ jobs:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-=======
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: ${{ matrix.language }}
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
-        with:
-          category: "/language:${{matrix.language}}"
- 
->>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
 

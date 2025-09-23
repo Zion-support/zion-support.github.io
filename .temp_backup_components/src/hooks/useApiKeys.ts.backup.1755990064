@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import {logErrorToProduction} from "@/utils/productionLogger";
@@ -333,10 +332,3 @@ export function useApiKeys() {
     clearNewApiKey: () => setNewApiKey(null)
   };
 }
-=======
-// Hook for useApiKeys;
-export const useUseApiKeys: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

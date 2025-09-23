@@ -394,7 +394,6 @@
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
-<<<<<<< HEAD
     "performance:audit": "node automation/performance-audit.cjs",
     "supervisor:start": "bash automation/supervisor/supervisor-cron.sh start",
     "supervisor:stop": "bash automation/supervisor/supervisor-cron.sh stop",
@@ -402,33 +401,6 @@
     "supervisor:run-once": "node automation/supervisor/supervisor-orchestrator.cjs run-once",
     "supervisor:discover": "node automation/supervisor-agents-factory.cjs"
   },
-=======
-    "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
-    "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
-    "ui-evolution:analyze": "node automation/ui-evolution-launcher.js analyze",
-    "ui-evolution:factory": "node automation/ui-evolution-launcher.js factory",
-    "ui-evolution:beautify": "node automation/ui-evolution-launcher.js beautify",
-    "ui-evolution:dashboard": "node automation/ui-evolution-launcher.js dashboard",
-    "meta:factory": "node automation/autonomous-meta-factory.cjs",
-    "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
-    "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
-    "venture:start": "node automation/venture-orchestrator.cjs continuous",
-    "venture:once": "node automation/venture-orchestrator.cjs once",
-    "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
-    "venture:cron:start": "bash automation/venture-cron.sh start",
-    "venture:cron:stop": "bash automation/venture-cron.sh stop",
-    "venture:cron:status": "bash automation/venture-cron.sh status",
-          "venture:report": "node automation/venture-orchestrator.cjs report",
-      "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
-      "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
-      "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
-      "logs:monitor": "node automation/log-monitor.cjs",
-      "logs:autofix": "bash scripts/log-auto-fix.sh",
-      "cron:install": "bash automation/install-cron.sh install",
-      "cron:remove": "bash automation/install-cron.sh remove",
-      "cron:status": "bash automation/install-cron.sh status"
-    },
->>>>>>> origin/cursor/automate-error-fixing-and-deploy-to-main-8fed
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",

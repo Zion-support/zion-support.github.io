@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
@@ -22,11 +21,6 @@ import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
 import { getStripe } from '@/utils/getStripe';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-=======
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 
 interface CartItem {
   id: string;
@@ -36,7 +30,6 @@ interface CartItem {
 }
 
 export default function CartPage() {
-<<<<<<< HEAD
   const { t: _t } = useTranslation();
   const items = useSelector((s: RootState) => s.cart.items);
   const dispatch = useDispatch<AppDispatch>();
@@ -44,31 +37,6 @@ export default function CartPage() {
   const [loading, setLoading] = useState(false);
   const [guestOpen, setGuestOpen] = useState(false);
   const { toggle: toggleWishlist, isWishlisted } = useWishlist();
-=======
-  const navigate = useNavigate();
-  const { user } = useAuth();
-  const [items, setItems] = useState<CartItem[]>([]);
-
-  if (!user) {
-    toast({
-      title: 'Authentication required',
-      description: 'Please sign in to view your cart.',
-    });
-    navigate('/login');
-    return null;
-  }
-
-  useEffect(() => {
-    const stored = safeStorage.getItem('cart');
-    if (stored) {
-      try {
-        setItems(JSON.parse(stored) as CartItem[]);
-      } catch {
-        setItems([]);
-      }
-    }
-  }, []);
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 
   const updateQuantity = (id: string, qty: number) => {
     setItems(prev => {

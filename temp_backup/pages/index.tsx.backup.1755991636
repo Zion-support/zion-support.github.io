@@ -9,14 +9,10 @@ import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceC
 import ServiceAds from '../components/sections/ServiceAds';
 import Card from '../components/ui/Card';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeNewServices } from '../data/innovative-new-services';
-=======
-import { ultimateEnhancedServices, getServicesByCategory, getPopularServices, serviceCategories } from '../data/ultimate-enhanced-services';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5df1
 
 export default function HomePage() {
   const popularServices = getPopularServices();
@@ -36,17 +32,8 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
-<<<<<<< HEAD
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
-=======
-  // Get featured services from the enhanced data
-  const revolutionaryServices = ultimateEnhancedServices
-    .filter(service => service.realImplementation && service.popular)
-    .slice(0, 8);
-
-  const marketInsights = [
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5df1
     {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
@@ -366,7 +353,6 @@ export default function HomePage() {
   // Enhanced market insights with real data
   const enhancedMarketInsights = [
     {
-<<<<<<< HEAD
       metric: '$8.5B',
       label: 'Quantum Finance Market',
       description: 'Growing at 450% annually',
@@ -524,57 +510,11 @@ export default function HomePage() {
       ourPrice: '$1,499/month',
       competitors: ['Siemens Mindsphere: $500-2,000', 'PTC ThingWorx: $1,000-3,000'],
       ourAdvantage: 'Full autonomy, AI integration, comprehensive automation'
-=======
-      name: 'Quantum Computing & AI',
-      description: 'Revolutionary quantum AI solutions',
-      icon: <Brain className="w-8 h-8" />,
-      count: ultimateEnhancedServices.filter(s => s.category.includes('Quantum') || s.category.includes('AI')).length,
-      color: 'from-indigo-500 to-purple-600'
-    },
-    {
-      name: 'Autonomous Systems',
-      description: 'Next-generation automation',
-      icon: <Factory className="w-8 h-8" />,
-      count: ultimateEnhancedServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Autonomous')).length,
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      name: 'Space Technology',
-      description: 'Satellite and space operations',
-      icon: <Rocket className="w-8 h-8" />,
-      count: ultimateEnhancedServices.filter(s => s.category.includes('Space')).length,
-      color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      name: 'Metaverse & VR',
-      description: 'Immersive digital experiences',
-      icon: <Globe className="w-8 h-8" />,
-      count: ultimateEnhancedServices.filter(s => s.category.includes('Metaverse')).length,
-      color: 'from-purple-500 to-violet-600'
-    },
-    {
-      name: 'Biomedical AI',
-      description: 'Healthcare and biotechnology',
-      icon: <FlaskConical className="w-8 h-8" />,
-      count: ultimateEnhancedServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Biomedical')).length,
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      name: 'Quantum Finance',
-      description: 'Financial modeling and trading',
-      icon: <DollarSign className="w-8 h-8" />,
-      count: ultimateEnhancedServices.filter(s => s.category.includes('Finance')).length,
-      color: 'from-emerald-500 to-teal-600'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5df1
     }
   ];
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum">
-=======
-    <UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5df1
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
         <meta name="description" content="Discover 500+ revolutionary micro SaaS services including quantum AI, autonomous systems, biomedical research, and emerging technologies. 99.99% uptime, 30-day free trials." />

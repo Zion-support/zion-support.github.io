@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 "use client";
-=======
-'use client';
-
-'use client';
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect, useRef } from 'react';
 
 interface Message {

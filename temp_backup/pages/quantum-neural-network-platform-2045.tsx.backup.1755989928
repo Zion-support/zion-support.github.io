@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   Atom, 
   Brain, 
@@ -72,51 +71,6 @@ const QuantumNeuralNetworkPlatform2045: React.FC = () => {
   ];
 
   const pricingPlans = [
-=======
-import { Atom, Brain, Zap, Cpu, Database, Cloud, ArrowRight, Shield, Network, Globe, Rocket, Star, Lock, Users, Eye } from 'lucide-react';
-import Link from 'next/link';
-
-const QuantumNeuralNetworkPlatform2045: React.FC = () => {
-  const features = [
-    {
-      icon: Atom,
-      title: 'Quantum Processing',
-      description: 'Revolutionary quantum computing power for neural network operations',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Brain,
-      title: 'Neural Evolution',
-      description: 'Self-evolving neural architectures that adapt and improve continuously',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Network,
-      title: 'Quantum Entanglement',
-      description: 'Interconnected quantum neural networks with instant communication',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Zap,
-      title: 'Lightning Speed',
-      description: 'Processing speeds that exceed classical computing limitations',
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
-
-  const capabilities = [
-    'Quantum neural network training and optimization',
-    'Real-time quantum pattern recognition',
-    'Quantum memory and storage systems',
-    'Quantum error correction and fault tolerance',
-    'Quantum neural network security protocols',
-    'Scalable quantum neural architectures',
-    'Quantum neural network monitoring and analytics',
-    'Cross-platform quantum neural integration'
-  ];
-
-  const applications = [
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     {
       title: 'Advanced AI Research',
       description: 'Breakthrough discoveries in artificial intelligence and machine learning',
@@ -332,7 +286,6 @@ const QuantumNeuralNetworkPlatform2045: React.FC = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Contact Section */}
       <section className="py-24">
@@ -383,9 +336,6 @@ const QuantumNeuralNetworkPlatform2045: React.FC = () => {
         </div>
       </section>
     </Layout>
-=======
-    </div>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   );
 };
 

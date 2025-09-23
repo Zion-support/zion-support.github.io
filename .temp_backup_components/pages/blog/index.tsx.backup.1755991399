@@ -38,7 +38,6 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
         <meta name="twitter:description" content="Insights on AI, DevOps, and digital transformation." />
         <meta name="twitter:image" content="/images/og/blog-default.jpg" />
       </Head>
-<<<<<<< HEAD
 
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-4">Zion Blog</h1>
@@ -92,14 +91,6 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
           ))}
         </div>
       </div>
-=======
-      
-      <main>
-        <h1>Index</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
->>>>>>> origin/cursor/deploy-zion-token-economy-simulator-07d9
     </div>
   );
 };

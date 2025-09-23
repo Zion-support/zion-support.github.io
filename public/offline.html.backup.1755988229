@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
-<<<<<<< HEAD
     <meta name="description" content="You're currently offline. Zion Tech Group provides revolutionary technology solutions for 2045 and beyond.">
     <meta name="theme-color" content="#06b6d4">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/icons/icon-192x192.png">
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
     
-=======
-    <meta name="description" content="You're currently offline. Some features may be limited.">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
     <style>
         * {
             margin: 0;
@@ -23,13 +19,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-<<<<<<< HEAD
             background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
             color: white;
-=======
-            background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
-            color: #ffffff;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -39,41 +30,24 @@
         
         .offline-container {
             text-align: center;
-<<<<<<< HEAD
             max-width: 600px;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 48px 32px;
-=======
-            max-width: 500px;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(6, 182, 212, 0.3);
-            border-radius: 20px;
-            padding: 40px;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
         
         .offline-icon {
-<<<<<<< HEAD
             width: 120px;
             height: 120px;
             margin: 0 auto 32px;
             background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
-=======
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-<<<<<<< HEAD
             animation: pulse 2s infinite;
         }
         
@@ -81,15 +55,6 @@
             width: 60px;
             height: 60px;
             color: white;
-=======
-            font-size: 40px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
         }
         
         @keyframes pulse {
@@ -100,39 +65,24 @@
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
-<<<<<<< HEAD
             margin-bottom: 16px;
             background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
-=======
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
         .subtitle {
-<<<<<<< HEAD
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 32px;
             line-height: 1.6;
         }
         
-=======
-            font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
         .status-indicator {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-<<<<<<< HEAD
             background: rgba(239, 68, 68, 0.2);
             border: 1px solid rgba(239, 68, 68, 0.3);
             color: #fca5a5;
@@ -216,76 +166,10 @@
             padding: 16px 32px;
             border: none;
             border-radius: 12px;
-=======
-            padding: 8px 16px;
-            background: rgba(239, 68, 68, 0.2);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 20px;
-            color: #fca5a5;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #ef4444;
-            border-radius: 50%;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
-        }
-
-        .features-list {
-            text-align: left;
-            margin: 30px 0;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .features-list h3 {
-            color: #06b6d4;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .features-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .features-list li {
-            padding: 8px 0;
-            color: #cbd5e1;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .features-list li::before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .retry-button {
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-<<<<<<< HEAD
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -340,46 +224,6 @@
         }
         
         @media (max-width: 768px) {
-=======
-            margin: 20px 10px;
-        }
-
-        .retry-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
-        }
-
-        .home-button {
-            background: transparent;
-            color: #06b6d4;
-            border: 2px solid #06b6d4;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 20px 10px;
-        }
-
-        .home-button:hover {
-            background: #06b6d4;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .connection-info {
-            margin-top: 30px;
-            padding: 15px;
-            background: rgba(6, 182, 212, 0.1);
-            border: 1px solid rgba(6, 182, 212, 0.2);
-            border-radius: 10px;
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
-
-        @media (max-width: 600px) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
             .offline-container {
                 padding: 32px 24px;
                 margin: 20px;
@@ -390,7 +234,6 @@
             }
             
             .subtitle {
-<<<<<<< HEAD
                 font-size: 1.125rem;
             }
             
@@ -400,9 +243,6 @@
             
             .actions {
                 flex-direction: column;
-=======
-                font-size: 1rem;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
             }
         }
     </style>
@@ -417,7 +257,6 @@
         
         <h1>You're Offline</h1>
         <p class="subtitle">
-<<<<<<< HEAD
             Don't worry! Zion Tech Group's revolutionary technology solutions are still available offline. 
             We've cached the most important content for you.
         </p>
@@ -480,47 +319,11 @@
         <div class="footer">
             <p>Zion Tech Group - Revolutionary Technology Solutions for 2045 and Beyond</p>
             <p>Your connection will be restored automatically when you're back online</p>
-=======
-            Don't worry! You can still access previously loaded content and use some features while offline.
-        </p>
-        
-        <div class="status-indicator">
-            <div class="status-dot"></div>
-            <span>No Internet Connection</span>
-        </div>
-        
-        <div class="features-list">
-            <h3>Available Offline:</h3>
-            <ul>
-                <li>Browse previously visited pages</li>
-                <li>View cached images and content</li>
-                <li>Access saved preferences</li>
-                <li>Use installed PWA features</li>
-            </ul>
-        </div>
-        
-        <div>
-            <button class="retry-button" onclick="window.location.reload()">
-                🔄 Try Again
-            </button>
-            <button class="home-button" onclick="window.location.href='/'">
-                🏠 Go Home
-            </button>
-        </div>
-        
-        <div class="connection-info">
-            <strong>Tip:</strong> Check your internet connection and try refreshing the page. 
-            If the problem persists, try restarting your device or contacting your network provider.
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
         </div>
     </div>
 
     <script>
-<<<<<<< HEAD
         // Check connection status
-=======
-        // Check connection status periodically
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
         function checkConnection() {
             if (navigator.onLine) {
                 // User is back online, redirect to home
@@ -559,7 +362,6 @@
         // Check connection every 5 seconds
         setInterval(checkConnection, 5000);
 
-<<<<<<< HEAD
         // Update status indicator
         function updateStatusIndicator() {
             const statusIndicator = document.querySelector('.status-indicator');
@@ -591,18 +393,6 @@
                 })
                 .catch(registrationError => {
                     console.log('SW registration failed: ', registrationError);
-=======
-        // Add some interactivity
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add click effects to buttons
-            const buttons = document.querySelectorAll('button');
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 150);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-b373
                 });
             });
         });

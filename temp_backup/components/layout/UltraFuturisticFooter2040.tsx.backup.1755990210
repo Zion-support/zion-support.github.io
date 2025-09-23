@@ -2,104 +2,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Brain, Atom, Shield, Rocket, Cpu, Target, Sparkles, 
   Heart, DollarSign, GraduationCap, Building, Truck, Zap,
   Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube,
   ArrowRight, Star, CheckCircle, TrendingUp, Award, Clock
 } from 'lucide-react';
 
-=======
-  ArrowRight, 
-  Rocket, 
-  BookOpen, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Linkedin,
-  Twitter,
-  Github,
-  Youtube,
-  Globe,
-  Zap,
-  Users,
-  Award,
-  TrendingUp,
-  Sparkles,
-  Target
-} from 'lucide-react';
-
-// Enhanced footer data with 2045 services
-const footerData = {
-  company: {
-    name: 'Zion Tech Group',
-    description: 'Pioneering the future of technology with revolutionary 2045 AI consciousness, quantum computing, space technology, and autonomous solutions that transform businesses worldwide.',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    website: 'https://ziontechgroup.com'
-  },
-  quickLinks: [
-    { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Solutions', href: '/solutions' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Contact', href: '/contact' }
-  ],
-  revolutionary2045: [
-    { label: 'AI Consciousness Evolution 2045', href: '/ai-consciousness-evolution-2045', badge: 'Revolutionary' },
-    { label: 'Quantum Neural Ecosystem 2045', href: '/quantum-neural-ecosystem-2045', badge: 'Quantum' },
-    { label: 'Space Resource Intelligence 2045', href: '/space-resource-intelligence-2045', badge: 'Space' },
-    { label: 'Metaverse Development Studio Pro 2045', href: '/metaverse-development-studio-pro-2045', badge: 'Metaverse' },
-    { label: 'Quantum Cybersecurity Platform 2045', href: '/quantum-cybersecurity-platform-2045', badge: 'Security' },
-    { label: 'Revolutionary 2045 Services Showcase', href: '/revolutionary-2045-futuristic-services-showcase', badge: 'Showcase' }
-  ],
-  services: [
-    { label: 'AI & Machine Learning', href: '/services?category=ai-ml' },
-    { label: 'Quantum Computing', href: '/services?category=quantum' },
-    { label: 'Space Technology', href: '/services?category=space-tech' },
-    { label: 'Cybersecurity', href: '/services?category=cybersecurity' },
-    { label: 'Cloud Infrastructure', href: '/services?category=cloud' },
-    { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { label: 'Micro SAAS Platforms', href: '/services?category=micro-saas' },
-    { label: 'IT Services', href: '/services?category=it-services' }
-  ],
-  resources: [
-    { label: 'Documentation', href: '/docs' },
-    { label: 'API Reference', href: '/api-documentation' },
-    { label: 'Webinars', href: '/webinars' },
-    { label: 'White Papers', href: '/white-papers' },
-    { label: 'Support', href: '/support' },
-    { label: 'Status', href: '/status' },
-    { label: 'Training', href: '/training' },
-    { label: 'Developer Resources', href: '/developer-resources' }
-  ],
-  solutions: [
-    { label: 'Healthcare AI Solutions', href: '/healthcare-ai-solutions' },
-    { label: 'Financial Solutions', href: '/financial-solutions' },
-    { label: 'Government Technology', href: '/government-technology-solutions' },
-    { label: 'Education Technology', href: '/education-technology-solutions' },
-    { label: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
-    { label: 'Retail Technology', href: '/retail-technology-solutions' },
-    { label: 'Energy & Utilities', href: '/energy-utilities-solutions' },
-    { label: 'Entertainment & Media', href: '/entertainment-media-solutions' }
-  ],
-  social: [
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { label: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> },
-    { label: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
-  ]
-};
-
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
 const UltraFuturisticFooter2040: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -284,7 +192,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <footer className="bg-black text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900">
@@ -300,29 +207,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Brain className="w-7 h-7 text-white" />
-=======
-    <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-cyan-400/20" role="contentinfo">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
-          
-          {/* Company Information */}
-          <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Link href="/" className="inline-block mb-6" aria-label="Zion Tech Group Home">
-                <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                    <Star className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </span>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
@@ -347,7 +231,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
                 Pioneering the future with cutting-edge AI, quantum technology, and innovative solutions that transform businesses and industries.
               </p>
 
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors duration-300">
@@ -371,40 +254,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
                   <span className="text-sm">{contactInfo.hours}</span>
                 </div>
               </div>
-=======
-          {/* Revolutionary 2045 Services */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <Sparkles className="w-4 h-4 mr-2 text-pink-400" />
-                Revolutionary 2045
-              </h3>
-              <ul className="space-y-3">
-                {footerData.revolutionary2045.map((service) => (
-                  <li key={service.label}>
-                    <Link
-                      href={service.href}
-                      className="group flex items-center justify-between text-gray-300 hover:text-pink-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-pink-400/50 rounded"
-                      aria-label={`Explore ${service.label}`}
-                    >
-                      <span className="truncate">{service.label}</span>
-                      {service.badge && (
-                        <span className="ml-2 px-2 py-1 text-xs bg-pink-500/20 text-pink-300 rounded-full border border-pink-500/30 group-hover:bg-pink-500/30 transition-colors duration-300">
-                          {service.badge}
-                        </span>
-                      )}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
 
               {/* Social Links */}
               <div className="flex space-x-4">
@@ -422,7 +271,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Services */}
             <div className="lg:col-span-1">
               <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
@@ -517,91 +365,12 @@ const UltraFuturisticFooter2040: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-=======
-          {/* Solutions */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <Target className="w-4 h-4 mr-2 text-green-400" />
-                Solutions
-              </h3>
-              <ul className="space-y-3">
-                {footerData.solutions.map((solution) => (
-                  <li key={solution.label}>
-                    <Link
-                      href={solution.href}
-                      className="text-gray-300 hover:text-green-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-green-400/50 rounded"
-                      aria-label={`Explore ${solution.label}`}
-                    >
-                      {solution.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-
-          {/* Resources & Quick Links */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <BookOpen className="w-4 h-4 mr-2 text-blue-400" />
-                Resources
-              </h3>
-              <ul className="space-y-3 mb-6">
-                {footerData.resources.map((resource) => (
-                  <li key={resource.label}>
-                    <Link
-                      href={resource.href}
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-400/50 rounded"
-                      aria-label={`Access ${resource.label}`}
-                    >
-                      {resource.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-                <ArrowRight className="w-4 h-4 mr-2 text-cyan-400" />
-                Quick Links
-              </h3>
-              <ul className="space-y-3">
-                {footerData.quickLinks.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:underline focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded"
-                      aria-label={`Navigate to ${link.label}`}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Social Media & Newsletter */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
         <motion.div
           className="mt-16 pt-12 border-t border-gray-700/50"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="max-w-2xl mx-auto text-center">
@@ -624,54 +393,10 @@ const UltraFuturisticFooter2040: React.FC = () => {
               >
                 Learn More
               </Link>
-=======
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 pt-8 border-t border-gray-700/50"
-        >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            {/* Social Media */}
-            <div className="flex items-center space-x-6">
-              <span className="text-gray-400 font-medium">Follow us:</span>
-              <div className="flex items-center space-x-4">
-                {footerData.social.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-300 group"
-                    aria-label={`Follow us on ${social.label}`}
-                  >
-                    <div className="group-hover:scale-110 transition-transform duration-300">
-                      {social.icon}
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="flex-1 max-w-md">
-              <div className="text-center lg:text-right">
-                <h4 className="text-white font-semibold mb-2">Stay Updated with 2045 Tech</h4>
-                <p className="text-gray-400 text-sm mb-3">Get the latest revolutionary technology insights</p>
-                <div className="flex gap-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-2 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
-                  />
-                  <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Bottom Bar */}
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -693,25 +418,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
                   Sitemap
                 </Link>
               </div>
-=======
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved. Pioneering the future of technology.
-            </div>
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                Cookie Policy
-              </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
             </div>
           </div>
         </div>

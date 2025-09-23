@@ -2,14 +2,7 @@ import { useEffect, useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
 import { supabase } from '@/integrations/supabase/client';
-<<<<<<< HEAD
 import { ModerationLog } from '@/types/moderation';
-=======
-<<<<<<< HEAD
-import type { ModerationLog } from '@/types/moderation';
-=======
-import { ModerationLog } from '@/types/moderation';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { FlaggedListingsTable } from '@/components/admin/moderation/FlaggedListingsTable';
 import AdminLayout from '@/components/admin/AdminLayout';
@@ -21,12 +14,6 @@ export default function ListingModeration() {
 
   const fetchLogs = async () => {
     setIsLoading(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    if (!supabase) throw new Error('Supabase client not initialized');
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     const { data, error } = await supabase
       .from('moderation_logs')
@@ -46,12 +33,6 @@ export default function ListingModeration() {
   }, []);
 
   const handleAction = async (id: string, action: 'approved' | 'rejected') => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    if (!supabase) throw new Error('Supabase client not initialized');
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     const { error } = await supabase
       .from('moderation_logs')

@@ -8,79 +8,10 @@ import {
 } from 'lucide-react';
 
 const UltraFuturisticFooter2046: React.FC = () => {
-<<<<<<< HEAD
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-=======
-  const currentYear = new Date().getFullYear();
-
-  const footerSections = [
-    {
-      title: 'AI & Machine Learning',
-      links: [
-        { label: 'Quantum Neural Interfaces', href: '/quantum-neural-interface-platform-2046' },
-        { label: 'Autonomous AI Enterprise', href: '/autonomous-ai-enterprise-orchestrator-2046' },
-        { label: 'Quantum Emotion Intelligence', href: '/quantum-emotion-intelligence-platform-2046' },
-        { label: 'Autonomous AI Research', href: '/autonomous-ai-research-assistant-2046' },
-        { label: 'Quantum Creative AI', href: '/quantum-creative-ai-platform-2046' },
-        { label: 'View All AI Services', href: '/ai-services' }
-      ]
-    },
-    {
-      title: 'IT & Infrastructure',
-      links: [
-        { label: 'Quantum Space Computing', href: '/quantum-space-computing-infrastructure-2046' },
-        { label: 'Autonomous Cybersecurity', href: '/autonomous-cybersecurity-orchestrator-2046' },
-        { label: 'Quantum Cloud Hybrid', href: '/quantum-cloud-hybrid-platform-2046' },
-        { label: 'Autonomous DevOps', href: '/autonomous-devops-intelligence-platform-2046' },
-        { label: 'Quantum Data Center', href: '/quantum-data-center-optimization-2046' },
-        { label: 'View All IT Services', href: '/it-services' }
-      ]
-    },
-    {
-      title: 'Micro SAAS Solutions',
-      links: [
-        { label: 'Quantum Sustainability', href: '/quantum-sustainability-optimizer-2046' },
-        { label: 'Autonomous HR Intelligence', href: '/autonomous-hr-intelligence-suite-2046' },
-        { label: 'Quantum Financial Intelligence', href: '/quantum-financial-intelligence-platform-2046' },
-        { label: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-orchestrator-2046' },
-        { label: 'Quantum Customer Experience', href: '/quantum-customer-experience-optimizer-2046' },
-        { label: 'View All Micro SAAS', href: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Our Mission', href: '/mission' },
-        { label: 'Leadership Team', href: '/team' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'News & Updates', href: '/news' },
-        { label: 'Contact Us', href: '/contact' }
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { label: 'Blog & Insights', href: '/blog' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Webinars', href: '/webinars' },
-        { label: 'Documentation', href: '/docs' },
-        { label: 'Support Center', href: '/support' }
-      ]
-    }
-  ];
-
-  const socialLinks = [
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: '💼' },
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' },
-    { label: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' },
-    { label: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }
-  ];
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">

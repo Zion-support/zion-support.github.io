@@ -148,7 +148,6 @@
     "prebuild": "npm run build:health-check && npm run netlify:manifest",
     "export": "rm -rf .next out tsconfig.tsbuildinfo && mkdir -p .temp && mv pages/reports .temp/ 2>/dev/null || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build --no-lint && mv .temp/reports pages/ 2>/dev/null || true && rm -rf .temp",
     "start": "next start",
-<<<<<<< HEAD
     "postbuild": "node automation/footer-injector.cjs || true",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
@@ -169,12 +168,6 @@
     "build:smart:full": "node automation/master-build-orchestrator.cjs runSmartBuild",
     "security:scan": "node automation/security-scanner.cjs || true && (npm audit --audit-level=high || true)",
     "auto:intel": "node automation/intelligent-orchestrator.cjs run intelligent",
-=======
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "type-check": "tsc --noEmit",
-    "prepare": "husky install",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
@@ -217,11 +210,6 @@
     "automation:all": "node automation/launch-all-automation.cjs start",
     "automation:status": "node automation/launch-all-automation.cjs status",
     "automation:report": "node automation/launch-all-automation.cjs report",
-<<<<<<< HEAD
-=======
-    "intelligence:start": "node automation/app-intelligence-enhancer.cjs",
-    "intelligence:watch": "node automation/app-intelligence-enhancer.cjs continuous",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "automation:git-sync": "node automation/git-sync.cjs",
     "git:sync": "node automation/advanced-git-sync.cjs",
     "git:sync:enhanced": "node automation/enhanced-git-sync-orchestrator.cjs",
@@ -230,52 +218,11 @@
     "git:cleanup": "node automation/enhanced-git-sync-orchestrator.cjs cleanup-locks",
     "git:status": "node automation/enhanced-git-sync-orchestrator.cjs status",
     "git:report": "node automation/enhanced-git-sync-orchestrator.cjs report",
-<<<<<<< HEAD
-=======
-    "links:monitor": "node automation/enhanced-link-health-monitor.cjs",
-    "links:fix": "node automation/intelligent-link-auto-fixer.cjs",
-    "routes:validate": "node automation/route-validation-system.cjs",
-    "github:fix": "node automation/github-link-fixer.cjs",
-    "links:health-check": "npm run links:monitor && npm run links:fix && npm run routes:validate",
-    "links:auto-heal": "npm run links:health-check && npm run github:fix && npm run build:heal",
-    "links:scheduler:start": "node automation/link-health-scheduler.cjs start",
-    "links:scheduler:stop": "node automation/link-health-scheduler.cjs stop",
-    "links:scheduler:status": "node automation/link-health-scheduler.cjs status",
-    "links:analytics": "node automation/link-analytics-dashboard.cjs",
-    "links:predict": "node automation/smart-link-predictor.cjs",
-    "links:ci:pre-deploy": "node automation/ci-cd-link-validator.cjs pre-deploy",
-    "links:ci:post-deploy": "node automation/ci-cd-link-validator.cjs post-deploy",
-    "links:ci:validate": "node automation/ci-cd-link-validator.cjs validate",
-    "links:enterprise": "npm run links:monitor && npm run links:predict && npm run links:analytics && npm run links:ci:validate",
-    "links:ml:start": "node automation/ml-link-intelligence.cjs",
-    "links:realtime:start": "node automation/real-time-performance-monitor.cjs start",
-    "links:realtime:stop": "node automation/real-time-performance-monitor.cjs stop",
-    "links:realtime:status": "node automation/real-time-performance-monitor.cjs status",
-    "links:security:scan": "node automation/security-link-scanner.cjs",
-    "links:advanced": "npm run links:ml:start & npm run links:realtime:start & npm run links:security:scan",
-    "links:ai": "npm run links:predict && npm run links:ml:start",
-    "links:production": "npm run links:enterprise && npm run links:security:scan && npm run links:realtime:start",
-    "autonomous:start": "node automation/autonomous-system-manager.cjs start",
-    "autonomous:stop": "node automation/autonomous-system-manager.cjs stop",
-    "autonomous:status": "node automation/autonomous-system-manager.cjs status",
-    "autonomous:deploy": "pm2 start ecosystem.config.js --env production",
-    "autonomous:stop-pm2": "pm2 stop ecosystem.config.js",
-    "autonomous:restart-pm2": "pm2 restart ecosystem.config.js --env production",
-    "autonomous:logs": "pm2 logs ecosystem.config.js",
-    "autonomous:docker": "docker-compose -f docker-compose.autonomous.yml up -d",
-    "autonomous:docker-stop": "docker-compose -f docker-compose.autonomous.yml down",
-    "autonomous:docker-logs": "docker-compose -f docker-compose.autonomous.yml logs -f",
-    "autonomous:full": "npm run autonomous:start && npm run autonomous:deploy && npm run autonomous:docker",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "automation:improvement": "node automation/continuous-automation-improvement-system.js",
     "automation:guardian": "node automation/automation-guardian-10min.cjs",
     "automation:cloud": "node automation/cloud-autonomous-orchestrator.cjs",
     "automation:discover": "node automation/auto-discovery-runner.cjs",
-<<<<<<< HEAD
     "redundancy:start": "npm run start || (echo \"Primary script failed, running backup...\" && npm run start:backup || true)",
-=======
-    "redundancy:start": "./automation/start-redundancy-system.sh start",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "redundancy:stop": "./automation/start-redundancy-system.sh stop",
     "redundancy:restart": "./automation/start-redundancy-system.sh restart",
     "redundancy:status": "./automation/start-redundancy-system.sh status",
@@ -283,32 +230,19 @@
     "redundancy:system": "node automation/redundancy-automation-system.cjs",
     "redundancy:health": "./automation/start-redundancy-system.sh health",
     "redundancy:git-sync": "node automation/redundancy-git-sync.cjs",
-<<<<<<< HEAD
     "redundancy:build": "npm run build || (echo \"Primary script failed, running backup...\" && npm run build:backup || true)",
     "redundancy:pm2": "node automation/pm2-redundancy-monitor.cjs check",
     "redundancy:pm2:stop": "npm run pm2:stop || (echo \"Primary script failed, running backup...\" && npm run pm2:stop:backup || true)",
     "redundancy:pm2:restart": "npm run pm2:restart || (echo \"Primary script failed, running backup...\" && npm run pm2:restart:backup || true)",
     "redundancy:pm2:status": "npm run pm2:status || (echo \"Primary script failed, running backup...\" && npm run pm2:status:backup || true)",
-=======
-    "redundancy:build": "node automation/redundancy-build-monitor.cjs",
-    "redundancy:pm2": "node automation/pm2-redundancy-monitor.cjs check",
-    "redundancy:pm2:stop": "pm2 stop ecosystem.redundancy.cjs",
-    "redundancy:pm2:restart": "pm2 restart ecosystem.redundancy.cjs",
-    "redundancy:pm2:status": "pm2 status",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
     "automation:restart": "node automation/restart-all-automation.js",
     "automation:enhance": "node automation/enhance-all-automation.js",
     "automation:beautify": "node automation/beautify-ui.cjs",
-<<<<<<< HEAD
     "autonomous:start": "node automation/launch-autonomous-systems-clean.js start",
     "autonomous:stop": "node automation/launch-autonomous-systems-clean.js stop",
-=======
-    "autonomous:start": "node automation/autonomous-system-manager.cjs start",
-    "autonomous:stop": "node automation/autonomous-system-manager.cjs stop",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
     "autonomous:factory": "node automation/autonomous-error-monitoring-factory.js",
     "autonomous:orchestrator": "node automation/autonomous-automation-orchestrator.js",
@@ -438,10 +372,6 @@
     "meta:factory": "node automation/autonomous-meta-factory.cjs",
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "venture:start": "node automation/venture-orchestrator.cjs continuous",
     "venture:once": "node automation/venture-orchestrator.cjs once",
     "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
@@ -450,7 +380,6 @@
     "venture:cron:status": "bash automation/venture-cron.sh status",
     "venture:report": "node automation/venture-orchestrator.cjs report",
     "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
-<<<<<<< HEAD
     "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
     "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
     "git:pull": "node automation/git-pull-rebase.cjs",
@@ -501,14 +430,6 @@
     "redundancy:ultimate:pm2:stop": "pm2 stop ecosystem.ultimate-redundancy.cjs",
     "redundancy:ultimate:pm2:restart": "pm2 restart ecosystem.ultimate-redundancy.cjs",
     "redundancy:ultimate:pm2:status": "pm2 status ecosystem.ultimate-redundancy.cjs"
-=======
-    "husky:check": "bash scripts/husky-health-check.sh",
-    "husky:repair": "bash scripts/husky-repair.sh",
-    "husky:cron:start": "bash automation/husky-cron.sh start",
-    "husky:cron:stop": "bash automation/husky-cron.sh stop",
-    "husky:cron:status": "bash automation/husky-cron.sh status",
-    "husky:cron:run": "bash automation/husky-cron.sh run"
->>>>>>> origin/cursor/automate-and-stabilize-husky-processes-for-main-branch-b783
   },
 =======
           "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
@@ -577,7 +498,6 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-<<<<<<< HEAD
     "lint-staged": "^16.1.5",
     "postcss": "^8.4.32",
     "sharp": "^0.34.3",
@@ -585,19 +505,6 @@
     "ts-node": "^10.9.2",
     "typescript": "5.9.2"
   },
-=======
-    "lint-staged": "^16.1.4",
-          "postcss": "^8.4.32",
-      "sharp": "^0.33.4",
-      "tailwindcss": "^3.4.0",
-      "ts-node": "^10.9.2",
-      "typescript": "^5.6.3",
-      "jest": "^29.7.0",
-      "ts-jest": "^29.2.5",
-      "jest-environment-jsdom": "^29.7.0",
-      "identity-obj-proxy": "^3.0.0"
-    },
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"

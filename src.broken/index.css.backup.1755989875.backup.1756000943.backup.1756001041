@@ -606,23 +606,4 @@ button,
     z-index: 50;
     background: hsl(var(--background));
   }
-<<<<<<< HEAD
 }
-=======
-
-  /* Improved placeholder contrast */
-  input::placeholder,
-  textarea::placeholder {
-    color: #b3b3b3;
-    opacity: 1;
-  }
-}
-  @keyframes slide-up {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-  }
-
-  .animate-slide-up {
-    animation: slide-up 0.3s ease-out;
-  }
->>>>>>> origin/74tfm8-codex/implement-instant-messaging-for-negotiations

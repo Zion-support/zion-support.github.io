@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function AiBusinessDiscussion() {
   return (
     <div className="space-y-2">
@@ -7,6 +6,3 @@ export default function AiBusinessDiscussion() {
     </div>
   );
 }
-=======
-export default function AIPoweredBusinessSolutionsDiscussion() { return <div>AI-Powered Business Solutions</div>; }
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

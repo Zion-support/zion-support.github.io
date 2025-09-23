@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
-=======
-import React from 'react';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { motion } from 'framer-motion';
@@ -19,10 +15,6 @@ const Homepage2025: React.FC = () => {
 
   return (
     <Layout>
-<<<<<<< HEAD
-=======
-      {/* Main Content */}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
@@ -321,7 +313,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </section>
       </main>
-<<<<<<< HEAD
 
       {/* Video Modal */}
       <AnimatePresence>
@@ -358,8 +349,6 @@ const Homepage2025: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
     </Layout>
   );
 });

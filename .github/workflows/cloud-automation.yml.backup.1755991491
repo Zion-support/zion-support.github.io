@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Cloud Automation Suite
 
 on:
@@ -9,14 +8,6 @@ on:
 concurrency:
   group: cloud-automation-${{ github.ref }}
   cancel-in-progress: true
-=======
-name: Zion Autonomous Cloud Automations
-
-on:
-  schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch: {}
->>>>>>> origin/cursor/deploy-zion-protocol-metrics-dashboard-eac6
 
 permissions:
   contents: write
@@ -25,7 +16,6 @@ jobs:
   run-automations:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -77,26 +67,3 @@ jobs:
           else
             echo "No changes to commit."
           fi
-=======
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Install minimal deps
-        run: |
-          npm ci --omit=dev
-      - name: Run orchestrator
-        run: |
-          node automation/cloud-autonomous-orchestrator.cjs
-      - name: Commit artifacts
-        run: |
-          git config user.name "zion-bot"
-          git config user.email "bot@zion.app"
-          git add public/metrics/latest.json public/automation/status.json docs/reports/ || true
-          git commit -m "chore(automation): update metrics and summary [skip ci]" || echo "No changes"
-          git push || true
->>>>>>> origin/cursor/deploy-zion-protocol-metrics-dashboard-eac6

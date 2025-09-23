@@ -33,7 +33,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     lineSpacing: 1.5,
     colorBlindMode: 'none'
   });
-<<<<<<< HEAD
   const [isReading, setIsReading] = useState(false);
   const [currentText, setCurrentText] = useState('');
   const [speechRate, setSpeechRate] = useState(1);
@@ -56,14 +55,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
-=======
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
-  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
-  
-  const focusRef = useRef<HTMLDivElement>(null);
-  const announcementRef = useRef<HTMLDivElement>(null);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
 
   // Apply accessibility settings to the document
   useEffect(() => {
@@ -162,51 +153,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   }, [applySettings]);
 
-<<<<<<< HEAD
   // Apply settings when they change
-=======
-  // Focus management
-  const handleFocusChange = useCallback((e: FocusEvent) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      setCurrentFocus(target);
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-    }
-  }, []);
-
-  // Keyboard navigation enhancements
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
-      setIsKeyboardNavigation(true);
-    }
-  }, []);
-
-  // Announce to screen reader
-  const announceToScreenReader = useCallback((message: string) => {
-    // setAnnouncements(prev => [...prev, message]); // This line was removed
-    
-    // Create live region for screen readers
-    if (!announcementRef.current) {
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      document.body.appendChild(liveRegion);
-      announcementRef.current = liveRegion;
-    }
-    
-    if (announcementRef.current) {
-      announcementRef.current.textContent = message;
-    }
-    
-    // Remove announcement after a delay
-    setTimeout(() => {
-      // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
-    }, 5000);
-  }, []);
-
-  // Auto-optimize accessibility
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
   useEffect(() => {
     applySettings(settings);
   }, [settings, applySettings]);

@@ -11,12 +11,7 @@ export function useUIState() {
     availability: true,
     region: true,
     experience: true,
-<<<<<<< HEAD
     price: true});
-=======
-    price: true,
-  });
->>>>>>> origin/auto/autonomy-17186719616
   
   // Toggle expanded sections in the sidebar
   const toggleSection = (sectionName: keyof typeof expandedSections) => {
@@ -43,10 +38,5 @@ export function useUIState() {
     setSelectedTalent,
     expandedSections,
     toggleSection,
-<<<<<<< HEAD
     closeMobileFilter};
-=======
-    closeMobileFilter,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 }

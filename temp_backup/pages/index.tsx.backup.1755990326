@@ -5,7 +5,6 @@ import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
 
 export default function Home() {
   return (
-<<<<<<< HEAD
     <>
       <SEO 
         title="Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions"
@@ -18,11 +17,6 @@ export default function Home() {
         <Homepage2044 />
       </ErrorBoundary>
     </>
-=======
-    <EnhancedErrorBoundary>
-      <Homepage2044 />
-    </EnhancedErrorBoundary>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a647
   );
 };
 

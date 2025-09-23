@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "Zion OS - Sovereign AI-Powered Digital Economies",
   "short_name": "Zion OS",
   "description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems.",
@@ -7,15 +6,6 @@
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#3b82f6",
-=======
-  "name": "Zion Tech Group",
-  "short_name": "Zion Tech",
-  "description": "Leading-edge technology solutions and autonomous innovation platform",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -55,11 +45,7 @@
     {
       "name": "Services",
       "short_name": "Services",
-<<<<<<< HEAD
       "description": "View our services and solutions",
-=======
-      "description": "View our technology services",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
       "url": "/services",
       "icons": [
         {
@@ -86,18 +72,13 @@
       "src": "/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
-<<<<<<< HEAD
       "form_factor": "wide",
       "label": "Zion OS Dashboard"
-=======
-      "form_factor": "wide"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
     },
     {
       "src": "/screenshot-narrow.png",
       "sizes": "750x1334",
       "type": "image/png",
-<<<<<<< HEAD
       "form_factor": "narrow",
       "label": "Zion OS Mobile View"
     }
@@ -115,9 +96,4 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   }
-=======
-      "form_factor": "narrow"
-    }
-  ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 }

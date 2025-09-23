@@ -46,16 +46,12 @@ interface Service {
   patentStatus?: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities?: string[];
   spaceCapabilities?: string[];
-<<<<<<< HEAD
   quantumCapabilities?: string[];
   iotCapabilities?: string[];
   edgeCapabilities?: string[];
   securityCapabilities?: string[];
   blockchainCapabilities?: string[];
   marketDisruption: string;
-=======
-  marketDisruption?: string;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-574a
   variant: string;
 }
 
@@ -192,11 +188,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           const aLevel = (a as any).innovationLevel || 'Advanced';
           const bLevel = (b as any).innovationLevel || 'Advanced';
           const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
-<<<<<<< HEAD
-=======
-          const aLevel = (a as any).innovationLevel || 'Advanced';
-          const bLevel = (b as any).innovationLevel || 'Advanced';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-574a
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -441,7 +432,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-20"
         >
-<<<<<<< HEAD
           <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -458,29 +448,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 Contact Sales
               </button>
             </div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { label: 'Revolutionary Services', value: services.filter(s => (s as any).innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => (s as any).patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-            ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-574a
           </div>
         </motion.div>
       </div>

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 export interface InnovativeAIService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string}; export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIServic e[] = [;
-=======
-<<<<<<< HEAD:backup-merge-conflicts/innovativeAIServices2025.ts.backup
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InnovativeAIService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string}; export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIServic e[] = [;
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/data/innovativeAIServices2025.ts
 export interface InnovativeAIService2025 {
   id: string;
   title: string;
@@ -294,16 +285,8 @@ export const "INNOVATIVE_AI_SERVICES_2025": "InnovativeAIService2025[] = [;
     "growthRate": "31.2% annually";
   }
 ];
-<<<<<<< HEAD:backup-merge-conflicts/innovativeAIServices2025.ts.backup
 <<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
-<<<<<<< HEAD
-=======
-export interface InnovativeAIService { "id": string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { "technology": string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string}; export const "INNOVATIVE_AI_SERVICES_2025": InnovativeAIServic e[] = [;
-<<<<<<< HEAD:backup-merge-conflicts/innovativeAIServices2025.ts.backup
->>>>>>> main
 export interface InnovativeAIService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string}; export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIServic e[] = [;
 >>>>>>> main
 >>>>>>> main

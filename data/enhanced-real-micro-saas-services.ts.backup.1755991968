@@ -1525,11 +1525,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
   {
     id: 'quantum-ai-cognitive',
     name: 'Quantum AI Cognitive Platform',
-<<<<<<< HEAD
     tagline: 'Revolutionary quantum AI platform with unprecedented problem-solving capabilities',
-=======
-    tagline: 'Revolutionary quantum AI with cognitive reasoning',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     price: '$1,299',
     period: '/month',
     description: 'First-to-market quantum AI platform combining quantum computing with advanced cognitive AI for unprecedented problem-solving capabilities. Achieves 99.99% accuracy in complex decision-making scenarios.',
@@ -1540,24 +1536,16 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       'Real-time quantum AI processing',
       'Advanced pattern recognition',
       'Quantum memory optimization',
-<<<<<<< HEAD
       'Cross-domain knowledge transfer',
       'Predictive analytics',
       'Quantum encryption',
       'Scalable quantum architecture'
-=======
-      'Cognitive load balancing',
-      'Quantum entanglement analysis',
-      'Real-time learning adaptation',
-      'Multi-modal AI processing'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-500 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-cognitive',
-<<<<<<< HEAD
     marketPosition: 'First-to-market quantum AI platform. No direct competitors in quantum cognitive computing space.',
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Tech giants',
     trialDays: 30,
@@ -1569,19 +1557,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     useCases: ['Drug discovery', 'Financial modeling', 'Climate prediction', 'Complex optimization', 'Scientific research', 'Strategic planning'],
     roi: 'Average customer achieves 500% ROI within 6 months through breakthrough discoveries and optimization.',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum', 'D-Wave Systems'],
-=======
-    marketPosition: 'First-to-market quantum cognitive AI platform. Competes with IBM Quantum ($1,200-5,000), Google Quantum AI ($2,000-10,000). Our advantage: Cognitive reasoning + quantum computing integration.',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services, Government agencies, Defense contractors, Aerospace companies',
-    trialDays: 30,
-    setupTime: '2-4 weeks',
-    category: 'Quantum Computing & AI',
-    realService: true,
-    technology: ['Quantum Computing', 'TensorFlow Quantum', 'Qiskit', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['AWS Braket', 'IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Jupyter Notebooks', 'TensorBoard'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Climate modeling', 'Cryptography', 'Optimization problems', 'Machine learning acceleration'],
-    roi: 'Average customer sees 500% ROI within 6 months through accelerated research and development processes.',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket', 'Rigetti Computing'],
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     marketSize: '$2.1B market',
     growthRate: '350% annual growth',
     variant: 'quantum',
@@ -1592,47 +1567,28 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced quantum AI platform with quantum simulators, cognitive reasoning engines, and real-time processing capabilities. Includes quantum memory optimization and cross-domain knowledge transfer.',
     launchDate: '2024-03-01',
     customers: 15,
     rating: 4.9,
     reviews: 8
-=======
-    implementationDetails: 'Full-stack quantum AI platform with quantum circuit simulator, cognitive reasoning engine, and real-time optimization algorithms. Includes quantum error correction and noise mitigation.',
-    launchDate: '2024-03-01',
-    customers: 150,
-    rating: 4.9,
-    reviews: 89
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
   },
   {
     id: 'autonomous-ai-factory',
     name: 'Autonomous AI Factory',
-<<<<<<< HEAD
     tagline: 'Complete autonomous manufacturing system with zero human intervention',
     price: '$2,499',
     period: '/month',
     description: 'Complete autonomous manufacturing system powered by AI that runs 24/7 with zero human intervention. Industry 4.0 leader delivering 200% productivity increase and 90% cost reduction.',
-=======
-    tagline: 'Complete autonomous manufacturing with zero human intervention',
-    price: '$2,499',
-    period: '/month',
-    description: 'Industry 4.0 leader - complete autonomous manufacturing system powered by AI that runs 24/7 with zero human intervention. Achieves 200% productivity increase and 99.9% quality consistency.',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     features: [
       'Fully autonomous operation',
       'AI-powered quality control',
       'Predictive maintenance',
       'Real-time optimization',
       'Supply chain automation',
-<<<<<<< HEAD
       'Energy efficiency management',
       'Quality assurance AI',
       'Production scheduling',
-=======
-      'Energy efficiency optimization',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
       'Inventory management',
       'Production scheduling',
       'Quality assurance AI',
@@ -1643,7 +1599,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-ai-factory',
-<<<<<<< HEAD
     marketPosition: 'Industry 4.0 leader in autonomous manufacturing. Competes with Siemens, ABB, and Rockwell Automation.',
     targetAudience: 'Manufacturing companies, Automotive industry, Electronics manufacturers, Food processing, Chemical plants',
     trialDays: 45,
@@ -1655,19 +1610,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     useCases: ['Automotive manufacturing', 'Electronics assembly', 'Food processing', 'Chemical manufacturing', 'Pharmaceutical production'],
     roi: 'Average customer achieves 200% productivity increase and 90% cost reduction within 12 months.',
     competitors: ['Siemens', 'ABB', 'Rockwell Automation', 'Honeywell', 'Emerson'],
-=======
-    marketPosition: 'Industry 4.0 leader in autonomous manufacturing. Competes with Siemens Mindsphere ($2,000-8,000), GE Predix ($1,500-6,000). Our advantage: Complete autonomy + AI quality control.',
-    targetAudience: 'Manufacturing companies, Automotive industry, Aerospace manufacturers, Electronics producers, Chemical plants, Food processing',
-    trialDays: 45,
-    setupTime: '4-8 weeks',
-    category: 'Manufacturing & Industry 4.0',
-    realService: true,
-    technology: ['Industrial IoT', 'Machine Learning', 'Computer Vision', 'Predictive Analytics', 'PLC Integration', 'SCADA Systems', 'Python', 'TensorFlow'],
-    integrations: ['Siemens PLC', 'Allen Bradley', 'Mitsubishi', 'SAP ERP', 'Oracle ERP', 'Microsoft Dynamics', 'Tableau', 'Power BI'],
-    useCases: ['Production automation', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy management', 'Safety monitoring'],
-    roi: 'Average customer sees 200% productivity increase and 40% cost reduction within 12 months.',
-    competitors: ['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'Bosch IoT Suite', 'ABB Ability'],
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     marketSize: '$4.8B market',
     growthRate: '250% annual growth',
     variant: 'holographic',
@@ -1678,19 +1620,11 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Complete autonomous manufacturing platform with IoT sensors, AI quality control, predictive maintenance, and real-time optimization. Includes supply chain automation and energy efficiency management.',
     launchDate: '2024-02-15',
     customers: 28,
     rating: 4.8,
     reviews: 15
-=======
-    implementationDetails: 'Complete autonomous manufacturing platform with IoT sensors, AI vision systems, predictive maintenance algorithms, and real-time optimization engine. Includes mobile app for monitoring.',
-    launchDate: '2024-02-15',
-    customers: 75,
-    rating: 4.8,
-    reviews: 156
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
   },
   {
     id: 'quantum-cybersecurity-fortress',
@@ -1698,11 +1632,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     tagline: 'Future-proof cybersecurity with quantum-resistant encryption',
     price: '$1,599',
     period: '/month',
-<<<<<<< HEAD
     description: 'Future-proof cybersecurity platform using quantum-resistant encryption and AI-powered threat detection. Protects against current and future quantum threats with military-grade security.',
-=======
-    description: 'Future-proof cybersecurity using quantum-resistant encryption and AI-powered threat detection. Protects against current and future quantum threats with military-grade security protocols.',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     features: [
       'Quantum-resistant encryption',
       'AI threat detection',
@@ -1710,47 +1640,27 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       '24/7 monitoring',
       'Behavioral analysis',
       'Threat intelligence',
-<<<<<<< HEAD
       'Incident response',
       'Compliance management',
       'Security automation',
       'Quantum key distribution'
-=======
-      'Incident response automation',
-      'Compliance reporting',
-      'Multi-factor authentication',
-      'Secure API gateway'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
-<<<<<<< HEAD
     marketPosition: 'Leading quantum-resistant cybersecurity platform. Competes with Palo Alto Networks, CrowdStrike, and SentinelOne.',
     targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Defense contractors, Tech companies',
-=======
-    marketPosition: 'Leading quantum-resistant cybersecurity platform. Competes with Palo Alto Networks ($1,200-4,000), CrowdStrike ($1,500-5,000). Our advantage: Quantum-resistant + AI threat detection.',
-    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Defense contractors, Technology companies, Energy sector',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'Cybersecurity',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum Cryptography', 'AI & ML', 'Zero Trust', 'Behavioral Analysis', 'React', 'Python', 'Blockchain'],
     integrations: ['SIEM Systems', 'EDR Solutions', 'Cloud Platforms', 'Identity Providers', 'Security Tools'],
     useCases: ['Financial security', 'Healthcare data protection', 'Government security', 'Critical infrastructure', 'Cloud security'],
     roi: 'Average customer prevents $2M+ in potential cyber attacks annually with 99.99% threat detection rate.',
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Cisco', 'Fortinet'],
-=======
-    technology: ['Post-Quantum Cryptography', 'Machine Learning', 'Zero Trust', 'SIEM', 'EDR', 'Python', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Active Directory', 'Okta', 'Duo', 'Slack', 'Microsoft Teams', 'Jira', 'ServiceNow', 'Splunk'],
-    useCases: ['Data protection', 'Threat detection', 'Compliance management', 'Incident response', 'Access control', 'Security monitoring'],
-    roi: 'Average customer prevents $2.5M in potential cyber losses annually while achieving 99.99% threat detection rate.',
-    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     marketSize: '$3.2B market',
     growthRate: '280% annual growth',
     variant: 'cyberpunk',
@@ -1761,19 +1671,11 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced quantum-resistant cybersecurity platform with AI threat detection, zero-trust architecture, and 24/7 monitoring. Includes behavioral analysis and quantum key distribution.',
     launchDate: '2024-01-20',
     customers: 95,
     rating: 4.9,
     reviews: 48
-=======
-    implementationDetails: 'Enterprise-grade cybersecurity platform with quantum-resistant encryption algorithms, AI-powered threat detection, and comprehensive security monitoring. Includes mobile app and API access.',
-    launchDate: '2024-01-20',
-    customers: 320,
-    rating: 4.9,
-    reviews: 234
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
   },
   {
     id: 'biomedical-ai-research',
@@ -1781,38 +1683,24 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     tagline: 'Accelerate biomedical research with AI-powered drug discovery',
     price: '$899',
     period: '/month',
-<<<<<<< HEAD
     description: 'Revolutionary AI-powered medical diagnostics platform that analyzes medical images, predicts diseases, and assists healthcare professionals. FDA-approved and HIPAA-compliant.',
-=======
-    description: 'Cutting-edge AI platform for biomedical research and drug discovery. Accelerates research timelines by 10x while maintaining scientific accuracy and FDA compliance standards.',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     features: [
       'Drug discovery acceleration',
       'Genomic analysis',
       'Clinical trial optimization',
       'Research automation',
-<<<<<<< HEAD
       'Data visualization',
       'Collaboration tools',
       'Compliance management',
       'Publication assistance',
       'Grant writing support',
       'Research analytics'
-=======
-      'Molecular modeling',
-      'Protein folding prediction',
-      'Drug interaction analysis',
-      'Clinical data analytics',
-      'Regulatory compliance',
-      'Collaboration tools'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     ],
     popular: true,
     icon: '🧬',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/biomedical-ai-research',
-<<<<<<< HEAD
     marketPosition: 'Leading AI-powered biomedical research platform. Competes with Benchling, LabArchives, and Quartzy.',
     targetAudience: 'Research institutions, Pharmaceutical companies, Biotech startups, Universities, Medical centers',
     trialDays: 30,
@@ -1824,19 +1712,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     useCases: ['Drug discovery', 'Genomic research', 'Clinical trials', 'Biomarker identification', 'Disease modeling', 'Personalized medicine'],
     roi: 'Average customer accelerates research by 10x and reduces costs by 60% within 6 months.',
     competitors: ['Benchling', 'LabArchives', 'Quartzy', 'Labguru', 'eLabJournal'],
-=======
-    marketPosition: 'Leading AI-powered biomedical research platform. Competes with Atomwise ($500-2,000), BenevolentAI ($1,000-3,000). Our advantage: 10x acceleration + FDA compliance.',
-    targetAudience: 'Pharmaceutical companies, Research institutions, Biotech startups, Medical device companies, Clinical research organizations, Universities',
-    trialDays: 60,
-    setupTime: '2-3 weeks',
-    category: 'Healthcare & Biotechnology',
-    realService: true,
-    technology: ['Deep Learning', 'Bioinformatics', 'Molecular Dynamics', 'Python', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['PubChem', 'ChEMBL', 'PDB', 'ClinicalTrials.gov', 'FDA databases', 'PubMed', 'GeneBank', 'UniProt'],
-    useCases: ['Drug discovery', 'Target identification', 'Clinical trial design', 'Genomic research', 'Protein analysis', 'Drug repurposing'],
-    roi: 'Average customer accelerates drug development by 10x, saving $50M+ in development costs and 3-5 years in time-to-market.',
-    competitors: ['Atomwise', 'BenevolentAI', 'Insilico Medicine', 'Exscientia', 'Recursion Pharmaceuticals'],
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     marketSize: '$3.2B market',
     growthRate: '200% annual growth',
     variant: 'neural',
@@ -1847,19 +1722,11 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Comprehensive biomedical AI research platform with drug discovery acceleration, genomic analysis, and clinical trial optimization. Includes research automation and collaboration tools.',
     launchDate: '2024-02-01',
     customers: 67,
     rating: 4.8,
     reviews: 34
-=======
-    implementationDetails: 'Comprehensive biomedical AI platform with molecular modeling, genomic analysis, and clinical trial optimization. Includes collaboration tools and regulatory compliance features.',
-    launchDate: '2024-02-01',
-    customers: 180,
-    rating: 4.8,
-    reviews: 167
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
   },
   {
     id: 'quantum-finance-optimizer',
@@ -1867,11 +1734,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     tagline: 'Revolutionary financial optimization with quantum computing',
     price: '$1,199',
     period: '/month',
-<<<<<<< HEAD
     description: 'Revolutionary financial optimization platform using quantum computing for portfolio optimization and risk assessment. Delivers 50x faster calculations and superior financial insights.',
-=======
-    description: 'Revolutionary financial optimization platform using quantum computing for portfolio optimization and risk assessment. Achieves 50x faster calculations than traditional financial models.',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     features: [
       'Portfolio optimization',
       'Risk assessment',
@@ -1889,7 +1752,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     color: 'from-yellow-500 to-amber-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-finance-optimizer',
-<<<<<<< HEAD
     marketPosition: 'Leading quantum-powered financial optimization platform. Competes with Bloomberg, Refinitiv, and FactSet.',
     targetAudience: 'Investment banks, Hedge funds, Asset managers, Insurance companies, Financial advisors',
     trialDays: 30,
@@ -1904,22 +1766,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.1B market',
     growthRate: '350% annual growth',
     variant: 'quantum',
-=======
-    marketPosition: 'Leading quantum financial optimization platform. Competes with Bloomberg Terminal ($2,000-24,000), Refinitiv ($1,500-15,000). Our advantage: Quantum speed + AI optimization.',
-    targetAudience: 'Investment banks, Hedge funds, Asset management firms, Insurance companies, Trading firms, Financial advisors',
-    trialDays: 30,
-    setupTime: '1-2 weeks',
-    category: 'Financial Technology',
-    realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'Financial Modeling', 'Python', 'Qiskit', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['Bloomberg API', 'Reuters API', 'Yahoo Finance', 'Alpha Vantage', 'IEX Cloud', 'Trading platforms', 'CRM systems'],
-    useCases: ['Portfolio optimization', 'Risk management', 'Algorithmic trading', 'Fraud detection', 'Compliance reporting', 'Performance analysis'],
-    roi: 'Average customer sees 300% ROI through improved portfolio performance and 50x faster risk calculations.',
-    competitors: ['Bloomberg Terminal', 'Refinitiv', 'FactSet', 'Morningstar', 'YCharts'],
-    marketSize: '$2.8B market',
-    growthRate: '320% annual growth',
-    variant: 'quantum-matrix',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1927,37 +1773,22 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced quantum finance platform with portfolio optimization, risk assessment, and real-time trading capabilities. Includes quantum algorithms and market prediction features.',
     launchDate: '2024-01-15',
     customers: 42,
     rating: 4.9,
     reviews: 21
-=======
-    implementationDetails: 'Advanced financial platform with quantum computing algorithms for portfolio optimization, real-time risk assessment, and AI-powered market prediction. Includes mobile app and API access.',
-    launchDate: '2024-01-10',
-    customers: 95,
-    rating: 4.7,
-    reviews: 143
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
   },
 
   // QUANTUM COMPUTING SERVICES
   {
-<<<<<<< HEAD
     id: 'ai-space-exploration-platform',
     name: 'AI Space Exploration Platform',
     tagline: 'AI-powered space exploration and satellite management',
-=======
-    id: 'autonomous-logistics-ai',
-    name: 'Autonomous Logistics AI',
-    tagline: 'Intelligent supply chain optimization with zero waste',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     price: '$1,899',
     period: '/month',
     description: 'Next-generation autonomous logistics platform that optimizes supply chains in real-time, reducing costs by 40% and improving delivery times by 60% through AI-powered route optimization.',
     features: [
-<<<<<<< HEAD
       'Autonomous space missions',
       'Satellite management',
       'Real-time decision making',
@@ -1968,75 +1799,11 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       'Navigation optimization',
       'Resource management',
       'Safety monitoring'
-=======
-      'Real-time route optimization',
-      'Autonomous vehicle management',
-      'Inventory forecasting',
-      'Demand prediction',
-      'Warehouse automation',
-      'Last-mile delivery optimization',
-      'Fuel efficiency optimization',
-      'Carbon footprint reduction',
-      'Real-time tracking',
-      'Analytics dashboard'
-    ],
-    popular: true,
-    icon: '🚚',
-    color: 'from-teal-500 to-green-600',
-    textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/autonomous-logistics-ai',
-    marketPosition: 'Leading autonomous logistics platform. Competes with Flexport ($1,000-5,000), Convoy ($800-3,000). Our advantage: AI optimization + autonomous vehicles.',
-    targetAudience: 'Logistics companies, E-commerce businesses, Manufacturing companies, Retail chains, Food delivery services, Healthcare logistics',
-    trialDays: 45,
-    setupTime: '3-4 weeks',
-    category: 'Logistics & Supply Chain',
-    realService: true,
-    technology: ['Machine Learning', 'IoT Sensors', 'GPS Tracking', 'Computer Vision', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['Shopify', 'WooCommerce', 'Magento', 'SAP', 'Oracle', 'Salesforce', 'Google Maps', 'Waze', 'Uber Freight'],
-    useCases: ['Route optimization', 'Fleet management', 'Inventory management', 'Demand forecasting', 'Warehouse automation', 'Delivery optimization'],
-    roi: 'Average customer reduces logistics costs by 40% and improves delivery times by 60% within 6 months.',
-    competitors: ['Flexport', 'Convoy', 'Coyote Logistics', 'CH Robinson', 'Echo Global Logistics'],
-    marketSize: '$3.5B market',
-    growthRate: '240% annual growth',
-    variant: 'holographic-neural',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Comprehensive logistics platform with AI-powered route optimization, autonomous vehicle management, and real-time supply chain analytics. Includes mobile app for drivers and customers.',
-    launchDate: '2024-02-20',
-    customers: 120,
-    rating: 4.8,
-    reviews: 89
-  },
-  {
-    id: 'quantum-space-analytics',
-    name: 'Quantum Space Analytics',
-    tagline: 'Revolutionary space data analysis with quantum computing',
-    price: '$2,999',
-    period: '/month',
-    description: 'Cutting-edge space analytics platform using quantum computing to process massive amounts of satellite data, enabling real-time Earth observation and space exploration insights.',
-    features: [
-      'Satellite data processing',
-      'Earth observation analytics',
-      'Climate change monitoring',
-      'Space debris tracking',
-      'Satellite constellation optimization',
-      'Real-time data analysis',
-      'Predictive modeling',
-      '3D visualization',
-      'API access',
-      'Custom dashboards'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     ],
     popular: true,
     icon: '🚀',
     color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-space-exploration',
     marketPosition: 'Leading AI-powered space exploration platform. Competes with SpaceX, Blue Origin, and Lockheed Martin.',
     targetAudience: 'Space agencies, Satellite companies, Aerospace companies, Research institutions, Defense contractors',
@@ -2049,20 +1816,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     useCases: ['Satellite operations', 'Mission planning', 'Space exploration', 'Earth observation', 'Communication networks', 'Research missions'],
     roi: 'Average customer reduces mission costs by 40% and improves success rate by 35% within 12 months.',
     competitors: ['SpaceX', 'Blue Origin', 'Lockheed Martin', 'Boeing', 'Northrop Grumman'],
-=======
-    link: 'https://ziontechgroup.com/quantum-space-analytics',
-    marketPosition: 'Leading quantum space analytics platform. Competes with Planet Labs ($2,000-10,000), Maxar ($5,000-25,000). Our advantage: Quantum processing + real-time analytics.',
-    targetAudience: 'Space agencies, Satellite companies, Environmental organizations, Climate researchers, Defense contractors, Insurance companies',
-    trialDays: 60,
-    setupTime: '4-6 weeks',
-    category: 'Space Technology',
-    realService: true,
-    technology: ['Quantum Computing', 'Satellite Imagery', 'Machine Learning', 'Computer Vision', 'Python', 'Qiskit', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['NASA APIs', 'ESA APIs', 'Planet Labs', 'Maxar', 'Google Earth Engine', 'AWS Ground Station', 'Azure Orbital'],
-    useCases: ['Climate monitoring', 'Disaster response', 'Urban planning', 'Agriculture monitoring', 'Infrastructure inspection', 'Security surveillance'],
-    roi: 'Average customer gains 1000x faster data processing capabilities, enabling real-time decision making in critical applications.',
-    competitors: ['Planet Labs', 'Maxar Technologies', 'BlackSky', 'Capella Space', 'ICEYE'],
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     marketSize: '$1.8B market',
     growthRate: '300% annual growth',
     variant: 'space',
@@ -2073,7 +1826,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced AI space exploration platform with autonomous mission planning, satellite management, and real-time decision making. Includes predictive analytics and safety monitoring.',
     launchDate: '2024-02-20',
     customers: 12,
@@ -2118,52 +1870,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B market',
     growthRate: '220% annual growth',
     variant: 'holographic',
-=======
-    implementationDetails: 'Advanced space analytics platform with quantum computing capabilities for processing massive satellite datasets. Includes real-time monitoring, predictive modeling, and 3D visualization.',
-    launchDate: '2024-03-15',
-    customers: 45,
-    rating: 4.9,
-    reviews: 67
-  },
-  {
-    id: 'neural-quantum-cyberpunk',
-    name: 'Neural Quantum Cyberpunk',
-    tagline: 'Futuristic AI platform combining neural networks and quantum computing',
-    price: '$1,799',
-    period: '/month',
-    description: 'Revolutionary AI platform that combines advanced neural networks with quantum computing capabilities, creating a cyberpunk-inspired system for next-generation problem solving.',
-    features: [
-      'Quantum neural networks',
-      'Cyberpunk AI interface',
-      'Advanced pattern recognition',
-      'Real-time learning',
-      'Multi-dimensional analysis',
-      'Predictive modeling',
-      'Creative AI generation',
-      'Quantum memory',
-      'Neural plasticity',
-      'Cyberpunk aesthetics'
-    ],
-    popular: true,
-    icon: '🤖',
-    color: 'from-pink-600 to-rose-700',
-    textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/neural-quantum-cyberpunk',
-    marketPosition: 'Unique cyberpunk-inspired quantum AI platform. Competes with OpenAI ($1,200-4,000), Anthropic ($1,500-5,000). Our advantage: Cyberpunk aesthetics + quantum neural networks.',
-    targetAudience: 'Creative agencies, Gaming companies, Film studios, Technology companies, Research institutions, AI enthusiasts',
-    trialDays: 30,
-    setupTime: '2-3 weeks',
-    category: 'AI & Machine Learning',
-    realService: true,
-    technology: ['Quantum Computing', 'Neural Networks', 'Machine Learning', 'Computer Graphics', 'Python', 'PyTorch', 'React', 'Three.js', 'WebGL'],
-    integrations: ['Unity', 'Unreal Engine', 'Blender', 'Maya', 'Adobe Creative Suite', 'Figma', 'Slack', 'Discord'],
-    useCases: ['Creative AI generation', 'Game development', 'Film production', 'Design automation', 'Content creation', 'Virtual reality'],
-    roi: 'Average customer sees 400% ROI through creative automation and AI-powered content generation.',
-    competitors: ['OpenAI', 'Anthropic', 'Stability AI', 'Midjourney', 'Runway ML'],
-    marketSize: '$2.2B market',
-    growthRate: '380% annual growth',
-    variant: 'neural-quantum-cyberpunk',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2171,7 +1877,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced autonomous logistics platform with AI-powered optimization, robotics integration, and comprehensive supply chain management.',
     launchDate: '2024-01-20',
     customers: 198,
@@ -4108,13 +3813,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     customers: 2800,
     rating: 4.8,
     reviews: 1200
-=======
-    implementationDetails: 'Innovative AI platform combining quantum computing with neural networks in a cyberpunk aesthetic. Includes creative AI tools, 3D visualization, and real-time collaboration features.',
-    launchDate: '2024-02-28',
-    customers: 85,
-    rating: 4.8,
-    reviews: 112
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
   }
 ];
 

@@ -3,21 +3,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import ServiceAds from '../components/sections/ServiceAds';
 import Card from '../components/ui/Card';
-=======
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import UltraAdvancedNavigation2026V2 from '../components/layout/UltraAdvancedNavigation2026V2';
-import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
-import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
-import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
-import UltraAdvancedHero2026V2 from '../components/sections/UltraAdvancedHero2026V2';
-import UltraAdvancedFooter2026V2 from '../components/layout/UltraAdvancedFooter2026V2';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5c61
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
@@ -28,47 +17,8 @@ import { quantumAdvancedServices } from '../data/quantum-advanced-services';
 import { emergingTechServices } from '../data/emerging-tech-services';
 import { spaceTechServices } from '../data/space-tech-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
-<<<<<<< HEAD
 import { emergingTechAdvancedServices } from '../data/emerging-tech-advanced-services';
 import { itInfrastructureServices } from '../data/it-infrastructure-services';
-=======
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { quantumAIServices2025 } from '../data/quantum-ai-services-2025';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { professionalServices } from '../data/professional-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { emergingTechServices2025 } from '../data/emerging-tech-services-2025';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { realMarketServices } from '../data/real-market-services';
-import { serviceExpansions2025 } from '../data/service-expansions-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { realOperationalServices } from '../data/real-operational-services';
-import { newOperationalServices2025 } from '../data/new-operational-services-2025';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { revolutionary2025Services } from '../data/revolutionary-2025-services';
-import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
-import { innovative2026Services } from '../data/innovative-2026-services';
-import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
-import { enterpriseIT2026Services } from '../data/enterprise-it-2026-services';
-import { innovative2026MicroSaasServices } from '../data/innovative-2026-micro-saas';
-import { emergingTech2026Services as emergingTech2026ServicesNew } from '../data/emerging-tech-2026-services';
-import { enterpriseIT2026Services as enterpriseIT2026ServicesNew } from '../data/enterprise-it-2026-services';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
-import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
-import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026MicroSaasV2 } from '../data/revolutionary-2026-micro-saas-v2';
-import { ultimate2026AIServicesV2 } from '../data/ultimate-2026-ai-services-v2';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5c61
 
 export default function HomePage() {
   const heroStats = [
@@ -126,14 +76,9 @@ export default function HomePage() {
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3,
     ...ultimate2026Services,
-<<<<<<< HEAD
     ...innovative2026MicroSaasV4Services,
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4
-=======
-    ...revolutionary2026MicroSaasV2,
-    ...ultimate2026AIServicesV2
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5c61
   ];
 
 const featuredServices = [
@@ -305,17 +250,10 @@ export default function HomePage() {
       </Head>
 
         {/* Ultra Advanced Navigation */}
-<<<<<<< HEAD
         <UltraAdvancedNavigation2026V4 />
 
         {/* Enhanced Hero Section 2026 */}
         <EnhancedHero2026V4 />
-=======
-        <UltraAdvancedNavigation2026V2 />
-
-        {/* Enhanced Hero Section 2026 */}
-        <UltraAdvancedHero2026V2 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5c61
 
         {/* Revolutionary 2026 Services Showcase */}
         <Revolutionary2026ServiceShowcase />

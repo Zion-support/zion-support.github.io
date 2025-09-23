@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -26,21 +25,11 @@ function collectAnchorsAndHeadings(filePath) {
   });
   const missing = anchors.filter(a => !headings.has(a));
   return { anchors, headings: Array.from(headings), missing };
-=======
-const path = require('path');
-const { spawnSync } = require('child_process');
-
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-6146
 }
 
 exports.config = { schedule: '*/5 * * * *' };
 
 exports.handler = async () => {
-<<<<<<< HEAD
   try {
     const root = process.cwd();
     const pagesDir = path.join(root, 'pages');
@@ -73,20 +62,3 @@ exports.handler = async () => {
     return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) };
   }
 };
-=======
-  const logs = [];
-  const logStep = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
-  };
-
-  logStep('anchor:links:report', () => runNode('automation/anchor-links-auto-fixer.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, body: logs.join('\n') };
-};
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-6146

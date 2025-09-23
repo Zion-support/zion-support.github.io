@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function AutomationStatusPage() {
   return (
     <div className="py-8">
@@ -7,10 +6,3 @@ export default function AutomationStatusPage() {
     </div>
   );
 }
-=======
-import React from 'react';
-
-export default function AutomationStatusPage() {
-  return <div>Automation Status</div>;
-}
->>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517

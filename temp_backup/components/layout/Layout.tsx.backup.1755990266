@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import UltraAdvancedFuturisticNavigation2041 from './UltraAdvancedFuturisticNavigation2041';
 import UltraAdvancedFuturisticFooter2041 from './UltraAdvancedFuturisticFooter2041';
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import UltraFuturisticNavigation2044 from './UltraFuturisticNavigation2044';
-import UltraFuturisticFooter2044 from './UltraFuturisticFooter2044';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a2aa
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraAdvancedFuturisticBackground2040 from '../backgrounds/UltraAdvancedFuturisticBackground2040';
 import TopContactBar from './TopContactBar';
@@ -17,7 +10,6 @@ import CookieConsentBanner from '../CookieConsentBanner';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
 import SEOHead from '../SEOHead';
 
-<<<<<<< HEAD
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -35,23 +27,6 @@ export default function Layout({
   ogImage = "/og-image.jpg",
   canonicalUrl
 }: LayoutProps) {
-=======
-interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string;
-  image: string;
-  url: string;
-  type: string;
-}
-
-interface LayoutProps {
-  children: React.ReactNode;
-  seo?: SEOConfig;
-}
-
-export default function Layout({ children, seo }: LayoutProps) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a2aa
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -97,36 +72,11 @@ export default function Layout({ children, seo }: LayoutProps) {
   const finalSEO = seo || defaultSEO;
 
   return (
-<<<<<<< HEAD
     <>
       <SEOHead />
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         {/* Skip to content link for accessibility */}
         <a href="#main" className="skip-link">Skip to main content</a>
-=======
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* SEO Head */}
-      <Head>
-        <title>{finalSEO.title}</title>
-        <meta name="description" content={finalSEO.description} />
-        <meta name="keywords" content={finalSEO.keywords} />
-        <meta property="og:title" content={finalSEO.title} />
-        <meta property="og:description" content={finalSEO.description} />
-        <meta property="og:image" content={finalSEO.image} />
-        <meta property="og:url" content={finalSEO.url} />
-        <meta property="og:type" content={finalSEO.type} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={finalSEO.title} />
-        <meta name="twitter:description" content={finalSEO.description} />
-        <meta name="twitter:image" content={finalSEO.image} />
-        <link rel="canonical" href={finalSEO.url} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-      </Head>
-
-      {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link">Skip to main content</a>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a2aa
       
       {/* Ultra Advanced Futuristic Background */}
       <UltraAdvancedFuturisticBackground2040 

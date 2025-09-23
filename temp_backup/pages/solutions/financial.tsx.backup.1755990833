@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Building, Users, Shield, Cpu, Database, Globe, Zap, Target, 
   TrendingUp, BarChart3, Lock, Cloud, Server, Network, Settings, Brain,
   DollarSign, CreditCard, PieChart, LineChart, Shield as ShieldIcon
@@ -12,9 +11,6 @@ import {
 const FinancialSolutionsPage: React.FC = () => {
   const solutions = [
     {
-=======
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       title: "Financial AI & Machine Learning",
       description: "Advanced AI solutions for financial institutions with predictive analytics and risk assessment",
       icon: <Brain className="w-8 h-8" />,

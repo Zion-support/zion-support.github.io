@@ -81,42 +81,7 @@ import { industryRealServices } from '../data/industry-real-services';
 
 // Helper function to get service category
 const getServiceCategory = (service: any) => {
-<<<<<<< HEAD
   if (service.category) return service.category;
-=======
-  if (service.category) {
-    // Map specific categories to our filter categories
-    const categoryMap: { [key: string]: string } = {
-      'AI & Development': 'ai-autonomous',
-      'AI & Business Operations': 'ai-autonomous',
-      'AI & Cybersecurity': 'ai-autonomous',
-      'AI & Data Science': 'ai-autonomous',
-      'AI & Customer Success': 'ai-autonomous',
-      'Quantum & AI': 'quantum-tech',
-      'Quantum & Cybersecurity': 'quantum-tech',
-      'Quantum & Fintech': 'quantum-tech',
-      'Quantum & Logistics': 'quantum-tech',
-      'Quantum & Materials Science': 'quantum-tech',
-      'Space Technology': 'space-tech',
-      'Metaverse & AI': 'metaverse-dev',
-      'Metaverse & Holographics': 'metaverse-dev',
-      'Space Technology & AI': 'space-tech',
-      'IT Infrastructure & Security': 'it-infrastructure',
-      'IT Infrastructure & Cloud': 'it-infrastructure',
-      'IT Infrastructure & DevOps': 'it-infrastructure',
-      'IT Infrastructure & Database': 'it-infrastructure',
-      'IT Infrastructure & AI': 'it-infrastructure',
-      'IT Infrastructure & Edge Computing': 'it-infrastructure',
-      'Industry-Specific Solutions': 'industry-solutions',
-      'Quantum Computing & AI': 'quantum-tech',
-      'Metaverse & Virtual Reality': 'metaverse-dev',
-      'Blockchain & AI': 'blockchain-tech',
-      'Robotics & Automation': 'robotics-tech'
-    };
-    
-    return categoryMap[service.category] || service.category.toLowerCase().replace(/\s+/g, '-');
-  }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8185
   if (service.type) return service.type;
   return 'Other';
 };
@@ -168,16 +133,9 @@ const allServices = [
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
   // Our new 2025 advanced services
-<<<<<<< HEAD
   ...advanced2025MicroSaasExpansion,
   ...advanced2025ITSolutionsExpansion,
   ...advanced2025AIServicesExpansion,
-=======
-  ...advancedAIAutomationPlatforms2025,
-  ...innovativeITInfrastructureSolutions2025,
-  ...specializedMicroSaasSolutions2025,
-  ...emergingTechnologyServices2025,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8185
   // Our new innovative services
   ...innovative2037MicroSaasServices,
   ...innovative2037ITServices,
@@ -304,7 +262,6 @@ const categories = [
   {
     id: 'it-infrastructure',
     name: 'IT Infrastructure',
-<<<<<<< HEAD
     icon: <Network className="w-6 h-6" />,
     color: 'from-blue-500 to-cyan-600',
     description: 'Advanced infrastructure solutions'
@@ -315,32 +272,6 @@ const categories = [
     icon: <Zap className="w-6 h-6" />,
     color: 'from-yellow-500 to-orange-600',
     description: 'Business process automation'
-=======
-    icon: <Server className="w-6 h-6" />,
-    color: 'from-slate-500 to-gray-500',
-    description: 'Advanced IT infrastructure and DevOps'
-  },
-  {
-    id: 'industry-solutions',
-    name: 'Industry Solutions',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-amber-500 to-orange-500',
-    description: 'Specialized solutions for specific industries'
-  },
-  {
-    id: 'blockchain-tech',
-    name: 'Blockchain Technology',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-yellow-500 to-orange-500',
-    description: 'Blockchain and decentralized applications'
-  },
-  {
-    id: 'robotics-tech',
-    name: 'Robotics & Automation',
-    icon: <Rocket className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-600',
-    description: 'Autonomous robotics and automation systems'
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8185
   }
 ];
 

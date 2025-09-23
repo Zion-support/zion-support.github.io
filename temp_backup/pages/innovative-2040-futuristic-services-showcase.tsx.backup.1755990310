@@ -16,7 +16,6 @@ import { innovativeAIServices } from '../data/innovative-ai-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 import { RealMarketService } from '../data/real-market-services';
 
-<<<<<<< HEAD
 interface Service {
   id: string;
   name: string;
@@ -55,10 +54,6 @@ interface Service {
   reviews: number;
   benefits?: string[];
 }
-=======
-// Use any for now to get the build working - we can refine types later
-type Service = any;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9ffa
 
 // Helper function to get price display
 const getPriceDisplay = (service: any) => {

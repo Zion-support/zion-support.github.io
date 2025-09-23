@@ -158,100 +158,13 @@ const navigationItems: NavigationItem[] = [
         description: 'Meet our team',
         icon: <Star className="w-4 h-4" />
       },
-<<<<<<< HEAD
       {
         name: 'Careers',
         href: '/careers',
-=======
-      { 
-        name: 'Partners', 
-        href: '/partners', 
-        description: 'Partnership opportunities',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Careers', 
-        href: '/careers', 
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-095e
         description: 'Join our team',
         icon: <Play className="w-4 h-4" />
       }
     ]
-<<<<<<< HEAD
-=======
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <Play className="w-5 h-5" />,
-    description: 'Knowledge & support',
-    category: 'resources',
-    children: [
-      { 
-        name: 'Documentation', 
-        href: '/docs', 
-        description: 'Technical documentation',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Blog', 
-        href: '/blog', 
-        description: 'Latest insights',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
-        description: 'Success stories',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Support', 
-        href: '/support', 
-        description: 'Technical support',
-        icon: <Play className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Play className="w-5 h-5" />,
-    description: 'Industry solutions',
-    category: 'solutions',
-    children: [
-      { 
-        name: 'Healthcare', 
-        href: '/healthcare-solutions', 
-        description: 'Healthcare technology solutions',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Finance', 
-        href: '/financial-solutions', 
-        description: 'Financial technology solutions',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Manufacturing', 
-        href: '/manufacturing-ai-solutions', 
-        description: 'Manufacturing automation',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Retail', 
-        href: '/retail-technology-solutions', 
-        description: 'Retail technology solutions',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Government', 
-        href: '/government-technology-solutions', 
-        description: 'Government technology solutions',
-        icon: <Play className="w-4 h-4" />
-      }
-    ]
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-095e
   }
 ];
 

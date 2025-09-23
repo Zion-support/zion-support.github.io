@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -16,6 +15,3 @@ const TalentProfilePage: NextPage = () => {
 };
 
 export default TalentProfilePage;
-=======
-export default function TalentProfile(){return <div className="p-6">Talent Profile</div>;}
->>>>>>> origin/cursor/build-digital-nation-creation-module-57e8

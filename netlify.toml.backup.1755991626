@@ -49,7 +49,6 @@
     Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
 [[redirects]]
-<<<<<<< HEAD
   from = "/rag-evaluation-lab"
   to = "/services/rag-evaluation-lab"
   status = 301
@@ -84,9 +83,3 @@
   to = "https://www.linkedin.com/company/zion-tech-group"
   status = 302
   force = true
-=======
-  from = "/services/*"
-  to = "/:splat"
-  status = 301
-  force = true
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-c45d

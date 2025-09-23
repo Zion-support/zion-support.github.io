@@ -132,18 +132,6 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [applySettings]);
 
-<<<<<<< HEAD
-=======
-  // Focus management
-  const handleFocusChange = useCallback((e: FocusEvent) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      setCurrentFocus(target);
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-    }
-  }, []);
-
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-ab61
   // Keyboard navigation enhancements
   const handleKeyDown = useCallback(() => {
     // Tab navigation detected

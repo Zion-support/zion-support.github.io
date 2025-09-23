@@ -1,22 +1,12 @@
-<<<<<<< HEAD
 name: Autonomous Cloud Ops
-=======
-name: Autonomous Cloud Automations
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
 
 on:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
-<<<<<<< HEAD
   workflow_dispatch: {}
 
 permissions:
   contents: write
-=======
-  workflow_dispatch:
-  push:
-    branches: [ main ]
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
 
 jobs:
   run-automations:
@@ -24,11 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-<<<<<<< HEAD
         with:
           persist-credentials: true
-=======
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -36,7 +23,6 @@ jobs:
           node-version: '20'
 
       - name: Install deps
-<<<<<<< HEAD
         run: npm ci
 
       - name: Generate sitemap
@@ -56,30 +42,3 @@ jobs:
           else
             echo "No changes to commit"
           fi
-=======
-        run: npm ci --prefer-offline --no-audit
-
-      - name: Run automations
-        run: |
-          node automation/auto-health-monitor/index.mjs || true
-          node automation/sitemap-maintenance-agents/generate-sitemap.cjs || true
-          node automation/autonomous-cloud/ai-talent-intake.cjs || true
-          node automation/autonomous-cloud/partner-kpis.cjs || true
-          node automation/autonomous-cloud/impact-metrics.cjs || true
-          node automation/git-health.cjs --fast || true
-
-      - name: Build site
-        run: npm run build
-
-      - name: Commit changes
-        run: |
-          git config user.name "autonomous-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(automations): autonomous cloud updates [skip ci]"
-            git push
-          else
-            echo "No changes to commit"
-          fi
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c

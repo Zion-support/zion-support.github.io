@@ -8,22 +8,14 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
-<<<<<<< HEAD
     title: 'Launch: Autonomous Procurement Copilot (v1.0)',
     summary:
       'Automates vendor sourcing, contract analysis, and PO workflows with policy-as-code guardrails and live cost benchmarks.',
     href: '/updates/autonomous-procurement-copilot-1-0',
-=======
-    title: 'Launch: Compliance Auditor (v1.0)',
-    summary:
-      'Automated GenAI compliance auditing with policy-as-code, lineage, PII detection, and exportable audit reports.',
-    href: '/updates/compliance-auditor-1-0',
->>>>>>> origin/cursor/create-and-deploy-new-content-f0a4
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
     title: 'Guide: Production Guardrails for Multimodal Agents',
     summary:
       'Practical design patterns for safe image, audio, and text agents: sandboxing, red-teaming, and continuous evals.',
@@ -102,14 +94,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/eval-ready-ai-pipelines',
     date: '2025-09-15',
     tag: 'Guide'
-=======
-    title: 'Course: GenAI for Executives',
-    summary:
-      'Executive program on GenAI strategy, governance, risk, operating models, and ROI with practical playbooks.',
-    href: '/updates/genai-executive-course',
-    date: '2025-09-15',
-    tag: 'Course'
->>>>>>> origin/cursor/create-and-deploy-new-content-f0a4
   },
   {
     title: 'Launch: Autonomous Sales Copilot (v1.0)',

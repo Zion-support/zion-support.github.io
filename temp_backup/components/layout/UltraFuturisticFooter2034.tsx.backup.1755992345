@@ -22,7 +22,6 @@ const contactInfo = {
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
-<<<<<<< HEAD
     description: 'Revolutionary AI consciousness and emotional intelligence solutions',
     icon: <Brain className="w-6 h-6" />,
     links: [
@@ -39,25 +38,10 @@ const serviceCategories = [
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
-=======
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
-    services: [
-      { name: 'AI Business Intelligence Suite Pro', href: '/ai-business-intelligence-suite-pro' },
-      { name: 'AI Content Creation Studio', href: '/ai-content-creation-studio' },
-      { name: 'Autonomous Customer Service AI', href: '/autonomous-customer-service-ai' },
-      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' },
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
-      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
-      { name: 'AI Education Platform', href: '/ai-education-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6758
     ]
   },
   {
     title: 'Quantum & Emerging Tech',
-<<<<<<< HEAD
     description: 'Quantum computing and breakthrough technologies',
     icon: <Atom className="w-6 h-6" />,
     links: [
@@ -76,25 +60,10 @@ const serviceCategories = [
       { name: 'Quantum Metaverse', href: '/quantum-metaverse' },
       { name: 'Quantum IoT Platform', href: '/quantum-iot' },
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading' }
-=======
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
-    services: [
-      { name: 'Quantum-Safe Cybersecurity Platform', href: '/quantum-safe-cybersecurity-platform' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform' },
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
-      { name: 'Quantum Sensing Platform', href: '/quantum-sensing-platform' },
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform' },
-      { name: 'Bio-Computing Platform', href: '/bio-computing-platform' },
-      { name: 'Space-Based Computing Platform', href: '/space-based-computing-platform' },
-      { name: 'Holographic Computing Interface', href: '/holographic-computing-interface' },
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform' },
-      { name: 'Fusion Power Simulation Platform', href: '/fusion-power-simulation-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6758
     ]
   },
   {
     title: 'Enterprise IT',
-<<<<<<< HEAD
     description: 'Enterprise solutions and infrastructure',
     icon: <Shield className="w-6 h-6" />,
     links: [
@@ -107,25 +76,10 @@ const serviceCategories = [
       { name: 'IoT Security Management', href: '/iot-security-management-platform' },
       { name: 'Data Privacy Management', href: '/data-privacy-management-platform' },
       { name: 'Cloud Cost Optimization', href: '/cloud-cost-optimization-platform' }
-=======
-    icon: <Shield className="w-5 h-5 text-green-400" />,
-    services: [
-      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform' },
-      { name: 'Edge AI Computing Platform', href: '/edge-ai-computing-platform' },
-      { name: 'IoT Security & Management Platform', href: '/iot-security-management-platform' },
-      { name: 'Healthcare AI Platform', href: '/healthcare-ai-platform' },
-      { name: 'Financial AI Trading Platform', href: '/financial-ai-trading-platform' },
-      { name: 'Manufacturing AI Platform', href: '/manufacturing-ai-platform' },
-      { name: 'Retail AI Platform', href: '/retail-ai-platform' },
-      { name: 'Energy AI Platform', href: '/energy-ai-platform' },
-      { name: 'Transportation AI Platform', href: '/transportation-ai-platform' },
-      { name: 'Education AI Platform', href: '/education-ai-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6758
     ]
   },
   {
     title: 'Micro SAAS',
-<<<<<<< HEAD
     description: 'Innovative business solutions for modern enterprises',
     icon: <Rocket className="w-6 h-6" />,
     links: [
@@ -191,20 +145,6 @@ const serviceCategories = [
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog', href: '/blog' },
       { name: 'Research Papers', href: '/research-papers' }
-=======
-    icon: <Rocket className="w-5 h-5 text-purple-400" />,
-    services: [
-      { name: 'Blockchain-as-a-Service Platform', href: '/blockchain-as-a-service-platform' },
-      { name: 'AI Content Factory Pro', href: '/ai-content-factory-pro' },
-      { name: 'Quantum CRM Suite', href: '/quantum-crm-suite' },
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' },
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
-      { name: 'AI Education Platform', href: '/ai-education-platform' },
-      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
-      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6758
     ]
   }
 ];

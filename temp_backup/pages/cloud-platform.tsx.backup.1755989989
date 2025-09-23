@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Layout from '../components/layout/Layout';
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 import { motion } from 'framer-motion';
 import { 
   Cloud, 

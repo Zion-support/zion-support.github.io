@@ -1,48 +1,6 @@
-<<<<<<< HEAD:src_backup/components/ui/switch.tsx
 import React from 'react';
 
 export default function Switch() {
-=======
-import React, { useState } from 'react';
-import { 
-  SERVICE_CATEGORIES, 
-  ALL_SERVICES, 
-  AI_SERVICES, 
-  IT_SERVICES, 
-  MICRO_SAAS_SERVICES,
-  CYBERSECURITY_SERVICES,
-  DATA_ANALYTICS_SERVICES,
-  CLOUD_SOLUTIONS
-} from '@/data/servicesData';
-import { ServiceCategory, ServiceSolution } from '@/types/services';
-
-export function ServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const filteredServices = ALL_SERVICES.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const getServicesByCategory = (categoryId: string) => {
-    switch (categoryId) {
-      case 'ai-services': return AI_SERVICES;
-      case 'it-services': return IT_SERVICES;
-      case 'micro-saas': return MICRO_SAAS_SERVICES;
-      case 'cybersecurity': return CYBERSECURITY_SERVICES;
-      case 'data-analytics': return DATA_ANALYTICS_SERVICES;
-      case 'cloud-solutions': return CLOUD_SOLUTIONS;
-      default: return ALL_SERVICES;
-    }
-  };
-
-  const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e654:src/pages/ServicesPage.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}

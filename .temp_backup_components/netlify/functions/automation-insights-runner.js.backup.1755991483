@@ -22,7 +22,6 @@ exports.handler = async () => {
     return status;
   }
 
-<<<<<<< HEAD
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 
@@ -34,19 +33,6 @@ exports.handler = async () => {
   }
 
   // Commit and push
-=======
-  // Crawl external links and generate report
-  logStep('links:check', () => runNode('scripts/automations/check_links.cjs'));
-
-  // If there are any local link fixers, run them (optional best-effort)
-  try {
-    logStep('links:fixer', () => runNode('automation/site-link-fixer.cjs'));
-  } catch (error) {
-    logs.push(`No site-link-fixer found or failed gracefully: ${String(error)}`);
-  }
-
-  // Commit and push any changes
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };

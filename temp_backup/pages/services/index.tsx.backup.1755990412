@@ -66,7 +66,6 @@ import { advancedAIServicesExpansion2025 } from '../../data/2025-advanced-ai-ser
 export default function ServicesPage() {
   const { navigation, isLoading, error } = useNavigation();
 
-<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -91,12 +90,6 @@ export default function ServicesPage() {
       </div>
     );
   }
-=======
-// Import our new 2025 innovative services V3
-import { innovativeMicroSaasExpansionV32025 } from '../../data/2025-innovative-micro-saas-expansion-v3';
-import { innovativeITServicesExpansion2025V3 } from '../../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../../data/2025-innovative-ai-services-expansion-v3';
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 
   if (error) {
     return (

@@ -5,11 +5,6 @@ import { ArrowUp, Filter, SortAsc, TrendingUp, Star, ShoppingCart, AlertTriangle
 import { toast } from '@/hooks/use-toast';
 import apiClient from '@/services/apiClient';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 const API_BASE = '/api';
 
 // Sample datacenter equipment listings
@@ -340,18 +335,12 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     reviewCount: 5,
   },
 ];
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   useEffect(() => {
     async function fetchEquipment() {
       try {
@@ -373,9 +362,6 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     }, 120000); // add new equipment every 2 minutes
     return () => clearInterval(interval);
   }, []);
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 

@@ -259,7 +259,6 @@
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-<<<<<<< HEAD
   name = "internal-link-optimizer"
   schedule = "*/7 * * * *" # every 7 minutes
 
@@ -346,19 +345,3 @@
 [[scheduled.functions]]
   name = "orphan-page-finder"
   schedule = "41 */6 * * *"
-=======
-  name = "autonomous-ad-factory"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "knowledge-radar-orchestrator"
-  schedule = "17 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "innovation-researcher"
-  schedule = "9 */2 * * *" # every 2 hours
-
-[[scheduled.functions]]
-  name = "continuous-cloud-refiner"
-  schedule = "*/5 * * * *" # every 5 minutes
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-55b6

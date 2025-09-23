@@ -6,7 +6,6 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   lcp: number;
   fid: number;
   cls: number;
@@ -14,29 +13,6 @@ interface PerformanceMetrics {
   fcp: number;
   fmp: number;
   tti: number;
-=======
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
-  fmp: number; // First Meaningful Paint
-  si: number; // Speed Index
-  tti: number; // Time to Interactive
-  tbt: number; // Total Blocking Time
-}
-
-interface PerformanceEntryExtended extends PerformanceEntry {
-  processingStart?: number;
-  value?: number;
-}
-
-interface PerformanceData {
-  timestamp: number;
-  metrics: PerformanceMetrics;
-  score: number;
-  grade: 'A' | 'B' | 'C' | 'D' | 'F';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f5d1
 }
 
 interface PerformanceMonitorProps {

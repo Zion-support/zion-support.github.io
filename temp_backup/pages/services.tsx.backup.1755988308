@@ -96,7 +96,6 @@ const getServicePricing = (service: any) => {
   // Handle pricing object structure
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-<<<<<<< HEAD
   if (service.price?.monthly) return `$${service.price.monthly}/month`;
   if (service.price && service.period) return `${service.price}${service.period}`;
   if (service.price) return service.price;
@@ -108,31 +107,6 @@ const getServicePricing = (service: any) => {
     if (service.pricing.yearly) return service.pricing.yearly;
     return 'Contact for pricing';
   }
-=======
-  if (service.pricing?.pro) return `$${service.pricing.pro}/month`;
-  if (service.pricing?.enterprise) return `$${service.pricing.enterprise}/month`;
-  
-  // Handle price object structure
-  if (service.price?.monthly) {
-    const monthly = service.price.monthly;
-    if (typeof monthly === 'number') {
-      return `$${monthly}/month`;
-    } else if (typeof monthly === 'string') {
-      return monthly;
-    }
-  }
-  
-  // Handle price as string
-  if (typeof service.price === 'string') return service.price;
-  
-  // Handle price as number
-  if (typeof service.price === 'number') return `$${service.price}/month`;
-  
-  // Handle marketPrice
-  if (service.marketPrice) return service.marketPrice;
-  
-  // Default fallback
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-d9ea
   return 'Contact for pricing';
 };
 

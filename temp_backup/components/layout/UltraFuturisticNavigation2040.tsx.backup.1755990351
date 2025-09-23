@@ -4,12 +4,8 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
-<<<<<<< HEAD
   Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
   Sun, Moon, Bell, User
-=======
-  Phone, Mail, MapPin, ArrowRight, Star, Users, Award, Building, Cpu, Rocket, Shield, Heart
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -73,7 +69,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Scalable cloud infrastructure'
       },
       {
-<<<<<<< HEAD
         label: 'Micro SaaS',
         href: '/micro-saas',
         icon: <Star className="w-4 h-4" />,
@@ -84,18 +79,6 @@ const navigationItems: NavigationItem[] = [
         href: '/services-2046-showcase',
         icon: <Star className="w-4 h-4" />,
         description: 'Revolutionary 2046 technology showcase'
-=======
-        label: 'Micro SAAS Solutions',
-        href: '/micro-saas',
-        icon: <Building className="w-4 h-4" />,
-        description: 'Innovative micro SAAS platforms'
-      },
-      {
-        label: 'IT Infrastructure',
-        href: '/it-services',
-        icon: <Cpu className="w-4 h-4" />,
-        description: 'Enterprise IT solutions'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
       },
       {
         label: 'View All Services',
@@ -244,7 +227,6 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
-<<<<<<< HEAD
     label: 'AI Services',
     children: [
       {
@@ -281,40 +263,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Shield className="w-4 h-4" />
       }
     ]
-=======
-    label: 'Solutions',
-    children: [
-      {
-        label: 'Enterprise Solutions',
-        href: '/solutions',
-        icon: <Building className="w-4 h-4" />,
-        description: 'Large-scale enterprise solutions'
-      },
-      {
-        label: 'Startup Solutions',
-        href: '/startup-solutions',
-        icon: <Rocket className="w-4 h-4" />,
-        description: 'Solutions for growing startups'
-      },
-      {
-        label: 'Government Solutions',
-        href: '/government-solutions',
-        icon: <Shield className="w-4 h-4" />,
-        description: 'Secure government solutions'
-      },
-      {
-        label: 'Healthcare Solutions',
-        href: '/healthcare-solutions',
-        icon: <Heart className="w-4 h-4" />,
-        description: 'Healthcare technology solutions'
-      }
-    ]
-  },
-  {
-    label: 'About',
-    href: '/about',
-    icon: <Users className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
   },
   {
     name: 'Innovative Services 2025',

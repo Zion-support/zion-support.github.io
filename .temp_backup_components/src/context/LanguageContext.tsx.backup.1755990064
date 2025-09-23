@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
@@ -247,10 +246,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     }
   };
   
-=======
-import React from 'react';
-export function LanguageContext() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

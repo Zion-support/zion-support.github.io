@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import { useFormik } from 'formik';
@@ -86,14 +85,5 @@ export default function SimpleSignup() {
         Sign Up
       </button>
     </form>
-=======
-import React from 'react';
-export function SimpleSignup() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

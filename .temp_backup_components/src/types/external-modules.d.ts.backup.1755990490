@@ -340,23 +340,6 @@ declare module 'recharts';
 declare module 'next' {
   export type GetStaticPaths = any;
   export type GetStaticProps<P = any, Q = any> = any;
-<<<<<<< HEAD
-=======
-  export type GetServerSideProps<P = any, Q = any> = any;
-}
-declare module 'next/link' {
-  const Link: React.ComponentType<any>
-  export default Link
-}
-declare module 'next/router' {
-  interface NextRouter {
-    pathname: string
-    amourx-codex/populate-forum-category-with-posts
-    query: Record<string, string | string[] | undefined>
-      main
-    isFallback?: boolean
-  }
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 }
 declare module 'next-themes';
 declare module 'tailwind-merge';

@@ -17,7 +17,6 @@ const footerSections = [
     color: 'from-yellow-500 to-orange-500',
     badge: 'Featured',
     links: [
-<<<<<<< HEAD
       { name: 'AI Consciousness Evolution 2043', href: '/ai-consciousness-evolution-2043', featured: true, description: 'Next-generation AI consciousness' },
       { name: 'Quantum AI Neural Network 2043', href: '/quantum-ai-neural-2043', featured: true, description: 'Quantum-powered AI networks' },
       { name: 'AI Business Intelligence 2043', href: '/ai-business-intelligence-2043', featured: true, description: 'AI-powered business insights' },
@@ -28,18 +27,6 @@ const footerSections = [
       { name: 'AI Healthcare Platform 2043', href: '/ai-healthcare-platform-2043', description: 'AI-powered healthcare solutions' },
       { name: 'Quantum Financial Trading 2043', href: '/quantum-financial-trading-2043', description: 'Quantum-powered trading' },
       { name: 'Autonomous Supply Chain 2043', href: '/autonomous-supply-chain-2043', description: 'AI-powered supply chain' }
-=======
-      { name: 'AI Consciousness Evolution 2040', href: '/ai-consciousness-evolution-2040', featured: true },
-      { name: 'Quantum Neural Ecosystem 2040', href: '/quantum-neural-ecosystem-2040', featured: true },
-      { name: 'Space Resource Intelligence 2040', href: '/space-resource-intelligence-2040', featured: true },
-      { name: 'Autonomous Business Intelligence 2040', href: '/autonomous-business-intelligence-2040', featured: true },
-      { name: 'Quantum Cybersecurity Future 2040', href: '/quantum-cybersecurity-future-2040', featured: true },
-      { name: 'Brain-Computer Interface 2040', href: '/brain-computer-interface-2040', featured: true },
-      { name: 'AI Autonomous Research 2041', href: '/ai-autonomous-research-2041', featured: true },
-      { name: 'Quantum Internet Security 2041', href: '/quantum-internet-security-2041', featured: true },
-      { name: 'AI Customer Success 2041', href: '/ai-customer-success-2041' },
-      { name: 'AI Sales Intelligence 2041', href: '/ai-sales-intelligence-2041' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-aabb
     ]
   },
   {
@@ -49,7 +36,6 @@ const footerSections = [
     color: 'from-purple-500 to-pink-500',
     badge: 'Hot',
     links: [
-<<<<<<< HEAD
       { name: 'AI Consciousness Evolution 2043', href: '/ai-consciousness-evolution-2043', description: 'Next-generation AI consciousness' },
       { name: 'Quantum AI Neural Network 2043', href: '/quantum-ai-neural-2043', description: 'Quantum-powered AI networks' },
       { name: 'Autonomous AI Research 2043', href: '/autonomous-ai-research-2043', description: 'Fully autonomous AI research' },
@@ -60,18 +46,6 @@ const footerSections = [
       { name: 'AI Customer Success 2043', href: '/ai-customer-success-2043', description: 'AI-powered customer success' },
       { name: 'AI Business Intelligence 2043', href: '/ai-business-intelligence-2043', description: 'AI-powered business insights' },
       { name: 'AI Marketing Automation 2043', href: '/ai-marketing-automation-2043', description: 'Intelligent marketing automation' }
-=======
-      { name: 'AI Consciousness Evolution 2040', href: '/ai-consciousness-evolution-2040' },
-      { name: 'AI Emotional Intelligence 2040', href: '/ai-emotional-intelligence-2040', featured: true },
-      { name: 'AI Autonomous Research 2041', href: '/ai-autonomous-research-2041' },
-      { name: 'AI Content Personalization 2041', href: '/ai-content-personalization-2041', featured: true },
-      { name: 'AI Ethics & Governance 2041', href: '/ai-ethics-governance-2041' },
-      { name: 'AI Autonomous Ecosystem 2041', href: '/ai-autonomous-ecosystem-2041' },
-      { name: 'AI Predictive Maintenance 2041', href: '/ai-predictive-maintenance-2041' },
-      { name: 'AI Customer Success 2041', href: '/ai-customer-success-2041' },
-      { name: 'AI Sales Intelligence 2041', href: '/ai-sales-intelligence-2041' },
-      { name: 'Autonomous Business Intelligence 2040', href: '/autonomous-business-intelligence-2040' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-aabb
     ]
   },
   {
@@ -81,7 +55,6 @@ const footerSections = [
     color: 'from-blue-500 to-cyan-500',
     badge: 'Trending',
     links: [
-<<<<<<< HEAD
       { name: 'Quantum Cloud Infrastructure 2043', href: '/quantum-cloud-infrastructure-2043', description: 'Quantum-powered cloud infrastructure' },
       { name: 'Quantum Database Platform 2043', href: '/quantum-database-2043', description: 'Quantum-powered database' },
       { name: 'Quantum Edge Computing 2043', href: '/quantum-edge-computing-2043', description: 'Quantum-powered edge computing' },
@@ -90,18 +63,6 @@ const footerSections = [
       { name: 'Quantum Internet Security 2043', href: '/quantum-internet-security-2043', description: 'Quantum internet security' },
       { name: 'Quantum Financial Trading 2043', href: '/quantum-financial-trading-2043', description: 'Quantum-powered trading' },
       { name: 'Quantum Neural Network 2043', href: '/quantum-ai-neural-2043', description: 'Quantum-powered AI networks' }
-=======
-      { name: 'Quantum Neural Ecosystem 2040', href: '/quantum-neural-ecosystem-2040', featured: true },
-      { name: 'Quantum Cybersecurity Future 2040', href: '/quantum-cybersecurity-future-2040', featured: true },
-      { name: 'Quantum Internet Security 2041', href: '/quantum-internet-security-2041', featured: true },
-      { name: 'Quantum Cloud Infrastructure 2041', href: '/quantum-cloud-infrastructure-2041' },
-      { name: 'Quantum Bio-Computing 2041', href: '/quantum-bio-computing-2041' },
-      { name: 'Space Resource Intelligence 2040', href: '/space-resource-intelligence-2040' },
-      { name: 'Brain-Computer Interface 2040', href: '/brain-computer-interface-2040' },
-      { name: 'Autonomous Vehicle AI 2040', href: '/autonomous-vehicle-ai-2040' },
-      { name: 'Quantum Materials Discovery 2040', href: '/quantum-materials-discovery-2040' },
-      { name: 'Quantum Financial Intelligence 2040', href: '/quantum-financial-intelligence-2040' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-aabb
     ]
   },
   {

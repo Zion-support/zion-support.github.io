@@ -343,7 +343,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Bottom Bar */}
       <div className="py-6 px-4 border-t border-gray-800/50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -359,76 +358,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
           
           <div className="flex items-center space-x-4">
             <span className="text-sm text-gray-400">Made with ❤️ for the future</span>
-=======
-        {/* Quick Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          <div className="space-y-3">
-            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Services</h4>
-            <div className="space-y-2">
-              <Link href="/services" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">All Services</Link>
-              <Link href="/ai-services" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link>
-              <Link href="/quantum-computing" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Quantum Computing</Link>
-              <Link href="/space-tech" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Space Technology</Link>
-              <Link href="/cybersecurity" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link>
-              <Link href="/cloud-platform" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Cloud Solutions</Link>
-              <Link href="/it-services" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h4>
-            <div className="space-y-2">
-              <Link href="/solutions" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Business Solutions</Link>
-              <Link href="/enterprise-solutions-showcase" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Enterprise Solutions</Link>
-              <Link href="/emerging-tech" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Emerging Technology</Link>
-              <Link href="/micro-saas" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Micro SaaS</Link>
-              <Link href="/innovative-2040-futuristic-services-showcase" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">2040 Services</Link>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Company</h4>
-            <div className="space-y-2">
-              <Link href="/about" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link>
-              <Link href="/contact" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Contact</Link>
-              <Link href="/careers" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Careers</Link>
-              <Link href="/news" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">News</Link>
-              <Link href="/partners" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Partners</Link>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Resources</h4>
-            <div className="space-y-2">
-              <Link href="/blog" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Blog</Link>
-              <Link href="/white-papers" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Whitepapers</Link>
-              <Link href="/webinars" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Webinars</Link>
-              <Link href="/support" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Support</Link>
-              <Link href="/training" className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors">Training</Link>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-gray-400">
-              © 2024 Zion Tech Group. All rights reserved. Revolutionary 2040-2041 Technology.
-            </div>
-            
-            <div className="flex items-center gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">Terms of Service</Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">Cookie Policy</Link>
-            </div>
-
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-7281
             <button
               onClick={scrollToTop}
               className="p-2 bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700 hover:border-cyan-500/50 rounded-lg text-gray-400 hover:text-cyan-400 transition-all duration-300"

@@ -132,16 +132,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-=======
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  
-  const router = useRouter();
-  const navRef = useRef<HTMLElement>(null);
-  const searchRef = useRef<HTMLInputElement>(null);
-  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 
   // Memoized scroll handler for better performance
   const handleScroll = useCallback(() => {
@@ -187,7 +177,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [activeDropdown]);
 
-<<<<<<< HEAD
   const navigationItems = [
     {
       name: 'Home',
@@ -363,13 +352,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       href: '/contact',
       icon: Phone,
       description: 'Get in touch with our experts'
-=======
-  // Handle keyboard navigation
-  const handleKeyDown = useCallback((e: React.KeyboardEvent, action: () => void) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      action();
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     }
   }, []);
 
@@ -526,13 +508,8 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                   </AnimatePresence>
                 )}
               </div>
-<<<<<<< HEAD
               <span className="text-lg font-bold text-white">Zion Tech</span>
             </Link>
-=======
-            ))}
-          </div>
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">

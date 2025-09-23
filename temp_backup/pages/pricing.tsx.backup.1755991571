@@ -382,7 +382,6 @@ export default function PricingPage() {
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
 
   return (
-<<<<<<< HEAD
     <div className="max-w-5xl mx-auto p-8">
       <h1 className="text-2xl font-semibold mb-6">Zion Hire AI Pricing</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -414,21 +413,6 @@ export default function PricingPage() {
           </ul>
         </div>
       </section>
-=======
-    <EnhancedFuturisticBackground variant="quantum-particles" intensity="medium">
-      <div className="min-h-screen">
-        <Head>
-          <title>Pricing Plans | Zion Tech Group - Transparent Pricing for 75+ Services</title>
-          <meta name="description" content="Choose from our flexible pricing plans for 75+ micro SaaS services. Starter from $99/month, Professional from $299/month, Enterprise from $799/month. Start your free trial today." />
-          <meta name="keywords" content="pricing plans, micro SaaS pricing, AI services pricing, cloud services cost, cybersecurity pricing, enterprise solutions pricing" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="Pricing Plans | Zion Tech Group" />
-          <meta property="og:description" content="Transparent pricing for our comprehensive portfolio of 75+ micro SaaS services." />
-          <meta property="og:url" content="https://ziontechgroup.com/pricing" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/pricing" />
-        </Head>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
 
       {/* Services Pricing */}
       <section className="py-20 bg-gray-50">

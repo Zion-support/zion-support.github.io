@@ -221,80 +221,11 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               About Zion Tech Group
             </motion.h2>
             <motion.p 
               className="text-xl text-gray-300 mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
-=======
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Revolutionary 2025 Services
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From AI-powered autonomous systems to quantum computing solutions, we're building the future today
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: "AI Content Autonomy", description: "Fully autonomous content creation and management", icon: Brain, color: "from-purple-500 to-pink-500", link: "/innovative-2025-services-showcase" },
-                { title: "Quantum Cloud Hybrid", description: "Seamless quantum-classical computing integration", icon: Cpu, color: "from-cyan-500 to-blue-500", link: "/innovative-2025-services-showcase" },
-                { title: "Cyber Immune Security", description: "Self-defending systems that adapt to threats", icon: Shield, color: "from-red-500 to-orange-500", link: "/innovative-2025-services-showcase" },
-                { title: "Edge Intelligence", description: "Distributed AI processing at the edge", icon: Cloud, color: "from-emerald-500 to-teal-500", link: "/innovative-2025-services-showcase" },
-                { title: "AI Research Scout", description: "Intelligent research automation and discovery", icon: BarChart3, color: "from-indigo-500 to-purple-500", link: "/innovative-2025-services-showcase" },
-                { title: "Autonomous DevOps", description: "Self-healing infrastructure with zero downtime", icon: Lock, color: "from-yellow-500 to-orange-500", link: "/innovative-2025-services-showcase" }
-              ].map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10"
-                  whileHover={{ y: -10, scale: 1.02 }}
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                  <div className="relative p-6">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} p-3 mb-4`}>
-                      <service.icon className="w-full h-full text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
-                    <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                      <span className="text-sm font-medium">Explore Service</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Call to Action for Services Showcase */}
-            <motion.div
-              className="text-center mt-16"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <a
-                href="/innovative-2025-services-showcase"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                View All 2025 Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Enhanced CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19ed
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}

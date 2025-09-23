@@ -13,18 +13,12 @@ export { aiHrService } from './aiHrService';
 export { designSystemBuilderService } from './designSystemBuilderService';
 export { performanceMonitorService } from './performanceMonitorService';
 export { videoEditingService } from './videoEditingService';
-<<<<<<< HEAD
 export { aiCodeReviewService } from './aiCodeReviewService';
 export { apiDocGeneratorService } from './apiDocGeneratorService';
 export { databasePerformanceMonitorService } from './databasePerformanceMonitorService';
 export { aiMarketResearchService } from './aiMarketResearchService';
 export { aiCustomerSupportService } from './aiCustomerSupportService';
 export { aiFinancialAdvisorService } from './aiFinancialAdvisorService';
-=======
-export { aiMarketingAutomationService } from './aiMarketingAutomationService';
-export { aiProjectManagementService } from './aiProjectManagementService';
-export { aiCustomerSupportService } from './aiCustomerSupportService';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-3603
 
 // Export types
 export type {
@@ -146,7 +140,6 @@ export type {
 } from './videoEditingService';
 
 export type {
-<<<<<<< HEAD
   CodeReview,
   CodeIssue,
   CodeRecommendation,
@@ -213,39 +206,3 @@ export type {
   FinancialRequest,
   FinancialResponse
 } from './aiFinancialAdvisorService';
-=======
-  MarketingCampaign,
-  CampaignMetrics,
-  EmailTemplate,
-  SocialMediaPost,
-  MarketingAutomation,
-  AutomationCondition,
-  AutomationAction
-} from './aiMarketingAutomationService';
-
-export type {
-  Project,
-  TeamMember,
-  Task,
-  Milestone,
-  Risk,
-  Attachment,
-  Comment,
-  ProjectAnalytics,
-  BurndownData,
-  AIRecommendation
-} from './aiProjectManagementService';
-
-export type {
-  SupportTicket,
-  TicketMessage,
-  Customer,
-  SupportAgent,
-  AgentPerformance,
-  ChatbotSession,
-  ChatbotMessage,
-  KnowledgeBaseArticle,
-  SupportAnalytics,
-  AIRecommendation as SupportAIRecommendation
-} from './aiCustomerSupportService';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-3603

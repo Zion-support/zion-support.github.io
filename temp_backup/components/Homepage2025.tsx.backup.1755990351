@@ -247,17 +247,12 @@ const Homepage2025: React.FC = () => {
       period: '/month',
       features: ['Autonomous Management', 'Churn Prediction', 'Retention Optimization', '24/7 Operation'],
       popular: true,
-<<<<<<< HEAD
       category: 'AI & Content',
       icon: '🏭',
       link: '/services/autonomous-content',
       customers: 78,
       rating: 4.7,
       reviews: 234
-=======
-      category: 'AI & Customer Success',
-      icon: '🤖'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
     },
     {
       id: 'quantum-cloud-infrastructure',
@@ -268,17 +263,12 @@ const Homepage2025: React.FC = () => {
       period: '/month',
       features: ['Quantum Processing', 'Quantum Security', 'Autonomous Scaling', 'Global Edge'],
       popular: false,
-<<<<<<< HEAD
       category: 'Quantum & Logistics',
       icon: '🚚',
       link: '/services/quantum-supply-chain',
       customers: 18,
       rating: 4.6,
       reviews: 67
-=======
-      category: 'Quantum & Cloud',
-      icon: '☁️'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
     }
   ];
 
@@ -327,7 +317,6 @@ const Homepage2025: React.FC = () => {
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
-<<<<<<< HEAD
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
                 Pioneering the future of technology with <span className="text-cyan-400 font-semibold">innovative solutions</span> that drive business transformation and unlock unlimited potential
@@ -354,38 +343,6 @@ const Homepage2025: React.FC = () => {
                 <Link href="/comprehensive-2025-services-showcase" aria-label="View our 2025 services showcase">
                   <button className="px-10 py-5 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-400/50 text-lg">
                     2025 Showcase
-=======
-              </motion.h1>
-              
-              <motion.p 
-                variants={itemVariants}
-                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
-              >
-                Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide
-              </motion.p>
-              
-              {/* Enhanced CTA Section */}
-              <motion.div 
-                variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
-              >
-                <Link href="/services" aria-label="Explore our services">
-                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
-                    <span className="flex items-center gap-2">
-                      Explore Services
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                    </span>
-                  </button>
-                </Link>
-                <Link href="/contact" aria-label="Contact us">
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
-                    Contact Us
-                  </button>
-                </Link>
-                <Link href="/innovative-2040-futuristic-services-showcase" aria-label="View our futuristic services">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">
-                    Futuristic Services
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
                   </button>
                 </Link>
               </div>
@@ -411,19 +368,9 @@ const Homepage2025: React.FC = () => {
                   <TrendingUp className="w-5 h-5 text-purple-400" aria-hidden="true" />
                   <span>Proven Results</span>
                 </div>
-<<<<<<< HEAD
                 <div className="flex items-center space-x-3" role="listitem">
                   <Award className="w-5 h-5 text-yellow-400" aria-hidden="true" />
                   <span>Industry Leader</span>
-=======
-                <div className="flex items-center space-x-2">
-                  <Brain className="w-4 h-4 text-cyan-400" aria-hidden="true" />
-                  <span>AI Innovation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Atom className="w-4 h-4 text-purple-400" aria-hidden="true" />
-                  <span>Quantum Technology</span>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
                 </div>
               </motion.div>
             </motion.div>
@@ -522,55 +469,12 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
               <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our comprehensive portfolio of innovative services designed to transform your business and drive unprecedented growth
               </p>
-=======
-              Our Revolutionary Services
-            </motion.h2>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-xl text-gray-300 mb-16 text-center max-w-3xl mx-auto"
-            >
-              Discover revolutionary AI consciousness, quantum computing, autonomous solutions, and innovative micro SAAS platforms that transform businesses and industries worldwide
-            </motion.p>
-            
-            <motion.div 
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
-            >
-              {featuredServices.map((service) => (
-                <motion.div
-                  key={service.id}
-                  variants={itemVariants}
-                >
-                  <Suspense fallback={
-                    <div className="p-6 bg-gray-800/50 rounded-xl animate-pulse">
-                      <div className="h-4 bg-gray-700 rounded mb-2"></div>
-                      <div className="h-3 bg-gray-700 rounded mb-4"></div>
-                      <div className="h-20 bg-gray-700 rounded"></div>
-                    </div>
-                  }>
-                    <LazyServiceCard
-                      service={service}
-                      variant={service.category.toLowerCase().includes('ai') ? 'ai' : 
-                              service.category.toLowerCase().includes('quantum') ? 'quantum' : 'automation'}
-                    />
-                  </Suspense>
-                </motion.div>
-              ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
             </motion.div>
 
             {/* Service Categories Grid */}

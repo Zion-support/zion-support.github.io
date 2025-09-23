@@ -1861,7 +1861,6 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
-<<<<<<< HEAD
         {/* AUTO-GENERATED: FRONT_ADS_START */
 
 <section id="auto-promoted" className="mx-auto max-w-7xl px-6 pb-14">
@@ -1927,9 +1926,6 @@ export default function MainFrontIndex() {
   </div>
 </section>
 /* AUTO-GENERATED: FRONT_ADS_END */}
-=======
-        {/* AUTO-GENERATED: FRONT_ADS_START */}
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-5f41
 
         <section id="auto-ads" className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑advertised Highlights</h2>

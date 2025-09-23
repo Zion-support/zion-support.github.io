@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import type { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
@@ -75,10 +74,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
            item.category.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
-=======
-import React from 'react';
-export function ServiceTypeStep() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

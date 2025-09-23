@@ -24,11 +24,7 @@ export interface MicroSaasService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'quantum-neural-cyberpunk-holographic';
-=======
-  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
   contactInfo: {
     mobile: string;
     email: string;
@@ -4298,7 +4294,6 @@ export const innovativeMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'API for custom strategies'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '⚡',
     color: 'from-blue-600 to-cyan-500',
     textColor: 'text-cyan-400',
@@ -4317,26 +4312,6 @@ export const innovativeMicroSaasServices: EnhancedRealMicroSaasService[] = [
     marketSize: '$8.5B market',
     growthRate: '450% annual growth',
     variant: 'quantum-advanced',
-=======
-    icon: '🌐',
-    color: 'from-violet-500 to-purple-600',
-    textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/metaverse-development',
-    marketPosition: 'Leading metaverse development platform. Competes with Unity ($40+/month) and Unreal Engine ($0-1500/month).',
-    targetAudience: 'Game developers, VR/AR companies, Educational institutions, Real estate companies, Event organizers, Brands and marketers',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'Metaverse & VR/AR',
-    realService: true,
-    technology: ['Unity3D', 'Unreal Engine', 'WebGL', 'WebXR', 'Blockchain', 'AI/ML', 'Cloud computing'],
-    integrations: ['Meta Quest', 'HTC Vive', 'SteamVR', 'PlayStation VR', 'Custom VR systems', 'Social platforms'],
-    useCases: ['Virtual events', 'Educational simulations', 'Virtual real estate', 'Gaming experiences', 'Training simulations', 'Social platforms'],
-    roi: 'Average customer sees 600% ROI within 8 months through virtual event hosting and digital asset sales.',
-    competitors: ['Unity', 'Unreal Engine', 'Roblox Studio', 'Decentraland'],
-    marketSize: '$13B metaverse market',
-    growthRate: '350% annual growth',
-    variant: 'holographic-matrix',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -4344,7 +4319,6 @@ export const innovativeMicroSaasServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full quantum computing integration with real-time market data processing, advanced ML algorithms, and comprehensive trading tools',
     launchDate: '2024-02-01',
     customers: 1800,
@@ -4484,106 +4458,6 @@ export const innovativeMicroSaasServices: EnhancedRealMicroSaasService[] = [
     competitors: ['Maxar', 'Planet Labs', 'SpaceX Starlink', 'OneWeb'],
     marketSize: '$4.2B market',
     growthRate: '290% annual growth',
-=======
-    implementationDetails: 'Complete metaverse development platform with 3D tools, AI content generation, and blockchain integration.',
-    launchDate: '2024-01-25',
-    customers: 180,
-    rating: 4.8,
-    reviews: 95
-  }
-];
-
-// New Revolutionary Services - 2025 Edition
-export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
-  {
-    id: 'quantum-brain-computer-interface',
-    name: 'Quantum Brain-Computer Interface',
-    tagline: 'Direct Neural Integration with Quantum Computing',
-    price: '$1,299',
-    period: '/month',
-    description: 'Revolutionary BCI platform that integrates human neural networks with quantum computing systems. Enable direct thought-to-computer communication and quantum-enhanced cognitive abilities.',
-    features: [
-      'Non-invasive neural signal processing',
-      'Quantum-enhanced pattern recognition',
-      'Real-time thought-to-text conversion',
-      'Quantum memory augmentation',
-      'Neural network training acceleration',
-      'Cognitive enhancement algorithms',
-      'Brain-computer gaming interfaces',
-      'Medical diagnostic assistance',
-      'Learning acceleration tools',
-      'Creative problem-solving enhancement'
-    ],
-    popular: true,
-    icon: '🧠',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-bci',
-    marketPosition: 'First-to-market quantum BCI platform. No direct competitors. Traditional BCI systems cost $5000+/month with limited capabilities.',
-    targetAudience: 'Research institutions, Medical centers, Gaming companies, Educational institutions, Defense contractors, Technology enterprises',
-    trialDays: 60,
-    setupTime: '1 month',
-    category: 'Quantum Technology',
-    realService: true,
-    technology: ['Quantum computing', 'Neural interfaces', 'Machine learning', 'Signal processing', 'Brain-computer interfaces', 'Quantum algorithms'],
-    integrations: ['EEG devices', 'fMRI systems', 'Quantum computers', 'AI platforms', 'Medical devices', 'Research tools'],
-    useCases: ['Medical research', 'Gaming interfaces', 'Educational enhancement', 'Cognitive research', 'Neural rehabilitation', 'Creative applications'],
-    roi: 'Average customer sees 2000% ROI within 12 months through breakthrough research and commercial applications.',
-    competitors: ['Neuralink', 'Kernel', 'CTRL-labs'],
-    marketSize: '$2.8B BCI market',
-    growthRate: '450% annual growth',
-    variant: 'quantum-neural-advanced',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Advanced quantum BCI platform with real neural interface capabilities, quantum computing integration, and comprehensive research tools.',
-    launchDate: '2025-01-15',
-    customers: 25,
-    rating: 4.9,
-    reviews: 18
-  },
-  {
-    id: 'autonomous-space-mining-platform',
-    name: 'Autonomous Space Mining Platform',
-    tagline: 'AI-Powered Asteroid Mining and Resource Extraction',
-    price: '$2,999',
-    period: '/month',
-    description: 'Revolutionary platform for autonomous space mining operations. AI-driven asteroid identification, resource assessment, and automated extraction systems.',
-    features: [
-      'AI-powered asteroid identification',
-      'Autonomous resource assessment',
-      'Robotic mining operations',
-      'Real-time space navigation',
-      'Resource processing automation',
-      'Supply chain optimization',
-      'Risk assessment algorithms',
-      'Environmental impact monitoring',
-      'Regulatory compliance tools',
-      'Investment portfolio management'
-    ],
-    popular: true,
-    icon: '⛏️',
-    color: 'from-amber-600 to-orange-700',
-    textColor: 'text-amber-400',
-    link: 'https://ziontechgroup.com/space-mining',
-    marketPosition: 'Leading autonomous space mining platform. Competes with Planetary Resources ($5000+/month) and Deep Space Industries ($3000+/month).',
-    targetAudience: 'Space mining companies, Investment firms, Government agencies, Aerospace companies, Resource companies, Research institutions',
-    trialDays: 90,
-    setupTime: '3 months',
-    category: 'Space Technology & Aerospace',
-    realService: true,
-    technology: ['AI/ML', 'Robotics', 'Space navigation', 'Resource processing', 'Blockchain', 'IoT sensors'],
-    integrations: ['NASA APIs', 'Space tracking systems', 'Investment platforms', 'Regulatory databases', 'Supply chain systems', 'Custom platforms'],
-    useCases: ['Asteroid mining', 'Resource extraction', 'Space exploration', 'Investment analysis', 'Regulatory compliance', 'Supply chain management'],
-    roi: 'Average customer sees 1500% ROI within 18 months through successful mining operations and resource sales.',
-    competitors: ['Planetary Resources', 'Deep Space Industries', 'Asteroid Mining Corporation'],
-    marketSize: '$3.8B space mining market',
-    growthRate: '520% annual growth',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
     variant: 'quantum-space',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -4592,7 +4466,6 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full satellite tracking system with real-time data processing and mission planning capabilities',
     launchDate: '2024-01-10',
     customers: 850,
@@ -5023,51 +4896,6 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
     marketSize: '$4.8B creative AI market',
     growthRate: '450% annual growth',
     variant: 'neural-quantum-cyberpunk',
-=======
-    implementationDetails: 'Production-ready autonomous space mining platform with AI navigation, robotic systems, and comprehensive resource management.',
-    launchDate: '2024-12-01',
-    customers: 12,
-    rating: 4.9,
-    reviews: 8
-  },
-  {
-    id: 'quantum-pharmaceutical-discovery',
-    name: 'Quantum Pharmaceutical Discovery Platform',
-    tagline: 'AI-Quantum Drug Discovery with 1000x Speed',
-    price: '$4,999',
-    period: '/month',
-    description: 'Revolutionary drug discovery platform combining quantum computing with AI to accelerate pharmaceutical research by 1000x. Discover breakthrough treatments in days, not years.',
-    features: [
-      'Quantum molecular simulation',
-      'AI-powered drug design',
-      'Real-time molecular dynamics',
-      'Predictive toxicity analysis',
-      'Clinical trial optimization',
-      'Drug repurposing algorithms',
-      'Personalized medicine tools',
-      'Regulatory pathway optimization',
-      'Patent analysis and protection',
-      'Market opportunity assessment'
-    ],
-    popular: true,
-    icon: '💊',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/quantum-pharma',
-    marketPosition: 'Leading quantum pharmaceutical platform. Competes with Insitro ($10000+/month) and Atomwise ($8000+/month).',
-    targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions, Medical centers, Investment firms, Regulatory agencies',
-    trialDays: 90,
-    setupTime: '2 months',
-    category: 'Biotechnology & Healthcare AI',
-    realService: true,
-    technology: ['Quantum computing', 'Machine learning', 'Molecular dynamics', 'Drug discovery', 'Bioinformatics', 'Cloud computing'],
-    integrations: ['PubChem', 'ChEMBL', 'FDA databases', 'Clinical trial systems', 'Patent databases', 'Custom platforms'],
-    useCases: ['Drug discovery', 'Clinical trials', 'Drug repurposing', 'Personalized medicine', 'Regulatory compliance', 'Market analysis'],
-    roi: 'Average customer sees 3000% ROI within 24 months through successful drug discoveries and licensing agreements.',
-    competitors: ['Insitro', 'Atomwise', 'BenevolentAI', 'Exscientia'],
-    marketSize: '$15.2B AI drug discovery market',
-    growthRate: '580% annual growth',
-    variant: 'quantum-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -5075,110 +4903,6 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    implementationDetails: 'Advanced quantum pharmaceutical platform with real molecular simulation, AI drug design, and comprehensive research tools.',
-    launchDate: '2024-11-15',
-    customers: 35,
-    rating: 4.9,
-    reviews: 28
-  },
-  {
-    id: 'autonomous-ai-lawyer',
-    name: 'Autonomous AI Lawyer Platform',
-    tagline: 'Fully Autonomous Legal Services with 99.9% Accuracy',
-    price: '$799',
-    period: '/month',
-    description: 'Revolutionary AI lawyer platform that provides fully autonomous legal services. Draft contracts, analyze cases, and provide legal advice with human-level accuracy.',
-    features: [
-      'Autonomous contract drafting',
-      'Legal case analysis',
-      'Real-time legal advice',
-      'Document review automation',
-      'Compliance monitoring',
-      'Risk assessment algorithms',
-      'Legal research automation',
-      'Court filing assistance',
-      'Client communication tools',
-      'Billing and time tracking'
-    ],
-    popular: true,
-    icon: '⚖️',
-    color: 'from-slate-600 to-gray-700',
-    textColor: 'text-slate-400',
-    link: 'https://ziontechgroup.com/ai-lawyer',
-    marketPosition: 'Leading autonomous AI lawyer platform. Competes with DoNotPay ($12/month) and LegalZoom ($39+/month).',
-    targetAudience: 'Law firms, Legal departments, Small businesses, Individuals, Startups, Real estate companies',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'AI & Legal Tech',
-    realService: true,
-    technology: ['Natural language processing', 'Machine learning', 'Legal databases', 'Document analysis', 'AI reasoning', 'Cloud computing'],
-    integrations: ['Legal research databases', 'Court filing systems', 'Document management', 'Client portals', 'Billing systems', 'Custom platforms'],
-    useCases: ['Contract drafting', 'Legal research', 'Document review', 'Compliance monitoring', 'Legal advice', 'Case analysis'],
-    roi: 'Average customer sees 800% ROI within 6 months through reduced legal costs and improved efficiency.',
-    competitors: ['DoNotPay', 'LegalZoom', 'Rocket Lawyer', 'Avvo'],
-    marketSize: '$8.9B legal tech market',
-    growthRate: '320% annual growth',
-    variant: 'neural-cyberpunk',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready autonomous AI lawyer platform with real legal analysis, contract drafting, and comprehensive legal services.',
-    launchDate: '2024-10-20',
-    customers: 280,
-    rating: 4.8,
-    reviews: 156
-  },
-  {
-    id: 'quantum-financial-forecasting',
-    name: 'Quantum Financial Forecasting Platform',
-    tagline: 'Quantum-Powered Market Prediction with 95% Accuracy',
-    price: '$1,599',
-    period: '/month',
-    description: 'Revolutionary financial forecasting platform using quantum computing to predict market movements with unprecedented accuracy. Achieve consistent profits in any market condition.',
-    features: [
-      'Quantum market prediction',
-      'Real-time risk assessment',
-      'Portfolio optimization',
-      'Algorithmic trading signals',
-      'Market sentiment analysis',
-      'Economic indicator tracking',
-      'Regulatory change monitoring',
-      'Investment opportunity identification',
-      'Performance analytics',
-      'Custom strategy development'
-    ],
-    popular: true,
-    icon: '📈',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/quantum-forecasting',
-    marketPosition: 'Leading quantum financial forecasting platform. Competes with Bloomberg Terminal ($2000+/month) and Refinitiv ($1500+/month).',
-    targetAudience: 'Investment firms, Hedge funds, Banks, Financial advisors, Individual investors, Trading companies',
-    trialDays: 45,
-    setupTime: '2 weeks',
-    category: 'Financial Technology & Trading',
-    realService: true,
-    technology: ['Quantum computing', 'Machine learning', 'Financial modeling', 'Risk analytics', 'Data analysis', 'Cloud computing'],
-    integrations: ['Bloomberg APIs', 'Reuters feeds', 'Trading platforms', 'Risk management systems', 'Portfolio systems', 'Custom platforms'],
-    useCases: ['Market prediction', 'Portfolio optimization', 'Risk management', 'Trading strategies', 'Investment analysis', 'Performance tracking'],
-    roi: 'Average customer sees 2000% ROI within 12 months through improved trading performance and risk management.',
-    competitors: ['Bloomberg Terminal', 'Refinitiv', 'FactSet', 'Thomson Reuters'],
-    marketSize: '$18.5B financial forecasting market',
-    growthRate: '420% annual growth',
-    variant: 'quantum-holographic-advanced',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced AI platform combining quantum computing, neural networks, and cyberpunk aesthetics with real-time processing and creative tools.',
     launchDate: '2024-02-15',
     customers: 320,
@@ -5283,16 +5007,11 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
     implementationDetails: 'Advanced quantum space AI platform with quantum computing integration, space mission optimization, and AI-powered space research capabilities.',
     launchDate: '2024-03-05',
-=======
-    implementationDetails: 'Advanced quantum financial forecasting platform with real market prediction, risk analytics, and comprehensive trading tools.',
-    launchDate: '2024-09-15',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
     customers: 95,
     rating: 4.9,
     reviews: 67
   },
   {
-<<<<<<< HEAD
     id: 'biomedical-quantum-ai',
     name: 'Biomedical Quantum AI Platform',
     tagline: 'Quantum AI for Breakthrough Medical Discoveries',
@@ -5432,45 +5151,6 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
     marketSize: '$25B advanced AI market',
     growthRate: '1000% annual growth',
     variant: 'quantum-neural-cyberpunk-holographic',
-=======
-    id: 'autonomous-ai-doctor',
-    name: 'Autonomous AI Doctor Platform',
-    tagline: 'AI-Powered Medical Diagnosis with 99.5% Accuracy',
-    price: '$1,299',
-    period: '/month',
-    description: 'Revolutionary AI doctor platform providing autonomous medical diagnosis, treatment recommendations, and health monitoring. Achieve medical accuracy surpassing human doctors.',
-    features: [
-      'Autonomous medical diagnosis',
-      'Treatment recommendation engine',
-      'Health monitoring automation',
-      'Medical image analysis',
-      'Symptom assessment tools',
-      'Drug interaction checking',
-      'Preventive care planning',
-      'Emergency response systems',
-      'Patient communication tools',
-      'Medical record management'
-    ],
-    popular: true,
-    icon: '👨‍⚕️',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-doctor',
-    marketPosition: 'Leading autonomous AI doctor platform. Competes with Babylon Health ($25/month) and Ada Health ($15/month).',
-    targetAudience: 'Hospitals, Medical clinics, Telemedicine companies, Insurance companies, Pharmaceutical companies, Research institutions',
-    trialDays: 60,
-    setupTime: '1 month',
-    category: 'Healthcare & Biotechnology',
-    realService: true,
-    technology: ['Machine learning', 'Medical AI', 'Image recognition', 'Natural language processing', 'Predictive analytics', 'Cloud computing'],
-    integrations: ['Electronic health records', 'Medical imaging systems', 'Lab systems', 'Pharmacy systems', 'Insurance platforms', 'Custom systems'],
-    useCases: ['Medical diagnosis', 'Treatment planning', 'Health monitoring', 'Medical imaging', 'Patient care', 'Research support'],
-    roi: 'Average customer sees 1200% ROI within 12 months through improved patient outcomes and reduced costs.',
-    competitors: ['Babylon Health', 'Ada Health', 'Zocdoc', 'Teladoc'],
-    marketSize: '$12.8B AI healthcare market',
-    growthRate: '450% annual growth',
-    variant: 'neural-quantum',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -5478,7 +5158,6 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'The most advanced AI platform ever created, combining all cutting-edge technologies into a single, unified system.',
     launchDate: '2024-04-01',
     customers: 25,
@@ -5572,50 +5251,6 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
     roi: 'Average customer sees 600% ROI within 10 months through improved climate understanding and policy optimization.',
     competitors: ['Climate Corp', 'Weather Company', 'AccuWeather', 'Climate Central'],
     marketSize: '$7.2B climate technology market',
-=======
-    implementationDetails: 'Production-ready autonomous AI doctor platform with real medical diagnosis, treatment recommendations, and comprehensive healthcare tools.',
-    launchDate: '2024-08-20',
-    customers: 180,
-    rating: 4.9,
-    reviews: 134
-  },
-  {
-    id: 'quantum-climate-prediction',
-    name: 'Quantum Climate Prediction Platform',
-    tagline: 'Quantum-Powered Climate Modeling with 99.9% Accuracy',
-    price: '$899',
-    period: '/month',
-    description: 'Revolutionary climate prediction platform using quantum computing to model complex climate systems with unprecedented accuracy. Predict climate changes decades in advance.',
-    features: [
-      'Quantum climate modeling',
-      'Long-term weather prediction',
-      'Climate change analysis',
-      'Natural disaster forecasting',
-      'Environmental impact assessment',
-      'Carbon footprint tracking',
-      'Sustainability planning tools',
-      'Policy impact modeling',
-      'Economic impact analysis',
-      'Adaptation strategy development'
-    ],
-    popular: true,
-    icon: '🌍',
-    color: 'from-teal-600 to-cyan-700',
-    textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/quantum-climate',
-    marketPosition: 'Leading quantum climate prediction platform. Competes with Climate Corporation ($500+/month) and Weather Company ($300+/month).',
-    targetAudience: 'Government agencies, Environmental organizations, Insurance companies, Agricultural companies, Energy companies, Research institutions',
-    trialDays: 45,
-    setupTime: '3 weeks',
-    category: 'Climate Technology',
-    realService: true,
-    technology: ['Quantum computing', 'Climate modeling', 'Machine learning', 'Data analytics', 'Satellite data', 'IoT sensors'],
-    integrations: ['Weather APIs', 'Satellite feeds', 'Environmental databases', 'Government data', 'Research platforms', 'Custom systems'],
-    useCases: ['Climate modeling', 'Weather prediction', 'Disaster forecasting', 'Environmental planning', 'Policy analysis', 'Research support'],
-    roi: 'Average customer sees 800% ROI within 18 months through improved planning and risk mitigation.',
-    competitors: ['Climate Corporation', 'Weather Company', 'AccuWeather', 'WeatherBug'],
-    marketSize: '$6.2B climate tech market',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
     growthRate: '380% annual growth',
     variant: 'quantum-advanced',
     contactInfo: {
@@ -5625,172 +5260,11 @@ export const newRevolutionaryServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced quantum climate AI platform with quantum computing integration, climate modeling, and environmental prediction capabilities.',
     launchDate: '2024-03-20',
     customers: 150,
     rating: 4.7,
     reviews: 89
-=======
-    implementationDetails: 'Advanced quantum climate prediction platform with real climate modeling, weather prediction, and comprehensive environmental tools.',
-    launchDate: '2024-07-15',
-    customers: 65,
-    rating: 4.8,
-    reviews: 42
-  },
-  {
-    id: 'autonomous-ai-architect',
-    name: 'Autonomous AI Architect Platform',
-    tagline: 'AI-Powered Architectural Design with Human Creativity',
-    price: '$599',
-    period: '/month',
-    description: 'Revolutionary AI architect platform that designs buildings, interiors, and urban spaces with human-level creativity and technical precision. Generate complete architectural solutions in minutes.',
-    features: [
-      'Autonomous building design',
-      'Interior design automation',
-      'Urban planning tools',
-      '3D model generation',
-      'Structural analysis automation',
-      'Energy efficiency optimization',
-      'Material selection algorithms',
-      'Cost estimation tools',
-      'Regulatory compliance checking',
-      'Client presentation generation'
-    ],
-    popular: true,
-    icon: '🏗️',
-    color: 'from-stone-600 to-neutral-700',
-    textColor: 'text-stone-400',
-    link: 'https://ziontechgroup.com/ai-architect',
-    marketPosition: 'Leading autonomous AI architect platform. Competes with Autodesk ($300+/month) and SketchUp ($119+/month).',
-    targetAudience: 'Architecture firms, Construction companies, Real estate developers, Interior designers, Urban planners, Engineering firms',
-    trialDays: 30,
-    setupTime: '2 weeks',
-    category: 'AI & Design',
-    realService: true,
-    technology: ['Machine learning', 'Computer vision', '3D modeling', 'Generative AI', 'Building information modeling', 'Cloud computing'],
-    integrations: ['CAD software', '3D modeling tools', 'Project management', 'Client portals', 'Construction systems', 'Custom platforms'],
-    useCases: ['Building design', 'Interior design', 'Urban planning', 'Structural analysis', 'Cost estimation', 'Client presentations'],
-    roi: 'Average customer sees 600% ROI within 8 months through improved design efficiency and client satisfaction.',
-    competitors: ['Autodesk', 'SketchUp', 'ArchiCAD', 'Revit'],
-    marketSize: '$9.8B architectural software market',
-    growthRate: '280% annual growth',
-    variant: 'holographic-neural',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready autonomous AI architect platform with real design generation, 3D modeling, and comprehensive architectural tools.',
-    launchDate: '2024-06-20',
-    customers: 220,
-    rating: 4.8,
-    reviews: 156
-  },
-  {
-    id: 'quantum-education-platform',
-    name: 'Quantum Education Platform',
-    tagline: 'AI-Quantum Learning with 10x Knowledge Retention',
-    price: '$399',
-    period: '/month',
-    description: 'Revolutionary education platform combining quantum computing with AI to create personalized learning experiences. Achieve 10x faster learning with perfect knowledge retention.',
-    features: [
-      'Quantum-enhanced learning algorithms',
-      'Personalized curriculum generation',
-      'Real-time knowledge assessment',
-      'Adaptive learning paths',
-      'Virtual reality classrooms',
-      'AI tutoring systems',
-      'Progress tracking analytics',
-      'Collaborative learning tools',
-      'Content creation automation',
-      'Performance optimization'
-    ],
-    popular: true,
-    icon: '🎓',
-    color: 'from-violet-600 to-purple-700',
-    textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-education',
-    marketPosition: 'Leading quantum education platform. Competes with Coursera ($49+/month) and Udacity ($399+/month).',
-    targetAudience: 'Educational institutions, Corporate training, Online learning platforms, Students, Professionals, Government agencies',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'Education Technology',
-    realService: true,
-    technology: ['Quantum computing', 'Machine learning', 'Virtual reality', 'Natural language processing', 'Adaptive learning', 'Cloud computing'],
-    integrations: ['Learning management systems', 'Video platforms', 'Assessment tools', 'Student information systems', 'Content platforms', 'Custom systems'],
-    useCases: ['Online learning', 'Corporate training', 'Skill development', 'Academic education', 'Professional certification', 'Research support'],
-    roi: 'Average customer sees 500% ROI within 6 months through improved learning outcomes and reduced training costs.',
-    competitors: ['Coursera', 'Udacity', 'edX', 'Skillshare'],
-    marketSize: '$11.5B online education market',
-    growthRate: '320% annual growth',
-    variant: 'quantum-holographic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Advanced quantum education platform with real learning algorithms, personalized curricula, and comprehensive educational tools.',
-    launchDate: '2024-05-15',
-    customers: 450,
-    rating: 4.9,
-    reviews: 298
-  },
-  {
-    id: 'autonomous-ai-scientist',
-    name: 'Autonomous AI Scientist Platform',
-    tagline: 'AI-Powered Research with Breakthrough Discovery',
-    price: '$1,999',
-    period: '/month',
-    description: 'Revolutionary AI scientist platform that conducts autonomous research, generates hypotheses, and makes breakthrough discoveries across all scientific disciplines.',
-    features: [
-      'Autonomous research design',
-      'Hypothesis generation',
-      'Data analysis automation',
-      'Literature review automation',
-      'Experiment planning',
-      'Results interpretation',
-      'Collaboration facilitation',
-      'Publication assistance',
-      'Patent analysis',
-      'Research funding optimization'
-    ],
-    popular: true,
-    icon: '🔬',
-    color: 'from-rose-600 to-pink-700',
-    textColor: 'text-rose-400',
-    link: 'https://ziontechgroup.com/ai-scientist',
-    marketPosition: 'Leading autonomous AI scientist platform. Competes with Benchling ($500+/month) and LabArchives ($300+/month).',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Universities, Government labs, Technology companies, Biotech firms',
-    trialDays: 60,
-    setupTime: '1 month',
-    category: 'Innovation & Research',
-    realService: true,
-    technology: ['Machine learning', 'Natural language processing', 'Data analysis', 'Knowledge graphs', 'Research automation', 'Cloud computing'],
-    integrations: ['Research databases', 'Lab management systems', 'Publication platforms', 'Patent databases', 'Funding platforms', 'Custom systems'],
-    useCases: ['Scientific research', 'Drug discovery', 'Material science', 'Climate research', 'Technology development', 'Academic research'],
-    roi: 'Average customer sees 1500% ROI within 18 months through breakthrough discoveries and accelerated research.',
-    competitors: ['Benchling', 'LabArchives', 'Labguru', 'Quartzy'],
-    marketSize: '$7.8B research software market',
-    growthRate: '420% annual growth',
-    variant: 'neural-quantum-cyberpunk',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Advanced autonomous AI scientist platform with real research automation, hypothesis generation, and comprehensive scientific tools.',
-    launchDate: '2024-04-20',
-    customers: 85,
-    rating: 4.9,
-    reviews: 67
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
   }
 ];
 
@@ -6237,23 +5711,13 @@ export const serviceCategories = [
   'Quantum Finance & Trading',
   'Quantum Technology',
   'Autonomous Manufacturing',
-<<<<<<< HEAD
   'Space Technology',
-=======
-  'Autonomous Systems',
-  'Quantum Cybersecurity',
-  'Space Technology & Aerospace',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
   'Metaverse & VR/AR',
   'Biomedical AI',
   'Biotechnology & Healthcare AI',
   'Blockchain & DeFi',
   'Edge Computing & IoT',
   'Manufacturing & Industry 4.0',
-<<<<<<< HEAD
-=======
-  'Cybersecurity & Privacy',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
   'Healthcare & Biotechnology',
   'Financial Technology',
   'Financial Technology & Trading',
@@ -6261,14 +5725,9 @@ export const serviceCategories = [
   'IoT & Smart Cities',
   'Climate Technology',
   'Robotics & Automation',
-<<<<<<< HEAD
   'Space Technology & Aerospace',
   'Legal Technology',
   'Marketing & Automation'
-=======
-  'Innovation & Research',
-  'Industrial AI & Automation'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
 ];
 
 export const getServicesByCategory = (category: string) => {

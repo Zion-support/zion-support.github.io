@@ -2,22 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
   Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
   Brain, Rocket, Shield, Cpu, Database, Cloud, Target,
   BookOpen, FileText, Video, Code, Building, GraduationCap,
   Heart, Briefcase, Newspaper, BarChart3
-=======
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Star, Sparkles, 
-  Grid, List, TrendingUp, 
-  Calendar, Calculator, GraduationCap,
-  Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
-  Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
-  BookOpen, FileText, Handshake, Users, Lock, Database, Server, Key, Search, Zap as ZapIcon
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -121,7 +110,6 @@ const navigationItems: NavigationItem[] = [
         description: 'E-commerce technology'
       },
       {
-<<<<<<< HEAD
         label: 'Government',
         href: '/government-technology-solutions',
         icon: <Shield className="w-4 h-4" />,
@@ -132,43 +120,6 @@ const navigationItems: NavigationItem[] = [
         href: '/education-technology-solutions',
         icon: <GraduationCap className="w-4 h-4" />,
         description: 'EdTech solutions'
-=======
-        name: 'AI Ethics & Governance 2041',
-        href: '/ai-ethics-governance-2041',
-        description: 'Comprehensive AI ethics framework',
-        icon: <Shield className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Research Assistant',
-        href: '/ai-autonomous-research-assistant',
-        description: 'Fully autonomous research and analysis',
-        icon: <Search className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'AI Autonomous Content Factory',
-        href: '/ai-autonomous-content-factory',
-        description: 'End-to-end autonomous content creation',
-        icon: <Palette className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Customer Success',
-        href: '/ai-autonomous-customer-success',
-        description: 'Intelligent customer success automation',
-        icon: <Users className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Sales Intelligence',
-        href: '/ai-autonomous-sales-intelligence',
-        description: 'Intelligent sales automation',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Product Management',
-        href: '/ai-autonomous-product-management',
-        description: 'Intelligent product lifecycle management',
-        icon: <Settings className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       }
     ]
   },
@@ -295,39 +246,12 @@ const navigationItems: NavigationItem[] = [
         description: 'Future-proof quantum security',
         icon: <Shield className="w-4 h-4" />
       },
-<<<<<<< HEAD
       { 
         name: 'Quantum Computing', 
         href: '/quantum-computing-platform', 
         description: 'Advanced quantum computing',
         icon: <Cpu className="w-4 h-4" />,
         color: 'from-indigo-500 to-purple-500'
-=======
-      {
-        name: 'Quantum Internet Security 2041',
-        href: '/quantum-internet-security-2041',
-        description: 'Quantum internet protection',
-        icon: <Network className="w-4 h-4" />
-      },
-      {
-        name: 'Quantum Cloud Infrastructure 2041',
-        href: '/quantum-cloud-infrastructure-2041',
-        description: 'Quantum cloud computing',
-        icon: <Cloud className="w-4 h-4" />
-      },
-      {
-        name: 'Quantum Bio-Computing 2041',
-        href: '/quantum-bio-computing-2041',
-        description: 'Quantum biological computing',
-        icon: <Atom className="w-4 h-4" />
-      },
-      {
-        name: 'Quantum-Ready Cloud Infrastructure',
-        href: '/quantum-ready-cloud-infrastructure',
-        description: 'Future-proof cloud infrastructure',
-        icon: <Server className="w-4 h-4" />,
-        featured: true
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       }
     ]
   },
@@ -416,7 +340,6 @@ const navigationItems: NavigationItem[] = [
         featured: true
       },
       {
-<<<<<<< HEAD
         name: 'AI Autonomous Customer Support',
         href: '/ai-autonomous-customer-support',
         description: 'Fully autonomous customer support',
@@ -498,31 +421,6 @@ const navigationItems: NavigationItem[] = [
         href: '/cloud-migration',
         description: 'Cloud migration services',
         icon: <Cloud className="w-4 h-4" />
-=======
-        name: 'AI-Powered DevOps Automation',
-        href: '/ai-powered-devops-automation',
-        description: 'Intelligent DevOps automation',
-        icon: <ZapIcon className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'Zero-Trust Network Architecture',
-        href: '/zero-trust-network-architecture',
-        description: 'Comprehensive zero-trust security',
-        icon: <Lock className="w-4 h-4" />
-      },
-      {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-        description: 'Intelligent edge computing management',
-        icon: <Network className="w-4 h-4" />
-      },
-      {
-        name: 'Blockchain Infrastructure Platform',
-        href: '/blockchain-infrastructure-platform',
-        description: 'Enterprise-grade blockchain infrastructure',
-        icon: <Database className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       }
     ]
   },
@@ -572,15 +470,9 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources & Support',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
-<<<<<<< HEAD
     description: 'Knowledge and learning resources',
     category: 'resources',
     color: 'from-teal-500 to-cyan-500',
-=======
-    description: 'Knowledge and support resources',
-    category: 'resources',
-    color: 'from-indigo-500 to-purple-500',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
     children: [
       {
         name: 'Documentation',
@@ -591,7 +483,6 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'API Reference',
         href: '/api',
-<<<<<<< HEAD
         description: 'API documentation',
         icon: <Code className="w-4 h-4" />
       },
@@ -652,28 +543,6 @@ const navigationItems: NavigationItem[] = [
         href: '/news',
         description: 'Company updates',
         icon: <Newspaper className="w-4 h-4" />
-=======
-        description: 'Developer API documentation',
-        icon: <Code className="w-4 h-4" />
-      },
-      {
-        name: 'Support Center',
-        href: '/support',
-        description: '24/7 technical support',
-        icon: <HelpCircle className="w-4 h-4" />
-      },
-      {
-        name: 'Training & Certification',
-        href: '/training',
-        description: 'Professional training programs',
-        icon: <GraduationCap className="w-4 h-4" />
-      },
-      {
-        name: 'Community Forum',
-        href: '/community',
-        description: 'User community and discussions',
-        icon: <Users className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7826
       }
     ]
   }

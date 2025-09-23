@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -77,39 +76,6 @@ function GreenIT() {
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
 
-=======
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-
-export default function GreenIT() {
-  const greenITSolutions = [
-    {
-      title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server,
-    },
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud,
-    },
-    {
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf,
-    }
-  ];
-
-  return (
-    <AppLayout>
-      <SEO 
-        title="Green IT Solutions - Sustainable Technology" 
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
->>>>>>> origin/auto/autonomy-17186719616
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -121,31 +87,18 @@ export default function GreenIT() {
               Sustainable technology solutions that reduce environmental impact without compromising performance
             </p>
           </div>
-<<<<<<< HEAD
-=======
-          
->>>>>>> origin/auto/autonomy-17186719616
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
-<<<<<<< HEAD
                     As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.
                     Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure
                     while maintaining performance and reliability.
                   </p>
                   <p className="text-zion-slate-light text-lg mb-6">
                     From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions
-=======
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
-                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
-                    while maintaining performance and reliability.
-                  </p>
-                  <p className="text-zion-slate-light text-lg mb-6">
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
->>>>>>> origin/auto/autonomy-17186719616
                     for reducing your carbon footprint.
                   </p>
                   <div className="mt-8">
@@ -155,29 +108,16 @@ export default function GreenIT() {
                   </div>
                 </div>
                 <div className="rounded-lg overflow-hidden">
-<<<<<<< HEAD
                   <img
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600"
                     alt="Green IT sustainability"
-=======
-                  <img 
-                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" 
-                    alt="Green IT sustainability" 
->>>>>>> origin/auto/autonomy-17186719616
                     className="object-cover w-full h-full"
                   />
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
-=======
-            
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
-              
->>>>>>> origin/auto/autonomy-17186719616
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
@@ -190,7 +130,6 @@ export default function GreenIT() {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
@@ -210,39 +149,11 @@ export default function GreenIT() {
                     <li> Enhanced brand reputation and stakeholder relations</li>
                     <li> Compliance with emerging environmental regulations</li>
                     <li> Improved operational efficiency and performance</li>
-=======
-            
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                  <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Reduced carbon footprint and greenhouse gas emissions</li>
-                    <li>• Lower energy consumption and resource utilization</li>
-                    <li>• Decreased electronic waste through better lifecycle management</li>
-                    <li>• Support for renewable energy initiatives</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                  <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Significant cost savings on energy and cooling</li>
-                    <li>• Enhanced brand reputation and stakeholder relations</li>
-                    <li>• Compliance with emerging environmental regulations</li>
-                    <li>• Improved operational efficiency and performance</li>
->>>>>>> origin/auto/autonomy-17186719616
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-          
->>>>>>> origin/auto/autonomy-17186719616
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -255,7 +166,6 @@ export default function GreenIT() {
         </div>
       </main>
     </AppLayout>
-<<<<<<< HEAD
   )
 
 
@@ -438,7 +348,3 @@ export default function GreenIT() {;
 }
 ;
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616

@@ -12,7 +12,6 @@ interface SEOIssue {
   impact: number; // 0-100
 }
 
-<<<<<<< HEAD
 interface SEOMetrics {
   title: {
     length: number;
@@ -173,60 +172,6 @@ const SEOOptimizer: React.FC = () => {
         (newMetrics.headings.h3Count >= 3 ? 20 : 0) +
         (newMetrics.headings.hasKeywords ? 20 : 0)
       );
-=======
-    // Check description length
-    if (seoData.description.length < 120 || seoData.description.length > 160) {
-      issues.push('Description length should be between 120-160 characters');
-      score -= 10;
-    }
-
-    // Check for missing alt text on images
-    const images = document.querySelectorAll('img');
-    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
-    if (imagesWithoutAlt.length > 0) {
-      issues.push(`${imagesWithoutAlt.length} images missing alt text`);
-      score -= 5;
-    }
-
-    // Check heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const h1Count = document.querySelectorAll('h1').length;
-    if (h1Count === 0) {
-      issues.push('Missing H1 heading');
-      score -= 15;
-    } else if (h1Count > 1) {
-      issues.push('Multiple H1 headings found');
-      score -= 10;
-    }
-
-    // Check for internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="https://ziontechgroup.com"]');
-    if (internalLinks.length < 3) {
-      issues.push('Low number of internal links');
-      score -= 5;
-    }
-
-    // Check for meta viewport
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
-      issues.push('Missing viewport meta tag');
-      score -= 10;
-    }
-
-    // Check for language declaration
-    const html = document.documentElement;
-    if (!html.lang) {
-      issues.push('Missing language declaration');
-      score -= 5;
-    }
-
-    // Check for robots meta tag
-    const robots = document.querySelector('meta[name="robots"]');
-    if (!robots) {
-      issues.push('Missing robots meta tag');
-      score -= 5;
-    }
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
       newMetrics.images.score = Math.min(100,
         (newMetrics.images.withAlt / Math.max(newMetrics.images.total, 1)) * 100

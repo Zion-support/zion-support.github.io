@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SiteLayout from '../components/layout/Layout';
 import '../styles/globals.css';
@@ -11,21 +10,3 @@ export default function App({ Component, pageProps }: any) {
 		</SiteLayout>
 	);
 }
-=======
-import type { AppProps } from 'next/app';
-import React, { useRef } from 'react';
-import '../styles/globals.css';
-import Layout from '../components/layout/Layout';
-import { SEOContext } from '../components/SEOContext';
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-	const renderedRef = useRef(false);
-	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
-		</SEOContext.Provider>
-	);
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350

@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
@@ -8,20 +7,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
-=======
-  // Enhanced performance and SEO settings
-  experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-    optimizeCss: true,
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
   },
   
   // Turbopack configuration
@@ -43,7 +28,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-<<<<<<< HEAD
   
   // Compression and optimization
   compress: true,
@@ -52,12 +36,6 @@ const nextConfig = {
   
   // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
-=======
-
-  // Enhanced webpack configuration
-  webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
     if (!dev && !isServer) {
       config.optimization.splitChunks.cacheGroups = {
         ...config.optimization.splitChunks.cacheGroups,
@@ -75,29 +53,17 @@ const nextConfig = {
         },
       };
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
     // SVG optimization
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-<<<<<<< HEAD
     
     return config;
   },
   
   // Headers for security and performance
-=======
-
-    return config;
-  },
-
-  // Enhanced headers for security and performance
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
   async headers() {
     return [
       {
@@ -158,7 +124,6 @@ const nextConfig = {
     ];
   },
 
-<<<<<<< HEAD
   // Rewrites for API routes (removed since using Netlify Functions for static export)
   // async rewrites() {
   //   return [
@@ -172,21 +137,6 @@ const nextConfig = {
   //     },
   //   ];
   // },
-=======
-  // Enhanced rewrites for better routing
-  async rewrites() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap',
-      },
-      {
-        source: '/robots.txt',
-        destination: '/api/robots',
-      },
-    ];
-  },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
 
   // Compiler optimization
   compiler: {
@@ -194,7 +144,6 @@ const nextConfig = {
     styledComponents: true,
   },
 
-<<<<<<< HEAD
   // Base path
   basePath: '',
 
@@ -203,15 +152,6 @@ const nextConfig = {
 
   // Output configuration
   output: 'export',
-=======
-  // Enhanced output configuration
-  output: 'standalone',
-  poweredByHeader: false,
-  generateEtags: false,
-  compress: true,
-  reactStrictMode: true,
-  swcMinify: true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7c50
 };
 
 module.exports = nextConfig;

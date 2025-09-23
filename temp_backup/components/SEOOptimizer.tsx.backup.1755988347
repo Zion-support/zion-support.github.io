@@ -11,17 +11,10 @@ interface SEOOptimizerProps {
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-<<<<<<< HEAD
   title = "Zion Tech Group - Revolutionary AI, Quantum Computing & Autonomous Solutions",
   description = "Pioneering the future of technology with innovative AI consciousness, quantum computing, and autonomous solutions that drive business transformation worldwide.",
   keywords = "AI, artificial intelligence, quantum computing, autonomous solutions, business transformation, technology innovation, Zion Tech Group",
   image = "/og-image.jpg",
-=======
-  title = "Zion Tech Group - Revolutionary AI Consciousness & Quantum Computing Solutions 2040-2041",
-  description = "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge 2040-2041 technology.",
-  keywords = "AI consciousness, quantum computing, autonomous systems, space technology, cybersecurity, business intelligence, Zion Tech Group, 2040 technology, revolutionary AI",
-  image = "/og-image-zion-tech-group.jpg",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
   url = "https://ziontechgroup.com",
   type = "website"
 }) => {
@@ -29,7 +22,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-<<<<<<< HEAD
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
     "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions.",
@@ -89,45 +81,19 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services",
-=======
-    "url": url,
-    "logo": `${url}/logo.png`,
-    "description": description,
-    "foundingDate": "2020",
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/Zion-Holdings"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-800-ZION-TECH",
-      "contactType": "customer service",
-      "areaServed": "Worldwide"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Revolutionary Technology Services",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-<<<<<<< HEAD
             "name": "AI & Machine Learning Solutions",
             "description": "Advanced artificial intelligence solutions for modern businesses"
-=======
-            "name": "AI Consciousness Evolution",
-            "description": "Next-generation AI consciousness and emotional intelligence"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-<<<<<<< HEAD
             "name": "Quantum Computing Services",
             "description": "Next-generation computing solutions for complex problems"
           }
@@ -138,10 +104,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             "@type": "Service",
             "name": "Process Automation",
             "description": "Intelligent automation to streamline your operations"
-=======
-            "name": "Quantum Computing Solutions",
-            "description": "Revolutionary quantum computing with consciousness integration"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
           }
         }
       ]
@@ -180,7 +142,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       
-<<<<<<< HEAD
       {/* Additional SEO Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#00d4ff" />
@@ -196,29 +157,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel="icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-=======
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
       
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-<<<<<<< HEAD
-=======
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
-      {/* Manifest */}
-      <link rel="manifest" href="/site.webmanifest" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
       
       {/* Structured Data */}
       <script
@@ -226,7 +168,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-<<<<<<< HEAD
       {/* Additional Meta Tags for Business */}
       <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
       <meta name="business:contact_data:locality" content="Middletown" />
@@ -235,26 +176,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="business:contact_data:country_name" content="United States" />
       <meta name="business:contact_data:phone_number" content="+1-302-464-0950" />
       <meta name="business:contact_data:email" content="kleber@ziontechgroup.com" />
-=======
-      {/* Additional Performance Optimizations */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      
-      {/* PWA Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
-      
-      {/* Mobile Meta Tags */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8ebe
     </Head>
   );
 };

@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity, Zap, Clock, TrendingUp, AlertTriangle, 
   CheckCircle, XCircle, Info, BarChart3, Gauge
-=======
-import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, TrendingUp, TrendingDown, CheckCircle, AlertTriangle, X, 
-  Zap, Clock, BarChart3, Target, Lightbulb, Settings, Monitor, Gauge,
-  RefreshCw, Minimize2, Maximize2, Wifi
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
 } from 'lucide-react';
 
 // Web Performance API type definitions
@@ -47,7 +38,6 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-<<<<<<< HEAD
   showUI?: boolean;
   autoHide?: boolean;
   threshold?: {
@@ -75,21 +65,6 @@ interface PerformanceResourceTiming extends PerformanceEntry {
   duration: number;
   name: string;
 }
-=======
-  onToggle?: (visible: boolean) => void;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onToggle }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [score, setScore] = useState<PerformanceScore | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-  const [optimizationTips, setOptimizationTips] = useState<string[]>([]);
-  const [autoRefresh, setAutoRefresh] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI = false,
@@ -114,138 +89,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [alerts, setAlerts] = useState<string[]>([]);
   const [overallScore, setOverallScore] = useState(0);
 
-<<<<<<< HEAD
   const calculateScore = useCallback((metrics: PerformanceMetrics) => {
     let score = 100;
-=======
-    const overall = Math.round((fcpScore + lcpScore + fidScore + clsScore + ttfbScore) / 5);
-
-    return {
-      overall: Math.max(0, Math.min(100, overall)),
-      fcp: Math.max(0, Math.min(100, fcpScore)),
-      lcp: Math.max(0, Math.min(100, lcpScore)),
-      fid: Math.max(0, Math.min(100, fidScore)),
-      cls: Math.max(0, Math.min(100, clsScore)),
-      ttfb: Math.max(0, Math.min(100, ttfbScore))
-    };
-  }, []);
-
-  // Get optimization tips based on performance scores
-  const getOptimizationTips = useCallback((score: PerformanceScore): string[] => {
-    const tips: string[] = [];
-
-    if (score.fcp < 70) {
-      tips.push('Optimize critical rendering path and reduce server response time');
-    }
-    if (score.lcp < 70) {
-      tips.push('Optimize images and implement lazy loading for better LCP');
-    }
-    if (score.fid < 70) {
-      tips.push('Reduce JavaScript execution time and optimize event handlers');
-    }
-    if (score.cls < 70) {
-      tips.push('Set explicit dimensions for images and avoid layout shifts');
-    }
-    if (score.ttfb < 70) {
-      tips.push('Optimize server response time and implement CDN');
-    }
-
-    if (tips.length === 0) {
-      tips.push('Great performance! Keep monitoring for any regressions');
-    }
-
-    return tips;
-  }, []);
-
-  // Monitor Core Web Vitals
-  const monitorPerformance = useCallback(() => {
-    if (!('PerformanceObserver' in window)) return;
-
-    // Monitor Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1] as LargestContentfulPaintEntry;
-      if (lastEntry) {
-        setMetrics(prev => prev ? { ...prev, lcp: lastEntry.startTime } : null);
-      }
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Monitor First Input Delay
-    const fidObserver = new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
-      const firstEntry = entries[0] as FirstInputEntry;
-      if (firstEntry) {
-        const fidValue = firstEntry.processingStart - firstEntry.startTime;
-        setMetrics(prev => prev ? { ...prev, fid: fidValue } : null);
-      }
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-    // Monitor Cumulative Layout Shift
-    const clsObserver = new PerformanceObserver((entryList) => {
-      let clsValue = 0;
-      entryList.getEntries().forEach((entry) => {
-        const layoutEntry = entry as LayoutShiftEntry;
-        if (!layoutEntry.hadRecentInput) {
-          clsValue += layoutEntry.value;
-        }
-      });
-      setMetrics(prev => prev ? { ...prev, cls: clsValue } : null);
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // Get other metrics
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      const fcp = navigationEntry.domContentLoadedEventEnd - navigationEntry.fetchStart;
-      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      
-      setMetrics(prev => ({
-        fcp: prev?.fcp || fcp,
-        lcp: prev?.lcp || 0,
-        fid: prev?.fid || 0,
-        cls: prev?.cls || 0,
-        ttfb: prev?.ttfb || ttfb,
-        fmp: prev?.fmp || 0,
-        si: prev?.si || 0,
-        tti: prev?.tti || 0
-      }));
-    }
-
-    return () => {
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-    };
-  }, []);
-
-  // Measure performance function
-  const measurePerformance = useCallback(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        const fcp = navigationEntry.domContentLoadedEventEnd - navigationEntry.fetchStart;
-        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-        
-        setMetrics(prev => ({
-          fcp: prev?.fcp || fcp,
-          lcp: prev?.lcp || 0,
-          fid: prev?.fid || 0,
-          cls: prev?.cls || 0,
-          ttfb: prev?.ttfb || ttfb,
-          fmp: prev?.fmp || 0,
-          si: prev?.si || 0,
-          tti: prev?.tti || 0
-        }));
-      }
-    }
-  }, []);
-
-  // Start monitoring when component mounts
-  useEffect(() => {
-    const cleanup = monitorPerformance();
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
     
     // LCP scoring (0-2500ms, lower is better)
     if (metrics.lcp > threshold.lcp) {
@@ -270,29 +115,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return Math.max(0, Math.round(score));
   }, [threshold]);
 
-<<<<<<< HEAD
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-=======
-  // Auto-refresh functionality
-  useEffect(() => {
-    if (autoRefresh && isVisible) {
-      intervalRef.current = setInterval(measurePerformance, 30000); // Every 30 seconds
-    }
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [autoRefresh, isVisible, measurePerformance]);
-
-  // Initial measurement
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
   useEffect(() => {
     if (isVisible) {
       startMonitoring();
@@ -506,45 +334,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <XCircle className="w-4 h-4" />
               </button>
             </div>
-<<<<<<< HEAD
-=======
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Control Buttons */}
-          <div className="flex items-center gap-2 p-2">
-            <button
-              onClick={toggleAutoRefresh}
-              className={`p-1.5 rounded-lg transition-colors ${
-                autoRefresh 
-                  ? 'bg-cyan-500/20 text-cyan-400' 
-                  : 'bg-white/10 text-white/60 hover:bg-white/20'
-              }`}
-              title={autoRefresh ? 'Disable auto-refresh' : 'Enable auto-refresh'}
-            >
-              <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />
-            </button>
-            <button
-              onClick={toggleExpanded}
-              className="p-1.5 rounded-lg bg-white/10 text-white/60 hover:bg-white/20 transition-colors"
-              title={isExpanded ? 'Minimize' : 'Expand'}
-            >
-              {isExpanded ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
-            </button>
-            <button
-              onClick={() => onToggle?.(false)}
-              className="p-1.5 rounded-lg bg-white/10 text-white/60 hover:bg-white/20 transition-colors"
-              title="Close"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
 
             {/* Overall Score */}
             <div className="p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
@@ -552,7 +341,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-sm text-gray-400">Overall Score</span>
                 {getScoreIcon(overallScore)}
               </div>
-<<<<<<< HEAD
               <div className="flex items-center space-x-3">
                 <div className={`text-3xl font-bold ${getScoreColor(overallScore)}`}>
                   {overallScore}
@@ -566,32 +354,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                       style={{ width: `${overallScore}%` }}
                     />
                   </div>
-=======
-              <div className="flex items-center gap-3">
-                <div className="relative w-16 h-16">
-                  <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
-                    <path
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeDasharray={`${score.overall}, 100`}
-                      className="text-cyan-400"
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-lg font-bold text-white">{score.overall}</span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-sm text-gray-400 mb-1">Performance Grade</div>
-                  <div className="text-lg font-semibold text-white">{getScoreLabel(score.overall)}</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
                 </div>
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Metrics Grid */}
             <div className="p-4 space-y-3">
               {Object.entries(metrics).map(([key, value]) => {
@@ -613,56 +379,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   </div>
                 );
               })}
-=======
-          {/* Core Web Vitals */}
-          {metrics && (
-            <div className="p-4 border-b border-gray-700/50">
-              <h4 className="text-sm font-medium text-gray-300 mb-3">Core Web Vitals</h4>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-blue-400" />
-                    <span className="text-sm text-gray-300">FCP</span>
-                  </div>
-                  <span className="text-sm font-mono text-white">
-                    {Math.round(metrics.fcp)}ms
-                  </span>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Target className="w-4 h-4 text-green-400" />
-                    <span className="text-sm text-gray-300">LCP</span>
-                  </div>
-                  <span className="text-sm font-mono text-white">
-                    {Math.round(metrics.lcp)}ms
-                  </span>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-purple-400" />
-                    <span className="text-sm text-gray-300">FID</span>
-                  </div>
-                  <span className="text-sm font-mono text-white">
-                    {Math.round(metrics.fid)}ms
-                  </span>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Wifi className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm text-gray-300">TTFB</span>
-                  </div>
-                  <span className="text-sm font-mono text-white">
-                    {Math.round(metrics.ttfb)}ms
-                  </span>
-                </div>
-              </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
             </div>
 
-<<<<<<< HEAD
             {/* Alerts */}
             {alerts.length > 0 && (
               <div className="p-4 border-t border-white/10 bg-red-500/10">
@@ -679,83 +397,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   {alerts.length > 3 && (
                     <div className="text-xs text-red-400">
                       +{alerts.length - 3} more issues
-=======
-          {/* Optimization Tips */}
-          {optimizationTips.length > 0 && (
-            <div className="p-4 border-b border-gray-700/50">
-              <div className="flex items-center gap-2 mb-3">
-                <TrendingUp className="w-4 h-4 text-emerald-400" />
-                <span className="text-sm font-medium text-gray-300">Optimization Tips</span>
-              </div>
-              <div className="space-y-2">
-                {optimizationTips.map((tip, index) => (
-                  <div key={index} className="text-xs text-gray-400 leading-relaxed">
-                    • {tip}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Actions */}
-          <div className="p-4">
-            <button
-              onClick={() => setShowDetails(!showDetails)}
-              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-            >
-              {showDetails ? 'Hide Details' : 'Show Details'}
-            </button>
-          </div>
-
-          {/* Detailed Metrics */}
-          <AnimatePresence>
-            {showDetails && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="border-t border-gray-700/50"
-              >
-                <div className="p-4 space-y-3">
-                  <h4 className="text-sm font-medium text-gray-300 mb-3">Detailed Performance Data</h4>
-                  
-                  {metrics && (
-                    <div className="grid grid-cols-2 gap-3 text-xs">
-                      <div className="bg-gray-800/50 p-2 rounded">
-                        <div className="text-gray-400">DOM Load</div>
-                        <div className="text-white font-mono">
-                          {Math.round(metrics.fcp)}ms
-                        </div>
-                      </div>
-                      
-                      <div className="bg-gray-800/50 p-2 rounded">
-                        <div className="text-gray-400">Interactive</div>
-                        <div className="text-white font-mono">
-                          {Math.round(metrics.fid)}ms
-                        </div>
-                      </div>
-                      
-                      <div className="bg-gray-800/50 p-2 rounded">
-                        <div className="text-gray-400">Server Response</div>
-                        <div className="text-white font-mono">
-                          {Math.round(metrics.ttfb)}ms
-                        </div>
-                      </div>
-                      
-                      <div className="bg-gray-800/50 p-2 rounded">
-                        <div className="text-gray-400">Layout Stability</div>
-                        <div className="text-white font-mono">
-                          {metrics.cls.toFixed(3)}
-                        </div>
-                      </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
                     </div>
                   )}
                 </div>
               </div>
             )}
-<<<<<<< HEAD
 
             {/* Footer */}
             <div className="p-3 bg-gray-900/50 border-t border-white/10">
@@ -770,57 +416,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         </motion.div>
       )}
-=======
-          </AnimatePresence>
-
-          {/* Footer Actions */}
-          <div className="p-3 border-t border-cyan-500/20 bg-white/5">
-            <button
-              onClick={measurePerformance}
-              disabled={isMonitoring}
-              className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-lg transition-all duration-300 hover:from-cyan-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isMonitoring ? (
-                <>
-                  <RefreshCw className="w-4 h-4 animate-spin" />
-                  Measuring...
-                </>
-              ) : (
-                <>
-                  <Activity className="w-4 h-4" />
-                  Measure Performance
-                </>
-              )}
-            </button>
-          </div>
-        </div>
-      </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
     </AnimatePresence>
   );
 };
 
-<<<<<<< HEAD
 // Missing icon component
 const RefreshCw: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
   </svg>
 );
-=======
-// Helper functions
-const getScoreIcon = (score: number) => {
-  if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-  if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-  return <AlertTriangle className="w-5 h-5 text-red-400" />;
-};
-
-const getScoreLabel = (score: number) => {
-  if (score >= 90) return 'Excellent';
-  if (score >= 70) return 'Good';
-  if (score >= 50) return 'Needs Improvement';
-  return 'Poor';
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
 
 export default PerformanceMonitor;

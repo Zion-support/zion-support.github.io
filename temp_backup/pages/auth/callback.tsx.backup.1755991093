@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function AuthCallbackPage() {
@@ -12,6 +11,3 @@ export default function AuthCallbackPage() {
     </>
   );
 }
-=======
-export default function AuthCallback() { return <div className="p-6">Auth Callback</div>; }
->>>>>>> origin/cursor/build-community-forum-for-zion-ai-marketplace-7967

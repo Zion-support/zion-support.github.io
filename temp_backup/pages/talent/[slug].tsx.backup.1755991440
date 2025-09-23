@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 
-<<<<<<< HEAD
 export default function TalentDetail() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
@@ -11,10 +10,3 @@ export default function TalentDetail() {
     </div>
   );
 }
-=======
-export default function TalentProfile() {
-  const { query } = useRouter();
-  const { slug } = query;
-  return <div>Talent Profile: {slug as string}</div>;
-}
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

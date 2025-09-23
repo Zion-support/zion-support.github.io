@@ -38,7 +38,6 @@ const heroStats = [
   { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" /> }
 ];
 
-<<<<<<< HEAD
 const serviceCategories = [
   {
     name: 'AI & Consciousness',
@@ -89,71 +88,6 @@ const serviceCategories = [
     link: '/services#customer-success'
   }
 ];
-=======
-  // Combine all services for comprehensive showcase
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
-    ...innovativeMicroSaasServices,
-    ...innovativeMicroSaasServicesV3,
-    ...extraServices,
-    ...additionalEnhancedServices,
-    ...innovativeAIServices,
-    ...quantumSpaceServices,
-    ...quantumAIServices2025,
-    ...enterpriseITServices,
-    ...nextGenerationAIServices,
-    ...emergingTechnologyServices,
-    ...emergingTechServices2025,
-    ...comprehensiveITSolutions,
-    ...realMarketServices,
-    ...serviceExpansions2025,
-    ...realOperationalServices,
-    ...newOperationalServices2025,
-    ...verifiedRealServices2025Batch2,
-    ...innovative2025Services,
-    ...emergingTechServices2025,
-    ...revolutionary2025Services,
-    ...nextGenInnovations2025,
-    ...futuristic2028Services,
-    ...emergingTech2028Services,
-    ...cuttingEdgeInnovations2029,
-    ...emergingTechServices2029,
-    ...practicalBusinessSolutions2029,
-    ...innovative2026Services,
-    ...emergingTech2026Services,
-    ...enterpriseIT2026Services,
-    ...innovative2026MicroSaasServices,
-    ...emergingTech2026ServicesNew,
-    ...enterpriseIT2026ServicesNew,
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesNew,
-    ...revolutionary2026Innovations,
-    ...nextGenAI2026Services,
-    ...aiAutonomousServices2026,
-    ...quantumSpaceTechServices2026,
-    ...metaverseDigitalRealityServices2026,
-    ...innovative2026AIServicesV3,
-            ...emergingTech2026ServicesV3,
-            ...enterpriseIT2026ServicesV3,
-            ...ultimate2026Services,
-            ...cuttingEdge2027Innovations,
-            ...practicalMicroSaas2027,
-            ...revolutionary2026MicroSaasServices,
-            ...revolutionary2026ITServices,
-            ...revolutionary2026AIServices,
-            ...revolutionary2027Services,
-            ...emergingTech2027Services,
-            ...revolutionary2027AIServices,
-            ...revolutionary2027ITServices,
-            ...revolutionary2027MicroSaasServices,
-            ...cuttingEdge2028MicroSaas,
-            ...practicalBusinessSolutions2028,
-            ...cuttingEdgeInnovations2029,
-            ...emergingTechServices2029,
-            ...practicalBusinessSolutions2029
-  ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2d1b
 
   // Get new 2029 services for enhanced showcase
   const cuttingEdge2029Services = cuttingEdgeInnovations2029;
@@ -239,7 +173,6 @@ const serviceCategories = [
         </script>
       </Head>
 
-<<<<<<< HEAD
       {/* Background */}
       <UltraFuturisticBackground2029 />
       
@@ -403,14 +336,6 @@ const serviceCategories = [
                 Transform your business with revolutionary 2029 innovations that are already operational today.
               </p>
             </motion.div>
-=======
-      <UltraFuturisticBackground2029>
-        {/* Navigation */}
-        <UltraFuturisticNavigation2029 />
-
-        {/* Hero Section */}
-        <UltraFuturisticHero2029 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2d1b
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -450,7 +375,6 @@ const serviceCategories = [
           </motion.div>
         </section>
 
-<<<<<<< HEAD
         {/* Revolutionary 2026 Services Showcase */}
         <Revolutionary2026ServiceShowcase />
 
@@ -460,37 +384,6 @@ const serviceCategories = [
           title="2029 Ultra-Futuristic Innovations"
           subtitle="Experience the future of technology with our revolutionary 2029 services"
           maxServices={10}
-=======
-        {/* Enhanced Service Showcase */}
-        <EnhancedServiceShowcase
-          services={allServices}
-          title="Comprehensive Technology Services"
-          subtitle="Explore our complete portfolio of innovative solutions"
-        />
-
-        {/* 2029 Cutting Edge Innovations */}
-        <EnhancedServiceShowcase
-          services={cuttingEdge2029Services}
-          title="🚀 2029 Cutting-Edge Innovations"
-          subtitle="Beyond the future of technology - Revolutionary AI consciousness, quantum time manipulation, and autonomous AI civilizations"
-          showStats={false}
-        />
-
-        {/* 2029 Emerging Technology Services */}
-        <EnhancedServiceShowcase
-          services={emergingTech2029Services}
-          title="⚛️ 2029 Emerging Technology Services"
-          subtitle="Quantum biotech synthesis, autonomous space mining, and quantum internet protocols"
-          showStats={false}
-        />
-
-        {/* 2029 Practical Business Solutions */}
-        <EnhancedServiceShowcase
-          services={practicalBusiness2029Services}
-          title="💼 2029 Practical Business Solutions"
-          subtitle="AI-powered automation for customer success, content marketing, inventory management, and sales optimization"
-          showStats={false}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2d1b
         />
 
         {/* Latest Innovations Showcase */}

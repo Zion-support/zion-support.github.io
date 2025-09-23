@@ -377,37 +377,9 @@
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
-<<<<<<< HEAD
     "performance:audit": "node automation/performance-audit.cjs",
     "automation:trends": "node scripts/curate-trends.mjs",
     "automation:health": "node scripts/health-check.mjs"
-=======
-    "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
-    "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
-    "ui-evolution:analyze": "node automation/ui-evolution-launcher.js analyze",
-    "ui-evolution:factory": "node automation/ui-evolution-launcher.js factory",
-    "ui-evolution:beautify": "node automation/ui-evolution-launcher.js beautify",
-    "ui-evolution:dashboard": "node automation/ui-evolution-launcher.js dashboard",
-    "meta:factory": "node automation/autonomous-meta-factory.cjs",
-    "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
-    "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
-    "venture:start": "node automation/venture-orchestrator.cjs continuous",
-    "venture:once": "node automation/venture-orchestrator.cjs once",
-    "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
-    "venture:cron:start": "bash automation/venture-cron.sh start",
-    "venture:cron:stop": "bash automation/venture-cron.sh stop",
-    "venture:cron:status": "bash automation/venture-cron.sh status",
-    "venture:report": "node automation/venture-orchestrator.cjs report",
-    "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
-    "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
-    "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
-    "git:sync": "node automation/advanced-git-sync.cjs",
-    "git:pull": "node automation/git-pull-rebase.cjs",
-    "git:cron:start": "bash automation/git-sync-cron.sh start",
-    "git:cron:stop": "bash automation/git-sync-cron.sh stop",
-    "git:cron:status": "bash automation/git-sync-cron.sh status",
-    "home:update": "node automation/homepage-updater.cjs"
->>>>>>> origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-6a86
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

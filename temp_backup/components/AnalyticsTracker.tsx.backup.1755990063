@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3 } from 'lucide-react';
 
-<<<<<<< HEAD
 const AnalyticsTracker: React.FC = () => {
   const router = useRouter();
 
@@ -302,13 +301,6 @@ declare global {
       action: string,
       params?: Record<string, unknown>
     ) => void;
-=======
-// Extend Window interface for Google Analytics
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
   }
 }
 

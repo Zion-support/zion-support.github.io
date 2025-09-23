@@ -249,7 +249,6 @@
   name = "deps-auto-upgrade-runner"
   schedule = "0 3 * * *"
 
-<<<<<<< HEAD
 # New autonomous cloud scanners
 [[scheduled.functions]]
   name = "unused-media-scanner"
@@ -282,19 +281,3 @@
 [[scheduled.functions]]
   name = "autonomy-score-runner"
   schedule = "*/1 * * * *" # every minute
-=======
-# Content freshness auditor
-[[scheduled.functions]]
-  name = "content-freshness-runner"
-  schedule = "*/15 * * * *"
-
-# Docs relative link auditor
-[[scheduled.functions]]
-  name = "docs-link-audit-runner"
-  schedule = "*/30 * * * *"
-
-# Image dimension auditor
-[[scheduled.functions]]
-  name = "image-dimension-audit-runner"
-  schedule = "*/20 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9ff4

@@ -53,7 +53,6 @@ interface Service {
   reviews: number;
 }
 
-<<<<<<< HEAD
 // Utility function to get service properties with defaults
 function getServiceProperty<T>(service: any, property: string, defaultValue: T): T {
   return service && service[property] !== undefined ? service[property] : defaultValue;
@@ -92,22 +91,6 @@ function getDefaultColor(category: string): string {
   };
   return colorMap[category] || colorMap.default;
 }
-=======
-// Helper function to get price display
-const getPriceDisplay = (service: any) => {
-  if (typeof service.price === 'string') {
-    return {
-      price: service.price,
-      period: service.period || '/month'
-    };
-  } else {
-    return {
-      price: `$${service.price.monthly}`,
-      period: '/month'
-    };
-  }
-};
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
 
 const Innovative2040FuturisticServicesShowcase: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -356,11 +339,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                     )}
 
                     {/* Service Icon */}
-<<<<<<< HEAD
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color || 'from-blue-600 to-purple-700'} rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-=======
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color || 'from-cyan-500 to-blue-600'} rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
                       {service.icon}
                     </div>
 
@@ -377,11 +356,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                       <div className="text-2xl font-bold text-cyan-400">
                         {getPriceDisplay(service).price}
                         <span className="text-sm text-gray-400">
-<<<<<<< HEAD
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
-=======
-                          {getPriceDisplay(service).period}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
                         </span>
                       </div>
                       <div className="flex items-center space-x-1 text-yellow-400">
@@ -454,11 +429,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                   >
                     <div className="flex items-start space-x-6">
                       {/* Service Icon */}
-<<<<<<< HEAD
                       <div className={`w-20 h-20 bg-gradient-to-r ${service.color || 'from-blue-600 to-purple-700'} rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-=======
-                      <div className={`w-20 h-20 bg-gradient-to-r ${service.color || 'from-cyan-500 to-blue-600'} rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
                         {service.icon}
                       </div>
 
@@ -485,15 +456,9 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                           </div>
                           <div className="text-right">
                                                        <div className="text-3xl font-bold text-cyan-400 mb-1">
-<<<<<<< HEAD
                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/${service.price.currency}`}
                                                            <span className="text-lg text-gray-400">
                                 {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
-=======
-                                                           {getPriceDisplay(service).price}
-                              <span className="text-lg text-gray-400">
-                                {getPriceDisplay(service).period}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
                               </span>
                            </div>
                             <div className="flex items-center justify-end space-x-1 text-yellow-400 mb-2">

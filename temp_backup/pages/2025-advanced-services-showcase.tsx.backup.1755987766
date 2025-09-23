@@ -5,7 +5,6 @@ import {
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-<<<<<<< HEAD
   Building, Cpu, Zap, Globe, Leaf, Car, Factory, Hospital,
   Phone, Mail, MapPin, ExternalLink, Star, Users, TrendingUp
 } from 'lucide-react';
@@ -19,25 +18,12 @@ import { advancedEnergySustainabilitySolutions2025 } from '../data/2025-advanced
 
 // Contact information
 const contactInfo = {
-=======
-  Building, Star, Users, TrendingUp, Zap, Globe, Eye, Phone, Mail, MapPin
-} from 'lucide-react';
-
-// Import 2025 advanced services
-import { real2025AdvancedMicroSaas } from '../data/real-2025-advanced-micro-saas';
-import { real2025AdvancedITServices } from '../data/real-2025-advanced-it-services';
-import { real2025AdvancedAIServices } from '../data/real-2025-advanced-ai-services';
-import { real2025EmergingTechServices } from '../data/real-2025-emerging-tech-services';
-
-const contact = {
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 // Combine all services
 const allAdvancedServices = [
   ...advancedCybersecuritySolutions2025,
@@ -70,34 +56,10 @@ export default function AdvancedServicesShowcase2025() {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory;
-=======
-export default function AdvancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('name');
-
-  // Combine all services
-  const allServices = [
-    ...real2025AdvancedMicroSaas,
-    ...real2025AdvancedITServices,
-    ...real2025AdvancedAIServices,
-    ...real2025EmergingTechServices
-  ];
-
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
       return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
       switch (sortBy) {
-<<<<<<< HEAD
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
@@ -118,10 +80,6 @@ export default function AdvancedServicesShowcase2025() {
 <<<<<<< HEAD
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
         keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
-=======
-        description="Discover our cutting-edge micro SAAS services across cybersecurity, fintech, healthcare, logistics, and sustainability. Real solutions with proven ROI and market validation."
-        keywords={["micro SAAS", "cybersecurity", "fintech", "healthcare technology", "logistics", "sustainability", "AI services", "quantum computing", "blockchain"]}
->>>>>>> origin/main
 =======
         case 'price':
           return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
@@ -189,7 +147,6 @@ export default function AdvancedServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 2025 Advanced Services
@@ -236,37 +193,11 @@ export default function AdvancedServicesShowcase2025() {
                 Visit Website
                 <ExternalLink className="inline ml-2 w-5 h-5" />
               </a>
-=======
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              2025 Advanced Services
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                Showcase
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our cutting-edge micro SAAS, IT, and AI services that are transforming industries. 
-              Real, innovative, and market-ready solutions for the future of business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center gap-2 text-cyan-400">
-                <Check className="w-5 h-5" />
-                <span>32+ Advanced Services</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-400">
-                <Star className="w-5 h-5" />
-                <span>4.8+ Average Rating</span>
-              </div>
-              <div className="flex items-center gap-2 text-purple-400">
-                <Users className="w-5 h-5" />
-                <span>1000+ Happy Customers</span>
-              </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
             </div>
           </motion.div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -344,39 +275,6 @@ export default function AdvancedServicesShowcase2025() {
                 </div>
               </motion.div>
             ))}
-=======
-      {/* Contact Information */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-1 rounded-lg mb-4">
-                <div className="bg-slate-800 p-4 rounded-lg">
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                  <p className="text-gray-300">{contact.mobile}</p>
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-1 rounded-lg mb-4">
-                <div className="bg-slate-800 p-4 rounded-lg">
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                  <p className="text-gray-300">{contact.email}</p>
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-1 rounded-lg mb-4">
-                <div className="bg-slate-800 p-4 rounded-lg">
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                  <p className="text-gray-300">{contact.address}</p>
-                </div>
-              </div>
-            </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
           </div>
         </div>
       </section>
@@ -384,7 +282,6 @@ export default function AdvancedServicesShowcase2025() {
       {/* Search and Filters */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               {/* Search */}
@@ -433,73 +330,12 @@ export default function AdvancedServicesShowcase2025() {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white hover:bg-white/20'}`}
-=======
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-            <div className="flex flex-col lg:flex-row gap-6">
-              {/* Search */}
-              <div className="flex-1">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search services..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              {/* Category Filter */}
-              <div className="flex-shrink-0">
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Sort */}
-              <div className="flex-shrink-0">
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="name">Sort by Name</option>
-                  <option value="price">Sort by Price</option>
-                  <option value="rating">Sort by Rating</option>
-                  <option value="customers">Sort by Customers</option>
-                </select>
-              </div>
-
-              {/* View Mode */}
-              <div className="flex-shrink-0">
-                <div className="flex bg-slate-700/50 rounded-lg p-1">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-md transition-colors ${
-                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                    }`}
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
                   >
                     <Grid className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-<<<<<<< HEAD
                     className={`p-2 rounded ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white hover:bg-white/20'}`}
-=======
-                    className={`p-2 rounded-md transition-colors ${
-                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                    }`}
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
                   >
                     <List className="w-5 h-5" />
                   </button>
@@ -511,7 +347,6 @@ export default function AdvancedServicesShowcase2025() {
       </section>
 
       {/* Services Grid/List */}
-<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
@@ -680,161 +515,10 @@ export default function AdvancedServicesShowcase2025() {
       </section>
 
       {/* Contact Section */}
-=======
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {filteredServices.length} Advanced Services Found
-            </h2>
-            <p className="text-gray-400">
-              Discover cutting-edge solutions designed for modern businesses
-            </p>
-          </div>
-
-          <AnimatePresence mode="wait">
-            {viewMode === 'grid' ? (
-              <motion.div
-                key="grid"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {filteredServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">{service.icon}</div>
-                      {service.popular && (
-                        <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{service.tagline}</p>
-
-                    <div className="mb-4">
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
-                    </div>
-
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                        <span>{service.rating}</span>
-                        <span>({service.reviews} reviews)</span>
-                      </div>
-                      <div className="text-sm text-gray-400">
-                        {service.customers} customers
-                      </div>
-                    </div>
-
-                    <div className="mb-4">
-                      <span className="inline-block bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
-                        {service.category}
-                      </span>
-                    </div>
-
-                    <a
-                      href={service.link}
-                      className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </motion.div>
-                ))}
-              </motion.div>
-            ) : (
-              <motion.div
-                key="list"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="space-y-4"
-              >
-                {filteredServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
-                  >
-                    <div className="flex flex-col lg:flex-row gap-6">
-                      <div className="flex-shrink-0">
-                        <div className="text-4xl">{service.icon}</div>
-                      </div>
-                      
-                      <div className="flex-1">
-                        <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-4">
-                          <div>
-                            <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                            <p className="text-gray-400">{service.tagline}</p>
-                          </div>
-                          
-                          <div className="flex-shrink-0">
-                            <div className="text-right">
-                              <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                              <div className="text-gray-400 text-sm">{service.period}</div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                          <div className="flex items-center gap-2 text-sm text-gray-400">
-                            <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                            <span>{service.rating} ({service.reviews} reviews)</span>
-                          </div>
-                          <div className="text-sm text-gray-400">
-                            {service.customers} customers
-                          </div>
-                          <div className="text-sm text-gray-400">
-                            {service.setupTime} setup
-                          </div>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          <span className="inline-block bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">
-                            {service.category}
-                          </span>
-                          {service.popular && (
-                            <span className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                              Popular
-                            </span>
-                          )}
-                        </div>
-
-                        <a
-                          href={service.link}
-                          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          Learn More <ArrowRight className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </section>
-
-      {/* CTA Section */}
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
@@ -881,38 +565,11 @@ export default function AdvancedServicesShowcase2025() {
               >
                 Explore More Services
                 <ExternalLink className="inline ml-2 w-5 h-5" />
-=======
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our advanced services to drive innovation, 
-              improve efficiency, and achieve remarkable results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={`mailto:${contact.email}`}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a
-                href={`tel:${contact.mobile}`}
-                className="inline-flex items-center gap-2 border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Call Us Now
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
               </a>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Footer */}
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
@@ -934,8 +591,6 @@ export default function AdvancedServicesShowcase2025() {
           </div>
         </div>
       </footer>
-=======
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
     </div>
   );
 }

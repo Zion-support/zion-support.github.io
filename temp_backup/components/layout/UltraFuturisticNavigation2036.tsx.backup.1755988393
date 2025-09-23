@@ -154,7 +154,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Play className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
         name: 'AI Evaluation', 
         href: '/services/ai-evaluation-orchestrator', 
         description: 'AI model evaluation & testing',
@@ -176,23 +175,6 @@ const navigationItems: NavigationItem[] = [
         name: 'AI Revenue Forecasting', 
         href: '/services/ai-revenue-forecasting-copilot', 
         description: 'Revenue prediction & planning',
-=======
-        name: 'AI Consciousness', 
-        href: '/ai-consciousness-evolution', 
-        description: 'Revolutionary AI consciousness',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Quantum Security', 
-        href: '/quantum-internet-security', 
-        description: 'Quantum-secured communications',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Brain-Computer Interface', 
-        href: '/brain-computer-interface', 
-        description: 'Neural interface technology',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5614
         icon: <Play className="w-4 h-4" />
       }
     ]

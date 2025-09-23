@@ -1,28 +1,15 @@
 {
-<<<<<<< HEAD
   "name": "Zion Tech Group - Revolutionary Technology Solutions",
   "short_name": "Zion Tech",
   "description": "Pioneering the future of technology with innovative AI, quantum computing, and enterprise solutions that drive business transformation",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
-=======
-  "name": "Zion Tech Group - Pioneering the Future of Technology",
-  "short_name": "Zion Tech Group",
-  "description": "Leading technology company specializing in AI, quantum computing, space technology, and enterprise solutions. Transform your business with cutting-edge innovation.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#111827",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
   "theme_color": "#06b6d4",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
-<<<<<<< HEAD
   "categories": ["business", "productivity", "technology", "utilities"],
-=======
-  "categories": ["business", "productivity", "technology"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
   "icons": [
     {
       "src": "/images/icon-72x72.png",
@@ -43,7 +30,6 @@
       "purpose": "maskable any"
     },
     {
-<<<<<<< HEAD
       "src": "/images/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
@@ -57,15 +43,11 @@
     },
     {
       "src": "/images/icon-192x192.png",
-=======
-      "src": "/logo192.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-<<<<<<< HEAD
       "src": "/images/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
@@ -73,9 +55,6 @@
     },
     {
       "src": "/images/icon-512x512.png",
-=======
-      "src": "/logo512.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -105,13 +84,8 @@
       "url": "/services",
       "icons": [
         {
-<<<<<<< HEAD
           "src": "/images/icon-services.png",
           "sizes": "96x96"
-=======
-          "src": "/logo192.png",
-          "sizes": "192x192"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
         }
       ]
     },
@@ -122,13 +96,8 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
           "src": "/images/icon-contact.png",
           "sizes": "96x96"
-=======
-          "src": "/logo192.png",
-          "sizes": "192x192"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
         }
       ]
     },
@@ -139,7 +108,6 @@
       "url": "/ai-consciousness-evolution-2040",
       "icons": [
         {
-<<<<<<< HEAD
           "src": "/images/icon-ai.png",
           "sizes": "96x96"
         }
@@ -154,15 +122,10 @@
         {
           "src": "/images/icon-quantum.png",
           "sizes": "96x96"
-=======
-          "src": "/logo192.png",
-          "sizes": "192x192"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
         }
       ]
     }
   ],
-<<<<<<< HEAD
   "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {
@@ -181,22 +144,6 @@
         "application/pdf": [".pdf"],
         "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
       }
-=======
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Homepage"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile View"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
     }
   ],
   "related_applications": [],
@@ -213,7 +160,6 @@
       "protocol": "web+zion",
       "url": "/?protocol=%s"
     }
-<<<<<<< HEAD
   ],
   "share_target": {
     "action": "/share",
@@ -248,7 +194,4 @@
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com"
   }
-=======
-  ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-dd4c
 }

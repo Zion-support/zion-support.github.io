@@ -1,85 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
   return (
     <>
       <Head><title>sitemap - Zion App</title><meta name="description" content="sitemap page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">sitemap</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
             ← Back to Home</a></div></div></>;
   );
-=======
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { 
-  Map, ArrowRight, ExternalLink, FileText, Users, 
-  Zap, Shield, Brain, Atom, Rocket, Globe, Building,
-  BookOpen, Video, Activity, Mail, Phone, MapPin
-} from 'lucide-react';
-import Link from 'next/link';
-
-const SitemapPage: React.FC = () => {
-  const siteStructure = [
-    {
-      category: "Main Pages",
-      icon: <Building className="w-5 h-5" />,
-      pages: [
-        { name: "Home", path: "/", description: "Main landing page" },
-        { name: "About", path: "/about", description: "Company information and history" },
-        { name: "Services", path: "/services", description: "Our technology services" },
-        { name: "Contact", path: "/contact", description: "Get in touch with us" }
-      ]
-    },
-    {
-      category: "Technology Services",
-      icon: <Zap className="w-5 h-5" />,
-      pages: [
-        { name: "AI Consciousness Evolution", path: "/ai-consciousness-evolution-2045", description: "AI consciousness platform" },
-        { name: "Quantum AI Cognitive Platform", path: "/quantum-ai-cognitive-2045", description: "Quantum computing solutions" },
-        { name: "Market Pricing", path: "/market-pricing", description: "Pricing strategy and analysis" },
-        { name: "Services Advertising", path: "/services-advertising", description: "Marketing and advertising services" }
-      ]
-    },
-    {
-      category: "Company Information",
-      icon: <Users className="w-5 h-5" />,
-      pages: [
-        { name: "Mission", path: "/mission", description: "Our mission and vision" },
-        { name: "News", path: "/news", description: "Company news and updates" },
-        { name: "Press", path: "/press", description: "Press releases and media" },
-        { name: "Careers", path: "/careers", description: "Job opportunities" },
-        { name: "Partners", path: "/partners", description: "Partnership information" },
-        { name: "Investors", path: "/investors", description: "Investor relations" }
-      ]
-    },
-    {
-      category: "Resources & Content",
-      icon: <BookOpen className="w-5 h-5" />,
-      pages: [
-        { name: "Blog", path: "/blog", description: "Articles and insights" },
-        { name: "Case Studies", path: "/case-studies", description: "Client success stories" },
-        { name: "Webinars", path: "/webinars", description: "Educational webinars" },
-        { name: "Documentation", path: "/docs", description: "Technical documentation" }
-      ]
-    },
-    {
-      category: "Legal & Compliance",
-      icon: <Shield className="w-5 h-5" />,
-      pages: [
-        { name: "Privacy Policy", path: "/privacy", description: "Data privacy information" },
-        { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
-        { name: "Cookies Policy", path: "/cookies", description: "Cookie usage information" },
-        { name: "Accessibility", path: "/accessibility", description: "Accessibility commitment" },
-        { name: "Security", path: "/security", description: "Security measures" }
-      ]
-    },
-    {
-      category: "Support & Information",
-      icon: <Mail className="w-5 h-5" />,
-      pages: [
-        { name: "Support", path: "/support", description: "Customer support" },
-        { name: "Get Started", path: "/get-started", description: "Getting started guide" },
-        { name: "Pricing", path: "/pricing", description: "Service pricing" },
-        { name: "System Status", path: "/status", description: "Service status and uptime" }
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
       ]
     }
   ];

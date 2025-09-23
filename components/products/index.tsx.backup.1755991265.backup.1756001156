@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function ProductsIndexPage() {
@@ -9,8 +8,3 @@ export default function ProductsIndexPage() {
     </div>
   );
 }
-=======
-export default function ProductsIndexPage() {
-  return <div className="py-8 text-slate-300">Products</div>;
-}
->>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

@@ -11,14 +11,8 @@ import {
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,
   Building, MessageCircle, Sparkles as SparklesIcon, Zap as ZapIcon,
   Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon,
-<<<<<<< HEAD
   Cpu as Quantum, Brain as AI, Code as MicroSaas, Server as ITServices, 
   Globe as Metaverse, Shield as Cybersecurity, Leaf, Mountain, Plane
-=======
-  Briefcase, Layers, ShieldCheck, Zap as ZapIcon2, Globe2, 
-  Cpu as CpuIcon, Database as DatabaseIcon, Network as NetworkIcon,
-  GraduationCap, Handshake
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -170,7 +164,6 @@ const navigationItems: NavigationItem[] = [
         name: 'Specialized Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
-<<<<<<< HEAD
         icon: <Play className="w-4 h-4" />
       },
       { 
@@ -178,27 +171,6 @@ const navigationItems: NavigationItem[] = [
         href: '/micro-saas', 
         description: 'Business automation solutions',
         icon: <Play className="w-4 h-4" />
-=======
-        icon: <TargetIcon className="w-4 h-4" />
-      },
-      {
-        name: 'Micro SAAS',
-        href: '/micro-saas',
-        description: 'Innovative micro SaaS solutions',
-        icon: <Layers className="w-4 h-4" />
-      },
-      {
-        name: 'Fintech Solutions',
-        href: '/fintech-solutions',
-        description: 'Financial technology innovations',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      {
-        name: 'Healthtech',
-        href: '/healthtech-solutions',
-        description: 'Healthcare technology solutions',
-        icon: <Heart className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
       }
     ]
   },
@@ -211,41 +183,21 @@ const navigationItems: NavigationItem[] = [
     category: 'showcase',
     children: [
       {
-<<<<<<< HEAD
         name: '2026 Services Showcase',
         href: '/ultimate-2026-services-showcase',
         description: 'Latest 2026 innovations',
-=======
-        name: '2025 Services Showcase',
-        href: '/revolutionary-2025-services-showcase',
-        description: 'Latest innovations and solutions',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
         icon: <Sparkles className="w-4 h-4" />,
         featured: true
       },
       {
-<<<<<<< HEAD
         name: '2035 Futuristic Services',
         href: '/ultimate-2035-futuristic-services-showcase',
         description: 'Future technology preview',
         icon: <Rocket className="w-4 h-4" />
-=======
-        name: '2026 Services Showcase',
-        href: '/revolutionary-2026-services-showcase',
-        description: 'Next-generation solutions',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      {
-        name: 'Ultimate 2025 Micro SAAS',
-        href: '/ultimate-2025-micro-saas-showcase',
-        description: 'Comprehensive micro SaaS portfolio',
-        icon: <Layers className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
       },
       {
         name: 'Pricing Plans',
         href: '/pricing',
-<<<<<<< HEAD
         description: 'Transparent pricing',
         icon: <DollarSign className="w-4 h-4" />
       },
@@ -260,16 +212,6 @@ const navigationItems: NavigationItem[] = [
         href: '/quote', 
         description: 'Request custom pricing',
         icon: <Play className="w-4 h-4" />
-=======
-        description: 'Transparent pricing structure',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      {
-        name: 'Market Pricing',
-        href: '/market-pricing',
-        description: 'Competitive market analysis',
-        icon: <BarChart3 className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
       }
     ]
   },
@@ -358,7 +300,6 @@ const navigationItems: NavigationItem[] = [
     description: 'About Zion Tech Group',
     category: 'company',
     children: [
-<<<<<<< HEAD
       { 
         name: 'About Us', 
         href: '/about', 
@@ -394,42 +335,10 @@ const navigationItems: NavigationItem[] = [
         href: '/business-tools',
         description: 'Business productivity tools',
         icon: <Building className="w-4 h-4" />
-=======
-      {
-        name: 'About Us',
-        href: '/about',
-        description: 'Our story and mission',
-        icon: <Users className="w-4 h-4" />
-      },
-      {
-        name: 'Team',
-        href: '/team',
-        description: 'Meet our experts',
-        icon: <Users className="w-4 h-4" />
-      },
-      {
-        name: 'Careers',
-        href: '/careers',
-        description: 'Join our team',
-        icon: <Briefcase className="w-4 h-4" />
-      },
-      {
-        name: 'Partners',
-        href: '/partners',
-        description: 'Strategic partnerships',
-        icon: <Handshake className="w-4 h-4" />
-      },
-      {
-        name: 'Investors',
-        href: '/investors',
-        description: 'Investment opportunities',
-        icon: <TrendingUp className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
       }
     ]
   },
   {
-<<<<<<< HEAD
     name: 'Innovative Services',
     href: '/innovative-services-showcase-2036',
     icon: <Sparkles className="w-5 h-5" />,
@@ -914,37 +823,6 @@ const navigationItems: NavigationItem[] = [
         href: '/emerging-tech', 
         description: 'Future technology research',
         icon: <Zap className="w-4 h-4" />
-=======
-    name: 'Support',
-    href: '/support',
-    icon: <HelpCircle className="w-5 h-5" />,
-    description: 'Help and support',
-    category: 'support',
-    children: [
-      {
-        name: 'Help Center',
-        href: '/support',
-        description: 'Comprehensive help resources',
-        icon: <HelpCircle className="w-4 h-4" />
-      },
-      {
-        name: 'Contact Us',
-        href: '/contact',
-        description: 'Get in touch',
-        icon: <MessageCircle className="w-4 h-4" />
-      },
-      {
-        name: 'Status Page',
-        href: '/status',
-        description: 'Service status updates',
-        icon: <Monitor className="w-4 h-4" />
-      },
-      {
-        name: 'API Status',
-        href: '/api-status',
-        description: 'API performance metrics',
-        icon: <DatabaseIcon className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-18dd
       }
     ]
   }

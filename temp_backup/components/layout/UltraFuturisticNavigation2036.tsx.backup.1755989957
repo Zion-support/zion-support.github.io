@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, ChevronDown, X, Phone, Mail, MapPin,
   Rocket, BookOpen,
   DollarSign, BarChart3, Star, 
@@ -13,12 +12,6 @@ import {
   Award,
   HelpCircle,
   BookOpenCheck
-=======
-  Menu, ChevronDown, X, ArrowRight,
-  BookOpen, DollarSign, BarChart3, Users, Star, 
-  Building, Play, Calculator,
-  Grid, FileText, Code, Video
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -80,21 +73,13 @@ const navigationItems: NavigationItem[] = [
         name: 'AI & Machine Learning', 
         href: '/ai-services', 
         description: 'Advanced AI solutions',
-<<<<<<< HEAD
         icon: <Cpu className="w-4 h-4" />
-=======
-        icon: <Play className="w-4 h-4" />
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       },
       { 
         name: 'Quantum Technology', 
         href: '/quantum-services', 
         description: 'Quantum computing solutions',
-<<<<<<< HEAD
         icon: <Cpu className="w-4 h-4" />
-=======
-        icon: <Play className="w-4 h-4" />
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       },
       { 
         name: 'Space Technology', 
@@ -112,19 +97,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Specialized Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
-<<<<<<< HEAD
         icon: <Star className="w-4 h-4" />
-=======
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
-        name: 'Innovative 2025 Services', 
-        href: '/innovative-2025-services-showcase', 
-        description: 'Cutting-edge 2025 innovations',
-        icon: <Star className="w-4 h-4" />,
-        featured: true,
-        badge: 'New'
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       }
     ]
   },
@@ -167,7 +140,6 @@ const navigationItems: NavigationItem[] = [
       { 
         name: 'About Us', 
         href: '/about', 
-<<<<<<< HEAD
         description: 'Company information',
         icon: <Star className="w-4 h-4" />
       },
@@ -182,11 +154,6 @@ const navigationItems: NavigationItem[] = [
         href: '/partners', 
         description: 'Partnership opportunities',
         icon: <Star className="w-4 h-4" />
-=======
-        description: 'Our story and mission',
-        icon: <Users className="w-4 h-4" />,
-        featured: true
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       },
       {
         name: 'Leadership',
@@ -198,7 +165,6 @@ const navigationItems: NavigationItem[] = [
         name: 'Careers',
         href: '/careers',
         description: 'Join our team',
-<<<<<<< HEAD
         icon: <Star className="w-4 h-4" />
       }
     ]
@@ -232,8 +198,6 @@ const navigationItems: NavigationItem[] = [
         name: 'Webinars',
         href: '/webinars',
         description: 'Live events',
-=======
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         icon: <Play className="w-4 h-4" />
       }
     ]
@@ -243,16 +207,10 @@ const navigationItems: NavigationItem[] = [
 const UltraFuturisticNavigation2036: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
-=======
-  const [isScrolled, setIsScrolled] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
-  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -279,7 +237,6 @@ const UltraFuturisticNavigation2036: React.FC = () => {
   }, []);
 
 
-<<<<<<< HEAD
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -434,45 +391,6 @@ const UltraFuturisticNavigation2036: React.FC = () => {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
               className="py-4 border-t border-cyan-400/20"
-=======
-  // Enhanced dropdown animation variants
-  const dropdownVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: -10,
-      scale: 0.95
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-  return (
-    <nav 
-      ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-md border-b border-white/10' 
-          : 'bg-transparent'
-      }`}
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link 
-              href="/" 
-              className="flex items-center space-x-2 group"
-              aria-label="Zion Tech Group - Home"
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             >
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -625,7 +543,6 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Navigation Items */}
               {navigationItems.map((item) => (
                 <div key={item.name} className="space-y-2">
@@ -672,20 +589,6 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                 <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                   Get Started
                 </button>
-=======
-              {/* Mobile CTA */}
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  <button className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                    Contact Us
-                  </button>
-                </Link>
-                <Link href="/get-started" onClick={() => setMobileMenuOpen(false)}>
-                  <button className="w-full px-4 py-3 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
-                    Get Started
-                  </button>
-                </Link>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </div>
             </div>
           </motion.div>

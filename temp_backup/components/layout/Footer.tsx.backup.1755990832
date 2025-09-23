@@ -13,7 +13,6 @@ import {
 const Footer: React.FC = () => {
 
   const services = [
-<<<<<<< HEAD
     { name: 'AI & Consciousness', href: '/ai-services', icon: Brain },
     { name: 'Quantum Technology', href: '/quantum-services', icon: Atom },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
@@ -21,23 +20,6 @@ const Footer: React.FC = () => {
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cpu },
     { name: 'Space Technology', href: '/space-tech', icon: Rocket }
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-    { name: 'AI & Consciousness', href: '/ai-services' },
-    { name: 'Quantum Computing', href: '/quantum-services' },
-    { name: 'Space Technology', href: '/space-technology' },
-    { name: 'IT Solutions', href: '/it-services' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'View All Services', href: '/services' }
-  ];
-
-  const solutions = [
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Industry Solutions', href: '/solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Cloud Platform', href: '/cloud-platform' },
-    { name: 'Support', href: '/support' },
-    { name: 'Documentation', href: '/docs' }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   ];
 
   const company = [
@@ -66,7 +48,6 @@ const Footer: React.FC = () => {
     { name: 'Security', href: '/security' }
   ];
 
-<<<<<<< HEAD
   const social = [
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
@@ -75,15 +56,6 @@ const Footer: React.FC = () => {
     { name: 'Instagram', href: '#', icon: Instagram },
     { name: 'Facebook', href: '#', icon: Facebook }
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-  const socialLinks = [
-    { name: 'X', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   ];
 
   return (

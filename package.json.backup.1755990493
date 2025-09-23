@@ -446,7 +446,6 @@
     "redundancy:ultimate:master:health": "node automation/ultimate-redundancy-master.cjs health",
     "redundancy:ultimate:master:report": "node automation/ultimate-redundancy-master.cjs report",
     "redundancy:ultimate:master:monitor": "node automation/ultimate-redundancy-master.cjs monitor",
-<<<<<<< HEAD
     "redundancy:ultimate:v2:start": "bash automation/start-ultimate-redundancy-v2.sh start",
     "redundancy:ultimate:v2:stop": "bash automation/start-ultimate-redundancy-v2.sh stop",
     "redundancy:ultimate:v2:restart": "bash automation/start-ultimate-redundancy-v2.sh restart",
@@ -520,18 +519,6 @@
     "redundancy:lint": "npm run lint || (echo \"Primary script failed, running backup...\" && npm run lint:backup || true)",
     "redundancy:type-check": "npm run type-check || (echo \"Primary script failed, running backup...\" && npm run type-check:backup || true)",
     "redundancy:prepare": "npm run prepare || (echo \"Primary script failed, running backup...\" && npm run prepare:backup || true)"
-=======
-    "redundancy:master:start": "./automation/start-master-redundancy.sh start",
-    "redundancy:master:stop": "./automation/start-master-redundancy.sh stop",
-    "redundancy:master:restart": "./automation/start-master-redundancy.sh restart",
-    "redundancy:master:status": "./automation/start-master-redundancy.sh status",
-    "redundancy:master:health": "./automation/start-master-redundancy.sh health",
-    "redundancy:master:logs": "./automation/start-master-redundancy.sh logs",
-    "redundancy:master:pm2": "pm2 start ecosystem.master-redundancy.pm2.cjs --update-env",
-    "redundancy:master:pm2:stop": "pm2 stop ecosystem.master-redundancy.pm2.cjs",
-    "redundancy:master:pm2:restart": "pm2 restart ecosystem.master-redundancy.pm2.cjs",
-    "redundancy:master:pm2:status": "pm2 status ecosystem.master-redundancy.pm2.cjs"
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-d558
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

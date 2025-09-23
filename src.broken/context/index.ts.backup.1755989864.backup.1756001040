@@ -8,12 +8,5 @@ export {
 } from './RequestQuoteWizard';
 export { ViewModeProvider, useViewMode } from './ViewModeContext';
 export { CartProvider, useCart } from './CartContext';
-<<<<<<< HEAD
 export { CommunityProvider, useCommunity } from './CommunityContext';
-=======
-<<<<<<< HEAD
-export { ConsentProvider, useConsent } from './ConsentContext';
-=======
-export { CommunityProvider, useCommunity } from './CommunityContext';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

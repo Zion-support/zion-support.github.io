@@ -114,7 +114,6 @@ export default function Layout({ children }: LayoutProps) {
           <UltraFuturisticFooter2025 />
         </div>
 
-<<<<<<< HEAD
         {/* Accessibility and Performance Tools */}
         <AccessibilityEnhancer />
         <PerformanceMonitor />
@@ -123,14 +122,5 @@ export default function Layout({ children }: LayoutProps) {
         <CookieConsentBanner />
       </div>
     </PerformanceOptimizer>
-=======
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-    </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e1f5
   );
 }

@@ -58,7 +58,6 @@ const AccessibilityEnhancer: React.FC<{
     fontSize: 'medium',
     theme: 'auto'
   });
-<<<<<<< HEAD
 
   const [settings, setSettings] = useState<AccessibilitySettings>(settingsRef.current);
 
@@ -146,14 +145,6 @@ const AccessibilityEnhancer: React.FC<{
       return newSettings;
     });
   }, [onSettingsChange]);
-=======
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
-  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
-  
-  const focusRef = useRef<HTMLDivElement>(null);
-  const announcementRef = useRef<HTMLDivElement>(null);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
 
   // Apply accessibility settings to the document
   const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {

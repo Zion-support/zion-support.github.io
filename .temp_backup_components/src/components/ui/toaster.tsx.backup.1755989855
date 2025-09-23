@@ -3,7 +3,6 @@ import { Toaster as HotToaster } from "react-hot-toast";
 
 export function Toaster() {
   return (
-<<<<<<< HEAD
     <div
       role="status"
       aria-live="polite"
@@ -32,8 +31,5 @@ export function Toaster() {
         offset="80px"
       />
     </div>
-=======
-    <HotToaster position="top-right" />
->>>>>>> origin/4o9pcp-codex/add-test-for-failed-login-toast
   );
 }

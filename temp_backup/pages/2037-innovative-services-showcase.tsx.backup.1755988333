@@ -25,13 +25,8 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
     transition={{ duration: 0.5, delay: index * 0.1 }}
     className="relative group"
   >
-<<<<<<< HEAD
     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-20"></div>
     <div className="relative bg-gradient-to-r from-cyan-500 to-blue-600 bg-opacity-10 border border-opacity-30 rounded-2xl p-8 hover:border-opacity-50 transition-all duration-300 h-full">
-=======
-    <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-20`}></div>
-    <div className={`relative bg-gradient-to-r ${service.color || 'from-cyan-500 to-blue-500'} bg-opacity-10 border border-opacity-30 rounded-2xl p-8 hover:border-opacity-50 transition-all duration-300 h-full`}>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b2df
       <div className="flex items-start justify-between mb-6">
         <div className="text-4xl">🚀</div>
         <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full">
@@ -78,13 +73,8 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
           <span>{service.launchDate}</span>
         </div>
         <div className="flex justify-between">
-<<<<<<< HEAD
           <span>Technology:</span>
           <span>{service.technology?.slice(0, 2).join(', ')}</span>
-=======
-          <span>Customers:</span>
-          <span>{service.customers ? service.customers.toLocaleString() : '0'}</span>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b2df
         </div>
       </div>
       

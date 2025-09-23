@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app';
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
@@ -123,16 +122,4 @@ const ProviderWrapper: React.FC<{ children: React.ReactNode; queryClient: QueryC
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
-=======
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-import '../styles/enhanced-design-system.css';
-import '../styles/modern-design-system.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <EnhancedLayout>
-      <Component {...pageProps} />
-    </EnhancedLayout>
-  );
->>>>>>> origin/cursor/automate-and-stabilize-husky-processes-for-main-branch-b783
 }

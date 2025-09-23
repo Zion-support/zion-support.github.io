@@ -187,20 +187,12 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-<<<<<<< HEAD
   // 2026 Innovative Services
   ...innovative2026AIServicesAdditions,
   ...innovative2026ITServicesAdditions,
   ...innovative2026MicroSaasAdditions,
   ...innovative2026IndustryAIServices,
   ...innovative2026EmergingTechServices
-=======
-  // New expanded 2036 services
-  ...innovative2036AIServicesExpanded,
-  ...innovative2036ITServicesExpanded,
-  ...innovative2036MicroSaasExpanded,
-  ...innovative2036QuantumEmergingTech
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5d7f
 ];
 
 const categories = [

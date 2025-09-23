@@ -4,11 +4,7 @@ export type ServiceVariant =
   | 'quantum'
   | 'cyberpunk'
   | 'neural'
-<<<<<<< HEAD
   | 'quantum-holographic'
-=======
-  | 'quantum-hologographic'
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   | 'quantum-advanced'
   | 'holographic-advanced'
   | 'neural-quantum'
@@ -97,7 +93,6 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
-<<<<<<< HEAD
   // New 2035 variants
   | 'consciousness-evolution'
   | 'quantum-emotional'
@@ -122,16 +117,3 @@ export type ServiceVariant =
   | 'quantum-edge'
   | 'service-desk-ai'
   | 'logistics-futuristic';
-=======
-  | 'neuromorphic-futuristic'
-  | 'bio-futuristic'
-  | 'fusion-futuristic'
-  | 'automation-futuristic'
-  | 'retail-futuristic'
-  | 'energy-futuristic'
-  | 'transportation-futuristic'
-  | 'education-futuristic'
-  | 'real-estate-futuristic'
-  | 'industrial-futuristic'
-  | 'neural-futuristic';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066

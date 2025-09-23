@@ -49,7 +49,6 @@ const navigationItems: NavigationItem[] = [
     icon: <DollarSign className="w-5 h-5" />,
     description: 'Plans and average market prices',
     children: [
-<<<<<<< HEAD
       { name: 'AI & Data', href: '/services#ai', description: 'AI, data, ML services' },
       { name: 'Cloud & FinOps', href: '/services#cloud', description: 'Cloud, cost, platform' },
       { name: 'Observability', href: '/services#observability', description: 'Monitoring & telemetry' },
@@ -195,10 +194,6 @@ const navigationItems: NavigationItem[] = [
       { name: 'Energy & Utilities', href: '/quantum-energy', description: 'Sustainable energy tech' },
       { name: 'Transportation & Logistics', href: '/quantum-logistics', description: 'Route optimization' },
       { name: 'Space Technology', href: '/space-technology', description: 'Advanced space tech' }
-=======
-      { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' },
-      { name: 'Market Pricing', href: '/market-pricing', description: 'Compare market averages' }
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
     ]
   },
   {

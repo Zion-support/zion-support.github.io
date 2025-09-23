@@ -89,7 +89,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Track focus changes
   useEffect(() => {
-<<<<<<< HEAD
     const saved = localStorage.getItem('accessibility-settings');
     if (saved) {
       try {
@@ -152,23 +151,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       images.forEach(img => {
         if (!img.alt) {
           issues.push(`Image missing alt text: ${img.src}`);
-=======
-    const handleFocusChange = (event: Event) => {
-      const target = event.target as HTMLElement;
-      if (target && target !== currentFocus) {
-        setCurrentFocus(target);
-        setFocusHistory(prev => [target, ...prev.slice(0, 9)]);
-        
-        // Add focus indicator
-        if (settings.focusIndicator) {
-          target.style.outline = '3px solid #0066cc';
-          target.style.outlineOffset = '2px';
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
         }
       }
     };
 
-<<<<<<< HEAD
   // Set up event listeners
   useEffect(() => {
     const handleFocusChangeWrapper = (e: Event) => {
@@ -187,24 +173,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
-=======
-    const handleBlur = (event: Event) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.style.outline = '';
-        target.style.outlineOffset = '';
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusChange);
-    document.addEventListener('focusout', handleBlur);
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
-    };
-  }, []);
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 
   useEffect(() => {
     // Apply accessibility settings to document

@@ -1,26 +1,17 @@
 {
-<<<<<<< HEAD
   "name": "Zion Tech Group - Revolutionary 2045 Technology",
-=======
-  "name": "Zion Tech Group - Revolutionary Technology Solutions",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   "short_name": "Zion Tech",
   "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
-<<<<<<< HEAD
   "theme_color": "#0ea5e9",
-=======
-  "theme_color": "#06b6d4",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-<<<<<<< HEAD
       "src": "/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
@@ -51,28 +42,18 @@
       "purpose": "maskable any"
     },
     {
-=======
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32",
-      "type": "image/x-icon"
-    },
-    {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
       "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-<<<<<<< HEAD
       "src": "/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
       "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
@@ -133,31 +114,11 @@
     {
       "name": "Services",
       "short_name": "Services",
-<<<<<<< HEAD
       "description": "View all our revolutionary services",
       "url": "/services",
       "icons": [
         {
           "src": "/icon-96x96.png",
-=======
-      "description": "Explore our revolutionary technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/favicon.ico",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Pricing",
-      "short_name": "Pricing",
-      "description": "View our competitive pricing plans",
-      "url": "/pricing",
-      "icons": [
-        {
-          "src": "/favicon.ico",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
           "sizes": "96x96"
         }
       ]
@@ -169,7 +130,6 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
           "src": "/icon-96x96.png",
           "sizes": "96x96"
         }
@@ -183,9 +143,6 @@
       "icons": [
         {
           "src": "/icon-96x96.png",
-=======
-          "src": "/favicon.ico",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
           "sizes": "96x96"
         }
       ]
@@ -205,7 +162,6 @@
       "form_factor": "narrow"
     }
   ],
-<<<<<<< HEAD
   "features": [
     "Cross Platform",
     "fast",
@@ -213,48 +169,5 @@
   ],
   "edge_side_panel": {
     "preferred_width": 400
-=======
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "capture_links": "existing-client-navigate",
-  "file_handlers": [
-    {
-      "action": "/",
-      "accept": {
-        "text/*": [".txt", ".md", ".html"],
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-      }
-    }
-  ],
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/?protocol=%s"
-    }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url",
-      "files": [
-        {
-          "name": "files",
-          "accept": ["image/*", "text/*", "application/pdf"]
-        }
-      ]
-    }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   }
 }

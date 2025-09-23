@@ -417,7 +417,6 @@ npm run improvement:status
 
 ### Features
 
-<<<<<<< HEAD
 - **🔧 Automatic Error Detection & Fixing**: Detects and fixes build, lint, TypeScript, runtime, performance, security, and accessibility issues
 - **🤖 Intelligent Cursor Chat Integration**: Triggers detailed Cursor chats with comprehensive project context for continuous improvement
 - **🔄 Continuous Improvement Pipeline**: Runs improvement cycles every 5 minutes with automatic commits and pushes to main branch
@@ -601,8 +600,4 @@ Add a workflow step:
 - name: Auto-fix accessibility
   run: ./scripts/auto-fix-accessibility.sh
 ```
-=======
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

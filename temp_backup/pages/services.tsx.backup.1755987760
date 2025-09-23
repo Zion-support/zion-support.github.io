@@ -17,7 +17,6 @@ import { advancedAIAutomationServices } from '../data/2025-advanced-ai-automatio
 import { innovativeITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
 import { real2029Q3Additions } from '../data/real-2029-q3-additions';
-<<<<<<< HEAD
 import { validatedServices2025Q4 } from '../data/real-validated-2025-q4-additions';
 import { real2035Q2Additions } from '../data/real-2035-q2-additions';
 import { real2036ServiceExpansions } from '../data/real-2036-service-expansions';
@@ -28,12 +27,6 @@ import { innovative2036ITServices } from '../data/innovative-2036-it-services';
 import { innovative2025MicroSaasExpansions } from '../data/innovative-2025-micro-saas-expansions';
 import { innovative2025ITServiceExpansions } from '../data/innovative-2025-it-services-expansions';
 import { innovative2025AIServiceExpansions } from '../data/innovative-2025-ai-services-expansions';
-=======
-import { enterpriseITSolutions2034Additions } from '../data/augment-2034-enterprise-it-additions';
-import { innovativeMicroSaasSolutions2034Additions } from '../data/augment-2034-micro-saas-additions';
-import { cuttingEdgeAIServices2034Additions } from '../data/augment-2034-ai-services-additions';
-import { aiAutonomousEcosystemServices2029Additions, emergingTechBreakthroughServices2029Additions, practicalBusinessSolutionServices2029Additions } from '../data/augment-2029-ecosystem-additions';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-5035
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -117,7 +110,6 @@ const allServices = [
   ...marketValidatedServices,
   ...industryRealServices,
   ...real2025Q4AugmentedBatch,
-<<<<<<< HEAD
   // ...real2029Q3Additions,
   // ...validatedServices2025Q4,
   ...real2035Q2Additions,
@@ -128,15 +120,6 @@ const allServices = [
   ...innovative2025MicroSaasExpansions,
   ...innovative2025ITServiceExpansions,
   ...innovative2025AIServiceExpansions
-=======
-  ...real2029Q3Additions,
-  ...enterpriseITSolutions2034Additions,
-  ...innovativeMicroSaasSolutions2034Additions,
-  ...cuttingEdgeAIServices2034Additions,
-  ...aiAutonomousEcosystemServices2029Additions,
-  ...emergingTechBreakthroughServices2029Additions,
-  ...practicalBusinessSolutionServices2029Additions
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-5035
 ];
 
 const categories = [

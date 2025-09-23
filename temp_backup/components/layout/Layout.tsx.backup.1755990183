@@ -138,7 +138,6 @@ export default function Layout({
   const toggleDarkMode = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
 
   return (
-<<<<<<< HEAD
     <>
       <Head>
         <title>{title}</title>
@@ -262,24 +261,6 @@ export default function Layout({
         <TopContactBar />
 
         {/* Navigation */}
-=======
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link">Skip to main content</a>
-      
-      {/* Ultra-Futuristic Background 2045 */}
-      <UltraFuturisticBackground2045 
-        intensity="medium" 
-        theme="ultra-futuristic" 
-      />
-      
-      {/* Layout Structure */}
-      <div className="relative z-10">
-        {/* Top Contact Bar */}
-        <TopContactBar />
-        
-        {/* Ultra-Futuristic Navigation 2045 */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4385
         <UltraFuturisticNavigation2045 />
         
         {/* Sidebar and Main Content */}
@@ -293,7 +274,6 @@ export default function Layout({
             {children}
           </main>
         </div>
-<<<<<<< HEAD
 
         {/* Main Content */}
         <main id="main-content" className="relative z-10">
@@ -301,10 +281,6 @@ export default function Layout({
         </main>
 
         {/* Footer */}
-=======
-        
-        {/* Ultra-Futuristic Footer 2045 */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4385
         <UltraFuturisticFooter2045 />
       </div>
 

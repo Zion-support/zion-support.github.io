@@ -59,7 +59,6 @@ export default function AIHRAnalyticsPlatform() {
     'Training & Development', 'Compensation Analysis', 'Diversity & Inclusion'
   ];
 
-<<<<<<< HEAD
 	return (
 		<>
 			<SEO data={{
@@ -82,20 +81,6 @@ export default function AIHRAnalyticsPlatform() {
 					</div>
 				</div>
 			</section>
-=======
-  return (
-    <>
-      <Head>
-        <title>AI HR Analytics Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform HR with data-driven insights. AI-powered analytics for performance, retention, and strategic workforce planning." />
-        <meta name="keywords" content="AI HR analytics, HR analytics, workforce analytics, employee analytics, talent analytics, HR insights" />
-        <meta property="og:title" content="AI HR Analytics Platform | Zion Tech Group" />
-        <meta property="og:description" content="Transform HR with data-driven insights." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-hr-analytics-platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-hr-analytics-platform" />
-      </Head>
->>>>>>> origin/cursor/website-audit-and-enhancement-fe5e
 
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}

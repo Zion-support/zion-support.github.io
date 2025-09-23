@@ -2,18 +2,12 @@ import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Database, Cloud, Lock, Globe,
   Star, Users, TrendingUp, Zap, Award, Eye
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-  Search, Grid, List,
-  ArrowRight, Star, Zap, TrendingUp,
-  Phone, Mail, MapPin
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -35,7 +29,6 @@ const Innovative2038ServicesShowcase: React.FC = () => {
     ...innovative2038AIServices
   ];
 
-<<<<<<< HEAD
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -52,44 +45,6 @@ const Innovative2038ServicesShowcase: React.FC = () => {
     }
   });
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-=======
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return (a.price?.monthly || 0) - (b.price?.monthly || 0);
-        case 'category':
-          return a.category.localeCompare(b.category);
-        default:
-          return a.name.localeCompare(b.name);
-      }
-    });
-
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-
-  // Get service pricing display
-  const getServicePricing = (service: any) => {
-    if (service.pricing?.starter) return `$${service.pricing.starter}/month`;
-    if (service.price?.monthly) return `$${service.price.monthly}/month`;
-    return 'Contact for pricing';
-  };
-
-  // Get service features
-  const getServiceFeatures = (service: any) => {
-    if (service.features) return service.features;
-    if (service.keyFeatures) return service.keyFeatures;
-    return [];
-  };
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -410,7 +365,6 @@ const Innovative2038ServicesShowcase: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 // Icon components
 const Phone = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -431,6 +385,3 @@ const MapPin = ({ className }: { className?: string }) => (
   </svg>
 );
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-export default Innovative2038ServicesShowcase;
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84

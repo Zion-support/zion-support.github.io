@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface BlockchainInnovation2026 {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface BlockchainInnovation2026 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const blockchainInnovations2026: BlockchainInnovation2026[] = [
   // Blockchain Infrastructure Platform 2026
   {
@@ -100,10 +92,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.8,
     reviews: 420
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // DeFi Yield Optimization Platform
   {
     id: 'defi-yield-optimization-platform',
@@ -156,10 +144,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.9,
     reviews: 1800
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // NFT Marketplace & Creation Platform
   {
     id: 'nft-marketplace-creation-platform',
@@ -212,10 +196,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.8,
     reviews: 950
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Web3 Identity & Authentication Platform
   {
     id: 'web3-identity-authentication-platform',
@@ -268,10 +248,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.7,
     reviews: 320
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Blockchain Supply Chain Platform
   {
     id: 'blockchain-supply-chain-platform',

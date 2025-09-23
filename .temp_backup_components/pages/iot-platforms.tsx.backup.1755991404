@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -20,16 +19,6 @@ const IotPlatforms: NextPage = () => {
 };
 
 export default IotPlatforms;
-=======
-export default function IotPlatforms() {
-  return (
-    <div className="space-y-2">
-      <h1 className="text-3xl font-bold">IoT Platforms</h1>
-      <p className="text-gray-600 dark:text-gray-300">Overview of modern IoT stacks.</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
 =======
 export default function IoTPlatformsPage() {
   return (

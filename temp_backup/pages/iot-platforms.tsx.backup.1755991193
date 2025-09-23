@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 export default function IotPlatforms() {
@@ -8,8 +7,3 @@ export default function IotPlatforms() {
     </EnhancedLayout>
   );
 }
-=======
-export default function IoTPlatforms() {
-  return <div>IoT Platforms</div>;
-}
->>>>>>> origin/cursor/build-it-service-provider-directory-page-d0d3

@@ -3,16 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import UltraFuturisticBackground2032 from '../components/ui/UltraFuturisticBackground2032';
 import UltraFuturisticNavigation2034 from '../components/layout/UltraFuturisticNavigation2034';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-=======
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ff2
 import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
 import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
 import UltraAdvancedHero2026 from '../components/sections/UltraAdvancedHero2026';
@@ -69,7 +62,6 @@ import { emergingTech2027Services } from '../data/emerging-tech-2027-services';
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
-<<<<<<< HEAD
 import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
 import { cuttingEdgeInnovations2029 } from '../data/2029-cutting-edge-innovations';
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
@@ -98,10 +90,6 @@ import { enterpriseInnovations2032 } from '../data/2032-enterprise-innovations';
 import { healthcareInnovations2032 } from '../data/2032-healthcare-innovations';
 import { cuttingEdgeInnovations2034 } from '../data/2034-cutting-edge-innovations';
 import { enterpriseInnovations2034 } from '../data/2034-enterprise-innovations';
-=======
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ff2
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -154,31 +142,7 @@ const heroStats = [
     ...innovative2026MicroSaasServicesV2,
     ...emergingTech2026ServicesV2,
     ...enterpriseIT2026ServicesV2,
-<<<<<<< HEAD
     ...allInnovative2026Services
-=======
-    ...revolutionary2026Innovations,
-    ...nextGenAI2026Services,
-    ...aiAutonomousServices2026,
-    ...quantumSpaceTechServices2026,
-    ...metaverseDigitalRealityServices2026,
-    ...innovative2026AIServicesV3,
-    ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3,
-    ...ultimate2026Services,
-    ...cuttingEdge2027Innovations,
-    ...practicalMicroSaas2027,
-    ...revolutionary2026MicroSaasServices,
-    ...revolutionary2026ITServices,
-    ...revolutionary2026AIServices,
-    ...revolutionary2027Services,
-    ...emergingTech2027Services,
-    ...revolutionary2027AIServices,
-    ...revolutionary2027ITServices,
-    ...revolutionary2027MicroSaasServices,
-    ...futuristic2028Services,
-    ...emergingTech2028Services
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ff2
   ];
 
 const serviceCategories = [
@@ -319,14 +283,8 @@ export default function Home() {
         </script>
       </Head>
 
-<<<<<<< HEAD
       {/* Navigation */}
               <UltraFuturisticNavigation2034 />
-=======
-      <UltraQuantumHolographicBackground>
-        {/* Ultra Advanced Navigation */}
-        <UltraFuturisticNavigation2028 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ff2
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

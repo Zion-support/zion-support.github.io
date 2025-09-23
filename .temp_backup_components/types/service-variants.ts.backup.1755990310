@@ -504,7 +504,6 @@ export type ServiceVariant =
   | 'multiversal-tech'
   | 'autonomous-ai'
   | 'quantum-reality-fusion'
-<<<<<<< HEAD
   | 'agriculture-futuristic'
   | 'retail-futuristic'
   | 'entertainment-futuristic'
@@ -532,29 +531,3 @@ export type ServiceVariant =
   | 'education-futuristic'
   | 'government-futuristic'
   | 'transportation-futuristic';
-=======
-  | 'ai-legal'
-  | 'ai-legal-enterprise'
-  | 'ai-legal-document-enterprise'
-  | 'quantum-finance-enterprise'
-  | 'ai-healthcare-enterprise'
-  | 'autonomous-supply-chain-enterprise'
-  | 'quantum-cybersecurity-enterprise'
-  | 'ai-creative-enterprise'
-  | 'quantum-internet-enterprise'
-  | 'ai-education-enterprise'
-  | 'autonomous-manufacturing-enterprise'
-  | 'quantum-encryption-advanced'
-  | 'quantum-threat-detection'
-  | 'quantum-identity-verification'
-  | 'quantum-network-security'
-  | 'quantum-compliance-automation'
-  | 'consciousness-advanced-2032'
-  | 'emotional-ai-advanced'
-  | 'creativity-orchestration'
-  | 'dream-interpretation'
-  | 'autonomous-business'
-  | 'marketing-futuristic'
-  | 'quantum-finance'
-  | 'ai-supply-chain';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9ffa

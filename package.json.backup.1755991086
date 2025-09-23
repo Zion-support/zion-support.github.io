@@ -120,7 +120,6 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "auto:generate": "node scripts/generate-auto-content.mjs",
     "auto:generate:and-commit": "node scripts/generate-auto-content.mjs && git config user.email 'bot@zion.app' && git config user.name 'Zion Bot' && git add -A && git commit -m 'chore(auto): generate auto content [skip ci]' || true && git push || true",
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
@@ -129,15 +128,6 @@
       "ai:blog": "ts-node scripts/ai-content-generator.ts",
       "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
-=======
-    "dao:compile": "hardhat compile",
-    "dao:deploy:sepolia": "hardhat run scripts/deploy-governor.ts --network sepolia",
-    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
-    "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
-    "sitemap": "node scripts/generate-sitemap.mjs",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build && hardhat compile",
->>>>>>> origin/cursor/build-categorized-ziongpt-prompt-library-535a
     "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -521,11 +511,7 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
     "dotenv": "^17.2.1",
-=======
-    "ethers": "^5.7.2",
->>>>>>> origin/cursor/build-categorized-ziongpt-prompt-library-535a
     "events": "^3.3.0",
     "firebase": "^12.1.0",
     "firebase-admin": "^13.4.0",
@@ -554,13 +540,7 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
-<<<<<<< HEAD
     "@tailwindcss/postcss": "^4.1.12",
-=======
-    "@netlify/plugin-nextjs": "4.41.3",
-    "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "@nomiclabs/hardhat-etherscan": "^3.1.8",
->>>>>>> origin/cursor/build-categorized-ziongpt-prompt-library-535a
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^14.3.1",
     "@types/node": "24.2.1",
@@ -569,12 +549,7 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
-<<<<<<< HEAD
     "autoprefixer": "^10.4.21",
-=======
-    "autoprefixer": "^10.4.16",
-    "dotenv": "^17.2.1",
->>>>>>> origin/cursor/build-categorized-ziongpt-prompt-library-535a
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.0.0",
     "eslint-plugin-react-hooks": "^5.2.0",

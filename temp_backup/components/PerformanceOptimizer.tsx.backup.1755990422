@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -14,21 +10,7 @@ interface PerformanceOptimizerProps {
 
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
-<<<<<<< HEAD
   startTime: number;
-=======
-  processingEnd: number;
-  target?: unknown;
-}
-
-// Global type declarations for browser APIs
-declare global {
-  interface Performance {
-    memory?: {
-      usedJSHeapSize: number;
-    };
-  }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
@@ -62,7 +44,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Measure performance metrics
   useEffect(() => {
-<<<<<<< HEAD
     if (!enableMonitoring) return;
 
     const measurePerformance = () => {
@@ -71,27 +52,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (navigation) {
           setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
         }
-=======
-    const startTime = performance.now();
-    
-    // Simulate performance monitoring
-    const timer = setTimeout(() => {
-      const loadTime = performance.now() - startTime;
-      
-      // Get performance metrics
-      if ('memory' in performance) {
-        const memory = performance.memory;
-        setPerformanceMetrics({
-          loadTime: Math.round(loadTime),
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024), // MB
-          networkRequests: 0 // This would be tracked in a real implementation
-        });
-      } else {
-        setPerformanceMetrics({
-          loadTime: Math.round(loadTime),
-          networkRequests: 0
-        });
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
       }
     };
 

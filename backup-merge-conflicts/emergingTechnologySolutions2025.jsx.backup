@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 "export\": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
-=======
-<<<<<<< HEAD
-export: const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [""
-<<<<<<< HEAD:backup-merge-conflicts/emergingTechnologySolutions2025.jsx.backup
-=======
-"export": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = ["]"
->>>>>>> main
 >>>>>>> main
 =======
 "export": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = ["]"

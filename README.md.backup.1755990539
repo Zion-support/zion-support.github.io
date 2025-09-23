@@ -10,7 +10,6 @@
 - Revenue Ideas Runner: `/.netlify/functions/revenue-ideas-runner` — aggregates monetization proposals into public reports.
 - Code Ownership Map: `/.netlify/functions/code-ownership-map-runner` — infers contributors per area and publishes a map.
 
-<<<<<<< HEAD
 ### **New Service Categories Added:**
 
 - **🚀 Innovative Services Expansion** - AI BI, Cybersecurity, DevOps, Customer Experience
@@ -51,12 +50,3 @@ This README is auto-generated. Do not edit manually.
 - Intelligent Orchestrator (1m): /.netlify/functions/intelligent-orchestrator
 - Anomaly Watchdog (10m): /.netlify/functions/anomaly-watchdog
 - Pulse Sync (1m): /.netlify/functions/pulse-sync
-=======
-See the homepage for links and live triggers.
-
-## Added automations
-
-- UX Friction Scanner: `/.netlify/functions/ux-friction-runner` — scans UI code for missing alts/dimensions and bad anchors; writes reports and commits.
-- Route Map Builder: `/.netlify/functions/route-map-runner` — generates a live route map (JSON/MD) for all pages.
-- OpenGraph Coverage Auditor: `/.netlify/functions/opengraph-coverage-runner` — audits OG/Twitter meta coverage and publishes reports.
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-b8b3

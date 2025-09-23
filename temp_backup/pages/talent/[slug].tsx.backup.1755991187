@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -39,16 +38,3 @@ export default function TalentPublicProfile() {
     </div>
   );
 }
-=======
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter } from 'next/router';
-
-export default function TalentDetail() {
-  const { query } = useRouter();
-  return (
-    <EnhancedLayout>
-      <div className="py-10">Talent: {String(query.slug || '')}</div>
-    </EnhancedLayout>
-  );
-}
->>>>>>> origin/cursor/build-investor-matchmaking-tool-37fa

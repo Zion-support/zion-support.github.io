@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 
@@ -19,13 +18,4 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       </footer>
     </div>
   );
-=======
-
-type EnhancedLayoutProps = {
-  children?: React.ReactNode;
-};
-
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  return <>{children}</>;
->>>>>>> origin/cursor/automate-and-stabilize-husky-processes-for-main-branch-b783
 }

@@ -22,7 +22,6 @@ import { realMarketServices } from '../data/real-market-services';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
 import { realOperationalServices } from '../data/real-operational-services';
-<<<<<<< HEAD
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { revolutionary2025Services } from '../data/revolutionary-2025-services';
@@ -73,10 +72,6 @@ import { innovative2030MicroSaasServices } from '../data/2030-innovative-micro-s
 import { innovative2030ITServices } from '../data/2030-innovative-it-services';
 import { innovative2030AIServices } from '../data/2030-innovative-ai-services';
 import { emergingTech2030Services } from '../data/2030-emerging-tech-services';
-=======
-import { verified2025Additions } from '../data/verified-2025-additions';
-import { additional2025RealServices } from '../data/additional-2025-real-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-551a
 
 export default function HomePage() {
   const contactInfo = {
@@ -112,7 +107,6 @@ export default function HomePage() {
     ...serviceExpansions2025,
     ...verifiedRealServices2025Batch2,
     ...realOperationalServices,
-<<<<<<< HEAD
     ...newOperationalServices2025,
     ...innovative2025Services,
     ...revolutionary2025Services,
@@ -126,10 +120,6 @@ export default function HomePage() {
     ...revolutionary2026AIServices,
     ...revolutionary2026ITInfrastructureServices,
     ...revolutionary2026MicroSaasServices
-=======
-    ...verified2025Additions,
-    ...additional2025RealServices
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-551a
   ];
 
 const featuredServices = [

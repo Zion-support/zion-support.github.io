@@ -26,13 +26,8 @@ import { NotificationProvider } from './context';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-<<<<<<< HEAD
 import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
-=======
-import { initGA } from './lib/gtag';
-import { ErrorBoundary } from './components/ErrorBoundary';
->>>>>>> origin/5dtq58-codex/implement-analytics-and-error-tracking
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
@@ -46,7 +41,6 @@ const queryClient = new QueryClient({
   },
 });
 
-<<<<<<< HEAD
 function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   const { t } = useTranslation();
   React.useEffect(() => {
@@ -119,31 +113,3 @@ try {
 }
 
 registerServiceWorker();
-=======
-initGA();
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <WhitelabelProvider>
-          <Router>
-            <AuthProvider>
-              <NotificationProvider>
-                <AnalyticsProvider>
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <ErrorBoundary>
-                      <App />
-                      <LanguageDetectionPopup />
-                    </ErrorBoundary>
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-);
->>>>>>> origin/5dtq58-codex/implement-analytics-and-error-tracking

@@ -83,7 +83,6 @@ const benefits = [
 ];
 
 export default function AIAutomationServices() {
-<<<<<<< HEAD
   const services = [
     {
       title: 'Intelligent Process Automation',
@@ -225,8 +224,6 @@ export default function AIAutomationServices() {
     }
   ];
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Layout>
       <Head>

@@ -288,7 +288,6 @@ export default function ServicesPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <QuantumNeuralBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -302,19 +301,6 @@ export default function ServicesPage() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/services" />
         </Head>
-=======
-          <UltraAdvancedFuturisticBackground variant="holographic" intensity="medium">
-      <Head>
-        <title>Revolutionary Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our cutting-edge micro SAAS services including quantum AI, autonomous manufacturing, cybersecurity, and more. Transform your business with next-generation technology." />
-        <meta name="keywords" content="micro SAAS, quantum AI, autonomous manufacturing, cybersecurity, blockchain, space technology, Zion Tech Group" />
-        <meta property="og:title" content="Revolutionary Micro SAAS Services - Zion Tech Group" />
-        <meta property="og:description" content="Discover our cutting-edge micro SAAS services including quantum AI, autonomous manufacturing, cybersecurity, and more." />
-        <meta property="og:url" content="https://ziontechgroup.com/services" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/services" />
-      </Head>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ae10
 
       {/* Hero */}
       <section className="relative py-20 px-4">

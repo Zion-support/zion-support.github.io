@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Activity, TrendingUp, TrendingDown, CheckCircle, AlertTriangle, X, 
   Zap, Clock, BarChart3, Target, Lightbulb, Settings, Monitor, Gauge,
   RefreshCw, Minimize2, Maximize2, Wifi
@@ -11,28 +10,6 @@ import {
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-=======
-  TrendingUp, AlertTriangle, CheckCircle, Clock, 
-  Zap, Database, Network, Cpu, HardDrive, X
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  cls: number;
-  tti: number;
-  fid: number;
-  ttfb: number;
-  bundleSize: number;
-  loadTime: number;
-}
-
-interface PerformanceIssue {
-  type: 'warning' | 'error' | 'info';
-  message: string;
-  suggestion: string;
-  priority: 'low' | 'medium' | 'high';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
 }
 
 interface FirstInputEntry extends PerformanceEntry {
@@ -68,7 +45,6 @@ interface PerformanceMonitorProps {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onToggle }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-<<<<<<< HEAD
   const [score, setScore] = useState<PerformanceScore | null>(null);
   const [showDetails, setShowDetails] = useState(false);
   const [optimizationTips, setOptimizationTips] = useState<string[]>([]);
@@ -163,29 +139,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
-=======
-  const [issues, setIssues] = useState<PerformanceIssue[]>([]);
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  useEffect(() => {
-    // Show performance monitor after page load
-    const timer = setTimeout(() => setIsVisible(true), 5000);
-    
-    // Measure performance metrics
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            setMetrics(prev => prev ? { ...prev, lcp } : null);
-          }
-        });
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
 
     // Measure First Contentful Paint
     if ('PerformanceObserver' in window) {
@@ -232,7 +185,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
   }, []);
 
-<<<<<<< HEAD
   // Measure performance function
   const measurePerformance = useCallback(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -371,75 +323,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
 
     return { score: Math.round(averageScore), grade, color };
-=======
-  // Analyze performance and generate suggestions
-  useEffect(() => {
-    if (!metrics) return;
-
-    const newIssues: PerformanceIssue[] = [];
-
-    // FCP analysis
-    if (metrics.fcp > 1500) {
-      newIssues.push({
-        type: 'warning',
-        message: 'First Contentful Paint is slow',
-        suggestion: 'Optimize critical rendering path, reduce server response time',
-        priority: 'high'
-      });
-    }
-
-    // LCP analysis
-    if (metrics.lcp > 2500) {
-      newIssues.push({
-        type: 'error',
-        message: 'Largest Contentful Paint exceeds target',
-        suggestion: 'Optimize images, implement lazy loading, use CDN',
-        priority: 'high'
-      });
-    }
-
-    // Bundle size analysis
-    if (metrics.bundleSize > 5000000) { // 5MB
-      newIssues.push({
-        type: 'warning',
-        message: 'Bundle size is large',
-        suggestion: 'Implement code splitting, tree shaking, and bundle analysis',
-        priority: 'medium'
-      });
-    }
-
-    // Load time analysis
-    if (metrics.loadTime > 3000) {
-      newIssues.push({
-        type: 'info',
-        message: 'Page load time could be improved',
-        suggestion: 'Enable compression, optimize images, use caching',
-        priority: 'low'
-      });
-    }
-
-    setIssues(newIssues);
-  }, [metrics]);
-
-  const getPerformanceScore = useCallback(() => {
-    if (!metrics) return 0;
-    
-    let score = 100;
-    
-    if (metrics.fcp > 1500) score -= 20;
-    if (metrics.lcp > 2500) score -= 25;
-    if (metrics.cls > 0.1) score -= 15;
-    if (metrics.bundleSize > 5000000) score -= 10;
-    if (metrics.loadTime > 3000) score -= 10;
-    
-    return Math.max(0, score);
-  }, [metrics]);
-
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
   };
 
   const overallScore = getOverallScore();
@@ -556,7 +439,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   return (
     <AnimatePresence>
-<<<<<<< HEAD
       {isVisible && (
         <motion.div
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -578,22 +460,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               >
                 <XCircle className="w-4 h-4" />
               </button>
-=======
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        className="fixed bottom-4 right-4 z-50"
-      >
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-w-sm">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-            <div className="flex items-center space-x-2">
-              <TrendingUp className="w-5 h-5 text-blue-500" />
-              <span className="font-semibold text-gray-900 dark:text-white">
-                Performance Monitor
-              </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
             </div>
             <button
               onClick={() => setIsVisible(false)}
@@ -603,7 +469,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </button>
           </div>
 
-<<<<<<< HEAD
           {/* Control Buttons */}
           <div className="flex items-center gap-2 p-2">
             <button
@@ -715,18 +580,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               <div className="flex items-center gap-2 mb-3">
                 <TrendingUp className="w-4 h-4 text-emerald-400" />
                 <span className="text-sm font-medium text-gray-300">Optimization Tips</span>
-=======
-          {/* Performance Score */}
-          {metrics && (
-            <div className="p-4">
-              <div className="text-center mb-4">
-                <div className={`text-3xl font-bold ${getScoreColor(getPerformanceScore())}`}>
-                  {getPerformanceScore()}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Performance Score
-                </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
               </div>
 
               {/* Key Metrics */}
@@ -776,7 +629,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
                   )}
                 </div>
               </div>
@@ -801,21 +653,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   Measure Performance
                 </>
               )}
-=======
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Expand Button */}
-          <div className="border-t border-gray-200 dark:border-gray-700 p-2">
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="w-full text-center text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-            >
-              {isExpanded ? 'Show Less' : 'Show More'}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
             </button>
           </div>
         </div>

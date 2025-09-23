@@ -22,7 +22,6 @@ const domains = await res.json();
   return domains.some((d) => d.name === domain);
 }
 
-<<<<<<< HEAD
 export async function switchNetlifySite() {
   const greenActive = await siteHasDomain(greenId);
   const newSite = greenActive ? blueId : greenId;
@@ -44,50 +43,6 @@ export async function switchNetlifySite() {
   if (!res.ok) throw new Error(`Remove domain failed: ${res.statusText}`);
 
   console.log('DNS switch complete');
-=======
-async function assignDomain(siteId) {
-  const res = await fetch(`https://api.netlify.com/api/v1/sites/${siteId}/domains`, {
-    method: 'POST',    headers,
-    body: JSON.stringify({ domain })
-  });
-  if (!res.ok && res.status !== 422) {
-    throw new Error(`Assign domain failed: ${res.statusText}`);
-  }
-  // Return true if the domain was newly assigned (status 201)
-  return res.status === 201;
-}
-
-async function removeDomain(siteId) {
-  const res = await fetch(`https://api.netlify.com/api/v1/sites/${siteId}/domains/${domain}`, {
-    method: 'DELETE',    headers
-  });
-  if (!res.ok && res.status !== 404) {
-    throw new Error(`Remove domain failed: ${res.statusText}`);
-  }
-  return res.status === 200;
-}
-;
-async function switchNetlifySite() {
-  const greenActive = await siteHasDomain(greenId)
-const newSite = greenActive ? blueId : greenId
-const oldSite = greenActive ? greenId : blueId;
-
-  console.warn(`Switching ${domain} from ${oldSite} to ${newSite}`);
-
-  let assigned = false;
-  try {
-    assigned = await assignDomain(newSite);
-    await removeDomain(oldSite);
-    console.warn('DNS switch complete');  } catch {
-    if (assigned) {
-      try {
-        await removeDomain(newSite);
-        console.warn('Rolled back domain assignment to new site');      } catch (_rollbackErr) {
-        console.error('Failed to rollback new site assignment:', rollbackErr);      }
-    }
-    throw err;
-  }
->>>>>>> origin/automation-error-fixes
 }
 
 if (import.meta.url === `file://${_process.argv[1]}`) {

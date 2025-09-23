@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-=======
-import React, { useState } from 'react';
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
-import UltraFuturisticFooter2045 from './UltraFuturisticFooter2045';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
@@ -88,13 +82,8 @@ export default function Layout({ children }: LayoutProps) {
         {/* Skip to content link for accessibility */}
         <a href="#main" className="skip-link">Skip to main content</a>
         
-<<<<<<< HEAD
         {/* Futuristic Background */}
         <UltraFuturisticBackground2036 />
-=======
-        {/* Navigation */}
-        <UltraFuturisticNavigation2045 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
         
         {/* Layout Structure */}
         <div className="relative z-10">
@@ -116,13 +105,6 @@ export default function Layout({ children }: LayoutProps) {
           {/* Footer */}
           <UltraFuturisticFooter2025 />
         </div>
-<<<<<<< HEAD
-=======
-        
-        {/* Footer */}
-        <UltraFuturisticFooter2045 />
-      </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-237e
 
         {/* Accessibility and Performance Tools */}
         <AccessibilityEnhancer />

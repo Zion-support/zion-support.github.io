@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function EnhancedHomePage() {
@@ -12,6 +11,3 @@ export default function EnhancedHomePage() {
     </>
   );
 }
-=======
-export default function EnhancedHome() { return <div className="p-6">Enhanced Home</div>; }
->>>>>>> origin/cursor/build-community-forum-for-zion-ai-marketplace-7967

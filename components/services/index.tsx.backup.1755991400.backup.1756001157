@@ -37,7 +37,6 @@ const ServicesIndex: NextPage = () => {
         <title>Services - Zion Tech Solutions</title>
         <meta name="description" content="Browse our services" />
       </Head>
-<<<<<<< HEAD
 
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-xl font-semibold">Services</h1>
@@ -61,15 +60,6 @@ const ServicesIndex: NextPage = () => {
         ))}
       </div>
     </EnhancedLayout>
-=======
-      
-      <main>
-        <h1>Index</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
->>>>>>> origin/cursor/deploy-zion-token-economy-simulator-07d9
   );
 };
 

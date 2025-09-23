@@ -31,15 +31,11 @@ const Footer: React.FC = () => {
     { name: 'Space Technology', href: '/space-technology' },
     { name: 'IT Solutions', href: '/it-services' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
-<<<<<<< HEAD
     { name: 'Cloud Platform', href: '/cloud-platform' },
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
     { name: 'View All Services', href: '/services' }
   ];
 
   const solutions = [
-<<<<<<< HEAD
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
     { name: 'Financial Solutions', href: '/solutions/financial' },
@@ -50,14 +46,6 @@ const Footer: React.FC = () => {
     { name: 'Energy Solutions', href: '/solutions/energy' },
     { name: 'Transportation Solutions', href: '/solutions/transportation' },
     { name: 'Case Studies', href: '/case-studies' }
-=======
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Industry Solutions', href: '/solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Cloud Platform', href: '/cloud-platform' },
-    { name: 'Support', href: '/support' },
-    { name: 'Documentation', href: '/docs' }
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
   ];
 
   const company = [
@@ -93,15 +81,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-<<<<<<< HEAD
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-=======
-    { name: 'X', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
@@ -130,114 +112,7 @@ const Footer: React.FC = () => {
               intelligent automation systems, and the future of cloud-native AI infrastructure.
             </p>
             <div className="flex space-x-4">
-<<<<<<< HEAD
               {social.map((social) => (
-=======
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-cyan-500 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5 text-gray-300 hover:text-white" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Services</h3>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <a
-                    href={service.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {service.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Solutions</h3>
-            <ul className="space-y-3">
-              {solutions.map((solution) => (
-                <li key={solution.name}>
-                  <a
-                    href={solution.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {solution.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Company</h3>
-            <ul className="space-y-3">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources & Legal */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Resources</h3>
-            <ul className="space-y-3 mb-6">
-              {resources.map((resource) => (
-                <li key={resource.name}>
-                  <a
-                    href={resource.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {resource.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold text-white mb-6">Legal</h3>
-            <ul className="space-y-3">
-              {legal.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Social Links & Newsletter */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            {/* Social Links */}
-            <div className="flex items-center space-x-4 mb-6 lg:mb-0">
-              <span className="text-gray-400 text-sm mr-4">Follow Us:</span>
-              {socialLinks.map((social) => (
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
                 <a
                   key={social.name}
                   href={social.href}

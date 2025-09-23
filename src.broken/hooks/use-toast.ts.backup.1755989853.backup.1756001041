@@ -1,14 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 // Remove direct import of sonnerToast, rely on globalToastManager
 import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
-=======
-<<<<<<< HEAD
-import { useSnackbar, VariantType, OptionsObject } from 'notistack';
-=======
-// Remove direct import of sonnerToast, rely on globalToastManager
-import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export type ToastOptions = OptionsObject & { variant?: VariantType };
@@ -35,14 +27,6 @@ export function ToastInitializer() {
   return null;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export const toast = {
-  error: (msg: string) => globalEnqueue?.(msg, { variant: 'error' }),
-  success: (msg: string) => globalEnqueue?.(msg, { variant: 'success' }),
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 const shouldShow = (key: string): boolean => {
   const now = Date.now();
   if (key === lastKey && (now - lastShown) < DEDUPE_DELAY) {
@@ -116,9 +100,6 @@ toastAdapter.error = (message: string, options?: { id?: string; duration?: numbe
 
 toastAdapter.info = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
   return showToast.info(message, options);
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -46,8 +45,3 @@ export default function NewServices() {
 		</UltraFuturisticBackground>
 	);
 }
-=======
-import NewServicesPage from '@/pages/NewServicesPage';
-
-export default NewServicesPage;
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors

@@ -8,25 +8,16 @@ import {
 } from 'lucide-react';
 
 // Import our new service data
-<<<<<<< HEAD
 import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
 import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
-import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
-import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
-import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 
-<<<<<<< HEAD
   const allServices = [
     ...advancedBusinessIntelligenceServices2025,
     ...advancedAIAutomationServices2025,
@@ -35,45 +26,6 @@ import { enterpriseITServices } from '../data/enterprise-it-services';
     ...cuttingEdgeAIServices2025
   ];
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-// Helper function to get service pricing
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  return 'Contact for pricing';
-};
-
-// Helper function to get service features
-const getServiceFeatures = (service: any) => {
-  return service.keyFeatures || service.features || [];
-};
-
-// Helper function to get service setup time
-const getServiceSetupTime = (service: any) => {
-  if (service.setupTime) return service.setupTime;
-  if (service.pricing?.setupTime) return service.pricing.setupTime;
-  if (service.price?.setupTime) return service.price.setupTime;
-  return 'N/A';
-};
-
-// Helper function to get service trial days
-const getServiceTrialDays = (service: any) => {
-  if (service.trialDays) return service.trialDays;
-  if (service.pricing?.trialDays) return service.pricing.trialDays;
-  if (service.price?.trialDays) return service.price.trialDays;
-  return 'N/A';
-};
-
-// All services combined
-const allServices = [
-  ...advancedAIMLServices,
-  ...advancedCybersecurityServices,
-      ...advancedCloudDevOpsServices2025,
-  ...industrySpecificSolutions,
-  ...emergingTechnologyServices
-];
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 // Service categories
 const categories = [

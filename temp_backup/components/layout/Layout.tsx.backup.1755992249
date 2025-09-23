@@ -71,7 +71,6 @@ interface LayoutProps {
   backgroundIntensity?: 'low' | 'medium' | 'high';
 }
 
-<<<<<<< HEAD
 export default function Layout({
   children,
   showSidebar = true,
@@ -90,21 +89,6 @@ export default function Layout({
           {/* Background content if needed */}
         </UltraAdvancedFuturisticBackground>
       )}
-=======
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-	return (
-		<div className="min-h-screen bg-black text-white">
-			<UltraAdvancedFuturisticBackground>
-				<QuantumHolographicNavbar />
-				<main className="pt-24 lg:pt-28">
-					{children}
-				</main>
-				<NeoFuturisticFooter />
-			</UltraAdvancedFuturisticBackground>
-		</div>
-	);
-};
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41c6
 
       {/* Top Contact Bar */}
       <TopContactBar />

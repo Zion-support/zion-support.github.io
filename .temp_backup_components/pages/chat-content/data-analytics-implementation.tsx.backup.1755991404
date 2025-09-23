@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -20,16 +19,6 @@ const DataAnalyticsImplementation: NextPage = () => {
 };
 
 export default DataAnalyticsImplementation;
-=======
-export default function DataAnalyticsImplementation() {
-  return (
-    <div className="space-y-2">
-      <h1 className="text-2xl font-bold">Data Analytics Implementation</h1>
-      <p className="text-gray-600 dark:text-gray-300">Content coming soon.</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
 =======
 export default function DataAnalyticsImplementationPage() {
   return (

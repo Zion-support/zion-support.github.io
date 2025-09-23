@@ -227,7 +227,6 @@ export default function FuturisticServicesShowcase2037() {
                     
                     <div className="space-y-4 mb-6">
                       <div className="flex items-center justify-between">
-<<<<<<< HEAD
                         <span className="text-white/50 text-sm">Starting Price:</span>
                         <span className="text-cyan-400 font-semibold">{service.price || service.marketPrice}</span>
                       </div>
@@ -257,35 +256,6 @@ export default function FuturisticServicesShowcase2037() {
                         <ArrowRight className="w-4 h-4" />
                       </a>
                       <span className="text-xs text-white/50">{service.period}</span>
-=======
-                        <span className="text-gray-300">Price:</span>
-                        <span className="text-white font-semibold text-lg">{service.price}</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-300">Market:</span>
-                        <span className="text-white font-semibold">{service.marketData}</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-300">Competitors:</span>
-                        <span className="text-white font-semibold">{service.competitors}</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-300">ROI:</span>
-                        <span className="text-white font-semibold">{service.savings}</span>
-                      </div>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                      <div className="grid grid-cols-1 gap-2">
-                        {service.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                            <span className="text-gray-200 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-0cca
                     </div>
 
                     <a 

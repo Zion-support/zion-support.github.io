@@ -3,7 +3,6 @@ import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-<<<<<<< HEAD
   style?: React.CSSProperties;
   onClick?: () => void;
   hover?: boolean;
@@ -56,32 +55,3 @@ const Card: React.FC<CardProps> = ({
 };
 
 export default Card;
-=======
-  hover?: boolean;
-  padding?: 'sm' | 'md' | 'lg';
-}
-
-export default function Card({ 
-  children, 
-  className = '', 
-  hover = true,
-  padding = 'md' 
-}: CardProps) {
-  const paddingClasses = {
-    sm: 'p-4',
-    md: 'p-6',
-    lg: 'p-8',
-  };
-
-  const baseClasses = 'bg-white rounded-xl border border-gray-200 shadow-sm';
-  const hoverClasses = hover ? 'hover:shadow-lg hover:border-gray-300 transition-all duration-200' : '';
-  
-  const classes = `${baseClasses} ${hoverClasses} ${paddingClasses[padding]} ${className}`;
-
-  return (
-    <div className={classes}>
-      {children}
-    </div>
-  );
-}
->>>>>>> origin/cursor/bc-3b39ce21-390e-4be8-b543-94ce23e119f2-8ade

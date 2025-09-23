@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Heart, Zap, Brain, Shield, Database, Code, Rocket, Users, Activity, Microscope } from 'lucide-react';
 import Link from 'next/link';
@@ -108,30 +107,3 @@ export default function HealthcareAiSolutionsPage() {
 };
 
 export default HealthcareAISolutionsPage;
-=======
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function HealthcareAISolutions() {
-	return (
-		<ServiceLanding
-			title="Healthcare AI Solutions"
-			description="AI platforms for diagnostics, patient intelligence, and population health—built with compliance, privacy, and safety in mind."
-			subtitle="Improve outcomes while reducing costs"
-			pricePerMonthUSD={5999}
-			implementationWeeks="Implementation: 6-10 weeks"
-			roiNote="Hospitals report 20-30% improved outcomes and cost reduction"
-			features={[
-				"Clinical decision support and triage",
-				"Patient risk stratification and outreach",
-				"Operational optimization and staffing",
-				"Radiology and pathology assistance",
-				"De-identification and PHI governance",
-				"Integrations: Epic, Cerner, HL7/FHIR, Snowflake"
-			]}
-			industries={["Hospitals", "Payers", "Providers", "Life Sciences"]}
-			ctaHref="/contact"
-			canonical="https://ziontechgroup.com/healthcare-ai-solutions"
-		/>
-	);
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5357

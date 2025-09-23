@@ -223,38 +223,8 @@ export default function Layout({
         <a href="#main" className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-black px-4 py-2 rounded z-50">
           Skip to main content
         </a>
-<<<<<<< HEAD
         
         {/* Futuristic Background */}
-=======
-
-        {/* Top Contact Bar */}
-        <TopContactBar />
-
-        {/* Navigation */}
-        <UltraFuturisticNavigation2045 />
-
-        {/* Theme Toggle */}
-        <div className="fixed top-24 right-4 z-50">
-          <ThemeToggle theme={theme} onToggle={toggleTheme} />
-        </div>
-
-        {/* Main Content */}
-        <main id="main-content" className="relative z-10">
-          {children}
-        </main>
-
-        {/* Footer */}
-        <UltraFuturisticFooter2045 />
-
-        {/* Sidebar */}
-        <EnhancedSidebar2025 
-          isOpen={sidebarOpen} 
-          onClose={() => setSidebarOpen(false)} 
-        />
-
-        {/* Background */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a118
         <UltraFuturisticBackground2036 />
         
         {/* Layout Structure */}

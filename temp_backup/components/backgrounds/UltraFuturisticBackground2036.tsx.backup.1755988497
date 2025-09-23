@@ -11,28 +11,7 @@ export default function UltraFuturisticBackground2036({
   intensity = 'high' 
 }: UltraFuturisticBackground2036Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-<<<<<<< HEAD
   const animationRef = useRef<number | undefined>(undefined);
-=======
-  const containerRef = useRef<HTMLDivElement>(null);
-  const animationFrameRef = useRef<number | null>(null);
-  const particlesRef = useRef<Array<{
-    x: number;
-    y: number;
-    vx: number;
-    vy: number;
-    size: number;
-    opacity: number;
-    color: string;
-    type: 'particle' | 'wave' | 'quantum' | 'neon';
-    life: number;
-    maxLife: number;
-    rotation: number;
-    rotationSpeed: number;
-    pulse: number;
-    pulseSpeed: number;
-  }>>([]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fad1
 
   // Theme-based color schemes with enhanced colors
   const getThemeColors = useCallback(() => {
@@ -236,7 +215,6 @@ export default function UltraFuturisticBackground2036({
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-<<<<<<< HEAD
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -544,69 +522,11 @@ export default function UltraFuturisticBackground2036({
             rotate: [0, 360],
             scale: [1, 1.1, 1],
             opacity: [0.2, 0.4, 0.2]
-=======
-    const resizeCanvas = () => {
-      const rect = containerRef.current?.getBoundingClientRect();
-      if (rect) {
-        const dpr = window.devicePixelRatio || 1;
-        canvas.width = rect.width * dpr;
-        canvas.height = rect.height * dpr;
-        canvas.style.width = rect.width + 'px';
-        canvas.style.height = rect.height + 'px';
-        ctx.scale(dpr, dpr);
-      }
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Initialize and start animation
-    initParticles(canvas, ctx);
-    animate(canvas, ctx);
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
-    };
-  }, [initParticles, animate]);
-
-  return (
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: 'transparent'
-        }}
-      />
-      
-      {/* Additional visual elements */}
-      <div className="absolute inset-0">
-        {/* Gradient overlays */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5" />
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-purple-500/3 via-transparent to-pink-500/3" />
-        
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-20 right-20 w-32 h-32 border border-cyan-400/10 rounded-full"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.05, 0.15, 0.05]
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fad1
           }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         />
         
         <motion.div
-<<<<<<< HEAD
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
           animate={{
             rotate: [360, 0],
@@ -648,37 +568,6 @@ export default function UltraFuturisticBackground2036({
           </>
         )}
       </div>
-=======
-          className="absolute bottom-20 left-20 w-24 h-24 border border-blue-400/10 transform rotate-45"
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.1, 1],
-            opacity: [0.05, 0.12, 0.05]
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-16 h-16 border border-purple-400/8 rounded-lg"
-          animate={{
-            rotate: [0, 180, 360],
-            scale: [1, 1.15, 1],
-            opacity: [0.03, 0.1, 0.03]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      </div>
-      
-      {children}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fad1
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { 
@@ -332,9 +331,3 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
-=======
-
-export default function EnhancedFooter() {
-  return <footer className="p-4 border-t">© {new Date().getFullYear()}</footer>;
-}
->>>>>>> origin/cursor/automate-script-management-and-repository-integration-0e77

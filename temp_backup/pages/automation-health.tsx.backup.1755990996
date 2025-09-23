@@ -464,7 +464,6 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 
   try {
-<<<<<<< HEAD
     const readJson = (relPath: string) => {
       const filePath = path.join(process.cwd(), 'public', relPath);
       if (fs.existsSync(filePath)) {
@@ -475,21 +474,6 @@ export const getStaticProps: GetStaticProps = async () => {
     };
 
     const health = readJson(path.join('reports', 'automation', 'health.json')) || {
-=======
-    const baseDir = process.cwd();
-
-    const readJsonIfExists = (filePath: string) => {
-      try {
-        if (fs.existsSync(filePath)) {
-          const raw = fs.readFileSync(filePath, 'utf8');
-          return JSON.parse(raw);
-        }
-      } catch { /* noop */ }
-      return null;
-    };
-
-    const defaultHealth = {
->>>>>>> origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
       version: '1.0.0',
       lastUpdated: new Date().toISOString(),
       functions: {},
@@ -508,11 +492,7 @@ export const getStaticProps: GetStaticProps = async () => {
       }
     });
 
-<<<<<<< HEAD
     const controlPlane = readJson(path.join('automation', 'control.json')) || {
-=======
-    const defaultControl = {
->>>>>>> origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
       globalPause: false,
       version: '1.0.0',
       lastUpdated: new Date().toISOString(),
@@ -522,11 +502,7 @@ export const getStaticProps: GetStaticProps = async () => {
       budgets: { openai: { dailyUsd: 2.50, monthlyUsd: 50.00, enabled: true }, github: { dailyActions: 2000, monthlyActions: 50000, enabled: true } }
     });
 
-<<<<<<< HEAD
     const scheduleHints = readJson(path.join('automation', 'schedule-hints.json')) || {
-=======
-    const defaultHints = {
->>>>>>> origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
       version: '1.0.0',
       lastUpdated: new Date().toISOString(),
       workflows: {},
@@ -534,28 +510,9 @@ export const getStaticProps: GetStaticProps = async () => {
       performance: { averageSuccessRate: 0, totalFailures: 0, efficiency: 'unknown' }
     });
 
-<<<<<<< HEAD
     return { props: { health, controlPlane, scheduleHints } };
   } catch (error) {
     console.error('Error fetching automation data:', error);
-=======
-    const healthPath = path.join(baseDir, 'public', 'reports', 'automation', 'health.json');
-    const controlPath = path.join(baseDir, 'public', 'automation', 'control.json');
-    const hintsPath = path.join(baseDir, 'public', 'automation', 'schedule-hints.json');
-
-    const health = readJsonIfExists(healthPath) ?? defaultHealth;
-    const controlPlane = readJsonIfExists(controlPath) ?? defaultControl;
-    const scheduleHints = readJsonIfExists(hintsPath) ?? defaultHints;
-
-    return {
-      props: {
-        health,
-        controlPlane,
-        scheduleHints,
-      },
-    };
-  } catch {
->>>>>>> origin/cursor/bc-fb46ff41-f41c-4a05-88f2-2122b9c9c4ce-81c6
     return {
       props: {
         health: {

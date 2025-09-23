@@ -2,22 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
   Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
   Brain, Rocket, Shield, Cpu, Database, Cloud, Target,
   BookOpen, FileText, Video, Code, Building, GraduationCap,
   Heart, Briefcase, Newspaper, BarChart3
-=======
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Star, Sparkles, 
-  Grid, List, TrendingUp, 
-  Calendar, Calculator, GraduationCap,
-  Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
-  Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
-  BookOpen, User
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -71,7 +60,6 @@ const navigationItems: NavigationItem[] = [
         label: 'Cybersecurity',
         href: '/cybersecurity',
         icon: <Shield className="w-4 h-4" />,
-<<<<<<< HEAD
         description: 'Enterprise security solutions'
       },
       {
@@ -91,23 +79,6 @@ const navigationItems: NavigationItem[] = [
         href: '/services',
         icon: <ArrowRight className="w-4 h-4" />,
         description: 'Complete service portfolio'
-=======
-        color: 'from-red-500 to-orange-500'
-      },
-      { 
-        name: 'Brain-Computer Interface', 
-        href: '/brain-computer-interface-2040', 
-        description: 'Direct neural integration',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
-      },
-      { 
-        name: 'AI Emotional Intelligence', 
-        href: '/ai-emotional-intelligence-2040', 
-        description: 'Consciousness-based empathy',
-        icon: <Heart className="w-4 h-4" />,
-        color: 'from-red-500 to-pink-500'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
       }
     ]
   },
@@ -127,23 +98,10 @@ const navigationItems: NavigationItem[] = [
         description: 'Fintech and financial solutions'
       },
       {
-<<<<<<< HEAD
         label: 'Manufacturing',
         href: '/manufacturing-ai-solutions',
         icon: <Target className="w-4 h-4" />,
         description: 'Industry 4.0 solutions'
-=======
-        name: 'Brain-Computer Interface 2040',
-        href: '/brain-computer-interface-2040',
-        description: 'Direct neural integration',
-        icon: <Brain className="w-4 h-4" />
-      },
-      {
-        name: 'AI Autonomous Research 2041',
-        href: '/ai-autonomous-research-2041',
-        description: 'Fully autonomous AI research',
-        icon: <CodeIcon className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
       },
       {
         label: 'Retail',

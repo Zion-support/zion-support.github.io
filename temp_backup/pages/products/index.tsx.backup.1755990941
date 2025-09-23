@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 
 const ProductsIndex: NextPage = () => (
@@ -9,6 +8,3 @@ const ProductsIndex: NextPage = () => (
 );
 
 export default ProductsIndex;
-=======
-export default function Products() { return <main className="p-8">Products coming soon.</main>; }
->>>>>>> origin/cursor/build-ai-powered-smart-contract-generator-b22e

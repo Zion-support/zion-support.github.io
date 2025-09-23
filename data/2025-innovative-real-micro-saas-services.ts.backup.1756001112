@@ -1,10 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
 export interface InnovativeMicroSaasService {
-=======
-export interface EnhancedRealMicroSaasService {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   id: string;
   name: string;
   tagline: string;
@@ -30,11 +26,7 @@ export interface EnhancedRealMicroSaasService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
   variant: string;
-=======
-  variant: ServiceVariant;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   contactInfo: {
     mobile: string;
     email: string;
@@ -49,7 +41,6 @@ export interface EnhancedRealMicroSaasService {
   reviews: number;
 }
 
-<<<<<<< HEAD
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence
   {
@@ -59,17 +50,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     price: '$299',
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes data, generates insights, and provides predictive analytics for data-driven decision making.',
-=======
-export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[] = [
-  // AI & Consciousness Services
-  {
-    id: 'ai-content-factory-pro',
-    name: 'AI Content Factory Pro',
-    tagline: 'Enterprise-grade AI content generation platform',
-    price: '$99',
-    period: '/month',
-    description: 'Enterprise-grade AI content generation platform with multi-language support, SEO optimization, and brand voice consistency across all content types.',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     features: [
       'AI-powered data analysis and visualization',
       'Predictive analytics and forecasting',
@@ -654,7 +634,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Comprehensive AI-powered marketing automation platform that optimizes campaigns, personalizes content, and maximizes ROI across all marketing channels.',
     features: [
-<<<<<<< HEAD
       'AI-powered churn prediction with 95% accuracy',
       'Automated customer health scoring',
       'Intelligent engagement recommendations',
@@ -885,26 +864,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition: 'Advanced AI-powered sales intelligence platform with predictive analytics and automated sales optimization capabilities.',
     targetAudience: 'Sales teams', 'Sales managers', 'Revenue operations', 'Business development', 'Sales consultants',
-=======
-      'AI-powered campaign optimization',
-      'Personalized content delivery',
-      'Multi-channel marketing automation',
-      'Customer segmentation and targeting',
-      'A/B testing and optimization',
-      'Marketing analytics and reporting',
-      'Email marketing automation',
-      'Social media management',
-      'Lead nurturing workflows',
-      'ROI tracking and optimization'
-    ],
-    popular: true,
-    icon: '📈',
-    color: 'from-red-600 to-pink-600',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-marketing-automation-suite',
-    marketPosition: 'Competes with HubSpot Marketing Hub ($45/month), Marketo ($1,250/month). Our advantage: AI automation increases marketing ROI by 300% and reduces manual work by 80%.',
-    targetAudience: 'Marketing teams, Agencies, E-commerce businesses, B2B companies',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     trialDays: 14,
     setupTime: '4-5 hours',
     category: 'Marketing & Automation',
@@ -955,21 +914,12 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     icon: '📋',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-powered-decision-engine',
     marketPosition: 'Revolutionary AI decision engine with advanced machine learning algorithms and automated decision optimization capabilities.',
     targetAudience: 'Executives', 'Business analysts', 'Operations managers', 'Strategic planners', 'Consultants',
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Business Intelligence',
-=======
-    link: 'https://ziontechgroup.com/ai-project-management-platform',
-    marketPosition: 'Competes with Asana ($10.99/month), Monday.com ($8/month). Our advantage: AI automation reduces project delays by 40% and increases team productivity by 30%.',
-    targetAudience: 'Project managers, Development teams, Agencies, Consulting firms',
-    trialDays: 14,
-    setupTime: '2-3 hours',
-    category: 'Project Management & Collaboration',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     realService: true,
     technology: ['React, Python, Scikit-learn, PostgreSQL, Redis, Docker'],
     integrations: ['Slack, Microsoft Teams, GitHub, Jira, Trello, Notion'],
@@ -1161,7 +1111,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Intelligent AI-powered legal document analysis platform that reviews contracts, identifies risks, and provides legal insights.',
     features: [
-<<<<<<< HEAD
       'AI-powered content generation and optimization',
       'Multi-channel content distribution',
       'SEO optimization and keyword analysis',
@@ -1236,29 +1185,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Customer Relationship Management',
-=======
-      'AI-powered contract analysis and review',
-      'Legal risk identification and assessment',
-      'Document comparison and analysis',
-      'Legal research and case law analysis',
-      'Compliance checking and monitoring',
-      'Legal document generation',
-      'Integration with legal systems',
-      'Mobile legal app',
-      'Multi-language legal support',
-      'Predictive legal analytics'
-    ],
-    popular: true,
-    icon: '⚖️',
-    color: 'from-gray-600 to-slate-600',
-    textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/ai-legal-document-analysis',
-    marketPosition: 'Competes with DocuSign ($10/month), ContractPodAi ($500/month). Our advantage: AI analysis reduces legal review time by 70% and improves accuracy by 85%.',
-    targetAudience: 'Law firms, Legal departments, Contract managers, Compliance officers',
-    trialDays: 14,
-    setupTime: '3-4 hours',
-    category: 'Legal Services & Compliance',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     realService: true,
     technology: ['React, Python, NLP, TensorFlow, PostgreSQL, Redis'],
     integrations: ['DocuSign, Adobe Sign, Legal case management systems, CRM systems'],

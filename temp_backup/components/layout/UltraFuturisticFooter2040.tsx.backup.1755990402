@@ -16,7 +16,6 @@ const footerSections = [
     icon: <Star className="w-5 h-5 text-yellow-400" />,
     color: 'from-yellow-500 to-orange-500',
     links: [
-<<<<<<< HEAD
       { name: '2046 Services Showcase', href: '/services-2046-showcase', featured: true },
       { name: 'Quantum AI Brain-Computer Interface 2046', href: '/quantum-ai-brain-computer-interface-platform-2046', featured: true },
       { name: 'Space Resource Intelligence 2046', href: '/space-resource-intelligence-platform-2046', featured: true },
@@ -45,18 +44,6 @@ const footerSections = [
       { name: 'AI-Powered Data Warehouse', href: '/ai-powered-data-warehouse' },
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
       { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' }
-=======
-      { name: '2025 Innovative Services Showcase', href: '/comprehensive-2025-innovative-services-showcase', featured: true },
-      { name: 'AI Autonomous Content Factory Pro', href: '/ai-autonomous-content-factory-pro', featured: true },
-      { name: 'AI Emotional Intelligence Platform 2040', href: '/ai-emotional-intelligence-platform-2040', featured: true },
-      { name: 'Quantum-Secure Cloud Infrastructure 2040', href: '/quantum-secure-cloud-infrastructure-2040', featured: true },
-      { name: 'Autonomous DevOps Platform 2040', href: '/autonomous-devops-platform-2040', featured: true },
-      { name: 'AI Autonomous HR Platform', href: '/ai-autonomous-hr-platform', featured: true },
-      { name: 'AI Autonomous Marketing Platform', href: '/ai-autonomous-marketing-platform', featured: true },
-      { name: 'AI Consciousness Evolution 2040', href: '/ai-consciousness-evolution-2040' },
-      { name: 'Quantum Neural Ecosystem 2040', href: '/quantum-neural-ecosystem-2040' },
-      { name: 'Space Resource Intelligence 2040', href: '/space-resource-intelligence-2040' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8640
     ]
   },
   {

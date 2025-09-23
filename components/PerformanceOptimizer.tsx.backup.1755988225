@@ -1,18 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-=======
-// Add browser API types
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
-}
-
-
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-a21b
 interface PerformanceOptimizerProps {
   showMetrics?: boolean;
   autoOptimize?: boolean;

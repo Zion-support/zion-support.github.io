@@ -17,7 +17,6 @@ export { aiCodeReviewService } from './aiCodeReviewService';
 export { apiDocGeneratorService } from './apiDocGeneratorService';
 export { databasePerformanceMonitorService } from './databasePerformanceMonitorService';
 export { aiMarketResearchService } from './aiMarketResearchService';
-<<<<<<< HEAD
 export { aiDataAnalyticsService } from './aiDataAnalyticsService';
 export { aiCybersecurityService } from './aiCybersecurityService';
 
@@ -42,10 +41,6 @@ export { aiCybersecurityService } from './aiCybersecurityService';
 export { aiDevOpsAutomationService } from './aiDevOpsAutomationService';
 export { aiFinancialAnalyticsService } from './aiFinancialAnalyticsService';
 export { aiHealthcareAnalyticsService } from './aiHealthcareAnalyticsService';
-=======
-export { aiCustomerServiceService } from './aiCustomerServiceService';
-export { aiFinancialAdvisorService } from './aiFinancialAdvisorService';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
 
 // Export types
 export type {
@@ -205,18 +200,13 @@ export type {
 
 export type {
   MarketTrend,
-<<<<<<< HEAD
   CompetitorAnalysis as MarketCompetitorAnalysis,
-=======
-  CompetitorAnalysis,
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
   MarketInsight,
   MarketResearchRequest,
   MarketResearchResponse
 } from './aiMarketResearchService';
 
 export type {
-<<<<<<< HEAD
   DataSource as AnalyticsDataSource,
   DataQuery,
   DataVisualization,
@@ -326,28 +316,3 @@ export type {
   HealthTrend,
   PredictiveInsight
 } from './aiHealthcareService';
-=======
-  CustomerTicket,
-  CustomerMessage,
-  CustomerProfile,
-  AIResponse,
-  CustomerServiceMetrics,
-  CustomerServiceRequest,
-  CustomerServiceResponse
-} from './aiCustomerServiceService';
-
-export type {
-  FinancialProfile,
-  InvestmentRecommendation,
-  FinancialPlan,
-  FinancialGoal,
-  FinancialStrategy,
-  RiskAssessment,
-  RiskFactor,
-  InsuranceRecommendation,
-  MonthlyAction,
-  FinancialAnalysis,
-  FinancialAdvisorRequest,
-  FinancialAdvisorResponse
-} from './aiFinancialAdvisorService';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42

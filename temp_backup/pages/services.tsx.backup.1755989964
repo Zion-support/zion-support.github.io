@@ -7,11 +7,7 @@ import {
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-<<<<<<< HEAD
   Building
-=======
-  Building, Cpu, Database, Cloud, Lock, Sparkles
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e8d4
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -122,7 +118,6 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-<<<<<<< HEAD
   // Our new 2025 advanced services
   // ...advanced2025MicroSaasExpansion,
   // ...advanced2025ITSolutionsExpansion,
@@ -154,13 +149,6 @@ const allServices = [
   if (!service.id || !service.name) return false;
   return true;
 });
-=======
-  // Add revolutionary 2025-2026 services
-  ...revolutionary20252026MicroSaasServices,
-  ...revolutionary20252026AIServices,
-  ...revolutionary20252026ITInfrastructureServices
-];
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e8d4
 
 const categories = [
   {

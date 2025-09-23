@@ -1,5 +1,4 @@
 const path = require('path');
-<<<<<<< HEAD
 const { execFile } = require('child_process');
 
 function runNodeScript(relPath, args = []) {
@@ -39,31 +38,4 @@ exports.handler = async () => {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ engine: 'content-freshness-auditor', results, timestamp: new Date().toISOString() })
   };
-=======
-const { spawnSync } = require('child_process');
-
-function runNode(relativePath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relativePath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.config = { schedule: '*/10 * * * *' };
-
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
-  };
-
-  step('content-freshness-auditor', () => runNode('automation/content-freshness-auditor.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-18c4
 };

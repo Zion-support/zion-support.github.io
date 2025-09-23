@@ -5,11 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, Star, 
-<<<<<<< HEAD
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin, Rocket, Check, Users, Building
-=======
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin, Rocket
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
 } from 'lucide-react';
 
 const Homepage2025: React.FC = () => {

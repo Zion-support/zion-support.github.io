@@ -8,25 +8,11 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isLargeText, setIsLargeText] = useState(false);
   const [isSpacing, setIsSpacing] = useState(false);
   const [isFocusVisible, setIsFocusVisible] = useState(false);
-=======
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    highlighter: false,
-    fontSize: 16,
-    colorScheme: 'auto',
-    focusIndicator: true,
-    screenReader: false
-  });
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([]);
@@ -41,7 +27,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       } catch {
         // Silently handle parsing errors
       }
-<<<<<<< HEAD
     }
   }, []);
 
@@ -63,42 +48,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
     const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-=======
-    ];
-    
-    // High contrast
-    if (settings.highContrast) {
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--bg-secondary', '#1a1a1a');
-      root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--text-secondary', '#e5e5e5');
-      root.style.setProperty('--accent-color', '#ffff00');
-      root.style.setProperty('--border-color', '#ffff00');
-    } else {
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--bg-secondary');
-      root.style.removeProperty('--text-primary');
-      root.style.removeProperty('--text-secondary');
-      root.style.removeProperty('--accent-color');
-      root.style.removeProperty('--border-color');
-    }
-
-    // Large text
-    if (settings.largeText) {
-      root.style.fontSize = '18px';
-      root.style.setProperty('--text-scale', '1.2');
-    } else {
-      root.style.fontSize = '16px';
-      root.style.setProperty('--text-scale', '1');
-    }
-
-    // Reduced motion
-    if (settings.reducedMotion) {
-      root.style.setProperty('--reduced-motion', 'reduce');
-    } else {
-      root.style.removeProperty('--reduced-motion');
-    }
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
     // Focus indicator
     if (settings.focusIndicator) {

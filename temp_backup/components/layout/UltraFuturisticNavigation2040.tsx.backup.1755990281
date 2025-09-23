@@ -26,58 +26,8 @@ const navigationItems: NavigationItem[] = [
     icon: <Home className="w-4 h-4" />,
     neonColor: 'shadow-cyan-400/50'
   },
-<<<<<<< HEAD
         {
         label: 'Services',
-=======
-  {
-    label: 'Services',
-    children: [
-      {
-        label: 'AI & Machine Learning',
-        href: '/ai-services',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Advanced AI solutions for enterprise'
-      },
-      {
-        label: 'Quantum Computing',
-        href: '/quantum-services',
-        icon: <Zap className="w-4 h-4" />,
-        description: 'Next-generation quantum solutions'
-      },
-      {
-        label: 'Space Technology',
-        href: '/space-tech',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Innovative space solutions'
-      },
-      {
-        label: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: <Lock className="w-4 h-4" />,
-        description: 'Enterprise security solutions'
-      },
-      {
-        label: 'Cloud Solutions',
-        href: '/cloud-platform',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Scalable cloud infrastructure'
-      },
-      {
-        label: 'Micro SaaS',
-        href: '/micro-saas',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Rapid deployment SaaS solutions'
-      },
-      {
-        label: '2046 Services Showcase',
-        href: '/services-2046-showcase',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Revolutionary 2046 technology showcase'
-      },
-      {
-        label: 'View All Services',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f6bf
         href: '/services',
         icon: <Briefcase className="w-4 h-4" />,
         description: 'Explore our comprehensive technology solutions',

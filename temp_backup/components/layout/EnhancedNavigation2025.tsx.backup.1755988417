@@ -41,7 +41,6 @@ const navigationItems: NavigationItem[] = [
     category: 'services',
     color: 'from-emerald-500 to-cyan-500',
     children: [
-<<<<<<< HEAD
       { 
         name: 'All Services', 
         href: '/services', 
@@ -98,15 +97,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Rocket className="w-4 h-4" />,
         color: 'from-purple-500 to-indigo-500'
       }
-=======
-      { label: 'Innovative 2025 Showcase', href: '/innovative-2025-services-showcase', icon: Rocket, badge: 'New' },
-      { label: 'AI & Machine Learning', href: '/ai-services', icon: Brain, badge: 'Hot' },
-      { label: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, badge: 'New' },
-      { label: 'Cybersecurity', href: '/cybersecurity', icon: Shield, badge: 'Popular' },
-      { label: 'Cloud Infrastructure', href: '/cloud-platform', icon: Globe },
-      { label: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
-      { label: 'Process Automation', href: '/process-automation', icon: Zap }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19ed
     ]
   },
   {

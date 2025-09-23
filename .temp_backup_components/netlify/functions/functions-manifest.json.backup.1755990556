@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "generatedAt": "2025-08-11T23:51:11.214Z",
-=======
-  "generatedAt": "2025-08-11T23:50:51.476Z",
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9ff4
   "functions": [
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
@@ -22,15 +18,11 @@
     "canonical-auditor",
     "cloud-swarm-committer",
     "cloud_orchestrator",
-<<<<<<< HEAD
     "code-ownership-map-runner",
     "component-coupling-graph-runner",
     "component-prop-coverage-runner",
     "component-size-report",
     "content-gap-analyzer",
-=======
-    "content-freshness-runner",
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9ff4
     "continuous-front-runner",
     "continuous-orchestrator",
     "contributing-refresher",

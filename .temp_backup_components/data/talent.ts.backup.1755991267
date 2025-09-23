@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type TalentProfile = {
   slug: string;
   name: string;
@@ -16,9 +15,6 @@ export type TalentProfile = {
   createdAt: string; // ISO date string for sorting by newest
   status?: 'available' | 'booked' | 'part-time';
 };
-=======
-import type { TalentProfile } from '@/utils/types/talent';
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
 
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -35,7 +31,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bio:
       'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',
     hourlyRateUsd: 140,
-<<<<<<< HEAD
     availability: 'contract',
     experienceYears: 8,
     region: 'Americas',
@@ -44,18 +39,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bookings: 72,
     createdAt: '2025-06-18T00:00:00.000Z',
     status: 'available',
-=======
-    availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=1',
-    portfolio: [
-      { title: 'RAG Platform Template', url: 'https://example.com/rag' },
-      { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' },
-    ],
-    verified: true,
-    rating: 4.9,
-    reviewsCount: 28,
-    createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
   },
   {
     slug: 'marco-silva',
@@ -70,7 +53,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Cloud architect focused on scalable multi-account AWS platforms, platform engineering, and secure-by-default patterns for modern teams.',
     bio: 'Designs scalable, secure multi-account AWS platforms and platform engineering toolchains.',
     hourlyRateUsd: 120,
-<<<<<<< HEAD
     availability: 'contract',
     experienceYears: 10,
     region: 'EMEA',
@@ -79,17 +61,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bookings: 58,
     createdAt: '2025-05-02T00:00:00.000Z',
     status: 'available',
-=======
-    availability: 'Part-time',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=2',
-    portfolio: [
-      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' },
-    ],
-    verified: true,
-    rating: 4.8,
-    reviewsCount: 19,
-    createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
   },
   {
     slug: 'nina-patel',
@@ -104,7 +75,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',
     bio: 'Builds data products end-to-end with strong model evaluation and product sense.',
     hourlyRateUsd: 110,
-<<<<<<< HEAD
     availability: 'part-time',
     experienceYears: 6,
     region: 'Americas',
@@ -113,15 +83,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bookings: 33,
     createdAt: '2025-07-01T00:00:00.000Z',
     status: 'part-time',
-=======
-    availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=3',
-    portfolio: [{ title: 'NLP Evaluation Dashboard', url: 'https://example.com/nlp' }],
-    verified: false,
-    rating: 4.7,
-    reviewsCount: 12,
-    createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
   },
   {
     slug: 'kenji-yamada',
@@ -136,7 +97,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Full‑stack developer building sleek, performant AI web apps with modern DX, observability, and delightful UX.',
     bio: 'Delivers sleek, performant AI web apps with modern DX and observability.',
     hourlyRateUsd: 95,
-<<<<<<< HEAD
     availability: 'contract',
     experienceYears: 7,
     region: 'APAC',
@@ -145,15 +105,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bookings: 41,
     createdAt: '2025-04-10T00:00:00.000Z',
     status: 'available',
-=======
-    availability: 'Booked',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=4',
-    portfolio: [{ title: 'AI SaaS Starter', url: 'https://example.com/saas' }],
-    verified: true,
-    rating: 4.6,
-    reviewsCount: 34,
-    createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
   },
   {
     slug: 'lena-mueller',
@@ -168,7 +119,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Security engineer who hardens platforms with developer‑friendly security programs, practical controls, and measurable impact.',
     bio: 'Hardens platforms with practical, developer‑friendly security programs.',
     hourlyRateUsd: 130,
-<<<<<<< HEAD
     availability: 'contract',
     experienceYears: 9,
     region: 'EMEA',
@@ -177,14 +127,5 @@ export const TALENT_PROFILES: TalentProfile[] = [
     bookings: 85,
     createdAt: '2025-06-25T00:00:00.000Z',
     status: 'booked',
-=======
-    availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=5',
-    portfolio: [{ title: 'Zero Trust Rollout Case Study', url: 'https://example.com/zt' }],
-    verified: false,
-    rating: 4.5,
-    reviewsCount: 9,
-    createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
   },
 ];

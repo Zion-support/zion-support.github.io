@@ -176,7 +176,6 @@ const ServicesShowcase2040: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="Zion Tech Group - Revolutionary 2040 Services Showcase | Cutting-Edge AI, Quantum & Space Technology"
@@ -503,24 +502,6 @@ const ServicesShowcase2040: React.FC = () => {
                 <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300 underline">
                   {contactInfo.website}
                 </a>
-=======
-    <Layout seo={seoConfig}>
-      <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Revolutionary Services Showcase 2040
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Discover our comprehensive portfolio of cutting-edge technology solutions that are transforming industries worldwide
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
               </p>
               
               {/* Stats */}

@@ -7,7 +7,6 @@ import {
 } from 'lucide-react';
 
 // Import our new 2025 services
-<<<<<<< HEAD
 import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services';
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
@@ -34,12 +33,6 @@ interface UnifiedService {
   trialDays?: number;
   setupTime?: string;
 }
-=======
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8cfb
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -55,11 +48,7 @@ const serviceCategories = [
     name: 'Enterprise AI Services',
     icon: <Brain className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500',
-<<<<<<< HEAD
     services: realEnterpriseAIServices2025
-=======
-    services: advancedAIAutomationServices2025
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8cfb
   },
   {
     id: 'it-infrastructure',
@@ -74,16 +63,6 @@ const serviceCategories = [
     icon: <Target className="w-8 h-8" />,
     color: 'from-green-500 to-emerald-500',
     services: innovativeMicroSaasSolutions2025
-<<<<<<< HEAD
-=======
-  },
-  {
-    id: 'emerging-tech',
-    name: 'Emerging Technology Services',
-    icon: <Rocket className="w-8 h-8" />,
-    color: 'from-orange-500 to-red-500',
-    services: emergingTechnologyServices
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8cfb
   }
 ];
 
@@ -223,16 +202,9 @@ export default function InnovativePricing2025() {
     
     if (selectedCategory === 'all') {
       return [
-<<<<<<< HEAD
         ...realEnterpriseAIServices2025,
         ...innovativeITInfrastructureServices2025,
         ...innovativeMicroSaasSolutions2025
-=======
-        ...advancedAIAutomationServices2025,
-        ...innovativeITInfrastructureServices2025,
-        ...innovativeMicroSaasSolutions2025,
-        ...emergingTechnologyServices
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8cfb
       ];
     }
     

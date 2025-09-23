@@ -17,26 +17,18 @@
     "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-=======
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-<<<<<<< HEAD
-=======
-    "module": "esnext",
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
     "plugins": [
       {
         "name": "next"
       }
     ],
-<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -53,18 +45,5 @@
   ],
   "exclude": [
     "node_modules"
-=======
-    "strictNullChecks": true
-  },
-  "include": [
-    "app/**/*",
-    "components/**/*",
-    "lib/**/*",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
   ]
 }

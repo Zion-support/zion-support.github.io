@@ -1,7 +1,6 @@
 import React from 'react';
 export function AIPoweredContent() {
   return (
-<<<<<<< HEAD
     <>
       <SEO
         title="AI Content Generation"
@@ -47,11 +46,5 @@ export function AIPoweredContent() {
         </div>
       </main>
     </>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

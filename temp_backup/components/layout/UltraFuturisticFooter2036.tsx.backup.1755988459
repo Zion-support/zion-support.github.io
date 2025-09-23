@@ -227,7 +227,6 @@ const footerSections = [
     }
   ];
 
-<<<<<<< HEAD
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5" /> },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
@@ -236,30 +235,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
 ];
-=======
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM EST'
-  };
-
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Accessibility', href: '/accessibility-scanner' }
-  ];
-
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram }
-  ];
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4109
 
 export default function UltraFuturisticFooter2036() {
   const scrollToTop = () => {
@@ -395,7 +370,6 @@ export default function UltraFuturisticFooter2036() {
             </div>
 
             {/* Social Links */}
-<<<<<<< HEAD
             <div>
               <h4 className="text-white font-semibold text-lg mb-4">Follow Us</h4>
               <div className="flex space-x-4">
@@ -439,28 +413,6 @@ export default function UltraFuturisticFooter2036() {
                 </div>
               </motion.div>
             </div>
-=======
-            <motion.div 
-              className="flex items-center space-x-4"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-gray-700/50 hover:border-cyan-500/50 transition-all duration-200"
-                  aria-label={`Follow us on ${social.name}`}
-                >
-                  {React.createElement(social.icon, { className: "w-5 h-5" })}
-                </a>
-              ))}
-            </motion.div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4109
           </div>
 
           {/* Services Sections */}

@@ -262,7 +262,6 @@ export default function ServicesIndexPage() {
     .concat(advanced2025ITSolutionsExpansion as unknown[])
     .concat(advanced2025AIServicesExpansion as unknown[])
     // Our new 2025 innovative services
-<<<<<<< HEAD
     .concat(innovativeMicroSaasExpansion2025 as unknown[])
     .concat(innovative2025ITSolutionsExpansion as unknown[])
     .concat(innovative2025AISolutionsExpansion as unknown[])
@@ -270,36 +269,6 @@ export default function ServicesIndexPage() {
     .concat(advanced2025MicroSaasExpansion as unknown[])
     .concat(advancedITInfrastructureServices2025 as unknown[])
     .concat(advanced2025AIServicesExpansion as unknown[]);
-=======
-    .concat(innovativeRetailServices as unknown[])
-    .concat(innovativeEntertainmentServices as unknown[])
-    .concat(innovativeGamingServices as unknown[])
-    .concat(innovativeRealEstateServices as unknown[])
-    .concat(innovativeLegalServices as unknown[])
-    .concat(innovativeAgricultureServices as unknown[])
-    .concat(innovativeHospitalityServices as unknown[])
-    .concat(innovativeSportsServices as unknown[])
-    .concat(innovativeEnvironmentalServices as unknown[])
-    .concat(innovativeResearchServices as unknown[])
-    .concat(innovativeSpaceServices as unknown[])
-    .concat(innovativeBiotechServices as unknown[])
-    .concat(innovativeNanotechServices as unknown[])
-    .concat(innovativeRoboticsServices as unknown[])
-    .concat(innovativeQuantumServices as unknown[])
-    .concat(innovativeBlockchainServices as unknown[])
-    .concat(innovativeIoTServices as unknown[])
-    .concat(innovativeARVRServices as unknown[])
-    .concat(innovativeEdgeComputingServices as unknown[])
-    .concat(innovativeCybersecurityServices as unknown[])
-    .concat(innovativeFintechServices as unknown[])
-    .concat(innovativeHealthtechServices as unknown[])
-    .concat(innovativeSupplyChainServices as unknown[])
-    .concat(innovativeManufacturingServices as unknown[])
-    .concat(innovativeEnergyServices as unknown[])
-    .concat(innovativeEducationServices as unknown[])
-    .concat(innovativeGovernmentServices as unknown[])
-    .concat(innovativeTransportationServices as unknown[]);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6271
 
   const anchorMap: Record<string, string> = {
     'AI & Data': 'ai',

@@ -8,7 +8,6 @@ import {
   Sparkles, Target, BarChart3, ShieldCheck
 } from 'lucide-react';
 
-<<<<<<< HEAD
 // Import new 2034 service data
 import { ultimateFuturisticServices2034 } from '../data/2034-ultimate-futuristic-services';
 // Import new 2034 services from remote
@@ -18,10 +17,6 @@ import { emergingTech2034Services } from '../data/2034-emerging-tech-breakthroug
 import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
 import { innovativeITSolutions } from '../data/2034-innovative-it-solutions';
 import { innovativeAISolutions } from '../data/2034-innovative-ai-solutions';
-=======
-// Import our service data
-import { realMarketServices } from '../data/real-market-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -30,47 +25,7 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 const serviceCategories = [
-=======
-// Helper function to get service pricing
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  return 'Contact for pricing';
-};
-
-// Helper function to get service features
-const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
-
-// Helper function to get service description
-const getServiceDescription = (service: any) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return 'No description available';
-};
-
-// Create unified services array
-const allServices = [
-  ...realMarketServices,
-  ...realMicroSaasServices,
-  ...innovativeAIServices,
-  ...enterpriseITServices,
-  ...emergingTechServices,
-  ...newRealServices,
-  ...realOperationalServices,
-  ...marketReadyServices,
-  ...marketValidatedServices,
-  ...industryRealServices
-];
-
-const categories = [
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
   {
     id: 'all',
     title: '🚀 All Services',

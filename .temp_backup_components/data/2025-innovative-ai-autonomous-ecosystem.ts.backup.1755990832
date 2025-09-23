@@ -129,7 +129,6 @@ export const innovative2025AIAutonomousEcosystem = [
 
   // AI-Powered Autonomous Sales Intelligence Platform
   {
-<<<<<<< HEAD
     id: 'autonomous-devops-intelligence-2045',
     name: 'Autonomous DevOps Intelligence Platform 2045',
     description: 'AI-powered DevOps optimization with autonomous decision-making and continuous improvement',
@@ -168,12 +167,6 @@ export const innovative2025AIAutonomousEcosystem = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-=======
-    pricing: {
-      starter: '$2,800/month',
-      professional: '$9,500/month',
-      enterprise: '$28,000/month'
->>>>>>> origin/main
 =======
     id: 'ai-autonomous-sales-intelligence-2025',
     name: 'AI Autonomous Sales Intelligence Platform 2025',

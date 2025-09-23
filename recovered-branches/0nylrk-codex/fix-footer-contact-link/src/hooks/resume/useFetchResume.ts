@@ -103,10 +103,7 @@ export function useFetchResume() {
       console.error('Error fetching resume:', e);
       setError(e.message);
       return null;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsLoading(false);
     }
@@ -116,10 +113,5 @@ export function useFetchResume() {
     isLoading,
     error,
     resume,
-<<<<<<< HEAD
     fetchResume};
-=======
-    fetchResume,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 }

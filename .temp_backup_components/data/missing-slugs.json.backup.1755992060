@@ -71,7 +71,6 @@
   "quantum-supply-chain-optimizer",
   "quantum-threat-detection",
   "real-estate-technology-solutions",
-<<<<<<< HEAD
   "services/ai-knowledge-graph-studio",
   "services/ai-sales-email-autopilot",
   "services/ci-flaky-test-detector",
@@ -85,7 +84,4 @@
   "space-mining-automation-platform",
   "space-mining-platform",
   "space-robotics-platform"
-=======
-  "transportation-logistics-solutions"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-13fb
 ]

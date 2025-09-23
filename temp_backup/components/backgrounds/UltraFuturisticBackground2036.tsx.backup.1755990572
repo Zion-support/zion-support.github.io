@@ -13,20 +13,14 @@ const UltraFuturisticBackground2036: React.FC = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-<<<<<<< HEAD
     // Particle system
     const particles: Array<{
-=======
-    let animationFrameId: number;
-    let particles: Array<{
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
       x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
       color: string;
-<<<<<<< HEAD
       alpha: number;
       life: number;
     }> = [];
@@ -46,26 +40,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
     }
 
     // Animation loop
-=======
-    }> = [];
-
-    // Initialize particles
-    const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 100; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.1,
-          color: `hsl(${Math.random() * 60 + 180}, 70%, 60%)`
-        });
-      }
-    };
-
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -82,7 +56,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
         if (particle.y > canvas.height) particle.y = 0;
 
         // Draw particle
-<<<<<<< HEAD
         ctx.save();
         ctx.globalAlpha = particle.alpha;
         ctx.fillStyle = particle.color;
@@ -183,67 +156,25 @@ const UltraFuturisticBackground2036: React.FC = () => {
       });
 
       requestAnimationFrame(animate);
-=======
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
-
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 100) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color;
-              ctx.globalAlpha = (100 - distance) / 100 * 0.3;
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
-          }
-        });
-      });
-
-      ctx.globalAlpha = 1;
-      animationFrameId = requestAnimationFrame(animate);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
     };
 
     animate();
 
-<<<<<<< HEAD
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-=======
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
     };
 
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-<<<<<<< HEAD
-=======
-      cancelAnimationFrame(animationFrameId);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
     };
   }, []);
 
   return (
     <>
-<<<<<<< HEAD
       {/* Enhanced CSS Background */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Gradient overlays */}
@@ -333,14 +264,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
           backgroundSize: '50px 50px'
         }} />
       </div>
-=======
-      {/* Enhanced Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,1) 100%)' }}
-      />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
 
       {/* Enhanced Geometric Elements */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -396,13 +319,8 @@ const UltraFuturisticBackground2036: React.FC = () => {
           }}
           transition={{
             duration: 8,
-<<<<<<< HEAD
             repeat: -1,
             ease: 'linear'
-=======
-            repeat: Infinity,
-            ease: "easeInOut"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
           }}
         />
         
@@ -413,15 +331,9 @@ const UltraFuturisticBackground2036: React.FC = () => {
             opacity: [0.2, 0.4, 0.2]
           }}
           transition={{
-<<<<<<< HEAD
             duration: 10,
             repeat: -1,
             ease: 'linear'
-=======
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3de3
           }}
         />
 

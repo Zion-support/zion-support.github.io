@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -10,19 +9,12 @@ import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
   BookOpen,
-=======
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  BookOpen, 
->>>>>>> origin/auto/autonomy-17186719616
   Code, 
   Key, 
   List, 
   LucideIcon, 
   Terminal, 
   Webhook 
-<<<<<<< HEAD
 } from "lucide-react",
 
 
@@ -77,35 +69,6 @@ export function DeveloperPortal() {
     { id: "logs", label: "Logs", icon: List }]
   return (
 
-=======
-} from "lucide-react";
-
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
-
-interface TabDefinition {
-  id: string;
-  label: string;
-  icon: LucideIcon;
-}
-
-export function DeveloperPortal() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation");
-  
-  // Define the tabs
-  const tabs: TabDefinition[] = [
-    { id: "documentation", label: "Documentation", icon: BookOpen },
-    { id: "api-keys", label: "API Keys", icon: Key },
-    { id: "webhooks", label: "Webhooks", icon: Webhook },
-    { id: "logs", label: "Logs", icon: List },
-  ];
-
-  return (
->>>>>>> origin/auto/autonomy-17186719616
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
@@ -116,7 +79,6 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-<<<<<<< HEAD
 
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -158,19 +120,12 @@ function DeveloperPortal() {
       </div>;
       {/* Tabs */}
 
-=======
-      
-      {/* Tabs */}
->>>>>>> origin/auto/autonomy-17186719616
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
             const Icon = tab.icon;
-<<<<<<< HEAD
 
             const Icon = tab.icon,
-=======
->>>>>>> origin/auto/autonomy-17186719616
             return (
               <button
                 key={tab.id}
@@ -182,7 +137,6 @@ function DeveloperPortal() {
                 onClick={() => setActiveTab(tab.id)}
               >
                 <Icon size={16} className="mr-2" />
-<<<<<<< HEAD
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import {;
@@ -264,28 +218,12 @@ export function DeveloperPortal() {;
 
       {/* Tab content */}
       <div>;
-=======
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-      
-      {/* Tab content */}
-      <div>
->>>>>>> origin/auto/autonomy-17186719616
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
-<<<<<<< HEAD
       </div>;
     </div>;
-=======
-      </div>
-    </div>
->>>>>>> origin/auto/autonomy-17186719616
   );
 }
 
@@ -294,7 +232,6 @@ export default function ProtectedDeveloperPortal() {
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 }
 
@@ -321,7 +258,3 @@ export default function ProtectedDeveloperPortal() {;
 
 
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616

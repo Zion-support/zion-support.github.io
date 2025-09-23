@@ -100,7 +100,6 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> }
   ];
 
-<<<<<<< HEAD
   const stats = [
     { label: 'Services', value: '500+', icon: <Zap className="w-6 h-6" /> },
     { label: 'Clients', value: '10K+', icon: <Users className="w-6 h-6" /> },
@@ -215,57 +214,12 @@ const EnhancedFooter: React.FC = () => {
               <div className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4 mt-0.5" />
                 <span className="text-sm">{contactInfo.address}</span>
-=======
-  return (
-    <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-2xl">Z</span>
-                </div>
-                <span className="text-white font-bold text-2xl">Zion Tech Group</span>
-              </div>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Leading-edge technology solutions and autonomous innovation platform. 
-                Empowering businesses with cutting-edge AI, quantum computing, and digital transformation.
-              </p>
-              
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-white transition-colors">
-                    {contactInfo.mobile}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                  <span className="text-sm">{contactInfo.address}</span>
-                </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
               </div>
             </motion.div>
           </div>
 
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
-<<<<<<< HEAD
             <motion.div 
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
@@ -276,18 +230,6 @@ const EnhancedFooter: React.FC = () => {
                 <div className={`p-2 rounded-lg bg-gradient-to-br ${category.color} shadow-lg`}>
                   {category.icon}
                 </div>
-=======
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="lg:col-span-1"
-            >
-              <div className={`inline-flex items-center space-x-2 p-2 rounded-lg bg-gradient-to-r ${category.color} mb-4`}>
-                {category.icon}
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
                 <h3 className="font-semibold text-white">{category.title}</h3>
               </div>
               <ul className="space-y-2">
@@ -295,14 +237,9 @@ const EnhancedFooter: React.FC = () => {
                   <li key={service.name}>
                     <Link
                       href={service.href}
-<<<<<<< HEAD
                       className="text-gray-400 hover:text-cyan-400 transition-colors text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
-=======
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm hover:underline"
-                    >
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
                       {service.name}
                     </Link>
                   </li>
@@ -312,7 +249,6 @@ const EnhancedFooter: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Additional Links Section */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-700/50"
@@ -323,103 +259,52 @@ const EnhancedFooter: React.FC = () => {
           {/* Company Links */}
           <div>
             <h4 className="font-semibold text-white mb-4">Company</h4>
-=======
-        {/* Additional Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800">
-          {/* Company Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-lg font-semibold mb-4 text-white">Company</h4>
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-=======
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm hover:underline"
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
           </div>
 
           {/* Resources */}
           <div>
             <h4 className="font-semibold text-white mb-4">Resources</h4>
-=======
-          </motion.div>
-
-          {/* Resources */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-lg font-semibold mb-4 text-white">Resources</h4>
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
             <ul className="space-y-2">
               {resourceLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-=======
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm hover:underline"
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
           </div>
 
           {/* Legal */}
           <div>
             <h4 className="font-semibold text-white mb-4">Legal</h4>
-=======
-          </motion.div>
-
-          {/* Legal */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-lg font-semibold mb-4 text-white">Legal</h4>
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
             <ul className="space-y-2">
               {legalLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-=======
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm hover:underline"
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
           </div>
         </motion.div>
 
@@ -434,39 +319,17 @@ const EnhancedFooter: React.FC = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-4">
               <span className="text-gray-400 text-sm">Follow us:</span>
-=======
-          </motion.div>
-        </div>
-
-        {/* Social Links & Newsletter */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex space-x-4"
-            >
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-<<<<<<< HEAD
                   className="p-2 bg-gray-800/50 hover:bg-cyan-500/20 rounded-lg text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-=======
-                  className="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
-                  aria-label={social.name}
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
                 >
                   {social.icon}
                 </a>
               ))}
-<<<<<<< HEAD
             </div>
 
             {/* Newsletter Signup */}
@@ -526,76 +389,8 @@ const EnhancedFooter: React.FC = () => {
           <span>Get Started</span>
         </Link>
       </motion.div>
-=======
-            </motion.div>
-
-            {/* Newsletter Signup */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex-1 max-w-md lg:ml-8"
-            >
-              <h4 className="text-lg font-semibold mb-3 text-white">Stay Updated</h4>
-              <p className="text-gray-300 text-sm mb-4">
-                Get the latest insights on AI, quantum computing, and emerging technologies.
-              </p>
-              <div className="flex space-x-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Subscribe
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="bg-black/50 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-gray-400 text-sm"
-            >
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-6 text-sm text-gray-400"
-            >
-              <span className="flex items-center space-x-2">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span>ISO 27001 Certified</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-yellow-400" />
-                <span>99.9% Uptime</span>
-              </span>
-            </motion.div>
-          </div>
-        </div>
-      </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc
     </footer>
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedFooter;
-=======
-export default EnhancedFooter;
->>>>>>> origin/cursor/website-audit-and-enhancement-d2bc

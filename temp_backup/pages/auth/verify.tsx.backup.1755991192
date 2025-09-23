@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 export default function Verify() {
@@ -8,8 +7,3 @@ export default function Verify() {
     </EnhancedLayout>
   );
 }
-=======
-export default function Verify() {
-  return <div>Verify Account</div>;
-}
->>>>>>> origin/cursor/build-it-service-provider-directory-page-d0d3

@@ -1,24 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon, ChevronRight, Play, ExternalLink } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
-import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
-import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
-import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
-import Revolutionary2027ServicesShowcase from '../components/sections/Revolutionary2027ServicesShowcase';
-import Revolutionary2027Hero from '../components/sections/Revolutionary2027Hero';
-import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
-import UltraFuturisticHero2027 from '../components/sections/UltraFuturisticHero2027';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4e2c
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
@@ -70,7 +54,6 @@ import { emergingTech2027Services } from '../data/emerging-tech-2027-services';
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
-<<<<<<< HEAD
 import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
 import { cuttingEdgeInnovations2029 } from '../data/2029-cutting-edge-innovations';
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
@@ -208,10 +191,6 @@ const serviceCategories = [
   };
 }
 
-=======
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4e2c
 
 export default function HomePage() {
   const contactInfo = {
@@ -275,7 +254,6 @@ export default function HomePage() {
     ...revolutionary2027AIServices,
     ...revolutionary2027ITServices,
     ...revolutionary2027MicroSaasServices,
-<<<<<<< HEAD
     ...cuttingEdge2028MicroSaas,
     ...cuttingEdgeInnovations2029,
     ...practicalBusinessSolutions2028,
@@ -307,10 +285,6 @@ export default function HomePage() {
     // Add our new 2024 innovative IT services
     ...innovativeITServices2024
 
-=======
-    ...futuristic2028Services,
-    ...emergingTech2028Services
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4e2c
   ];
 
   const stats = [
@@ -478,7 +452,6 @@ export default function Home() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
@@ -487,11 +460,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]" />
         </div>
-=======
-      <UltraQuantumHolographicBackground>
-        {/* Ultra Advanced Navigation */}
-        <UltraFuturisticNavigation2028 />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4e2c
 
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">

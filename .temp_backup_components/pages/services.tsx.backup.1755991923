@@ -123,12 +123,8 @@ export default function ServicesPage() {
       color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
       textColor: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500',
-<<<<<<< HEAD
       link: '/ai-content-generator',
       cta: 'Try AI Content Generator'
-=======
-      href: '/automation'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-5442
     },
     {
       icon: '☁️',
@@ -144,60 +140,8 @@ export default function ServicesPage() {
       color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
       textColor: 'text-cyan-400',
       gradient: 'from-cyan-400 to-blue-500',
-<<<<<<< HEAD
       link: '/cloud-monitoring',
       cta: 'Explore Cloud Monitoring'
-=======
-      href: '/cloud-platform'
-    },
-    {
-      icon: '📝',
-      title: 'AI Content Generator',
-      description: 'Generate high-quality, SEO-optimized content in seconds with advanced AI writing assistance.',
-      features: [
-        'Real-time Content Creation',
-        '50+ Language Support',
-        'SEO Optimization',
-        'Plagiarism-Free Writing',
-        'Content Templates'
-      ],
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      textColor: 'text-purple-400',
-      gradient: 'from-purple-400 to-indigo-500',
-      href: '/ai-content-generator'
-    },
-    {
-      icon: '👁️',
-      title: 'Cloud Monitoring & Analytics',
-      description: 'Real-time infrastructure monitoring with AI-powered insights and intelligent alerting.',
-      features: [
-        'Real-time Monitoring',
-        'AI-Powered Alerting',
-        'Multi-Cloud Support',
-        'Performance Analytics',
-        'Security Monitoring'
-      ],
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
-      href: '/cloud-monitoring'
-    },
-    {
-      icon: '🔍',
-      title: 'AI-Powered SEO Suite',
-      description: 'Comprehensive SEO tools with AI-powered optimization, keyword research, and analytics.',
-      features: [
-        'AI Keyword Research',
-        'Content Optimization',
-        'Technical SEO Audits',
-        'Ranking Analytics',
-        'Local SEO Tools'
-      ],
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      textColor: 'text-blue-400',
-      gradient: 'from-blue-400 to-cyan-500',
-      href: '/ai-seo-suite'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-5442
     },
     {
       id: 'qr-generator',
@@ -307,7 +251,6 @@ export default function ServicesPage() {
         'Multiple time windows',
         'Developer-friendly API'
       ],
-<<<<<<< HEAD
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500',
@@ -378,13 +321,6 @@ export default function ServicesPage() {
       gradient: 'from-teal-400 to-cyan-500',
       href: '/json-formatter'
     },
-=======
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      textColor: 'text-red-400',
-      gradient: 'from-red-400 to-pink-500',
-      href: '/security'
-    }
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-5442
   ];
 
   const technologies = [
@@ -578,7 +514,6 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                     {service.link && service.cta && (
                       <Button
                         href={service.link}
@@ -588,13 +523,6 @@ export default function ServicesPage() {
                       >
                         {service.cta}
                       </Button>
-=======
-                    {service.href && (
-                      <div className="mt-6 flex items-center text-cursor-blue group-hover:text-white transition-colors duration-300">
-                        <span className="text-sm font-medium">Learn More</span>
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-5442
                     )}
                   </div>
                 </div>

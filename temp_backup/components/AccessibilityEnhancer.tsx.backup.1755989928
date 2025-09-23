@@ -31,7 +31,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   autoOptimize = true 
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   const [activeFeatures, setActiveFeatures] = useState<AccessibilityFeature[]>([]);
   const [report, setReport] = useState<AccessibilityReport | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -45,22 +44,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   
   const focusableElementsRef = useRef<HTMLElement[]>([]);
   const liveRegionRef = useRef<HTMLDivElement>(null);
-=======
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    highlighter: false,
-    fontSize: 16,
-    colorScheme: 'auto',
-    focusIndicator: true,
-    screenReader: false
-  });
-
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([]);
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
   // Initialize accessibility features
   const initializeFeatures = useCallback(() => {
@@ -131,7 +114,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
     ];
     
-<<<<<<< HEAD
     setActiveFeatures(features);
   }, []);
 
@@ -302,72 +284,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         if (main) {
           (main as HTMLElement).focus();
           announceChange('Skipped to main content');
-=======
-    // High contrast
-    if (settings.highContrast) {
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--bg-secondary', '#1a1a1a');
-      root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--text-secondary', '#e5e5e5');
-      root.style.setProperty('--accent-color', '#ffff00');
-      root.style.setProperty('--border-color', '#ffff00');
-    } else {
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--bg-secondary');
-      root.style.removeProperty('--text-primary');
-      root.style.removeProperty('--text-secondary');
-      root.style.removeProperty('--accent-color');
-      root.style.removeProperty('--border-color');
-    }
-
-    // Large text
-    if (settings.largeText) {
-      root.style.fontSize = '18px';
-      root.style.setProperty('--text-scale', '1.2');
-    } else {
-      root.style.fontSize = '16px';
-      root.style.setProperty('--text-scale', '1');
-    }
-
-    // Reduced motion
-    if (settings.reducedMotion) {
-      root.style.setProperty('--reduced-motion', 'reduce');
-    } else {
-      root.style.removeProperty('--reduced-motion');
-    }
-
-    // Focus indicator
-    if (settings.focusIndicator) {
-      root.style.setProperty('--focus-outline', '3px solid #0066cc');
-    } else {
-      root.style.setProperty('--focus-outline', 'none');
-    }
-
-    // Color scheme
-    if (settings.colorScheme === 'light') {
-      root.classList.remove('dark');
-      root.classList.add('light');
-    } else if (settings.colorScheme === 'dark') {
-      root.classList.remove('light');
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('light', 'dark');
-    }
-  }, [settings]);
-
-  // Track focus changes
-  useEffect(() => {
-    const handleFocusChange = (event: Event) => {
-      const target = event.target as HTMLElement;
-      if (target && target !== currentFocus) {
-        setCurrentFocus(target);
-        setFocusHistory(prev => [target, ...prev.slice(0, 9)]);
-        
-        // Add focus indicator
-        if (settings.focusIndicator) {
-          target.style.outline = '3px solid #0066cc';
-          target.style.outlineOffset = '2px';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         }
       }
 

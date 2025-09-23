@@ -42,32 +42,10 @@ const queryClient = new QueryClient({
   },
 });
 
-<<<<<<< HEAD
 const rootElement = document.getElementById('root');
 
 function renderApp() {
   const app = (
-=======
-function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
-  const { t } = useTranslation();
-  React.useEffect(() => {
-    captureException(error);
-  }, [error]);
-  return (
-    <div role="alert" className="p-4 text-center">
-      <p className="mb-2">{t('error_boundary.message', 'Something went wrong.')}</p>
-      <button className="rounded bg-blue-600 px-4 py-2 text-white" onClick={resetErrorBoundary}>
-        {t('error_boundary.retry', 'Retry')}
-      </button>
-    </div>
-  );
-}
-
-try {
-  console.log("main.tsx: Before ReactDOM.createRoot");
-  // Render the app with proper provider structure
-  ReactDOM.createRoot(document.getElementById('root')!).render(
->>>>>>> origin/7yfp2f-codex/implement-global-error-boundary-with-toasts
     <React.StrictMode>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
@@ -79,27 +57,12 @@ try {
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-<<<<<<< HEAD
                       <ViewModeProvider>
                         <AppLayout>
                           <App />
                         </AppLayout>
                       </ViewModeProvider>
                       <LanguageDetectionPopup />
-=======
-                      <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
-                        <ViewModeProvider>
-                          <CartProvider>
-                            <ReferralMiddleware>
-                              <AppLayout>
-                                <App />
-                              </AppLayout>
-                            </ReferralMiddleware>
-                          </CartProvider>
-                        </ViewModeProvider>
-                        <LanguageDetectionPopup />
-                      </ErrorBoundary>
->>>>>>> origin/7yfp2f-codex/implement-global-error-boundary-with-toasts
                     </LanguageProvider>
                   </AnalyticsProvider>
                 </NotificationProvider>

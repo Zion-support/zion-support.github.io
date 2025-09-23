@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2024",
     "useDefineForClassFields": true,
-=======
-    "target": "es5",
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     "lib": [
       "ES2024",
       "DOM",
@@ -15,7 +11,6 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
@@ -28,18 +23,12 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-=======
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "plugins": [
@@ -72,16 +61,4 @@
   },
   "include": ["src", "src/types/offline-shims.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
-=======
-    "incremental": true
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 }

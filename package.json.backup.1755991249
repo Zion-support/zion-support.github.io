@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -726,15 +725,6 @@
     "auto:intel": "node automation/auto-market-intel.cjs",
     "auto:talent": "node automation/auto-talent-highlights.cjs",
     "auto:all": "npm run auto:intel && npm run auto:talent"
-=======
-  "name": "zion-ai-assistant",
-  "version": "1.0.0",
-  "description": "AI-powered chat assistant widget for the Zion AI Marketplace",
-  "type": "module",
-  "scripts": {
-    "dev": "node --env-file=.env server.mjs",
-    "start": "NODE_ENV=production node --env-file=.env server.mjs"
->>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-7fc3
   },
 =======
           "postautomation": "npm run automation:git-sync",
@@ -749,7 +739,6 @@
       "nextgen:scheduler": "node automation/nextgen-scheduler.cjs"
     },
   "dependencies": {
-<<<<<<< HEAD
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -830,13 +819,5 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-=======
-    "compression": "^1.7.4",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "openai": "^4.56.0",
-    "rate-limiter-flexible": "^5.0.4"
->>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-7fc3
   }
 }

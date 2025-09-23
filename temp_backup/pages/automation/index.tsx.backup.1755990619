@@ -183,7 +183,6 @@ export default function AutomationHub() {
             <a className="text-cyan-300 underline" href="/.netlify/functions/structured-data-auditor" target="_blank" rel="noopener">Trigger / View</a>
           </li>
 
-<<<<<<< HEAD
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Robots Auditor</h2>
             <p className="text-white/70">Validates robots.txt presence and sitemap linkage.</p>
@@ -317,12 +316,6 @@ export default function AutomationHub() {
             <h2 className="text-xl font-bold">Innovation Lab Curator</h2>
             <p className="text-white/70">Synthesizes new ideas from repo signals and publishes highlights.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/innovation-lab-curator" target="_blank" rel="noopener">Trigger / View</a>
-=======
-                     <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Dependency Auto‑Upgrade</h2>
-            <p className="text-white/70">Safely bumps minor/patch deps with build verification.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/deps-auto-upgrade-runner" target="_blank" rel="noopener">Trigger / View</a>
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-2bf4
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">

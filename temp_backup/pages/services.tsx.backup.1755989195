@@ -156,7 +156,6 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-<<<<<<< HEAD
   // Our new 2025 advanced services
   ...ultimate2025MicroSaasExpansion,
   ...ultimate2025ITServicesExpansion,
@@ -210,33 +209,6 @@ const allServices = [
   
   // Our new 2025 innovative business solutions expansion
   ...innovativeBusinessSolutionsExpansion2025
-=======
-  ...innovative2026MicroSaasExpansions,
-  ...innovative2026ITServicesExpansions,
-  ...innovative2026AIServicesExpansions,
-  ...innovative2038MicroSaasExpansions,
-  ...innovative2038ITServicesExpansions,
-  ...innovative2038AIServicesExpansions,
-  // Our new comprehensive services
-  ...innovative2038AdvancedServices,
-  // ...revolutionary2040FuturisticServices,
-  ...comprehensiveAdvertisingMarketingServices,
-  
-  // Our latest innovative services
-  ...innovative2040FuturisticServices,
-  ...advanced2041EnterpriseServices,
-  ...revolutionary2042MicroSaasServices,
-  
-  // Our new 2025 innovative services expansion
-  ...innovative2025MicroSaasExpansion,
-  ...innovative2025ITServicesExpansion,
-  ...innovative2025AIServicesExpansion,
-  
-  // Our latest 2025 comprehensive services
-  ...innovative2025MicroSaasExpansionV2,
-  ...innovative2025ITServicesExpansionV2,
-  ...innovative2025AIServicesExpansionV2
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-0357
 =======
   // New expanded services
   ...innovative2025MicroSaasExpanded,
@@ -315,93 +287,6 @@ const categories = [
     icon: <GraduationCap className="w-6 h-6" />,
     color: 'from-yellow-500 to-orange-500',
     description: 'Learning and research platforms'
-<<<<<<< HEAD
-=======
-  },
-  {
-    id: 'ai-emotional',
-    name: 'AI & Emotional Intelligence',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-pink-500 to-purple-600',
-    description: 'AI-powered emotional intelligence and consciousness'
-  },
-  {
-    id: 'quantum-security',
-    name: 'Quantum Security',
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-indigo-600 to-purple-700',
-    description: 'Quantum-resistant security and communication'
-  },
-  {
-    id: 'autonomous-systems',
-    name: 'Autonomous Systems',
-    icon: <Cpu className="w-6 h-6" />,
-    color: 'from-green-600 to-teal-700',
-    description: 'AI-powered autonomous decision-making systems'
-  },
-  {
-    id: 'metaverse-business',
-    name: 'Metaverse Business',
-    icon: <Globe className="w-6 h-6" />,
-    color: 'from-blue-500 to-cyan-600',
-    description: 'Business infrastructure for the metaverse'
-  },
-  {
-    id: 'neural-quantum',
-    name: 'Neural & Quantum',
-    icon: <Atom className="w-6 h-6" />,
-    color: 'from-purple-600 to-pink-700',
-    description: 'Neural networks and quantum computing fusion'
-  },
-  {
-    id: 'advertising-marketing',
-    name: 'Advertising & Marketing',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
-    description: 'AI-powered advertising and marketing solutions'
-  },
-  {
-    id: 'consciousness-ai',
-    name: 'Consciousness & AI',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-violet-500 to-purple-600',
-    description: 'AI consciousness and human augmentation'
-  },
-  {
-    id: 'quantum-reality',
-    name: 'Quantum Reality',
-    icon: <Atom className="w-6 h-6" />,
-    color: 'from-cyan-500 to-blue-600',
-    description: 'Quantum reality manipulation and simulation'
-  },
-  {
-    id: 'space-technology',
-    name: 'Space & Technology',
-    icon: <Rocket className="w-6 h-6" />,
-    color: 'from-indigo-600 to-purple-700',
-    description: 'Space exploration and advanced technology solutions'
-  },
-  {
-    id: 'climate-sustainability',
-    name: 'Climate & Sustainability',
-    icon: <Globe className="w-6 h-6" />,
-    color: 'from-teal-600 to-green-700',
-    description: 'Climate change mitigation and environmental optimization'
-  },
-  {
-    id: 'digital-twin-iot',
-    name: 'Digital Twin & IoT',
-    icon: <Cpu className="w-6 h-6" />,
-    color: 'from-violet-600 to-purple-700',
-    description: 'Digital twin technology and IoT integration'
-  },
-  {
-    id: 'biotech-ai',
-    name: 'Biotech & AI',
-    icon: <Heart className="w-6 h-6" />,
-    color: 'from-emerald-600 to-green-700',
-    description: 'AI-powered biotechnology and research acceleration'
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-0357
   }
 ];
 

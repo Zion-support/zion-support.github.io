@@ -1,9 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
-=======
-  darkMode: "class",
->>>>>>> origin/by9dba-codex/implement-light/dark-theme-with-persistence
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -11,31 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         // Modern color palette
-=======
-        'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-        'fade-in-down': 'fadeInDown 0.6s ease-out forwards',
-        'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
-        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
-        'scale-in': 'scaleIn 0.6s ease-out forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'bounce-slow': 'bounce 2s infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'shimmer': 'shimmer 2.5s linear infinite',
-        'matrix': 'matrix 20s linear infinite',
-        'neon-pulse': 'neonPulse 1.5s ease-in-out infinite',
-        'cyber-float': 'cyberFloat 8s ease-in-out infinite',
-        'hologram': 'hologram 3s ease-in-out infinite',
-        'energy-wave': 'energyWave 4s ease-in-out infinite',
-        'quantum-spin': 'quantumSpin 6s linear infinite',
-        'neural-network': 'neuralNetwork 10s linear infinite',
-        'plasma-flow': 'plasmaFlow 5s ease-in-out infinite',
-        'cyber-grid': 'cyberGrid 15s linear infinite',
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -234,77 +206,8 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
-<<<<<<< HEAD
         'glow': 'glow 2s ease-in-out infinite alternate',
         'spin-slow': 'spin 8s linear infinite',
-=======
-        'shimmer': 'shimmer 2s linear infinite',
-        'neon-pulse': 'neonPulse 1.5s ease-in-out infinite alternate',
-        'matrix-rain': 'matrixRain 20s linear infinite',
-        'quantum-shift': 'quantumShift 4s ease-in-out infinite',
-        'space-drift': 'spaceDrift 8s ease-in-out infinite',
-        'ai-breathe': 'aiBreathe 3s ease-in-out infinite',
-        'hologram-flicker': 'hologramFlicker 0.5s ease-in-out infinite alternate',
-        'cyber-glitch': 'cyberGlitch 0.3s ease-in-out infinite alternate',
-        'neural-pulse': 'neuralPulse 2s ease-in-out infinite',
-        'quantum-entangle': 'quantumEntangle 5s ease-in-out infinite',
-        'space-time-warp': 'spaceTimeWarp 10s ease-in-out infinite',
-        'ai-consciousness': 'aiConsciousness 6s ease-in-out infinite',
-        'biotech-evolution': 'biotechEvolution 7s ease-in-out infinite',
-        'metaverse-float': 'metaverseFloat 4s ease-in-out infinite',
-        'quantum-compute': 'quantumCompute 8s ease-in-out infinite',
-        'space-mining': 'spaceMining 12s ease-in-out infinite',
-        'ai-emotion': 'aiEmotion 3.5s ease-in-out infinite',
-        'quantum-security': 'quantumSecurity 5.5s ease-in-out infinite',
-        'biotech-dna': 'biotechDNA 6.5s ease-in-out infinite',
-        'space-colonization': 'spaceColonization 15s ease-in-out infinite',
-        'ai-creativity': 'aiCreativity 4.5s ease-in-out infinite',
-        'quantum-learning': 'quantumLearning 7.5s ease-in-out infinite',
-        'space-exploration': 'spaceExploration 20s ease-in-out infinite',
-        'ai-autonomy': 'aiAutonomy 5.5s ease-in-out infinite',
-        'quantum-finance': 'quantumFinance 6.5s ease-in-out infinite',
-        'biotech-health': 'biotechHealth 4.5s ease-in-out infinite',
-        'space-technology': 'spaceTechnology 18s ease-in-out infinite',
-        'ai-innovation': 'aiInnovation 3.5s ease-in-out infinite',
-        'quantum-space': 'quantumSpace 25s ease-in-out infinite',
-        'biotech-research': 'biotechResearch 8.5s ease-in-out infinite',
-        'space-mining-automation': 'spaceMiningAutomation 30s ease-in-out infinite',
-        'ai-consciousness-evolution': 'aiConsciousnessEvolution 10s ease-in-out infinite',
-        'quantum-internet-security': 'quantumInternetSecurity 7.5s ease-in-out infinite',
-        'biotech-dna-computing': 'biotechDNAComputing 12.5s ease-in-out infinite',
-        'quantum-financial-trading': 'quantumFinancialTrading 9.5s ease-in-out infinite',
-        'space-mining-platform': 'spaceMiningPlatform 35s ease-in-out infinite',
-        'metaverse-digital-reality': 'metaverseDigitalReality 6.5s ease-in-out infinite',
-        'autonomous-devops': 'autonomousDevOps 8.5s ease-in-out infinite',
-        'quantum-cloud-infrastructure': 'quantumCloudInfrastructure 15.5s ease-in-out infinite',
-        'ai-powered-enterprise-security': 'aiPoweredEnterpriseSecurity 6.5s ease-in-out infinite',
-        'autonomous-it-operations': 'autonomousITOperations 9.5s ease-in-out infinite',
-        'zero-trust-architecture': 'zeroTrustArchitecture 7.5s ease-in-out infinite',
-        'ai-emotion-marketing': 'aiEmotionMarketing 4.5s ease-in-out infinite',
-        'biotech-personalized-nutrition': 'biotechPersonalizedNutrition 5.5s ease-in-out infinite',
-        'quantum-learning-accelerator': 'quantumLearningAccelerator 8.5s ease-in-out infinite',
-        'intelligent-data-governance': 'intelligentDataGovernance 6.5s ease-in-out infinite',
-        'ai-meeting-transcriber': 'aiMeetingTranscriber 4.5s ease-in-out infinite'
-=======
-        'scale-out': 'scaleOut 0.3s ease-out',
-        'bounce-in': 'bounceIn 0.6s ease-out',
-        'bounce-out': 'bounceOut 0.6s ease-out',
-        'rotate-in': 'rotateIn 0.6s ease-out',
-        'rotate-out': 'rotateOut 0.6s ease-out',
-        'flip-in-x': 'flipInX 0.6s ease-out',
-        'flip-in-y': 'flipInY 0.6s ease-out',
-        'zoom-in': 'zoomIn 0.3s ease-out',
-        'zoom-out': 'zoomOut 0.3s ease-out',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'spin-slow': 'spin 3s linear infinite',
-        'bounce-slow': 'bounce 2s infinite',
-        'grid-flow': 'gridFlow 20s linear infinite',
-        'particle': 'particle 7s linear infinite',
-        'scan-line': 'scanLine 3s ease-in-out infinite',
-        'gradient-x': 'gradientX 3s ease-in-out infinite',
-        'bounce-x': 'bounceX 2s ease-in-out infinite',
-        'count-up': 'countUp 2s ease-out forwards',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       },
       keyframes: {
         fadeIn: {
@@ -332,7 +235,6 @@ module.exports = {
           '100%': { transform: 'translateX(0)' },
         },
         scaleIn: {
-<<<<<<< HEAD
           '0%': { transform: 'scale(0.8)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' }
         },
@@ -408,87 +310,6 @@ module.exports = {
         metaverseFloat: {
           '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
           '50%': { transform: 'translateY(-15px) rotate(180deg)' }
-=======
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
-        },
-        scaleOut: {
-          '0%': { transform: 'scale(1)' },
-          '100%': { transform: 'scale(0)' },
-        },
-        bounceIn: {
-          '0%': { transform: 'scale(0.3)', opacity: '0' },
-          '50%': { transform: 'scale(1.05)' },
-          '70%': { transform: 'scale(0.9)' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
-        },
-        bounceOut: {
-          '0%': { transform: 'scale(1)', opacity: '1' },
-          '20%': { transform: 'scale(0.9)' },
-          '50%': { transform: 'scale(1.05)' },
-          '100%': { transform: 'scale(0.3)', opacity: '0' },
-        },
-        rotateIn: {
-          '0%': { transform: 'rotate(-200deg)', opacity: '0' },
-          '100%': { transform: 'rotate(0)', opacity: '1' },
-        },
-        rotateOut: {
-          '0%': { transform: 'rotate(0)', opacity: '1' },
-          '100%': { transform: 'rotate(200deg)', opacity: '0' },
-        },
-        flipInX: {
-          '0%': { transform: 'perspective(400px) rotateX(90deg)', opacity: '0' },
-          '40%': { transform: 'perspective(400px) rotateX(-20deg)' },
-          '60%': { transform: 'perspective(400px) rotateX(10deg)' },
-          '80%': { transform: 'perspective(400px) rotateX(-5deg)' },
-          '100%': { transform: 'perspective(400px) rotateX(0deg)', opacity: '1' },
-        },
-        flipInY: {
-          '0%': { transform: 'perspective(400px) rotateY(90deg)', opacity: '0' },
-          '40%': { transform: 'perspective(400px) rotateY(-20deg)' },
-          '60%': { transform: 'perspective(400px) rotateY(10deg)' },
-          '80%': { transform: 'perspective(400px) rotateY(-5deg)' },
-          '100%': { transform: 'perspective(400px) rotateY(0deg)', opacity: '1' },
-        },
-        zoomIn: {
-          '0%': { transform: 'scale(0.3)', opacity: '0' },
-          '50%': { opacity: '1' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
-        },
-        zoomOut: {
-          '0%': { transform: 'scale(1)', opacity: '1' },
-          '50%': { opacity: '0' },
-          '100%': { transform: 'scale(0.3)', opacity: '0' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        gridFlow: {
-          '0%': { transform: 'translateX(0) translateY(0)' },
-          '100%': { transform: 'translateX(60px) translateY(60px)' },
-        },
-        particle: {
-          '0%': { transform: 'translateY(0) scale(1)', opacity: '1' },
-          '50%': { transform: 'translateY(-100px) scale(1.5)', opacity: '0.7' },
-          '100%': { transform: 'translateY(-200px) scale(0.5)', opacity: '0' },
-        },
-        scanLine: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
-        },
-        gradientX: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-        bounceX: {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(25%)' },
-        },
-        countUp: {
-          '0%': { transform: 'scale(0.8)', opacity: '0' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
         },
         quantumCompute: {
           '0%': { transform: 'rotate(0deg) scale(1)' },

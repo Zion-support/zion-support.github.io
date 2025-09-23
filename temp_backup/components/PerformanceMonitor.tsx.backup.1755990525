@@ -44,7 +44,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI = false 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-<<<<<<< HEAD
     lcp: 0,
     fid: 0,
     cls: 0,
@@ -52,14 +51,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     fcp: 0,
     fmp: 0,
     tti: 0
-=======
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -75,7 +66,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
 
-<<<<<<< HEAD
   const getOverallScore = () => {
     const validScores = Object.values(scores).filter(score => score.score > 0);
     if (validScores.length === 0) return { score: 0, grade: 'F', color: 'text-gray-500' };
@@ -159,16 +149,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const resourceEntry = entry as PerformanceResourceTiming;
           if (resourceEntry.initiatorType === 'img' && resourceEntry.duration > 1000) {
             setAlerts(prev => [...prev, `Slow image load: ${resourceEntry.name}`]);
-=======
-    // Measure First Contentful Paint
-    const measureFCP = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcpEntry) {
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
           }
         });
         observer.observe({ entryTypes: ['paint'] });
@@ -398,15 +378,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               )}
             </ul>
           </div>
-<<<<<<< HEAD
         </motion.div>
       )}
     </AnimatePresence>
-=======
-        )}
-      </div>
-    </div>
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   );
 };
 

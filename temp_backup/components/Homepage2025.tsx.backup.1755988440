@@ -2,14 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-import { 
-  ArrowRight, Star, 
-  Brain, Atom, Shield, Zap, TrendingUp, Globe,
-  CheckCircle, Users, Award, Rocket
-} from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-a21b
 
 const Homepage2025: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -260,18 +252,6 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-=======
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our comprehensive range of cutting-edge technology solutions designed to transform your business and accelerate growth
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-a21b
               <UltraFuturisticServiceCard2026
                 service={{
                   id: 'ai-ml',
@@ -673,7 +653,6 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               About Zion Tech Group
             </motion.h2>
             <motion.p 
@@ -712,25 +691,6 @@ const Homepage2025: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Partnership</h3>
                 <p className="text-gray-400">Building long-term relationships with our clients</p>
-=======
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the future of technology with Zion Tech Group. Let's build something extraordinary together and unlock your business potential.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact">
-                  <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25">
-                    Start Your Journey
-                  </button>
-                </Link>
-                <Link href="/demo">
-                  <button className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Schedule Free Demo
-                  </button>
-                </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-a21b
               </div>
             </motion.div>
           </motion.div>

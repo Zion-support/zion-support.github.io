@@ -1,18 +1,13 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   ArrowRight, Star, Sparkles, Clock, Users, TrendingUp, 
   Brain, Atom, Shield, Rocket, Target, Zap, Globe, Cpu
 } from 'lucide-react';
-=======
-import { ArrowRight, Brain } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b1f5
 
 interface ServiceCardProps {
   service: {
     id: string;
-<<<<<<< HEAD
     name?: string;
     title?: string;
     tagline?: string;
@@ -119,35 +114,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       }}
       whileTap={{ scale: 0.98 }}
       onClick={handleClick}
-=======
-    name: string;
-    description: string;
-    type: string;
-    pricing: {
-      starter: string;
-    };
-    slug: string;
-  };
-  index: number;
-  isCurrent: boolean;
-  onClick: (service: { slug: string }) => void;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {
-  return (
-    <motion.div
-      className={`relative group cursor-pointer ${
-        isCurrent ? 'scale-105' : 'scale-100'
-      } transition-transform duration-500`}
-      onClick={() => onClick(service)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b1f5
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
-<<<<<<< HEAD
           e.preventDefault();
           handleClick();
         }
@@ -159,44 +129,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
         <div className={`absolute inset-0 bg-gradient-to-br ${categoryColor} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700 delay-100" />
-=======
-          onClick(service);
-        }
-      }}
-      aria-label={`Learn more about ${service.name}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
-      <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        <div className="relative z-10">
-          <div className="flex items-center justify-between mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)]">
-              <Brain className="w-8 h-8 text-white" />
-            </div>
-            <span className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
-              {service.type}
-            </span>
-          </div>
-          
-          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-            {service.name}
-          </h3>
-          
-          <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            {service.description.substring(0, 120)}...
-          </p>
-          
-          <div className="flex items-center justify-between">
-            <span className="text-2xl font-bold text-cyan-400">
-              {service.pricing.starter}
-            </span>
-            <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
-          </div>
-        </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b1f5
       </div>
 
       {/* Card Content */}

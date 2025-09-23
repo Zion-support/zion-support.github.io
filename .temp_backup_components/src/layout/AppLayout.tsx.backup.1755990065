@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react";
 import { Outlet } from "react-router-dom";
@@ -71,14 +70,5 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       </div>
       <Toaster position="top-right" />
     </ErrorBoundary>
-=======
-import React from 'react';
-export function AppLayout() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
   );
 }

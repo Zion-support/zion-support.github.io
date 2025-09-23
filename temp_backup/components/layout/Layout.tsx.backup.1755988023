@@ -3,14 +3,9 @@ import Head from 'next/head';
 import UltraFuturisticNavigation2047 from './UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2048 from './UltraFuturisticFooter2048';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
-<<<<<<< HEAD
 import UltraFuturisticBackground2037 from '../backgrounds/UltraFuturisticBackground2037';
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2047 from '../backgrounds/UltraFuturisticBackground2047';
-=======
-import TopContactBar from './TopContactBar';
-import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5d49
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';

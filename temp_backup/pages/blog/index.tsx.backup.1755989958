@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import BlogPage from '../../src/pages/Blog';
 import type { BlogProps } from '../../src/pages/Blog';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import type { GetServerSideProps } from 'next';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
 export default function BlogIndexPage() {
   const blogPosts = [
@@ -74,54 +69,12 @@ export default function BlogIndexPage() {
 
   const categories = ['All', 'AI & Automation', 'Cloud Computing', 'Innovation', 'Performance', 'Security', 'Data Engineering'];
 
-<<<<<<< HEAD
     return { props: { posts: BLOG_POSTS } };
   } catch (error) {
     // Sentry.captureException(error); // This line was removed as per the edit hint.
     throw error; // Re-throw the error so Next.js can handle it
   }
 };
-=======
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <Head>
-        <title>Blog | Zion Tech Group - AI & Cloud Automation Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI automation, cloud computing, and autonomous systems. Expert analysis and industry trends from Zion Tech Group." />
-        <meta name="keywords" content="AI automation blog, cloud computing insights, autonomous systems, technology trends, Zion Tech Group blog" />
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
-        
-        <meta property="og:title" content="Blog | Zion Tech Group - AI & Cloud Automation Insights" />
-        <meta property="og:description" content="Latest insights on AI automation, cloud computing, and autonomous systems." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/blog" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Blog | Zion Tech Group" />
-        <meta name="twitter:description" content="AI & Cloud Automation Insights" />
-        
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Blog",
-          "headline": "Zion Tech Group Blog",
-          "description": "AI & Cloud Automation Insights",
-          "url": "https://ziontechgroup.com/blog",
-          "publisher": { "@type": "Organization", "name": "Zion Tech Group" }
-        })}</script>
-      </Head>
-      
-      <main className="container mx-auto px-6 py-12 max-w-6xl">
-        <Link href="/news" className="internal-link link-instance-3">[CONTENT] Content Link</Link>
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent mb-6">
-            Blog
-          </h1>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto">
-            Stay ahead of the curve with expert insights on AI automation, cloud computing, 
-            autonomous systems, and the future of technology.
-          </p>
-        </section>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
         {/* Featured Post */}
         <section className="mb-16">

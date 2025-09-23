@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 // Auto-generated basic file for tailwind.config.js
 // Please configure this file according to your needs
-=======
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: "class",
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',

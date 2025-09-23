@@ -55,7 +55,6 @@ const ServicesIndex: NextPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Head>
-<<<<<<< HEAD:pages/services/index.tsx
         <title>Our Services - Zion Tech Group | Comprehensive Technology Solutions</title>
         <meta name="description" content="Explore our comprehensive range of micro SAAS services, IT solutions, and AI services. From AI development to cloud migration, we provide cutting-edge technology solutions for modern businesses." />
         <meta name="keywords" content="AI services, cloud solutions, web development, mobile apps, cybersecurity, data analytics, micro SAAS, IT services" />
@@ -119,26 +118,10 @@ const ServicesIndex: NextPage = () => {
             </a>
           </div>
         </div>
-=======
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
-      </Head>
-      
-      <main>
-        <h1>Index</h1>
-        <p>This page is under construction.</p>
->>>>>>> 84d173ee8a40495698da2560d91f786b60cbd3c9:temp_components/products/index.tsx.backup.1755991384
       </main>
     </div>
   );
 };
 
-<<<<<<< HEAD:pages/services/index.tsx
 export default ServicesIndex;
-=======
-<<<<<<< HEAD
-export default Index;
-=======
-export default Index;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
 >>>>>>> 84d173ee8a40495698da2560d91f786b60cbd3c9:temp_components/products/index.tsx.backup.1755991384

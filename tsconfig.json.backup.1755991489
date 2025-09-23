@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": ["ES2024", "DOM", "DOM.Iterable", "WebWorker", "WebWorker.Iterable"],
@@ -28,14 +27,9 @@
     "esModuleInterop": true,
     "module": "esnext",
     "esModuleInterop": true,
-=======
-    "target": "ES2020",
-    "module": "commonjs",
->>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-<<<<<<< HEAD
     "isolatedModules": true,
     /* Linting */
     "strict": true,
@@ -60,13 +54,4 @@
     "node_modules",
     "zion.app/recovered-content/**"
   ]
-=======
-    "strict": true,
-    "outDir": "dist",
-    "types": ["node", "hardhat"],
-    "skipLibCheck": true
-  },
-  "include": ["scripts", "hardhat.config.ts", "typechain-types"],
-  "exclude": ["node_modules"]
->>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
 }

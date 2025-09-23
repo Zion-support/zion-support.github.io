@@ -80,7 +80,6 @@ const UltraFuturisticFooter2044: React.FC = () => {
     }
   ], []);
 
-<<<<<<< HEAD
   const socialLinks = [
     { name: 'Facebook', icon: Facebook, href: 'https://facebook.com', color: 'from-blue-500 to-blue-600' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com', color: 'from-cyan-400 to-blue-500' },
@@ -89,58 +88,6 @@ const UltraFuturisticFooter2044: React.FC = () => {
     { name: 'YouTube', icon: Youtube, href: 'https://youtube.com', color: 'from-red-500 to-red-600' },
     { name: 'GitHub', icon: Github, href: 'https://github.com', color: 'from-gray-600 to-gray-700' }
   ];
-=======
-  const socialLinks = useMemo(() => [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-500 to-blue-600', ariaLabel: 'Follow us on Facebook' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-400 to-blue-500', ariaLabel: 'Follow us on Twitter' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-600 to-blue-700', ariaLabel: 'Follow us on LinkedIn' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-500 to-pink-500', ariaLabel: 'Follow us on Instagram' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-500 to-red-600', ariaLabel: 'Subscribe to our YouTube channel' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'from-gray-600 to-gray-700', ariaLabel: 'Check out our GitHub repositories' }
-  ], []);
-
-  const quickActions = useMemo(() => [
-    { name: 'Get Quote', href: '/quote', icon: Download, description: 'Request a custom quote' },
-    { name: 'Schedule Demo', href: '/demo', icon: Calendar, description: 'Book a personalized demo' },
-    { name: 'Join Team', href: '/careers', icon: Users, description: 'Explore career opportunities' },
-    { name: 'View Awards', href: '/awards', icon: Award, description: 'See our achievements' }
-  ], []);
-
-  const toggleSection = useCallback((sectionId: string) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(sectionId)) {
-        newSet.delete(sectionId);
-      } else {
-        newSet.add(sectionId);
-      }
-      return newSet;
-    });
-  }, []);
-
-  const scrollToTop = useCallback(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, []);
-
-  // Set client-side flag
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Show back to top button when scrolled
-  useEffect(() => {
-    if (!isClient) return;
-
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 400);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isClient]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a2aa
 
   return (
     <footer className="relative bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50" role="contentinfo">

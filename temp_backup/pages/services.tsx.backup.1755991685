@@ -3,16 +3,11 @@ import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, Filter as FilterIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { realMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/real-micro-saas-services';
-=======
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -36,17 +31,12 @@ export default function ServicesPage() {
     { value: 'category', label: 'Category' }
   ];
 
-<<<<<<< HEAD
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-=======
-  // Filter and sort services
-  let filteredServices = enhancedMicroSaasServices;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
 
   const filteredServices = useMemo(() => {
     let filtered = [...enhancedRealMicroSaasServices];
@@ -172,7 +162,6 @@ export default function ServicesPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-black text-white">
       <Head>
         <title>AI-Powered Micro SAAS Services - Zion Tech Group</title>
@@ -185,21 +174,6 @@ export default function ServicesPage() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
-=======
-    <UltraFuturisticBackground variant="neural" intensity="high">
-      <div className="min-h-screen">
-        <Head>
-          <title>Complete Services Portfolio | Zion Tech Group - AI, Cloud, Security & More</title>
-          <meta name="description" content="Explore our complete portfolio of 75+ micro SaaS services. AI solutions, cloud infrastructure, cybersecurity, data analytics, IoT, blockchain, and emerging technologies." />
-          <meta name="keywords" content="AI services, cloud solutions, cybersecurity, data analytics, IoT platform, blockchain, quantum computing, AR/VR, micro SaaS, business automation" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="Complete Services Portfolio | Zion Tech Group" />
-          <meta property="og:description" content="Comprehensive technology services portfolio with AI, cloud, security, and emerging technology solutions." />
-          <meta property="og:url" content="https://ziontechgroup.com/services" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/services" />
-        </Head>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -412,16 +386,6 @@ export default function ServicesPage() {
               </div>
             </div>
 
-<<<<<<< HEAD
-=======
-            {/* Results Count */}
-            <div className="text-center mb-8">
-              <p className="text-gray-300">
-                Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of {enhancedMicroSaasServices.length} services
-              </p>
-            </div>
-
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
             {/* Services Grid/List */}
             <div className={`grid gap-6 ${
               viewMode === 'grid' 
@@ -687,7 +651,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Services Grid */}
         <section className="py-16">
@@ -946,13 +909,5 @@ export default function ServicesPage() {
         </div>
       </footer>
     </UltraAdvancedFuturisticBackground>
-=======
-        </div>
-      </section>
-    </div>
-=======
-      </div>
-    </UltraFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
   );
 }

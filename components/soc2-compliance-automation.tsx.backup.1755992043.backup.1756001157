@@ -3,7 +3,6 @@ import SEO from '../components/SEO';
 import Link from 'next/link';
 
 export default function SOC2ComplianceAutomationPage() {
-<<<<<<< HEAD
 	const title = 'SOC 2 Compliance Automation — Zion Tech Group';
 	const description = 'Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance.';
 
@@ -14,17 +13,6 @@ export default function SOC2ComplianceAutomationPage() {
 				<div className="max-w-6xl mx-auto">
 					<h1 className="text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-pink-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">SOC 2 Compliance Automation</h1>
 					<p className="mt-4 text-gray-300 max-w-3xl">Automate SOC 2 readiness with continuous controls monitoring, evidence collection, asset inventory, vendor risk, and audit workspace. Reduce audit time and cost dramatically.</p>
-=======
-	return (
-		<>
-			<SEO title="SOC 2 Compliance Automation" description="Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance." />
-			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
-				<div className="container mx-auto px-4">
-					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">SOC 2 Compliance Automation</h1>
-					<p className="mt-6 text-lg text-gray-300 max-w-3xl">
-						Automate SOC 2 readiness with continuous controls, evidence pipelines, and prebuilt auditor workflows. Integrates with cloud providers and ticketing systems.
-					</p>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
 
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
@@ -71,10 +59,6 @@ export default function SOC2ComplianceAutomationPage() {
 					</div>
 				</div>
 			</section>
-<<<<<<< HEAD
 		</div>
-=======
-		</>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
 	);
 }

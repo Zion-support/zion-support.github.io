@@ -16,7 +16,6 @@ import {
   Menu, X, Search, Globe, TrendingUp, Lightbulb, Sparkles
 } from 'lucide-react';
 
-<<<<<<< HEAD
 // Enhanced types for better TypeScript support
 interface HeroSlide {
   title: string;
@@ -49,16 +48,6 @@ const LoadingFallback = React.memo(() => (
 ));
 
 LoadingFallback.displayName = 'LoadingFallback';
-=======
-// Import the new service data
-import { ultimate2025MicroSaasExpansion } from '../data/2025-ultimate-micro-saas-expansion';
-import { ultimate2025ITServicesExpansion } from '../data/2025-ultimate-it-services-expansion';
-import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-services-expansion';
-import { revolutionary2041AdvancedServices } from '../data/revolutionary-2041-advanced-services';
-
-// Lazy load heavy components for better performance
-const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
->>>>>>> 0f8f34f79a240b91d4992261cb0e4f4ff09ab0f5
 
 const Homepage2040: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,28 +71,11 @@ const Homepage2040: React.FC = () => {
     }
   }), []);
 
-<<<<<<< HEAD
   const backgroundVariants = useMemo(() => ({
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: "easeOut" }
   }), []);
-=======
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-  // Combine all revolutionary services
-  const allRevolutionaryServices = [...revolutionary2041AdvancedServices];
->>>>>>> 0f8f34f79a240b91d4992261cb0e4f4ff09ab0f5
 
   // Memoized color classes for better performance
   const getColorClasses = useCallback((index: number) => {

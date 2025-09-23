@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -11,6 +10,3 @@ const AuthCallbackPage: NextPage = () => (
 );
 
 export default AuthCallbackPage;
-=======
-export default function AuthCallback(){return <div className="p-6">Auth Callback</div>;}
->>>>>>> origin/cursor/build-digital-nation-creation-module-57e8

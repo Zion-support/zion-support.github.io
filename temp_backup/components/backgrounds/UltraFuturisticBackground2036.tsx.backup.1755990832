@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useCallback } from 'react';
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 import { motion } from 'framer-motion';
-=======
-import React, { useEffect, useRef } from 'react';
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 const UltraFuturisticBackground2036: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -50,7 +46,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-<<<<<<< HEAD
       switch (particle.type) {
         case 'quantum':
           // Quantum particles with geometric shapes
@@ -106,10 +101,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
           ctx.beginPath();
           ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
           ctx.fill();
-=======
-        this.opacity += (Math.random() - 0.5) * 0.02;
-        this.opacity = Math.max(0.1, Math.min(0.8, this.opacity));
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       }
 
       draw() {
@@ -123,7 +114,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
       }
     }
 
-<<<<<<< HEAD
     // Draw connecting lines between nearby particles
     ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
     ctx.lineWidth = 1;
@@ -142,40 +132,10 @@ const UltraFuturisticBackground2036: React.FC = () => {
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(p2.x, p2.y);
           ctx.stroke();
-=======
-    class Connection {
-      particle1: Particle;
-      particle2: Particle;
-      opacity: number;
-
-      constructor(p1: Particle, p2: Particle) {
-        this.particle1 = p1;
-        this.particle2 = p2;
-        this.opacity = Math.random() * 0.3 + 0.1;
-      }
-
-      draw() {
-        const distance = Math.sqrt(
-          Math.pow(this.particle1.x - this.particle2.x, 2) +
-          Math.pow(this.particle1.y - this.particle2.y, 2)
-        );
-
-        if (distance < 150) {
-          ctx!.save();
-          ctx!.globalAlpha = this.opacity * (1 - distance / 150);
-          ctx!.strokeStyle = 'rgba(0, 255, 255, 0.3)';
-          ctx!.lineWidth = 1;
-          ctx!.beginPath();
-          ctx!.moveTo(this.particle1.x, this.particle1.y);
-          ctx!.lineTo(this.particle2.x, this.particle2.y);
-          ctx!.stroke();
-          ctx!.restore();
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
         }
       }
     }
 
-<<<<<<< HEAD
     // Continue animation
     animationFrameRef.current = requestAnimationFrame(() => animate(canvas, ctx));
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
@@ -185,37 +145,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
   useEffect(() => {
     initParticles();
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-    // Initialize particles and connections
-    for (let i = 0; i < 100; i++) {
-      particles.push(new Particle());
-    }
-
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        if (Math.random() < 0.1) {
-          connections.push(new Connection(particles[i], particles[j]));
-        }
-      }
-    }
-
-    const animate = () => {
-      ctx!.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx!.fillRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-      });
-
-      connections.forEach(connection => {
-        connection.draw();
-      });
-
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     animate();
 
     const handleResize = () => {
@@ -232,13 +161,8 @@ const UltraFuturisticBackground2036: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0">
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-    <>
-      {/* Enhanced Canvas Background */}
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
@@ -346,7 +270,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
           ease: "linear"
         }}
       />
-<<<<<<< HEAD
       
       {/* Additional visual elements */}
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
@@ -377,56 +300,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
       {children}
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
     </div>
-=======
-
-      {/* Corner Accents */}
-      <div className="fixed top-0 left-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute top-0 left-0 w-16 h-1 bg-gradient-to-r from-cyan-400 to-transparent" />
-        <div className="absolute top-0 left-0 w-1 h-16 bg-gradient-to-b from-cyan-400 to-transparent" />
-      </div>
-      
-      <div className="fixed top-0 right-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute top-0 right-0 w-16 h-1 bg-gradient-to-l from-blue-400 to-transparent" />
-        <div className="absolute top-0 right-0 w-1 h-16 bg-gradient-to-b from-blue-400 to-transparent" />
-      </div>
-      
-      <div className="fixed bottom-0 left-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute bottom-0 left-0 w-16 h-1 bg-gradient-to-r from-purple-400 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-1 h-16 bg-gradient-to-t from-purple-400 to-transparent" />
-      </div>
-      
-      <div className="fixed bottom-0 right-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute bottom-0 right-0 w-16 h-1 bg-gradient-to-l from-pink-400 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-1 h-16 bg-gradient-to-t from-pink-400 to-transparent" />
-      </div>
-
-      {/* Floating Data Streams */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-cyan-400/30 font-mono text-xs"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
-            }}
-            animate={{
-              y: [0, -50],
-              opacity: [0, 1, 0]
-            }}
-            transition={{
-              duration: Math.random() * 4 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 3,
-              ease: "easeInOut"
-            }}
-          >
-            {Math.random().toString(16).substring(2, 8).toUpperCase()}
-          </motion.div>
-        ))}
-      </div>
-    </>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   );
 };
 

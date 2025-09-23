@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
-<<<<<<< HEAD
     <meta name="description" content="You're currently offline. Zion Tech Group provides revolutionary technology solutions for 2045 and beyond.">
     <meta name="theme-color" content="#06b6d4">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/icons/icon-192x192.png">
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
     
-=======
-    <meta name="description" content="You're currently offline. Some features may not be available.">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
     <style>
         * {
             margin: 0;
@@ -23,13 +19,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-<<<<<<< HEAD
             background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
             color: white;
-=======
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: #ffffff;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -42,33 +33,21 @@
             max-width: 600px;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
-<<<<<<< HEAD
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 48px 32px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-=======
-            border-radius: 24px;
-            padding: 48px 32px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
         }
         
         .offline-icon {
             width: 120px;
             height: 120px;
             margin: 0 auto 32px;
-<<<<<<< HEAD
             background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
-=======
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-<<<<<<< HEAD
             animation: pulse 2s infinite;
         }
         
@@ -76,15 +55,6 @@
             width: 60px;
             height: 60px;
             color: white;
-=======
-            font-size: 48px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
         }
         
         @keyframes pulse {
@@ -96,11 +66,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 16px;
-<<<<<<< HEAD
             background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
-=======
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -108,24 +74,15 @@
         
         .subtitle {
             font-size: 1.25rem;
-<<<<<<< HEAD
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 32px;
             line-height: 1.6;
         }
         
-=======
-            color: #a0a0a0;
-            margin-bottom: 32px;
-            line-height: 1.6;
-        }
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
         .status-indicator {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-<<<<<<< HEAD
             background: rgba(239, 68, 68, 0.2);
             border: 1px solid rgba(239, 68, 68, 0.3);
             color: #fca5a5;
@@ -208,66 +165,6 @@
         .btn {
             padding: 16px 32px;
             border: none;
-=======
-            padding: 12px 24px;
-            background: rgba(255, 107, 107, 0.1);
-            border: 1px solid rgba(255, 107, 107, 0.3);
-            border-radius: 50px;
-            margin-bottom: 32px;
-            font-size: 0.9rem;
-            color: #ff6b6b;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #ff6b6b;
-            border-radius: 50%;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
-        }
-
-        .features-list {
-            text-align: left;
-            margin: 32px 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .features-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .features-list li:last-child {
-            border-bottom: none;
-        }
-
-        .feature-icon {
-            width: 24px;
-            height: 24px;
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: white;
-        }
-
-        .retry-button {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            color: white;
-            border: none;
-            padding: 16px 32px;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
             border-radius: 12px;
             font-size: 1rem;
             font-weight: 600;
@@ -298,7 +195,6 @@
             justify-content: center;
             gap: 8px;
         }
-<<<<<<< HEAD
         
         .btn-primary {
             background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
@@ -346,75 +242,6 @@
             font-size: 0.875rem;
         }
         
-=======
-
-        .home-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .connection-info {
-            margin-top: 32px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .connection-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-            color: #4ecdc4;
-        }
-
-        .connection-info p {
-            color: #a0a0a0;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-
-        .tech-support {
-            margin-top: 24px;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(68, 160, 141, 0.1));
-            border-radius: 12px;
-            border: 1px solid rgba(78, 205, 196, 0.2);
-        }
-
-        .tech-support h3 {
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-            color: #4ecdc4;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #a0a0a0;
-            font-size: 0.9rem;
-        }
-
-        .contact-icon {
-            width: 16px;
-            height: 16px;
-            background: #4ecdc4;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8px;
-            color: white;
-        }
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
         @media (max-width: 768px) {
             .offline-container {
                 padding: 32px 24px;
@@ -424,7 +251,6 @@
             h1 {
                 font-size: 2rem;
             }
-<<<<<<< HEAD
             
             .subtitle {
                 font-size: 1.125rem;
@@ -436,18 +262,6 @@
             
             .actions {
                 flex-direction: column;
-=======
-
-            .subtitle {
-                font-size: 1.1rem;
-            }
-
-            .retry-button,
-            .home-button {
-                display: block;
-                width: 100%;
-                margin: 8px 0;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
             }
         }
     </style>
@@ -462,7 +276,6 @@
         
         <h1>You're Offline</h1>
         <p class="subtitle">
-<<<<<<< HEAD
             Don't worry! Zion Tech Group's revolutionary technology solutions are still available offline. 
             We've cached the most important content for you.
         </p>
@@ -525,68 +338,6 @@
         <div class="footer">
             <p>Zion Tech Group - Revolutionary Technology Solutions for 2045 and Beyond</p>
             <p>Your connection will be restored automatically when you're back online</p>
-=======
-            It looks like you've lost your internet connection. Don't worry - we've got you covered with offline capabilities.
-        </p>
-
-        <div class="status-indicator">
-            <div class="status-dot"></div>
-            <span>No Internet Connection</span>
-        </div>
-
-        <ul class="features-list">
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>Browse cached pages and content</span>
-            </li>
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>Access previously viewed services</span>
-            </li>
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>View company information and contact details</span>
-            </li>
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>Read cached blog posts and resources</span>
-            </li>
-        </ul>
-
-        <div>
-            <button class="retry-button" onclick="retryConnection()">
-                🔄 Retry Connection
-            </button>
-            <a href="/" class="home-button">
-                🏠 Go to Homepage
-            </a>
-        </div>
-
-        <div class="connection-info">
-            <h3>🔍 Troubleshooting Tips</h3>
-            <p>• Check your Wi-Fi or mobile data connection</p>
-            <p>• Try refreshing the page</p>
-            <p>• Check if other websites are working</p>
-            <p>• Restart your router if the problem persists</p>
-        </div>
-
-        <div class="tech-support">
-            <h3>🆘 Need Help?</h3>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <span>Email: support@ziontechgroup.com</span>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <span>Phone: +1 (555) 123-4567</span>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">💬</div>
-                    <span>Live Chat: Available when online</span>
-                </div>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
         </div>
     </div>
 
@@ -600,23 +351,14 @@
 
         // Retry connection
         function retryConnection() {
-<<<<<<< HEAD
             const retryBtn = document.querySelector('.retry-button');
             retryBtn.textContent = 'Checking...';
             retryBtn.disabled = true;
             
-=======
-            const button = event.target;
-            button.innerHTML = '🔄 Checking...';
-            button.disabled = true;
-
-            // Simulate connection check
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
             setTimeout(() => {
                 if (navigator.onLine) {
                     window.location.reload();
                 } else {
-<<<<<<< HEAD
                     retryBtn.textContent = 'Still Offline';
                     setTimeout(() => {
                         retryBtn.textContent = 'Retry Connection';
@@ -624,15 +366,6 @@
                     }, 2000);
                 }
             }, 1000);
-=======
-                    button.innerHTML = '🔴 Still Offline';
-                    setTimeout(() => {
-                        button.innerHTML = '🔄 Retry Connection';
-                        button.disabled = false;
-                    }, 2000);
-                }
-            }, 2000);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
         }
 
         // Listen for online/offline events
@@ -643,7 +376,6 @@
         window.addEventListener('offline', () => {
             // Already on offline page
         });
-<<<<<<< HEAD
 
         // Check connection every 5 seconds
         setInterval(checkConnection, 5000);
@@ -672,13 +404,6 @@
         setInterval(updateStatusIndicator, 1000);
 
         // Register service worker
-=======
-
-        // Periodic connection check
-        setInterval(checkConnection, 10000);
-
-        // Service Worker registration
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')
                 .then(registration => {

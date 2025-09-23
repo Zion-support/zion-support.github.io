@@ -296,7 +296,6 @@ export const innovative2025MicroSaasExpansion: InnovativeMicroSaasService2025[] 
     launchDate: '2025-01-25',
     customers: 2800,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 920
   },
   {
@@ -365,8 +364,5 @@ export const innovative2025MicroSaasExpansion: InnovativeMicroSaasService2025[] 
     rating: 4.9,
     reviews: 150
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
-    reviews: 1400
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   }
 ];

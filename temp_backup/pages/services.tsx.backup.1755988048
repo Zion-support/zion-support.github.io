@@ -235,7 +235,6 @@ const allServices = [
   ...advancedEnterpriseServices,
   ...cuttingEdgeITInfrastructureServices,
   
-<<<<<<< HEAD
   // Our new 2025 advanced real micro SAAS expansion
   ...advancedRealMicroSaasExpansion2025,
   
@@ -250,17 +249,6 @@ const allServices = [
   
   // Our new 2025 innovative business solutions expansion
   ...innovativeBusinessSolutionsExpansion2025
-=======
-  // Our new 2025 cutting-edge innovative services expansion
-  ...cuttingEdgeInnovativeServices2025,
-  ...advancedITInfrastructureSolutions2025,
-  
-  // Our new 2025 advanced micro SAAS services
-  ...advancedMicroSaasServices2025V2,
-  ...specializedEnterpriseServices2025,
-  ...innovativeAIAutomationServices2025,
-  ...advancedAIAutomationSolutions2025
->>>>>>> origin/cursor/expand-services-and-deploy-updates-af2e
 ];
 
 const categories = [

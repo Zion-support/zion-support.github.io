@@ -27,7 +27,6 @@ export default function EnhancedNavigation() {
           <Link href="/salary-insights"><a>Salary Insights</a></Link>
           <Link href="/admin"><a>Admin</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-<<<<<<< HEAD
           <Link href="/notifications">
             <a className="relative inline-flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 p-2 hover:bg-gray-50 dark:hover:bg-gray-800">
               <Bell className="h-5 w-5" />
@@ -38,9 +37,6 @@ export default function EnhancedNavigation() {
               )}
             </a>
           </Link>
-=======
-          <Link href="/academy/founder-course"><a className="font-medium">Founder Course</a></Link>
->>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81
         </div>
       </nav>
 

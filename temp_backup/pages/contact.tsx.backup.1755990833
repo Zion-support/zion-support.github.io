@@ -1,4 +1,3 @@
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -8,52 +7,6 @@
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Clock, Globe,
-  Send, CheckCircle, ArrowRight
-} from 'lucide-react';
-import Link from 'next/link';
-
-const ContactPage: React.FC = () => {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    if (typeof window !== 'undefined') {
-      window.alert('Thank you for your message! We will get back to you soon.');
-    }
-  };
-
-  return (
-    <Layout>
-      <SEO 
-        title="Contact Us | Zion Tech Group"
-        description="Get in touch with Zion Tech Group for innovative AI, quantum, and IT infrastructure solutions. Contact us today to transform your business."
-        keywords="contact, Zion Tech Group, AI services, quantum computing, IT infrastructure, support"
-      />
-      
-      <main className="relative z-10 pt-8">
-        {/* Hero Section */}
-        <section className="min-h-[60vh] flex items-center justify-center px-4 bg-gradient-to-br from-black via-gray-900 to-black">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                 Get In Touch
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -422,7 +375,6 @@ const ContactPage: React.FC = () => {
                     </>
                   )}
                 </button>
-<<<<<<< HEAD
               </div>
             </form>
           </div>
@@ -502,80 +454,6 @@ const ContactPage: React.FC = () => {
           </div>
         </main>
       </div>
-=======
-              </form>
-            )}
-          </motion.div>
-        </div>
-
-        {/* CTA Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-6">
-              Let's discuss your technology needs and explore how we can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/services" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Our Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a 
-                href="/pricing" 
-                className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
-                View Pricing
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20 px-4 bg-black/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Don't wait to transform your business. Contact us today and let's discuss how we can help you achieve your technology goals.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href={`tel:${contactInfo.mobile}`}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call Now</span>
-                </a>
-                
-                <a
-                  href={`mailto:${contactInfo.email}?subject=Inquiry about Zion Tech Group Services`}
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Send Email</span>
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     </Layout>
   );
 =======

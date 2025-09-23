@@ -12,7 +12,6 @@ interface SEOIssue {
   impact: number; // 0-100
 }
 
-<<<<<<< HEAD
 interface SEOMetrics {
   title: {
     length: number;
@@ -84,12 +83,6 @@ const SEOOptimizer: React.FC = () => {
       } catch {
         // Silently handle parsing errors
       }
-=======
-    // Check description length
-    if (seoData.description.length < 120 || seoData.description.length > 160) {
-      issues.push('Description length should be between 120-160 characters');
-      score -= 10;
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
     }
 
     // Check for missing alt text on images

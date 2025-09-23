@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
   darkMode: "class",
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -754,15 +753,3 @@ module.exports = {
     'focus:ring-offset-gray-900'
   ]
 }
-=======
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-
->>>>>>> origin/cursor/bc-85c13f69-d674-45c3-ae5d-2ff76a6c2c81-991b

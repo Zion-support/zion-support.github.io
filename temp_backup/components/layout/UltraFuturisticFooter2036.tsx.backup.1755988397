@@ -51,14 +51,7 @@ const footerSections = [
       { name: 'AI Code Review Assistant Pro', href: '/services/ai-code-review-assistant-pro', featured: true },
       { name: 'AI Revenue Forecasting Copilot', href: '/services/ai-revenue-forecasting-copilot', featured: true },
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading', featured: true },
-<<<<<<< HEAD
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', featured: true }
-=======
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', featured: true },
-      { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
-      { name: 'Financial Solutions', href: '/financial-solutions' },
-      { name: 'Case Studies', href: '/case-studies' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-ecc3
     ]
   },
   {
@@ -148,16 +141,6 @@ const footerSections = [
   }
 ];
 
-<<<<<<< HEAD
-=======
-const socialLinks = [
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" />, color: 'hover:text-gray-400' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/kleber-santos', icon: <Linkedin className="w-5 h-5" />, color: 'hover:text-blue-400' },
-  { name: 'Contact', href: 'mailto:kleber@ziontechgroup.com', icon: <Mail className="w-5 h-5" />, color: 'hover:text-cyan-400' },
-  { name: 'Phone', href: 'tel:+13024640950', icon: <Phone className="w-5 h-5" />, color: 'hover:text-green-400' }
-];
-
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-ecc3
 const quickLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Contact', href: '/contact' },

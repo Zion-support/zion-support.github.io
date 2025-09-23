@@ -280,7 +280,6 @@
   name = "adaptive-orchestrator"
   schedule = "*/5 * * * *"
 
-<<<<<<< HEAD
 # Newly invented autonomous intelligence
 [[scheduled.functions]]
   name = "roadmap-curator"
@@ -289,16 +288,3 @@
 [[scheduled.functions]]
   name = "patterns-miner"
   schedule = "*/15 * * * *"
-=======
-[[scheduled.functions]]
-  name = "performance-budget-runner"
-  schedule = "*/20 * * * *"
-
-[[scheduled.functions]]
-  name = "structured-data-generator"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "internal-anchors-checker"
-  schedule = "*/30 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-bb81

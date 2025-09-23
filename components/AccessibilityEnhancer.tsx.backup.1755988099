@@ -63,7 +63,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         return;
       }
 
-<<<<<<< HEAD
       // Tab navigation enhancement
       if (e.key === 'Tab') {
         setIsKeyboardMode(true);
@@ -78,16 +77,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           el.addEventListener('blur', () => setCurrentFocus(null));
         });
       }
-=======
-  // Focus management
-  const handleFocusChange = useCallback((e: FocusEvent) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      setCurrentFocus(target);
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-    }
-  }, []);
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-ab61
 
       // Escape key to close modals/panels
       if (e.key === 'Escape') {

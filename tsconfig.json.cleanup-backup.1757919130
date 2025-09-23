@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
@@ -12,9 +11,6 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-=======
-    "module": "esnext",
->>>>>>> origin/new-content-and-promotional-components
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -39,7 +35,6 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
@@ -60,11 +55,6 @@
         "name": "typescript-plugin-css-modules"
       }
     ]
-=======
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"]
-    }
->>>>>>> origin/new-content-and-promotional-components
   },
   "include": [
     "src/**/*",

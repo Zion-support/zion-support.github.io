@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { 
   Brain, 
   Cloud, 
@@ -437,18 +436,10 @@ export function ServicesPage() {
           </div>
         </div>
       </footer>
-=======
-export function ServicesPage() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );
 }
 
-<<<<<<< HEAD
 // Missing icon components
 const Phone = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -493,5 +484,3 @@ const Github = ({ className }: { className?: string }) => (
   </svg>
 );
 
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

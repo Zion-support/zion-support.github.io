@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 name: Autonomous Cloud Automations
 
 on:
   schedule:
     - cron: '*/15 * * * *' # every 15 minutes
   workflow_dispatch: {}
-=======
-name: Cloud Automations
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '*/30 * * * *' # every 30 minutes
-
-permissions:
-  contents: write
->>>>>>> origin/cursor/build-talent-marketplace-platform-793e
 
 jobs:
   run-automations:
@@ -31,7 +19,6 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Install deps
-<<<<<<< HEAD
         run: npm ci --no-audit --no-fund
       - name: Generate ideas
         run: node scripts/generate-ideas.cjs
@@ -59,23 +46,3 @@ jobs:
           else
             echo "No changes to commit"
           fi
-=======
-        run: npm ci
-      - name: Run automations
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: node scripts/run-automations.mjs
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "automation-bot"
-          git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add -A
-            git commit -m "chore(automation): update AI trends and talent summaries [skip ci]"
-            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
-          else
-            echo "No changes to commit"
-          fi
->>>>>>> origin/cursor/build-talent-marketplace-platform-793e

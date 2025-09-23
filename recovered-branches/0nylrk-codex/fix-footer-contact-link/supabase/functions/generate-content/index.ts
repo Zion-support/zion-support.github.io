@@ -4,12 +4,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 interface ContentGenerationRequest {
   contentType: 'blog' | 'newsletter';
@@ -83,25 +78,14 @@ serve(async (req) => {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
-<<<<<<< HEAD
         "Content-Type": "application/json"},
-=======
-        "Content-Type": "application/json",
-      },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: "gpt-4o",
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
-<<<<<<< HEAD
         temperature: 0.7})});
-=======
-        temperature: 0.7,
-      }),
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (!response.ok) {
       const errorData = await response.json();
@@ -117,12 +101,7 @@ serve(async (req) => {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${openAIApiKey}`,
-<<<<<<< HEAD
           "Content-Type": "application/json"},
-=======
-          "Content-Type": "application/json",
-        },
->>>>>>> origin/auto/autonomy-17186719616
         body: JSON.stringify({
           model: "gpt-4o-mini",
           messages: [
@@ -136,13 +115,7 @@ serve(async (req) => {
             }
           ],
           temperature: 0.7,
-<<<<<<< HEAD
           max_tokens: 100})});
-=======
-          max_tokens: 100,
-        }),
-      });
->>>>>>> origin/auto/autonomy-17186719616
       
       const imagePromptData = await imagePromptResponse.json();
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
@@ -225,22 +198,12 @@ serve(async (req) => {
 
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
       status: 200});
-=======
-      status: 200,
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Error in generate-content function:", error);
     
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
       status: 500});
-=======
-      status: 500,
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });

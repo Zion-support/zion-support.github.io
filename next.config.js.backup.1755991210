@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
 const nextConfig = {
   // Enhanced performance optimizations
   experimental: {
@@ -193,25 +192,6 @@ const nextConfig = {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase}}',
     },
   },
-=======
-const path = require('path');
-
-let withSentryConfig = (cfg) => cfg;
-try {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const sentry = require('@sentry/nextjs');
-  withSentryConfig = (cfg) => sentry.withSentryConfig(cfg, { silent: true });
-} catch {}
-
-const baseConfig = {
-  reactStrictMode: true,
-  images: { domains: ["localhost"] },
-  typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
-  async rewrites() { return [{ source: '/webhooks/receive', destination: '/api/webhooks/receive' }]; },
-  exportPathMap: async function (defaultPathMap) { delete defaultPathMap['/developers']; delete defaultPathMap['/dashboard/api-access']; return defaultPathMap; },
-  webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 };
 
 module.exports = withSentryConfig(baseConfig);
