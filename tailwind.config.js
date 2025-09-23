@@ -8,26 +8,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-        'fade-in-down': 'fadeInDown 0.6s ease-out forwards',
-        'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
-        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
-        'scale-in': 'scaleIn 0.6s ease-out forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'bounce-slow': 'bounce 2s infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'shimmer': 'shimmer 2.5s linear infinite',
-        'matrix': 'matrix 20s linear infinite',
-        'neon-pulse': 'neonPulse 1.5s ease-in-out infinite',
-        'cyber-float': 'cyberFloat 8s ease-in-out infinite',
-        'hologram': 'hologram 3s ease-in-out infinite',
-        'energy-wave': 'energyWave 4s ease-in-out infinite',
-        'quantum-spin': 'quantumSpin 6s linear infinite',
-        'neural-network': 'neuralNetwork 10s linear infinite',
-        'plasma-flow': 'plasmaFlow 5s ease-in-out infinite',
-        'cyber-grid': 'cyberGrid 15s linear infinite',
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -82,6 +62,8 @@ module.exports = {
           950: '#1e1b4b',
         },
         purple: {
+        },
+        secondary: {
           50: '#faf5ff',
           100: '#f3e8ff',
           200: '#e9d5ff',
@@ -171,19 +153,6 @@ module.exports = {
           800: '#115e59',
           900: '#134e4a',
           950: '#042f2e',
-        },
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
-      },
-      fontSize: {
-        'xs': ['0.75rem', { lineHeight: '1rem' }],
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-        'base': ['1rem', { lineHeight: '1.5rem' }],
-        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
-        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
-        '2xl': ['1.5rem', { lineHeight: '2rem' }],
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
         '5xl': ['3rem', { lineHeight: '1' }],
@@ -191,33 +160,6 @@ module.exports = {
         '7xl': ['4.5rem', { lineHeight: '1' }],
         '8xl': ['6rem', { lineHeight: '1' }],
         '9xl': ['8rem', { lineHeight: '1' }],
-      },
-      fontWeight: {
-        thin: '100',
-        extralight: '200',
-        light: '300',
-        normal: '400',
-        medium: '500',
-        semibold: '600',
-        bold: '700',
-        extrabold: '800',
-        black: '900',
-      },
-      // Add cursor color palette to match CSS variables
-      colors: {
-        // ... existing colors ...
-        cursor: {
-          blue: '#3b82f6',
-          'blue-hover': '#2563eb',
-          accent: '#10b981',
-          'accent-hover': '#059669',
-          purple: '#8b5cf6',
-          'purple-hover': '#7c3aed',
-          light: '#374151',
-          lighter: '#4b5563',
-          dark: '#1f2937',
-          darker: '#111827',
-        },
       },
       spacing: {
         '18': '4.5rem',
@@ -307,6 +249,18 @@ module.exports = {
         'gradient-x': 'gradientX 3s ease-in-out infinite',
         'bounce-x': 'bounceX 2s ease-in-out infinite',
         'count-up': 'countUp 2s ease-out forwards',
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'fade-in-up': 'fadeInUp 0.5s ease-out',
+        'fade-in-down': 'fadeInDown 0.5s ease-out',
+        'slide-in-left': 'slideInLeft 0.5s ease-out',
+        'slide-in-right': 'slideInRight 0.5s ease-out',
+        'bounce-slow': 'bounce 2s infinite',
+        'pulse-slow': 'pulse 3s infinite',
+        'spin-slow': 'spin 3s linear infinite',
+        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {

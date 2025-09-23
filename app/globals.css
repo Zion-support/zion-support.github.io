@@ -8,6 +8,18 @@
   padding: 0;
 }
 
+/* Base styles with performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: var(--scroll-behavior);
+  text-rendering: var(--text-rendering);
+  -webkit-font-smoothing: var(--webkit-font-smoothing);
+  -moz-osx-font-smoothing: var(--moz-osx-font-smoothing);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

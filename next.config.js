@@ -23,13 +23,26 @@ module.exports = {
   // Ensure valid non-empty string only when used; leave undefined otherwise
   assetPrefix: undefined,
   generateEtags: true,
-  // Remove unsupported experimental flags for Next 12 compatibility
-  experimental: {},
-  typescript: {
-    ignoreBuildErrors: true,
+
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
-  eslint: {
-    ignoreDuringBuilds: true,
+
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+
   async redirects() {
     return [
       { source: '/zion/gitbook', destination: '/docs/gitbook', permanent: true },
