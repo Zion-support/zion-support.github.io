@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SpecializedIndustrySolution {
 =======
 export interface SpecializedIndustrySolution2026 {
 >>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
+=======
+export interface SpecializedIndustrySolution {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   id: string;
   name: string;
   tagline: string;
@@ -41,6 +45,7 @@ export interface SpecializedIndustrySolution2026 {
   rating: number;
   reviews: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
   benefits: string[];
@@ -51,6 +56,10 @@ export interface SpecializedIndustrySolution2026 {
 }
 
 >>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
+=======
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -58,6 +67,10 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -65,44 +78,34 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     tagline: 'Advanced AI-powered diagnostic tools for healthcare professionals',
     price: '$18,999',
     period: '/month',
-    description: 'Comprehensive AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosis, treatment planning, and patient care optimization.',
-    features: [
-      'AI-powered image analysis (X-rays, MRIs, CT scans)',
-      'Symptom analysis and diagnosis support',
-      'Treatment recommendation engine',
-      'Patient data management',
-      'Clinical decision support',
-      'Drug interaction checking',
-      'Medical literature integration',
-      'Compliance with HIPAA standards',
-      'Real-time collaboration tools',
-      'Analytics and reporting dashboard'
-    ],
+    description: 'AI diagnostic platform that assists with analysis and planning.',
+    features: ['Image analysis', 'Diagnosis support', 'Treatment recommendations'],
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/healthcare-ai-diagnostic-platform',
-    marketPosition: 'Leading healthcare AI diagnostic platform. Competes with IBM Watson Health ($50K+ setup), Google Health AI ($100K+ setup). Our advantage: Cost-effective implementation and comprehensive features.',
-    targetAudience: 'Hospitals, Medical clinics, Diagnostic centers, Research institutions, Healthcare networks',
+    marketPosition: 'Cost-effective implementation with comprehensive features.',
+    targetAudience: 'Hospitals, Clinics, Diagnostic centers',
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Healthcare Technology',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Computer Vision', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['EMR systems', 'PACS systems', 'Lab information systems', 'Pharmacy systems', 'Insurance platforms'],
-    useCases: ['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Patient care optimization', 'Clinical research'],
-    roi: 'Average 300% ROI through improved diagnostic accuracy and reduced medical errors.',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Philips Healthcare'],
-    marketSize: '$45.2B healthcare AI market',
-    growthRate: '44.9% annual growth',
+    technology: ['Python', 'TensorFlow', 'NLP', 'React', 'Node.js'],
+    integrations: ['EMR systems', 'PACS systems'],
+    useCases: ['Imaging analysis', 'Diagnostic support'],
+    roi: 'Improve accuracy and reduce errors.',
+    competitors: ['IBM Watson Health', 'Google Health AI'],
+    marketSize: '$45.2B',
+    growthRate: '44.9% annual',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced healthcare AI platform with diagnostic support and clinical decision assistance.',
+    implementationDetails: 'Diagnostic support and decision assistance.',
     launchDate: '2024-06-15',
     customers: 28,
     rating: 4.9,
     reviews: 22
+<<<<<<< HEAD
 =======
 
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [
@@ -152,6 +155,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     averageMarketPrice: '$18,000/year',
     featuresCapabilities: ['Risk assessment', 'Portfolio optimization', 'Predictive analytics']
 >>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   }
 ];
 
@@ -162,9 +167,13 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Retail Technology',
   'Logistics Technology'
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 ];
 
 export default specializedIndustrySolutions2026;
 >>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
+=======
+];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
