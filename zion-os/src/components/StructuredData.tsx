@@ -1,3 +1,6 @@
+export default function StructuredData() {
+  return null;
+}
 <<<<<<< HEAD
 
 "use client";

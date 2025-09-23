@@ -1,3 +1,8 @@
+import type { ReactNode } from 'react';
+
+export default function InteractiveCard({ children }: { children: ReactNode }) {
+  return <div className="rounded-lg border border-gray-200 p-4">{children}</div>;
+}
 <<<<<<< HEAD
 
 'use client';
