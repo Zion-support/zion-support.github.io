@@ -1,7 +1,5 @@
 import './globals.css'
 import type { ReactNode } from 'react'
-
-<<<<<<< HEAD
 export const metadata = {
   title: {
     default: 'Zion Tech Group - AI & Technology Solutions',
@@ -49,11 +47,6 @@ export const metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
-=======
-export const metadata ={
-  title: 'Zion Tech Group',
-  description: 'AI & Technology Solutions'
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
