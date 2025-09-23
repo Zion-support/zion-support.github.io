@@ -1,4 +1,3 @@
-// import './globals.css' // Temporarily disabled due to build issues
 import type { ReactNode } from 'react'
 
 export const metadata = {
