@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": "eslint zion-website/src --no-error-on-unmatched-pattern",
     "lint:fix": "eslint zion-website/src --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc -p tsconfig.typecheck.json --noEmit",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
