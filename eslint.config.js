@@ -103,6 +103,7 @@ export default [
       'zion-os.disabled/**',
       'zion-website/.next/**',
       'zion-os/.next/**',
+      // Exclude non-root apps and alt projects
       'zion.app/**',
       'zion_academy/**',
       // Problematic or legacy directories to exclude from linting
@@ -134,23 +135,17 @@ export default [
       'src-corrupted/**',
       'src.corrupted/**',
       'src.disabled/**',
-      // Exclude broken/backup/disabled page directories
+      // Backup and disabled pages
       'pages.broken/**',
+      'pages.corrupted*/**',
       'pages_backup_before_cleanup/**',
-      'pages_backup_conflicts/**',
       'pages_backup_conflict/**',
-      'pages.corrupted.*/**',
-      'pages.old/**',
+      'pages_backup_conflicts/**',
       'pages_disabled/**',
-      'pages_disabled*/**',
       'pages.disabled*/**',
-      'pages_api.disabled/**',
-      // Exclude legacy or experimental solution dirs
-      'solutions.disabled/**',
-      // Exclude server code from front-end lint scope
-      'server/**',
-      // Broad excludes for noisy or legacy dirs not part of active root app
-      'src/**',
+      'pages.old/**',
+      'pages.bak/**',
+      // Legacy or experimental directories not part of active build
       'pages_backup/**',
       'pages-backup/**',
       'pages.__backup/**',
@@ -178,20 +173,18 @@ export default [
       'test_build/**',
       '**/__tests__/**',
       'src.pages.disabled/**',
+      // Type definition and utilities can be noisy; opt-out of lint by default
       'types/**',
       'types.disabled/**',
       'utils/**',
       'utils.disabled/**',
-      // Legacy/unrelated backend and utilities
+      // Exclude backend server and functions from frontend lint scope
       'server/**',
-      'services/**',
-      'solutions/**',
-      'solutions.disabled/**',
-      'sdk/**',
       'supabase/**',
-      'token/**',
-      'remote/**',
-      'api/**',
+      // Exclude standalone services and solution content outside app scope
+      'services/**',
+      'solutions.disabled/**',
+      'solutions/**',
       'zion-os/**',
       'zion-website/**',
       'zion-ai-assistant/**',
@@ -201,7 +194,6 @@ export default [
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
       'apps.backup/**',
-      'pages.disabled*/**',
       'temp_*/**',
       'temp-*/**',
       'temp/**',
