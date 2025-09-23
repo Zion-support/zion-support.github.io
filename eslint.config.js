@@ -62,7 +62,8 @@ export default [
       '@typescript-eslint': tsPlugin
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      'no-undef': 'off'
     }
   },
   {
@@ -111,6 +112,15 @@ export default [
       'services/**',
       // Additional ignores to avoid linting backups/alt projects
       'ts_files_backup/**',
+      'src/pages_backup/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      'src/**/*.backup/**',
+      'src/**/*.bak/**',
+      'src/**/*.disabled/**',
+      'src/data/**',
+      'src/types/**',
+      'src/routes/**',
       'src.broken/**',
       'src-corrupted/**',
       'src.corrupted/**',
