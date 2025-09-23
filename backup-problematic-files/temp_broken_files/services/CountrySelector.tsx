@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
-import { useState, useEffect } from "react";""
-import { Globe } from 'lucide-react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";""
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";"
-=======
 import { useState, useEffect } from "react",;
 import { Globe } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface CountrySelectorProps {;
   onCountryChange:(country:CountryPricing | null) => void,;
@@ -97,9 +88,5 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 }> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
 }</div> </SelectContent> </Select> </div>) ;
 }"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/CountrySelector.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -4,13 +4,6 @@
 
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
-<<<<<<< HEAD
-const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './',
-});
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 import type { Config } from "jest";
 import nextJest from "next/jest ;
@@ -150,8 +143,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 }
 export default createJestConfig(config);
-<<<<<<< HEAD
-=======
 
 
 }
@@ -181,4 +172,3 @@ export default createJestConfig (config);
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

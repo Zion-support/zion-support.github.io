@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ursor/automate-test-improve-and-merge-code-646c;
 import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }return { PrismaClient: jest.fn(() => mPrismaClient) }})let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint', () => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient()(prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search', () => { it('should return products matching "gpt";
     it('should return products matching "gpt";
@@ -39,7 +37,6 @@ import productHandler from '@/pages/api/products/index'
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {
   const mPrismaClient = {
->>>>>>> origin/merge-pr-12271
     product: {
       findMany: jest.fn(),
       aggregate: jest.fn()
@@ -57,9 +54,6 @@ jest.mock('@prisma/client', () => {
       _count: { id: 0 }
     });
   });
-<<<<<<< HEAD
-
-=======
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses
@@ -78,28 +72,6 @@ jest.mock('@prisma/client', () => {
           "name_similarity": 0.82,
           "description_similarity": 0.85
         }
-<<<<<<< HEAD
-
-      const mockRawResults = [
-        {
-          id: 'product-gpt-high-score',
-          name_similarity: 0.9,
-          description_similarity: 0.5,
-        },
-        {
-          id: 'product-other',
-          name_similarity: 0.2,
-          description_similarity: 0.1,
-        },
-        {
-          id: 'product-gpt-medium-score',
-          name_similarity: 0.82,
-          description_similarity: 0.85,
-        },
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       ];
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
@@ -204,11 +176,3 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 });
 });
-<<<<<<< HEAD
-main
-});
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-=======
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

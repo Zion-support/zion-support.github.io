@@ -9,19 +9,6 @@ import { Textarea } from '@/components/ui/textarea',;
 import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
-<<<<<<< HEAD
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import {;
   Form,;
   FormControl,;
@@ -84,30 +71,13 @@ export function EducationFormFields({ ;
           <FormField;
             control={form.control}
             name="institution";
-<<<<<<< HEAD
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Institution</FormLabel>;
-            control={form.control}"
-            name="institution";"
-            render={({ field } { field: any ;}) => (;
-
-              <FormItem>;
-
-                <FormLabel>Institution;
-=======
             render={({ field } { field:any }) => (;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
-
-            render={({ field }) => (;
-=======
               </FormItem>;            )}
           />;
 ;
@@ -115,7 +85,6 @@ export function EducationFormFields({ ;
             control={form.control}
             name="degree";
             render={({ field } { field:any }) => (;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
@@ -177,14 +146,6 @@ export function EducationFormFields({ ;
                 </FormItem>;
               )}
             />;
-<<<<<<< HEAD
-
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>End Date</FormLabel>;
-                    <FormControl>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
             {!form.watch('is_current') && (;
               <FormField;
@@ -206,14 +167,6 @@ export function EducationFormFields({ ;
             )}
           </div>;
         </div>;
-<<<<<<< HEAD
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
-              <FormControl>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
         <FormField;
           control={form.control}
@@ -279,13 +232,5 @@ export function EducationFormFields({ ;
 }/>) ;
 }</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
   isEditing ? 'Cancel' : 'Back' ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
-}</Button> </Button> </div> </form> </Form>) ;"}'"
-}</Button> </Button> </div> </form> </Form>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationFormFields.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

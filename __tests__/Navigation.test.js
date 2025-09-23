@@ -3,34 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navigation from '../components/Navigation';
 
-<<<<<<< HEAD
-describe('Navigation', () => {
-  test('renders without crashing', () => {
-    render(<Navigation />);
-    expect(screen.getByTestId('navigation')).toBeInTheDocument();
-  });
-  
-  test('displays correct content', () => {
-    render(<Navigation />);
-  });
-  
-  test('handles user interactions', () => {
-    render(<Navigation />);
-  });
-  
-  test('applies correct styling', () => {
-    render(<Navigation />);
-  });
-});
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import Navigation from '../components/Navigation" describe('Navigation',() => {' test('renders without crashing',() => {' render(<Navigation / / />) expect(screen.getByTestId("navigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Navigation / / />) }) test('handles user interactions',() => {' render(<Navigation / / />) }) test('applies correct styling',() => {' render(<Navigation / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import Navigation from '../components/Navigation" describe('Navigation',() => {' test('renders without crashing',() => {' render(<Navigation / / />) expect(screen.getByTestId("navigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Navigation / / />) }) test('handles user interactions',() => {' render(<Navigation / / />) }) test('applies correct styling',() => {' render(<Navigation / / />) }) })
-
-
-=======
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Navigation from "./components/Navigation" describe("Navigation",() => {" test("renders without crashing",() => {" render(<Navigation / / />) expect(screen.getByTestId("navigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Navigation / / />) }) test("handles user interactions",() => {" render(<Navigation / / />) }) test("applies correct styling",() => {" render(<Navigation / / />) }) })'"'"
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Navigation from "./components/Navigation" describe("Navigation",() => {" test("renders without crashing",() => {" render(<Navigation / / />) expect(screen.getByTestId("navigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Navigation / / />) }) test("handles user interactions",() => {" render(<Navigation / / />) }) test("applies correct styling",() => {" render(<Navigation / / />) }) })'"'"
@@ -40,9 +12,3 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import Navigation from '../components/Navigation" describe('Navigation',() => {' test('renders without crashing',() => {' render(<Navigation / / />) expect(screen.getByTestId("navigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Navigation / / />) }) test('handles user interactions',() => {' render(<Navigation / / />) }) test('applies correct styling',() => {' render(<Navigation / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import Navigation from '../components/Navigation" describe('Navigation',() => {' test('renders without crashing',() => {' render(<Navigation / / />) expect(screen.getByTestId("navigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Navigation / / />) }) test('handles user interactions',() => {' render(<Navigation / / />) }) test('applies correct styling',() => {' render(<Navigation / / />) }) })
-=======
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

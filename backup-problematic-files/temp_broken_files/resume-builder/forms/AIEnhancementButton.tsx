@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2 } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface AIEnhancementButtonProps {;
   currentContent:string,;

@@ -7,19 +7,7 @@ interface User {
   email: string;
   name: string;
 }
-<<<<<<< HEAD
-export const useAuth = () => {
 
-export const useAuth = () => {;
-  const [user, setUser] = useState<User | null>(null);
-const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Simulate auth check
-    setLoading(false);
-  }, []);
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);

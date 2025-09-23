@@ -707,14 +707,10 @@ ref={canvasRef}
         {/* Grid overlay for cyber variant */}
         {variant === 'cyber' && (
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)1px,transparent1px),linear-gradient(90deg,rgba(0,255,255,0.1)1px,transparent1px)] bg-[size:50px50px]&quot; />
-<<<<<<< HEAD
-)}
-=======
         )}
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -745,17 +741,8 @@ key={i}
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-        ;
-</motion>
-                className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;)
-            ))}
-          </div>;
-    </div>;`;
-=======
       </div>;
     </div>;
   );
 }
 export default UltraFuturisticBackground2036;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

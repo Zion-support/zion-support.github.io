@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
@@ -12,25 +9,8 @@ import { toast } from "@/components/ui/use-toast",;
 import { cn } from "@/lib/utils",;
 import { ChatMessage } from "./ChatMessage",;
 import { QuickReplyButton } from "./QuickReplyButton",;
-<<<<<<< HEAD
-import { Send, Loader2 } from "lucide-react",;
-import { useTheme } from "@/hooks/useTheme",;
-import React, { useState, useRef, useEffect } from "react";""
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button";""
-import { Input } from "@/components/ui/input";""
-import { ScrollArea } from "@/components/ui/scroll-area";""
-import { Separator } from "@/components/ui/separator";""
-import { toast } from "@/components/ui/use-toast";""
-import { cn } from "@/lib/utils";""
-import { ChatMessage } from "./ChatMessage";""
-import { QuickReplyButton } from "./QuickReplyButton";""
-import { Send, Loader2 } from 'lucide-react';
-import { useTheme } from "@/hooks/useTheme";"
-=======
 import { Send, Loader2 } from 'lucide-react';
 import { useTheme } from "@/hooks/useTheme",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
@@ -111,23 +91,11 @@ export function ChatBotPanel() {;
         setFailedAttempts(0),;
       }
     } catch (error) {;
-<<<<<<< HEAD
-      console.error("Error in AI chat:", error),;
-=======
       logErrorToProduction("Error in AI chat", error as Error, { component:'ChatBotPanel' }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       toast({;
         variant:"destructive",;
         title:"Communication Error",;
         description:"We're having trouble connecting to our support service."}),;
-<<<<<<< HEAD
-      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' ;}),;
-      toast({;
-        variant: "destructive";,;
-        title: "Communication Error";,,
-  description: "We're having trouble connecting to our support service.";}),;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       ;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -161,12 +129,7 @@ export function ChatBotPanel() {;
         message:data.message;
       },;
     } catch (error) {;
-<<<<<<< HEAD
-      console.error("Error in AI chat:", error),;
-      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel';, functionName: 'ai-chat' ;}),;
-=======
       logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component:'ChatBotPanel', functionName:'ai-chat' }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       return {;
         success:false,;
         message:"I'm experiencing technical difficulties. Please try again later.";
@@ -345,11 +308,6 @@ export function ChatBotPanel() {;
         </form>;
       </div>;
     </div>;
-<<<<<<< HEAD
-
-}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   ); type Message = {;
   id: string;
 content: string;
@@ -430,35 +388,16 @@ timestamp: new Date () ;
 }]);
 //In a real implementation, this would trigger a live chat request ;
 };
-<<<<<<< HEAD
-timestamp: new Date () ;
-}]);
-//In a real implementation, this would trigger a live chat request 
-};
-:temp_broken_files/support/ChatBotPanel.tsx
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
-<<<<<<< HEAD
-Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
-=======
   Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 timestamp: new Date () ;
 };
 timestamp: new Date () ;
 }]) ;
 };
-<<<<<<< HEAD
-timestamp: new Date () ;
-}]) 
-};
-pr-12325
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 </div>) ;
 }</div> </ScrollArea> key= {;
   reply.id ;
@@ -466,8 +405,4 @@ pr-12325
   reply.text ;
 }onClick={;
   () => handleQuickReply (reply.text) ;
-<<<<<<< HEAD
 }/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;"}'"
-=======
-}/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;"}'"
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

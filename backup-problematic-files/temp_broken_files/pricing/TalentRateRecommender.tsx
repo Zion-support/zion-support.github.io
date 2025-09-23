@@ -1,10 +1,7 @@
 
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { ;
   getTalentRateSuggestion,;
   PricingSuggestion,;
@@ -13,10 +10,6 @@ import { ;
 } from "@/services/pricingSuggestionService",;
 import { PricingSuggestionBox } from "./PricingSuggestionBox",;
 import { useAuth } from "@/hooks/useAuth",;
-<<<<<<< HEAD
-import { Sparkles } from "lucide-react",;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Sparkles } from 'lucide-react';
 ;
 interface TalentRateRecommenderProps {;
@@ -51,15 +44,8 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
 ;
       const result = await getTalentRateSuggestion(params),;
       setSuggestion(result),;
-<<<<<<< HEAD
-} catch (error) {;
-      console.error("Error generating rate suggestion:", error),;
-    } catch (error) {;"
-      logErrorToProduction('Error generating rate suggestion: ';, { data: error ;}),;
-=======
     } catch (error) {;
       logErrorToProduction('Error generating rate suggestion:', { data:error }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     } finally {;
       setIsLoading(false),;
     }
@@ -109,42 +95,6 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       </div>;
     </div>;
   ),;
-<<<<<<< HEAD
-},; import {
-  getTalentRateSuggestion;
-PricingSuggestion;
-TalentRateParams;
-trackPricingSuggestion interface TalentRateRecommenderProps {
-  skills: string[];
-yearsExperience: number;
-location?: string;
-}finally {
-  setIsLoading (false) 
-}
-};
-if (suggestion) {
-  //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {
-  trackPricingSuggestion ({
-
-}
-}
-};
-return (<div className="space-y-4" > <div> {
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick= {
-  generateSuggestion 
-}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
-  suggestion 
-}isLoading= {
-  isLoading 
-}onApplySuggestion= {
-  handleApplySuggestion 
-}rateType= {
-  rateType 
-}/>) 
-}</div> </div>) 
-};
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 },; import {;
   getTalentRateSuggestion;
 PricingSuggestion;
@@ -171,13 +121,5 @@ return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<B
   rateType ;
 }/>) ;
 }</div> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/pricing/TalentRateRecommender.tsx
-};"'"
-};
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/TalentRateRecommender.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

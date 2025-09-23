@@ -135,13 +135,5 @@ profileType ;
 }AI Match: {;
   aiScore ;
 }% </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/profile/ProfileHero.tsx
-}</div> </div> </div> </div> </div> </div>) ;"}'"
-}</div> </div> </div> </div> </div> </div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileHero.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

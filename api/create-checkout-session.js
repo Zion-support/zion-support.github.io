@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}          price: priceId,
-
-
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })};
-  res.status(200).json({ message: 'Checkout session created' });
-}
-export default function handler() { return null; }
-
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}          price: priceId,
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}""
-  res.status(200).json({ message: 'Checkout session created' });
-}
-(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-=======
-<<<<<<< HEAD
-=======
 
 ;
 export default function handler() {res.status(200).json({ message: "Checkout session created" })}ursor/automate-test-improve-and-merge-code-646c;
@@ -53,7 +25,6 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler() {res.status(200).json({ "message": 'Checkout session created' })}url: session.url;
     })} catch (err) {,// console.error('Checkout session API error:, err),res.statusCode = 500,res.json({ error: err.message || 'Checkout session creation failed' })}}export default withErrorLogging(handler),}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}ursor/automate-test-improve-and-merge-code-646c;
 }export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -74,13 +45,6 @@ export default function handler(req, res) {
 
     const session = stripe.checkout.sessions.create({
       payment_method_types: ['card'],
-<<<<<<< HEAD
-      line_items: []
-        {}
-          price: priceId,
-          quantity: quantity,
-        },]
-=======
       line_items: [
         {
           price_data: {
@@ -92,82 +56,15 @@ export default function handler(req, res) {
           },
           quantity: 1
         }
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       ],
       mode: 'payment',
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/cancel`
     });
 
-<<<<<<< HEAD
-
-      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,`;
-      cancel_url: `${req.headers.origin}/cancel`,)
-
-    res.statusCode = 200;
-    res.json({}
-      success: true, 
-      sessionId: session.id,
-url: session.url;
-    });
-  } catch (err) {'
-    // console.error('Checkout session API error:', err);
-    res.statusCode = 500;'
-    res.json({ error: err.message || 'Checkout session creation failed' });
-  }
-}
-
-export default withErrorLogging(handler);      url: session.url
-
-}
-;
-export default withErrorLogging(handler);
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-  res.status(200).json({ message: 'Checkout session created' });
-}
-export default function handler(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-
-      url: session.url
-      url: session.url
-export default withErrorLogging(handler);      url: session.url
-
-export default withErrorLogging(handler);
-
-      url: session.url;
-    })
-  } catch (err) {,
-    // console.error('Checkout session API error:, err),
-    res.statusCode = 500,
-    res.json({ error: err.message || 'Checkout session creation failed' })
-  };
-export default withErrorLogging(handler),
-,
-
-,
-}
-}
-
-export default withErrorLogging(handler);
-
-'"`
-
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}`;
-'
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}''
-
-=======
     res.status(200).json({ sessionId: session.id });
   } catch (error) {
     console.error('Error creating checkout session:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 }
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -93,20 +93,11 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   ;
   return (;
     <Card className="bg-zion-blue border-zion-purple/30">;
-<<<<<<< HEAD
-  return (;"
-    <Card className="bg-zion-blue border-zion-purple/30">;"
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-=======
         <div ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
             isDragging ;
               ? "border-zion-cyan bg-zion-cyan/10" ;
@@ -135,11 +126,6 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             Select Files;
           </Button>;
         </div>;
-<<<<<<< HEAD
-
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         ;
         <div className="text-xs text-gray-300 mb-4">;
           {platform === "ios" ;
@@ -195,13 +181,5 @@ return filtered;
 };
 <CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;"  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";"  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) ;
 }</div> </CardContent> </Card>) ;
-<<<<<<< HEAD
-:temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
-};""
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

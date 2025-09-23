@@ -1,16 +1,12 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 =======
 # Sitemap location
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9

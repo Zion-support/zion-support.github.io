@@ -3,34 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PWARegistration from '../components/PWARegistration';
 
-<<<<<<< HEAD
-describe('PWARegistration', () => {
-  test('renders without crashing', () => {
-    render(<PWARegistration />);
-    expect(screen.getByTestId('pwaregistration')).toBeInTheDocument();
-  });
-  
-  test('displays correct content', () => {
-    render(<PWARegistration />);
-  });
-  
-  test('handles user interactions', () => {
-    render(<PWARegistration />);
-  });
-  
-  test('applies correct styling', () => {
-    render(<PWARegistration />);
-  });
-});
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import PWARegistration from '../components/PWARegistration" describe('PWARegistration',() => {' test('renders without crashing',() => {' render(<PWARegistration / />) expect(screen.getByTestId("pwaregistration")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PWARegistration / />) }) test('handles user interactions',() => {' render(<PWARegistration / />) }) test('applies correct styling',() => {' render(<PWARegistration / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import PWARegistration from '../components/PWARegistration" describe('PWARegistration',() => {' test('renders without crashing',() => {' render(<PWARegistration / />) expect(screen.getByTestId("pwaregistration")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PWARegistration / />) }) test('handles user interactions',() => {' render(<PWARegistration / />) }) test('applies correct styling',() => {' render(<PWARegistration / />) }) })
-
-
-=======
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PWARegistration from "./components/PWARegistration" describe("PWARegistration",() => {" test("renders without crashing",() => {" render(<PWARegistration / />) expect(screen.getByTestId("pwaregistration")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<PWARegistration / />) }) test("handles user interactions",() => {" render(<PWARegistration / />) }) test("applies correct styling",() => {" render(<PWARegistration / />) }) })'"'"
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PWARegistration from "./components/PWARegistration" describe("PWARegistration",() => {" test("renders without crashing",() => {" render(<PWARegistration / />) expect(screen.getByTestId("pwaregistration")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<PWARegistration / />) }) test("handles user interactions",() => {" render(<PWARegistration / />) }) test("applies correct styling",() => {" render(<PWARegistration / />) }) })'"'"
@@ -40,9 +12,3 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import PWARegistration from '../components/PWARegistration" describe('PWARegistration',() => {' test('renders without crashing',() => {' render(<PWARegistration / />) expect(screen.getByTestId("pwaregistration")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PWARegistration / />) }) test('handles user interactions',() => {' render(<PWARegistration / />) }) test('applies correct styling',() => {' render(<PWARegistration / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import PWARegistration from '../components/PWARegistration" describe('PWARegistration',() => {' test('renders without crashing',() => {' render(<PWARegistration / />) expect(screen.getByTestId("pwaregistration")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PWARegistration / />) }) test('handles user interactions',() => {' render(<PWARegistration / />) }) test('applies correct styling',() => {' render(<PWARegistration / />) }) })
-=======
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

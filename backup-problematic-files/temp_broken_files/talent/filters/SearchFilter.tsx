@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { SearchFilterProps } from "@/types/filters",;
 ;
 export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
@@ -19,10 +16,7 @@ export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
           placeholder="Search talents...";
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
-=======
           aria-describedby="talent-search-help";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
         <p id="talent-search-help" className="sr-only">;

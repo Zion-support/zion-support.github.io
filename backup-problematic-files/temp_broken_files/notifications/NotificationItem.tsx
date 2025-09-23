@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
 import { formatDistanceToNow } from 'date-fns',;
@@ -27,11 +24,7 @@ export const getTypeIcon = (type:NotificationType) => {;
     case 'hire_request':;
       return <span className="text-zion-purple"></span>,;
     case 'onboarding':;
-<<<<<<< HEAD
-      return <span className="text-zion-cyan">🚀</span>,;
-=======
       return <span className="text-zion-cyan"></span>,;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     case 'system':;
       return <span className="text-yellow-500"></span>,;
     case 'project_update':;
@@ -182,9 +175,5 @@ onDismiss ;
 }</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };
 '"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/notifications/NotificationItem.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

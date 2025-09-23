@@ -1,7 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD:app/page-backup.tsx
-import React from 'react';
-=======
 // import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -281,7 +278,6 @@ import AI2026BreakthroughRevolutionBanner from '../components/AI2026Breakthrough
 import QuantumComputing2026UltimateBanner from '../components/QuantumComputing2026UltimateBanner';
 import NeuralInterfaceRevolution2026Banner from '../components/NeuralInterfaceRevolution2026Banner';
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa:app_backup/page-backup.tsx
 
 export const metadata = {
   title: 'Page Backup',

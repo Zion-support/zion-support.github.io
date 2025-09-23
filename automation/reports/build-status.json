@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/merge-pr-12271
   "timestamp": "2025-09-05T21:41:32.481Z",
   "build": {
     "status": "success",
@@ -8167,8 +8164,6 @@
   },
   "dependencies": {
     "status": "warning",
-<<<<<<< HEAD
-=======
 
   "timestamp": "2025-09-01T09:45:49.476Z",
   "build": {
@@ -8186,15 +8181,11 @@
   },
   "dependencies": {
     "status": "unknown",
->>>>>>> origin/merge-pr-12271
     "outdated": []
   },
   "trends": {
     "consecutiveFailures": 0,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/merge-pr-12271
     "improvementSinceLastRun": true,
     "degradationSinceLastRun": false
   },
@@ -8205,9 +8196,6 @@
     "Fix TypeScript errors",
     "Review type definitions"
   ]
-<<<<<<< HEAD
-}
-=======
 }
 
     "improvementSinceLastRun": false,
@@ -8219,4 +8207,3 @@
     "Run intelligent error fixer"
   ]
 }
->>>>>>> origin/merge-pr-12271

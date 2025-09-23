@@ -34,25 +34,14 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                     <>  Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;
                       :format(cert.expiration_date, 'MMM yyyy')}
-<<<<<<< HEAD
-                    <>  Expires:{typeof cert.expiration_date === 'string' ;
-                      ? cert.expiration_date ;)
-                      :format(cert.expiration_date, 'MMM yyyy')}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                     </>;
                   )}
                 </p>;
               </div>;
-<<<<<<< HEAD
-<div className="flex gap-2">;
-
-=======
               <div className="flex gap-2">;
                 <Button;
                   variant="ghost";
                   size="icon";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   onClick={() => onEdit(cert)}
                   aria-label="Edit certification";
                 >;
@@ -62,11 +51,7 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                   variant="ghost";
                   size="icon";
                   onClick={() => onDelete(cert.id!)}
-<<<<<<< HEAD
-aria-label="Delete certification";
-=======
                   aria-label="Delete certification";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 >;
                   <Trash2 className="h-4 w-4" />;
                 </Button>;
@@ -87,24 +72,13 @@ aria-label="Delete certification";
         </Card>;
       ))}
     </div>;
-<<<<<<< HEAD
-=======
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' ;
 }{;
   cert.expiration date && (<>  Expires: {';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') ;
 }</>) ;
 }</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
 }</CardContent> </Card>) ) ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
-}</div>) ;"}'"
-}</div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/certifications/CertificationsList.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

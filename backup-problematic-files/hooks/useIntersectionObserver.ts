@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
@@ -14,8 +11,6 @@ interface UseIntersectionObserverProps {
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
-<<<<<<< HEAD
-=======
 
 
   return [setNode, entry] as const;
@@ -33,7 +28,6 @@ export function useIntersectionObserver({;
   rootMargin = '0%',;
   freezeOnceVisible = false;
 }: UseIntersectionObserverProps = {}) {;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   const [entry, setEntry] = useState<IntersectionObserverEntry>(),;
   const [node, setNode] = useState<Element | null>(null),;
   const observer = useRef<IntersectionObserver | null>(null),;
@@ -73,9 +67,6 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -12,13 +12,10 @@ export default function EmailValidatorPage() {;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
   const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -66,8 +63,6 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
-<<<<<<< HEAD
-=======
 
 
 
@@ -88,7 +83,6 @@ import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState(''),
   const [validationResults, setValidationResults] = useState<any[]>([]),
@@ -161,29 +155,16 @@ if (email.length > 254) {
       status = 'invalid',
       score = 0,
       issues.push('Email too long')
-<<<<<<< HEAD
-=======
 
 
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
       score = 0;
       issues.push('Email too long');
-<<<<<<< HEAD
-    if (email.split('@')[0].length > 64) {status = 'invalid';
-      issues.push('Local part too long');
-}
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'valid':
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
     if (email.split('@')[0].length > 64) {status = 'invalid';
       score = 0;
@@ -238,10 +219,6 @@ if (email.length > 254) {
 
             </div>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
             Email Validator
           </h1>
@@ -260,15 +237,6 @@ if (email.length > 254) {
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;text-center mb-16&quot;>
-<<<<<<< HEAD
-<h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Validate Your Emails
-            </h2>
-</h2>
-            <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
-          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
             <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Validate Your Emails
 
@@ -302,31 +270,12 @@ type=&quot;checkbox&quot;
                     <textarea,
 value={emails}
                       onChange={(e) => setEmails(e.target.value)}
-<<<<<<< HEAD
-                  <Mail className=&quot;w-6 h-6 mr-3 text-blue-400&quot; />
 
-                <div className=&quot;flex items-center space-x-2&quot;>
-                  <label className=&quot;text-sm text-gray-300&quot;>Bulk Mode</label>
-                  <input;
-                    type=&quot;checkbox&quot;
-                    checked={bulkMode})
-                    onChange={(e) => setBulkMode(e.target.checked)}
-</input>
-              <div className=&quot;space-y-6&quot;>
-                  <div>
-                    <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
-Email Addresses (One per line)
-                    </label>
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                     )}
                   </Button>;
                   {validation_results.length > 0 && (
                     <Button;
 
-<<<<<<< HEAD
-=======
 
 
                       placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"                      rows={8}
@@ -391,7 +340,6 @@ onClick={clearResults}
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
                       Clear
@@ -418,13 +366,7 @@ onClick={clearResults}
                 {validationResults.length > 0 && (
                   <Button,
 onClick={copyResults}
-<<<<<<< HEAD
-                  <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />
-</BarChart3>
-                    onClick={copyResults}
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                     variant=&quot;outline&quot;
                     size=&quot;sm&quot;
                     className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
@@ -436,13 +378,6 @@ onClick={copyResults}
               </div>
 
 
-<<<<<<< HEAD
-                    <Copy className=&quot;w - 4 h - 4 mr - 2&quot; />;
-Copy Results;
-                  </Button>)}
-              </div>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               {stats && (
 
                       className={`p - 4 rounded - lg border ${
@@ -460,10 +395,6 @@ Copy Results;
                           <span className={`font - medium ${getStatusColor (result.status)}`}>;
                             {result.email}
                           </span>;
-<<<<<<< HEAD
-</div>;
-                        <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
-=======
                         </div>;
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
 
@@ -492,7 +423,6 @@ Copy Results;
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
@@ -512,11 +442,8 @@ key={index}
                             {result.email}                          </span>
                         </div>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                           Score: {result.score}
 
 </span>;
@@ -536,12 +463,6 @@ key={index}
                               <li key={issueIndex} className=&quot;text-red-300 flex items-center&quot;>
                                 <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
 
-<<<<<<< HEAD
-                            ))}
-                          </ul>;
-                        </div>;
-                      )}
-=======
                                 {issue}                              </li>
 
 
@@ -556,7 +477,6 @@ key={index}
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
                         </div>
                       )}
@@ -578,36 +498,19 @@ key={index}
                   </p>
                 </div>
               )}
-<<<<<<< HEAD
-                        </div>)}
-                        <div className=&quot;mt - 2 p - 2 bg - orange - 500 / 20 border border - orange - 500 / 30 rounded text - sm text - orange - 300 & quot;>;
-                        <div className=&quot;mt - 2 p - 2 bg - yellow - 500 / 20 border border - yellow - 500 / 30 rounded text - sm text - yellow - 300 & quot;>;
-                    </div>))}
-</div>) : (
-                <div className=&quot;bg - gray - 900 p - 6 rounded - lg border border - gray - 700 text - center & quot;>;
-                  <div className=&quot;text - 6xl mb - 4&quot;>📧</div>;
-                  <p className=&quot;text - gray - 400 & quot;>;
-Validation results will appear here. Enter an email address and click validate to get started.;
-                  </p>;
-                </div>)}
-=======
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             </Card>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
 
 
 ;
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       {/* Features */}
 
 <section className=&quot;py - 20 bg - gray - 800 & quot;>;
@@ -731,14 +634,11 @@ Validation results will appear here. Enter an email address and click validate t
       </section>;
       {/* CTA Section */}
 }
-<<<<<<< HEAD
-=======
 
 
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-indigo-600&quot;>
         <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
@@ -768,12 +668,8 @@ href=&quot;/pricing&quot;
         </div>
       </section>
     </>
-<<<<<<< HEAD
-)}
-=======
   )}
 
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

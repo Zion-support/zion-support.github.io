@@ -6,23 +6,9 @@ import { MilestoneCard } from './MilestoneCard',;
 import { AddMilestoneForm } from './AddMilestoneForm',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { useAuth } from '@/hooks/useAuth';
-import { MilestoneCard } from './MilestoneCard';
-import { AddMilestoneForm } from './AddMilestoneForm';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
 import { Plus } from 'lucide-react';
 import { EmptyState } from '@/components/ui/empty-state',;
-<<<<<<< HEAD
-import { EmptyState } from '@/components/ui/empty-state';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface MilestonesListProps {;
   milestones:Milestone[],;
@@ -62,12 +48,6 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
     return (;
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
-<<<<<<< HEAD
-
-      <div className="space-y-4">;"
-</div>
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           <Card key={i}>;
             <CardContent className="p-6">;
               <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
@@ -77,8 +57,6 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </Card>;
         ))}
       </div>;
-<<<<<<< HEAD
-=======
     ),;
   }
   ;
@@ -101,7 +79,6 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   }
 ;
   return (;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -111,19 +88,12 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </Button>;
         </div>;
       )}
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       {showAddForm && (;
         <Card>;
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-<<<<<<< HEAD
-<AddMilestoneForm ;
-=======
             <AddMilestoneForm ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -185,13 +155,5 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   onReject ;
 }/>) ) ;
 }</div> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/projects/milestones/MilestonesList.tsx
-};""
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestonesList.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

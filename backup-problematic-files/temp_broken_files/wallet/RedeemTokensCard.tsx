@@ -76,8 +76,6 @@ export function RedeemTokensCard() {;
               </DialogDescription>;
             </DialogHeader>;
             <div className="space-y-4 py-4">;
-<<<<<<< HEAD
-=======
               {REWARD_OPTIONS.map((option) => (;
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">;
                   <div>;
@@ -90,7 +88,6 @@ export function RedeemTokensCard() {;
                       size="sm" ;
                       variant={wallet && wallet.balance >= option.cost ? "default" :"outline"}
                       disabled={!wallet || wallet.balance < option.cost}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />;
@@ -146,31 +143,6 @@ type: 'feature' ;
   id: 'platform-credit';';
 title: '$5 Platform Credit';';
 description: 'Get $5 credit to use on any paid service';
-<<<<<<< HEAD
-  description: string;
-cost: number;';
-type: 'credit' | 'feature' | 'course' ;
-};
-const REWARD OPTIONS: RewardOption[] = [ {';
-  id: 'premium-week';';
-title: 'Premium Week';',
-  description: '7 days of premium features including top placement in search results';
-cost: 100;';
-type: 'feature' ;
-};
-{';
-  id: 'resume-review';';
-title: 'AI Resume Review';',
-  description: 'Get your resume analyzed and optimized by our AI';
-cost: 50;';
-type: 'feature' ;
-};
-{';
-  id: 'platform-credit';';
-title: '$5 Platform Credit';',
-  description: 'Get $5 credit to use on any paid service';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 cost: 100;';
 type: 'credit' ;
 }];
@@ -196,9 +168,5 @@ setOpen (false) ;
 }ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3" /> </Button> </div> </div>) ) ;
 }</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/wallet/RedeemTokensCard.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
