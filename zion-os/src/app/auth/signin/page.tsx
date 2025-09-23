@@ -9,11 +9,7 @@ export default function SignInPage() {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-<<<<<<< HEAD
   const { signIn } = useAuth();
-=======
-  const { login } = useAuth();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -102,8 +98,4 @@ export default function SignInPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
