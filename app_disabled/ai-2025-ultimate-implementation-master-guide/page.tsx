@@ -1,8 +1,29 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD:app_disabled/ai-2025-ultimate-implementation-master-guide/page.tsx
 import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Target, TrendingUp } from 'lucide-react';
 
+=======
+<<<<<<<< HEAD:app.disabled/resources/ai-2025-ultimate-implementation-master-guide.disabled/page.tsx
+"use client";
+========
+export default function Page() {
+  return (
+    <main style={{ padding: 32 }}>
+      <h1>AI 2025 Ultimate Implementation Master Guide</h1>
+      <p>Content temporarily simplified to unblock build.</p>
+    </main>
+  );
+}
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react';
+>>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:app.disabled/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
+
+<<<<<<< HEAD:app-disabled/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
 export default function AI2025UltimateImplementationMasterGuide() {
   return (
     <div className="min-h-screen bg-white">
@@ -39,6 +60,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
 import { ArrowLeft, BookOpen, Calendar, User, Download, CheckCircle, Star, Brain, Target, TrendingUp } from 'lucide-react';
 
@@ -90,13 +112,33 @@ export default function AI2025UltimateImplementationMasterGuide() {
 			</div>
 
 <<<<<<< HEAD:app_disabled/ai-2025-ultimate-implementation-master-guide/page.tsx
+=======
+
+      {/* Navigation */}
+      <div className="bg-gray-50 border-b">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <Link 
+            href="/resources" 
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Resources
+          </Link>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
           {/* Overview */}
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500 p-6 rounded-r-lg mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+<<<<<<< HEAD
               <BookOpen className="w-6 h-6 text-indigo-600" />
+=======
+              <Brain className="w-6 h-6 text-indigo-600" />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
               Guide Overview
             </h2>
             <p className="text-gray-700 leading-relaxed">
@@ -138,6 +180,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
                   </li>
                 </ul>
               </div>
+<<<<<<< HEAD
 =======
 			{/* Main Content */}
 			<div className="max-w-4xl mx-auto px-4 py-12">
@@ -201,6 +244,41 @@ export default function AI2025UltimateImplementationMasterGuide() {
 					</div>
 
 <<<<<<< HEAD:app_disabled/ai-2025-ultimate-implementation-master-guide/page.tsx
+=======
+
+              {/* Best Practices */}
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <Star className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Best Practices</h3>
+                </div>
+                <ul className="text-gray-600 space-y-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Change Management Strategies</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Data Quality Guidelines</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Security & Compliance</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Team Building & Training</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Performance Monitoring</span>
+                  </li>
+                </ul>
+              </div>
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
               {/* Implementation Strategies */}
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
@@ -266,10 +344,14 @@ export default function AI2025UltimateImplementationMasterGuide() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:app_disabled/ai-2025-ultimate-implementation-master-guide/page.tsx
         </div>
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
+=======
+        </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
 
         {/* Implementation Phases */}
           <section className="mb-12">
@@ -499,6 +581,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:app_disabled/ai-2025-ultimate-implementation-master-guide/page.tsx
 
 =======
@@ -551,4 +634,18 @@ export default function AI2025UltimateImplementationMasterGuide() {
 		</div>
 	);
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8:app/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
+=======
+
+    </div>
+  );
+=======
+export default function Page() {
+	return (
+		<div className="max-w-3xl mx-auto py-16 px-4">
+			<h1 className="text-3xl font-bold">AI 2025 Ultimate Implementation Master Guide</h1>
+			<p className="mt-4 text-gray-600">This guide is temporarily simplified while we resolve content merge issues.</p>
+		</div>
+	);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/resources/ai-2025-ultimate-implementation-master-guide/page.tsx
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
 }

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AI2026QuantumRevolutionBanner() {
 	return null;
 }
@@ -54,3 +55,8 @@ export default function AI2026QuantumRevolutionBanner() {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+export default function AI2026QuantumRevolutionBanner() {
+  return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295

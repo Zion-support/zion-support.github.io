@@ -37,6 +37,7 @@
     ".next/types/**/*.ts",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "app-minimal/**/*.ts",
     "app-minimal/**/*.tsx",
     "zion-website/src/**/*.ts",
@@ -58,6 +59,10 @@
     "src/**/*.ts",
     "src/**/*.tsx"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
+=======
+    "src/**/*.ts",
+    "src/**/*.tsx"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
   ],
   "exclude": [
     "node_modules",
@@ -88,6 +93,7 @@
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,5 +167,11 @@
 =======
     "zion-os/**"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
+=======
+    "zion-os",
+    "zion-os.disabled",
+    "zion-ai-assistant",
+    "utils"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
   ]
 }

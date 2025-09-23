@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head'
 
 <<<<<<< HEAD
@@ -285,4 +286,8 @@ export default function SEOHead({
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
+=======
+export default function SEOHead() {
+	return null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
 }
