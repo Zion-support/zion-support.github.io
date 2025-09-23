@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next build --no-lint",
     "start": "next start",
     "lint": "eslint \"app/**/*.{js,jsx,ts,tsx}\" \"components/**/*.{js,jsx,ts,tsx}\" \"src/**/*.{js,jsx,ts,tsx}\" \"providers/**/*.{js,jsx,ts,tsx}\"",
     "build:analyze": "ANALYZE=true npm run build",
@@ -19,8 +19,11 @@
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
-    "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "rm -rf .next && npm run build",
+    "dev:clean": "rm -rf .next && npm run dev",
+    "preview": "npm run build && npm run start",
     "clean": "rm -rf .next out dist build",
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
@@ -81,7 +84,7 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.9.2",
+    "typescript": "5.9.2",
     "typescript-eslint": "^8.44.1"
   },
   "jest": {

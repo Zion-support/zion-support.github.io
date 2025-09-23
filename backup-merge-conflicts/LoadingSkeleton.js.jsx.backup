@@ -47,7 +47,6 @@ export function CardSkeleton(props: any) {
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
 }>;
       {showImage && (<Skeleton className="w-full h-48 rounded-lg" />)}
       ;
@@ -89,7 +88,6 @@ export function ListSkeleton(props: any) {
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
 }>;
       {Array.from({ "length": "items "}).map((_, i) => (<div key={i} className="flex gap-4 items-start">;
           {showAvatar && (<Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />)}
@@ -130,7 +128,6 @@ export function TableSkeleton(props: any) {
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
 }>;
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">;
           {Array.from({ "length": "columns "}).map((_, i) => (<Skeleton key={i} className="h-5 flex-1" />))}
@@ -167,7 +164,6 @@ export function GridSkeleton(props: any) {
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
 } style="{{{;
             "gridTemplateColumns": "`repeat(${columns"}}", minmax(0, 1fr))`,;
             "gap": "`${gap * 0.25"}rem`;
@@ -198,7 +194,6 @@ export function HeroSkeleton(props: any) {
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
 }>;
       {showImage && (<div className=""lg": "w-1/2">;
           <Skeleton className="w-full h-96 rounded-2xl" />;
@@ -248,7 +243,6 @@ export function Shimmer(props: any) {
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
 }>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />;
     </div>)}

@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/OptimizedImage.dynamic.jsx.backup
-<<<<<<< HEAD
-const OptimizedImage = dynamic(() => import("./OptimizedImage"),{"; loading: () => <p>Loading.</p,>}) export: "default OptimizedImage" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled_full/OptimizedImage.dynamic.jsx
@@ -11,7 +7,6 @@ const OptimizedImage = dynamic(() => import(\"./OptimizedImage\"),{\'; \"loading
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled_full/OptimizedImage.dynamic.jsx
 >>>>>>> pr-11935
 const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
 <<<<<<< HEAD

@@ -1,10 +1,6 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
-<<<<<<< HEAD
-import globals from 'globals';
-=======
 <<<<<<< HEAD
 =======
 =======
@@ -134,7 +130,6 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 export default [{
     "ignores": [
->>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
@@ -689,7 +684,6 @@ export default [{
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
       'pages.disabled_auto/'
->>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
     ]
   },
   js.configs.recommended,
@@ -1465,11 +1459,6 @@ export default [{
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
     },
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js
-=======
   },
 =======
       'react/jsx-uses-react': 'error',
@@ -1491,7 +1480,6 @@ export default [{
 ];
 =======
 ];
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
 =======
 ];

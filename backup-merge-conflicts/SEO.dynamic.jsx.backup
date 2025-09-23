@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/SEO.dynamic.jsx.backup
-<<<<<<< HEAD
-const SEO = dynamic(() => import("./SEO"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEO" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled/SEO.dynamic.jsx
@@ -11,7 +7,6 @@ const SEO = dynamic(() => import(\"./SEO\"),{\'; loading: () => <p>Loading...</p
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/SEO.dynamic.jsx
 >>>>>>> pr-11935
 const SEO = dynamic(() => import("./SEO"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEO' ,'
 <<<<<<< HEAD

@@ -3,9 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-
-=======
 console.log('🚀 Advanced Automation Suite');
 console.log('');
 // Function to create ESLint configuration fix
@@ -629,4 +626,3 @@ main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
->>>>>>> main

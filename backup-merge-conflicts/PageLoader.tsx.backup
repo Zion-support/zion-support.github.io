@@ -27,7 +27,6 @@ export const "PageLoader": React.FC = (props) => {
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <div className="min-h-screen bg-white">
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/PageLoader.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/PageLoader.tsx

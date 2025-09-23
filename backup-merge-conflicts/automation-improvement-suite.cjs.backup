@@ -8,29 +8,6 @@ class AutomationImprovementSuite {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-<<<<<<< HEAD
-    this.ensureDirectories();
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true });
-    }
-  }
-
-  log(message) {
-    .toISOString()}] ${message}`);
-  }
-
-  async runCommand(command, description) {
-    this.log(`🚀 "Starting": ${description}`);
-    try {
-      const result = execSync(command, {
-<<<<<<< HEAD
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000, // 1 minute timeout
-=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000, // 1 minute timeout
@@ -177,7 +154,6 @@ class PerformanceMonitor {
     if (!fs.existsSync(this.reportsDir)) {}
       fs.mkdirSync(this.reportsDir, { recursive: true }
 });
->>>>>>> main
     };
   };
   log(message, level = 'INFO') {}
@@ -329,97 +305,6 @@ class SecurityAuditor {
         error: error.message;
       };
     };
-<<<<<<< HEAD
-    
-    fs.writeFileSync(
-      path.join(this.projectRoot, 'test-results-comprehensive.json'),
-      JSON.stringify(report, null, 2)
-    );
-    
-    this.log(\`🧪 Tests Completed: \${this.testResults.passed}/\${this.testResults.total} passed\`);
-  }
-}
-
-const runner = new ComprehensiveTestRunner();
-runner.runTests().catch(console.error);
-`;
-
-    fs.writeFileSync(
-      path.join(this.projectRoot, 'comprehensive-test-runner.cjs'),
-      testRunnerScript
-    );
-    this.log('✅ Created comprehensive-test-runner.cjs');
-  }
-
-  async runEnhancedAutomations() {
-    this.log('🚀 Running Enhanced Automation Scripts');
-
-    const scripts = [
-      {
-        script: 'node enhanced-error-fixer.cjs',
-        description: 'Enhanced Error Fixer',
-      },
-      {
-        script: 'node performance-monitor-enhanced.cjs',
-        description: 'Performance Monitor',
-      },
-      {
-        script: 'node security-audit-enhanced.cjs',
-        description: 'Security Audit',
-      },
-      {
-        script: 'node comprehensive-test-runner.cjs',
-        description: 'Comprehensive Test Runner',
-      },
-    ];
-
-    const results = [];
-
-    for (const script of scripts) {
-      const result = await this.runCommand(script.script, script.description);
-      results.push({ ...script, ...result });
-    }
-
-    return results;
-  }
-
-  async run() {
-    this.log('🎯 Starting Automation Improvement Suite');
-
-    // Create enhanced automation scripts
-    this.createEnhancedAutomationScripts();
-
-    // Run the enhanced automations
-    const results = await this.runEnhancedAutomations();
-
-    // Generate final report
-    const finalReport = {
-      timestamp: new Date().toISOString(),
-      suite: 'Automation Improvement Suite',
-      results: results,
-      summary: {
-        totalScripts: results.length,
-        successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
-      },
-    };
-
-    fs.writeFileSync(
-      path.join(this.reportsDir, 'automation-improvement-report.json'),
-      JSON.stringify(finalReport, null, 2)
-    );
-
-    this.log('🎉 Automation Improvement Suite Completed');
-    this.log(
-      `📊 Summary: ${finalReport.summary.successful}/${finalReport.summary.total} scripts successful`
-    );
-  }
-}
-
-// Run the suite
-const suite = new AutomationImprovementSuite();
-suite.run().catch(console.error);
-=======
   };
   async runAllOptimizations() {}
     const optimizations = this.getPerformanceOptimizations().optimizations;
@@ -532,5 +417,4 @@ if (require.main === module) {}
   suite.run();
 };
 module.exports = AutomationImprovementSuite;
->>>>>>> main
 >>>>>>> main

@@ -239,7 +239,6 @@ async function runTests() {
     process.exit(1);
   }
 }
->>>>>>> main
 // Run tests if this script is executed directly
 if (require.main === module) {
 <<<<<<< HEAD

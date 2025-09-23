@@ -83,10 +83,6 @@ export function AdminHeader($1) {
     return (
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/AdminHeader.jsx.backup
-<<<<<<< HEAD
-        <div className="space-y-4">
-=======
 =======
 =======
 <<<<<<< HEAD

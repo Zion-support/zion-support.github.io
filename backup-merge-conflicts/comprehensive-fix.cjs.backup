@@ -4,9 +4,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-
-=======
 console.log('🔧 Comprehensive fix for all files...');
 
 // List of problematic files
@@ -177,4 +174,3 @@ function main() {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
->>>>>>> main

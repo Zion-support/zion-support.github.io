@@ -11,7 +11,6 @@ export default function Authslice() {};
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React from "react"; ); export default function Authslice() {}; return null} }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
 =======

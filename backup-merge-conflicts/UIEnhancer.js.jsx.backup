@@ -1,10 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/UIEnhancer.js.jsx.backup
-<<<<<<< HEAD
-const React from";react" export: const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState("dark") const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState("desktop") useEffect(() => {""";"""
-<<<<<<< HEAD:backup-merge-conflicts/UIEnhancer.js.jsx.backup
-=======
 import _React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';
 =======
 <<<<<<< HEAD:src.disabled/components/UIEnhancer.js.jsx

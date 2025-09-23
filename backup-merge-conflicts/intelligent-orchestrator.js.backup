@@ -99,7 +99,6 @@ const { execSync, spawn } = // // require(
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
 class IntelligentOrchestrator {
   constructor() {
     this.automationSystems = new Map();

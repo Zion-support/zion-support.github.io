@@ -75,7 +75,6 @@ export interface InnovativeITService2025 {;
     "security": string[];
   "};
   competitors?: "string[];
->>>>>>> main
 >>>>>>> pr-11935
   marketSize?: string;
   launchDate?: string;
@@ -296,8 +295,6 @@ export const "INNOVATIVE_IT_SERVICES_2025": "InnovativeITService2025[] = [;
 ];
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 export interface InnovativeITService { "id": string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { "technology": string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string}; export const "INNOVATIVE_IT_SERVICES_2025": InnovativeITServic e[] = [;
 <<<<<<< HEAD:backup-merge-conflicts/innovativeITServices2025.ts.backup
 =======
@@ -305,7 +302,6 @@ export interface InnovativeITService { "id": string; title: string; description:
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string}; export const INNOVATIVE_IT_SERVICES_2025: InnovativeITServic e[] = [;
->>>>>>> main
 >>>>>>> main
 =======
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string}; export const INNOVATIVE_IT_SERVICES_2025: InnovativeITServic e[] = [;

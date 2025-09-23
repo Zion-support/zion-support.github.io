@@ -39,7 +39,6 @@ const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 "}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/empty-state.tsx
 ;

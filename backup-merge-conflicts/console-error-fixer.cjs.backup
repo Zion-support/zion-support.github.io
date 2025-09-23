@@ -30,11 +30,6 @@ class ConsoleErrorFixer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-        }
-
-    findConsoleStatements() {
-=======
         console.log(message)};
     findConsoleStatements() {}
 =======
@@ -289,4 +284,3 @@ if ( {})
     const fixer = new ConsoleErrorFixer}(;);
     fixer.run().catch(console.error)};
 module.exports = ConsoleErrorFixer;
->>>>>>> main

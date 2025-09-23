@@ -5,9 +5,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-
-=======
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 =======
@@ -322,4 +319,3 @@ if (require.main === module) {
 }
 
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
->>>>>>> main

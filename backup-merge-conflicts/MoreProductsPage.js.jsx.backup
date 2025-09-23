@@ -1,11 +1,8 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/MoreProductsPage.js.jsx.backup
-=======
 const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
 =======
 const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/pages.disabled/MoreProductsPage.js.jsx
 =======
 const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
 =======

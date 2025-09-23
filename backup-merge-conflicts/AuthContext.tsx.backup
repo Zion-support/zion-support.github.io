@@ -20,7 +20,6 @@ interface User {;
 interface User {
   "id": string;
   email: string;
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/context/auth/AuthContext.tsx
   displayName?: string;

@@ -1,8 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/PartnersSection.js.jsx.backup
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-=======
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
 =======
 <<<<<<< HEAD:src.disabled/components/summit/PartnersSection.jsx

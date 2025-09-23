@@ -16,8 +16,6 @@ class MonitoringDashboard {
         hasNodeModules: fs.existsSync('node_modules'),
         hasTsConfig: fs.existsSync('tsconfig.json')
       }
-<<<<<<< HEAD
-=======
     };
   }
   generateReport() {
@@ -63,4 +61,3 @@ if (require.main === module) {
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 module.exports = MonitoringDashboard;
->>>>>>> main

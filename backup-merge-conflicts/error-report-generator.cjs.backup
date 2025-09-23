@@ -18,11 +18,6 @@ class ErrorReportGenerator {}
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour default};
 ;
-<<<<<<< HEAD
-  log(message) {
-  .toISOString()}] [ErrorReportGenerator] ${message}";
-    )}
-=======
   log(message) {}
   console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}";
     )};
@@ -154,4 +149,3 @@ class ErrorReportGenerator {}
 ;
 const generator = new ErrorReportGenerator();
 generator.run().catch(console.error);
->>>>>>> main

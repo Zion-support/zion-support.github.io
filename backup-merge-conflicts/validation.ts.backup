@@ -104,4 +104,3 @@ export const validators = { email: (email: string): boolean => { const emailRege
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
->>>>>>> main

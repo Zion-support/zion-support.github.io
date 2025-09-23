@@ -1,36 +1,5 @@
 <<<<<<< HEAD
 #!/usr/bin/env node
-<<<<<<< HEAD
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync } = require("child_process")
-class ComprehensiveMergeResolver {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.resolvedFiles = []
-    this.errors = []}
-  log(message) {
-    .toISOString()}] ${message}`)}
-  resolveMergeConflicts() {
-    this.log("🔧 Starting comprehensive merge conflict resolution...")
-    try {
-      // Get list of conflicted files
-      const conflictedFiles = execSync("git diff --name-only --diff-filter=U", {"cwd": this.projectRoot,"encoding": "utf8"}).trim().split("\n").filter(file => file)
-      this.log(`Found ${conflictedFiles.length} conflicted files`)
-      for (const file of conflictedFiles) {
-        this.resolveFileConflicts(file)}
-      // Clean up build artifacts and cache files
-      this.cleanupBuildArtifacts()
-      this.log(`🎉 Merge conflict resolution completed. Resolved ${this.resolvedFiles.length} files.`)
-      if (this.errors.length > 0) {
-        this.log(`❌ ${this.errors.length} errors "encountered": `)
-        this.errors.forEach(err => {
-          this.log(`   - ${err.file}: ${err.error}`)})}
-      return {"resolvedFiles": this.resolvedFiles,"errors": this.errors}
-    } catch (error) {
-      this.log(`❌ Error during merge conflict "resolution": ${error.message}`)
-      return { "resolvedFiles": [], "errors": [{ file: "general", "error": error.message }] }
-=======
 
 const fs = require('fs');
 const path = require('path');
@@ -246,4 +215,3 @@ async function main() {
 }
 
 main();
->>>>>>> main

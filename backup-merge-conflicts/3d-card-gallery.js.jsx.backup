@@ -460,10 +460,6 @@ function Card3D("props": "any) {;
     const y = useMotionValue(0);
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/3d-card-gallery.js.jsx.backup
-<<<<<<< HEAD
-    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { "stiffness": "300", "damping": "30 "});
-=======
 =======
 =======
 <<<<<<< HEAD

@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/ErrorBoundary.dynamic.jsx.backup
-<<<<<<< HEAD
-const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{"; loading: () => <p>Loading.</p,>}) export: "default ErrorBoundary" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled_full/ErrorBoundary.dynamic.jsx
@@ -11,7 +7,6 @@ const ErrorBoundary = dynamic(() => import(\"./ErrorBoundary\"),{\'; \"loading\"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled_full/ErrorBoundary.dynamic.jsx
 >>>>>>> pr-11935
 const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ErrorBoundary' ,'
 <<<<<<< HEAD

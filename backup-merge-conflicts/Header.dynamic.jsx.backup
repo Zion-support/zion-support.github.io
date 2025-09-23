@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/Header.dynamic.jsx.backup
-<<<<<<< HEAD
-const Header = dynamic(() => import("./Header"),{"; loading: () => <p>Loading.</p,>}) export: "default Header" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled/Header.dynamic.jsx
@@ -11,7 +7,6 @@ const Header = dynamic(() => import(\"./Header\"),{\'; \"loading\": () => <p>Loa
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/Header.dynamic.jsx
 >>>>>>> pr-11935
 const Header = dynamic(() => import("./Header"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Header' ,'
 <<<<<<< HEAD

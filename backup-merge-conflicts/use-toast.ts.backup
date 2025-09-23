@@ -23,7 +23,6 @@ import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "num
 import { toast } from 'react-hot-toast'
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { toast } from 'react-hot-toast'
->>>>>>> main
 >>>>>>> pr-11935
 interface ToastOptions {
   duration?: number;

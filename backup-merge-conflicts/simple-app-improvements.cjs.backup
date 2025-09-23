@@ -3,9 +3,6 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-
-=======
 console.log('🚀 Simple App Improvements System');
 console.log('=====');
 =======
@@ -323,4 +320,3 @@ improvements.runImprovements().then(() => {;
   }).catch(error => {;
   console.error('Improvements "failed": ', error.message);
   process.exit(1)})
->>>>>>> main
